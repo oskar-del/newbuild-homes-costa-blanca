@@ -1,3 +1,4 @@
+import ImageGallery from '@/components/ImageGallery';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -147,6 +148,8 @@ export default async function DevelopmentPage({ params }: Props) {
         </section>
 
         {/* Main Content Area */}
+        <section className="section py-8"><div className="container"><ImageGallery images={development.images} name={development.name} /></div></section>
+
         <section className="section">
           <div className="container">
             <div className="grid lg:grid-cols-3 gap-12">

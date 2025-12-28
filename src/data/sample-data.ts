@@ -23,7 +23,7 @@ export const sampleDevelopments: ParsedDevelopment[] = [
     types: ['apartment'],
     bedroomRange: { min: 2, max: 3 },
     statuses: ['under-construction'],
-    properties: []
+    properties: [], images: []
   },
   {
     slug: 'oasis-laguna-ii',
@@ -39,7 +39,7 @@ export const sampleDevelopments: ParsedDevelopment[] = [
     types: ['apartment'],
     bedroomRange: { min: 2, max: 3 },
     statuses: ['under-construction', 'off-plan'],
-    properties: []
+    properties: [], images: []
   },
   {
     slug: 'oasis-villas-sun',
@@ -55,7 +55,7 @@ export const sampleDevelopments: ParsedDevelopment[] = [
     types: ['villa'],
     bedroomRange: { min: 3, max: 3 },
     statuses: ['under-construction'],
-    properties: []
+    properties: [], images: []
   },
   {
     slug: 'alegria-24',
@@ -71,7 +71,7 @@ export const sampleDevelopments: ParsedDevelopment[] = [
     types: ['apartment', 'penthouse'],
     bedroomRange: { min: 2, max: 3 },
     statuses: ['under-construction'],
-    properties: []
+    properties: [], images: []
   },
   {
     slug: 'optimus-iii',
@@ -87,7 +87,7 @@ export const sampleDevelopments: ParsedDevelopment[] = [
     types: ['apartment'],
     bedroomRange: { min: 2, max: 3 },
     statuses: ['under-construction'],
-    properties: []
+    properties: [], images: []
   },
   {
     slug: 'atlantis',
@@ -103,7 +103,7 @@ export const sampleDevelopments: ParsedDevelopment[] = [
     types: ['apartment', 'penthouse'],
     bedroomRange: { min: 2, max: 4 },
     statuses: ['under-construction'],
-    properties: []
+    properties: [], images: []
   },
   {
     slug: 'residencial-h',
@@ -119,7 +119,7 @@ export const sampleDevelopments: ParsedDevelopment[] = [
     types: ['apartment'],
     bedroomRange: { min: 2, max: 3 },
     statuses: ['under-construction'],
-    properties: []
+    properties: [], images: []
   },
   {
     slug: 'oasis-guardamar',
@@ -135,7 +135,7 @@ export const sampleDevelopments: ParsedDevelopment[] = [
     types: ['apartment'],
     bedroomRange: { min: 2, max: 3 },
     statuses: ['under-construction'],
-    properties: []
+    properties: [], images: []
   }
 ];
 
