@@ -206,8 +206,8 @@ export function groupByDevelopment(properties: ParsedProperty[]): ParsedDevelopm
       slug, name: first.development, developer: first.developer, developerSlug: slugify(first.developer),
       town: first.town, province: first.province, zone: first.zone, propertyCount: props.length,
       priceFrom: prices.length ? Math.min(...prices) : null, priceTo: prices.length ? Math.max(...prices) : null,
-      types: [...new Set(props.map(p => p.type))], bedroomRange: { min: beds.length ? Math.min(...beds) : 0, max: beds.length ? Math.max(...beds) : 0 },
-      statuses: [...new Set(props.map(p => p.status))], properties: props
+      types: Array.from(new Set(props.map(p => p.type))), bedroomRange: { min: beds.length ? Math.min(...beds) : 0, max: beds.length ? Math.max(...beds) : 0 },
+      statuses: Array.from(new Set(props.map(p => p.status))), properties: props
     };
   });
 }
