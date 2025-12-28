@@ -97,7 +97,7 @@ export interface ParsedDevelopment {
 export async function fetchXMLFeed(): Promise<ParsedProperty[]> {
   try {
     const response = await fetch(siteConfig.xmlFeed.url, {
-      next: { revalidate: siteConfig.xmlFeed.revalidateSeconds }
+    cache: 'no-store'  
     });
 
     if (!response.ok) {
