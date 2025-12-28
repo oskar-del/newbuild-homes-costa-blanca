@@ -20,7 +20,7 @@ export const siteConfig = {
   
   // Data Sources
   xmlFeed: {
-    url: "https://xml.redsp.net/files/450/94015ams84x/test-redsp_v4.xml",
+    url: "https://xml.redsp.net/file/450/23a140q0551/general-zone-1.xml",
     revalidateSeconds: 3600, // 1 hour
   },
   
