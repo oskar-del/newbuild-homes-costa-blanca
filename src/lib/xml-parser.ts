@@ -46,7 +46,7 @@ interface KyeroProperty {
   location?: { latitude?: string[]; longitude?: string[] }[];
 }
 
-interface XMLRoot { properties?: { property?: XMLProperty[] } }
+interface XMLRoot { root?: { property?: XMLProperty[] }; properties?: { property?: XMLProperty[] } }
 interface KyeroRoot { root?: { property?: KyeroProperty[]; agent?: { name?: string[] }[] } }
 
 export interface ParsedProperty {
@@ -119,7 +119,7 @@ export async function fetchXMLFeed(): Promise<ParsedProperty[]> {
 export async function parseXMLContent(xmlContent: string): Promise<ParsedProperty[]> {
   try {
     const result: XMLRoot = await parseStringPromise(xmlContent, { explicitArray: true, ignoreAttrs: true, trim: true });
-    return (result?.properties?.property || []).map(normalizeProperty).filter(Boolean) as ParsedProperty[];
+    return (result?.root?.property || []).map(normalizeProperty).filter(Boolean) as ParsedProperty[];
   } catch (error) { console.error('Error parsing XML:', error); return []; }
 }
 
