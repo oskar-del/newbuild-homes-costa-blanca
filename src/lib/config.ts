@@ -4,7 +4,6 @@ export const siteConfig = {
   tagline: "Your Key to New Build Living in Spain",
   description: "Specialist agency for new build properties across Costa Blanca. Off-plan apartments, villas, and key-ready homes from trusted developers.",
   
-  // Contact Information
   contact: {
     phone: "+34 634 044 970",
     phoneClean: "+34634044970",
@@ -13,25 +12,32 @@ export const siteConfig = {
     email: "info@newbuildhomescostablanca.com",
   },
   
-  // Partner Links
   partners: {
     habeno: "https://habeno.com/form?hypido=1&partnerId=9f927d6f-7293-4f06-0de0-08dabb4ac15e",
   },
   
-  // Data Sources
-  xmlFeed: {
-    url: "https://xml.redsp.net/file/450/23a140q0551/general-zone-1.xml",
-    revalidateSeconds: 3600, // 1 hour
-  },
+  xmlFeeds: [
+    {
+      name: "REDSP",
+      url: "https://xml.redsp.net/file/450/23a140q0551/general-zone-1.xml",
+      format: "redsp" as const,
+      enabled: true,
+    },
+    {
+      name: "Miralbo",
+      url: "http://feeds.transporter.janeladigital.com/423E0F5F-30FC-4E01-8FE1-99BD7E14B021/0500015622.xml",
+      format: "kyero" as const,
+      enabled: true,
+    },
+  ],
+  revalidateSeconds: 3600,
   
-  // Social Media
   social: {
     facebook: "",
     instagram: "",
     youtube: "",
   },
   
-  // SEO Defaults
   seo: {
     titleTemplate: "%s | New Build Homes Costa Blanca",
     defaultTitle: "New Build Homes Costa Blanca | Key-Ready & Off-Plan Properties",
@@ -46,7 +52,6 @@ export const siteConfig = {
     ],
   },
   
-  // Navigation
   navigation: {
     main: [
       { name: "Developments", href: "/developments" },
@@ -79,10 +84,8 @@ export const siteConfig = {
     },
   },
   
-  // Featured Builders
   featuredBuilders: ["contrimar", "aedas-homes", "taylor-wimpey"],
   
-  // Golf Resorts (for golf properties page)
   golfResorts: [
     { name: "La Finca Golf", location: "Algorfa", slug: "la-finca-golf" },
     { name: "Vistabella Golf", location: "Orihuela Costa", slug: "vistabella-golf" },
@@ -94,7 +97,6 @@ export const siteConfig = {
     { name: "Font del Llop", location: "Alicante", slug: "font-del-llop" },
   ],
   
-  // Property Status Labels
   statusLabels: {
     "key-ready": { label: "Key Ready", class: "badge-key-ready", priority: 1 },
     "completion-3-months": { label: "Completion Soon", class: "badge-key-ready", priority: 2 },
