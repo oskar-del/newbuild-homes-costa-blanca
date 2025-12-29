@@ -1,4 +1,6 @@
-import { XMLParser } from 'fast-xml-parser';
+const fs = require('fs');
+
+const content = `import { XMLParser } from 'fast-xml-parser';
 
 export interface ParsedProperty {
   id: string;
@@ -190,3 +192,7 @@ export function groupByArea(properties: ParsedProperty[]): Map<string, ParsedPro
   });
   return groups;
 }
+`;
+
+fs.writeFileSync('src/lib/xml-parser.ts', content);
+console.log('xml-parser.ts created successfully');

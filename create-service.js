@@ -1,4 +1,6 @@
-import { fetchXMLFeed, groupByDevelopment, groupByArea, groupByDeveloper, ParsedProperty, ParsedDevelopment } from './xml-parser';
+const fs = require('fs');
+
+const content = `import { fetchXMLFeed, groupByDevelopment, groupByArea, groupByDeveloper, ParsedProperty, ParsedDevelopment } from './xml-parser';
 
 export async function getAllDevelopments(): Promise<ParsedDevelopment[]> {
   const props = await fetchXMLFeed();
@@ -87,3 +89,7 @@ export async function getStats() {
     priceFromFormatted: formatPrice(minPrice),
   };
 }
+`;
+
+fs.writeFileSync('src/lib/property-service.ts', content);
+console.log('property-service.ts created');
