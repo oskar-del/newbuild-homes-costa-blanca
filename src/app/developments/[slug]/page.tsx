@@ -331,7 +331,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ sl
             {/* Sidebar */}
             <aside className="lg:col-span-1 space-y-6">
               {/* Price Card */}
-              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg sticky top-6">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg ">
                 <div className="text-center mb-6">
                   {property.price ? (
                     <>
