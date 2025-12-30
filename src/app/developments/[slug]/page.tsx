@@ -375,31 +375,6 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ sl
 
                 <p className="text-xs text-gray-400 text-center mb-6">Ref: {property.ref}</p>
 
-                {/* Contact Buttons */}
-                <div className="space-y-3">
-                  <a
-                    href={CONTACT.whatsapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded-lg font-medium transition-colors"
-                  >
-                    📱 WhatsApp
-                  </a>
-                  <a
-                    href={`tel:${CONTACT.phone}`}
-                    className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-medium transition-colors"
-                  >
-                    📞 Call Now
-                  </a>
-                  <a
-                    href={CONTACT.habeno}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-3 rounded-lg font-medium transition-colors"
-                  >
-                    💰 Get Mortgage Quote
-                  </a>
-                </div>
               </div>
 
               {/* Lead Form Card */}
