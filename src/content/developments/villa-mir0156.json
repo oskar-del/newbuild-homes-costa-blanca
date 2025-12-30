@@ -137,7 +137,17 @@
       "availability": "https://schema.org/InStock",
       "seller": {
         "@type": "RealEstateAgent",
-        "name": "New Build Homes Costa Blanca"
+        "name": "New Build Homes Costa Blanca",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle Caballero de Rodas 31",
+          "addressLocality": "Torrevieja",
+          "postalCode": "03181",
+          "addressRegion": "Alicante",
+          "addressCountry": "ES"
+        },
+        "telephone": "+34634044970",
+        "url": "https://newbuildhomescostablanca.com"
       }
     },
     "address": {
