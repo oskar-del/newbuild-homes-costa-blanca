@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { getStats, getAllDevelopments, formatPrice } from '@/lib/property-service';
 import { breadcrumbSchema, faqSchema, toJsonLd } from '@/lib/schema';
+import LeadForm from '@/components/LeadForm';
 
 export const revalidate = 3600;
 
@@ -202,6 +203,25 @@ export default async function HomePage() {
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Lead Capture Form */}
+      <section className="py-16 bg-white">
+        <div className="max-w-2xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">Get Property Recommendations</h2>
+            <p className="text-gray-600">Tell us what you're looking for and we'll send you matching properties</p>
+          </div>
+          <div className="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+            <LeadForm
+              propertyInterest="General Inquiry - Homepage"
+              title="Request Information"
+              subtitle="We'll get back to you within 24 hours"
+              compact={false}
+              formName="lead-inquiry"
+            />
           </div>
         </div>
       </section>
