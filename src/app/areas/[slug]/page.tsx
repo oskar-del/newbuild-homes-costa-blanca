@@ -11,12 +11,34 @@ const CONTACT = {
   habeno: 'https://habeno.com/form?hypido=1&partnerId=9f927d6f-7293-4f06-0de0-08dabb4ac15e',
 };
 
+interface GolfCourse {
+  name: string;
+  distance: string;
+  driveTime: string;
+  holes: number;
+  url: string;
+  googleMaps: string;
+  description: string;
+}
+
+interface ExternalLinks {
+  tourism?: { name: string; url: string; description: string };
+  beaches?: { name: string; googleMaps: string; description: string }[];
+  healthcare?: { name: string; googleMaps: string; url: string; distance: string };
+  airport?: { name: string; googleMaps: string; url: string; distance: string; driveTime: string };
+}
+
 interface AreaContent {
   slug: string;
   name: string;
   propertyCount: number;
   propertyTypes: string[];
   priceRange: { min: number; max: number };
+  externalLinks?: ExternalLinks;
+  golf?: {
+    intro: string;
+    courses: GolfCourse[];
+  };
   content: {
     metaTitle: string;
     metaDescription: string;
@@ -98,7 +120,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
     notFound();
   }
   
-  const { content, developments, schema, schemaFAQ } = data;
+  const { content, developments, schema, schemaFAQ, externalLinks, golf } = data;
 
   return (
     <>
@@ -142,6 +164,11 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               <span className="bg-white/20 px-4 py-2 rounded-full">
                 🌴 Costa Blanca North
               </span>
+              {golf && (
+                <span className="bg-white/20 px-4 py-2 rounded-full">
+                  ⛳ {golf.courses.length} Golf Courses Nearby
+                </span>
+              )}
             </div>
           </div>
         </section>
@@ -181,6 +208,74 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 </div>
               </section>
 
+              {/* Beaches with External Links */}
+              {externalLinks?.beaches && externalLinks.beaches.length > 0 && (
+                <section>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                    🏖️ Beaches in {data.name}
+                  </h2>
+                  <p className="text-gray-700 mb-6">{content.amenitiesSection.beaches}</p>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    {externalLinks.beaches.map((beach, i) => (
+                      <a
+                        key={i}
+                        href={beach.googleMaps}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+                      >
+                        <h3 className="font-bold text-gray-900 mb-1">{beach.name}</h3>
+                        <p className="text-gray-600 text-sm mb-2">{beach.description}</p>
+                        <span className="text-blue-600 text-sm font-medium">
+                          📍 View on Google Maps →
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* Golf Section */}
+              {golf && golf.courses.length > 0 && (
+                <section>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                    ⛳ Golf Near {data.name}
+                  </h2>
+                  <p className="text-gray-700 mb-6">{golf.intro}</p>
+                  <div className="space-y-4">
+                    {golf.courses.map((course, i) => (
+                      <div key={i} className="border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow">
+                        <div className="flex flex-wrap items-start justify-between gap-4 mb-3">
+                          <div>
+                            <h3 className="font-bold text-gray-900 text-lg">{course.name}</h3>
+                            <p className="text-gray-500">{course.holes} holes • {course.distance} ({course.driveTime})</p>
+                          </div>
+                          <div className="flex gap-2">
+                            <a
+                              href={course.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                            >
+                              🌐 Website
+                            </a>
+                            <a
+                              href={course.googleMaps}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+                            >
+                              📍 Directions
+                            </a>
+                          </div>
+                        </div>
+                        <p className="text-gray-700">{course.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
+
               {/* Amenities Section */}
               <section>
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
@@ -188,11 +283,6 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 </h2>
                 
                 <div className="space-y-6">
-                  <div className="border-l-4 border-blue-500 pl-4">
-                    <h3 className="font-bold text-gray-900 mb-2">🏖️ Beaches</h3>
-                    <p className="text-gray-700">{content.amenitiesSection.beaches}</p>
-                  </div>
-                  
                   <div className="border-l-4 border-orange-500 pl-4">
                     <h3 className="font-bold text-gray-900 mb-2">🍽️ Dining</h3>
                     <p className="text-gray-700">{content.amenitiesSection.dining}</p>
@@ -206,11 +296,35 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                   <div className="border-l-4 border-red-500 pl-4">
                     <h3 className="font-bold text-gray-900 mb-2">🏥 Healthcare</h3>
                     <p className="text-gray-700">{content.amenitiesSection.healthcare}</p>
+                    {externalLinks?.healthcare && (
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        <a
+                          href={externalLinks.healthcare.googleMaps}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-blue-600 hover:underline text-sm"
+                        >
+                          📍 {externalLinks.healthcare.name} ({externalLinks.healthcare.distance})
+                        </a>
+                      </div>
+                    )}
                   </div>
                   
                   <div className="border-l-4 border-green-500 pl-4">
                     <h3 className="font-bold text-gray-900 mb-2">✈️ Transport</h3>
                     <p className="text-gray-700">{content.amenitiesSection.transport}</p>
+                    {externalLinks?.airport && (
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        <a
+                          href={externalLinks.airport.googleMaps}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-blue-600 hover:underline text-sm"
+                        >
+                          📍 {externalLinks.airport.name} ({externalLinks.airport.distance}, {externalLinks.airport.driveTime})
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               </section>
@@ -365,7 +479,27 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       €{data.priceRange.min.toLocaleString()} - €{data.priceRange.max.toLocaleString()}
                     </p>
                   </div>
+                  {golf && (
+                    <div>
+                      <p className="text-sm text-gray-500">Golf Courses</p>
+                      <p className="font-bold text-gray-900">{golf.courses.length} nearby</p>
+                    </div>
+                  )}
                 </div>
+
+                {/* External Links */}
+                {externalLinks?.tourism && (
+                  <div className="mb-6 p-3 bg-gray-50 rounded-lg">
+                    <a
+                      href={externalLinks.tourism.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:underline font-medium text-sm"
+                    >
+                      🌐 Official {data.name} Tourism →
+                    </a>
+                  </div>
+                )}
 
                 {/* Contact Buttons */}
                 <div className="space-y-3">

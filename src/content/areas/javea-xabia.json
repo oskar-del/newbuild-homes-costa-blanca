@@ -1,333 +1,162 @@
 {
   "slug": "javea-xabia",
   "name": "Jávea / Xàbia",
-  "propertyCount": 29,
-  "propertyTypes": [
-    "Villa",
-    "Chalet"
-  ],
+  "propertyCount": 24,
+  "propertyTypes": ["Villa", "Chalet"],
   "priceRange": {
-    "min": 1285000,
-    "max": 2625000
+    "min": 695000,
+    "max": 3450000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Jávea Tourism Office",
+      "url": "https://www.javea.es/",
+      "description": "Official Jávea tourism website"
+    },
+    "beaches": [
+      {
+        "name": "Arenal Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+del+Arenal+Javea",
+        "description": "Main sandy beach with promenade"
+      },
+      {
+        "name": "La Granadella Beach",
+        "googleMaps": "https://maps.google.com/?q=Cala+Granadella+Javea",
+        "description": "Award-winning cove beach"
+      },
+      {
+        "name": "Portitxol Cove",
+        "googleMaps": "https://maps.google.com/?q=Cala+Portitxol+Javea",
+        "description": "Secluded rocky cove"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital de Dénia",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Denia",
+      "url": "https://marinasalud.es/",
+      "distance": "15 km"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "90 km",
+      "driveTime": "1 hour"
+    }
+  },
+  "golf": {
+    "intro": "Jávea offers excellent golf facilities, with two quality courses within easy reach. The Mediterranean climate means year-round playing conditions.",
+    "courses": [
+      {
+        "name": "Club de Golf Jávea",
+        "distance": "5 km",
+        "driveTime": "8 minutes",
+        "holes": 9,
+        "url": "https://www.clubdegolfjavea.com/",
+        "googleMaps": "https://maps.google.com/?q=Club+de+Golf+Javea",
+        "description": "Intimate 9-hole course with stunning views of Montgó mountain. Perfect for a relaxed round."
+      },
+      {
+        "name": "La Sella Golf Resort",
+        "distance": "15 km",
+        "driveTime": "18 minutes",
+        "holes": 27,
+        "url": "https://www.lasellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Sella+Golf+Denia",
+        "description": "Championship 27-hole course designed by José María Olazábal. Part of a luxury resort with hotel and spa."
+      }
+    ]
   },
   "content": {
-    "metaTitle": "Luxury Villas for Sale in Jávea Costa Blanca North Spain",
-    "metaDescription": "Discover premium villas in Jávea from €1.3M-€2.6M. Perfect Mediterranean lifestyle with stunning beaches, excellent amenities & vibrant expat community.",
-    "heroIntro": "Nestled between dramatic cliffs and pristine Mediterranean waters, Jávea (Xàbia in Valencian) stands as one of Costa Blanca North's most coveted destinations for luxury property investment. This enchanting coastal town in Alicante Province seamlessly blends traditional Spanish charm with sophisticated international appeal, offering an exceptional quality of life that attracts discerning buyers from across Europe.\n\nWith its unique microclimate, three distinct beaches, and protected natural surroundings within Montgó Natural Park, Jávea provides an exclusive retreat where luxury meets authenticity. The town's commitment to preserving its architectural heritage while embracing modern amenities creates an perfect environment for those seeking a premium Mediterranean lifestyle in one of Spain's most beautiful coastal settings.",
+    "metaTitle": "Living in Jávea (Xàbia) | Property Guide Costa Blanca",
+    "metaDescription": "Complete guide to living in Jávea, Costa Blanca. Discover beaches, lifestyle, property market, golf courses and why international buyers choose Jávea.",
+    "heroIntro": "Jávea (Xàbia in Valencian) is widely considered the jewel of Costa Blanca North. This picturesque coastal town combines authentic Spanish character with a thriving international community, world-class beaches, and a microclimate that's been officially recognized as one of the healthiest in the world by the World Health Organization.\n\nUnlike the high-rise developments of the southern Costa Blanca, Jávea has maintained strict building regulations that preserve its traditional character. The town is divided into three distinct areas: the historic old town with its Gothic church and traditional architecture, the bustling port area with excellent seafood restaurants, and the Arenal beach zone with its famous sandy beach and promenade.",
     "lifestyleSection": {
-      "intro": "Life in Jávea embodies the quintessential Mediterranean dream, where days begin with sunrise yoga on pristine beaches and evenings unfold in charming tapas bars overlooking the azure sea. The town's unique geography creates distinct microclimates and diverse landscapes, from the historic old town with its narrow cobbled streets to the modern port area bustling with restaurants and the peaceful Arenal beach district perfect for family life.\n\nThe international community thrives here year-round, creating a cosmopolitan atmosphere while respecting local traditions. Weekly markets showcase fresh local produce, while cultural events blend Spanish festivals with international celebrations. The pace of life encourages outdoor living, with hiking trails through Montgó Natural Park, world-class sailing conditions, and golf courses just minutes away.",
+      "intro": "Life in Jávea moves at a relaxed Mediterranean pace, yet offers everything you need for comfortable modern living. The town attracts a discerning international community—predominantly British, German, and Dutch—who appreciate quality of life over tourist-focused development.\n\nThe culinary scene is exceptional, from traditional tapas bars in the old town to Michelin-quality restaurants along the port. Weekly markets, year-round festivals, and an active social calendar mean there's always something happening.",
       "highlights": [
-        "Year-round sailing and water sports in crystal-clear Mediterranean waters",
-        "Hiking and cycling through UNESCO-protected Montgó Natural Park",
-        "Vibrant weekly markets featuring local artisans and fresh produce",
-        "Championship golf courses within 15 minutes drive",
-        "Rich cultural calendar blending Spanish traditions with international events",
-        "Exceptional gastronomy scene from Michelin-starred dining to authentic tapas",
-        "Strong international community with excellent networking opportunities",
-        "Premium wellness facilities including spas and fitness centers"
+        "WHO-recognized microclimate with 300+ sunny days annually",
+        "Three distinct zones: Old Town, Port, and Arenal Beach",
+        "Strong international community with English widely spoken",
+        "Excellent restaurants from tapas bars to fine dining",
+        "Year-round cultural events and traditional festivals",
+        "Low-rise development preserving natural beauty",
+        "Safe, family-friendly environment",
+        "Active outdoor lifestyle: hiking, water sports, cycling"
       ]
     },
     "amenitiesSection": {
-      "beaches": "Jávea boasts three distinctly different beaches, each offering unique experiences. The expansive sandy Arenal Beach provides family-friendly facilities with beachfront restaurants and water sports, while the pebbly Granadella Beach, consistently ranked among Spain's most beautiful, offers pristine waters perfect for snorkeling in a more secluded setting. The Port area features a small beach alongside the bustling marina, creating a sophisticated atmosphere ideal for evening strolls and waterfront dining.",
-      "dining": "The culinary scene in Jávea reflects its sophisticated international community while celebrating local Valencian traditions. From Michelin-starred establishments to authentic family-run tapas bars, the town offers exceptional dining experiences. The port area buzzes with cosmopolitan restaurants serving international cuisine, while the old town preserves traditional Spanish dining culture. Local specialties include fresh seafood, paella valenciana, and regional wines from nearby Alicante vineyards.",
-      "shopping": "Shopping in Jávea ranges from charming local boutiques in the historic center to modern amenities in nearby shopping centers. The weekly Thursday market in the old town offers fresh produce, artisanal goods, and local crafts. For comprehensive shopping needs, La Marina Shopping Center and major retail parks in nearby Denia provide international brands and services. Specialty shops throughout town cater to the international community with imported goods and luxury items.",
-      "healthcare": "Healthcare facilities in Jávea meet international standards with both public and private options available. The local Centro de Salud provides comprehensive primary care, while private clinics offer specialized services often with multilingual staff. The regional Hospital de Denia, just 15 minutes away, provides full medical services including emergency care. Many healthcare professionals speak multiple languages, catering to the large expat population with European health insurance accepted widely.",
-      "transport": "Jávea enjoys excellent connectivity with Alicante Airport just 90 minutes away offering flights across Europe and beyond. Valencia Airport, 90 kilometers north, provides additional international connections. Local transport includes regular bus services connecting the town's three main areas, while the coastal road provides scenic drives to neighboring towns. The AP-7 autopista offers quick access to major cities, and plans for improved rail connections continue to enhance accessibility."
+      "beaches": "Jávea boasts over 20 km of coastline with diverse beach options. The Arenal is the main sandy beach with a palm-lined promenade, perfect for families. La Granadella has been voted Spain's best beach multiple times—a stunning cove with crystal-clear waters. For something quieter, hidden coves like Portitxol and Ambolo offer secluded swimming spots.",
+      "dining": "The port area is the culinary heart of Jávea, with restaurants serving fresh-caught seafood daily. Try arroz a banda (local fish rice) or gambas rojas (red prawns) at waterfront terraces. The old town offers traditional Spanish tapas, while Arenal has international cuisine. Several restaurants hold Michelin recommendations.",
+      "shopping": "The old town features boutique shops, artisan stores, and the covered market hall for fresh produce. Arenal has beachwear shops and cafés. For larger shopping, Dénia (15 min) and Ondara (20 min) have major supermarkets and retail parks including a large Carrefour and MediaMarkt.",
+      "healthcare": "Hospital de Dénia (Marina Salud) is a modern private-public hospital just 15 km away, offering comprehensive medical services with English-speaking staff. Jávea has numerous private clinics, dentists, and pharmacies. Many residents also use private health insurance for faster access to specialists.",
+      "transport": "Alicante-Elche Airport is 90 km (approximately 1 hour) via the AP-7 motorway. Valencia Airport is 110 km (1 hour 15 minutes). The town is well-connected by road, though having a car is essential. Local buses connect to Dénia, which has a tram line to Alicante."
     },
-    "propertyMarketSection": "The luxury property market in Jávea represents one of Costa Blanca North's most exclusive segments, with current new-build villas ranging from €1,285,000 to €2,625,000. This premium price range reflects the area's exceptional desirability, limited development opportunities due to protected natural surroundings, and consistently strong international demand. Properties at this level typically feature cutting-edge design, prime locations with sea views, and luxury amenities including infinity pools, smart home technology, and landscaped gardens.\n\nMarket dynamics remain robust despite global economic fluctuations, driven by Jávea's reputation as a premium destination and its appeal to affluent Northern European buyers seeking permanent or second homes. The limited supply of buildable land, strict planning regulations preserving the area's natural beauty, and growing demand from international buyers seeking luxury Mediterranean properties continue to support strong capital appreciation potential. Investment prospects remain particularly attractive given the combination of lifestyle benefits, rental income potential, and long-term capital growth in this established luxury market.",
+    "propertyMarketSection": "The Jávea property market focuses on quality over quantity. New build developments are limited due to strict planning regulations, making each project highly sought after. Most new builds are luxury villas in elevated positions with sea views.\n\nPrices for new build villas typically start around €700,000 for 3-bedroom properties, rising to €2-3 million for premium sea-view villas. The market attracts buyers seeking permanent homes or high-end holiday properties rather than pure investment.\n\nThe limited supply of new builds, combined with consistent international demand, has resulted in steady price appreciation. Properties in the sought-after Balcón al Mar and La Corona areas command premium prices for their panoramic sea views.",
     "whyLiveHereSection": [
-      "Exclusive location with protected natural surroundings limiting overdevelopment",
-      "Exceptional climate with over 300 days of sunshine annually",
-      "Three diverse beaches offering varied coastal experiences",
-      "Strong international community creating global networking opportunities",
-      "Premium dining and entertainment options year-round",
-      "Excellent healthcare facilities with multilingual services",
-      "Outstanding natural beauty with hiking trails and marine reserves",
-      "Strategic location for exploring Valencia, Alicante, and Mediterranean islands"
+      "Microclimate officially recognized as one of the healthiest in the world",
+      "Sophisticated international community without mass tourism",
+      "Exceptional beaches including award-winning La Granadella",
+      "Strong property values due to limited new development",
+      "Year-round outdoor lifestyle with hiking, golf, and water sports",
+      "Excellent gastronomy from traditional Spanish to international fine dining",
+      "Safe, well-maintained town with quality infrastructure",
+      "Preserved natural beauty with Montgó Natural Park as backdrop"
     ],
     "faqs": [
       {
-        "question": "What is the cost of living like in Jávea compared to Northern Europe?",
-        "answer": "Living costs in Jávea are generally 20-30% lower than Northern European cities, with significant savings on dining, entertainment, and services. However, imported goods and some utilities may cost more, while local produce, healthcare, and property maintenance remain very affordable."
+        "question": "Is Jávea good for families?",
+        "answer": "Jávea is excellent for families. It's a safe, clean town with good schools (including international options in nearby towns), family-friendly beaches, and plenty of outdoor activities. The international community means children easily integrate, and many facilities cater to families."
       },
       {
-        "question": "How large and active is the expat community in Jávea?",
-        "answer": "Jávea has one of Costa Blanca's most established international communities, with approximately 50% foreign residents. Active expat groups, international clubs, and English-speaking services create a welcoming environment while maintaining authentic Spanish character."
+        "question": "Do I need to speak Spanish in Jávea?",
+        "answer": "While Spanish is helpful, you can manage well with English. The large international community means English is widely spoken in shops, restaurants, and services. However, learning some Spanish will enrich your experience and help with official matters."
       },
       {
-        "question": "What makes Jávea's climate special compared to other Costa Blanca locations?",
-        "answer": "Jávea enjoys a unique microclimate protected by surrounding mountains, resulting in milder winters and cooler summers than inland areas. The town receives over 300 days of sunshine annually with minimal rainfall, creating ideal conditions year-round."
+        "question": "What is the climate like in Jávea?",
+        "answer": "Jávea enjoys a Mediterranean microclimate with over 300 sunny days per year. Summers are warm (25-32°C) with sea breezes, while winters are mild (12-18°C). Rainfall is low and mainly occurs in autumn. The WHO has recognized this microclimate as one of the healthiest in the world."
       },
       {
-        "question": "How safe is Jávea for international residents and property owners?",
-        "answer": "Jávea maintains excellent safety standards with low crime rates typical of Spanish coastal towns. The local police force includes officers who speak multiple languages, and the strong expat community creates additional security networks for residents."
+        "question": "How far is Jávea from the airport?",
+        "answer": "Alicante-Elche Airport is 90 km from Jávea, approximately 1 hour by car via the AP-7 motorway. Valencia Airport is 110 km, about 1 hour 15 minutes. Both airports have excellent international connections."
       },
       {
-        "question": "What healthcare options are available for international residents?",
-        "answer": "Both public and private healthcare systems serve international residents, with many professionals speaking English and other European languages. European health cards are widely accepted, and private insurance provides access to premium facilities including the regional hospital in nearby Denia."
+        "question": "Are there golf courses near Jávea?",
+        "answer": "Yes, Jávea has excellent golf access. Club de Golf Jávea is a scenic 9-hole course just 5 km from town. La Sella Golf Resort, designed by Olazábal, offers 27 championship holes and is only 15 km away. Both courses welcome visitors year-round."
       },
       {
-        "question": "Is it necessary to speak Spanish to live comfortably in Jávea?",
-        "answer": "While Spanish is beneficial for deeper cultural integration, many services, businesses, and healthcare facilities operate in English and other European languages due to the large international community. However, learning Spanish enhances the living experience significantly."
+        "question": "What healthcare is available?",
+        "answer": "Hospital de Dénia is a modern hospital 15 km away with English-speaking staff. Jávea has private medical clinics, dentists, and pharmacies. Many expats use private health insurance (around €100-200/month) for comprehensive coverage."
       },
       {
-        "question": "How do current property prices in Jávea compare to recent years?",
-        "answer": "Luxury property prices in Jávea have shown steady growth, with new-build villas now ranging €1.3M-€2.6M. Limited supply due to protected land status and strong international demand continue supporting price appreciation in the premium segment."
+        "question": "Is Jávea expensive to live in?",
+        "answer": "Jávea is one of the more upmarket areas of Costa Blanca, reflected in property prices and some services. However, daily living costs—groceries, restaurants, utilities—are reasonable compared to Northern Europe. Budget €2,000-3,000/month for a comfortable lifestyle for a couple."
       },
       {
-        "question": "What is the rental potential for luxury properties in Jávea?",
-        "answer": "High-end properties in Jávea command premium rental rates, especially during peak season and for holiday rentals. Annual rental yields typically range 4-6% for luxury properties, with higher returns possible through short-term vacation rentals, though local regulations should be considered."
-      },
-      {
-        "question": "What are the main property taxes and ongoing costs for villa owners?",
-        "answer": "Annual property taxes (IBI) typically range 0.5-1.1% of cadastral value, which is usually below market value. Additional costs include community fees for gated developments, insurance, utilities, and maintenance. Professional property management services are readily available."
-      },
-      {
-        "question": "How easy is it to obtain residency status when buying property in Jávea?",
-        "answer": "Property purchase doesn't automatically grant residency, but Spain offers various visa options including the Golden Visa for investments over €500,000. EU citizens have freedom of movement, while non-EU buyers should consult legal professionals for residency requirements and tax implications."
+        "question": "What are property prices in Jávea?",
+        "answer": "New build villas in Jávea typically start from €700,000 for 3-bedroom properties and can exceed €3 million for premium sea-view homes. The limited supply of new developments and consistent demand have maintained strong property values."
       }
     ],
-    "conclusion": "Jávea represents the pinnacle of Mediterranean luxury living, where exceptional natural beauty meets sophisticated international lifestyle. With premium new-build villas offering unparalleled quality and location, this is your opportunity to secure a prestigious property in one of Costa Blanca North's most exclusive destinations. Contact our expert team today to discover your perfect luxury villa in this extraordinary coastal paradise."
+    "conclusion": "Jávea represents the best of Costa Blanca North—natural beauty, authentic character, and sophisticated living without the crowds. Whether you're seeking a permanent home in the Spanish sun or a high-quality holiday property, Jávea delivers an exceptional lifestyle. Contact us today to explore available new build villas in this sought-after location."
   },
   "developments": [
     {
       "name": "Villa Elysia",
       "slug": "villa-elysia",
       "propertyType": "Villa",
-      "price": 1285000,
+      "price": 1650000,
       "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P26774897/Tphoto/ID718d9801-0000-0500-0000-00001691e312.jpg"
-    },
-    {
-      "name": "Chalet MIR0089",
-      "slug": "chalet-mir0089",
-      "propertyType": "Chalet",
-      "price": 1550000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P12531490/Tphoto/ID2237bf00-0000-0500-0000-000006ca468d.jpg"
-    },
-    {
-      "name": "Villa Chloe",
-      "slug": "villa-chloe",
-      "propertyType": "Chalet",
-      "price": 1285000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P12459959/Tphoto/IDb71fbe00-0000-0500-0000-00000a41eeb2.jpg"
-    },
-    {
-      "name": "Villa SIROCCO",
-      "slug": "villa-sirocco",
-      "propertyType": "Villa",
-      "price": 2395000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P26911610/Tphoto/ID7aa39a01-0000-0500-0000-000015801e9f.jpg"
-    },
-    {
-      "name": "Villa MIR0156",
-      "slug": "villa-mir0156",
-      "propertyType": "Villa",
-      "price": 1995000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P25133282/Tphoto/IDe2807f01-0000-0500-0000-0000136cd842.jpg"
-    },
-    {
-      "name": "Villa MIR0157",
-      "slug": "villa-mir0157",
-      "propertyType": "Villa",
-      "price": 2625000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P25436399/Tphoto/IDef208401-0000-0500-0000-000014015ba8.jpg"
-    },
-    {
-      "name": "Villa MIR0160",
-      "slug": "villa-mir0160",
-      "propertyType": "Villa",
-      "price": 1915000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P26042538/Tphoto/IDaa608d01-0000-0500-0000-000014917202.jpg"
-    },
-    {
-      "name": "Villa MIR0159",
-      "slug": "villa-mir0159",
-      "propertyType": "Villa",
-      "price": 2565000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P26042307/Tphoto/IDc35f8d01-0000-0500-0000-00001491f312.jpg"
-    },
-    {
-      "name": "VILLA LAUREL",
-      "slug": "villa-laurel",
-      "propertyType": "Villa",
-      "price": 1975000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P27224146/Tphoto/ID52689f01-0000-0500-0000-000015e4ec11.jpg"
-    },
-    {
-      "name": "Villa Thalassa",
-      "slug": "villa-thalassa",
-      "propertyType": "Villa",
-      "price": 2095000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P27503394/Tphoto/ID22aba301-0000-0500-0000-0000165df8a0.jpg"
-    },
-    {
-      "name": "Chalet MIR0054",
-      "slug": "chalet-mir0054",
-      "propertyType": "Chalet",
-      "price": null,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P12545686/Tphoto/ID966ebf00-0000-0500-0000-000006cd6abb.jpg"
-    },
-    {
-      "name": "Villa MIR0144",
-      "slug": "villa-mir0144",
-      "propertyType": "Villa",
-      "price": 1425000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24237404/Tphoto/ID5cd57101-0000-0500-0000-000011fc785c.jpg"
-    },
-    {
-      "name": "Chalet MIR0124",
-      "slug": "chalet-mir0124",
-      "propertyType": "Chalet",
-      "price": 1425000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P22235136/Tphoto/ID00485301-0000-0500-0000-000013406522.jpg"
-    },
-    {
-      "name": "Villa MIR0151",
-      "slug": "villa-mir0151",
-      "propertyType": "Villa",
-      "price": 1285000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24899709/Tphoto/ID7df07b01-0000-0500-0000-00001305ecdb.jpg"
-    },
-    {
-      "name": "Villa Aquiles",
-      "slug": "villa-aquiles",
-      "propertyType": "Chalet",
-      "price": 1425000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P22475439/Tphoto/IDaff25601-0000-0500-0000-00000f903f15.jpg"
-    },
-    {
-      "name": "Chalet MIR0106",
-      "slug": "chalet-mir0106",
-      "propertyType": "Chalet",
-      "price": 1425000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P22917828/Tphoto/IDc4b25d01-0000-0500-0000-000010224b28.jpg"
-    },
-    {
-      "name": "Chalet MIR0133",
-      "slug": "chalet-mir0133",
-      "propertyType": "Chalet",
-      "price": 1550000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P22835082/Tphoto/ID8a6f5c01-0000-0500-0000-0000143c4088.jpg"
-    },
-    {
-      "name": "Villa MIR0153",
-      "slug": "villa-mir0153",
-      "propertyType": "Villa",
-      "price": 1285000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24924809/Tphoto/ID89527c01-0000-0500-0000-000013117ccf.jpg"
-    },
-    {
-      "name": "Villa MIR0149",
-      "slug": "villa-mir0149",
-      "propertyType": "Villa",
-      "price": 1285000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24755803/Tphoto/ID5bbe7901-0000-0500-0000-000017bc9b00.jpg"
-    },
-    {
-      "name": "VILLA MOMENTUM",
-      "slug": "villa-momentum",
-      "propertyType": "Villa",
-      "price": 1425000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24085106/Tphoto/ID72826f01-0000-0500-0000-00001365ce15.jpg"
-    },
-    {
-      "name": "Villa Posidonia",
-      "slug": "villa-posidonia",
-      "propertyType": "Villa",
-      "price": 1425000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P26067322/Tphoto/ID7ac18d01-0000-0500-0000-000014998faa.jpg"
-    },
-    {
-      "name": "Villa Scorpio",
-      "slug": "villa-scorpio",
-      "propertyType": "Villa",
-      "price": 1285000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24823582/Tphoto/ID1ec77a01-0000-0500-0000-000012e5b08a.jpg"
-    },
-    {
-      "name": "Villa MIR0155",
-      "slug": "villa-mir0155",
-      "propertyType": "Villa",
-      "price": 1285000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24964229/Tphoto/ID85ec7c01-0000-0500-0000-00001321c8aa.jpg"
-    },
-    {
-      "name": "Villa MIR0147",
-      "slug": "villa-mir0147",
-      "propertyType": "Villa",
-      "price": 1285000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24681639/Tphoto/IDa79c7801-0000-0500-0000-00001298fb68.jpg"
-    },
-    {
-      "name": "Villa IDILIC",
-      "slug": "villa-idilic",
-      "propertyType": "Villa",
-      "price": 1550000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P27169969/Tphoto/IDb1949e01-0000-0500-0000-000015e4de4b.jpg"
-    },
-    {
-      "name": "Villa Lotus",
-      "slug": "villa-lotus",
-      "propertyType": "Villa",
-      "price": 1550000,
-      "bedrooms": 3,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P25045092/Tphoto/ID64287e01-0000-0500-0000-00001341697d.jpg"
-    },
-    {
-      "name": "Villa Odon",
-      "slug": "villa-odon",
-      "propertyType": "Villa",
-      "price": 1390000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P23514910/Tphoto/ID1ecf6601-0000-0500-0000-000010e902de.jpg"
-    },
-    {
-      "name": "Villa Atlantis",
-      "slug": "villa-atlantis",
-      "propertyType": "Villa",
-      "price": 1550000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24634445/Tphoto/ID4de47701-0000-0500-0000-000012878c5b.jpg"
-    },
-    {
-      "name": "Villa Aurea",
-      "slug": "villa-aurea",
-      "propertyType": "Villa",
-      "price": 1550000,
-      "bedrooms": 4,
-      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24363328/Tphoto/ID40c17301-0000-0500-0000-000012263501.jpg"
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P26774897/Tphoto/0006340992.jpg"
     }
   ],
   "schema": {
     "@context": "https://schema.org",
-    "@type": "Place",
-    "name": "Jávea / Xàbia",
-    "description": "Discover premium villas in Jávea from €1.3M-€2.6M. Perfect Mediterranean lifestyle with stunning beaches, excellent amenities & vibrant expat community."
+    "@type": "Article",
+    "headline": "Living in Jávea (Xàbia) | Complete Property Guide",
+    "description": "Complete guide to living in Jávea, Costa Blanca. Discover beaches, lifestyle, property market, golf courses and why international buyers choose Jávea.",
+    "author": {
+      "@type": "Organization",
+      "name": "New Build Homes Costa Blanca"
+    }
   },
   "schemaFAQ": {
     "@context": "https://schema.org",
@@ -335,82 +164,26 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is the cost of living like in Jávea compared to Northern Europe?",
+        "name": "Is Jávea good for families?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Living costs in Jávea are generally 20-30% lower than Northern European cities, with significant savings on dining, entertainment, and services. However, imported goods and some utilities may cost more, while local produce, healthcare, and property maintenance remain very affordable."
+          "text": "Jávea is excellent for families. It's a safe, clean town with good schools, family-friendly beaches, and plenty of outdoor activities."
         }
       },
       {
         "@type": "Question",
-        "name": "How large and active is the expat community in Jávea?",
+        "name": "Are there golf courses near Jávea?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Jávea has one of Costa Blanca's most established international communities, with approximately 50% foreign residents. Active expat groups, international clubs, and English-speaking services create a welcoming environment while maintaining authentic Spanish character."
+          "text": "Yes, Club de Golf Jávea is a scenic 9-hole course just 5 km from town. La Sella Golf Resort offers 27 championship holes and is only 15 km away."
         }
       },
       {
         "@type": "Question",
-        "name": "What makes Jávea's climate special compared to other Costa Blanca locations?",
+        "name": "How far is Jávea from the airport?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Jávea enjoys a unique microclimate protected by surrounding mountains, resulting in milder winters and cooler summers than inland areas. The town receives over 300 days of sunshine annually with minimal rainfall, creating ideal conditions year-round."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How safe is Jávea for international residents and property owners?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Jávea maintains excellent safety standards with low crime rates typical of Spanish coastal towns. The local police force includes officers who speak multiple languages, and the strong expat community creates additional security networks for residents."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What healthcare options are available for international residents?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Both public and private healthcare systems serve international residents, with many professionals speaking English and other European languages. European health cards are widely accepted, and private insurance provides access to premium facilities including the regional hospital in nearby Denia."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is it necessary to speak Spanish to live comfortably in Jávea?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "While Spanish is beneficial for deeper cultural integration, many services, businesses, and healthcare facilities operate in English and other European languages due to the large international community. However, learning Spanish enhances the living experience significantly."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do current property prices in Jávea compare to recent years?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Luxury property prices in Jávea have shown steady growth, with new-build villas now ranging €1.3M-€2.6M. Limited supply due to protected land status and strong international demand continue supporting price appreciation in the premium segment."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the rental potential for luxury properties in Jávea?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "High-end properties in Jávea command premium rental rates, especially during peak season and for holiday rentals. Annual rental yields typically range 4-6% for luxury properties, with higher returns possible through short-term vacation rentals, though local regulations should be considered."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the main property taxes and ongoing costs for villa owners?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Annual property taxes (IBI) typically range 0.5-1.1% of cadastral value, which is usually below market value. Additional costs include community fees for gated developments, insurance, utilities, and maintenance. Professional property management services are readily available."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How easy is it to obtain residency status when buying property in Jávea?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Property purchase doesn't automatically grant residency, but Spain offers various visa options including the Golden Visa for investments over €500,000. EU citizens have freedom of movement, while non-EU buyers should consult legal professionals for residency requirements and tax implications."
+          "text": "Alicante-Elche Airport is 90 km from Jávea, approximately 1 hour by car. Valencia Airport is 110 km, about 1 hour 15 minutes."
         }
       }
     ]

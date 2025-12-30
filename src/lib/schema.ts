@@ -1,226 +1,147 @@
-// Schema generators for all page types
-// Following BUILD_RULES.md specifications
+// Schema.org structured data generators
 
-const SITE_URL = 'https://newbuildhomescostablanca.com';
-const COMPANY = {
-  name: 'New Build Homes Costa Blanca',
-  phone: '+34634044970',
-  email: 'oskar@hanssonhertzell.com',
-  whatsapp: 'https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0',
-};
+export function toJsonLd(schema: object): string {
+  return JSON.stringify(schema);
+}
 
 export function organizationSchema() {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'RealEstateAgent',
-    name: COMPANY.name,
-    url: SITE_URL,
-    telephone: COMPANY.phone,
-    email: COMPANY.email,
-    areaServed: ['Costa Blanca', 'Alicante', 'Torrevieja', 'Orihuela Costa', 'Javea', 'Altea'],
-    priceRange: '€€€',
-    parentOrganization: {
-      '@type': 'RealEstateAgent',
-      name: 'Hansson & Hertzell',
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "New Build Homes Costa Blanca",
+    "url": "https://newbuildhomescostablanca.com",
+    "telephone": "+34634044970",
+    "email": "oskar@hanssonhertzell.com",
+    "description": "Specialist new build property agency in Costa Blanca, Spain. Helping international buyers find their perfect home.",
+    "priceRange": "€€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Canonigo Torres 8",
+      "addressLocality": "Torrevieja",
+      "addressRegion": "Alicante",
+      "postalCode": "03181",
+      "addressCountry": "ES"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.9786",
+      "longitude": "-0.6823"
+    },
+    "areaServed": [
+      {
+        "@type": "Place",
+        "name": "Costa Blanca"
+      },
+      {
+        "@type": "Place",
+        "name": "Jávea"
+      },
+      {
+        "@type": "Place",
+        "name": "Moraira"
+      },
+      {
+        "@type": "Place",
+        "name": "Torrevieja"
+      },
+      {
+        "@type": "Place",
+        "name": "Orihuela Costa"
+      },
+      {
+        "@type": "Place",
+        "name": "Alicante"
+      }
+    ],
+    "parentOrganization": {
+      "@type": "RealEstateAgent",
+      "name": "Hansson & Hertzell",
+      "url": "https://hanssonhertzell.se",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Canonigo Torres 8",
+        "addressLocality": "Torrevieja",
+        "addressRegion": "Alicante",
+        "postalCode": "03181",
+        "addressCountry": "ES"
+      }
+    },
+    "sameAs": [
+      "https://hanssonhertzell.se"
+    ]
   };
 }
 
-export function breadcrumbSchema(items: { name: string; url: string }[]) {
+export function productSchema(property: {
+  name: string;
+  description: string;
+  price: number | null;
+  images: string[];
+  url: string;
+  address: { town: string; region?: string };
+}) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.name,
-      item: `${SITE_URL}${item.url}`,
-    })),
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": property.name,
+    "description": property.description,
+    "image": property.images,
+    "url": property.url,
+    "offers": property.price ? {
+      "@type": "Offer",
+      "price": property.price,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    } : undefined,
+    "brand": {
+      "@type": "Organization",
+      "name": "New Build Homes Costa Blanca"
+    }
   };
 }
 
 export function faqSchema(faqs: { question: string; answer: string }[]) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map(faq => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
-    })),
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
   };
 }
 
-export function developmentSchema(dev: {
-  name: string;
-  slug: string;
-  description: string;
-  town: string;
-  lat?: number;
-  lng?: number;
-  totalUnits?: number;
-  amenities?: string[];
-  priceFrom?: number;
-}) {
+export function breadcrumbSchema(items: { name: string; url: string }[]) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'ApartmentComplex',
-    name: dev.name,
-    description: dev.description,
-    url: `${SITE_URL}/developments/${dev.slug}`,
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: dev.town,
-      addressRegion: 'Alicante',
-      addressCountry: 'ES',
-    },
-    geo: dev.lat && dev.lng ? {
-      '@type': 'GeoCoordinates',
-      latitude: dev.lat,
-      longitude: dev.lng,
-    } : undefined,
-    numberOfAccommodationUnits: dev.totalUnits,
-    amenityFeature: dev.amenities?.map(a => ({
-      '@type': 'LocationFeatureSpecification',
-      name: a,
-    })),
-  };
-}
-
-export function listingSchema(listing: {
-  name: string;
-  slug: string;
-  bedrooms?: number;
-  bathrooms?: number;
-  size?: number;
-  price?: number;
-  availability?: 'PreSale' | 'InStock';
-}) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'RealEstateListing',
-    name: listing.name,
-    url: `${SITE_URL}/developments/${listing.slug}`,
-    datePosted: new Date().toISOString().split('T')[0],
-    mainEntity: {
-      '@type': 'Apartment',
-      name: listing.name,
-      numberOfBedrooms: listing.bedrooms,
-      numberOfBathroomsTotal: listing.bathrooms,
-      floorSize: listing.size ? {
-        '@type': 'QuantitativeValue',
-        value: listing.size,
-        unitCode: 'MTK',
-      } : undefined,
-      offers: {
-        '@type': 'Offer',
-        availability: `https://schema.org/${listing.availability || 'PreSale'}`,
-        priceCurrency: 'EUR',
-        price: listing.price,
-        seller: {
-          '@type': 'RealEstateAgent',
-          name: COMPANY.name,
-          telephone: COMPANY.phone,
-        },
-      },
-    },
-    potentialAction: {
-      '@type': 'ScheduleAction',
-      name: 'Book Viewing',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: COMPANY.whatsapp,
-        actionPlatform: [
-          'http://schema.org/DesktopWebPlatform',
-          'http://schema.org/MobileWebPlatform',
-        ],
-      },
-    },
-  };
-}
-
-export function builderSchema(builder: {
-  name: string;
-  slug: string;
-  description: string;
-  developmentCount: number;
-}) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: builder.name,
-    description: builder.description,
-    url: `${SITE_URL}/builders/${builder.slug}`,
-    numberOfEmployees: undefined,
-    makesOffer: {
-      '@type': 'Offer',
-      itemOffered: {
-        '@type': 'Product',
-        name: 'New Build Properties',
-        description: `${builder.developmentCount} developments in Costa Blanca`,
-      },
-    },
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url
+    }))
   };
 }
 
 export function areaSchema(area: {
   name: string;
-  slug: string;
   description: string;
-  lat?: number;
-  lng?: number;
+  url: string;
 }) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Place',
-    name: area.name,
-    description: area.description,
-    url: `${SITE_URL}/areas/${area.slug}`,
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: area.name,
-      addressRegion: 'Alicante',
-      addressCountry: 'ES',
-    },
-    geo: area.lat && area.lng ? {
-      '@type': 'GeoCoordinates',
-      latitude: area.lat,
-      longitude: area.lng,
-    } : undefined,
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": area.name,
+    "description": area.description,
+    "url": area.url,
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca, Spain"
+    }
   };
-}
-
-export function golfCourseSchema(course: {
-  name: string;
-  slug: string;
-  description: string;
-  town: string;
-  lat?: number;
-  lng?: number;
-}) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'GolfCourse',
-    name: course.name,
-    description: course.description,
-    url: `${SITE_URL}/golf/${course.slug}`,
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: course.town,
-      addressCountry: 'ES',
-    },
-    geo: course.lat && course.lng ? {
-      '@type': 'GeoCoordinates',
-      latitude: course.lat,
-      longitude: course.lng,
-    } : undefined,
-  };
-}
-
-// Helper to render schema as JSON-LD script tag content
-export function toJsonLd(schema: object | object[]): string {
-  return JSON.stringify(Array.isArray(schema) ? schema : schema, null, 0);
 }
