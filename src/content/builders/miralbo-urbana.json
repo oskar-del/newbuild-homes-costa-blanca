@@ -1,0 +1,426 @@
+{
+  "slug": "miralbo-urbana",
+  "name": "Miralbo Urbana",
+  "towns": [
+    "Jávea / Xàbia",
+    "Moraira"
+  ],
+  "propertyTypes": [
+    "Villa",
+    "Chalet"
+  ],
+  "propertyCount": 30,
+  "priceRange": {
+    "min": 1285000,
+    "max": 2625000
+  },
+  "content": {
+    "metaTitle": "Miralbo Urbana - Premium Villa Developer Costa Blanca Spain",
+    "metaDescription": "Miralbo Urbana creates luxury villas & chalets in Jávea and Moraira, Costa Blanca. 30 current projects from €1.28M-€2.63M. Expert Spanish property developers.",
+    "heroIntro": "Miralbo Urbana stands as one of Costa Blanca's most distinguished property developers, specializing in creating exceptional luxury villas and chalets in the prestigious locations of Jávea (Xàbia) and Moraira. With an impressive portfolio of 30 current projects, we have established ourselves as the premier choice for discerning clients seeking premium Mediterranean properties.\n\nOur commitment to architectural excellence and superior craftsmanship has positioned us at the forefront of Spanish luxury property development. Each Miralbo Urbana residence represents the perfect fusion of contemporary design, traditional Mediterranean charm, and cutting-edge construction techniques, delivering properties that exceed the expectations of the most sophisticated international buyers.",
+    "aboutSection": "Founded with a vision to redefine luxury living on the Costa Blanca, Miralbo Urbana has built a reputation for creating homes that seamlessly blend elegance, functionality, and the coveted Mediterranean lifestyle. Our deep understanding of the local landscape, combined with years of experience in high-end construction, enables us to identify and develop the most desirable locations in Jávea and Moraira.\n\nOur diverse portfolio showcases our versatility and expertise, with properties ranging from €1,285,000 to €2,625,000, each designed to cater to the unique preferences of our international clientele. We pride ourselves on our personalized approach, working closely with each client to ensure their vision becomes reality while maintaining our unwavering standards of quality and design excellence.\n\nAt Miralbo Urbana, we don't just build houses; we create lifestyle destinations. Our properties are strategically positioned to take advantage of the Costa Blanca's year-round sunshine, stunning coastal views, and proximity to world-class amenities, making them perfect for both permanent residence and luxury vacation homes.",
+    "qualitySection": {
+      "intro": "Quality is the cornerstone of every Miralbo Urbana project. We employ only the finest materials, latest construction technologies, and work with carefully selected craftsmen who share our commitment to excellence. Our rigorous quality control processes ensure that every villa and chalet meets the highest international standards while incorporating the best of Mediterranean architectural traditions.",
+      "standards": [
+        "Premium materials sourced from leading European suppliers",
+        "Advanced insulation and energy-efficient systems for year-round comfort",
+        "High-end finishes including natural stone, premium ceramics, and designer fixtures",
+        "State-of-the-art home automation and security systems",
+        "Professional landscape design with drought-resistant Mediterranean gardens",
+        "Comprehensive quality inspections at every construction phase"
+      ]
+    },
+    "whyChooseSection": [
+      "Proven track record with 30 active luxury projects across Costa Blanca's most desirable locations",
+      "Extensive local expertise in Jávea and Moraira property markets and regulations",
+      "Personalized service with dedicated project managers for each development",
+      "Transparent pricing with no hidden costs, ranging from €1.28M to €2.63M",
+      "Sustainable construction practices using eco-friendly materials and energy-efficient technologies",
+      "Comprehensive after-sales support and property management services available"
+    ],
+    "faqs": [
+      {
+        "question": "How many years of experience does Miralbo Urbana have in luxury property development?",
+        "answer": "Miralbo Urbana has extensive experience in Costa Blanca luxury property development, with a proven track record of delivering high-end villas and chalets. Our team combines decades of collective experience in Spanish construction, local regulations, and international client service."
+      },
+      {
+        "question": "What warranty coverage do you provide on your properties?",
+        "answer": "We provide comprehensive warranty coverage including a 10-year structural warranty, 2-year warranty on installations and finishes, and 1-year warranty on appliances and fixtures. Our after-sales service team ensures prompt resolution of any issues during the warranty period."
+      },
+      {
+        "question": "What types of properties does Miralbo Urbana specialize in?",
+        "answer": "We specialize exclusively in luxury villas and chalets, primarily featuring 4-bedroom configurations. Our properties are designed for discerning clients seeking premium Mediterranean homes with modern amenities, private pools, and exceptional finishes."
+      },
+      {
+        "question": "Can I visit and view properties during construction?",
+        "answer": "Absolutely! We encourage client visits during construction and provide regular progress updates. Our project managers can arrange site visits at convenient times, and we also offer virtual tours and detailed progress reports for international clients."
+      },
+      {
+        "question": "What quality standards do Miralbo Urbana properties meet?",
+        "answer": "All our properties exceed Spanish building regulations and meet international quality standards. We use premium European materials, energy-efficient systems, and employ certified contractors. Each property undergoes rigorous quality inspections throughout construction."
+      },
+      {
+        "question": "Do you offer flexible payment plans for property purchases?",
+        "answer": "Yes, we offer structured payment plans tailored to each project's timeline. Typically, this includes a reservation deposit, payments at key construction milestones, and final payment upon completion. Our sales team can discuss specific payment schedules for each property."
+      },
+      {
+        "question": "Are your properties suitable for rental investment?",
+        "answer": "Our luxury villas in Jávea and Moraira are excellent rental investments due to their prime locations and high-end specifications. The Costa Blanca's strong luxury rental market, particularly for 4-bedroom villas, offers attractive rental yields for property investors."
+      },
+      {
+        "question": "Do you assist with legal procedures and property registration?",
+        "answer": "Yes, we work with trusted legal partners who specialize in Spanish property law to assist international buyers with all legal procedures, NIE numbers, mortgage arrangements, and property registration. We ensure a smooth, compliant purchasing process from start to finish."
+      }
+    ],
+    "conclusion": "Discover the exceptional quality and Mediterranean elegance that defines Miralbo Urbana properties. With 30 current luxury projects in Jávea and Moraira, we're ready to help you find your perfect Costa Blanca home. Contact our expert team today to explore our exclusive portfolio of villas and chalets, and take the first step toward owning your dream Mediterranean property."
+  },
+  "projects": [
+    {
+      "name": "Villa Elysia",
+      "slug": "villa-elysia",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1285000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P26774897/Tphoto/ID718d9801-0000-0500-0000-00001691e312.jpg"
+    },
+    {
+      "name": "Chalet MIR0089",
+      "slug": "chalet-mir0089",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Chalet",
+      "price": 1550000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P12531490/Tphoto/ID2237bf00-0000-0500-0000-000006ca468d.jpg"
+    },
+    {
+      "name": "Villa Chloe",
+      "slug": "villa-chloe",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Chalet",
+      "price": 1285000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P12459959/Tphoto/IDb71fbe00-0000-0500-0000-00000a41eeb2.jpg"
+    },
+    {
+      "name": "Villa SIROCCO",
+      "slug": "villa-sirocco",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 2395000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P26911610/Tphoto/ID7aa39a01-0000-0500-0000-000015801e9f.jpg"
+    },
+    {
+      "name": "Villa MIR0156",
+      "slug": "villa-mir0156",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1995000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P25133282/Tphoto/IDe2807f01-0000-0500-0000-0000136cd842.jpg"
+    },
+    {
+      "name": "Villa MIR0157",
+      "slug": "villa-mir0157",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 2625000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P25436399/Tphoto/IDef208401-0000-0500-0000-000014015ba8.jpg"
+    },
+    {
+      "name": "Villa MIR0160",
+      "slug": "villa-mir0160",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1915000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P26042538/Tphoto/IDaa608d01-0000-0500-0000-000014917202.jpg"
+    },
+    {
+      "name": "Villa MIR0168-3",
+      "slug": "villa-mir0168-3",
+      "town": "Moraira",
+      "propertyType": "Villa",
+      "price": 1795000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P27838770/Tphoto/ID32c9a801-0000-0500-0000-000016c0a0c0.jpg"
+    },
+    {
+      "name": "Villa MIR0159",
+      "slug": "villa-mir0159",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 2565000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P26042307/Tphoto/IDc35f8d01-0000-0500-0000-00001491f312.jpg"
+    },
+    {
+      "name": "VILLA LAUREL",
+      "slug": "villa-laurel",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1975000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P27224146/Tphoto/ID52689f01-0000-0500-0000-000015e4ec11.jpg"
+    },
+    {
+      "name": "Villa Thalassa",
+      "slug": "villa-thalassa",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 2095000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P27503394/Tphoto/ID22aba301-0000-0500-0000-0000165df8a0.jpg"
+    },
+    {
+      "name": "Chalet MIR0054",
+      "slug": "chalet-mir0054",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Chalet",
+      "price": null,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P12545686/Tphoto/ID966ebf00-0000-0500-0000-000006cd6abb.jpg"
+    },
+    {
+      "name": "Villa MIR0144",
+      "slug": "villa-mir0144",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1425000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24237404/Tphoto/ID5cd57101-0000-0500-0000-000011fc785c.jpg"
+    },
+    {
+      "name": "Chalet MIR0124",
+      "slug": "chalet-mir0124",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Chalet",
+      "price": 1425000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P22235136/Tphoto/ID00485301-0000-0500-0000-000013406522.jpg"
+    },
+    {
+      "name": "Villa MIR0151",
+      "slug": "villa-mir0151",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1285000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24899709/Tphoto/ID7df07b01-0000-0500-0000-00001305ecdb.jpg"
+    },
+    {
+      "name": "Villa Aquiles",
+      "slug": "villa-aquiles",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Chalet",
+      "price": 1425000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P22475439/Tphoto/IDaff25601-0000-0500-0000-00000f903f15.jpg"
+    },
+    {
+      "name": "Chalet MIR0106",
+      "slug": "chalet-mir0106",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Chalet",
+      "price": 1425000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P22917828/Tphoto/IDc4b25d01-0000-0500-0000-000010224b28.jpg"
+    },
+    {
+      "name": "Chalet MIR0133",
+      "slug": "chalet-mir0133",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Chalet",
+      "price": 1550000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P22835082/Tphoto/ID8a6f5c01-0000-0500-0000-0000143c4088.jpg"
+    },
+    {
+      "name": "Villa MIR0153",
+      "slug": "villa-mir0153",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1285000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24924809/Tphoto/ID89527c01-0000-0500-0000-000013117ccf.jpg"
+    },
+    {
+      "name": "Villa MIR0149",
+      "slug": "villa-mir0149",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1285000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24755803/Tphoto/ID5bbe7901-0000-0500-0000-000017bc9b00.jpg"
+    },
+    {
+      "name": "VILLA MOMENTUM",
+      "slug": "villa-momentum",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1425000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24085106/Tphoto/ID72826f01-0000-0500-0000-00001365ce15.jpg"
+    },
+    {
+      "name": "Villa Posidonia",
+      "slug": "villa-posidonia",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1425000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P26067322/Tphoto/ID7ac18d01-0000-0500-0000-000014998faa.jpg"
+    },
+    {
+      "name": "Villa Scorpio",
+      "slug": "villa-scorpio",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1285000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24823582/Tphoto/ID1ec77a01-0000-0500-0000-000012e5b08a.jpg"
+    },
+    {
+      "name": "Villa MIR0155",
+      "slug": "villa-mir0155",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1285000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24964229/Tphoto/ID85ec7c01-0000-0500-0000-00001321c8aa.jpg"
+    },
+    {
+      "name": "Villa MIR0147",
+      "slug": "villa-mir0147",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1285000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24681639/Tphoto/IDa79c7801-0000-0500-0000-00001298fb68.jpg"
+    },
+    {
+      "name": "Villa IDILIC",
+      "slug": "villa-idilic",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1550000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P27169969/Tphoto/IDb1949e01-0000-0500-0000-000015e4de4b.jpg"
+    },
+    {
+      "name": "Villa Lotus",
+      "slug": "villa-lotus",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1550000,
+      "bedrooms": 3,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P25045092/Tphoto/ID64287e01-0000-0500-0000-00001341697d.jpg"
+    },
+    {
+      "name": "Villa Odon",
+      "slug": "villa-odon",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1390000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P23514910/Tphoto/ID1ecf6601-0000-0500-0000-000010e902de.jpg"
+    },
+    {
+      "name": "Villa Atlantis",
+      "slug": "villa-atlantis",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1550000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24634445/Tphoto/ID4de47701-0000-0500-0000-000012878c5b.jpg"
+    },
+    {
+      "name": "Villa Aurea",
+      "slug": "villa-aurea",
+      "town": "Jávea / Xàbia",
+      "propertyType": "Villa",
+      "price": 1550000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P24363328/Tphoto/ID40c17301-0000-0500-0000-000012263501.jpg"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Miralbo Urbana",
+    "url": "https://www.newbuildhomescostablanca.com/builders/miralbo-urbana/",
+    "description": "Miralbo Urbana creates luxury villas & chalets in Jávea and Moraira, Costa Blanca. 30 current projects from €1.28M-€2.63M. Expert Spanish property developers."
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many years of experience does Miralbo Urbana have in luxury property development?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Miralbo Urbana has extensive experience in Costa Blanca luxury property development, with a proven track record of delivering high-end villas and chalets. Our team combines decades of collective experience in Spanish construction, local regulations, and international client service."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What warranty coverage do you provide on your properties?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide comprehensive warranty coverage including a 10-year structural warranty, 2-year warranty on installations and finishes, and 1-year warranty on appliances and fixtures. Our after-sales service team ensures prompt resolution of any issues during the warranty period."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of properties does Miralbo Urbana specialize in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We specialize exclusively in luxury villas and chalets, primarily featuring 4-bedroom configurations. Our properties are designed for discerning clients seeking premium Mediterranean homes with modern amenities, private pools, and exceptional finishes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I visit and view properties during construction?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! We encourage client visits during construction and provide regular progress updates. Our project managers can arrange site visits at convenient times, and we also offer virtual tours and detailed progress reports for international clients."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What quality standards do Miralbo Urbana properties meet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All our properties exceed Spanish building regulations and meet international quality standards. We use premium European materials, energy-efficient systems, and employ certified contractors. Each property undergoes rigorous quality inspections throughout construction."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer flexible payment plans for property purchases?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer structured payment plans tailored to each project's timeline. Typically, this includes a reservation deposit, payments at key construction milestones, and final payment upon completion. Our sales team can discuss specific payment schedules for each property."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are your properties suitable for rental investment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our luxury villas in Jávea and Moraira are excellent rental investments due to their prime locations and high-end specifications. The Costa Blanca's strong luxury rental market, particularly for 4-bedroom villas, offers attractive rental yields for property investors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you assist with legal procedures and property registration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we work with trusted legal partners who specialize in Spanish property law to assist international buyers with all legal procedures, NIE numbers, mortgage arrangements, and property registration. We ensure a smooth, compliant purchasing process from start to finish."
+        }
+      }
+    ]
+  }
+}

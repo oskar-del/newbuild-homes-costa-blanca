@@ -8,6 +8,7 @@ export interface ParsedProperty {
   bedrooms: number | null;
   bathrooms: number | null;
   size: number | null;
+  plotSize: number | null;
   description: string;
   images: string[];
   town: string;
@@ -18,6 +19,8 @@ export interface ParsedProperty {
   developmentSlug: string;
   propertyType: string;
   status: string;
+  isNewBuild: boolean;
+  ref: string;
 }
 
 export interface ParsedDevelopment {
@@ -33,160 +36,173 @@ export interface ParsedDevelopment {
   bedroomsRange: string;
   images: string[];
   properties: ParsedProperty[];
+  description: string;
 }
 
-const FEEDS = [
-  { name: 'miralbo', url: 'https://mifrfrede.mfrpro.com/inmuebles/xml/56b76456fab7c', enabled: true },
-  { name: 'redsp', url: '', enabled: false },
-];
+const FEED_URL = 'http://feeds.transporter.janeladigital.com/423E0F5F-30FC-4E01-8FE1-99BD7E14B021/0500015622.xml';
 
-let cachedProperties: ParsedProperty[] | null = null;
-let cacheTime: number = 0;
-const CACHE_DURATION = 1000 * 60 * 60;
-
-function createSlug(text: string): string {
-  return (text || 'unknown').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[àáâãäå]/g, 'a')
+    .replace(/[èéêë]/g, 'e')
+    .replace(/[ìíîï]/g, 'i')
+    .replace(/[òóôõö]/g, 'o')
+    .replace(/[ùúûü]/g, 'u')
+    .replace(/[ñ]/g, 'n')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
 }
 
-function extractText(obj: unknown): string {
-  if (typeof obj === 'string') return obj;
-  if (typeof obj === 'number') return String(obj);
-  if (obj && typeof obj === 'object' && '_text' in obj) return String((obj as {_text: unknown})._text);
-  if (obj && typeof obj === 'object' && '#text' in obj) return String((obj as {'#text': unknown})['#text']);
-  return '';
-}
+function extractProjectName(description: string, propertyType: string, ref: string): string {
+  // Try to extract villa/project name from description
+  // Patterns: "present Villa Elysia", "Villa Elysia,", "Villa Elysia is"
+  const patterns = [
+    /present\s+(Villa\s+\w+)/i,
+    /presenting\s+(Villa\s+\w+)/i,
+    /(Villa\s+\w+),/i,
+    /(Villa\s+\w+)\s+is/i,
+    /(Villa\s+\w+)\s+offers/i,
+    /(Villa\s+\w+)\s+features/i,
+    /welcome\s+to\s+(Villa\s+\w+)/i,
+    /discover\s+(Villa\s+\w+)/i,
+    /(Residencial\s+\w+)/i,
+    /(Apartamentos\s+\w+)/i,
+  ];
 
-function extractNumber(obj: unknown): number | null {
-  const text = extractText(obj);
-  const num = parseFloat(text.replace(/[^0-9.]/g, ''));
-  return isNaN(num) ? null : num;
-}
-
-function extractImages(property: Record<string, unknown>): string[] {
-  const images: string[] = [];
-  const fotos = property.fotos as Record<string, unknown> | undefined;
-  if (fotos?.foto) {
-    const fotoArray = Array.isArray(fotos.foto) ? fotos.foto : [fotos.foto];
-    fotoArray.forEach((f: unknown) => {
-      const url = extractText((f as Record<string, unknown>)?.url || f);
-      if (url && url.startsWith('http')) images.push(url);
-    });
+  for (const pattern of patterns) {
+    const match = description.match(pattern);
+    if (match && match[1]) {
+      return match[1].trim();
+    }
   }
-  const imagesObj = property.images as Record<string, unknown> | undefined;
-  if (imagesObj?.image) {
-    const imgArray = Array.isArray(imagesObj.image) ? imagesObj.image : [imagesObj.image];
-    imgArray.forEach((img: unknown) => {
-      const url = extractText((img as Record<string, unknown>)?.url || img);
-      if (url && url.startsWith('http')) images.push(url);
-    });
-  }
-  return images;
+
+  // Fallback: use property type + ref
+  return `${propertyType} ${ref}`;
 }
 
-function parseMiralboProperty(prop: Record<string, unknown>): ParsedProperty {
-  const id = extractText(prop.id || prop.referencia);
-  const title = extractText(prop.titulo || prop.nombre || prop.title) || 'Property';
-  const developmentName = extractText(prop.promocion || prop.urbanizacion) || 'Development';
-  const developer = extractText(prop.promotor || prop.agencia) || 'Miralbo Urbana';
-  const town = extractText(prop.poblacion || prop.ciudad || prop.localidad) || 'Costa Blanca';
-  
-  return {
-    id,
-    title,
-    slug: createSlug(id + '-' + title),
-    price: extractNumber(prop.precio),
-    bedrooms: extractNumber(prop.habitaciones || prop.dormitorios),
-    bathrooms: extractNumber(prop.banos),
-    size: extractNumber(prop.superficie || prop.metros),
-    description: extractText(prop.descripcion || prop.observaciones || ''),
-    images: extractImages(prop),
-    town,
-    province: extractText(prop.provincia) || 'Alicante',
-    developer,
-    developerSlug: createSlug(developer),
-    developmentName,
-    developmentSlug: createSlug(developmentName),
-    propertyType: extractText(prop.tipo || prop.subtipo) || 'Apartment',
-    status: 'available',
-  };
-}
-
-async function fetchFeed(url: string): Promise<ParsedProperty[]> {
+export async function fetchXMLFeed(): Promise<ParsedProperty[]> {
   try {
-    const response = await fetch(url, { headers: { 'User-Agent': 'NewBuildHomes/1.0' }, next: { revalidate: 3600 } });
-    if (!response.ok) throw new Error('Feed fetch failed: ' + response.status);
+    const response = await fetch(FEED_URL, { next: { revalidate: 3600 } });
+    if (!response.ok) {
+      console.error('Feed fetch failed:', response.status);
+      return [];
+    }
     const xml = await response.text();
-    const parser = new XMLParser({ ignoreAttributes: false, attributeNamePrefix: '@_' });
-    const result = parser.parse(xml);
-    let properties: unknown[] = [];
-    const root = result.inmuebles || result.properties || result.root || result;
-    if (root.inmueble) properties = Array.isArray(root.inmueble) ? root.inmueble : [root.inmueble];
-    else if (root.property) properties = Array.isArray(root.property) ? root.property : [root.property];
-    return properties.map(p => parseMiralboProperty(p as Record<string, unknown>));
+    
+    const parser = new XMLParser({
+      ignoreAttributes: false,
+      attributeNamePrefix: '@_',
+      textNodeName: '_text',
+    });
+    
+    const data = parser.parse(xml);
+    const properties = data?.root?.property || [];
+    const agent = data?.root?.agent || {};
+    
+    const developerName = typeof agent.name === 'string' 
+      ? agent.name.replace(/<!\[CDATA\[(.*?)\]\]>/g, '$1').trim()
+      : 'Unknown Developer';
+    const developerSlug = slugify(developerName);
+    
+    const propArray = Array.isArray(properties) ? properties : [properties];
+    
+    return propArray
+      .filter((p: any) => p.new_build === 1 || p.new_build === '1')
+      .map((p: any) => {
+        const descEn = p.desc?.en || '';
+        const descEs = p.desc?.es || '';
+        const description = descEn || descEs;
+        const cleanDescription = description.replace(/#ref:\w+/gi, '').trim();
+        
+        const town = p.town || '';
+        const propertyType = p.type || 'Property';
+        const ref = p.ref || p.id || '';
+        
+        // Extract the actual project/villa name
+        const developmentName = extractProjectName(cleanDescription, propertyType, ref);
+        
+        const images: string[] = [];
+        if (p.images?.image) {
+          const imgArray = Array.isArray(p.images.image) ? p.images.image : [p.images.image];
+          imgArray.forEach((img: any) => {
+            if (img?.url) images.push(img.url);
+            else if (typeof img === 'string') images.push(img);
+          });
+        }
+        
+        return {
+          id: String(p.id || ''),
+          title: developmentName,
+          slug: slugify(developmentName),
+          price: p.price ? Number(p.price) : null,
+          bedrooms: p.beds ? Number(p.beds) : null,
+          bathrooms: p.baths ? Number(p.baths) : null,
+          size: p.surface_area?.built ? Number(p.surface_area.built) : null,
+          plotSize: p.surface_area?.plot ? Number(p.surface_area.plot) : null,
+          description: cleanDescription,
+          images,
+          town,
+          province: p.province || 'Alicante',
+          developer: developerName,
+          developerSlug,
+          developmentName,
+          developmentSlug: slugify(developmentName),
+          propertyType,
+          status: 'available',
+          isNewBuild: true,
+          ref,
+        };
+      });
   } catch (error) {
     console.error('Feed error:', error);
     return [];
   }
 }
 
-export async function fetchXMLFeed(): Promise<ParsedProperty[]> {
-  const now = Date.now();
-  if (cachedProperties && (now - cacheTime) < CACHE_DURATION) return cachedProperties;
-  const allProperties: ParsedProperty[] = [];
-  for (const feed of FEEDS) {
-    if (feed.enabled && feed.url) {
-      const props = await fetchFeed(feed.url);
-      allProperties.push(...props);
-    }
-  }
-  cachedProperties = allProperties;
-  cacheTime = now;
-  return allProperties;
-}
-
 export function groupByDevelopment(properties: ParsedProperty[]): ParsedDevelopment[] {
-  const groups = new Map<string, ParsedProperty[]>();
-  properties.forEach(prop => {
-    const key = prop.developmentSlug;
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key)!.push(prop);
-  });
-  return Array.from(groups.entries()).map(([slug, props]) => {
-    const prices = props.map(p => p.price).filter(Boolean) as number[];
-    const bedrooms = props.map(p => p.bedrooms).filter(Boolean) as number[];
-    return {
-      slug,
-      name: props[0].developmentName,
-      developer: props[0].developer,
-      developerSlug: props[0].developerSlug,
-      town: props[0].town,
-      province: props[0].province,
-      propertyCount: props.length,
-      priceFrom: prices.length ? Math.min(...prices) : null,
-      priceTo: prices.length ? Math.max(...prices) : null,
-      bedroomsRange: bedrooms.length ? Math.min(...bedrooms) + '-' + Math.max(...bedrooms) + ' bed' : '',
-      images: props.flatMap(p => p.images).slice(0, 20),
-      properties: props,
-    };
-  });
-}
-
-export function groupByDeveloper(properties: ParsedProperty[]): Map<string, ParsedProperty[]> {
-  const groups = new Map<string, ParsedProperty[]>();
-  properties.forEach(prop => {
-    const key = prop.developerSlug;
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key)!.push(prop);
-  });
-  return groups;
+  // For single-property developments (like Miralbo villas), each property IS the development
+  return properties.map(p => ({
+    slug: p.developmentSlug,
+    name: p.developmentName,
+    developer: p.developer,
+    developerSlug: p.developerSlug,
+    town: p.town,
+    province: p.province,
+    propertyCount: 1,
+    priceFrom: p.price,
+    priceTo: p.price,
+    bedroomsRange: p.bedrooms ? `${p.bedrooms} bed` : '',
+    images: p.images,
+    properties: [p],
+    description: p.description,
+  }));
 }
 
 export function groupByArea(properties: ParsedProperty[]): Map<string, ParsedProperty[]> {
   const groups = new Map<string, ParsedProperty[]>();
-  properties.forEach(prop => {
-    const key = createSlug(prop.town);
+  properties.forEach(p => {
+    const key = slugify(p.town);
     if (!groups.has(key)) groups.set(key, []);
-    groups.get(key)!.push(prop);
+    groups.get(key)!.push(p);
   });
   return groups;
+}
+
+export function groupByDeveloper(properties: ParsedProperty[]): Map<string, ParsedProperty[]> {
+  const groups = new Map<string, ParsedProperty[]>();
+  properties.forEach(p => {
+    const key = p.developerSlug;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key)!.push(p);
+  });
+  return groups;
+}
+
+export function formatPrice(price: number): string {
+  return new Intl.NumberFormat('en-EU', {
+    style: 'currency',
+    currency: 'EUR',
+    maximumFractionDigits: 0,
+  }).format(price);
 }
