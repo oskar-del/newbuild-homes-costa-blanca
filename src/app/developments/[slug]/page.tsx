@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import fs from 'fs';
+import LeadForm from '@/components/LeadForm';
 import path from 'path';
 
 // Contact info
@@ -399,6 +400,17 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ sl
                     💰 Get Mortgage Quote
                   </a>
                 </div>
+              </div>
+
+              {/* Lead Form Card */}
+              <div className="bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden">
+                <LeadForm
+                  propertyInterest={`${data.projectName} (Ref: ${property.ref})`}
+                  title="Request Information"
+                  subtitle="Get pricing, availability & floor plans"
+                  compact={true}
+                  formName="lead-inquiry"
+                />
               </div>
 
               {/* Developer Card */}
