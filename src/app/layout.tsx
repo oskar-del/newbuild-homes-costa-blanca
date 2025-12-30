@@ -69,6 +69,7 @@ function Header() {
           <a href="/areas" className="text-gray-600 hover:text-gray-900">Areas</a>
           <a href="/builders" className="text-gray-600 hover:text-gray-900">Builders</a>
           <a href="/guides/buying-process" className="text-gray-600 hover:text-gray-900">Buying Guide</a>
+          <a href="/contact" className="text-gray-600 hover:text-gray-900">Contact</a>
         </nav>
         <a
           href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0"
