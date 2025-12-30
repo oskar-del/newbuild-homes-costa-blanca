@@ -34,6 +34,22 @@ export default function RootLayout({
       </head>
       <body className="font-sans">
         <Header />
+        
+        {/* Hidden forms for Netlify detection */}
+        <form name="lead-inquiry" data-netlify="true" netlify-honeypot="bot-field" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="tel" name="phone" />
+          <textarea name="message" />
+          <input type="text" name="property-interest" />
+        </form>
+        <form name="sidebar-inquiry" data-netlify="true" netlify-honeypot="bot-field" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="tel" name="phone" />
+          <input type="text" name="property-interest" />
+        </form>
+        
         <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
