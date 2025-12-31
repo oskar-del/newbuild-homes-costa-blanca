@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import './globals.css';
-import { organizationSchema, toJsonLd } from '@/lib/schema';
+import { organizationSchema, websiteSchema, localBusinessSchema, toJsonLd } from '@/lib/schema';
 
 
 
@@ -30,6 +30,14 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: toJsonLd(organizationSchema()) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: toJsonLd(websiteSchema()) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: toJsonLd(localBusinessSchema()) }}
         />
       </head>
       <body className="font-sans">
