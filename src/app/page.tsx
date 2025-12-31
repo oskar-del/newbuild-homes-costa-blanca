@@ -7,7 +7,7 @@ import LeadForm from '@/components/LeadForm';
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: 'New Build Homes Costa Blanca | Modern Properties from 199000 EUR',
+  title: 'New Build Homes Costa Blanca | Villas & Apartments',
   description: 'Discover new build apartments, villas and townhouses in Costa Blanca, Spain. Expert guidance for international buyers. Contact us for latest availability.',
 };
 
