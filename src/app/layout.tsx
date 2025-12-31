@@ -67,6 +67,7 @@ function Header() {
         <nav className="hidden md:flex items-center gap-6">
           <a href="/developments" className="text-gray-600 hover:text-gray-900">Developments</a>
           <a href="/areas" className="text-gray-600 hover:text-gray-900">Areas</a>
+          <a href="/golf" className="text-gray-600 hover:text-gray-900">Golf</a>
           <a href="/builders" className="text-gray-600 hover:text-gray-900">Builders</a>
           <a href="/guides/buying-process" className="text-gray-600 hover:text-gray-900">Buying Guide</a>
           <a href="/contact" className="text-gray-600 hover:text-gray-900">Contact</a>
