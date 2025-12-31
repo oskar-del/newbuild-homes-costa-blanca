@@ -2,12 +2,9 @@ import { Metadata } from 'next';
 import LeadForm from '@/components/LeadForm';
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
+  title: 'Contact Us | New Build Homes Costa Blanca',
   description: 'Get in touch with New Build Homes Costa Blanca. Expert guidance for buying new build properties in Spain. WhatsApp, phone, email or contact form.',
-  openGraph: {
-    title: 'Contact Us | New Build Homes Costa Blanca',
-    description: 'Get in touch with New Build Homes Costa Blanca. Expert guidance for buying new build properties in Spain.',
-  },
+  
 };
 
 export default function ContactPage() {

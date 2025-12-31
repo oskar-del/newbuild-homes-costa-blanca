@@ -3,7 +3,7 @@ import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 
 export const metadata: Metadata = {
-  title: 'Golf Properties Costa Blanca | New Build Homes Near Golf Courses',
+  title: 'Golf Properties Costa Blanca | Villas Near Golf',
   description: 'Find new build properties near the best golf courses in Costa Blanca. La Finca, Villamartín, Las Ramblas, Campoamor & more. Expert help for golf property buyers.',
 };
 

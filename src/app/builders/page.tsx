@@ -5,7 +5,7 @@ import path from 'path';
 
 export const metadata: Metadata = {
   title: 'Property Developers Costa Blanca | New Build Builders',
-  description: 'Trusted property developers building new homes in Costa Blanca. View builder profiles, portfolios, and current developments.',
+  description: 'Trusted developers building new homes in Costa Blanca. Miralbo, Contrimar, Taylor Wimpey & more. View portfolios and current projects.',
 };
 
 interface Builder {
