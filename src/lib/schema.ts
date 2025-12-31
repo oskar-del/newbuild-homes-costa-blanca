@@ -145,3 +145,104 @@ export function areaSchema(area: {
     }
   };
 }
+
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "New Build Homes Costa Blanca",
+    "url": "https://newbuildhomescostablanca.com",
+    "description": "Find new build properties in Costa Blanca, Spain. Apartments, villas and townhouses from trusted developers.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "New Build Homes Costa Blanca"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://newbuildhomescostablanca.com/developments?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+}
+
+export function realEstateListingSchema(property: {
+  name: string;
+  description: string;
+  price: number | null;
+  images: string[];
+  url: string;
+  bedrooms?: number;
+  bathrooms?: number;
+  floorSize?: number;
+  address: { town: string; region?: string };
+  propertyType?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "RealEstateListing",
+    "name": property.name,
+    "description": property.description,
+    "image": property.images,
+    "url": property.url,
+    "datePosted": new Date().toISOString().split('T')[0],
+    "offers": property.price ? {
+      "@type": "Offer",
+      "price": property.price,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    } : undefined,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": property.address.town,
+      "addressRegion": property.address.region || "Alicante",
+      "addressCountry": "ES"
+    },
+    "numberOfBedrooms": property.bedrooms,
+    "numberOfBathroomsTotal": property.bathrooms,
+    "floorSize": property.floorSize ? {
+      "@type": "QuantitativeValue",
+      "value": property.floorSize,
+      "unitCode": "MTK"
+    } : undefined
+  };
+}
+
+export function localBusinessSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "New Build Homes Costa Blanca",
+    "image": "https://newbuildhomescostablanca.com/logo.png",
+    "@id": "https://newbuildhomescostablanca.com",
+    "url": "https://newbuildhomescostablanca.com",
+    "telephone": "+34634044970",
+    "priceRange": "€€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Canonigo Torres 8",
+      "addressLocality": "Torrevieja",
+      "addressRegion": "Alicante",
+      "postalCode": "03181",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.9786,
+      "longitude": -0.6823
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "10:00",
+        "closes": "14:00"
+      }
+    ]
+  };
+}
