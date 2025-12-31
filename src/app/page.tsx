@@ -192,6 +192,26 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+      {/* Golf Properties Section */}
+      <section className="py-16 bg-gradient-to-br from-green-800 to-green-600 text-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Golf Property Specialists</h2>
+              <p className="text-green-100 text-lg mb-6">Costa Blanca is home to over 20 championship golf courses, with year-round sunshine making it one of Europe&#39;s premier golf destinations.</p>
+              <a href="/golf" className="inline-block bg-white text-green-800 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors">Explore Golf Properties</a>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center"><div className="text-4xl font-bold mb-2">20+</div><div className="text-green-200">Golf Courses</div></div>
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center"><div className="text-4xl font-bold mb-2">300+</div><div className="text-green-200">Sunny Days</div></div>
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center"><div className="text-4xl font-bold mb-2">E30</div><div className="text-green-200">Green Fees From</div></div>
+              <div className="bg-white/10 backdrop-blur rounded-xl p-6 text-center"><div className="text-4xl font-bold mb-2">15C</div><div className="text-green-200">Winter Average</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
