@@ -117,7 +117,7 @@ export default function CostsTaxesPage() {
                   <span className="font-bold text-lg">€600 - €1,500</span>
                 </div>
                 <p className="text-gray-600 text-sm">
-                  Set by government scale based on property value. Covers preparation and witnessing of the purchase deed (escritura).
+                  Set by government scale based on property value. Covers preparation and witnessing of the purchase deed (escritura). Your lawyer typically arranges the notary appointment — we can recommend trusted notaries in the Costa Blanca area.
                 </p>
               </div>
 
@@ -141,7 +141,7 @@ export default function CostsTaxesPage() {
                   <span className="font-bold text-lg">1% - 1.5% + IVA</span>
                 </div>
                 <p className="text-gray-600 text-sm">
-                  Independent legal representation. Strongly recommended for international buyers. Usually minimum €1,500.
+                  Independent legal representation. Strongly recommended for international buyers. Usually minimum €1,500. We work with English-speaking lawyers experienced in Costa Blanca property transactions — ask us for recommendations.
                 </p>
               </div>
 

@@ -14,7 +14,7 @@ export default function MortgagesPage() {
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-16">
         <div className="container mx-auto px-4">
           <nav className="text-sm mb-4 text-blue-200">
-            <Link href="/guides" className="hover:text-white">Guides</Link>
+            <a href="/guides" className="hover:text-white">Guides</a>
             <span className="mx-2">→</span>
             <span>Mortgages</span>
           </nav>
@@ -354,15 +354,15 @@ export default function MortgagesPage() {
           <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl p-8 mb-12">
             <h2 className="text-2xl font-bold mb-4">Need Help with Financing?</h2>
             <p className="mb-6 text-blue-100">
-              We work with mortgage brokers who specialize in non-resident lending. Get connected to find the best rates for your situation.
+              We partner with Habeno, a mortgage aggregator specializing in non-resident financing. They compare offers from multiple Spanish banks to find you the best rates and terms.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/contact"
+              <a 
+                href="https://habeno.com/form?hypido=1&partnerId=9f927d6f-7293-4f06-0de0-08dabb4ac15e" target="_blank" rel="noopener noreferrer"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
               >
-                Get Mortgage Advice
-              </Link>
+                Start Mortgage Application →
+              </a>
               <a 
                 href="https://wa.me/34634044970"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors text-center"
@@ -391,21 +391,21 @@ export default function MortgagesPage() {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-8 text-center">Related Guides</h2>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <Link href="/guides/buying-process" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
+            <a href="/guides/buying-process" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
               <div className="text-3xl mb-3">🏠</div>
               <h3 className="font-bold mb-2">Buying Process</h3>
               <p className="text-gray-600 text-sm">Step-by-step purchase guide</p>
-            </Link>
-            <Link href="/guides/nie-number" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
+            </a>
+            <a href="/guides/nie-number" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
               <div className="text-3xl mb-3">📋</div>
               <h3 className="font-bold mb-2">NIE Number</h3>
               <p className="text-gray-600 text-sm">Get your Spanish tax ID</p>
-            </Link>
-            <Link href="/guides/costs-taxes" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
+            </a>
+            <a href="/guides/costs-taxes" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
               <div className="text-3xl mb-3">💰</div>
               <h3 className="font-bold mb-2">Costs & Taxes</h3>
               <p className="text-gray-600 text-sm">Full cost breakdown</p>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
