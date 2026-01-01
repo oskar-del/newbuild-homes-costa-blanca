@@ -552,6 +552,16 @@ export default function WhyNewBuildPage() {
             </div>
           </section>
 
+
+          {/* Expert Guidance CTA */}
+          <section className="mb-12">
+            <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-xl p-8">
+              <h2 className="text-2xl font-bold mb-4">Not All New Builds Are Equal</h2>
+              <p className="mb-4 text-emerald-100">Location, developer track record, and timing all impact your investment potential. Some areas consistently outperform others for capital growth, while certain developments offer better value than comparable projects nearby.</p>
+              <p className="mb-6 text-emerald-100">We specialize in matching buyers with the right development for their budget and goals — whether that is maximizing rental yield, long-term appreciation, or finding the best lifestyle fit.</p>
+              <a href="https://wa.me/34634044970?text=Hi%2C%20I%27m%20interested%20in%20new%20build%20properties" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-emerald-700 px-6 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors">Get Personalized Recommendations</a>
+            </div>
+          </section>
           {/* FAQ Section */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
