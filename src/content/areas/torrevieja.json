@@ -1,0 +1,236 @@
+{
+  "slug": "torrevieja",
+  "name": "Torrevieja",
+  "region": "Costa Blanca South",
+  "propertyCount": 0,
+  "propertyTypes": ["Apartment", "Penthouse", "Townhouse", "Villa"],
+  "priceRange": {
+    "min": 180000,
+    "max": 650000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Torrevieja Tourism",
+      "url": "https://www.torrevieja.es/",
+      "description": "Official Torrevieja tourism website"
+    },
+    "beaches": [
+      {
+        "name": "Playa del Cura",
+        "googleMaps": "https://maps.google.com/?q=Playa+del+Cura+Torrevieja",
+        "description": "Main central beach with promenade"
+      },
+      {
+        "name": "Playa de Los Locos",
+        "googleMaps": "https://maps.google.com/?q=Playa+de+Los+Locos+Torrevieja",
+        "description": "Popular family beach with calm waters"
+      },
+      {
+        "name": "Playa de La Mata",
+        "googleMaps": "https://maps.google.com/?q=Playa+de+La+Mata+Torrevieja",
+        "description": "Long natural beach with dunes"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "In town"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "45 km",
+      "driveTime": "35 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Torrevieja is surrounded by excellent golf courses, with over 10 courses within 30 minutes. The region is one of Spain's top golf destinations with year-round playing conditions.",
+    "courses": [
+      {
+        "name": "Villamartín Golf",
+        "distance": "8 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.villamartingolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Villamartin+Golf",
+        "description": "Championship course opened in 1972. Host to European Tour events. Challenging layout with mature trees."
+      },
+      {
+        "name": "Las Ramblas Golf",
+        "distance": "10 km",
+        "driveTime": "15 minutes",
+        "holes": 18,
+        "url": "https://www.lasramblasgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Las+Ramblas+Golf+Orihuela",
+        "description": "Scenic course with dramatic elevation changes and Mediterranean views."
+      },
+      {
+        "name": "Campoamor Golf",
+        "distance": "12 km",
+        "driveTime": "15 minutes",
+        "holes": 18,
+        "url": "https://www.campoamorgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Campoamor+Golf",
+        "description": "Well-maintained course near the coast, suitable for all levels."
+      },
+      {
+        "name": "La Finca Golf",
+        "distance": "15 km",
+        "driveTime": "18 minutes",
+        "holes": 18,
+        "url": "https://www.lafincagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Finca+Golf+Algorfa",
+        "description": "Championship course designed by Pepe Gancedo. Beautiful setting with lake features."
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Living in Torrevieja | Property Guide Costa Blanca South",
+    "metaDescription": "Complete guide to living in Torrevieja, Costa Blanca. Salt lakes, beaches, Spanish lifestyle, property market and why international buyers choose Torrevieja.",
+    "heroIntro": "Torrevieja is the vibrant heart of Costa Blanca South, offering an authentic Spanish coastal lifestyle combined with excellent value property and one of Europe's largest international communities. With over 80,000 residents representing 100+ nationalities, this is a town that truly embraces diversity while maintaining its Spanish character.\n\nThe town is famous for its two stunning salt lakes—the pink Laguna Rosa and the green Laguna de Torrevieja—which create a unique microclimate with exceptionally clean air. The World Health Organization has recognized Torrevieja as having one of the healthiest climates in Europe, with over 300 sunny days annually and mild winters averaging 16-18°C.",
+    "lifestyleSection": {
+      "intro": "Life in Torrevieja offers the best of both worlds: authentic Spanish culture with the convenience of a large international community. The famous Friday market is one of Spain's largest, stretching over 2 km with hundreds of stalls. The seafront promenade buzzes with activity year-round, lined with restaurants, cafés, and traditional tapas bars.\n\nThe town maintains a genuine Spanish atmosphere despite its international population. You'll find traditional fiestas throughout the year, including the famous Habaneras choral music festival in August.",
+      "highlights": [
+        "One of Europe's healthiest microclimates (WHO recognized)",
+        "Large international community with English widely spoken",
+        "Famous pink salt lake (Laguna Rosa) and nature reserves",
+        "Excellent value property compared to Costa Blanca North",
+        "Full university hospital with English-speaking staff",
+        "One of Spain's largest street markets (Friday)",
+        "Direct bus links and 35 minutes to Alicante Airport",
+        "Year-round events and traditional Spanish festivals"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Torrevieja boasts Blue Flag beaches along its coastline. Playa del Cura is the main central beach with a wide promenade perfect for evening strolls. Playa de Los Locos offers calm, shallow waters ideal for families. For something more natural, La Mata beach stretches for kilometers with protected dunes and fewer crowds.",
+      "dining": "The seafront is lined with restaurants serving fresh seafood—try the local caldero (fish stew) or arroz a banda. The town center has traditional Spanish tapas bars alongside international options. The port area offers waterfront dining with views of the fishing boats bringing in the daily catch.",
+      "shopping": "The Friday market is legendary—one of Spain's largest with everything from fresh produce to clothing. Habaneras Shopping Center in town offers major Spanish and international brands, a supermarket, and cinema. For larger shopping, Zenia Boulevard (15 min) is one of Europe's largest open-air malls.",
+      "healthcare": "Hospital Universitario de Torrevieja is a modern university hospital right in town, offering comprehensive services with many English-speaking staff. Numerous private clinics, dentists, and 24-hour pharmacies serve the community. The large expat population means finding English-speaking healthcare is never difficult.",
+      "transport": "Alicante-Elche Airport is 45 km away (35 minutes via AP-7 motorway). Murcia-Corvera Airport is 40 km (30 minutes). Regular buses connect to Alicante, Murcia, and surrounding towns. Having a car is recommended but not essential for town living. The planned Mediterranean Corridor rail link will eventually connect Torrevieja."
+    },
+    "propertyMarketSection": "Torrevieja offers exceptional value in the Costa Blanca property market. New build apartments start from around €180,000-220,000 for 2-bedroom units, while villas range from €350,000-650,000. This represents significantly better value than Costa Blanca North, attracting buyers seeking modern properties without premium pricing.\n\nThe market has seen strong growth in recent years, driven by international demand and limited new supply. New developments typically sell out quickly, especially those close to amenities or with sea views.\n\nInvestment potential is strong—the large tourism industry and international resident population create year-round rental demand. Properties with pools and modern amenities achieve strong rental returns, particularly during the extended summer season.",
+    "whyLiveHereSection": [
+      "Exceptional value—modern new builds at accessible prices",
+      "WHO-recognized healthy microclimate with year-round sunshine",
+      "Large, established international community",
+      "Full hospital and comprehensive healthcare in town",
+      "Easy airport access (35 min to Alicante)",
+      "Unique natural beauty with pink salt lakes",
+      "Strong rental market for investment buyers",
+      "Authentic Spanish lifestyle with international conveniences"
+    ],
+    "faqs": [
+      {
+        "question": "Is Torrevieja a good place to buy property?",
+        "answer": "Torrevieja offers excellent value for money with modern new builds at prices significantly lower than Costa Blanca North. The large international community, full hospital, good transport links, and strong rental market make it attractive for both permanent residents and investors. The WHO-recognized healthy climate is an added bonus."
+      },
+      {
+        "question": "How far is Torrevieja from Alicante Airport?",
+        "answer": "Alicante-Elche Airport is approximately 45 km from Torrevieja, which takes around 35 minutes via the AP-7 motorway. Murcia-Corvera Airport is slightly closer at 40 km (30 minutes), offering additional flight options."
+      },
+      {
+        "question": "What is the cost of living in Torrevieja?",
+        "answer": "Torrevieja offers a lower cost of living than many other Costa Blanca towns. Groceries, dining out, and services are reasonably priced. Expect monthly living costs of €1,200-1,800 for a couple including rent/mortgage, utilities, food, and entertainment—significantly less than northern Europe."
+      },
+      {
+        "question": "Is English widely spoken in Torrevieja?",
+        "answer": "Yes, English is widely spoken in Torrevieja due to the large British and international community. Most shops, restaurants, healthcare providers, and services cater to English speakers. However, learning some Spanish will enrich your experience and is appreciated by locals."
+      },
+      {
+        "question": "What are property prices like in Torrevieja?",
+        "answer": "New build apartments in Torrevieja start from around €180,000 for 2-bedroom units. Townhouses range from €220,000-350,000, while villas start around €350,000 and can reach €650,000+ for luxury properties. Resale properties offer even more affordable options."
+      },
+      {
+        "question": "What makes the Torrevieja climate special?",
+        "answer": "Torrevieja's climate has been recognized by the World Health Organization as one of the healthiest in Europe. The salt lakes create a unique microclimate with exceptionally clean, mineral-rich air. The area enjoys over 300 sunny days per year with mild winters averaging 16-18°C."
+      },
+      {
+        "question": "Are there good healthcare facilities in Torrevieja?",
+        "answer": "Torrevieja has excellent healthcare including the modern Hospital Universitario de Torrevieja with English-speaking staff. There are numerous private clinics, dental practices, and 24-hour pharmacies. The large expat community means healthcare services are well-adapted to international patients."
+      },
+      {
+        "question": "What is the rental market like in Torrevieja?",
+        "answer": "Torrevieja has a strong rental market driven by tourism and the international community. Holiday rentals are popular year-round, with peak demand in summer. Long-term rentals are also in demand from expats and retirees. Well-located properties with pools and modern amenities achieve the best returns."
+      },
+      {
+        "question": "What are the best areas to buy in Torrevieja?",
+        "answer": "Popular areas include the town center for convenience, Playa del Cura for beach proximity, La Mata for a quieter atmosphere near natural beaches, and urbanizations like Aguas Nuevas and Los Balcones for modern developments. Each area offers different lifestyles and price points."
+      },
+      {
+        "question": "Is Torrevieja suitable for families?",
+        "answer": "Yes, Torrevieja is very family-friendly with safe beaches, good schools (including international options nearby), plenty of parks and recreational facilities, and a welcoming community. The affordable cost of living and good healthcare make it practical for families too."
+      }
+    ],
+    "conclusion": "Ready to explore new build properties in Torrevieja? Our team specializes in helping international buyers find their perfect home in Costa Blanca South. Whether you're looking for a holiday apartment, permanent residence, or investment property, we'll guide you through every step of the buying process."
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Torrevieja",
+    "description": "Torrevieja is a coastal city in Costa Blanca South, Spain, known for its salt lakes, healthy climate, international community, and excellent value property market.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.9786",
+      "longitude": "-0.6823"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Torrevieja",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Torrevieja a good place to buy property?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Torrevieja offers excellent value for money with modern new builds at prices significantly lower than Costa Blanca North. The large international community, full hospital, good transport links, and strong rental market make it attractive for both permanent residents and investors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Torrevieja from Alicante Airport?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alicante-Elche Airport is approximately 45 km from Torrevieja, which takes around 35 minutes via the AP-7 motorway. Murcia-Corvera Airport is slightly closer at 40 km (30 minutes)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Torrevieja?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Torrevieja offers a lower cost of living than many other Costa Blanca towns. Expect monthly living costs of €1,200-1,800 for a couple including rent/mortgage, utilities, food, and entertainment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is English widely spoken in Torrevieja?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, English is widely spoken in Torrevieja due to the large British and international community. Most shops, restaurants, healthcare providers, and services cater to English speakers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes the Torrevieja climate special?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Torrevieja's climate has been recognized by the World Health Organization as one of the healthiest in Europe. The salt lakes create a unique microclimate with exceptionally clean, mineral-rich air and over 300 sunny days per year."
+        }
+      }
+    ]
+  }
+}

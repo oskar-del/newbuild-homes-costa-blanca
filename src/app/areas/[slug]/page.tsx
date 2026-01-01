@@ -35,6 +35,7 @@ interface AreaContent {
   propertyCount: number;
   propertyTypes: string[];
   priceRange: { min: number; max: number };
+  region?: string;
   externalLinks?: ExternalLinks;
   golf?: {
     intro: string;
@@ -163,7 +164,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 💶 From €{data.priceRange.min.toLocaleString()}
               </span>
               <span className="bg-white/20 px-4 py-2 rounded-full">
-                🌴 Costa Blanca North
+                🌴 {data.region || 'Costa Blanca'}
               </span>
               {golf && (
                 <span className="bg-white/20 px-4 py-2 rounded-full">
@@ -464,7 +465,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 <div className="space-y-4 mb-6">
                   <div>
                     <p className="text-sm text-gray-500">Region</p>
-                    <p className="font-bold text-gray-900">Costa Blanca North</p>
+                    <p className="font-bold text-gray-900">{data.region || 'Costa Blanca'}</p>
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">New Build Properties</p>
