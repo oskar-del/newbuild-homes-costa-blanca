@@ -36,7 +36,8 @@ interface AreaContent {
   propertyTypes: string[];
   priceRange: { min: number; max: number };
   region?: string;
-  externalLinks?: ExternalLinks;
+  heroImage?: string;
+  cardImage?: string;
   golf?: {
     intro: string;
     courses: GolfCourse[];
@@ -138,8 +139,22 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-teal-800 to-teal-600 text-white py-20">
-          <div className="max-w-6xl mx-auto px-4">
+        <section className="relative text-white py-20">
+          {data.heroImage ? (
+            <>
+              <Image
+                src={data.heroImage}
+                alt={data.name}
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-teal-900/90 to-teal-700/80" />
+            </>
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-r from-teal-800 to-teal-600" />
+          )}
+          <div className="relative max-w-6xl mx-auto px-4">
             <nav className="text-white/70 text-sm mb-4">
               <Link href="/" className="hover:text-white">Home</Link>
               <span className="mx-2">›</span>
