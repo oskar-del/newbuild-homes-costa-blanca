@@ -249,7 +249,7 @@ export default function WhyNewBuildPage() {
                   </div>
                   <div className="flex justify-between border-t pt-3">
                     <span>On completion</span>
-                    <span className="font-semibold">40-50%</span>
+                    <span className="font-semibold">20-40%</span>
                   </div>
                 </div>
               </div>
