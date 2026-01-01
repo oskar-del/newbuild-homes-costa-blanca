@@ -118,7 +118,7 @@ function Footer() {
             <li><a href="/guides/nie-number" className="hover:text-white">NIE Number</a></li>
             <li><a href="/guides/mortgages" className="hover:text-white">Mortgage Guide</a></li>
             <li><a href="/guides/costs-taxes" className="hover:text-white">Costs and Taxes</a></li>
-          </ul>
+                  <li><a href="/guides/why-new-build" className="hover:text-white">Why Buy New Build</a></li>          </ul>
         </div>
         <div>
           <h4 className="text-white font-semibold mb-3">Contact Us</h4>
