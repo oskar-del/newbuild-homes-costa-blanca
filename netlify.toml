@@ -2,20 +2,10 @@
   command = "npm run build"
   publish = ".next"
 
-# Redirect Netlify subdomain to main domain (prevent duplicate content)
-[[redirects]]
-  from = "https://cosmic-lollipop-bafe04.netlify.app/*"
-  to = "https://newbuildhomescostablanca.com/:splat"
-  status = 301
-  force = true
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
-# Handle trailing slashes consistently
-[[redirects]]
-  from = "/*/"
-  to = "/:splat"
-  status = 301
-
-# Pretty URLs
+# Security headers
 [[headers]]
   for = "/*"
   [headers.values]
