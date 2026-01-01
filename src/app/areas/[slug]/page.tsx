@@ -38,6 +38,12 @@ interface AreaContent {
   region?: string;
   heroImage?: string;
   cardImage?: string;
+  externalLinks?: {
+    beaches?: { name: string; url: string; googleMaps?: string; description?: string }[];
+    healthcare?: { name: string; googleMaps: string; distance: string };
+    airport?: { name: string; googleMaps: string; distance: string; driveTime: string };
+    tourism?: { url: string };
+  };
   golf?: {
     intro: string;
     courses: GolfCourse[];
