@@ -69,12 +69,21 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/areas/torrevieja" className="hover:text-white transition-colors">
+                  Torrevieja
+                </Link>
+              </li>
+              <li>
+                <Link href="/areas/orihuela-costa" className="hover:text-white transition-colors">
+                  Orihuela Costa
+                </Link>
+              </li>
+              <li>
                 <Link href="/areas" className="hover:text-white transition-colors">
                   All Area Guides
                 </Link>
               </li>
-            </ul>
-          </div>
+            </ul>          </div>
 
           {/* Contact */}
           <div>
