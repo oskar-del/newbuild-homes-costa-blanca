@@ -3,8 +3,8 @@ import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 
 export const metadata: Metadata = {
-  title: 'New Build vs Resale Property in Spain | 10 Reasons to Buy New',
-  description: 'New build vs resale property in Spain compared. 10-year guarantees, launch prices 40% below completion, lower taxes, better mortgages. Complete 2025 guide.',
+  title: 'New Build vs Resale Spain | 10 Reasons to Buy New',
+  description: 'New build vs resale property in Spain compared. 10-year guarantees, launch pricing, better mortgages. Complete guide for 2025.',
   keywords: 'new build vs resale Spain, buy new build Spain, off plan property Spain, new construction Costa Blanca, advantages new build Spain',
 };
 
@@ -24,7 +24,7 @@ export default function WhyNewBuildPage() {
               New Build vs Resale Property in Spain: Which Should You Buy?
             </h1>
             <p className="text-xl text-blue-100">
-              10 compelling reasons to choose new construction over resale — from launch pricing advantages to 10-year guarantees and lower taxes.
+              10 compelling reasons to choose new construction over resale — from launch pricing advantages to 10-year guarantees and better mortgage terms.
             </p>
             <div className="mt-6 flex items-center gap-4 text-sm text-blue-200">
               <span>📖 10 min read</span>
@@ -44,7 +44,7 @@ export default function WhyNewBuildPage() {
               <div className="grid md:grid-cols-2 gap-3 text-sm">
                 <div className="flex items-start gap-2">
                   <span className="text-green-500">✓</span>
-                  <span><strong>Launch prices</strong> — up to 40-50% below completion</span>
+                  <span><strong>Launch prices</strong> — 20-40% below completion value</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-green-500">✓</span>
@@ -98,16 +98,16 @@ export default function WhyNewBuildPage() {
           <section className="mb-12">
             <div className="flex items-start gap-4 mb-4">
               <span className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">1</span>
-              <h2 className="text-2xl font-bold">Launch Prices: Buy at 40-50% Below Completion Price</h2>
+              <h2 className="text-2xl font-bold">Launch Prices: Buy at 20-40% Below Completion Value</h2>
             </div>
             <div className="pl-14">
               <p className="text-gray-700 mb-4">
-                This is the biggest advantage most buyers don't know about. Developers launch projects at <strong>significantly lower prices</strong> to generate early sales and fund construction. As the project progresses and units sell, prices increase with each phase.
+                This is the biggest advantage most buyers don't know about. Developers launch projects at <strong>significantly lower prices</strong> to generate early sales and build momentum. As the project progresses and units sell, prices increase with each phase.
               </p>
               <div className="bg-green-50 border-l-4 border-green-500 p-4 mb-4">
                 <p className="font-semibold text-green-800">Real Example:</p>
                 <p className="text-green-700">
-                  A development might launch 2-bed apartments at €185,000. By completion 18 months later, the last units sell for €260,000 — that's <strong>40% appreciation</strong> before you even get the keys.
+                  A development might launch 2-bed apartments at €195,000. By completion 18 months later, the last units sell for €260,000 — that's <strong>over 30% appreciation</strong> before you even get the keys.
                 </p>
               </div>
               <p className="text-gray-700">
@@ -182,7 +182,7 @@ export default function WhyNewBuildPage() {
                 *ITP varies by region. Valencia/Alicante region is 10%.
               </p>
               <p className="text-gray-700">
-                While resale appears cheaper on tax alone, remember: new builds include everything brand new (no renovation costs), and you're buying at launch prices that can be 20-40% below market value.
+                While resale appears cheaper on tax alone, remember: new builds include everything brand new (no renovation costs), and you're buying at launch prices that can be 20-40% below completion value.
               </p>
             </div>
           </section>
@@ -529,6 +529,29 @@ export default function WhyNewBuildPage() {
             </p>
           </section>
 
+          {/* Expert Guidance CTA */}
+          <section className="mb-12">
+            <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-xl p-8">
+              <h2 className="text-2xl font-bold mb-4">Not All New Builds Are Equal</h2>
+              <p className="mb-4 text-emerald-100">
+                Location, developer track record, and timing all impact your investment potential. Some areas consistently outperform others for capital growth, while certain developments offer better value than comparable projects nearby.
+              </p>
+              <p className="mb-6 text-emerald-100">
+                We specialize in matching buyers with the right development for their budget and goals — whether that's maximizing rental yield, long-term appreciation, or finding the best lifestyle fit.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="https://wa.me/34634044970?text=Hi%2C%20I%27m%20interested%20in%20new%20build%20properties%20and%20would%20like%20advice%20on%20the%20best%20areas%20and%20developments%20for%20my%20budget."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-emerald-700 px-6 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors text-center"
+                >
+                  Get Personalized Recommendations
+                </a>
+              </div>
+            </div>
+          </section>
+
           {/* FAQ Section */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
@@ -559,7 +582,7 @@ export default function WhyNewBuildPage() {
                   <span className="transform group-open:rotate-180 transition-transform">▼</span>
                 </summary>
                 <p className="mt-4 text-gray-700">
-                  Launch prices are typically 20-40% below completion prices, sometimes even more in high-demand areas. Developers increase prices with each construction phase and as units sell. Buying in Phase 1 or 2 offers the best value, though you'll wait longer for completion.
+                  Launch prices are typically 20-40% below completion prices, depending on the development and location. Developers increase prices with each construction phase and as units sell. Buying in Phase 1 or 2 offers the best value, though you'll wait longer for completion.
                 </p>
               </details>
 
@@ -599,7 +622,7 @@ export default function WhyNewBuildPage() {
                   <span className="transform group-open:rotate-180 transition-transform">▼</span>
                 </summary>
                 <p className="mt-4 text-gray-700">
-                  On paper, yes — new builds typically cost 20-44% more per square meter than resale. However, this doesn't account for launch price discounts (buying early), renovation costs on resale (often €20,000+), or energy efficiency savings. When comparing total cost of ownership, new builds often work out better value.
+                  On paper, yes — new builds typically cost more per square meter than resale. However, this doesn't account for launch price discounts (buying early), renovation costs on resale (often €20,000+), or energy efficiency savings. When comparing total cost of ownership, new builds often work out better value.
                 </p>
               </details>
 
