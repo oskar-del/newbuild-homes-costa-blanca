@@ -89,7 +89,7 @@ export default function AreasPage() {
                 
                 <div className="space-y-3 text-gray-600">
                   <p>
-                    <span className="font-medium">New Builds: 🏗 </span> {area.propertyCount}
+                    <span className="font-medium">New Builds:</span> {area.propertyCount}
                   </p>
                   <p>
                     <span className="font-medium">Property Types:</span> {area.propertyTypes.join(', ')}
@@ -138,7 +138,7 @@ export default function AreasPage() {
               href="tel:+34634044970"
               className="inline-flex items-center gap-2 bg-white text-teal-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-medium transition-colors"
             >
-              📞 +34 634 444 970
+              📞 +34 634 044 970
             </a>
           </div>
         </div>
