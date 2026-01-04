@@ -14,6 +14,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'feedmedia.egorealestate.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'backgroundproperties.com',
+      },
     ],
   },
 }
