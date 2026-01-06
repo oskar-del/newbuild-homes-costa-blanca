@@ -159,11 +159,25 @@ export default async function PropertiesPage({
   );
 }
 
+
+function generatePropertyTitle(property: BPProperty): string {
+  const adjectives = ["Stunning", "Beautiful", "Modern", "Elegant", "Spacious", "Luxurious"];
+  const adjective = adjectives[Math.abs(property.reference.charCodeAt(0)) % adjectives.length];
+  const beds = property.bedrooms > 0 ? `${property.bedrooms} Bedroom ` : "";
+  const type = property.type || "Property";
+  let feature = "";
+  if (property.pool) feature = " with Private Pool";
+  else if (property.views?.toLowerCase().includes("sea")) feature = " with Sea Views";
+  else if (property.views?.toLowerCase().includes("mountain")) feature = " with Mountain Views";
+  else if (property.builtArea > 200) feature = " with Spacious Living";
+  const location = property.town || "Costa Blanca";
+  return `${adjective} ${beds}${type}${feature} in ${location}`;
+}
 function PropertyCard({ property }: { property: BPProperty }) {
   const mainImage = property.images[0] || '/images/placeholder-property.jpg';
   
   // Create a cleaner title
-  const displayTitle = property.title || `${property.bedrooms} Bed ${property.type} in ${property.town}`;
+  const displayTitle = generatePropertyTitle(property);
   
   return (
     <Link
