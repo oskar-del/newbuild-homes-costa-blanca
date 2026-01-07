@@ -1,0 +1,58 @@
+name: Generate AI Content
+
+on:
+  # Run manually from GitHub Actions tab
+  workflow_dispatch:
+    inputs:
+      regenerate_all:
+        description: 'Regenerate all content (not just new)'
+        required: false
+        default: 'false'
+        type: boolean
+  
+  # Run daily at 6 AM UTC
+  schedule:
+    - cron: '0 6 * * *'
+  
+  # Run on push to main (optional - can remove if too frequent)
+  # push:
+  #   branches: [main]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Generate AI content
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          REGENERATE_ALL: ${{ github.event.inputs.regenerate_all }}
+        run: npx tsx src/scripts/generate-all-content.ts
+      
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --quiet src/content/ || echo "changes=true" >> $GITHUB_OUTPUT
+      
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add src/content/
+          git commit -m "Auto-generate AI content for properties and areas"
+          git push
