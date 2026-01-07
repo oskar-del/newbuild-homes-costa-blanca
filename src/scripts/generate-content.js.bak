@@ -115,9 +115,34 @@ function parseXML(xml) {
 }
 
 async function fetchFeedData() {
-  console.log('Reading local feed file...');
-  const fs = require('fs');
-  const xml = fs.readFileSync('/tmp/miralbo-feed.xml', 'utf-8');
+async function fetchFeedData() {
+  console.log("Reading local feed file...");
+  const fs = require("fs");
+  const xml = fs.readFileSync("/tmp/miralbo-feed.xml", "utf-8");
+  return parseXML(xml);
+}
+async function fetchFeedData() {
+  console.log("Reading local feed file...");
+  const fs = require("fs");
+  const xml = fs.readFileSync("/tmp/miralbo-feed.xml", "utf-8");
+  return parseXML(xml);
+}
+async function fetchFeedData() {
+  console.log("Reading local feed file...");
+  const fs = require("fs");
+  const xml = fs.readFileSync("/tmp/miralbo-feed.xml", "utf-8");
+  return parseXML(xml);
+}
+async function fetchFeedData() {
+  console.log("Reading local feed file...");
+  const fs = require("fs");
+  const xml = fs.readFileSync("/tmp/miralbo-feed.xml", "utf-8");
+  return parseXML(xml);
+}
+async function fetchFeedData() {
+  console.log("Reading local feed file...");
+  const fs = require("fs");
+  const xml = fs.readFileSync("/tmp/miralbo-feed.xml", "utf-8");
   return parseXML(xml);
 }
 
