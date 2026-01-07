@@ -12,22 +12,6 @@ export default async function DevelopmentsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="text-xl font-bold text-blue-900">
-            New Build Homes Costa Blanca
-          </Link>
-          <nav className="flex gap-6">
-            <Link href="/developments" className="text-blue-600 font-medium">Developments</Link>
-            <Link href="/properties" className="text-gray-600 hover:text-blue-600">Properties</Link>
-            <Link href="/areas" className="text-gray-600 hover:text-blue-600">Areas</Link>
-            <Link href="/builders" className="text-gray-600 hover:text-blue-600">Builders</Link>
-            <Link href="/contact" className="text-gray-600 hover:text-blue-600">Contact</Link>
-          </nav>
-        </div>
-      </header>
-
       {/* Hero */}
       <section className="bg-blue-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
@@ -111,13 +95,6 @@ export default async function DevelopmentsPage() {
           </Link>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-8">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p>&copy; 2025 New Build Homes Costa Blanca. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 }
