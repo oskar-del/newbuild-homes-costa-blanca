@@ -1,7 +1,6 @@
 name: Generate AI Content
 
 on:
-  # Run manually from GitHub Actions tab
   workflow_dispatch:
     inputs:
       regenerate_all:
@@ -10,13 +9,8 @@ on:
         default: 'false'
         type: boolean
   
-  # Run daily at 6 AM UTC
   schedule:
     - cron: '0 6 * * *'
-  
-  # Run on push to main (optional - can remove if too frequent)
-  # push:
-  #   branches: [main]
 
 jobs:
   generate:
@@ -46,13 +40,13 @@ jobs:
       - name: Check for changes
         id: git-check
         run: |
-          git diff --quiet src/content/ || echo "changes=true" >> $GITHUB_OUTPUT
+          git add src/content/
+          git diff --staged --quiet || echo "changes=true" >> $GITHUB_OUTPUT
       
       - name: Commit and push changes
         if: steps.git-check.outputs.changes == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add src/content/
           git commit -m "Auto-generate AI content for properties and areas"
           git push
