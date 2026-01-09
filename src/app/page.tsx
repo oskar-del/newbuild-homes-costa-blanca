@@ -152,7 +152,7 @@ function PropertyCard({ property }: { property: UnifiedProperty }) {
         <div className="flex items-center gap-4 mt-2 text-sm text-gray-500">
           {property.bedrooms && <span>{property.bedrooms} beds</span>}
           {property.bathrooms && <span>{property.bathrooms} baths</span>}
-          {property.builtSize && <span>{property.builtSize}m²</span>}
+          {property.builtArea && <span>{property.builtArea}m²</span>}
         </div>
         <p className="text-lg font-bold text-blue-600 mt-2">
           {formatPrice(property.price)}

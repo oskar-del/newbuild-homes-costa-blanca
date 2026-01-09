@@ -26,6 +26,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const gtmNoscriptUrl = GTM_ID ? "https://www.googletagmanager.com/ns.html?id=" + GTM_ID : "";
+  
   return (
     <html lang="en">
       <head>
@@ -59,7 +61,7 @@ export default function RootLayout({
         {GTM_ID && (
           <noscript>
             <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              src={gtmNoscriptUrl}
               height="0"
               width="0"
               style={{ display: 'none', visibility: 'hidden' }}
