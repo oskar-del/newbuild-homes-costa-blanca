@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
-
+import Script from 'next/script';
 import './globals.css';
 import { organizationSchema, websiteSchema, localBusinessSchema, toJsonLd } from '@/lib/schema';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
-
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
 export const metadata: Metadata = {
   title: {
@@ -27,6 +29,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','${GTM_ID}');
+            `,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: toJsonLd(organizationSchema()) }}
@@ -41,9 +56,19 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans">
+        {GTM_ID && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+            />
+          </noscript>
+        )}
+        
         <Header />
         
-        {/* Hidden forms for Netlify detection */}
         <form name="lead-inquiry" data-netlify="true" netlify-honeypot="bot-field" hidden>
           <input type="text" name="name" />
           <input type="email" name="email" />
@@ -62,83 +87,5 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
-  );
-}
-
-function Header() {
-  return (
-    <header className="bg-white shadow-sm border-b sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="/" className="text-xl font-bold text-gray-900">
-          New Build Homes <span className="text-blue-600">Costa Blanca</span>
-        </a>
-        <nav className="hidden md:flex items-center gap-6">
-          <a href="/developments" className="text-gray-600 hover:text-gray-900">Developments</a>
-          <a href="/areas" className="text-gray-600 hover:text-gray-900">Areas</a>
-          <a href="/golf" className="text-gray-600 hover:text-gray-900">Golf</a>
-          <a href="/builders" className="text-gray-600 hover:text-gray-900">Builders</a>
-          <a href="/guides/buying-process" className="text-gray-600 hover:text-gray-900">Buying Guide</a>
-          <a href="/contact" className="text-gray-600 hover:text-gray-900">Contact</a>
-        </nav>
-        <a
-          href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium"
-        >
-          WhatsApp Us
-        </a>
-      </div>
-    </header>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
-      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
-        <div>
-          <h3 className="text-white font-bold mb-4">New Build Homes Costa Blanca</h3>
-          <p className="text-sm">Your trusted partner for new build properties in Costa Blanca, Spain.</p>
-          <p className="text-sm mt-2">Part of the Hansson and Hertzell Group</p>
-        </div>
-        <div>
-          <h4 className="text-white font-semibold mb-3">Quick Links</h4>
-          <ul className="space-y-2 text-sm">
-            <li><a href="/developments" className="hover:text-white">All Developments</a></li>
-            <li><a href="/areas" className="hover:text-white">Areas</a></li>
-            <li><a href="/builders" className="hover:text-white">Builders</a></li>
-            <li><a href="/golf" className="hover:text-white">Golf Properties</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-white font-semibold mb-3">Buyer Guides</h4>
-          <ul className="space-y-2 text-sm">
-            <li><a href="/guides/buying-process" className="hover:text-white">Buying Process</a></li>
-            <li><a href="/guides/nie-number" className="hover:text-white">NIE Number</a></li>
-            <li><a href="/guides/mortgages" className="hover:text-white">Mortgage Guide</a></li>
-            <li><a href="/guides/costs-taxes" className="hover:text-white">Costs and Taxes</a></li>
-                  <li><a href="/guides/why-new-build" className="hover:text-white">Why Buy New Build</a></li>          </ul>
-        </div>
-        <div>
-          <h4 className="text-white font-semibold mb-3">Contact Us</h4>
-          <ul className="space-y-2 text-sm">
-            <li>+34 634 044 970</li>
-            <li>oskar@hanssonhertzell.com</li>
-            <li className="pt-2">
-              <a
-                href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0"
-                className="inline-block bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded font-medium"
-              >
-                WhatsApp Us
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="max-w-7xl mx-auto px-4 mt-8 pt-8 border-t border-gray-700 text-sm text-center">
-        © 2025 New Build Homes Costa Blanca. All rights reserved.
-      </div>
-    </footer>
   );
 }

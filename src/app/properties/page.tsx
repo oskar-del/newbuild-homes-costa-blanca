@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { fetchNewBuilds, BPProperty } from '@/lib/backgroundProperties';
+import { fetchAllProperties } from '@/lib/unified-feed-service';
+import { UnifiedProperty } from '@/lib/unified-property';
 import PropertyFilters from '@/components/PropertyFilters';
 
 export const metadata: Metadata = {
@@ -16,11 +17,11 @@ export default async function PropertiesPage({
 }: {
   searchParams: { town?: string; beds?: string; type?: string };
 }) {
-  const allProperties = await fetchNewBuilds();
+  const allProperties = await fetchAllProperties();
   
   // Get unique values for filters
   const towns = [...new Set(allProperties.map(p => p.town).filter(Boolean))].sort();
-  const types = [...new Set(allProperties.map(p => p.type).filter(Boolean))].sort();
+  const types = [...new Set(allProperties.map(p => p.propertyType).filter(Boolean))].sort();
   const bedOptions = [...new Set(allProperties.map(p => p.bedrooms).filter(b => b > 0))].sort((a, b) => a - b);
 
   // Apply filters
@@ -32,7 +33,7 @@ export default async function PropertiesPage({
     properties = properties.filter(p => p.bedrooms === parseInt(searchParams.beds as string));
   }
   if (searchParams.type) {
-    properties = properties.filter(p => p.type === searchParams.type);
+    properties = properties.filter(p => p.propertyType === searchParams.type);
   }
 
   // Group by town
@@ -41,7 +42,7 @@ export default async function PropertiesPage({
     if (!acc[town]) acc[town] = [];
     acc[town].push(prop);
     return acc;
-  }, {} as Record<string, BPProperty[]>);
+  }, {} as Record<string, UnifiedProperty[]>);
 
   const sortedTowns = Object.keys(byTown).sort((a, b) => byTown[b].length - byTown[a].length);
 
@@ -86,7 +87,7 @@ export default async function PropertiesPage({
             // Show flat grid when filtered by town
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {properties.map(property => (
-                <PropertyCard key={property.reference} property={property} />
+                <PropertyCard key={property.id} property={property} />
               ))}
             </div>
           ) : (
@@ -109,7 +110,7 @@ export default async function PropertiesPage({
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {byTown[town].slice(0, 6).map(property => (
-                    <PropertyCard key={property.reference} property={property} />
+                    <PropertyCard key={property.id} property={property} />
                   ))}
                 </div>
                 {byTown[town].length > 6 && (
@@ -160,21 +161,20 @@ export default async function PropertiesPage({
 }
 
 
-function generatePropertyTitle(property: BPProperty): string {
+function generatePropertyTitle(property: UnifiedProperty): string {
   const adjectives = ["Stunning", "Beautiful", "Modern", "Elegant", "Spacious", "Luxurious"];
   const adjective = adjectives[Math.abs(property.reference.charCodeAt(0)) % adjectives.length];
   const beds = property.bedrooms > 0 ? `${property.bedrooms} Bedroom ` : "";
-  const type = property.type || "Property";
+  const type = property.propertyType || "Property";
   let feature = "";
-  if (property.pool) feature = " with Private Pool";
-  else if (property.views?.toLowerCase().includes("sea")) feature = " with Sea Views";
-  else if (property.views?.toLowerCase().includes("mountain")) feature = " with Mountain Views";
+  if (property.hasPool) feature = " with Private Pool";
   else if (property.builtArea > 200) feature = " with Spacious Living";
   const location = property.town || "Costa Blanca";
   return `${adjective} ${beds}${type}${feature} in ${location}`;
 }
-function PropertyCard({ property }: { property: BPProperty }) {
-  const mainImage = property.images[0] || '/images/placeholder-property.jpg';
+
+function PropertyCard({ property }: { property: UnifiedProperty }) {
+  const mainImage = property.mainImage || property.images[0]?.url || '/images/placeholder-property.jpg';
   
   // Create a cleaner title
   const displayTitle = generatePropertyTitle(property);
@@ -195,17 +195,22 @@ function PropertyCard({ property }: { property: BPProperty }) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         <div className="absolute top-3 left-3 flex gap-2">
           <span className="bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-            {property.type}
+            {property.propertyType}
           </span>
-          {property.pool && (
+          {property.hasPool && (
             <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
               Pool
+            </span>
+          )}
+          {property.source === 'redsp' && (
+            <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              New
             </span>
           )}
         </div>
         <div className="absolute bottom-3 left-3 right-3">
           <p className="text-white text-sm font-medium">
-            {property.zone ? `${property.zone}, ` : ''}{property.town}
+            {property.locationDetail ? `${property.locationDetail}, ` : ''}{property.town}
           </p>
         </div>
       </div>
@@ -235,7 +240,9 @@ function PropertyCard({ property }: { property: BPProperty }) {
           )}
         </div>
         <div className="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
-          <span className="text-amber-600 font-bold text-lg">{property.price > 0 ? `€${property.price.toLocaleString()}` : "Contact for Price"}</span>
+          <span className="text-amber-600 font-bold text-lg">
+            {property.price > 0 ? `€${property.price.toLocaleString()}` : "Contact for Price"}
+          </span>
           <span className="text-amber-600 group-hover:translate-x-1 transition-transform">→</span>
         </div>
       </div>

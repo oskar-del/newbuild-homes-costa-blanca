@@ -18,6 +18,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'backgroundproperties.com',
       },
+      {
+        protocol: 'https',
+        hostname: '**.apinmo.com',
+      },
     ],
   },
 }
