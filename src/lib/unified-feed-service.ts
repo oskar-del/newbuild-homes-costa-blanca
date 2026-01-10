@@ -146,7 +146,7 @@ async function fetchBackgroundProperties(): Promise<UnifiedProperty[]> {
     // Fetch with redirect following
     const response = await fetch(FEED_CONFIG.backgroundProperties.feedUrl, {
       redirect: 'follow',
-      next: { revalidate: 3600 },
+      cache: 'no-store',
     });
 
     if (!response.ok) {
