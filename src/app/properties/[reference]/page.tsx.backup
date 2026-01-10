@@ -2,25 +2,34 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { getPropertyByReference, fetchNewBuilds, BPProperty } from '@/lib/backgroundProperties';
+import { fetchAllProperties, getPropertyById } from '@/lib/unified-feed-service';
+import { UnifiedProperty } from '@/lib/unified-property';
 import fs from 'fs';
 import path from 'path';
 
 export const revalidate = 3600;
 
 // Load AI content from src/content/developments/ if available
-function loadAIContent(propertyName: string): any | null {
+function loadAIContent(propertyName: string, reference: string): any | null {
   try {
-    const slug = propertyName.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-    const contentPath = path.join(process.cwd(), 'src/content/developments', `${slug}.json`);
-    if (fs.existsSync(contentPath)) {
-      const content = JSON.parse(fs.readFileSync(contentPath, 'utf-8'));
-      return content;
-    }
-    // Try variations
     const dir = path.join(process.cwd(), 'src/content/developments');
+    if (!fs.existsSync(dir)) return null;
+    
     const files = fs.readdirSync(dir);
-    const match = files.find(f => f.includes(slug) || slug.includes(f.replace('.json', '')));
+    
+    // Try exact reference match first
+    const refSlug = reference.toLowerCase();
+    let match = files.find(f => f.replace('.json', '').toLowerCase() === refSlug);
+    
+    // Try property name match
+    if (!match && propertyName) {
+      const nameSlug = propertyName.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+      match = files.find(f => {
+        const fileSlug = f.replace('.json', '').toLowerCase();
+        return fileSlug === nameSlug || fileSlug.includes(nameSlug) || nameSlug.includes(fileSlug);
+      });
+    }
+    
     if (match) {
       return JSON.parse(fs.readFileSync(path.join(dir, match), 'utf-8'));
     }
@@ -31,47 +40,61 @@ function loadAIContent(propertyName: string): any | null {
 }
 
 export async function generateStaticParams() {
-  const properties = await fetchNewBuilds();
-  return properties.map((property) => ({
-    reference: property.reference,
-  }));
+  try {
+    const properties = await fetchAllProperties();
+    console.log(`[generateStaticParams] Generating params for ${properties.length} properties`);
+    return properties.map((property) => ({
+      reference: property.reference || property.id,
+    }));
+  } catch (error) {
+    console.error('[generateStaticParams] Error:', error);
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: { params: { reference: string } }): Promise<Metadata> {
-  const property = await getPropertyByReference(params.reference);
+  const property = await getPropertyById(params.reference);
   if (!property) return { title: 'Property Not Found' };
   
-  const aiContent = loadAIContent(property.title);
+  const aiContent = loadAIContent(property.aiContent?.title || '', params.reference);
   const title = aiContent?.metaTitle || generateSEOTitle(property);
-  const description = aiContent?.metaDescription || (property.description 
-    ? property.description.substring(0, 155) + '...'
-    : `${property.bedrooms} bedroom ${property.type.toLowerCase()} for sale in ${property.town}, Costa Blanca.`);
+  const description = aiContent?.metaDescription || generateMetaDescription(property);
   
   return {
     title: `${title} | New Build Homes Costa Blanca`,
     description,
-    openGraph: { title, description, images: property.images.length > 0 ? [property.images[0]] : [] },
+    openGraph: { 
+      title, 
+      description, 
+      images: property.images && property.images.length > 0 ? [property.images[0].url || property.images[0]] : [] 
+    },
   };
 }
 
-function generateSEOTitle(p: BPProperty): string {
+function generateSEOTitle(p: UnifiedProperty): string {
   const parts: string[] = [];
-  if (p.bedrooms > 0) parts.push(`${p.bedrooms} Bedroom`);
-  parts.push(p.type || 'Property');
-  if (p.pool) parts.push('with Pool');
+  if (p.bedrooms && p.bedrooms > 0) parts.push(`${p.bedrooms} Bedroom`);
+  parts.push(p.propertyType || 'Property');
+  if (p.hasPool) parts.push('with Pool');
   parts.push(`in ${p.town}`);
   return parts.join(' ');
 }
 
-function generateHighlights(p: BPProperty): { label: string; value: string }[] {
+function generateMetaDescription(p: UnifiedProperty): string {
+  const desc = p.descriptions?.en;
+  if (desc) return desc.substring(0, 155) + '...';
+  return `${p.bedrooms || ''} bedroom ${(p.propertyType || 'property').toLowerCase()} for sale in ${p.town}, Costa Blanca.`;
+}
+
+function generateHighlights(p: UnifiedProperty): { label: string; value: string }[] {
   const h: { label: string; value: string }[] = [];
-  if (p.bedrooms > 0) h.push({ label: 'Bedrooms', value: String(p.bedrooms) });
-  if (p.bathrooms > 0) h.push({ label: 'Bathrooms', value: String(p.bathrooms) });
-  if (p.builtArea > 0) h.push({ label: 'Built Area', value: `${p.builtArea}m²` });
-  if (p.plotArea > 0) h.push({ label: 'Plot Size', value: `${p.plotArea}m²` });
-  if (p.pool) h.push({ label: 'Pool', value: 'Private Pool' });
-  if (p.views && p.views.toLowerCase() !== 'none') h.push({ label: 'Views', value: p.views });
-  if (p.orientation && p.orientation.toLowerCase() !== 'none') h.push({ label: 'Orientation', value: p.orientation });
+  if (p.bedrooms && p.bedrooms > 0) h.push({ label: 'Bedrooms', value: String(p.bedrooms) });
+  if (p.bathrooms && p.bathrooms > 0) h.push({ label: 'Bathrooms', value: String(p.bathrooms) });
+  if (p.builtArea && p.builtArea > 0) h.push({ label: 'Built Area', value: `${p.builtArea}m²` });
+  if (p.plotArea && p.plotArea > 0) h.push({ label: 'Plot Size', value: `${p.plotArea}m²` });
+  if (p.hasPool) h.push({ label: 'Pool', value: p.hasPool ? 'Yes' : 'No' });
+  if (p.features?.includes('parking') || p.features?.includes('Parking')) h.push({ label: 'Parking', value: 'Yes' });
+  if (p.features?.includes('air conditioning') || p.features?.includes('A/C')) h.push({ label: 'A/C', value: 'Yes' });
   return h;
 }
 
@@ -86,6 +109,10 @@ function getAreaInfo(town: string): { nearbyAttractions: string[]; description: 
     'torrevieja': { nearbyAttractions: ['Salt Lakes (10 min)', 'Torrevieja Beach (5 min)', 'La Zenia Boulevard (15 min)', 'Alicante Airport (45 min)'], description: 'Torrevieja offers affordable beachside living with excellent amenities.' },
     'orihuela costa': { nearbyAttractions: ['Playa Flamenca Beach (5 min)', 'La Zenia Boulevard (10 min)', 'Villamartin Golf (10 min)', 'Alicante Airport (40 min)'], description: 'Orihuela Costa is popular for beach lovers and golfers.' },
     'guardamar del segura': { nearbyAttractions: ['Guardamar Dunes (5 min)', 'Guardamar Beach (5 min)', 'La Finca Golf (15 min)', 'Alicante Airport (40 min)'], description: 'Guardamar offers pristine beaches backed by pine forests.' },
+    'algorfa': { nearbyAttractions: ['La Finca Golf (5 min)', 'Guardamar Beach (15 min)', 'La Zenia Boulevard (20 min)', 'Alicante Airport (40 min)'], description: 'Algorfa is home to the prestigious La Finca Golf Resort.' },
+    'san miguel de salinas': { nearbyAttractions: ['Local Markets', 'Torrevieja (10 min)', 'La Zenia Boulevard (15 min)', 'Alicante Airport (45 min)'], description: 'San Miguel de Salinas offers authentic Spanish living at affordable prices.' },
+    'pilar de la horadada': { nearbyAttractions: ['Mil Palmeras Beach (5 min)', 'Local Restaurants', 'Murcia Airport (25 min)'], description: 'Pilar de la Horadada offers beautiful beaches and a relaxed atmosphere.' },
+    'los montesinos': { nearbyAttractions: ['Local Golf Courses', 'Torrevieja (10 min)', 'La Zenia Boulevard (15 min)', 'Alicante Airport (40 min)'], description: 'Los Montesinos is a traditional Spanish town popular with golfers.' },
   };
   const key = town.toLowerCase();
   return areas[key] || { nearbyAttractions: ['Local Beaches', 'Restaurants & Shops', 'Golf Courses', 'Alicante Airport'], description: `${town} is a wonderful location on the Costa Blanca.` };
@@ -96,32 +123,69 @@ const PHONE_NUMBER = '+34 634 044 970';
 const HABENO_LINK = 'https://habeno.com/form?hypido=1&partnerId=9f927d6f-7293-4f06-0de0-08dabb4ac15e';
 
 export default async function PropertyPage({ params }: { params: { reference: string } }) {
-  const property = await getPropertyByReference(params.reference);
-  if (!property) notFound();
+  console.log(`[PropertyPage] Loading property: ${params.reference}`);
+  
+  const property = await getPropertyById(params.reference);
+  if (!property) {
+    console.log(`[PropertyPage] Property not found: ${params.reference}`);
+    notFound();
+  }
 
-  const aiContent = loadAIContent(property.title);
-  const title = aiContent?.metaTitle?.split(' - ')[0] || aiContent?.projectName || generateSEOTitle(property);
+  console.log(`[PropertyPage] Found property: ${property.aiContent?.title || property.reference} from ${property.source}`);
+
+  const aiContent = loadAIContent(property.aiContent?.title || '', params.reference);
+  const title = aiContent?.metaTitle?.split(' - ')[0] || aiContent?.projectName || property.aiContent?.title || generateSEOTitle(property);
   const highlights = generateHighlights(property);
   const areaInfo = getAreaInfo(property.town);
-  const mainImage = property.images[0] || '/images/placeholder-property.jpg';
-  const additionalImages = property.images.slice(1, 5);
-  const remainingCount = Math.max(0, property.images.length - 5);
+  
+  // Handle images - unified format
+  const images = property.images || [];
+  const mainImage = images.length > 0 ? (typeof images[0] === 'string' ? images[0] : images[0].url) : '/images/placeholder-property.jpg';
+  const additionalImages = images.slice(1, 5).map(img => typeof img === 'string' ? img : img.url);
+  const remainingCount = Math.max(0, images.length - 5);
+  
+  // Get description - prefer AI content, then multilingual, then raw
+  const description = aiContent?.content?.heroIntro || 
+    property.descriptions?.en || 
+     
+    `This ${property.bedrooms || ''} bedroom ${(property.propertyType || 'property').toLowerCase()} is located in ${property.town}.`;
+
+  // Price display
+  const priceDisplay = property.price 
+    ? `€${property.price.toLocaleString()}` 
+    : 'Price on request';
 
   const productSchema = {
-    '@context': 'https://schema.org', '@type': 'Product', name: title, image: property.images,
-    description: aiContent?.content?.heroIntro || property.description || `New build ${property.type.toLowerCase()} for sale in ${property.town}.`,
+    '@context': 'https://schema.org', 
+    '@type': 'Product', 
+    name: title, 
+    image: images.map(img => img.url || img),
+    description: description.substring(0, 500),
     brand: { '@type': 'Brand', name: 'New Build Homes Costa Blanca' },
-    offers: { '@type': 'Offer', url: `https://www.newbuildhomescostablanca.com/properties/${property.reference}`, priceCurrency: 'EUR', availability: 'https://schema.org/InStock', seller: { '@type': 'RealEstateAgent', name: 'New Build Homes Costa Blanca' } },
-    address: { '@type': 'PostalAddress', addressLocality: property.town, addressRegion: 'Alicante', addressCountry: 'ES' },
-    numberOfRooms: property.bedrooms, floorSize: { '@type': 'QuantitativeValue', value: property.builtArea, unitCode: 'MTK' },
+    offers: { 
+      '@type': 'Offer', 
+      url: `https://www.newbuildhomescostablanca.com/properties/${property.reference}`, 
+      priceCurrency: 'EUR', 
+      ...(property.price && { price: property.price }),
+      availability: 'https://schema.org/InStock', 
+      seller: { '@type': 'RealEstateAgent', name: 'New Build Homes Costa Blanca' } 
+    },
+    address: { 
+      '@type': 'PostalAddress', 
+      addressLocality: property.town, 
+      addressRegion: property.province || 'Alicante', 
+      addressCountry: 'ES' 
+    },
+    ...(property.bedrooms && { numberOfRooms: property.bedrooms }),
+    ...(property.builtArea && { floorSize: { '@type': 'QuantitativeValue', value: property.builtArea, unitCode: 'MTK' } }),
   };
 
   const faqItems = aiContent?.content?.faqs || [
-    { question: `What is the price of this property in ${property.town}?`, answer: 'For the latest pricing and availability, please contact us via WhatsApp at +34 634 044 970 or use our contact form.' },
+    { question: `What is the price of this property in ${property.town}?`, answer: property.price ? `This property is listed at ${priceDisplay}. Contact us for the latest availability.` : 'For the latest pricing and availability, please contact us via WhatsApp at +34 634 044 970 or use our contact form.' },
     { question: 'Can I arrange a viewing of this property?', answer: 'Yes, we offer both in-person viewings and video tours. Contact us to schedule.' },
-    { question: 'Is mortgage financing available for international buyers?', answer: 'Yes, Spanish banks offer mortgages to international buyers. EU residents can typically finance up to 80%, non-EU up to 70%.' },
-    { question: 'What additional costs should I budget for?', answer: 'Budget approximately 13-14% on top of the purchase price including 10% IVA, 1.5% stamp duty, notary fees, land registry, and legal fees.' },
-    { question: 'Do I need an NIE number to buy property in Spain?', answer: 'Yes, all foreign buyers need an NIE. This can be obtained at Spanish consulates abroad or in Spain.' },
+    { question: 'Is mortgage financing available for international buyers?', answer: 'Yes, Spanish banks offer mortgages to international buyers. EU residents can typically finance up to 80%, non-EU up to 70%. We partner with Habeno who can compare offers from multiple banks.' },
+    { question: 'What additional costs should I budget for?', answer: 'Budget approximately 13-14% on top of the purchase price including 10% IVA (for new builds), 1.5% stamp duty, notary fees, land registry, and legal fees.' },
+    { question: 'Do I need an NIE number to buy property in Spain?', answer: 'Yes, all foreign buyers need an NIE (tax identification number). This can be obtained at Spanish consulates abroad or in Spain with a lawyer\'s assistance.' },
   ];
 
   const faqSchema = {
@@ -161,6 +225,15 @@ export default async function PropertyPage({ params }: { params: { reference: st
         </nav>
 
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          {/* Source Badge */}
+          {property.source === 'redsp' && (
+            <div className="mb-4">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                ✓ New Build
+              </span>
+            </div>
+          )}
+
           {/* Image Gallery */}
           <div className="mb-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -188,10 +261,17 @@ export default async function PropertyPage({ params }: { params: { reference: st
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-8">
               <div className="bg-white rounded-xl shadow-sm p-6">
-                <h1 className="text-3xl font-bold text-gray-900 mb-2">{title}</h1>
-                <p className="text-lg text-gray-600 mb-4">{property.town}, Costa Blanca</p>
+                <div className="flex justify-between items-start mb-2">
+                  <h1 className="text-3xl font-bold text-gray-900">{title}</h1>
+                  {property.price && (
+                    <span className="text-2xl font-bold text-blue-600">{priceDisplay}</span>
+                  )}
+                </div>
+                <p className="text-lg text-gray-600 mb-4">
+                  {property.locationDetail ? `${property.locationDetail}, ` : ''}{property.town}, Costa Blanca
+                </p>
                 <div className="flex flex-wrap gap-4 mb-6">
-                  {highlights.slice(0, 4).map((h, i) => (
+                  {highlights.slice(0, 6).map((h, i) => (
                     <div key={i} className="flex items-center gap-2 bg-gray-100 px-3 py-2 rounded-lg">
                       <span className="font-semibold text-gray-900">{h.value}</span>
                       <span className="text-gray-500 text-sm">{h.label}</span>
@@ -200,27 +280,19 @@ export default async function PropertyPage({ params }: { params: { reference: st
                 </div>
               </div>
 
-              {/* Description Section - AI Content or Feed */}
+              {/* Description Section */}
               <div className="bg-white rounded-xl shadow-sm p-6">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
                   {aiContent ? `About ${aiContent.projectName || title}` : 'Property Description'}
                 </h2>
                 <div className="prose max-w-none text-gray-600">
-                  {aiContent?.content?.heroIntro ? (
-                    aiContent.content.heroIntro.split('\n\n').map((para: string, idx: number) => (
-                      <p key={idx} className="mb-4">{para}</p>
-                    ))
-                  ) : property.description ? (
-                    property.description.split('\n').filter(Boolean).map((para, idx) => (
-                      <p key={idx} className="mb-4">{para}</p>
-                    ))
-                  ) : (
-                    <p>This {property.bedrooms} bedroom {property.type.toLowerCase()} is located in the sought-after area of {property.town}. Contact us for full details and to arrange a viewing.</p>
-                  )}
+                  {description.split('\n').filter(Boolean).map((para: string, idx: number) => (
+                    <p key={idx} className="mb-4">{para}</p>
+                  ))}
                 </div>
               </div>
 
-              {/* Location Section - AI Content or Generic */}
+              {/* Location Section */}
               <div className="bg-white rounded-xl shadow-sm p-6">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Location: {property.town}</h2>
                 <div className="prose max-w-none text-gray-600 mb-6">
@@ -243,19 +315,35 @@ export default async function PropertyPage({ params }: { params: { reference: st
               </div>
 
               {/* Property Features */}
-              {(aiContent?.content?.propertyFeatures || highlights.length > 4) && (
+              {highlights.length > 0 && (
                 <div className="bg-white rounded-xl shadow-sm p-6">
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">Property Features</h2>
                   {aiContent?.content?.propertyFeatures?.intro && (
                     <p className="text-gray-600 mb-4">{aiContent.content.propertyFeatures.intro}</p>
                   )}
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                    {(aiContent?.content?.propertyFeatures?.features || property.features || []).map((feature: string, idx: number) => (
-                      <li key={idx} className="flex items-center gap-2 text-gray-600">
-                        <span className="text-blue-500">•</span> {feature}
-                      </li>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {highlights.map((h, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-gray-600">
+                        <span className="text-blue-500">•</span> 
+                        <span className="font-medium">{h.label}:</span> {h.value}
+                      </div>
                     ))}
-                  </ul>
+                    {property.hasPool && (
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <span className="text-blue-500">•</span> Swimming Pool
+                      </div>
+                    )}
+                    {property.features?.some(f => f.toLowerCase().includes('air') || f.toLowerCase().includes('a/c')) && (
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <span className="text-blue-500">•</span> Air Conditioning
+                      </div>
+                    )}
+                    {property.features?.some(f => f.toLowerCase().includes('parking') || f.toLowerCase().includes('garage')) && (
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <span className="text-blue-500">•</span> Parking
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
 
@@ -307,8 +395,11 @@ export default async function PropertyPage({ params }: { params: { reference: st
             <div className="space-y-6">
               {/* Contact Card */}
               <div className="bg-white rounded-xl shadow-sm p-6 sticky top-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Interested in this property?</h3>
-                <p className="text-gray-600 mb-6">Contact us for the latest pricing, availability, and to arrange a viewing.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Interested in this property?</h3>
+                {property.price && (
+                  <p className="text-2xl font-bold text-blue-600 mb-4">{priceDisplay}</p>
+                )}
+                <p className="text-gray-600 mb-6">Contact us for the latest availability and to arrange a viewing.</p>
                 <div className="space-y-3">
                   <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg transition">
                     <span>📱</span> WhatsApp Us
@@ -342,8 +433,27 @@ export default async function PropertyPage({ params }: { params: { reference: st
                     <dt className="text-gray-500">Reference</dt>
                     <dd className="font-medium text-gray-900">{property.reference}</dd>
                   </div>
+                  <div className="flex justify-between">
+                    <dt className="text-gray-500">Type</dt>
+                    <dd className="font-medium text-gray-900">{property.propertyType}</dd>
+                  </div>
+                  {property.source && (
+                    <div className="flex justify-between">
+                      <dt className="text-gray-500">Source</dt>
+                      <dd className="font-medium text-gray-900 capitalize">{property.source}</dd>
+                    </div>
+                  )}
                 </dl>
               </div>
+
+              {/* Multilingual Note (for REDSP) */}
+              {property.source === 'redsp' && property.descriptions && Object.keys(property.descriptions).length > 1 && (
+                <div className="bg-blue-50 rounded-xl p-4">
+                  <p className="text-sm text-blue-800">
+                    <strong>🌍 Available in multiple languages:</strong> This property description is available in {Object.keys(property.descriptions).join(', ').toUpperCase()}
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </main>

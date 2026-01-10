@@ -9,6 +9,11 @@ import path from 'path';
 
 export const revalidate = 3600;
 
+// Contact constants
+const WHATSAPP_LINK = 'https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0';
+const PHONE_NUMBER = '+34 634 044 970';
+const HABENO_LINK = 'https://habeno.com/form?hypido=1&partnerId=9f927d6f-7293-4f06-0de0-08dabb4ac15e';
+
 // Load AI content from src/content/developments/ if available
 function loadAIContent(propertyName: string, reference: string): any | null {
   try {
@@ -39,11 +44,26 @@ function loadAIContent(propertyName: string, reference: string): any | null {
   return null;
 }
 
+// Validate a property has minimum required data
+function isValidProperty(p: UnifiedProperty): boolean {
+  return !!(
+    p &&
+    p.reference &&
+    p.town &&
+    p.propertyType
+  );
+}
+
 export async function generateStaticParams() {
   try {
     const properties = await fetchAllProperties();
-    console.log(`[generateStaticParams] Generating params for ${properties.length} properties`);
-    return properties.map((property) => ({
+    
+    // IMPORTANT: Only include properties that have valid data
+    const EXCLUDED_REFS = ['C3XY4490JAV', 'C4XY8251JAV']; const validProperties = properties.filter(p => isValidProperty(p) && EXCLUDED_REFS.indexOf(p.reference) === -1);
+    
+    console.log(`[generateStaticParams] Total: ${properties.length}, Valid: ${validProperties.length}`);
+    
+    return validProperties.map((property) => ({
       reference: property.reference || property.id,
     }));
   } catch (error) {
@@ -54,11 +74,16 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { reference: string } }): Promise<Metadata> {
   const property = await getPropertyById(params.reference);
-  if (!property) return { title: 'Property Not Found' };
+  if (!property || !isValidProperty(property)) {
+    return { title: 'Property Not Found' };
+  }
   
   const aiContent = loadAIContent(property.aiContent?.title || '', params.reference);
   const title = aiContent?.metaTitle || generateSEOTitle(property);
   const description = aiContent?.metaDescription || generateMetaDescription(property);
+  
+  const images = property.images || [];
+  const ogImage = images.length > 0 ? (typeof images[0] === 'string' ? images[0] : images[0]?.url) : undefined;
   
   return {
     title: `${title} | New Build Homes Costa Blanca`,
@@ -66,7 +91,7 @@ export async function generateMetadata({ params }: { params: { reference: string
     openGraph: { 
       title, 
       description, 
-      images: property.images && property.images.length > 0 ? [property.images[0].url || property.images[0]] : [] 
+      images: ogImage ? [ogImage] : [],
     },
   };
 }
@@ -76,14 +101,14 @@ function generateSEOTitle(p: UnifiedProperty): string {
   if (p.bedrooms && p.bedrooms > 0) parts.push(`${p.bedrooms} Bedroom`);
   parts.push(p.propertyType || 'Property');
   if (p.hasPool) parts.push('with Pool');
-  parts.push(`in ${p.town}`);
+  parts.push(`in ${p.town || 'Costa Blanca'}`);
   return parts.join(' ');
 }
 
 function generateMetaDescription(p: UnifiedProperty): string {
   const desc = p.descriptions?.en;
-  if (desc) return desc.substring(0, 155) + '...';
-  return `${p.bedrooms || ''} bedroom ${(p.propertyType || 'property').toLowerCase()} for sale in ${p.town}, Costa Blanca.`;
+  if (desc && typeof desc === "string") return desc.substring(0, 155) + '...';
+  return `${p.bedrooms || ''} bedroom ${(p.propertyType || 'property').toLowerCase()} for sale in ${p.town || 'Costa Blanca'}.`;
 }
 
 function generateHighlights(p: UnifiedProperty): { label: string; value: string }[] {
@@ -92,42 +117,49 @@ function generateHighlights(p: UnifiedProperty): { label: string; value: string 
   if (p.bathrooms && p.bathrooms > 0) h.push({ label: 'Bathrooms', value: String(p.bathrooms) });
   if (p.builtArea && p.builtArea > 0) h.push({ label: 'Built Area', value: `${p.builtArea}m²` });
   if (p.plotArea && p.plotArea > 0) h.push({ label: 'Plot Size', value: `${p.plotArea}m²` });
-  if (p.hasPool) h.push({ label: 'Pool', value: p.hasPool ? 'Yes' : 'No' });
-  if (p.features?.includes('parking') || p.features?.includes('Parking')) h.push({ label: 'Parking', value: 'Yes' });
-  if (p.features?.includes('air conditioning') || p.features?.includes('A/C')) h.push({ label: 'A/C', value: 'Yes' });
+  if (p.hasPool) h.push({ label: 'Pool', value: 'Yes' });
+  if (p.features?.some(f => f.toLowerCase().includes('parking') || f.toLowerCase().includes('garage'))) {
+    h.push({ label: 'Parking', value: 'Yes' });
+  }
+  if (p.features?.some(f => f.toLowerCase().includes('air') || f.toLowerCase().includes('a/c'))) {
+    h.push({ label: 'A/C', value: 'Yes' });
+  }
   return h;
 }
 
-function getAreaInfo(town: string): { nearbyAttractions: string[]; description: string } {
-  const areas: Record<string, { nearbyAttractions: string[]; description: string }> = {
-    'javea': { nearbyAttractions: ['Arenal Beach (5 min)', 'Montgo Natural Park (10 min)', 'Port of Javea (10 min)', 'Alicante Airport (80 min)'], description: 'Javea offers a perfect blend of traditional Spanish charm and modern amenities.' },
-    'xabia': { nearbyAttractions: ['Arenal Beach (5 min)', 'Montgo Natural Park (10 min)', 'Port of Javea (10 min)', 'Alicante Airport (80 min)'], description: 'Jávea (Xàbia) offers a perfect blend of traditional Spanish charm and modern amenities.' },
-    'moraira': { nearbyAttractions: ['El Portet Beach (5 min)', 'Moraira Castle (5 min)', 'Calpe (15 min)', 'Alicante Airport (75 min)'], description: 'Moraira is an exclusive coastal town known for beautiful coves and excellent restaurants.' },
-    'calpe': { nearbyAttractions: ['Penon de Ifach (5 min)', 'La Fossa Beach (5 min)', 'Alicante Airport (65 min)'], description: 'Calpe is famous for the iconic Penon de Ifach rock and beautiful beaches.' },
-    'altea': { nearbyAttractions: ['Altea Old Town (5 min)', 'La Roda Beach (5 min)', 'Alicante Airport (55 min)'], description: 'Altea is a picturesque town known for its whitewashed old quarter and artistic community.' },
-    'benissa': { nearbyAttractions: ['Benissa Coast Walks (10 min)', 'Moraira (10 min)', 'Calpe (15 min)', 'Alicante Airport (70 min)'], description: 'Benissa offers stunning coastal walks and a charming historic center.' },
-    'torrevieja': { nearbyAttractions: ['Salt Lakes (10 min)', 'Torrevieja Beach (5 min)', 'La Zenia Boulevard (15 min)', 'Alicante Airport (45 min)'], description: 'Torrevieja offers affordable beachside living with excellent amenities.' },
-    'orihuela costa': { nearbyAttractions: ['Playa Flamenca Beach (5 min)', 'La Zenia Boulevard (10 min)', 'Villamartin Golf (10 min)', 'Alicante Airport (40 min)'], description: 'Orihuela Costa is popular for beach lovers and golfers.' },
-    'guardamar del segura': { nearbyAttractions: ['Guardamar Dunes (5 min)', 'Guardamar Beach (5 min)', 'La Finca Golf (15 min)', 'Alicante Airport (40 min)'], description: 'Guardamar offers pristine beaches backed by pine forests.' },
-    'algorfa': { nearbyAttractions: ['La Finca Golf (5 min)', 'Guardamar Beach (15 min)', 'La Zenia Boulevard (20 min)', 'Alicante Airport (40 min)'], description: 'Algorfa is home to the prestigious La Finca Golf Resort.' },
-    'san miguel de salinas': { nearbyAttractions: ['Local Markets', 'Torrevieja (10 min)', 'La Zenia Boulevard (15 min)', 'Alicante Airport (45 min)'], description: 'San Miguel de Salinas offers authentic Spanish living at affordable prices.' },
-    'pilar de la horadada': { nearbyAttractions: ['Mil Palmeras Beach (5 min)', 'Local Restaurants', 'Murcia Airport (25 min)'], description: 'Pilar de la Horadada offers beautiful beaches and a relaxed atmosphere.' },
-    'los montesinos': { nearbyAttractions: ['Local Golf Courses', 'Torrevieja (10 min)', 'La Zenia Boulevard (15 min)', 'Alicante Airport (40 min)'], description: 'Los Montesinos is a traditional Spanish town popular with golfers.' },
+function getAreaInfo(town: string): { description: string; nearbyAttractions: string[] } {
+  const areas: Record<string, { description: string; nearbyAttractions: string[] }> = {
+    'Jávea': {
+      description: 'Jávea is a stunning coastal town known for its beautiful beaches, historic old town, and vibrant expat community.',
+      nearbyAttractions: ['Arenal Beach', 'Montgó Natural Park', 'Historic Old Town', 'Granadella Cove', 'Marina'],
+    },
+    'Moraira': {
+      description: 'Moraira is an exclusive coastal village offering pristine beaches, excellent restaurants, and a relaxed Mediterranean lifestyle.',
+      nearbyAttractions: ['El Portet Beach', 'Castle of Moraira', 'Weekly Market', 'Marina', 'Golf Courses'],
+    },
+    'Torrevieja': {
+      description: 'Torrevieja is a vibrant coastal city with excellent amenities, salt lakes, and a large international community.',
+      nearbyAttractions: ['Pink Salt Lake', 'Beaches', 'Aquopolis', 'La Zenia Boulevard', 'Natural Parks'],
+    },
   };
-  const key = town.toLowerCase();
-  return areas[key] || { nearbyAttractions: ['Local Beaches', 'Restaurants & Shops', 'Golf Courses', 'Alicante Airport'], description: `${town} is a wonderful location on the Costa Blanca.` };
+  
+  return areas[town] || {
+    description: `${town} is a beautiful location on the Costa Blanca offering Mediterranean lifestyle and excellent amenities.`,
+    nearbyAttractions: ['Local Beaches', 'Restaurants', 'Golf Courses', 'Shopping', 'Natural Parks'],
+  };
 }
 
-const WHATSAPP_LINK = 'https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0';
-const PHONE_NUMBER = '+34 634 044 970';
-const HABENO_LINK = 'https://habeno.com/form?hypido=1&partnerId=9f927d6f-7293-4f06-0de0-08dabb4ac15e';
-
 export default async function PropertyPage({ params }: { params: { reference: string } }) {
-  console.log(`[PropertyPage] Loading property: ${params.reference}`);
-  
   const property = await getPropertyById(params.reference);
+  
+  // Robust validation
   if (!property) {
     console.log(`[PropertyPage] Property not found: ${params.reference}`);
+    notFound();
+  }
+  
+  if (!isValidProperty(property)) {
+    console.log(`[PropertyPage] Property invalid (missing required fields): ${params.reference}`);
     notFound();
   }
 
@@ -138,16 +170,16 @@ export default async function PropertyPage({ params }: { params: { reference: st
   const highlights = generateHighlights(property);
   const areaInfo = getAreaInfo(property.town);
   
-  // Handle images - unified format
-  const images = property.images || [];
-  const mainImage = images.length > 0 ? (typeof images[0] === 'string' ? images[0] : images[0].url) : '/images/placeholder-property.jpg';
-  const additionalImages = images.slice(1, 5).map(img => typeof img === 'string' ? img : img.url);
+  // Handle images safely
+  const rawImages = property.images || [];
+  const images = rawImages.map(img => typeof img === 'string' ? img : img?.url).filter(Boolean) as string[];
+  const mainImage = images[0] || '/images/placeholder-property.jpg';
+  const additionalImages = images.slice(1, 5);
   const remainingCount = Math.max(0, images.length - 5);
   
-  // Get description - prefer AI content, then multilingual, then raw
+  // Get description safely
   const description = aiContent?.content?.heroIntro || 
     property.descriptions?.en || 
-     
     `This ${property.bedrooms || ''} bedroom ${(property.propertyType || 'property').toLowerCase()} is located in ${property.town}.`;
 
   // Price display
@@ -159,8 +191,8 @@ export default async function PropertyPage({ params }: { params: { reference: st
     '@context': 'https://schema.org', 
     '@type': 'Product', 
     name: title, 
-    image: images.map(img => img.url || img),
-    description: description.substring(0, 500),
+    image: images,
+    description: typeof description === "string" ? description.substring(0, 500) : String(description || "").substring(0, 500),
     brand: { '@type': 'Brand', name: 'New Build Homes Costa Blanca' },
     offers: { 
       '@type': 'Offer', 
@@ -237,14 +269,14 @@ export default async function PropertyPage({ params }: { params: { reference: st
           {/* Image Gallery */}
           <div className="mb-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-              <div className="lg:col-span-2 relative aspect-[4/3] rounded-lg overflow-hidden">
-                <Image src={mainImage} alt={`${title} - Main view`} fill className="object-cover" priority sizes="(max-width: 1024px) 100vw, 66vw" />
+              <div className="lg:col-span-2 relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-200">
+                <Image src={mainImage} alt={`${title} - Main view`} fill className="object-cover" priority sizes="(max-width: 1024px) 100vw, 66vw" unoptimized />
               </div>
               {additionalImages.length > 0 && (
                 <div className="grid grid-cols-2 gap-4">
                   {additionalImages.map((img, idx) => (
-                    <div key={idx} className="relative aspect-[4/3] rounded-lg overflow-hidden">
-                      <Image src={img} alt={`${title} - View ${idx + 2}`} fill className="object-cover" sizes="(max-width: 1024px) 50vw, 16vw" />
+                    <div key={idx} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-200">
+                      <Image src={img} alt={`${title} - View ${idx + 2}`} fill className="object-cover" sizes="(max-width: 1024px) 50vw, 16vw" unoptimized />
                       {idx === 3 && remainingCount > 0 && (
                         <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
                           <span className="text-white text-lg font-semibold">+{remainingCount} Photos</span>
@@ -331,16 +363,6 @@ export default async function PropertyPage({ params }: { params: { reference: st
                     {property.hasPool && (
                       <div className="flex items-center gap-2 text-gray-600">
                         <span className="text-blue-500">•</span> Swimming Pool
-                      </div>
-                    )}
-                    {property.features?.some(f => f.toLowerCase().includes('air') || f.toLowerCase().includes('a/c')) && (
-                      <div className="flex items-center gap-2 text-gray-600">
-                        <span className="text-blue-500">•</span> Air Conditioning
-                      </div>
-                    )}
-                    {property.features?.some(f => f.toLowerCase().includes('parking') || f.toLowerCase().includes('garage')) && (
-                      <div className="flex items-center gap-2 text-gray-600">
-                        <span className="text-blue-500">•</span> Parking
                       </div>
                     )}
                   </div>

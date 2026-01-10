@@ -18,6 +18,68 @@ interface Area {
   cardImage?: string;
 }
 
+// Normalizer to handle both JSON formats
+function normalizeAreaToCard(rawData: any, filename: string): Area {
+  // Format 1: Has content.metaTitle nested structure
+  if (rawData.content?.metaTitle || rawData.slug) {
+    return {
+      slug: rawData.slug || filename.replace('.json', ''),
+      name: rawData.name || 'Unknown Area',
+      propertyCount: rawData.propertyCount || 0,
+      propertyTypes: rawData.propertyTypes || ['Apartments', 'Villas'],
+      priceRange: rawData.priceRange || { min: 200000, max: 1000000 },
+      cardImage: rawData.cardImage,
+    };
+  }
+  
+  // Format 2: Has metaTitle at root level (AI-generated format)
+  const slug = filename.replace('.json', '');
+  
+  // Extract name from metaTitle or slug
+  let name = slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  if (rawData.metaTitle) {
+    const match = rawData.metaTitle.match(/Living in ([^:|]+)/i) || 
+                  rawData.metaTitle.match(/^([^:|]+)/);
+    if (match) {
+      name = match[1].trim();
+    }
+  }
+  
+  // Parse price range from string like "€428,000 - €4,500,000"
+  let priceRange = { min: 200000, max: 1000000 };
+  if (rawData.propertyMarket?.priceRange) {
+    const priceStr = rawData.propertyMarket.priceRange;
+    const prices = priceStr.match(/[\d,]+/g);
+    if (prices && prices.length >= 2) {
+      priceRange = {
+        min: parseInt(prices[0].replace(/,/g, ''), 10) || 200000,
+        max: parseInt(prices[1].replace(/,/g, ''), 10) || 1000000,
+      };
+    }
+  }
+  
+  // Extract property types from propertyMarket or use defaults
+  let propertyTypes = ['Apartments', 'Villas', 'Townhouses'];
+  if (rawData.propertyMarket?.overview) {
+    const overview = rawData.propertyMarket.overview.toLowerCase();
+    const types: string[] = [];
+    if (overview.includes('villa')) types.push('Villas');
+    if (overview.includes('apartment')) types.push('Apartments');
+    if (overview.includes('townhouse')) types.push('Townhouses');
+    if (overview.includes('penthouse')) types.push('Penthouses');
+    if (types.length > 0) propertyTypes = types;
+  }
+  
+  return {
+    slug,
+    name,
+    propertyCount: rawData.propertyCount || 0,
+    propertyTypes,
+    priceRange,
+    cardImage: rawData.cardImage,
+  };
+}
+
 function getAllAreas(): Area[] {
   const areasDir = path.join(process.cwd(), 'src', 'content', 'areas');
   
@@ -28,15 +90,21 @@ function getAllAreas(): Area[] {
   const files = fs.readdirSync(areasDir).filter(file => file.endsWith('.json'));
   
   return files.map(file => {
-    const content = JSON.parse(fs.readFileSync(path.join(areasDir, file), 'utf-8'));
-    return {
-      slug: content.slug,
-      name: content.name,
-      propertyCount: content.propertyCount,
-      propertyTypes: content.propertyTypes,
-      priceRange: content.priceRange,
-      cardImage: content.cardImage,
-    };
+    try {
+      const content = JSON.parse(fs.readFileSync(path.join(areasDir, file), 'utf-8'));
+      return normalizeAreaToCard(content, file);
+    } catch (error) {
+      console.error(`Error parsing area file ${file}:`, error);
+      // Return a fallback area so the page doesn't crash
+      const slug = file.replace('.json', '');
+      return {
+        slug,
+        name: slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+        propertyCount: 0,
+        propertyTypes: ['Properties'],
+        priceRange: { min: 200000, max: 1000000 },
+      };
+    }
   });
 }
 
@@ -88,9 +156,11 @@ export default function AreasPage() {
                 </h2>
                 
                 <div className="space-y-3 text-gray-600">
-                  <p>
-                    <span className="font-medium">New Builds: 🏗 </span> {area.propertyCount}
-                  </p>
+                  {area.propertyCount > 0 && (
+                    <p>
+                      <span className="font-medium">New Builds: 🏗 </span> {area.propertyCount}
+                    </p>
+                  )}
                   <p>
                     <span className="font-medium">Property Types:</span> {area.propertyTypes.join(', ')}
                   </p>
@@ -138,7 +208,7 @@ export default function AreasPage() {
               href="tel:+34634044970"
               className="inline-flex items-center gap-2 bg-white text-teal-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-medium transition-colors"
             >
-              📞 +34 634 444 970
+              📞 +34 634 044 970
             </a>
           </div>
         </div>
