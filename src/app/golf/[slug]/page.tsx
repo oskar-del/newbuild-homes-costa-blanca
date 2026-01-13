@@ -408,7 +408,7 @@ const DEFAULT_COURSE_DATA = {
     { type: '2-bed apartment', range: '€180,000 - €280,000' },
     { type: '3-bed villa', range: '€350,000 - €550,000' },
   ],
-  faqs: [],
+  faqs: [] as { question: string; answer: string }[],
   extendedDescription: '',
   signatureHoles: '',
   bestFor: [],
