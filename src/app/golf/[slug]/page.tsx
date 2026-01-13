@@ -411,7 +411,7 @@ const DEFAULT_COURSE_DATA = {
   faqs: [] as { question: string; answer: string }[],
   extendedDescription: '',
   signatureHoles: '',
-  bestFor: [],
+  bestFor: [] as string[],
 };
 
 function getCourseSchema(course: typeof GOLF_COURSES[0], courseData: typeof DEFAULT_COURSE_DATA) {
