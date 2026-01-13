@@ -261,7 +261,6 @@ function convertREDSPToUnified(property: REDSPProperty): UnifiedProperty {
     locationDetail,
     province,
     region,
-    country: 'Spain',
     latitude,
     longitude,
     
@@ -279,6 +278,11 @@ function convertREDSPToUnified(property: REDSPProperty): UnifiedProperty {
     // Features
     isNewBuild,
     hasPool,
+    hasGarden: features.some(f => f.toLowerCase().includes('garden')),
+    hasTerrace: features.some(f => f.toLowerCase().includes('terrace')),
+    hasParking: features.some(f => f.toLowerCase().includes('parking')),
+    hasSeaview: features.some(f => f.toLowerCase().includes('sea view')),
+    hasGolfview: features.some(f => f.toLowerCase().includes('golf')),
     features,
     
     // Descriptions (multilingual)
@@ -286,18 +290,13 @@ function convertREDSPToUnified(property: REDSPProperty): UnifiedProperty {
     
     // Images
     images,
-    mainImage: images[0]?.url || null,
-    floorplanImages: images.filter(img => img.isFloorplan),
     
     // Energy
-    energyConsumption,
-    energyEmissions,
     
     // External link
-    externalUrl: property.url?.[0] || null,
     
     // Metadata
-    lastUpdated: new Date().toISOString(),
+    lastFetched: new Date().toISOString(),
   };
 }
 

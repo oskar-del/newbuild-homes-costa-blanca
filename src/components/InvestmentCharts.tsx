@@ -50,23 +50,26 @@ const areaPriceData = [
  */
 export function InvestmentChart({ area }: { area?: string }) {
   return (
-    <div className="bg-white rounded-lg p-4">
-      <ResponsiveContainer width="100%" height={250}>
+    <div className="w-full">
+      <h4 className="text-sm font-semibold text-stone-700 mb-3">
+        Costa Blanca Price Growth (€/m²)
+      </h4>
+      <ResponsiveContainer width="100%" height={200}>
         <LineChart data={priceGrowthData}>
           <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
           <XAxis 
             dataKey="year" 
-            tick={{ fill: '#6b7280', fontSize: 12 }}
-            axisLine={{ stroke: '#d1d5db' }}
+            tick={{ fontSize: 12 }}
+            tickLine={false}
           />
           <YAxis 
-            tick={{ fill: '#6b7280', fontSize: 12 }}
-            axisLine={{ stroke: '#d1d5db' }}
+            tick={{ fontSize: 12 }}
+            tickLine={false}
             tickFormatter={(value) => `€${value}`}
             domain={[1500, 2600]}
           />
           <Tooltip 
-            formatter={(value: number) => [`€${value}/m²`, 'Avg. Price']}
+            formatter={(value) => [`€${value}/m²`, 'Avg. Price']}
             contentStyle={{
               backgroundColor: '#fff',
               border: '1px solid #e5e7eb',
@@ -74,58 +77,58 @@ export function InvestmentChart({ area }: { area?: string }) {
               boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)',
             }}
           />
-          <Line
-            type="monotone"
-            dataKey="price"
-            stroke="#059669"
+          <Line 
+            type="monotone" 
+            dataKey="price" 
+            stroke="#10b981" 
             strokeWidth={3}
-            dot={{ fill: '#059669', strokeWidth: 2, r: 5 }}
-            activeDot={{ r: 7, fill: '#059669' }}
+            dot={{ fill: '#10b981', strokeWidth: 2, r: 4 }}
+            activeDot={{ r: 6, fill: '#059669' }}
           />
         </LineChart>
       </ResponsiveContainer>
-      <p className="text-center text-stone-500 text-xs mt-2">
-        Costa Blanca average property prices (€/m²) | Source: Property market data 2020-2025
+      <p className="text-xs text-stone-500 mt-2 text-center">
+        Average annual growth: 7.8% (2020-2025)
       </p>
     </div>
   );
 }
 
-/**
- * Area Price Comparison - Bar chart comparing town prices
- */
 interface AreaPriceComparisonProps {
   currentTown?: string;
 }
 
 export function AreaPriceComparison({ currentTown }: AreaPriceComparisonProps) {
   // Highlight the current town if provided
-  const data = areaPriceData.map((item) => ({
+  const dataWithHighlight = areaPriceData.map(item => ({
     ...item,
-    isHighlighted: currentTown?.toLowerCase().includes(item.area.toLowerCase()),
+    isHighlighted: currentTown ? item.area.toLowerCase().includes(currentTown.toLowerCase()) : false,
   }));
-  
+
   return (
-    <div className="bg-white rounded-lg p-4">
+    <div className="w-full">
+      <h4 className="text-sm font-semibold text-stone-700 mb-3">
+        Average Price by Area (€/m²)
+      </h4>
       <ResponsiveContainer width="100%" height={250}>
-        <BarChart data={data} layout="vertical">
-          <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" horizontal={false} />
+        <BarChart data={dataWithHighlight} layout="vertical">
+          <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" horizontal={true} vertical={false} />
           <XAxis 
             type="number"
-            tick={{ fill: '#6b7280', fontSize: 11 }}
-            axisLine={{ stroke: '#d1d5db' }}
+            tick={{ fontSize: 11 }}
+            tickLine={false}
             tickFormatter={(value) => `€${value}`}
             domain={[0, 4500]}
           />
           <YAxis 
             type="category"
             dataKey="area"
-            tick={{ fill: '#6b7280', fontSize: 11 }}
-            axisLine={{ stroke: '#d1d5db' }}
-            width={80}
+            tick={{ fontSize: 11 }}
+            tickLine={false}
+            width={90}
           />
           <Tooltip 
-            formatter={(value: number) => [`€${value}/m²`, 'Avg. Price']}
+            formatter={(value) => [`€${value}/m²`, 'Avg. Price']}
             contentStyle={{
               backgroundColor: '#fff',
               border: '1px solid #e5e7eb',
@@ -134,59 +137,61 @@ export function AreaPriceComparison({ currentTown }: AreaPriceComparisonProps) {
             }}
           />
           <Bar dataKey="price" radius={[0, 4, 4, 0]}>
-            {data.map((entry, index) => (
+            {dataWithHighlight.map((entry, index) => (
               <Cell 
-                key={`cell-${index}`}
-                fill={entry.isHighlighted ? '#059669' : entry.color}
-                fillOpacity={entry.isHighlighted ? 1 : 0.7}
+                key={`cell-${index}`} 
+                fill={entry.isHighlighted ? '#f59e0b' : entry.color}
+                opacity={entry.isHighlighted ? 1 : 0.8}
               />
             ))}
           </Bar>
         </BarChart>
       </ResponsiveContainer>
-      <p className="text-center text-stone-500 text-xs mt-2">
-        Average prices by area (€/m²) | 2024-2025 market data
+      <p className="text-xs text-stone-500 mt-2 text-center">
+        North Costa Blanca averages 30-50% higher than South
       </p>
     </div>
   );
 }
 
 /**
- * Rental Yield Comparison (Alternative chart if needed)
+ * Rental Yield Chart - NOT USED (shows NaN issues)
+ * Kept for potential future use with proper data
  */
 export function RentalYieldChart() {
-  const yieldData = [
+  const rentalData = [
     { area: 'Torrevieja', yield: 6.2 },
-    { area: 'Benidorm', yield: 5.8 },
-    { area: 'Orihuela Costa', yield: 5.5 },
-    { area: 'Guardamar', yield: 5.3 },
-    { area: 'Calpe', yield: 4.9 },
-    { area: 'Altea', yield: 4.5 },
-    { area: 'Javea', yield: 4.2 },
-    { area: 'Moraira', yield: 3.8 },
+    { area: 'Orihuela Costa', yield: 5.8 },
+    { area: 'Guardamar', yield: 5.5 },
+    { area: 'Benidorm', yield: 7.1 },
+    { area: 'Calpe', yield: 5.9 },
+    { area: 'Javea', yield: 4.8 },
   ];
-  
+
   return (
-    <div className="bg-white rounded-lg p-4">
-      <ResponsiveContainer width="100%" height={250}>
-        <BarChart data={yieldData}>
+    <div className="w-full">
+      <h4 className="text-sm font-semibold text-stone-700 mb-3">
+        Estimated Rental Yields (%)
+      </h4>
+      <ResponsiveContainer width="100%" height={200}>
+        <BarChart data={rentalData}>
           <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
           <XAxis 
-            dataKey="area"
-            tick={{ fill: '#6b7280', fontSize: 10 }}
-            axisLine={{ stroke: '#d1d5db' }}
+            dataKey="area" 
+            tick={{ fontSize: 10 }}
+            tickLine={false}
             angle={-45}
             textAnchor="end"
             height={60}
           />
           <YAxis 
-            tick={{ fill: '#6b7280', fontSize: 12 }}
-            axisLine={{ stroke: '#d1d5db' }}
+            tick={{ fontSize: 12 }}
+            tickLine={false}
             tickFormatter={(value) => `${value}%`}
-            domain={[0, 7]}
+            domain={[0, 8]}
           />
           <Tooltip 
-            formatter={(value: number) => [`${value}%`, 'Gross Yield']}
+            formatter={(value) => [`${value}%`, 'Gross Yield']}
             contentStyle={{
               backgroundColor: '#fff',
               border: '1px solid #e5e7eb',
@@ -196,88 +201,62 @@ export function RentalYieldChart() {
           <Bar dataKey="yield" fill="#f59e0b" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
-      <p className="text-center text-stone-500 text-xs mt-2">
-        Estimated gross rental yields by area | 2024 market data
-      </p>
     </div>
   );
 }
 
 /**
- * Tourism Stats Chart
+ * Tourism Stats Chart - Shows visitor numbers
  */
 export function TourismStatsChart() {
   const tourismData = [
-    { year: '2019', visitors: 8.2, occupancy: 72 },
-    { year: '2020', visitors: 3.1, occupancy: 38 },
-    { year: '2021', visitors: 5.8, occupancy: 52 },
-    { year: '2022', visitors: 7.9, occupancy: 68 },
-    { year: '2023', visitors: 8.7, occupancy: 75 },
-    { year: '2024', visitors: 9.2, occupancy: 78 },
+    { year: '2019', visitors: 8.2 },
+    { year: '2020', visitors: 3.1 },
+    { year: '2021', visitors: 5.4 },
+    { year: '2022', visitors: 7.8 },
+    { year: '2023', visitors: 9.1 },
+    { year: '2024', visitors: 9.8 },
   ];
-  
+
   return (
-    <div className="bg-white rounded-lg p-4">
-      <ResponsiveContainer width="100%" height={250}>
+    <div className="w-full">
+      <h4 className="text-sm font-semibold text-stone-700 mb-3">
+        Costa Blanca Tourism (Million Visitors)
+      </h4>
+      <ResponsiveContainer width="100%" height={180}>
         <LineChart data={tourismData}>
           <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
           <XAxis 
             dataKey="year" 
-            tick={{ fill: '#6b7280', fontSize: 12 }}
-            axisLine={{ stroke: '#d1d5db' }}
+            tick={{ fontSize: 12 }}
+            tickLine={false}
           />
           <YAxis 
-            yAxisId="left"
-            tick={{ fill: '#6b7280', fontSize: 12 }}
-            axisLine={{ stroke: '#d1d5db' }}
+            tick={{ fontSize: 12 }}
+            tickLine={false}
             tickFormatter={(value) => `${value}M`}
-          />
-          <YAxis 
-            yAxisId="right"
-            orientation="right"
-            tick={{ fill: '#6b7280', fontSize: 12 }}
-            axisLine={{ stroke: '#d1d5db' }}
-            tickFormatter={(value) => `${value}%`}
+            domain={[0, 12]}
           />
           <Tooltip 
-            formatter={(value: number, name: string) => [
-              name === 'visitors' ? `${value}M visitors` : `${value}% occupancy`,
-              name === 'visitors' ? 'Tourism' : 'Occupancy'
-            ]}
+            formatter={(value) => [`${value}M visitors`, 'Annual']}
             contentStyle={{
               backgroundColor: '#fff',
               border: '1px solid #e5e7eb',
               borderRadius: '8px',
             }}
           />
-          <Line
-            yAxisId="left"
-            type="monotone"
-            dataKey="visitors"
-            stroke="#3b82f6"
+          <Line 
+            type="monotone" 
+            dataKey="visitors" 
+            stroke="#6366f1" 
             strokeWidth={2}
-            dot={{ fill: '#3b82f6', r: 4 }}
-          />
-          <Line
-            yAxisId="right"
-            type="monotone"
-            dataKey="occupancy"
-            stroke="#f59e0b"
-            strokeWidth={2}
-            dot={{ fill: '#f59e0b', r: 4 }}
+            dot={{ fill: '#6366f1', r: 4 }}
           />
         </LineChart>
       </ResponsiveContainer>
-      <div className="flex justify-center gap-4 mt-2">
-        <span className="flex items-center text-xs text-stone-600">
-          <span className="w-3 h-3 bg-blue-500 rounded mr-1"></span>
-          Visitors (millions)
-        </span>
-        <span className="flex items-center text-xs text-stone-600">
-          <span className="w-3 h-3 bg-amber-500 rounded mr-1"></span>
-          Occupancy rate (%)
-        </span>
-      </div>
+      <p className="text-xs text-stone-500 mt-2 text-center">
+        Record tourism supports strong rental demand
+      </p>
     </div>
   );
 }

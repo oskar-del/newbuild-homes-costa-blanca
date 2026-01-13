@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 /**
  * Property Detail Page - Server Component
  * ========================================

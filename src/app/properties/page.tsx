@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -174,7 +175,7 @@ function generatePropertyTitle(property: UnifiedProperty): string {
 }
 
 function PropertyCard({ property }: { property: UnifiedProperty }) {
-  const mainImage = property.mainImage || property.images[0]?.url || '/images/placeholder-property.jpg';
+  const mainImage = property.images[0]?.url || '/images/placeholder-property.jpg';
   
   // Create a cleaner title
   const displayTitle = generatePropertyTitle(property);
