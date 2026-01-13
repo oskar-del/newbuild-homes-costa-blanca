@@ -10,9 +10,7 @@ interface LeadFormProps {
   title?: string;
   subtitle?: string;
   propertyInterest?: string;
-  subtitle?: string;
-  subtitle?: string;
-  propertyInterest?: string;
+  formName?: string;
 }
 
 export default function LeadForm({ 
@@ -20,7 +18,10 @@ export default function LeadForm({
   propertyReference,
   customMessage,
   onSuccess,
-  title
+  title,
+  subtitle,
+  propertyInterest,
+  formName = 'property-inquiry'
 }: LeadFormProps) {
   const [formData, setFormData] = useState({
     name: '',
@@ -37,13 +38,16 @@ export default function LeadForm({
     try {
       // Prepare form data for Netlify
       const formBody = new URLSearchParams();
-      formBody.append('form-name', 'property-inquiry');
+      formBody.append('form-name', formName);
       formBody.append('name', formData.name);
       formBody.append('email', formData.email);
       formBody.append('phone', formData.phone);
       formBody.append('message', formData.message);
       if (propertyReference) {
         formBody.append('propertyReference', propertyReference);
+      }
+      if (propertyInterest) {
+        formBody.append('propertyInterest', propertyInterest);
       }
 
       const response = await fetch('/', {
@@ -82,21 +86,28 @@ export default function LeadForm({
   return (
     <form 
       onSubmit={handleSubmit}
-      name="property-inquiry"
+      name={formName}
       method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
       className="space-y-4"
     >
       {/* Netlify form hidden fields */}
-      <input type="hidden" name="form-name" value="property-inquiry" />
+      <input type="hidden" name="form-name" value={formName} />
       <input type="hidden" name="bot-field" />
       {propertyReference && (
         <input type="hidden" name="propertyReference" value={propertyReference} />
       )}
+      {propertyInterest && (
+        <input type="hidden" name="propertyInterest" value={propertyInterest} />
+      )}
 
       {title && (
-        <h4 className="font-semibold text-[#1e3a5f] mb-3">{title}</h4>
+        <h4 className="font-semibold text-[#1e3a5f] mb-1">{title}</h4>
+      )}
+      
+      {subtitle && (
+        <p className="text-sm text-stone-600 mb-3">{subtitle}</p>
       )}
 
       <div>
