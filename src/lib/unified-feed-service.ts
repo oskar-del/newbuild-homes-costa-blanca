@@ -1,553 +1,597 @@
 /**
  * Unified Feed Service
- * Combines properties from multiple sources:
- * - REDSP (Kyero XML format) - 11 languages, new_build flag
- * - Background Properties (JSON format) - existing feed
  * 
- * Provides a single API for accessing all properties regardless of source.
+ * Fetches and combines property data from multiple feeds:
+ * 1. REDSP Feed (Primary - 1,300+ properties with 11 languages)
+ * 2. Background Properties Feed (Secondary)
+ * 
+ * Handles:
+ * - Feed fetching with caching
+ * - Data normalization to UnifiedProperty format
+ * - Deduplication (REDSP preferred for richer content)
+ * - Error handling and fallbacks
  */
 
-import { fetchREDSPFeed, getREDSPPropertyById } from './redsp-parser';
-import { 
-  UnifiedProperty, 
-  PropertyFilter, 
-  PropertyListResponse, 
-  TownSummary,
-  filterProperties,
-  generateTownSummary,
-  generateSlug,
-} from './unified-property';
+import { UnifiedProperty, PropertyImage, PropertyDescription } from './unified-property';
 
-// Feed configuration
-const FEED_CONFIG = {
-  // Background Properties feed
-  backgroundProperties: {
-    enabled: true,
-    feedUrl: 'https://backgroundproperties.com/wp-load.php?security_token=23f0185aeb5102e7&export_id=19&action=get_data',
-  },
-  // REDSP feed
-  redsp: {
-    enabled: true,
-    productionUrl: 'https://xml.redsp.net/file/450/23a140q0551/general-zone-1-kyero.xml',
-    trialUrl: 'https://www.redsp.net/trial/trial-feed-kyero.xml',
-    useProduction: true, // Set to false for testing with trial feed
-  },
-  // Cache duration (1 hour)
-  cacheDuration: 60 * 60 * 1000,
-};
+// Feed URLs
+const REDSP_FEED_URL = 'https://xml.redsp.net/file/450/23a140q0551/general-zone-1-kyero.xml';
+const BACKGROUND_FEED_URL = 'https://backgroundproperties.com/wp-load.php?security_token=23f0185aeb5102e7&export_id=19&action=get_data';
 
-// Combined cache
-let combinedCache: {
-  data: UnifiedProperty[] | null;
-  timestamp: number;
-} = {
-  data: null,
-  timestamp: 0,
-};
+// Cache
+let cachedProperties: UnifiedProperty[] | null = null;
+let cacheTimestamp: number | null = null;
+const CACHE_DURATION = 60 * 60 * 1000; // 1 hour
 
 /**
- * Background Properties interface (from existing feed)
+ * Parse REDSP XML feed
  */
-interface BackgroundProperty {
-  reference?: string;
-  ref?: string;
-  title?: string;
-  description?: string;
-  price?: string | number;
-  bedrooms?: number;
-  rooms?: number;
-  bathrooms?: number;
-  baths?: number;
-  built_size?: number;
-  plot_size?: number;
-  location?: string;
-  town?: string;
-  province?: string;
-  property_type?: string;
-  type?: string;
-  latitude?: number;
-  longitude?: number;
-  images?: string[];
-  main_image?: string;
-  features?: string[];
-  pool?: boolean;
-}
-
-/**
- * Fetch Background Properties feed
- */
-
-/**
- * Background Properties XML interface (multilingual)
- */
-interface BPXMLProperty {
-  id?: string[];
-  reference?: string[];
-  price?: string[];
-  saleType?: string[];
-  title?: [{
-    en?: string[];
-    de?: string[];
-    es?: string[];
-    fr?: string[];
-    nl?: string[];
-  }];
-  description?: [{
-    en?: string[];
-    de?: string[];
-    es?: string[];
-    fr?: string[];
-    nl?: string[];
-  }];
-  type?: [{
-    en?: string[];
-  }];
-  location?: [{
-    town?: string[];
-    zone?: string[];
-    province?: string[];
-    country?: string[];
-    coordinates?: [{
-      latitude?: string[];
-      longitude?: string[];
-    }];
-  }];
-  rooms?: string[];
-  baths?: string[];
-  m2Built?: string[];
-  m2Plot?: string[];
-  pool?: [{
-    en?: string[];
-  }];
-  images?: [{
-    image?: Array<{
-      url?: string[];
-    }>;
-  }];
-  views?: [{
-    en?: string[];
-  }];
-  orientation?: [{
-    en?: string[];
-  }];
-}
-
-/**
- * Fetch Background Properties feed (XML format with redirect)
- */
-async function fetchBackgroundProperties(): Promise<UnifiedProperty[]> {
-  if (!FEED_CONFIG.backgroundProperties.enabled) {
-    return [];
-  }
-
+async function parseRedspFeed(): Promise<UnifiedProperty[]> {
   try {
-    console.log('[BackgroundProperties] Fetching XML feed...');
-    
-    // Fetch with redirect following
-    const response = await fetch(FEED_CONFIG.backgroundProperties.feedUrl, {
-      redirect: 'follow',
-      cache: 'no-store',
+    const response = await fetch(REDSP_FEED_URL, {
+      next: { revalidate: 3600 },
+      cache: 'no-store', // Avoid Next.js cache size issues
     });
-
+    
     if (!response.ok) {
-      throw new Error(`Failed to fetch: ${response.status}`);
+      throw new Error(`REDSP feed error: ${response.status}`);
     }
-
-    const xmlText = await response.text();
-    console.log(`[BackgroundProperties] Received ${xmlText.length} bytes of XML`);
     
-    // Parse XML using xml2js
-    const { parseStringPromise } = await import('xml2js');
-    const result = await parseStringPromise(xmlText, {
-      explicitArray: true,
-      ignoreAttrs: false,
-    });
+    const xml = await response.text();
     
-    // Extract properties - handle different root element names
-    const properties: BPXMLProperty[] = result?.sooprema?.properties?.[0]?.property || 
-                                         result?.properties?.property || 
-                                         result?.root?.property ||
-                                         [];
+    // Parse XML using regex for simplicity (could use xml2js in production)
+    const properties: UnifiedProperty[] = [];
     
-    console.log(`[BackgroundProperties] Parsed ${properties.length} properties from XML`);
+    // Match all property elements
+    const propertyMatches = xml.match(/<property>[\s\S]*?<\/property>/g) || [];
     
-    return properties.map(convertBPXMLToUnified).filter((p): p is UnifiedProperty => p !== null);
+    for (const propXml of propertyMatches) {
+      try {
+        const property = parseRedspProperty(propXml);
+        if (property) {
+          properties.push(property);
+        }
+      } catch (e) {
+        // Silent fail for individual properties
+      }
+    }
+    
+    console.log(`Parsed ${properties.length} properties from REDSP feed`);
+    return properties;
   } catch (error) {
-    console.error('[BackgroundProperties] Error:', error);
+    console.error('Error fetching REDSP feed:', error);
     return [];
   }
 }
 
 /**
- * Convert Background Properties XML to unified format
+ * Parse a single REDSP property from XML
  */
-function convertBPXMLToUnified(property: BPXMLProperty): UnifiedProperty | null {
+function parseRedspProperty(xml: string): UnifiedProperty | null {
+  const getValue = (tag: string): string => {
+    // Try CDATA format first
+    const cdataMatch = xml.match(new RegExp(`<${tag}[^>]*><!\\[CDATA\\[([\\s\\S]*?)\\]\\]><\\/${tag}>`));
+    if (cdataMatch) return cdataMatch[1].trim();
+    
+    // Then try simple format
+    const simpleMatch = xml.match(new RegExp(`<${tag}[^>]*>([^<]*)<\\/${tag}>`));
+    if (simpleMatch) return simpleMatch[1].trim();
+    
+    return '';
+  };
+  
+  const getNumericValue = (tag: string): number => {
+    const val = getValue(tag);
+    return parseFloat(val) || 0;
+  };
+  
+  // FIXED: Use 'id' tag instead of 'ref' - this is what the REDSP feed actually uses
+  const reference = getValue('id') || getValue('ref');
+  if (!reference) return null;
+  
+  // Parse images
+  const images: PropertyImage[] = [];
+  const imageMatches = xml.match(/<image[^>]*>[\s\S]*?<\/image>/g) || [];
+  for (const imgXml of imageMatches) {
+    const urlMatch = imgXml.match(/<url>([^<]*)<\/url>/);
+    if (urlMatch && urlMatch[1]) {
+      images.push({
+        url: urlMatch[1],
+        caption: '',
+      });
+    }
+  }
+  
+  // Parse descriptions (multilingual)
+  const descriptions: PropertyDescription = {};
+  const descMatches = xml.match(/<desc[^>]*>[\s\S]*?<\/desc>/g) || [];
+  for (const descXml of descMatches) {
+    const langMatch = descXml.match(/language="([^"]+)"/);
+    const textMatch = descXml.match(/<!\[CDATA\[([\s\S]*?)\]\]>/);
+    if (langMatch && textMatch) {
+      descriptions[langMatch[1]] = textMatch[1].trim();
+    }
+  }
+  
+  // Parse features
+  const features: string[] = [];
+  const featureMatches = xml.match(/<feature>([^<]*)<\/feature>/g) || [];
+  for (const feat of featureMatches) {
+    const match = feat.match(/<feature>([^<]*)<\/feature>/);
+    if (match && match[1]) {
+      features.push(match[1].trim());
+    }
+  }
+  
+  // Determine feature flags from features array
+  const featuresLower = features.map(f => f.toLowerCase()).join(' ');
+  const hasPool = featuresLower.includes('pool') || featuresLower.includes('piscina');
+  const hasSeaview = featuresLower.includes('sea view') || featuresLower.includes('vista mar') || featuresLower.includes('seaview');
+  const hasGolfview = featuresLower.includes('golf') && (featuresLower.includes('view') || featuresLower.includes('vista'));
+  const hasGarden = featuresLower.includes('garden') || featuresLower.includes('jardin');
+  const hasTerrace = featuresLower.includes('terrace') || featuresLower.includes('terraza');
+  const hasParking = featuresLower.includes('parking') || featuresLower.includes('garage') || featuresLower.includes('garaje');
+  
+  // Get property type
+  let propertyType = getValue('type');
+  // Normalize property type
+  const typeMapping: Record<string, string> = {
+    'apartment': 'Apartment',
+    'flat': 'Apartment',
+    'villa': 'Villa',
+    'detached': 'Villa',
+    'townhouse': 'Townhouse',
+    'town house': 'Townhouse',
+    'semi-detached': 'Semi-Detached',
+    'penthouse': 'Penthouse',
+    'bungalow': 'Bungalow',
+    'duplex': 'Duplex',
+    'finca': 'Country House',
+    'country house': 'Country House',
+  };
+  const typeLower = propertyType.toLowerCase();
+  for (const [key, value] of Object.entries(typeMapping)) {
+    if (typeLower.includes(key)) {
+      propertyType = value;
+      break;
+    }
+  }
+  if (!propertyType) propertyType = 'Property';
+  
+  return {
+    id: `redsp-${reference}`,
+    reference,
+    source: 'redsp',
+    
+    // Location
+    town: getValue('town') || getValue('location'),
+    locationDetail: getValue('location_detail'),
+    province: getValue('province') || 'Alicante',
+    region: determineRegion(getValue('town') || getValue('location')),
+    latitude: getNumericValue('latitude'),
+    longitude: getNumericValue('longitude'),
+    
+    // Property details
+    propertyType,
+    bedrooms: getNumericValue('beds'),
+    bathrooms: getNumericValue('baths'),
+    builtArea: getNumericValue('surface_area') || getNumericValue('built'),
+    plotArea: getNumericValue('plot_size') || getNumericValue('plot'),
+    
+    // Pricing
+    price: getNumericValue('price'),
+    currency: getValue('currency') || 'EUR',
+    
+    // Media
+    images,
+    
+    // Descriptions
+    descriptions,
+    
+    // Features
+    features,
+    hasPool,
+    hasGarden,
+    hasTerrace,
+    hasParking,
+    hasSeaview,
+    hasGolfview,
+  };
+}
+
+/**
+ * Parse Background Properties JSON feed
+ */
+async function parseBackgroundFeed(): Promise<UnifiedProperty[]> {
   try {
-    const id = property.reference?.[0] || property.id?.[0] || '';
-    if (!id) return null;
+    const response = await fetch(BACKGROUND_FEED_URL, {
+      next: { revalidate: 3600 },
+      cache: 'no-store',
+      redirect: 'follow', // Follow redirects
+    });
     
-    const price = parseInt(property.price?.[0] || '0', 10);
-    const location = property.location?.[0];
-    const town = location?.town?.[0] || '';
-    const province = location?.province?.[0] || 'Alicante';
-    const region = determineRegion(town, province);
+    if (!response.ok) {
+      throw new Error(`Background feed error: ${response.status}`);
+    }
     
-    // Get multilingual title
-    const titleObj = property.title?.[0];
-    const title = titleObj?.en?.[0] || titleObj?.es?.[0] || `Property in ${town}`;
+    // Check content type - might be XML now due to redirect
+    const contentType = response.headers.get('content-type') || '';
+    const text = await response.text();
     
-    // Get multilingual descriptions
-    const descObj = property.description?.[0];
-    const descriptions: Record<string, string> = {};
-    if (descObj?.en?.[0]) descriptions.en = descObj.en[0];
-    if (descObj?.es?.[0]) descriptions.es = descObj.es[0];
-    if (descObj?.de?.[0]) descriptions.de = descObj.de[0];
-    if (descObj?.fr?.[0]) descriptions.fr = descObj.fr[0];
-    if (descObj?.nl?.[0]) descriptions.nl = descObj.nl[0];
+    // If it's XML (the feed might redirect to XML)
+    if (contentType.includes('xml') || text.trim().startsWith('<?xml') || text.trim().startsWith('<')) {
+      console.log('Background feed returned XML, parsing as XML...');
+      return parseBackgroundXmlFeed(text);
+    }
     
-    // Property type
-    const typeObj = property.type?.[0];
-    const propertyType = normalizePropertyType(typeObj?.en?.[0] || 'Apartment');
+    // Otherwise parse as JSON
+    const data = JSON.parse(text);
+    const properties: UnifiedProperty[] = [];
     
-    // Get coordinates
-    const coords = location?.coordinates?.[0];
-    const latitude = parseFloat(coords?.latitude?.[0] || '0') || 0;
-    const longitude = parseFloat(coords?.longitude?.[0] || '0') || 0;
+    const items = Array.isArray(data) ? data : data.properties || [];
     
-    // Get images
-    const imagesArray = property.images?.[0]?.image || [];
-    const images = imagesArray.map((img, index) => ({
-      url: img.url?.[0] || '',
-      order: index,
-      isFloorplan: false,
-    })).filter(img => img.url);
+    for (const item of items) {
+      try {
+        const property = parseBackgroundProperty(item);
+        if (property) {
+          properties.push(property);
+        }
+      } catch (e) {
+        // Silent fail for individual properties
+      }
+    }
     
-    // Check for pool
-    const poolValue = property.pool?.[0]?.en?.[0];
-    const hasPool = poolValue === '1' || poolValue?.toLowerCase() === 'yes';
-    
-    // Features from views, orientation, etc.
-    const features: string[] = [];
-    const views = property.views?.[0]?.en?.[0];
-    if (views) features.push(`${views} views`);
-    const orientation = property.orientation?.[0]?.en?.[0];
-    if (orientation) features.push(`${orientation} facing`);
-    
-    return {
-      id: `bp-${id}`,
-      reference: id,
-      source: 'background-properties' as const,
-      aiContent: { title },
-      
-      town,
-      locationDetail: location?.zone?.[0] || '',
-      province,
-      region,
-      country: 'Spain',
-      latitude,
-      longitude,
-      
-      propertyType,
-      bedrooms: parseInt(property.rooms?.[0] || '0', 10),
-      bathrooms: parseInt(property.baths?.[0] || '0', 10),
-      builtArea: parseInt(property.m2Built?.[0] || '0', 10),
-      plotArea: parseInt(property.m2Plot?.[0] || '0', 10),
-      
-      price,
-      currency: 'EUR',
-      
-      isNewBuild: !isPlotOrLand(propertyType),
-      propertyCategory: isPlotOrLand(propertyType) ? 'plot' : 'new-build',
-      hasPool,
-      features,
-      
-      descriptions,
-      
-      images,
-      mainImage: images[0]?.url || null,
-      floorplanImages: [],
-      
-      lastUpdated: new Date().toISOString(),
-    };
+    console.log(`Parsed ${properties.length} properties from Background feed`);
+    return properties;
   } catch (error) {
-    console.error('[BackgroundProperties] Error converting property:', property.reference, error);
-    return null;
+    console.error('Error fetching Background feed:', error);
+    return [];
   }
 }
 
-function normalizePropertyType(type: string): string {
-  const normalized = type.toLowerCase().trim();
-  const typeMap: Record<string, string> = {
+/**
+ * Parse Background Properties XML feed (when it redirects to XML)
+ */
+function parseBackgroundXmlFeed(xml: string): UnifiedProperty[] {
+  const properties: UnifiedProperty[] = [];
+  
+  // Try to match property/listing elements
+  const propertyMatches = xml.match(/<property>[\s\S]*?<\/property>/g) || 
+                          xml.match(/<listing>[\s\S]*?<\/listing>/g) || 
+                          [];
+  
+  for (const propXml of propertyMatches) {
+    try {
+      const getValue = (tag: string): string => {
+        const cdataMatch = propXml.match(new RegExp(`<${tag}[^>]*><!\\[CDATA\\[([\\s\\S]*?)\\]\\]><\\/${tag}>`));
+        if (cdataMatch) return cdataMatch[1].trim();
+        const simpleMatch = propXml.match(new RegExp(`<${tag}[^>]*>([^<]*)<\\/${tag}>`));
+        if (simpleMatch) return simpleMatch[1].trim();
+        return '';
+      };
+      
+      const reference = getValue('id') || getValue('ref') || getValue('reference');
+      if (!reference) continue;
+      
+      // Parse images
+      const images: PropertyImage[] = [];
+      const imageMatches = propXml.match(/<image[^>]*>[\s\S]*?<\/image>/g) || 
+                           propXml.match(/<photo[^>]*>([^<]*)<\/photo>/g) || [];
+      for (const imgXml of imageMatches) {
+        const urlMatch = imgXml.match(/<url>([^<]*)<\/url>/) || imgXml.match(/>([^<]+)</);
+        if (urlMatch && urlMatch[1] && urlMatch[1].startsWith('http')) {
+          images.push({ url: urlMatch[1], caption: '' });
+        }
+      }
+      
+      const property: UnifiedProperty = {
+        id: `bp-${reference}`,
+        reference,
+        source: 'background-properties',
+        town: getValue('town') || getValue('location') || getValue('city'),
+        locationDetail: '',
+        province: getValue('province') || 'Alicante',
+        region: determineRegion(getValue('town') || getValue('location') || ''),
+        latitude: parseFloat(getValue('latitude')) || 0,
+        longitude: parseFloat(getValue('longitude')) || 0,
+        propertyType: getValue('type') || 'Property',
+        bedrooms: parseInt(getValue('beds') || getValue('bedrooms')) || 0,
+        bathrooms: parseInt(getValue('baths') || getValue('bathrooms')) || 0,
+        builtArea: parseFloat(getValue('built') || getValue('size')) || 0,
+        plotArea: parseFloat(getValue('plot')) || 0,
+        price: parseFloat(getValue('price')) || 0,
+        currency: 'EUR',
+        images,
+        descriptions: { en: getValue('description') },
+        features: [],
+        hasPool: false,
+        hasGarden: false,
+        hasTerrace: false,
+        hasParking: false,
+        hasSeaview: false,
+        hasGolfview: false,
+      };
+      
+      properties.push(property);
+    } catch (e) {
+      // Silent fail
+    }
+  }
+  
+  console.log(`Parsed ${properties.length} properties from Background XML feed`);
+  return properties;
+}
+
+/**
+ * Parse a single Background Properties item
+ */
+function parseBackgroundProperty(item: any): UnifiedProperty | null {
+  const reference = item.reference || item.ref || item.id;
+  if (!reference) return null;
+  
+  // Parse images
+  const images: PropertyImage[] = [];
+  const imageList = item.images || item.photos || [];
+  for (const img of imageList) {
+    const url = typeof img === 'string' ? img : img.url || img.src;
+    if (url) {
+      images.push({ url, caption: '' });
+    }
+  }
+  
+  // Parse descriptions
+  const descriptions: PropertyDescription = {};
+  if (item.description) {
+    descriptions.en = typeof item.description === 'string' 
+      ? item.description 
+      : item.description.en || item.description.english || '';
+  }
+  
+  // Parse features
+  const features: string[] = item.features || [];
+  const featuresLower = features.map((f: string) => f.toLowerCase()).join(' ');
+  
+  // Determine property type
+  let propertyType = item.type || item.property_type || 'Property';
+  const typeMapping: Record<string, string> = {
     'apartment': 'Apartment',
     'villa': 'Villa',
     'townhouse': 'Townhouse',
     'penthouse': 'Penthouse',
     'bungalow': 'Bungalow',
-    'duplex': 'Duplex',
-    'chalet': 'Chalet',
-    'finca': 'Finca',
   };
-  return typeMap[normalized] || type;
+  for (const [key, value] of Object.entries(typeMapping)) {
+    if (propertyType.toLowerCase().includes(key)) {
+      propertyType = value;
+      break;
+    }
+  }
+  
+  return {
+    id: `bp-${reference}`,
+    reference,
+    source: 'background-properties',
+    
+    // Location
+    town: item.town || item.location || item.city || '',
+    locationDetail: item.location_detail || '',
+    province: item.province || 'Alicante',
+    region: determineRegion(item.town || item.location || ''),
+    latitude: parseFloat(item.latitude) || 0,
+    longitude: parseFloat(item.longitude) || 0,
+    
+    // Property details
+    propertyType,
+    bedrooms: parseInt(item.bedrooms) || parseInt(item.rooms) || 0,
+    bathrooms: parseInt(item.bathrooms) || parseInt(item.baths) || 0,
+    builtArea: parseFloat(item.built_area) || parseFloat(item.size) || 0,
+    plotArea: parseFloat(item.plot_area) || parseFloat(item.plot) || 0,
+    
+    // Pricing
+    price: parseFloat(item.price) || 0,
+    currency: item.currency || 'EUR',
+    
+    // Media
+    images,
+    
+    // Descriptions
+    descriptions,
+    
+    // Features
+    features,
+    hasPool: featuresLower.includes('pool'),
+    hasGarden: featuresLower.includes('garden'),
+    hasTerrace: featuresLower.includes('terrace'),
+    hasParking: featuresLower.includes('parking') || featuresLower.includes('garage'),
+    hasSeaview: featuresLower.includes('sea view'),
+    hasGolfview: featuresLower.includes('golf'),
+  };
 }
 
 /**
- * Check if property type is a building plot/land
+ * Determine region based on town name
  */
-function isPlotOrLand(propertyType: string): boolean {
-  const plotTypes = [
-    'land', 'plot', 'terrain', 'terreno', 'grundstück', 'baugrundstück',
-    'grondstuk', 'bouwgrond', 'tomt', 'parcela', 'solar', 'finca rústica',
-    'rustic land', 'urban land', 'building plot', 'building land'
-  ];
-  const normalized = propertyType.toLowerCase().trim();
-  return plotTypes.some(type => normalized.includes(type));
-}
-/**
- * Determine region from town and province
- */
-function determineRegion(town: string, province: string): string {
-  const t = town.toLowerCase();
-  const p = province.toLowerCase();
+function determineRegion(town: string): string {
+  const townLower = town?.toLowerCase() || '';
   
-  if (p.includes('murcia')) return 'Costa Cálida';
+  const southTowns = ['torrevieja', 'orihuela', 'guardamar', 'algorfa', 'villamartin', 'la zenia', 
+    'playa flamenca', 'punta prima', 'campoamor', 'mil palmeras', 'pilar de la horadada', 
+    'san miguel', 'los montesinos', 'quesada', 'rojales', 'catral', 'almoradi', 'benijofar', 
+    'ciudad quesada', 'la marina', 'san fulgencio', 'dolores', 'bigastro', 'cabo roig', 
+    'dehesa de campoamor', 'la finca'];
   
-  const northTowns = ['javea', 'moraira', 'calpe', 'altea', 'benidorm', 'denia', 'oliva'];
-  const southTowns = ['torrevieja', 'orihuela', 'guardamar', 'villamartin', 'la zenia', 'cabo roig'];
+  const northTowns = ['javea', 'xabia', 'moraira', 'calpe', 'altea', 'benidorm', 'denia', 
+    'villajoyosa', 'albir', 'alfaz del pi', 'benissa', 'teulada', 'benitachell', 'cumbre del sol', 
+    'pedreguer', 'ondara', 'pego', 'parcent', 'jalon', 'gandia', 'oliva', 'finestrat', 'polop',
+    'callosa', 'guadalest', 'nucia'];
   
-  for (const nt of northTowns) {
-    if (t.includes(nt)) return 'Costa Blanca North';
+  for (const t of southTowns) {
+    if (townLower.includes(t)) return 'Costa Blanca South';
   }
-  for (const st of southTowns) {
-    if (t.includes(st)) return 'Costa Blanca South';
+  for (const t of northTowns) {
+    if (townLower.includes(t)) return 'Costa Blanca North';
   }
   
   return 'Costa Blanca';
 }
 
 /**
- * Fetch all properties from all sources
+ * Fetch and combine all properties from all feeds
  */
-export async function fetchAllProperties(options?: {
-  forceRefresh?: boolean;
-}): Promise<UnifiedProperty[]> {
-  const { forceRefresh = false } = options || {};
-
+export async function getAllProperties(): Promise<UnifiedProperty[]> {
   // Check cache
-  if (!forceRefresh && combinedCache.data && (Date.now() - combinedCache.timestamp) < FEED_CONFIG.cacheDuration) {
-    console.log('[UnifiedFeed] Returning cached data');
-    return combinedCache.data;
+  if (cachedProperties && cacheTimestamp && Date.now() - cacheTimestamp < CACHE_DURATION) {
+    return cachedProperties;
   }
-
-  console.log('[UnifiedFeed] Fetching from all sources...');
-
-  // Fetch from all sources in parallel
-  const [redspProperties, bgProperties] = await Promise.all([
-    FEED_CONFIG.redsp.enabled 
-      ? fetchREDSPFeed({ useTrialFeed: !FEED_CONFIG.redsp.useProduction })
-      : Promise.resolve([]),
-    fetchBackgroundProperties(),
+  
+  console.log('Fetching properties from all feeds...');
+  
+  // Fetch from both feeds in parallel
+  const [redspProperties, backgroundProperties] = await Promise.all([
+    parseRedspFeed(),
+    parseBackgroundFeed(),
   ]);
-
-  console.log(`[UnifiedFeed] REDSP: ${redspProperties.length}, Background: ${bgProperties.length}`);
-
-  // Combine all properties
-  const allProperties = [...redspProperties, ...bgProperties];
-
-  // Deduplicate by reference (prefer REDSP as it has more data)
-  const deduped = deduplicateProperties(allProperties);
-  console.log(`[UnifiedFeed] Total after deduplication: ${deduped.length}`);
-
+  
+  // Combine and deduplicate (REDSP preferred)
+  const propertyMap = new Map<string, UnifiedProperty>();
+  
+  // Add Background properties first
+  for (const prop of backgroundProperties) {
+    propertyMap.set(prop.reference.toUpperCase(), prop);
+  }
+  
+  // Then add/override with REDSP properties (preferred source)
+  for (const prop of redspProperties) {
+    propertyMap.set(prop.reference.toUpperCase(), prop);
+  }
+  
+  const allProperties = Array.from(propertyMap.values());
+  
   // Update cache
-  combinedCache = {
-    data: deduped,
-    timestamp: Date.now(),
-  };
-
-  return deduped;
+  cachedProperties = allProperties;
+  cacheTimestamp = Date.now();
+  
+  console.log(`Total unique properties: ${allProperties.length}`);
+  return allProperties;
 }
 
 /**
- * Deduplicate properties, preferring REDSP source
+ * Get all property references for static generation
  */
-function deduplicateProperties(properties: UnifiedProperty[]): UnifiedProperty[] {
-  const seen = new Map<string, UnifiedProperty>();
+export async function getAllPropertyReferences(): Promise<string[]> {
+  const properties = await getAllProperties();
+  return properties.map(p => p.reference);
+}
+
+/**
+ * Get a single property by reference
+ */
+export async function getPropertyById(reference: string): Promise<UnifiedProperty | null> {
+  const properties = await getAllProperties();
+  return properties.find(p => 
+    p.reference.toUpperCase() === reference.toUpperCase()
+  ) || null;
+}
+
+/**
+ * Search properties with filters
+ */
+export interface PropertyFilters {
+  town?: string;
+  propertyType?: string;
+  minBedrooms?: number;
+  maxBedrooms?: number;
+  minPrice?: number;
+  maxPrice?: number;
+  hasPool?: boolean;
+  hasSeaview?: boolean;
+  hasGolfview?: boolean;
+  region?: string;
+}
+
+export async function searchProperties(filters: PropertyFilters = {}): Promise<UnifiedProperty[]> {
+  let properties = await getAllProperties();
   
-  // Sort so REDSP comes first (will be preferred in dedup)
-  const sorted = [...properties].sort((a, b) => {
-    if (a.source === 'redsp' && b.source !== 'redsp') return -1;
-    if (a.source !== 'redsp' && b.source === 'redsp') return 1;
-    return 0;
-  });
-  
-  for (const prop of sorted) {
-    // Create dedup key from reference or location+price
-    const key = prop.reference || `${prop.town}-${prop.price}-${prop.bedrooms}`;
-    if (!seen.has(key)) {
-      seen.set(key, prop);
-    }
+  if (filters.town) {
+    const townLower = filters.town.toLowerCase();
+    properties = properties.filter(p => 
+      p.town?.toLowerCase().includes(townLower)
+    );
   }
   
-  return Array.from(seen.values());
-}
-
-/**
- * Get properties with filtering and pagination
- */
-export async function getProperties(options?: {
-  filter?: PropertyFilter;
-  page?: number;
-  pageSize?: number;
-  sortBy?: 'price' | 'bedrooms' | 'date';
-  sortOrder?: 'asc' | 'desc';
-}): Promise<PropertyListResponse> {
-  const {
-    filter = {},
-    page = 1,
-    pageSize = 20,
-    sortBy = 'price',
-    sortOrder = 'asc',
-  } = options || {};
-
-  let properties = await fetchAllProperties();
-
-  // Filter out plots/land from main properties (they go to /plots page)
-  properties = properties.filter(p => p.propertyCategory !== 'plot');
-  
-  // Apply filters
-  properties = filterProperties(properties, filter);
-  
-  // Sort
-  properties.sort((a, b) => {
-    let comparison = 0;
-    switch (sortBy) {
-      case 'price':
-        comparison = a.price - b.price;
-        break;
-      case 'bedrooms':
-        comparison = a.bedrooms - b.bedrooms;
-        break;
-      case 'date':
-        comparison = new Date(a.lastUpdated).getTime() - new Date(b.lastUpdated).getTime();
-        break;
-    }
-    return sortOrder === 'desc' ? -comparison : comparison;
-  });
-  
-  // Paginate
-  const total = properties.length;
-  const totalPages = Math.ceil(total / pageSize);
-  const start = (page - 1) * pageSize;
-  const paginatedProperties = properties.slice(start, start + pageSize);
-  
-  return {
-    properties: paginatedProperties,
-    total,
-    page,
-    pageSize,
-    totalPages,
-  };
-}
-
-/**
- * Get single property by ID
- */
-export async function getPropertyById(id: string): Promise<UnifiedProperty | null> {
-  const allProperties = await fetchAllProperties();
-  return allProperties.find(p => p.id === id || p.reference === id) || null;
-}
-
-/**
- * Get all unique towns with property counts
- */
-export async function getAllTowns(): Promise<TownSummary[]> {
-  const allProperties = await fetchAllProperties();
-  
-  // Group by town
-  const townMap = new Map<string, UnifiedProperty[]>();
-  for (const prop of allProperties) {
-    const town = prop.town;
-    if (!town) continue;
-    
-    if (!townMap.has(town)) {
-      townMap.set(town, []);
-    }
-    townMap.get(town)!.push(prop);
+  if (filters.propertyType) {
+    const typeLower = filters.propertyType.toLowerCase();
+    properties = properties.filter(p => 
+      p.propertyType?.toLowerCase().includes(typeLower)
+    );
   }
   
-  // Generate summaries
-  const summaries: TownSummary[] = [];
-  for (const [townName, properties] of townMap) {
-    summaries.push(generateTownSummary(townName, properties));
+  if (filters.minBedrooms !== undefined) {
+    properties = properties.filter(p => p.bedrooms >= filters.minBedrooms!);
   }
   
-  // Sort by property count (descending)
-  return summaries.sort((a, b) => b.propertyCount - a.propertyCount);
+  if (filters.maxBedrooms !== undefined) {
+    properties = properties.filter(p => p.bedrooms <= filters.maxBedrooms!);
+  }
+  
+  if (filters.minPrice !== undefined) {
+    properties = properties.filter(p => p.price >= filters.minPrice!);
+  }
+  
+  if (filters.maxPrice !== undefined) {
+    properties = properties.filter(p => p.price <= filters.maxPrice!);
+  }
+  
+  if (filters.hasPool) {
+    properties = properties.filter(p => p.hasPool);
+  }
+  
+  if (filters.hasSeaview) {
+    properties = properties.filter(p => p.hasSeaview);
+  }
+  
+  if (filters.hasGolfview) {
+    properties = properties.filter(p => p.hasGolfview);
+  }
+  
+  if (filters.region) {
+    const regionLower = filters.region.toLowerCase();
+    properties = properties.filter(p => 
+      p.region?.toLowerCase().includes(regionLower)
+    );
+  }
+  
+  return properties;
 }
 
 /**
  * Get properties by town
  */
 export async function getPropertiesByTown(town: string): Promise<UnifiedProperty[]> {
-  return getProperties({
-    filter: { town },
-    pageSize: 1000,
-  }).then(res => res.properties);
+  return searchProperties({ town });
 }
 
 /**
- * Get property statistics
+ * Get featured properties (properties with best features)
  */
-export async function getPropertyStats(): Promise<{
-  totalProperties: number;
-  bySource: Record<string, number>;
-  byRegion: Record<string, number>;
-  byType: Record<string, number>;
-  priceRange: { min: number; max: number };
-}> {
-  const allProperties = await fetchAllProperties();
+export async function getFeaturedProperties(limit: number = 6): Promise<UnifiedProperty[]> {
+  const properties = await getAllProperties();
   
-  const bySource: Record<string, number> = {};
-  const byRegion: Record<string, number> = {};
-  const byType: Record<string, number> = {};
-  let minPrice = Infinity;
-  let maxPrice = 0;
-  
-  for (const prop of allProperties) {
-    bySource[prop.source] = (bySource[prop.source] || 0) + 1;
-    byRegion[prop.region] = (byRegion[prop.region] || 0) + 1;
-    byType[prop.propertyType] = (byType[prop.propertyType] || 0) + 1;
-    
-    if (prop.price > 0) {
-      minPrice = Math.min(minPrice, prop.price);
-      maxPrice = Math.max(maxPrice, prop.price);
-    }
-  }
-  
-  return {
-    totalProperties: allProperties.length,
-    bySource,
-    byRegion,
-    byType,
-    priceRange: {
-      min: minPrice === Infinity ? 0 : minPrice,
-      max: maxPrice,
-    },
-  };
-}
-
-/**
- * Export for use in static generation
- */
-export async function getStaticPropertyPaths(): Promise<{ params: { slug: string } }[]> {
-  const allProperties = await fetchAllProperties();
-  return allProperties.map(p => ({
-    params: { slug: p.reference || p.id },
+  // Score properties based on features
+  const scored = properties.map(p => ({
+    property: p,
+    score: (
+      (p.hasPool ? 2 : 0) +
+      (p.hasSeaview ? 3 : 0) +
+      (p.hasGolfview ? 2 : 0) +
+      (p.hasGarden ? 1 : 0) +
+      (p.hasTerrace ? 1 : 0) +
+      (p.images?.length > 5 ? 1 : 0) +
+      (p.price > 300000 ? 1 : 0)
+    ),
   }));
-}
-
-export async function getStaticTownPaths(): Promise<{ params: { slug: string } }[]> {
-  const towns = await getAllTowns();
-  return towns.map(t => ({
-    params: { slug: t.slug },
-  }));
+  
+  // Sort by score and return top N
+  scored.sort((a, b) => b.score - a.score);
+  return scored.slice(0, limit).map(s => s.property);
 }

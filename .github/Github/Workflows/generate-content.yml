@@ -1,0 +1,125 @@
+# GitHub Actions Workflow: AI Content Generation
+# File: .github/workflows/generate-content.yml
+#
+# This workflow runs daily to:
+# 1. Fetch latest properties from feed
+# 2. Generate AI content for new properties
+# 3. Commit and push new content files
+# 4. Trigger Netlify rebuild
+
+name: Generate AI Content
+
+on:
+  # Run daily at 6 AM UTC
+  schedule:
+    - cron: '0 6 * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Number of properties to process'
+        required: false
+        default: '50'
+      area:
+        description: 'Filter by area (optional)'
+        required: false
+        default: ''
+      regenerate:
+        description: 'Regenerate existing content'
+        required: false
+        default: 'false'
+        type: boolean
+
+jobs:
+  generate-content:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run AI content generation
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          ARGS=""
+          
+          # Add limit argument
+          if [ -n "${{ github.event.inputs.limit }}" ]; then
+            ARGS="$ARGS --limit=${{ github.event.inputs.limit }}"
+          else
+            ARGS="$ARGS --limit=50"
+          fi
+          
+          # Add area filter if specified
+          if [ -n "${{ github.event.inputs.area }}" ]; then
+            ARGS="$ARGS --area=${{ github.event.inputs.area }}"
+          fi
+          
+          # Add regenerate flag if true
+          if [ "${{ github.event.inputs.regenerate }}" == "true" ]; then
+            ARGS="$ARGS --regenerate"
+          fi
+          
+          echo "Running: npx ts-node src/scripts/generate-property-content.ts $ARGS"
+          npx ts-node src/scripts/generate-property-content.ts $ARGS
+      
+      - name: Check for changes
+        id: changes
+        run: |
+          git add src/content/properties/
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "files_changed=$(git diff --staged --name-only | wc -l)" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit and push changes
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "🤖 Auto-generated AI content for ${{ steps.changes.outputs.files_changed }} properties"
+          git push
+      
+      - name: Trigger Netlify deploy
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          if [ -n "$NETLIFY_BUILD_HOOK" ]; then
+            curl -X POST -d '{}' $NETLIFY_BUILD_HOOK
+            echo "✅ Triggered Netlify rebuild"
+          else
+            echo "⚠️ NETLIFY_BUILD_HOOK not set, skipping deploy trigger"
+          fi
+      
+      - name: Summary
+        run: |
+          echo "## AI Content Generation Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.changes.outputs.has_changes }}" == "true" ]; then
+            echo "✅ **Generated content for ${{ steps.changes.outputs.files_changed }} properties**" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Changes committed and Netlify rebuild triggered." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "ℹ️ **No new content generated**" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "All properties already have AI-generated content." >> $GITHUB_STEP_SUMMARY
+          fi

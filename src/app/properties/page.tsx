@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { fetchAllProperties } from '@/lib/unified-feed-service';
+import { getAllProperties } from '@/lib/unified-feed-service';
 import { UnifiedProperty } from '@/lib/unified-property';
 import PropertyFilters from '@/components/PropertyFilters';
 
@@ -17,7 +17,7 @@ export default async function PropertiesPage({
 }: {
   searchParams: { town?: string; beds?: string; type?: string };
 }) {
-  const allProperties = await fetchAllProperties();
+  const allProperties = await getAllProperties();
   
   // Get unique values for filters
   const towns = [...new Set(allProperties.map(p => p.town).filter(Boolean))].sort();
