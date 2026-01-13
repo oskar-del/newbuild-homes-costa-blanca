@@ -48,7 +48,7 @@ const areaPriceData = [
 /**
  * Investment Chart - Shows price growth over time
  */
-export function InvestmentChart() {
+export function InvestmentChart({ area }: { area?: string }) {
   return (
     <div className="bg-white rounded-lg p-4">
       <ResponsiveContainer width="100%" height={250}>
