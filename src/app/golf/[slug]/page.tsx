@@ -430,8 +430,8 @@ function getCourseSchema(course: typeof GOLF_COURSES[0], courseData: typeof DEFA
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: course.coordinates.lat,
-        longitude: course.coordinates.lng,
+        latitude: course.lat,
+        longitude: course.lng,
       },
       amenityFeature: courseData.facilities.map(f => ({
         '@type': 'LocationFeatureSpecification',
@@ -790,7 +790,7 @@ export default async function GolfCoursePage({ params }: { params: { slug: strin
               <div className="text-3xl mb-3">📍</div>
               <h3 className="font-semibold text-[#1e3a5f] mb-2">GPS Coordinates</h3>
               <p className="text-stone-600">
-                {course.coordinates.lat.toFixed(5)}, {course.coordinates.lng.toFixed(5)}
+                {course.lat.toFixed(5)}, {course.lng.toFixed(5)}
               </p>
             </div>
           </div>
