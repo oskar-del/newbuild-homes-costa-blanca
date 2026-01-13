@@ -8,6 +8,7 @@ interface LeadFormProps {
   customMessage?: string;
   onSuccess?: () => void;
   title?: string;
+  subtitle?: string;
 }
 
 export default function LeadForm({ 
