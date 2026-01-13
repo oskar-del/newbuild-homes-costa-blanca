@@ -9,6 +9,10 @@ interface LeadFormProps {
   onSuccess?: () => void;
   title?: string;
   subtitle?: string;
+  propertyInterest?: string;
+  subtitle?: string;
+  subtitle?: string;
+  propertyInterest?: string;
 }
 
 export default function LeadForm({ 
