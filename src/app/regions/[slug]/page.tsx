@@ -132,7 +132,8 @@ export default async function RegionPage({ params }: { params: Promise<{ slug: s
   const { slug } = await params;
   const region = getRegion(slug);
 
-  if (!region) {
+  // Guard against missing region or incomplete data
+  if (!region || !region.content || !region.name) {
     notFound();
   }
 
