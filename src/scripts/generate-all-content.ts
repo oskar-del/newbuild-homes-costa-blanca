@@ -21,11 +21,29 @@ const REGENERATE_ALL = process.env.REGENERATE_ALL === 'true';
 
 // Helper to clean and parse JSON from AI responses
 function parseAIJson(text: string): any {
-  // Extract JSON from response - find the outermost braces
-  const jsonMatch = text.match(/\{[\s\S]*\}/);
-  if (!jsonMatch) throw new Error('No JSON found in response');
+  // Try to find JSON in the response
+  // First, look for ```json code blocks
+  let jsonStr = '';
+  const codeBlockMatch = text.match(/```(?:json)?\s*([\s\S]*?)```/);
+  if (codeBlockMatch) {
+    jsonStr = codeBlockMatch[1].trim();
+  }
 
-  let jsonStr = jsonMatch[0];
+  // If no code block, extract JSON object directly
+  if (!jsonStr || !jsonStr.startsWith('{')) {
+    const jsonMatch = text.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) {
+      console.log('   ⚠️  Raw response (first 500 chars):', text.substring(0, 500));
+      throw new Error('No JSON found in response');
+    }
+    jsonStr = jsonMatch[0];
+  }
+
+  // Make sure it starts with {
+  const firstBrace = jsonStr.indexOf('{');
+  if (firstBrace > 0) {
+    jsonStr = jsonStr.substring(firstBrace);
+  }
 
   // Common fixes for AI-generated JSON
   // 1. Remove trailing commas before } or ]
