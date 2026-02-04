@@ -198,23 +198,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const enhanced = getEnhancedContent(slug);
 
-  if (enhanced) {
+  if (enhanced && enhanced.property) {
+    const images = enhanced.property.images || [];
     return {
-      title: enhanced.metaTitle,
-      description: enhanced.metaDescription,
+      title: enhanced.metaTitle || 'Development',
+      description: enhanced.metaDescription || '',
       openGraph: {
-        title: enhanced.metaTitle,
-        description: enhanced.metaDescription,
-        images: enhanced.property.images.slice(0, 3),
+        title: enhanced.metaTitle || 'Development',
+        description: enhanced.metaDescription || '',
+        images: images.slice(0, 3),
       },
     };
   }
 
   const development = await getDevelopmentBySlug(slug);
-  if (!development) return { title: 'Development Not Found' };
+  if (!development || !development.name) return { title: 'Development Not Found' };
 
-  const title = `${development.name} | New Build in ${development.town} from ${formatPrice(development.priceFrom)}`;
-  const description = `Discover ${development.name} by ${development.developer} in ${development.town}. ${development.totalUnits} units from ${formatPrice(development.priceFrom)}. ${development.status === 'key-ready' ? 'Key ready!' : `Delivery: ${development.deliveryQuarter || 'TBA'}`}`;
+  const title = `${development.name} | New Build in ${development.town || 'Costa Blanca'} from ${formatPrice(development.priceFrom || 0)}`;
+  const description = `Discover ${development.name} by ${development.developer || 'Developer'} in ${development.town || 'Costa Blanca'}. ${development.totalUnits || 0} units from ${formatPrice(development.priceFrom || 0)}. ${development.status === 'key-ready' ? 'Key ready!' : `Delivery: ${development.deliveryQuarter || 'TBA'}`}`;
 
   return {
     title,
@@ -228,14 +229,26 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ sl
   const enhanced = getEnhancedContent(slug);
 
   if (enhanced) {
-    const [similarDevelopments, builderContent, developmentsInTown] = await Promise.all([
-      getDevelopmentsByBuilder(enhanced.property.developerSlug),
-      getBuilderContent(enhanced.property.developerSlug),
-      getDevelopmentsByTown(enhanced.property.town),
+    // Validate enhanced content has required fields
+    if (!enhanced.property || !enhanced.projectName) {
+      notFound();
+    }
+
+    const developerSlug = enhanced.property.developerSlug || 'unknown';
+    const town = enhanced.property.town || 'Costa Blanca';
+
+    const [similarDevelopmentsResult, builderContent, developmentsInTownResult] = await Promise.all([
+      getDevelopmentsByBuilder(developerSlug),
+      getBuilderContent(developerSlug),
+      getDevelopmentsByTown(town),
     ]);
 
+    // Ensure arrays are always defined
+    const similarDevelopments = Array.isArray(similarDevelopmentsResult) ? similarDevelopmentsResult : [];
+    const developmentsInTown = Array.isArray(developmentsInTownResult) ? developmentsInTownResult : [];
+
     const similarByBuilder = similarDevelopments.filter(d => d.slug !== slug).slice(0, 3);
-    const nearbyDevelopments = developmentsInTown?.filter(d => d.slug !== slug).slice(0, 3) || [];
+    const nearbyDevelopments = developmentsInTown.filter(d => d.slug !== slug).slice(0, 3);
 
     return (
       <EnhancedDevelopmentPage

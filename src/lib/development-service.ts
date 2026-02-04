@@ -585,8 +585,15 @@ export async function getDevelopmentUnits(slug: string): Promise<ParsedProperty[
   if (!development) return [];
 
   // Get all properties and filter by unit references
-  const properties = await fetchXMLFeed();
-  return properties.filter(p => development.unitReferences.includes(p.ref));
+  // Wrap in try-catch to handle feed failures gracefully
+  try {
+    const properties = await fetchXMLFeed();
+    if (!Array.isArray(properties)) return [];
+    return properties.filter(p => development.unitReferences.includes(p.ref));
+  } catch (error) {
+    console.error('[DEV-SERVICE] Failed to fetch units for development:', slug, error);
+    return [];
+  }
 }
 
 /**
@@ -660,27 +667,39 @@ export async function getBuilderBySlug(slug: string): Promise<Builder | null> {
  * Get developments for a specific builder
  */
 export async function getDevelopmentsByBuilder(builderSlug: string): Promise<Development[]> {
-  const developments = await getAllDevelopments();
-  return developments.filter(d => d.developerSlug === builderSlug);
+  try {
+    const developments = await getAllDevelopments();
+    if (!Array.isArray(developments)) return [];
+    return developments.filter(d => d.developerSlug === builderSlug);
+  } catch (error) {
+    console.error('[DEV-SERVICE] Failed to get developments by builder:', builderSlug, error);
+    return [];
+  }
 }
 
 /**
  * Get developments by town name
  */
 export async function getDevelopmentsByTown(town: string): Promise<Development[]> {
-  const developments = await getAllDevelopments();
-  const townLower = town.toLowerCase();
+  try {
+    const developments = await getAllDevelopments();
+    if (!Array.isArray(developments)) return [];
+    const townLower = town.toLowerCase();
 
-  return developments.filter(d => {
-    const devTown = d.town.toLowerCase();
-    const devZone = (d.zone || '').toLowerCase();
+    return developments.filter(d => {
+      const devTown = d.town.toLowerCase();
+      const devZone = (d.zone || '').toLowerCase();
 
-    // Check if development's town or zone matches the specified town
-    return devTown.includes(townLower) ||
-           townLower.includes(devTown) ||
-           devZone.includes(townLower) ||
-           townLower.includes(devZone);
-  });
+      // Check if development's town or zone matches the specified town
+      return devTown.includes(townLower) ||
+             townLower.includes(devTown) ||
+             devZone.includes(townLower) ||
+             townLower.includes(devZone);
+    });
+  } catch (error) {
+    console.error('[DEV-SERVICE] Failed to get developments by town:', town, error);
+    return [];
+  }
 }
 
 /**
