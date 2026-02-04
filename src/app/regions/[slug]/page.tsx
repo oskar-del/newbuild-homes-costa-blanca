@@ -285,15 +285,17 @@ export default async function RegionPage({ params }: { params: Promise<{ slug: s
                   <h2 className="text-2xl font-semibold text-primary-900 mb-4">Golf in {region.name}</h2>
                   <p className="text-warm-700 leading-relaxed mb-6">{region.content.golfSection.intro}</p>
 
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
-                    {region.content.golfSection.keyFeatures.map((feature, idx) => (
-                      <div key={idx} className="bg-accent-50 p-3 rounded text-center">
-                        <span className="text-accent-700 text-sm font-medium">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
+                  {Array.isArray(region.content.golfSection.keyFeatures) && region.content.golfSection.keyFeatures.length > 0 && (
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-6">
+                      {region.content.golfSection.keyFeatures.map((feature, idx) => (
+                        <div key={idx} className="bg-accent-50 p-3 rounded text-center">
+                          <span className="text-accent-700 text-sm font-medium">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
 
-                  {region.content.golfSection.topCourses && (
+                  {Array.isArray(region.content.golfSection.topCourses) && region.content.golfSection.topCourses.length > 0 && (
                     <div className="mt-6">
                       <h3 className="font-semibold text-primary-900 mb-4">Top Courses</h3>
                       <div className="space-y-4">
@@ -328,8 +330,9 @@ export default async function RegionPage({ params }: { params: Promise<{ slug: s
                   <h2 className="text-2xl font-semibold text-primary-900 mb-4">Beaches</h2>
                   <p className="text-warm-700 leading-relaxed mb-6">{region.content.beachesSection.intro}</p>
 
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {region.content.beachesSection.highlights.map((beach, idx) => (
+                  {Array.isArray(region.content.beachesSection.highlights) && region.content.beachesSection.highlights.length > 0 && (
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {region.content.beachesSection.highlights.map((beach, idx) => (
                       <div key={idx} className="p-4 bg-gradient-to-br from-blue-50 to-accent-50 rounded-lg">
                         <div className="flex items-center gap-2 mb-2">
                           <span className="text-2xl">🏖️</span>
@@ -339,7 +342,8 @@ export default async function RegionPage({ params }: { params: Promise<{ slug: s
                         <p className="text-warm-600 text-sm">{beach.description}</p>
                       </div>
                     ))}
-                  </div>
+                    </div>
+                  )}
 
                   <Link href="/beach" className="inline-flex items-center gap-2 text-accent-600 hover:text-accent-700 font-medium mt-6">
                     View Beach Properties
@@ -356,26 +360,28 @@ export default async function RegionPage({ params }: { params: Promise<{ slug: s
                   <h2 className="text-2xl font-semibold text-primary-900 mb-4">Property Market</h2>
                   <p className="text-warm-700 leading-relaxed mb-6">{region.content.propertyMarketSection.overview}</p>
 
-                  <div className="overflow-x-auto mb-6">
-                    <table className="w-full">
-                      <thead>
-                        <tr className="bg-primary-900 text-white">
-                          <th className="p-3 text-left font-medium">Property Type</th>
-                          <th className="p-3 text-left font-medium">Price Range</th>
-                          <th className="p-3 text-left font-medium hidden md:table-cell">Notes</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {region.content.propertyMarketSection.priceGuide.map((row, idx) => (
-                          <tr key={idx} className={idx % 2 === 0 ? 'bg-warm-50' : 'bg-white'}>
-                            <td className="p-3 border-b border-warm-200 font-medium text-primary-900">{row.type}</td>
-                            <td className="p-3 border-b border-warm-200 text-accent-600 font-medium">{row.range}</td>
-                            <td className="p-3 border-b border-warm-200 text-warm-600 text-sm hidden md:table-cell">{row.notes}</td>
+                  {Array.isArray(region.content.propertyMarketSection.priceGuide) && region.content.propertyMarketSection.priceGuide.length > 0 && (
+                    <div className="overflow-x-auto mb-6">
+                      <table className="w-full">
+                        <thead>
+                          <tr className="bg-primary-900 text-white">
+                            <th className="p-3 text-left font-medium">Property Type</th>
+                            <th className="p-3 text-left font-medium">Price Range</th>
+                            <th className="p-3 text-left font-medium hidden md:table-cell">Notes</th>
                           </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
+                        </thead>
+                        <tbody>
+                          {region.content.propertyMarketSection.priceGuide.map((row, idx) => (
+                            <tr key={idx} className={idx % 2 === 0 ? 'bg-warm-50' : 'bg-white'}>
+                              <td className="p-3 border-b border-warm-200 font-medium text-primary-900">{row.type}</td>
+                              <td className="p-3 border-b border-warm-200 text-accent-600 font-medium">{row.range}</td>
+                              <td className="p-3 border-b border-warm-200 text-warm-600 text-sm hidden md:table-cell">{row.notes}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
 
                   {region.content.propertyMarketSection.investmentPotential && (
                     <div className="bg-accent-50 p-4 rounded-lg">
@@ -391,14 +397,16 @@ export default async function RegionPage({ params }: { params: Promise<{ slug: s
                 <section className="bg-gradient-to-br from-primary-900 to-primary-800 p-8 rounded-lg text-white">
                   <h2 className="text-2xl font-semibold mb-4">Lifestyle in {region.name}</h2>
                   <p className="text-warm-300 leading-relaxed mb-6">{region.content.lifestyleSection.intro}</p>
-                  <div className="grid grid-cols-2 gap-3">
-                    {region.content.lifestyleSection.highlights.map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-2">
-                        <span className="text-accent-400">✓</span>
-                        <span className="text-warm-200 text-sm">{item}</span>
-                      </div>
-                    ))}
-                  </div>
+                  {Array.isArray(region.content.lifestyleSection.highlights) && region.content.lifestyleSection.highlights.length > 0 && (
+                    <div className="grid grid-cols-2 gap-3">
+                      {region.content.lifestyleSection.highlights.map((item, idx) => (
+                        <div key={idx} className="flex items-center gap-2">
+                          <span className="text-accent-400">✓</span>
+                          <span className="text-warm-200 text-sm">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </section>
               )}
 
