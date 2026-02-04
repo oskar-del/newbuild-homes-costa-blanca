@@ -22,8 +22,9 @@ export const FEED_URLS = {
   // 2. Background Properties - Sooprema format, new builds only
   background: 'https://backgroundproperties.com/wp-load.php?security_token=23f0185aeb5102e7&export_id=19&action=get_data',
 
-  // 3. Miralbo Urbana - Luxury villas, mostly Costa Blanca North
-  miralbo: 'https://mifrfrede.mfrpro.com/inmuebles/xml/56b76456fab7c',
+  // 3. Miralbo Urbana - DISABLED: DNS lookup fails during build
+  // miralbo: 'https://mifrfrede.mfrpro.com/inmuebles/xml/56b76456fab7c',
+  miralbo: '', // Disabled - feed URL unreachable
 
   // DISABLED: Special feed has empty town fields, causes data loss
   special: 'https://xml.redsp.net/files/450/94015ams84x/test-redsp_v4.xml',

@@ -324,6 +324,12 @@ async function fetchBackgroundFeed(): Promise<ParsedProperty[]> {
  * Luxury villas, mostly Costa Blanca North (Pedreguer area)
  */
 async function fetchMiralboFeed(): Promise<ParsedProperty[]> {
+  // Skip if feed URL is disabled/empty
+  if (!MIRALBO_FEED_URL) {
+    console.log('[XML-PARSER] Miralbo feed disabled');
+    return [];
+  }
+
   try {
     const response = await fetch(MIRALBO_FEED_URL, {
       next: { revalidate: 3600 },
