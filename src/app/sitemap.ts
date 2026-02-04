@@ -55,18 +55,34 @@ const FILTER_SLUGS = [
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://newbuildhomescostablanca.com';
 
-  // Get dynamic data
-  const developments = await getAllDevelopments();
-  const areas = await getAllAreas();
-  const builders = await getAllBuilders();
-
-  // Get all properties for individual property pages
+  // Get dynamic data - wrap in try-catch to prevent build failures when feeds are unreachable
+  let developments: Awaited<ReturnType<typeof getAllDevelopments>> = [];
+  let areas: Awaited<ReturnType<typeof getAllAreas>> = [];
+  let builders: Awaited<ReturnType<typeof getAllBuilders>> = [];
   let properties: { reference: string }[] = [];
+
+  try {
+    developments = await getAllDevelopments();
+  } catch (e) {
+    console.warn('[Sitemap] Failed to fetch developments, using empty array');
+  }
+
+  try {
+    areas = await getAllAreas();
+  } catch (e) {
+    console.warn('[Sitemap] Failed to fetch areas, using empty array');
+  }
+
+  try {
+    builders = await getAllBuilders();
+  } catch (e) {
+    console.warn('[Sitemap] Failed to fetch builders, using empty array');
+  }
+
   try {
     properties = await getAllProperties();
   } catch (e) {
-    // Properties feed may not be available at build time
-    properties = [];
+    console.warn('[Sitemap] Failed to fetch properties, using empty array');
   }
 
   // Static pages
