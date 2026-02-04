@@ -18,7 +18,7 @@ export const revalidate = 3600;
 
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getPropertyById, getAllProperties } from '@/lib/unified-feed-service';
+import { getPropertyByRef, fetchXMLFeed, toUnifiedFormat } from '@/lib/xml-parser';
 import { generatePropertyContent, PropertyContent } from '@/lib/property-content-generator';
 import PropertyPageClient from './PropertyPageClient';
 
@@ -28,9 +28,9 @@ import PropertyPageClient from './PropertyPageClient';
 
 export async function generateStaticParams() {
   try {
-    const properties = await getAllProperties();
+    const properties = await fetchXMLFeed();
     return properties.slice(0, 100).map((property) => ({
-      reference: property.reference || property.id,
+      reference: property.ref,
     }));
   } catch (error) {
     console.error('Error generating static params:', error);
@@ -48,17 +48,19 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { reference } = await params;  // Await params first!
-  const property = await getPropertyById(reference);
-  
-  if (!property) {
+  const parsedProperty = await getPropertyByRef(reference);
+
+  if (!parsedProperty) {
     return {
       title: 'Property Not Found | New Build Homes Costa Blanca',
       description: 'The property you are looking for could not be found.',
     };
   }
-  
-  const content = generatePropertyContent(property);
-  
+
+  // Convert to unified format for content generator
+  const property = toUnifiedFormat(parsedProperty);
+  const content = generatePropertyContent(property as any);
+
   return {
     title: `${content.seoTitle} | New Build Homes Costa Blanca`,
     description: content.metaDescription,
@@ -82,7 +84,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: property.images?.[0]?.url ? [property.images[0].url] : [],
     },
     alternates: {
-      canonical: `https://newbuildhomescostablanca.com/properties/${property.reference || property.id}`,
+      canonical: `https://newbuildhomescostablanca.com/properties/${property.reference}`,
     },
     robots: {
       index: true,
@@ -287,15 +289,18 @@ function generateSpeakableSchema(property: any, content: PropertyContent) {
 
 export default async function PropertyPage({ params }: PageProps) {
   const { reference } = await params;  // Next.js 14: Await params first!
-  const property = await getPropertyById(reference);
-  
-  if (!property) {
+  const parsedProperty = await getPropertyByRef(reference);
+
+  if (!parsedProperty) {
     notFound();
   }
-  
+
+  // Convert to unified format for content generator and schemas
+  const property = toUnifiedFormat(parsedProperty);
+
   // Generate all AI content for this property
-  const content = generatePropertyContent(property);
-  
+  const content = generatePropertyContent(property as any);
+
   // Generate JSON-LD schemas
   const productSchema = generateProductSchema(property, content);
   const faqSchema = generateFAQSchema(content);
@@ -303,7 +308,7 @@ export default async function PropertyPage({ params }: PageProps) {
   const breadcrumbSchema = generateBreadcrumbSchema(property);
   const placeSchema = generatePlaceSchema(property);
   const speakableSchema = generateSpeakableSchema(property, content);
-  
+
   // RealEstateListing schema with freshness signals
   const realEstateListingSchema = {
     '@context': 'https://schema.org',
@@ -313,36 +318,36 @@ export default async function PropertyPage({ params }: PageProps) {
     datePosted: new Date().toISOString().split('T')[0],
     dateModified: new Date().toISOString().split('T')[0],
     validThrough: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-    url: `https://newbuildhomescostablanca.com/properties/${property.reference || property.id}`,
+    url: `https://newbuildhomescostablanca.com/properties/${property.reference}`,
   };
-  
+
   // Fetch similar properties - PRIORITIZE same town first, then fill with same region
   let similarProperties: any[] = [];
   try {
-    const allProperties = await getAllProperties();
-    
+    const allProperties = await fetchXMLFeed();
+
     // FIRST: Get properties from the SAME TOWN only
-    const sameTown = allProperties.filter(p => 
-      p.id !== property.id && 
-      p.town?.toLowerCase() === property.town?.toLowerCase()
+    const sameTown = allProperties.filter(p =>
+      p.ref !== parsedProperty.ref &&
+      p.town?.toLowerCase() === parsedProperty.town?.toLowerCase()
     );
-    
+
     // If we have 4+ same-town properties, use only those
     if (sameTown.length >= 4) {
-      similarProperties = sameTown.slice(0, 4);
+      similarProperties = sameTown.slice(0, 4).map(p => toUnifiedFormat(p));
     } else {
       // Otherwise, start with same-town, then fill remaining slots with same-region
-      const sameRegion = allProperties.filter(p => 
-        p.id !== property.id && 
-        p.town?.toLowerCase() !== property.town?.toLowerCase() && // Exclude already-included same town
-        p.region === property.region
+      const sameRegion = allProperties.filter(p =>
+        p.ref !== parsedProperty.ref &&
+        p.town?.toLowerCase() !== parsedProperty.town?.toLowerCase() &&
+        p.region === parsedProperty.region
       );
-      similarProperties = [...sameTown, ...sameRegion].slice(0, 4);
+      similarProperties = [...sameTown, ...sameRegion].slice(0, 4).map(p => toUnifiedFormat(p));
     }
   } catch (error) {
     console.error('Error fetching similar properties:', error);
   }
-  
+
   return (
     <>
       {/* JSON-LD Schema Markup */}
@@ -374,10 +379,10 @@ export default async function PropertyPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(realEstateListingSchema) }}
       />
-      
+
       {/* Client Component with all interactive UI */}
-      <PropertyPageClient 
-        property={property}
+      <PropertyPageClient
+        property={property as any}
         content={content}
         similarProperties={similarProperties}
       />

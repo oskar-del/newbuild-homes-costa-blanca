@@ -552,6 +552,97 @@ export function formatPrice(price: number): string {
   }).format(price);
 }
 
+/**
+ * Get a single property by its reference (ref)
+ * Used by property detail page to find property from URL
+ */
+export async function getPropertyByRef(ref: string): Promise<ParsedProperty | null> {
+  const allProperties = await fetchXMLFeed();
+  const refUpper = ref.toUpperCase();
+  return allProperties.find(p => p.ref.toUpperCase() === refUpper) || null;
+}
+
+/**
+ * Get all property references for static generation
+ */
+export async function getAllPropertyRefs(): Promise<string[]> {
+  const properties = await fetchXMLFeed();
+  return properties.map(p => p.ref).filter(Boolean);
+}
+
+/**
+ * Convert ParsedProperty to format compatible with content generator
+ * Maps the xml-parser fields to UnifiedProperty-like structure
+ */
+export function toUnifiedFormat(p: ParsedProperty): {
+  id: string;
+  reference: string;
+  source: 'redsp' | 'background-properties' | 'miralbo';
+  town: string;
+  locationDetail: string;
+  province: string;
+  region: string;
+  latitude: number;
+  longitude: number;
+  propertyType: string;
+  bedrooms: number;
+  bathrooms: number;
+  builtArea: number;
+  plotArea: number;
+  price: number;
+  currency: string;
+  images: { url: string; caption: string }[];
+  descriptions: { en: string };
+  features: string[];
+  hasPool: boolean;
+  hasGarden: boolean;
+  hasTerrace: boolean;
+  hasParking: boolean;
+  hasSeaview: boolean;
+  hasGolfview: boolean;
+  isNewBuild: boolean;
+  developmentName?: string;
+  developer?: string;
+} {
+  const descLower = (p.description || '').toLowerCase();
+
+  // Determine source from ref prefix
+  let source: 'redsp' | 'background-properties' | 'miralbo' = 'redsp';
+  if (p.ref.startsWith('BP-')) source = 'background-properties';
+  if (p.ref.startsWith('MIR-')) source = 'miralbo';
+
+  return {
+    id: p.id,
+    reference: p.ref,
+    source,
+    town: p.town || '',
+    locationDetail: '',
+    province: p.province || 'Alicante',
+    region: p.region || 'Costa Blanca',
+    latitude: 0,
+    longitude: 0,
+    propertyType: p.propertyType || 'Property',
+    bedrooms: p.bedrooms || 0,
+    bathrooms: p.bathrooms || 0,
+    builtArea: p.size || 0,
+    plotArea: p.plotSize || 0,
+    price: p.price || 0,
+    currency: 'EUR',
+    images: p.images.map(url => ({ url, caption: '' })),
+    descriptions: { en: p.description || '' },
+    features: [],
+    hasPool: descLower.includes('pool') || descLower.includes('piscina'),
+    hasGarden: descLower.includes('garden') || descLower.includes('jardin'),
+    hasTerrace: descLower.includes('terrace') || descLower.includes('terraza'),
+    hasParking: descLower.includes('parking') || descLower.includes('garage') || descLower.includes('garaje'),
+    hasSeaview: descLower.includes('sea view') || descLower.includes('vista mar') || descLower.includes('seaview'),
+    hasGolfview: descLower.includes('golf'),
+    isNewBuild: p.isNewBuild,
+    developmentName: p.developmentName,
+    developer: p.developer,
+  };
+}
+
 // All inland town definitions are now in feed-config.ts
 
 /**
