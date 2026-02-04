@@ -1,0 +1,251 @@
+{
+  "slug": "punta-prima",
+  "name": "Punta Prima",
+  "region": "Costa Blanca South",
+  "parentArea": "orihuela-costa",
+  "heroImage": "/images/areas/punta-prima-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartment",
+    "Penthouse",
+    "Townhouse",
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 175000,
+    "max": 650000
+  },
+  "coordinates": {
+    "lat": 37.9578,
+    "lng": -0.7122
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Orihuela Costa Tourism",
+      "url": "https://www.orihuelaturistica.es/",
+      "description": "Official Orihuela tourism portal"
+    },
+    "beaches": [
+      {
+        "name": "Playa de Punta Prima",
+        "googleMaps": "https://maps.google.com/?q=Playa+Punta+Prima+Torrevieja",
+        "description": "Blue Flag beach with golden sand, turquoise waters, and full facilities",
+        "blueFlag": true
+      },
+      {
+        "name": "Cala Piteras",
+        "googleMaps": "https://maps.google.com/?q=Cala+Piteras",
+        "description": "Rocky cove with crystal-clear water and natural character"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "5 km",
+      "driveTime": "8 minutes"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "50 km",
+      "driveTime": "38 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Punta Prima offers excellent golf access to Orihuela Costa's courses while maintaining beachfront focus.",
+    "courses": [
+      {
+        "name": "Villamartin Golf",
+        "distance": "5 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "url": "https://www.villamartingolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Villamartin+Golf",
+        "description": "Championship course with storied history."
+      },
+      {
+        "name": "Las Ramblas Golf",
+        "distance": "6 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "url": "https://www.lasramblasgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Las+Ramblas+Golf",
+        "description": "Dramatic elevation changes with views."
+      },
+      {
+        "name": "Campoamor Golf",
+        "distance": "8 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.campoamorgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Campoamor+Golf",
+        "description": "Well-maintained coastal course."
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Living in Punta Prima | Beachfront Living | Orihuela Costa 2026",
+    "metaDescription": "Complete guide to Punta Prima—northern gateway to Orihuela Costa, Blue Flag beach, close to Torrevieja. Apartments from €175k. Beach lifestyle at its purest.",
+    "quickAnswer": "Punta Prima is the northern gateway to Orihuela Costa, featuring a stunning Blue Flag beach and proximity to Torrevieja (5 min). Properties start at €175,000 for apartments, with sea-view penthouses and villas to €650,000. Just 8 minutes to Torrevieja hospital, 38 min to Alicante Airport.",
+    "heroIntro": "Where Torrevieja ends and Orihuela Costa begins, Punta Prima emerges as a beachfront community that distills coastal living to its essence. The beach here is exceptional—Blue Flag certified, with that particular turquoise that comes from the right combination of sand, depth, and Mediterranean clarity. It's the beach that appears in photos when people imagine Spanish coastal life.\n\nPunta Prima's northern position gives it advantages: Torrevieja's full amenities are just 5 minutes away, the university hospital 8 minutes. Yet it belongs to the Orihuela Costa community, sharing the resort infrastructure and international atmosphere. This gateway position—connected to both, distinct from each—defines its appeal.\n\nFor buyers seeking pure beachfront lifestyle with practical access to services, Punta Prima delivers without compromise.",
+    "lifestyleSection": {
+      "intro": "Life in Punta Prima centers on the beach. Morning swims before the crowds arrive. Afternoon lounging on sand that's quality enough to attract visitors from across the region. Sunset drinks at beachfront chiringuitos. The rhythm is simple, the rewards immediate.\n\nThe community is established and international, with the friendliness that comes from shared appreciation of location. Golf is accessible but secondary—this is beach country first. Torrevieja's shops, restaurants, and services provide everything needed without Punta Prima becoming anything but beachfront.",
+      "highlights": [
+        "Exceptional Blue Flag beach—among the best on Costa Blanca",
+        "Torrevieja just 5 minutes—full city services nearby",
+        "Hospital 8 minutes—excellent healthcare access",
+        "Northern gateway to Orihuela Costa",
+        "5 golf courses within 15 minutes",
+        "Sea-view properties widely available",
+        "Established international community",
+        "38 minutes to Alicante Airport"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Playa de Punta Prima is exceptional—Blue Flag certified with golden sand, turquoise water, and full facilities including lifeguards, beach bars, and sun lounger rental. Cala Piteras offers a rocky alternative for snorkeling. The beach quality is the primary draw of the area.",
+      "dining": "Beachfront chiringuitos serve fresh fish and paella. The promenade has cafés and restaurants. For variety, Torrevieja (5 min) offers extensive dining options. La Zenia Boulevard (10 min) adds international choices.",
+      "shopping": "Local shops cover basics. Torrevieja (5 min) has full shopping including Habaneras center. La Zenia Boulevard (10 min) provides 150+ stores. Excellent access to shopping while maintaining beachfront character.",
+      "healthcare": "Hospital Universitario de Torrevieja is just 5 km (8 minutes)—excellent healthcare access. This northern position is closer to the hospital than most Orihuela Costa locations.",
+      "transport": "Alicante-Elche Airport is 50 km (38 minutes). Convenient access via the AP-7 and N-332. The location bridges Torrevieja and Orihuela Costa, with good connections to both."
+    },
+    "neighborhoods": [
+      {
+        "name": "Beachfront",
+        "description": "Properties within walking distance of Playa de Punta Prima. Premium location with immediate beach access. Mix of apartments and penthouses. Highest prices for the area."
+      },
+      {
+        "name": "Punta Prima Park",
+        "description": "Slightly inland with parks and pools. Good value with beach access. Family-friendly developments. Mix of apartments and townhouses."
+      },
+      {
+        "name": "Towards La Zenia",
+        "description": "Southern edge connecting to the rest of Orihuela Costa. Good access to both Punta Prima beach and La Zenia amenities."
+      }
+    ],
+    "propertyMarketSection": "Punta Prima offers beachfront lifestyle at accessible prices. Apartments start from around €175,000-350,000, penthouses from €300,000-500,000, and villas from €450,000-650,000. Sea-view properties are widely available given the beach orientation.\n\n**Featured Development: Residencial EMA Penthouse** – Premium 2-bed penthouses from €425,000 with sea views, roof terraces, and luxury finishes. 120m² living space with exceptional beach proximity.\n\nThe rental market is strong—beachfront location drives consistent demand. Summer is peak but the excellent beach attracts visitors beyond the traditional season. Properties with sea views and pools perform particularly well.",
+    "whyLiveHereSection": [
+      "Exceptional Blue Flag beach—Costa Blanca's finest",
+      "Sea-view properties widely available",
+      "Torrevieja services just 5 minutes",
+      "Hospital 8 minutes—excellent access",
+      "5 golf courses within 15 minutes",
+      "Established international community",
+      "Strong rental potential",
+      "Pure beachfront lifestyle"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Residencial EMA Penthouse",
+        "reference": "N7130",
+        "price": 425000,
+        "type": "Penthouse",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "features": [
+          "Sea Views",
+          "Roof Terrace",
+          "Luxury Finish"
+        ],
+        "description": "Premium 2-bed penthouse with sea views and 120m² living space."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the beach like in Punta Prima?",
+        "answer": "Exceptional—Blue Flag certified with golden sand and turquoise water. Among the best beaches on Costa Blanca. Full facilities including lifeguards and beach bars. The beach quality is Punta Prima's primary attraction."
+      },
+      {
+        "question": "How far is Punta Prima from Torrevieja?",
+        "answer": "Just 5 km (5 minutes drive). Torrevieja's full services—hospital, shopping, restaurants—are immediately accessible while Punta Prima maintains beachfront character."
+      },
+      {
+        "question": "What are property prices in Punta Prima?",
+        "answer": "Apartments from €175,000, penthouses from €300,000, villas from €450,000. Sea-view properties are widely available. Good value for beachfront Costa Blanca location."
+      },
+      {
+        "question": "Is Punta Prima part of Torrevieja or Orihuela Costa?",
+        "answer": "Punta Prima belongs to Orihuela Costa (Orihuela municipality) but sits at the northern border adjacent to Torrevieja. It benefits from proximity to Torrevieja's services while being part of the Orihuela Costa community."
+      },
+      {
+        "question": "Is Punta Prima good for rental investment?",
+        "answer": "Yes, beachfront location drives strong rental demand. Summer is peak but the excellent beach attracts visitors beyond traditional season. Sea-view properties with pools perform best."
+      },
+      {
+        "question": "How close is the hospital to Punta Prima?",
+        "answer": "Hospital Universitario de Torrevieja is just 5 km (8 minutes). Punta Prima has better hospital access than most Orihuela Costa locations due to its northern position."
+      },
+      {
+        "question": "Is Punta Prima good for golf?",
+        "answer": "Good access with Villamartin (8 min), Las Ramblas (10 min), and Campoamor (12 min) nearby. However, Punta Prima is beach-focused—golfers might prefer Villamartin or Campoamor as a base."
+      },
+      {
+        "question": "Is English widely spoken in Punta Prima?",
+        "answer": "Yes, with an established international community. Most services cater to English speakers. The community is welcoming and well-integrated."
+      },
+      {
+        "question": "How far is Punta Prima from Alicante Airport?",
+        "answer": "Approximately 50 km (38 minutes via AP-7). Good access, slightly closer than southern Orihuela Costa locations."
+      },
+      {
+        "question": "Is Punta Prima suitable for permanent living?",
+        "answer": "Excellent for beach-focused lifestyle. Year-round services, good healthcare access, established community. Torrevieja nearby provides full city services. Ideal for those who want beach as daily life, not just vacation."
+      }
+    ],
+    "conclusion": "Punta Prima distills Costa Blanca beachfront living to its essence: exceptional beach, convenient services, sea views, and a community built around appreciation of the coast. The gateway position offers the best of Torrevieja and Orihuela Costa without compromise.\n\nFor buyers seeking pure beachfront lifestyle with practical convenience, Punta Prima delivers exactly that.\n\nReady to explore properties in Punta Prima? Our team understands beachfront living and can match you with properties that maximize what makes this location special—from sea-view apartments to beachside penthouses."
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Punta Prima",
+    "description": "Punta Prima is a beachfront community at the northern gateway to Orihuela Costa, featuring an exceptional Blue Flag beach and convenient access to Torrevieja's services.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.9578",
+      "longitude": "-0.7122"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Punta Prima",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Orihuela Costa, Costa Blanca"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the beach like in Punta Prima?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Exceptional—Blue Flag certified with golden sand and turquoise water. Among the best beaches on Costa Blanca with full facilities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Punta Prima from Torrevieja?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Just 5 km (5 minutes drive). Torrevieja's full services are immediately accessible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are property prices in Punta Prima?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Apartments from €175,000, penthouses from €300,000, villas from €450,000. Sea-view properties widely available."
+        }
+      }
+    ]
+  }
+}

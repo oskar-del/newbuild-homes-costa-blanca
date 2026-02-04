@@ -1,914 +1,1667 @@
-export const dynamic = 'force-dynamic';
+// ISR: Regenerate pages every hour for fresh data
+export const revalidate = 3600;
+
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getAllProperties } from '@/lib/unified-feed-service';
-import { getGolfCourseBySlug, getAllGolfSlugs, GOLF_COURSES, getGolfCoursesByRegion } from '@/lib/golf-courses';
+import {
+  getGolfCourseBySlug,
+  getAllGolfSlugs,
+  GOLF_COURSES,
+  GolfCourse,
+  getGolfCoursesByRegion,
+} from '@/lib/golf-courses';
+import { getDevelopmentsByGolfCourse } from '@/lib/development-service';
+import LeadForm from '@/components/LeadForm';
+import InteractiveAreaMap from '@/components/area/InteractiveAreaMap';
+import { breadcrumbSchema, faqSchema, toJsonLd } from '@/lib/schema';
 
-// Generate static params for all golf course pages
-export async function generateStaticParams() {
-  return getAllGolfSlugs().map((slug) => ({ slug }));
+// ============================================
+// RICH LIFESTYLE DATA FOR EACH GOLF COURSE
+// ============================================
+interface GolfCourseLifestyle {
+  heroImage: string;
+  introduction: string;
+  whyLiveHere: string[];
+  lifestyle: {
+    overview: string;
+    dailyLife: string;
+    community: string;
+  };
+  schools: Array<{
+    name: string;
+    type: string;
+    distance: string;
+    curriculum: string;
+    fees: string;
+    ages: string;
+    url?: string;
+    note: string;
+  }>;
+  healthcare: {
+    hospital: { name: string; distance: string; description: string; googleMaps: string };
+    healthCenter: { name: string; distance: string };
+    pharmacies: string;
+    privateOptions: string;
+  };
+  beaches: Array<{
+    name: string;
+    distance: string;
+    description: string;
+    googleMaps: string;
+  }>;
+  markets: Array<{
+    name: string;
+    day: string;
+    time: string;
+    distance: string;
+    description: string;
+    googleMaps: string;
+  }>;
+  events: Array<{
+    name: string;
+    when: string;
+    description: string;
+  }>;
+  expat: {
+    population: string;
+    nationalities: string;
+    socialHub: string;
+    facebookGroups: string[];
+    integration: string;
+  };
+  costOfLiving: Array<{
+    category: string;
+    cost: string;
+    notes: string;
+  }>;
+  investment: {
+    overview: string;
+    priceGrowth: string;
+    rentalYield: string;
+    outlook: string;
+  };
+  faqs: Array<{
+    question: string;
+    answer: string;
+  }>;
+  mapLocations: Array<{
+    id: string;
+    name: string;
+    type: 'golf' | 'beach' | 'hospital' | 'airport' | 'shopping' | 'school' | 'market';
+    coordinates: [number, number];
+    distance: string;
+    description: string;
+    googleMapsLink?: string;
+    internalLink?: string;
+  }>;
 }
 
-// Generate metadata for each course
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const course = getGolfCourseBySlug(params.slug);
-  if (!course) return { title: 'Course Not Found' };
+// Lifestyle data for each golf course
+const GOLF_LIFESTYLE_DATA: Record<string, GolfCourseLifestyle> = {
+  'la-finca-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1600&q=80',
+    introduction: 'La Finca Golf Resort is more than just a golf course - it\'s a lifestyle. This thriving international community in Algorfa offers the perfect blend of quality golf, Spanish culture, and modern amenities. With a 4-star hotel on-site and excellent new build developments from quality builders, La Finca has become one of Costa Blanca\'s most sought-after golf destinations.',
+    whyLiveHere: [
+      '18-hole championship course designed by Pepe Gancedo',
+      '4-star hotel with spa and restaurants on-site',
+      '40% international residents - welcoming expat community',
+      'Properties 30-40% cheaper than coastal resorts',
+      '15 minutes to beautiful Guardamar beaches',
+      'Excellent new build villas from €150,000'
+    ],
+    lifestyle: {
+      overview: 'La Finca offers a relaxed yet social lifestyle centered around the golf club. The clubhouse serves as the community hub where neighbors become friends over breakfast after their morning round.',
+      dailyLife: 'A typical day might start with early golf before the heat, followed by breakfast on the terrace. Afternoons could be spent at the pool, exploring nearby markets, or at the beach. Evenings bring socializing at the clubhouse or dining in Algorfa village.',
+      community: 'The community is predominantly British, Scandinavian, and Belgian, with a welcoming atmosphere. Quiz nights, golf competitions, and social events make it easy to integrate. The golf club has active ladies\' and men\'s sections with regular competitions.',
+    },
+    schools: [
+      { name: 'El Limonar International School', type: 'British International', distance: '20 min', curriculum: 'British (GCSE, A-Level)', fees: '€5,000-8,000/year', ages: '3-18', url: 'https://www.ellimonarinternational.com/', note: 'Most popular choice for expat families. Excellent results, strong community.' },
+      { name: 'Kings College Alicante', type: 'British International', distance: '45 min', curriculum: 'British (IB available)', fees: '€8,000-12,000/year', ages: '2-18', url: 'https://alicante.kingscollegeschools.org/', note: 'Premium option with IB programme.' },
+      { name: 'CEIP Virgen del Rosario', type: 'Spanish Public', distance: '5 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local village school, great for Spanish immersion.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital Universitario de Torrevieja', distance: '18 min', description: 'Full-service hospital with 24hr emergency, English-speaking staff available.', googleMaps: 'https://maps.google.com/?q=Hospital+de+Torrevieja' },
+      healthCenter: { name: 'Centro de Salud Algorfa', distance: '5 min' },
+      pharmacies: 'Pharmacies in Algorfa village and all nearby towns',
+      privateOptions: 'Most expats use private insurance (Sanitas, Adeslas) - €80-150/month for comprehensive cover',
+    },
+    beaches: [
+      { name: 'Playa de Guardamar', distance: '15 min', description: 'Beautiful dune-backed Blue Flag beach with crystal-clear water and pine forest for natural shade.', googleMaps: 'https://maps.google.com/?q=Playa+de+Guardamar+del+Segura' },
+      { name: 'Playa de La Mata', distance: '20 min', description: 'Long natural beach with protected dunes. Less crowded, great for walks.', googleMaps: 'https://maps.google.com/?q=Playa+de+La+Mata+Torrevieja' },
+      { name: 'Torrevieja Beaches', distance: '25 min', description: 'Urban beaches with promenade, restaurants, and full facilities.', googleMaps: 'https://maps.google.com/?q=Playa+del+Cura+Torrevieja' },
+    ],
+    markets: [
+      { name: 'Rojales Sunday Market', day: 'Sunday', time: '9am - 2pm', distance: '10 min', description: 'Huge expat favorite! Hundreds of stalls selling everything. Great atmosphere, live music.', googleMaps: 'https://maps.google.com/?q=Mercadillo+Rojales+Sunday+Market' },
+      { name: 'Guardamar Wednesday Market', day: 'Wednesday', time: '8am - 1pm', distance: '15 min', description: 'Traditional Spanish market with fresh produce and fish.', googleMaps: 'https://maps.google.com/?q=Mercado+Guardamar+del+Segura' },
+      { name: 'Torrevieja Friday Market', day: 'Friday', time: '8am - 2pm', distance: '20 min', description: 'Large market near the seafront. Great for fresh fish and Spanish products.', googleMaps: 'https://maps.google.com/?q=Mercadillo+Torrevieja' },
+    ],
+    events: [
+      { name: 'Algorfa Fiestas Patronales', when: 'Mid-August', description: 'Week-long village festival with street parties, music, fireworks, and traditional events. The whole village celebrates!' },
+      { name: 'La Finca Golf Tournament Season', when: 'October - May', description: 'Regular competitions and social events at the golf club. Great way to meet the community.' },
+      { name: 'Moors & Christians Festivals', when: 'Various dates', description: 'Spectacular costumed parades in nearby Orihuela and Guardamar.' },
+      { name: 'Noche de San Juan', when: 'June 23rd', description: 'Beach bonfires at Guardamar and Torrevieja. All-night parties and fireworks!' },
+    ],
+    expat: {
+      population: 'Approximately 40% international residents in La Finca area',
+      nationalities: 'Predominantly British, Scandinavian (Norwegian, Swedish), Belgian, Dutch',
+      socialHub: 'La Finca Golf clubhouse - quiz nights, competitions, social dinners',
+      facebookGroups: ['La Finca Golf Community', 'Algorfa Expats', 'Vega Baja Expats'],
+      integration: 'Easy through the golf club which is the social hub. English widely spoken. Village fiestas welcome everyone.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€400 - €800/year', notes: 'Algorfa rates lower than coastal towns' },
+      { category: 'Community Fees', cost: '€80 - €120/month', notes: 'Includes pool, gardens, security' },
+      { category: 'Utilities (Electric/Water)', cost: '€100 - €200/month', notes: 'Higher in summer (AC)' },
+      { category: 'Golf Membership', cost: '€1,500 - €3,000/year', notes: 'Significant discount vs green fees' },
+      { category: 'Health Insurance', cost: '€80 - €150/month', notes: 'Private cover recommended' },
+      { category: 'Weekly Shop (2 people)', cost: '€80 - €120', notes: '20-30% cheaper than UK' },
+    ],
+    investment: {
+      overview: 'La Finca properties have outperformed the wider market with consistent demand from golf-focused buyers. Limited buildable land constrains supply while demand remains strong.',
+      priceGrowth: '+42% over 5 years',
+      rentalYield: '4-6% achievable',
+      outlook: 'Expected 5-8% annual appreciation. New developments from Contrimar continue to sell well.',
+    },
+    faqs: [
+      { question: 'Do I need to be a golf member to live at La Finca?', answer: 'No, golf membership is optional. Many residents don\'t play golf but enjoy the community, restaurants, and lifestyle. However, membership offers great value if you play regularly.' },
+      { question: 'How far is La Finca from the beach?', answer: 'Guardamar beach is 15 minutes drive. Torrevieja beaches are 20-25 minutes. Most residents find this an acceptable trade-off for the value and lifestyle.' },
+      { question: 'Is there public transport from La Finca?', answer: 'Limited. A car is essential for living at La Finca. Roads are excellent and parking is free. Most residents find this worthwhile for the peace and value.' },
+      { question: 'What is the expat community like?', answer: 'Very welcoming! Around 40% international, mainly British and Scandinavian. The golf club is the social hub with regular events. Easy to make friends quickly.' },
+      { question: 'Can I rent out my property?', answer: 'Yes, golf properties are popular rentals, especially September to June. Rental yields of 4-6% are achievable. Many owners use their property part-year and rent during other periods.' },
+    ],
+    mapLocations: [
+      { id: 'la-finca', name: 'La Finca Golf', type: 'golf', coordinates: [38.0647, -0.7928], distance: 'Center', description: 'Championship 18-hole course', googleMapsLink: 'https://maps.google.com/?q=La+Finca+Golf+Resort+Algorfa' },
+      { id: 'guardamar-beach', name: 'Playa de Guardamar', type: 'beach', coordinates: [38.0892, -0.6553], distance: '15 min', description: 'Blue Flag beach', googleMapsLink: 'https://maps.google.com/?q=Playa+de+Guardamar+del+Segura' },
+      { id: 'hospital', name: 'Hospital Torrevieja', type: 'hospital', coordinates: [37.9780, -0.6847], distance: '18 min', description: '24hr emergency', googleMapsLink: 'https://maps.google.com/?q=Hospital+de+Torrevieja' },
+      { id: 'airport', name: 'Alicante Airport', type: 'airport', coordinates: [38.2822, -0.5582], distance: '30 min', description: 'International flights', googleMapsLink: 'https://maps.google.com/?q=Alicante+Airport' },
+      { id: 'zenia', name: 'Zenia Boulevard', type: 'shopping', coordinates: [37.9150, -0.7464], distance: '25 min', description: '150+ stores', googleMapsLink: 'https://maps.google.com/?q=Zenia+Boulevard' },
+      { id: 'el-limonar', name: 'El Limonar School', type: 'school', coordinates: [37.9383, -0.7925], distance: '20 min', description: 'British curriculum', googleMapsLink: 'https://maps.google.com/?q=El+Limonar+International+School' },
+    ],
+  },
+
+  // SERENA GOLF
+  'serena-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=1600&q=80',
+    introduction: 'Serena Golf has become the hottest new build destination in the Costa Cálida. Located near Los Alcázares on the Mar Menor, it combines links-style golf with beach access in under 10 minutes. Multiple quality builders are creating modern apartments and villas, making this the go-to location for buyers seeking value without compromising on lifestyle.',
+    whyLiveHere: [
+      '18-hole links-style course with sea breezes',
+      'Mar Menor beaches just 10 minutes away',
+      'Murcia region\'s best value new builds',
+      '34+ properties available from €180,000',
+      'Multiple quality builders (Grupo Vermell, AMAL)',
+      'Year-round Mediterranean climate'
+    ],
+    lifestyle: {
+      overview: 'Serena Golf offers a laid-back lifestyle combining golf and beach. The Mar Menor\'s warm, shallow waters are perfect for families, while Los Alcázares has a charming promenade with restaurants.',
+      dailyLife: 'Morning golf followed by lunch at the clubhouse, then afternoon at the Mar Menor beaches. Evening tapas in Los Alcázares or Santiago de la Ribera. A perfect blend of active and relaxed living.',
+      community: 'Growing international community, predominantly Spanish, British, and Nordic. Newer than established resorts, so you\'ll be part of building the community. Multiple developments creating a diverse neighborhood.',
+    },
+    schools: [
+      { name: 'CEIP Santiago el Mayor', type: 'Spanish Public', distance: '10 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local school in Los Alcázares.' },
+      { name: 'King\'s College Murcia', type: 'British International', distance: '30 min', curriculum: 'British', fees: '€6,000-10,000/year', ages: '3-18', note: 'British curriculum in Murcia city.' },
+      { name: 'IES Antonio Menárguez Costa', type: 'Spanish Public Secondary', distance: '10 min', curriculum: 'Spanish National', fees: 'Free', ages: '12-18', note: 'Secondary school in Los Alcázares.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital General Universitario Los Arcos del Mar Menor', distance: '15 min', description: 'Modern hospital in San Javier with excellent facilities.', googleMaps: 'https://maps.google.com/?q=Hospital+Los+Arcos+Mar+Menor' },
+      healthCenter: { name: 'Centro de Salud Los Alcázares', distance: '8 min' },
+      pharmacies: 'Multiple pharmacies in Los Alcázares and San Javier',
+      privateOptions: 'Private clinics in Murcia and Cartagena. Sanitas, Adeslas available.',
+    },
+    beaches: [
+      { name: 'Los Alcázares Beach', distance: '8 min', description: 'Mar Menor beach with warm, calm waters. Perfect for families and water sports.', googleMaps: 'https://maps.google.com/?q=Playa+Los+Alcazares' },
+      { name: 'Santiago de la Ribera', distance: '12 min', description: 'Beautiful promenade and shallow waters. Popular with families.', googleMaps: 'https://maps.google.com/?q=Santiago+de+la+Ribera+beach' },
+      { name: 'La Manga Mediterranean', distance: '25 min', description: 'Mediterranean sea beaches with bigger waves and open water.', googleMaps: 'https://maps.google.com/?q=La+Manga+del+Mar+Menor+beaches' },
+    ],
+    markets: [
+      { name: 'Los Alcázares Market', day: 'Tuesday & Saturday', time: '8am - 1pm', distance: '8 min', description: 'Traditional Spanish market with fresh produce, fish, and local products.', googleMaps: 'https://maps.google.com/?q=Mercado+Los+Alcazares' },
+      { name: 'San Javier Market', day: 'Wednesday', time: '8am - 1pm', distance: '15 min', description: 'Larger market with good variety.', googleMaps: 'https://maps.google.com/?q=Mercado+San+Javier' },
+    ],
+    events: [
+      { name: 'Los Alcázares Fiestas', when: 'August', description: 'Week of celebrations with concerts, fireworks, and traditional events.' },
+      { name: 'Mar Menor Water Sports', when: 'Year-round', description: 'Kitesurfing, sailing, and paddle boarding events on the lagoon.' },
+      { name: 'Semana Santa', when: 'March/April', description: 'Easter processions in Cartagena are among Spain\'s finest.' },
+    ],
+    expat: {
+      population: 'Growing international community, estimated 25% expat',
+      nationalities: 'Mix of Spanish, British, Nordic, and Eastern European',
+      socialHub: 'Golf clubhouse and Los Alcázares promenade restaurants',
+      facebookGroups: ['Mar Menor Expats', 'Murcia Region Property'],
+      integration: 'Newer community so still forming. Great opportunity to be a founding member.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€350 - €700/year', notes: 'Murcia region very competitive' },
+      { category: 'Community Fees', cost: '€60 - €100/month', notes: 'New developments with modern facilities' },
+      { category: 'Utilities', cost: '€80 - €180/month', notes: 'Good solar potential in this region' },
+      { category: 'Weekly Shop', cost: '€70 - €100', notes: 'Mercadona, Lidl, local markets' },
+    ],
+    investment: {
+      overview: 'Serena Golf is experiencing rapid growth with multiple new developments launching. The Mar Menor location offers unique dual appeal of golf and beach.',
+      priceGrowth: '+35% over 5 years',
+      rentalYield: '5-7% achievable',
+      outlook: 'Strong growth expected as new developments complete and community matures.',
+    },
+    faqs: [
+      { question: 'How warm is the Mar Menor?', answer: 'The Mar Menor is Europe\'s largest saltwater lagoon and is significantly warmer than the Mediterranean - often 5-7°C warmer. The shallow, calm waters are ideal for families.' },
+      { question: 'Is Serena Golf good for beginners?', answer: 'Yes! The links-style course is accessible for all levels with wide fairways. Sea breezes add challenge for better players.' },
+      { question: 'What are the flight connections?', answer: 'Murcia-Corvera airport is 20 minutes away with Ryanair flights to UK and Europe. Alicante is 50 minutes with more options.' },
+    ],
+    mapLocations: [
+      { id: 'serena-golf', name: 'Serena Golf', type: 'golf', coordinates: [37.7456, -0.8456], distance: 'Center', description: 'Links-style course' },
+      { id: 'los-alcazares', name: 'Los Alcázares Beach', type: 'beach', coordinates: [37.7389, -0.8522], distance: '8 min', description: 'Mar Menor beach' },
+      { id: 'hospital', name: 'Hospital Los Arcos', type: 'hospital', coordinates: [37.7923, -0.8367], distance: '15 min', description: 'Modern hospital' },
+    ],
+  },
+
+  // VISTABELLA GOLF
+  'vistabella-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1600&q=80',
+    introduction: 'Vistabella Golf is a championship course designed by Ryder Cup legend Manuel Piñero, set against a stunning mountain backdrop. This growing resort offers new build developments at excellent value, combining quality golf with the peaceful inland lifestyle of Costa Blanca South.',
+    whyLiveHere: [
+      'Championship course by Ryder Cup captain Manuel Piñero',
+      'Stunning mountain views from course and homes',
+      'New developments with modern Spanish design',
+      '30-40% cheaper than coastal golf resorts',
+      '20 minutes to Guardamar and Torrevieja beaches',
+      'Growing international community'
+    ],
+    lifestyle: {
+      overview: 'Vistabella offers a relaxed resort lifestyle in a beautiful mountain setting. The course is the social hub, with a friendly mix of residents and visitors creating an inclusive atmosphere.',
+      dailyLife: 'Morning golf with mountain views, lunch on the clubhouse terrace, afternoon by the pool or exploring local villages. Evenings bring socializing at the club or tapas in nearby Quesada.',
+      community: 'A growing international community with British, Scandinavian, and Dutch residents. The golf club runs regular competitions and social events, making it easy to integrate.',
+    },
+    schools: [
+      { name: 'El Limonar International School', type: 'British International', distance: '25 min', curriculum: 'British (GCSE, A-Level)', fees: '€5,000-8,000/year', ages: '3-18', url: 'https://www.ellimonarinternational.com/', note: 'Most popular for expat families in the region.' },
+      { name: 'CEIP Virgen del Rosario', type: 'Spanish Public', distance: '10 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local school in Algorfa, good for Spanish immersion.' },
+      { name: 'IES Azud de Alfeitamí', type: 'Spanish Secondary', distance: '15 min', curriculum: 'Spanish National', fees: 'Free', ages: '12-18', note: 'Secondary school in Almoradí.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital Universitario de Torrevieja', distance: '20 min', description: 'Full-service public hospital with 24hr emergency and English-speaking staff.', googleMaps: 'https://maps.google.com/?q=Hospital+de+Torrevieja' },
+      healthCenter: { name: 'Centro de Salud Quesada', distance: '10 min' },
+      pharmacies: 'Pharmacies in Quesada and all nearby towns',
+      privateOptions: 'Most expats use private insurance - Sanitas, Adeslas clinics in Torrevieja',
+    },
+    beaches: [
+      { name: 'Playa de Guardamar', distance: '20 min', description: 'Beautiful dune-backed Blue Flag beach with pine forest shade.', googleMaps: 'https://maps.google.com/?q=Playa+de+Guardamar+del+Segura' },
+      { name: 'Torrevieja Beaches', distance: '25 min', description: 'Urban beaches with promenade, restaurants, and full facilities.', googleMaps: 'https://maps.google.com/?q=Playa+del+Cura+Torrevieja' },
+      { name: 'La Zenia Beach', distance: '30 min', description: 'Popular beach near Zenia Boulevard shopping center.', googleMaps: 'https://maps.google.com/?q=Playa+La+Zenia' },
+    ],
+    markets: [
+      { name: 'Quesada Street Market', day: 'Wednesday', time: '9am - 2pm', distance: '10 min', description: 'Good local market with fresh produce and household items.', googleMaps: 'https://maps.google.com/?q=Ciudad+Quesada+market' },
+      { name: 'Rojales Sunday Market', day: 'Sunday', time: '9am - 2pm', distance: '15 min', description: 'Huge expat favorite with hundreds of stalls and live music.', googleMaps: 'https://maps.google.com/?q=Mercadillo+Rojales+Sunday+Market' },
+      { name: 'Torrevieja Friday Market', day: 'Friday', time: '8am - 2pm', distance: '25 min', description: 'Large market near the seafront with excellent fresh fish.', googleMaps: 'https://maps.google.com/?q=Mercadillo+Torrevieja' },
+    ],
+    events: [
+      { name: 'Vistabella Golf Championships', when: 'Year-round', description: 'Regular competitions at the club for all handicap levels.' },
+      { name: 'Orihuela Medieval Market', when: 'February', description: 'Historic city transforms with medieval themed market and events.' },
+      { name: 'Moors & Christians Orihuela', when: 'July', description: 'Spectacular costumed parades celebrating regional history.' },
+      { name: 'San Juan Bonfires', when: 'June 23rd', description: 'Beach bonfires and all-night parties at Guardamar and Torrevieja.' },
+    ],
+    expat: {
+      population: 'Approximately 30% international residents in Vistabella area',
+      nationalities: 'British, Scandinavian (Norwegian, Swedish), Dutch, Belgian',
+      socialHub: 'Vistabella Golf clubhouse and nearby Quesada restaurants',
+      facebookGroups: ['Vistabella Golf Community', 'Quesada Expats', 'Vega Baja Living'],
+      integration: 'The golf club is the social center. English widely spoken in the area.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€400 - €800/year', notes: 'Orihuela municipality rates' },
+      { category: 'Community Fees', cost: '€70 - €110/month', notes: 'Varies by development' },
+      { category: 'Utilities', cost: '€100 - €200/month', notes: 'Higher in summer (AC)' },
+      { category: 'Golf Membership', cost: '€1,200 - €2,500/year', notes: 'Great value vs green fees' },
+      { category: 'Weekly Shop (2 people)', cost: '€80 - €120', notes: 'Similar to La Finca area' },
+    ],
+    investment: {
+      overview: 'Vistabella is growing with new developments releasing regularly. The Piñero course design adds prestige while inland location keeps prices accessible.',
+      priceGrowth: '+38% over 5 years',
+      rentalYield: '4-6% achievable',
+      outlook: 'Continued growth expected as resort matures. New phases bring fresh inventory.',
+    },
+    faqs: [
+      { question: 'Who designed Vistabella Golf?', answer: 'The course was designed by Manuel Piñero, a Ryder Cup legend who captained the European team. His courses are known for being challenging but fair for all levels.' },
+      { question: 'How far is Vistabella from the beach?', answer: 'Guardamar beach is about 20 minutes drive. Torrevieja beaches are 25 minutes. The trade-off is better value properties and a quieter lifestyle.' },
+      { question: 'Is there a clubhouse at Vistabella?', answer: 'Yes, the modern clubhouse has a restaurant, bar, pro shop, and terrace with mountain views. It serves as the social hub for residents.' },
+      { question: 'What new developments are at Vistabella?', answer: 'Several new developments are underway with apartments and villas. Contact us for the latest availability and launch information.' },
+    ],
+    mapLocations: [
+      { id: 'vistabella', name: 'Vistabella Golf', type: 'golf', coordinates: [38.0234, -0.7856], distance: 'Center', description: 'Manuel Piñero design' },
+      { id: 'guardamar-beach', name: 'Playa de Guardamar', type: 'beach', coordinates: [38.0892, -0.6553], distance: '20 min', description: 'Blue Flag beach' },
+      { id: 'hospital', name: 'Hospital Torrevieja', type: 'hospital', coordinates: [37.9780, -0.6847], distance: '20 min', description: '24hr emergency' },
+      { id: 'zenia', name: 'Zenia Boulevard', type: 'shopping', coordinates: [37.9150, -0.7464], distance: '25 min', description: '150+ stores' },
+    ],
+  },
+
+  // HACIENDA DEL ÁLAMO
+  'hacienda-del-alamo': {
+    heroImage: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=1600&q=80',
+    introduction: 'Hacienda del Álamo is an expansive resort in the Murcia countryside offering a desert-style championship golf experience. Wide open spaces, mountain views, and excellent value make this resort popular with families and golfers seeking the Spanish lifestyle without the coastal crowds.',
+    whyLiveHere: [
+      '18-hole desert-style championship course',
+      'Expansive resort with spacious properties',
+      'Mountain backdrop and spectacular views',
+      'Excellent value - significantly below coastal prices',
+      'Full resort facilities: pools, spa, tennis',
+      '30 minutes to beaches, 20 minutes to Cartagena'
+    ],
+    lifestyle: {
+      overview: 'Hacienda del Álamo offers space and tranquility. The desert-style setting feels distinctly different from coastal resorts, with wide open views and a relaxed pace of life.',
+      dailyLife: 'Golf in the cooler morning hours, followed by relaxation at the pools or spa. Afternoons might include exploring historic Cartagena or heading to Mazarrón beaches. A self-contained resort lifestyle with easy access to more.',
+      community: 'Mix of permanent residents and holiday home owners. Mainly British and Spanish, with growing international interest. The resort facilities bring people together.',
+    },
+    schools: [
+      { name: 'King\'s College Murcia', type: 'British International', distance: '35 min', curriculum: 'British (GCSE, A-Level)', fees: '€6,000-10,000/year', ages: '3-18', note: 'British curriculum school in Murcia city.' },
+      { name: 'CEIP Fuente Álamo', type: 'Spanish Public', distance: '10 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local village school.' },
+      { name: 'IES Ricardo Ortega', type: 'Spanish Secondary', distance: '15 min', curriculum: 'Spanish National', fees: 'Free', ages: '12-18', note: 'Secondary school in Fuente Álamo.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital Santa Lucía', distance: '25 min', description: 'Major hospital in Cartagena with full services and emergency care.', googleMaps: 'https://maps.google.com/?q=Hospital+Santa+Lucia+Cartagena' },
+      healthCenter: { name: 'Centro de Salud Fuente Álamo', distance: '10 min' },
+      pharmacies: 'Pharmacies in Fuente Álamo and nearby towns',
+      privateOptions: 'Private clinics in Murcia and Cartagena. Sanitas, Adeslas available.',
+    },
+    beaches: [
+      { name: 'Playas de Mazarrón', distance: '30 min', description: 'Beautiful cove beaches with clear water and traditional fishing village atmosphere.', googleMaps: 'https://maps.google.com/?q=Playa+Mazarron' },
+      { name: 'Bolnuevo Beach', distance: '35 min', description: 'Stunning beach with unique eroded rock formations and crystal water.', googleMaps: 'https://maps.google.com/?q=Playa+Bolnuevo' },
+      { name: 'La Manga', distance: '50 min', description: 'Famous strip with Mediterranean on one side, Mar Menor on other.', googleMaps: 'https://maps.google.com/?q=La+Manga+del+Mar+Menor' },
+    ],
+    markets: [
+      { name: 'Fuente Álamo Market', day: 'Saturday', time: '8am - 1pm', distance: '10 min', description: 'Traditional Spanish market with local produce.', googleMaps: 'https://maps.google.com/?q=Fuente+Alamo+mercado' },
+      { name: 'Cartagena Market Hall', day: 'Daily', time: '8am - 2pm', distance: '25 min', description: 'Indoor market hall with excellent fresh fish and meat.', googleMaps: 'https://maps.google.com/?q=Mercado+Santa+Florentina+Cartagena' },
+      { name: 'Mazarrón Market', day: 'Saturday', time: '8am - 1pm', distance: '25 min', description: 'Coastal market with fresh seafood.', googleMaps: 'https://maps.google.com/?q=Mazarron+mercado' },
+    ],
+    events: [
+      { name: 'Cartagena Semana Santa', when: 'March/April', description: 'Famous Easter processions - among the finest in Spain with Roman soldiers.' },
+      { name: 'Carthagineses y Romanos', when: 'September', description: 'Spectacular 10-day festival recreating Carthaginian and Roman battles.' },
+      { name: 'Hacienda Golf Events', when: 'Year-round', description: 'Regular competitions and social events at the club.' },
+    ],
+    expat: {
+      population: 'Approximately 20% international residents on resort',
+      nationalities: 'British, Spanish, Northern European',
+      socialHub: 'Golf clubhouse and resort facilities',
+      facebookGroups: ['Hacienda del Álamo Residents', 'Murcia Expats'],
+      integration: 'Self-contained resort community with easy mixing through golf and facilities.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€350 - €600/year', notes: 'Fuente Álamo has low rates' },
+      { category: 'Community Fees', cost: '€80 - €140/month', notes: 'Includes resort facilities access' },
+      { category: 'Utilities', cost: '€90 - €180/month', notes: 'Good solar potential' },
+      { category: 'Golf Membership', cost: '€1,500 - €2,800/year', notes: 'Various options available' },
+      { category: 'Weekly Shop', cost: '€70 - €100', notes: 'Cheaper than coastal areas' },
+    ],
+    investment: {
+      overview: 'Hacienda del Álamo offers excellent value with spacious properties. The desert setting appeals to those seeking something different from typical Spanish golf.',
+      priceGrowth: '+30% over 5 years',
+      rentalYield: '4-5% achievable',
+      outlook: 'Steady growth expected. Appeals to value-focused buyers seeking space.',
+    },
+    faqs: [
+      { question: 'What makes Hacienda del Álamo different?', answer: 'It\'s a desert-style course - unique in this region. Wide open spaces, mountain views, and a more American feel than typical Spanish courses.' },
+      { question: 'How far is Hacienda del Álamo from beaches?', answer: 'Mazarrón beaches are 30 minutes. The beautiful coves of this coast are worth the drive. Mar Menor is 40 minutes.' },
+      { question: 'What facilities does the resort have?', answer: 'Multiple pools, spa, gym, tennis courts, paddle courts, clubhouse restaurant, and more. It\'s a self-contained community.' },
+      { question: 'Is Cartagena worth visiting?', answer: 'Absolutely! A historic port city with Roman ruins, excellent restaurants, and a vibrant atmosphere. Only 20-25 minutes from the resort.' },
+    ],
+    mapLocations: [
+      { id: 'hacienda', name: 'Hacienda del Álamo', type: 'golf', coordinates: [37.7234, -1.1345], distance: 'Center', description: 'Desert-style course' },
+      { id: 'mazarron', name: 'Mazarrón Beach', type: 'beach', coordinates: [37.5614, -1.2614], distance: '30 min', description: 'Cove beaches' },
+      { id: 'hospital', name: 'Hospital Santa Lucía', type: 'hospital', coordinates: [37.6012, -0.9834], distance: '25 min', description: 'Major hospital' },
+      { id: 'cartagena', name: 'Cartagena', type: 'shopping', coordinates: [37.6057, -0.9860], distance: '25 min', description: 'Historic port city' },
+    ],
+  },
+
+  // PERALEJA GOLF
+  'peraleja-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1600&q=80',
+    introduction: 'Peraleja Golf Resort is a modern championship course with a rapidly growing residential community. Located near Sucina with easy access to both Mar Menor beaches and Murcia city, it offers the best of both worlds at competitive prices.',
+    whyLiveHere: [
+      '18-hole modern championship course',
+      'Growing residential community',
+      'New developments like Peralia Origenes',
+      '15 minutes to Mar Menor beaches',
+      '20 minutes to Murcia city',
+      'Excellent value new builds'
+    ],
+    lifestyle: {
+      overview: 'Peraleja offers a modern golf lifestyle in a developing community. You\'ll be part of building something new, with fresh developments and facilities.',
+      dailyLife: 'Morning golf on the well-maintained course, afternoons at the pool or Mar Menor beaches nearby. Murcia city is close for shopping, dining, and culture.',
+      community: 'A mix of Spanish and international residents in a growing community. The course brings people together, with regular competitions and social events.',
+    },
+    schools: [
+      { name: 'King\'s College Murcia', type: 'British International', distance: '25 min', curriculum: 'British', fees: '€6,000-10,000/year', ages: '3-18', note: 'British curriculum in Murcia.' },
+      { name: 'CEIP San José', type: 'Spanish Public', distance: '8 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local school in Sucina.' },
+      { name: 'IES Rambla de Nogalte', type: 'Spanish Secondary', distance: '15 min', curriculum: 'Spanish National', fees: 'Free', ages: '12-18', note: 'Secondary option in Torre Pacheco.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital Los Arcos del Mar Menor', distance: '15 min', description: 'Modern hospital in San Javier with good facilities.', googleMaps: 'https://maps.google.com/?q=Hospital+Los+Arcos+Mar+Menor' },
+      healthCenter: { name: 'Centro de Salud Sucina', distance: '5 min' },
+      pharmacies: 'Pharmacies in Sucina and nearby towns',
+      privateOptions: 'Private clinics in Murcia. Sanitas, Adeslas available.',
+    },
+    beaches: [
+      { name: 'Los Alcázares Beach', distance: '15 min', description: 'Mar Menor beach with warm, calm waters perfect for families.', googleMaps: 'https://maps.google.com/?q=Playa+Los+Alcazares' },
+      { name: 'Santiago de la Ribera', distance: '15 min', description: 'Beautiful promenade and family-friendly beach.', googleMaps: 'https://maps.google.com/?q=Santiago+de+la+Ribera+beach' },
+      { name: 'La Manga Mediterranean', distance: '30 min', description: 'Mediterranean beaches with bigger waves.', googleMaps: 'https://maps.google.com/?q=La+Manga+beaches' },
+    ],
+    markets: [
+      { name: 'Torre Pacheco Market', day: 'Wednesday', time: '8am - 1pm', distance: '10 min', description: 'Local market with fresh produce.', googleMaps: 'https://maps.google.com/?q=Mercado+Torre+Pacheco' },
+      { name: 'Los Alcázares Market', day: 'Tuesday & Saturday', time: '8am - 1pm', distance: '15 min', description: 'Coastal market near the beach.', googleMaps: 'https://maps.google.com/?q=Mercado+Los+Alcazares' },
+    ],
+    events: [
+      { name: 'Peraleja Golf Events', when: 'Year-round', description: 'Regular competitions and social events.' },
+      { name: 'Torre Pacheco Fiestas', when: 'August', description: 'Local festivals with music and food.' },
+      { name: 'Mar Menor Sailing Regattas', when: 'Various', description: 'Water sports events on the lagoon.' },
+    ],
+    expat: {
+      population: 'Growing international community, approximately 25%',
+      nationalities: 'Spanish, British, Scandinavian, Eastern European',
+      socialHub: 'Golf clubhouse and resort facilities',
+      facebookGroups: ['Peraleja Golf Community', 'Mar Menor Expats'],
+      integration: 'Developing community - great opportunity to be part of growth.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€350 - €650/year', notes: 'Torre Pacheco municipality' },
+      { category: 'Community Fees', cost: '€60 - €100/month', notes: 'New developments have modern fees' },
+      { category: 'Utilities', cost: '€80 - €170/month', notes: 'Good solar options' },
+      { category: 'Weekly Shop', cost: '€70 - €100', notes: 'Mercadona, Lidl nearby' },
+    ],
+    investment: {
+      overview: 'Peraleja is developing rapidly with new releases like Peralia Origenes. Early buyers benefit from growth as community matures.',
+      priceGrowth: '+32% over 5 years',
+      rentalYield: '5-6% achievable',
+      outlook: 'Strong growth potential as developments complete and community grows.',
+    },
+    faqs: [
+      { question: 'What developments are at Peraleja?', answer: 'Peralia Origenes is the latest development offering modern apartments and villas with golf views. Contact us for current availability.' },
+      { question: 'How close is Peraleja to beaches?', answer: 'Mar Menor beaches at Los Alcázares are just 15 minutes. You get both golf and beach lifestyle easily.' },
+      { question: 'What is the course like?', answer: 'Modern championship layout by European Golf Design. Well-maintained with challenging but fair holes for all levels.' },
+    ],
+    mapLocations: [
+      { id: 'peraleja', name: 'Peraleja Golf', type: 'golf', coordinates: [37.8123, -0.9567], distance: 'Center', description: 'Modern course' },
+      { id: 'los-alcazares', name: 'Los Alcázares', type: 'beach', coordinates: [37.7389, -0.8522], distance: '15 min', description: 'Mar Menor beach' },
+      { id: 'hospital', name: 'Hospital Los Arcos', type: 'hospital', coordinates: [37.7923, -0.8367], distance: '15 min', description: 'Modern hospital' },
+    ],
+  },
+
+  // ALTORREAL GOLF
+  'altorreal-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=1600&q=80',
+    introduction: 'Altorreal Golf Club is an established parkland course in the hills near Murcia city, featuring mature trees and championship conditioning. Taylor Wimpey España\'s luxury Allure development brings prestige living to this exclusive setting.',
+    whyLiveHere: [
+      'Established 1995 parkland course by Dave Thomas',
+      'Mature landscaping with established trees',
+      'Prestigious location near Murcia city',
+      'Taylor Wimpey Allure luxury development',
+      '15 minutes to Murcia city center',
+      'Quiet, exclusive residential atmosphere'
+    ],
+    lifestyle: {
+      overview: 'Altorreal offers a more exclusive, established lifestyle. Mature gardens, quiet streets, and a quality course attract discerning buyers.',
+      dailyLife: 'Morning golf on the immaculate parkland course, lunch at the traditional clubhouse. Murcia city offers world-class tapas, culture, and shopping just 15 minutes away.',
+      community: 'A mix of affluent Spanish families and international residents. More established and quieter than newer resorts. Quality over quantity.',
+    },
+    schools: [
+      { name: 'King\'s College Murcia', type: 'British International', distance: '20 min', curriculum: 'British', fees: '€6,000-10,000/year', ages: '3-18', note: 'Excellent British school in Murcia.' },
+      { name: 'CEIP Maestro Francisco Martínez Bernal', type: 'Spanish Public', distance: '10 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Good local school in Molina.' },
+      { name: 'International School of Murcia', type: 'International', distance: '20 min', curriculum: 'IB', fees: '€8,000-12,000/year', ages: '3-18', note: 'IB curriculum option.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital Universitario Reina Sofía', distance: '15 min', description: 'Major university hospital in Murcia with all specialties.', googleMaps: 'https://maps.google.com/?q=Hospital+Reina+Sofia+Murcia' },
+      healthCenter: { name: 'Centro de Salud Molina de Segura', distance: '10 min' },
+      pharmacies: 'Multiple pharmacies in Molina de Segura',
+      privateOptions: 'Excellent private clinics in Murcia city - Quirónsalud, Virgen de la Vega.',
+    },
+    beaches: [
+      { name: 'Mar Menor Beaches', distance: '40 min', description: 'Warm lagoon beaches at Los Alcázares and San Javier.', googleMaps: 'https://maps.google.com/?q=Los+Alcazares+beach' },
+      { name: 'Mazarrón Coves', distance: '45 min', description: 'Beautiful Mediterranean cove beaches.', googleMaps: 'https://maps.google.com/?q=Playa+Bolnuevo' },
+      { name: 'La Manga', distance: '50 min', description: 'Famous strip with dual coastlines.', googleMaps: 'https://maps.google.com/?q=La+Manga+del+Mar+Menor' },
+    ],
+    markets: [
+      { name: 'Murcia Central Market', day: 'Daily', time: '8am - 2pm', distance: '15 min', description: 'Historic market hall with exceptional produce.', googleMaps: 'https://maps.google.com/?q=Mercado+Verónicas+Murcia' },
+      { name: 'Molina de Segura Market', day: 'Friday', time: '8am - 1pm', distance: '10 min', description: 'Good local market.', googleMaps: 'https://maps.google.com/?q=Mercado+Molina+de+Segura' },
+    ],
+    events: [
+      { name: 'Murcia Bando de la Huerta', when: 'Spring', description: 'Famous festival celebrating regional culture with parade of traditional costumes.' },
+      { name: 'Semana Santa Murcia', when: 'March/April', description: 'Renowned Easter processions with spectacular floats.' },
+      { name: 'Altorreal Golf Championships', when: 'Year-round', description: 'Club competitions in a prestigious setting.' },
+    ],
+    expat: {
+      population: 'Approximately 15% international, mostly established residents',
+      nationalities: 'Spanish majority, British, German, Scandinavian',
+      socialHub: 'Altorreal clubhouse and Murcia city dining scene',
+      facebookGroups: ['Murcia Expats', 'Costa Cálida Living'],
+      integration: 'More Spanish atmosphere than coastal resorts. Good Spanish helpful.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€500 - €1,000/year', notes: 'Higher value properties' },
+      { category: 'Community Fees', cost: '€100 - €180/month', notes: 'Premium developments' },
+      { category: 'Utilities', cost: '€100 - €200/month', notes: 'Similar to city living' },
+      { category: 'Golf Membership', cost: '€2,000 - €4,000/year', notes: 'Prestigious club' },
+      { category: 'Dining out (Murcia)', cost: '€15-25/person', notes: 'Excellent value tapas' },
+    ],
+    investment: {
+      overview: 'Altorreal attracts premium buyers. Taylor Wimpey\'s Allure development brings luxury specification to an established setting.',
+      priceGrowth: '+35% over 5 years',
+      rentalYield: '3-5% achievable',
+      outlook: 'Stable appreciation in this prestigious location. Appeals to quality-focused buyers.',
+    },
+    faqs: [
+      { question: 'What makes Altorreal different?', answer: 'It\'s an established 1995 course with mature trees and traditional clubhouse. More prestigious and quieter than newer coastal resorts.' },
+      { question: 'Who is Taylor Wimpey Allure for?', answer: 'Discerning buyers seeking quality construction, premium specifications, and an exclusive setting near Murcia city.' },
+      { question: 'How close is Murcia city?', answer: 'Just 15 minutes to the historic center. Murcia offers excellent gastronomy, culture, shopping, and medical facilities.' },
+    ],
+    mapLocations: [
+      { id: 'altorreal', name: 'Altorreal Golf', type: 'golf', coordinates: [38.0712, -1.1234], distance: 'Center', description: 'Parkland course' },
+      { id: 'murcia', name: 'Murcia City', type: 'shopping', coordinates: [37.9922, -1.1307], distance: '15 min', description: 'Regional capital' },
+      { id: 'hospital', name: 'Hospital Reina Sofía', type: 'hospital', coordinates: [37.9878, -1.1234], distance: '15 min', description: 'University hospital' },
+    ],
+  },
+
+  // RODA GOLF
+  'roda-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1600&q=80',
+    introduction: 'Roda Golf & Beach Resort perfectly combines quality golf with proximity to the Mar Menor beaches. Just minutes from the warm lagoon waters, this resort offers the best of both worlds - play golf in the morning, swim in the afternoon.',
+    whyLiveHere: [
+      'Championship Dave Thomas course',
+      'Mar Menor beaches 5 minutes away',
+      'Water features throughout the course',
+      'Beach club lifestyle with golf',
+      'San Javier airport 15 minutes',
+      'Family-friendly atmosphere'
+    ],
+    lifestyle: {
+      overview: 'Roda Golf is about lifestyle flexibility - golf one day, beach the next, or both in the same day. The Mar Menor\'s warm, calm waters are perfect for families.',
+      dailyLife: 'Morning golf with water hazard challenges, lunch at the clubhouse, afternoon on the Mar Menor beaches or trying water sports. The combination is unbeatable.',
+      community: 'Active mix of golfers and beach lovers. Families appreciate the water sports options on the Mar Menor. International with Spanish, British, and Nordic residents.',
+    },
+    schools: [
+      { name: 'CEIP Santiago el Mayor', type: 'Spanish Public', distance: '10 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local school in San Javier.' },
+      { name: 'King\'s College Murcia', type: 'British International', distance: '35 min', curriculum: 'British', fees: '€6,000-10,000/year', ages: '3-18', note: 'British curriculum school.' },
+      { name: 'IES Mar Menor', type: 'Spanish Secondary', distance: '10 min', curriculum: 'Spanish National', fees: 'Free', ages: '12-18', note: 'Secondary school in San Javier.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital Los Arcos del Mar Menor', distance: '10 min', description: 'Modern hospital in San Javier.', googleMaps: 'https://maps.google.com/?q=Hospital+Los+Arcos+Mar+Menor' },
+      healthCenter: { name: 'Centro de Salud San Javier', distance: '8 min' },
+      pharmacies: 'Multiple pharmacies in San Javier and Santiago de la Ribera',
+      privateOptions: 'Private clinics available in the area.',
+    },
+    beaches: [
+      { name: 'Santiago de la Ribera', distance: '5 min', description: 'Beautiful Mar Menor beach with promenade and restaurants.', googleMaps: 'https://maps.google.com/?q=Santiago+de+la+Ribera+beach' },
+      { name: 'Los Alcázares Beach', distance: '10 min', description: 'Warm Mar Menor waters, perfect for families and water sports.', googleMaps: 'https://maps.google.com/?q=Playa+Los+Alcazares' },
+      { name: 'La Manga Mediterranean', distance: '20 min', description: 'Open Mediterranean beaches.', googleMaps: 'https://maps.google.com/?q=La+Manga+beaches' },
+    ],
+    markets: [
+      { name: 'San Javier Market', day: 'Wednesday', time: '8am - 1pm', distance: '10 min', description: 'Good local market.', googleMaps: 'https://maps.google.com/?q=Mercado+San+Javier' },
+      { name: 'Los Alcázares Market', day: 'Tuesday & Saturday', time: '8am - 1pm', distance: '10 min', description: 'Coastal market with fresh fish.', googleMaps: 'https://maps.google.com/?q=Mercado+Los+Alcazares' },
+    ],
+    events: [
+      { name: 'San Javier Jazz Festival', when: 'July', description: 'Renowned international jazz festival on the Mar Menor waterfront.' },
+      { name: 'Semana Santa San Javier', when: 'March/April', description: 'Easter processions in the town.' },
+      { name: 'Mar Menor Water Sports', when: 'Year-round', description: 'Kitesurfing, sailing, and paddle boarding on the lagoon.' },
+    ],
+    expat: {
+      population: 'Approximately 30% international on the resort',
+      nationalities: 'Spanish, British, Nordic, German',
+      socialHub: 'Golf clubhouse and beach promenade at Santiago',
+      facebookGroups: ['Mar Menor Expats', 'Roda Golf Community'],
+      integration: 'Active community with golf and beach activities.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€400 - €750/year', notes: 'San Javier rates' },
+      { category: 'Community Fees', cost: '€70 - €120/month', notes: 'Varies by development' },
+      { category: 'Utilities', cost: '€80 - €180/month', notes: 'Standard for the area' },
+      { category: 'Golf Membership', cost: '€1,500 - €2,800/year', notes: 'Resident discounts available' },
+      { category: 'Weekly Shop', cost: '€70 - €100', notes: 'Good supermarket options' },
+    ],
+    investment: {
+      overview: 'Roda Golf\'s unique beach+golf combination maintains appeal. The Mar Menor location is increasingly valued.',
+      priceGrowth: '+36% over 5 years',
+      rentalYield: '5-7% achievable',
+      outlook: 'Strong rental potential from dual golf/beach appeal.',
+    },
+    faqs: [
+      { question: 'How close are the beaches?', answer: 'Santiago de la Ribera beach is just 5 minutes. You can genuinely play golf in the morning and be on the beach for lunch.' },
+      { question: 'What is the Mar Menor like?', answer: 'Europe\'s largest saltwater lagoon - warm (5-7°C warmer than Mediterranean), calm, shallow. Perfect for families and water sports.' },
+      { question: 'Is San Javier airport useful?', answer: 'Very! Just 15 minutes away with Ryanair flights to UK and Europe. Alicante is 45 minutes for more options.' },
+    ],
+    mapLocations: [
+      { id: 'roda', name: 'Roda Golf', type: 'golf', coordinates: [37.7845, -0.8012], distance: 'Center', description: 'Beach & golf' },
+      { id: 'santiago', name: 'Santiago de la Ribera', type: 'beach', coordinates: [37.8012, -0.8145], distance: '5 min', description: 'Mar Menor beach' },
+      { id: 'hospital', name: 'Hospital Los Arcos', type: 'hospital', coordinates: [37.7923, -0.8367], distance: '10 min', description: 'Modern hospital' },
+      { id: 'airport', name: 'San Javier Airport', type: 'airport', coordinates: [37.7750, -0.8120], distance: '15 min', description: 'Ryanair flights' },
+    ],
+  },
+
+  // VILLAITANA (PUIG CAMPANA)
+  'puig-campana-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=1600&q=80',
+    introduction: 'Villaitana is Costa Blanca\'s only 36-hole resort, featuring courses designed by golfing legends Jack Nicklaus and Severiano Ballesteros. With the dramatic Puig Campana mountain as a backdrop and a 5-star Meliá hotel on-site, this is premium golf living at its finest.',
+    whyLiveHere: [
+      '36 holes - Jack Nicklaus & Seve Ballesteros designs',
+      'Dramatic Puig Campana mountain backdrop',
+      '5-star Meliá Villaitana hotel on-site',
+      'Prime Home Alicante luxury developments',
+      '10 minutes to Benidorm beaches',
+      'Premium amenities: spa, restaurants, pools'
+    ],
+    lifestyle: {
+      overview: 'Villaitana offers a luxury lifestyle with world-class golf, 5-star hotel amenities, and stunning mountain scenery. This is premium living for discerning buyers.',
+      dailyLife: 'Choose between two championship courses each day. Enjoy lunch at the Meliá hotel, spa treatments in the afternoon, and fine dining in the evening. Benidorm beaches are just 10 minutes away.',
+      community: 'A more exclusive community of premium property owners. International with Spanish, British, and Northern European residents. The resort attracts serious golfers and those seeking quality.',
+    },
+    schools: [
+      { name: 'Elian\'s British School', type: 'British International', distance: '15 min', curriculum: 'British', fees: '€5,000-9,000/year', ages: '3-18', url: 'https://www.eliansbritishschool.com/', note: 'Well-regarded British school in La Nucia.' },
+      { name: 'Laude Lady Elizabeth', type: 'British International', distance: '25 min', curriculum: 'British/IB', fees: '€8,000-14,000/year', ages: '2-18', note: 'Premium school with IB program.' },
+      { name: 'CEIP Puig Campana', type: 'Spanish Public', distance: '10 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local village school in Finestrat.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital Vithas Benidorm', distance: '12 min', description: 'Modern private hospital with English-speaking staff and all specialties.', googleMaps: 'https://maps.google.com/?q=Hospital+Vithas+Benidorm' },
+      healthCenter: { name: 'Centro de Salud Finestrat', distance: '10 min' },
+      pharmacies: 'Pharmacies in Finestrat and extensive options in Benidorm',
+      privateOptions: 'Vithas and IMED hospitals in Benidorm. Excellent private healthcare.',
+    },
+    beaches: [
+      { name: 'Poniente Beach Benidorm', distance: '10 min', description: 'Quieter of Benidorm\'s two main beaches with 3km of golden sand.', googleMaps: 'https://maps.google.com/?q=Playa+Poniente+Benidorm' },
+      { name: 'Levante Beach Benidorm', distance: '12 min', description: 'Famous beach with promenade, restaurants, and full facilities.', googleMaps: 'https://maps.google.com/?q=Playa+Levante+Benidorm' },
+      { name: 'Altea Beach', distance: '15 min', description: 'Charming pebble beach in picturesque Altea old town.', googleMaps: 'https://maps.google.com/?q=Playa+Altea' },
+    ],
+    markets: [
+      { name: 'Finestrat Market', day: 'Friday', time: '8am - 1pm', distance: '10 min', description: 'Local village market.', googleMaps: 'https://maps.google.com/?q=Mercado+Finestrat' },
+      { name: 'Benidorm Market', day: 'Wednesday & Sunday', time: '8am - 2pm', distance: '10 min', description: 'Large markets with everything from produce to clothing.', googleMaps: 'https://maps.google.com/?q=Mercadillo+Benidorm' },
+      { name: 'Altea Market', day: 'Tuesday', time: '8am - 1pm', distance: '15 min', description: 'Charming market in the artistic town of Altea.', googleMaps: 'https://maps.google.com/?q=Mercado+Altea' },
+    ],
+    events: [
+      { name: 'Benidorm Fiestas', when: 'November', description: 'Week of celebrations honoring the town\'s patron saint with parades and fireworks.' },
+      { name: 'Villaitana Golf Events', when: 'Year-round', description: 'Premium tournaments on Nicklaus and Ballesteros courses.' },
+      { name: 'Altea Art Festivals', when: 'Various', description: 'Cultural events in the nearby artistic town of Altea.' },
+      { name: 'Low Festival', when: 'July', description: 'Major music festival in Benidorm featuring international acts.' },
+    ],
+    expat: {
+      population: 'Approximately 20% international on resort',
+      nationalities: 'Spanish, British, Scandinavian, German',
+      socialHub: 'Meliá Villaitana facilities and golf clubhouses',
+      facebookGroups: ['Benidorm Expats', 'Costa Blanca North Community'],
+      integration: 'Premium community with hotel-style services. English widely spoken.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€800 - €1,500/year', notes: 'Premium properties' },
+      { category: 'Community Fees', cost: '€150 - €300/month', notes: 'Premium resort facilities' },
+      { category: 'Utilities', cost: '€120 - €250/month', notes: 'Larger properties' },
+      { category: 'Golf Membership', cost: '€3,000 - €6,000/year', notes: '36 holes access' },
+      { category: 'Meliá Spa Access', cost: '€80 - €150/month', notes: 'Optional membership' },
+    ],
+    investment: {
+      overview: 'Villaitana commands premium prices due to its unique 36-hole offering and Nicklaus/Ballesteros pedigree. Prime Home Alicante\'s Green & Blue development targets discerning buyers.',
+      priceGrowth: '+45% over 5 years',
+      rentalYield: '4-6% achievable',
+      outlook: 'Premium segment with strong demand. Unique 36-hole proposition maintains value.',
+    },
+    faqs: [
+      { question: 'What makes Villaitana special?', answer: 'It\'s Costa Blanca\'s only 36-hole resort with courses by Jack Nicklaus and Severiano Ballesteros - two golfing legends. Plus the dramatic Puig Campana mountain backdrop.' },
+      { question: 'Which course is better, Levante or Poniente?', answer: 'Levante (Nicklaus design) is more challenging and dramatic. Poniente (Ballesteros) suits more levels. Most members enjoy alternating between both!' },
+      { question: 'Is the Meliá hotel accessible to residents?', answer: 'Yes, resort residents can access hotel facilities including restaurants, spa, and pools - often with resident discounts.' },
+      { question: 'How close is Benidorm?', answer: 'Just 10 minutes to Benidorm\'s beaches, restaurants, and entertainment. Close enough to enjoy, far enough for peace.' },
+    ],
+    mapLocations: [
+      { id: 'villaitana', name: 'Villaitana Golf', type: 'golf', coordinates: [38.5523, -0.0934], distance: 'Center', description: '36 holes - Nicklaus & Seve' },
+      { id: 'poniente', name: 'Poniente Beach', type: 'beach', coordinates: [38.5394, -0.1223], distance: '10 min', description: 'Benidorm beach' },
+      { id: 'hospital', name: 'Hospital Vithas', type: 'hospital', coordinates: [38.5367, -0.1234], distance: '12 min', description: 'Private hospital' },
+      { id: 'altea', name: 'Altea Old Town', type: 'shopping', coordinates: [38.5988, -0.0499], distance: '15 min', description: 'Artistic village' },
+    ],
+  },
+
+  // LO ROMERO GOLF
+  'lo-romero-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1600&q=80',
+    introduction: 'Lo Romero Golf offers a modern championship experience in a strategic location between Costa Blanca South and the Mar Menor. Wide fairways and thoughtful design make it enjoyable for all levels while the area develops with new build opportunities.',
+    whyLiveHere: [
+      '18-hole championship course by David Thomas',
+      'Strategic location - beaches both sides',
+      'Wide fairways suit all levels',
+      'Growing area with new developments',
+      '15 minutes to Pilar de la Horadada coast',
+      'Good value in developing area'
+    ],
+    lifestyle: {
+      overview: 'Lo Romero offers golf in a developing area with access to both Costa Blanca and Mar Menor beaches. Less crowded than established resorts with good growth potential.',
+      dailyLife: 'Uncrowded morning golf, choice of Mediterranean or Mar Menor beaches in the afternoon. Local villages offer authentic Spanish dining.',
+      community: 'Developing community with Spanish and international residents. Quieter than established resorts but growing.',
+    },
+    schools: [
+      { name: 'CEIP Virgen del Pilar', type: 'Spanish Public', distance: '10 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local school in Pilar de la Horadada.' },
+      { name: 'El Limonar International', type: 'British International', distance: '25 min', curriculum: 'British', fees: '€5,000-8,000/year', ages: '3-18', note: 'British school in Torrevieja area.' },
+      { name: 'IES Antonio García Besco', type: 'Spanish Secondary', distance: '10 min', curriculum: 'Spanish National', fees: 'Free', ages: '12-18', note: 'Secondary school in Pilar.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital de Torrevieja', distance: '25 min', description: 'Full-service public hospital.', googleMaps: 'https://maps.google.com/?q=Hospital+de+Torrevieja' },
+      healthCenter: { name: 'Centro de Salud Pilar de la Horadada', distance: '10 min' },
+      pharmacies: 'Pharmacies in Pilar de la Horadada',
+      privateOptions: 'Private clinics in Torrevieja and Cartagena.',
+    },
+    beaches: [
+      { name: 'Mil Palmeras Beach', distance: '12 min', description: 'Beautiful Mediterranean beach with good facilities.', googleMaps: 'https://maps.google.com/?q=Playa+Mil+Palmeras' },
+      { name: 'Torre de la Horadada', distance: '15 min', description: 'Traditional fishing village beach with excellent seafood restaurants.', googleMaps: 'https://maps.google.com/?q=Torre+de+la+Horadada+beach' },
+      { name: 'Lo Pagán (Mar Menor)', distance: '20 min', description: 'Mar Menor beach famous for therapeutic mud.', googleMaps: 'https://maps.google.com/?q=Lo+Pagan+beach' },
+    ],
+    markets: [
+      { name: 'Pilar de la Horadada Market', day: 'Saturday', time: '8am - 1pm', distance: '10 min', description: 'Local market with fresh produce.', googleMaps: 'https://maps.google.com/?q=Mercado+Pilar+Horadada' },
+      { name: 'San Pedro del Pinatar Market', day: 'Monday', time: '8am - 1pm', distance: '15 min', description: 'Good coastal market.', googleMaps: 'https://maps.google.com/?q=Mercado+San+Pedro+del+Pinatar' },
+    ],
+    events: [
+      { name: 'Lo Romero Golf Events', when: 'Year-round', description: 'Club competitions and social golf.' },
+      { name: 'Pilar de la Horadada Fiestas', when: 'October', description: 'Local festival celebrating the town\'s patron saint.' },
+      { name: 'Mud Baths Festival', when: 'Summer', description: 'The famous Mar Menor mud treatments at Lo Pagán.' },
+    ],
+    expat: {
+      population: 'Growing international presence, approximately 20%',
+      nationalities: 'Spanish, British, Nordic',
+      socialHub: 'Golf clubhouse and coastal restaurants',
+      facebookGroups: ['Pilar de la Horadada Expats', 'Costa Cálida Living'],
+      integration: 'Developing community with good potential to grow.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€350 - €600/year', notes: 'Reasonable rates' },
+      { category: 'Community Fees', cost: '€50 - €90/month', notes: 'Lower than established resorts' },
+      { category: 'Utilities', cost: '€80 - €160/month', notes: 'Standard costs' },
+      { category: 'Weekly Shop', cost: '€70 - €100', notes: 'Good value locally' },
+    ],
+    investment: {
+      overview: 'Lo Romero offers value in a strategic location. As the area develops, early buyers may benefit from growth.',
+      priceGrowth: '+28% over 5 years',
+      rentalYield: '4-6% achievable',
+      outlook: 'Good value entry point with development potential.',
+    },
+    faqs: [
+      { question: 'What is special about Lo Romero\'s location?', answer: 'You can reach both Mediterranean beaches (Mil Palmeras) and Mar Menor beaches (Lo Pagán) in 15-20 minutes. Best of both worlds!' },
+      { question: 'Is Lo Romero busy?', answer: 'Less crowded than established coastal courses. Quicker rounds and a more relaxed atmosphere.' },
+      { question: 'What is Lo Pagán\'s mud famous for?', answer: 'The Mar Menor mud at Lo Pagán has been used for centuries for therapeutic benefits. People cover themselves in mud at the beach!' },
+    ],
+    mapLocations: [
+      { id: 'lo-romero', name: 'Lo Romero Golf', type: 'golf', coordinates: [37.8456, -0.7812], distance: 'Center', description: 'Modern course' },
+      { id: 'mil-palmeras', name: 'Mil Palmeras', type: 'beach', coordinates: [37.8678, -0.7523], distance: '12 min', description: 'Mediterranean beach' },
+      { id: 'lo-pagan', name: 'Lo Pagán', type: 'beach', coordinates: [37.8234, -0.7834], distance: '20 min', description: 'Mar Menor mud baths' },
+    ],
+  },
+
+  // LA MARQUESA GOLF
+  'la-marquesa-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=1600&q=80',
+    introduction: 'Golf La Marquesa is an established parkland course in the heart of the Vega Baja region. Tree-lined fairways, water features, and a friendly atmosphere make this an accessible and enjoyable golf experience at great value prices.',
+    whyLiveHere: [
+      'Established 1989 parkland course',
+      'Mature tree-lined fairways',
+      'Central Vega Baja location',
+      'Most affordable golf resort option',
+      'Friendly, welcoming atmosphere',
+      '15 minutes to Guardamar beach'
+    ],
+    lifestyle: {
+      overview: 'La Marquesa offers accessible golf living at great value. The mature parkland course and friendly clubhouse create a welcoming environment.',
+      dailyLife: 'Relaxed morning golf among mature trees, affordable lunch at the clubhouse. Close to all Vega Baja amenities and beaches.',
+      community: 'Mixed Spanish and international community with a friendly, unpretentious atmosphere. Regular social golf brings people together.',
+    },
+    schools: [
+      { name: 'CEIP Azorín', type: 'Spanish Public', distance: '10 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local school in Rojales.' },
+      { name: 'El Limonar International', type: 'British International', distance: '20 min', curriculum: 'British', fees: '€5,000-8,000/year', ages: '3-18', note: 'Most popular British school in the area.' },
+      { name: 'IES Azud de Alfeitamí', type: 'Spanish Secondary', distance: '15 min', curriculum: 'Spanish National', fees: 'Free', ages: '12-18', note: 'Secondary school in Almoradí.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital de Torrevieja', distance: '18 min', description: 'Public hospital with 24hr emergency.', googleMaps: 'https://maps.google.com/?q=Hospital+de+Torrevieja' },
+      healthCenter: { name: 'Centro de Salud Rojales', distance: '5 min' },
+      pharmacies: 'Multiple pharmacies in Rojales and Quesada',
+      privateOptions: 'Private clinics in Torrevieja. Sanitas, Adeslas available.',
+    },
+    beaches: [
+      { name: 'Playa de Guardamar', distance: '15 min', description: 'Beautiful Blue Flag beach with pine-backed dunes.', googleMaps: 'https://maps.google.com/?q=Playa+de+Guardamar+del+Segura' },
+      { name: 'Torrevieja Beaches', distance: '20 min', description: 'Urban beaches with promenade and facilities.', googleMaps: 'https://maps.google.com/?q=Playa+del+Cura+Torrevieja' },
+      { name: 'La Mata Beach', distance: '22 min', description: 'Natural beach with dunes and nature reserve.', googleMaps: 'https://maps.google.com/?q=Playa+de+La+Mata' },
+    ],
+    markets: [
+      { name: 'Rojales Sunday Market', day: 'Sunday', time: '9am - 2pm', distance: '5 min', description: 'Huge expat favorite - hundreds of stalls, live music.', googleMaps: 'https://maps.google.com/?q=Mercadillo+Rojales+Sunday+Market' },
+      { name: 'Rojales Thursday Market', day: 'Thursday', time: '8am - 1pm', distance: '5 min', description: 'Local produce market.', googleMaps: 'https://maps.google.com/?q=Mercado+Rojales' },
+      { name: 'Guardamar Wednesday Market', day: 'Wednesday', time: '8am - 1pm', distance: '15 min', description: 'Traditional coastal market.', googleMaps: 'https://maps.google.com/?q=Mercado+Guardamar' },
+    ],
+    events: [
+      { name: 'La Marquesa Golf Days', when: 'Year-round', description: 'Regular social golf events at accessible prices.' },
+      { name: 'Rojales Fiestas', when: 'August', description: 'Village festivals with music and traditional events.' },
+      { name: 'Moors & Christians', when: 'Various', description: 'Historic parades in nearby Orihuela and Guardamar.' },
+    ],
+    expat: {
+      population: 'High expat population in surrounding Quesada/Rojales area',
+      nationalities: 'British, Scandinavian, Dutch, Belgian',
+      socialHub: 'La Marquesa clubhouse and nearby Quesada restaurants',
+      facebookGroups: ['Quesada Expats', 'Rojales Community', 'Vega Baja Living'],
+      integration: 'Very welcoming expat community. English widely spoken.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€300 - €500/year', notes: 'Very affordable' },
+      { category: 'Community Fees', cost: '€40 - €80/month', notes: 'Lower than newer resorts' },
+      { category: 'Utilities', cost: '€80 - €150/month', notes: 'Standard costs' },
+      { category: 'Golf Membership', cost: '€800 - €1,500/year', notes: 'Great value memberships' },
+      { category: 'Weekly Shop', cost: '€70 - €100', notes: 'Mercadona, Lidl, Aldi nearby' },
+    ],
+    investment: {
+      overview: 'La Marquesa offers the most affordable entry to golf resort living. The Terrazas Golf development provides modern apartments at accessible prices.',
+      priceGrowth: '+25% over 5 years',
+      rentalYield: '5-7% achievable',
+      outlook: 'Steady affordable option. Good rental potential from budget-conscious golfers.',
+    },
+    faqs: [
+      { question: 'Is La Marquesa suitable for beginners?', answer: 'Absolutely! The forgiving parkland layout and friendly atmosphere make it perfect for golfers of all levels. Green fees are very reasonable too.' },
+      { question: 'How old is the course?', answer: 'Established in 1989, La Marquesa has beautifully mature trees and established landscaping that newer courses lack.' },
+      { question: 'What is the community like?', answer: 'Friendly and unpretentious. A mix of retired expats and Spanish families. The Sunday market brings everyone together!' },
+    ],
+    mapLocations: [
+      { id: 'la-marquesa', name: 'La Marquesa Golf', type: 'golf', coordinates: [38.0512, -0.7823], distance: 'Center', description: 'Parkland course' },
+      { id: 'guardamar', name: 'Guardamar Beach', type: 'beach', coordinates: [38.0892, -0.6553], distance: '15 min', description: 'Blue Flag beach' },
+      { id: 'rojales-market', name: 'Rojales Sunday Market', type: 'market', coordinates: [38.0867, -0.7234], distance: '5 min', description: 'Famous expat market' },
+    ],
+  },
+
+  // AGUILÓN GOLF
+  'aguilon-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1600&q=80',
+    introduction: 'Aguilón Golf Resort offers a unique desert-links experience designed by Ryder Cup captain Manuel Piñero. Set in the unspoilt Almería landscape with dramatic mountain and sea views, this is golf and property buying for those seeking something genuinely different.',
+    whyLiveHere: [
+      'Desert-links course by Manuel Piñero',
+      'Dramatic mountain AND sea views',
+      'Unspoilt Almería province - authentic Spain',
+      'Excellent value compared to Costa Blanca',
+      'Year-round sunshine - 320+ days',
+      'Quieter, less commercialized area'
+    ],
+    lifestyle: {
+      overview: 'Aguilón offers escape from the crowds. The dramatic Almería landscape, empty beaches, and authentic Spanish atmosphere attract those seeking tranquility.',
+      dailyLife: 'Golf with sea and mountain views, lunch overlooking the course. Afternoons exploring unspoilt beaches or the fascinating Almería province. Authentic Spanish dining in local villages.',
+      community: 'Smaller, tight-knit community. Mix of Spanish and Northern European residents seeking peace and value. Less commercialized than coastal resorts.',
+    },
+    schools: [
+      { name: 'British School of Almería', type: 'British International', distance: '45 min', curriculum: 'British', fees: '€4,500-7,500/year', ages: '3-18', note: 'The main British school option in Almería province.' },
+      { name: 'CEIP San Juan', type: 'Spanish Public', distance: '10 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local school in Pulpí.' },
+      { name: 'IES Mar Serena', type: 'Spanish Secondary', distance: '15 min', curriculum: 'Spanish National', fees: 'Free', ages: '12-18', note: 'Secondary school option.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital de la Inmaculada', distance: '40 min', description: 'Hospital in Huércal-Overa with emergency services.', googleMaps: 'https://maps.google.com/?q=Hospital+Inmaculada+Huercal-Overa' },
+      healthCenter: { name: 'Centro de Salud Pulpí', distance: '10 min' },
+      pharmacies: 'Pharmacies in Pulpí and San Juan de los Terreros',
+      privateOptions: 'Private clinics in Vera and Mojácar. Limited but growing.',
+    },
+    beaches: [
+      { name: 'San Juan de los Terreros', distance: '10 min', description: 'Quiet beaches with crystal clear water and dramatic cliffs.', googleMaps: 'https://maps.google.com/?q=San+Juan+de+los+Terreros+beach' },
+      { name: 'Playa de Vera', distance: '25 min', description: 'Famous naturist beach but also regular beach sections.', googleMaps: 'https://maps.google.com/?q=Playa+de+Vera' },
+      { name: 'Águilas Beaches', distance: '20 min', description: 'Pretty cove beaches in this traditional Murcian town.', googleMaps: 'https://maps.google.com/?q=Playas+Aguilas' },
+    ],
+    markets: [
+      { name: 'Pulpí Market', day: 'Sunday', time: '8am - 1pm', distance: '10 min', description: 'Traditional local market.', googleMaps: 'https://maps.google.com/?q=Mercado+Pulpi' },
+      { name: 'Vera Market', day: 'Saturday', time: '8am - 2pm', distance: '25 min', description: 'Larger market in nearby Vera.', googleMaps: 'https://maps.google.com/?q=Mercado+Vera+Almeria' },
+      { name: 'Garrucha Fish Market', day: 'Daily', time: 'Morning', distance: '30 min', description: 'Fresh fish auction and market in fishing village.', googleMaps: 'https://maps.google.com/?q=Lonja+Garrucha' },
+    ],
+    events: [
+      { name: 'Aguilón Golf Events', when: 'Year-round', description: 'Club competitions in stunning setting.' },
+      { name: 'Pulpí Fiestas', when: 'August', description: 'Traditional village celebrations.' },
+      { name: 'Geode of Pulpí Tours', when: 'Year-round', description: 'Visit Europe\'s largest accessible geode - a unique geological wonder.' },
+    ],
+    expat: {
+      population: 'Approximately 15% international residents',
+      nationalities: 'British, German, Dutch, Scandinavian',
+      socialHub: 'Golf clubhouse and San Juan de los Terreros restaurants',
+      facebookGroups: ['Almería Expats', 'Costa de Almería Living'],
+      integration: 'Smaller community where everyone knows each other. Some Spanish helpful.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€300 - €500/year', notes: 'Very competitive rates' },
+      { category: 'Community Fees', cost: '€50 - €100/month', notes: 'Lower than coastal resorts' },
+      { category: 'Utilities', cost: '€70 - €150/month', notes: 'Solar very effective here' },
+      { category: 'Golf Membership', cost: '€1,000 - €2,000/year', notes: 'Excellent value' },
+      { category: 'Weekly Shop', cost: '€60 - €90', notes: 'Lower cost of living generally' },
+    ],
+    investment: {
+      overview: 'Aguilón offers excellent value in an unspoilt setting. Lower profile means lower prices, but increasing interest in Almería is driving appreciation.',
+      priceGrowth: '+30% over 5 years',
+      rentalYield: '4-6% achievable',
+      outlook: 'Growing interest in Almería province. Early buyers may benefit as area develops.',
+    },
+    faqs: [
+      { question: 'Why choose Almería over Costa Blanca?', answer: 'Fewer tourists, unspoilt landscapes, lower prices, more authentic Spanish life. If you want peace and value over nightlife and crowds, Almería delivers.' },
+      { question: 'What is the Geode of Pulpí?', answer: 'Europe\'s largest accessible geode - a giant crystal cave you can visit! One of many unique attractions in this fascinating area.' },
+      { question: 'How is the weather in Almería?', answer: 'The driest region in Europe with 320+ sunny days. Perfect for year-round golf. Mild winters and hot (but dry) summers.' },
+      { question: 'Are there good beaches near Aguilón?', answer: 'Yes! San Juan de los Terreros has beautiful quiet beaches just 10 minutes away. Less crowded than Costa Blanca with crystal clear water.' },
+    ],
+    mapLocations: [
+      { id: 'aguilon', name: 'Aguilón Golf', type: 'golf', coordinates: [37.4012, -1.6823], distance: 'Center', description: 'Desert-links course' },
+      { id: 'san-juan', name: 'San Juan de los Terreros', type: 'beach', coordinates: [37.3567, -1.6789], distance: '10 min', description: 'Quiet beaches' },
+      { id: 'hospital', name: 'Hospital Huércal-Overa', type: 'hospital', coordinates: [37.3923, -1.9412], distance: '40 min', description: 'Main hospital' },
+    ],
+  },
+
+  // DESERT SPRINGS
+  'desert-springs': {
+    heroImage: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=1600&q=80',
+    introduction: 'Desert Springs is Europe\'s only desert golf course - an award-winning Arizona-style layout unlike anything else on the continent. Cacti, dry river beds, and mountain scenery create a truly unique experience in the sunshine capital of Spain.',
+    whyLiveHere: [
+      'Europe\'s ONLY desert golf course',
+      'Arizona-style landscape unique in Europe',
+      'Award-winning design with cacti & dry washes',
+      'Almería - 320+ sunny days per year',
+      'Full resort with pools, spa, restaurants',
+      'Something genuinely different'
+    ],
+    lifestyle: {
+      overview: 'Desert Springs offers a truly unique experience. The Arizona-style setting feels like nowhere else in Spain. This is for those who want something different.',
+      dailyLife: 'Golf among cacti with mountain views, relaxation at the resort pools and spa. The unique setting makes every day feel like an adventure. Year-round perfect weather.',
+      community: 'A mix of golfers seeking the unique experience and property owners who fell in love with the setting. International with British, German, and Dutch residents.',
+    },
+    schools: [
+      { name: 'British School of Almería', type: 'British International', distance: '35 min', curriculum: 'British', fees: '€4,500-7,500/year', ages: '3-18', note: 'British curriculum school.' },
+      { name: 'CEIP Cuevas del Almanzora', type: 'Spanish Public', distance: '15 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local Spanish school.' },
+      { name: 'IES Cura Valera', type: 'Spanish Secondary', distance: '15 min', curriculum: 'Spanish National', fees: 'Free', ages: '12-18', note: 'Secondary school option.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital La Inmaculada', distance: '25 min', description: 'Hospital in Huércal-Overa.', googleMaps: 'https://maps.google.com/?q=Hospital+Inmaculada+Huercal-Overa' },
+      healthCenter: { name: 'Centro de Salud Cuevas del Almanzora', distance: '15 min' },
+      pharmacies: 'Pharmacies in Cuevas del Almanzora and Vera',
+      privateOptions: 'Private clinics in Vera. Limited but adequate.',
+    },
+    beaches: [
+      { name: 'Mojácar Beaches', distance: '25 min', description: 'Beautiful beaches below the iconic white hilltop village.', googleMaps: 'https://maps.google.com/?q=Playa+de+Mojacar' },
+      { name: 'Garrucha Beach', distance: '20 min', description: 'Traditional fishing village with authentic seafood restaurants.', googleMaps: 'https://maps.google.com/?q=Playa+Garrucha' },
+      { name: 'Vera Beaches', distance: '25 min', description: 'Long beaches including famous naturist section.', googleMaps: 'https://maps.google.com/?q=Playa+Vera' },
+    ],
+    markets: [
+      { name: 'Mojácar Market', day: 'Wednesday', time: '8am - 1pm', distance: '25 min', description: 'Market in charming Mojácar village.', googleMaps: 'https://maps.google.com/?q=Mercado+Mojacar' },
+      { name: 'Vera Market', day: 'Saturday', time: '8am - 2pm', distance: '25 min', description: 'Good sized market.', googleMaps: 'https://maps.google.com/?q=Mercado+Vera' },
+      { name: 'Garrucha Fish Auction', day: 'Daily', time: 'Morning', distance: '20 min', description: 'Authentic fish auction at the port.', googleMaps: 'https://maps.google.com/?q=Lonja+Garrucha' },
+    ],
+    events: [
+      { name: 'Desert Springs Golf Events', when: 'Year-round', description: 'Tournaments in the unique desert setting.' },
+      { name: 'Mojácar Fiestas', when: 'June', description: 'Moors and Christians celebrations in the iconic village.' },
+      { name: 'Almería Western Film Locations', when: 'Year-round', description: 'Visit Tabernas Desert where Sergio Leone westerns were filmed.' },
+    ],
+    expat: {
+      population: 'Approximately 20% international on resort',
+      nationalities: 'British, German, Dutch, Scandinavian',
+      socialHub: 'Resort clubhouse and facilities',
+      facebookGroups: ['Desert Springs Community', 'Almería Expats'],
+      integration: 'Unique community of people who chose something different. Strong sense of identity.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€400 - €700/year', notes: 'Resort properties' },
+      { category: 'Community Fees', cost: '€80 - €150/month', notes: 'Full resort facilities' },
+      { category: 'Utilities', cost: '€70 - €150/month', notes: 'Excellent solar conditions' },
+      { category: 'Golf Membership', cost: '€1,500 - €2,500/year', notes: 'Unique course access' },
+      { category: 'Weekly Shop', cost: '€60 - €90', notes: 'Lower cost region' },
+    ],
+    investment: {
+      overview: 'Desert Springs is unique in Europe - there is literally nothing else like it. This uniqueness maintains appeal but also creates a specific buyer profile.',
+      priceGrowth: '+28% over 5 years',
+      rentalYield: '4-5% achievable',
+      outlook: 'Unique proposition maintains value. Appeals to those seeking something different.',
+    },
+    faqs: [
+      { question: 'What makes Desert Springs unique?', answer: 'It\'s Europe\'s only desert golf course. Arizona-style landscape with cacti, dry washes, and mountain backdrop. Nothing else like it on the continent.' },
+      { question: 'Isn\'t it too hot in summer?', answer: 'Almería is dry heat - much more bearable than humid coast. Morning golf is comfortable even in summer, and the resort pools provide relief.' },
+      { question: 'What is Mojácar like?', answer: 'A stunning whitewashed hilltop village with art galleries, restaurants, and incredible views. One of Spain\'s most beautiful pueblos blancos, just 25 minutes away.' },
+      { question: 'Can I visit film locations?', answer: 'Yes! The Tabernas Desert nearby is where spaghetti westerns were filmed. You can visit preserved film sets - a unique day out.' },
+    ],
+    mapLocations: [
+      { id: 'desert-springs', name: 'Desert Springs', type: 'golf', coordinates: [37.3156, -1.7234], distance: 'Center', description: 'Europe\'s only desert course' },
+      { id: 'mojacar', name: 'Mojácar Beach', type: 'beach', coordinates: [37.1456, -1.8456], distance: '25 min', description: 'Below white village' },
+      { id: 'garrucha', name: 'Garrucha', type: 'shopping', coordinates: [37.1845, -1.8234], distance: '20 min', description: 'Fishing village' },
+    ],
+  },
+};
+
+// Generate default lifestyle data for courses without specific data
+function getDefaultLifestyle(course: GolfCourse): GolfCourseLifestyle {
+  return {
+    heroImage: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1600&q=80',
+    introduction: course.description,
+    whyLiveHere: course.highlights,
+    lifestyle: {
+      overview: course.story,
+      dailyLife: `Life at ${course.shortName} revolves around golf, sunshine, and relaxation. Morning rounds, afternoon relaxation, and evenings enjoying the Mediterranean lifestyle.`,
+      community: `${course.shortName} attracts an international community of golf enthusiasts seeking the Spanish lifestyle.`,
+    },
+    schools: [
+      { name: 'Local International School', type: 'International', distance: '20-40 min', curriculum: 'British/Spanish', fees: '€5,000-10,000/year', ages: '3-18', note: 'Contact us for specific recommendations for this area.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Regional Hospital', distance: '15-30 min', description: 'Full-service hospital with English-speaking staff available.', googleMaps: '' },
+      healthCenter: { name: 'Local Health Center', distance: '10 min' },
+      pharmacies: 'Pharmacies in nearby towns',
+      privateOptions: 'Private insurance recommended (Sanitas, Adeslas)',
+    },
+    beaches: [
+      { name: 'Nearest Beach', distance: '15-30 min', description: 'Beautiful Mediterranean beaches within easy reach.', googleMaps: '' },
+    ],
+    markets: [
+      { name: 'Local Weekly Market', day: 'Weekly', time: 'Morning', distance: '10-15 min', description: 'Traditional Spanish market with fresh produce.', googleMaps: '' },
+    ],
+    events: [
+      { name: 'Golf Club Events', when: 'Year-round', description: 'Regular competitions, social events, and tournaments at the club.' },
+      { name: 'Local Fiestas', when: 'August', description: 'Traditional Spanish festivals in nearby towns.' },
+    ],
+    expat: {
+      population: 'Significant international community',
+      nationalities: 'British, Nordic, German, Dutch',
+      socialHub: 'Golf clubhouse',
+      facebookGroups: ['Costa Blanca Expats', 'Golf Spain'],
+      integration: 'The golf club is the social hub - easy to meet people through competitions and events.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€400 - €800/year', notes: 'Varies by municipality' },
+      { category: 'Community Fees', cost: '€60 - €150/month', notes: 'Depends on development' },
+      { category: 'Utilities', cost: '€100 - €200/month', notes: 'AC adds to summer costs' },
+    ],
+    investment: {
+      overview: 'Golf properties in this region consistently perform well due to limited supply and steady international demand.',
+      priceGrowth: '+30-40% over 5 years',
+      rentalYield: '4-6% achievable',
+      outlook: 'Positive outlook with continued interest from international buyers.',
+    },
+    faqs: [
+      { question: `Do I need a car at ${course.shortName}?`, answer: 'Yes, a car is essential for golf resort living. Roads are excellent and parking is typically free.' },
+      { question: `What is the weather like at ${course.shortName}?`, answer: 'Over 300 sunny days per year. Golf playable year-round with mild winters and hot summers.' },
+      { question: `Can I rent out my property at ${course.shortName}?`, answer: 'Yes, golf properties are popular rentals, especially September to June during the main golf season.' },
+    ],
+    mapLocations: [
+      { id: course.slug, name: course.name, type: 'golf', coordinates: [course.lat, course.lng], distance: 'Center', description: course.description.slice(0, 50) },
+    ],
+  };
+}
+
+// Contact info
+const CONTACT = {
+  whatsapp: 'https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0',
+  phone: '+34 634 044 970',
+};
+
+function formatPrice(price: number): string {
+  return new Intl.NumberFormat('en-EU', {
+    style: 'currency',
+    currency: 'EUR',
+    maximumFractionDigits: 0,
+  }).format(price);
+}
+
+// Generate static params
+export async function generateStaticParams() {
+  const slugs = getAllGolfSlugs();
+  return slugs.map(slug => ({ slug }));
+}
+
+// Generate metadata
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const course = getGolfCourseBySlug(slug);
+
+  if (!course) {
+    return { title: 'Golf Course Not Found' };
+  }
 
   return {
-    title: `${course.name} Properties | Golf Homes Near ${course.town} From €180k`,
-    description: `Find properties near ${course.name} in ${course.town}. ${course.holes}-hole ${course.designer ? `course designed by ${course.designer}` : 'championship course'}. Frontline golf apartments, villas & townhouses. Year-round golf, 300+ days sunshine.`,
-    keywords: `${course.name.toLowerCase()}, ${course.town.toLowerCase()} golf property, golf homes ${course.town.toLowerCase()}, frontline golf ${course.region.toLowerCase()}, costa blanca golf property`,
+    title: `Living at ${course.name} 2026 | ${course.propertyCount} Properties from ${formatPrice(course.priceFrom)} | Complete Guide`,
+    description: `Complete guide to living at ${course.name}, ${course.town}. ${course.propertyCount} properties from ${formatPrice(course.priceFrom)}. Schools, beaches, cost of living, expat community. ${course.holes}-hole course.`,
+    keywords: `${course.name}, ${course.town} property, Costa Blanca golf, golf villa Spain, expat Spain, buy property ${course.town}`,
     openGraph: {
-      title: `${course.name} | Golf Properties Costa Blanca`,
-      description: `Properties near ${course.name}. ${course.holes} holes, par ${course.par}. Golf homes from €180,000.`,
+      title: `${course.name} - Complete Living Guide 2026`,
+      description: `Everything you need to know about living at ${course.name}. Golf lifestyle, schools, costs, community.`,
       type: 'website',
     },
   };
 }
 
-// Course-specific data (green fees, stats, FAQs)
-const COURSE_DATA: Record<string, {
-  stats: { length?: string; slope?: string; rating?: string; difficulty: string };
-  greenFees: { high: string; low: string; twilight: string; buggy: string; trolley: string; clubs: string };
-  facilities: string[];
-  propertyPrices: { type: string; range: string }[];
-  faqs: { question: string; answer: string }[];
-  extendedDescription: string;
-  signatureHoles: string;
-  bestFor: string[];
-}> = {
-  'la-finca': {
-    stats: { length: '6,017m', slope: '126', rating: '71.5', difficulty: 'Medium' },
-    greenFees: { high: '€75-85', low: '€55-65', twilight: '€45-55', buggy: '€35', trolley: '€5', clubs: '€25' },
-    facilities: ['Driving Range', 'Putting Green', 'Chipping Area', 'Pro Shop', 'Restaurant & Bar', 'Locker Rooms', 'Golf Academy', 'Club Hire', 'Electric Buggies'],
-    propertyPrices: [
-      { type: '2-bed apartment', range: '€180,000 - €250,000' },
-      { type: '3-bed apartment', range: '€250,000 - €320,000' },
-      { type: '3-bed townhouse', range: '€280,000 - €380,000' },
-      { type: '3-bed villa', range: '€380,000 - €550,000' },
-    ],
-    faqs: [
-      { question: 'How much is La Finca Golf membership?', answer: 'La Finca Golf offers various membership options. Annual unlimited play memberships typically range from €1,200-1,500 depending on age and category. Flexible membership cards (10 or 20 rounds) are also available from €550. Contact the club directly for current rates and special offers.' },
-      { question: 'Is La Finca Golf difficult for beginners?', answer: 'La Finca is rated as medium difficulty, making it suitable for golfers of all levels. The course has wide fairways on many holes which are forgiving for beginners, while the strategic bunkering and water hazards provide challenge for experienced players. The excellent practice facilities also make it ideal for improving your game.' },
-      { question: 'How far is La Finca Golf from Alicante Airport?', answer: 'La Finca Golf Resort is approximately 40km from Alicante-Elche Airport, which takes around 35-40 minutes by car via the AP-7 motorway. From Murcia-Corvera Airport, the distance is about 30km (25 minutes). Transfer services are available.' },
-      { question: 'Can I buy property directly on La Finca Golf course?', answer: 'Yes! La Finca Golf Resort has several residential developments offering frontline golf properties. New build apartments with golf views start from around €180,000, with villas from €380,000. The Oasis Golf La Finca development by Contrimar offers modern apartments with pool and golf views.' },
-      { question: 'What is the dress code at La Finca Golf?', answer: 'La Finca Golf has a smart casual dress code. Golf shoes with soft spikes are required on the course. Collared shirts are recommended, and denim/cargo shorts are generally not permitted on the course. The clubhouse restaurant has a relaxed dress code.' },
-      { question: 'Does La Finca Golf have a driving range?', answer: 'Yes, La Finca has excellent practice facilities including a large driving range with covered bays, a putting green, and a short game practice area with bunkers. Golf lessons are available from PGA-qualified professionals at the on-site golf academy.' },
-      { question: 'What other golf courses are near La Finca?', answer: 'La Finca is ideally located with several courses nearby: La Marquesa (5 mins), Vistabella (10 mins), Villamartín (15 mins), Las Ramblas (15 mins), and Campoamor (15 mins). This makes it perfect for golfers wanting variety.' },
-      { question: 'Is La Finca Golf busy?', answer: 'La Finca is popular but rarely overcrowded. Peak times are mornings during winter (Nov-Mar) when visiting golfers escape Northern European weather. Summer mornings can also be busy. Booking 2-3 days ahead is recommended in high season. Twilight rounds are usually readily available.' },
-    ],
-    extendedDescription: `La Finca Golf Resort stands as one of Costa Blanca South's most popular golfing destinations, offering the perfect blend of challenging golf, excellent facilities, and an established residential community. Designed by Pepe Gancedo and opened in 2002, the course has matured beautifully with tree-lined fairways and strategic water features creating an engaging test for all abilities.
+export default async function GolfCoursePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const course = getGolfCourseBySlug(slug);
 
-The course layout winds through the Algorfa countryside with the Sierra de Callosa mountains providing a stunning backdrop. At 6,017 meters from the back tees, it's not overly long but demands accuracy—wayward shots are punished by well-positioned bunkers and several lakes that come into play on key holes. The greens are typically maintained in excellent condition with subtle breaks that reward those who read them correctly.
-
-What sets La Finca apart is its atmosphere. The resort has developed into a genuine golf community where residents and visitors mix easily. The clubhouse terrace is a popular spot for post-round drinks, overlooking the 18th green and practice putting area. The restaurant serves excellent Spanish and international cuisine at reasonable prices.
-
-For property buyers, La Finca offers something increasingly rare: the ability to buy new build properties with genuine frontline golf positions. Developments like Oasis Golf La Finca by Contrimar offer modern apartments with course views and resort-style amenities, all within walking distance of the first tee. The rental potential is strong, with golf tourism creating year-round demand.`,
-    signatureHoles: `The signature hole at La Finca is the par-3 8th, requiring a precise tee shot over water to a well-protected green with bunkers front-left and right. The 15th is another highlight—a dogleg par 4 with water down the left side and a two-tiered green that punishes poorly judged approach shots. The closing stretch from 16-18 provides an exciting finish with risk-reward decisions on each hole.`,
-    bestFor: ['Golfers seeking good value', 'Property investors', 'Families', 'Social golfers', 'Those wanting new build options'],
-  },
-  'villamartin': {
-    stats: { length: '5,663m', slope: '121', rating: '69.2', difficulty: 'Medium' },
-    greenFees: { high: '€80-95', low: '€60-70', twilight: '€50-60', buggy: '€40', trolley: '€5', clubs: '€30' },
-    facilities: ['Driving Range', 'Putting Green', 'Pro Shop', 'Famous Plaza with Restaurants', 'Locker Rooms', 'Golf Academy', 'Club Hire'],
-    propertyPrices: [
-      { type: '2-bed apartment', range: '€150,000 - €220,000' },
-      { type: '3-bed apartment', range: '€200,000 - €280,000' },
-      { type: '3-bed townhouse', range: '€250,000 - €350,000' },
-      { type: '3-bed villa', range: '€350,000 - €600,000' },
-    ],
-    faqs: [
-      { question: 'What is Villamartín Plaza famous for?', answer: 'Villamartín Plaza is the social heart of the golf community—a charming square surrounded by restaurants, bars, and cafes that has become one of Costa Blanca\'s most popular meeting spots. The atmosphere is particularly vibrant on weekend evenings and during golf tournaments. It\'s a key reason many buyers choose to live in this area.' },
-      { question: 'How much is Villamartín Golf membership?', answer: 'Villamartín Golf Club offers memberships from approximately €1,400-1,800 per year for unlimited play. They also offer flexible options including 10-round cards. Senior and couple discounts are available. Contact the club for current pricing.' },
-      { question: 'Is Villamartín Golf part of the same group as Las Ramblas and Campoamor?', answer: 'Yes, all three courses are managed by the same group, allowing golfers to book across all three venues. Multi-course packages offer excellent value, and membership at one course often provides discounts at the others.' },
-      { question: 'How far is Villamartín from the beach?', answer: 'Villamartín is approximately 5km from the nearest beaches at La Zenia and Cabo Roig, around 8-10 minutes by car. The famous La Zenia Boulevard shopping center is just 5 minutes away.' },
-      { question: 'What is the best time to play Villamartín?', answer: 'Spring (March-May) and autumn (September-November) offer ideal conditions. Winter is popular with visiting golfers but the course is well-managed to avoid overcrowding. Summer afternoons with twilight rates offer excellent value and pleasant evening temperatures.' },
-      { question: 'Is Villamartín good for beginners?', answer: 'Villamartín is considered moderately challenging. While not the easiest course for complete beginners, it\'s playable for improving golfers. The club offers excellent teaching facilities and PGA-qualified instructors.' },
-      { question: 'What properties are available near Villamartín?', answer: 'The Villamartín area has a mature property market with options from resale apartments from €150,000 to luxury villas over €600,000. The nearby Blue Lagoon and El Galan urbanizations also offer good value. New build options are more limited than at La Finca.' },
-      { question: 'How far is Villamartín from Alicante Airport?', answer: 'Villamartín is approximately 50km from Alicante Airport, taking around 40-45 minutes via the AP-7 motorway. From Murcia-Corvera Airport, it\'s about 35km (30 minutes).' },
-    ],
-    extendedDescription: `Villamartín Golf Club is perhaps the most famous name in Costa Blanca South golf, not just for its excellent 18-hole course but for the vibrant community that has grown around it. Since opening in 1972, Villamartín has been the beating heart of expat golf culture in the region, with the famous Plaza becoming an essential part of the Costa Blanca lifestyle experience.
-
-The course itself is a Putnam & Buther design that has stood the test of time. At 5,663 meters it's not overly long, but the tight, tree-lined fairways and small, well-protected greens demand accuracy. Water comes into play on several holes, including the challenging 18th where the green is guarded by a lake. The course conditioning is consistently excellent, with greens running true and fairways well-maintained year-round.
-
-What truly distinguishes Villamartín is the atmosphere. The famous Plaza, surrounded by restaurants, bars, and shops, creates a social hub that brings golfers and residents together. After your round, the tradition is drinks on the terrace overlooking the 18th green, followed by dinner at one of the many excellent restaurants. Weekend evenings see the Plaza come alive with families, golfers, and visitors enjoying the quintessential Costa Blanca lifestyle.
-
-For property buyers, Villamartín offers an established community with proven infrastructure. While new build options are more limited than at La Finca, the resale market is active with well-maintained properties at various price points. The proximity to La Zenia Boulevard, beaches, and healthcare facilities adds practical convenience to the golf lifestyle appeal.`,
-    signatureHoles: `The par-4 18th is Villamartín's signature hole and a memorable finish to any round. The drive must avoid trees on both sides, leaving an approach shot over water to a green that slopes towards the lake. Many rounds have been won and lost on this hole. The par-3 3rd is another standout, playing over a valley to an elevated green with beautiful views.`,
-    bestFor: ['Social golfers', 'Established community seekers', 'Restaurant & nightlife lovers', 'Those wanting proven rental market', 'Couples and retirees'],
-  },
-  'las-ramblas': {
-    stats: { length: '5,921m', slope: '130', rating: '71.8', difficulty: 'Challenging' },
-    greenFees: { high: '€75-90', low: '€55-65', twilight: '€45-55', buggy: '€35', trolley: '€5', clubs: '€25' },
-    facilities: ['Driving Range', 'Putting Green', 'Pro Shop', 'Restaurant & Bar', 'Locker Rooms', 'Golf Academy'],
-    propertyPrices: [
-      { type: '2-bed apartment', range: '€160,000 - €230,000' },
-      { type: '3-bed apartment', range: '€220,000 - €300,000' },
-      { type: '3-bed townhouse', range: '€280,000 - €380,000' },
-      { type: '3-bed villa', range: '€400,000 - €650,000' },
-    ],
-    faqs: [
-      { question: 'Is Las Ramblas Golf difficult?', answer: 'Las Ramblas is considered the most challenging of the Orihuela Costa courses due to its dramatic elevation changes and narrow fairways. The slope rating of 130 reflects this difficulty. Mid-to-high handicappers should consider playing from the forward tees for an enjoyable round.' },
-      { question: 'What are the views like at Las Ramblas?', answer: 'Las Ramblas offers arguably the best views of any Costa Blanca South course. The elevated positions provide panoramic vistas across the Mediterranean, the salt lakes, and the surrounding mountains. Several holes offer stunning photo opportunities.' },
-      { question: 'How physically demanding is Las Ramblas?', answer: 'Las Ramblas is the most physically demanding course in the area due to significant elevation changes. A buggy is highly recommended, especially in summer or for those with mobility concerns. The walk between some greens and tees is steep.' },
-      { question: 'What properties are available near Las Ramblas?', answer: 'Las Ramblas has a residential community with properties ranging from apartments to luxury villas. Many properties enjoy elevated positions with spectacular views. Prices tend to be slightly higher than Villamartín due to the views and lower density development.' },
-      { question: 'Is Las Ramblas suitable for beginners?', answer: 'Las Ramblas is not recommended for beginners. The combination of elevation changes, narrow fairways, and challenging greens can be frustrating for high handicappers. We\'d suggest starting at La Finca or La Marquesa before tackling Las Ramblas.' },
-      { question: 'What is the signature hole at Las Ramblas?', answer: 'The par-3 7th is Las Ramblas\' most photographed hole—a dramatic downhill shot to a green surrounded by rocks and vegetation with the Mediterranean as a backdrop. The par-4 15th also offers stunning views across the salt lakes.' },
-      { question: 'Can I play Las Ramblas, Villamartín, and Campoamor together?', answer: 'Yes, all three courses are under the same management and multi-course packages are available. This is a popular option for golf groups visiting the area, offering three different experiences over consecutive days.' },
-      { question: 'How far is Las Ramblas from the beach?', answer: 'Las Ramblas is approximately 6km from the beaches at Cabo Roig and Campoamor, around 10 minutes by car. Despite the elevated position, you\'re still very close to the coast.' },
-    ],
-    extendedDescription: `Las Ramblas Golf Course offers the most visually dramatic golfing experience in Costa Blanca South, with elevation changes that set it apart from the flatter courses in the region. Built into the hillside overlooking the Mediterranean and the famous pink salt lakes, every round here is accompanied by spectacular views that make even poor shots easier to accept.
-
-Designed and opened in 1991, the course makes full use of the natural terrain. Holes climb and plunge through the landscape, with the par-3 7th offering one of the most photographed golf shots on the coast—a dramatic downhill hole with the sea stretching to the horizon beyond the green. The layout demands strategic thinking; the elevation changes affect club selection significantly, and many fairways are narrower than they appear.
-
-The course is challenging but fair. At 5,921 meters with a slope rating of 130, it demands respect from all players. Low handicappers will relish the test, while higher handicappers should consider the forward tees or the many forgiving bailout areas that thoughtful design provides. What Las Ramblas lacks in length it makes up for in character—no two holes feel alike.
-
-For property buyers, Las Ramblas offers something unique: homes with views that would cost significantly more in other Costa Blanca locations. The residential areas benefit from the elevated position, with many properties enjoying panoramic Mediterranean vistas. The community is smaller and more exclusive than Villamartín, appealing to those seeking a quieter environment with outstanding natural beauty.`,
-    signatureHoles: `The par-3 7th is undoubtedly the signature hole—playing dramatically downhill to a green perched above the Mediterranean with nothing but sea and sky beyond. Bring your camera. The 15th offers equally stunning views across the salt lakes to the mountains, while the closing holes provide a challenging finish with elevation changes and water hazards testing your closing skills.`,
-    bestFor: ['Experienced golfers', 'View seekers', 'Photographers', 'Those wanting exclusive location', 'Mountain/sea view property buyers'],
-  },
-  'campoamor': {
-    stats: { length: '5,737m', slope: '123', rating: '70.1', difficulty: 'Medium' },
-    greenFees: { high: '€70-85', low: '€50-60', twilight: '€40-50', buggy: '€35', trolley: '€5', clubs: '€25' },
-    facilities: ['Driving Range', 'Putting Green', 'Pro Shop', 'Restaurant', 'Locker Rooms', 'Hotel'],
-    propertyPrices: [
-      { type: '2-bed apartment', range: '€170,000 - €240,000' },
-      { type: '3-bed apartment', range: '€230,000 - €310,000' },
-      { type: '3-bed townhouse', range: '€290,000 - €400,000' },
-      { type: '3-bed villa', range: '€420,000 - €700,000' },
-    ],
-    faqs: [
-      { question: 'Who designed Campoamor Golf?', answer: 'Campoamor was designed by José María Olazábal, the two-time Masters champion from Spain. His design philosophy emphasizes strategy and shot-making over raw length, creating a course that rewards thoughtful play.' },
-      { question: 'Does Campoamor have a hotel?', answer: 'Yes, Campoamor has an on-site hotel, making it ideal for golf breaks and visitors. The hotel offers comfortable accommodation with direct access to the course and practice facilities.' },
-      { question: 'How does Campoamor compare to Villamartín?', answer: 'Campoamor offers a more peaceful setting compared to the bustling Villamartín. The course is slightly shorter but equally challenging, with more mature trees and a parkland feel. It\'s part of the same management group, so combination deals are available.' },
-      { question: 'Is Campoamor suitable for all levels?', answer: 'Yes, Campoamor is considered one of the more accessible courses in the area. While it has strategic challenges, wider fairways and manageable length make it enjoyable for golfers of all abilities.' },
-      { question: 'What properties are near Campoamor Golf?', answer: 'Campoamor has a prestigious residential area with properties ranging from apartments to substantial villas. The area has a slightly higher-end feel than some neighboring developments, reflected in property prices.' },
-      { question: 'How far is Campoamor from the beach?', answer: 'Campoamor Golf is just 2km from the beautiful Campoamor beach, one of the quieter beaches in the Orihuela Costa area. Cabo Roig beach is also just 3km away.' },
-      { question: 'Is Campoamor busy?', answer: 'Campoamor is generally less crowded than Villamartín, making it easier to get tee times. The hotel guests have some priority but the course is rarely overcrowded.' },
-      { question: 'What is the best hole at Campoamor?', answer: 'The par-4 9th is considered the signature hole, requiring a precise drive and approach to a green protected by water and bunkers. The closing holes also provide an exciting finish to the round.' },
-    ],
-    extendedDescription: `Campoamor Golf, designed by two-time Masters champion José María Olazábal, brings championship pedigree to Costa Blanca South. The course reflects Olazábal's playing philosophy—emphasizing strategy, accuracy, and course management over brute force. It's a thinking golfer's course where the smart play is often rewarded over the aggressive option.
-
-The layout meanders through mature pine trees and Mediterranean vegetation, creating a parkland atmosphere that feels more established than some newer courses in the area. Water features are used strategically rather than punitively, coming into play on key holes but offering bail-out options for those who respect the hazards. The greens are typically excellent, with subtle borrows that reward players who take time to read their putts.
-
-What distinguishes Campoamor is its peaceful atmosphere. Unlike the social buzz of Villamartín or the challenging terrain of Las Ramblas, Campoamor offers a more traditional golf experience focused purely on the game. The on-site hotel adds convenience for golf groups, while the course's location just 2km from Campoamor beach means families can easily combine golf and beach holidays.
-
-For property buyers, Campoamor represents one of the more prestigious addresses in Orihuela Costa. The residential areas have maintained high standards, with well-kept gardens and quality construction throughout. Properties here command slightly higher prices than equivalent homes at Villamartín or La Finca, reflecting the area's reputation and beach proximity.`,
-    signatureHoles: `The par-4 9th hole captures Olazábal's design philosophy—a strategic dogleg where the aggressive line brings water into play but shortens the approach, while the safe play leaves a longer but unobstructed shot to the green. The finishing stretch from 16-18 provides excellent drama, with water and bunkers creating risk-reward decisions on each hole.`,
-    bestFor: ['Strategic players', 'Those seeking peaceful golf', 'Golf break visitors (hotel)', 'Families (beach proximity)', 'Higher-end property seekers'],
-  },
-  'vistabella': {
-    stats: { length: '5,635m', slope: '118', rating: '68.9', difficulty: 'Easy-Medium' },
-    greenFees: { high: '€55-65', low: '€40-50', twilight: '€30-40', buggy: '€30', trolley: '€4', clubs: '€20' },
-    facilities: ['Driving Range', 'Putting Green', 'Pro Shop', 'Restaurant & Bar', 'Locker Rooms', 'Golf Academy', 'Halfway House'],
-    propertyPrices: [
-      { type: '2-bed apartment', range: '€140,000 - €200,000' },
-      { type: '3-bed apartment', range: '€180,000 - €250,000' },
-      { type: '3-bed townhouse', range: '€230,000 - €320,000' },
-      { type: '3-bed villa', range: '€320,000 - €480,000' },
-    ],
-    faqs: [
-      { question: 'Is Vistabella good for beginners?', answer: 'Yes, Vistabella is considered one of the best courses for beginners in Costa Blanca. Wider fairways, forgiving rough, and excellent practice facilities create an encouraging environment for those new to golf or building confidence.' },
-      { question: 'How much are green fees at Vistabella?', answer: 'Vistabella offers excellent value with green fees ranging from €40-65 depending on season. Twilight rates from €30 make it very accessible. Annual memberships are around €950, excellent value for regular golfers.' },
-      { question: 'Does Vistabella have a golf academy?', answer: 'Yes, Vistabella has an excellent golf academy with PGA-qualified professionals offering individual and group lessons. The facilities include a driving range, short game area, and practice putting greens—ideal for beginners and those wanting to improve.' },
-      { question: 'What properties are available at Vistabella?', answer: 'Vistabella Golf Resort has a residential community with new build and resale properties. It\'s one of the more affordable golf locations, with apartments from around €140,000. New developments continue to add modern options.' },
-      { question: 'How far is Vistabella from the beach?', answer: 'Vistabella is approximately 12km inland from the coast, about 15 minutes to the nearest beaches at Guardamar del Segura. This inland location keeps property prices lower while still offering easy beach access.' },
-      { question: 'Is Vistabella suitable for experienced golfers?', answer: 'While Vistabella is beginner-friendly, experienced golfers can still enjoy the course. The layout has enough variety and challenge to test all abilities, especially when played from the back tees. The excellent conditioning makes it enjoyable regardless of skill level.' },
-      { question: 'What other courses are near Vistabella?', answer: 'Vistabella is centrally located for Costa Blanca South golf: La Marquesa (5 mins), La Finca (10 mins), Villamartín (20 mins), and Las Ramblas (20 mins). This makes it ideal for golfers wanting variety.' },
-      { question: 'Does Vistabella have a halfway house?', answer: 'Yes, Vistabella has a halfway house between the 9th and 10th holes where you can grab drinks and snacks. This is a nice touch that adds to the relaxed, friendly atmosphere of the club.' },
-    ],
-    extendedDescription: `Vistabella Golf has carved out a well-deserved reputation as Costa Blanca's most welcoming golf course, offering a friendly environment where beginners feel encouraged and experienced golfers enjoy excellent facilities at outstanding value. The course, while not the most challenging in the region, delivers a consistently enjoyable experience with excellent conditioning throughout the year.
-
-The layout is designed to build confidence. Wider fairways give players room to hit their drives, while the rough is kept playable rather than punishing. This doesn't mean Vistabella is easy—the course has teeth when played from the back tees, with strategic bunkering and subtle green complexes that reward good approach play. But the overall design philosophy is inclusive, making golf fun for everyone.
-
-The practice facilities at Vistabella are among the best in the area. The driving range, putting greens, and short game practice areas see constant use by golfers looking to improve. The golf academy staffed by PGA professionals offers lessons for all levels, from complete beginners to experienced players fine-tuning their technique. This focus on development has created a genuine golf community feeling.
-
-For property buyers, Vistabella offers the best value frontline golf living in Costa Blanca South. The inland location keeps prices lower than coastal developments, but you're still only 15 minutes from beautiful beaches. New build developments continue to add modern housing options, while the established community ensures good infrastructure and services.`,
-    signatureHoles: `Vistabella's most memorable hole is the par-3 12th, playing over water to a well-protected green with views across the course. The closing par-5 18th offers a risk-reward finish where longer hitters can reach in two but must contend with water protecting the green. Both holes exemplify Vistabella's approach: challenging but fair.`,
-    bestFor: ['Beginners', 'Improving golfers', 'Value seekers', 'Golf academy students', 'Budget-conscious property buyers'],
-  },
-  'la-marquesa': {
-    stats: { length: '5,465m', slope: '115', rating: '67.8', difficulty: 'Easy-Medium' },
-    greenFees: { high: '€50-60', low: '€35-45', twilight: '€25-35', buggy: '€30', trolley: '€4', clubs: '€20' },
-    facilities: ['Driving Range', 'Putting Green', 'Pro Shop', 'Restaurant & Bar', 'Locker Rooms'],
-    propertyPrices: [
-      { type: '2-bed apartment', range: '€120,000 - €170,000' },
-      { type: '3-bed apartment', range: '€160,000 - €220,000' },
-      { type: '3-bed townhouse', range: '€200,000 - €280,000' },
-      { type: '3-bed villa', range: '€280,000 - €400,000' },
-    ],
-    faqs: [
-      { question: 'Is La Marquesa the cheapest golf course in Costa Blanca?', answer: 'La Marquesa offers some of the best value green fees in Costa Blanca, with rates from €35-60. Combined with good course conditioning and a friendly atmosphere, it represents outstanding value for money.' },
-      { question: 'Is La Marquesa suitable for beginners?', answer: 'Absolutely. La Marquesa is one of the most beginner-friendly courses in Costa Blanca. Shorter overall length, forgiving fairways, and a relaxed atmosphere make it perfect for those new to golf or building confidence.' },
-      { question: 'What is the clubhouse like at La Marquesa?', answer: 'La Marquesa has a welcoming clubhouse with a restaurant serving Spanish and international food at reasonable prices. It has a friendly, unpretentious atmosphere popular with locals and visitors alike.' },
-      { question: 'How far is La Marquesa from other golf courses?', answer: 'La Marquesa is ideally located: Vistabella (5 mins), La Finca (10 mins), Villamartín (15 mins). This makes it easy to play multiple courses during a golf trip.' },
-      { question: 'What properties are near La Marquesa?', answer: 'The Ciudad Quesada area near La Marquesa offers some of the most affordable property in Costa Blanca, with apartments from around €120,000. The established community has good amenities, shops, and restaurants.' },
-      { question: 'Is La Marquesa crowded?', answer: 'La Marquesa is generally less crowded than the more famous courses, making it easier to get tee times and enjoy a relaxed pace of play. It\'s a popular choice for regular golfers who value uncrowded fairways.' },
-      { question: 'Does La Marquesa have a driving range?', answer: 'Yes, La Marquesa has a driving range and practice facilities. While not as extensive as some larger clubs, they\'re adequate for warming up or practicing.' },
-      { question: 'How long does a round take at La Marquesa?', answer: 'Rounds at La Marquesa typically take 4-4.5 hours. The shorter course length and generally good pace of play mean you\'re not waiting on every tee. It\'s good for those who don\'t want to spend all day on the course.' },
-    ],
-    extendedDescription: `La Marquesa Golf has earned its reputation as the "golfer's golf course" of Costa Blanca South—unpretentious, excellent value, and focused purely on delivering an enjoyable round of golf. While it may lack the prestige of Villamartín or the drama of Las Ramblas, La Marquesa excels at what matters most: being a fun place to play golf regularly without breaking the bank.
-
-The course layout is compact but cleverly designed, making full use of available space to create varied and interesting holes. At 5,465 meters, it's shorter than most, but this works in its favor—rounds are quicker, the course is accessible to all abilities, and there's less walking between holes. The par-3s are particularly well-crafted, each offering a different challenge.
-
-The atmosphere at La Marquesa is refreshingly relaxed. There's no pretension here—just golfers enjoying their game. The clubhouse restaurant serves hearty food at fair prices, and it's common to see players lingering over post-round beers discussing their rounds. This unpretentious character has made La Marquesa a local favorite, with many regulars who play here weekly.
-
-For property buyers, the Ciudad Quesada area around La Marquesa offers exceptional value. This established residential area has good infrastructure, shops, restaurants, and healthcare facilities. Property prices are among the lowest in the golf communities, making it attractive for budget-conscious buyers who still want the golf lifestyle.`,
-    signatureHoles: `La Marquesa doesn't have a famous signature hole, but the par-3 5th over water is a favorite among regulars. The closing holes provide a good test to finish your round, and the overall variety of the par-3s is often praised—each requires a different shape of shot and club selection.`,
-    bestFor: ['Budget-conscious golfers', 'Beginners', 'Regular players wanting value', 'Those seeking unpretentious atmosphere', 'Entry-level property buyers'],
-  },
-  'lo-romero': {
-    stats: { length: '6,280m', slope: '131', rating: '72.4', difficulty: 'Challenging' },
-    greenFees: { high: '€65-80', low: '€45-55', twilight: '€35-45', buggy: '€35', trolley: '€5', clubs: '€25' },
-    facilities: ['Driving Range', 'Putting Green', 'Pro Shop', 'Restaurant & Bar', 'Locker Rooms', 'Academy'],
-    propertyPrices: [
-      { type: '2-bed apartment', range: '€150,000 - €210,000' },
-      { type: '3-bed apartment', range: '€200,000 - €280,000' },
-      { type: '3-bed townhouse', range: '€260,000 - €360,000' },
-      { type: '3-bed villa', range: '€380,000 - €550,000' },
-    ],
-    faqs: [
-      { question: 'Is Lo Romero difficult?', answer: 'Lo Romero is one of the longer and more challenging courses in Costa Blanca South, with a slope rating of 131. At 6,280 meters, it demands good length off the tee. Lower handicappers will enjoy the challenge, while higher handicappers should consider forward tees.' },
-      { question: 'How far is Lo Romero from Murcia Airport?', answer: 'Lo Romero is the closest Costa Blanca course to Murcia-Corvera Airport, just 20 minutes away. This makes it convenient for golfers flying into Murcia rather than Alicante.' },
-      { question: 'What makes Lo Romero different from other courses?', answer: 'Lo Romero offers a longer, more modern design compared to the classic Orihuela Costa courses. It suits players who hit the ball far and want a championship-style challenge. The conditioning is typically excellent.' },
-      { question: 'Are there properties at Lo Romero?', answer: 'Yes, Lo Romero Golf Resort has residential developments with apartments, townhouses, and villas. It\'s newer than Villamartín or Campoamor, so more modern housing options are available.' },
-      { question: 'Does Lo Romero host tournaments?', answer: 'Yes, Lo Romero regularly hosts regional and national tournaments. Its championship layout and excellent facilities make it suitable for competitive golf events.' },
-      { question: 'Is Lo Romero good for beginners?', answer: 'Lo Romero is not recommended for beginners due to its length and difficulty. We\'d suggest starting at La Marquesa or Vistabella before attempting Lo Romero.' },
-      { question: 'What are the facilities like at Lo Romero?', answer: 'Lo Romero has modern facilities including a large driving range, practice areas, well-stocked pro shop, and a contemporary clubhouse with restaurant and bar offering views over the course.' },
-      { question: 'How does Lo Romero compare to La Finca?', answer: 'Lo Romero is longer and more challenging than La Finca, appealing to lower handicappers. La Finca has a more established community and is more accessible to average golfers. Both offer good property options.' },
-    ],
-    extendedDescription: `Lo Romero Golf Club represents the new generation of Costa Blanca golf—a modern, championship-length course designed to challenge better players while offering excellent facilities throughout. Opened more recently than the classic Orihuela Costa courses, Lo Romero brings a contemporary approach to golf in the region.
-
-At 6,280 meters, Lo Romero is significantly longer than most Costa Blanca South courses and plays to its full length. The slope rating of 131 confirms what players experience on the course: this is a serious test of golf that rewards power combined with precision. The wide fairways invite aggressive driving, but subtle contouring and strategic bunkering punish wayward shots.
-
-The course is immaculately maintained, with greens that roll true and fairways that provide excellent lies. Modern irrigation and drainage systems mean the course plays consistently well year-round, even after winter rains. The design aesthetic is American-style target golf, with clearly defined landing areas and risk-reward options on many holes.
-
-For property buyers, Lo Romero offers modern developments with contemporary design and specifications. The resort is newer than Villamartín or Campoamor, meaning homes are built to current standards with modern amenities. The proximity to Murcia Airport is a practical advantage for those flying in regularly.`,
-    signatureHoles: `The par-5 9th is Lo Romero's standout hole—a long three-shotter that requires strategic thinking on every shot. The back nine opener, a sharp dogleg par-4, demands a precisely placed drive. The closing stretch provides championship drama with water hazards and elevation changes testing players coming down the final fairways.`,
-    bestFor: ['Low handicappers', 'Long hitters', 'Tournament players', 'Modern facility seekers', 'Murcia Airport arrivals'],
-  },
-  'oliva-nova': {
-    stats: { length: '6,297m', slope: '133', rating: '72.8', difficulty: 'Challenging' },
-    greenFees: { high: '€90-110', low: '€70-85', twilight: '€55-70', buggy: '€45', trolley: '€6', clubs: '€35' },
-    facilities: ['Driving Range', 'Putting Green', 'Short Game Area', 'Pro Shop', 'Clubhouse Restaurant', 'Golf Academy', '5-Star Hotel', 'Spa', 'Beach Club'],
-    propertyPrices: [
-      { type: '2-bed apartment', range: '€250,000 - €380,000' },
-      { type: '3-bed apartment', range: '€350,000 - €500,000' },
-      { type: '3-bed townhouse', range: '€450,000 - €650,000' },
-      { type: '3-bed villa', range: '€650,000 - €1,200,000' },
-    ],
-    faqs: [
-      { question: 'Who designed Oliva Nova Golf?', answer: 'Oliva Nova was designed by Severiano Ballesteros, the legendary Spanish golfer and three-time Open Championship winner. Opened in 1995, it\'s considered one of his finest designs and has hosted European Tour events.' },
-      { question: 'Does Oliva Nova host professional tournaments?', answer: 'Yes, Oliva Nova has hosted several European Tour and European Seniors Tour events. The course is maintained to tournament standards year-round, ensuring exceptional conditioning for all visitors.' },
-      { question: 'How difficult is Oliva Nova?', answer: 'Oliva Nova is a challenging championship course with a slope of 133. At 6,297 meters with strategic water hazards and well-protected greens, it demands a complete game. Average golfers should use appropriate tees to enjoy the experience.' },
-      { question: 'What facilities are at Oliva Nova?', answer: 'Oliva Nova is a full resort with 5-star hotel, spa, beach club, multiple restaurants, and one of the best practice facilities in Spain. It\'s a complete golf destination, not just a course.' },
-      { question: 'How far is Oliva Nova from Valencia?', answer: 'Oliva Nova is approximately 75km south of Valencia Airport, about 50 minutes by car. It\'s also 90 minutes from Alicante Airport. The resort\'s coastal location offers beautiful beach access.' },
-      { question: 'What are property prices at Oliva Nova?', answer: 'Oliva Nova is one of Costa Blanca\'s most prestigious addresses, with property prices reflecting this. Apartments start around €250,000, with villas reaching over €1 million. It\'s a premium market for discerning buyers.' },
-      { question: 'Is Oliva Nova suitable for families?', answer: 'Yes, Oliva Nova is excellent for families. The beach club provides activities for all ages, and the resort atmosphere means there\'s plenty to do beyond golf. The 5-star hotel offers family-friendly accommodation.' },
-      { question: 'What is the signature hole at Oliva Nova?', answer: 'The par-3 8th, playing over water to an island green, is the most famous hole and features on many \'best holes in Spain\' lists. The par-5 18th with its dramatic water approach is also a memorable finishing hole.' },
-    ],
-    extendedDescription: `Oliva Nova Golf stands as the crown jewel of Costa Blanca golf—a Severiano Ballesteros masterpiece that consistently ranks among Spain's finest courses. When Seve created Oliva Nova in 1995, he crafted a layout that reflects his playing philosophy: strategic, dramatic, and always fair to those who think their way around the course.
-
-The course layout takes full advantage of its coastal setting, with Mediterranean views and sea breezes adding to the experience. Seve's design incorporates water on numerous holes, but never unfairly—there are always safe options for those who respect the hazards. The greens are large and subtly contoured, rewarding precise iron play and intelligent green reading.
-
-What elevates Oliva Nova beyond just a golf course is the complete resort experience. The 5-star hotel provides luxury accommodation, while the spa offers post-round relaxation. The beach club gives families an alternative to golf, and multiple dining options cater to all tastes. The practice facilities are extensive, making Oliva Nova ideal for serious golfers looking to improve.
-
-For property buyers, Oliva Nova represents the premium end of Costa Blanca real estate. The combination of championship golf, beach access, and resort facilities creates a lifestyle that commands premium prices. Properties here offer excellent rental potential to discerning visitors seeking luxury golf experiences.`,
-    signatureHoles: `The par-3 8th is Oliva Nova's most iconic hole—a dramatic shot over water to an island green that requires precision and nerve. It's appeared on countless "best holes in Spain" lists. The par-5 18th provides a fitting finale, with water protecting the green and demanding a thoughtful approach shot to close your round in style.`,
-    bestFor: ['Championship golf seekers', 'Resort lifestyle', 'Luxury property buyers', 'Families wanting activities', 'Serious golfers'],
-  },
-  'la-sella': {
-    stats: { length: '6,138m', slope: '128', rating: '71.5', difficulty: 'Challenging' },
-    greenFees: { high: '€80-100', low: '€60-75', twilight: '€50-60', buggy: '€40', trolley: '€5', clubs: '€30' },
-    facilities: ['Driving Range', 'Putting Green', 'Pro Shop', 'Restaurant & Bar', 'Locker Rooms', 'Golf Academy', 'Hotel', 'Tennis Courts', 'Spa'],
-    propertyPrices: [
-      { type: '2-bed apartment', range: '€220,000 - €320,000' },
-      { type: '3-bed apartment', range: '€300,000 - €450,000' },
-      { type: '3-bed townhouse', range: '€400,000 - €600,000' },
-      { type: '3-bed villa', range: '€600,000 - €1,000,000' },
-    ],
-    faqs: [
-      { question: 'Who designed La Sella Golf?', answer: 'La Sella was designed by José María Olazábal, the two-time Masters champion from Spain. His design showcases the natural beauty of the Dénia hills while creating a fair but challenging test of golf.' },
-      { question: 'How difficult is La Sella?', answer: 'La Sella is a challenging course with significant elevation changes. The slope rating of 128 and the hillside terrain make it a test for all levels. Buggies are recommended due to the terrain.' },
-      { question: 'What are the views like at La Sella?', answer: 'La Sella offers stunning views of the Montgó mountain, the Mediterranean, and the surrounding orange groves. It\'s one of the most scenic courses on the Costa Blanca, with panoramic vistas from many holes.' },
-      { question: 'Is La Sella near the beach?', answer: 'La Sella is approximately 10km inland from Dénia\'s beaches, about 15 minutes by car. The Dénia coastline offers some of Costa Blanca North\'s finest beaches and marina facilities.' },
-      { question: 'What facilities are at La Sella?', answer: 'La Sella is a full resort with hotel, spa, tennis courts, and swimming pools. The practice facilities are excellent, and the clubhouse offers quality dining with mountain views.' },
-      { question: 'What properties are available at La Sella?', answer: 'La Sella Golf Resort has an established residential community with apartments, townhouses, and villas. Property prices are higher than Costa Blanca South, reflecting the prestigious North location.' },
-      { question: 'Is La Sella suitable for beginners?', answer: 'La Sella is more suited to intermediate and advanced golfers due to its challenging terrain. Beginners might find the elevation changes and course length demanding. The resort does offer excellent teaching facilities.' },
-      { question: 'How far is La Sella from Alicante Airport?', answer: 'La Sella is approximately 90km from Alicante Airport, about 1 hour 15 minutes by car via the AP-7. Valencia Airport is about 90 minutes away.' },
-    ],
-    extendedDescription: `La Sella Golf Resort, designed by Masters champion José María Olazábal, occupies one of Costa Blanca North's most spectacular settings. Built into the foothills of the Montgó mountain near Dénia, the course combines championship-quality golf with breathtaking views across the valley to the Mediterranean and beyond.
-
-Olazábal's design philosophy emphasizes strategy and shot-making, and La Sella exemplifies this approach. The hillside terrain creates dramatic elevation changes that affect club selection on nearly every shot. Water features are used strategically, coming into play on key holes without being punitive. The greens are excellent—true, consistent, and featuring the subtle breaks that reward those who read them carefully.
-
-The resort facilities extend well beyond golf. The on-site hotel provides comfortable accommodation for golf breaks, while the spa offers relaxation after a challenging round. Tennis courts and swimming pools cater to non-golfers or those wanting variety. The clubhouse restaurant serves excellent cuisine with views across the course to the mountains.
-
-For property buyers, La Sella offers a prestigious address in Costa Blanca North. The residential community has matured over the years, with well-maintained properties in a beautiful natural setting. The combination of mountain location, proximity to Dénia's beaches and marina, and championship golf creates a lifestyle appealing to discerning buyers.`,
-    signatureHoles: `The par-3 7th plays from an elevated tee to a green surrounded by bunkers, with the Montgó mountain providing a dramatic backdrop. The par-5 15th is another standout, requiring strategic thinking through a tree-lined valley. Every hole at La Sella seems to offer a different view, making it one of the most photogenic courses in the region.`,
-    bestFor: ['Scenic golf seekers', 'Olazábal fans', 'Intermediate/advanced golfers', 'Mountain view property buyers', 'Those wanting resort amenities'],
-  },
-  'villaitana': {
-    stats: { length: '6,357m', slope: '137', rating: '73.2', difficulty: 'Very Challenging' },
-    greenFees: { high: '€85-120', low: '€65-90', twilight: '€55-75', buggy: '€45', trolley: '€6', clubs: '€35' },
-    facilities: ['Driving Range', 'Putting Green', 'Pro Shop', '5-Star Hotel', 'Multiple Restaurants', 'Spa', 'Gym', 'Pool Complex', 'Golf Academy'],
-    propertyPrices: [
-      { type: '2-bed apartment', range: '€280,000 - €400,000' },
-      { type: '3-bed apartment', range: '€380,000 - €550,000' },
-      { type: '3-bed townhouse', range: '€500,000 - €750,000' },
-      { type: '3-bed villa', range: '€750,000 - €1,500,000' },
-    ],
-    faqs: [
-      { question: 'Who designed the courses at Villaitana?', answer: 'Villaitana features two championship courses: the Levante course designed by Jack Nicklaus, and the Poniente course designed by Bernhard Langer. Having two courses by such golfing legends makes Villaitana unique in Costa Blanca.' },
-      { question: 'What is the difference between the Levante and Poniente courses?', answer: 'The Levante (Nicklaus) course is the longer, more challenging of the two with dramatic elevation changes. The Poniente (Langer) course is slightly shorter and more playable, though still demanding. Both offer exceptional quality.' },
-      { question: 'Does Villaitana have a hotel?', answer: 'Yes, Villaitana is anchored by a luxurious 5-star hotel with multiple restaurants, a full spa, fitness center, and pool complex. It\'s one of the most complete golf resort experiences in Spain.' },
-      { question: 'How difficult is Villaitana?', answer: 'Both courses are challenging. The Levante has a slope of 137, making it one of the toughest courses in the region. Average golfers should play from forward tees. The Poniente is slightly more forgiving but still demands a complete game.' },
-      { question: 'Is Villaitana near Benidorm?', answer: 'Yes, Villaitana is located in the hills behind Finestrat, just 10 minutes from Benidorm. This means you can combine championship golf with Benidorm\'s beaches, restaurants, and entertainment.' },
-      { question: 'What are property prices at Villaitana?', answer: 'Villaitana is one of Costa Blanca\'s most exclusive addresses. Apartments start around €280,000, with villas reaching €1.5 million or more. The combination of two championship courses and 5-star facilities commands premium prices.' },
-      { question: 'Is Villaitana suitable for families?', answer: 'Yes, the 5-star hotel facilities make Villaitana excellent for families. Non-golfers have the spa, pool, and proximity to Benidorm\'s attractions. The resort atmosphere caters to all ages.' },
-      { question: 'How far is Villaitana from Alicante Airport?', answer: 'Villaitana is approximately 50km from Alicante Airport, about 40-45 minutes by car. This relatively easy access makes it convenient for golf trips.' },
-    ],
-    extendedDescription: `Villaitana Golf represents the pinnacle of Costa Blanca golf—the only resort in the region boasting two championship courses designed by legends of the game. Jack Nicklaus and Bernhard Langer each brought their unique philosophies to create layouts that would challenge the best players while providing memorable experiences for all visitors.
-
-The Levante course, Nicklaus's creation, is the longer and more demanding of the two. It climbs into the hills behind Finestrat with dramatic elevation changes and panoramic views extending to the Mediterranean. Nicklaus's trademark strategic bunkering and bold green complexes are evident throughout. With a slope of 137, this is a serious examination of golf that rewards accurate shot-making and course management.
-
-Langer's Poniente course offers a slightly different experience—still challenging but more playable for average golfers. The design emphasizes rhythm and flow, with each hole leading naturally to the next. Both courses share Villaitana's exceptional conditioning, with greens that roll true and fairways maintained to tournament standards.
-
-For property buyers, Villaitana represents ultra-premium Costa Blanca living. The residential community enjoys access to both courses and the 5-star hotel facilities, creating a complete lifestyle package. Properties here command the highest prices in the region, reflecting the unmatched combination of championship golf, resort amenities, and prestigious address.`,
-    signatureHoles: `On the Levante, the par-4 14th is a dramatic downhill hole with the Mediterranean visible beyond the green—one of Costa Blanca's most photographed golf holes. On the Poniente, the par-3 6th over water to an island green tests nerve and precision. Both courses finish with challenging closing holes that have decided many matches on the 18th green.`,
-    bestFor: ['Serious golfers', 'Luxury seekers', 'Those wanting variety (two courses)', 'Premium property buyers', 'Resort lifestyle enthusiasts'],
-  },
-  'javea': {
-    stats: { length: '2,461m', slope: '104', rating: '33.1', difficulty: 'Easy-Medium' },
-    greenFees: { high: '€50-60', low: '€35-45', twilight: '€25-35', buggy: '€25', trolley: '€4', clubs: '€15' },
-    facilities: ['Driving Range', 'Putting Green', 'Pro Shop', 'Restaurant & Bar', 'Pool', 'Tennis Courts'],
-    propertyPrices: [
-      { type: '2-bed apartment', range: '€250,000 - €400,000' },
-      { type: '3-bed apartment', range: '€380,000 - €550,000' },
-      { type: '3-bed townhouse', range: '€450,000 - €700,000' },
-      { type: '3-bed villa', range: '€700,000 - €2,000,000' },
-    ],
-    faqs: [
-      { question: 'Is Jávea Golf a 9 or 18 hole course?', answer: 'Jávea Golf Club is a charming 9-hole course, making it ideal for quick rounds or players wanting a less intensive golf experience. You can play 18 holes by going around twice with different tee positions.' },
-      { question: 'Is Jávea Golf suitable for beginners?', answer: 'Absolutely. The 9-hole format and manageable length make Jávea ideal for beginners, returning golfers, or those wanting a social round without a 4+ hour commitment. The club has a friendly, welcoming atmosphere.' },
-      { question: 'What are the views like at Jávea Golf?', answer: 'Jávea Golf enjoys spectacular views of the Montgó mountain, one of Costa Blanca\'s most iconic landmarks. The course is set in the hills above the town with beautiful Mediterranean vegetation throughout.' },
-      { question: 'What are property prices in Jávea?', answer: 'Jávea is one of Costa Blanca\'s most prestigious towns, with property prices reflecting this. Apartments typically start around €250,000, with luxury villas reaching €2 million or more. The combination of beach, town character, and natural beauty commands premium prices.' },
-      { question: 'Is Jávea Golf a private club?', answer: 'Jávea Golf Club welcomes visitors as well as members. Booking a tee time in advance is recommended, especially during busy periods. The club has an inclusive, friendly atmosphere.' },
-      { question: 'How far is Jávea Golf from the beach?', answer: 'Jávea Golf is about 5km from the beaches at Arenal and Granadella, approximately 10 minutes by car. Jávea\'s coastline features both sandy beaches and secluded coves.' },
-      { question: 'What other courses are near Jávea?', answer: 'La Sella Golf (20 mins), Oliva Nova (25 mins), and Altea Don Cayo (25 mins) are the nearest full-length courses. Jávea\'s 9-hole format complements these for those wanting variety.' },
-      { question: 'Does Jávea Golf have a pool and tennis?', answer: 'Yes, the club has a swimming pool and tennis courts, making it a proper club rather than just a golf course. The social facilities add to the community atmosphere.' },
-    ],
-    extendedDescription: `Jávea Golf Club occupies a special place in Costa Blanca North golf—a charming 9-hole layout with views of the majestic Montgó mountain that offers a more intimate alternative to the region's championship courses. For golfers who value atmosphere, scenery, and social golf over challenging yardage, Jávea delivers an experience that longer courses cannot match.
-
-The course layout makes intelligent use of the available terrain, with each hole offering a distinct challenge and character. At 2,461 meters for 9 holes, it's not about length—it's about shot-making and enjoyment. The Montgó views provide constant companionship, making this one of the most scenic rounds in the region regardless of how you score.
-
-The club atmosphere at Jávea is notably welcoming. This is a place where members and visitors mix easily, where post-round drinks are as important as the round itself. The swimming pool and tennis courts add social dimensions beyond golf, creating a true club environment. For many residents, Jávea Golf is as much about community as it is about the game.
-
-For property buyers, Jávea represents Costa Blanca North at its finest. This sophisticated town combines Spanish character with international influence, offering excellent restaurants, beautiful beaches, and a quality of life that attracts discerning buyers. Property prices are among the highest on the coast, but the lifestyle delivered is exceptional.`,
-    signatureHoles: `The par-3 5th offers the best Montgó views, with the imposing mountain dominating the backdrop as you play towards a well-protected green. The finishing hole, a short par-4, brings you back to the welcoming clubhouse where refreshments await.`,
-    bestFor: ['Social golfers', 'Beginners', 'Those wanting quick rounds', 'Scenic golf lovers', 'Premium property seekers'],
-  },
-  'altea': {
-    stats: { length: '2,583m', slope: '108', rating: '34.2', difficulty: 'Easy-Medium' },
-    greenFees: { high: '€45-55', low: '€30-40', twilight: '€25-30', buggy: '€25', trolley: '€4', clubs: '€15' },
-    facilities: ['Putting Green', 'Pro Shop', 'Restaurant & Bar with Views', 'Terrace'],
-    propertyPrices: [
-      { type: '2-bed apartment', range: '€220,000 - €350,000' },
-      { type: '3-bed apartment', range: '€320,000 - €480,000' },
-      { type: '3-bed townhouse', range: '€400,000 - €600,000' },
-      { type: '3-bed villa', range: '€600,000 - €1,500,000' },
-    ],
-    faqs: [
-      { question: 'Is Altea Golf (Don Cayo) a full 18-hole course?', answer: 'Don Cayo is a 9-hole course, but you can play 18 holes using different tee positions for each round. It\'s a compact course ideal for those wanting golf without a full-day commitment.' },
-      { question: 'What are the views like at Don Cayo?', answer: 'Don Cayo offers spectacular panoramic views across the Mediterranean and the Altea coastline. The elevated position provides some of the best coastal views of any Costa Blanca course.' },
-      { question: 'Is Don Cayo difficult?', answer: 'Don Cayo is moderately challenging but suitable for all levels. The hillside terrain creates interesting elevation changes, but the course is not overly long or punishing.' },
-      { question: 'What are property prices in Altea?', answer: 'Altea is one of Costa Blanca\'s most artistic and sought-after towns. Property prices start around €220,000 for apartments, with premium villas reaching €1.5 million. The town\'s cultural reputation and beautiful old quarter command premium prices.' },
-      { question: 'Is Don Cayo near the beach?', answer: 'Don Cayo is located in the Sierra Bernia hills above Altea, approximately 10 minutes from the beautiful Altea beaches and the charming old town.' },
-      { question: 'What is the clubhouse like at Don Cayo?', answer: 'The clubhouse terrace offers some of the best views in Costa Blanca golf—a perfect spot for post-round drinks overlooking the Mediterranean. The restaurant serves good food at reasonable prices.' },
-      { question: 'What other courses are near Altea?', answer: 'Villaitana (15 mins), La Sella (25 mins), and Jávea (25 mins) are nearby for those wanting variety or longer courses.' },
-      { question: 'Is Don Cayo suitable for beginners?', answer: 'Yes, the 9-hole format and manageable length make Don Cayo accessible for beginners while still offering challenge for experienced golfers.' },
-    ],
-    extendedDescription: `Don Cayo Golf in Altea offers something unique among Costa Blanca courses—a compact 9-hole layout with views that rival any full championship course. Perched in the hills above Altea, the clubhouse terrace looks out across the Mediterranean in a panorama that makes even a poor round feel worthwhile.
-
-The course layout is designed to offer variety within its 9 holes. The hillside terrain creates natural elevation changes, with some holes playing uphill and others offering dramatic downhill shots with sea views. At 2,583 meters for 9 holes, it's not about length—it's about enjoyment, scenery, and social golf.
-
-What makes Don Cayo special is its setting within Altea's unique atmosphere. This artistic town has attracted creatives and free spirits for decades, creating a character quite different from other Costa Blanca destinations. The whitewashed old town, excellent restaurants, and cultural events make Altea a lifestyle destination rather than just a beach town.
-
-For property buyers, Altea offers prestige and character. The town's artistic heritage, beautiful old quarter, and sophisticated atmosphere attract discerning buyers. Property prices are accordingly high, but the lifestyle delivered is distinctive—this is Costa Blanca at its most cultured.`,
-    signatureHoles: `Every hole at Don Cayo offers views, but the par-3 6th stands out—playing from an elevated tee towards the sea creates a shot where the Mediterranean seems to stretch endlessly beyond the green. The finishing holes wind back towards the clubhouse with its famous terrace views.`,
-    bestFor: ['View seekers', 'Social golfers', 'Art/culture lovers', 'Those wanting character', 'Premium property seekers'],
-  },
-};
-
-// Default data for courses without specific entries
-const DEFAULT_COURSE_DATA = {
-  stats: { difficulty: 'Medium' },
-  greenFees: { high: '€70-85', low: '€50-65', twilight: '€40-50', buggy: '€35', trolley: '€5', clubs: '€25' },
-  facilities: ['Driving Range', 'Putting Green', 'Pro Shop', 'Restaurant & Bar', 'Locker Rooms'],
-  propertyPrices: [
-    { type: '2-bed apartment', range: '€180,000 - €280,000' },
-    { type: '3-bed villa', range: '€350,000 - €550,000' },
-  ],
-  faqs: [] as { question: string; answer: string }[],
-  extendedDescription: '',
-  signatureHoles: '',
-  bestFor: [] as string[],
-};
-
-function getCourseSchema(course: typeof GOLF_COURSES[0], courseData: typeof DEFAULT_COURSE_DATA) {
-  return [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'GolfCourse',
-      name: course.name,
-      description: course.description,
-      url: `https://www.newbuildhomescostablanca.com/golf/${course.slug}`,
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: course.town,
-        addressRegion: 'Alicante',
-        addressCountry: 'ES',
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: course.lat,
-        longitude: course.lng,
-      },
-      amenityFeature: courseData.facilities.map(f => ({
-        '@type': 'LocationFeatureSpecification',
-        name: f,
-      })),
-      numberOfHoles: course.holes,
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: courseData.faqs.map(faq => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer,
-        },
-      })),
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.newbuildhomescostablanca.com/' },
-        { '@type': 'ListItem', position: 2, name: 'Golf Properties', item: 'https://www.newbuildhomescostablanca.com/golf' },
-        { '@type': 'ListItem', position: 3, name: course.name, item: `https://www.newbuildhomescostablanca.com/golf/${course.slug}` },
-      ],
-    },
-  ];
-}
-
-export default async function GolfCoursePage({ params }: { params: { slug: string } }) {
-  const course = getGolfCourseBySlug(params.slug);
   if (!course) {
     notFound();
   }
 
-  const courseData = COURSE_DATA[params.slug] || DEFAULT_COURSE_DATA;
+  // Get rich lifestyle data or default
+  const lifestyle = GOLF_LIFESTYLE_DATA[slug] || getDefaultLifestyle(course);
 
-  // Get properties near this course
-  const allProperties = await getAllProperties();
-  
-  // Properties with golf views near this course's towns
-  const golfProperties = allProperties.filter(p => 
-    (p.hasGolfview || p.features?.some(f => f.toLowerCase().includes('golf'))) &&
-    course.nearbyTowns.some(town => p.town?.toLowerCase().includes(town.toLowerCase()))
-  );
-  
-  // All properties in nearby towns
-  const nearbyProperties = allProperties.filter(p =>
-    course.nearbyTowns.some(town => p.town?.toLowerCase().includes(town.toLowerCase()))
-  );
+  // Get developments near this golf course
+  const developments = await getDevelopmentsByGolfCourse(course.nearbyTowns);
 
-  // Other courses in same region
-  const regionCourses = getGolfCoursesByRegion(course.region as 'north' | 'south')
-    .filter(c => c.id !== course.id);
+  // Get other golf courses in same region
+  const sameRegionCourses = getGolfCoursesByRegion(course.region).filter(c => c.slug !== course.slug);
+  const otherCourses = sameRegionCourses.length > 0
+    ? sameRegionCourses.slice(0, 4)
+    : GOLF_COURSES.filter(c => c.slug !== course.slug).slice(0, 4);
+
+  // Generate schemas
+  const breadcrumbs = breadcrumbSchema([
+    { name: 'Home', url: 'https://newbuildhomescostablanca.com/' },
+    { name: 'Golf', url: 'https://newbuildhomescostablanca.com/golf/' },
+    { name: course.name, url: `https://newbuildhomescostablanca.com/golf/${course.slug}/` },
+  ]);
+
+  const faqSchemaData = faqSchema(lifestyle.faqs);
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(getCourseSchema(course, courseData)) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(faqSchemaData) }} />
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8f] text-white py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <nav className="text-sm mb-4 text-white/70">
-            <Link href="/" className="hover:text-white">Home</Link>
-            <span className="mx-2">›</span>
-            <Link href="/golf" className="hover:text-white">Golf</Link>
-            <span className="mx-2">›</span>
-            <span className="text-white">{course.name}</span>
-          </nav>
-          
-          <div className="flex flex-col md:flex-row gap-8 items-start">
-            <div className="flex-1">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                {course.name}
-              </h1>
-              <p className="text-xl text-white/90 mb-6">
-                {course.holes}-hole {course.designer ? `course designed by ${course.designer}` : 'championship course'} in {course.town}, Costa Blanca {course.region === 'south' ? 'South' : 'North'}
-              </p>
-              
-              <div className="flex flex-wrap gap-4 mb-8">
-                <span className="bg-white/20 px-4 py-2 rounded-lg">{course.holes} Holes</span>
-                <span className="bg-white/20 px-4 py-2 rounded-lg">Par {course.par}</span>
-                {courseData.stats.difficulty && (
-                  <span className="bg-white/20 px-4 py-2 rounded-lg">{courseData.stats.difficulty}</span>
-                )}
-                {course.yearOpened && (
-                  <span className="bg-white/20 px-4 py-2 rounded-lg">Est. {course.yearOpened}</span>
-                )}
-              </div>
-              
-              <div className="flex flex-wrap gap-4">
-                {/* Smart fallback: show golf properties if available, otherwise show nearby properties */}
-                {golfProperties.length > 0 ? (
-                  <Link
-                    href={`/properties?location=${encodeURIComponent(course.town)}&feature=golf`}
-                    className="bg-[#e8913a] hover:bg-[#d4792c] text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-                  >
-                    View Golf Properties ({golfProperties.length})
-                  </Link>
-                ) : nearbyProperties.length > 0 ? (
-                  <Link
-                    href={`/properties?location=${encodeURIComponent(course.town)}`}
-                    className="bg-[#e8913a] hover:bg-[#d4792c] text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-                  >
-                    View Properties in {course.town} ({nearbyProperties.length})
-                  </Link>
-                ) : (
-                  <Link
-                    href="/properties"
-                    className="bg-[#e8913a] hover:bg-[#d4792c] text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-                  >
-                    Browse All Properties
-                  </Link>
-                )}
-                {course.website && (
-                  <a
-                    href={course.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border-2 border-white/50 hover:border-white text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-                  >
-                    Course Website →
-                  </a>
-                )}
-              </div>
-            </div>
-            
-            {/* Quick Stats Card */}
-            <div className="bg-white/10 backdrop-blur rounded-xl p-6 min-w-[280px]">
-              <h3 className="font-semibold mb-4">Course Details</h3>
-              <div className="space-y-3 text-white/90">
-                <div className="flex justify-between">
-                  <span>Holes:</span>
-                  <span className="font-semibold">{course.holes}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Par:</span>
-                  <span className="font-semibold">{course.par}</span>
-                </div>
-                {courseData.stats.length && (
-                  <div className="flex justify-between">
-                    <span>Length:</span>
-                    <span className="font-semibold">{courseData.stats.length}</span>
-                  </div>
-                )}
-                {courseData.stats.slope && (
-                  <div className="flex justify-between">
-                    <span>Slope:</span>
-                    <span className="font-semibold">{courseData.stats.slope}</span>
-                  </div>
-                )}
-                {courseData.stats.rating && (
-                  <div className="flex justify-between">
-                    <span>Rating:</span>
-                    <span className="font-semibold">{courseData.stats.rating}</span>
-                  </div>
-                )}
-                {course.designer && (
-                  <div className="flex justify-between">
-                    <span>Designer:</span>
-                    <span className="font-semibold">{course.designer}</span>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
+      {/* Mobile Sticky CTA */}
+      <div className="fixed bottom-0 left-0 right-0 bg-primary-900 border-t border-primary-700 z-50 lg:hidden">
+        <div className="flex">
+          <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white py-4 font-medium">
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+          <a href="#properties" className="flex-1 flex items-center justify-center gap-2 bg-accent-500 text-white py-4 font-medium">
+            View Properties
+          </a>
         </div>
-      </section>
+      </div>
 
-      {/* Extended Description */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#1e3a5f] mb-6">
-            About {course.name}
-          </h2>
-          
-          <div className="prose prose-lg max-w-none text-stone-700">
-            {courseData.extendedDescription ? (
-              courseData.extendedDescription.split('\n\n').map((para, idx) => (
-                <p key={idx}>{para}</p>
-              ))
-            ) : (
-              <p>{course.description}</p>
-            )}
+      <main className="min-h-screen bg-warm-50 pb-20 lg:pb-0">
+        {/* ============================================ */}
+        {/* HERO SECTION */}
+        {/* ============================================ */}
+        <section className={`relative bg-gradient-to-br ${course.gradient} py-20 md:py-28 overflow-hidden`}>
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }} />
           </div>
-          
-          {courseData.signatureHoles && (
-            <div className="mt-8 p-6 bg-green-50 rounded-xl border border-green-200">
-              <h3 className="text-xl font-bold text-[#1e3a5f] mb-3">⛳ Signature Holes</h3>
-              <p className="text-stone-700">{courseData.signatureHoles}</p>
-            </div>
-          )}
-          
-          {courseData.bestFor.length > 0 && (
-            <div className="mt-8">
-              <h3 className="text-xl font-bold text-[#1e3a5f] mb-4">Best For</h3>
-              <div className="flex flex-wrap gap-2">
-                {courseData.bestFor.map((item, idx) => (
-                  <span key={idx} className="bg-stone-100 text-stone-700 px-4 py-2 rounded-lg text-sm">
-                    {item}
+
+          <div className="relative max-w-7xl mx-auto px-6">
+            <nav className="text-white/70 text-sm mb-6">
+              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+              <span className="mx-2">›</span>
+              <Link href="/golf" className="hover:text-white transition-colors">Golf</Link>
+              <span className="mx-2">›</span>
+              <span className="text-white">{course.name}</span>
+            </nav>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="flex items-center gap-3 mb-4 flex-wrap">
+                  <span className="bg-white/20 backdrop-blur text-white text-xs font-medium px-3 py-1 rounded-full">
+                    {course.regionDisplay}
                   </span>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
+                  <span className="bg-success-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    {course.propertyCount} Properties Available
+                  </span>
+                </div>
 
-      {/* Green Fees Section */}
-      <section className="py-16 bg-stone-50">
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#1e3a5f] mb-4 text-center">
-            {course.name} Green Fees 2025
-          </h2>
-          <p className="text-center text-stone-600 mb-8">
-            Current pricing for visitors. Fees may vary—contact the club for latest rates.
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-              <div className="bg-[#1e3a5f] text-white px-6 py-4">
-                <h3 className="font-semibold">Green Fees</h3>
-              </div>
-              <div className="p-6 space-y-4">
-                <div className="flex justify-between items-center pb-3 border-b border-stone-100">
-                  <span className="text-stone-600">High Season (Mar-May, Sep-Nov)</span>
-                  <span className="font-semibold text-[#1e3a5f]">{courseData.greenFees.high}</span>
-                </div>
-                <div className="flex justify-between items-center pb-3 border-b border-stone-100">
-                  <span className="text-stone-600">Low Season (Jun-Aug, Dec-Feb)</span>
-                  <span className="font-semibold text-green-600">{courseData.greenFees.low}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-stone-600">Twilight (after 2pm)</span>
-                  <span className="font-semibold text-green-600">{courseData.greenFees.twilight}</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-              <div className="bg-[#1e3a5f] text-white px-6 py-4">
-                <h3 className="font-semibold">Equipment Hire</h3>
-              </div>
-              <div className="p-6 space-y-4">
-                <div className="flex justify-between items-center pb-3 border-b border-stone-100">
-                  <span className="text-stone-600">Electric Buggy</span>
-                  <span className="font-semibold text-[#1e3a5f]">{courseData.greenFees.buggy}</span>
-                </div>
-                <div className="flex justify-between items-center pb-3 border-b border-stone-100">
-                  <span className="text-stone-600">Pull/Electric Trolley</span>
-                  <span className="font-semibold text-[#1e3a5f]">{courseData.greenFees.trolley}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-stone-600">Club Hire (full set)</span>
-                  <span className="font-semibold text-[#1e3a5f]">{courseData.greenFees.clubs}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <p className="text-sm text-stone-500 mt-6 text-center">
-            * Prices are approximate and subject to change. Contact the club or book online for current rates and availability.
-          </p>
-        </div>
-      </section>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                  Living at {course.name}
+                </h1>
 
-      {/* Facilities */}
-      <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8 text-center">
-            Facilities at {course.name}
-          </h2>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {courseData.facilities.map((facility, idx) => (
-              <div key={idx} className="bg-stone-50 rounded-lg p-4 text-center">
-                <span className="text-2xl mb-2 block">
-                  {facility.includes('Range') ? '🎯' :
-                   facility.includes('Putting') ? '⛳' :
-                   facility.includes('Shop') ? '🛒' :
-                   facility.includes('Restaurant') || facility.includes('Bar') ? '🍽️' :
-                   facility.includes('Locker') ? '🚿' :
-                   facility.includes('Academy') ? '📚' :
-                   facility.includes('Hotel') ? '🏨' :
-                   facility.includes('Spa') ? '💆' :
-                   facility.includes('Pool') ? '🏊' :
-                   facility.includes('Tennis') ? '🎾' :
-                   facility.includes('Gym') ? '💪' :
-                   '✓'}
-                </span>
-                <span className="text-sm text-stone-700">{facility}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                <p className="text-white/90 text-lg leading-relaxed mb-6">
+                  {lifestyle.introduction}
+                </p>
 
-      {/* Property Prices */}
-      <section className="py-16 bg-gradient-to-br from-amber-50 to-stone-50">
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#1e3a5f] mb-4 text-center">
-            Property Prices Near {course.name}
-          </h2>
-          <p className="text-center text-stone-600 mb-8">
-            Average property prices in the {course.town} area. Contact us for current listings.
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            {courseData.propertyPrices.map((price, idx) => (
-              <div key={idx} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-lg font-semibold text-[#1e3a5f] mb-2">{price.type}</div>
-                <div className="text-2xl font-bold text-[#e8913a]">{price.range}</div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <Link
-              href={`/properties?location=${encodeURIComponent(course.town)}`}
-              className="bg-[#e8913a] hover:bg-[#d4792c] text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-block"
-            >
-              View All Properties Near {course.name} ({nearbyProperties.length})
-            </Link>
-          </div>
-        </div>
-      </section>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+                  <div className="bg-white/10 rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold text-white">{course.holes}</div>
+                    <div className="text-white/70 text-sm">Holes</div>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold text-white">{course.propertyCount}</div>
+                    <div className="text-white/70 text-sm">Properties</div>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold text-accent-300">{formatPrice(course.priceFrom)}</div>
+                    <div className="text-white/70 text-sm">From</div>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold text-white">{lifestyle.beaches[0]?.distance || '15 min'}</div>
+                    <div className="text-white/70 text-sm">To Beach</div>
+                  </div>
+                </div>
 
-      {/* How to Get There */}
-      <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8 text-center">
-            Getting to {course.name}
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="text-3xl mb-3">✈️</div>
-              <h3 className="font-semibold text-[#1e3a5f] mb-2">From Alicante Airport</h3>
-              <p className="text-stone-600">
-                {course.region === 'south' ? '35-45 minutes via AP-7' : '60-90 minutes via AP-7'}
-              </p>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-3xl mb-3">✈️</div>
-              <h3 className="font-semibold text-[#1e3a5f] mb-2">From Murcia Airport</h3>
-              <p className="text-stone-600">
-                {course.region === 'south' ? '20-35 minutes' : '90+ minutes'}
-              </p>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-3xl mb-3">📍</div>
-              <h3 className="font-semibold text-[#1e3a5f] mb-2">GPS Coordinates</h3>
-              <p className="text-stone-600">
-                {course.lat.toFixed(5)}, {course.lng.toFixed(5)}
-              </p>
+                <div className="flex flex-wrap gap-4">
+                  <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center gap-2">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Discuss {course.shortName}
+                  </a>
+                  <a href="#properties" className="bg-white text-primary-900 hover:bg-warm-100 px-6 py-3 rounded-lg font-medium transition-colors">
+                    View Properties →
+                  </a>
+                </div>
+              </div>
+
+              {/* Quick inquiry form */}
+              <div className="hidden lg:block">
+                <div className="bg-white rounded-xl p-6 shadow-2xl">
+                  <h3 className="text-xl font-semibold text-primary-900 mb-1">Get {course.shortName} Properties</h3>
+                  <p className="text-warm-500 text-sm mb-5">{course.propertyCount} homes available from {formatPrice(course.priceFrom)}</p>
+                  <LeadForm propertyInterest={`Golf property near ${course.name}`} compact={true} formName="golf-course-inquiry" />
+                </div>
+              </div>
             </div>
           </div>
-          
-          <div className="mt-8 p-6 bg-stone-50 rounded-xl">
-            <h3 className="font-semibold text-[#1e3a5f] mb-3">Nearby Towns</h3>
-            <div className="flex flex-wrap gap-2">
-              {course.nearbyTowns.map((town, idx) => (
-                <Link
-                  key={idx}
-                  href={`/areas/${town.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="bg-white px-4 py-2 rounded-lg text-stone-700 hover:text-[#e8913a] transition-colors"
-                >
-                  {town}
-                </Link>
+        </section>
+
+        {/* ============================================ */}
+        {/* WHY LIVE HERE */}
+        {/* ============================================ */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-6">
+              Why Live at <span className="font-semibold">{course.shortName}</span>?
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {lifestyle.whyLiveHere.map((reason, i) => (
+                <div key={i} className="flex items-start gap-3 p-4 bg-warm-50 rounded-lg">
+                  <svg className="w-6 h-6 text-success-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-warm-700">{reason}</span>
+                </div>
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* FAQ Section */}
-      {courseData.faqs.length > 0 && (
-        <section className="py-16 bg-stone-50">
-          <div className="max-w-4xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-4 text-center">
-              Frequently Asked Questions About {course.name}
+        {/* ============================================ */}
+        {/* LIFESTYLE SECTION */}
+        {/* ============================================ */}
+        <section className="py-12 bg-warm-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-8">
+              The <span className="font-semibold">{course.shortName} Lifestyle</span>
             </h2>
-            <p className="text-center text-stone-600 mb-10">
-              Everything you need to know about playing and living near {course.name}.
-            </p>
-            
-            <div className="space-y-4">
-              {courseData.faqs.map((faq, idx) => (
-                <details
-                  key={idx}
-                  className="bg-white rounded-xl shadow-sm overflow-hidden group"
-                >
-                  <summary className="px-6 py-4 cursor-pointer font-semibold text-[#1e3a5f] hover:text-[#e8913a] transition-colors flex justify-between items-center">
-                    {faq.question}
-                    <span className="text-stone-400 group-open:rotate-180 transition-transform">▼</span>
-                  </summary>
-                  <div className="px-6 pb-4 text-stone-600">
-                    {faq.answer}
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white p-6 rounded-xl border border-warm-200">
+                <h3 className="font-semibold text-primary-900 mb-3">🏌️ Golf & Resort</h3>
+                <p className="text-warm-600 text-sm">{lifestyle.lifestyle.overview}</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl border border-warm-200">
+                <h3 className="font-semibold text-primary-900 mb-3">☀️ Daily Life</h3>
+                <p className="text-warm-600 text-sm">{lifestyle.lifestyle.dailyLife}</p>
+              </div>
+              <div className="bg-white p-6 rounded-xl border border-warm-200">
+                <h3 className="font-semibold text-primary-900 mb-3">👥 Community</h3>
+                <p className="text-warm-600 text-sm">{lifestyle.lifestyle.community}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================ */}
+        {/* SCHOOLS */}
+        {/* ============================================ */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
+              Schools Near <span className="font-semibold">{course.shortName}</span>
+            </h2>
+            <p className="text-warm-600 mb-6">Education options for families</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {lifestyle.schools.map((school, i) => (
+                <div key={i} className="bg-warm-50 p-5 rounded-xl border border-warm-200">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="font-semibold text-primary-900">{school.name}</h3>
+                    <span className="text-xs bg-primary-100 text-primary-700 px-2 py-1 rounded">{school.distance}</span>
                   </div>
+                  <p className="text-warm-500 text-sm mb-2">{school.type} • Ages {school.ages}</p>
+                  <p className="text-accent-600 font-medium text-sm mb-2">{school.fees}</p>
+                  <p className="text-warm-600 text-sm">{school.note}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================ */}
+        {/* BEACHES */}
+        {/* ============================================ */}
+        <section className="py-12 bg-blue-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
+              🏖️ Nearest <span className="font-semibold">Beaches</span>
+            </h2>
+            <p className="text-warm-600 mb-6">Mediterranean beaches within easy reach</p>
+            <div className="grid md:grid-cols-3 gap-4">
+              {lifestyle.beaches.map((beach, i) => (
+                <div key={i} className="bg-white p-5 rounded-xl border border-warm-200">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="font-semibold text-primary-900">{beach.name}</h3>
+                    <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">{beach.distance}</span>
+                  </div>
+                  <p className="text-warm-600 text-sm mb-3">{beach.description}</p>
+                  {beach.googleMaps && (
+                    <a href={beach.googleMaps} target="_blank" rel="noopener noreferrer" className="text-accent-600 text-sm hover:underline">
+                      View on Google Maps →
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================ */}
+        {/* HEALTHCARE */}
+        {/* ============================================ */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-6">
+              🏥 Healthcare & <span className="font-semibold">Medical</span>
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-warm-50 p-6 rounded-xl border border-warm-200">
+                <h3 className="font-semibold text-primary-900 mb-2">{lifestyle.healthcare.hospital.name}</h3>
+                <p className="text-accent-600 font-medium mb-2">{lifestyle.healthcare.hospital.distance}</p>
+                <p className="text-warm-600 text-sm mb-3">{lifestyle.healthcare.hospital.description}</p>
+                {lifestyle.healthcare.hospital.googleMaps && (
+                  <a href={lifestyle.healthcare.hospital.googleMaps} target="_blank" rel="noopener noreferrer" className="text-accent-600 text-sm hover:underline">
+                    View on Google Maps →
+                  </a>
+                )}
+              </div>
+              <div className="space-y-4">
+                <div className="bg-warm-50 p-4 rounded-lg">
+                  <p className="font-medium text-primary-900">Local Health Center</p>
+                  <p className="text-warm-600 text-sm">{lifestyle.healthcare.healthCenter.name} - {lifestyle.healthcare.healthCenter.distance}</p>
+                </div>
+                <div className="bg-warm-50 p-4 rounded-lg">
+                  <p className="font-medium text-primary-900">Pharmacies</p>
+                  <p className="text-warm-600 text-sm">{lifestyle.healthcare.pharmacies}</p>
+                </div>
+                <div className="bg-warm-50 p-4 rounded-lg">
+                  <p className="font-medium text-primary-900">Private Options</p>
+                  <p className="text-warm-600 text-sm">{lifestyle.healthcare.privateOptions}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================ */}
+        {/* MARKETS */}
+        {/* ============================================ */}
+        <section className="py-12 bg-warm-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
+              🛒 Local <span className="font-semibold">Markets</span>
+            </h2>
+            <p className="text-warm-600 mb-6">Weekly markets are a highlight of Spanish life</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {lifestyle.markets.map((market, i) => (
+                <div key={i} className="bg-white p-5 rounded-xl border border-warm-200">
+                  <h3 className="font-semibold text-primary-900 mb-1">{market.name}</h3>
+                  <p className="text-accent-600 font-medium text-sm mb-1">{market.day}, {market.time}</p>
+                  <p className="text-warm-500 text-xs mb-2">{market.distance} drive</p>
+                  <p className="text-warm-600 text-sm">{market.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================ */}
+        {/* EVENTS & FIESTAS */}
+        {/* ============================================ */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
+              🎉 Events & <span className="font-semibold">Fiestas</span>
+            </h2>
+            <p className="text-warm-600 mb-6">Local celebrations and golf club events</p>
+            <div className="grid md:grid-cols-2 gap-4">
+              {lifestyle.events.map((event, i) => (
+                <div key={i} className="flex gap-4 p-4 bg-warm-50 rounded-xl border border-warm-200">
+                  <div className="flex-shrink-0 w-24">
+                    <p className="text-accent-600 font-semibold text-sm">{event.when}</p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-primary-900 mb-1">{event.name}</h3>
+                    <p className="text-warm-600 text-sm">{event.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================ */}
+        {/* EXPAT COMMUNITY */}
+        {/* ============================================ */}
+        <section className="py-12 bg-primary-900 text-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-light mb-6">
+              👥 The <span className="font-semibold">Expat Community</span>
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="bg-white/10 p-5 rounded-xl">
+                <p className="text-warm-300 text-sm mb-1">International Population</p>
+                <p className="text-white font-medium">{lifestyle.expat.population}</p>
+              </div>
+              <div className="bg-white/10 p-5 rounded-xl">
+                <p className="text-warm-300 text-sm mb-1">Main Nationalities</p>
+                <p className="text-white font-medium">{lifestyle.expat.nationalities}</p>
+              </div>
+              <div className="bg-white/10 p-5 rounded-xl">
+                <p className="text-warm-300 text-sm mb-1">Social Hub</p>
+                <p className="text-white font-medium">{lifestyle.expat.socialHub}</p>
+              </div>
+              <div className="bg-white/10 p-5 rounded-xl">
+                <p className="text-warm-300 text-sm mb-1">Integration</p>
+                <p className="text-white font-medium text-sm">{lifestyle.expat.integration}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================ */}
+        {/* COST OF LIVING */}
+        {/* ============================================ */}
+        <section className="py-12 bg-warm-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
+              💰 Cost of <span className="font-semibold">Living</span>
+            </h2>
+            <p className="text-warm-600 mb-6">Monthly expenses for golf resort living</p>
+            <div className="bg-white rounded-xl border border-warm-200 overflow-hidden">
+              <table className="w-full">
+                <thead className="bg-primary-900 text-white">
+                  <tr>
+                    <th className="px-4 py-3 text-left font-medium">Category</th>
+                    <th className="px-4 py-3 text-left font-medium">Cost</th>
+                    <th className="px-4 py-3 text-left font-medium hidden md:table-cell">Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {lifestyle.costOfLiving.map((item, i) => (
+                    <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-warm-50'}>
+                      <td className="px-4 py-3 font-medium text-primary-900">{item.category}</td>
+                      <td className="px-4 py-3 text-accent-600 font-medium">{item.cost}</td>
+                      <td className="px-4 py-3 text-warm-600 text-sm hidden md:table-cell">{item.notes}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================ */}
+        {/* INVESTMENT */}
+        {/* ============================================ */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-6">
+              📈 Investment <span className="font-semibold">Potential</span>
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6 mb-6">
+              <div className="bg-success-50 p-6 rounded-xl border border-success-200 text-center">
+                <p className="text-4xl font-bold text-success-600">{lifestyle.investment.priceGrowth}</p>
+                <p className="text-success-700">5-Year Growth</p>
+              </div>
+              <div className="bg-accent-50 p-6 rounded-xl border border-accent-200 text-center">
+                <p className="text-4xl font-bold text-accent-600">{lifestyle.investment.rentalYield}</p>
+                <p className="text-accent-700">Rental Yield</p>
+              </div>
+              <div className="bg-primary-50 p-6 rounded-xl border border-primary-200 text-center">
+                <p className="text-2xl font-bold text-primary-900">Strong</p>
+                <p className="text-primary-700">Market Outlook</p>
+              </div>
+            </div>
+            <div className="bg-warm-50 p-6 rounded-xl">
+              <p className="text-warm-700 mb-4">{lifestyle.investment.overview}</p>
+              <p className="text-warm-700"><strong>Outlook:</strong> {lifestyle.investment.outlook}</p>
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================ */}
+        {/* PROPERTIES */}
+        {/* ============================================ */}
+        <section className="py-12 bg-warm-100" id="properties">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
+              🏠 Properties at <span className="font-semibold">{course.shortName}</span>
+            </h2>
+            <p className="text-warm-600 mb-8">
+              {developments.length > 0 ? `${developments.length} developments with new build homes` : 'Contact us for the latest availability'}
+            </p>
+
+            {developments.length > 0 ? (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {developments.slice(0, 9).map((dev, i) => (
+                  <Link key={i} href={`/developments/${dev.slug}`} className="group bg-white border border-warm-200 rounded-xl overflow-hidden hover:shadow-xl transition-all">
+                    <div className="relative h-48 bg-warm-200">
+                      {dev.images[0] && (
+                        <Image src={dev.images[0]} alt={dev.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" unoptimized />
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <div className="absolute bottom-3 left-3">
+                        <span className="bg-accent-500 text-white text-xs font-bold px-2 py-1 rounded">
+                          {dev.status === 'off-plan' ? 'Off-Plan' : dev.status === 'key-ready' ? 'Key Ready' : 'Under Construction'}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold text-primary-900 mb-1 group-hover:text-accent-600 transition-colors">{dev.name}</h3>
+                      <p className="text-warm-500 text-sm mb-2">{dev.town}</p>
+                      {dev.priceFrom && <p className="text-accent-600 font-bold text-lg">From {formatPrice(dev.priceFrom)}</p>}
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <div className="bg-white rounded-xl p-8 text-center border border-warm-200">
+                <p className="text-4xl mb-4">🏌️</p>
+                <h3 className="text-xl font-semibold text-primary-900 mb-2">Properties Coming Soon</h3>
+                <p className="text-warm-600 mb-6">New developments near {course.name} are added regularly.</p>
+                <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-lg font-medium">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Register Interest
+                </a>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* ============================================ */}
+        {/* INTERACTIVE MAP */}
+        {/* ============================================ */}
+        {lifestyle.mapLocations.length > 0 && (
+          <section className="py-12 bg-white">
+            <div className="max-w-7xl mx-auto px-6">
+              <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-6">
+                📍 Area <span className="font-semibold">Map</span>
+              </h2>
+              <div className="h-[400px] rounded-xl overflow-hidden border border-warm-200">
+                <InteractiveAreaMap
+                  centerCoordinates={[course.lat, course.lng]}
+                  locations={lifestyle.mapLocations}
+                  areaName={course.name}
+                />
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ============================================ */}
+        {/* FAQs */}
+        {/* ============================================ */}
+        <section className="py-12 bg-warm-50">
+          <div className="max-w-4xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-6 text-center">
+              ❓ Frequently Asked <span className="font-semibold">Questions</span>
+            </h2>
+            <div className="space-y-3">
+              {lifestyle.faqs.map((faq, i) => (
+                <details key={i} className="group bg-white border border-warm-200 rounded-lg overflow-hidden">
+                  <summary className="flex justify-between items-center cursor-pointer p-5 font-medium text-primary-900 hover:bg-warm-50 transition-colors">
+                    {faq.question}
+                    <svg className="w-5 h-5 text-warm-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-5 pb-5 text-warm-700 border-t border-warm-100 pt-4">{faq.answer}</div>
                 </details>
               ))}
             </div>
           </div>
         </section>
-      )}
 
-      {/* Other Courses in Region */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8 text-center">
-            Other Golf Courses in Costa Blanca {course.region === 'south' ? 'South' : 'North'}
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {regionCourses.slice(0, 6).map((otherCourse) => (
-              <Link
-                key={otherCourse.id}
-                href={`/golf/${otherCourse.slug}`}
-                className="bg-stone-50 rounded-xl p-6 hover:shadow-md transition-shadow group"
-              >
-                <h3 className="text-lg font-bold text-[#1e3a5f] mb-2 group-hover:text-[#e8913a] transition-colors">
-                  {otherCourse.name}
-                </h3>
-                <p className="text-stone-600 mb-3">{otherCourse.town}</p>
-                <div className="flex gap-3 text-sm text-stone-500">
-                  <span>{otherCourse.holes} holes</span>
-                  <span>Par {otherCourse.par}</span>
+        {/* ============================================ */}
+        {/* OTHER COURSES */}
+        {/* ============================================ */}
+        {otherCourses.length > 0 && (
+          <section className="py-12 bg-white">
+            <div className="max-w-7xl mx-auto px-6">
+              <h2 className="text-2xl font-light text-primary-900 mb-6">
+                Other <span className="font-semibold">Golf Courses</span>
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {otherCourses.map((c) => (
+                  <Link key={c.slug} href={`/golf/${c.slug}`} className={`group rounded-xl overflow-hidden border border-warm-200 hover:shadow-lg transition-all`}>
+                    <div className={`h-32 bg-gradient-to-br ${c.gradient} relative`}>
+                      <div className="absolute inset-0 bg-black/20" />
+                      <div className="absolute bottom-3 left-3 right-3">
+                        <h3 className="font-semibold text-white group-hover:text-accent-300 transition-colors">{c.shortName}</h3>
+                        <p className="text-white/70 text-sm">{c.town}</p>
+                      </div>
+                    </div>
+                    <div className="p-3 bg-white flex justify-between">
+                      <span className="text-success-600 font-medium text-sm">{c.propertyCount} properties</span>
+                      <span className="text-accent-600 font-medium text-sm">From {formatPrice(c.priceFrom)}</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ============================================ */}
+        {/* FINAL CTA */}
+        {/* ============================================ */}
+        <section className="py-16 bg-primary-900">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-2xl md:text-3xl font-light text-white mb-4">Ready to Live at {course.shortName}?</h2>
+                <p className="text-warm-300 leading-relaxed mb-6">
+                  {course.propertyCount} properties available from {formatPrice(course.priceFrom)}. Contact us today to find your perfect golf home.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-medium px-6 py-3 rounded-lg transition-colors inline-flex items-center gap-2">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp Us
+                  </a>
+                  <a href={`tel:${CONTACT.phone.replace(/\s/g, '')}`} className="bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-3 rounded-lg transition-colors border border-white/20">
+                    {CONTACT.phone}
+                  </a>
                 </div>
-              </Link>
-            ))}
+              </div>
+              <div className="bg-white rounded-xl p-6 shadow-xl">
+                <h3 className="text-xl font-semibold text-primary-900 mb-1">Get {course.shortName} Matches</h3>
+                <p className="text-warm-500 text-sm mb-5">We'll send properties matching your criteria</p>
+                <LeadForm propertyInterest={`Golf property at ${course.name}`} formName="golf-course-footer" />
+              </div>
+            </div>
           </div>
-          
-          <div className="text-center mt-8">
-            <Link
-              href="/golf"
-              className="text-[#e8913a] hover:text-[#d4792c] font-semibold"
-            >
-              View All Costa Blanca Golf Courses →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8f] text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Interested in Property Near {course.name}?
-          </h2>
-          <p className="text-xl text-white/90 mb-8">
-            Contact us today to discuss golf properties in {course.town}. 
-            We'll help you find the perfect home for your golf lifestyle.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center justify-center gap-2"
-            >
-              💬 WhatsApp Us
-            </a>
-            <a
-              href="tel:+34634044970"
-              className="bg-[#e8913a] hover:bg-[#d4792c] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center justify-center gap-2"
-            >
-              📞 +34 634 044 970
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </>
   );
 }

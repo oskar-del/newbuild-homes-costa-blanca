@@ -1,0 +1,98 @@
+{
+  "costa-blanca-south": {
+    "name": "Costa Blanca South",
+    "tagline": "Sun, Value & Lifestyle",
+    "shortDescription": "Sun-drenched coastline from Torrevieja to Pilar de la Horadada. Known for affordable new builds, championship golf, and 320+ days of sunshine.",
+    "longDescription": "Costa Blanca South offers the perfect blend of Mediterranean lifestyle and exceptional value. From the vibrant streets of Torrevieja to the peaceful golf resorts of Algorfa, this region has become a haven for international buyers seeking quality new builds without the premium price tag. The area boasts world-class golf courses, pristine beaches, and a well-established expat community with excellent amenities.",
+    "lifestyle": "Morning coffee overlooking the salt lakes, afternoon rounds at La Finca, sunset tapas in Torrevieja's harbour. This is Costa Blanca South living.",
+    "stats": {
+      "averagePrice": "€245,000",
+      "sunnyDays": "320+",
+      "golfCourses": "8+",
+      "beaches": "50+ km",
+      "airportDistance": "30-45 min to Alicante"
+    },
+    "highlights": [
+      "Most affordable new builds on the Costa Blanca",
+      "8 championship golf courses within 30 minutes",
+      "Large international community (UK, Scandinavian, Belgian, Dutch)",
+      "Excellent healthcare with international hospitals",
+      "Year-round sunshine with mild winters"
+    ],
+    "popularTowns": ["Torrevieja", "Orihuela Costa", "Pilar de la Horadada", "San Miguel de Salinas", "Algorfa", "Ciudad Quesada"],
+    "bestFor": ["Golf lovers", "Budget-conscious buyers", "Retirees", "Rental investment"],
+    "popularWith": "UK, Scandinavian, Belgian & Dutch buyers"
+  },
+  "costa-blanca-north": {
+    "name": "Costa Blanca North",
+    "tagline": "Prestige, Beauty & Exclusivity",
+    "shortDescription": "Dramatic coastlines, charming old towns, and exclusive properties. From Jávea to Moraira, this is Spain's premium Mediterranean destination.",
+    "longDescription": "Costa Blanca North is where dramatic mountain scenery meets crystal-clear waters. Historic towns like Jávea, Moraira, and Calpe offer a more refined Mediterranean experience, with Michelin-starred restaurants, boutique shopping, and properties that command premium prices for good reason. The Montgó Natural Park provides a stunning backdrop, while the coastline offers hidden coves and world-renowned beaches.",
+    "lifestyle": "Wake to sea views and Montgó's silhouette, lunch at a beachfront chiringuito, evening strolls through Jávea's old town. This is Costa Blanca North living.",
+    "stats": {
+      "averagePrice": "€650,000",
+      "sunnyDays": "300+",
+      "michelinRestaurants": "5+",
+      "naturalParks": "2",
+      "airportDistance": "1 hour to Alicante, 1.5 hours to Valencia"
+    },
+    "highlights": [
+      "Spain's most prestigious coastal addresses",
+      "Dramatic scenery: Montgó, Peñón de Ifach, hidden coves",
+      "Sophisticated dining and cultural scene",
+      "Lower density, more exclusive communities",
+      "Strong capital appreciation history"
+    ],
+    "popularTowns": ["Jávea", "Moraira", "Calpe", "Altea", "Dénia", "Benissa", "Benidorm", "Benitachell", "Finestrat", "La Nucia", "Polop", "Alfaz del Pi", "El Campello", "Teulada", "Alcalali", "Pedreguer", "El Vergel", "Els Poblets"],
+    "bestFor": ["Luxury seekers", "Privacy lovers", "Foodies & culture", "Long-term investment"],
+    "popularWith": "German, French, British & Scandinavian buyers"
+  },
+  "golf": {
+    "name": "Golf Properties",
+    "tagline": "Live on the Fairway",
+    "shortDescription": "Championship courses, year-round play, and homes with green views. Costa Blanca is a golfer's paradise.",
+    "longDescription": "With over 20 golf courses across the region, Costa Blanca has earned its reputation as one of Europe's premier golf destinations. From the challenging layouts of La Finca and Villamartín to the scenic rounds at Las Ramblas and Lo Romero, there's a course for every level. Many new build developments are designed around these courses, offering frontline golf living with sunrise tee times on your doorstep.",
+    "lifestyle": "Tee off at sunrise, lunch at the clubhouse, siesta by your private pool. Repeat. This is Costa Blanca golf living.",
+    "stats": {
+      "courses": "20+",
+      "playableDays": "340+",
+      "averageGreenFee": "€50-80",
+      "golfResorts": "8",
+      "proShops": "15+"
+    },
+    "highlights": [
+      "Year-round playing conditions",
+      "Championship courses designed by legends",
+      "Frontline golf properties from €350k",
+      "Active golf communities and social scene",
+      "Golf academies and practice facilities"
+    ],
+    "popularCourses": ["La Finca", "Villamartín", "Las Ramblas", "Lo Romero", "Vistabella", "La Marquesa"],
+    "bestFor": ["Avid golfers", "Golf communities", "Retirement", "Holiday homes"],
+    "popularWith": "UK, Irish, Scandinavian & German golfers"
+  },
+  "luxury": {
+    "name": "Luxury Collection",
+    "tagline": "Exceptional Properties for Discerning Buyers",
+    "shortDescription": "Handpicked villas and estates from €800,000. Sea views, private pools, and premium locations across Costa Blanca.",
+    "longDescription": "Our luxury collection represents the finest properties Costa Blanca has to offer. From contemporary architectural masterpieces in Jávea to sprawling estates in Moraira, each property is selected for its exceptional quality, location, and lifestyle potential. Many feature panoramic sea views, infinity pools, and the kind of privacy that only comes with premium real estate.",
+    "lifestyle": "Infinity pool overlooking the Mediterranean, morning yoga on your private terrace, chef's kitchen for entertaining. This is Costa Blanca luxury.",
+    "stats": {
+      "averagePrice": "€1.2M",
+      "seaViewProperties": "85%",
+      "privatePool": "95%",
+      "averagePlotSize": "1,000m²",
+      "premiumLocations": "12+"
+    },
+    "highlights": [
+      "Handpicked properties, personally vetted",
+      "Premium locations with proven appreciation",
+      "Sea views, privacy, and exclusivity",
+      "Architectural excellence and quality finishes",
+      "Concierge-level service throughout"
+    ],
+    "popularAreas": ["Jávea", "Moraira", "Altea Hills", "Cumbre del Sol", "Benissa Costa"],
+    "bestFor": ["Primary residence", "Holiday retreat", "Investment portfolio", "Relocation"],
+    "popularWith": "International executives, entrepreneurs & retirees"
+  }
+}

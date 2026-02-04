@@ -1,0 +1,283 @@
+{
+  "slug": "los-montesinos",
+  "name": "Los Montesinos",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/los-montesinos-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartment",
+    "Townhouse",
+    "Villa",
+    "Bungalow"
+  ],
+  "priceRange": {
+    "min": 149000,
+    "max": 600000
+  },
+  "coordinates": {
+    "lat": 38.0247,
+    "lng": -0.7356
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Los Montesinos Tourism",
+      "url": "https://www.losmontesinos.es/",
+      "description": "Official Los Montesinos municipality"
+    },
+    "beaches": [
+      {
+        "name": "La Mata Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+La+Mata",
+        "description": "Long natural beach near the salt lakes",
+        "distance": "8 km"
+      },
+      {
+        "name": "Guardamar Beaches",
+        "googleMaps": "https://maps.google.com/?q=Playa+Guardamar",
+        "description": "Natural beaches backed by pine forests",
+        "distance": "10 km"
+      },
+      {
+        "name": "Torrevieja Beaches",
+        "googleMaps": "https://maps.google.com/?q=Playa+del+Cura+Torrevieja",
+        "description": "Urban beaches with full facilities",
+        "distance": "12 km"
+      }
+    ],
+    "nature": [
+      {
+        "name": "Parque Natural de las Lagunas de La Mata y Torrevieja",
+        "googleMaps": "https://maps.google.com/?q=Lagunas+Torrevieja",
+        "description": "Salt lake nature reserve with flamingos and walking trails—on the doorstep",
+        "distance": "2 km"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "8 km",
+      "driveTime": "10 minutes"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "42 km",
+      "driveTime": "32 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Los Montesinos offers excellent golf access with courses in all directions—ideal for golfers who want variety without living in a golf resort.",
+    "courses": [
+      {
+        "name": "La Finca Golf",
+        "distance": "6 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "url": "https://www.lafincagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Finca+Golf",
+        "description": "Championship course designed by Pepe Gancedo."
+      },
+      {
+        "name": "Vistabella Golf",
+        "distance": "8 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "url": "https://www.vistabellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+        "description": "Modern course with excellent facilities."
+      },
+      {
+        "name": "La Marquesa Golf",
+        "distance": "5 km",
+        "driveTime": "7 minutes",
+        "holes": 18,
+        "url": "https://www.lamarquesagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Marquesa+Golf",
+        "description": "Well-maintained course popular with residents."
+      }
+    ]
+  },
+  "localMarket": {
+    "sundayMarket": {
+      "name": "Los Montesinos Sunday Market",
+      "location": "Town center",
+      "googleMaps": "https://maps.google.com/?q=Mercado+Los+Montesinos",
+      "hours": "Sundays 8:00 - 14:00",
+      "description": "Local market with fresh produce and household goods"
+    }
+  },
+  "content": {
+    "metaTitle": "Living in Los Montesinos | Salt Lakes & Value | Costa Blanca 2026",
+    "metaDescription": "Complete guide to Los Montesinos—overlooking the famous salt lakes, flamingos on your doorstep, excellent value villas from €149k. 8 min to La Finca Golf, 10 min to beaches.",
+    "quickAnswer": "Los Montesinos overlooks the famous Torrevieja salt lakes nature reserve with flamingos visible year-round. Properties start at €149,000 for apartments, €280,000 for villas with pools. Just 8 minutes from La Finca Golf and 10 minutes from beaches, it offers nature and value in equal measure.",
+    "heroIntro": "From certain vantage points in Los Montesinos, the view is unlike anywhere else on Costa Blanca: the shimmering expanse of the salt lakes—one pink, one green—stretching to the horizon with flamingos wading in the shallows. This protected natural park sits literally on the town's doorstep, a daily reminder that this corner of Spain is something special.\n\nLos Montesinos itself is a quiet Spanish town that has grown to accommodate international residents seeking space, value, and connection to nature. It lacks the bustle of coastal resorts—and for many, that's precisely the appeal. Here, mornings might involve watching flamingos from your terrace, afternoons at one of the nearby golf courses, and evenings with the windows open to air that carries a hint of the sea.\n\nFor buyers who prioritize nature and tranquility alongside excellent value, Los Montesinos offers a distinctive proposition.",
+    "lifestyleSection": {
+      "intro": "Life in Los Montesinos is quieter than the coast—deliberately so. The salt lakes nature reserve provides walking and cycling trails through protected landscape where flamingos, herons, and other birdlife are regular companions. The town itself offers daily essentials without resort commercialism. Beaches and golf are minutes away when you want them; peace and nature are constants.\n\nThe international community is present but smaller than in larger towns. Integration with Spanish life is more natural here. Those seeking nightlife and shopping convenience should look elsewhere; those seeking space, nature, and value find exactly what they're looking for.",
+      "highlights": [
+        "Salt lakes nature reserve on your doorstep—flamingos year-round",
+        "Exceptional value—modern villas from €280,000",
+        "La Finca Golf just 8 minutes away",
+        "La Mata beach 10 minutes",
+        "Torrevieja hospital 10 minutes",
+        "Peaceful countryside setting with stunning views",
+        "Protected natural environment—rare on Costa Blanca",
+        "Lower tourist density—genuinely tranquil"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "La Mata's long natural beach (near the salt lakes) is just 8 km (10 minutes). Guardamar's pine-backed beaches are 10 km. Torrevieja's urban beaches are 12 km. Easy beach access without coastal property premiums.",
+      "dining": "The town has traditional Spanish restaurants and bars. For variety, Torrevieja (8 km) offers extensive options. The location suits those comfortable cooking at home with occasional restaurant outings rather than daily dining out.",
+      "shopping": "Los Montesinos has essential shops and supermarkets for daily needs. The Sunday market adds local produce. For major shopping, Habaneras in Torrevieja (8 km) or La Zenia Boulevard (18 km) are accessible.",
+      "healthcare": "Hospital Universitario de Torrevieja is just 8 km away (10 minutes)—excellent access for a town of this size. Local medical center and pharmacy in town.",
+      "transport": "Alicante-Elche Airport is 42 km (32 minutes via AP-7). Good central location for exploring the region. A car is essential."
+    },
+    "neighborhoods": [
+      {
+        "name": "Town Center",
+        "description": "Traditional Spanish town center. Walking distance to shops and restaurants. Lower prices, genuine local character. Townhouses and apartments."
+      },
+      {
+        "name": "Urbanizations",
+        "description": "Modern residential areas with villas and bungalows. Private pools, larger plots. International residents. Views toward salt lakes in some locations."
+      },
+      {
+        "name": "Laguna Views",
+        "description": "Properties with views over the salt lakes. Premium for the area but spectacular natural vistas. Worth the extra for nature lovers."
+      }
+    ],
+    "propertyMarketSection": "Los Montesinos offers outstanding value for those seeking space and nature. Apartments start from around €149,000-220,000, townhouses from €180,000-300,000, and villas from €280,000-600,000. Properties with salt lake views command premiums but offer unique natural vistas.\n\n**Featured Development: Residencial Laguna Azul** – 3-bed villas from €485,000 with private pools, underbuild option, and views. 160m² living space on 400m² plots.\n\nThe market attracts nature lovers, value-focused buyers, and those seeking tranquility. Rental potential is limited compared to coastal resorts—this is primarily a lifestyle choice for residents.",
+    "whyLiveHereSection": [
+      "Salt lakes nature reserve on your doorstep",
+      "Flamingos and wildlife visible year-round",
+      "Exceptional value—modern villas from €280,000",
+      "La Finca Golf just 8 minutes",
+      "Beaches at La Mata 10 minutes",
+      "Torrevieja hospital 10 minutes",
+      "Peaceful, low-density living",
+      "Protected natural environment"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Residencial Laguna Azul Villa",
+        "reference": "N6403",
+        "price": 485000,
+        "type": "Villa",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "plotArea": 400,
+        "features": [
+          "Private Pool",
+          "Underbuild",
+          "Views"
+        ],
+        "description": "Modern 3-bed villa with pool, underbuild option, and natural views. 160m² living space."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What makes Los Montesinos special?",
+        "answer": "Los Montesinos overlooks the Torrevieja salt lakes nature reserve—a protected area with flamingos, herons, and other wildlife. This natural environment is literally on the doorstep, making it unique on Costa Blanca. The pink and green salt lakes create stunning views."
+      },
+      {
+        "question": "Can you see flamingos in Los Montesinos?",
+        "answer": "Yes, flamingos inhabit the salt lakes year-round, though numbers vary by season. From properties with laguna views or walking trails in the nature reserve, flamingos are regularly visible. It's one of the town's unique attractions."
+      },
+      {
+        "question": "How far is Los Montesinos from the beach?",
+        "answer": "La Mata beach is 8 km (10 minutes). Guardamar beaches are 10 km. Torrevieja beaches are 12 km. Easy beach access without paying coastal property premiums."
+      },
+      {
+        "question": "What are property prices in Los Montesinos?",
+        "answer": "Apartments from €149,000, townhouses from €180,000, villas from €280,000. Properties with salt lake views command premiums. Outstanding value for nature-focused living."
+      },
+      {
+        "question": "Is Los Montesinos good for golf?",
+        "answer": "Excellent access. La Finca Golf is 8 minutes, Vistabella 10 minutes, La Marquesa 7 minutes. Central location provides variety without living in a golf resort."
+      },
+      {
+        "question": "Is Los Montesinos quiet?",
+        "answer": "Yes, deliberately so. It's a small Spanish town without resort development. Perfect for those seeking tranquility and nature. Not ideal for those wanting nightlife or extensive shopping."
+      },
+      {
+        "question": "Is English widely spoken in Los Montesinos?",
+        "answer": "Moderately. There's an international community but it's smaller than in larger towns. Some Spanish is helpful. The nature lovers and value-focused buyers who settle here tend to integrate more."
+      },
+      {
+        "question": "What is the salt lakes nature reserve?",
+        "answer": "Parque Natural de las Lagunas de La Mata y Torrevieja is a protected area comprising two salt lakes—one pink (Laguna Rosa), one green (Laguna de Torrevieja). Flamingos, herons, and other birds inhabit the area. Walking and cycling trails provide access."
+      },
+      {
+        "question": "Is Los Montesinos suitable for permanent living?",
+        "answer": "Yes, for those who value nature and tranquility over convenience. Year-round services are available. The salt lakes and peaceful setting attract permanent residents seeking quality of life over resort amenities."
+      },
+      {
+        "question": "How does Los Montesinos compare to other inland towns?",
+        "answer": "Unique due to the salt lakes nature reserve—no other inland town offers this. Slightly higher prices than some purely agricultural towns, but the natural environment justifies the premium for nature lovers."
+      }
+    ],
+    "conclusion": "Los Montesinos offers something genuinely different: a quiet Spanish town with protected natural parkland on its doorstep. The flamingos, the salt lake views, the peaceful atmosphere—these aren't marketing gimmicks but daily reality. For buyers prioritizing nature and tranquility alongside excellent value, Los Montesinos rewards consideration.\n\nReady to explore properties in Los Montesinos? Our team understands the appeal of this nature-focused town and can match you with properties that capture its unique character—from laguna-view villas to practical town center homes."
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Los Montesinos",
+    "description": "Los Montesinos is a quiet Spanish town overlooking the Torrevieja salt lakes nature reserve in Costa Blanca South, offering excellent value properties and unique natural environment with flamingos visible year-round.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.0247",
+      "longitude": "-0.7356"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Los Montesinos",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What makes Los Montesinos special?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los Montesinos overlooks the Torrevieja salt lakes nature reserve with flamingos, herons, and protected wildlife. The pink and green salt lakes create stunning views."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you see flamingos in Los Montesinos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, flamingos inhabit the salt lakes year-round. From properties with laguna views or nature reserve trails, flamingos are regularly visible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are property prices in Los Montesinos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Apartments from €149,000, townhouses from €180,000, villas from €280,000. Outstanding value for nature-focused living."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Los Montesinos from the beach?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La Mata beach is 8 km (10 minutes). Guardamar beaches are 10 km. Easy access without coastal premiums."
+        }
+      }
+    ]
+  }
+}

@@ -1,11 +1,21 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { DM_Sans } from 'next/font/google';
 import './globals.css';
 import { organizationSchema, websiteSchema, localBusinessSchema, toJsonLd } from '@/lib/schema';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import CookieConsent from '@/components/CookieConsent';
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+
+// Load DM Sans font
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-dm-sans',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -14,10 +24,42 @@ export const metadata: Metadata = {
   },
   description: 'Find your dream new build property in Costa Blanca. Modern apartments, villas and townhouses from trusted developers. Expert guidance for international buyers.',
   metadataBase: new URL('https://newbuildhomescostablanca.com'),
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     type: 'website',
     locale: 'en_GB',
     siteName: 'New Build Homes Costa Blanca',
+    images: [
+      {
+        url: '/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'New Build Homes Costa Blanca - Modern Properties in Spain',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/og-image.jpg'],
+  },
+  verification: {
+    // Add your Google Search Console verification code here
+    // google: 'your-verification-code',
   },
 };
 
@@ -27,9 +69,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const gtmNoscriptUrl = GTM_ID ? "https://www.googletagmanager.com/ns.html?id=" + GTM_ID : "";
-  
+
   return (
-    <html lang="en">
+    <html lang="en" className={dmSans.variable}>
       <head>
         <Script
           id="gtm-script"
@@ -57,7 +99,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: toJsonLd(localBusinessSchema()) }}
         />
       </head>
-      <body className="font-sans">
+      <body className="font-sans antialiased">
         {GTM_ID && (
           <noscript>
             <iframe
@@ -68,9 +110,9 @@ export default function RootLayout({
             />
           </noscript>
         )}
-        
+
         <Header />
-        
+
         <form name="lead-inquiry" data-netlify="true" netlify-honeypot="bot-field" hidden>
           <input type="text" name="name" />
           <input type="email" name="email" />
@@ -84,9 +126,10 @@ export default function RootLayout({
           <input type="tel" name="phone" />
           <input type="text" name="property-interest" />
         </form>
-        
+
         <main className="min-h-screen">{children}</main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

@@ -1,0 +1,288 @@
+{
+  "slug": "costa-blanca-north",
+  "name": "Costa Blanca North",
+  "type": "region",
+  "heroImage": "/images/regions/costa-blanca-north-hero.webp",
+  "cardImage": "/images/regions/costa-blanca-north-card.webp",
+  "coordinates": {
+    "lat": 38.75,
+    "lng": 0.03
+  },
+  "priceRange": {
+    "min": 220000,
+    "max": 3500000
+  },
+  "content": {
+    "metaTitle": "Costa Blanca North Property Guide 2026 | Javea, Moraira, Calpe & Altea",
+    "metaDescription": "Complete guide to Costa Blanca North property. Javea, Moraira, Altea—dramatic coastline, traditional villages, upmarket living. Properties from €220k to luxury villas.",
+    "quickAnswer": "Costa Blanca North stretches from Denia to Benidorm, featuring dramatic cliffs, traditional white villages, and Spain's most desirable coastal properties. Known for Javea, Moraira, and Altea, the region offers upmarket living with strong Spanish character. Properties from €220,000 for apartments to €3.5M+ for luxury villas with sea views.",
+    "heroIntro": "Where the mountains meet the Mediterranean in dramatic fashion, Costa Blanca North has long been Spain's most prestigious coastal address. This isn't mass tourism territory—this is where discerning buyers seek authentic Mediterranean living among traditional villages, dramatic cliffs, and some of Europe's most beautiful coastline.\n\nFrom the old town charm of Altea to the sailing haven of Javea, from the boutique sophistication of Moraira to the iconic Peñón de Ifach in Calpe, Costa Blanca North offers a Mediterranean lifestyle that has attracted international residents for decades. The region combines Spanish authenticity with international convenience, natural beauty with cultural richness.\n\nPrices are higher here than in the south—but for many, the dramatic landscapes, established communities, and refined atmosphere justify the premium.",
+    "regionOverview": {
+      "geography": "Costa Blanca North occupies the northern portion of Alicante Province, roughly from Denia south to Benidorm. The coastline features dramatic cliffs, hidden coves, and the iconic headlands of Cabo de la Nao and the Peñón de Ifach. Inland, valleys give way to mountains, creating the dramatic backdrop that defines the region.",
+      "climate": "Mediterranean climate with mild winters (12-18°C) and warm summers (25-32°C). Protected by mountains from extreme weather, the region enjoys a microclimate with less humidity than further south. Rainfall is higher than Costa Blanca South but still modest (400-500mm annually).",
+      "population": "The region has significant British, German, Dutch, and Scandinavian communities alongside Spanish residents. Towns like Javea have 40%+ international residents. The communities are well-established, often multigenerational, with strong integration into Spanish life.",
+      "accessibility": "Alicante-Elche Airport (ALC) serves the region, with drive times of 50-90 minutes depending on location. Valencia Airport offers an alternative for northern towns like Denia (60 min). The AP-7 motorway and scenic N-332 provide road access."
+    },
+    "majorAreas": [
+      {
+        "name": "Javea (Xàbia)",
+        "slug": "javea-xabia",
+        "description": "Three distinct zones: historic old town, bustling port, and family-friendly Arenal beach. Spain's most popular destination for British expats, with excellent infrastructure and lifestyle.",
+        "priceRange": "€280,000-2,500,000",
+        "lifestyle": "Established, family-friendly, year-round",
+        "bestFor": "Families, permanent residents, established communities"
+      },
+      {
+        "name": "Moraira",
+        "slug": "moraira",
+        "description": "Boutique coastal town with upmarket feel, marina, quality restaurants. Popular with German and Scandinavian buyers seeking refinement without pretension.",
+        "priceRange": "€350,000-3,000,000",
+        "lifestyle": "Upmarket, refined, international",
+        "bestFor": "Quality seekers, sailing enthusiasts, discerning buyers"
+      },
+      {
+        "name": "Altea",
+        "slug": "altea",
+        "description": "The most beautiful old town on Costa Blanca—white-washed buildings, blue-domed church, artists' quarter. Cultural hub with year-round events and genuine Spanish character.",
+        "priceRange": "€300,000-1,500,000",
+        "lifestyle": "Cultural, artistic, traditional",
+        "bestFor": "Culture lovers, old town living, artists"
+      },
+      {
+        "name": "Calpe",
+        "slug": "calpe",
+        "description": "Dominated by the iconic Peñón de Ifach rock, Calpe offers excellent beaches, lively restaurant scene, and more accessible pricing than neighbors.",
+        "priceRange": "€220,000-1,200,000",
+        "lifestyle": "Beach-focused, active, accessible",
+        "bestFor": "Beach lovers, foodies, value in the north"
+      },
+      {
+        "name": "Denia",
+        "slug": "denia",
+        "description": "Historic port town with castle, ferry connections to Ibiza, and strong local character. Gateway to Montgo Natural Park and less touristy than coastal neighbors.",
+        "priceRange": "€250,000-1,500,000",
+        "lifestyle": "Historic, maritime, authentic",
+        "bestFor": "History lovers, boating, authentic Spain"
+      },
+      {
+        "name": "Benidorm",
+        "slug": "benidorm",
+        "description": "Spain's most famous resort town—love it or avoid it. Excellent beaches, endless entertainment, year-round energy. Not typical Costa Blanca North but part of the region.",
+        "priceRange": "€180,000-800,000",
+        "lifestyle": "Resort, entertainment, beaches",
+        "bestFor": "Entertainment seekers, beach holidays, nightlife"
+      }
+    ],
+    "naturalBeauty": {
+      "intro": "Costa Blanca North's dramatic landscape sets it apart from flatter coastal areas. Protected natural parks, hidden coves, and mountain backdrops create scenery that draws visitors and residents alike.",
+      "highlights": [
+        {
+          "name": "Peñón de Ifach",
+          "description": "Iconic 332m rock jutting into the sea at Calpe—symbol of Costa Blanca, hiking destination, nature reserve."
+        },
+        {
+          "name": "Cabo de la Nao",
+          "description": "Dramatic cape near Javea with lighthouse, cliff walks, and Mediterranean views to Ibiza on clear days."
+        },
+        {
+          "name": "Montgo Natural Park",
+          "description": "753m mountain between Denia and Javea with hiking trails and endemic flora."
+        },
+        {
+          "name": "Serra Gelada",
+          "description": "Cliffside natural park between Benidorm and Altea with walking trails and fossil dunes."
+        },
+        {
+          "name": "Granadella Beach",
+          "description": "Pristine cove beach near Javea, consistently rated among Spain's most beautiful."
+        }
+      ]
+    },
+    "golfSection": {
+      "intro": "While less densely populated with courses than Costa Blanca South, the north offers quality golfing in spectacular settings with sea and mountain views.",
+      "topCourses": [
+        {
+          "name": "Javea Golf Club",
+          "holes": 9,
+          "description": "Scenic course with mountain backdrop, popular with local players."
+        },
+        {
+          "name": "Club de Golf Ifach",
+          "holes": 9,
+          "description": "Well-maintained course near Calpe with excellent facilities."
+        },
+        {
+          "name": "La Sella Golf Resort",
+          "holes": 27,
+          "description": "Seve Ballesteros-designed course near Denia with three 9-hole loops."
+        },
+        {
+          "name": "Villaitana Golf",
+          "holes": 36,
+          "description": "Jack Nicklaus-designed courses at Benidorm with Mediterranean views."
+        }
+      ]
+    },
+    "propertyMarketSection": {
+      "overview": "Costa Blanca North is the premium end of the Costa Blanca market. Prices reflect the desirable locations, established infrastructure, and limited supply. Properties here tend to be larger, better-built, and hold value well. The market attracts quality-focused buyers rather than bargain hunters.",
+      "priceGuide": [
+        {
+          "type": "Apartments",
+          "range": "€220,000-600,000",
+          "notes": "Sea views command premiums, quality generally higher than south"
+        },
+        {
+          "type": "Townhouses",
+          "range": "€300,000-800,000",
+          "notes": "Old town properties in Altea/Javea highly sought"
+        },
+        {
+          "type": "Villas",
+          "range": "€450,000-3,500,000",
+          "notes": "Sea-view villas in Moraira/Javea at premium end"
+        },
+        {
+          "type": "Luxury Estates",
+          "range": "€2,000,000+",
+          "notes": "Exceptional properties in prime cliff-top positions"
+        }
+      ],
+      "marketCharacter": "The north attracts established buyers, often with previous Spanish experience. Transactions tend to be smoother, buyers more decisive, and properties held longer. Rental market exists but is less dominant than in the south—most buyers seek lifestyle rather than investment."
+    },
+    "lifestyleSection": {
+      "intro": "Life on Costa Blanca North blends Spanish authenticity with international sophistication. The pace is unhurried but not sleepy; the communities are established but welcoming; the culture is rich but accessible.",
+      "highlights": [
+        "Dramatic coastal scenery—cliffs, coves, mountains",
+        "Authentic Spanish towns with real character",
+        "Established international communities",
+        "Higher-end dining and cultural scenes",
+        "Less touristy than many coastal areas",
+        "Strong sailing and water sports culture",
+        "Year-round events and festivals",
+        "Close to Valencia for city trips"
+      ]
+    },
+    "practicalInfo": {
+      "healthcare": "Hospital Marina Baixa in Villajoyosa, Hospital de Denia, plus numerous private clinics. English-speaking doctors common. EHIC/S1 access for EU/UK citizens.",
+      "transport": "Alicante Airport 50-90 minutes. Valencia Airport 60-90 minutes for northern areas. Denia has ferry connections to Ibiza. Car recommended. TRAM service connects Benidorm to Alicante.",
+      "costOfLiving": "Generally 10-15% higher than Costa Blanca South, reflecting property prices and market positioning. Dining and services slightly more expensive but quality often higher.",
+      "language": "Spanish character stronger than in south. English widely understood in expat areas. German common in Moraira. Spanish more useful here than in heavily British south."
+    },
+    "faqs": [
+      {
+        "question": "Why is Costa Blanca North more expensive than Costa Blanca South?",
+        "answer": "The north developed earlier, has more dramatic scenery, stronger Spanish character, and attracts a different market. Limited developable land and established communities maintain premium prices. Many buyers consider it worth the premium for the landscape and lifestyle."
+      },
+      {
+        "question": "What is the best town in Costa Blanca North?",
+        "answer": "Javea offers the best all-round package: three distinct areas, excellent infrastructure, year-round community. Moraira suits those seeking refinement. Altea appeals to culture lovers. Calpe offers best value. Each town has distinct character—visits are essential."
+      },
+      {
+        "question": "Is Costa Blanca North suitable for year-round living?",
+        "answer": "Excellent for permanent residence. Larger year-round populations than many coastal areas, full services, established communities, and good climate make it practical. Winters are mild with some rain. Summer is warm but less intense than further south."
+      },
+      {
+        "question": "How far is Costa Blanca North from Alicante Airport?",
+        "answer": "Benidorm is 50 minutes, Altea 60 minutes, Calpe 70 minutes, Javea/Moraira 75-80 minutes, Denia 90 minutes. Valencia Airport offers alternative for Denia area (60 minutes)."
+      },
+      {
+        "question": "Is there good healthcare in Costa Blanca North?",
+        "answer": "Yes—hospitals in Villajoyosa and Denia serve the region. Numerous private clinics and English-speaking doctors. The established expat community has created good healthcare infrastructure. Not quite as comprehensive as Torrevieja but entirely adequate."
+      },
+      {
+        "question": "What is the rental market like in Costa Blanca North?",
+        "answer": "Holiday rentals exist but the market is less investment-driven than the south. Summer season performs well. Long-term rentals are in demand from established residents. Yields are generally lower than south as capital values are higher."
+      },
+      {
+        "question": "How does Javea compare to Moraira?",
+        "answer": "Javea is larger with more infrastructure, three distinct zones, and a bigger British community. Moraira is smaller, more refined, popular with Germans and Scandinavians. Both are excellent—Javea suits families and those wanting more options; Moraira suits those seeking boutique coastal living."
+      },
+      {
+        "question": "Is Costa Blanca North crowded in summer?",
+        "answer": "Less so than you might expect. While beaches get busy in August, the rugged coastline disperses crowds. Many coves remain quiet even in peak season. Towns are busier but not overwhelming. Year-round residents often enjoy the summer energy."
+      },
+      {
+        "question": "Can I live without a car in Costa Blanca North?",
+        "answer": "Difficult outside Benidorm. Towns are spread across hilly terrain, public transport is limited, and many properties are in urbanizations away from centers. A car is strongly recommended for the lifestyle Costa Blanca North offers."
+      },
+      {
+        "question": "What about schools in Costa Blanca North?",
+        "answer": "Several international schools including Lady Elizabeth School (Javea), Laude Newton College (Elche area accessible), and The British School of Alicante. Spanish schools throughout. Generally good options for families, especially in Javea area."
+      }
+    ],
+    "conclusion": "Costa Blanca North offers something different from the mass-market coast: dramatic scenery, authentic communities, refined lifestyle, and properties that feel like genuine Mediterranean homes rather than holiday investments. The premium prices reflect genuine quality—of location, community, and lifestyle. For buyers seeking the best of Spanish coastal living and willing to invest accordingly, Costa Blanca North rewards handsomely."
+  },
+  "childAreas": [
+    "javea-xabia",
+    "moraira",
+    "altea",
+    "calpe",
+    "denia",
+    "benidorm",
+    "benissa",
+    "benitachell",
+    "finestrat",
+    "alfaz-del-pi",
+    "la-nucia",
+    "polop",
+    "el-campello",
+    "teulada",
+    "pedreguer",
+    "el-vergel",
+    "els-poblets"
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Costa Blanca North",
+    "description": "Costa Blanca North is Spain's premium Mediterranean coast, featuring dramatic cliffs, traditional villages like Javea, Moraira, and Altea, and upmarket property market.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.75",
+      "longitude": "0.03"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why is Costa Blanca North more expensive than Costa Blanca South?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "More dramatic scenery, stronger Spanish character, earlier development, and established communities maintain premium prices. Many buyers consider it worth the premium."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best town in Costa Blanca North?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Javea offers the best all-round package. Moraira suits those seeking refinement. Altea appeals to culture lovers. Calpe offers best value. Each has distinct character."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Costa Blanca North from Alicante Airport?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Benidorm 50 minutes, Altea 60, Calpe 70, Javea/Moraira 75-80, Denia 90 minutes. Valencia Airport offers alternative for Denia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Costa Blanca North suitable for year-round living?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Excellent—larger year-round populations, full services, established communities, mild winters. Very practical for permanent residence."
+        }
+      }
+    ]
+  }
+}

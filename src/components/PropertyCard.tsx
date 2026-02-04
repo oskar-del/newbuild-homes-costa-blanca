@@ -33,31 +33,31 @@ function getPropertyTitle(property: UnifiedProperty): string {
   if (property.aiContent?.title) {
     return property.aiContent.title;
   }
-  
+
   // Fallback: generate from property type, beds, and location
   const type = property.propertyType || 'Property';
   const beds = property.bedrooms ? `${property.bedrooms}-Bed ` : '';
   return `${beds}${type}`;
 }
 
-// Get badge type based on property features
+// Get badge type based on property features - refined colours
 function getBadgeType(property: UnifiedProperty): { text: string; className: string } | null {
   if (isKeyReady(property)) {
-    return { text: 'Key Ready', className: 'bg-orange-500' };
+    return { text: 'Key Ready', className: 'bg-accent-500' };
   }
-  
+
   if (property.features?.some(f => f.toLowerCase().includes('golf'))) {
-    return { text: 'Golf', className: 'bg-green-700' };
+    return { text: 'Golf', className: 'bg-success-500' };
   }
-  
+
   if (property.price >= 800000) {
-    return { text: 'Luxury', className: 'bg-purple-700' };
+    return { text: 'Luxury', className: 'bg-primary-900' };
   }
-  
+
   if (property.features?.some((f: string) => f.toLowerCase().includes('sea'))) {
-    return { text: 'Sea View', className: 'bg-blue-600' };
+    return { text: 'Sea View', className: 'bg-primary-700' };
   }
-  
+
   return null;
 }
 
@@ -65,11 +65,11 @@ export default function PropertyCard({ property }: PropertyCardProps) {
   const badge = getBadgeType(property);
   const keyReady = isKeyReady(property);
   const imageUrl = property.images?.[0]?.url || '/placeholder-property.jpg';
-  
+
   return (
-    <Link 
+    <Link
       href={`/properties/${property.reference}`}
-      className="block min-w-[300px] max-w-[300px] bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-200 hover:-translate-y-1 flex-shrink-0"
+      className="block min-w-[300px] max-w-[300px] bg-warm-50 rounded-lg overflow-hidden border border-warm-200 hover:shadow-medium transition-all duration-250 hover:-translate-y-0.5 flex-shrink-0"
     >
       {/* Image */}
       <div className="relative h-[200px]">
@@ -79,49 +79,41 @@ export default function PropertyCard({ property }: PropertyCardProps) {
           fill
           className="object-cover"
           sizes="300px"
+          unoptimized
         />
         {badge && (
-          <span className={`absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-semibold text-white uppercase ${badge.className}`}>
+          <span className={`absolute top-3 left-3 px-3 py-1 rounded text-xs font-medium text-white ${badge.className}`}>
             {badge.text}
           </span>
         )}
       </div>
-      
+
       {/* Content */}
       <div className="p-4">
-        {/* Price */}
-        <div className="text-xl font-bold text-[#1e3a5f] mb-1">
-          
-          {formatPrice(property.price)}
-        </div>
-        
-        {/* Title */}
-        <h3 className="font-semibold text-gray-800 mb-1">
-          {getPropertyTitle(property)}
-        </h3>
-        
-        {/* Location */}
-        <p className="text-sm text-gray-500 mb-3">
+        {/* Location - smaller, muted */}
+        <p className="text-xs text-warm-600 uppercase tracking-wide mb-1">
           {property.town}{property.locationDetail ? `, ${property.locationDetail}` : ''}
         </p>
-        
+
+        {/* Title */}
+        <h3 className="font-medium text-primary-900 mb-2 leading-tight">
+          {getPropertyTitle(property)}
+        </h3>
+
         {/* Specs */}
-        <div className="flex gap-4 text-sm text-gray-600 pt-3 border-t border-gray-100">
-          <span className="flex items-center gap-1">
-            🛏 {property.bedrooms} beds
-          </span>
-          <span className="flex items-center gap-1">
-            🚿 {property.bathrooms} baths
-          </span>
-          <span className="flex items-center gap-1">
-            📐 {property.builtArea}m²
-          </span>
+        <div className="flex gap-4 text-sm text-warm-600 mb-3">
+          <span>{property.bedrooms} bed</span>
+          <span>{property.bathrooms} bath</span>
+          <span>{property.builtArea}m²</span>
         </div>
-        
-        {/* Delivery Status */}
-        <div className="text-xs mt-2">
+
+        {/* Price */}
+        <div className="flex items-center justify-between pt-3 border-t border-warm-200">
+          <span className="text-lg font-semibold text-primary-900">
+            {formatPrice(property.price)}
+          </span>
           {keyReady && (
-            <span className="text-green-600 font-medium">✅ Key Ready</span>
+            <span className="text-xs text-success-600 font-medium">Key Ready</span>
           )}
         </div>
       </div>

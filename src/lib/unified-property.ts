@@ -95,11 +95,14 @@ export interface UnifiedProperty {
   hasSeaview: boolean;
   hasGolfview: boolean;
   
-  // New build specific
+  // New build / Development specific
   isNewBuild?: boolean;
-  developer?: string;
-  completionDate?: string;
+  developmentName?: string;           // Project name: "GOMERA STAR", "Contrimar Oasis"
+  developer?: string;                 // Builder name: "GUEMAR", "Grupo Prasa"
+  deliveryDate?: string;              // Move-in date: "01-06-2026"
+  completionDate?: string;            // Alias for deliveryDate
   constructionStatus?: 'off-plan' | 'under-construction' | 'completed' | 'key-ready';
+  zone?: string;                      // Sub-area: "Aguas Nuevas"
   
   // AI-generated content (optional, added on demand)
   aiContent?: AIGeneratedContent;

@@ -1,0 +1,293 @@
+{
+  "slug": "rojales",
+  "name": "Rojales",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/rojales-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartment",
+    "Townhouse",
+    "Villa",
+    "Bungalow",
+    "Country House"
+  ],
+  "priceRange": {
+    "min": 145000,
+    "max": 650000
+  },
+  "coordinates": {
+    "lat": 38.0864,
+    "lng": -0.7256
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Rojales Tourism",
+      "url": "https://www.rojales.es/",
+      "description": "Official Rojales municipality tourism"
+    },
+    "beaches": [
+      {
+        "name": "Guardamar Beaches",
+        "googleMaps": "https://maps.google.com/?q=Playa+Centro+Guardamar",
+        "description": "Natural beaches backed by pine forests",
+        "distance": "8 km"
+      },
+      {
+        "name": "La Mata Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+La+Mata",
+        "description": "Long natural beach near salt lakes",
+        "distance": "12 km"
+      },
+      {
+        "name": "Torrevieja Beaches",
+        "googleMaps": "https://maps.google.com/?q=Playa+del+Cura+Torrevieja",
+        "description": "Urban beaches with full facilities",
+        "distance": "10 km"
+      }
+    ],
+    "shopping": [
+      {
+        "name": "Rojales Town Center",
+        "googleMaps": "https://maps.google.com/?q=Rojales+Centro",
+        "description": "Historic town center with traditional shops and Sunday market"
+      },
+      {
+        "name": "Habaneras Shopping Center",
+        "googleMaps": "https://maps.google.com/?q=Habaneras+Torrevieja",
+        "description": "Major shopping center in Torrevieja",
+        "distance": "10 km"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "10 km",
+      "driveTime": "12 minutes"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "40 km",
+      "driveTime": "30 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Rojales municipality (including Ciudad Quesada) is surrounded by excellent golf courses, with La Marquesa on its doorstep and several others within easy reach.",
+    "courses": [
+      {
+        "name": "La Marquesa Golf",
+        "distance": "4 km",
+        "driveTime": "6 minutes",
+        "holes": 18,
+        "url": "https://www.lamarquesagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Marquesa+Golf",
+        "description": "Well-maintained course popular with residents. Good practice facilities."
+      },
+      {
+        "name": "La Finca Golf",
+        "distance": "8 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "url": "https://www.lafincagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Finca+Golf+Algorfa",
+        "description": "Championship course designed by Pepe Gancedo."
+      },
+      {
+        "name": "Vistabella Golf",
+        "distance": "10 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.vistabellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+        "description": "Modern course with excellent facilities."
+      }
+    ]
+  },
+  "localMarket": {
+    "sundayMarket": {
+      "name": "Rojales Sunday Market",
+      "location": "Town center and riverside",
+      "googleMaps": "https://maps.google.com/?q=Mercado+Rojales",
+      "hours": "Sundays 8:00 - 14:00",
+      "description": "Famous Sunday market along the River Segura, one of the largest in the region"
+    }
+  },
+  "content": {
+    "metaTitle": "Living in Rojales | Historic Town | Costa Blanca South 2026",
+    "metaDescription": "Complete guide to Rojales—historic Spanish town on the River Segura, famous Sunday market, modern villas from €145k. Real Spain with all conveniences nearby.",
+    "quickAnswer": "Rojales is a historic Spanish town on the River Segura offering authentic character and excellent value from €145,000. Famous for its Sunday market (one of the region's largest), cave houses, and riverside setting. Beaches are 8-12 minutes away, with Torrevieja hospital 12 minutes. Includes Ciudad Quesada.",
+    "heroIntro": "The River Segura has shaped Rojales for centuries, carving its path through the landscape and creating the fertile vega that sustains the town. On Sunday mornings, the riverside comes alive with one of Costa Blanca's largest markets, stalls stretching along the water as they have for generations. This is a town with roots that go deeper than the tourist developments surrounding it.\n\nRojales is the municipal seat that includes Ciudad Quesada within its boundaries, but the town center itself offers something different—genuine Spanish history, cave houses carved into hillsides, a river that flows year-round, and a community that maintains its traditions. The modern urbanizations nearby provide comfortable living; the town center provides soul.\n\nFor buyers seeking Spanish authenticity with modern convenience accessible, Rojales bridges both worlds.",
+    "lifestyleSection": {
+      "intro": "Life in Rojales town center follows Spanish rhythms—morning coffee at riverside cafés, the bustle of Sunday market, evening paseo along the river banks. The cave houses (casas cueva) carved into the hillsides are now museums and curiosities, reminding visitors this town existed long before tourism. Yet Ciudad Quesada and other urbanizations just minutes away offer modern living with international communities.\n\nThis duality is the opportunity: choose authentic town center living for genuine immersion, or modern urbanization for comfort with authenticity close by. Either way, you're connected to something real.",
+      "highlights": [
+        "Historic Spanish town on the River Segura",
+        "Famous Sunday market—one of the region's largest",
+        "Unique cave houses (casas cueva) carved into hillsides",
+        "Excellent value—authentic properties from €145,000",
+        "Beaches at Guardamar just 8 km away",
+        "Municipality includes Ciudad Quesada",
+        "Torrevieja hospital 12 minutes",
+        "30 minutes to Alicante Airport"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Guardamar's natural beaches (backed by pine forests and dunes) are just 8 km away. La Mata's long stretch near the salt lakes is 12 km. Torrevieja's urban beaches are 10 km. The location offers easy beach access without coastal property prices.",
+      "dining": "The town center has traditional Spanish restaurants along the riverside—excellent local food at local prices. The Sunday market draws visitors from across the region. For variety, Torrevieja (10 km) and Guardamar (8 km) offer more international options.",
+      "shopping": "Rojales town center has traditional shops, supermarkets, banks, and essential services. The Sunday market is legendary for fresh produce, clothing, and household goods. Habaneras shopping center in Torrevieja (10 km) offers major brands. La Zenia Boulevard (20 km) provides the full experience.",
+      "healthcare": "Hospital Universitario de Torrevieja is 10 km away (12 minutes). Local medical centers and pharmacies serve the town. Good healthcare access for the size of the town.",
+      "transport": "Alicante-Elche Airport is 40 km (30 minutes via AP-7). The location is central, making north-south travel along the coast efficient. A car is essential. The CV-91 provides good connections."
+    },
+    "neighborhoods": [
+      {
+        "name": "Casco Antiguo (Old Town)",
+        "description": "Historic town center with traditional architecture. Walking distance to river, market, and old town. Lower prices, genuine Spanish character. Townhouses and traditional homes."
+      },
+      {
+        "name": "Riverside (Ribera)",
+        "description": "Properties near the River Segura. Pleasant walking areas, Sunday market location. Mix of old and newer properties."
+      },
+      {
+        "name": "Modern Urbanizations",
+        "description": "Newer residential areas surrounding the town. Modern villas and bungalows with pools. More international residents. Good value with convenient access."
+      },
+      {
+        "name": "Towards Ciudad Quesada",
+        "description": "Eastern edge connecting to Ciudad Quesada. Mix of property styles. Good golf access. Growing development area."
+      }
+    ],
+    "propertyMarketSection": "Rojales offers excellent value across property types. New build apartments start from around €145,000-220,000, townhouses from €180,000-320,000, and villas from €280,000-650,000. The town center offers character properties; surrounding urbanizations offer modern conveniences.\n\n**Featured Development: Agata Villas Rojales** – Premium 4-bed villas from €567,000 with private pools, 180m² living space, and garage. Modern design on 450m² plots.\n\nThe market attracts buyers seeking value without sacrificing quality, those interested in Spanish integration, and golf enthusiasts wanting proximity to La Marquesa and other courses. Rental potential is moderate—better than deep inland but less than coastal resorts.",
+    "whyLiveHereSection": [
+      "Historic Spanish town with genuine character",
+      "Famous Sunday market—regional attraction",
+      "River Segura setting—unique among Costa Blanca towns",
+      "Outstanding value—authentic Spain at accessible prices",
+      "Municipality includes Ciudad Quesada's golf lifestyle",
+      "Beaches at Guardamar just 8 km away",
+      "Torrevieja hospital 12 minutes",
+      "Cave houses and historic curiosities to explore"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Agata Villas Rojales",
+        "reference": "N7227",
+        "price": 567000,
+        "type": "Villa",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "plotArea": 450,
+        "features": [
+          "4 Bedrooms",
+          "Private Pool",
+          "Garage"
+        ],
+        "description": "Premium 4-bed villa with 180m² living space, private pool, and garage on 450m² plot."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is Rojales famous for?",
+        "answer": "Rojales is famous for its Sunday market along the River Segura (one of the largest in Costa Blanca), historic cave houses carved into hillsides, and authentic Spanish character. The municipality also includes Ciudad Quesada."
+      },
+      {
+        "question": "How far is Rojales from the beach?",
+        "answer": "Guardamar beaches are 8 km (10 minutes). La Mata beach is 12 km. Torrevieja beaches are 10 km. Easy beach access without paying coastal property premiums."
+      },
+      {
+        "question": "What are property prices in Rojales?",
+        "answer": "Apartments from €145,000, townhouses from €180,000, villas from €280,000. Excellent value for authentic Spanish properties with modern conveniences nearby."
+      },
+      {
+        "question": "What is the Rojales Sunday market?",
+        "answer": "One of Costa Blanca's largest markets, stretching along the River Segura every Sunday morning. Fresh produce, fish, clothing, household goods, and local crafts. A genuine Spanish experience that draws visitors from across the region."
+      },
+      {
+        "question": "Is Rojales the same as Ciudad Quesada?",
+        "answer": "Ciudad Quesada is part of Rojales municipality but a distinct urbanization. Rojales town is the historic municipal seat; Ciudad Quesada is a modern development built around La Marquesa Golf. They're adjacent and connected."
+      },
+      {
+        "question": "What are the cave houses in Rojales?",
+        "answer": "Casas cueva (cave houses) are dwellings carved into the hillsides, traditional to this region. Some date back centuries. Today most are museums or curiosities, though some have been converted to homes. They're a unique feature of Rojales."
+      },
+      {
+        "question": "Is English widely spoken in Rojales?",
+        "answer": "Less so in the old town than in the surrounding urbanizations. Rojales town is authentically Spanish; nearby Ciudad Quesada has a large English-speaking community. Depends on which part of the municipality you're in."
+      },
+      {
+        "question": "Is Rojales good for golf?",
+        "answer": "Good access. La Marquesa Golf is 4 km (6 minutes), La Finca Golf 8 km (10 minutes), Vistabella 10 km (12 minutes). The municipality is positioned well for variety without being golf-centric."
+      },
+      {
+        "question": "Is Rojales suitable for permanent living?",
+        "answer": "Yes, particularly for those comfortable with Spanish integration. The town has year-round services and permanent population. Modern urbanizations offer more international convenience. Good balance of authenticity and practicality."
+      },
+      {
+        "question": "How does Rojales compare to Torrevieja?",
+        "answer": "Rojales is smaller, more Spanish, and more historic. Torrevieja is larger with more international amenities and direct beach access. Rojales offers authenticity and value; Torrevieja offers convenience and coastal location. They're 10 km apart."
+      }
+    ],
+    "conclusion": "Rojales offers something increasingly rare: authentic Spanish character in a location that hasn't been absorbed into resort anonymity. The river, the market, the cave houses, the historic center—these give the town personality that purpose-built developments lack. Yet modern living is accessible in surrounding urbanizations including Ciudad Quesada.\n\nFor buyers seeking real Spain at excellent value, with beaches and golf close by, Rojales rewards exploration beyond the obvious.\n\nReady to explore properties in Rojales? Our team understands the character of this historic town and can match you with properties that suit your priorities—from riverside townhouses to modern urbanization villas."
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Rojales",
+    "description": "Rojales is a historic Spanish town on the River Segura in Costa Blanca South, famous for its Sunday market, cave houses, and authentic character. Municipality includes Ciudad Quesada.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.0864",
+      "longitude": "-0.7256"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rojales",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Rojales famous for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rojales is famous for its Sunday market along the River Segura, historic cave houses, and authentic Spanish character. The municipality includes Ciudad Quesada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Rojales from the beach?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Guardamar beaches are 8 km (10 minutes). La Mata is 12 km. Torrevieja is 10 km."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are property prices in Rojales?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Apartments from €145,000, townhouses from €180,000, villas from €280,000. Excellent value for authentic Spanish properties."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Rojales Sunday market?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "One of Costa Blanca's largest markets along the River Segura every Sunday morning. Fresh produce, fish, clothing, and local crafts."
+        }
+      }
+    ]
+  }
+}

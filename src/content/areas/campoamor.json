@@ -1,0 +1,279 @@
+{
+  "slug": "campoamor",
+  "name": "Campoamor",
+  "region": "Costa Blanca South",
+  "parentArea": "orihuela-costa",
+  "heroImage": "/images/areas/campoamor-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartment",
+    "Penthouse",
+    "Townhouse",
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 195000,
+    "max": 800000
+  },
+  "coordinates": {
+    "lat": 37.8972,
+    "lng": -0.7564
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Orihuela Costa Tourism",
+      "url": "https://www.orihuelaturistica.es/",
+      "description": "Official Orihuela tourism portal"
+    },
+    "beaches": [
+      {
+        "name": "Playa de Campoamor",
+        "googleMaps": "https://maps.google.com/?q=Playa+Campoamor",
+        "description": "Blue Flag beach with golden sand, calm waters, and full facilities",
+        "blueFlag": true
+      },
+      {
+        "name": "Playa La Glea",
+        "googleMaps": "https://maps.google.com/?q=Playa+La+Glea",
+        "description": "Adjacent beach with natural beauty and rock formations"
+      },
+      {
+        "name": "Playa Barranco Rubio",
+        "googleMaps": "https://maps.google.com/?q=Playa+Barranco+Rubio",
+        "description": "Quieter beach toward Pilar de la Horadada"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "15 km",
+      "driveTime": "18 minutes"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "60 km",
+      "driveTime": "45 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Campoamor has its own championship course and sits at the heart of Orihuela Costa's golf triangle with multiple courses within minutes.",
+    "courses": [
+      {
+        "name": "Campoamor Golf",
+        "distance": "0 km",
+        "driveTime": "Walking distance",
+        "holes": 18,
+        "url": "https://www.campoamorgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Campoamor+Golf",
+        "description": "Home course with excellent facilities. Well-maintained and suitable for all levels. Active club scene."
+      },
+      {
+        "name": "Las Colinas Golf",
+        "distance": "5 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "url": "https://www.lascolinasgolf.es/",
+        "googleMaps": "https://maps.google.com/?q=Las+Colinas+Golf",
+        "description": "Award-winning Cabell Robinson design ranked among Spain's best."
+      },
+      {
+        "name": "Las Ramblas Golf",
+        "distance": "4 km",
+        "driveTime": "6 minutes",
+        "holes": 18,
+        "url": "https://www.lasramblasgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Las+Ramblas+Golf",
+        "description": "Dramatic elevation changes with Mediterranean views."
+      },
+      {
+        "name": "Villamartin Golf",
+        "distance": "6 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "url": "https://www.villamartingolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Villamartin+Golf",
+        "description": "Championship course with storied history."
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Living in Campoamor | Beach & Golf | Orihuela Costa 2026",
+    "metaDescription": "Complete guide to Campoamor—Blue Flag beach, own golf course, upscale atmosphere. Properties from €195k. Quieter, more refined Orihuela Costa living.",
+    "quickAnswer": "Campoamor is the quieter, more upscale end of Orihuela Costa with its own Blue Flag beach and Campoamor Golf course. Properties start at €195,000 for apartments, €350,000 for townhouses, €500,000 for villas. Less commercial than La Zenia, more refined than Cabo Roig.",
+    "heroIntro": "At the southern end of Orihuela Costa, where the coast curves toward Pilar de la Horadada, Campoamor maintains a quieter elegance that distinguishes it from its busier neighbors. The beach is Blue Flag quality but less crowded. The golf course is excellent but less hectic. The restaurants serve quality without pretension. This is Orihuela Costa for those who want the lifestyle without the crowds.\n\nCampoamor grew more deliberately than some neighboring areas, with lower-density development and more space between properties. The result is a more refined atmosphere—still accessible, still friendly, but with room to breathe. The beach and golf course anchor daily life, with La Zenia Boulevard's shopping close enough for convenience but far enough to preserve tranquility.\n\nFor buyers seeking quality coastal living without compromise, Campoamor delivers understated excellence.",
+    "lifestyleSection": {
+      "intro": "Life in Campoamor balances beach and golf without the commercial bustle of La Zenia or the tourist density of Cabo Roig. Morning coffee might be at the golf club or a beachfront café. Afternoons offer beach time on sand that's genuinely less crowded. Evenings bring good dining without queuing for tables.\n\nThe international community is established but smaller than in neighboring areas—more opportunity for genuine connection, less anonymity. Those seeking non-stop activity should look elsewhere; those seeking quality of life find it here.",
+      "highlights": [
+        "Blue Flag beach with less crowding than neighbors",
+        "Campoamor Golf Course on your doorstep",
+        "5 golf courses within 10 minutes",
+        "Quieter, more upscale than La Zenia/Cabo Roig",
+        "Las Colinas (Spain's top-10 course) 8 minutes",
+        "La Zenia Boulevard 10 minutes for shopping",
+        "Lower-density development with more space",
+        "Refined atmosphere without pretension"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Playa de Campoamor has Blue Flag status—golden sand, calm waters, full facilities including lifeguards and beach bars. The beach is notably less crowded than La Zenia or Cabo Roig, maintaining quality while offering space. Playa La Glea adjacent offers natural rock formations. Both are walkable from most properties.",
+      "dining": "Campoamor has quality restaurants without resort commercialism. The beachfront offers seafood; the golf club provides club dining. For variety, Cabo Roig's harbor (8 km) has excellent seafood, and La Zenia Boulevard (10 km) offers international options. Quality over quantity defines dining here.",
+      "shopping": "Local shops and supermarkets cover daily needs. For major shopping, La Zenia Boulevard (10 km) provides 150+ stores. The location offers convenience when needed, quiet when preferred.",
+      "healthcare": "Hospital Universitario de Torrevieja is 15 km away (18 minutes). Local medical services and pharmacies available. Healthcare access is good given the residential nature of the area.",
+      "transport": "Alicante-Elche Airport is 60 km (45 minutes via AP-7). Murcia-Corvera Airport is 30 km (25 minutes)—closer from this end of Orihuela Costa. A car is recommended."
+    },
+    "neighborhoods": [
+      {
+        "name": "Campoamor Beach",
+        "description": "Properties close to the beach. Premium location with walking beach access. Mix of apartments and villas. Highest prices for the area."
+      },
+      {
+        "name": "Campoamor Golf",
+        "description": "Properties around the golf course. Fairway views available. Golf lifestyle focus. Mix of villas and townhouses."
+      },
+      {
+        "name": "Dehesa de Campoamor",
+        "description": "Established residential area. Larger plots, mature gardens. Quieter atmosphere. Popular with permanent residents."
+      }
+    ],
+    "propertyMarketSection": "Campoamor offers quality at Orihuela Costa's quieter end. New build apartments start from around €195,000-350,000, townhouses from €350,000-500,000, and villas from €500,000-800,000. The lower density development and refined atmosphere justify modest premiums over busier areas.\n\n**Featured Development: Lomas de Campoamor** – Modern 2-bed apartments from €212,350 with communal pool, near golf, and sea views. Contemporary specifications.\n\n**Featured Development: Innova Beach** – Premium 4-bed villas from €699,900 with private pools, 200m² living space, near beach location. Luxury specifications.\n\nRental potential is steady—the area attracts quality-focused visitors and golfers rather than budget tourists. Properties achieve good rates with less wear than high-volume areas.",
+    "whyLiveHereSection": [
+      "Blue Flag beach with less crowding",
+      "Campoamor Golf Course on your doorstep",
+      "5 courses within 10 minutes",
+      "Quieter, more refined atmosphere",
+      "Lower-density development",
+      "Las Colinas Golf 8 minutes",
+      "La Zenia Boulevard 10 minutes",
+      "Quality over quantity in all aspects"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Lomas de Campoamor",
+        "reference": "N8535",
+        "price": 212350,
+        "type": "Apartment",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "features": [
+          "Communal Pool",
+          "Near Golf",
+          "Sea Views"
+        ],
+        "description": "Modern 2-bed apartment with pool access, golf proximity, and sea views."
+      },
+      {
+        "title": "Innova Beach Villa",
+        "reference": "N6722",
+        "price": 699900,
+        "type": "Villa",
+        "bedrooms": 4,
+        "bathrooms": 4,
+        "features": [
+          "4 Bedrooms",
+          "Near Beach",
+          "Premium"
+        ],
+        "description": "Luxury 4-bed villa with pool, 200m² living space, near beach."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How does Campoamor compare to La Zenia?",
+        "answer": "Campoamor is quieter, less commercial, and more refined. La Zenia has the Boulevard shopping and more activity. Campoamor offers quality beach and golf with less crowding. Prices are similar but Campoamor has lower density. Choose based on preference for atmosphere."
+      },
+      {
+        "question": "Is Campoamor good for golf?",
+        "answer": "Excellent. Campoamor Golf is on your doorstep. Las Colinas (8 min), Las Ramblas (6 min), and Villamartin (10 min) add variety. Five courses within 10 minutes make this a serious golf location."
+      },
+      {
+        "question": "What is the beach like in Campoamor?",
+        "answer": "Blue Flag quality with golden sand and calm waters. Less crowded than La Zenia or Cabo Roig beaches. Full facilities including lifeguards and beach bars. Quality beach experience without fighting for space."
+      },
+      {
+        "question": "What are property prices in Campoamor?",
+        "answer": "Apartments from €195,000, townhouses from €350,000, villas from €500,000. Slight premiums over busier areas reflect lower density and refined atmosphere."
+      },
+      {
+        "question": "Is Campoamor quiet?",
+        "answer": "Quieter than La Zenia or Cabo Roig, yes. It's not isolated—beaches, golf, restaurants are all active. But density is lower, crowds are fewer, and atmosphere is more refined. Ideal for those seeking quality without bustle."
+      },
+      {
+        "question": "How far is La Zenia Boulevard from Campoamor?",
+        "answer": "Approximately 10 km (12 minutes drive). Close enough for convenient shopping, far enough to preserve Campoamor's quieter atmosphere."
+      },
+      {
+        "question": "Is English widely spoken in Campoamor?",
+        "answer": "Yes, with a well-established international community. Most services cater to English speakers. The community is smaller than La Zenia but equally welcoming."
+      },
+      {
+        "question": "Is Campoamor good for rental investment?",
+        "answer": "Yes, with a quality focus. The area attracts quality-conscious visitors and golfers willing to pay premium rates. Less volume than La Zenia but higher per-stay value. Less wear on properties."
+      },
+      {
+        "question": "Which airport is closer to Campoamor?",
+        "answer": "Murcia-Corvera Airport is closer at 30 km (25 minutes). Alicante-Elche is 60 km (45 minutes). Campoamor's southern position makes Murcia more convenient."
+      },
+      {
+        "question": "Is Campoamor suitable for permanent living?",
+        "answer": "Excellent for those seeking quality of life over activity. Year-round services, permanent resident community, refined atmosphere. More suited to those who prefer quieter coastal living."
+      }
+    ],
+    "conclusion": "Campoamor offers what discerning buyers seek: quality beach, excellent golf, refined atmosphere, and lower density—without sacrificing convenience. It's Orihuela Costa for those who prefer their Mediterranean life with room to breathe and quality over crowds.\n\nReady to explore properties in Campoamor? Our team understands what makes this area special and can match you with properties that deliver its distinctive combination of quality and tranquility."
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Campoamor",
+    "description": "Campoamor is a refined coastal community at the southern end of Orihuela Costa, featuring a Blue Flag beach, Campoamor Golf Course, and quieter, more upscale atmosphere than neighboring areas.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.8972",
+      "longitude": "-0.7564"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Campoamor",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Orihuela Costa, Costa Blanca"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does Campoamor compare to La Zenia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Campoamor is quieter, less commercial, and more refined with lower density development. La Zenia has the Boulevard shopping and more activity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Campoamor good for golf?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Excellent. Campoamor Golf is on your doorstep, with Las Colinas, Las Ramblas, and Villamartin within 10 minutes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are property prices in Campoamor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Apartments from €195,000, townhouses from €350,000, villas from €500,000."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "slug": "san-fulgencio",
+  "name": "San Fulgencio & La Marina",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/san-fulgencio-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartment",
+    "Townhouse",
+    "Villa",
+    "Bungalow"
+  ],
+  "priceRange": {
+    "min": 159000,
+    "max": 650000
+  },
+  "coordinates": {
+    "lat": 38.1089,
+    "lng": -0.7567
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "San Fulgencio Tourism",
+      "url": "https://www.sanfulgencio.es/",
+      "description": "Official San Fulgencio municipality"
+    },
+    "beaches": [
+      {
+        "name": "La Marina Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+La+Marina",
+        "description": "Long natural beach backed by protected dunes—pristine and unspoiled",
+        "blueFlag": true
+      },
+      {
+        "name": "El Pinet Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+El+Pinet",
+        "description": "Wild, natural beach near the salt marshes",
+        "distance": "2 km from La Marina"
+      },
+      {
+        "name": "Guardamar Beaches",
+        "googleMaps": "https://maps.google.com/?q=Playa+Guardamar",
+        "description": "Pine-backed beaches with full facilities",
+        "distance": "5 km"
+      }
+    ],
+    "nature": [
+      {
+        "name": "Dunas de Guardamar",
+        "googleMaps": "https://maps.google.com/?q=Dunas+Guardamar",
+        "description": "Protected dune system and pine forests",
+        "distance": "3 km"
+      },
+      {
+        "name": "Parque Natural de las Salinas de Santa Pola",
+        "googleMaps": "https://maps.google.com/?q=Salinas+Santa+Pola",
+        "description": "Salt marshes with flamingos and birdlife",
+        "distance": "5 km"
+      }
+    ],
+    "shopping": [
+      {
+        "name": "La Marina Commercial Areas",
+        "googleMaps": "https://maps.google.com/?q=La+Marina+Urbanizacion",
+        "description": "Local shops, supermarkets, restaurants along the strip"
+      },
+      {
+        "name": "Habaneras Centro Comercial",
+        "googleMaps": "https://maps.google.com/?q=Habaneras+Torrevieja",
+        "url": "https://cchabaneras.com/",
+        "description": "Major shopping center in Torrevieja",
+        "distance": "18 km"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital General de Elche",
+      "googleMaps": "https://maps.google.com/?q=Hospital+General+Elche",
+      "distance": "20 km",
+      "driveTime": "20 minutes"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "25 km",
+      "driveTime": "20 minutes"
+    }
+  },
+  "golf": {
+    "intro": "San Fulgencio offers excellent golf access with La Finca and Vistabella nearby, plus easy reach of Alicante courses to the north.",
+    "courses": [
+      {
+        "name": "La Finca Golf",
+        "distance": "10 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.lafincagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Finca+Golf",
+        "description": "Championship course designed by Pepe Gancedo."
+      },
+      {
+        "name": "Vistabella Golf",
+        "distance": "15 km",
+        "driveTime": "18 minutes",
+        "holes": 18,
+        "url": "https://www.vistabellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+        "description": "Modern course with excellent facilities."
+      },
+      {
+        "name": "Alicante Golf",
+        "distance": "30 km",
+        "driveTime": "25 minutes",
+        "holes": 18,
+        "url": "https://www.alicantegolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Alicante+Golf",
+        "description": "Seve Ballesteros-designed course north of the area."
+      }
+    ]
+  },
+  "localMarket": {
+    "tuesdayMarket": {
+      "name": "San Fulgencio Tuesday Market",
+      "location": "Town center",
+      "googleMaps": "https://maps.google.com/?q=Mercado+San+Fulgencio",
+      "hours": "Tuesdays 8:00 - 14:00",
+      "description": "Traditional Spanish market with fresh produce, clothing, and household items"
+    },
+    "sundayMarket": {
+      "name": "La Marina Sunday Market",
+      "location": "La Marina urbanization",
+      "googleMaps": "https://maps.google.com/?q=Mercadillo+La+Marina",
+      "hours": "Sundays 8:00 - 14:00",
+      "description": "Popular expat market with variety of goods"
+    }
+  },
+  "content": {
+    "metaTitle": "Living in San Fulgencio & La Marina | Beach & Dunes | Costa Blanca 2026",
+    "metaDescription": "Complete guide to San Fulgencio & La Marina—unspoiled dune beaches, closest to Alicante Airport (20 min), established expat community. Properties from €159k. Nature meets convenience.",
+    "quickAnswer": "San Fulgencio is an inland Spanish town while La Marina is its coastal urbanization with unspoiled dune-backed beaches. Just 20 minutes from Alicante Airport—the closest residential area to the airport. Properties from €159,000 for apartments, €275,000 for villas. Strong expat community with nature on your doorstep.",
+    "heroIntro": "Two personalities, one municipality. San Fulgencio is the traditional Spanish heart—a hillside town with church bells, narrow streets, and an authenticity that coastal resorts can only imitate. La Marina is the soul—a beachfront urbanization where golden sand meets protected dunes, where flamingos wade in nearby salt marshes, and where one of Costa Blanca's most unspoiled coastlines stretches in both directions.\n\nWhat makes this area unique is its proximity to Alicante Airport—just 20 minutes door-to-door. For frequent travelers, weekend visitors, or those who simply value easy connections, this accessibility is unmatched on the southern Costa Blanca. Yet despite this convenience, the beaches here remain remarkably natural, the dunes still wild, the development low-rise and respectful.\n\nFor buyers seeking natural beauty, airport convenience, and established community—all without the premium prices of better-known resorts—San Fulgencio and La Marina offer a compelling combination.",
+    "lifestyleSection": {
+      "intro": "Life here splits between the beach and the town. La Marina offers long morning walks on pristine sand, afternoons by the pool, and evenings at beachfront restaurants watching the sun set over the dunes. San Fulgencio provides Spanish authenticity—the Tuesday market bustling with local produce, tapas bars where Spanish mingles with English and German, a church square where village life continues as it has for generations.\n\nThe expat community is well-established—particularly British, German, and Scandinavian residents who discovered this area decades ago. Clubs, activities, and social groups abound. English is widely spoken in La Marina, while Spanish dominates in the town. Most residents appreciate having both options.",
+      "highlights": [
+        "Closest residential area to Alicante Airport—20 minutes",
+        "Unspoiled dune-backed beaches at La Marina",
+        "Protected natural environment—salt marshes, flamingos",
+        "Traditional Spanish town with Tuesday market",
+        "Established international community",
+        "Properties from €159,000—excellent value",
+        "La Finca Golf just 12 minutes",
+        "Guardamar's pine forests nearby"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "La Marina beach is one of Costa Blanca's finest—long, golden, backed by protected dunes, with Blue Flag water quality. El Pinet offers a wilder experience near the salt marshes. Guardamar's pine-backed beaches are just 5 km south. The natural character here is increasingly rare on developed coastlines.",
+      "dining": "La Marina has numerous restaurants and bars along its main strip—British pubs, Spanish tapas, international cuisine. San Fulgencio offers more traditional Spanish dining. For variety, Guardamar (5 km) and Santa Pola (10 km) add excellent seafood options.",
+      "shopping": "La Marina has supermarkets and daily essentials. San Fulgencio's Tuesday market provides local produce. For major shopping, Santa Pola (10 km) or Elche (20 km) offer full options. The famous La Zenia Boulevard is 30 km south.",
+      "healthcare": "Hospital General de Elche is 20 km (20 minutes). Local health centers in both San Fulgencio and La Marina. The area's proximity to Elche provides good healthcare infrastructure.",
+      "transport": "Alicante-Elche Airport is just 25 km (20 minutes)—the closest of any residential area on Costa Blanca South. This is a major advantage for frequent travelers. A car is essential for daily life."
+    },
+    "neighborhoods": [
+      {
+        "name": "La Marina Beachfront",
+        "description": "Properties close to the beach and dunes. Walking distance to sand. Mix of apartments and townhouses. Premium location with rental potential."
+      },
+      {
+        "name": "La Marina Urbanization",
+        "description": "Established residential area with villas and bungalows. Swimming pools, gardens. Strong expat community. Good value compared to beachfront."
+      },
+      {
+        "name": "San Fulgencio Town",
+        "description": "Traditional Spanish town center. Lower prices, authentic character. Walking distance to shops and restaurants. Townhouses and apartments."
+      },
+      {
+        "name": "Urbanizaciones (Inland)",
+        "description": "Various residential developments between town and coast. Villas with pools, larger plots. Peaceful settings with countryside character."
+      }
+    ],
+    "propertyMarketSection": "San Fulgencio and La Marina offer excellent value with the bonus of airport proximity. Apartments start from around €159,000-250,000, townhouses from €185,000-320,000, and villas from €275,000-650,000. Beachfront La Marina commands premiums; inland San Fulgencio offers better value.\n\n**Featured Development: Buganvillas Sol Villa** – 3-bed villa at €275,000 in this area, offering excellent value with pool and gardens.\n\nThe market attracts value-conscious buyers, nature lovers, and those who prioritize airport access. Rental potential is good in La Marina, particularly for holiday lets attracted by the beaches and convenient airport connections.",
+    "whyLiveHereSection": [
+      "Closest to Alicante Airport—20 minutes",
+      "Unspoiled dune-backed beaches",
+      "Protected natural environment",
+      "Traditional Spanish town character",
+      "Established expat community",
+      "Excellent value properties",
+      "La Finca Golf 12 minutes",
+      "Two markets weekly—Tuesday and Sunday"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Buganvillas Sol Villa",
+        "reference": "N7825",
+        "price": 275000,
+        "type": "Villa",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "features": [
+          "Private Pool",
+          "Garden",
+          "Terrace"
+        ],
+        "description": "3-bed villa in San Fulgencio / La Marina area with private pool."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How far is San Fulgencio from Alicante Airport?",
+        "answer": "Just 25 km (20 minutes)—the closest residential area to the airport on Costa Blanca South. This makes it ideal for frequent travelers or those receiving regular visitors."
+      },
+      {
+        "question": "What is the difference between San Fulgencio and La Marina?",
+        "answer": "San Fulgencio is the traditional Spanish inland town—authentic, affordable, with Tuesday market. La Marina is the coastal urbanization—beaches, dunes, expat community, Sunday market. Same municipality, different characters. Many residents appreciate having both."
+      },
+      {
+        "question": "Is La Marina beach nice?",
+        "answer": "Exceptional. Long golden sand backed by protected dunes, Blue Flag water quality, remarkably unspoiled for Costa Blanca. One of the most natural beach environments on the southern coast."
+      },
+      {
+        "question": "What are property prices in San Fulgencio and La Marina?",
+        "answer": "Apartments from €159,000, townhouses from €185,000, villas from €275,000. Beachfront La Marina commands premiums; inland San Fulgencio offers better value for those who don't need daily beach access."
+      },
+      {
+        "question": "Is there an expat community in La Marina?",
+        "answer": "Yes, well-established. British, German, and Scandinavian residents have lived here for decades. Social clubs, activities, English widely spoken. Welcoming community while maintaining Spanish character in the town itself."
+      },
+      {
+        "question": "Is San Fulgencio good for golf?",
+        "answer": "Good access. La Finca Golf is 12 minutes, Vistabella 18 minutes. Northern location also provides access to Alicante courses. Not as central as Villamartin area but adequate for regular golfers."
+      },
+      {
+        "question": "What are the dunes like at La Marina?",
+        "answer": "Protected natural environment—part of the same dune system as Guardamar. Walking paths through vegetation, birdlife, a buffer between development and sea. Increasingly rare on developed coastlines."
+      },
+      {
+        "question": "Is English widely spoken?",
+        "answer": "In La Marina, yes—strong expat community. In San Fulgencio town, Spanish dominates but basic English is understood in shops and restaurants. Having both options is an advantage."
+      },
+      {
+        "question": "What markets are there?",
+        "answer": "Tuesday market in San Fulgencio town—traditional Spanish market with local produce. Sunday market in La Marina—popular expat market with variety of goods. Both add character and convenience."
+      },
+      {
+        "question": "Is San Fulgencio suitable for permanent living?",
+        "answer": "Yes, particularly for those valuing airport access and natural environment. Year-round services available. The combination of Spanish town and beach urbanization suits different moods. Less suitable for those wanting resort-style nightlife."
+      }
+    ],
+    "conclusion": "San Fulgencio and La Marina offer something distinctive: the closest residential beaches to Alicante Airport, wrapped in protected dunes and salt marshes, with a traditional Spanish town just inland. For buyers who value natural beauty, convenient travel, and established community without premium prices, this dual-character municipality delivers on all fronts.\n\nReady to explore properties in San Fulgencio and La Marina? Our team understands both the beachfront appeal and the inland value, helping you find the perfect balance of nature, convenience, and lifestyle."
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "San Fulgencio & La Marina",
+    "description": "San Fulgencio is a traditional Spanish town with La Marina as its coastal urbanization, offering unspoiled dune-backed beaches just 20 minutes from Alicante Airport.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.1089",
+      "longitude": "-0.7567"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Fulgencio",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How far is San Fulgencio from Alicante Airport?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Just 25 km (20 minutes)—the closest residential area to the airport on Costa Blanca South."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between San Fulgencio and La Marina?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "San Fulgencio is the traditional Spanish inland town. La Marina is the coastal urbanization with beaches and expat community. Same municipality, different characters."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are property prices in San Fulgencio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Apartments from €159,000, townhouses from €185,000, villas from €275,000. Excellent value with airport proximity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is La Marina beach nice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Exceptional—long golden sand backed by protected dunes, Blue Flag quality, remarkably unspoiled."
+        }
+      }
+    ]
+  }
+}

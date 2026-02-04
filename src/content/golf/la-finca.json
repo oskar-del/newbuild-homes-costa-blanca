@@ -1,0 +1,282 @@
+{
+  "slug": "la-finca",
+  "name": "La Finca Golf Resort",
+  "region": "Costa Blanca South",
+  "town": "Algorfa",
+  "holes": 18,
+  "par": 72,
+  "length": 6027,
+  "lengthUnit": "meters",
+  "designer": "Pepe Gancedo",
+  "yearOpened": 2002,
+  "courseType": "Parkland",
+  "heroImage": "/images/golf/la-finca-hero.webp",
+  "cardImage": "/images/golf/la-finca-card.webp",
+  "website": "https://www.lafincagolf.com/",
+  "phone": "+34 966 729 010",
+  "coordinates": {
+    "latitude": 38.0647,
+    "longitude": -0.7928
+  },
+  "greenFees": {
+    "high": 72,
+    "low": 45,
+    "currency": "EUR",
+    "note": "Prices vary seasonally. Resident and multiple-round discounts available."
+  },
+  "facilities": [
+    "Clubhouse with restaurant and bar",
+    "Pro shop",
+    "Practice range",
+    "Putting and chipping greens",
+    "Golf academy",
+    "Buggy hire",
+    "Club rental",
+    "Locker rooms"
+  ],
+  "nearbyAreas": [
+    {
+      "name": "Algorfa",
+      "slug": "algorfa",
+      "distance": "In Algorfa"
+    },
+    {
+      "name": "Guardamar del Segura",
+      "distance": "15 km"
+    },
+    {
+      "name": "Torrevieja",
+      "distance": "18 km"
+    }
+  ],
+  "nearbyCourses": [
+    {
+      "name": "Vistabella Golf",
+      "slug": "vistabella",
+      "distance": "5 km",
+      "driveTime": "8 minutes"
+    },
+    {
+      "name": "La Marquesa Golf",
+      "slug": "la-marquesa",
+      "distance": "8 km",
+      "driveTime": "10 minutes"
+    },
+    {
+      "name": "Lo Romero Golf",
+      "slug": "lo-romero",
+      "distance": "12 km",
+      "driveTime": "15 minutes"
+    },
+    {
+      "name": "Villamartín Golf",
+      "slug": "villamartin",
+      "distance": "18 km",
+      "driveTime": "20 minutes"
+    }
+  ],
+  "content": {
+    "metaTitle": "La Finca Golf Resort | Championship Golf & Property Guide Algorfa",
+    "metaDescription": "Complete guide to La Finca Golf Resort in Algorfa. 18-hole championship course by Pepe Gancedo. Golf properties from €195,000. Green fees, facilities, and nearby homes.",
+    "heroIntro": "La Finca Golf Resort stands as one of Costa Blanca South's premier golf destinations, combining championship-quality golf with an exceptional residential community. Designed by renowned Spanish architect Pepe Gancedo and opened in 2002, this parkland-style 18-hole course has become synonymous with quality golf lifestyle in the Vega Baja region.\n\nSet within the peaceful municipality of Algorfa, La Finca offers everything golfers seek: a challenging yet fair layout, excellent year-round conditions, a welcoming clubhouse, and crucially, access to quality new build properties at prices significantly below coastal alternatives.",
+    "courseSection": {
+      "intro": "La Finca's 18-hole championship course presents a thoroughly enjoyable test for golfers of all abilities. The parkland layout stretches across undulating terrain, with mature palm trees framing generous fairways and strategic water features adding both beauty and challenge.",
+      "features": [
+        "18 holes, Par 72, measuring 6,027 meters from championship tees",
+        "Wide fairways accommodate varying skill levels",
+        "Strategic bunkering protects well-designed greens",
+        "Five lakes create stunning visuals and strategic challenges",
+        "Mature Mediterranean landscaping throughout",
+        "Excellent drainage ensures playability year-round",
+        "Practice facilities including driving range, putting and chipping greens"
+      ],
+      "description": "Pepe Gancedo's design philosophy is evident throughout: the course rewards thoughtful play without punishing the higher handicapper excessively. Each hole offers multiple routes to the green, encouraging strategic thinking over raw power.\n\nSignature holes include the par-3 7th, where water guards the entire front of the green, and the par-5 18th, which brings water into play twice and provides a dramatic finishing test. But there's not a weak hole on the course—Gancedo crafted 18 interesting challenges.\n\nConditions are maintained to a consistently high standard. The greens run true and at reasonable pace, while the fairways provide excellent lies. Even in peak summer, when some courses struggle, La Finca's irrigation systems keep the course in excellent shape."
+    },
+    "facilitiesSection": {
+      "intro": "La Finca's clubhouse serves as the social heart of the resort, offering comfortable facilities for members, visitors, and residents alike.",
+      "facilities": [
+        {
+          "name": "Clubhouse Restaurant",
+          "description": "Full-service restaurant with terrace overlooking the 18th green. Spanish and international cuisine, popular for post-round meals and social gatherings."
+        },
+        {
+          "name": "Bar & Lounge",
+          "description": "Comfortable bar area for drinks and light refreshments. Large screen for major golf tournaments. Friendly atmosphere."
+        },
+        {
+          "name": "Pro Shop",
+          "description": "Well-stocked shop with equipment, clothing, and accessories. Club fitting available. Staff can arrange lessons with club professionals."
+        },
+        {
+          "name": "Practice Range",
+          "description": "Extensive grass practice range with multiple target greens. Practice bunker and chipping area adjacent."
+        },
+        {
+          "name": "Buggy & Equipment Hire",
+          "description": "Modern fleet of electric buggies. Club rental available for visitors. Pull and electric trolleys."
+        }
+      ]
+    },
+    "membershipSection": {
+      "intro": "La Finca offers various membership options to suit different requirements, from occasional visitors to year-round residents.",
+      "options": [
+        {
+          "type": "Annual Membership",
+          "description": "Full membership with unlimited play. Significant green fee savings for those playing regularly. Guest privileges included."
+        },
+        {
+          "type": "Flexi-Membership",
+          "description": "Reduced commitment for part-time residents or those splitting time between locations. Typically covers 3-6 months."
+        },
+        {
+          "type": "Visitor Green Fees",
+          "description": "Pay-and-play available without membership. Seasonal pricing with discounts for twilight rounds and multi-round bookings."
+        }
+      ],
+      "note": "Contact the pro shop directly for current membership rates and availability. Resident discounts often apply for property owners within the resort."
+    },
+    "propertySection": {
+      "intro": "La Finca has developed into a thriving residential community, with quality new builds and established properties attracting international buyers seeking golf lifestyle living.",
+      "highlights": [
+        "New build villas from €300,000-550,000",
+        "Townhouses from €195,000-280,000",
+        "Frontline golf positions available in new developments",
+        "Contrimar's Oasis Villas series among most popular",
+        "Strong rental market for golf holiday lets",
+        "Established international community with year-round residents"
+      ],
+      "description": "Property prices at La Finca remain significantly below equivalent golf locations on the coast, with savings of 30-40% typical. The 15-minute drive to Guardamar beaches is the trade-off, but for golf-focused buyers, the value proposition is compelling.\n\nBuilder Contrimar has been particularly active at La Finca, with their Oasis Villas developments becoming synonymous with quality golf lifestyle. Current availability includes the Oasis Villas 2 development, offering 3-bedroom villas with private pools from €395,000."
+    },
+    "locationSection": {
+      "intro": "La Finca's location balances peaceful resort living with practical accessibility.",
+      "distances": [
+        { "destination": "Algorfa village", "distance": "2 km", "time": "5 minutes" },
+        { "destination": "Guardamar beaches", "distance": "15 km", "time": "15 minutes" },
+        { "destination": "Torrevieja", "distance": "18 km", "time": "20 minutes" },
+        { "destination": "Zenia Boulevard", "distance": "22 km", "time": "25 minutes" },
+        { "destination": "Alicante Airport", "distance": "40 km", "time": "30 minutes" },
+        { "destination": "Murcia Airport", "distance": "45 km", "time": "35 minutes" }
+      ],
+      "description": "The inland location means peaceful surroundings without tourist traffic. Daily essentials are available in Algorfa village, while Guardamar and Torrevieja provide larger shopping and dining options. The AP-7 motorway is easily accessible, making airport transfers straightforward."
+    },
+    "whyPlayHere": [
+      "Championship-quality 18-hole course by Pepe Gancedo",
+      "Excellent year-round conditions with mild winters",
+      "Welcoming clubhouse with quality dining",
+      "Less crowded than coastal courses",
+      "Value pricing with green fees from €45",
+      "Residential community creates friendly atmosphere",
+      "Multiple nearby courses for variety",
+      "Property opportunities for those seeking golf lifestyle"
+    ],
+    "faqs": [
+      {
+        "question": "What are the green fees at La Finca Golf?",
+        "answer": "Green fees at La Finca range from approximately €45-72 depending on season and tee time. Twilight rates and multi-round packages offer further savings. Residents and members receive preferential rates. Contact the pro shop for current pricing."
+      },
+      {
+        "question": "Is La Finca suitable for high handicappers?",
+        "answer": "Yes, La Finca is suitable for all abilities. The wide fairways and multiple tee options accommodate higher handicappers, while strategic bunkering and water hazards challenge better players. Pepe Gancedo designed a course that's fair but interesting for everyone."
+      },
+      {
+        "question": "Can I rent clubs at La Finca?",
+        "answer": "Yes, club rental is available from the pro shop. Quality sets for both men and women are offered at reasonable daily rates. Booking in advance is recommended during busy periods."
+      },
+      {
+        "question": "What is the dress code at La Finca?",
+        "answer": "La Finca maintains a smart casual dress code typical of Spanish golf clubs. Collared shirts are required on the course, and denim is not permitted. Golf shoes with soft spikes are required. The clubhouse is more relaxed but smart casual is appreciated."
+      },
+      {
+        "question": "Are buggies available at La Finca?",
+        "answer": "Yes, electric buggies are available for hire. The course is also walkable for those who prefer to walk. Pull and electric trolleys are available as alternatives to buggies."
+      },
+      {
+        "question": "What other courses are near La Finca?",
+        "answer": "Several quality courses are within easy reach: Vistabella Golf (8 min), La Marquesa Golf (10 min), Lo Romero Golf (15 min), and the coastal courses of Villamartín, Las Ramblas, and Campoamor (20-25 min). This variety is a major attraction for the area."
+      },
+      {
+        "question": "Can I buy property at La Finca Golf?",
+        "answer": "Yes, La Finca is a residential community with ongoing new build development. Contrimar's Oasis Villas 2 offers new 3-bedroom villas from €395,000. Townhouses start from around €195,000. Contact us for current availability and property viewings."
+      },
+      {
+        "question": "What are the best months to play golf at La Finca?",
+        "answer": "La Finca is playable year-round, but October through May offers ideal conditions—warm enough for comfortable play, without summer heat. Winter temperatures typically range 15-20°C during the day. Even summer rounds are pleasant if you tee off early morning."
+      },
+      {
+        "question": "Does La Finca have a practice range?",
+        "answer": "Yes, La Finca has a full practice range with grass hitting areas and multiple target greens. There's also a practice putting green and chipping area near the clubhouse. Practice facilities are included with green fees or available separately."
+      },
+      {
+        "question": "How far is La Finca from the beach?",
+        "answer": "Guardamar del Segura's beaches are approximately 15 km from La Finca, a 15-minute drive. Torrevieja's beaches are about 20 minutes away. While La Finca is inland, beach access is easy for those who want to combine golf with coastal visits."
+      }
+    ],
+    "conclusion": "La Finca Golf Resort offers everything a golf-focused buyer could want: a quality championship course, excellent facilities, an established community, and access to new build properties at compelling prices. Whether you're seeking a golf holiday destination, a permanent home on the fairways, or an investment property with rental potential, La Finca delivers.\n\nReady to explore La Finca? We can arrange property viewings, golf introductions, and help you understand what life at this exceptional resort could look like. Contact us today to start your La Finca journey."
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "GolfCourse",
+    "name": "La Finca Golf Resort",
+    "description": "Championship 18-hole golf course in Algorfa designed by Pepe Gancedo. Parkland-style layout with water features, excellent facilities, and residential community.",
+    "url": "https://www.lafincagolf.com/",
+    "telephone": "+34 966 729 010",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Algorfa",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 38.0647,
+      "longitude": -0.7928
+    },
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "18 Holes", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Clubhouse", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Restaurant", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Pro Shop", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Practice Range", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Buggy Hire", "value": true }
+    ],
+    "priceRange": "€45-72"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are the green fees at La Finca Golf?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Green fees at La Finca range from approximately €45-72 depending on season and tee time. Twilight rates and multi-round packages offer further savings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is La Finca suitable for high handicappers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, La Finca is suitable for all abilities. The wide fairways and multiple tee options accommodate higher handicappers, while strategic bunkering challenges better players."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I buy property at La Finca Golf?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, La Finca is a residential community with ongoing development. Contrimar's Oasis Villas 2 offers new 3-bedroom villas from €395,000. Townhouses start from around €195,000."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is La Finca from the beach?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Guardamar del Segura's beaches are approximately 15 km from La Finca, a 15-minute drive. Torrevieja's beaches are about 20 minutes away."
+        }
+      }
+    ]
+  }
+}

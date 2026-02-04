@@ -3,7 +3,10 @@
   "name": "Moraira",
   "region": "Costa Blanca North",
   "propertyCount": 6,
-  "propertyTypes": ["Villa", "Chalet"],
+  "propertyTypes": [
+    "Villa",
+    "Chalet"
+  ],
   "priceRange": {
     "min": 850000,
     "max": 2200000
@@ -197,5 +200,6 @@
         }
       }
     ]
-  }
+  },
+  "cardImage": "https://images.unsplash.com/photo-1600047509782-20d39509f26d?w=800&q=80&fit=crop"
 }

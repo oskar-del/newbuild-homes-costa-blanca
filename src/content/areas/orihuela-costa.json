@@ -3,7 +3,12 @@
   "name": "Orihuela Costa",
   "region": "Costa Blanca South",
   "propertyCount": 0,
-  "propertyTypes": ["Apartment", "Penthouse", "Townhouse", "Villa"],
+  "propertyTypes": [
+    "Apartment",
+    "Penthouse",
+    "Townhouse",
+    "Villa"
+  ],
   "priceRange": {
     "min": 195000,
     "max": 750000
@@ -246,5 +251,6 @@
         }
       }
     ]
-  }
+  },
+  "cardImage": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&q=80&fit=crop"
 }

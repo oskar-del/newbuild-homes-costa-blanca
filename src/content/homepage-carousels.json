@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-12",
+  "lastUpdated": "2026-01-26",
   "carousels": {
     "south-golf": {
       "id": "south-golf",
@@ -24,7 +24,12 @@
           "isKeyReady": true,
           "isGolf": true,
           "hasPool": true,
-          "features": ["Private Pool", "Golf Views", "Garage"]
+          "features": [
+            "Private Pool",
+            "Golf Views",
+            "Garage"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/16689067/12-1.jpg"
         },
         {
           "reference": "N7666",
@@ -41,7 +46,12 @@
           "isKeyReady": true,
           "isGolf": true,
           "hasPool": true,
-          "features": ["Private Pool", "Frontline Golf", "Solarium"]
+          "features": [
+            "Private Pool",
+            "Frontline Golf",
+            "Solarium"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/20011159/9-1.jpg"
         },
         {
           "reference": "N8806",
@@ -58,7 +68,12 @@
           "isKeyReady": true,
           "isGolf": true,
           "hasPool": true,
-          "features": ["Private Pool", "Golf Views", "Modern Design"]
+          "features": [
+            "Private Pool",
+            "Golf Views",
+            "Modern Design"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/24361541/10-1.jpg"
         },
         {
           "reference": "N6034",
@@ -75,7 +90,12 @@
           "isKeyReady": true,
           "isGolf": true,
           "hasPool": true,
-          "features": ["Private Pool", "Frontline Golf", "Underbuild"]
+          "features": [
+            "Private Pool",
+            "Frontline Golf",
+            "Underbuild"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/13526381/24-1.jpg"
         },
         {
           "reference": "N7417",
@@ -92,7 +112,12 @@
           "isKeyReady": true,
           "isGolf": true,
           "hasPool": true,
-          "features": ["Private Pool", "Golf Views", "4 Bedrooms"]
+          "features": [
+            "Private Pool",
+            "Golf Views",
+            "4 Bedrooms"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/19432786/9-1.jpg"
         }
       ]
     },
@@ -118,7 +143,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Communal Pool", "Terrace", "Storage"]
+          "features": [
+            "Communal Pool",
+            "Terrace",
+            "Storage"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/21616952/3-1.jpg"
         },
         {
           "reference": "N8140",
@@ -134,7 +164,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Communal Pool", "Garden", "Parking"]
+          "features": [
+            "Communal Pool",
+            "Garden",
+            "Parking"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/21828871/5-1.jpg"
         },
         {
           "reference": "N7841",
@@ -150,7 +185,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Rooftop Pool", "City Center", "Modern"]
+          "features": [
+            "Rooftop Pool",
+            "City Center",
+            "Modern"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/20469393/2-1.jpg"
         },
         {
           "reference": "N8095",
@@ -166,7 +206,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Communal Pool", "3 Bedrooms", "Terrace"]
+          "features": [
+            "Communal Pool",
+            "3 Bedrooms",
+            "Terrace"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/21620230/4-1.jpg"
         },
         {
           "reference": "N8535",
@@ -182,7 +227,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Communal Pool", "Near Golf", "Sea Views"]
+          "features": [
+            "Communal Pool",
+            "Near Golf",
+            "Sea Views"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/23360522/7-1.jpg"
         },
         {
           "reference": "N8207",
@@ -198,7 +248,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Laguna Views", "Communal Pool", "Spa"]
+          "features": [
+            "Laguna Views",
+            "Communal Pool",
+            "Spa"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/22029803/6-1.jpg"
         },
         {
           "reference": "N7716",
@@ -214,7 +269,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Near Beach", "Communal Pool", "Modern"]
+          "features": [
+            "Near Beach",
+            "Communal Pool",
+            "Modern"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/20197743/2-1.jpg"
         },
         {
           "reference": "N6470",
@@ -230,7 +290,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["3 Bedrooms", "Garden", "Communal Pool"]
+          "features": [
+            "3 Bedrooms",
+            "Garden",
+            "Communal Pool"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/15957049/2-1.jpg"
         },
         {
           "reference": "N7323",
@@ -247,7 +312,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": false,
-          "features": ["Detached Villa", "Private Garden", "Garage"]
+          "features": [
+            "Detached Villa",
+            "Private Garden",
+            "Garage"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/19159149/15-1.jpg"
         },
         {
           "reference": "N5843",
@@ -263,7 +333,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Laguna Views", "3 Bedrooms", "Solarium"]
+          "features": [
+            "Laguna Views",
+            "3 Bedrooms",
+            "Solarium"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/12223436/2-1.jpg"
         },
         {
           "reference": "N7033",
@@ -279,7 +354,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["3 Bedrooms", "Near Beach", "Pool"]
+          "features": [
+            "3 Bedrooms",
+            "Near Beach",
+            "Pool"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/18029874/3-1.jpg"
         },
         {
           "reference": "N7845",
@@ -295,7 +375,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Penthouse", "Rooftop Pool", "Sea Views"]
+          "features": [
+            "Penthouse",
+            "Rooftop Pool",
+            "Sea Views"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/20469485/13-1.jpg"
         }
       ]
     },
@@ -321,7 +406,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Sea Views", "Roof Terrace", "Luxury Finish"]
+          "features": [
+            "Sea Views",
+            "Roof Terrace",
+            "Luxury Finish"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/18485041/13-1.jpg"
         },
         {
           "reference": "N8496",
@@ -338,7 +428,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Private Pool", "Modern Design", "Garage"]
+          "features": [
+            "Private Pool",
+            "Modern Design",
+            "Garage"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/23092260/14-1.jpg"
         },
         {
           "reference": "N6403",
@@ -355,7 +450,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Private Pool", "Underbuild", "Views"]
+          "features": [
+            "Private Pool",
+            "Underbuild",
+            "Views"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/15619069/11-1.jpg"
         },
         {
           "reference": "N6299",
@@ -372,7 +472,12 @@
           "isKeyReady": true,
           "isGolf": true,
           "hasPool": true,
-          "features": ["Near Golf", "Private Pool", "Modern"]
+          "features": [
+            "Near Golf",
+            "Private Pool",
+            "Modern"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/15220071/1-1.jpg"
         },
         {
           "reference": "N7227",
@@ -389,7 +494,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["4 Bedrooms", "Private Pool", "Garage"]
+          "features": [
+            "4 Bedrooms",
+            "Private Pool",
+            "Garage"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/18721530/12-1.jpg"
         },
         {
           "reference": "N6722",
@@ -406,7 +516,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["4 Bedrooms", "Near Beach", "Premium"]
+          "features": [
+            "4 Bedrooms",
+            "Near Beach",
+            "Premium"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/16785944/17-1.jpg"
         },
         {
           "reference": "N3719",
@@ -423,7 +538,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Luxury", "Private Pool", "Sea Views"]
+          "features": [
+            "Luxury",
+            "Private Pool",
+            "Sea Views"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/9860438/1-1.jpg"
         },
         {
           "reference": "N6894",
@@ -440,7 +560,12 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Luxury Design", "Private Pool", "Views"]
+          "features": [
+            "Luxury Design",
+            "Private Pool",
+            "Views"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/17601471/2-1.jpg"
         }
       ]
     },
@@ -453,20 +578,48 @@
       "viewAllText": "View All Inland Properties",
       "properties": [
         {
-          "reference": "N8770",
-          "title": "Hondon Apartment",
-          "development": "HONDON RESIDENCIAL",
-          "town": "Hondon de las Nieves",
-          "zone": "Hondon Valley",
-          "price": 219000,
-          "propertyType": "Apartment",
-          "bedrooms": 2,
-          "bathrooms": 2,
-          "builtArea": 80,
-          "isKeyReady": true,
+          "reference": "N7763",
+          "title": "Pinoso Estate Villa",
+          "development": "PINOSO LUXURY ESTATES",
+          "town": "Pinoso",
+          "zone": "Camino Del Prado",
+          "price": 518000,
+          "propertyType": "Villa",
+          "bedrooms": 4,
+          "bathrooms": 3,
+          "builtArea": 180,
+          "plotArea": 25000,
+          "isKeyReady": false,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Mountain Views", "Peaceful", "Communal Pool"]
+          "features": [
+            "Private Pool",
+            "Huge 25,000m² Plot",
+            "Mountain Views"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/20329327/19-1.jpg"
+        },
+        {
+          "reference": "N7759",
+          "title": "Pinoso Grand Villa",
+          "development": "PINOSO LUXURY ESTATES",
+          "town": "Pinoso",
+          "zone": "Camino Del Prado",
+          "price": 547000,
+          "propertyType": "Villa",
+          "bedrooms": 4,
+          "bathrooms": 3,
+          "builtArea": 245,
+          "plotArea": 10000,
+          "isKeyReady": false,
+          "isGolf": false,
+          "hasPool": true,
+          "features": [
+            "Private Pool",
+            "245m² Living Space",
+            "10,000m² Plot"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/20329300/12-1.jpg"
         },
         {
           "reference": "N8987",
@@ -483,24 +636,12 @@
           "isKeyReady": false,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Private Pool", "Large Plot", "Countryside"]
-        },
-        {
-          "reference": "N8988",
-          "title": "Pinoso Luxury Villa",
-          "development": "PINOSO VILLAS",
-          "town": "Pinoso",
-          "zone": "Pinoso",
-          "price": 349000,
-          "propertyType": "Villa",
-          "bedrooms": 3,
-          "bathrooms": 3,
-          "builtArea": 150,
-          "plotArea": 700,
-          "isKeyReady": false,
-          "isGolf": false,
-          "hasPool": true,
-          "features": ["Private Pool", "Large Plot", "Modern Design"]
+          "features": [
+            "Private Pool",
+            "Large Plot",
+            "Countryside"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/25710097/7-1.jpg"
         },
         {
           "reference": "N9069",
@@ -517,7 +658,11 @@
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Private Pool", "Quiet Location", "Near La Finca"]
+          "features": [
+            "Private Pool",
+            "Quiet Location",
+            "Near La Finca"
+          ]
         }
       ]
     },
@@ -530,57 +675,94 @@
       "viewAllText": "Explore Jávea & Moraira",
       "properties": [
         {
-          "reference": "JAVEA-001",
-          "title": "Exclusive Jávea Villa",
-          "development": "JAVEA EXCLUSIVE",
+          "reference": "N9401",
+          "title": "3-Bed Villa with Pool in Jávea",
+          "development": "CA LOS OLIVOS",
           "town": "Jávea",
-          "zone": "Cap Marti",
-          "price": 1250000,
+          "zone": "Valle del Sol",
+          "price": 1375000,
           "propertyType": "Villa",
-          "bedrooms": 4,
-          "bathrooms": 4,
-          "builtArea": 300,
-          "plotArea": 1200,
-          "isKeyReady": false,
-          "isGolf": false,
-          "hasPool": true,
-          "hasSeaview": true,
-          "features": ["Sea Views", "Private Pool", "Luxury Finish"]
-        },
-        {
-          "reference": "MORAIRA-001",
-          "title": "Moraira Sea View Villa",
-          "development": "MORAIRA HEIGHTS",
-          "town": "Moraira",
-          "zone": "Moraira",
-          "price": 1450000,
-          "propertyType": "Villa",
-          "bedrooms": 4,
-          "bathrooms": 4,
-          "builtArea": 350,
-          "plotArea": 1500,
-          "isKeyReady": false,
-          "isGolf": false,
-          "hasPool": true,
-          "hasSeaview": true,
-          "features": ["Panoramic Sea Views", "Infinity Pool", "Premium"]
-        },
-        {
-          "reference": "JAVEA-002",
-          "title": "Modern Jávea Apartment",
-          "development": "ARENAL RESIDENCE",
-          "town": "Jávea",
-          "zone": "Arenal",
-          "price": 495000,
-          "propertyType": "Apartment",
           "bedrooms": 3,
-          "bathrooms": 2,
-          "builtArea": 120,
+          "bathrooms": 3,
+          "builtArea": 189,
+          "plotArea": 800,
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
           "hasSeaview": true,
-          "features": ["Near Beach", "Sea Views", "Modern"]
+          "features": [
+            "Sea Views",
+            "Private Pool",
+            "Luxury"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/27406650/9-1.jpg"
+        },
+        {
+          "reference": "N9404",
+          "title": "4-Bed Villa with Pool in Jávea",
+          "development": "CA SOROLLA",
+          "town": "Jávea",
+          "zone": "Valle del Sol",
+          "price": 1525000,
+          "propertyType": "Villa",
+          "bedrooms": 4,
+          "bathrooms": 4,
+          "builtArea": 245,
+          "plotArea": 1000,
+          "isKeyReady": true,
+          "isGolf": false,
+          "hasPool": true,
+          "hasSeaview": true,
+          "features": [
+            "4 Bedrooms",
+            "Sea Views",
+            "Premium"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/27412165/13-1.jpg"
+        },
+        {
+          "reference": "N7975",
+          "title": "3-Bed Villa with Pool in Polop",
+          "development": "VENECIA V",
+          "town": "Polop",
+          "zone": "Urbanizaciones",
+          "price": 860000,
+          "propertyType": "Villa",
+          "bedrooms": 3,
+          "bathrooms": 3,
+          "builtArea": 306,
+          "plotArea": 800,
+          "isKeyReady": true,
+          "isGolf": false,
+          "hasPool": true,
+          "features": [
+            "Large Build",
+            "Private Pool",
+            "Mountain Views"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/21030557/6-1.jpg"
+        },
+        {
+          "reference": "N8251",
+          "title": "3-Bed Penthouse with Sea Views in Denia",
+          "development": "RESIDENCIAL VICTORIA IV",
+          "town": "Denia",
+          "zone": "Las Marinas",
+          "price": 499000,
+          "propertyType": "Penthouse",
+          "bedrooms": 3,
+          "bathrooms": 3,
+          "builtArea": 82,
+          "isKeyReady": true,
+          "isGolf": false,
+          "hasPool": true,
+          "hasSeaview": true,
+          "features": [
+            "Sea Views",
+            "Penthouse",
+            "Near Beach"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/22132687/10-1.jpg"
         }
       ]
     },
@@ -593,56 +775,71 @@
       "viewAllText": "Explore Calpe & Altea",
       "properties": [
         {
-          "reference": "CALPE-001",
-          "title": "Calpe Beach Apartment",
-          "development": "MAR AZUL CALPE",
-          "town": "Calpe",
-          "zone": "Calpe Playa",
-          "price": 395000,
-          "propertyType": "Apartment",
-          "bedrooms": 2,
-          "bathrooms": 2,
-          "builtArea": 90,
-          "isKeyReady": true,
-          "isGolf": false,
-          "hasPool": true,
-          "hasSeaview": true,
-          "features": ["Beach Front", "Sea Views", "Communal Pool"]
-        },
-        {
-          "reference": "ALTEA-001",
-          "title": "Altea Hills Villa",
-          "development": "ALTEA HILLS PREMIUM",
-          "town": "Altea",
-          "zone": "Altea Hills",
-          "price": 895000,
-          "propertyType": "Villa",
-          "bedrooms": 4,
-          "bathrooms": 3,
-          "builtArea": 250,
-          "plotArea": 800,
-          "isKeyReady": false,
-          "isGolf": false,
-          "hasPool": true,
-          "hasSeaview": true,
-          "features": ["Panoramic Views", "Private Pool", "Gated Community"]
-        },
-        {
           "reference": "SP0195",
-          "title": "Alexia Penthouse Calpe",
+          "title": "2-Bed Penthouse with Sea Views in Calpe",
           "development": "ALEXIA",
           "town": "Calpe",
-          "zone": "Calpe",
+          "zone": "Arenal Bol",
           "price": 559250,
           "propertyType": "Penthouse",
           "bedrooms": 2,
           "bathrooms": 2,
-          "builtArea": 110,
+          "builtArea": 68,
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
           "hasSeaview": true,
-          "features": ["Penthouse", "Sea Views", "Roof Terrace"]
+          "features": [
+            "Penthouse",
+            "Sea Views",
+            "Near Beach"
+          ],
+          "image": ""
+        },
+        {
+          "reference": "SP1297",
+          "title": "4-Bed Villa with Pool in Finestrat",
+          "development": "SALISOL HILLS",
+          "town": "Finestrat",
+          "zone": "Balcón De Finestrat",
+          "price": 650000,
+          "propertyType": "Villa",
+          "bedrooms": 4,
+          "bathrooms": 3,
+          "builtArea": 202,
+          "plotArea": 500,
+          "isKeyReady": true,
+          "isGolf": false,
+          "hasPool": true,
+          "features": [
+            "4 Bedrooms",
+            "Private Pool",
+            "Mountain Views"
+          ],
+          "image": ""
+        },
+        {
+          "reference": "N6130",
+          "title": "4-Bed Luxury Villa with Pool in Finestrat",
+          "development": "ORANGE",
+          "town": "Finestrat",
+          "zone": "Campana Garden",
+          "price": 1350000,
+          "propertyType": "Villa",
+          "bedrooms": 4,
+          "bathrooms": 4,
+          "builtArea": 486,
+          "plotArea": 1200,
+          "isKeyReady": true,
+          "isGolf": false,
+          "hasPool": true,
+          "hasSeaview": true,
+          "features": [
+            "Luxury",
+            "Private Pool",
+            "Premium Design"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/14336173/4-1.jpg"
         }
       ]
     },
@@ -655,38 +852,70 @@
       "viewAllText": "Explore Dénia",
       "properties": [
         {
-          "reference": "DENIA-001",
-          "title": "Dénia Marina Apartment",
-          "development": "PUERTO DENIA",
-          "town": "Dénia",
-          "zone": "Marina",
-          "price": 345000,
-          "propertyType": "Apartment",
-          "bedrooms": 2,
-          "bathrooms": 2,
-          "builtArea": 85,
+          "reference": "N8251",
+          "title": "3-Bed Penthouse in Denia",
+          "development": "RESIDENCIAL VICTORIA IV",
+          "town": "Denia",
+          "zone": "Las Marinas",
+          "price": 499000,
+          "propertyType": "Penthouse",
+          "bedrooms": 3,
+          "bathrooms": 3,
+          "builtArea": 82,
           "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "features": ["Marina Views", "Near Port", "Modern"]
+          "hasSeaview": true,
+          "features": [
+            "Penthouse",
+            "Near Beach",
+            "Modern"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/22132687/10-1.jpg"
         },
         {
-          "reference": "DENIA-002",
-          "title": "Dénia Montgo Villa",
-          "development": "MONTGO VILLAS",
-          "town": "Dénia",
-          "zone": "Montgo",
-          "price": 750000,
+          "reference": "N5632",
+          "title": "3-Bed Villa with Pool in Mutxamel",
+          "development": "ALICANTE PANORAMIC",
+          "town": "Mutxamel",
+          "zone": "Mutxamel",
+          "price": 450000,
           "propertyType": "Villa",
-          "bedrooms": 4,
+          "bedrooms": 3,
           "bathrooms": 3,
-          "builtArea": 200,
-          "plotArea": 800,
-          "isKeyReady": false,
+          "builtArea": 118,
+          "plotArea": 300,
+          "isKeyReady": true,
           "isGolf": false,
           "hasPool": true,
-          "hasSeaview": true,
-          "features": ["Mountain & Sea Views", "Private Pool", "Quiet"]
+          "features": [
+            "Private Pool",
+            "City Views",
+            "Modern Design"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/10961766/5-1.jpg"
+        },
+        {
+          "reference": "N6430",
+          "title": "3-Bed Villa with Pool in La Nucia",
+          "development": "DON MAR LA NUCIA",
+          "town": "La Nucia",
+          "zone": "Urb. Don Mar",
+          "price": 600000,
+          "propertyType": "Villa",
+          "bedrooms": 3,
+          "bathrooms": 3,
+          "builtArea": 141,
+          "plotArea": 400,
+          "isKeyReady": true,
+          "isGolf": false,
+          "hasPool": true,
+          "features": [
+            "Private Pool",
+            "Mountain Views",
+            "Premium"
+          ],
+          "image": "https://fotos15.apinmo.com/7515/15837815/3-1.jpg"
         }
       ]
     }

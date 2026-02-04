@@ -13,8 +13,8 @@ interface LeadFormProps {
   formName?: string;
 }
 
-export default function LeadForm({ 
-  compact = false, 
+export default function LeadForm({
+  compact = false,
   propertyReference,
   customMessage,
   onSuccess,
@@ -73,10 +73,10 @@ export default function LeadForm({
 
   if (status === 'success') {
     return (
-      <div className={`${compact ? 'p-4' : 'p-6'} bg-green-50 border border-green-200 rounded-lg text-center`}>
-        <div className="text-green-600 text-2xl mb-2">✓</div>
-        <p className="font-semibold text-green-800">Thank you!</p>
-        <p className="text-sm text-green-600 mt-1">
+      <div className={`${compact ? 'p-4' : 'p-6'} bg-success-100 border border-success-300 rounded-lg text-center`}>
+        <div className="text-success-500 text-2xl mb-2">✓</div>
+        <p className="font-medium text-success-700">Thank you!</p>
+        <p className="text-sm text-success-600 mt-1">
           We&apos;ll be in touch within 24 hours.
         </p>
       </div>
@@ -84,7 +84,7 @@ export default function LeadForm({
   }
 
   return (
-    <form 
+    <form
       onSubmit={handleSubmit}
       name={formName}
       method="POST"
@@ -103,15 +103,15 @@ export default function LeadForm({
       )}
 
       {title && (
-        <h4 className="font-semibold text-[#1e3a5f] mb-1">{title}</h4>
+        <h4 className="font-medium text-primary-900 mb-1">{title}</h4>
       )}
-      
+
       {subtitle && (
-        <p className="text-sm text-stone-600 mb-3">{subtitle}</p>
+        <p className="text-sm text-warm-600 mb-3">{subtitle}</p>
       )}
 
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-stone-700 mb-1">
+        <label htmlFor="name" className="block text-sm font-medium text-warm-700 mb-1">
           Your Name *
         </label>
         <input
@@ -121,13 +121,13 @@ export default function LeadForm({
           required
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          className="w-full px-3 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-[#e8913a] focus:border-transparent outline-none transition-all"
-          placeholder="John Smith"
+          className="w-full px-3 py-2 border border-warm-300 rounded-md focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition-all bg-white"
+          placeholder="Your name"
         />
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-stone-700 mb-1">
+        <label htmlFor="email" className="block text-sm font-medium text-warm-700 mb-1">
           Email Address *
         </label>
         <input
@@ -137,14 +137,14 @@ export default function LeadForm({
           required
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-          className="w-full px-3 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-[#e8913a] focus:border-transparent outline-none transition-all"
-          placeholder="john@example.com"
+          className="w-full px-3 py-2 border border-warm-300 rounded-md focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition-all bg-white"
+          placeholder="Email address"
         />
       </div>
 
       <div>
-        <label htmlFor="phone" className="block text-sm font-medium text-stone-700 mb-1">
-          Phone Number
+        <label htmlFor="phone" className="block text-sm font-medium text-warm-700 mb-1">
+          Phone (optional)
         </label>
         <input
           type="tel"
@@ -152,14 +152,14 @@ export default function LeadForm({
           name="phone"
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-          className="w-full px-3 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-[#e8913a] focus:border-transparent outline-none transition-all"
-          placeholder="+44 7123 456789"
+          className="w-full px-3 py-2 border border-warm-300 rounded-md focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition-all bg-white"
+          placeholder="Phone number"
         />
       </div>
 
       {!compact && (
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-stone-700 mb-1">
+          <label htmlFor="message" className="block text-sm font-medium text-warm-700 mb-1">
             Message
           </label>
           <textarea
@@ -168,14 +168,14 @@ export default function LeadForm({
             rows={3}
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-            className="w-full px-3 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-[#e8913a] focus:border-transparent outline-none transition-all resize-none"
+            className="w-full px-3 py-2 border border-warm-300 rounded-md focus:ring-2 focus:ring-accent-500 focus:border-transparent outline-none transition-all resize-none bg-white"
             placeholder="I'm interested in this property..."
           />
         </div>
       )}
 
       {status === 'error' && (
-        <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
+        <div className="p-3 bg-red-50 border border-red-200 rounded-md">
           <p className="text-sm text-red-600">
             Something went wrong. Please try again or contact us directly.
           </p>
@@ -185,7 +185,7 @@ export default function LeadForm({
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="w-full bg-[#e8913a] hover:bg-[#d4792c] disabled:bg-stone-400 text-white font-bold py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+        className="w-full bg-accent-500 hover:bg-accent-600 disabled:bg-warm-400 text-white font-medium py-3 px-4 rounded-md transition-colors flex items-center justify-center gap-2"
       >
         {status === 'submitting' ? (
           <>
@@ -196,11 +196,11 @@ export default function LeadForm({
             Sending...
           </>
         ) : (
-          'Send Enquiry'
+          'Request Information'
         )}
       </button>
 
-      <p className="text-xs text-stone-500 text-center">
+      <p className="text-xs text-warm-500 text-center">
         We respect your privacy. Your information will only be used to respond to your enquiry.
       </p>
     </form>

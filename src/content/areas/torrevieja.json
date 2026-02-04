@@ -3,9 +3,14 @@
   "name": "Torrevieja",
   "region": "Costa Blanca South",
   "heroImage": "/images/areas/torrevieja-hero.webp",
-  "cardImage": "/images/areas/torrevieja-card.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=800&q=80&fit=crop",
   "propertyCount": 0,
-  "propertyTypes": ["Apartment", "Penthouse", "Townhouse", "Villa"],
+  "propertyTypes": [
+    "Apartment",
+    "Penthouse",
+    "Townhouse",
+    "Villa"
+  ],
   "priceRange": {
     "min": 180000,
     "max": 650000

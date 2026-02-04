@@ -1,34 +1,110 @@
-export const dynamic = 'force-dynamic';
+// ISR: Regenerate every hour
+export const revalidate = 3600;
+
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getAllProperties } from '@/lib/unified-feed-service';
-import { UnifiedProperty } from '@/lib/unified-property';
+import { fetchXMLFeed, ParsedProperty } from '@/lib/xml-parser';
+import { getRegionForTown, REGIONS } from '@/lib/feed-config';
 import PropertyFilters from '@/components/PropertyFilters';
+import SortDropdown from '@/components/SortDropdown';
+import PropertySearch from '@/components/PropertySearch';
+import { collectionPageSchema, breadcrumbSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'New Build Villas & Houses Costa Blanca | Properties for Sale',
-  description: 'Browse 100+ new build villas and houses for sale in Costa Blanca. Properties in Javea, Moraira, Calpe, Benissa, Benitachell and more. Contact us for viewings.',
+  title: 'New Build Properties Costa Blanca | Villas & Houses for Sale',
+  description: 'Browse 1000+ new build villas and houses for sale across Costa Blanca. From sunny south beaches to prestigious north coastline. Find your Spanish dream home.',
+  openGraph: {
+    title: 'New Build Properties Costa Blanca | Villas & Houses for Sale',
+    description: 'Browse 1000+ new build villas and houses for sale across Costa Blanca. From sunny south beaches to prestigious north coastline.',
+    type: 'website',
+    url: 'https://newbuildhomescostablanca.com/properties',
+    siteName: 'New Build Homes Costa Blanca',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'New Build Properties Costa Blanca | Villas & Houses for Sale',
+    description: 'Browse 1000+ new build villas and houses for sale across Costa Blanca.',
+  },
 };
 
-export const revalidate = 3600;
+// Town lifestyle data for filtered views
+const TOWN_DATA: Record<string, { tagline: string; highlights: string[]; image: string }> = {
+  'Javea': {
+    tagline: 'Where mountains meet the Mediterranean',
+    highlights: ['Arenal sandy beach', 'Historic old town', 'Montgó Natural Park', '300+ sunshine days'],
+    image: '/images/areas/javea-hero.jpg',
+  },
+  'Moraira': {
+    tagline: 'Exclusive coastal elegance',
+    highlights: ['Pristine coves', 'Yacht club marina', 'Michelin dining', 'Low-density luxury'],
+    image: '/images/areas/moraira-hero.jpg',
+  },
+  'Calpe': {
+    tagline: 'Iconic Peñón, endless possibilities',
+    highlights: ['Peñón de Ifach landmark', 'Two sandy beaches', 'Vibrant town center', 'Great value'],
+    image: '/images/areas/calpe-hero.jpg',
+  },
+  'Torrevieja': {
+    tagline: 'Sun-soaked southern living',
+    highlights: ['Salt lakes & nature', 'Year-round expat community', 'Excellent healthcare', 'Budget-friendly'],
+    image: '/images/areas/torrevieja-hero.jpg',
+  },
+  'Benidorm': {
+    tagline: 'The Costa Blanca capital',
+    highlights: ['Vibrant nightlife', 'Award-winning beaches', 'Theme parks nearby', 'Great transport links'],
+    image: '/images/areas/benidorm-hero.jpg',
+  },
+  'Altea': {
+    tagline: 'The artistic heart of the coast',
+    highlights: ['Whitewashed old town', 'Art galleries', 'Sunset views', 'Cultural events'],
+    image: '/images/areas/altea-hero.jpg',
+  },
+  'Orihuela Costa': {
+    tagline: 'Golf, beaches & community',
+    highlights: ['5 golf courses', 'Blue flag beaches', 'Established community', 'Great amenities'],
+    image: '/images/areas/orihuela-costa-hero.jpg',
+  },
+};
+
+// Regional categories
+const SOUTH_TOWNS = ['torrevieja', 'orihuela costa', 'guardamar', 'pilar de la horadada', 'la zenia', 'cabo roig', 'playa flamenca', 'punta prima', 'villamartin', 'los montesinos', 'san miguel'];
+const NORTH_TOWNS = ['javea', 'moraira', 'calpe', 'altea', 'benidorm', 'denia', 'benissa', 'benitachell', 'cumbre del sol', 'teulada'];
+const GOLF_KEYWORDS = ['golf', 'la finca', 'villamartin', 'las colinas', 'campoamor', 'las ramblas', 'vistabella', 'algorfa'];
+const INLAND_TOWNS = ['algorfa', 'rojales', 'ciudad quesada', 'benijofar', 'san fulgencio', 'jalon', 'orba', 'pedreguer'];
+
+function formatPrice(price: number): string {
+  return new Intl.NumberFormat('en-EU', {
+    style: 'currency',
+    currency: 'EUR',
+    maximumFractionDigits: 0,
+  }).format(price);
+}
+
+function hasPool(property: ParsedProperty): boolean {
+  const desc = (property.description || '').toLowerCase();
+  return desc.includes('pool') || desc.includes('piscina');
+}
 
 export default async function PropertiesPage({
   searchParams,
 }: {
-  searchParams: { town?: string; beds?: string; type?: string };
+  searchParams: { town?: string; beds?: string; type?: string; sort?: string; region?: string };
 }) {
-  const allProperties = await getAllProperties();
-  
+  const allProperties = await fetchXMLFeed();
+
   // Get unique values for filters
   const towns = [...new Set(allProperties.map(p => p.town).filter(Boolean))].sort();
   const types = [...new Set(allProperties.map(p => p.propertyType).filter(Boolean))].sort();
-  const bedOptions = [...new Set(allProperties.map(p => p.bedrooms).filter(b => b > 0))].sort((a, b) => a - b);
+  const bedOptions = [...new Set(allProperties.map(p => p.bedrooms).filter((b): b is number => b !== null && b > 0))].sort((a, b) => a - b);
+
+  // Check if we have filters applied
+  const hasFilters = searchParams.town || searchParams.beds || searchParams.type || searchParams.region;
 
   // Apply filters
   let properties = allProperties;
   if (searchParams.town) {
-    properties = properties.filter(p => p.town === searchParams.town);
+    properties = properties.filter(p => p.town?.toLowerCase() === searchParams.town?.toLowerCase());
   }
   if (searchParams.beds) {
     properties = properties.filter(p => p.bedrooms === parseInt(searchParams.beds as string));
@@ -36,215 +112,571 @@ export default async function PropertiesPage({
   if (searchParams.type) {
     properties = properties.filter(p => p.propertyType === searchParams.type);
   }
+  if (searchParams.region) {
+    const regionLower = searchParams.region.toLowerCase();
+    if (regionLower === 'south') {
+      properties = properties.filter(p => SOUTH_TOWNS.some(t => p.town?.toLowerCase().includes(t)));
+    } else if (regionLower === 'north') {
+      properties = properties.filter(p => NORTH_TOWNS.some(t => p.town?.toLowerCase().includes(t)));
+    } else if (regionLower === 'golf') {
+      properties = properties.filter(p =>
+        GOLF_KEYWORDS.some(k => p.town?.toLowerCase().includes(k) || p.description?.toLowerCase().includes(k))
+      );
+    } else if (regionLower === 'inland') {
+      properties = properties.filter(p => INLAND_TOWNS.some(t => p.town?.toLowerCase().includes(t)));
+    }
+  }
 
-  // Group by town
-  const byTown = properties.reduce((acc, prop) => {
-    const town = prop.town || 'Other';
-    if (!acc[town]) acc[town] = [];
-    acc[town].push(prop);
-    return acc;
-  }, {} as Record<string, UnifiedProperty[]>);
+  // Sort properties
+  const sortBy = searchParams.sort || 'price-asc';
+  properties = [...properties].sort((a, b) => {
+    switch (sortBy) {
+      case 'price-desc': return (b.price || 0) - (a.price || 0);
+      case 'price-asc': return (a.price || 0) - (b.price || 0);
+      case 'beds-desc': return (b.bedrooms || 0) - (a.bedrooms || 0);
+      case 'size-desc': return (b.size || 0) - (a.size || 0);
+      default: return (a.price || 0) - (b.price || 0);
+    }
+  });
 
-  const sortedTowns = Object.keys(byTown).sort((a, b) => byTown[b].length - byTown[a].length);
+  // Group by regions for the "all properties" view
+  const southProperties = allProperties.filter(p => SOUTH_TOWNS.some(t => p.town?.toLowerCase().includes(t)));
+  const northProperties = allProperties.filter(p => NORTH_TOWNS.some(t => p.town?.toLowerCase().includes(t)));
+  const golfProperties = allProperties.filter(p => GOLF_KEYWORDS.some(k => p.town?.toLowerCase().includes(k) || p.description?.toLowerCase().includes('golf')));
+  const inlandProperties = allProperties.filter(p => INLAND_TOWNS.some(t => p.town?.toLowerCase().includes(t)));
 
-  return (
-    <main className="min-h-screen bg-slate-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-16">
-        <div className="container mx-auto px-4">
-          <nav className="text-sm mb-4 text-slate-400">
-            <Link href="/" className="hover:text-white">Home</Link>
-            <span className="mx-2">/</span>
-            <span className="text-white">Properties</span>
-          </nav>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">New Build Properties</h1>
-          <p className="text-xl text-slate-300 max-w-2xl">
-            Individual new build villas and houses across Costa Blanca. Modern homes from trusted developers, ready for your viewing.
-          </p>
-          <p className="mt-4 text-amber-400 font-semibold text-lg">
-            {properties.length} properties available
-          </p>
-        </div>
-      </section>
+  // Get top towns by property count
+  const getTopTowns = (props: ParsedProperty[], limit: number = 5) => {
+    const townCounts = props.reduce((acc, p) => {
+      const town = p.town || 'Other';
+      acc[town] = (acc[town] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+    return Object.entries(townCounts)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, limit)
+      .map(([town, count]) => ({ town, count, avgPrice: Math.round(props.filter(p => p.town === town).reduce((sum, p) => sum + (p.price || 0), 0) / count) }));
+  };
 
-      {/* Filters Section */}
-      <section className="bg-white border-b shadow-sm sticky top-16 z-40">
-        <div className="container mx-auto px-4 py-4">
-          <PropertyFilters towns={towns} types={types} bedOptions={bedOptions} />
-        </div>
-      </section>
+  const topSouthTowns = getTopTowns(southProperties);
+  const topNorthTowns = getTopTowns(northProperties);
 
-      {/* Properties Grid */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          {properties.length === 0 ? (
-            <div className="text-center py-16">
-              <p className="text-slate-500 text-lg">No properties found matching your criteria.</p>
-              <Link href="/properties" className="text-amber-600 hover:text-amber-700 font-medium mt-2 inline-block">
-                Clear filters
-              </Link>
+  // Schemas
+  const breadcrumbs = breadcrumbSchema([
+    { name: 'Home', url: 'https://newbuildhomescostablanca.com/' },
+    { name: 'Properties', url: 'https://newbuildhomescostablanca.com/properties/' },
+  ]);
+
+  const collectionSchema = collectionPageSchema({
+    name: 'New Build Properties Costa Blanca',
+    description: 'Browse 1000+ new build villas and houses for sale across Costa Blanca.',
+    url: 'https://newbuildhomescostablanca.com/properties/',
+    items: properties.slice(0, 20).map(p => ({
+      name: `${p.bedrooms} Bed ${p.propertyType} in ${p.town}`,
+      url: `https://newbuildhomescostablanca.com/properties/${p.ref || p.id}/`,
+      price: p.price || undefined,
+    })),
+  });
+
+  // If town filter is applied, show lifestyle-focused view
+  if (searchParams.town) {
+    const townData = TOWN_DATA[searchParams.town] || {
+      tagline: `Discover ${searchParams.town}`,
+      highlights: ['New build properties', 'Mediterranean lifestyle', 'Quality developments'],
+      image: '/images/placeholder-hero.jpg',
+    };
+
+    const avgPrice = properties.length > 0
+      ? Math.round(properties.reduce((sum, p) => sum + (p.price || 0), 0) / properties.length)
+      : 0;
+    const minPrice = properties.length > 0
+      ? Math.min(...properties.filter(p => p.price).map(p => p.price!))
+      : 0;
+
+    return (
+      <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(collectionSchema) }} />
+
+        <main className="min-h-screen bg-warm-50">
+          {/* Town Hero */}
+          <section className="relative bg-primary-900 overflow-hidden">
+            <div className="absolute inset-0 opacity-30">
+              <Image
+                src={townData.image}
+                alt={searchParams.town}
+                fill
+                className="object-cover"
+                unoptimized
+              />
             </div>
-          ) : searchParams.town ? (
-            // Show flat grid when filtered by town
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {properties.map(property => (
-                <PropertyCard key={property.id} property={property} />
-              ))}
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-900 via-primary-900/90 to-primary-900/70" />
+
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+              <nav className="flex items-center gap-2 text-sm mb-6">
+                <Link href="/" className="text-warm-400 hover:text-white transition-colors">Home</Link>
+                <span className="text-warm-600">/</span>
+                <Link href="/properties" className="text-warm-400 hover:text-white transition-colors">Properties</Link>
+                <span className="text-warm-600">/</span>
+                <span className="text-white font-medium">{searchParams.town}</span>
+              </nav>
+
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-4">
+                    New Builds in <span className="font-semibold">{searchParams.town}</span>
+                  </h1>
+                  <p className="text-xl text-accent-400 font-medium mb-6">{townData.tagline}</p>
+                  <div className="flex flex-wrap gap-3 mb-8">
+                    {townData.highlights.map((h, i) => (
+                      <span key={i} className="bg-white/10 backdrop-blur-sm text-white text-sm px-4 py-2 rounded-full">
+                        {h}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Quick Stats Card */}
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+                  <h2 className="text-white text-lg font-medium mb-6">Property Snapshot</h2>
+                  <div className="grid grid-cols-2 gap-6">
+                    <div>
+                      <div className="text-4xl font-semibold text-accent-400">{properties.length}</div>
+                      <div className="text-warm-300 text-sm">Properties Available</div>
+                    </div>
+                    <div>
+                      <div className="text-4xl font-semibold text-white">From {formatPrice(minPrice)}</div>
+                      <div className="text-warm-300 text-sm">Starting Price</div>
+                    </div>
+                    <div>
+                      <div className="text-4xl font-semibold text-white">{formatPrice(avgPrice)}</div>
+                      <div className="text-warm-300 text-sm">Average Price</div>
+                    </div>
+                    <div>
+                      <div className="text-4xl font-semibold text-white">{[...new Set(properties.map(p => p.propertyType))].length}</div>
+                      <div className="text-warm-300 text-sm">Property Types</div>
+                    </div>
+                  </div>
+                  <div className="mt-6 pt-6 border-t border-white/20">
+                    <a
+                      href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20bd5a] text-white py-3 rounded-lg font-medium transition-colors"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                      Enquire About {searchParams.town}
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-          ) : (
-            // Show grouped by town
-            sortedTowns.map(town => (
-              <div key={town} className="mb-12">
-                <div className="flex items-center justify-between mb-6 pb-2 border-b border-slate-200">
-                  <h2 className="text-2xl font-bold text-slate-800">
-                    {town}
-                    <span className="text-slate-400 font-normal text-lg ml-2">
-                      ({byTown[town].length} {byTown[town].length === 1 ? 'property' : 'properties'})
-                    </span>
-                  </h2>
-                  <Link
-                    href={`/properties?town=${encodeURIComponent(town)}`}
-                    className="text-amber-600 hover:text-amber-700 font-medium text-sm"
-                  >
-                    View all →
+          </section>
+
+          {/* Filters Bar */}
+          <section className="bg-white border-b border-warm-200 shadow-sm sticky top-0 z-40">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+              <div className="flex flex-wrap items-center justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <Link href="/properties" className="text-accent-600 hover:text-accent-700 text-sm font-medium flex items-center gap-1">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+                    All Properties
+                  </Link>
+                  <span className="text-warm-300">|</span>
+                  <span className="text-warm-600 text-sm">{properties.length} properties in {searchParams.town}</span>
+                </div>
+                <SortDropdown currentSort={sortBy} />
+              </div>
+            </div>
+          </section>
+
+          {/* Properties Grid - Larger Cards */}
+          <section className="py-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              {properties.length === 0 ? (
+                <div className="text-center py-20 bg-white rounded-lg">
+                  <h3 className="text-xl font-semibold text-primary-900 mb-2">No properties found</h3>
+                  <p className="text-warm-500 mb-6">Try adjusting your filters or browse all properties.</p>
+                  <Link href="/properties" className="bg-accent-500 hover:bg-accent-600 text-white px-6 py-3 rounded-md font-medium">
+                    View All Properties
                   </Link>
                 </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {byTown[town].slice(0, 6).map(property => (
-                    <PropertyCard key={property.id} property={property} />
+              ) : (
+                <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+                  {properties.map(property => (
+                    <LargePropertyCard key={property.id} property={property} />
                   ))}
                 </div>
-                {byTown[town].length > 6 && (
-                  <div className="text-center mt-6">
-                    <Link
-                      href={`/properties?town=${encodeURIComponent(town)}`}
-                      className="inline-block bg-slate-100 hover:bg-slate-200 text-slate-700 px-6 py-2 rounded-lg font-medium transition-colors"
-                    >
-                      View all {byTown[town].length} properties in {town}
-                    </Link>
-                  </div>
-                )}
-              </div>
-            ))
-          )}
-        </div>
-      </section>
+              )}
+            </div>
+          </section>
 
-      {/* CTA Section */}
-      <section className="bg-gradient-to-r from-amber-500 to-amber-600 py-12">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Can't Find What You're Looking For?
-          </h2>
-          <p className="text-amber-100 mb-6 max-w-xl mx-auto">
-            Tell us your requirements and we'll find your perfect Costa Blanca home.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-block bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors"
-            >
-              Contact Us
-            </Link>
-            <a
-              href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
-            >
-              WhatsApp Us
-            </a>
+          {/* CTA Section */}
+          <section className="bg-primary-900 py-16">
+            <div className="max-w-4xl mx-auto px-4 text-center">
+              <h2 className="text-2xl md:text-3xl font-light text-white mb-4">
+                Can't Find Your Perfect <span className="font-semibold">{searchParams.town} Property?</span>
+              </h2>
+              <p className="text-warm-300 mb-8">Tell us your requirements and we'll find matching properties from our network.</p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link href="/contact" className="bg-white text-primary-900 px-8 py-3 rounded-md font-medium hover:bg-warm-100 transition-colors">
+                  Contact Us
+                </Link>
+                <a href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-3 rounded-md font-medium flex items-center gap-2">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
+      </>
+    );
+  }
+
+  // Default view - Show all properties with regional sections
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(collectionSchema) }} />
+
+      <main className="min-h-screen bg-warm-50">
+        {/* Hero with Search */}
+        <section className="relative bg-primary-900 overflow-hidden">
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }} />
           </div>
-        </div>
-      </section>
-    </main>
+
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+            <div className="text-center max-w-3xl mx-auto">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6">
+                Find Your <span className="font-semibold text-accent-400">Dream Home</span>
+              </h1>
+              <p className="text-warm-300 text-lg mb-10">
+                {allProperties.length.toLocaleString()} new build properties across Costa Blanca's most desirable locations
+              </p>
+
+              {/* Search Bar */}
+              <PropertySearch towns={towns} types={types} bedOptions={bedOptions} />
+
+              {/* Quick Stats */}
+              <div className="flex flex-wrap justify-center gap-8 mt-10">
+                <div className="text-center">
+                  <div className="text-3xl font-semibold text-accent-400">{allProperties.length.toLocaleString()}</div>
+                  <div className="text-warm-400 text-sm">Properties</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-semibold text-white">{towns.length}</div>
+                  <div className="text-warm-400 text-sm">Locations</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-semibold text-white">{types.length}</div>
+                  <div className="text-warm-400 text-sm">Property Types</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Costa Blanca South Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-end justify-between mb-8">
+              <div>
+                <span className="text-accent-500 font-medium text-sm uppercase tracking-wide">Sun & Beaches</span>
+                <h2 className="text-3xl md:text-4xl font-light text-primary-900 mt-2">
+                  Costa Blanca <span className="font-semibold">South</span>
+                </h2>
+                <p className="text-warm-500 mt-2">Year-round sunshine, golf courses, and established expat communities</p>
+              </div>
+              <Link href="/properties?region=south" className="hidden md:flex items-center gap-2 text-accent-600 hover:text-accent-700 font-medium">
+                View all {southProperties.length} properties
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </Link>
+            </div>
+
+            <div className="grid md:grid-cols-5 gap-4">
+              {topSouthTowns.map((item, i) => (
+                <Link
+                  key={item.town}
+                  href={`/properties?town=${encodeURIComponent(item.town)}`}
+                  className={`group relative rounded-xl overflow-hidden ${i === 0 ? 'md:col-span-2 md:row-span-2' : ''}`}
+                >
+                  <div className={`relative ${i === 0 ? 'h-80 md:h-full' : 'h-40'}`}>
+                    <Image
+                      src={`https://picsum.photos/seed/${item.town.replace(/\s/g, '')}/600/400`}
+                      alt={item.town}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      unoptimized
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <h3 className="text-white font-semibold text-lg">{item.town}</h3>
+                      <p className="text-warm-200 text-sm">{item.count} properties from {formatPrice(item.avgPrice * 0.6)}</p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            <Link href="/properties?region=south" className="md:hidden flex items-center justify-center gap-2 text-accent-600 hover:text-accent-700 font-medium mt-6">
+              View all {southProperties.length} properties →
+            </Link>
+          </div>
+        </section>
+
+        {/* Costa Blanca North Section */}
+        <section className="py-16 bg-warm-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-end justify-between mb-8">
+              <div>
+                <span className="text-accent-500 font-medium text-sm uppercase tracking-wide">Premium Coastline</span>
+                <h2 className="text-3xl md:text-4xl font-light text-primary-900 mt-2">
+                  Costa Blanca <span className="font-semibold">North</span>
+                </h2>
+                <p className="text-warm-500 mt-2">Dramatic coastline, prestigious villas, and Mediterranean elegance</p>
+              </div>
+              <Link href="/properties?region=north" className="hidden md:flex items-center gap-2 text-accent-600 hover:text-accent-700 font-medium">
+                View all {northProperties.length} properties
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </Link>
+            </div>
+
+            <div className="grid md:grid-cols-5 gap-4">
+              {topNorthTowns.map((item, i) => (
+                <Link
+                  key={item.town}
+                  href={`/properties?town=${encodeURIComponent(item.town)}`}
+                  className={`group relative rounded-xl overflow-hidden ${i === 0 ? 'md:col-span-2 md:row-span-2' : ''}`}
+                >
+                  <div className={`relative ${i === 0 ? 'h-80 md:h-full' : 'h-40'}`}>
+                    <Image
+                      src={`https://picsum.photos/seed/${item.town.replace(/\s/g, '')}north/600/400`}
+                      alt={item.town}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      unoptimized
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <h3 className="text-white font-semibold text-lg">{item.town}</h3>
+                      <p className="text-warm-200 text-sm">{item.count} properties from {formatPrice(item.avgPrice * 0.6)}</p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            <Link href="/properties?region=north" className="md:hidden flex items-center justify-center gap-2 text-accent-600 hover:text-accent-700 font-medium mt-6">
+              View all {northProperties.length} properties →
+            </Link>
+          </div>
+        </section>
+
+        {/* Category Cards: Golf, Inland, Luxury */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-light text-primary-900 mb-8 text-center">
+              Browse by <span className="font-semibold">Lifestyle</span>
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Golf Properties */}
+              <Link href="/properties?region=golf" className="group relative rounded-2xl overflow-hidden h-72">
+                <Image
+                  src="https://picsum.photos/seed/golfcourse/600/400"
+                  alt="Golf Properties"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <span className="bg-green-500 text-white text-xs font-medium px-3 py-1 rounded-full">Golf Living</span>
+                  <h3 className="text-white font-semibold text-2xl mt-3">Golf Properties</h3>
+                  <p className="text-warm-200 text-sm mt-1">{golfProperties.length} properties on or near golf courses</p>
+                </div>
+              </Link>
+
+              {/* Inland Properties */}
+              <Link href="/properties?region=inland" className="group relative rounded-2xl overflow-hidden h-72">
+                <Image
+                  src="https://picsum.photos/seed/inlandspain/600/400"
+                  alt="Inland Properties"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <span className="bg-amber-500 text-white text-xs font-medium px-3 py-1 rounded-full">Best Value</span>
+                  <h3 className="text-white font-semibold text-2xl mt-3">Inland Living</h3>
+                  <p className="text-warm-200 text-sm mt-1">{inlandProperties.length} properties in peaceful inland towns</p>
+                </div>
+              </Link>
+
+              {/* Luxury Properties */}
+              <Link href="/luxury" className="group relative rounded-2xl overflow-hidden h-72">
+                <Image
+                  src="https://picsum.photos/seed/luxuryvilla/600/400"
+                  alt="Luxury Properties"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <span className="bg-primary-900 text-white text-xs font-medium px-3 py-1 rounded-full">Premium</span>
+                  <h3 className="text-white font-semibold text-2xl mt-3">Luxury Villas €800k+</h3>
+                  <p className="text-warm-200 text-sm mt-1">Exclusive properties in prime locations</p>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* All Locations Grid */}
+        <section className="py-16 bg-warm-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-light text-primary-900 mb-8 text-center">
+              All <span className="font-semibold">Locations</span>
+            </h2>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              {towns.slice(0, 24).map(town => {
+                const count = allProperties.filter(p => p.town === town).length;
+                return (
+                  <Link
+                    key={town}
+                    href={`/properties?town=${encodeURIComponent(town)}`}
+                    className="bg-white rounded-lg p-4 hover:shadow-md transition-shadow group"
+                  >
+                    <h3 className="font-medium text-primary-900 group-hover:text-accent-600 transition-colors">{town}</h3>
+                    <p className="text-warm-500 text-sm">{count} properties</p>
+                  </Link>
+                );
+              })}
+            </div>
+
+            {towns.length > 24 && (
+              <div className="text-center mt-8">
+                <span className="text-warm-500">+ {towns.length - 24} more locations</span>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-primary-900 py-16">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <h2 className="text-2xl md:text-3xl font-light text-white mb-4">
+              Need Help Finding the <span className="font-semibold">Perfect Property?</span>
+            </h2>
+            <p className="text-warm-300 mb-8">Our local experts know every town and can match you with your ideal home.</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/contact" className="bg-white text-primary-900 px-8 py-3 rounded-md font-medium hover:bg-warm-100 transition-colors">
+                Contact Us
+              </Link>
+              <a href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-3 rounded-md font-medium flex items-center gap-2">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
 
+// Large Property Card for filtered views
+function LargePropertyCard({ property }: { property: ParsedProperty }) {
+  const mainImage = property.images[0] || '/images/placeholder-property.jpg';
 
-function generatePropertyTitle(property: UnifiedProperty): string {
-  const adjectives = ["Stunning", "Beautiful", "Modern", "Elegant", "Spacious", "Luxurious"];
-  const adjective = adjectives[Math.abs(property.reference.charCodeAt(0)) % adjectives.length];
-  const beds = property.bedrooms > 0 ? `${property.bedrooms} Bedroom ` : "";
-  const type = property.propertyType || "Property";
-  let feature = "";
-  if (property.hasPool) feature = " with Private Pool";
-  else if (property.builtArea > 200) feature = " with Spacious Living";
-  const location = property.town || "Costa Blanca";
-  return `${adjective} ${beds}${type}${feature} in ${location}`;
-}
-
-function PropertyCard({ property }: { property: UnifiedProperty }) {
-  const mainImage = property.images[0]?.url || '/images/placeholder-property.jpg';
-  
-  // Create a cleaner title
-  const displayTitle = generatePropertyTitle(property);
-  
   return (
     <Link
-      href={`/properties/${property.reference}`}
-      className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group flex flex-col"
+      href={`/properties/${property.ref}`}
+      className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
     >
-      <div className="relative h-56 overflow-hidden">
+      {/* Image */}
+      <div className="relative h-64 overflow-hidden">
         <Image
           src={mainImage}
-          alt={displayTitle}
+          alt={`${property.bedrooms} bed ${property.propertyType} in ${property.town}`}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-        <div className="absolute top-3 left-3 flex gap-2">
-          <span className="bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+        {/* Badges */}
+        <div className="absolute top-4 left-4 flex flex-wrap gap-2">
+          <span className="bg-white/95 text-primary-900 text-sm font-medium px-3 py-1.5 rounded-full">
             {property.propertyType}
           </span>
-          {property.hasPool && (
-            <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-              Pool
-            </span>
-          )}
-          {property.source === 'redsp' && (
-            <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-              New
-            </span>
+          {hasPool(property) && (
+            <span className="bg-accent-500 text-white text-sm font-medium px-3 py-1.5 rounded-full">Pool</span>
           )}
         </div>
-        <div className="absolute bottom-3 left-3 right-3">
-          <p className="text-white text-sm font-medium">
-            {property.locationDetail ? `${property.locationDetail}, ` : ''}{property.town}
-          </p>
+
+        {/* Price */}
+        <div className="absolute bottom-4 left-4">
+          <div className="text-2xl font-bold text-white">
+            {property.price && property.price > 0 ? formatPrice(property.price) : 'Price on Request'}
+          </div>
         </div>
       </div>
-      <div className="p-5 flex-1 flex flex-col">
-        <h3 className="font-bold text-slate-800 text-lg mb-2 line-clamp-2 group-hover:text-amber-600 transition-colors">
-          {displayTitle}
+
+      {/* Content */}
+      <div className="p-6">
+        <h3 className="text-xl font-semibold text-primary-900 group-hover:text-accent-600 transition-colors mb-3">
+          {property.bedrooms && property.bedrooms > 0 ? `${property.bedrooms}-Bed ` : ''}{property.propertyType}
+          {property.developmentName && <span className="font-normal text-warm-500"> in {property.developmentName}</span>}
         </h3>
-        <div className="flex items-center gap-4 text-sm text-slate-600 mb-4">
-          {property.bedrooms > 0 && (
-            <span className="flex items-center gap-1">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-              </svg>
-              {property.bedrooms} bed
+
+        {/* Specs */}
+        <div className="flex flex-wrap gap-4 text-sm text-warm-600 mb-4">
+          {property.bedrooms && property.bedrooms > 0 && (
+            <span className="flex items-center gap-1.5">
+              <svg className="w-5 h-5 text-warm-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+              {property.bedrooms} Bedrooms
             </span>
           )}
-          {property.bathrooms > 0 && (
-            <span className="flex items-center gap-1">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
-              </svg>
-              {property.bathrooms} bath
+          {property.bathrooms && property.bathrooms > 0 && (
+            <span className="flex items-center gap-1.5">
+              <svg className="w-5 h-5 text-warm-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+              {property.bathrooms} Bathrooms
             </span>
           )}
-          {property.builtArea > 0 && (
-            <span>{property.builtArea} m²</span>
+          {property.size && property.size > 0 && (
+            <span className="flex items-center gap-1.5">
+              <svg className="w-5 h-5 text-warm-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" /></svg>
+              {property.size} m²
+            </span>
+          )}
+          {property.plotSize && property.plotSize > 0 && (
+            <span className="flex items-center gap-1.5">
+              <svg className="w-5 h-5 text-warm-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
+              {property.plotSize} m² plot
+            </span>
           )}
         </div>
-        <div className="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
-          <span className="text-amber-600 font-bold text-lg">
-            {property.price > 0 ? `€${property.price.toLocaleString()}` : "Contact for Price"}
+
+        {/* Description preview */}
+        {property.description && (
+          <p className="text-warm-500 text-sm line-clamp-2 mb-4">
+            {property.description.substring(0, 150)}...
+          </p>
+        )}
+
+        {/* Footer */}
+        <div className="flex items-center justify-between pt-4 border-t border-warm-100">
+          <span className="text-warm-400 text-sm">Ref: {property.ref}</span>
+          <span className="text-accent-600 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+            View Details
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
           </span>
-          <span className="text-amber-600 group-hover:translate-x-1 transition-transform">→</span>
         </div>
       </div>
     </Link>

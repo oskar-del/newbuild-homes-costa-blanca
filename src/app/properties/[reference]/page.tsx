@@ -1,11 +1,20 @@
-export const dynamic = 'force-dynamic';
 /**
  * Property Detail Page - Server Component
  * ========================================
  * Fetches property data, generates AI content, creates JSON-LD schemas
- * 
+ *
  * NEVER uses feed descriptions - all content is AI-generated for SEO
+ *
+ * Caching Strategy (ISR - Incremental Static Regeneration):
+ * - revalidate: 3600 = cache for 1 hour, regenerate in background
+ * - First 100 properties pre-built at deploy time (generateStaticParams)
+ * - Remaining 900+ properties: generate on first visit, then cache
+ * - Content regenerated automatically when feed data updates
  */
+
+// ISR: Regenerate pages every hour (3600 seconds)
+// This caches the page and regenerates in background after 1 hour
+export const revalidate = 3600;
 
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';

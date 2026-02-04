@@ -1,0 +1,236 @@
+{
+  "slug": "benijofar",
+  "name": "Benijófar",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/benijofar-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Townhouse",
+    "Villa",
+    "Bungalow",
+    "Country House"
+  ],
+  "priceRange": {
+    "min": 165000,
+    "max": 550000
+  },
+  "coordinates": {
+    "lat": 38.0697,
+    "lng": -0.7278
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Benijófar",
+      "url": "https://www.benijofar.es/",
+      "description": "Official Benijófar municipality"
+    },
+    "beaches": [
+      {
+        "name": "Guardamar Beaches",
+        "googleMaps": "https://maps.google.com/?q=Playa+Centro+Guardamar",
+        "description": "Natural beaches with pine forest backdrop",
+        "distance": "6 km"
+      },
+      {
+        "name": "La Mata Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+La+Mata",
+        "description": "Long natural beach near salt lakes",
+        "distance": "10 km"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "12 km",
+      "driveTime": "14 minutes"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "38 km",
+      "driveTime": "28 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Benijófar is surrounded by golf courses in all directions, offering variety without golf-resort prices.",
+    "courses": [
+      {
+        "name": "La Finca Golf",
+        "distance": "5 km",
+        "driveTime": "7 minutes",
+        "holes": 18,
+        "url": "https://www.lafincagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Finca+Golf",
+        "description": "Championship course designed by Pepe Gancedo."
+      },
+      {
+        "name": "La Marquesa Golf",
+        "distance": "6 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "url": "https://www.lamarquesagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Marquesa+Golf",
+        "description": "Well-maintained course popular with residents."
+      },
+      {
+        "name": "Vistabella Golf",
+        "distance": "10 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.vistabellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+        "description": "Modern course with excellent facilities."
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Living in Benijófar | Village Life | Costa Blanca South 2026",
+    "metaDescription": "Complete guide to Benijófar—authentic Spanish village, modern villas from €165k, Guardamar beaches 6 km. Citrus groves, traditional fiestas, genuine integration.",
+    "quickAnswer": "Benijófar is a small authentic Spanish village surrounded by citrus groves offering modern villas from €165,000. Guardamar beaches are just 6 km away, La Finca Golf 7 minutes. Perfect for buyers seeking village life with coastal convenience—real Spain at affordable prices.",
+    "heroIntro": "Benijófar is the kind of Spanish village that postcards try to capture: whitewashed houses clustered around a church tower, orange groves perfuming the air in spring, elderly locals gathering in the plaza as they have for generations. Yet this isn't a museum piece—it's a living community where new villas with pools sit alongside traditional homes, and international buyers are welcomed into genuine village life.\n\nThe village occupies a gentle rise in the Vega Baja agricultural region, surrounded by the citrus groves that have sustained the area for centuries. Guardamar's natural beaches are just 6 km away. La Finca Golf is 7 minutes. Torrevieja's amenities are 12 minutes. Yet the pace of life here is unmistakably village—slower, friendlier, more connected to the rhythms of Spanish life.\n\nFor buyers seeking authenticity without isolation, Benijófar offers a rare balance.",
+    "lifestyleSection": {
+      "intro": "Village life in Benijófar means knowing your neighbors, stopping for coffee at the local bar, and participating in fiestas that have run for generations. The international community is present but integrates rather than dominates. Spanish is useful and appreciated. Those who embrace village life find warmth that resort living can't replicate.\n\nThe surrounding modern urbanizations offer new villas with pools and contemporary comforts. Residents get the best of both: village character for daily life, modern home comforts, and coastal amenities minutes away.",
+      "highlights": [
+        "Authentic Spanish village atmosphere",
+        "Modern new build villas with pools available",
+        "Guardamar beaches just 6 km away",
+        "La Finca Golf 7 minutes",
+        "Surrounded by fragrant citrus groves",
+        "Traditional fiestas throughout the year",
+        "Excellent value compared to coastal areas",
+        "Genuine Spanish integration opportunity"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Guardamar's natural beaches (backed by pine forests) are just 6 km (8 minutes). La Mata is 10 km. Close enough for regular beach days without coastal property premiums.",
+      "dining": "The village has traditional Spanish bars and restaurants. For variety, Rojales (3 km), Guardamar (6 km), and Torrevieja (12 km) offer more options.",
+      "shopping": "Village shops cover basics. Mercadona supermarket nearby. Weekly markets in surrounding towns. For major shopping, Habaneras in Torrevieja (12 km) or La Zenia Boulevard (22 km).",
+      "healthcare": "Hospital Universitario de Torrevieja is 12 km (14 minutes). Local medical center and pharmacy in village. Good access for a village of this size.",
+      "transport": "Alicante-Elche Airport is 38 km (28 minutes)—good access. A car is essential. Central location makes regional exploration easy."
+    },
+    "neighborhoods": [
+      {
+        "name": "Village Center",
+        "description": "Traditional Spanish village living. Townhouses and older properties. Walking distance to plaza, church, and bars. Genuine integration."
+      },
+      {
+        "name": "Modern Urbanizations",
+        "description": "New villas and bungalows surrounding the village. Private pools, modern specifications. International residents. Best of both worlds."
+      }
+    ],
+    "propertyMarketSection": "Benijófar offers excellent value for village-adjacent living. Townhouses start from around €165,000-280,000, and villas from €280,000-550,000. The combination of village character and modern urbanization options attracts value-focused buyers.\n\n**Featured Development: Doña Patro IX** – Modern 3-bed villas from €449,000 with private pools, 140m² living space, garage. Contemporary design on 300m² plots.\n\nThe market attracts those seeking authentic Spanish integration with modern home comforts nearby. Rental potential is limited compared to coastal areas—this is a lifestyle choice.",
+    "whyLiveHereSection": [
+      "Authentic Spanish village character",
+      "Modern new build villas available",
+      "Guardamar beaches just 6 km",
+      "La Finca Golf 7 minutes",
+      "Traditional fiestas and community life",
+      "Excellent value for village-adjacent living",
+      "Citrus groves and countryside setting",
+      "28 minutes to Alicante Airport"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Doña Patro IX Villa",
+        "reference": "N8496",
+        "price": 449000,
+        "type": "Villa",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "plotArea": 300,
+        "features": [
+          "Private Pool",
+          "Modern Design",
+          "Garage"
+        ],
+        "description": "Contemporary 3-bed villa with pool, 140m² living space, and garage."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Benijófar a good place to buy property?",
+        "answer": "Excellent for buyers seeking authentic Spanish village life with modern villa options nearby. Properties cost less than coastal equivalents while beaches are just 6 km away. Ideal for those comfortable with village integration."
+      },
+      {
+        "question": "How far is Benijófar from the beach?",
+        "answer": "Guardamar beaches are 6 km (8 minutes). La Mata is 10 km. Very close for an inland village—easy beach access without coastal prices."
+      },
+      {
+        "question": "What are property prices in Benijófar?",
+        "answer": "Townhouses from €165,000, villas from €280,000. Modern new builds in surrounding urbanizations offer contemporary living at village-adjacent prices."
+      },
+      {
+        "question": "Is Benijófar good for golf?",
+        "answer": "Good access. La Finca Golf is 7 minutes, La Marquesa 8 minutes, Vistabella 12 minutes. Central location without golf-resort prices."
+      },
+      {
+        "question": "Is English widely spoken in Benijófar?",
+        "answer": "The village is authentically Spanish—Spanish is the primary language. Some international residents in surrounding urbanizations. Basic Spanish is helpful and appreciated."
+      },
+      {
+        "question": "What is village life like in Benijófar?",
+        "answer": "Traditional Spanish village rhythms: morning coffee at local bars, evening paseo in the plaza, fiestas throughout the year. Neighbors know each other. Those who integrate find genuine community warmth."
+      },
+      {
+        "question": "Is Benijófar suitable for permanent living?",
+        "answer": "Yes, for those who value village atmosphere and Spanish integration. Year-round services, permanent population, traditional community. Not for those wanting extensive English-speaking amenities."
+      },
+      {
+        "question": "How does Benijófar compare to larger towns?",
+        "answer": "Smaller, more Spanish, more intimate. Larger towns like Torrevieja offer more amenities but less character. Benijófar offers village authenticity with larger town amenities close by."
+      }
+    ],
+    "conclusion": "Benijófar offers something increasingly precious: genuine Spanish village life that hasn't been transformed by mass tourism. The whitewashed houses, the citrus groves, the fiestas—these are authentic, not recreated. Yet modern villas nearby offer contemporary comfort, and beaches are closer than many coastal developments.\n\nFor buyers seeking village integration with convenience nearby, Benijófar delivers both.\n\nReady to explore properties in Benijófar? Our team understands village living and can match you with properties that suit your integration goals—from village center townhouses to modern urbanization villas."
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Benijófar",
+    "description": "Benijófar is an authentic Spanish village in Costa Blanca South surrounded by citrus groves, offering traditional village life and modern new build villas with Guardamar beaches just 6 km away.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.0697",
+      "longitude": "-0.7278"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Benijófar",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Benijófar a good place to buy property?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Excellent for buyers seeking authentic Spanish village life with modern villa options nearby. Beaches are just 6 km away at lower prices than coastal equivalents."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Benijófar from the beach?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Guardamar beaches are 6 km (8 minutes). Very close for an inland village."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are property prices in Benijófar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Townhouses from €165,000, villas from €280,000."
+        }
+      }
+    ]
+  }
+}

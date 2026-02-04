@@ -5,6 +5,23 @@ import { notFound } from 'next/navigation';
 import fs from 'fs';
 import path from 'path';
 import LeadForm from '@/components/LeadForm';
+import { getAllDevelopments, Development } from '@/lib/development-service';
+import { breadcrumbSchema, toJsonLd, articleSchema, placeSchema } from '@/lib/schema';
+import { LifestyleBanner, SectionCardImage, ImageGrid } from '@/components/area/SectionImage';
+import {
+  beachImages,
+  golfImages,
+  villaPoolImages,
+  marketFoodImages,
+  oldTownImages,
+  marinaImages,
+  getImageUrl,
+  getRandomImage,
+  areaImageSuggestions
+} from '@/data/stock-images';
+
+// Fallback image for developments without photos
+const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80&fit=crop&auto=format';
 
 const CONTACT = {
   whatsapp: 'https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0',
@@ -227,22 +244,100 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function AreaPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const data = getArea(slug);
-  
+
   if (!data) {
     notFound();
   }
-  
-  const { content, developments, schema, schemaFAQ, externalLinks, golf } = data;
+
+  const { content, schema, schemaFAQ, externalLinks, golf } = data;
+
+  // Fetch real developments from API for this area
+  const allDevelopments = await getAllDevelopments();
+  const areaNameLower = data.name.toLowerCase();
+  const slugLower = slug.toLowerCase();
+
+  // Filter developments that match this area by town field
+  // Handle compound towns like "Moraira_Teulada" by splitting on underscores
+  const developments = allDevelopments
+    .filter(dev => {
+      const town = (dev.town || '').toLowerCase().replace(/_/g, ' ');
+      const zone = (dev.zone || '').toLowerCase().replace(/_/g, ' ');
+      const townParts = town.split(/[\s_-]+/);
+      const zoneParts = zone.split(/[\s_-]+/);
+
+      // Check direct includes
+      if (town.includes(areaNameLower) || town.includes(slugLower) ||
+          zone.includes(areaNameLower) || zone.includes(slugLower)) return true;
+
+      // Check if any part of compound town matches
+      if (townParts.some(part => part.includes(areaNameLower) || areaNameLower.includes(part))) return true;
+      if (zoneParts.some(part => part.includes(areaNameLower) || areaNameLower.includes(part))) return true;
+
+      return false;
+    })
+    .slice(0, 8) // Limit to 8 properties
+    .map(dev => ({
+      name: dev.name || 'New Build Property',
+      slug: dev.slug,
+      propertyType: dev.propertyTypes?.[0] || 'Property',
+      price: dev.priceFrom || null,
+      bedrooms: dev.minBedrooms || null,
+      image: dev.images?.[0] || FALLBACK_IMAGE,
+    }));
+
+  // Get hero image - use first development image if available, otherwise stock image
+  const heroImage = data.heroImage ||
+    (developments[0]?.image && developments[0].image !== FALLBACK_IMAGE ? developments[0].image : null) ||
+    (areaImageSuggestions[slug]?.hero ? getImageUrl(areaImageSuggestions[slug].hero, 1920) : null) ||
+    getImageUrl(villaPoolImages[5], 1920); // Default to villa sea view
+
+  // Generate breadcrumb schema
+  const breadcrumbs = breadcrumbSchema([
+    { name: 'Home', url: 'https://newbuildhomescostablanca.com/' },
+    { name: 'Areas', url: 'https://newbuildhomescostablanca.com/areas/' },
+    { name: data.name, url: `https://newbuildhomescostablanca.com/areas/${data.slug}/` },
+  ]);
+
+  // Generate article schema for SEO
+  const pageArticleSchema = articleSchema({
+    headline: content.metaTitle,
+    description: content.metaDescription,
+    datePublished: new Date().toISOString().split('T')[0],
+    author: 'New Build Homes Costa Blanca',
+    url: `https://newbuildhomescostablanca.com/areas/${data.slug}/`,
+    image: data.heroImage,
+  });
+
+  // Generate place schema if not in data
+  const areaPlaceSchema = schema && Object.keys(schema).length > 0 ? schema : placeSchema({
+    name: data.name,
+    description: content.heroIntro.slice(0, 200),
+    url: `https://newbuildhomescostablanca.com/areas/${data.slug}/`,
+    image: data.heroImage,
+    address: {
+      region: data.region || 'Costa Blanca',
+    },
+    containedIn: 'Costa Blanca, Spain',
+  });
 
   return (
     <>
-      {/* Schema Markup */}
-      {schema && Object.keys(schema).length > 0 && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      )}
+      {/* Schema Markup - Breadcrumb (Critical for SEO) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }}
+      />
+      {/* Schema Markup - Place/Area */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(areaPlaceSchema) }}
+      />
+      {/* Schema Markup - Article */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: toJsonLd(pageArticleSchema) }}
+      />
+      {/* Schema Markup - FAQ */}
       {schemaFAQ && Object.keys(schemaFAQ).length > 0 && (
         <script
           type="application/ld+json"
@@ -253,20 +348,15 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="relative text-white py-20">
-          {data.heroImage ? (
-            <>
-              <Image
-                src={data.heroImage}
-                alt={data.name}
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-teal-900/90 to-teal-700/80" />
-            </>
-          ) : (
-            <div className="absolute inset-0 bg-gradient-to-r from-teal-800 to-teal-600" />
-          )}
+          <Image
+            src={heroImage}
+            alt={data.name}
+            fill
+            className="object-cover"
+            priority
+            unoptimized
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/80" />
           <div className="relative max-w-6xl mx-auto px-4">
             <nav className="text-white/70 text-sm mb-4">
               <Link href="/" className="hover:text-white">Home</Link>
@@ -313,27 +403,41 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               <section>
                 <div className="prose prose-lg max-w-none">
                   {content.heroIntro.split('\n\n').map((paragraph, i) => (
-                    <p key={i} className="text-gray-700 leading-relaxed">{paragraph}</p>
+                    <p key={i} className="text-warm-700 leading-relaxed">{paragraph}</p>
                   ))}
                 </div>
               </section>
 
               {/* Lifestyle Section */}
               <section>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                <h2 className="text-2xl font-bold text-primary-900 mb-6">
                   The {data.name} Lifestyle
                 </h2>
                 <div className="prose prose-lg max-w-none mb-6">
                   {content.lifestyleSection.intro.split('\n\n').map((paragraph, i) => (
-                    <p key={i} className="text-gray-700">{paragraph}</p>
+                    <p key={i} className="text-warm-700">{paragraph}</p>
                   ))}
                 </div>
+
+                {/* Lifestyle image grid showcasing the area */}
+                <ImageGrid
+                  images={[
+                    villaPoolImages[0],
+                    beachImages[1],
+                    marketFoodImages[0],
+                    oldTownImages[0],
+                  ]}
+                  columns={2}
+                  gap="gap-4"
+                  className="mb-6"
+                />
+
                 {content.lifestyleSection.highlights.length > 0 && (
                   <div className="grid md:grid-cols-2 gap-3">
                     {content.lifestyleSection.highlights.map((highlight, i) => (
-                      <div key={i} className="flex items-start gap-3 p-3 bg-teal-50 rounded-lg">
-                        <span className="text-teal-600">✓</span>
-                        <span className="text-gray-700">{highlight}</span>
+                      <div key={i} className="flex items-start gap-3 p-3 bg-accent-50 rounded-sm">
+                        <span className="text-accent-500">✓</span>
+                        <span className="text-warm-700">{highlight}</span>
                       </div>
                     ))}
                   </div>
@@ -343,10 +447,27 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               {/* Beaches with External Links */}
               {externalLinks?.beaches && externalLinks.beaches.length > 0 && (
                 <section>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
                     🏖️ Beaches in {data.name}
                   </h2>
-                  <p className="text-gray-700 mb-6">{content.amenitiesSection.beaches}</p>
+
+                  {/* Beach lifestyle image */}
+                  <div className="relative h-64 rounded-sm overflow-hidden mb-6">
+                    <Image
+                      src={getImageUrl(beachImages[0], 1200)}
+                      alt={beachImages[0].alt}
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <p className="text-white text-lg font-light">
+                        {content.amenitiesSection.beaches}
+                      </p>
+                    </div>
+                  </div>
+
                   <div className="grid md:grid-cols-3 gap-4">
                     {externalLinks.beaches.map((beach, i) => (
                       <a
@@ -354,15 +475,26 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                         href={beach.googleMaps || beach.url || '#'}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
+                        className="group block rounded-sm overflow-hidden border border-warm-200 hover:shadow-lg transition-shadow"
                       >
-                        <h3 className="font-bold text-gray-900 mb-1">{beach.name}</h3>
-                        {beach.description && (
-                          <p className="text-gray-600 text-sm mb-2">{beach.description}</p>
-                        )}
-                        <span className="text-blue-600 text-sm font-medium">
-                          📍 View on Google Maps →
-                        </span>
+                        <div className="relative h-32">
+                          <Image
+                            src={getImageUrl(beachImages[i % beachImages.length], 600)}
+                            alt={`${beach.name} beach`}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            unoptimized
+                          />
+                        </div>
+                        <div className="p-4">
+                          <h3 className="font-bold text-primary-900 mb-1">{beach.name}</h3>
+                          {beach.description && (
+                            <p className="text-warm-600 text-sm mb-2">{beach.description}</p>
+                          )}
+                          <span className="text-blue-600 text-sm font-medium">
+                            📍 View on Google Maps →
+                          </span>
+                        </div>
                       </a>
                     ))}
                   </div>
@@ -372,42 +504,58 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               {/* Golf Section */}
               {golf && golf.courses && golf.courses.length > 0 && (
                 <section>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                    ⛳ Golf Near {data.name}
-                  </h2>
-                  {golf.intro && <p className="text-gray-700 mb-6">{golf.intro}</p>}
-                  <div className="space-y-4">
+                  {/* Golf lifestyle banner */}
+                  <LifestyleBanner
+                    image={golfImages[0]}
+                    title={`Golf Near ${data.name}`}
+                    description={golf.intro || `Discover world-class golf courses just minutes from ${data.name}. The Costa Blanca is a golfer's paradise with year-round sunshine.`}
+                    alignment="left"
+                  />
+
+                  <div className="mt-8 space-y-4">
                     {golf.courses.map((course, i) => (
-                      <div key={i} className="border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow">
-                        <div className="flex flex-wrap items-start justify-between gap-4 mb-3">
-                          <div>
-                            <h3 className="font-bold text-gray-900 text-lg">{course.name}</h3>
-                            <p className="text-gray-500">{course.holes} holes • {course.distance} ({course.driveTime})</p>
-                          </div>
-                          <div className="flex gap-2">
-                            {course.url && (
-                              <a
-                                href={course.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                              >
-                                🌐 Website
-                              </a>
-                            )}
-                            {course.googleMaps && (
-                              <a
-                                href={course.googleMaps}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-                              >
-                                📍 Directions
-                              </a>
-                            )}
-                          </div>
+                      <div key={i} className="flex gap-4 border border-warm-200 rounded-sm overflow-hidden hover:shadow-md transition-shadow">
+                        {/* Golf course image */}
+                        <div className="relative w-32 md:w-48 flex-shrink-0">
+                          <Image
+                            src={getImageUrl(golfImages[i % golfImages.length], 400)}
+                            alt={`${course.name} golf course`}
+                            fill
+                            className="object-cover"
+                            unoptimized
+                          />
                         </div>
-                        {course.description && <p className="text-gray-700">{course.description}</p>}
+                        <div className="flex-1 p-4">
+                          <div className="flex flex-wrap items-start justify-between gap-4 mb-3">
+                            <div>
+                              <h3 className="font-bold text-primary-900 text-lg">{course.name}</h3>
+                              <p className="text-warm-500">{course.holes} holes • {course.distance} ({course.driveTime})</p>
+                            </div>
+                            <div className="flex gap-2">
+                              {course.url && (
+                                <a
+                                  href={course.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1 bg-success-500 hover:bg-success-600 text-white px-4 py-2 rounded-sm text-sm font-medium transition-colors"
+                                >
+                                  🌐 Website
+                                </a>
+                              )}
+                              {course.googleMaps && (
+                                <a
+                                  href={course.googleMaps}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-sm text-sm font-medium transition-colors"
+                                >
+                                  📍 Directions
+                                </a>
+                              )}
+                            </div>
+                          </div>
+                          {course.description && <p className="text-warm-700">{course.description}</p>}
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -416,24 +564,32 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
               {/* Amenities Section */}
               <section>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                <h2 className="text-2xl font-bold text-primary-900 mb-6">
                   Amenities & Services
                 </h2>
-                
-                <div className="space-y-6">
+
+                {/* Local market/dining lifestyle banner */}
+                <LifestyleBanner
+                  image={marketFoodImages[1]}
+                  title="Local Dining & Markets"
+                  description={`Experience the authentic flavors of ${data.name} — from traditional tapas bars to fresh local markets bursting with Mediterranean produce.`}
+                  alignment="center"
+                />
+
+                <div className="mt-8 space-y-6">
                   <div className="border-l-4 border-orange-500 pl-4">
-                    <h3 className="font-bold text-gray-900 mb-2">🍽️ Dining</h3>
-                    <p className="text-gray-700">{content.amenitiesSection.dining}</p>
+                    <h3 className="font-bold text-primary-900 mb-2">🍽️ Dining</h3>
+                    <p className="text-warm-700">{content.amenitiesSection.dining}</p>
                   </div>
-                  
+
                   <div className="border-l-4 border-purple-500 pl-4">
-                    <h3 className="font-bold text-gray-900 mb-2">🛍️ Shopping</h3>
-                    <p className="text-gray-700">{content.amenitiesSection.shopping}</p>
+                    <h3 className="font-bold text-primary-900 mb-2">🛍️ Shopping</h3>
+                    <p className="text-warm-700">{content.amenitiesSection.shopping}</p>
                   </div>
                   
                   <div className="border-l-4 border-red-500 pl-4">
-                    <h3 className="font-bold text-gray-900 mb-2">🏥 Healthcare</h3>
-                    <p className="text-gray-700">{content.amenitiesSection.healthcare}</p>
+                    <h3 className="font-bold text-primary-900 mb-2">🏥 Healthcare</h3>
+                    <p className="text-warm-700">{content.amenitiesSection.healthcare}</p>
                     {externalLinks?.healthcare && (
                       <div className="mt-3 flex flex-wrap gap-2">
                         <a
@@ -448,9 +604,9 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     )}
                   </div>
                   
-                  <div className="border-l-4 border-green-500 pl-4">
-                    <h3 className="font-bold text-gray-900 mb-2">✈️ Transport</h3>
-                    <p className="text-gray-700">{content.amenitiesSection.transport}</p>
+                  <div className="border-l-4 border-success-500 pl-4">
+                    <h3 className="font-bold text-primary-900 mb-2">✈️ Transport</h3>
+                    <p className="text-warm-700">{content.amenitiesSection.transport}</p>
                     {externalLinks?.airport && (
                       <div className="mt-3 flex flex-wrap gap-2">
                         <a
@@ -469,12 +625,12 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
               {/* Property Market */}
               <section>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                <h2 className="text-2xl font-bold text-primary-900 mb-6">
                   Property Market in {data.name}
                 </h2>
                 <div className="prose prose-lg max-w-none">
                   {content.propertyMarketSection.split('\n\n').map((paragraph, i) => (
-                    <p key={i} className="text-gray-700">{paragraph}</p>
+                    <p key={i} className="text-warm-700">{paragraph}</p>
                   ))}
                 </div>
               </section>
@@ -482,7 +638,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               {/* Available Properties */}
               {developments && developments.length > 0 && (
                 <section>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
                     New Build Properties in {data.name}
                   </h2>
                   <div className="grid md:grid-cols-2 gap-6">
@@ -490,37 +646,31 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <Link
                         key={dev.slug}
                         href={`/developments/${dev.slug}`}
-                        className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
+                        className="group bg-white border border-warm-200 rounded-sm overflow-hidden hover:shadow-lg transition-shadow"
                       >
                         <div className="relative aspect-[4/3]">
-                          {dev.image ? (
-                            <Image
-                              src={dev.image}
-                              alt={dev.name}
-                              fill
-                              className="object-cover group-hover:scale-105 transition-transform"
-                              unoptimized
-                            />
-                          ) : (
-                            <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                              <span className="text-gray-400">No image</span>
-                            </div>
-                          )}
+                          <Image
+                            src={dev.image || FALLBACK_IMAGE}
+                            alt={dev.name}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform"
+                            unoptimized
+                          />
                           {dev.price && (
                             <div className="absolute top-3 left-3">
-                              <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">
-                                €{dev.price.toLocaleString()}
+                              <span className="bg-primary-900 text-white px-3 py-1 rounded-sm text-sm font-bold">
+                                From €{dev.price.toLocaleString()}
                               </span>
                             </div>
                           )}
                         </div>
                         <div className="p-4">
-                          <h3 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                          <h3 className="font-bold text-primary-900 group-hover:text-accent-600 transition-colors">
                             {dev.name}
                           </h3>
-                          <p className="text-gray-600 text-sm">{dev.propertyType}</p>
+                          <p className="text-warm-600 text-sm">{dev.propertyType}</p>
                           {dev.bedrooms && (
-                            <p className="text-gray-500 text-sm mt-1">
+                            <p className="text-warm-500 text-sm mt-1">
                               {dev.bedrooms} bedrooms
                             </p>
                           )}
@@ -534,16 +684,16 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               {/* Why Live Here */}
               {content.whyLiveHereSection.length > 0 && (
                 <section>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
                     Why Live in {data.name}?
                   </h2>
                   <ul className="space-y-4">
                     {content.whyLiveHereSection.map((reason, i) => (
-                      <li key={i} className="flex items-start gap-4 p-4 bg-teal-50 rounded-lg">
-                        <span className="flex-shrink-0 w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold">
+                      <li key={i} className="flex items-start gap-4 p-4 bg-accent-50 rounded-sm">
+                        <span className="flex-shrink-0 w-8 h-8 bg-accent-500 text-white rounded-full flex items-center justify-center font-bold">
                           {i + 1}
                         </span>
-                        <span className="text-gray-700">{reason}</span>
+                        <span className="text-warm-700">{reason}</span>
                       </li>
                     ))}
                   </ul>
@@ -553,19 +703,19 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               {/* FAQs */}
               {content.faqs.length > 0 && (
                 <section>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
                     Frequently Asked Questions about {data.name}
                   </h2>
                   <div className="space-y-4">
                     {content.faqs.map((faq, i) => (
-                      <details key={i} className="group border border-gray-200 rounded-lg">
-                        <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-gray-900 hover:bg-gray-50">
+                      <details key={i} className="group border border-warm-200 rounded-sm">
+                        <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-primary-900 hover:bg-warm-50">
                           {faq.question}
                           <span className="ml-4 flex-shrink-0 text-gray-400 group-open:rotate-180 transition-transform">
                             ▼
                           </span>
                         </summary>
-                        <div className="px-4 pb-4 text-gray-700">
+                        <div className="px-4 pb-4 text-warm-700">
                           {faq.answer}
                         </div>
                       </details>
@@ -575,20 +725,20 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               )}
 
               {/* Conclusion CTA */}
-              <section className="bg-gradient-to-r from-teal-600 to-teal-800 rounded-xl p-8 text-white">
+              <section className="bg-gradient-to-r from-accent-500 to-primary-800 rounded-sm p-8 text-white">
                 <p className="text-lg mb-6">{content.conclusion}</p>
                 <div className="flex flex-wrap gap-4">
                   <a
                     href={CONTACT.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                    className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-sm font-medium transition-colors"
                   >
                     📱 WhatsApp Us
                   </a>
                   <a
                     href={`tel:${CONTACT.phone}`}
-                    className="inline-flex items-center gap-2 bg-white text-teal-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition-colors"
+                    className="inline-flex items-center gap-2 bg-white text-accent-500 hover:bg-gray-100 px-6 py-3 rounded-sm font-medium transition-colors"
                   >
                     📞 {CONTACT.phone}
                   </a>
@@ -599,39 +749,39 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             {/* Sidebar */}
             <aside className="lg:col-span-1 space-y-6">
               {/* Area Info Card */}
-              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg sticky top-6">
-                <h3 className="font-bold text-gray-900 text-xl mb-4">{data.name}</h3>
+              <div className="bg-white border border-warm-200 rounded-sm p-6 shadow-lg sticky top-6">
+                <h3 className="font-bold text-primary-900 text-xl mb-4">{data.name}</h3>
                 
                 <div className="space-y-4 mb-6">
                   <div>
-                    <p className="text-sm text-gray-500">Region</p>
-                    <p className="font-bold text-gray-900">{data.region || 'Costa Blanca'}</p>
+                    <p className="text-sm text-warm-500">Region</p>
+                    <p className="font-bold text-primary-900">{data.region || 'Costa Blanca'}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">New Build Properties</p>
-                    <p className="font-bold text-gray-900">{data.propertyCount}</p>
+                    <p className="text-sm text-warm-500">New Build Properties</p>
+                    <p className="font-bold text-primary-900">{data.propertyCount}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Property Types</p>
-                    <p className="font-bold text-gray-900">{data.propertyTypes.join(', ')}</p>
+                    <p className="text-sm text-warm-500">Property Types</p>
+                    <p className="font-bold text-primary-900">{data.propertyTypes.join(', ')}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-500">Price Range</p>
-                    <p className="font-bold text-gray-900">
+                    <p className="text-sm text-warm-500">Price Range</p>
+                    <p className="font-bold text-primary-900">
                       €{data.priceRange.min.toLocaleString()} - €{data.priceRange.max.toLocaleString()}
                     </p>
                   </div>
                   {golf && golf.courses && (
                     <div>
-                      <p className="text-sm text-gray-500">Golf Courses</p>
-                      <p className="font-bold text-gray-900">{golf.courses.length} nearby</p>
+                      <p className="text-sm text-warm-500">Golf Courses</p>
+                      <p className="font-bold text-primary-900">{golf.courses.length} nearby</p>
                     </div>
                   )}
                 </div>
 
                 {/* External Links */}
                 {externalLinks?.tourism?.url && (
-                  <div className="mb-6 p-3 bg-gray-50 rounded-lg">
+                  <div className="mb-6 p-3 bg-warm-50 rounded-sm">
                     <a
                       href={externalLinks.tourism.url}
                       target="_blank"
@@ -649,13 +799,13 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     href={CONTACT.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded-lg font-medium transition-colors"
+                    className="block w-full bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded-sm font-medium transition-colors"
                   >
                     📱 WhatsApp
                   </a>
                   <a
                     href={`tel:${CONTACT.phone}`}
-                    className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-medium transition-colors"
+                    className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-sm font-medium transition-colors"
                   >
                     📞 Call Now
                   </a>
@@ -663,7 +813,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     href={CONTACT.habeno}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-3 rounded-lg font-medium transition-colors"
+                    className="block w-full bg-gray-100 hover:bg-gray-200 text-warm-700 text-center py-3 rounded-sm font-medium transition-colors"
                   >
                     💰 Get Mortgage Quote
                   </a>
@@ -671,8 +821,8 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               </div>
 
               {/* Other Areas */}
-              <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="font-bold text-gray-900 mb-4">Explore Other Areas</h3>
+              <div className="bg-warm-50 rounded-sm p-6">
+                <h3 className="font-bold text-primary-900 mb-4">Explore Other Areas</h3>
                 <div className="space-y-2">
                   <Link href="/areas/torrevieja" className="block text-blue-600 hover:underline">
                     Torrevieja

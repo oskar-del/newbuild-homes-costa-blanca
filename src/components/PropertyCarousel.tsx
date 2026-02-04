@@ -77,15 +77,15 @@ export default function PropertyCarousel({
       {/* Header */}
       <div className="flex items-end justify-between mb-6 px-4 lg:px-0">
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold text-stone-800">{title}</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold text-primary-900">{title}</h2>
           {subtitle && (
-            <p className="text-stone-600 mt-1">{subtitle}</p>
+            <p className="text-warm-600 mt-1">{subtitle}</p>
           )}
         </div>
         {viewAllLink && (
-          <Link 
+          <Link
             href={viewAllLink}
-            className="text-amber-600 hover:text-amber-700 font-medium flex items-center gap-1 whitespace-nowrap"
+            className="text-accent-600 hover:text-accent-700 font-medium flex items-center gap-1 whitespace-nowrap"
           >
             {viewAllText}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,10 +101,10 @@ export default function PropertyCarousel({
         {canScrollLeft && (
           <button
             onClick={() => scroll('left')}
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-2 transition-all"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-warm-50/95 hover:bg-white shadow-medium rounded-full p-2 transition-all"
             aria-label="Scroll left"
           >
-            <svg className="w-6 h-6 text-stone-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -114,10 +114,10 @@ export default function PropertyCarousel({
         {canScrollRight && (
           <button
             onClick={() => scroll('right')}
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-2 transition-all"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-warm-50/95 hover:bg-white shadow-medium rounded-full p-2 transition-all"
             aria-label="Scroll right"
           >
-            <svg className="w-6 h-6 text-stone-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -139,19 +139,19 @@ export default function PropertyCarousel({
   );
 }
 
-function PropertyCard({ 
-  property, 
-  formatPrice 
-}: { 
-  property: CarouselProperty; 
+function PropertyCard({
+  property,
+  formatPrice
+}: {
+  property: CarouselProperty;
   formatPrice: (price: number) => string;
 }) {
-  const placeholderImage = `https://placehold.co/400x300/e7e5e4/78716c?text=${encodeURIComponent(property.propertyType)}`;
-  
+  const placeholderImage = `https://placehold.co/400x300/F7F5F0/1E2A38?text=${encodeURIComponent(property.propertyType)}`;
+
   return (
     <Link
       href={`/properties/${property.reference}`}
-      className="flex-shrink-0 w-[280px] md:w-[300px] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
+      className="flex-shrink-0 w-[280px] md:w-[300px] bg-warm-50 rounded-lg border border-warm-200 hover:shadow-medium transition-all duration-250 overflow-hidden group hover:-translate-y-0.5"
     >
       {/* Image Container */}
       <div className="relative h-[200px] overflow-hidden">
@@ -161,17 +161,18 @@ function PropertyCard({
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
           sizes="300px"
+          unoptimized
         />
-        
+
         {/* Price Badge */}
-        <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow">
-          <span className="text-lg font-bold text-stone-800">{formatPrice(property.price)}</span>
+        <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-md shadow-soft">
+          <span className="text-lg font-semibold text-primary-900">{formatPrice(property.price)}</span>
         </div>
 
         {/* Badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-2">
           {property.isKeyReady && (
-            <span className="bg-emerald-500 text-white text-xs font-semibold px-2 py-1 rounded-full flex items-center gap-1">
+            <span className="bg-accent-500 text-white text-xs font-medium px-2.5 py-1 rounded flex items-center gap-1">
               <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
@@ -179,8 +180,8 @@ function PropertyCard({
             </span>
           )}
           {property.isGolf && (
-            <span className="bg-green-600 text-white text-xs font-semibold px-2 py-1 rounded-full">
-              ⛳ Golf
+            <span className="bg-success-500 text-white text-xs font-medium px-2.5 py-1 rounded">
+              Golf
             </span>
           )}
         </div>
@@ -189,19 +190,19 @@ function PropertyCard({
       {/* Content */}
       <div className="p-4">
         {/* Property Type & Location */}
-        <div className="flex items-center gap-2 text-sm text-stone-500 mb-1">
-          <span className="font-medium text-amber-600">{property.propertyType}</span>
+        <div className="flex items-center gap-2 text-sm text-warm-500 mb-1">
+          <span className="font-medium text-accent-600">{property.propertyType}</span>
           <span>•</span>
           <span>{property.town}</span>
         </div>
 
         {/* Title */}
-        <h3 className="font-semibold text-stone-800 mb-2 line-clamp-1 group-hover:text-amber-600 transition-colors">
+        <h3 className="font-medium text-primary-900 mb-2 line-clamp-1 group-hover:text-accent-600 transition-colors">
           {property.title}
         </h3>
 
         {/* Stats */}
-        <div className="flex items-center gap-4 text-sm text-stone-600">
+        <div className="flex items-center gap-4 text-sm text-warm-600">
           <span className="flex items-center gap-1">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -226,9 +227,9 @@ function PropertyCard({
         {property.features && property.features.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-3">
             {property.features.slice(0, 3).map((feature, idx) => (
-              <span 
+              <span
                 key={idx}
-                className="text-xs bg-stone-100 text-stone-600 px-2 py-0.5 rounded"
+                className="text-xs bg-warm-200 text-warm-700 px-2 py-0.5 rounded"
               >
                 {feature}
               </span>

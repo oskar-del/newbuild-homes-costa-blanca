@@ -1,812 +1,868 @@
-export const dynamic = 'force-dynamic';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getAllProperties } from '@/lib/unified-feed-service';
-import { GOLF_COURSES, getGolfCoursesByRegion } from '@/lib/golf-courses';
+import {
+  GOLF_COURSES,
+  GolfCourse,
+  getGolfCoursesByRegion,
+  getTotalGolfProperties,
+  getCoursesByPropertyCount,
+} from '@/lib/golf-courses';
+import { breadcrumbSchema, toJsonLd, faqSchema } from '@/lib/schema';
+// 12 UNIQUE property images - one per golf course, verified working URLs
+const GOLF_COURSE_IMAGES: Record<string, string> = {
+  'serena-golf': 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80',
+  'hacienda-del-alamo': 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80',
+  'peraleja-golf': 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
+  'altorreal-golf': 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+  'roda-golf': 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+  'la-finca-golf': 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+  'vistabella-golf': 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=800&q=80',
+  'lo-romero-golf': 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80',
+  'la-marquesa-golf': 'https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80',
+  'puig-campana-golf': 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80',
+  'aguilon-golf': 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80',
+  'desert-springs': 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80',
+};
+
+function getCoursesWithImages(): GolfCourse[] {
+  return GOLF_COURSES.map(course => ({
+    ...course,
+    image: GOLF_COURSE_IMAGES[course.slug] || course.image,
+  }));
+}
 
 export const metadata: Metadata = {
-  title: 'Golf Properties Costa Blanca | Frontline Golf Homes & Apartments 2025',
-  description: 'Find your dream golf property in Costa Blanca. Browse frontline golf apartments and villas near La Finca, Villamartín, Las Ramblas, Oliva Nova and 12+ championship courses. Year-round golf, 300+ days sunshine.',
-  keywords: 'golf properties costa blanca, golf course homes spain, frontline golf apartments, la finca golf property, villamartin golf homes, costa blanca golf courses',
+  title: 'Golf Course Properties Costa Blanca & Murcia | New Builds on Golf Resorts',
+  description: 'Find new build homes on Costa Blanca and Murcia golf resorts. Properties at Serena Golf, La Finca, Vistabella, Roda Golf, and more. Golf lifestyle from €150,000.',
   openGraph: {
-    title: 'Golf Properties Costa Blanca | Frontline Golf Homes',
-    description: 'Find your dream golf property in Costa Blanca. 12+ championship courses, year-round golf, frontline homes from €180,000.',
+    title: 'Golf Course Properties Costa Blanca & Murcia',
+    description: 'New build homes on Costa Blanca and Murcia golf resorts. Golf lifestyle from €150,000.',
     type: 'website',
+    url: 'https://newbuildhomescostablanca.com/golf',
+    siteName: 'New Build Homes Costa Blanca',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Golf Course Properties Costa Blanca & Murcia | New Builds on Golf Resorts',
+    description: 'Find new build homes on golf resorts across Costa Blanca and Murcia from €150,000.',
   },
 };
 
-// FAQ Data
-const GOLF_FAQS = [
+const CONTACT = {
+  whatsapp: 'https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0',
+  phone: '+34 634 044 970',
+};
+
+// FAQs for SEO
+const golfFaqs = [
   {
-    question: "How many golf courses are in Costa Blanca?",
-    answer: "Costa Blanca has over 20 golf courses spread across the North and South regions. The South (Orihuela Costa, Torrevieja area) has around 12 courses including La Finca, Villamartín, Las Ramblas, and Campoamor. The North (Jávea, Dénia, Benidorm area) has 8+ courses including the Severiano Ballesteros-designed Oliva Nova, La Sella, and Villaitana's twin Nicklaus/Langer courses."
+    question: 'What are the best golf resorts to buy property in Costa Blanca and Murcia?',
+    answer: 'For variety and value, Serena Golf near Los Alcázares has the most new build options with 34+ properties. La Finca in Algorfa and Vistabella offer excellent courses with modern developments from €150,000. For premium golf, Altorreal and Villaitana (Puig Campana) feature courses by legends like Nicklaus and Ballesteros.',
   },
   {
-    question: "What is the best golf course in Costa Blanca?",
-    answer: "It depends on your preferences. For championship quality, Oliva Nova (designed by Seve Ballesteros) and Villaitana (Nicklaus & Langer designs) are world-class. For best value and accessibility, La Finca and La Marquesa in the South offer excellent golf at reasonable prices. Villamartín is the most established with a vibrant social scene. Las Ramblas offers the most dramatic elevation changes and mountain views."
+    question: 'How much does a golf property cost in Costa Blanca?',
+    answer: 'New build golf properties start from around €150,000 for apartments at La Finca or La Marquesa. Most developments are priced between €180,000-€350,000. Premium courses like Altorreal and Villaitana have villas from €350,000+.',
   },
   {
-    question: "Can you play golf year-round in Costa Blanca?",
-    answer: "Yes! Costa Blanca enjoys over 300 days of sunshine annually with mild winters averaging 16-18°C. Unlike Northern Europe, courses never close for winter. January and February are the coolest months but still very playable. Summer (July-August) can be hot, so many golfers prefer early morning or late afternoon tee times. Spring (March-May) and autumn (September-November) offer ideal golfing conditions."
+    question: 'Do I need to be a member to play golf if I live on a resort?',
+    answer: 'Most golf resorts offer preferential rates to property owners, but membership is typically optional. Contact us for specific details on each resort - arrangements vary between courses.',
   },
   {
-    question: "How much are green fees in Costa Blanca?",
-    answer: "Green fees in Costa Blanca typically range from €50-100 for 18 holes depending on course and season. Budget-friendly courses like La Marquesa and Vistabella charge €50-65. Mid-range courses like La Finca and Villamartín are €65-85. Premium courses like Oliva Nova and Villaitana can reach €80-120. Most courses offer twilight rates (after 2-3pm) at 30-50% discount, and annual memberships range from €1,000-2,500."
+    question: 'Can I rent out my golf property when I\'m not using it?',
+    answer: 'Yes, golf properties are popular rentals, especially during the extended golf season (September to June). Courses like Serena Golf and Roda Golf near the Mar Menor attract golfers year-round. Rental yields of 4-6% are achievable with professional management.',
   },
   {
-    question: "Which Costa Blanca golf course is best for beginners?",
-    answer: "Vistabella Golf and La Marquesa Golf are excellent for beginners, with wider fairways and forgiving layouts. Both offer good practice facilities and patient staff. The 9-hole courses at Jávea Golf Club and Altea's Don Cayo are also great for those building confidence. Avoid Las Ramblas initially as its elevation changes can be challenging for new golfers."
+    question: 'What is the golf season in Costa Blanca and Murcia?',
+    answer: 'The region enjoys year-round golf thanks to the Mediterranean climate, with over 300 sunny days annually. The main season runs from September to June, with summer being quieter due to heat. Many courses offer reduced summer rates.',
   },
   {
-    question: "Are there famous designer golf courses in Costa Blanca?",
-    answer: "Yes! Costa Blanca boasts courses by golf legends. Oliva Nova was designed by Severiano Ballesteros. Villaitana features two courses - one by Jack Nicklaus (Levante) and one by Bernhard Langer (Poniente). La Sella was designed by José María Olazábal, as was Campoamor. These championship-caliber courses attract golfers from around the world."
+    question: 'Which golf course has the most new build options?',
+    answer: 'Serena Golf near Los Alcázares currently has the most new build properties with multiple developments from builders like Grupo Vermell, AMAL, and others. La Finca in Algorfa also has strong supply with several active developments.',
   },
   {
-    question: "Is Costa Blanca or Costa del Sol better for golf?",
-    answer: "Both are excellent, but Costa Blanca offers better value. Property prices are 30-40% lower than Costa del Sol while course quality is comparable. Costa Blanca has fewer crowds and a more authentic Spanish feel. Costa del Sol has more courses (70+) and is more established for golf tourism, but Costa Blanca's 20+ courses provide plenty of variety. Flight connections to both are excellent from across Europe."
+    question: 'Are there any Jack Nicklaus-designed courses with properties?',
+    answer: 'Yes! Villaitana (Puig Campana Golf) in Finestrat features courses designed by both Jack Nicklaus and Severiano Ballesteros. Prime Home Alicante\'s Green & Blue development offers properties here from around €350,000.',
   },
-  {
-    question: "What is the best time of year to play golf in Costa Blanca?",
-    answer: "March to May and September to November offer the ideal combination of perfect weather (20-25°C), reasonable green fees, and less crowded courses. Winter (December-February) is popular with Northern Europeans escaping cold weather - courses are busier but still excellent playing conditions. Summer offers the lowest prices but can be very hot (30°C+) midday."
-  },
-  {
-    question: "How far is Costa Blanca from the airport?",
-    answer: "Alicante-Elche Airport (ALC) is the main gateway, with most golf courses 25-60 minutes away. Southern courses (Villamartín, La Finca, Campoamor) are 35-45 minutes from Alicante. Northern courses (Oliva Nova, La Sella) are 60-90 minutes from Alicante. Murcia-Corvera Airport (RMU) serves the South, with courses like Lo Romero just 20 minutes away."
-  },
-  {
-    question: "Can I buy property directly on a golf course in Costa Blanca?",
-    answer: "Yes! Many Costa Blanca developments are built around golf courses offering frontline golf properties with course views. La Finca Golf Resort, Villamartín, Las Ramblas, Campoamor, and Vistabella all have residential communities. Prices for frontline golf apartments start around €180,000, with villas from €350,000. We specialize in golf properties - contact us for current availability."
-  }
 ];
 
-// Green Fees Data (approximate, for reference)
-const GREEN_FEES = [
-  { course: 'La Finca Golf', region: 'South', high: '€75-85', low: '€55-65', buggy: '€35', annual: '€1,200' },
-  { course: 'Villamartín Golf', region: 'South', high: '€80-95', low: '€60-70', buggy: '€40', annual: '€1,400' },
-  { course: 'Las Ramblas Golf', region: 'South', high: '€75-90', low: '€55-65', buggy: '€35', annual: '€1,300' },
-  { course: 'Campoamor Golf', region: 'South', high: '€70-85', low: '€50-60', buggy: '€35', annual: '€1,200' },
-  { course: 'Vistabella Golf', region: 'South', high: '€55-65', low: '€40-50', buggy: '€30', annual: '€950' },
-  { course: 'La Marquesa Golf', region: 'South', high: '€50-60', low: '€35-45', buggy: '€30', annual: '€900' },
-  { course: 'Lo Romero Golf', region: 'South', high: '€65-80', low: '€45-55', buggy: '€35', annual: '€1,100' },
-  { course: 'Oliva Nova Golf', region: 'North', high: '€90-110', low: '€70-85', buggy: '€45', annual: '€2,200' },
-  { course: 'La Sella Golf', region: 'North', high: '€80-100', low: '€60-75', buggy: '€40', annual: '€1,800' },
-  { course: 'Villaitana Golf', region: 'North', high: '€85-120', low: '€65-90', buggy: '€45', annual: '€2,000' },
-  { course: 'Jávea Golf Club', region: 'North', high: '€50-60', low: '€35-45', buggy: '€25', annual: '€800' },
-  { course: 'Altea Don Cayo', region: 'North', high: '€45-55', low: '€30-40', buggy: '€25', annual: '€700' },
+// Why buy on a golf course
+const golfBenefits = [
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+      </svg>
+    ),
+    title: 'Strong Resale Value',
+    description: 'Golf properties consistently outperform the wider market. Limited supply on established courses drives appreciation.',
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      </svg>
+    ),
+    title: 'Quality Environments',
+    description: 'Golf resorts are maintained to high standards. Landscaping, security, and community facilities are typically excellent.',
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
+    title: 'Ready-Made Community',
+    description: 'Golf resorts attract like-minded international residents. Social clubs, competitions, and events create instant friendships.',
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    title: 'Rental Income',
+    description: 'Golf tourists seek quality accommodation near courses. The extended season (Sep-Jun) provides strong rental demand.',
+  },
 ];
 
-// Best For Categories
-const BEST_FOR = [
-  { category: 'Championship Golf', course: 'Oliva Nova Golf', reason: 'Severiano Ballesteros design, hosts European Tour events', slug: 'oliva-nova' },
-  { category: 'Best Value', course: 'La Marquesa Golf', reason: 'Quality 18-hole course, green fees from €35', slug: 'la-marquesa' },
-  { category: 'Beginners', course: 'Vistabella Golf', reason: 'Forgiving layout, excellent practice facilities, friendly staff', slug: 'vistabella' },
-  { category: 'Mountain Views', course: 'Las Ramblas Golf', reason: 'Dramatic elevation changes, stunning Sierra de Callosa backdrop', slug: 'las-ramblas' },
-  { category: 'Social Scene', course: 'Villamartín Golf', reason: 'Famous plaza with bars/restaurants, established expat community', slug: 'villamartin' },
-  { category: 'Luxury Resort', course: 'Villaitana Golf', reason: 'Two championship courses, 5-star hotel, spa facilities', slug: 'villaitana' },
-  { category: 'Investment Property', course: 'La Finca Golf', reason: 'Strong rental demand, new developments, proven appreciation', slug: 'la-finca' },
-  { category: 'Quick Round (9 holes)', course: 'Jávea Golf Club', reason: 'Charming 9-hole course, Montgó mountain views, friendly club', slug: 'javea' },
-];
-
-// Schema markup for golf properties collection
-function getGolfPageSchema() {
-  return [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'CollectionPage',
-      name: 'Golf Properties Costa Blanca',
-      description: 'Collection of golf properties and frontline golf homes in Costa Blanca, Spain. Over 20 courses including designs by Ballesteros, Nicklaus, and Olazábal.',
-      url: 'https://www.newbuildhomescostablanca.com/golf',
-      mainEntity: {
-        '@type': 'ItemList',
-        name: 'Costa Blanca Golf Courses',
-        numberOfItems: GOLF_COURSES.length,
-        itemListElement: GOLF_COURSES.map((course, index) => ({
-          '@type': 'ListItem',
-          position: index + 1,
-          item: {
-            '@type': 'GolfCourse',
-            name: course.name,
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: course.town,
-              addressRegion: 'Alicante',
-              addressCountry: 'ES',
-            },
-          },
-        })),
-      },
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: GOLF_FAQS.map(faq => ({
-        '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer,
-        },
-      })),
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.newbuildhomescostablanca.com/' },
-        { '@type': 'ListItem', position: 2, name: 'Golf Properties', item: 'https://www.newbuildhomescostablanca.com/golf' },
-      ],
-    },
-  ];
+function formatPrice(price: number): string {
+  return new Intl.NumberFormat('en-EU', {
+    style: 'currency',
+    currency: 'EUR',
+    maximumFractionDigits: 0,
+  }).format(price);
 }
 
-export default async function GolfPage() {
-  // Fetch properties with golf views/proximity
-  const allProperties = await getAllProperties();
-  const golfProperties = allProperties.filter(p => 
-    p.hasGolfview || 
-    p.features?.some(f => f.toLowerCase().includes('golf'))
+function getTierBadge(tier: GolfCourse['tier']) {
+  switch (tier) {
+    case 'premium':
+      return <span className="bg-gradient-to-r from-amber-500 to-amber-600 text-white text-xs font-bold px-2 py-1 rounded">Premium</span>;
+    case 'popular':
+      return <span className="bg-accent-500 text-white text-xs font-bold px-2 py-1 rounded">Most Popular</span>;
+    case 'unique':
+      return <span className="bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded">Unique</span>;
+    default:
+      return null;
+  }
+}
+
+// Clean card design with reliable image handling
+function GolfCourseCard({ course }: { course: GolfCourse }) {
+  return (
+    <Link
+      href={`/golf/${course.slug}`}
+      className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-warm-200"
+    >
+      {/* Image section with gradient fallback */}
+      <div className={`relative h-64 bg-gradient-to-br ${course.gradient}`}>
+        {course.image && (
+          <Image
+            src={course.image}
+            alt={course.name}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            unoptimized
+          />
+        )}
+
+        {/* Badges */}
+        <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-10">
+          <div className="flex gap-2 flex-wrap">
+            <span className="bg-primary-900/80 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full">
+              {course.holes} Holes · Par {course.par}
+            </span>
+            {getTierBadge(course.tier)}
+          </div>
+          <span className="bg-accent-500 text-white text-xs font-bold px-3 py-1.5 rounded-full">
+            {course.propertyCount} Properties
+          </span>
+        </div>
+
+        {/* Bottom gradient with name */}
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-5">
+          <h3 className="text-xl font-bold text-white group-hover:text-accent-300 transition-colors">
+            {course.name}
+          </h3>
+          <p className="text-warm-300 text-sm flex items-center gap-1">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            </svg>
+            {course.town}, {course.regionDisplay}
+          </p>
+        </div>
+      </div>
+
+      {/* Content section */}
+      <div className="p-6">
+        {/* Story */}
+        <p className="text-warm-600 text-sm leading-relaxed mb-4 line-clamp-3">
+          {course.story}
+        </p>
+
+        {/* Designer */}
+        {course.designer && (
+          <p className="text-warm-500 text-sm mb-4">
+            Designed by <span className="font-semibold text-primary-900">{course.designer}</span> · Est. {course.yearOpened}
+          </p>
+        )}
+
+        {/* Highlights */}
+        <div className="flex flex-wrap gap-2 mb-5">
+          {course.highlights.slice(0, 4).map((h) => (
+            <span key={h} className="bg-warm-100 text-warm-700 text-xs px-2.5 py-1 rounded-full">{h}</span>
+          ))}
+        </div>
+
+        {/* Price and CTA */}
+        <div className="flex items-center justify-between pt-4 border-t border-warm-100">
+          <div>
+            <p className="text-warm-500 text-xs">Properties from</p>
+            <p className="text-accent-600 font-bold text-xl">{formatPrice(course.priceFrom)}</p>
+          </div>
+          <span className="bg-primary-900 group-hover:bg-accent-500 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-colors inline-flex items-center gap-2">
+            View Properties
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </Link>
   );
+}
 
-  const southCourses = getGolfCoursesByRegion('south');
-  const northCourses = getGolfCoursesByRegion('north');
+function FeaturedCourseHero({ course }: { course: GolfCourse }) {
+  return (
+    <div className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 rounded-2xl overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className={`absolute inset-0 bg-gradient-to-br ${course.gradient} opacity-50`} />
+      </div>
 
-  // Count properties near each course
-  const getPropertiesNearCourse = (course: typeof GOLF_COURSES[0]) => {
-    return golfProperties.filter(p => 
-      course.nearbyTowns.some(town => 
-        p.town?.toLowerCase().includes(town.toLowerCase())
-      )
-    ).length;
-  };
+      <div className="relative grid lg:grid-cols-2 gap-8 p-8 lg:p-12">
+        <div>
+          <div className="flex items-center gap-3 mb-4">
+            <span className="bg-accent-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+              Featured Course
+            </span>
+            <span className="bg-success-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+              {course.propertyCount} Properties Available
+            </span>
+          </div>
+
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            {course.name}
+          </h2>
+
+          <p className="text-warm-200 text-lg mb-6 leading-relaxed">
+            {course.description}
+          </p>
+
+          <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="bg-white/10 rounded-lg p-4">
+              <p className="text-warm-300 text-sm">Course</p>
+              <p className="text-white font-semibold">{course.holes} Holes · Par {course.par}</p>
+            </div>
+            <div className="bg-white/10 rounded-lg p-4">
+              <p className="text-warm-300 text-sm">Designer</p>
+              <p className="text-white font-semibold">{course.designer || 'Various'}</p>
+            </div>
+            <div className="bg-white/10 rounded-lg p-4">
+              <p className="text-warm-300 text-sm">Location</p>
+              <p className="text-white font-semibold">{course.town}</p>
+            </div>
+            <div className="bg-white/10 rounded-lg p-4">
+              <p className="text-warm-300 text-sm">Properties From</p>
+              <p className="text-accent-400 font-bold text-lg">{formatPrice(course.priceFrom)}</p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-2 mb-8">
+            {course.highlights.map((h) => (
+              <span key={h} className="bg-white/20 text-white text-sm px-3 py-1 rounded-full">{h}</span>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href={`/golf/${course.slug}`}
+              className="bg-accent-500 hover:bg-accent-600 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center gap-2"
+            >
+              View {course.shortName} Properties
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+            <a
+              href={CONTACT.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center gap-2"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Ask About {course.shortName}
+            </a>
+          </div>
+        </div>
+
+        {/* Quick info sidebar */}
+        <div className="hidden lg:block">
+          <div className="bg-white rounded-xl p-6 shadow-xl">
+            <h3 className="text-xl font-semibold text-primary-900 mb-1">Why {course.shortName}?</h3>
+            <p className="text-warm-500 text-sm mb-5">{course.story}</p>
+
+            {course.amenities && (
+              <div className="mb-5">
+                <h4 className="text-sm font-medium text-primary-900 mb-2">Resort Amenities</h4>
+                <div className="flex flex-wrap gap-2">
+                  {course.amenities.slice(0, 6).map((a) => (
+                    <span key={a} className="bg-warm-100 text-warm-700 text-xs px-2 py-1 rounded">{a}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {course.builders && course.builders.length > 0 && (
+              <div className="mb-5">
+                <h4 className="text-sm font-medium text-primary-900 mb-2">Active Builders</h4>
+                <div className="flex flex-wrap gap-2">
+                  {course.builders.map((b) => (
+                    <Link
+                      key={b.slug}
+                      href={`/builders/${b.slug}`}
+                      className="bg-primary-100 text-primary-700 text-xs px-2 py-1 rounded hover:bg-primary-200 transition-colors"
+                    >
+                      {b.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div className="pt-4 border-t border-warm-100">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-warm-500 text-xs">Properties from</p>
+                  <p className="text-accent-600 font-bold text-xl">{formatPrice(course.priceFrom)}</p>
+                </div>
+                <Link
+                  href={`/golf/${course.slug}`}
+                  className="bg-primary-900 hover:bg-primary-800 text-white text-sm font-medium px-4 py-2 rounded transition-colors"
+                >
+                  View All →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function GolfPage() {
+  const breadcrumbs = breadcrumbSchema([
+    { name: 'Home', url: 'https://newbuildhomescostablanca.com/' },
+    { name: 'Golf Properties', url: 'https://newbuildhomescostablanca.com/golf/' },
+  ]);
+
+  const faqSchemaData = faqSchema(golfFaqs);
+
+  // Get courses with hardcoded unique images
+  const coursesWithImages = getCoursesWithImages();
+
+  // Get courses by region (using enriched data)
+  const southCourses = coursesWithImages.filter(c => c.region === 'south');
+  const murciaCourses = coursesWithImages.filter(c => c.region === 'murcia');
+  const northCourses = coursesWithImages.filter(c => c.region === 'north');
+  const almeriaCourses = coursesWithImages.filter(c => c.region === 'almeria');
+
+  // Featured course is La Finca (our most established Costa Blanca course)
+  const featuredCourse = coursesWithImages.find(c => c.slug === 'la-finca-golf') || coursesWithImages[0];
+
+  // Total properties across all courses
+  const totalProperties = getTotalGolfProperties();
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(getGolfPageSchema()) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(faqSchemaData) }} />
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8f] text-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="max-w-3xl">
-            <nav className="text-sm mb-4 text-white/70">
-              <Link href="/" className="hover:text-white">Home</Link>
+      {/* Mobile Sticky CTA */}
+      <div className="fixed bottom-0 left-0 right-0 bg-primary-900 border-t border-primary-700 z-50 lg:hidden">
+        <div className="flex">
+          <a
+            href={CONTACT.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white py-4 font-medium"
+          >
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+          <a
+            href="#inquiry"
+            className="flex-1 flex items-center justify-center gap-2 bg-accent-500 text-white py-4 font-medium"
+          >
+            Find Golf Property
+          </a>
+        </div>
+      </div>
+
+      <main className="min-h-screen bg-warm-50 pb-20 lg:pb-0">
+        {/* ============================================ */}
+        {/* HERO SECTION */}
+        {/* ============================================ */}
+        <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 py-16 md:py-24 overflow-hidden">
+          {/* Subtle gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-accent-600/10 to-transparent" />
+
+          <div className="relative max-w-7xl mx-auto px-6">
+            <nav className="text-warm-400 text-sm mb-6">
+              <Link href="/" className="hover:text-white transition-colors">Home</Link>
               <span className="mx-2">›</span>
               <span className="text-white">Golf Properties</span>
             </nav>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Golf Properties Costa Blanca
-            </h1>
-            <p className="text-xl text-white/90 mb-8">
-              Discover frontline golf apartments, villas, and townhouses near Costa Blanca's 
-              finest championship courses. From La Finca to Oliva Nova, find your perfect 
-              golf lifestyle home in Spain's sunniest region.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/properties?feature=golf"
-                className="bg-[#e8913a] hover:bg-[#d4792c] text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                View All Golf Properties ({golfProperties.length})
-              </Link>
-              <a
-                href="#courses"
-                className="border-2 border-white/50 hover:border-white text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Explore Golf Courses
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Stats Bar */}
-      <section className="bg-white border-b border-stone-200 py-8">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-[#1e3a5f]">{golfProperties.length}+</div>
-              <div className="text-stone-600">Golf Properties</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-[#1e3a5f]">{GOLF_COURSES.length}+</div>
-              <div className="text-stone-600">Golf Courses</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-[#1e3a5f]">300+</div>
-              <div className="text-stone-600">Days of Sunshine</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-[#1e3a5f]">12 Months</div>
-              <div className="text-stone-600">Golfing Season</div>
-            </div>
-          </div>
-        </div>
-      </section>
+            <div className="max-w-3xl">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-10 h-px bg-accent-500" />
+                <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">Golf Lifestyle</span>
+              </div>
 
-      {/* Why Costa Blanca Section - Visual Cards */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#1e3a5f] mb-4 text-center">
-            Why Costa Blanca is Europe's Premier Golf Destination
-          </h2>
-          <p className="text-center text-stone-600 mb-12 max-w-2xl mx-auto">
-            World-class courses, year-round sunshine, and property prices 30-40% lower than Costa del Sol
-          </p>
-          
-          {/* Key Benefits Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-100">
-              <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-[#1e3a5f] mb-2">Year-Round Golf</h3>
-              <p className="text-stone-600 text-sm">300+ days of sunshine. Play in January while Northern Europe is frozen. Winter highs of 16-18°C.</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-50 to-sky-50 rounded-xl p-6 border border-blue-100">
-              <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-[#1e3a5f] mb-2">Outstanding Value</h3>
-              <p className="text-stone-600 text-sm">Frontline golf apartments from €180,000. Green fees €50-100. Annual memberships from €900.</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-100">
-              <div className="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-[#1e3a5f] mb-2">World-Class Courses</h3>
-              <p className="text-stone-600 text-sm">Designs by Severiano Ballesteros, Jack Nicklaus, Bernhard Langer, and José María Olazábal.</p>
-            </div>
-            
-            <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-6 border border-purple-100">
-              <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="font-bold text-[#1e3a5f] mb-2">Golf Community</h3>
-              <p className="text-stone-600 text-sm">Established international community. Golf-focused restaurants, shops, and social scene.</p>
-            </div>
-          </div>
-          
-          {/* North vs South Comparison */}
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* South Card */}
-            <div className="bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl p-8 text-white">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                  <span className="text-xl">☀️</span>
-                </div>
-                <h3 className="text-2xl font-bold">Costa Blanca South</h3>
-              </div>
-              <p className="text-white/90 mb-6">
-                The heart of Costa Blanca golf. From Torrevieja to Pilar de la Horadada, the South offers 
-                the famous Villamartín triangle, La Finca Golf Resort, and the best value for golf property investment.
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-6 leading-tight">
+                Live the <span className="font-semibold">Golf Dream</span> in Spain
+              </h1>
+
+              <p className="text-warm-200 text-lg leading-relaxed mb-8">
+                Wake up to fairway views, play world-class courses, and enjoy year-round Mediterranean sunshine.
+                We've curated <strong className="text-white">{totalProperties} new build properties</strong> across <strong className="text-white">{GOLF_COURSES.length} golf resorts</strong> in
+                Costa Blanca, Murcia, and Almería.
               </p>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-white/90">8+ courses within 20 minutes</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-white/90">Frontline apartments from €180,000</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-white/90">Strong rental demand year-round</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-white/90">35-45 mins from Alicante Airport</span>
-                </li>
-              </ul>
-              <Link 
-                href="#courses-south" 
-                className="inline-flex items-center gap-2 bg-white text-amber-600 px-5 py-2 rounded-lg font-semibold hover:bg-amber-50 transition-colors"
-              >
-                Explore South Courses
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-            
-            {/* North Card */}
-            <div className="bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8f] rounded-2xl p-8 text-white">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                  <span className="text-xl">⛰️</span>
+
+              {/* Stats */}
+              <div className="flex flex-wrap gap-8 mb-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white">{GOLF_COURSES.length}</div>
+                  <div className="text-warm-400 text-sm">Golf Courses</div>
                 </div>
-                <h3 className="text-2xl font-bold">Costa Blanca North</h3>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white">{totalProperties}+</div>
+                  <div className="text-warm-400 text-sm">Properties</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white">€150k</div>
+                  <div className="text-warm-400 text-sm">Starting From</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white">300+</div>
+                  <div className="text-warm-400 text-sm">Sunny Days/Year</div>
+                </div>
               </div>
-              <p className="text-white/90 mb-6">
-                Premium resort golf meets dramatic Mediterranean landscapes. Jávea, Dénia, Altea, and Benidorm 
-                offer championship courses including Seve Ballesteros's masterpiece Oliva Nova.
-              </p>
-              <ul className="space-y-3 mb-6">
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+
+              <div className="flex flex-wrap gap-4">
+                <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer"
+                  className="bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center gap-2">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Ask About Golf Properties
+                </a>
+                <Link href="#courses" className="bg-accent-500 hover:bg-accent-600 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center gap-2">
+                  Browse Courses
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
-                  <span className="text-white/90">Oliva Nova (Ballesteros design)</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-white/90">Villaitana (Nicklaus & Langer)</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-white/90">Mountain & sea view properties</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-white/90">5-star resort facilities</span>
-                </li>
-              </ul>
-              <Link 
-                href="#courses-north" 
-                className="inline-flex items-center gap-2 bg-white text-[#1e3a5f] px-5 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-              >
-                Explore North Courses
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Best Course For Section */}
-      <section className="py-16 bg-stone-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#1e3a5f] mb-4 text-center">
-            Best Golf Course For...
-          </h2>
-          <p className="text-center text-stone-600 mb-10 max-w-2xl mx-auto">
-            Not sure which course suits your style? Here's our guide to matching the perfect course to your needs.
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {BEST_FOR.map((item, idx) => (
-              <Link
-                key={idx}
-                href={`/golf/${item.slug}`}
-                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow group"
-              >
-                <div className="text-sm text-[#e8913a] font-semibold mb-2">Best for {item.category}</div>
-                <h3 className="text-lg font-bold text-[#1e3a5f] mb-2 group-hover:text-[#e8913a] transition-colors">
-                  {item.course}
-                </h3>
-                <p className="text-sm text-stone-600">{item.reason}</p>
-              </Link>
-            ))}
+        {/* ============================================ */}
+        {/* WHY BUY ON A GOLF COURSE */}
+        {/* ============================================ */}
+        <section className="py-14 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-10">
+              <div className="flex items-center justify-center gap-4 mb-3">
+                <div className="w-10 h-px bg-primary-700" />
+                <span className="text-primary-700 text-xs font-medium tracking-widest uppercase">
+                  The Smart Choice
+                </span>
+                <div className="w-10 h-px bg-primary-700" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
+                Why Buy on a Golf Course?
+              </h2>
+              <p className="text-warm-600 max-w-2xl mx-auto">
+                Beyond the lifestyle, golf properties offer compelling investment advantages.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {golfBenefits.map((benefit, i) => (
+                <div key={i} className="bg-warm-50 rounded-xl p-6 border border-warm-200">
+                  <div className="text-accent-500 mb-4">{benefit.icon}</div>
+                  <h3 className="font-semibold text-primary-900 mb-2">{benefit.title}</h3>
+                  <p className="text-warm-600 text-sm">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Green Fees Comparison */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#1e3a5f] mb-4 text-center">
-            Costa Blanca Golf Green Fees Comparison 2025
-          </h2>
-          <p className="text-center text-stone-600 mb-10 max-w-2xl mx-auto">
-            Compare prices across Costa Blanca's top courses. Prices vary by season—high season is typically March-May and September-November.
-          </p>
-          
-          <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-xl shadow-sm overflow-hidden">
-              <thead className="bg-[#1e3a5f] text-white">
-                <tr>
-                  <th className="px-4 py-3 text-left">Course</th>
-                  <th className="px-4 py-3 text-left">Region</th>
-                  <th className="px-4 py-3 text-center">High Season</th>
-                  <th className="px-4 py-3 text-center">Low Season</th>
-                  <th className="px-4 py-3 text-center">Buggy</th>
-                  <th className="px-4 py-3 text-center">Annual Pass</th>
-                </tr>
-              </thead>
-              <tbody>
-                {GREEN_FEES.map((fee, idx) => (
-                  <tr key={idx} className={idx % 2 === 0 ? 'bg-stone-50' : 'bg-white'}>
-                    <td className="px-4 py-3 font-medium text-[#1e3a5f]">{fee.course}</td>
-                    <td className="px-4 py-3 text-stone-600">{fee.region}</td>
-                    <td className="px-4 py-3 text-center">{fee.high}</td>
-                    <td className="px-4 py-3 text-center text-green-600">{fee.low}</td>
-                    <td className="px-4 py-3 text-center">{fee.buggy}</td>
-                    <td className="px-4 py-3 text-center">{fee.annual}</td>
-                  </tr>
+        {/* ============================================ */}
+        {/* FEATURED COURSE */}
+        {/* ============================================ */}
+        <section className="py-14 bg-warm-100" id="courses">
+          <div className="max-w-7xl mx-auto px-6">
+            <FeaturedCourseHero course={featuredCourse} />
+          </div>
+        </section>
+
+        {/* ============================================ */}
+        {/* COSTA BLANCA SOUTH COURSES - SHOWN FIRST */}
+        {/* ============================================ */}
+        {southCourses.length > 0 && (
+          <section className="py-14 bg-white">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="flex items-center gap-4 mb-2">
+                <div className="w-10 h-px bg-accent-500" />
+                <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
+                  Our Main Region
+                </span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
+                Costa Blanca <span className="font-semibold">South</span>
+              </h2>
+              <p className="text-warm-600 mb-8">
+                {southCourses.length} established golf courses in the heart of Spanish golf tourism. Excellent accessibility and value.
+              </p>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {southCourses
+                  .filter(c => c.slug !== featuredCourse.slug)
+                  .map((course) => (
+                    <GolfCourseCard key={course.slug} course={course} />
+                  ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ============================================ */}
+        {/* COSTA CÁLIDA (MURCIA) COURSES */}
+        {/* ============================================ */}
+        {murciaCourses.length > 0 && (
+          <section id="costa-calida" className="py-14 bg-warm-50">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="flex items-center gap-4 mb-2">
+                <div className="w-10 h-px bg-blue-500" />
+                <span className="text-blue-600 text-xs font-medium tracking-widest uppercase">
+                  Best Value Region
+                </span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
+                Costa <span className="font-semibold">Cálida</span> (Murcia)
+              </h2>
+              <p className="text-warm-600 mb-8">
+                {murciaCourses.length} golf courses with excellent value new builds near the Mar Menor lagoon.
+                <Link href="/areas/costa-calida" className="text-accent-600 hover:underline ml-1">
+                  Explore Costa Cálida →
+                </Link>
+              </p>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {murciaCourses.map((course) => (
+                  <GolfCourseCard key={course.slug} course={course} />
                 ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-sm text-stone-500 mt-4 text-center">
-            * Prices are approximate and subject to change. Many courses offer twilight rates at 30-50% discount.
-          </p>
-        </div>
-      </section>
-
-      {/* North vs South Comparison */}
-      <section className="py-16 bg-gradient-to-br from-green-50 to-stone-50">
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#1e3a5f] mb-4 text-center">
-            Costa Blanca North vs South: Where Should You Buy?
-          </h2>
-          <p className="text-center text-stone-600 mb-10 max-w-2xl mx-auto">
-            Both regions offer excellent golf—here's how they compare for property buyers.
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* South */}
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-bold text-[#1e3a5f] mb-4 flex items-center gap-2">
-                <span className="text-2xl">☀️</span> Costa Blanca South
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span><strong>8+ golf courses</strong> within 30 minutes</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span><strong>Lower property prices</strong> – apartments from €150k</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span><strong>Large expat community</strong> – English widely spoken</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span><strong>More new build developments</strong></span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span><strong>35-45 min</strong> from Alicante Airport</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-500 mt-1">•</span>
-                  <span>Flatter terrain, more modern developments</span>
-                </li>
-              </ul>
-              <div className="mt-4 pt-4 border-t border-stone-200">
-                <span className="text-sm text-stone-500">Best for:</span>
-                <p className="font-medium text-[#1e3a5f]">Value seekers, frequent golfers, rental investors</p>
               </div>
             </div>
-            
-            {/* North */}
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-bold text-[#1e3a5f] mb-4 flex items-center gap-2">
-                <span className="text-2xl">⛰️</span> Costa Blanca North
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span><strong>Championship courses</strong> – Ballesteros, Nicklaus designs</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span><strong>Dramatic scenery</strong> – mountains and sea views</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span><strong>More Spanish character</strong> – authentic towns</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span><strong>Higher-end properties</strong> – more villas</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span><strong>60-90 min</strong> from Alicante Airport</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-500 mt-1">•</span>
-                  <span>Hilly terrain, established communities</span>
-                </li>
-              </ul>
-              <div className="mt-4 pt-4 border-t border-stone-200">
-                <span className="text-sm text-stone-500">Best for:</span>
-                <p className="font-medium text-[#1e3a5f]">Luxury seekers, scenery lovers, permanent residents</p>
+          </section>
+        )}
+
+        {/* ============================================ */}
+        {/* PREMIUM & UNIQUE COURSES */}
+        {/* ============================================ */}
+        {(northCourses.length > 0 || almeriaCourses.length > 0) && (
+          <section className="py-14 bg-white">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="flex items-center gap-4 mb-2">
+                <div className="w-10 h-px bg-purple-500" />
+                <span className="text-purple-600 text-xs font-medium tracking-widest uppercase">
+                  Something Different
+                </span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
+                Premium & <span className="font-semibold">Unique</span> Courses
+              </h2>
+              <p className="text-warm-600 mb-8">
+                From Nicklaus-designed luxury to Europe's only desert course - for buyers seeking something special.
+              </p>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {[...northCourses, ...almeriaCourses].map((course) => (
+                  <GolfCourseCard key={course.slug} course={course} />
+                ))}
               </div>
             </div>
-          </div>
-          
-          <div className="text-center mt-8">
-            <Link
-              href="/guides/costa-blanca-north-vs-south"
-              className="text-[#e8913a] hover:text-[#d4792c] font-semibold"
-            >
-              Read our complete North vs South guide →
-            </Link>
-          </div>
-        </div>
-      </section>
+          </section>
+        )}
 
-      {/* Golf Courses Section */}
-      <section id="courses" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#1e3a5f] mb-4">
-              Costa Blanca Golf Courses
+        {/* ============================================ */}
+        {/* COURSE COMPARISON TABLE */}
+        {/* ============================================ */}
+        <section className="py-14 bg-warm-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
+              Quick <span className="font-semibold">Comparison</span>
             </h2>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              From world-class championship courses to charming local clubs. Click on any course 
-              to see available properties and detailed information.
+            <p className="text-warm-600 mb-8">
+              All {GOLF_COURSES.length} courses at a glance - sorted by number of available properties.
             </p>
-          </div>
 
-          {/* Costa Blanca South Courses */}
-          <div className="mb-12">
-            <h3 className="text-2xl font-bold text-[#1e3a5f] mb-6 flex items-center gap-2">
-              <span className="text-[#e8913a]">⛳</span> Costa Blanca South Courses
-            </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {southCourses.map((course) => {
-                const propertyCount = getPropertiesNearCourse(course);
-                return (
-                  <Link
-                    key={course.id}
-                    href={`/golf/${course.slug}`}
-                    className="bg-stone-50 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group"
-                  >
-                    <div className="aspect-video bg-gradient-to-br from-green-600 to-green-800 relative">
-                      <div className="absolute inset-0 flex items-center justify-center text-white/30 text-6xl">
-                        ⛳
-                      </div>
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                        <span className="text-white font-semibold">{course.name}</span>
-                      </div>
-                    </div>
-                    <div className="p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-stone-600">{course.town}</span>
-                        <span className="text-sm bg-white px-2 py-1 rounded">
-                          {course.holes} holes
-                        </span>
-                      </div>
-                      <p className="text-sm text-stone-500 line-clamp-2 mb-3">
-                        {course.description.substring(0, 100)}...
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-[#e8913a] font-semibold">
-                          {propertyCount} {propertyCount === 1 ? 'property' : 'properties'} nearby
-                        </span>
-                        <span className="text-[#1e3a5f] group-hover:text-[#e8913a] transition-colors">
-                          View →
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
+            <div className="bg-white rounded-xl border border-warm-200 overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-primary-900 text-white">
+                      <th className="px-4 py-3 text-left font-medium">Course</th>
+                      <th className="px-4 py-3 text-left font-medium hidden md:table-cell">Region</th>
+                      <th className="px-4 py-3 text-center font-medium">Holes</th>
+                      <th className="px-4 py-3 text-center font-medium">Properties</th>
+                      <th className="px-4 py-3 text-right font-medium">From</th>
+                      <th className="px-4 py-3 text-center font-medium"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {getCoursesByPropertyCount().map((course, i) => (
+                      <tr key={course.slug} className={i % 2 === 0 ? 'bg-white' : 'bg-warm-50'}>
+                        <td className="px-4 py-3">
+                          <Link href={`/golf/${course.slug}`} className="font-medium text-primary-900 hover:text-accent-600 transition-colors">
+                            {course.shortName}
+                          </Link>
+                          <p className="text-warm-500 text-xs md:hidden">{course.regionDisplay}</p>
+                        </td>
+                        <td className="px-4 py-3 text-warm-600 hidden md:table-cell">{course.regionDisplay}</td>
+                        <td className="px-4 py-3 text-center text-warm-700">{course.holes}</td>
+                        <td className="px-4 py-3 text-center">
+                          <span className="bg-success-100 text-success-700 font-medium px-2 py-1 rounded text-xs">
+                            {course.propertyCount}
+                          </span>
+                        </td>
+                        <td className="px-4 py-3 text-right font-medium text-accent-600">{formatPrice(course.priceFrom)}</td>
+                        <td className="px-4 py-3 text-center">
+                          <Link
+                            href={`/golf/${course.slug}`}
+                            className="text-accent-600 hover:text-accent-700 font-medium"
+                          >
+                            View →
+                          </Link>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
+        </section>
 
-          {/* Costa Blanca North Courses */}
-          <div>
-            <h3 className="text-2xl font-bold text-[#1e3a5f] mb-6 flex items-center gap-2">
-              <span className="text-[#e8913a]">⛳</span> Costa Blanca North Courses
-            </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {northCourses.map((course) => {
-                const propertyCount = getPropertiesNearCourse(course);
-                return (
-                  <Link
-                    key={course.id}
-                    href={`/golf/${course.slug}`}
-                    className="bg-stone-50 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden group"
-                  >
-                    <div className="aspect-video bg-gradient-to-br from-green-600 to-green-800 relative">
-                      <div className="absolute inset-0 flex items-center justify-center text-white/30 text-6xl">
-                        ⛳
-                      </div>
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                        <span className="text-white font-semibold">{course.name}</span>
-                      </div>
-                    </div>
-                    <div className="p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-stone-600">{course.town}</span>
-                        <span className="text-sm bg-white px-2 py-1 rounded">
-                          {course.holes} holes
-                        </span>
-                      </div>
-                      <p className="text-sm text-stone-500 line-clamp-2 mb-3">
-                        {course.description.substring(0, 100)}...
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-[#e8913a] font-semibold">
-                          {propertyCount} {propertyCount === 1 ? 'property' : 'properties'} nearby
-                        </span>
-                        <span className="text-[#1e3a5f] group-hover:text-[#e8913a] transition-colors">
-                          View →
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
+        {/* ============================================ */}
+        {/* FAQs */}
+        {/* ============================================ */}
+        <section className="py-14 bg-white" id="faqs">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="text-center mb-10">
+              <div className="flex items-center justify-center gap-4 mb-3">
+                <div className="w-10 h-px bg-primary-700" />
+                <span className="text-primary-700 text-xs font-medium tracking-widest uppercase">
+                  Common Questions
+                </span>
+                <div className="w-10 h-px bg-primary-700" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-light text-primary-900">
+                Golf Property FAQs
+              </h2>
+            </div>
+
+            <div className="space-y-3">
+              {golfFaqs.map((faq, i) => (
+                <details key={i} className="group bg-warm-50 border border-warm-200 rounded-lg overflow-hidden">
+                  <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-primary-900 hover:bg-warm-100 transition-colors">
+                    {faq.question}
+                    <svg className="w-5 h-5 text-warm-400 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-5 pb-5 text-warm-700 border-t border-warm-200 pt-4">
+                    {faq.answer}
+                  </div>
+                </details>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Seasonal Guide */}
-      <section className="py-16 bg-stone-50">
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#1e3a5f] mb-4 text-center">
-            When to Play Golf in Costa Blanca
-          </h2>
-          <p className="text-center text-stone-600 mb-10 max-w-2xl mx-auto">
-            Year-round golf is possible, but here's what to expect each season.
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white rounded-xl p-6 text-center">
-              <div className="text-3xl mb-2">🌸</div>
-              <h3 className="font-bold text-[#1e3a5f] mb-2">Spring (Mar-May)</h3>
-              <p className="text-sm text-stone-600 mb-3">20-25°C • Perfect conditions</p>
-              <span className="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded">High Season Prices</span>
-            </div>
-            <div className="bg-white rounded-xl p-6 text-center">
-              <div className="text-3xl mb-2">☀️</div>
-              <h3 className="font-bold text-[#1e3a5f] mb-2">Summer (Jun-Aug)</h3>
-              <p className="text-sm text-stone-600 mb-3">28-35°C • Early/late play best</p>
-              <span className="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Low Season Prices</span>
-            </div>
-            <div className="bg-white rounded-xl p-6 text-center">
-              <div className="text-3xl mb-2">🍂</div>
-              <h3 className="font-bold text-[#1e3a5f] mb-2">Autumn (Sep-Nov)</h3>
-              <p className="text-sm text-stone-600 mb-3">18-25°C • Ideal golf weather</p>
-              <span className="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded">High Season Prices</span>
-            </div>
-            <div className="bg-white rounded-xl p-6 text-center">
-              <div className="text-3xl mb-2">❄️</div>
-              <h3 className="font-bold text-[#1e3a5f] mb-2">Winter (Dec-Feb)</h3>
-              <p className="text-sm text-stone-600 mb-3">12-18°C • Busy with visitors</p>
-              <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Mid Season Prices</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Golf in Costa Blanca */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#1e3a5f] mb-8 text-center">
-            Why Buy a Golf Property in Costa Blanca?
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="text-4xl mb-4">☀️</div>
-              <h3 className="text-xl font-semibold text-[#1e3a5f] mb-2">Year-Round Golf</h3>
-              <p className="text-stone-600">
-                With over 300 days of sunshine and mild winters, play golf every month of the year.
-              </p>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-4xl mb-4">🏌️</div>
-              <h3 className="text-xl font-semibold text-[#1e3a5f] mb-2">World-Class Courses</h3>
-              <p className="text-stone-600">
-                Courses designed by legends like Ballesteros, Nicklaus, Langer, and Olazábal.
-              </p>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-4xl mb-4">💰</div>
-              <h3 className="text-xl font-semibold text-[#1e3a5f] mb-2">Strong Investment</h3>
-              <p className="text-stone-600">
-                Golf properties command premium rental rates from international golfers year-round.
-              </p>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-4xl mb-4">✈️</div>
-              <h3 className="text-xl font-semibold text-[#1e3a5f] mb-2">Easy Access</h3>
-              <p className="text-stone-600">
-                Alicante Airport offers direct flights from 100+ destinations, courses 30-60 mins away.
-              </p>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-4xl mb-4">🏖️</div>
-              <h3 className="text-xl font-semibold text-[#1e3a5f] mb-2">Beach & Golf</h3>
-              <p className="text-stone-600">
-                Combine golf with beautiful Mediterranean beaches, all within 15-20 minutes.
-              </p>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-4xl mb-4">🏡</div>
-              <h3 className="text-xl font-semibold text-[#1e3a5f] mb-2">Quality Lifestyle</h3>
-              <p className="text-stone-600">
-                Excellent restaurants, healthcare, and a welcoming international community.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 bg-stone-50">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-[#1e3a5f] mb-4 text-center">
-            Frequently Asked Questions About Golf in Costa Blanca
-          </h2>
-          <p className="text-center text-stone-600 mb-10">
-            Everything you need to know about golf courses, green fees, and buying golf property.
-          </p>
-          
-          <div className="space-y-4">
-            {GOLF_FAQS.map((faq, idx) => (
-              <details
-                key={idx}
-                className="bg-white rounded-xl shadow-sm overflow-hidden group"
-              >
-                <summary className="px-6 py-4 cursor-pointer font-semibold text-[#1e3a5f] hover:text-[#e8913a] transition-colors flex justify-between items-center">
-                  {faq.question}
-                  <span className="text-stone-400 group-open:rotate-180 transition-transform">▼</span>
-                </summary>
-                <div className="px-6 pb-4 text-stone-600">
-                  {faq.answer}
+        {/* ============================================ */}
+        {/* FINAL CTA - Lead Capture */}
+        {/* ============================================ */}
+        <section className="py-16 bg-primary-900" id="inquiry">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-10 h-px bg-accent-500" />
+                  <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
+                    Get Started
+                  </span>
                 </div>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
+                <h2 className="text-2xl md:text-3xl font-light text-white mb-4">
+                  Find Your Perfect Golf Property
+                </h2>
+                <p className="text-warm-300 leading-relaxed mb-6">
+                  Whether you want frontline fairway views, a lock-up-and-leave apartment, or a spacious villa for family holidays,
+                  we'll help you find the right property on the right course.
+                </p>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8f] text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Find Your Perfect Golf Property
-          </h2>
-          <p className="text-xl text-white/90 mb-8">
-            Contact us today to discuss golf properties near your preferred course. 
-            We'll help you find the perfect home for your golf lifestyle in Costa Blanca.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center justify-center gap-2"
-            >
-              💬 WhatsApp Us
-            </a>
-            <a
-              href="tel:+34634044970"
-              className="bg-[#e8913a] hover:bg-[#d4792c] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center justify-center gap-2"
-            >
-              📞 +34 634 044 970
-            </a>
+                {/* Trust elements */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-success-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-warm-200 text-sm">15+ years experience</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-success-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-warm-200 text-sm">{GOLF_COURSES.length} courses covered</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-success-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-warm-200 text-sm">No buyer fees</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <svg className="w-5 h-5 text-success-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-warm-200 text-sm">Expert advice</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href={CONTACT.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-medium px-6 py-3 rounded-lg transition-colors inline-flex items-center gap-2"
+                  >
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp Us
+                  </a>
+                  <a
+                    href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
+                    className="bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-3 rounded-lg transition-colors border border-white/20"
+                  >
+                    {CONTACT.phone}
+                  </a>
+                </div>
+              </div>
+
+              {/* Contact Form */}
+              <div className="bg-white rounded-xl p-6 shadow-xl">
+                <h3 className="text-xl font-semibold text-primary-900 mb-1">Get Golf Property Matches</h3>
+                <p className="text-warm-500 text-sm mb-5">We'll send you properties matching your criteria</p>
+                <form
+                  name="golf-inquiry-footer"
+                  method="POST"
+                  data-netlify="true"
+                  className="space-y-4"
+                >
+                  <input type="hidden" name="form-name" value="golf-inquiry-footer" />
+                  <input type="hidden" name="source" value="golf-footer" />
+
+                  <div className="grid grid-cols-2 gap-4">
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      placeholder="Name *"
+                      className="w-full px-4 py-2.5 border border-warm-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500"
+                    />
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Phone"
+                      className="w-full px-4 py-2.5 border border-warm-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500"
+                    />
+                  </div>
+
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Email address *"
+                    className="w-full px-4 py-2.5 border border-warm-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500"
+                  />
+
+                  <div className="grid grid-cols-2 gap-4">
+                    <select
+                      name="budget"
+                      className="w-full px-4 py-2.5 border border-warm-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 bg-white"
+                    >
+                      <option value="">Budget</option>
+                      <option value="under-200k">Under €200k</option>
+                      <option value="200k-350k">€200k - €350k</option>
+                      <option value="350k-500k">€350k - €500k</option>
+                      <option value="500k+">€500k+</option>
+                    </select>
+                    <select
+                      name="property-type"
+                      className="w-full px-4 py-2.5 border border-warm-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 bg-white"
+                    >
+                      <option value="">Property type</option>
+                      <option value="apartment">Apartment</option>
+                      <option value="townhouse">Townhouse</option>
+                      <option value="villa">Villa</option>
+                      <option value="any">Any</option>
+                    </select>
+                  </div>
+
+                  <select
+                    name="course"
+                    className="w-full px-4 py-2.5 border border-warm-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 bg-white"
+                  >
+                    <option value="">Preferred course (optional)</option>
+                    {getCoursesByPropertyCount().map(c => (
+                      <option key={c.slug} value={c.slug}>{c.shortName} ({c.propertyCount} properties)</option>
+                    ))}
+                    <option value="no-preference">No preference - advise me</option>
+                  </select>
+
+                  <textarea
+                    name="message"
+                    rows={3}
+                    placeholder="Any specific requirements? (e.g., preferred courses, bedrooms, views)"
+                    className="w-full px-4 py-2.5 border border-warm-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 resize-none"
+                  />
+
+                  <button
+                    type="submit"
+                    className="w-full bg-accent-500 hover:bg-accent-600 text-white font-medium py-3 rounded-lg transition-colors"
+                  >
+                    Send Requirements
+                  </button>
+
+                  <p className="text-xs text-warm-400 text-center">
+                    We respond within 2 hours • No obligation
+                  </p>
+                </form>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
     </>
   );
 }

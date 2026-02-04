@@ -1,0 +1,61 @@
+{
+  "contrimar": {
+    "name": "Contrimar",
+    "slug": "contrimar",
+    "tagline": "Quality & Trust Since 1998",
+    "shortDescription": "One of Costa Blanca's most established developers with 2,000+ homes delivered.",
+    "longDescription": "Contrimar has been building quality homes across Costa Blanca South since 1998. Known for their Oasis developments, they combine modern design with practical layouts, communal pools, and excellent value. With over 2,000 homes delivered, their track record speaks for itself.",
+    "stats": {
+      "founded": "1998",
+      "homesDelivered": "2,000+",
+      "activeDevelopments": "8+",
+      "regions": "Costa Blanca South"
+    },
+    "knownFor": ["On-time delivery", "Quality finishes", "Communal amenities", "Excellent value"],
+    "developments": ["Oasis Laguna", "Oasis Golf La Finca", "Oasis Beach", "La Vista"]
+  },
+  "miralbo-urbana": {
+    "name": "Miralbo Urbana",
+    "slug": "miralbo-urbana",
+    "tagline": "Bespoke Luxury Villas",
+    "shortDescription": "Architectural excellence in Jávea's most prestigious locations.",
+    "longDescription": "Miralbo Urbana specializes in bespoke luxury villas in Costa Blanca North, particularly in and around Jávea. Each project is individually designed to maximize views, privacy, and lifestyle. Their contemporary Mediterranean architecture has become synonymous with premium living on the Costa Blanca.",
+    "stats": {
+      "founded": "2010",
+      "priceRange": "€1M - €3M+",
+      "focus": "Bespoke villas",
+      "regions": "Jávea, Moraira, Costa Blanca North"
+    },
+    "knownFor": ["Bespoke designs", "Premium locations", "Sea views", "Architectural excellence"],
+    "developments": ["Villa Atlantis", "Villa Posidonia", "Villa Momentum", "Villa Elysia"]
+  },
+  "grupo-vapf": {
+    "name": "Grupo VAPF",
+    "slug": "grupo-vapf",
+    "tagline": "50+ Years of Excellence",
+    "shortDescription": "Costa Blanca's most experienced developer with over 50 years in the region.",
+    "longDescription": "Grupo VAPF is a family-run business that has been developing properties on the Costa Blanca for over 50 years. They specialize in high-quality villas and apartments in premium locations, with a particular focus on Cumbre del Sol in Benitachell and other exclusive enclaves.",
+    "stats": {
+      "founded": "1963",
+      "experience": "60+ years",
+      "homesDelivered": "5,000+",
+      "regions": "Costa Blanca North"
+    },
+    "knownFor": ["Established reputation", "Premium locations", "Family business values", "After-sales service"],
+    "developments": ["Cumbre del Sol", "Lirios Design", "Jazmines"]
+  },
+  "urbincasa": {
+    "name": "Urbincasa",
+    "slug": "urbincasa",
+    "tagline": "Modern Living, Affordable Prices",
+    "shortDescription": "Quality new builds across Costa Blanca South at competitive prices.",
+    "longDescription": "Urbincasa focuses on delivering modern, well-designed homes at accessible price points. Their developments typically feature clean contemporary lines, energy efficiency, and communal facilities. Popular with first-time buyers and investors alike.",
+    "stats": {
+      "priceRange": "€180k - €400k",
+      "focus": "Apartments & townhouses",
+      "regions": "Costa Blanca South"
+    },
+    "knownFor": ["Value for money", "Modern design", "Energy efficiency", "Quick delivery"],
+    "developments": ["San Miguel Bungalows", "Torrevieja Residences"]
+  }
+}

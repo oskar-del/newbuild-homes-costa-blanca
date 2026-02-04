@@ -1,0 +1,290 @@
+{
+  "slug": "costa-blanca-south",
+  "name": "Costa Blanca South",
+  "type": "region",
+  "heroImage": "/images/regions/costa-blanca-south-hero.webp",
+  "cardImage": "/images/regions/costa-blanca-south-card.webp",
+  "coordinates": {
+    "lat": 37.98,
+    "lng": -0.68
+  },
+  "priceRange": {
+    "min": 145000,
+    "max": 850000
+  },
+  "content": {
+    "metaTitle": "Costa Blanca South Property Guide 2026 | Orihuela Costa, Torrevieja & Beyond",
+    "metaDescription": "Complete guide to Costa Blanca South property. Orihuela Costa beaches, Torrevieja salt lakes, 20+ golf courses. Properties from €145k. Discover why buyers choose the sunny south.",
+    "quickAnswer": "Costa Blanca South stretches from Guardamar del Segura to the Murcia border, offering Europe's healthiest climate (WHO-recognized), 20+ golf courses, Blue Flag beaches, and property prices 25-40% lower than Costa Blanca North. Main areas include Torrevieja, Orihuela Costa, and inland towns like Algorfa and Ciudad Quesada. Properties from €145,000.",
+    "heroIntro": "Where the sun shines 320 days a year and the World Health Organization recognizes the climate as one of Europe's healthiest, Costa Blanca South has quietly become Spain's most popular destination for international property buyers. This isn't the Costa Blanca of high-rise tourism—this is something different.\n\nFrom the pink salt lakes of Torrevieja to the rocky coves of Cabo Roig, from the championship golf courses of Villamartin to the unspoiled dunes of Guardamar, Costa Blanca South offers remarkable variety within a compact area. Every beach town is within 20 minutes of every golf course. The hospital serves everyone. The airport connects to everywhere.\n\nBut perhaps what draws buyers most is the value. Properties here cost 25-40% less than equivalent homes on Costa Blanca North or the Costa del Sol, yet the lifestyle is equally rich—just with more sunshine and less pretension.",
+    "regionOverview": {
+      "geography": "Costa Blanca South occupies the southernmost portion of Alicante Province, stretching roughly 60 km from Guardamar del Segura in the north to Pilar de la Horadada at the Murcia border. The coastline alternates between sandy beaches and rocky coves, while inland rises gently toward agricultural hinterland dotted with golf courses and residential developments.",
+      "climate": "The region enjoys a semi-arid Mediterranean climate with average temperatures of 10-16°C in winter and 26-32°C in summer. Rainfall averages just 300mm annually, with most precipitation falling October-December. The famous salt lakes create a microclimate with exceptionally clean, mineral-rich air—hence the WHO recognition.",
+      "population": "Torrevieja alone has 80,000+ residents representing 100+ nationalities. The wider region houses significant British, German, Scandinavian, and Dutch communities alongside Spanish residents. During summer, the population swells with tourists and second-home owners.",
+      "accessibility": "Alicante-Elche Airport (ALC) serves the region, with flights to 150+ European destinations. Drive times range from 20 minutes (San Fulgencio) to 50 minutes (Pilar de la Horadada). Murcia-Corvera Airport (RMU) offers an alternative for southern areas. The AP-7 motorway runs the length of the coast."
+    },
+    "majorAreas": [
+      {
+        "name": "Torrevieja",
+        "slug": "torrevieja",
+        "description": "The regional capital with 80,000+ residents, famous salt lakes, full hospital, and Friday market. Urban coastal living with excellent amenities.",
+        "priceRange": "€180,000-650,000",
+        "lifestyle": "Urban, active, international",
+        "bestFor": "Year-round residents, healthcare access, urban amenities"
+      },
+      {
+        "name": "Orihuela Costa",
+        "slug": "orihuela-costa",
+        "description": "15km of coastline including La Zenia, Cabo Roig, Playa Flamenca, Campoamor, and Punta Prima. The heartland of Costa Blanca South property.",
+        "priceRange": "€165,000-850,000",
+        "lifestyle": "Beachfront, golf, resort-style",
+        "bestFor": "Beach lovers, golf enthusiasts, holiday-let investors"
+      },
+      {
+        "name": "Villamartin & Golf Triangle",
+        "slug": "villamartin",
+        "description": "Famous Plaza, three championship courses within 5 minutes, established expat community. The golf capital of Costa Blanca South.",
+        "priceRange": "€185,000-750,000",
+        "lifestyle": "Golf-focused, social, community",
+        "bestFor": "Golfers, active retirees, social lifestyle"
+      },
+      {
+        "name": "Guardamar del Segura",
+        "slug": "guardamar-del-segura",
+        "description": "11km of natural beaches backed by protected dunes and pine forests. Closest to airport, most natural environment.",
+        "priceRange": "€175,000-600,000",
+        "lifestyle": "Natural, beach-focused, quieter",
+        "bestFor": "Nature lovers, families, airport convenience"
+      },
+      {
+        "name": "Inland Towns",
+        "description": "Algorfa, Ciudad Quesada, San Miguel de Salinas, Rojales, Los Montesinos, Benijofar. 25-40% cheaper than coast with golf and nature access.",
+        "priceRange": "€145,000-650,000",
+        "lifestyle": "Value-focused, golf access, countryside",
+        "bestFor": "Value buyers, golfers, authentic Spain"
+      }
+    ],
+    "golfSection": {
+      "intro": "Costa Blanca South is one of Europe's premier golf destinations with 20+ courses within 30 minutes of any property. Year-round playing conditions, competitive green fees, and courses designed by legends make this a golfer's paradise.",
+      "keyFeatures": [
+        "20+ courses within 30 minutes",
+        "Year-round playing—320+ sunny days",
+        "Green fees from €40-150",
+        "Courses by Nicklaus, Gancedo, Robinson",
+        "Active golf community with social scene"
+      ],
+      "topCourses": [
+        {
+          "name": "Las Colinas Golf & Country Club",
+          "designer": "Cabell Robinson",
+          "rating": "Top 10 Spain",
+          "description": "Award-winning course consistently ranked among Spain's best."
+        },
+        {
+          "name": "Lo Romero Golf",
+          "designer": "Jack Nicklaus",
+          "rating": "Championship",
+          "description": "Jack Nicklaus design with American-style layout and lake features."
+        },
+        {
+          "name": "Villamartin Golf",
+          "designer": "Robert Putnam",
+          "rating": "Classic",
+          "description": "Historic course opened 1972, hosted European Tour events."
+        },
+        {
+          "name": "La Finca Golf",
+          "designer": "Pepe Gancedo",
+          "rating": "Championship",
+          "description": "Championship course with challenging layout and excellent facilities."
+        }
+      ]
+    },
+    "beachesSection": {
+      "intro": "From the wild dunes of Guardamar to the rocky coves of Cabo Roig, Costa Blanca South offers remarkable beach variety. Blue Flag status is common, waters are calm and warm, and crowds are manageable outside peak August.",
+      "highlights": [
+        {
+          "name": "Guardamar Beaches",
+          "type": "Natural/Dunes",
+          "description": "11km of golden sand backed by protected pine forests and dunes."
+        },
+        {
+          "name": "Cabo Roig & Cala Capitán",
+          "type": "Rocky Coves",
+          "description": "Dramatic coastline with rock pools, clear waters, seafood restaurants."
+        },
+        {
+          "name": "La Zenia & Playa Flamenca",
+          "type": "Family Beaches",
+          "description": "Calm shallow waters, full facilities, Blue Flag quality."
+        },
+        {
+          "name": "La Mata",
+          "type": "Natural",
+          "description": "Long beach near salt lakes with protected dunes and birdlife."
+        }
+      ]
+    },
+    "propertyMarketSection": {
+      "overview": "Costa Blanca South offers exceptional value in the Spanish property market. Prices run 25-40% below Costa Blanca North and significantly below Costa del Sol for equivalent properties. Strong international demand has driven appreciation, but value remains compelling.",
+      "priceGuide": [
+        {
+          "type": "Apartments",
+          "range": "€145,000-350,000",
+          "notes": "2-3 bed, communal pools, new builds from €165k"
+        },
+        {
+          "type": "Townhouses",
+          "range": "€180,000-450,000",
+          "notes": "2-4 bed, often with solarium, private parking"
+        },
+        {
+          "type": "Villas",
+          "range": "€280,000-850,000",
+          "notes": "Private pools, 3-5 bed, plots from 300m²"
+        },
+        {
+          "type": "Luxury Properties",
+          "range": "€600,000+",
+          "notes": "Premium locations, large plots, sea views"
+        }
+      ],
+      "investmentPotential": "Strong rental demand from tourism and the international community creates investment opportunities. Holiday lets perform well near beaches and golf; long-term rentals suit inland towns. Yields of 4-7% are achievable with good property selection and management."
+    },
+    "lifestyleSection": {
+      "intro": "Life on Costa Blanca South follows the Mediterranean rhythm: morning coffee, beach or golf, long lunches, siesta, evening paseo, late dinners. The pace is slower, the stress lower, the sun constant.",
+      "highlights": [
+        "320+ sunny days per year",
+        "WHO-recognized healthy climate",
+        "Strong international community—English widely spoken",
+        "Excellent healthcare with hospital in Torrevieja",
+        "Lower cost of living than northern Europe",
+        "Year-round outdoor lifestyle",
+        "Golf, beach, nature all within reach",
+        "Active social scene through clubs and groups"
+      ]
+    },
+    "practicalInfo": {
+      "healthcare": "Hospital Universitario de Torrevieja serves the region with English-speaking staff. Private clinics and dentists throughout. European Health Insurance Card (EHIC) and S1 forms provide access for UK/EU citizens.",
+      "transport": "Alicante Airport 20-50 minutes depending on location. Car recommended but not essential in larger towns. Bus network connects coastal areas. Taxi and ride-share available.",
+      "costOfLiving": "Generally 20-30% lower than UK/Germany/Scandinavia. Monthly costs for couple: €1,200-2,000 including accommodation, food, utilities, entertainment. Restaurant meals from €10-15, beer €2-3.",
+      "language": "English widely spoken in tourist/expat areas. Spanish helpful and appreciated. German and Scandinavian languages also common. Official documents require Spanish or translation."
+    },
+    "faqs": [
+      {
+        "question": "Why is Costa Blanca South cheaper than Costa Blanca North?",
+        "answer": "Costa Blanca South developed later and targets a different market. The north has more established Spanish tourism and higher-end development. The south attracted value-focused international buyers and maintains competitive pricing. Both offer excellent lifestyle—the south simply at lower cost."
+      },
+      {
+        "question": "What is the best area in Costa Blanca South?",
+        "answer": "It depends on priorities. For beaches: Orihuela Costa (La Zenia, Cabo Roig). For golf: Villamartin area. For value: inland towns (Algorfa, Ciudad Quesada). For urban amenities: Torrevieja. For nature: Guardamar. Each area suits different lifestyles."
+      },
+      {
+        "question": "Is Costa Blanca South good for retirement?",
+        "answer": "Excellent. The healthy climate, comprehensive healthcare, lower cost of living, established expat community, and year-round activities make it ideal. Many retirees cite improved health and quality of life after relocating."
+      },
+      {
+        "question": "How far is Costa Blanca South from Alicante Airport?",
+        "answer": "The region spans 20-50 minutes from the airport. San Fulgencio/La Marina is closest (20 min). Guardamar is 25 minutes. Torrevieja is 35 minutes. Pilar de la Horadada (southern end) is about 50 minutes."
+      },
+      {
+        "question": "Can I live in Costa Blanca South without speaking Spanish?",
+        "answer": "Yes, comfortably. English is widely spoken in shops, restaurants, healthcare, and services. The large British community has created English-language infrastructure. However, learning Spanish enriches your experience and is appreciated by locals."
+      },
+      {
+        "question": "What are property taxes in Costa Blanca South?",
+        "answer": "IBI (council tax) varies by municipality but typically €400-1,200 annually. Non-resident owners pay imputed income tax (around 0.5% of cadastral value). Residents pay income tax on worldwide income. Buying costs add approximately 12-14% to purchase price."
+      },
+      {
+        "question": "Is rental income possible from Costa Blanca South property?",
+        "answer": "Yes, the region has strong rental demand. Holiday lets near beaches/golf perform well in tourist season (April-October). Long-term rentals suit year-round tenants. Tourist license requirements vary by municipality—check before purchasing for rental purposes."
+      },
+      {
+        "question": "What is the weather like in winter?",
+        "answer": "Mild winters averaging 10-16°C during the day, with 6-8 hours of sunshine. Frost is rare. Some rain October-December but generally dry. Many residents golf and dine outdoors year-round. Heating may be needed for evening comfort."
+      },
+      {
+        "question": "Are there international schools in Costa Blanca South?",
+        "answer": "Several international schools serve the region, offering British, Scandinavian, and international curricula. Main schools in Torrevieja and Orihuela Costa areas. Most families are satisfied with options, though choice is less than larger cities."
+      },
+      {
+        "question": "How does Costa Blanca South compare to Costa del Sol?",
+        "answer": "Costa Blanca South offers better value (20-30% cheaper), similar climate, and comparable lifestyle. Costa del Sol has more golf courses and arguably more glamour. Costa Blanca South has the healthy microclimate, easier airport access from Northern Europe, and less crowded beaches."
+      }
+    ],
+    "conclusion": "Costa Blanca South rewards those who look beyond the obvious. Yes, the sunshine is abundant and the prices attractive—but the real appeal lies in the lifestyle: the morning golf, the afternoon beach, the evening tapas, the community that welcomes newcomers, the space to breathe and live well. Whether you seek a holiday home, investment property, or permanent residence, this sun-blessed corner of Spain delivers remarkable value and genuine quality of life."
+  },
+  "childAreas": [
+    "torrevieja",
+    "orihuela-costa",
+    "la-zenia",
+    "cabo-roig",
+    "playa-flamenca",
+    "punta-prima",
+    "campoamor",
+    "villamartin",
+    "guardamar-del-segura",
+    "algorfa",
+    "ciudad-quesada",
+    "san-miguel-de-salinas",
+    "rojales",
+    "los-montesinos",
+    "benijofar",
+    "pilar-de-la-horadada",
+    "san-fulgencio"
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Costa Blanca South",
+    "description": "Costa Blanca South is a popular property destination in southeastern Spain, known for its healthy climate, golf courses, beaches, and excellent value real estate.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.98",
+      "longitude": "-0.68"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why is Costa Blanca South cheaper than Costa Blanca North?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costa Blanca South developed later and targets value-focused international buyers. The north has more established Spanish tourism and higher-end development. Both offer excellent lifestyle—the south at lower cost."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best area in Costa Blanca South?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For beaches: Orihuela Costa. For golf: Villamartin. For value: inland towns. For amenities: Torrevieja. For nature: Guardamar. Each suits different lifestyles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Costa Blanca South good for retirement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Excellent—healthy climate, comprehensive healthcare, lower cost of living, established expat community, year-round activities. Many retirees report improved health and quality of life."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I live there without speaking Spanish?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, comfortably. English is widely spoken due to the large British community. However, learning Spanish enriches your experience."
+        }
+      }
+    ]
+  }
+}

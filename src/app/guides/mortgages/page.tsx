@@ -1,19 +1,20 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import LeadForm from '@/components/LeadForm';
+import LeadFormAdvanced from '@/components/LeadFormAdvanced';
 
 export const metadata: Metadata = {
-  title: 'Spanish Mortgages for Foreigners | Guide 2025',
-  description: 'How to get a mortgage in Spain as a non-resident. Banks, rates, requirements, LTV limits. Complete guide for international property buyers in Costa Blanca.',
+  title: 'Spanish Mortgages for Foreigners 2026 | Non-Resident Guide',
+  description: 'How to get a mortgage in Spain as a non-resident. Current rates ~3.15%, LTV 60-70%, requirements for British & EU buyers. Compare 15+ banks.',
+  keywords: 'Spanish mortgage non-resident, mortgage Spain foreigners, property finance Spain, Costa Blanca mortgage, British buyer mortgage Spain',
 };
 
 export default function MortgagesPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-16">
+      <section className="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 text-white py-16">
         <div className="container mx-auto px-4">
-          <nav className="text-sm mb-4 text-blue-200">
+          <nav className="text-sm mb-4 text-warm-200">
             <a href="/guides" className="hover:text-white">Guides</a>
             <span className="mx-2">→</span>
             <span>Mortgages</span>
@@ -21,13 +22,17 @@ export default function MortgagesPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Spanish Mortgages for Foreign Buyers
           </h1>
-          <p className="text-xl text-blue-100 max-w-2xl">
+          <p className="text-xl text-warm-300 max-w-2xl">
             Everything you need to know about financing your Spanish property purchase. Requirements, rates, and how to apply.
           </p>
-          <div className="mt-6 flex items-center gap-4 text-sm text-blue-200">
+          <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-warm-200">
             <span>📖 10 min read</span>
             <span>•</span>
-            <span>Updated January 2025</span>
+            <span>Updated February 2026</span>
+            <span>•</span>
+            <Link href="/finance" className="bg-accent-500/20 text-accent-300 px-2 py-1 rounded hover:bg-accent-500/30 transition-colors">
+              Compare Rates →
+            </Link>
           </div>
         </div>
       </section>
@@ -37,32 +42,37 @@ export default function MortgagesPage() {
         <div className="container mx-auto px-4 max-w-3xl">
           
           {/* Key Facts */}
-          <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mb-12">
-            <h2 className="text-xl font-bold mb-4 text-blue-900">Key Facts for Non-Residents</h2>
+          <div className="bg-primary-50 border-2 border-warm-200 rounded-xl p-6 mb-12">
+            <h2 className="text-xl font-bold mb-4 text-primary-900">Key Facts for Non-Residents (February 2026)</h2>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="bg-white rounded-lg p-4">
-                <div className="text-sm text-gray-600">Maximum LTV</div>
-                <div className="text-2xl font-bold text-blue-600">60-70%</div>
+                <div className="text-sm text-warm-600">Maximum LTV</div>
+                <div className="text-2xl font-bold text-accent-600">60-70%</div>
               </div>
               <div className="bg-white rounded-lg p-4">
-                <div className="text-sm text-gray-600">Typical Rates (2025)</div>
-                <div className="text-2xl font-bold text-blue-600">3.5-5%</div>
+                <div className="text-sm text-warm-600">Avg Fixed Rate (25yr)</div>
+                <div className="text-2xl font-bold text-accent-600">~3.15%</div>
               </div>
               <div className="bg-white rounded-lg p-4">
-                <div className="text-sm text-gray-600">Maximum Term</div>
-                <div className="text-2xl font-bold text-blue-600">20-25 years</div>
+                <div className="text-sm text-warm-600">Maximum Term</div>
+                <div className="text-2xl font-bold text-accent-600">20-25 years</div>
               </div>
               <div className="bg-white rounded-lg p-4">
-                <div className="text-sm text-gray-600">Minimum Deposit</div>
-                <div className="text-2xl font-bold text-blue-600">30-40%</div>
+                <div className="text-sm text-warm-600">12-Month Euribor</div>
+                <div className="text-2xl font-bold text-accent-600">2.45%</div>
               </div>
+            </div>
+            <div className="mt-4 pt-4 border-t border-warm-200">
+              <Link href="/finance" className="inline-flex items-center gap-2 text-accent-600 font-semibold hover:text-accent-700">
+                Compare rates from 15+ Spanish banks →
+              </Link>
             </div>
           </div>
 
           {/* Can Foreigners Get Mortgages */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">Can Foreigners Get Spanish Mortgages?</h2>
-            <div className="prose prose-lg max-w-none text-gray-700">
+            <div className="prose prose-lg max-w-none text-warm-700">
               <p>
                 <strong>Yes.</strong> Spanish banks actively lend to foreign nationals, including non-residents. Whether you're from the UK, EU, USA, or elsewhere, you can obtain financing for your Spanish property purchase.
               </p>
@@ -81,9 +91,9 @@ export default function MortgagesPage() {
           {/* LTV by Buyer Type */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">Loan-to-Value (LTV) Limits</h2>
-            <div className="bg-gray-50 rounded-xl overflow-hidden">
+            <div className="bg-warm-50 rounded-xl overflow-hidden">
               <table className="w-full">
-                <thead className="bg-gray-800 text-white">
+                <thead className="bg-warm-800 text-white">
                   <tr>
                     <th className="p-4 text-left">Buyer Type</th>
                     <th className="p-4 text-right">Maximum LTV</th>
@@ -114,7 +124,7 @@ export default function MortgagesPage() {
                 </tbody>
               </table>
             </div>
-            <p className="mt-4 text-gray-600 text-sm">
+            <p className="mt-4 text-warm-600 text-sm">
               Note: LTV is based on the <strong>lower of</strong> purchase price or bank valuation. If the bank values your property lower than the price, your effective LTV decreases.
             </p>
           </section>
@@ -122,7 +132,7 @@ export default function MortgagesPage() {
           {/* Interest Rates */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">Interest Rates in 2025</h2>
-            <div className="prose prose-lg max-w-none text-gray-700">
+            <div className="prose prose-lg max-w-none text-warm-700">
               <p>
                 Spanish mortgage rates have risen with ECB rate increases but remain competitive. You'll typically choose between:
               </p>
@@ -157,39 +167,39 @@ export default function MortgagesPage() {
           {/* Requirements */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">Documents Required</h2>
-            <div className="bg-gray-50 rounded-xl p-6">
+            <div className="bg-warm-50 rounded-xl p-6">
               <h3 className="font-semibold mb-4">Employed Applicants:</h3>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600">✓</span>
+                  <span className="text-success-600">✓</span>
                   <span>Valid passport (copy of all pages)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600">✓</span>
+                  <span className="text-success-600">✓</span>
                   <span>NIE number</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600">✓</span>
+                  <span className="text-success-600">✓</span>
                   <span>Last 2-3 years tax returns</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600">✓</span>
+                  <span className="text-success-600">✓</span>
                   <span>Last 3-6 months payslips</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600">✓</span>
+                  <span className="text-success-600">✓</span>
                   <span>Employment contract or letter from employer</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600">✓</span>
+                  <span className="text-success-600">✓</span>
                   <span>Last 3-6 months bank statements</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600">✓</span>
+                  <span className="text-success-600">✓</span>
                   <span>Proof of deposit funds</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600">✓</span>
+                  <span className="text-success-600">✓</span>
                   <span>Details of existing debts/mortgages</span>
                 </li>
               </ul>
@@ -197,19 +207,19 @@ export default function MortgagesPage() {
               <h3 className="font-semibold mb-4">Self-Employed Applicants:</h3>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600">✓</span>
+                  <span className="text-success-600">✓</span>
                   <span>All above documents, plus:</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600">✓</span>
+                  <span className="text-success-600">✓</span>
                   <span>Last 2-3 years business accounts</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600">✓</span>
+                  <span className="text-success-600">✓</span>
                   <span>Business tax returns (SA302 for UK)</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-green-600">✓</span>
+                  <span className="text-success-600">✓</span>
                   <span>Accountant's reference letter</span>
                 </li>
               </ul>
@@ -220,21 +230,21 @@ export default function MortgagesPage() {
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">Major Spanish Banks for Mortgages</h2>
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-gray-50 rounded-xl p-6">
+              <div className="bg-warm-50 rounded-xl p-6">
                 <h3 className="font-bold text-lg mb-2">Banco Sabadell</h3>
-                <p className="text-gray-600 text-sm">Popular with international buyers. English-speaking advisors available. Strong presence in Costa Blanca.</p>
+                <p className="text-warm-600 text-sm">Popular with international buyers. English-speaking advisors available. Strong presence in Costa Blanca.</p>
               </div>
-              <div className="bg-gray-50 rounded-xl p-6">
+              <div className="bg-warm-50 rounded-xl p-6">
                 <h3 className="font-bold text-lg mb-2">CaixaBank</h3>
-                <p className="text-gray-600 text-sm">Spain's largest bank. Wide branch network. Offers non-resident mortgages through specialist departments.</p>
+                <p className="text-warm-600 text-sm">Spain's largest bank. Wide branch network. Offers non-resident mortgages through specialist departments.</p>
               </div>
-              <div className="bg-gray-50 rounded-xl p-6">
+              <div className="bg-warm-50 rounded-xl p-6">
                 <h3 className="font-bold text-lg mb-2">Santander</h3>
-                <p className="text-gray-600 text-sm">International bank with presence in UK. Can sometimes use UK income verification.</p>
+                <p className="text-warm-600 text-sm">International bank with presence in UK. Can sometimes use UK income verification.</p>
               </div>
-              <div className="bg-gray-50 rounded-xl p-6">
+              <div className="bg-warm-50 rounded-xl p-6">
                 <h3 className="font-bold text-lg mb-2">BBVA</h3>
-                <p className="text-gray-600 text-sm">Major Spanish bank. Offers competitive rates. English service available in tourist areas.</p>
+                <p className="text-warm-600 text-sm">Major Spanish bank. Offers competitive rates. English service available in tourist areas.</p>
               </div>
             </div>
           </section>
@@ -244,61 +254,61 @@ export default function MortgagesPage() {
             <h2 className="text-2xl font-bold mb-4">The Mortgage Application Process</h2>
             <div className="space-y-6">
               <div className="flex gap-4">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
+                <div className="bg-accent-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
                 <div>
                   <h3 className="font-bold text-lg">Initial Consultation & Pre-Approval</h3>
-                  <p className="text-gray-700">Submit basic financial information. Bank provides an indicative offer showing how much you could borrow. Not binding but useful for budgeting.</p>
-                  <p className="text-sm text-gray-500 mt-1">Timeline: 1-2 weeks</p>
+                  <p className="text-warm-700">Submit basic financial information. Bank provides an indicative offer showing how much you could borrow. Not binding but useful for budgeting.</p>
+                  <p className="text-sm text-warm-500 mt-1">Timeline: 1-2 weeks</p>
                 </div>
               </div>
               
               <div className="flex gap-4">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
+                <div className="bg-accent-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
                 <div>
                   <h3 className="font-bold text-lg">Full Application</h3>
-                  <p className="text-gray-700">Once you've found a property and signed reservation, submit complete documentation. Bank reviews your application in detail.</p>
-                  <p className="text-sm text-gray-500 mt-1">Timeline: 2-4 weeks</p>
+                  <p className="text-warm-700">Once you've found a property and signed reservation, submit complete documentation. Bank reviews your application in detail.</p>
+                  <p className="text-sm text-warm-500 mt-1">Timeline: 2-4 weeks</p>
                 </div>
               </div>
               
               <div className="flex gap-4">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
+                <div className="bg-accent-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
                 <div>
                   <h3 className="font-bold text-lg">Property Valuation</h3>
-                  <p className="text-gray-700">Bank arranges independent valuation (tasación). You pay for this (€300-500). LTV is based on this figure.</p>
-                  <p className="text-sm text-gray-500 mt-1">Timeline: 1-2 weeks</p>
+                  <p className="text-warm-700">Bank arranges independent valuation (tasación). You pay for this (€300-500). LTV is based on this figure.</p>
+                  <p className="text-sm text-warm-500 mt-1">Timeline: 1-2 weeks</p>
                 </div>
               </div>
               
               <div className="flex gap-4">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div>
+                <div className="bg-accent-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div>
                 <div>
                   <h3 className="font-bold text-lg">Formal Offer (Oferta Vinculante)</h3>
-                  <p className="text-gray-700">Bank issues binding offer detailing loan amount, rate, term, and all conditions. Valid for minimum 10 days by law.</p>
-                  <p className="text-sm text-gray-500 mt-1">Timeline: 1 week</p>
+                  <p className="text-warm-700">Bank issues binding offer detailing loan amount, rate, term, and all conditions. Valid for minimum 10 days by law.</p>
+                  <p className="text-sm text-warm-500 mt-1">Timeline: 1 week</p>
                 </div>
               </div>
               
               <div className="flex gap-4">
-                <div className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</div>
+                <div className="bg-accent-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">5</div>
                 <div>
                   <h3 className="font-bold text-lg">Completion at Notary</h3>
-                  <p className="text-gray-700">Sign mortgage deed same day as property purchase. Bank representative attends. Funds transferred same day.</p>
-                  <p className="text-sm text-gray-500 mt-1">Timeline: Coordinated with purchase completion</p>
+                  <p className="text-warm-700">Sign mortgage deed same day as property purchase. Bank representative attends. Funds transferred same day.</p>
+                  <p className="text-sm text-warm-500 mt-1">Timeline: Coordinated with purchase completion</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6">
-              <p className="font-semibold text-blue-800">Total Timeline:</p>
-              <p className="text-blue-700">Allow <strong>6-10 weeks</strong> from full application to completion. Start early – don't wait until just before your purchase deadline.</p>
+            <div className="bg-primary-50 border-l-4 border-primary-600 p-4 mt-6">
+              <p className="font-semibold text-primary-800">Total Timeline:</p>
+              <p className="text-primary-700">Allow <strong>6-10 weeks</strong> from full application to completion. Start early – don't wait until just before your purchase deadline.</p>
             </div>
           </section>
 
           {/* Costs */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">Mortgage Setup Costs</h2>
-            <div className="bg-gray-50 rounded-xl p-6">
+            <div className="bg-warm-50 rounded-xl p-6">
               <table className="w-full">
                 <tbody>
                   <tr className="border-b">
@@ -323,7 +333,7 @@ export default function MortgagesPage() {
                   </tr>
                 </tbody>
               </table>
-              <p className="text-sm text-gray-600 mt-4">*Since 2019, banks pay the AJD stamp duty on mortgages, not borrowers.</p>
+              <p className="text-sm text-warm-600 mt-4">*Since 2019, banks pay the AJD stamp duty on mortgages, not borrowers.</p>
             </div>
           </section>
 
@@ -331,35 +341,35 @@ export default function MortgagesPage() {
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-4">Tips for Success</h2>
             <div className="space-y-4">
-              <div className="bg-green-50 border-l-4 border-green-500 p-4">
-                <p className="font-semibold text-green-800">Get pre-approval early</p>
-                <p className="text-green-700">Know your budget before you start property hunting. Pre-approval strengthens your negotiating position.</p>
+              <div className="bg-success-50 border-l-4 border-success-500 p-4">
+                <p className="font-semibold text-success-800">Get pre-approval early</p>
+                <p className="text-success-700">Know your budget before you start property hunting. Pre-approval strengthens your negotiating position.</p>
               </div>
-              <div className="bg-green-50 border-l-4 border-green-500 p-4">
-                <p className="font-semibold text-green-800">Use a mortgage broker</p>
-                <p className="text-green-700">Brokers specializing in non-resident mortgages know which banks work best for your situation and can negotiate better rates.</p>
+              <div className="bg-success-50 border-l-4 border-success-500 p-4">
+                <p className="font-semibold text-success-800">Use a mortgage broker</p>
+                <p className="text-success-700">Brokers specializing in non-resident mortgages know which banks work best for your situation and can negotiate better rates.</p>
               </div>
-              <div className="bg-green-50 border-l-4 border-green-500 p-4">
-                <p className="font-semibold text-green-800">Keep documents ready</p>
-                <p className="text-green-700">Have all paperwork translated into Spanish. Incomplete documentation is the main cause of delays.</p>
+              <div className="bg-success-50 border-l-4 border-success-500 p-4">
+                <p className="font-semibold text-success-800">Keep documents ready</p>
+                <p className="text-success-700">Have all paperwork translated into Spanish. Incomplete documentation is the main cause of delays.</p>
               </div>
-              <div className="bg-green-50 border-l-4 border-green-500 p-4">
-                <p className="font-semibold text-green-800">Budget conservatively</p>
-                <p className="text-green-700">Don't stretch to the maximum. Remember ongoing costs, currency fluctuations, and potential rate increases.</p>
+              <div className="bg-success-50 border-l-4 border-success-500 p-4">
+                <p className="font-semibold text-success-800">Budget conservatively</p>
+                <p className="text-success-700">Don't stretch to the maximum. Remember ongoing costs, currency fluctuations, and potential rate increases.</p>
               </div>
             </div>
           </section>
 
           {/* CTA */}
-          <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-xl p-8 mb-12">
+          <section className="bg-gradient-to-r from-accent-600 to-primary-800 text-white rounded-xl p-8 mb-12">
             <h2 className="text-2xl font-bold mb-4">Need Help with Financing?</h2>
-            <p className="mb-6 text-blue-100">
+            <p className="mb-6 text-warm-300">
               We partner with Habeno, a mortgage aggregator specializing in non-resident financing. They compare offers from multiple Spanish banks to find you the best rates and terms.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="https://habeno.com/form?hypido=1&partnerId=9f927d6f-7293-4f06-0de0-08dabb4ac15e" target="_blank" rel="noopener noreferrer"
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
+                className="bg-white text-accent-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors text-center"
               >
                 Start Mortgage Application →
               </a>
@@ -376,12 +386,18 @@ export default function MortgagesPage() {
       </article>
 
       {/* Lead Form */}
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <LeadForm
+      <section className="py-16 bg-gradient-to-br from-primary-900 to-primary-800">
+        <div className="container mx-auto px-4 max-w-2xl">
+          <LeadFormAdvanced
             title="Get Mortgage Pre-Approval"
-            subtitle="Connect with specialist mortgage brokers for non-resident buyers."
+            subtitle="Connect with specialist mortgage brokers who work with non-resident buyers daily."
             propertyInterest="Mortgage Guide Inquiry"
+            source="mortgages-guide"
+            variant="hero"
+            showBudget={true}
+            showTimeline={true}
+            showCallbackDate={true}
+            ctaText="Get Pre-Approval Started"
           />
         </div>
       </section>
@@ -394,17 +410,17 @@ export default function MortgagesPage() {
             <a href="/guides/buying-process" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
               <div className="text-3xl mb-3">🏠</div>
               <h3 className="font-bold mb-2">Buying Process</h3>
-              <p className="text-gray-600 text-sm">Step-by-step purchase guide</p>
+              <p className="text-warm-600 text-sm">Step-by-step purchase guide</p>
             </a>
             <a href="/guides/nie-number" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
               <div className="text-3xl mb-3">📋</div>
               <h3 className="font-bold mb-2">NIE Number</h3>
-              <p className="text-gray-600 text-sm">Get your Spanish tax ID</p>
+              <p className="text-warm-600 text-sm">Get your Spanish tax ID</p>
             </a>
             <a href="/guides/costs-taxes" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
               <div className="text-3xl mb-3">💰</div>
               <h3 className="font-bold mb-2">Costs & Taxes</h3>
-              <p className="text-gray-600 text-sm">Full cost breakdown</p>
+              <p className="text-warm-600 text-sm">Full cost breakdown</p>
             </a>
           </div>
         </div>
