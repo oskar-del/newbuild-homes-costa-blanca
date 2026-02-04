@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { fetchXMLFeed, ParsedProperty } from '@/lib/xml-parser';
-import { getRegionForTown, REGIONS } from '@/lib/feed-config';
+import { getRegionForTown, REGIONS, normalizeTownName } from '@/lib/feed-config';
 import PropertyFilters from '@/components/PropertyFilters';
 import SortDropdown from '@/components/SortDropdown';
 import PropertySearch from '@/components/PropertySearch';
@@ -93,18 +93,22 @@ export default async function PropertiesPage({
 }) {
   const allProperties = await fetchXMLFeed();
 
-  // Get unique values for filters
-  const towns = [...new Set(allProperties.map(p => p.town).filter(Boolean))].sort();
+  // Get unique values for filters - normalize town names to merge duplicates
+  const towns = [...new Set(allProperties.map(p => {
+    const normalized = normalizeTownName(p.town || '');
+    return normalized.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  }).filter(Boolean))].sort();
   const types = [...new Set(allProperties.map(p => p.propertyType).filter(Boolean))].sort();
   const bedOptions = [...new Set(allProperties.map(p => p.bedrooms).filter((b): b is number => b !== null && b > 0))].sort((a, b) => a - b);
 
   // Check if we have filters applied
   const hasFilters = searchParams.town || searchParams.beds || searchParams.type || searchParams.region;
 
-  // Apply filters
+  // Apply filters - use normalized town names for matching
   let properties = allProperties;
   if (searchParams.town) {
-    properties = properties.filter(p => p.town?.toLowerCase() === searchParams.town?.toLowerCase());
+    const normalizedFilter = normalizeTownName(searchParams.town);
+    properties = properties.filter(p => normalizeTownName(p.town || '') === normalizedFilter);
   }
   if (searchParams.beds) {
     properties = properties.filter(p => p.bedrooms === parseInt(searchParams.beds as string));

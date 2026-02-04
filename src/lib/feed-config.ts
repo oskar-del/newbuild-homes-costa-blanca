@@ -95,6 +95,61 @@ export const REGIONS: Record<RegionKey, RegionConfig> = {
 };
 
 // =============================================================================
+// TOWN NAME ALIASES - Normalize different spellings to canonical names
+// =============================================================================
+// Use this to merge towns that should be treated as the same location
+export const TOWN_ALIASES: Record<string, string> = {
+  // Javea variations
+  'xabia': 'javea',
+  'jávea': 'javea',
+  'jávea xàbia': 'javea',
+  'javea xabia': 'javea',
+  'xàbia': 'javea',
+
+  // Alfaz del Pi variations
+  'alfas del pi': 'alfaz del pi',
+  'alfàs del pi': 'alfaz del pi',
+  'l\'alfàs del pi': 'alfaz del pi',
+  'lalfas del pi': 'alfaz del pi',
+
+  // Moraira/Teulada - merge into Moraira (more recognizable)
+  'moraira_teulada': 'moraira',
+  'moraira-teulada': 'moraira',
+  'moraira teulada': 'moraira',
+  'teulada-moraira': 'moraira',
+  'teulada moraira': 'moraira',
+
+  // Denia variations
+  'dénia': 'denia',
+
+  // Calpe variations
+  'calp': 'calpe',
+
+  // Guardamar variations
+  'guardamar': 'guardamar del segura',
+
+  // Orihuela Costa variations
+  'orihuela-costa': 'orihuela costa',
+
+  // San Miguel variations
+  'san miguel': 'san miguel de salinas',
+
+  // Los Montesinos variations
+  'montesinos': 'los montesinos',
+
+  // Ciudad Quesada variations
+  'quesada': 'ciudad quesada',
+};
+
+/**
+ * Normalize town name using aliases
+ */
+export function normalizeTownName(town: string): string {
+  const townLower = (town || '').toLowerCase().trim();
+  return TOWN_ALIASES[townLower] || townLower;
+}
+
+// =============================================================================
 // TOWN TO REGION MAPPING
 // =============================================================================
 // This is THE definitive list. If a town isn't here, it won't be categorized.
@@ -110,6 +165,7 @@ export const TOWN_TO_REGION: Record<string, RegionKey> = {
   'calpe': 'costa-blanca-north',
   'altea': 'costa-blanca-north',
   'alfaz del pi': 'costa-blanca-north',
+  'alfas del pi': 'costa-blanca-north', // Added alias
   'albir': 'costa-blanca-north',
   'benidorm': 'costa-blanca-north',
   'villajoyosa': 'costa-blanca-north',
@@ -244,11 +300,20 @@ export const EXCLUDED_TOWNS = [
 
 /**
  * Get region for a town name (case-insensitive, partial match)
+ * Uses normalization to handle different spellings
  */
 export function getRegionForTown(town: string): RegionKey | null {
   const townLower = (town || '').toLowerCase().trim();
 
-  // Try exact match first
+  // First normalize the town name
+  const normalizedTown = normalizeTownName(townLower);
+
+  // Try exact match with normalized name first
+  if (TOWN_TO_REGION[normalizedTown]) {
+    return TOWN_TO_REGION[normalizedTown];
+  }
+
+  // Try exact match with original name
   if (TOWN_TO_REGION[townLower]) {
     return TOWN_TO_REGION[townLower];
   }
