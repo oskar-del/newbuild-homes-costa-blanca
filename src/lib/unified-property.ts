@@ -54,7 +54,7 @@ export interface UnifiedProperty {
   // Identity
   id: string;                    // Unique ID: "redsp-12345" or "bp-ABC123"
   reference: string;             // Original reference from source
-  source: 'redsp' | 'background-properties' | 'manual';
+  source: 'redsp' | 'background-properties' | 'manual' | 'miralbo';
   
   // Location
   town: string;                  // Main town/city name
