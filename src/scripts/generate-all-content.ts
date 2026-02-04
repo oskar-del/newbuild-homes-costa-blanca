@@ -152,9 +152,8 @@ function parseBackgroundFeed(xml: string): Property[] {
   const properties = parsed?.sooprema?.properties?.property || [];
   const propArray = Array.isArray(properties) ? properties : [properties];
   
-  return propArray
-    .filter((p: any) => String(p.saleType) === '1') // New builds only
-    .map((p: any) => ({
+  // Note: Remove strict filter - feed structure may vary
+  return propArray.map((p: any) => ({
       reference: String(p.reference || ''),
       title: safeStr(p.title),
       description: safeStr(p.description),
