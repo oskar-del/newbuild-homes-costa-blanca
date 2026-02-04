@@ -79,6 +79,8 @@ function parseAIJson(text: string): any {
   } catch (e: any) {
     console.log('   ⚠️  JSON parse error, attempting repair...');
     console.log(`   ⚠️  Error: ${e.message}`);
+    console.log(`   ⚠️  First 200 chars of JSON: ${JSON.stringify(jsonStr.substring(0, 200))}`);
+    console.log(`   ⚠️  Last 100 chars of JSON: ${JSON.stringify(jsonStr.substring(jsonStr.length - 100))}`);
 
     // More aggressive fixes
     try {
