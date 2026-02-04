@@ -18,6 +18,21 @@ import { propertyMapping } from '../data/property-development-mapping';
 
 const anthropic = new Anthropic();
 const REGENERATE_ALL = process.env.REGENERATE_ALL === 'true';
+const MAX_RETRIES = 3;
+
+// System prompt to enforce JSON-only output
+const JSON_SYSTEM_PROMPT = `You are a JSON generator. You MUST respond with ONLY a valid JSON object.
+
+CRITICAL RULES:
+1. Your entire response must be a single JSON object
+2. Start your response with { and end with }
+3. NO markdown code blocks (no \`\`\`)
+4. NO explanatory text before or after the JSON
+5. NO comments inside the JSON
+6. All strings must be properly escaped
+7. No trailing commas
+
+If you cannot generate the requested content, still return valid JSON with empty strings for fields you cannot fill.`;
 
 // Helper to clean and parse JSON from AI responses
 function parseAIJson(text: string): any {
@@ -112,6 +127,30 @@ function parseAIJson(text: string): any {
       throw new Error(`Failed to parse JSON: ${e2.message}`);
     }
   }
+}
+
+// Retry wrapper for API calls
+async function withRetry<T>(
+  fn: () => Promise<T>,
+  itemName: string,
+  maxRetries: number = MAX_RETRIES
+): Promise<T> {
+  let lastError: Error | null = null;
+
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      return await fn();
+    } catch (error: any) {
+      lastError = error;
+      if (attempt < maxRetries) {
+        console.log(`   ⚠️  Attempt ${attempt}/${maxRetries} failed for ${itemName}: ${error.message}`);
+        console.log(`   🔄 Retrying in ${attempt * 2} seconds...`);
+        await new Promise(r => setTimeout(r, attempt * 2000));
+      }
+    }
+  }
+
+  throw lastError;
 }
 
 // Parse command line arguments
@@ -374,11 +413,14 @@ Generate a JSON response with:
   ]
 }
 
-Write naturally, avoiding clichés. Focus on specific details about ${property.town}. Make it genuinely helpful for buyers.`;
+Write naturally, avoiding clichés. Focus on specific details about ${property.town}. Make it genuinely helpful for buyers.
+
+IMPORTANT: Return ONLY the JSON object. No markdown, no code blocks, no explanation.`;
 
   const response = await anthropic.messages.create({
     model: 'claude-sonnet-4-5-20250929',
     max_tokens: 2000,
+    system: JSON_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: prompt }],
   });
 
@@ -435,11 +477,14 @@ Generate a JSON response with:
   ]
 }
 
-Be specific to ${town}. Include real place names, distances, and practical information buyers need.`;
+Be specific to ${town}. Include real place names, distances, and practical information buyers need.
+
+IMPORTANT: Return ONLY the JSON object. No markdown, no code blocks, no explanation.`;
 
   const response = await anthropic.messages.create({
     model: 'claude-sonnet-4-5-20250929',
     max_tokens: 3000,
+    system: JSON_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: prompt }],
   });
 
@@ -552,11 +597,14 @@ Generate JSON matching this EXACT structure (use Contrimar template style):
   }
 }
 
-Important: We are an AGENCY showcasing their properties, not the developer themselves. Write naturally, no clichés.`;
+Important: We are an AGENCY showcasing their properties, not the developer themselves. Write naturally, no clichés.
+
+IMPORTANT: Return ONLY the JSON object. No markdown, no code blocks, no explanation.`;
 
   const response = await anthropic.messages.create({
     model: 'claude-sonnet-4-5-20250929',
     max_tokens: 2500,
+    system: JSON_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: prompt }],
   });
 
@@ -632,7 +680,10 @@ async function main() {
       try {
         console.log(`   🔄 Generating ${area}...`);
         const areaProperties = allProperties.filter(p => p.town === area);
-        const content = await generateAreaContent(area, areaProperties);
+        const content = await withRetry(
+          () => generateAreaContent(area, areaProperties),
+          area
+        );
         content.slug = slug;
         content.town = area;
         content.propertyCount = areaProperties.length;
@@ -643,8 +694,8 @@ async function main() {
 
         // Rate limiting - wait 1 second between API calls
         await new Promise(r => setTimeout(r, 1000));
-      } catch (error) {
-        console.error(`   ❌ Error generating ${area}:`, error);
+      } catch (error: any) {
+        console.error(`   ❌ Error generating ${area} (after ${MAX_RETRIES} attempts): ${error.message}`);
       }
     }
   }
@@ -664,7 +715,10 @@ async function main() {
 
       try {
         console.log(`   🔄 Generating ${dev.name} (${dev.propertyCount} properties)...`);
-        const content = await generateDeveloperContent(dev);
+        const content = await withRetry(
+          () => generateDeveloperContent(dev),
+          dev.name
+        );
         content.generatedAt = new Date().toISOString();
         saveContent(BUILDERS_DIR, dev.slug, content);
         console.log(`   ✅ ${dev.name} saved`);
@@ -673,7 +727,7 @@ async function main() {
         // Rate limiting
         await new Promise(r => setTimeout(r, 1000));
       } catch (error) {
-        console.error(`   ❌ Error generating ${dev.name}:`, error);
+        console.error(`   ❌ Error generating ${dev.name} (after ${MAX_RETRIES} attempts): ${(error as any).message}`);
       }
     }
   }
@@ -734,7 +788,10 @@ async function main() {
 
       try {
         console.log(`   🔄 Generating ${property.reference} (${property.town})...`);
-        const content = await generatePropertyContent(property);
+        const content = await withRetry(
+          () => generatePropertyContent(property),
+          property.reference
+        );
         content.reference = property.reference;
         content.slug = slug;
         content.source = property.source;
@@ -745,8 +802,8 @@ async function main() {
         generated++;
 
         await new Promise(r => setTimeout(r, 1000));
-      } catch (error) {
-        console.error(`   ❌ Error generating ${property.reference}:`, error);
+      } catch (error: any) {
+        console.error(`   ❌ Error generating ${property.reference} (after ${MAX_RETRIES} attempts): ${error.message}`);
       }
     }
   } // end if TYPE_FILTER properties
