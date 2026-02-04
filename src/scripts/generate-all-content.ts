@@ -14,6 +14,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import * as fs from 'fs';
 import * as path from 'path';
 import { XMLParser } from 'fast-xml-parser';
+import { propertyMapping } from '../data/property-development-mapping';
 
 const anthropic = new Anthropic();
 const REGENERATE_ALL = process.env.REGENERATE_ALL === 'true';
@@ -335,6 +336,126 @@ Be specific to ${town}. Include real place names, distances, and practical infor
   return JSON.parse(jsonMatch[0]);
 }
 
+// Aggregate developer data from property mapping
+function aggregateDeveloperData() {
+  const developers: Record<string, {
+    name: string;
+    developments: Set<string>;
+    zones: Set<string>;
+    towns: Set<string>;
+    propertyRefs: string[];
+    deliveryDates: string[];
+  }> = {};
+
+  for (const [ref, info] of Object.entries(propertyMapping)) {
+    const devName = info.developer;
+    if (!developers[devName]) {
+      developers[devName] = {
+        name: devName,
+        developments: new Set(),
+        zones: new Set(),
+        towns: new Set(),
+        propertyRefs: [],
+        deliveryDates: [],
+      };
+    }
+    developers[devName].developments.add(info.development);
+    if (info.zone) developers[devName].zones.add(info.zone);
+    developers[devName].propertyRefs.push(ref);
+    if (info.deliveryDate) developers[devName].deliveryDates.push(info.deliveryDate);
+  }
+
+  return Object.values(developers).map(d => ({
+    name: d.name,
+    slug: slugify(d.name),
+    developmentCount: d.developments.size,
+    developments: Array.from(d.developments),
+    zones: Array.from(d.zones),
+    propertyCount: d.propertyRefs.length,
+    propertyRefs: d.propertyRefs,
+    isGolfSpecialist: Array.from(d.zones).some(z => z.toLowerCase().includes('golf')),
+  })).sort((a, b) => b.propertyCount - a.propertyCount);
+}
+
+// Generate developer/builder content
+async function generateDeveloperContent(dev: {
+  name: string;
+  slug: string;
+  developmentCount: number;
+  developments: string[];
+  zones: string[];
+  propertyCount: number;
+  isGolfSpecialist: boolean;
+}): Promise<any> {
+  const golfNote = dev.isGolfSpecialist ? 'This is a GOLF SPECIALIST developer.' : '';
+
+  const prompt = `Generate SEO content for a property developer page. We are a real estate agency showcasing properties by this developer.
+
+Developer: ${dev.name}
+Properties Available: ${dev.propertyCount}
+Developments: ${dev.developments.join(', ')}
+Zones/Areas: ${dev.zones.join(', ')}
+${golfNote}
+
+Generate JSON matching this EXACT structure (use Contrimar template style):
+{
+  "name": "${dev.name}",
+  "slug": "${dev.slug}",
+  "metaTitle": "${dev.name} | New Build Homes Costa Blanca - under 60 chars",
+  "metaDescription": "Compelling description under 155 chars about ${dev.name} properties",
+  "heroHeadline": "${dev.name} - [Specialty/Location] tagline",
+  "heroIntro": "2 paragraphs (150-200 words) introducing ${dev.name} and their developments. Mention property count and areas.",
+  "aboutSection": {
+    "title": "About ${dev.name}",
+    "content": "2 paragraphs about the developer's focus areas and what makes them notable"
+  },
+  "specializationSection": {
+    "title": "Development Focus or similar",
+    "regions": ["Costa Blanca South", "etc based on zones"],
+    "towns": ["extract from zones"],
+    "propertyTypes": ["Villas", "Apartments", "Townhouses"],
+    "content": "1-2 paragraphs about their specialization"
+  },
+  "qualitySection": {
+    "title": "Quality & Specifications",
+    "features": ["6-8 typical quality features"],
+    "content": "Paragraph about build quality"
+  },
+  "whyChooseSection": {
+    "title": "Why Choose ${dev.name}",
+    "reasons": [
+      {"title": "Short title", "description": "One sentence explanation"},
+      // 3 total reasons
+    ]
+  },
+  "faqs": [
+    {"question": "Where are ${dev.name} properties located?", "answer": "Based on the zones/developments"},
+    {"question": "Another relevant FAQ", "answer": "Helpful answer"},
+    {"question": "Third FAQ", "answer": "Answer"}
+  ],
+  "conclusion": "Short closing paragraph encouraging buyers to browse listings",
+  "stats": {
+    "propertyCount": ${dev.propertyCount},
+    "developmentCount": ${dev.developmentCount},
+    "regions": ["list regions"]
+  }
+}
+
+Important: We are an AGENCY showcasing their properties, not the developer themselves. Write naturally, no clichés.`;
+
+  const response = await anthropic.messages.create({
+    model: 'claude-sonnet-4-5-20250929',
+    max_tokens: 2500,
+    messages: [{ role: 'user', content: prompt }],
+  });
+
+  const text = response.content[0].type === 'text' ? response.content[0].text : '';
+  const jsonMatch = text.match(/\{[\s\S]*\}/);
+  if (!jsonMatch) throw new Error('No JSON found in response');
+
+  return JSON.parse(jsonMatch[0]);
+}
+
 // Check if content already exists
 function contentExists(dir: string, slug: string): boolean {
   return fs.existsSync(path.join(dir, `${slug}.json`));
@@ -418,9 +539,36 @@ async function main() {
     }
   }
 
+  // Generate developer/builder content from property mapping
+  console.log('\n🏗️  Generating Developer Content...\n');
+  const developers = aggregateDeveloperData();
+  console.log(`   Found ${developers.length} developers in mapping\n`);
+
+  for (const dev of developers) {
+    if (!REGENERATE_ALL && contentExists(BUILDERS_DIR, dev.slug)) {
+      console.log(`   ⏭️  Skipping ${dev.name} (exists)`);
+      skipped++;
+      continue;
+    }
+
+    try {
+      console.log(`   🔄 Generating ${dev.name} (${dev.propertyCount} properties)...`);
+      const content = await generateDeveloperContent(dev);
+      content.generatedAt = new Date().toISOString();
+      saveContent(BUILDERS_DIR, dev.slug, content);
+      console.log(`   ✅ ${dev.name} saved`);
+      generated++;
+
+      // Rate limiting
+      await new Promise(r => setTimeout(r, 1000));
+    } catch (error) {
+      console.error(`   ❌ Error generating ${dev.name}:`, error);
+    }
+  }
+
   // Generate property content (only for properties without descriptions)
   console.log('\n📝 Generating Property Content...\n');
-  const propertiesNeedingContent = allProperties.filter(p => 
+  const propertiesNeedingContent = allProperties.filter(p =>
     !p.description || p.description.length < 200
   );
   
