@@ -38,7 +38,7 @@ function safeStr(val: unknown): string {
 }
 
 async function followRedirect(url: string): Promise<string> {
-  const response = await fetch(url, { cache: 'no-store', redirect: 'follow' });
+  const response = await fetch(url, { next: { revalidate: 3600 }, redirect: 'follow' });
   return response.text();
 }
 

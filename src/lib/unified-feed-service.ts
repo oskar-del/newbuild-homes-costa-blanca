@@ -31,7 +31,7 @@ async function parseRedspFeed(): Promise<UnifiedProperty[]> {
   try {
     const response = await fetch(REDSP_FEED_URL, {
       next: { revalidate: 3600 },
-      cache: 'no-store', // Avoid Next.js cache size issues
+      next: { revalidate: 3600 }, // Revalidate hourly for ISR
     });
     
     if (!response.ok) {
@@ -255,7 +255,7 @@ async function parseBackgroundFeed(): Promise<UnifiedProperty[]> {
   try {
     const response = await fetch(BACKGROUND_FEED_URL, {
       next: { revalidate: 3600 },
-      cache: 'no-store',
+      next: { revalidate: 3600 },
       redirect: 'follow', // Follow redirects
     });
     

@@ -107,7 +107,7 @@ function extractProjectName(description: string, propertyType: string, ref: stri
 async function fetchSingleFeed(url: string, feedName: string, filterByArea: boolean = false): Promise<ParsedProperty[]> {
   try {
     const response = await fetch(url, {
-      cache: 'no-store',
+      next: { revalidate: 3600 },
       next: { revalidate: 3600 } // Revalidate every hour
     });
 
@@ -236,7 +236,7 @@ function safeStr(val: unknown): string {
 async function fetchBackgroundFeed(): Promise<ParsedProperty[]> {
   try {
     const response = await fetch(BACKGROUND_FEED_URL, {
-      cache: 'no-store',
+      next: { revalidate: 3600 },
       redirect: 'follow',
     });
 
@@ -327,7 +327,7 @@ async function fetchBackgroundFeed(): Promise<ParsedProperty[]> {
 async function fetchMiralboFeed(): Promise<ParsedProperty[]> {
   try {
     const response = await fetch(MIRALBO_FEED_URL, {
-      cache: 'no-store',
+      next: { revalidate: 3600 },
       headers: { 'User-Agent': 'NewBuildHomes/1.0' },
     });
 
@@ -595,7 +595,7 @@ export async function fetchInlandProperties(): Promise<ParsedProperty[]> {
 export async function fetchLandPlots(minPrice: number = 200000): Promise<ParsedProperty[]> {
   try {
     const response = await fetch(BACKGROUND_FEED_URL, {
-      cache: 'no-store',
+      next: { revalidate: 3600 },
       redirect: 'follow',
     });
 
