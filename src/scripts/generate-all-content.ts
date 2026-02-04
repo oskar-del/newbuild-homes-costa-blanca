@@ -19,6 +19,33 @@ import { propertyMapping } from '../data/property-development-mapping';
 const anthropic = new Anthropic();
 const REGENERATE_ALL = process.env.REGENERATE_ALL === 'true';
 
+// Parse command line arguments
+const args = process.argv.slice(2);
+const TOWN_FILTER = args.find(a => a.startsWith('--town='))?.split('=')[1]?.toLowerCase() || '';
+const TYPE_FILTER = args.find(a => a.startsWith('--type='))?.split('=')[1] || 'all'; // all, developers, areas, properties
+const LIMIT = parseInt(args.find(a => a.startsWith('--limit='))?.split('=')[1] || '0') || 0; // 0 = no limit
+const LIST_TOWNS = args.includes('--list-towns');
+
+// Usage help
+if (args.includes('--help')) {
+  console.log(`
+Usage: npx tsx generate-all-content.ts [options]
+
+Options:
+  --town=NAME      Filter properties by town (e.g., --town=torrevieja)
+  --type=TYPE      What to generate: all, developers, areas, properties
+  --limit=N        Limit number of items to generate (0 = no limit)
+  --list-towns     Just list towns and property counts, don't generate
+  --help           Show this help
+
+Examples:
+  npx tsx generate-all-content.ts --town=torrevieja
+  npx tsx generate-all-content.ts --type=developers
+  npx tsx generate-all-content.ts --list-towns
+`);
+  process.exit(0);
+}
+
 // Feed configurations
 // NOTE: Miralbo disabled - only 25 properties and causes DNS issues during build
 // Those 25 can be hard-coded later if needed
@@ -512,95 +539,138 @@ async function main() {
   let skipped = 0;
 
   // Generate area guides
-  console.log('\n📝 Generating Area Guides...\n');
-  for (const area of areas) {
-    const slug = slugify(area);
-    
-    if (!REGENERATE_ALL && contentExists(AREAS_DIR, slug)) {
-      console.log(`   ⏭️  Skipping ${area} (exists)`);
-      skipped++;
-      continue;
-    }
+  if (TYPE_FILTER === 'all' || TYPE_FILTER === 'areas') {
+    console.log('\n📝 Generating Area Guides...\n');
+    for (const area of areas) {
+      const slug = slugify(area);
 
-    try {
-      console.log(`   🔄 Generating ${area}...`);
-      const areaProperties = allProperties.filter(p => p.town === area);
-      const content = await generateAreaContent(area, areaProperties);
-      content.slug = slug;
-      content.town = area;
-      content.propertyCount = areaProperties.length;
-      content.generatedAt = new Date().toISOString();
-      saveContent(AREAS_DIR, slug, content);
-      console.log(`   ✅ ${area} saved`);
-      generated++;
-      
-      // Rate limiting - wait 1 second between API calls
-      await new Promise(r => setTimeout(r, 1000));
-    } catch (error) {
-      console.error(`   ❌ Error generating ${area}:`, error);
+      if (!REGENERATE_ALL && contentExists(AREAS_DIR, slug)) {
+        console.log(`   ⏭️  Skipping ${area} (exists)`);
+        skipped++;
+        continue;
+      }
+
+      try {
+        console.log(`   🔄 Generating ${area}...`);
+        const areaProperties = allProperties.filter(p => p.town === area);
+        const content = await generateAreaContent(area, areaProperties);
+        content.slug = slug;
+        content.town = area;
+        content.propertyCount = areaProperties.length;
+        content.generatedAt = new Date().toISOString();
+        saveContent(AREAS_DIR, slug, content);
+        console.log(`   ✅ ${area} saved`);
+        generated++;
+
+        // Rate limiting - wait 1 second between API calls
+        await new Promise(r => setTimeout(r, 1000));
+      } catch (error) {
+        console.error(`   ❌ Error generating ${area}:`, error);
+      }
     }
   }
 
   // Generate developer/builder content from property mapping
-  console.log('\n🏗️  Generating Developer Content...\n');
-  const developers = aggregateDeveloperData();
-  console.log(`   Found ${developers.length} developers in mapping\n`);
+  if (TYPE_FILTER === 'all' || TYPE_FILTER === 'developers') {
+    console.log('\n🏗️  Generating Developer Content...\n');
+    const developers = aggregateDeveloperData();
+    console.log(`   Found ${developers.length} developers in mapping\n`);
 
-  for (const dev of developers) {
-    if (!REGENERATE_ALL && contentExists(BUILDERS_DIR, dev.slug)) {
-      console.log(`   ⏭️  Skipping ${dev.name} (exists)`);
-      skipped++;
-      continue;
-    }
+    for (const dev of developers) {
+      if (!REGENERATE_ALL && contentExists(BUILDERS_DIR, dev.slug)) {
+        console.log(`   ⏭️  Skipping ${dev.name} (exists)`);
+        skipped++;
+        continue;
+      }
 
-    try {
-      console.log(`   🔄 Generating ${dev.name} (${dev.propertyCount} properties)...`);
-      const content = await generateDeveloperContent(dev);
-      content.generatedAt = new Date().toISOString();
-      saveContent(BUILDERS_DIR, dev.slug, content);
-      console.log(`   ✅ ${dev.name} saved`);
-      generated++;
+      try {
+        console.log(`   🔄 Generating ${dev.name} (${dev.propertyCount} properties)...`);
+        const content = await generateDeveloperContent(dev);
+        content.generatedAt = new Date().toISOString();
+        saveContent(BUILDERS_DIR, dev.slug, content);
+        console.log(`   ✅ ${dev.name} saved`);
+        generated++;
 
-      // Rate limiting
-      await new Promise(r => setTimeout(r, 1000));
-    } catch (error) {
-      console.error(`   ❌ Error generating ${dev.name}:`, error);
-    }
-  }
-
-  // Generate property content (only for properties without descriptions)
-  console.log('\n📝 Generating Property Content...\n');
-  const propertiesNeedingContent = allProperties.filter(p =>
-    !p.description || p.description.length < 200
-  );
-  
-  console.log(`   ${propertiesNeedingContent.length} properties need content\n`);
-
-  for (const property of propertiesNeedingContent.slice(0, 50)) { // Limit to 50 per run
-    const slug = slugify(property.reference);
-    
-    if (!REGENERATE_ALL && contentExists(DEVELOPMENTS_DIR, slug)) {
-      console.log(`   ⏭️  Skipping ${property.reference} (exists)`);
-      skipped++;
-      continue;
-    }
-
-    try {
-      console.log(`   🔄 Generating ${property.reference}...`);
-      const content = await generatePropertyContent(property);
-      content.reference = property.reference;
-      content.slug = slug;
-      content.source = property.source;
-      content.generatedAt = new Date().toISOString();
-      saveContent(DEVELOPMENTS_DIR, slug, content);
-      console.log(`   ✅ ${property.reference} saved`);
-      generated++;
-      
-      await new Promise(r => setTimeout(r, 1000));
-    } catch (error) {
-      console.error(`   ❌ Error generating ${property.reference}:`, error);
+        // Rate limiting
+        await new Promise(r => setTimeout(r, 1000));
+      } catch (error) {
+        console.error(`   ❌ Error generating ${dev.name}:`, error);
+      }
     }
   }
+
+  // Generate property content - organized by town
+  if (TYPE_FILTER === 'all' || TYPE_FILTER === 'properties') {
+    console.log('\n📝 Generating Property Content...\n');
+
+    // Group properties by town
+    const byTown: Record<string, Property[]> = {};
+    for (const p of allProperties) {
+      const town = (p.town || 'Unknown').toLowerCase();
+      if (!byTown[town]) byTown[town] = [];
+      byTown[town].push(p);
+    }
+
+    // Show town statistics
+    console.log('   Properties by town:');
+    const sortedTowns = Object.entries(byTown).sort((a, b) => b[1].length - a[1].length);
+    sortedTowns.slice(0, 20).forEach(([town, props]) => {
+      const marker = TOWN_FILTER && town.includes(TOWN_FILTER) ? ' 👈 SELECTED' : '';
+      console.log(`   ${props.length.toString().padStart(4)} - ${town}${marker}`);
+    });
+    if (sortedTowns.length > 20) console.log(`   ... and ${sortedTowns.length - 20} more towns`);
+    console.log('');
+
+    // If --list-towns, stop here
+    if (LIST_TOWNS) {
+      console.log('   (--list-towns mode, not generating)');
+      return;
+    }
+
+    // Filter by town if specified
+    let propertiesToGenerate = allProperties;
+    if (TOWN_FILTER) {
+      propertiesToGenerate = allProperties.filter(p =>
+        (p.town || '').toLowerCase().includes(TOWN_FILTER)
+      );
+      console.log(`   Filtered to ${propertiesToGenerate.length} properties in "${TOWN_FILTER}"\n`);
+    }
+
+    // Apply limit if specified
+    if (LIMIT > 0) {
+      propertiesToGenerate = propertiesToGenerate.slice(0, LIMIT);
+      console.log(`   Limited to ${LIMIT} properties\n`);
+    }
+
+    console.log(`   Generating content for ${propertiesToGenerate.length} properties...\n`);
+
+    for (const property of propertiesToGenerate) {
+      const slug = slugify(property.reference);
+
+      if (!REGENERATE_ALL && contentExists(DEVELOPMENTS_DIR, slug)) {
+        console.log(`   ⏭️  Skipping ${property.reference} (exists)`);
+        skipped++;
+        continue;
+      }
+
+      try {
+        console.log(`   🔄 Generating ${property.reference} (${property.town})...`);
+        const content = await generatePropertyContent(property);
+        content.reference = property.reference;
+        content.slug = slug;
+        content.source = property.source;
+        content.town = property.town;
+        content.generatedAt = new Date().toISOString();
+        saveContent(DEVELOPMENTS_DIR, slug, content);
+        console.log(`   ✅ ${property.reference} saved`);
+        generated++;
+
+        await new Promise(r => setTimeout(r, 1000));
+      } catch (error) {
+        console.error(`   ❌ Error generating ${property.reference}:`, error);
+      }
+    }
+  } // end if TYPE_FILTER properties
 
   console.log('\n===================================');
   console.log(`✅ Generated: ${generated}`);
