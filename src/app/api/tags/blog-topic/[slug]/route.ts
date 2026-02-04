@@ -7,6 +7,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
+
+export const dynamic = 'force-dynamic';
 import { getPropertiesForBlogTopic, BLOG_TOPIC_SUGGESTIONS } from '@/lib/tag-service';
 import { generateBlogPostSchema } from '@/data/property-schemas';
 

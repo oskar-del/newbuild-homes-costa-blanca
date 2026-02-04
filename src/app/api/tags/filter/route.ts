@@ -15,6 +15,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
+
+export const dynamic = 'force-dynamic';
 import { filterDevelopmentsByTags, TagFilter } from '@/lib/tag-service';
 
 export async function POST(request: NextRequest) {
