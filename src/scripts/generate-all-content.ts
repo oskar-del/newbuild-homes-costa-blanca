@@ -183,14 +183,8 @@ function parseRedspFeed(xml: string): Property[] {
   const properties = parsed?.root?.property || [];
   const propArray = Array.isArray(properties) ? properties : [properties];
 
-  return propArray
-    .filter((p: any) => {
-      // Filter for new builds - check new_build flag or type contains 'new'
-      const isNew = p.new_build === 'yes' || p.new_build === '1' ||
-                    String(p.type || '').toLowerCase().includes('new');
-      return isNew;
-    })
-    .map((p: any) => ({
+  // Note: REDSP feed is already filtered for new builds, no need to filter again
+  return propArray.map((p: any) => ({
       reference: String(p.ref || p.id || ''),
       title: safeStr(p.title) || `${safeStr(p.type)} in ${safeStr(p.town)}`,
       description: safeStr(p.desc),
