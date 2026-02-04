@@ -21,7 +21,7 @@ const REGENERATE_ALL = process.env.REGENERATE_ALL === 'true';
 // Feed configurations
 const FEEDS = {
   miralbo: {
-    url: 'https://miralbo.es/feed/properties.xml',
+    url: 'https://mifrfrede.mfrpro.com/inmuebles/xml/56b76456fab7c',
     enabled: true,
   },
   backgroundProperties: {
@@ -202,7 +202,7 @@ Generate a JSON response with:
 Write naturally, avoiding clichés. Focus on specific details about ${property.town}. Make it genuinely helpful for buyers.`;
 
   const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-20250514',
+    model: 'claude-sonnet-4-5-20250929',
     max_tokens: 2000,
     messages: [{ role: 'user', content: prompt }],
   });
@@ -266,7 +266,7 @@ Generate a JSON response with:
 Be specific to ${town}. Include real place names, distances, and practical information buyers need.`;
 
   const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-20250514',
+    model: 'claude-sonnet-4-5-20250929',
     max_tokens: 3000,
     messages: [{ role: 'user', content: prompt }],
   });
