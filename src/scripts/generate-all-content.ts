@@ -20,10 +20,12 @@ const anthropic = new Anthropic();
 const REGENERATE_ALL = process.env.REGENERATE_ALL === 'true';
 
 // Feed configurations
+// NOTE: Miralbo disabled - only 25 properties and causes DNS issues during build
+// Those 25 can be hard-coded later if needed
 const FEEDS = {
   miralbo: {
     url: 'https://mifrfrede.mfrpro.com/inmuebles/xml/56b76456fab7c',
-    enabled: true,
+    enabled: false, // DISABLED - DNS unreliable, only 25 properties
   },
   backgroundProperties: {
     url: 'https://backgroundproperties.com/wp-load.php?security_token=23f0185aeb5102e7&export_id=19&action=get_data',
