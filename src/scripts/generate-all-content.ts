@@ -65,14 +65,8 @@ function parseAIJson(text: string): any {
   jsonStr = jsonStr.replace(/,(\s*[}\]])/g, '$1');
   // 2. Remove comments (// style) - but not inside strings
   jsonStr = jsonStr.replace(/^\s*\/\/[^\n]*/gm, '');
-  // 3. Fix control characters that break JSON
-  jsonStr = jsonStr.replace(/[\x00-\x1F\x7F]/g, (char) => {
-    // Keep newlines and tabs as escaped versions
-    if (char === '\n') return '\\n';
-    if (char === '\r') return '\\r';
-    if (char === '\t') return '\\t';
-    return ' ';
-  });
+  // 3. Remove control characters EXCEPT valid whitespace (newline, tab, carriage return)
+  jsonStr = jsonStr.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, ' ');
 
   try {
     return JSON.parse(jsonStr);
