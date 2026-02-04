@@ -107,8 +107,7 @@ function extractProjectName(description: string, propertyType: string, ref: stri
 async function fetchSingleFeed(url: string, feedName: string, filterByArea: boolean = false): Promise<ParsedProperty[]> {
   try {
     const response = await fetch(url, {
-      next: { revalidate: 3600 },
-      next: { revalidate: 3600 } // Revalidate every hour
+      next: { revalidate: 3600 }, // Revalidate every hour
     });
 
     if (!response.ok) {

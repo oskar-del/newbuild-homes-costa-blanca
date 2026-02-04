@@ -30,7 +30,6 @@ const CACHE_DURATION = 60 * 60 * 1000; // 1 hour
 async function parseRedspFeed(): Promise<UnifiedProperty[]> {
   try {
     const response = await fetch(REDSP_FEED_URL, {
-      next: { revalidate: 3600 },
       next: { revalidate: 3600 }, // Revalidate hourly for ISR
     });
     
@@ -254,7 +253,6 @@ function getDevelopmentFieldsFromMapping(reference: string, locationDetail?: str
 async function parseBackgroundFeed(): Promise<UnifiedProperty[]> {
   try {
     const response = await fetch(BACKGROUND_FEED_URL, {
-      next: { revalidate: 3600 },
       next: { revalidate: 3600 },
       redirect: 'follow', // Follow redirects
     });
