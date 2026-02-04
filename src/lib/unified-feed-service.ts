@@ -18,6 +18,7 @@ import { getPropertyDevelopmentInfo } from '@/data/property-development-mapping'
 // Feed URLs
 const REDSP_FEED_URL = 'http://feeds.transporter.janeladigital.com/423E0F5F-30FC-4E01-8FE1-99BD7E14B021/0500015622.xml';
 const BACKGROUND_FEED_URL = 'https://backgroundproperties.com/wp-load.php?security_token=23f0185aeb5102e7&export_id=19&action=get_data';
+const MIRALBO_FEED_URL = 'https://mifrfrede.mfrpro.com/inmuebles/xml/56b76456fab7c';
 
 // Cache
 let cachedProperties: UnifiedProperty[] | null = null;
@@ -365,7 +366,7 @@ function parseBackgroundXmlFeed(xml: string): UnifiedProperty[] {
     }
   }
   
-  console.log(`Parsed ${properties.length} properties from Background XML feed`);
+  console.log(`[Background] Parsed ${properties.length} properties from XML feed`);
   return properties;
 }
 
@@ -453,6 +454,154 @@ function parseBackgroundProperty(item: any): UnifiedProperty | null {
     hasSeaview: featuresLower.includes('sea view'),
     hasGolfview: featuresLower.includes('golf'),
   };
+}
+
+/**
+ * Parse Miralbo Urbana XML feed (luxury properties in Costa Blanca North)
+ * Uses a short timeout to avoid blocking builds if DNS fails
+ */
+async function parseMiralboFeed(): Promise<UnifiedProperty[]> {
+  if (!MIRALBO_FEED_URL) {
+    console.log('[Miralbo] Feed URL not configured, skipping');
+    return [];
+  }
+
+  try {
+    // Create AbortController for timeout (5 seconds max)
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+    const response = await fetch(MIRALBO_FEED_URL, {
+      signal: controller.signal,
+      next: { revalidate: 3600 },
+    });
+
+    clearTimeout(timeoutId);
+
+    if (!response.ok) {
+      console.warn(`[Miralbo] Feed returned status ${response.status}, skipping`);
+      return [];
+    }
+
+    const xml = await response.text();
+    const properties: UnifiedProperty[] = [];
+
+    // Miralbo uses <inmueble> tags for properties
+    const propertyMatches = xml.match(/<inmueble>[\s\S]*?<\/inmueble>/gi) ||
+                            xml.match(/<property>[\s\S]*?<\/property>/gi) || [];
+
+    for (const propXml of propertyMatches) {
+      try {
+        const getValue = (tag: string): string => {
+          const cdataMatch = propXml.match(new RegExp(`<${tag}[^>]*><!\\[CDATA\\[([\\s\\S]*?)\\]\\]><\\/${tag}>`, 'i'));
+          if (cdataMatch) return cdataMatch[1].trim();
+          const simpleMatch = propXml.match(new RegExp(`<${tag}[^>]*>([^<]*)<\\/${tag}>`, 'i'));
+          if (simpleMatch) return simpleMatch[1].trim();
+          return '';
+        };
+
+        const reference = getValue('referencia') || getValue('ref') || getValue('id');
+        if (!reference) continue;
+
+        // Parse images
+        const images: PropertyImage[] = [];
+        const imageMatches = propXml.match(/<imagen[^>]*>([^<]*)<\/imagen>/gi) ||
+                             propXml.match(/<foto[^>]*>([^<]*)<\/foto>/gi) ||
+                             propXml.match(/<image[^>]*>[\s\S]*?<\/image>/gi) || [];
+        for (const imgXml of imageMatches) {
+          const urlMatch = imgXml.match(/>([^<]+)</) || imgXml.match(/<url>([^<]*)<\/url>/);
+          if (urlMatch && urlMatch[1] && urlMatch[1].startsWith('http')) {
+            images.push({ url: urlMatch[1].trim(), caption: '' });
+          }
+        }
+
+        // Get town - Miralbo focuses on Costa Blanca North
+        const town = getValue('poblacion') || getValue('ciudad') || getValue('town') || 'Javea';
+
+        // Parse description
+        const descEs = getValue('descripcion') || getValue('descripcion_es') || '';
+        const descEn = getValue('descripcion_en') || getValue('description') || descEs;
+
+        // Parse features for flags
+        const features = getValue('caracteristicas') || getValue('features') || '';
+        const featuresLower = features.toLowerCase();
+        const descLower = (descEs + ' ' + descEn).toLowerCase();
+
+        const property: UnifiedProperty = {
+          id: `miralbo-${reference}`,
+          reference: `MU-${reference}`,
+          source: 'miralbo',
+          town,
+          locationDetail: getValue('zona') || getValue('urbanizacion') || '',
+          province: 'Alicante',
+          region: determineRegion(town),
+          latitude: parseFloat(getValue('latitud') || getValue('latitude')) || 0,
+          longitude: parseFloat(getValue('longitud') || getValue('longitude')) || 0,
+          propertyType: normalizePropertyType(getValue('tipo') || getValue('type') || 'Villa'),
+          bedrooms: parseInt(getValue('habitaciones') || getValue('dormitorios') || getValue('beds')) || 0,
+          bathrooms: parseInt(getValue('banos') || getValue('baths')) || 0,
+          builtArea: parseFloat(getValue('superficie_construida') || getValue('m2_construidos') || getValue('built')) || 0,
+          plotArea: parseFloat(getValue('superficie_parcela') || getValue('m2_parcela') || getValue('plot')) || 0,
+          price: parseFloat(getValue('precio') || getValue('price')) || 0,
+          currency: 'EUR',
+          images,
+          descriptions: {
+            en: descEn,
+            es: descEs,
+          },
+          features: features.split(',').map(f => f.trim()).filter(Boolean),
+          hasPool: featuresLower.includes('piscina') || featuresLower.includes('pool') || descLower.includes('pool'),
+          hasGarden: featuresLower.includes('jardin') || featuresLower.includes('garden'),
+          hasTerrace: featuresLower.includes('terraza') || featuresLower.includes('terrace'),
+          hasParking: featuresLower.includes('garaje') || featuresLower.includes('parking') || featuresLower.includes('garage'),
+          hasSeaview: featuresLower.includes('vista mar') || featuresLower.includes('sea view') || descLower.includes('sea view'),
+          hasGolfview: featuresLower.includes('golf'),
+          isNewBuild: true,
+          developer: 'Miralbo Urbana',
+        };
+
+        properties.push(property);
+      } catch (e) {
+        // Silent fail for individual properties
+      }
+    }
+
+    console.log(`[Miralbo] Parsed ${properties.length} properties`);
+    return properties;
+  } catch (error: any) {
+    // Handle timeout/abort gracefully
+    if (error.name === 'AbortError') {
+      console.warn('[Miralbo] Feed fetch timed out (5s), skipping - DNS may be unreachable');
+    } else {
+      console.warn('[Miralbo] Feed fetch failed, skipping:', error.message || error);
+    }
+    return [];
+  }
+}
+
+/**
+ * Normalize property type from Spanish/English variants
+ */
+function normalizePropertyType(type: string): string {
+  const typeLower = (type || '').toLowerCase();
+  const mapping: Record<string, string> = {
+    'villa': 'Villa',
+    'chalet': 'Villa',
+    'apartamento': 'Apartment',
+    'apartment': 'Apartment',
+    'piso': 'Apartment',
+    'adosado': 'Townhouse',
+    'townhouse': 'Townhouse',
+    'bungalow': 'Bungalow',
+    'atico': 'Penthouse',
+    'penthouse': 'Penthouse',
+    'duplex': 'Duplex',
+  };
+
+  for (const [key, value] of Object.entries(mapping)) {
+    if (typeLower.includes(key)) return value;
+  }
+  return type || 'Villa';
 }
 
 /**
@@ -769,21 +918,27 @@ export async function getAllProperties(): Promise<UnifiedProperty[]> {
 
   console.log('Fetching properties from all feeds...');
 
-  // Fetch from both feeds in parallel
-  const [redspProperties, backgroundProperties] = await Promise.all([
+  // Fetch from all feeds in parallel (Miralbo has 5s timeout to avoid blocking)
+  const [redspProperties, backgroundProperties, miralboProperties] = await Promise.all([
     parseRedspFeed(),
     parseBackgroundFeed(),
+    parseMiralboFeed(),
   ]);
 
-  // Combine and deduplicate (REDSP preferred)
+  // Combine and deduplicate (REDSP preferred, then Miralbo, then Background)
   const propertyMap = new Map<string, UnifiedProperty>();
 
-  // Add Background properties first
+  // Add Background properties first (lowest priority)
   for (const prop of backgroundProperties) {
     propertyMap.set(prop.reference.toUpperCase(), prop);
   }
 
-  // Then add/override with REDSP properties (preferred source)
+  // Add Miralbo properties (medium priority - luxury Costa Blanca North)
+  for (const prop of miralboProperties) {
+    propertyMap.set(prop.reference.toUpperCase(), prop);
+  }
+
+  // Then add/override with REDSP properties (highest priority - preferred source)
   for (const prop of redspProperties) {
     propertyMap.set(prop.reference.toUpperCase(), prop);
   }
