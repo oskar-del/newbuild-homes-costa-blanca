@@ -597,88 +597,134 @@ export default async function PropertiesPage({
 // Large Property Card for filtered views
 function LargePropertyCard({ property }: { property: ParsedProperty }) {
   const mainImage = property.images[0] || '/images/placeholder-property.jpg';
+  const imageCount = property.images.length;
+  const hasPoolFeature = hasPool(property);
+
+  // Format town name nicely
+  const displayTown = (property.town || '').split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
 
   return (
     <Link
       href={`/properties/${property.ref}`}
-      className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 border border-warm-100"
     >
-      {/* Image */}
-      <div className="relative h-64 overflow-hidden">
+      {/* Image Section */}
+      <div className="relative h-72 overflow-hidden">
         <Image
           src={mainImage}
           alt={`${property.bedrooms} bed ${property.propertyType} in ${property.town}`}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          className="object-cover group-hover:scale-105 transition-transform duration-700"
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-        {/* Badges */}
-        <div className="absolute top-4 left-4 flex flex-wrap gap-2">
-          <span className="bg-white/95 text-primary-900 text-sm font-medium px-3 py-1.5 rounded-full">
-            {property.propertyType}
-          </span>
-          {hasPool(property) && (
-            <span className="bg-accent-500 text-white text-sm font-medium px-3 py-1.5 rounded-full">Pool</span>
+        {/* Top badges row */}
+        <div className="absolute top-4 left-4 right-4 flex items-start justify-between">
+          <div className="flex flex-wrap gap-2">
+            <span className="bg-accent-500 text-white text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wide">
+              New Build
+            </span>
+            {property.propertyType && (
+              <span className="bg-white/95 backdrop-blur-sm text-primary-900 text-xs font-medium px-3 py-1.5 rounded-full">
+                {property.propertyType}
+              </span>
+            )}
+          </div>
+          {imageCount > 1 && (
+            <span className="bg-black/60 backdrop-blur-sm text-white text-xs font-medium px-2.5 py-1.5 rounded-full flex items-center gap-1.5">
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+              {imageCount}
+            </span>
           )}
         </div>
 
-        {/* Price */}
-        <div className="absolute bottom-4 left-4">
-          <div className="text-2xl font-bold text-white">
-            {property.price && property.price > 0 ? formatPrice(property.price) : 'Price on Request'}
+        {/* Bottom overlay with price and location */}
+        <div className="absolute bottom-0 left-0 right-0 p-4">
+          <div className="flex items-end justify-between">
+            <div>
+              <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                {property.price && property.price > 0 ? formatPrice(property.price) : 'Price on Request'}
+              </div>
+              <div className="flex items-center gap-1.5 text-white/90 text-sm">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                {displayTown}
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Content */}
-      <div className="p-6">
-        <h3 className="text-xl font-semibold text-primary-900 group-hover:text-accent-600 transition-colors mb-3">
-          {property.bedrooms && property.bedrooms > 0 ? `${property.bedrooms}-Bed ` : ''}{property.propertyType}
-          {property.developmentName && <span className="font-normal text-warm-500"> in {property.developmentName}</span>}
+      {/* Content Section */}
+      <div className="p-5">
+        {/* Title */}
+        <h3 className="text-lg font-semibold text-primary-900 group-hover:text-accent-600 transition-colors mb-2 line-clamp-1">
+          {property.bedrooms && property.bedrooms > 0 ? `${property.bedrooms}-Bedroom ` : ''}{property.propertyType}
+          {property.developmentName && <span className="font-normal text-warm-500"> · {property.developmentName}</span>}
         </h3>
 
-        {/* Specs */}
-        <div className="flex flex-wrap gap-4 text-sm text-warm-600 mb-4">
+        {/* Key specs grid */}
+        <div className="grid grid-cols-4 gap-2 mb-4">
           {property.bedrooms && property.bedrooms > 0 && (
-            <span className="flex items-center gap-1.5">
-              <svg className="w-5 h-5 text-warm-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
-              {property.bedrooms} Bedrooms
-            </span>
+            <div className="text-center p-2 bg-warm-50 rounded-lg">
+              <div className="text-lg font-semibold text-primary-900">{property.bedrooms}</div>
+              <div className="text-xs text-warm-500">Beds</div>
+            </div>
           )}
           {property.bathrooms && property.bathrooms > 0 && (
-            <span className="flex items-center gap-1.5">
-              <svg className="w-5 h-5 text-warm-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-              {property.bathrooms} Bathrooms
-            </span>
+            <div className="text-center p-2 bg-warm-50 rounded-lg">
+              <div className="text-lg font-semibold text-primary-900">{property.bathrooms}</div>
+              <div className="text-xs text-warm-500">Baths</div>
+            </div>
           )}
           {property.size && property.size > 0 && (
-            <span className="flex items-center gap-1.5">
-              <svg className="w-5 h-5 text-warm-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" /></svg>
-              {property.size} m²
+            <div className="text-center p-2 bg-warm-50 rounded-lg">
+              <div className="text-lg font-semibold text-primary-900">{property.size}</div>
+              <div className="text-xs text-warm-500">m²</div>
+            </div>
+          )}
+          {property.plotSize && property.plotSize > 0 ? (
+            <div className="text-center p-2 bg-warm-50 rounded-lg">
+              <div className="text-lg font-semibold text-primary-900">{property.plotSize}</div>
+              <div className="text-xs text-warm-500">Plot m²</div>
+            </div>
+          ) : hasPoolFeature ? (
+            <div className="text-center p-2 bg-accent-50 rounded-lg">
+              <div className="text-lg font-semibold text-accent-600">✓</div>
+              <div className="text-xs text-accent-600">Pool</div>
+            </div>
+          ) : null}
+        </div>
+
+        {/* Feature tags */}
+        <div className="flex flex-wrap gap-1.5 mb-4">
+          {hasPoolFeature && property.plotSize && property.plotSize > 0 && (
+            <span className="bg-accent-50 text-accent-700 text-xs font-medium px-2 py-1 rounded">
+              Pool
             </span>
           )}
-          {property.plotSize && property.plotSize > 0 && (
-            <span className="flex items-center gap-1.5">
-              <svg className="w-5 h-5 text-warm-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
-              {property.plotSize} m² plot
+          {property.size && property.size >= 150 && (
+            <span className="bg-primary-50 text-primary-700 text-xs font-medium px-2 py-1 rounded">
+              Spacious
+            </span>
+          )}
+          {property.plotSize && property.plotSize >= 500 && (
+            <span className="bg-green-50 text-green-700 text-xs font-medium px-2 py-1 rounded">
+              Large Plot
+            </span>
+          )}
+          {property.bedrooms && property.bedrooms >= 4 && (
+            <span className="bg-purple-50 text-purple-700 text-xs font-medium px-2 py-1 rounded">
+              Family Home
             </span>
           )}
         </div>
 
-        {/* Description preview */}
-        {property.description && (
-          <p className="text-warm-500 text-sm line-clamp-2 mb-4">
-            {property.description.substring(0, 150)}...
-          </p>
-        )}
-
-        {/* Footer */}
-        <div className="flex items-center justify-between pt-4 border-t border-warm-100">
-          <span className="text-warm-400 text-sm">Ref: {property.ref}</span>
+        {/* Footer with ref and CTA */}
+        <div className="flex items-center justify-between pt-3 border-t border-warm-100">
+          <span className="text-warm-400 text-xs">Ref: {property.ref}</span>
           <span className="text-accent-600 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-            View Details
+            View Property
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
           </span>
         </div>
