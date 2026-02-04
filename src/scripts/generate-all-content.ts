@@ -28,10 +28,10 @@ const FEEDS = {
     url: 'https://backgroundproperties.com/wp-load.php?security_token=23f0185aeb5102e7&export_id=19&action=get_data',
     enabled: true,
   },
-  // redsp: {
-  //   url: 'YOUR_REDSP_FEED_URL',
-  //   enabled: false,
-  // },
+  redsp: {
+    url: 'https://xml.redsp.net/file/450/23a140q0551/general-zone-1-kyero.xml',
+    enabled: true,
+  },
 };
 
 // Content directories
@@ -144,6 +144,63 @@ function parseBackgroundFeed(xml: string): Property[] {
       orientation: safeStr(p.orientation),
       source: 'backgroundProperties',
     }));
+}
+
+// Parse REDSP Kyero feed
+function parseRedspFeed(xml: string): Property[] {
+  const parser = new XMLParser({ ignoreAttributes: false });
+  const parsed = parser.parse(xml);
+  const properties = parsed?.root?.property || [];
+  const propArray = Array.isArray(properties) ? properties : [properties];
+
+  return propArray
+    .filter((p: any) => {
+      // Filter for new builds - check new_build flag or type contains 'new'
+      const isNew = p.new_build === 'yes' || p.new_build === '1' ||
+                    String(p.type || '').toLowerCase().includes('new');
+      return isNew;
+    })
+    .map((p: any) => ({
+      reference: String(p.ref || p.id || ''),
+      title: safeStr(p.title) || `${safeStr(p.type)} in ${safeStr(p.town)}`,
+      description: safeStr(p.desc),
+      type: safeStr(p.type),
+      bedrooms: Number(p.beds) || 0,
+      bathrooms: Number(p.baths) || 0,
+      builtArea: Number(p.built) || Number(p.surface_area?.built) || 0,
+      plotArea: Number(p.plot) || Number(p.surface_area?.plot) || 0,
+      price: Number(p.price) || 0,
+      town: safeStr(p.town) || safeStr(p.location?.town),
+      province: safeStr(p.province) || 'Alicante',
+      zone: safeStr(p.location_detail) || '',
+      images: extractRedspImages(p),
+      features: extractRedspFeatures(p),
+      pool: p.pool === '1' || p.pool === 'yes' || safeStr(p.pool).toLowerCase() === 'yes',
+      views: safeStr(p.views),
+      orientation: safeStr(p.orientation),
+      source: 'redsp',
+    }));
+}
+
+function extractRedspImages(p: any): string[] {
+  const images = p.images?.image;
+  if (!images) return [];
+  const imgArray = Array.isArray(images) ? images : [images];
+  return imgArray.map((img: any) => {
+    if (typeof img === 'string') return img;
+    return img?.url || img?.['#text'] || '';
+  }).filter(Boolean);
+}
+
+function extractRedspFeatures(p: any): string[] {
+  const features: string[] = [];
+  if (p.pool === 'yes' || p.pool === '1') features.push('Swimming Pool');
+  if (p.parking) features.push('Parking');
+  if (p.garden) features.push('Garden');
+  if (p.terrace) features.push('Terrace');
+  if (p.air_con) features.push('Air Conditioning');
+  if (p.heating) features.push('Heating');
+  return features;
 }
 
 function extractImages(p: any): string[] {
@@ -306,9 +363,14 @@ async function main() {
     console.log(`📡 Fetching ${name} feed...`);
     try {
       const xml = await fetchFeed(config.url);
-      const properties = name === 'miralbo' 
-        ? parseMiralboFeed(xml) 
-        : parseBackgroundFeed(xml);
+      let properties: Property[];
+      if (name === 'miralbo') {
+        properties = parseMiralboFeed(xml);
+      } else if (name === 'redsp') {
+        properties = parseRedspFeed(xml);
+      } else {
+        properties = parseBackgroundFeed(xml);
+      }
       console.log(`   Found ${properties.length} properties\n`);
       allProperties.push(...properties);
     } catch (error) {
