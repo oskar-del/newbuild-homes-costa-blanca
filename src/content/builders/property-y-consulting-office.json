@@ -1,0 +1,75 @@
+{
+  "name": "Property Y Consulting Office",
+  "slug": "property-y-consulting-office",
+  "metaTitle": "Property Y Consulting Office | New Build Homes Costa Blanca & Mar Menor",
+  "metaDescription": "Discover 33+ new build properties by Property Y Consulting Office across 18 developments in Costa Blanca South and Mar Menor. Apartments and villas in Los Alcazares, Torre de la Horadada & more.",
+  "heroHeadline": "Property Y Consulting Office - Costa Blanca South & Mar Menor Specialist",
+  "heroIntro": "Property Y Consulting Office stands as one of the most prolific developers in the Costa Blanca South and Mar Menor regions. With an impressive portfolio spanning 18 distinct developments and over 33 properties currently available, they offer buyers exceptional choice across some of Spain's most desirable coastal locations.",
+  "aboutSection": {
+    "title": "About Property Y Consulting Office",
+    "content": "Operating across the municipalities of Los Alcazares, Torre de la Horadada, Lo Pagan, and Torre Pacheco, Property Y Consulting Office has established a strong presence in the Costa Blanca South property market. Their developments range from beachfront apartments to inland residential communities, catering to both holiday home buyers and permanent residents seeking the Mediterranean lifestyle."
+  },
+  "specializationSection": {
+    "title": "Areas of Focus",
+    "regions": ["Costa Blanca South", "Mar Menor", "Costa Calida"],
+    "towns": ["Los Alcazares", "Torre de la Horadada", "Lo Pagan", "Torre Pacheco", "Los Narejos", "Mar de Pulpi"],
+    "propertyTypes": ["Apartments", "Penthouses", "Villas", "Townhouses"],
+    "content": "Property Y Consulting Office specializes in the Mar Menor and Costa Blanca South corridor, with particular expertise in Los Alcazares and the surrounding beach communities. Their developments in Los Narejos and Lo Pagan offer proximity to Europe's largest saltwater lagoon, perfect for water sports enthusiasts and those seeking a quieter alternative to the main tourist areas."
+  },
+  "qualitySection": {
+    "title": "Quality & Specifications",
+    "features": [
+      "Modern Mediterranean architecture",
+      "Energy-efficient construction",
+      "Private and communal pools",
+      "Landscaped gardens",
+      "Underground parking",
+      "Close proximity to beaches"
+    ],
+    "content": "Properties by Property Y Consulting Office feature contemporary designs with quality finishes. Many developments include communal amenities such as swimming pools and landscaped areas, while maintaining competitive price points that appeal to international buyers."
+  },
+  "whyChooseSection": {
+    "title": "Why Choose Property Y Consulting Office",
+    "reasons": [
+      {
+        "title": "Extensive Portfolio",
+        "description": "With 18 active developments, buyers have exceptional choice in location, property type, and budget."
+      },
+      {
+        "title": "Prime Locations",
+        "description": "Strategic positioning near Mar Menor beaches and the Costa Blanca coastline."
+      },
+      {
+        "title": "Established Track Record",
+        "description": "Proven delivery across multiple projects in the region."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Where are Property Y Consulting Office developments located?",
+      "answer": "Their developments span Los Alcazares, Torre de la Horadada, Lo Pagan, Torre Pacheco, Los Narejos, and Mar de Pulpi - covering the Costa Blanca South and Mar Menor regions."
+    },
+    {
+      "question": "What types of properties does Property Y Consulting Office build?",
+      "answer": "They offer a range including apartments, penthouses, townhouses, and villas, with options suitable for both holiday homes and permanent residences."
+    },
+    {
+      "question": "Are Property Y Consulting Office properties near the beach?",
+      "answer": "Yes, many developments are within walking distance of Mar Menor beaches and the Mediterranean coastline, with several beachfront options available."
+    }
+  ],
+  "conclusion": "For buyers seeking new build properties in the Costa Blanca South and Mar Menor areas, Property Y Consulting Office offers one of the most comprehensive portfolios available. Browse their current developments through our listings to find your ideal Spanish property.",
+  "stats": {
+    "propertyCount": 33,
+    "developmentCount": 18,
+    "regions": ["Costa Blanca South", "Mar Menor", "Costa Calida"]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Property Y Consulting Office",
+    "description": "Property developer specializing in new build homes across Costa Blanca South and Mar Menor regions of Spain.",
+    "areaServed": ["Los Alcazares", "Torre de la Horadada", "Lo Pagan", "Torre Pacheco", "Costa Blanca South"]
+  }
+}

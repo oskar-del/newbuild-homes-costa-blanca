@@ -1,0 +1,75 @@
+{
+  "name": "Urmosa",
+  "slug": "urmosa",
+  "metaTitle": "Urmosa Developer | New Build Homes Costa Blanca & Murcia",
+  "metaDescription": "Explore 10 new build properties by Urmosa across 3 developments. Quality apartments and villas in Costa Blanca South and Murcia region.",
+  "heroHeadline": "Urmosa - Established Costa Blanca & Murcia Developer",
+  "heroIntro": "Urmosa brings extensive development experience to the Costa Blanca South and Murcia regions, with 10 properties currently available across 3 thoughtfully planned developments. Their track record demonstrates consistent delivery of quality residential projects.",
+  "aboutSection": {
+    "title": "About Urmosa",
+    "content": "Urmosa operates across the southern Costa Blanca and into Murcia, understanding the nuances of both markets. Their developments cater to buyers seeking quality construction in established areas, with a focus on creating communities rather than isolated projects."
+  },
+  "specializationSection": {
+    "title": "Development Regions",
+    "regions": ["Costa Blanca South", "Murcia"],
+    "towns": ["Ciudad Quesada", "Rojales", "Torre Pacheco"],
+    "propertyTypes": ["Apartments", "Villas", "Townhouses", "Bungalows"],
+    "content": "Urmosa's developments span the popular inland and coastal communities of Costa Blanca South and Murcia. Their projects in established areas benefit from existing infrastructure and amenities, offering buyers move-in-ready locations with proven appeal to international residents."
+  },
+  "qualitySection": {
+    "title": "Build Quality",
+    "features": [
+      "Quality construction standards",
+      "Private gardens and terraces",
+      "Communal swimming pools",
+      "Landscaped common areas",
+      "Secure parking",
+      "Modern energy systems"
+    ],
+    "content": "Urmosa developments feature solid construction with attention to practical living requirements. Properties are designed for the Spanish climate with appropriate insulation, ventilation, and outdoor living spaces. Communal facilities are well-maintained and designed for long-term enjoyment."
+  },
+  "whyChooseSection": {
+    "title": "Why Choose Urmosa",
+    "reasons": [
+      {
+        "title": "Proven Track Record",
+        "description": "Established developer with history of successful project delivery."
+      },
+      {
+        "title": "Regional Expertise",
+        "description": "Deep knowledge of Costa Blanca South and Murcia markets."
+      },
+      {
+        "title": "Value Focus",
+        "description": "Quality construction at competitive price points."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Where does Urmosa build?",
+      "answer": "Urmosa develops across Costa Blanca South and Murcia, including areas like Ciudad Quesada, Rojales, and Torre Pacheco."
+    },
+    {
+      "question": "What types of properties does Urmosa offer?",
+      "answer": "Their portfolio includes apartments, townhouses, villas, and bungalows - offering options across different budgets and lifestyle requirements."
+    },
+    {
+      "question": "Are Urmosa developments in established areas?",
+      "answer": "Yes, they typically build in established communities with existing amenities, infrastructure, and international resident populations."
+    }
+  ],
+  "conclusion": "Urmosa offers reliable new build options for buyers seeking quality property in Costa Blanca South and Murcia. Their established presence and consistent delivery make them a solid choice for international buyers.",
+  "stats": {
+    "propertyCount": 10,
+    "developmentCount": 3,
+    "regions": ["Costa Blanca South", "Murcia"]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Urmosa",
+    "description": "Property developer in Costa Blanca South and Murcia, Spain.",
+    "areaServed": ["Ciudad Quesada", "Rojales", "Torre Pacheco", "Costa Blanca South", "Murcia"]
+  }
+}

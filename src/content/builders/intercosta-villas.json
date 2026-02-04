@@ -1,0 +1,76 @@
+{
+  "name": "Intercosta Villas",
+  "slug": "intercosta-villas",
+  "metaTitle": "Intercosta Villas | New Build Homes Torrevieja Costa Blanca",
+  "metaDescription": "Browse 10 new build properties by Intercosta Villas in 3 developments. Quality apartments and villas in Torrevieja Centro and Playa del Cura.",
+  "heroHeadline": "Intercosta Villas - Torrevieja Property Specialists",
+  "heroIntro": "Intercosta Villas has established a strong presence in Torrevieja with 10 properties across 3 developments. Their focus on central Torrevieja and the popular Playa del Cura area offers buyers prime positions in one of Costa Blanca South's most vibrant towns.",
+  "aboutSection": {
+    "title": "About Intercosta Villas",
+    "content": "Intercosta Villas concentrates on Torrevieja, understanding the unique appeal of this bustling coastal town. Their developments in the Centro and Playa del Cura neighborhoods offer buyers the convenience of town-center living with beach access - the combination that makes Torrevieja so popular with international residents."
+  },
+  "specializationSection": {
+    "title": "Torrevieja Focus",
+    "regions": ["Costa Blanca South"],
+    "towns": ["Torrevieja", "Playa del Cura"],
+    "propertyTypes": ["Apartments", "Penthouses", "Townhouses"],
+    "content": "Intercosta Villas specializes in Torrevieja's most sought-after zones. Centro developments offer walking-distance access to shops, restaurants, and the famous Friday market. Playa del Cura properties sit near one of Torrevieja's best beaches, with its promenade cafes and water sports facilities."
+  },
+  "qualitySection": {
+    "title": "Quality Standards",
+    "features": [
+      "Central locations",
+      "Beach proximity",
+      "Modern interiors",
+      "Communal pools",
+      "Rooftop solariums",
+      "Secure parking",
+      "Storage rooms"
+    ],
+    "content": "Intercosta Villas developments combine location convenience with quality construction. Properties feature modern layouts, quality kitchens and bathrooms, and outdoor spaces designed for the Mediterranean lifestyle. Communal areas typically include swimming pools and landscaped gardens."
+  },
+  "whyChooseSection": {
+    "title": "Why Choose Intercosta Villas",
+    "reasons": [
+      {
+        "title": "Prime Torrevieja Locations",
+        "description": "Developments in Centro and Playa del Cura - the best addresses in town."
+      },
+      {
+        "title": "Walk-to-Everything",
+        "description": "Properties within walking distance of beaches, shops, and amenities."
+      },
+      {
+        "title": "Rental Appeal",
+        "description": "Central locations attract year-round rental demand."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How far are Intercosta Villas properties from the beach?",
+      "answer": "Playa del Cura developments are typically 5-10 minutes walk from the beach. Centro properties are slightly further but still within easy reach."
+    },
+    {
+      "question": "What amenities are nearby?",
+      "answer": "Torrevieja Centro offers supermarkets, restaurants, medical facilities, and the famous Friday market. Playa del Cura has beachfront bars, restaurants, and water sports."
+    },
+    {
+      "question": "Is Torrevieja good for year-round living?",
+      "answer": "Yes, Torrevieja has a large permanent international community with excellent infrastructure, healthcare, and year-round amenities."
+    }
+  ],
+  "conclusion": "Intercosta Villas offers the ideal choice for buyers wanting new build property in the heart of Torrevieja. Their central and beachside developments provide the convenience and lifestyle that makes this town so popular.",
+  "stats": {
+    "propertyCount": 10,
+    "developmentCount": 3,
+    "regions": ["Costa Blanca South"]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Intercosta Villas",
+    "description": "Property developer specializing in Torrevieja, Costa Blanca South, Spain.",
+    "areaServed": ["Torrevieja", "Playa del Cura", "Costa Blanca South"]
+  }
+}

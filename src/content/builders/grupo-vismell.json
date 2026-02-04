@@ -1,0 +1,78 @@
+{
+  "name": "Grupo Vismell",
+  "slug": "grupo-vismell",
+  "metaTitle": "Grupo Vismell | Golf Property Developer Costa Blanca South",
+  "metaDescription": "Discover 12 new build golf properties by Grupo Vismell in 3 developments. Specialist in La Serena Golf resort homes, villas and apartments in Murcia.",
+  "heroHeadline": "Grupo Vismell - Golf Resort Property Specialists",
+  "heroIntro": "Grupo Vismell has established itself as a specialist golf resort developer, with 12 properties across 3 developments concentrated in the prestigious La Serena Golf area. For buyers seeking new build homes with direct access to championship golf, Grupo Vismell offers purpose-built resort living.",
+  "aboutSection": {
+    "title": "About Grupo Vismell",
+    "content": "Grupo Vismell focuses exclusively on golf resort developments, with particular expertise in the La Serena Golf resort. This specialization means they understand the specific requirements of golf property buyers - from course proximity to community amenities. Their developments are designed to complement the golf lifestyle while providing year-round residential appeal."
+  },
+  "specializationSection": {
+    "title": "Golf Resort Expertise",
+    "regions": ["Murcia", "Costa Calida"],
+    "towns": ["La Serena Golf", "Los Alcazares"],
+    "propertyTypes": ["Golf Villas", "Apartments", "Townhouses"],
+    "golfSpecialist": true,
+    "content": "Grupo Vismell's developments at La Serena Golf offer frontline and second-line golf properties with views across manicured fairways. The resort features an 18-hole championship course designed by Dave Thomas, along with extensive practice facilities. Properties range from apartments to detached villas, all designed with the golfer's lifestyle in mind."
+  },
+  "qualitySection": {
+    "title": "Golf Property Features",
+    "features": [
+      "Golf course views",
+      "Private pools (villas)",
+      "Spacious terraces",
+      "Golf buggy parking",
+      "Resort clubhouse access",
+      "Landscaped gardens",
+      "Underground parking"
+    ],
+    "content": "Properties by Grupo Vismell are designed specifically for golf resort living. Villas typically feature private pools and gardens, while apartments offer generous terraces with course views. All residents benefit from resort amenities including the clubhouse, restaurant, and practice facilities."
+  },
+  "whyChooseSection": {
+    "title": "Why Choose Grupo Vismell",
+    "reasons": [
+      {
+        "title": "Golf Specialists",
+        "description": "Dedicated focus on golf resort properties with deep understanding of buyer needs."
+      },
+      {
+        "title": "La Serena Golf Location",
+        "description": "Premium position in one of Murcia's finest golf resorts."
+      },
+      {
+        "title": "Investment Potential",
+        "description": "Golf properties offer strong rental appeal for golf tourism market."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What golf course is near Grupo Vismell properties?",
+      "answer": "All Grupo Vismell developments are located within La Serena Golf resort, featuring an 18-hole Dave Thomas-designed championship course."
+    },
+    {
+      "question": "Can I play golf year-round at La Serena?",
+      "answer": "Yes, the Murcia climate allows for year-round golf with over 300 days of sunshine annually."
+    },
+    {
+      "question": "Are Grupo Vismell properties good for rental income?",
+      "answer": "Golf resort properties have strong rental appeal, particularly for golf tourism packages and winter sun seekers."
+    }
+  ],
+  "conclusion": "Grupo Vismell offers the ideal choice for golf enthusiasts seeking new build property in Spain. Their La Serena Golf developments combine quality construction with an unbeatable location for those who want to live and breathe golf.",
+  "stats": {
+    "propertyCount": 12,
+    "developmentCount": 3,
+    "regions": ["Murcia", "Costa Calida"],
+    "isGolfSpecialist": true
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Grupo Vismell",
+    "description": "Golf resort property developer specializing in La Serena Golf, Murcia, Spain.",
+    "areaServed": ["La Serena Golf", "Los Alcazares", "Murcia"]
+  }
+}

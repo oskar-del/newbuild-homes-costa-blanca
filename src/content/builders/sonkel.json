@@ -1,0 +1,75 @@
+{
+  "name": "Sonkel",
+  "slug": "sonkel",
+  "metaTitle": "Sonkel Developer | New Build Homes Costa Blanca North",
+  "metaDescription": "Explore 15 new build properties by Sonkel in 4 developments. Modern apartments and villas in Muchavista, El Campello, Ciudad Deportiva & Alfaz del Pi.",
+  "heroHeadline": "Sonkel - Premium Costa Blanca North Developments",
+  "heroIntro": "Sonkel has positioned itself as a leading developer in the Costa Blanca North, with 15 properties across 4 thoughtfully designed developments. Their focus on established residential areas like Muchavista, Ciudad Deportiva, and Alfaz del Pi demonstrates a commitment to quality locations with proven appeal.",
+  "aboutSection": {
+    "title": "About Sonkel",
+    "content": "Sonkel operates in some of the Costa Blanca's most desirable northern municipalities. Their developments in Muchavista benefit from proximity to El Campello's excellent beaches and amenities, while projects in Ciudad Deportiva offer easy access to Alicante city. This strategic positioning appeals to buyers seeking the best of both coastal living and urban convenience."
+  },
+  "specializationSection": {
+    "title": "Development Areas",
+    "regions": ["Costa Blanca North"],
+    "towns": ["Muchavista", "El Campello", "Ciudad Deportiva", "Alfaz del Pi"],
+    "propertyTypes": ["Apartments", "Penthouses", "Townhouses"],
+    "content": "Sonkel concentrates on the northern Costa Blanca corridor between Alicante and Benidorm. Muchavista, their primary focus area, offers a perfect blend of beach lifestyle and residential calm, with one of the coast's finest promenades. Their Alfaz del Pi developments tap into the popularity of this inland town with its established international community."
+  },
+  "qualitySection": {
+    "title": "Quality Standards",
+    "features": [
+      "Modern Mediterranean architecture",
+      "High-specification kitchens",
+      "Spacious terraces and balconies",
+      "Community swimming pools",
+      "Landscaped communal areas",
+      "Underground parking"
+    ],
+    "content": "Sonkel developments feature contemporary design with quality materials and finishes. Properties are designed to maximize natural light and outdoor living space, with many offering sea views or mountain vistas depending on location."
+  },
+  "whyChooseSection": {
+    "title": "Why Choose Sonkel",
+    "reasons": [
+      {
+        "title": "Prime Northern Locations",
+        "description": "Developments in established, sought-after areas of Costa Blanca North."
+      },
+      {
+        "title": "Beach Proximity",
+        "description": "Many properties within walking distance of award-winning beaches."
+      },
+      {
+        "title": "Transport Links",
+        "description": "Easy access to Alicante airport and city amenities."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Where are Sonkel developments located?",
+      "answer": "Sonkel builds in Muchavista (El Campello), Ciudad Deportiva, and Alfaz del Pi - all prime locations on the Costa Blanca North."
+    },
+    {
+      "question": "How far are Sonkel properties from the beach?",
+      "answer": "Their Muchavista developments are typically within 5-10 minutes walk of the beach and seafront promenade."
+    },
+    {
+      "question": "What is the international community like in Sonkel areas?",
+      "answer": "Both Muchavista and Alfaz del Pi have established international communities with English-speaking services, shops, and social groups."
+    }
+  ],
+  "conclusion": "For buyers seeking new build property in the Costa Blanca North, Sonkel offers quality developments in prime locations. Their focus on Muchavista and surrounding areas provides excellent options for those wanting beach access with good connections to Alicante.",
+  "stats": {
+    "propertyCount": 15,
+    "developmentCount": 4,
+    "regions": ["Costa Blanca North"]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sonkel",
+    "description": "Property developer specializing in new build homes on the Costa Blanca North, Spain.",
+    "areaServed": ["Muchavista", "El Campello", "Ciudad Deportiva", "Alfaz del Pi", "Costa Blanca North"]
+  }
+}

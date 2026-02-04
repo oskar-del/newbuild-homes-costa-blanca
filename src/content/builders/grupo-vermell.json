@@ -1,0 +1,78 @@
+{
+  "name": "Grupo Vermell",
+  "slug": "grupo-vermell",
+  "metaTitle": "Grupo Vermell | Golf Resort Developer Serena Golf Murcia",
+  "metaDescription": "Discover 10 golf resort properties by Grupo Vermell in 2 developments at Serena Golf. Specialist in frontline golf villas and apartments in Murcia.",
+  "heroHeadline": "Grupo Vermell - Serena Golf Resort Specialists",
+  "heroIntro": "Grupo Vermell focuses exclusively on golf resort living at Serena Golf, one of Murcia's premier golfing destinations. With 10 properties across 2 developments, they offer specialized expertise in creating homes designed around the golf lifestyle.",
+  "aboutSection": {
+    "title": "About Grupo Vermell",
+    "content": "Grupo Vermell has carved out a niche as specialists in Serena Golf resort properties. Their concentrated focus means deep understanding of what golf property buyers want - from course proximity and views to practical features like buggy storage and easy access to the clubhouse."
+  },
+  "specializationSection": {
+    "title": "Golf Resort Expertise",
+    "regions": ["Murcia", "Costa Calida"],
+    "towns": ["Serena Golf", "Los Alcazares"],
+    "propertyTypes": ["Golf Villas", "Apartments", "Townhouses"],
+    "golfSpecialist": true,
+    "content": "Grupo Vermell's developments sit within Serena Golf resort, offering frontline and fairway properties with direct course access. The resort features an 18-hole championship course in excellent condition year-round, plus extensive practice facilities, pro shop, and clubhouse restaurant."
+  },
+  "qualitySection": {
+    "title": "Golf Property Features",
+    "features": [
+      "Frontline golf positions",
+      "Course and lake views",
+      "Private pools (villas)",
+      "Covered terraces",
+      "Golf buggy parking",
+      "Resort amenity access",
+      "Landscaped gardens"
+    ],
+    "content": "Grupo Vermell properties maximize their golf resort setting. Expect properties positioned for optimal course views, with outdoor spaces designed for the Spanish climate. Villas include private pools and gardens, while apartments offer generous terraces overlooking the fairways."
+  },
+  "whyChooseSection": {
+    "title": "Why Choose Grupo Vermell",
+    "reasons": [
+      {
+        "title": "Golf Specialists",
+        "description": "Exclusive focus on Serena Golf means unmatched resort expertise."
+      },
+      {
+        "title": "Year-Round Golf",
+        "description": "Murcia's climate allows golf 365 days a year."
+      },
+      {
+        "title": "Rental Potential",
+        "description": "Golf resort properties attract strong rental demand from golf tourists."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What golf facilities are at Serena Golf?",
+      "answer": "Serena Golf features an 18-hole championship course, driving range, practice greens, pro shop, and clubhouse with restaurant and bar."
+    },
+    {
+      "question": "How far is Serena Golf from the beach?",
+      "answer": "The resort is approximately 15 minutes drive from the Mar Menor beaches and Los Alcazares."
+    },
+    {
+      "question": "Are Grupo Vermell properties a good investment?",
+      "answer": "Golf resort properties at Serena Golf benefit from strong rental demand, particularly from golf groups and winter sun seekers."
+    }
+  ],
+  "conclusion": "Grupo Vermell offers the perfect entry point for golf enthusiasts seeking property at Serena Golf. Their specialist knowledge and focused portfolio ensure buyers get exactly what they need for the golf lifestyle.",
+  "stats": {
+    "propertyCount": 10,
+    "developmentCount": 2,
+    "regions": ["Murcia", "Costa Calida"],
+    "isGolfSpecialist": true
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Grupo Vermell",
+    "description": "Golf resort property developer specializing in Serena Golf, Murcia, Spain.",
+    "areaServed": ["Serena Golf", "Los Alcazares", "Murcia"]
+  }
+}

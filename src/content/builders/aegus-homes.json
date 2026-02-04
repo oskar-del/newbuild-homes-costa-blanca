@@ -1,0 +1,75 @@
+{
+  "name": "Aegus Homes",
+  "slug": "aegus-homes",
+  "metaTitle": "Aegus Homes | New Build Properties Almeria & Costa Blanca",
+  "metaDescription": "Browse 19 new build properties by Aegus Homes across 5 developments. Quality apartments and villas in Almerimar, Playa de la Almadrava, and San Agustin.",
+  "heroHeadline": "Aegus Homes - Quality Developments in Almeria & Costa Blanca",
+  "heroIntro": "Aegus Homes has established itself as a significant developer in southeastern Spain, with a focused portfolio of 5 developments featuring 19 properties. Their projects span from the golf resort community of Almerimar to the beach areas of Playa de la Almadrava, offering buyers diverse options in prime locations.",
+  "aboutSection": {
+    "title": "About Aegus Homes",
+    "content": "Aegus Homes concentrates their development activity in carefully selected locations across Almeria and the northern Costa Blanca. Their approach emphasizes quality over quantity, with each development designed to maximize the appeal of its specific location - whether that's proximity to championship golf courses or Mediterranean beaches."
+  },
+  "specializationSection": {
+    "title": "Development Focus",
+    "regions": ["Costa de Almeria", "Costa Blanca North"],
+    "towns": ["Almerimar", "Playa de la Almadrava", "San Agustin", "Alfaz del Pi"],
+    "propertyTypes": ["Apartments", "Villas", "Townhouses"],
+    "content": "Aegus Homes has carved out a niche in the Almerimar area, known for its world-class golf facilities and marina. Their developments here cater to golf enthusiasts and sailing aficionados alike. Additionally, their projects near Playa de la Almadrava tap into demand for beachfront living in less crowded areas of the coast."
+  },
+  "qualitySection": {
+    "title": "Build Quality",
+    "features": [
+      "Contemporary architectural design",
+      "High-quality interior finishes",
+      "Private terraces and gardens",
+      "Communal swimming pools",
+      "Secure parking facilities",
+      "Energy-efficient systems"
+    ],
+    "content": "Aegus Homes developments are characterized by modern design principles and attention to detail. Properties typically feature open-plan living spaces, quality kitchen installations, and outdoor areas designed to make the most of the Spanish climate."
+  },
+  "whyChooseSection": {
+    "title": "Why Choose Aegus Homes",
+    "reasons": [
+      {
+        "title": "Strategic Locations",
+        "description": "Developments positioned near golf courses, marinas, and beaches."
+      },
+      {
+        "title": "Quality Focus",
+        "description": "Concentrated portfolio allows for attention to detail in each project."
+      },
+      {
+        "title": "Diverse Options",
+        "description": "Properties ranging from apartments to villas across multiple price points."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Where does Aegus Homes build?",
+      "answer": "Aegus Homes focuses on Almerimar (Costa de Almeria), Playa de la Almadrava, and San Agustin, with properties also available near Alfaz del Pi on the Costa Blanca."
+    },
+    {
+      "question": "What amenities are included in Aegus Homes developments?",
+      "answer": "Most developments feature communal swimming pools, landscaped gardens, and secure parking. Individual properties include private terraces or gardens."
+    },
+    {
+      "question": "Are Aegus Homes properties suitable for golf lovers?",
+      "answer": "Yes, their Almerimar developments are ideally located for golf enthusiasts, with direct access to championship courses in the area."
+    }
+  ],
+  "conclusion": "Aegus Homes offers a curated selection of new build properties in sought-after locations across Almeria and Costa Blanca. Their focus on quality and location makes them an excellent choice for buyers seeking Spanish property in established resort areas.",
+  "stats": {
+    "propertyCount": 19,
+    "developmentCount": 5,
+    "regions": ["Costa de Almeria", "Costa Blanca North"]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Aegus Homes",
+    "description": "Property developer specializing in new build homes in Almerimar and Costa Blanca regions of Spain.",
+    "areaServed": ["Almerimar", "Playa de la Almadrava", "San Agustin", "Costa de Almeria"]
+  }
+}

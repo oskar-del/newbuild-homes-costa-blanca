@@ -1,0 +1,76 @@
+{
+  "name": "VAPI",
+  "slug": "vapi",
+  "metaTitle": "VAPI Developer | Luxury New Build Homes Costa Blanca North",
+  "metaDescription": "Explore 12 luxury properties by VAPI across 7 developments. Premium villas and apartments in Cumbre del Sol, Benitachell, and Sierra de Altea.",
+  "heroHeadline": "VAPI - Premium Costa Blanca North Developer",
+  "heroIntro": "VAPI has built a reputation for quality developments in some of Costa Blanca North's most prestigious locations. With 12 properties spread across 7 developments in areas like Cumbre del Sol and Sierra de Altea, VAPI caters to buyers seeking elevated living in every sense.",
+  "aboutSection": {
+    "title": "About VAPI",
+    "content": "VAPI specializes in premium residential developments in the hillside and coastal communities north of Benidorm. Their projects in Cumbre del Sol and Sierra de Altea take advantage of spectacular elevated positions, offering properties with panoramic sea views and the exclusivity that comes with these sought-after locations."
+  },
+  "specializationSection": {
+    "title": "Premium Locations",
+    "regions": ["Costa Blanca North", "Marina Alta"],
+    "towns": ["Cumbre del Sol", "Benitachell", "Altea", "Sierra de Altea"],
+    "propertyTypes": ["Luxury Villas", "Premium Apartments", "Penthouses"],
+    "content": "VAPI's developments are concentrated in the elevated residential areas between Javea and Altea. Cumbre del Sol, their primary focus, is a prestigious urbanization known for dramatic cliff-top settings and access to secluded coves. Sierra de Altea offers similar appeal with mountain backdrops and sea views."
+  },
+  "qualitySection": {
+    "title": "Luxury Specifications",
+    "features": [
+      "Infinity pools with sea views",
+      "Floor-to-ceiling glazing",
+      "Designer kitchens",
+      "Home automation systems",
+      "Premium outdoor living spaces",
+      "High-end finishes throughout",
+      "Underfloor heating"
+    ],
+    "content": "VAPI properties are finished to exceptional standards. Expect contemporary architecture designed to frame the views, with expansive glazing, infinity pools, and outdoor entertaining areas. Interior specifications typically include designer kitchens, premium bathrooms, and smart home technology."
+  },
+  "whyChooseSection": {
+    "title": "Why Choose VAPI",
+    "reasons": [
+      {
+        "title": "Prestige Locations",
+        "description": "Exclusive developments in Cumbre del Sol and Sierra de Altea."
+      },
+      {
+        "title": "Sea View Focus",
+        "description": "Properties designed to maximize Mediterranean panoramas."
+      },
+      {
+        "title": "Luxury Standards",
+        "description": "Premium specifications and contemporary design throughout."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What makes Cumbre del Sol special?",
+      "answer": "Cumbre del Sol is a prestigious urbanization with cliff-top properties, private cove access, and some of the most spectacular sea views on the Costa Blanca."
+    },
+    {
+      "question": "Are VAPI properties suitable as permanent homes?",
+      "answer": "Yes, their properties are designed for year-round living with quality insulation, heating systems, and full residential specifications."
+    },
+    {
+      "question": "What is the price range for VAPI properties?",
+      "answer": "VAPI focuses on the premium segment, with properties typically positioned in the upper price brackets reflecting their exclusive locations and specifications."
+    }
+  ],
+  "conclusion": "VAPI offers discerning buyers access to some of Costa Blanca North's most exclusive addresses. Their developments in Cumbre del Sol and Sierra de Altea combine spectacular settings with luxury specifications.",
+  "stats": {
+    "propertyCount": 12,
+    "developmentCount": 7,
+    "regions": ["Costa Blanca North", "Marina Alta"]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "VAPI",
+    "description": "Premium property developer in Cumbre del Sol and Costa Blanca North, Spain.",
+    "areaServed": ["Cumbre del Sol", "Benitachell", "Altea", "Sierra de Altea"]
+  }
+}

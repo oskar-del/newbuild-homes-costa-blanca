@@ -1,0 +1,75 @@
+{
+  "name": "Spain Mediterranean Experience",
+  "slug": "spain-mediterranean-experience",
+  "metaTitle": "Spain Mediterranean Experience | New Build Homes Costa Blanca",
+  "metaDescription": "Browse 12 new build properties by Spain Mediterranean Experience in 2 exclusive developments. Quality villas and apartments in Costa Blanca South.",
+  "heroHeadline": "Spain Mediterranean Experience - Boutique Costa Blanca Developments",
+  "heroIntro": "Spain Mediterranean Experience takes a focused approach to property development, concentrating their expertise on 2 carefully selected developments featuring 12 properties. This boutique strategy ensures each project receives the attention to detail that discerning buyers expect.",
+  "aboutSection": {
+    "title": "About Spain Mediterranean Experience",
+    "content": "Spain Mediterranean Experience operates with a quality-over-quantity philosophy in the Costa Blanca property market. Their concentrated portfolio in the Rojales and surrounding areas allows them to maintain high standards across every property, from initial design through to final handover."
+  },
+  "specializationSection": {
+    "title": "Development Focus",
+    "regions": ["Costa Blanca South", "Vega Baja"],
+    "towns": ["Rojales", "Ciudad Quesada"],
+    "propertyTypes": ["Villas", "Apartments", "Townhouses"],
+    "content": "Spain Mediterranean Experience focuses on the Vega Baja region, an area known for its established international community and excellent value. Their developments in Rojales and surrounding zones offer buyers the authentic Spanish experience combined with modern amenities and easy access to beaches, golf courses, and Alicante airport."
+  },
+  "qualitySection": {
+    "title": "Quality & Design",
+    "features": [
+      "Contemporary Mediterranean design",
+      "Private swimming pools",
+      "Landscaped gardens",
+      "Quality interior finishes",
+      "Energy-efficient construction",
+      "Covered terraces"
+    ],
+    "content": "Properties by Spain Mediterranean Experience feature thoughtful design that maximizes indoor-outdoor living. Expect quality kitchens, modern bathrooms, and generous outdoor spaces - all designed for the Mediterranean climate and lifestyle."
+  },
+  "whyChooseSection": {
+    "title": "Why Choose Spain Mediterranean Experience",
+    "reasons": [
+      {
+        "title": "Boutique Approach",
+        "description": "Focused portfolio means dedicated attention to each development and buyer."
+      },
+      {
+        "title": "Value Location",
+        "description": "Vega Baja offers excellent value while maintaining quality of life."
+      },
+      {
+        "title": "Established Community",
+        "description": "Strong international presence with English-speaking services throughout."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Where are Spain Mediterranean Experience properties located?",
+      "answer": "Their developments are concentrated in the Vega Baja region, including Rojales and surrounding areas of Costa Blanca South."
+    },
+    {
+      "question": "What makes Vega Baja a good location?",
+      "answer": "Vega Baja offers excellent value, established international communities, easy airport access, and proximity to both beaches and golf courses."
+    },
+    {
+      "question": "Do Spain Mediterranean Experience properties include pools?",
+      "answer": "Yes, many of their villas feature private pools, while apartment developments include communal pool facilities."
+    }
+  ],
+  "conclusion": "Spain Mediterranean Experience offers a curated selection of new build properties for buyers who appreciate personalized service and quality construction. Their Vega Baja developments represent excellent value in an established, welcoming community.",
+  "stats": {
+    "propertyCount": 12,
+    "developmentCount": 2,
+    "regions": ["Costa Blanca South", "Vega Baja"]
+  },
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Spain Mediterranean Experience",
+    "description": "Boutique property developer in Costa Blanca South, Spain.",
+    "areaServed": ["Rojales", "Vega Baja", "Costa Blanca South"]
+  }
+}
