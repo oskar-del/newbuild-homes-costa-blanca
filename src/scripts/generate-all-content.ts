@@ -19,6 +19,83 @@ import { propertyMapping } from '../data/property-development-mapping';
 const anthropic = new Anthropic();
 const REGENERATE_ALL = process.env.REGENERATE_ALL === 'true';
 
+// Helper to clean and parse JSON from AI responses
+function parseAIJson(text: string): any {
+  // Extract JSON from response - find the outermost braces
+  const jsonMatch = text.match(/\{[\s\S]*\}/);
+  if (!jsonMatch) throw new Error('No JSON found in response');
+
+  let jsonStr = jsonMatch[0];
+
+  // Common fixes for AI-generated JSON
+  // 1. Remove trailing commas before } or ]
+  jsonStr = jsonStr.replace(/,(\s*[}\]])/g, '$1');
+  // 2. Remove comments (// style) - but not inside strings
+  jsonStr = jsonStr.replace(/^\s*\/\/[^\n]*/gm, '');
+  // 3. Fix control characters that break JSON
+  jsonStr = jsonStr.replace(/[\x00-\x1F\x7F]/g, (char) => {
+    // Keep newlines and tabs as escaped versions
+    if (char === '\n') return '\\n';
+    if (char === '\r') return '\\r';
+    if (char === '\t') return '\\t';
+    return ' ';
+  });
+
+  try {
+    return JSON.parse(jsonStr);
+  } catch (e: any) {
+    console.log('   ⚠️  JSON parse error, attempting repair...');
+    console.log(`   ⚠️  Error: ${e.message}`);
+
+    // More aggressive fixes
+    try {
+      // Fix unescaped quotes inside strings (tricky - just replace smart quotes)
+      jsonStr = jsonStr.replace(/[\u201C\u201D]/g, '\\"'); // curly double quotes
+      jsonStr = jsonStr.replace(/[\u2018\u2019]/g, "\\'"); // curly single quotes
+
+      // Try again
+      return JSON.parse(jsonStr);
+    } catch (e2: any) {
+      console.log(`   ⚠️  Second attempt failed: ${e2.message}`);
+
+      // Last resort: try to extract just the valid portion
+      // Find where the error occurs and truncate
+      const posMatch = e2.message.match(/position (\d+)/);
+      if (posMatch) {
+        const errorPos = parseInt(posMatch[1]);
+        console.log(`   ⚠️  Error at position ${errorPos}, attempting truncation...`);
+
+        // Find the last complete property before the error
+        const upToError = jsonStr.substring(0, errorPos);
+        const lastGoodBrace = upToError.lastIndexOf('},');
+        if (lastGoodBrace > 0) {
+          const truncated = jsonStr.substring(0, lastGoodBrace + 1) + '}';
+          try {
+            // Count braces to balance
+            let depth = 0;
+            let balanced = '';
+            for (const char of truncated) {
+              balanced += char;
+              if (char === '{') depth++;
+              if (char === '}') depth--;
+            }
+            // Add closing braces if needed
+            while (depth > 0) {
+              balanced += '}';
+              depth--;
+            }
+            return JSON.parse(balanced);
+          } catch {
+            // Give up
+          }
+        }
+      }
+
+      throw new Error(`Failed to parse JSON: ${e2.message}`);
+    }
+  }
+}
+
 // Parse command line arguments
 const args = process.argv.slice(2);
 const TOWN_FILTER = args.find(a => a.startsWith('--town='))?.split('=')[1]?.toLowerCase() || '';
@@ -288,10 +365,7 @@ Write naturally, avoiding clichés. Focus on specific details about ${property.t
   });
 
   const text = response.content[0].type === 'text' ? response.content[0].text : '';
-  const jsonMatch = text.match(/\{[\s\S]*\}/);
-  if (!jsonMatch) throw new Error('No JSON found in response');
-  
-  return JSON.parse(jsonMatch[0]);
+  return parseAIJson(text);
 }
 
 // Generate area guide content
@@ -352,10 +426,7 @@ Be specific to ${town}. Include real place names, distances, and practical infor
   });
 
   const text = response.content[0].type === 'text' ? response.content[0].text : '';
-  const jsonMatch = text.match(/\{[\s\S]*\}/);
-  if (!jsonMatch) throw new Error('No JSON found in response');
-  
-  return JSON.parse(jsonMatch[0]);
+  return parseAIJson(text);
 }
 
 // Aggregate developer data from property mapping
@@ -472,10 +543,7 @@ Important: We are an AGENCY showcasing their properties, not the developer thems
   });
 
   const text = response.content[0].type === 'text' ? response.content[0].text : '';
-  const jsonMatch = text.match(/\{[\s\S]*\}/);
-  if (!jsonMatch) throw new Error('No JSON found in response');
-
-  return JSON.parse(jsonMatch[0]);
+  return parseAIJson(text);
 }
 
 // Check if content already exists
