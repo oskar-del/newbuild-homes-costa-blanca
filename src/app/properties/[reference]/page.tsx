@@ -20,6 +20,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getPropertyByRef, fetchXMLFeed, toUnifiedFormat } from '@/lib/xml-parser';
 import { generatePropertyContent, PropertyContent } from '@/lib/property-content-generator';
+import { loadAIContent, convertAIToPropertyContent } from '@/lib/ai-content-loader';
 import PropertyPageClient from './PropertyPageClient';
 
 // ====================
@@ -59,7 +60,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   // Convert to unified format for content generator
   const property = toUnifiedFormat(parsedProperty);
-  const content = generatePropertyContent(property as any);
+
+  // TRY AI CONTENT FIRST, fall back to template generator
+  const aiContent = loadAIContent(reference);
+  const content = aiContent
+    ? convertAIToPropertyContent(aiContent)
+    : generatePropertyContent(property as any);
 
   return {
     title: `${content.seoTitle} | New Build Homes Costa Blanca`,
@@ -298,8 +304,19 @@ export default async function PropertyPage({ params }: PageProps) {
   // Convert to unified format for content generator and schemas
   const property = toUnifiedFormat(parsedProperty);
 
-  // Generate all AI content for this property
-  const content = generatePropertyContent(property as any);
+  // TRY AI-GENERATED CONTENT FIRST (from GitHub Action)
+  // Fall back to template generator if no AI content exists
+  const aiContent = loadAIContent(reference);
+  const content = aiContent
+    ? convertAIToPropertyContent(aiContent)
+    : generatePropertyContent(property as any);
+
+  // Log which content source is being used
+  if (aiContent) {
+    console.log(`🤖 Using AI-generated content for ${reference}`);
+  } else {
+    console.log(`📝 Using template content for ${reference}`);
+  }
 
   // Generate JSON-LD schemas
   const productSchema = generateProductSchema(property, content);

@@ -15,6 +15,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { XMLParser } from 'fast-xml-parser';
 import { propertyMapping } from '../data/property-development-mapping';
+import { generatePropertyPrompt, generateBuilderPrompt, generateAreaPrompt, generateDevelopmentPrompt, TOWN_AMENITIES_DATA, TOWN_PRICE_DATA } from './seo-prompts';
 
 const anthropic = new Anthropic();
 const REGENERATE_ALL = process.env.REGENERATE_ALL === 'true';
@@ -155,7 +156,7 @@ async function withRetry<T>(
 // Parse command line arguments
 const args = process.argv.slice(2);
 const TOWN_FILTER = args.find(a => a.startsWith('--town='))?.split('=')[1]?.toLowerCase() || '';
-const TYPE_FILTER = args.find(a => a.startsWith('--type='))?.split('=')[1] || 'all'; // all, developers, areas, properties
+const TYPE_FILTER = args.find(a => a.startsWith('--type='))?.split('=')[1] || 'all'; // all, developers, developments, areas, properties
 const LIMIT = parseInt(args.find(a => a.startsWith('--limit='))?.split('=')[1] || '0') || 0; // 0 = no limit
 const LIST_TOWNS = args.includes('--list-towns');
 
@@ -165,15 +166,22 @@ if (args.includes('--help')) {
 Usage: npx tsx generate-all-content.ts [options]
 
 Options:
-  --town=NAME      Filter properties by town (e.g., --town=torrevieja)
-  --type=TYPE      What to generate: all, developers, areas, properties
+  --town=NAME      Filter by town (e.g., --town=torrevieja)
+  --type=TYPE      What to generate: all, developers, developments, areas, properties
   --limit=N        Limit number of items to generate (0 = no limit)
   --list-towns     Just list towns and property counts, don't generate
   --help           Show this help
 
+Content Types:
+  developers    - Builder/developer company profiles (src/content/builders/)
+  developments  - Development/project pages (src/content/projects/)
+  areas         - Town/area guides (src/content/areas/)
+  properties    - Individual property pages (src/content/developments/)
+
 Examples:
-  npx tsx generate-all-content.ts --town=torrevieja
+  npx tsx generate-all-content.ts --town=torrevieja --type=developments
   npx tsx generate-all-content.ts --type=developers
+  npx tsx generate-all-content.ts --town=torrevieja
   npx tsx generate-all-content.ts --list-towns
 `);
   process.exit(0);
@@ -199,12 +207,13 @@ const FEEDS = {
 
 // Content directories
 const CONTENT_DIR = path.join(process.cwd(), 'src/content');
-const DEVELOPMENTS_DIR = path.join(CONTENT_DIR, 'developments');
+const DEVELOPMENTS_DIR = path.join(CONTENT_DIR, 'developments'); // Individual property AI content
+const PROJECTS_DIR = path.join(CONTENT_DIR, 'projects'); // Development/project pages (middle layer)
 const AREAS_DIR = path.join(CONTENT_DIR, 'areas');
 const BUILDERS_DIR = path.join(CONTENT_DIR, 'builders');
 
 // Ensure directories exist
-[CONTENT_DIR, DEVELOPMENTS_DIR, AREAS_DIR, BUILDERS_DIR].forEach(dir => {
+[CONTENT_DIR, DEVELOPMENTS_DIR, PROJECTS_DIR, AREAS_DIR, BUILDERS_DIR].forEach(dir => {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
 
@@ -230,6 +239,7 @@ interface Property {
   bedrooms: number;
   bathrooms: number;
   builtArea: number;
+  plotSize?: number;
   plotArea: number;
   price: number;
   town: string;
@@ -241,6 +251,7 @@ interface Property {
   views: string;
   orientation: string;
   source: string;
+  developer?: string; // Builder/developer name if known
 }
 
 // Fetch and parse XML feed
@@ -375,50 +386,30 @@ function extractFeatures(p: any): string[] {
   return [];
 }
 
-// Generate property content using Claude
+// Generate property content using Claude - ULTIMATE SEO VERSION
 async function generatePropertyContent(property: Property): Promise<any> {
-  const prompt = `Generate SEO-optimized content for this Costa Blanca property listing.
-
-Property Details:
-- Reference: ${property.reference}
-- Type: ${property.type}
-- Location: ${property.zone ? property.zone + ', ' : ''}${property.town}, ${property.province}
-- Bedrooms: ${property.bedrooms}
-- Bathrooms: ${property.bathrooms}
-- Built Area: ${property.builtArea}m²
-- Plot Area: ${property.plotArea}m²
-- Pool: ${property.pool ? 'Yes' : 'No'}
-- Views: ${property.views || 'Not specified'}
-- Original Description: ${property.description.substring(0, 500)}
-
-Generate a JSON response with:
-{
-  "metaTitle": "SEO title under 60 chars, include location and key feature",
-  "metaDescription": "Compelling description under 155 chars",
-  "heroIntro": "2-3 paragraph engaging introduction (300-400 words) about this specific property and its location",
-  "locationSection": {
-    "intro": "1-2 paragraphs about living in this area",
-    "highlights": ["5-6 specific nearby attractions/amenities with distances"]
-  },
-  "propertyFeatures": {
-    "intro": "Brief intro to the property's standout features",
-    "features": ["8-10 key features based on the specs"]
-  },
-  "investmentSection": "1-2 paragraphs about rental/investment potential in this area",
-  "whyBuySection": ["5-6 compelling reasons to buy this property"],
-  "faqs": [
-    {"question": "Relevant FAQ about this property/area", "answer": "Helpful answer"},
-    // 5-6 total FAQs
-  ]
-}
-
-Write naturally, avoiding clichés. Focus on specific details about ${property.town}. Make it genuinely helpful for buyers.
-
-IMPORTANT: Return ONLY the JSON object. No markdown, no code blocks, no explanation.`;
+  // Use the new SEO-optimized prompt generator
+  const prompt = generatePropertyPrompt({
+    reference: property.reference,
+    type: property.type,
+    town: property.town,
+    zone: property.zone,
+    province: property.province,
+    bedrooms: property.bedrooms,
+    bathrooms: property.bathrooms,
+    builtArea: property.builtArea,
+    plotArea: property.plotArea,
+    price: property.price,
+    pool: property.pool,
+    views: property.views,
+    description: property.description?.substring(0, 300),
+    images: property.images || [],
+    developer: property.developer,
+  });
 
   const response = await anthropic.messages.create({
     model: AI_MODEL,
-    max_tokens: 2000,
+    max_tokens: 3500, // Increased for more comprehensive content
     system: JSON_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: prompt }],
   });
@@ -427,62 +418,34 @@ IMPORTANT: Return ONLY the JSON object. No markdown, no code blocks, no explanat
   return parseAIJson(text);
 }
 
-// Generate area guide content
+// Generate area guide content - NOW USING SEO PROMPTS
 async function generateAreaContent(town: string, properties: Property[]): Promise<any> {
-  const propertyTypes = [...new Set(properties.map(p => p.type))].join(', ');
+  const propertyTypes = [...new Set(properties.map(p => p.type))].filter(Boolean);
   const priceRange = properties.filter(p => p.price > 0);
   const minPrice = priceRange.length ? Math.min(...priceRange.map(p => p.price)) : 0;
   const maxPrice = priceRange.length ? Math.max(...priceRange.map(p => p.price)) : 0;
-  
-  const prompt = `Generate a comprehensive SEO area guide for ${town}, Costa Blanca, Spain.
 
-Current market data:
-- ${properties.length} new build properties available
-- Property types: ${propertyTypes}
-- Price range: €${minPrice.toLocaleString()} - €${maxPrice.toLocaleString()}
+  // Detect area characteristics
+  const golfAreas = ['algorfa', 'villamartin', 'campoamor', 'las colinas', 'vistabella', 'la finca', 'la marquesa'];
+  const coastalTowns = ['torrevieja', 'guardamar', 'benidorm', 'calpe', 'javea', 'moraira', 'altea', 'denia', 'orihuela costa'];
+  const townLower = town.toLowerCase();
+  const isGolfArea = golfAreas.some(g => townLower.includes(g));
+  const isCoastal = coastalTowns.some(c => townLower.includes(c));
 
-Generate a JSON response with:
-{
-  "metaTitle": "Living in ${town}: Complete Guide to Costa Blanca | under 60 chars",
-  "metaDescription": "Compelling description under 155 chars about living/buying in ${town}",
-  "heroIntro": "2-3 paragraph engaging introduction (250-300 words) about ${town}",
-  "climate": "Paragraph about the climate and weather",
-  "lifestyle": "2 paragraphs about daily life, expat community, atmosphere",
-  "amenities": {
-    "healthcare": "Healthcare facilities info",
-    "shopping": "Shopping options",
-    "dining": "Restaurant and food scene",
-    "sports": "Sports and recreation including golf, beaches"
-  },
-  "transport": {
-    "airports": "Nearest airports with distances",
-    "driving": "Road access and connections",
-    "public": "Public transport options"
-  },
-  "propertyMarket": {
-    "overview": "Current market conditions",
-    "priceRange": "€${minPrice.toLocaleString()} - €${maxPrice.toLocaleString()}",
-    "popularTypes": "${propertyTypes}",
-    "investment": "Investment and rental potential"
-  },
-  "neighborhoods": ["3-4 popular neighborhoods/urbanizations in ${town}"],
-  "prosAndCons": {
-    "pros": ["5 advantages of living in ${town}"],
-    "cons": ["2-3 honest considerations/challenges"]
-  },
-  "faqs": [
-    {"question": "FAQ about living in ${town}", "answer": "Helpful answer"},
-    // 6-8 total FAQs
-  ]
-}
-
-Be specific to ${town}. Include real place names, distances, and practical information buyers need.
-
-IMPORTANT: Return ONLY the JSON object. No markdown, no code blocks, no explanation.`;
+  // Use the SEO-optimized prompt from seo-prompts.ts
+  const prompt = generateAreaPrompt({
+    name: town,
+    slug: slugify(town),
+    propertyCount: properties.length,
+    priceRange: { min: minPrice, max: maxPrice },
+    propertyTypes: propertyTypes.length > 0 ? propertyTypes : ['Apartments', 'Villas', 'Townhouses'],
+    isGolfArea,
+    isCoastal,
+  });
 
   const response = await anthropic.messages.create({
     model: AI_MODEL,
-    max_tokens: 3000,
+    max_tokens: 3500, // Increased for comprehensive area content
     system: JSON_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: prompt }],
   });
@@ -532,7 +495,7 @@ function aggregateDeveloperData() {
   })).sort((a, b) => b.propertyCount - a.propertyCount);
 }
 
-// Generate developer/builder content
+// Generate developer/builder content - NOW USING SEO PROMPTS
 async function generateDeveloperContent(dev: {
   name: string;
   slug: string;
@@ -542,73 +505,167 @@ async function generateDeveloperContent(dev: {
   propertyCount: number;
   isGolfSpecialist: boolean;
 }): Promise<any> {
-  const golfNote = dev.isGolfSpecialist ? 'This is a GOLF SPECIALIST developer.' : '';
-
-  const prompt = `Generate SEO content for a property developer page. We are a real estate agency showcasing properties by this developer.
-
-Developer: ${dev.name}
-Properties Available: ${dev.propertyCount}
-Developments: ${dev.developments.join(', ')}
-Zones/Areas: ${dev.zones.join(', ')}
-${golfNote}
-
-Generate JSON matching this EXACT structure (use Contrimar template style):
-{
-  "name": "${dev.name}",
-  "slug": "${dev.slug}",
-  "metaTitle": "${dev.name} | New Build Homes Costa Blanca - under 60 chars",
-  "metaDescription": "Compelling description under 155 chars about ${dev.name} properties",
-  "heroHeadline": "${dev.name} - [Specialty/Location] tagline",
-  "heroIntro": "2 paragraphs (150-200 words) introducing ${dev.name} and their developments. Mention property count and areas.",
-  "aboutSection": {
-    "title": "About ${dev.name}",
-    "content": "2 paragraphs about the developer's focus areas and what makes them notable"
-  },
-  "specializationSection": {
-    "title": "Development Focus or similar",
-    "regions": ["Costa Blanca South", "etc based on zones"],
-    "towns": ["extract from zones"],
-    "propertyTypes": ["Villas", "Apartments", "Townhouses"],
-    "content": "1-2 paragraphs about their specialization"
-  },
-  "qualitySection": {
-    "title": "Quality & Specifications",
-    "features": ["6-8 typical quality features"],
-    "content": "Paragraph about build quality"
-  },
-  "whyChooseSection": {
-    "title": "Why Choose ${dev.name}",
-    "reasons": [
-      {"title": "Short title", "description": "One sentence explanation"},
-      // 3 total reasons
-    ]
-  },
-  "faqs": [
-    {"question": "Where are ${dev.name} properties located?", "answer": "Based on the zones/developments"},
-    {"question": "Another relevant FAQ", "answer": "Helpful answer"},
-    {"question": "Third FAQ", "answer": "Answer"}
-  ],
-  "conclusion": "Short closing paragraph encouraging buyers to browse listings",
-  "stats": {
-    "propertyCount": ${dev.propertyCount},
-    "developmentCount": ${dev.developmentCount},
-    "regions": ["list regions"]
-  }
-}
-
-Important: We are an AGENCY showcasing their properties, not the developer themselves. Write naturally, no clichés.
-
-IMPORTANT: Return ONLY the JSON object. No markdown, no code blocks, no explanation.`;
+  // Use the SEO-optimized prompt from seo-prompts.ts
+  const prompt = generateBuilderPrompt({
+    name: dev.name,
+    slug: dev.slug,
+    propertyCount: dev.propertyCount,
+    developments: dev.developments,
+    zones: dev.zones,
+    isGolfSpecialist: dev.isGolfSpecialist,
+  });
 
   const response = await anthropic.messages.create({
     model: AI_MODEL,
-    max_tokens: 2500,
+    max_tokens: 3000, // Increased for more comprehensive content
     system: JSON_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: prompt }],
   });
 
   const text = response.content[0].type === 'text' ? response.content[0].text : '';
   return parseAIJson(text);
+}
+
+// Aggregate development data from property mapping
+// Groups properties by developer + development name
+function aggregateDevelopmentData(allProperties: Property[]) {
+  const developments: Record<string, {
+    name: string;
+    developer: string;
+    developerSlug: string;
+    zone: string;
+    town: string;
+    province: string;
+    propertyRefs: string[];
+    prices: number[];
+    bedrooms: number[];
+    bathrooms: number[];
+    builtAreas: number[];
+    plotAreas: number[];
+    propertyTypes: string[];
+    deliveryDate?: string;
+    hasPool: boolean;
+    images: string[];
+  }> = {};
+
+  // First pass: group by development from property mapping
+  for (const [ref, info] of Object.entries(propertyMapping)) {
+    const devKey = `${info.developer}__${info.development}`;
+
+    // Find matching property in allProperties
+    const property = allProperties.find(p => p.reference === ref);
+
+    if (!developments[devKey]) {
+      developments[devKey] = {
+        name: info.development,
+        developer: info.developer,
+        developerSlug: slugify(info.developer),
+        zone: info.zone || '',
+        town: property?.town || '',
+        province: property?.province || 'Alicante',
+        propertyRefs: [],
+        prices: [],
+        bedrooms: [],
+        bathrooms: [],
+        builtAreas: [],
+        plotAreas: [],
+        propertyTypes: [],
+        deliveryDate: info.deliveryDate,
+        hasPool: false,
+        images: [],
+      };
+    }
+
+    developments[devKey].propertyRefs.push(ref);
+
+    if (property) {
+      if (property.price > 0) developments[devKey].prices.push(property.price);
+      if (property.bedrooms > 0) developments[devKey].bedrooms.push(property.bedrooms);
+      if (property.bathrooms > 0) developments[devKey].bathrooms.push(property.bathrooms);
+      if (property.builtArea > 0) developments[devKey].builtAreas.push(property.builtArea);
+      if (property.plotArea > 0) developments[devKey].plotAreas.push(property.plotArea);
+      if (property.type) developments[devKey].propertyTypes.push(property.type);
+      if (property.pool) developments[devKey].hasPool = true;
+      if (property.images?.length) developments[devKey].images.push(...property.images.slice(0, 3));
+      if (!developments[devKey].town && property.town) developments[devKey].town = property.town;
+    }
+  }
+
+  // Convert to array and compute ranges
+  return Object.entries(developments).map(([key, dev]) => ({
+    name: dev.name,
+    slug: slugify(dev.name),
+    developer: dev.developer,
+    developerSlug: dev.developerSlug,
+    town: dev.town || 'Costa Blanca',
+    province: dev.province,
+    zone: dev.zone,
+    propertyCount: dev.propertyRefs.length,
+    priceFrom: dev.prices.length > 0 ? Math.min(...dev.prices) : 0,
+    bedroomRange: {
+      min: dev.bedrooms.length > 0 ? Math.min(...dev.bedrooms) : 2,
+      max: dev.bedrooms.length > 0 ? Math.max(...dev.bedrooms) : 4,
+    },
+    bathroomRange: {
+      min: dev.bathrooms.length > 0 ? Math.min(...dev.bathrooms) : 1,
+      max: dev.bathrooms.length > 0 ? Math.max(...dev.bathrooms) : 3,
+    },
+    builtSizeRange: dev.builtAreas.length > 0 ? {
+      min: Math.min(...dev.builtAreas),
+      max: Math.max(...dev.builtAreas),
+    } : undefined,
+    plotSizeRange: dev.plotAreas.length > 0 ? {
+      min: Math.min(...dev.plotAreas),
+      max: Math.max(...dev.plotAreas),
+    } : undefined,
+    propertyTypes: [...new Set(dev.propertyTypes)],
+    deliveryDate: dev.deliveryDate,
+    hasPool: dev.hasPool,
+    images: [...new Set(dev.images)].slice(0, 10),
+    representativeRef: dev.propertyRefs[0],
+  })).filter(d => d.priceFrom > 0) // Only include developments with price data
+    .sort((a, b) => b.propertyCount - a.propertyCount);
+}
+
+// Generate development/project content - uses the development page template format
+async function generateDevelopmentContent(dev: ReturnType<typeof aggregateDevelopmentData>[0]): Promise<any> {
+  const prompt = generateDevelopmentPrompt({
+    name: dev.name,
+    slug: dev.slug,
+    developer: dev.developer,
+    developerSlug: dev.developerSlug,
+    town: dev.town,
+    province: dev.province,
+    zone: dev.zone,
+    propertyCount: dev.propertyCount,
+    priceFrom: dev.priceFrom,
+    propertyTypes: dev.propertyTypes,
+    bedroomRange: dev.bedroomRange,
+    bathroomRange: dev.bathroomRange,
+    builtSizeRange: dev.builtSizeRange,
+    plotSizeRange: dev.plotSizeRange,
+    deliveryDate: dev.deliveryDate,
+    hasPool: dev.hasPool,
+    images: dev.images,
+    representativeRef: dev.representativeRef,
+  });
+
+  const response = await anthropic.messages.create({
+    model: AI_MODEL,
+    max_tokens: 4000, // Developments need more content
+    system: JSON_SYSTEM_PROMPT,
+    messages: [{ role: 'user', content: prompt }],
+  });
+
+  const text = response.content[0].type === 'text' ? response.content[0].text : '';
+  const content = parseAIJson(text);
+
+  // Add images from feed data
+  if (dev.images.length > 0 && content.property) {
+    content.property.images = dev.images;
+  }
+
+  return content;
 }
 
 // Check if content already exists
@@ -720,6 +777,48 @@ async function main() {
         );
         content.generatedAt = new Date().toISOString();
         saveContent(BUILDERS_DIR, dev.slug, content);
+        console.log(`   ✅ ${dev.name} saved`);
+        generated++;
+
+        // Rate limiting
+        await new Promise(r => setTimeout(r, 1000));
+      } catch (error) {
+        console.error(`   ❌ Error generating ${dev.name} (after ${MAX_RETRIES} attempts): ${(error as any).message}`);
+      }
+    }
+  }
+
+  // Generate development/project content from property mapping
+  if (TYPE_FILTER === 'all' || TYPE_FILTER === 'developments') {
+    console.log('\n🏘️  Generating Development/Project Content...\n');
+    const developmentsList = aggregateDevelopmentData(allProperties);
+    console.log(`   Found ${developmentsList.length} developments in mapping\n`);
+
+    // Filter by town if specified
+    let developmentsToGenerate = developmentsList;
+    if (TOWN_FILTER) {
+      developmentsToGenerate = developmentsList.filter(d =>
+        d.town.toLowerCase().includes(TOWN_FILTER)
+      );
+      console.log(`   Filtered to ${developmentsToGenerate.length} developments in "${TOWN_FILTER}"\n`);
+    }
+
+    for (const dev of developmentsToGenerate) {
+      // Note: Developments go to PROJECTS_DIR (not DEVELOPMENTS_DIR which is for property-level content)
+      if (!REGENERATE_ALL && contentExists(PROJECTS_DIR, dev.slug)) {
+        console.log(`   ⏭️  Skipping ${dev.name} (exists)`);
+        skipped++;
+        continue;
+      }
+
+      try {
+        console.log(`   🔄 Generating ${dev.name} by ${dev.developer} (${dev.propertyCount} units, ${dev.town})...`);
+        const content = await withRetry(
+          () => generateDevelopmentContent(dev),
+          dev.name
+        );
+        content.generatedAt = new Date().toISOString();
+        saveContent(PROJECTS_DIR, dev.slug, content);
         console.log(`   ✅ ${dev.name} saved`);
         generated++;
 

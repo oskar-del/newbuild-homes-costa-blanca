@@ -1,0 +1,222 @@
+/**
+ * AI Content Loader
+ * =================
+ * Loads AI-generated content from JSON files in /src/content/developments/
+ *
+ * The GitHub Action generates this content using Claude AI.
+ * This loader retrieves it for use on property pages.
+ */
+
+import * as fs from 'fs';
+import * as path from 'path';
+
+// Path to AI-generated content
+const DEVELOPMENTS_DIR = path.join(process.cwd(), 'src/content/developments');
+
+export interface AIGeneratedContent {
+  slug: string;
+  projectName?: string;
+  metaTitle: string;
+  metaDescription: string;
+  content: {
+    heroIntro: string;
+    locationSection: {
+      intro: string;
+      highlights: string[];
+    };
+    propertyFeatures: {
+      intro: string;
+      features: string[];
+    };
+    investmentSection: string;
+    whyBuySection: string[];
+    faqs: Array<{ question: string; answer: string }>;
+    conclusion?: string;
+  };
+  property?: {
+    ref: string;
+    price: number;
+    bedrooms: number;
+    bathrooms: number;
+    builtSize: number;
+    plotSize: number;
+    town: string;
+    province: string;
+    propertyType: string;
+    developer?: string;
+    developerSlug?: string;
+    images: string[];
+  };
+  golfCourse?: {
+    id: string;
+    name: string;
+    slug: string;
+    distance: string;
+    description: string;
+  };
+  imageAlts?: Array<{ url: string; alt: string }>;
+  schemaProduct?: any;
+  schemaFAQ?: any;
+  schemaBreadcrumb?: any;
+}
+
+/**
+ * Try to load AI-generated content for a property reference
+ * Returns null if no AI content exists
+ */
+export function loadAIContent(reference: string): AIGeneratedContent | null {
+  // Try different slug formats
+  const slugVariants = [
+    reference.toLowerCase(),
+    reference.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+    reference.toLowerCase().replace(/_/g, '-'),
+  ];
+
+  for (const slug of slugVariants) {
+    const filePath = path.join(DEVELOPMENTS_DIR, `${slug}.json`);
+
+    if (fs.existsSync(filePath)) {
+      try {
+        const content = fs.readFileSync(filePath, 'utf-8');
+        const parsed = JSON.parse(content);
+
+        // Validate it has the expected structure
+        if (parsed.content && parsed.metaTitle) {
+          console.log(`✅ Loaded AI content for ${reference} from ${slug}.json`);
+          return parsed as AIGeneratedContent;
+        }
+      } catch (error) {
+        console.error(`❌ Error loading AI content for ${reference}:`, error);
+      }
+    }
+  }
+
+  // Also check by property ref inside the JSON files
+  try {
+    const files = fs.readdirSync(DEVELOPMENTS_DIR);
+
+    for (const file of files) {
+      if (!file.endsWith('.json') || file === 'index.json') continue;
+
+      const filePath = path.join(DEVELOPMENTS_DIR, file);
+      const content = fs.readFileSync(filePath, 'utf-8');
+      const parsed = JSON.parse(content);
+
+      // Check if this file's property ref matches
+      if (parsed.property?.ref === reference) {
+        console.log(`✅ Loaded AI content for ${reference} from ${file} (matched by ref)`);
+        return parsed as AIGeneratedContent;
+      }
+    }
+  } catch (error) {
+    // Silently fail - fall back to template generator
+  }
+
+  console.log(`ℹ️ No AI content found for ${reference}, using template generator`);
+  return null;
+}
+
+/**
+ * Check if AI content exists for a property
+ */
+export function hasAIContent(reference: string): boolean {
+  return loadAIContent(reference) !== null;
+}
+
+/**
+ * List all properties with AI-generated content
+ */
+export function listAIContentProperties(): string[] {
+  const properties: string[] = [];
+
+  try {
+    const files = fs.readdirSync(DEVELOPMENTS_DIR);
+
+    for (const file of files) {
+      if (!file.endsWith('.json') || file === 'index.json') continue;
+      properties.push(file.replace('.json', ''));
+    }
+  } catch (error) {
+    console.error('Error listing AI content:', error);
+  }
+
+  return properties;
+}
+
+/**
+ * Convert AI content to the PropertyContent format used by the page
+ * Handles both old format (locationSection) and new SEO format (areaSection + lifestyleSection)
+ */
+export function convertAIToPropertyContent(aiContent: AIGeneratedContent): any {
+  const content = aiContent.content as any; // Type flexibility for new fields
+
+  // Handle both old and new format for area/lifestyle sections
+  const areaSection = content.areaSection || content.locationSection?.intro || '';
+  const lifestyleSection = content.lifestyleSection || content.locationSection?.intro || '';
+  const locationHighlights = content.locationHighlights || content.locationSection?.highlights || [];
+
+  // Handle new imageAlts format (with index) and old format (with url)
+  const imageAltTags = aiContent.imageAlts?.map((img: any) => img.alt) ||
+    content.imageAlts?.map((img: any) => img.alt) || [];
+
+  // Handle buyer persona from new format
+  const buyerPersona = content.buyerPersona || { type: 'holiday', description: '' };
+
+  // Handle price comparison from new format
+  const priceComparison = content.priceComparison || {};
+
+  return {
+    seoTitle: aiContent.metaTitle.replace(' | New Build Homes Costa Blanca', ''),
+    metaDescription: aiContent.metaDescription,
+    mainDescription: content.heroIntro,
+
+    // Area and lifestyle - NEW: separate sections
+    areaSection: areaSection,
+    lifestyleSection: lifestyleSection,
+    areaHighlights: locationHighlights,
+
+    // Investment and features
+    investmentSection: content.investmentSection,
+    sellingPoints: content.whyBuySection || [],
+    propertyFeatures: content.propertyFeatures,
+
+    // FAQs - now with direct answer format
+    faqs: content.faqs || [],
+
+    // Image alt tags - now search-query optimized
+    imageAltTags: imageAltTags,
+
+    // Conclusion/CTA
+    conclusion: content.conclusion,
+
+    // Life & Amenities - NEW: healthcare, schools, shopping, transport
+    lifeAndAmenities: content.lifeAndAmenities || null,
+
+    // Internal links (new)
+    internalLinks: content.internalLinks || null,
+
+    // Price context - from AI or calculated
+    priceContext: priceComparison.thisProperty ? {
+      pricePerSqm: priceComparison.thisProperty,
+      areaAverageSqm: priceComparison.areaAverage,
+      percentageDiff: priceComparison.thisProperty && priceComparison.areaAverage
+        ? Math.round(((priceComparison.thisProperty - priceComparison.areaAverage) / priceComparison.areaAverage) * 100)
+        : 0,
+      comparisonText: priceComparison.verdict || '',
+    } : { pricePerSqm: 0, areaAverageSqm: 0, percentageDiff: 0, comparisonText: '' },
+
+    // Buyer persona - now AI-detected
+    buyerPersona: {
+      type: buyerPersona.type || 'holiday',
+      description: buyerPersona.perfectFor || '',
+    },
+
+    // Chart data - still from template (AI doesn't generate numeric arrays)
+    priceChartData: [],
+    rentalYieldData: [],
+    rentalIncomeEstimate: { annual: 0, monthly: 0, weekly: 0, occupancyRate: 0 },
+
+    // Timestamp
+    lastUpdated: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }),
+  };
+}

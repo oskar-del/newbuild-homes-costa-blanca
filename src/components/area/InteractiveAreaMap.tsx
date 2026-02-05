@@ -6,7 +6,7 @@ import Link from 'next/link';
 interface MapLocation {
   id: string;
   name: string;
-  type: 'beach' | 'golf' | 'hospital' | 'airport' | 'shopping' | 'area' | 'school' | 'market';
+  type: 'beach' | 'golf' | 'hospital' | 'airport' | 'shopping' | 'area' | 'school' | 'market' | 'town' | 'attraction' | 'landmark' | 'residential' | 'restaurant' | 'marina' | 'nature' | 'transport';
   coordinates: [number, number]; // [lat, lng]
   distance?: string;
   description?: string;
@@ -41,6 +41,14 @@ export default function InteractiveAreaMap({
     area: '📍',
     school: '🏫',
     market: '🛒',
+    town: '🏘️',
+    attraction: '🎡',
+    landmark: '🏛️',
+    residential: '🏠',
+    restaurant: '🍽️',
+    marina: '⚓',
+    nature: '🌳',
+    transport: '🚌',
   };
 
   const typeColors: Record<string, string> = {
@@ -52,6 +60,14 @@ export default function InteractiveAreaMap({
     area: 'bg-accent-500',
     school: 'bg-yellow-500',
     market: 'bg-orange-500',
+    town: 'bg-indigo-500',
+    attraction: 'bg-rose-500',
+    landmark: 'bg-amber-500',
+    residential: 'bg-teal-500',
+    restaurant: 'bg-red-400',
+    marina: 'bg-cyan-500',
+    nature: 'bg-emerald-500',
+    transport: 'bg-slate-500',
   };
 
   const typeLabels: Record<string, string> = {
@@ -62,6 +78,14 @@ export default function InteractiveAreaMap({
     shopping: 'Shopping',
     school: 'Schools',
     market: 'Markets',
+    town: 'Towns',
+    attraction: 'Attractions',
+    landmark: 'Landmarks',
+    residential: 'Residential',
+    restaurant: 'Restaurants',
+    marina: 'Marina',
+    nature: 'Nature',
+    transport: 'Transport',
   };
 
   useEffect(() => {
