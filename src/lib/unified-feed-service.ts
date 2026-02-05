@@ -32,7 +32,7 @@ const CACHE_DURATION = 60 * 60 * 1000; // 1 hour
 async function parseRedspFeed(): Promise<UnifiedProperty[]> {
   try {
     const response = await fetch(REDSP_FEED_URL, {
-      cache: 'no-store' // Large XML feeds exceed Next.js cache limit, // Revalidate hourly for ISR
+      cache: 'no-store', // Skip cache - large XML feeds
     });
     
     if (!response.ok) {
@@ -255,7 +255,7 @@ function getDevelopmentFieldsFromMapping(reference: string, locationDetail?: str
 async function parseBackgroundFeed(): Promise<UnifiedProperty[]> {
   try {
     const response = await fetch(BACKGROUND_FEED_URL, {
-      cache: 'no-store' // Large XML feeds exceed Next.js cache limit,
+      cache: 'no-store', // Large XML feeds exceed Next.js cache limit
       redirect: 'follow', // Follow redirects
     });
     

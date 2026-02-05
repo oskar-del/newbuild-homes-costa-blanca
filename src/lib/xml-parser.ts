@@ -107,7 +107,7 @@ function extractProjectName(description: string, propertyType: string, ref: stri
 async function fetchSingleFeed(url: string, feedName: string, filterByArea: boolean = false): Promise<ParsedProperty[]> {
   try {
     const response = await fetch(url, {
-      cache: 'no-store' // Large XML feeds exceed Next.js cache limit, // Revalidate every hour
+      cache: 'no-store', // Skip cache - large XML feeds
     });
 
     if (!response.ok) {
@@ -235,7 +235,7 @@ function safeStr(val: unknown): string {
 async function fetchBackgroundFeed(): Promise<ParsedProperty[]> {
   try {
     const response = await fetch(BACKGROUND_FEED_URL, {
-      cache: 'no-store' // Large XML feeds exceed Next.js cache limit,
+      cache: 'no-store', // Large XML feeds exceed Next.js cache limit
       redirect: 'follow',
     });
 
@@ -332,7 +332,7 @@ async function fetchMiralboFeed(): Promise<ParsedProperty[]> {
 
   try {
     const response = await fetch(MIRALBO_FEED_URL, {
-      cache: 'no-store' // Large XML feeds exceed Next.js cache limit,
+      cache: 'no-store', // Skip cache - large XML feeds
       headers: { 'User-Agent': 'NewBuildHomes/1.0' },
     });
 
@@ -691,7 +691,7 @@ export async function fetchInlandProperties(): Promise<ParsedProperty[]> {
 export async function fetchLandPlots(minPrice: number = 200000): Promise<ParsedProperty[]> {
   try {
     const response = await fetch(BACKGROUND_FEED_URL, {
-      cache: 'no-store' // Large XML feeds exceed Next.js cache limit,
+      cache: 'no-store', // Large XML feeds exceed Next.js cache limit
       redirect: 'follow',
     });
 
