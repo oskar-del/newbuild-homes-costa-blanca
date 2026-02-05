@@ -38,7 +38,7 @@ function safeStr(val: unknown): string {
 }
 
 async function followRedirect(url: string): Promise<string> {
-  const response = await fetch(url, { cache: 'no-store', redirect: 'follow' }); // Large XML exceeds cache limit
+  const response = await fetch(url, { cache: 'force-cache', redirect: 'follow' }); // Use cache for static generation
   return response.text();
 }
 
