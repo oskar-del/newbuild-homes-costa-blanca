@@ -3,6 +3,11 @@ name: Generate AI Content
 on:
   workflow_dispatch:
     inputs:
+      town:
+        description: 'Filter by town (e.g., torrevieja, javea, calpe)'
+        required: false
+        default: ''
+        type: string
       regenerate_all:
         description: 'Regenerate all content (not just new)'
         required: false
@@ -27,13 +32,18 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           REGENERATE_ALL: ${{ github.event.inputs.regenerate_all }}
-        run: npx tsx src/scripts/generate-all-content.ts
+        run: |
+          if [ -n "${{ github.event.inputs.town }}" ]; then
+            npx tsx src/scripts/generate-all-content.ts --town=${{ github.event.inputs.town }}
+          else
+            npx tsx src/scripts/generate-all-content.ts
+          fi
       - name: Commit and push
         run: |
           git add src/content/
           git diff --staged --quiet || (
             git config user.email "bot@github.com"
             git config user.name "bot"
-            git commit -m "Auto-generate AI content"
+            git commit -m "Auto-generate AI content for ${{ github.event.inputs.town || 'all areas' }}"
             git push
           )
