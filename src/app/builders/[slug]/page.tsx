@@ -52,6 +52,7 @@ interface EnhancedBuilderContent {
 
 /**
  * Check if enhanced JSON content exists for this builder
+ * Handles both old format (nested content object) and new format (flat structure)
  */
 function getEnhancedContent(slug: string): EnhancedBuilderContent | null {
   const contentPath = path.join(process.cwd(), 'src', 'content', 'builders', `${slug}.json`);
@@ -61,8 +62,52 @@ function getEnhancedContent(slug: string): EnhancedBuilderContent | null {
   }
 
   try {
-    return JSON.parse(fs.readFileSync(contentPath, 'utf-8'));
-  } catch {
+    const raw = JSON.parse(fs.readFileSync(contentPath, 'utf-8'));
+
+    // Check if this is the new flat format (no nested content object)
+    // New format has metaTitle at root level, old format has it inside content
+    if (raw.metaTitle && !raw.content) {
+      // Convert flat format to expected nested format
+      return {
+        slug: raw.slug,
+        name: raw.name,
+        towns: raw.specializationSection?.towns || [],
+        propertyTypes: raw.specializationSection?.propertyTypes || [],
+        propertyCount: raw.propertyCount || 0,
+        priceRange: raw.priceRange || { min: 0, max: 0 },
+        content: {
+          metaTitle: raw.metaTitle,
+          metaDescription: raw.metaDescription,
+          heroIntro: raw.heroIntro || raw.heroHeadline || '',
+          aboutSection: typeof raw.aboutSection === 'string'
+            ? raw.aboutSection
+            : raw.aboutSection?.content || '',
+          qualitySection: {
+            intro: typeof raw.qualitySection === 'string'
+              ? raw.qualitySection
+              : raw.qualitySection?.content || '',
+            standards: raw.qualitySection?.features || [],
+          },
+          whyChooseSection: raw.whyChooseSection?.reasons || [],
+          faqs: raw.faqSection?.faqs || [],
+          conclusion: raw.ctaSection?.content || raw.conclusion || '',
+        },
+        schema: raw.schema || {},
+        schemaFAQ: raw.schemaFAQ || {},
+      };
+    }
+
+    // Old format - already has nested content structure
+    // But still validate it has the required fields
+    if (raw.content && raw.content.metaTitle) {
+      return raw;
+    }
+
+    // Invalid format - return null to fall back to auto-generated page
+    console.warn(`[Builder] Invalid JSON format for ${slug}, falling back to auto-generated page`);
+    return null;
+  } catch (e) {
+    console.error(`[Builder] Error parsing JSON for ${slug}:`, e);
     return null;
   }
 }
