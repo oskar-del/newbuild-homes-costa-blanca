@@ -31,7 +31,7 @@ const CACHE_DURATION = 60 * 60 * 1000; // 1 hour
  */
 async function parseRedspFeed(): Promise<UnifiedProperty[]> {
   try {
-    const response = await fetch(REDSP_FEED_URL);
+    const response = await fetch(REDSP_FEED_URL, { cache: 'no-store' });
     
     if (!response.ok) {
       throw new Error(`REDSP feed error: ${response.status}`);
@@ -252,7 +252,7 @@ function getDevelopmentFieldsFromMapping(reference: string, locationDetail?: str
  */
 async function parseBackgroundFeed(): Promise<UnifiedProperty[]> {
   try {
-    const response = await fetch(BACKGROUND_FEED_URL, { redirect: 'follow' });
+    const response = await fetch(BACKGROUND_FEED_URL, { cache: 'no-store', redirect: 'follow' });
     
     if (!response.ok) {
       throw new Error(`Background feed error: ${response.status}`);

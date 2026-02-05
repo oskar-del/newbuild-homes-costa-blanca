@@ -58,6 +58,11 @@ const GENERAL_FEED_URL = FEED_URLS.general;
 const BACKGROUND_FEED_URL = FEED_URLS.background;
 const MIRALBO_FEED_URL = FEED_URLS.miralbo;
 
+// MODULE-LEVEL CACHE: Fetch feeds ONCE during build, reuse for all pages
+// This prevents Next.js from trying to cache each fetch (which fails for large XMLs)
+let cachedFeedData: ParsedProperty[] | null = null;
+let feedFetchPromise: Promise<ParsedProperty[]> | null = null;
+
 function slugify(text: string): string {
   return text
     .toLowerCase()
@@ -106,7 +111,7 @@ function extractProjectName(description: string, propertyType: string, ref: stri
  */
 async function fetchSingleFeed(url: string, feedName: string, filterByArea: boolean = false): Promise<ParsedProperty[]> {
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, { cache: 'no-store' });
 
     if (!response.ok) {
       console.error(`[XML-PARSER] ${feedName} fetch failed:`, response.status);
@@ -232,7 +237,7 @@ function safeStr(val: unknown): string {
  */
 async function fetchBackgroundFeed(): Promise<ParsedProperty[]> {
   try {
-    const response = await fetch(BACKGROUND_FEED_URL, { redirect: 'follow' });
+    const response = await fetch(BACKGROUND_FEED_URL, { cache: 'no-store', redirect: 'follow' });
 
     if (!response.ok) {
       console.error(`[XML-PARSER] Background feed fetch failed:`, response.status);
@@ -326,7 +331,7 @@ async function fetchMiralboFeed(): Promise<ParsedProperty[]> {
   }
 
   try {
-    const response = await fetch(MIRALBO_FEED_URL, { headers: { 'User-Agent': 'NewBuildHomes/1.0' } });
+    const response = await fetch(MIRALBO_FEED_URL, { cache: 'no-store', headers: { 'User-Agent': 'NewBuildHomes/1.0' } });
 
     if (!response.ok) {
       console.error(`[XML-PARSER] Miralbo feed fetch failed:`, response.status);
@@ -435,9 +440,34 @@ function mergeProperties(existing: ParsedProperty, incoming: ParsedProperty): Pa
  *
  * PRIORITY ORDER: REDSP → Background → Miralbo
  * Each feed has unique ref prefix so no collision issues
+ *
+ * CACHING: Uses module-level cache to fetch ONCE during build.
+ * This prevents Next.js fetch cache issues with large XML responses.
  */
 export async function fetchXMLFeed(): Promise<ParsedProperty[]> {
+  // Return cached data if available
+  if (cachedFeedData) {
+    return cachedFeedData;
+  }
+
+  // If fetch is already in progress, wait for it
+  if (feedFetchPromise) {
+    return feedFetchPromise;
+  }
+
+  // Start the fetch and cache the promise
+  feedFetchPromise = fetchXMLFeedInternal();
+  cachedFeedData = await feedFetchPromise;
+  return cachedFeedData;
+}
+
+/**
+ * Internal function that actually fetches the feeds
+ */
+async function fetchXMLFeedInternal(): Promise<ParsedProperty[]> {
   try {
+    console.log('[XML-PARSER] Fetching feeds (once for entire build)...');
+
     // Fetch all THREE feeds in parallel
     const [generalProperties, backgroundProperties, miralboProperties] = await Promise.all([
       fetchSingleFeed(GENERAL_FEED_URL, 'REDSP General Feed', false),
@@ -682,7 +712,7 @@ export async function fetchInlandProperties(): Promise<ParsedProperty[]> {
  */
 export async function fetchLandPlots(minPrice: number = 200000): Promise<ParsedProperty[]> {
   try {
-    const response = await fetch(BACKGROUND_FEED_URL, { redirect: 'follow' });
+    const response = await fetch(BACKGROUND_FEED_URL, { cache: 'no-store', redirect: 'follow' });
 
     if (!response.ok) {
       console.error(`[XML-PARSER] Background feed fetch failed for plots:`, response.status);
