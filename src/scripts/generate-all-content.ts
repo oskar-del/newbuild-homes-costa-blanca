@@ -18,7 +18,10 @@ import { propertyMapping } from '../data/property-development-mapping';
 
 const anthropic = new Anthropic();
 const REGENERATE_ALL = process.env.REGENERATE_ALL === 'true';
-const MAX_RETRIES = 3;
+const MAX_RETRIES = 1; // Don't waste money on retries
+
+// Use Haiku - 10x cheaper than Sonnet
+const AI_MODEL = 'claude-haiku-4-5-20251001';
 
 // System prompt to enforce JSON-only output
 const JSON_SYSTEM_PROMPT = `You are a JSON generator. You MUST respond with ONLY a valid JSON object.
@@ -414,7 +417,7 @@ Write naturally, avoiding clichés. Focus on specific details about ${property.t
 IMPORTANT: Return ONLY the JSON object. No markdown, no code blocks, no explanation.`;
 
   const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-5-20250929',
+    model: AI_MODEL,
     max_tokens: 2000,
     system: JSON_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: prompt }],
@@ -478,7 +481,7 @@ Be specific to ${town}. Include real place names, distances, and practical infor
 IMPORTANT: Return ONLY the JSON object. No markdown, no code blocks, no explanation.`;
 
   const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-5-20250929',
+    model: AI_MODEL,
     max_tokens: 3000,
     system: JSON_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: prompt }],
@@ -598,7 +601,7 @@ Important: We are an AGENCY showcasing their properties, not the developer thems
 IMPORTANT: Return ONLY the JSON object. No markdown, no code blocks, no explanation.`;
 
   const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-5-20250929',
+    model: AI_MODEL,
     max_tokens: 2500,
     system: JSON_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: prompt }],
