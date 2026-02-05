@@ -15,6 +15,35 @@
 import { UnifiedProperty, PropertyImage, PropertyDescription } from './unified-property';
 import { getPropertyDevelopmentInfo } from '@/data/property-development-mapping';
 import { getMiralboStaticProperties, MiralboProperty } from '@/data/miralbo-static-properties';
+import https from 'https';
+import http from 'http';
+
+/**
+ * Fetch URL using Node's native http/https modules.
+ * This BYPASSES Next.js fetch interception, avoiding cache issues.
+ */
+function fetchWithNode(url: string): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const client = url.startsWith('https') ? https : http;
+    client.get(url, (res) => {
+      if (res.statusCode === 301 || res.statusCode === 302) {
+        const redirectUrl = res.headers.location;
+        if (redirectUrl) {
+          fetchWithNode(redirectUrl).then(resolve).catch(reject);
+          return;
+        }
+      }
+      if (res.statusCode !== 200) {
+        reject(new Error(`HTTP ${res.statusCode}`));
+        return;
+      }
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => resolve(data));
+      res.on('error', reject);
+    }).on('error', reject);
+  });
+}
 
 // Feed URLs
 const REDSP_FEED_URL = 'http://feeds.transporter.janeladigital.com/423E0F5F-30FC-4E01-8FE1-99BD7E14B021/0500015622.xml';
@@ -31,13 +60,8 @@ const CACHE_DURATION = 60 * 60 * 1000; // 1 hour
  */
 async function parseRedspFeed(): Promise<UnifiedProperty[]> {
   try {
-    const response = await fetch(REDSP_FEED_URL, { cache: 'no-store' });
-    
-    if (!response.ok) {
-      throw new Error(`REDSP feed error: ${response.status}`);
-    }
-    
-    const xml = await response.text();
+    // Use Node's native http to bypass Next.js fetch interception
+    const xml = await fetchWithNode(REDSP_FEED_URL);
     
     // Parse XML using regex for simplicity (could use xml2js in production)
     const properties: UnifiedProperty[] = [];
@@ -252,18 +276,11 @@ function getDevelopmentFieldsFromMapping(reference: string, locationDetail?: str
  */
 async function parseBackgroundFeed(): Promise<UnifiedProperty[]> {
   try {
-    const response = await fetch(BACKGROUND_FEED_URL, { cache: 'no-store', redirect: 'follow' });
-    
-    if (!response.ok) {
-      throw new Error(`Background feed error: ${response.status}`);
-    }
-    
-    // Check content type - might be XML now due to redirect
-    const contentType = response.headers.get('content-type') || '';
-    const text = await response.text();
-    
-    // If it's XML (the feed might redirect to XML)
-    if (contentType.includes('xml') || text.trim().startsWith('<?xml') || text.trim().startsWith('<')) {
+    // Use Node's native http to bypass Next.js fetch interception
+    const text = await fetchWithNode(BACKGROUND_FEED_URL);
+
+    // Check if it's XML (the feed might redirect to XML)
+    if (text.trim().startsWith('<?xml') || text.trim().startsWith('<')) {
       console.log('Background feed returned XML, parsing as XML...');
       return parseBackgroundXmlFeed(text);
     }

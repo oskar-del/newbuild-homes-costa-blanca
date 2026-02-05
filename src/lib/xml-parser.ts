@@ -1,4 +1,6 @@
 import { XMLParser } from 'fast-xml-parser';
+import https from 'https';
+import http from 'http';
 import {
   FEED_URLS,
   getRegionForTown,
@@ -9,6 +11,36 @@ import {
   REGIONS,
   type RegionKey,
 } from './feed-config';
+
+/**
+ * Fetch URL using Node's native http/https modules.
+ * This BYPASSES Next.js fetch interception, avoiding cache issues.
+ */
+function fetchWithNode(url: string): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const client = url.startsWith('https') ? https : http;
+    client.get(url, (res) => {
+      // Handle redirects
+      if (res.statusCode === 301 || res.statusCode === 302) {
+        const redirectUrl = res.headers.location;
+        if (redirectUrl) {
+          fetchWithNode(redirectUrl).then(resolve).catch(reject);
+          return;
+        }
+      }
+
+      if (res.statusCode !== 200) {
+        reject(new Error(`HTTP ${res.statusCode}`));
+        return;
+      }
+
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => resolve(data));
+      res.on('error', reject);
+    }).on('error', reject);
+  });
+}
 
 // Re-export feed config for convenience
 export * from './feed-config';
@@ -111,14 +143,8 @@ function extractProjectName(description: string, propertyType: string, ref: stri
  */
 async function fetchSingleFeed(url: string, feedName: string, filterByArea: boolean = false): Promise<ParsedProperty[]> {
   try {
-    const response = await fetch(url, { cache: 'no-store' });
-
-    if (!response.ok) {
-      console.error(`[XML-PARSER] ${feedName} fetch failed:`, response.status);
-      return [];
-    }
-
-    const xml = await response.text();
+    // Use Node's native http to bypass Next.js fetch interception
+    const xml = await fetchWithNode(url);
     const parser = new XMLParser({
       ignoreAttributes: false,
       attributeNamePrefix: '@_',
@@ -237,14 +263,8 @@ function safeStr(val: unknown): string {
  */
 async function fetchBackgroundFeed(): Promise<ParsedProperty[]> {
   try {
-    const response = await fetch(BACKGROUND_FEED_URL, { cache: 'no-store', redirect: 'follow' });
-
-    if (!response.ok) {
-      console.error(`[XML-PARSER] Background feed fetch failed:`, response.status);
-      return [];
-    }
-
-    const text = await response.text();
+    // Use Node's native http to bypass Next.js fetch interception
+    const text = await fetchWithNode(BACKGROUND_FEED_URL);
 
     // Parse as XML (Sooprema format)
     const parser = new XMLParser({
@@ -331,14 +351,8 @@ async function fetchMiralboFeed(): Promise<ParsedProperty[]> {
   }
 
   try {
-    const response = await fetch(MIRALBO_FEED_URL, { cache: 'no-store', headers: { 'User-Agent': 'NewBuildHomes/1.0' } });
-
-    if (!response.ok) {
-      console.error(`[XML-PARSER] Miralbo feed fetch failed:`, response.status);
-      return [];
-    }
-
-    const xml = await response.text();
+    // Use Node's native http to bypass Next.js fetch interception
+    const xml = await fetchWithNode(MIRALBO_FEED_URL);
     const parser = new XMLParser({
       ignoreAttributes: false,
       attributeNamePrefix: '@_',
@@ -712,14 +726,8 @@ export async function fetchInlandProperties(): Promise<ParsedProperty[]> {
  */
 export async function fetchLandPlots(minPrice: number = 200000): Promise<ParsedProperty[]> {
   try {
-    const response = await fetch(BACKGROUND_FEED_URL, { cache: 'no-store', redirect: 'follow' });
-
-    if (!response.ok) {
-      console.error(`[XML-PARSER] Background feed fetch failed for plots:`, response.status);
-      return [];
-    }
-
-    const text = await response.text();
+    // Use Node's native http to bypass Next.js fetch interception
+    const text = await fetchWithNode(BACKGROUND_FEED_URL);
 
     const parser = new XMLParser({
       ignoreAttributes: false,

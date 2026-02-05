@@ -1,6 +1,35 @@
 import { XMLParser } from 'fast-xml-parser';
+import https from 'https';
+import http from 'http';
 
 const FEED_URL = 'https://backgroundproperties.com/wp-load.php?security_token=23f0185aeb5102e7&export_id=19&action=get_data';
+
+/**
+ * Fetch URL using Node's native http/https modules.
+ * This BYPASSES Next.js fetch interception, avoiding cache issues.
+ */
+function fetchWithNode(url: string): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const client = url.startsWith('https') ? https : http;
+    client.get(url, (res) => {
+      if (res.statusCode === 301 || res.statusCode === 302) {
+        const redirectUrl = res.headers.location;
+        if (redirectUrl) {
+          fetchWithNode(redirectUrl).then(resolve).catch(reject);
+          return;
+        }
+      }
+      if (res.statusCode !== 200) {
+        reject(new Error(`HTTP ${res.statusCode}`));
+        return;
+      }
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => resolve(data));
+      res.on('error', reject);
+    }).on('error', reject);
+  });
+}
 
 export interface BackgroundProperty {
   reference: string;
@@ -38,8 +67,8 @@ function safeStr(val: unknown): string {
 }
 
 async function followRedirect(url: string): Promise<string> {
-  const response = await fetch(url, { cache: 'no-store', redirect: 'follow' });
-  return response.text();
+  // Use Node's native http to bypass Next.js fetch interception
+  return fetchWithNode(url);
 }
 
 export async function fetchNewBuilds(): Promise<BackgroundProperty[]> {
