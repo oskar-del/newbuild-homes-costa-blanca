@@ -106,9 +106,7 @@ function extractProjectName(description: string, propertyType: string, ref: stri
  */
 async function fetchSingleFeed(url: string, feedName: string, filterByArea: boolean = false): Promise<ParsedProperty[]> {
   try {
-    const response = await fetch(url, {
-      cache: 'force-cache', // Use cache for static generation
-    });
+    const response = await fetch(url);
 
     if (!response.ok) {
       console.error(`[XML-PARSER] ${feedName} fetch failed:`, response.status);
@@ -234,10 +232,7 @@ function safeStr(val: unknown): string {
  */
 async function fetchBackgroundFeed(): Promise<ParsedProperty[]> {
   try {
-    const response = await fetch(BACKGROUND_FEED_URL, {
-      cache: 'force-cache', // Use cache for static generation
-      redirect: 'follow',
-    });
+    const response = await fetch(BACKGROUND_FEED_URL, { redirect: 'follow' });
 
     if (!response.ok) {
       console.error(`[XML-PARSER] Background feed fetch failed:`, response.status);
@@ -331,10 +326,7 @@ async function fetchMiralboFeed(): Promise<ParsedProperty[]> {
   }
 
   try {
-    const response = await fetch(MIRALBO_FEED_URL, {
-      cache: 'force-cache', // Use cache for static generation
-      headers: { 'User-Agent': 'NewBuildHomes/1.0' },
-    });
+    const response = await fetch(MIRALBO_FEED_URL, { headers: { 'User-Agent': 'NewBuildHomes/1.0' } });
 
     if (!response.ok) {
       console.error(`[XML-PARSER] Miralbo feed fetch failed:`, response.status);
@@ -690,10 +682,7 @@ export async function fetchInlandProperties(): Promise<ParsedProperty[]> {
  */
 export async function fetchLandPlots(minPrice: number = 200000): Promise<ParsedProperty[]> {
   try {
-    const response = await fetch(BACKGROUND_FEED_URL, {
-      cache: 'force-cache', // Use cache for static generation
-      redirect: 'follow',
-    });
+    const response = await fetch(BACKGROUND_FEED_URL, { redirect: 'follow' });
 
     if (!response.ok) {
       console.error(`[XML-PARSER] Background feed fetch failed for plots:`, response.status);
