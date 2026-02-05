@@ -88,8 +88,10 @@ function getEnhancedContent(slug: string): EnhancedBuilderContent | null {
               : raw.qualitySection?.content || '',
             standards: raw.qualitySection?.features || [],
           },
-          whyChooseSection: raw.whyChooseSection?.reasons || [],
-          faqs: raw.faqSection?.faqs || [],
+          whyChooseSection: (raw.whyChooseSection?.reasons || []).map((r: any) =>
+            typeof r === 'string' ? r : `${r.title}: ${r.description}`
+          ),
+          faqs: raw.faqs || raw.faqSection?.faqs || [],
           conclusion: raw.ctaSection?.content || raw.conclusion || '',
         },
         schema: raw.schema || {},
