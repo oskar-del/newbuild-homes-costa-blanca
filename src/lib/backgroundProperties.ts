@@ -7,27 +7,41 @@ const FEED_URL = 'https://backgroundproperties.com/wp-load.php?security_token=23
 /**
  * Fetch URL using Node's native http/https modules.
  * This BYPASSES Next.js fetch interception, avoiding cache issues.
+ * Returns empty string on ANY error (network, HTTP, timeout) to prevent build failures.
  */
 function fetchWithNode(url: string): Promise<string> {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const client = url.startsWith('https') ? https : http;
-    client.get(url, (res) => {
+    const request = client.get(url, (res) => {
       if (res.statusCode === 301 || res.statusCode === 302) {
         const redirectUrl = res.headers.location;
         if (redirectUrl) {
-          fetchWithNode(redirectUrl).then(resolve).catch(reject);
+          fetchWithNode(redirectUrl).then(resolve);
           return;
         }
       }
       if (res.statusCode !== 200) {
-        reject(new Error(`HTTP ${res.statusCode}`));
+        console.error(`[FETCH] ${url} returned HTTP ${res.statusCode} - skipping`);
+        resolve('');
         return;
       }
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => resolve(data));
-      res.on('error', reject);
-    }).on('error', reject);
+      res.on('error', (err) => {
+        console.error(`[FETCH] ${url} error: ${err.message} - skipping`);
+        resolve('');
+      });
+    });
+    request.on('error', (err) => {
+      console.error(`[FETCH] ${url} request error: ${err.message} - skipping`);
+      resolve('');
+    });
+    request.setTimeout(30000, () => {
+      console.error(`[FETCH] ${url} timeout - skipping`);
+      request.destroy();
+      resolve('');
+    });
   });
 }
 
