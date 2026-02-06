@@ -724,7 +724,15 @@ async function main() {
   // Generate area guides
   if (TYPE_FILTER === 'all' || TYPE_FILTER === 'areas') {
     console.log('\n📝 Generating Area Guides...\n');
-    for (const area of areas) {
+
+    // Apply town filter to areas
+    let areasToGenerate = areas;
+    if (TOWN_FILTER) {
+      areasToGenerate = areas.filter(a => a.toLowerCase().includes(TOWN_FILTER));
+      console.log(`   Filtered to ${areasToGenerate.length} areas matching "${TOWN_FILTER}"\n`);
+    }
+
+    for (const area of areasToGenerate) {
       const slug = slugify(area);
 
       if (!REGENERATE_ALL && contentExists(AREAS_DIR, slug)) {
@@ -762,7 +770,14 @@ async function main() {
     const developers = aggregateDeveloperData();
     console.log(`   Found ${developers.length} developers in mapping\n`);
 
-    for (const dev of developers) {
+    // Apply town filter to developers (skip if town filter is set - developers are town-agnostic)
+    if (TOWN_FILTER) {
+      console.log(`   ⏭️  Skipping developer generation (town filter "${TOWN_FILTER}" is set)\n`);
+    }
+
+    const developersToGenerate = TOWN_FILTER ? [] : developers;
+
+    for (const dev of developersToGenerate) {
       if (!REGENERATE_ALL && contentExists(BUILDERS_DIR, dev.slug)) {
         console.log(`   ⏭️  Skipping ${dev.name} (exists)`);
         skipped++;
