@@ -90,14 +90,45 @@ interface AreaContent {
   schemaFAQ: object;
 }
 
+// Helper to extract string from potentially nested object (handles { text, keyPoints } format)
+function extractString(value: any, fallback: string = ''): string {
+  if (typeof value === 'string') return value;
+  if (value && typeof value === 'object') {
+    // Handle { text, keyPoints } format from AI generation
+    if (typeof value.text === 'string') return value.text;
+    // Handle other object formats
+    if (typeof value.description === 'string') return value.description;
+    if (typeof value.intro === 'string') return value.intro;
+  }
+  return fallback;
+}
+
 // Normalizer function that handles BOTH JSON formats
 function normalizeAreaContent(rawData: any, slug: string): AreaContent {
   // Detect format: Format 1 has nested "content", Format 2 has "metaTitle" at root
   const isFormat1 = rawData.content !== undefined && rawData.content.metaTitle !== undefined;
-  
+
   if (isFormat1) {
-    // Format 1 (torrevieja.json style) - already correct, just ensure slug exists
-    return { ...rawData, slug: rawData.slug || slug };
+    // Format 1 (torrevieja.json style) - normalize any nested objects in amenities
+    const normalized = { ...rawData, slug: rawData.slug || slug };
+    if (normalized.content?.amenitiesSection) {
+      normalized.content.amenitiesSection = {
+        beaches: extractString(normalized.content.amenitiesSection.beaches, ''),
+        dining: extractString(normalized.content.amenitiesSection.dining, ''),
+        shopping: extractString(normalized.content.amenitiesSection.shopping, ''),
+        healthcare: extractString(normalized.content.amenitiesSection.healthcare, ''),
+        transport: extractString(normalized.content.amenitiesSection.transport, ''),
+      };
+    }
+    if (normalized.content?.lifestyleSection) {
+      normalized.content.lifestyleSection = {
+        intro: extractString(normalized.content.lifestyleSection.intro, normalized.content.lifestyleSection.intro || ''),
+        highlights: Array.isArray(normalized.content.lifestyleSection.highlights)
+          ? normalized.content.lifestyleSection.highlights.map((h: any) => extractString(h, String(h)))
+          : [],
+      };
+    }
+    return normalized;
   }
   
   // Format 2 (javea.json style) - needs full mapping
@@ -158,24 +189,24 @@ function normalizeAreaContent(rawData: any, slug: string): AreaContent {
       metaDescription: rawData.metaDescription || `Discover ${name} on the Costa Blanca. Properties, lifestyle, and amenities guide.`,
       heroIntro: rawData.heroIntro || `Welcome to ${name}, a beautiful destination on Spain's Costa Blanca.`,
       lifestyleSection: {
-        intro: rawData.lifestyle || rawData.climate || `${name} offers an exceptional Mediterranean lifestyle with year-round sunshine.`,
+        intro: extractString(rawData.lifestyle || rawData.climate, `${name} offers an exceptional Mediterranean lifestyle with year-round sunshine.`),
         highlights: neighborhoodStrings.length > 0 ? neighborhoodStrings : [`Beautiful beaches`, `Mediterranean climate`, `International community`]
       },
       amenitiesSection: {
-        beaches: rawData.amenities?.sports || rawData.amenities?.beaches || `${name} features excellent beaches along the Mediterranean coast.`,
-        dining: rawData.amenities?.dining || `A variety of restaurants and cafes serving local and international cuisine.`,
-        shopping: rawData.amenities?.shopping || `Local markets and shopping centers for all your needs.`,
-        healthcare: rawData.amenities?.healthcare || `Quality healthcare facilities available nearby.`,
+        beaches: extractString(rawData.amenities?.sports || rawData.amenities?.beaches, `${name} features excellent beaches along the Mediterranean coast.`),
+        dining: extractString(rawData.amenities?.dining, `A variety of restaurants and cafes serving local and international cuisine.`),
+        shopping: extractString(rawData.amenities?.shopping, `Local markets and shopping centers for all your needs.`),
+        healthcare: extractString(rawData.amenities?.healthcare, `Quality healthcare facilities available nearby.`),
         transport: [
-          rawData.transport?.airports,
-          rawData.transport?.driving,
-          rawData.transport?.public
+          extractString(rawData.transport?.airports, ''),
+          extractString(rawData.transport?.driving, ''),
+          extractString(rawData.transport?.public, '')
         ].filter(Boolean).join(' ') || `Well connected by road to Alicante and Valencia airports.`
       },
       propertyMarketSection: [
-        rawData.propertyMarket?.overview,
-        rawData.propertyMarket?.popularTypes,
-        rawData.propertyMarket?.investment
+        extractString(rawData.propertyMarket?.overview, ''),
+        extractString(rawData.propertyMarket?.popularTypes, ''),
+        extractString(rawData.propertyMarket?.investment, '')
       ].filter(Boolean).join('\n\n') || `${name} offers a range of new build properties from apartments to luxury villas.`,
       whyLiveHereSection: prosStrings.length > 0 ? prosStrings : [
         `Mediterranean climate with over 300 days of sunshine`,
