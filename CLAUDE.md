@@ -2,6 +2,25 @@
 
 ## CRITICAL: READ THIS BEFORE EVERY ACTION
 
+### Rule 0: READ CODE BEFORE GIVING ADVICE (ADDED AFTER FEB 6 FUCKUP)
+**BEFORE telling the user to run ANY script, workflow, or action:**
+1. READ the actual code that will execute
+2. VERIFY filters, flags, and parameters work as expected
+3. TRACE through the logic to confirm behavior
+4. TEST locally if possible (`--list-towns`, `--limit=3`)
+
+**DO NOT:**
+- Assume how a script works
+- Tell user to click buttons without checking what they do
+- Give advice based on parameter names alone
+
+**TODAY'S MISTAKE:** Told user to check "Regenerate all" without reading the script. The script ignored the town filter for areas. Cost hours of wasted generation.
+
+**PATTERN TO BREAK:** "Click X" → disaster → "oh let me read the code" → "there's a bug"
+**NEW PATTERN:** "Let me read the code first" → verify → "here's what will happen" → user decides
+
+---
+
 ### Rule 1: NEVER PUSH WHILE GITHUB ACTIONS ARE RUNNING
 - **BEFORE suggesting `git push`**, ALWAYS ask: "Is there a GitHub Action running?"
 - If user says yes or you're unsure: **DO NOT PUSH**
