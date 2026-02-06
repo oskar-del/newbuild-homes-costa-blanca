@@ -13,8 +13,9 @@ on:
         required: false
         default: 'false'
         type: boolean
-  schedule:
-    - cron: '0 6 * * *'
+  # DISABLED - was costing money running daily for ALL content
+  # schedule:
+  #   - cron: '0 6 * * *'
 
 jobs:
   generate:
