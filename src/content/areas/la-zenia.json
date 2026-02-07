@@ -223,7 +223,240 @@
         "answer": "Absolutely. The calm beach waters, family-friendly restaurants at the Boulevard, cinema, and safe residential areas make La Zenia ideal for families. International schools are within 15-20 minutes, and healthcare is excellent. The community has many families with children of all ages."
       }
     ],
-    "conclusion": "Ready to explore new build properties in La Zenia? Our team specializes in helping international buyers find their perfect home in this sought-after beach and shopping destination. Whether you're seeking a holiday apartment with rental potential, a family townhouse, or a permanent home in the sun, we'll guide you through every step."
+    "conclusion": "Ready to explore new build properties in La Zenia? Our team specializes in helping international buyers find their perfect home in this sought-after beach and shopping destination. Whether you're seeking a holiday apartment with rental potential, a family townhouse, or a permanent home in the sun, we'll guide you through every step.",
+    "investmentAnalysis": {
+      "rentalYield": "7-10%",
+      "annualAppreciation": "4-7%",
+      "overview": "La Zenia represents one of Costa Blanca's highest-yielding investment locations. The combination of Blue Flag beach, Europe's largest shopping mall, and proximity to golf courses creates unmatched demand diversity. Properties achieve exceptional occupancy rates throughout the year from both tourist and permanent resident markets.",
+      "highlights": [
+        "Highest rental yields on Costa Blanca from multiple demand sources",
+        "Year-round occupancy from beach holidays, shopping visits, and golf",
+        "Beach-adjacent properties command premium rental rates",
+        "La Zenia Boulevard drives consistent visitor flow to the area",
+        "Established track record of strong capital appreciation"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living in La Zenia offers excellent value for beachside resort living, with costs similar to other established coastal areas but offset by rental income potential for investment properties.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€330-480",
+          "notes": "Mercadona at La Zenia Boulevard; local shops; weekly markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€140-210",
+          "notes": "Sea breeze reduces cooling; electricity higher in peak summer"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€100-220",
+          "notes": "Higher for beachfront; includes pool, maintenance, security"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€700-1800/year",
+          "notes": "Beachfront properties significantly higher due to location value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€18-35",
+          "notes": "Boulevard restaurants €25-45; beach chiringuitos €15-20"
+        },
+        {
+          "category": "Beach Clubs & Activities",
+          "cost": "€60-150",
+          "notes": "Beach club memberships, water sports, sun lounger rentals"
+        },
+        {
+          "category": "Shopping Entertainment",
+          "cost": "€50-120",
+          "notes": "Cinema, restaurants, entertainment at La Zenia Boulevard"
+        },
+        {
+          "category": "Car expenses",
+          "cost": "€100-180",
+          "notes": "Most areas walkable; car useful for flexibility and golf"
+        }
+      ]
+    },
+    "events": {
+      "intro": "La Zenia and surrounding Orihuela Costa host year-round festivals and events celebrating the vibrant beach and shopping culture.",
+      "events": [
+        {
+          "name": "La Zenia Beach Fiesta",
+          "month": "June",
+          "description": "Summer festival with beach parties, DJ performances, and entertainment along the shoreline"
+        },
+        {
+          "name": "Boulevard Festival",
+          "month": "July",
+          "description": "Shopping center festival with live music, fashion shows, and special retail events"
+        },
+        {
+          "name": "International Food Festival",
+          "month": "August",
+          "description": "Celebration of international cuisine with food stalls from around the world"
+        },
+        {
+          "name": "La Zenia Sunset Market",
+          "month": "Saturday Year-Round",
+          "description": "Weekly market on Calle Maestro Torralba with fresh produce, crafts, and goods"
+        },
+        {
+          "name": "Sports & Recreation Events",
+          "month": "Throughout Year",
+          "description": "Beach volleyball tournaments, paddleboard races, water sports competitions"
+        },
+        {
+          "name": "Christmas & Holiday Markets",
+          "month": "December",
+          "description": "Festive celebrations with lights, markets, and holiday events throughout La Zenia"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "La Zenia benefits from excellent schooling options serving the large family-oriented expatriate community, from international schools to Spanish education.",
+      "schools": [
+        {
+          "name": "International School of Alicante",
+          "type": "International (IB)",
+          "distance": "20 min",
+          "description": "Leading IB school with excellent facilities offering comprehensive international curriculum"
+        },
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "25 min",
+          "description": "British curriculum specialist with strong academic record and pastoral care"
+        },
+        {
+          "name": "Colegio Público Playa Flamenca",
+          "type": "Spanish State",
+          "distance": "8 min",
+          "description": "Public primary school serving the coastal communities of Orihuela Costa"
+        },
+        {
+          "name": "IES La Zenia",
+          "type": "Spanish State",
+          "distance": "10 min",
+          "description": "Secondary school offering Spanish education from age 12-18"
+        },
+        {
+          "name": "Happy Kids Nursery",
+          "type": "International Nursery",
+          "distance": "5 min",
+          "description": "English-language nursery and preschool for youngest residents"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "La Zenia combines beach and water activities with nearby nature reserves and golf courses, offering diverse outdoor options.",
+      "activities": [
+        {
+          "name": "Playa de La Zenia Blue Flag Beach",
+          "type": "Beach",
+          "description": "Golden sand beach with lifeguards, beach bars, sun loungers, and full facilities"
+        },
+        {
+          "name": "Swimming & Water Sports",
+          "type": "Beach",
+          "description": "Safe calm waters perfect for swimming; paddleboarding, windsurfing available"
+        },
+        {
+          "name": "Cala Bosque Quiet Cove",
+          "type": "Beach",
+          "description": "Quieter rocky cove north of main beach, ideal for exploring and snorkeling"
+        },
+        {
+          "name": "Cala Capitán Rocky Exploration",
+          "type": "Beach",
+          "description": "Scenic rocky cove towards Cabo Roig with natural pools and snorkeling"
+        },
+        {
+          "name": "Golf at Multiple Courses",
+          "type": "Golf",
+          "description": "Six championship courses within 15 minutes including Villamartin and Las Colinas"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Coastal paths connecting La Zenia to Playa Flamenca and beyond"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "La Zenia has one of Costa Blanca's most established and welcoming expatriate communities. The area attracts families, retirees, and holiday homeowners, primarily from the UK but increasingly diverse. English is spoken everywhere, and the infrastructure for expatriate life is comprehensive. Community integration is easy through shared interests in beach, shopping, and golf.",
+      "highlights": [
+        "Large, established British community with strong support networks",
+        "English spoken in nearly all shops, restaurants, and services",
+        "Family-friendly atmosphere with schools and child-oriented amenities",
+        "Strong beach and sports clubs with regular social activities",
+        "Shopping at La Zenia Boulevard creates natural meeting points",
+        "Golf clubs serve as important social hubs",
+        "International community increasingly diverse beyond British",
+        "Numerous expat-oriented social groups and clubs"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "French",
+        "Irish",
+        "Swiss",
+        "Spanish",
+        "Multinational"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in La Zenia",
+      "entries": [
+        {
+          "time": "07:30",
+          "activity": "Early Beach Walk",
+          "description": "Morning stroll along Playa de La Zenia beach before the crowds arrive"
+        },
+        {
+          "time": "09:00",
+          "activity": "Coffee & Breakfast",
+          "description": "Coffee at a beachfront chiringuito watching swimmers and early walkers"
+        },
+        {
+          "time": "10:30",
+          "activity": "La Zenia Boulevard Shopping",
+          "description": "Shopping, browsing, or catching up with friends at the vast mall"
+        },
+        {
+          "time": "13:00",
+          "activity": "Boulevard Restaurant Lunch",
+          "description": "Lunch at one of 30+ restaurants offering cuisines from around the world"
+        },
+        {
+          "time": "15:00",
+          "activity": "Beach & Pool Time",
+          "description": "Afternoon beach swimming or relaxation at community pool"
+        },
+        {
+          "time": "17:00",
+          "activity": "Golf or Activities",
+          "description": "Afternoon golf round or water sports activity like paddleboarding"
+        },
+        {
+          "time": "19:30",
+          "activity": "Promenade & Drinks",
+          "description": "Evening promenade walk with aperitivo drinks watching sunset"
+        },
+        {
+          "time": "21:00",
+          "activity": "Dinner & Entertainment",
+          "description": "Dinner at favorite restaurant then cinema or evening entertainment"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7358!3d37.9389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63ba000000%3A0x400a1e000000!2sLa%20Zenia%2C%20Orihuela%20Costa%2C%20Alicante%2C%20Spain!5e0!3m2!1sen!2ses!4v1640000000000"
   },
   "developments": [],
   "schema": {

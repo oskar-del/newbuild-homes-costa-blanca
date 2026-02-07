@@ -121,10 +121,10 @@ export const developers: Record<string, Developer> = {
     specialties: ['Golf Developments', 'Luxury Villas'],
     trustFactors: ['Bank Guarantee (LCI)', '10-Year Structural Warranty'],
   },
-  'trvite': {
-    slug: 'trvite',
-    name: 'TRVITE',
-    displayName: 'Trvite',
+  'trivee': {
+    slug: 'trivee',
+    name: 'TRIVEE',
+    displayName: 'Trivee',
     description: 'Developer known for their Grecia series of Mediterranean-style homes.',
     specialties: ['Mediterranean Style', 'Golf Properties'],
     trustFactors: ['Bank Guarantee (LCI)', '10-Year Structural Warranty'],
@@ -391,19 +391,19 @@ export const developments: Development[] = [
     relatedBlogSlugs: ['family-homes-costa-blanca'],
   },
 
-  // TRVITE - GRECIA II
+  // TRIVEE - GRECIA II
   {
     slug: 'grecia-ii-la-finca',
     name: 'GRECIA II',
     displayName: 'Grecia II',
-    developer: 'TRVITE',
-    developerSlug: 'trvite',
+    developer: 'TRIVEE',
+    developerSlug: 'trivee',
     area: 'algorfa',
     areaSlug: 'algorfa',
     zone: 'La Finca Golf',
     coordinates: [38.0642, -0.7925],
     concept: 'Classic Mediterranean Charm',
-    description: 'Grecia II continues Trvite\'s popular Mediterranean-inspired series. These charming villas feature traditional styling with arched doorways, terracotta details, and sun-drenched terraces.',
+    description: 'Grecia II continues Trivee\'s popular Mediterranean-inspired series. These charming villas feature traditional styling with arched doorways, terracotta details, and sun-drenched terraces.',
     idealFor: ['retirement', 'holiday-home', 'golf-enthusiast'],
     highlights: [
       'Classic Mediterranean style',
@@ -428,19 +428,19 @@ export const developments: Development[] = [
     relatedBlogSlugs: ['mediterranean-style-homes'],
   },
 
-  // TRVITE - GRECIA ZANTE
+  // TRIVEE - GRECIA ZANTE
   {
     slug: 'grecia-zante',
     name: 'GRECIA_ZANTE',
     displayName: 'Grecia Zante',
-    developer: 'TRVITE',
-    developerSlug: 'trvite',
+    developer: 'TRIVEE',
+    developerSlug: 'trivee',
     area: 'algorfa',
     areaSlug: 'algorfa',
     zone: 'Algorfa',
     coordinates: [38.0620, -0.7900],
     concept: 'Affordable Mediterranean Living',
-    description: 'Part of Trvite\'s Grecia series, Zante offers an accessible entry point to the Algorfa lifestyle. These well-designed homes provide Mediterranean charm at an attractive price point.',
+    description: 'Part of Trivee\'s Grecia series, Zante offers an accessible entry point to the Algorfa lifestyle. These well-designed homes provide Mediterranean charm at an attractive price point.',
     idealFor: ['first-time-buyer', 'investor', 'holiday-home'],
     highlights: [
       'Affordable entry point',

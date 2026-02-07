@@ -78,6 +78,39 @@ interface AreaContent {
     whyLiveHereSection: string[];
     faqs: { question: string; answer: string }[];
     conclusion: string;
+    // Enhanced fields (optional)
+    investmentAnalysis?: {
+      rentalYield: string;
+      annualAppreciation: string;
+      overview: string;
+      highlights: string[];
+    };
+    costOfLiving?: {
+      intro: string;
+      items: { category: string; cost: string; notes: string }[];
+    };
+    events?: {
+      intro: string;
+      events: { name: string; month: string; description: string }[];
+    };
+    schools?: {
+      intro: string;
+      schools: { name: string; type: string; distance: string; description: string }[];
+    };
+    natureActivities?: {
+      intro: string;
+      activities: { name: string; type: string; description: string }[];
+    };
+    expatCommunity?: {
+      intro: string;
+      highlights: string[];
+      nationalities: string[];
+    };
+    lifestyleTimeline?: {
+      title: string;
+      entries: { time: string; activity: string; description: string }[];
+    };
+    mapEmbed?: string;
   };
   developments: {
     name: string;
@@ -129,6 +162,15 @@ function normalizeAreaContent(rawData: any, slug: string): AreaContent {
           : [],
       };
     }
+    // Pass through enhanced fields from Format 1
+    if (rawData.content?.investmentAnalysis) normalized.content.investmentAnalysis = rawData.content.investmentAnalysis;
+    if (rawData.content?.costOfLiving) normalized.content.costOfLiving = rawData.content.costOfLiving;
+    if (rawData.content?.events) normalized.content.events = rawData.content.events;
+    if (rawData.content?.schools) normalized.content.schools = rawData.content.schools;
+    if (rawData.content?.natureActivities) normalized.content.natureActivities = rawData.content.natureActivities;
+    if (rawData.content?.expatCommunity) normalized.content.expatCommunity = rawData.content.expatCommunity;
+    if (rawData.content?.lifestyleTimeline) normalized.content.lifestyleTimeline = rawData.content.lifestyleTimeline;
+    if (rawData.content?.mapEmbed) normalized.content.mapEmbed = rawData.content.mapEmbed;
     return normalized;
   }
   
@@ -780,6 +822,234 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                   ))}
                 </div>
               </section>
+
+              {/* Investment Analysis */}
+              {content.investmentAnalysis && (
+                <section>
+                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
+                    Investment Analysis
+                  </h2>
+                  <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-sm p-6 mb-6">
+                    <div className="grid grid-cols-2 gap-6 mb-6">
+                      <div className="text-center">
+                        <p className="text-3xl font-bold text-accent-600">{content.investmentAnalysis.rentalYield}</p>
+                        <p className="text-sm text-warm-600 mt-1">Rental Yield</p>
+                      </div>
+                      <div className="text-center">
+                        <p className="text-3xl font-bold text-primary-700">{content.investmentAnalysis.annualAppreciation}</p>
+                        <p className="text-sm text-warm-600 mt-1">Annual Appreciation</p>
+                      </div>
+                    </div>
+                    <p className="text-warm-700">{content.investmentAnalysis.overview}</p>
+                  </div>
+                  {content.investmentAnalysis.highlights.length > 0 && (
+                    <div className="grid md:grid-cols-2 gap-3">
+                      {content.investmentAnalysis.highlights.map((highlight, i) => (
+                        <div key={i} className="flex items-start gap-3 p-3 border border-warm-200 rounded-sm">
+                          <span className="text-accent-500 text-lg">📈</span>
+                          <span className="text-warm-700">{highlight}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </section>
+              )}
+
+              {/* Cost of Living */}
+              {content.costOfLiving && (
+                <section>
+                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
+                    Cost of Living in {data.name}
+                  </h2>
+                  <p className="text-warm-700 mb-6">{content.costOfLiving.intro}</p>
+                  <div className="overflow-hidden border border-warm-200 rounded-sm">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="bg-primary-900 text-white">
+                          <th className="text-left px-4 py-3 font-medium">Category</th>
+                          <th className="text-left px-4 py-3 font-medium">Cost</th>
+                          <th className="text-left px-4 py-3 font-medium hidden md:table-cell">Notes</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {content.costOfLiving.items.map((item, i) => (
+                          <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-warm-50'}>
+                            <td className="px-4 py-3 text-warm-800 font-medium">{item.category}</td>
+                            <td className="px-4 py-3 text-accent-600 font-bold">{item.cost}</td>
+                            <td className="px-4 py-3 text-warm-600 text-sm hidden md:table-cell">{item.notes}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              )}
+
+              {/* Lifestyle Timeline */}
+              {content.lifestyleTimeline && content.lifestyleTimeline.entries.length > 0 && (
+                <section>
+                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
+                    {content.lifestyleTimeline.title || `A Typical Day in ${data.name}`}
+                  </h2>
+                  <div className="relative">
+                    <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-accent-200" />
+                    <div className="space-y-6">
+                      {content.lifestyleTimeline.entries.map((entry, i) => (
+                        <div key={i} className="relative flex gap-6 items-start">
+                          <div className="relative z-10 flex-shrink-0 w-12 h-12 bg-accent-500 text-white rounded-full flex items-center justify-center text-xs font-bold shadow-md">
+                            {entry.time}
+                          </div>
+                          <div className="flex-1 bg-white border border-warm-200 rounded-sm p-4 shadow-sm">
+                            <h3 className="font-bold text-primary-900 mb-1">{entry.activity}</h3>
+                            <p className="text-warm-600 text-sm">{entry.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </section>
+              )}
+
+              {/* Events & Fiestas */}
+              {content.events && content.events.events.length > 0 && (
+                <section>
+                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
+                    Events & Fiestas in {data.name}
+                  </h2>
+                  <p className="text-warm-700 mb-6">{content.events.intro}</p>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {content.events.events.map((event, i) => (
+                      <div key={i} className="border border-warm-200 rounded-sm p-4 hover:shadow-md transition-shadow">
+                        <div className="flex items-start gap-3">
+                          <div className="flex-shrink-0 bg-accent-100 text-accent-700 px-3 py-1 rounded-full text-sm font-medium">
+                            {event.month}
+                          </div>
+                          <div>
+                            <h3 className="font-bold text-primary-900 mb-1">{event.name}</h3>
+                            <p className="text-warm-600 text-sm">{event.description}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* Schools */}
+              {content.schools && content.schools.schools.length > 0 && (
+                <section>
+                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
+                    Schools Near {data.name}
+                  </h2>
+                  <p className="text-warm-700 mb-6">{content.schools.intro}</p>
+                  <div className="space-y-3">
+                    {content.schools.schools.map((school, i) => (
+                      <div key={i} className="flex items-start gap-4 p-4 border border-warm-200 rounded-sm">
+                        <span className="flex-shrink-0 text-2xl">🎓</span>
+                        <div className="flex-1">
+                          <div className="flex flex-wrap items-center gap-2 mb-1">
+                            <h3 className="font-bold text-primary-900">{school.name}</h3>
+                            <span className="bg-primary-100 text-primary-700 px-2 py-0.5 rounded-full text-xs font-medium">
+                              {school.type}
+                            </span>
+                          </div>
+                          <p className="text-warm-600 text-sm">{school.description}</p>
+                          <p className="text-warm-500 text-xs mt-1">📍 {school.distance}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* Nature & Activities */}
+              {content.natureActivities && content.natureActivities.activities.length > 0 && (
+                <section>
+                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
+                    Nature & Activities
+                  </h2>
+                  <p className="text-warm-700 mb-6">{content.natureActivities.intro}</p>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {content.natureActivities.activities.map((activity, i) => (
+                      <div key={i} className="bg-gradient-to-br from-green-50 to-blue-50 rounded-sm p-4 border border-green-100">
+                        <div className="flex items-start gap-3">
+                          <span className="flex-shrink-0 text-xl">
+                            {activity.type === 'Golf' ? '⛳' :
+                             activity.type === 'Beach' || activity.type === 'Water Sports' ? '🏖️' :
+                             activity.type === 'Hiking' || activity.type === 'Walking' ? '🥾' :
+                             activity.type === 'Cycling' ? '🚴' :
+                             activity.type === 'Nature Reserve' || activity.type === 'Nature' ? '🌿' :
+                             activity.type === 'Bird Watching' ? '🦅' :
+                             '🏞️'}
+                          </span>
+                          <div>
+                            <h3 className="font-bold text-primary-900 mb-1">{activity.name}</h3>
+                            <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">{activity.type}</span>
+                            <p className="text-warm-600 text-sm mt-2">{activity.description}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* Expat Community */}
+              {content.expatCommunity && (
+                <section>
+                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
+                    Expat Community in {data.name}
+                  </h2>
+                  <div className="prose prose-lg max-w-none mb-6">
+                    {content.expatCommunity.intro.split('\n\n').map((paragraph, i) => (
+                      <p key={i} className="text-warm-700">{paragraph}</p>
+                    ))}
+                  </div>
+                  {content.expatCommunity.nationalities.length > 0 && (
+                    <div className="mb-6">
+                      <h3 className="font-medium text-primary-900 mb-3">International Community</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {content.expatCommunity.nationalities.map((nat, i) => (
+                          <span key={i} className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium">
+                            {nat}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {content.expatCommunity.highlights.length > 0 && (
+                    <div className="grid md:grid-cols-2 gap-3">
+                      {content.expatCommunity.highlights.map((highlight, i) => (
+                        <div key={i} className="flex items-start gap-3 p-3 bg-warm-50 rounded-sm">
+                          <span className="text-accent-500">🤝</span>
+                          <span className="text-warm-700">{highlight}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </section>
+              )}
+
+              {/* Area Map */}
+              {content.mapEmbed && (
+                <section>
+                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
+                    {data.name} Location
+                  </h2>
+                  <div className="rounded-sm overflow-hidden border border-warm-200">
+                    <iframe
+                      src={content.mapEmbed}
+                      width="100%"
+                      height="400"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title={`Map of ${data.name}`}
+                    />
+                  </div>
+                </section>
+              )}
 
               {/* Available Properties */}
               {developments && developments.length > 0 && (

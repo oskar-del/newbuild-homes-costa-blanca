@@ -492,9 +492,9 @@ export const propertyMapping: Record<string, PropertyDevelopmentInfo> = {
   'SP1417': { developer: 'INSLIR GRUPO', development: 'LAS TERRAZAS DE MACENAS', deliveryDate: '01-04-2028', zone: 'Playa Macenas' },
 
   // ==========================================
-  // TRVITE - GRECIA_ZANTE (Algorfa)
+  // TRIVEE - GRECIA_ZANTE (Algorfa)
   // ==========================================
-  'N9074B': { developer: 'TRVITE', development: 'GRECIA_ZANTE', deliveryDate: '01-06-2026', zone: 'Algorfa' },
+  'N9074B': { developer: 'TRIVEE', development: 'GRECIA_ZANTE', deliveryDate: '01-06-2026', zone: 'Algorfa' },
 
   // ==========================================
   // TURIS PROMOCIONES - PROJECT 018 (Benejuzar, Lo Fuentes)
@@ -1300,11 +1300,11 @@ export const propertyMapping: Record<string, PropertyDevelopmentInfo> = {
   'N8769': { developer: 'COSTA BLANCA BOLUS', development: 'ALBA VERDE', deliveryDate: '01-12-2026', zone: 'Jacarillo' },
 
   // ==========================================
-  // TRVITE - GRECIA II (Algorfa, La Finca Golf)
+  // TRIVEE - GRECIA II (Algorfa, La Finca Golf)
   // ==========================================
-  'N872': { developer: 'TRVITE', development: 'GRECIA II', deliveryDate: '01-01-2026', zone: 'La Finca Golf' },
-  'N8733': { developer: 'TRVITE', development: 'GRECIA II', deliveryDate: '01-04-2026', zone: 'La Finca Golf' },
-  'N8731': { developer: 'TRVITE', development: 'GRECIA II', deliveryDate: '01-04-2026', zone: 'La Finca Golf' },
+  'N872': { developer: 'TRIVEE', development: 'GRECIA II', deliveryDate: '01-01-2026', zone: 'La Finca Golf' },
+  'N8733': { developer: 'TRIVEE', development: 'GRECIA II', deliveryDate: '01-04-2026', zone: 'La Finca Golf' },
+  'N8731': { developer: 'TRIVEE', development: 'GRECIA II', deliveryDate: '01-04-2026', zone: 'La Finca Golf' },
 
   // ==========================================
   // TINDRA HOMES - COSTA SIRENA (Los Alcazares, Serena Golf)

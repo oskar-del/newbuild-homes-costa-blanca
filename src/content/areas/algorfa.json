@@ -167,7 +167,236 @@
         "answer": "Algorfa has a strong community feel, particularly around La Finca Golf. The resort attracts like-minded residents who enjoy the golf lifestyle, and there are regular social events, competitions, and gatherings. The village itself maintains authentic Spanish character with local fiestas throughout the year. It's easy to make friends, especially if you enjoy golf."
       }
     ],
-    "conclusion": "Ready to explore golf lifestyle properties in Algorfa? Our team specializes in La Finca Golf developments and can show you the full range of available villas and townhouses. Whether you're seeking a permanent golf home, a holiday retreat, or an investment property with strong rental potential, we'll help you find the perfect property in this exceptional location."
+    "conclusion": "Ready to explore golf lifestyle properties in Algorfa? Our team specializes in La Finca Golf developments and can show you the full range of available villas and townhouses. Whether you're seeking a permanent golf home, a holiday retreat, or an investment property with strong rental potential, we'll help you find the perfect property in this exceptional location.",
+    "investmentAnalysis": {
+      "rentalYield": "5-7%",
+      "annualAppreciation": "4-6%",
+      "overview": "Algorfa offers compelling investment potential for golf-focused property buyers. The combination of lower entry prices than coastal equivalents, strong rental demand from golf tourists, and a proven market creates an attractive investment profile. Properties near La Finca Golf Resort command consistent rental demand throughout the extended golf season (October-May).",
+      "highlights": [
+        "Golf properties command premium rental rates year-round",
+        "Lower entry prices than coastal equivalents with similar rental returns",
+        "Growing demand from international buyers driving appreciation",
+        "Short-term holiday lets popular with golf tourists"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Algorfa are significantly lower than Northern Europe and competitive with other inland areas. The village offers all essential services with good value, while maintaining proximity to larger shopping areas.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-380",
+          "notes": "Mercadona, Lidl, and local markets in Algorfa and nearby Rojales"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€110-160",
+          "notes": "Higher in summer with air conditioning, winter heating minimal"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€60-120",
+          "notes": "Varies by development; golf course access included in some"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€450-950/year",
+          "notes": "Annual property tax based on property value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€12-22",
+          "notes": "Menu del día around €10; international restaurants €18-30"
+        },
+        {
+          "category": "Golf green fees",
+          "cost": "€45-85",
+          "notes": "La Finca membership discounts; weekday rates lower"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Excellent broadband coverage; several providers available"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for daily life in inland location"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Algorfa celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the modern international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, fireworks, bullfights, and street celebrations lasting several days"
+        },
+        {
+          "name": "La Finca Golf Tournament",
+          "month": "September",
+          "description": "Annual championship tournament attracting golfers from across Europe with prize money and social events"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration marking the end of spring with flower displays, food stalls, and community gatherings in the village square"
+        },
+        {
+          "name": "Día de la Comunidad Valenciana",
+          "month": "October",
+          "description": "Regional day celebration with traditional paella competitions and cultural performances"
+        },
+        {
+          "name": "Christmas Market & Festival",
+          "month": "December",
+          "description": "Festive season with market stalls, lights, nativity scenes, and Spanish Christmas traditions"
+        },
+        {
+          "name": "Año Nuevo Golf Gala",
+          "month": "December",
+          "description": "New Year's golf tournament and gala dinner at La Finca clubhouse for residents and visitors"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Algorfa have access to schools in the surrounding area, with several international schools nearby serving the expatriate community.",
+      "schools": [
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "25 min",
+          "description": "British curriculum primary and secondary school with excellent facilities and strong academic record"
+        },
+        {
+          "name": "Colegio San Vicente Ferrer",
+          "type": "Spanish State",
+          "distance": "10 min",
+          "description": "Local Spanish primary school in Rojales serving the village community"
+        },
+        {
+          "name": "Colegio Público Juan Sempere",
+          "type": "Spanish State",
+          "distance": "8 min",
+          "description": "Spanish state secondary school in Algorfa offering education to ages 12-18"
+        },
+        {
+          "name": "International School of Alicante",
+          "type": "International (IB)",
+          "distance": "30 min",
+          "description": "International Baccalaureate school with comprehensive curriculum in English"
+        },
+        {
+          "name": "Guardamar Spanish School",
+          "type": "Spanish State",
+          "distance": "15 min",
+          "description": "Beachside location with modern facilities serving local area"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Despite its inland location, Algorfa offers excellent outdoor activities with golf, nature reserves, beaches, and cycling routes nearby.",
+      "activities": [
+        {
+          "name": "La Finca Golf",
+          "type": "Golf",
+          "description": "Championship 18-hole course on your doorstep with daily green fees and membership options"
+        },
+        {
+          "name": "Guardamar Dunes Nature Reserve",
+          "type": "Nature Reserve",
+          "description": "Protected dune system with walking and cycling trails through pine forests (15 min drive)"
+        },
+        {
+          "name": "La Mata Salt Lakes",
+          "type": "Nature Reserve",
+          "description": "Spectacular pink and green salt lakes with walking trails and birdwatching opportunities (20 min drive)"
+        },
+        {
+          "name": "River Segura Cycling Route",
+          "type": "Cycling",
+          "description": "Scenic riverside cycling path connecting Guardamar to inland towns, flat and family-friendly (nearby)"
+        },
+        {
+          "name": "Guardamar Beaches",
+          "type": "Beach",
+          "description": "Beautiful dune-backed beaches perfect for swimming and water sports (15 min drive)"
+        },
+        {
+          "name": "Vega Baja Hiking Trails",
+          "type": "Hiking",
+          "description": "Countryside hiking trails through agricultural areas and villages in the surrounding region"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Algorfa has a growing international community, particularly among golf enthusiasts and retirees. While smaller than coastal resort areas, it offers a welcoming environment with English widely spoken in golf and social circles. The community is characterized by a blend of active golfing enthusiasts and those seeking peaceful rural living.",
+      "highlights": [
+        "Active golf social scene with weekly tournaments and monthly competitions",
+        "Growing number of international shops and English-speaking services",
+        "Regular community events, dinners, and social gatherings",
+        "Strong British presence alongside Scandinavian, Belgian, and Dutch residents",
+        "English widely spoken in golf clubs, shops, and restaurants",
+        "Many long-term residents providing a stable expat community",
+        "Less crowded and commercialized than coastal resort areas"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Belgian",
+        "Dutch",
+        "German",
+        "Irish",
+        "French",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Algorfa",
+      "entries": [
+        {
+          "time": "07:30",
+          "activity": "Morning Coffee",
+          "description": "Start the day with coffee on your terrace overlooking the golf course, watching golfers tee off"
+        },
+        {
+          "time": "09:00",
+          "activity": "Golf Round",
+          "description": "Walk to La Finca Golf for a morning 18 holes, enjoying the course's beautiful parkland layout"
+        },
+        {
+          "time": "13:00",
+          "activity": "Lunch at the Clubhouse",
+          "description": "Post-round meal with friends at La Finca clubhouse with views over the fairways"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta & Pool",
+          "description": "Return home for a relaxing siesta and afternoon swim in your private or communal pool"
+        },
+        {
+          "time": "17:00",
+          "activity": "Beach Trip",
+          "description": "Drive 15 minutes to Guardamar's stunning beaches for an evening swim and sunset views"
+        },
+        {
+          "time": "19:30",
+          "activity": "Evening Walk",
+          "description": "Stroll through the village center, greeting neighbors and enjoying the cooler evening air"
+        },
+        {
+          "time": "20:30",
+          "activity": "Tapas Dinner",
+          "description": "Enjoy traditional Spanish tapas at a local village restaurant or golf club dining room"
+        },
+        {
+          "time": "22:30",
+          "activity": "Stargazing",
+          "description": "End the day under clear skies from your terrace with a nightcap, enjoying the peaceful silence"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7928!3d38.0647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63a15d89555555%3A0x400a1c000000!2sAlgorfa%2C%20Alicante%2C%20Spain!5e0!3m2!1sen!2ses!4v1640000000000"
   },
   "developments": [],
   "schema": {

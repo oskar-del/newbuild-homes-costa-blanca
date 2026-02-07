@@ -140,7 +140,217 @@
         "answer": "New build villas in Jávea typically start from €700,000 for 3-bedroom properties and can exceed €3 million for premium sea-view homes. The limited supply of new developments and consistent demand have maintained strong property values."
       }
     ],
-    "conclusion": "Jávea represents the best of Costa Blanca North—natural beauty, authentic character, and sophisticated living without the crowds. Whether you're seeking a permanent home in the Spanish sun or a high-quality holiday property, Jávea delivers an exceptional lifestyle. Contact us today to explore available new build villas in this sought-after location."
+    "conclusion": "Jávea represents the best of Costa Blanca North—natural beauty, authentic character, and sophisticated living without the crowds. Whether you're seeking a permanent home in the Spanish sun or a high-quality holiday property, Jávea delivers an exceptional lifestyle. Contact us today to explore available new build villas in this sought-after location.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6% on quality villas, higher during summer season",
+      "annualAppreciation": "3-5% annually, strong due to limited supply and quality positioning",
+      "overview": "Jávea's property market focuses on high-end holiday rentals and permanent residences. The WHO-recognized microclimate, strict building regulations, and limited new development create sustained demand from discerning international buyers.",
+      "highlights": [
+        "Limited new supply maintains strong price appreciation",
+        "Attracts high-income buyers seeking quality over quantity",
+        "Holiday rental market supports good seasonal occupancy rates",
+        "UNESCO-level health microclimate adds long-term value",
+        "Established prestige positioning attracts consistent international demand"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Jávea's cost of living is higher than average Costa Blanca due to its upmarket positioning, quality services, and sophisticated international community.",
+      "items": [
+        {
+          "category": "Rent (2-bed villa)",
+          "cost": "€1200-2000",
+          "notes": "Sea-view properties significantly more; town center cheaper"
+        },
+        {
+          "category": "Utilities (monthly)",
+          "cost": "€120-180",
+          "notes": "Mild climate reduces heating; air conditioning seasonal"
+        },
+        {
+          "category": "Groceries (weekly)",
+          "cost": "€80-120",
+          "notes": "Covered market with quality produce; some imported items at premium prices"
+        },
+        {
+          "category": "Restaurant meal (3-course)",
+          "cost": "€22-35",
+          "notes": "Quality dining with Michelin-referenced establishments"
+        },
+        {
+          "category": "Cafe coffee",
+          "cost": "€1.60-2.20",
+          "notes": "Premium café pricing in seafront and old town locations"
+        },
+        {
+          "category": "Healthcare (monthly)",
+          "cost": "€100-150",
+          "notes": "Private insurance recommended for specialist access"
+        },
+        {
+          "category": "Property taxes (annual)",
+          "cost": "€800-1500",
+          "notes": "IBI higher due to upmarket property values"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€150-250",
+          "notes": "Common in gated communities and developments"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Jávea's event calendar blends traditional Spanish celebrations with cultural events reflecting its sophisticated international community.",
+      "events": [
+        {
+          "name": "Fiestas de Jávea (Patron Saint Festival)",
+          "month": "July 30 - August 5",
+          "description": "Traditional Spanish celebration honoring Mare de Déu, featuring parades, processions, concerts, and cultural events throughout the town"
+        },
+        {
+          "name": "Mediterranean Gastronomy Festival",
+          "month": "September",
+          "description": "Celebration of local cuisine featuring renowned restaurants, wine tastings, and demonstrations of Mediterranean cooking traditions"
+        },
+        {
+          "name": "Semana Santa (Holy Week)",
+          "month": "March/April",
+          "description": "Religious processions in the historic old town with traditional Spanish ceremonies and local participation"
+        },
+        {
+          "name": "Cultural Events & Exhibitions",
+          "month": "Year-round",
+          "description": "Regular art exhibitions, theater performances, and cultural events reflecting the town's artistic community"
+        },
+        {
+          "name": "Weekly Markets",
+          "month": "Year-round",
+          "description": "Covered market in the old town offering fresh local produce, flowers, and crafts"
+        },
+        {
+          "name": "Christmas Celebration",
+          "month": "December",
+          "description": "Festive season celebrations with decorations, nativity scenes, and holiday events throughout town"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Jávea has several international school options alongside quality Spanish public schools, making it suitable for families. The sophisticated community supports educational excellence.",
+      "schools": [
+        {
+          "name": "Jávea International School",
+          "type": "International Primary & Secondary",
+          "distance": "Central location",
+          "description": "English-language curriculum school with strong academic reputation and international student body"
+        },
+        {
+          "name": "Colegio Público de Jávea",
+          "type": "Public Primary & Secondary",
+          "distance": "Walking distance",
+          "description": "Spanish public school with good educational standards and bilingual programs"
+        },
+        {
+          "name": "British Schools (Dénia)",
+          "type": "International Education",
+          "distance": "15 km",
+          "description": "British curriculum schools in nearby Dénia with established expat student populations"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Jávea's natural environment is exceptional. The dramatic coastline, protected parks, and Mediterranean activities provide year-round outdoor lifestyle opportunities.",
+      "activities": [
+        {
+          "name": "Swimming at Arenal Beach",
+          "type": "Water recreation",
+          "description": "Main sandy beach with promenade, calm waters perfect for families and casual swimmers"
+        },
+        {
+          "name": "Snorkeling at La Granadella",
+          "type": "Water sports",
+          "description": "Award-winning cove with crystal-clear waters, underwater visibility, and marine biodiversity"
+        },
+        {
+          "name": "Hiking in Montgó Natural Park",
+          "type": "Nature walks",
+          "description": "Mountain trails with panoramic views overlooking three coastlines and protected natural environment"
+        },
+        {
+          "name": "Coastal walks and cliff paths",
+          "type": "Scenic recreation",
+          "description": "Dramatic cliff-top paths connecting different coves and offering Mediterranean vistas"
+        },
+        {
+          "name": "Water sports (sailing, paddleboarding)",
+          "type": "Water activities",
+          "description": "Various water sports available from the beaches and port area"
+        },
+        {
+          "name": "Golf at La Sella Resort",
+          "type": "Sports",
+          "description": "Championship 27-hole course by José María Olazábal, 15 km away, world-class facilities"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Jávea has a well-established, sophisticated expatriate community that values quality of life and cultural integration. The international population is substantial but maintains Spanish character.",
+      "highlights": [
+        "Sophisticated, quality-focused expat community",
+        "Mix of permanent residents and seasonal visitors",
+        "Strong British and Northern European presence alongside Spanish locals",
+        "Cultural integration valued; restaurants, shops, and services multilingual",
+        "Active social clubs and community organizations",
+        "Year-round temperate climate supports active outdoor lifestyle"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "French",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Jávea",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Beach walk or outdoor activity",
+          "description": "Start the day with a walk along the Arenal promenade or hike in Montgó park"
+        },
+        {
+          "time": "10:00",
+          "activity": "Market or café",
+          "description": "Stop at the covered market for fresh produce or café con leche in the old town"
+        },
+        {
+          "time": "13:00",
+          "activity": "Long lunch",
+          "description": "Main meal at a terrace restaurant overlooking the port or at a traditional tapas bar"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta or beach time",
+          "description": "Afternoon rest or swimming at one of the quieter coves"
+        },
+        {
+          "time": "17:00",
+          "activity": "Cultural activity",
+          "description": "Museum visit, art gallery, or cultural center activity reflecting Jávea's artistic community"
+        },
+        {
+          "time": "19:30",
+          "activity": "Paseo and aperitivo",
+          "description": "Evening stroll through the old town square and drinks at a favorite bar"
+        },
+        {
+          "time": "21:00",
+          "activity": "Fine dining experience",
+          "description": "Quality dinner at restaurant with Michelin recognition or local specialty restaurants"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.0600!3d38.7412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sJ%C3%A1vea!5e0!3m2!1sen!2ses"
   },
   "developments": [
     {

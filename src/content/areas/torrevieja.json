@@ -170,7 +170,240 @@
         "answer": "Yes, Torrevieja is very family-friendly with safe beaches, good schools (including international options nearby), plenty of parks and recreational facilities, and a welcoming community. The affordable cost of living and good healthcare make it practical for families too."
       }
     ],
-    "conclusion": "Ready to explore new build properties in Torrevieja? Our team specializes in helping international buyers find their perfect home in Costa Blanca South. Whether you're looking for a holiday apartment, permanent residence, or investment property, we'll guide you through every step of the buying process."
+    "conclusion": "Ready to explore new build properties in Torrevieja? Our team specializes in helping international buyers find their perfect home in Costa Blanca South. Whether you're looking for a holiday apartment, permanent residence, or investment property, we'll guide you through every step of the buying process.",
+    "investmentAnalysis": {
+      "rentalYield": "6-8%",
+      "annualAppreciation": "4-6%",
+      "overview": "Torrevieja represents one of Costa Blanca's strongest investment opportunities. The large international community, established rental market, proximity to amenities, and year-round tourism create consistent demand. The WHO-recognized healthy climate attracts long-term residents and health-focused investors.",
+      "highlights": [
+        "Large international community drives year-round rental demand",
+        "Holiday rental potential combined with permanent resident market",
+        "Healthiest climate in Europe recognized by WHO",
+        "Strong university hospital attracts retirees and health-conscious buyers",
+        "Over 300 sunny days annually supports extended rental season"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Torrevieja offers excellent value for coastal living in Spain. Costs are lower than most European coastal cities and competitive with other Costa Blanca locations.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€300-420",
+          "notes": "Large supermarkets and Friday market with competitive pricing"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€120-180",
+          "notes": "Higher in summer with AC; sea breeze reduces cooling costs"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€70-150",
+          "notes": "Varies by development; beachfront properties often higher"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€500-1200/year",
+          "notes": "Based on property value; town amenities increase slightly"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€14-25",
+          "notes": "Fresh seafood restaurants €20-35; tapas bars €10-15"
+        },
+        {
+          "category": "Healthcare (private)",
+          "cost": "€80-150/month",
+          "notes": "Private insurance; public healthcare available to residents"
+        },
+        {
+          "category": "Beach activities & clubs",
+          "cost": "€50-100",
+          "notes": "Beach bar memberships, water sports, social clubs"
+        },
+        {
+          "category": "Car expenses",
+          "cost": "€120-200",
+          "notes": "Lower fuel costs than Europe; parking available"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Torrevieja hosts a vibrant calendar of festivals and events that celebrate its unique culture and large international community.",
+      "events": [
+        {
+          "name": "Festival de Habaneras",
+          "month": "August",
+          "description": "Famous choral singing festival celebrating the unique Habaneras musical tradition with performances across the town"
+        },
+        {
+          "name": "Fiestas de Torrevieja",
+          "month": "July-August",
+          "description": "Annual festivities with fireworks, parades, bullfights, and street celebrations honoring the city's patron saint"
+        },
+        {
+          "name": "Sea Festival (Fiesta del Mar)",
+          "month": "June",
+          "description": "Celebration of maritime traditions with boat parades, water sports demonstrations, and seafood gastronomy"
+        },
+        {
+          "name": "Spring Market & Garden Festival",
+          "month": "May",
+          "description": "Celebrates the season with plant sales, flower displays, and outdoor markets throughout the city"
+        },
+        {
+          "name": "Semana Santa (Holy Week)",
+          "month": "April",
+          "description": "Traditional religious processions and celebrations with Spanish customs and cultural significance"
+        },
+        {
+          "name": "International Community Fair",
+          "month": "October",
+          "description": "Celebration of the 100+ nationalities living in Torrevieja with food, music, and cultural performances"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Torrevieja offers a variety of educational options from Spanish state schools to international institutions, serving the large expat community.",
+      "schools": [
+        {
+          "name": "International School of Alicante (Secondary)",
+          "type": "International (IB)",
+          "distance": "20 min",
+          "description": "IB-certified school offering International Baccalaureate curriculum for secondary students"
+        },
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "25 min",
+          "description": "British curriculum school from nursery through secondary offering A-levels"
+        },
+        {
+          "name": "Colegio Público Cardenal Cisneros",
+          "type": "Spanish State",
+          "distance": "5 min",
+          "description": "Public Spanish school offering primary education in the town center"
+        },
+        {
+          "name": "IES Joanot Martorell",
+          "type": "Spanish State",
+          "distance": "8 min",
+          "description": "Secondary school offering comprehensive Spanish education curriculum"
+        },
+        {
+          "name": "Happy Kids Nursery",
+          "type": "International Nursery",
+          "distance": "3 min",
+          "description": "English-language nursery and pre-school serving expat families"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Torrevieja offers diverse nature experiences from salt lake exploration to coastal activities and water sports.",
+      "activities": [
+        {
+          "name": "Laguna Rosa (Pink Salt Lake)",
+          "type": "Nature Reserve",
+          "description": "Unique pink salt lake offering walking trails, birdwatching, and photography opportunities"
+        },
+        {
+          "name": "Laguna de Torrevieja (Green Salt Lake)",
+          "type": "Nature Reserve",
+          "description": "Green salt lake with protected habitat for flamingos, herons, and migratory birds"
+        },
+        {
+          "name": "Beach Swimming & Water Sports",
+          "type": "Beach",
+          "description": "Multiple Blue Flag beaches with lifeguards, paddleboarding, and sailing options"
+        },
+        {
+          "name": "Paseo Marítimo Promenade Walk",
+          "type": "Walking",
+          "description": "Seafront promenade perfect for evening strolls with restaurants and sea views"
+        },
+        {
+          "name": "Yacht Club Activities",
+          "type": "Water Sports",
+          "description": "Sailing, boat trips, and maritime activities at the bustling yacht club"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Villamartin, Las Ramblas, and Campoamor courses within 15-20 minutes"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Torrevieja is home to one of Europe's largest international communities with over 100 nationalities represented. The established infrastructure for foreign residents, combined with the friendly local Spanish population, creates a unique multicultural environment. English is spoken everywhere, and integrating into the community is effortless through numerous clubs, organizations, and social groups.",
+      "highlights": [
+        "One of Europe's largest international communities (100+ nationalities)",
+        "English widely spoken in shops, restaurants, and services",
+        "Numerous international clubs and social organizations",
+        "Established infrastructure catering to expatriate needs",
+        "Strong healthcare services adapted for international residents",
+        "Easy integration through numerous social groups and events",
+        "British pubs, restaurants, and shops throughout the town",
+        "Active retiree community with organized activities"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "French",
+        "Irish",
+        "Russian",
+        "Eastern European",
+        "Latin American"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Torrevieja",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Beach Walk",
+          "description": "Morning stroll along the seafront promenade with coffee, watching the Mediterranean come alive"
+        },
+        {
+          "time": "09:30",
+          "activity": "Friday Market (Wednesdays)",
+          "description": "Visit one of Spain's largest markets with hundreds of stalls selling produce, clothing, and crafts"
+        },
+        {
+          "time": "12:30",
+          "activity": "Fresh Fish Lunch",
+          "description": "Enjoy caldero (local fish stew) or grilled prawns at a seafront restaurant with sea views"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta & Pool",
+          "description": "Return home for afternoon rest and swim in community pool or sea if building is beachfront"
+        },
+        {
+          "time": "17:00",
+          "activity": "Salt Lake Visit",
+          "description": "Drive to Laguna Rosa or Laguna Verde for evening birdwatching and nature photography"
+        },
+        {
+          "time": "19:30",
+          "activity": "Café Aperitivo",
+          "description": "Enjoy drinks and tapas at a waterfront café, meeting friends and neighbors"
+        },
+        {
+          "time": "21:00",
+          "activity": "Dinner & Culture",
+          "description": "Dine at a Spanish restaurant or enjoy live music performances and theater at local venues"
+        },
+        {
+          "time": "23:00",
+          "activity": "Evening Promenade",
+          "description": "Final stroll along the illuminated seafront before retiring, soaking in the Mediterranean night"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.6823!3d37.9786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63b7d89700000%3A0x400a1d000000!2sTorrevieja%2C%20Alicante%2C%20Spain!5e0!3m2!1sen!2ses!4v1640000000000"
   },
   "developments": [],
   "schema": {

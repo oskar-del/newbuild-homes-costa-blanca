@@ -222,7 +222,206 @@
         "answer": "Excellent for those seeking quality of life over activity. Year-round services, permanent resident community, refined atmosphere. More suited to those who prefer quieter coastal living."
       }
     ],
-    "conclusion": "Campoamor offers what discerning buyers seek: quality beach, excellent golf, refined atmosphere, and lower density—without sacrificing convenience. It's Orihuela Costa for those who prefer their Mediterranean life with room to breathe and quality over crowds.\n\nReady to explore properties in Campoamor? Our team understands what makes this area special and can match you with properties that deliver its distinctive combination of quality and tranquility."
+    "conclusion": "Campoamor offers what discerning buyers seek: quality beach, excellent golf, refined atmosphere, and lower density—without sacrificing convenience. It's Orihuela Costa for those who prefer their Mediterranean life with room to breathe and quality over crowds.\n\nReady to explore properties in Campoamor? Our team understands what makes this area special and can match you with properties that deliver its distinctive combination of quality and tranquility.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6% on apartments, 5-6% on villas with pools",
+      "annualAppreciation": "2-3% annually, steady due to limited supply and refined positioning",
+      "overview": "Campoamor attracts quality-focused holiday visitors and golf tourists who value refined living over mass-market appeal. The lower density and upscale positioning support premium nightly rates and longer seasonal rentals.",
+      "highlights": [
+        "Attracts couples and golf-focused visitors seeking quality",
+        "Refined positioning supports premium nightly rates",
+        "Lower density than neighboring areas reduces competition",
+        "Properties with pools and golf views perform best",
+        "Golf course anchor provides year-round demand catalyst"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Campoamor's cost of living is slightly higher than La Zenia but lower than exclusive golf resorts. The refined atmosphere reflects modest price premiums in dining and services.",
+      "items": [
+        {
+          "category": "Rent (2-bed apartment)",
+          "cost": "€700-1100",
+          "notes": "Beach proximity commands premium; inland urbanization cheaper"
+        },
+        {
+          "category": "Utilities (monthly)",
+          "cost": "€100-140",
+          "notes": "Air conditioning essential, pools increase seasonal consumption"
+        },
+        {
+          "category": "Groceries (weekly)",
+          "cost": "€65-90",
+          "notes": "Mix of supermarkets and small shops, some tourist inflation"
+        },
+        {
+          "category": "Restaurant meal (3-course)",
+          "cost": "€16-24",
+          "notes": "Quality dining without resort-level mark-ups"
+        },
+        {
+          "category": "Cafe coffee",
+          "cost": "€1.40-1.80",
+          "notes": "Beach and golf club locations slightly higher"
+        },
+        {
+          "category": "Golf green fees",
+          "cost": "€45-70",
+          "notes": "Campoamor Golf resident rates available; other courses negotiable"
+        },
+        {
+          "category": "Healthcare (monthly)",
+          "cost": "€80-120",
+          "notes": "Private insurance recommended for quality specialist access"
+        },
+        {
+          "category": "Property taxes (annual)",
+          "cost": "€600-1000",
+          "notes": "IBI for typical beach or golf-proximity property"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Campoamor's event calendar combines traditional Spanish celebrations with activities centered on the beach and golf lifestyle community.",
+      "events": [
+        {
+          "name": "Fiestas de Verano (Summer Festivities)",
+          "month": "July-August",
+          "description": "Beach-focused celebrations with evening events, concerts, and food festivals along Playa de Campoamor"
+        },
+        {
+          "name": "Golf Club Championships",
+          "month": "Throughout year",
+          "description": "Campoamor Golf hosts regular tournaments and club events attracting golfers from across the region"
+        },
+        {
+          "name": "Semana Santa (Holy Week)",
+          "month": "March/April",
+          "description": "Religious processions through Campoamor with beach area participation in regional celebrations"
+        },
+        {
+          "name": "Dia del Turismo (Tourism Day)",
+          "month": "July",
+          "description": "Beach-focused celebration with special events, promotions, and community activities"
+        },
+        {
+          "name": "Christmas Market",
+          "month": "December",
+          "description": "Festive season markets and decorations centered on the beach area and commercial center"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Campoamor relies on nearby international school options in La Zenia and Orihuela Costa, with Spanish public schools available in surrounding areas.",
+      "schools": [
+        {
+          "name": "International Schools (La Zenia)",
+          "type": "International Primary & Secondary",
+          "distance": "10 km, 12 minutes by car",
+          "description": "British and other international curriculum schools with English-language instruction"
+        },
+        {
+          "name": "Colegio Público Orihuela Costa",
+          "type": "Public Primary & Secondary",
+          "distance": "8 km, 10 minutes by car",
+          "description": "Spanish public school with bilingual education programs serving the area"
+        },
+        {
+          "name": "Lycée Français Orihuela",
+          "type": "International School",
+          "distance": "12 km",
+          "description": "French curriculum school for families preferring French-language education"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Campoamor's natural activities center on the beach and golf course lifestyle, with Mediterranean water sports and coastal walking opportunities.",
+      "activities": [
+        {
+          "name": "Swimming at Playa de Campoamor",
+          "type": "Water recreation",
+          "description": "Blue Flag beach with calm golden sand, gentle slope ideal for families, and excellent water clarity"
+        },
+        {
+          "name": "Golf at Campoamor Golf",
+          "type": "Sports",
+          "description": "Walkable championship course right on your doorstep with excellent facilities and dramatic fairways"
+        },
+        {
+          "name": "Coastal walks to La Glea",
+          "type": "Nature walks",
+          "description": "Scenic paths along the coastline connecting to adjacent Playa La Glea with rock formations"
+        },
+        {
+          "name": "Paddleboarding and water sports",
+          "type": "Water activities",
+          "description": "Beach-based water sports rentals available for kayaking, paddleboarding, and beach volleyball"
+        },
+        {
+          "name": "Sunset beach time",
+          "type": "Leisure",
+          "description": "Mediterranean sunsets over calm waters from the beach or beachfront restaurants"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Campoamor's expatriate community is established and quality-focused, smaller than La Zenia but equally welcoming. The refined atmosphere attracts discerning international residents.",
+      "highlights": [
+        "Smaller, more selective expat community focused on quality",
+        "Mix of retirees and active families seeking refined living",
+        "Golf clubs and beach clubs provide community infrastructure",
+        "British and Northern European focus with Spanish integration values",
+        "Less anglicized than La Zenia—more Spanish cultural integration"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Scandinavian",
+        "Dutch",
+        "Belgian",
+        "French"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Campoamor",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Beach walk or yoga",
+          "description": "Start the day with a refreshing walk along Playa de Campoamor or beach-side yoga class"
+        },
+        {
+          "time": "10:00",
+          "activity": "Café and newspaper",
+          "description": "Coffee at a beachfront café catching up on news and meeting neighbors"
+        },
+        {
+          "time": "13:00",
+          "activity": "Late lunch",
+          "description": "Main meal, either at a beachfront restaurant, golf club, or home-cooked Mediterranean cuisine"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta or pool time",
+          "description": "Afternoon rest or relaxing by the private pool overlooking the beach"
+        },
+        {
+          "time": "17:00",
+          "activity": "Golf round",
+          "description": "Afternoon 18 holes at Campoamor Golf (walking distance) or nearby Las Colinas or Las Ramblas"
+        },
+        {
+          "time": "19:30",
+          "activity": "Aperitivo at club or bar",
+          "description": "Pre-dinner drinks at the golf club or beachfront bar with friends"
+        },
+        {
+          "time": "21:00",
+          "activity": "Dinner and evening",
+          "description": "Quality dining at beachfront restaurant or clubhouse, evening entertainment or quiet time"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7564!3d37.8972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCampoamor!5e0!3m2!1sen!2ses"
   },
   "developments": [],
   "schema": {
