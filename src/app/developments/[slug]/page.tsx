@@ -280,15 +280,17 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ sl
     const developerSlug = enhanced.property.developerSlug || 'unknown';
     const town = enhanced.property.town || 'Costa Blanca';
 
-    const [similarDevelopmentsResult, builderContent, developmentsInTownResult] = await Promise.all([
+    const [similarDevelopmentsResult, builderContent, developmentsInTownResult, unitsResult] = await Promise.all([
       getDevelopmentsByBuilder(developerSlug),
       getBuilderContent(developerSlug),
       getDevelopmentsByTown(town),
+      getDevelopmentUnits(slug),
     ]);
 
     // Ensure arrays are always defined
     const similarDevelopments = Array.isArray(similarDevelopmentsResult) ? similarDevelopmentsResult : [];
     const developmentsInTown = Array.isArray(developmentsInTownResult) ? developmentsInTownResult : [];
+    const units = Array.isArray(unitsResult) ? unitsResult : [];
 
     const similarByBuilder = similarDevelopments.filter(d => d.slug !== slug).slice(0, 3);
     const nearbyDevelopments = developmentsInTown.filter(d => d.slug !== slug).slice(0, 3);
@@ -299,6 +301,7 @@ export default async function DevelopmentPage({ params }: { params: Promise<{ sl
         similarDevelopments={similarByBuilder}
         nearbyDevelopments={nearbyDevelopments}
         builderContent={builderContent}
+        units={units}
       />
     );
   }
@@ -321,11 +324,13 @@ function EnhancedDevelopmentPage({
   similarDevelopments = [],
   nearbyDevelopments = [],
   builderContent = null,
+  units = [],
 }: {
   data: EnhancedContent;
   similarDevelopments?: Development[];
   nearbyDevelopments?: Development[];
   builderContent?: BuilderContent | null;
+  units?: { id: string; ref: string; images?: string[]; bedrooms: number | null; bathrooms: number | null; propertyType: string; price: number | null; size: number | null }[];
 }) {
   const { content, property, schemaProduct, schemaFAQ, schemaBreadcrumb, imageAlts } = data;
 
@@ -559,6 +564,55 @@ function EnhancedDevelopmentPage({
               )}
 
               {/* ============================================================ */}
+              {/* AVAILABLE UNITS - Link to individual property pages */}
+              {/* ============================================================ */}
+              {units.length > 0 && (
+                <section>
+                  <h2 className="text-2xl font-bold text-primary-900 mb-6 flex items-center gap-3">
+                    <svg className="w-6 h-6 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                    Available Units ({units.length})
+                  </h2>
+                  <div className="grid md:grid-cols-2 gap-5">
+                    {units.map((unit) => (
+                      <Link
+                        key={unit.id || unit.ref}
+                        href={`/properties/${unit.ref}`}
+                        className="group bg-white rounded-lg overflow-hidden border border-warm-200 hover:shadow-lg hover:border-accent-300 transition-all"
+                      >
+                        <div className="relative h-48">
+                          <Image
+                            src={unit.images?.[0] || '/images/placeholder-property.jpg'}
+                            alt={`${unit.bedrooms || 0} bed ${unit.propertyType || 'Property'} in ${data.projectName}`}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            unoptimized
+                          />
+                          <div className="absolute top-2 right-2 bg-white/90 backdrop-blur-sm text-primary-900 text-xs font-bold px-3 py-1.5 rounded-full">
+                            Ref: {unit.ref}
+                          </div>
+                        </div>
+                        <div className="p-4">
+                          <h3 className="font-semibold text-primary-900 group-hover:text-accent-600 transition-colors text-lg">
+                            {unit.bedrooms || 0} Bed {unit.propertyType || 'Property'}
+                          </h3>
+                          <p className="text-warm-500 text-sm mt-1">
+                            {unit.bathrooms || 0} bath{(unit.bathrooms || 0) !== 1 ? 's' : ''} • {unit.size || 0}m²
+                          </p>
+                          <div className="flex items-center justify-between mt-3">
+                            <p className="text-accent-600 font-bold text-xl">{formatPrice(unit.price || 0)}</p>
+                            <span className="text-accent-500 text-sm font-medium group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                              View details
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* ============================================================ */}
               {/* DISTANCE MATRIX - Key for SEO and user experience */}
               {/* ============================================================ */}
               <section className="bg-white rounded-xl p-6 border border-warm-200 shadow-sm">
@@ -770,19 +824,25 @@ function EnhancedDevelopmentPage({
                     <svg className="w-6 h-6 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
                     About {property.developer}
                   </h2>
-                  {builderContent.content?.heroIntro && (
-                    <div className="prose max-w-none mb-6">
-                      {builderContent.content.heroIntro.split('\n\n').slice(0, 2).map((paragraph, i) => (
-                        <p key={i} className="text-warm-700">{paragraph}</p>
-                      ))}
-                    </div>
-                  )}
+                  {/* Handle both nested (content.heroIntro) and flat (heroIntro) builder formats */}
+                  {(() => {
+                    const bc = builderContent as any;
+                    const introText = bc.content?.heroIntro || bc.heroIntro || '';
+                    if (!introText) return null;
+                    return (
+                      <div className="prose max-w-none mb-6">
+                        {introText.split('\n\n').slice(0, 2).map((paragraph: string, i: number) => (
+                          <p key={i} className="text-warm-700">{paragraph}</p>
+                        ))}
+                      </div>
+                    );
+                  })()}
                   <Link
                     href={`/builders/${property.developerSlug}`}
-                    className="inline-flex items-center gap-2 text-accent-600 hover:text-accent-700 font-medium"
+                    className="inline-flex items-center gap-2 bg-primary-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-800 transition-colors"
                   >
-                    View all {property.developer} developments
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                    View all {property.developer} developments →
                   </Link>
                 </section>
               )}
@@ -986,36 +1046,60 @@ function EnhancedDevelopmentPage({
               </div>
 
               {/* Quick Links */}
-              <div className="bg-warm-50 border border-warm-200 rounded-xl p-6">
-                <h3 className="font-bold text-primary-900 mb-4">Quick Links</h3>
-                <ul className="space-y-3">
-                  <li>
-                    <Link href={`/builders/${property.developerSlug}`} className="flex items-center gap-2 text-warm-700 hover:text-accent-600 transition-colors">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-                      View all {property.developer} developments
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href={`/areas/${property.town.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center gap-2 text-warm-700 hover:text-accent-600 transition-colors">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
-                      {property.town} area guide
-                    </Link>
-                  </li>
+              <div className="bg-primary-900 border border-primary-700 rounded-xl p-6">
+                <h3 className="font-bold text-white text-lg mb-5">Explore More</h3>
+                <div className="space-y-3">
+                  <Link
+                    href={`/builders/${property.developerSlug}`}
+                    className="flex items-center gap-3 p-3 bg-white/10 rounded-lg text-white hover:bg-white/20 transition-colors"
+                  >
+                    <div className="w-10 h-10 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                    </div>
+                    <div>
+                      <div className="font-semibold">All {property.developer} Developments</div>
+                      <div className="text-white/60 text-sm">View builder profile & projects</div>
+                    </div>
+                  </Link>
+                  <Link
+                    href={`/areas/${property.town.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="flex items-center gap-3 p-3 bg-white/10 rounded-lg text-white hover:bg-white/20 transition-colors"
+                  >
+                    <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
+                    </div>
+                    <div>
+                      <div className="font-semibold">{property.town} Area Guide</div>
+                      <div className="text-white/60 text-sm">Lifestyle, amenities & market info</div>
+                    </div>
+                  </Link>
                   {data.golfCourse && (
-                    <li>
-                      <Link href={`/golf/${data.golfCourse.slug}`} className="flex items-center gap-2 text-warm-700 hover:text-accent-600 transition-colors">
-                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" /></svg>
-                        {data.golfCourse.name}
-                      </Link>
-                    </li>
-                  )}
-                  <li>
-                    <Link href="/developments" className="flex items-center gap-2 text-warm-700 hover:text-accent-600 transition-colors">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
-                      Browse all developments
+                    <Link
+                      href={`/golf/${data.golfCourse.slug}`}
+                      className="flex items-center gap-3 p-3 bg-white/10 rounded-lg text-white hover:bg-white/20 transition-colors"
+                    >
+                      <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" /></svg>
+                      </div>
+                      <div>
+                        <div className="font-semibold">{data.golfCourse.name}</div>
+                        <div className="text-white/60 text-sm">{data.golfCourse.distance}</div>
+                      </div>
                     </Link>
-                  </li>
-                </ul>
+                  )}
+                  <Link
+                    href="/developments"
+                    className="flex items-center gap-3 p-3 bg-white/10 rounded-lg text-white hover:bg-white/20 transition-colors"
+                  >
+                    <div className="w-10 h-10 bg-warm-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
+                    </div>
+                    <div>
+                      <div className="font-semibold">Browse All Developments</div>
+                      <div className="text-white/60 text-sm">See all Costa Blanca projects</div>
+                    </div>
+                  </Link>
+                </div>
               </div>
 
             </div>
