@@ -357,8 +357,145 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     return '📌';
   };
 
-  // Enhanced markdown-to-HTML conversion with rich styling
-  const markdownToHtml = (text: string) => {
+  // Inline text formatting (bold, stars)
+  const inlineFmt = (text: string) => text
+    .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-primary-900">$1</strong>')
+    .replace(/⭐⭐/g, '<span class="text-amber-500">★★</span>')
+    .replace(/⭐/g, '<span class="text-amber-500">★</span>');
+
+  // ── Card detection: parse content into card groups ──
+  // A "card" = bold heading line (**Title** with optional stars) + bullet items
+  // When 3+ cards found, render as 2-col grid like area pages
+  interface ContentCard {
+    title: string;
+    stars: number;
+    hasArrow: boolean;
+    bullets: string[];
+  }
+  interface ContentBlock {
+    type: 'prose' | 'cards';
+    html?: string;         // for prose
+    cards?: ContentCard[];  // for card groups
+  }
+
+  const parseContentBlocks = (text: string): ContentBlock[] => {
+    const blocks: ContentBlock[] = [];
+    const lines = text.split('\n');
+    let proseLines: string[] = [];
+    let currentCard: ContentCard | null = null;
+    const cardBuffer: ContentCard[] = [];
+
+    const flushProse = () => {
+      if (proseLines.length > 0) {
+        const joined = proseLines.join('\n').trim();
+        if (joined) blocks.push({ type: 'prose', html: markdownToHtmlSimple(joined) });
+        proseLines = [];
+      }
+    };
+    const flushCards = () => {
+      if (currentCard) { cardBuffer.push(currentCard); currentCard = null; }
+      if (cardBuffer.length >= 3) {
+        flushProse();
+        blocks.push({ type: 'cards', cards: [...cardBuffer] });
+      } else {
+        // Not enough for grid — push back as prose
+        cardBuffer.forEach(card => {
+          const starStr = card.stars > 0 ? ' ' + '⭐'.repeat(card.stars) : '';
+          proseLines.push(`**${card.title}**${starStr}`);
+          card.bullets.forEach(b => proseLines.push(`- ${b}`));
+          proseLines.push('');
+        });
+      }
+      cardBuffer.length = 0;
+    };
+
+    for (let i = 0; i < lines.length; i++) {
+      const trimmed = lines[i].trim();
+
+      // Detect bold heading line (card start)
+      const boldMatch = trimmed.match(/^\*\*(.*?)\*\*\s*(⭐*)\s*$/);
+      const arrowMatch = !boldMatch ? trimmed.match(/^\*\*(.*?(?:→|Properties|Options|Access).*?)\*\*\s*$/) : null;
+
+      if (boldMatch || arrowMatch) {
+        // Check if next non-empty line is a bullet (confirming this is a card)
+        let nextIdx = i + 1;
+        while (nextIdx < lines.length && !lines[nextIdx].trim()) nextIdx++;
+        const nextIsBullet = nextIdx < lines.length && lines[nextIdx].trim().startsWith('- ');
+
+        if (nextIsBullet) {
+          // Start new card
+          if (currentCard) cardBuffer.push(currentCard);
+          const title = boldMatch ? boldMatch[1] : arrowMatch![1];
+          const stars = boldMatch && boldMatch[2] ? boldMatch[2].length : 0;
+          currentCard = { title, stars, hasArrow: !!arrowMatch, bullets: [] };
+          continue;
+        } else {
+          // Bold line NOT followed by bullets — treat as prose
+          if (currentCard) { cardBuffer.push(currentCard); currentCard = null; }
+          flushCards();
+          proseLines.push(lines[i]);
+          continue;
+        }
+      }
+
+      // Bullet line — belongs to current card if we have one
+      if (trimmed.startsWith('- ') && currentCard) {
+        currentCard.bullets.push(trimmed.slice(2));
+        continue;
+      }
+
+      // Any other line — break out of card mode
+      if (currentCard) { cardBuffer.push(currentCard); currentCard = null; }
+      if (cardBuffer.length > 0 && !trimmed) {
+        // Empty line after cards — could be separator, peek ahead
+        let nextIdx = i + 1;
+        while (nextIdx < lines.length && !lines[nextIdx].trim()) nextIdx++;
+        const nextLine = nextIdx < lines.length ? lines[nextIdx].trim() : '';
+        const nextIsBold = /^\*\*(.*?)\*\*/.test(nextLine);
+        if (!nextIsBold) {
+          flushCards();
+        }
+        continue;
+      }
+      if (cardBuffer.length > 0) {
+        flushCards();
+      }
+      proseLines.push(lines[i]);
+    }
+
+    // Flush remaining
+    if (currentCard) cardBuffer.push(currentCard);
+    flushCards();
+    flushProse();
+
+    return blocks;
+  };
+
+  // Render a card grid (area-page style)
+  const borderCardColors = ['border-accent-500', 'border-blue-500', 'border-emerald-500', 'border-orange-500', 'border-purple-500', 'border-rose-500'];
+  const renderCardGrid = (cards: ContentCard[]): string => {
+    const cardHtmls = cards.map((card, idx) => {
+      const borderColor = borderCardColors[idx % borderCardColors.length];
+      const stars = card.stars > 0 ? ` <span class="text-amber-500 ml-1">${'★'.repeat(card.stars)}</span>` : '';
+      const bullets = card.bullets.map(b =>
+        `<div class="flex items-start gap-2 py-0.5"><span class="flex-shrink-0 w-1.5 h-1.5 mt-[9px] bg-accent-400 rounded-full"></span><span class="text-warm-600 text-sm leading-relaxed">${inlineFmt(b)}</span></div>`
+      ).join('\n');
+      return `<div class="border ${borderColor} border-l-4 border-t-0 border-r-0 border-b-0 rounded-sm p-4 bg-white hover:shadow-md transition-shadow"><h3 class="font-bold text-primary-900 text-[15px] mb-2">${inlineFmt(card.title)}${stars}</h3><div class="space-y-0.5">${bullets}</div></div>`;
+    });
+    return `<div class="grid md:grid-cols-2 gap-4 my-4">${cardHtmls.join('\n')}</div>`;
+  };
+
+  // Smart section renderer: tries card layout, falls back to linear
+  const renderSectionContent = (text: string): string => {
+    const blocks = parseContentBlocks(text);
+    return blocks.map(block => {
+      if (block.type === 'cards' && block.cards) return renderCardGrid(block.cards);
+      return block.html || '';
+    }).join('\n');
+  };
+
+  // Simple markdown-to-HTML (linear flow, used for prose blocks and non-card content)
+  const markdownToHtmlSimple = (text: string) => {
     const lines = text.split('\n');
     const output: string[] = [];
     let inList = false;
@@ -367,19 +504,17 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     for (let i = 0; i < lines.length; i++) {
       const trimmed = lines[i].trim();
 
-      // Empty line — close open blocks
       if (!trimmed) {
         if (inList) { output.push('</div>'); inList = false; }
         if (inParagraph) { output.push('</p>'); inParagraph = false; }
         continue;
       }
 
-      // h2 sub-headers within section content
+      // h2 sub-headers
       if (trimmed.startsWith('## ')) {
         if (inList) { output.push('</div>'); inList = false; }
         if (inParagraph) { output.push('</p>'); inParagraph = false; }
-        const title = trimmed.replace(/^## /, '');
-        output.push(`<h2 class="text-2xl font-bold text-primary-900 mt-10 mb-4 pl-4 border-l-4 border-accent-500">${title}</h2>`);
+        output.push(`<h2 class="text-2xl font-bold text-primary-900 mt-10 mb-4 pl-4 border-l-4 border-accent-500">${trimmed.replace(/^## /, '')}</h2>`);
         continue;
       }
 
@@ -387,33 +522,29 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       if (trimmed.startsWith('### ')) {
         if (inList) { output.push('</div>'); inList = false; }
         if (inParagraph) { output.push('</p>'); inParagraph = false; }
-        const title = trimmed.replace(/^### /, '');
-        output.push(`<h3 class="text-lg font-bold text-primary-900 mt-6 mb-3">${title}</h3>`);
+        output.push(`<h3 class="text-lg font-bold text-primary-900 mt-6 mb-3">${trimmed.replace(/^### /, '')}</h3>`);
         continue;
       }
 
-      // Callout/tip detection — "Tip:", "Pro tip:", "Note:", "Important:", "Local tip:"
+      // Callout/tip detection
       const calloutMatch = trimmed.match(/^\*\*(Tip|Pro tip|Note|Important|Local tip|Warning|Remember)\*?\*?[:]\s*(.*)/i);
       if (calloutMatch) {
         if (inList) { output.push('</div>'); inList = false; }
         if (inParagraph) { output.push('</p>'); inParagraph = false; }
-        const label = calloutMatch[1];
-        const text = calloutMatch[2].replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-primary-900">$1</strong>');
-        const isWarning = label.toLowerCase() === 'warning' || label.toLowerCase() === 'important';
+        const isWarning = calloutMatch[1].toLowerCase() === 'warning' || calloutMatch[1].toLowerCase() === 'important';
         const bgColor = isWarning ? 'bg-amber-50 border-amber-400' : 'bg-accent-50 border-accent-400';
         const iconEmoji = isWarning ? '⚠️' : '💡';
-        output.push(`<div class="my-4 p-4 ${bgColor} border-l-4 rounded-r-sm"><div class="flex items-start gap-3"><span class="flex-shrink-0 text-lg">${iconEmoji}</span><div><span class="font-bold text-primary-900 text-sm uppercase tracking-wide">${label}</span><p class="text-warm-700 mt-1 leading-relaxed">${text}</p></div></div></div>`);
+        output.push(`<div class="my-4 p-4 ${bgColor} border-l-4 rounded-r-sm"><div class="flex items-start gap-3"><span class="flex-shrink-0 text-lg">${iconEmoji}</span><div><span class="font-bold text-primary-900 text-sm uppercase tracking-wide">${calloutMatch[1]}</span><p class="text-warm-700 mt-1 leading-relaxed">${inlineFmt(calloutMatch[2])}</p></div></div></div>`);
         continue;
       }
 
-      // Standalone bold line with optional stars = feature card (matches area-page amenity style)
+      // Bold heading line (when rendering linearly, not as card)
       const boldLineMatch = trimmed.match(/^\*\*(.*?)\*\*\s*(⭐*)\s*$/);
       if (boldLineMatch) {
         if (inList) { output.push('</div>'); inList = false; }
         if (inParagraph) { output.push('</p>'); inParagraph = false; }
         const starCount = boldLineMatch[2] ? boldLineMatch[2].length : 0;
         const stars = starCount > 0 ? ` <span class="text-amber-500 ml-1">${'★'.repeat(starCount)}</span>` : '';
-        // Use area-page-style colored left border card for starred items, simple subheading for others
         if (starCount > 0) {
           output.push(`<div class="mt-5 mb-2 pl-4 border-l-4 border-amber-400 py-1"><span class="font-bold text-primary-900 text-[15px]">${boldLineMatch[1]}${stars}</span></div>`);
         } else {
@@ -422,7 +553,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         continue;
       }
 
-      // Standalone bold line with arrow/colon content = feature card (e.g. "**Orihuela Costa Properties → ...**")
+      // Arrow bold line
       const boldArrowMatch = trimmed.match(/^\*\*(.*?(?:→|Properties|Options|Access).*?)\*\*\s*$/);
       if (boldArrowMatch) {
         if (inList) { output.push('</div>'); inList = false; }
@@ -431,48 +562,40 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         continue;
       }
 
-      // Bullet list item
+      // Bullet list
       if (trimmed.startsWith('- ')) {
         if (inParagraph) { output.push('</p>'); inParagraph = false; }
         if (!inList) { output.push('<div class="space-y-0.5 my-3 pl-1">'); inList = true; }
-        const content = trimmed.slice(2)
-          .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-primary-900">$1</strong>')
-          .replace(/⭐/g, '<span class="text-amber-500">★</span>');
-        output.push(`<div class="flex items-start gap-2.5 py-1"><span class="flex-shrink-0 w-1.5 h-1.5 mt-[9px] bg-accent-400 rounded-full"></span><span class="text-warm-700 leading-relaxed">${content}</span></div>`);
+        output.push(`<div class="flex items-start gap-2.5 py-1"><span class="flex-shrink-0 w-1.5 h-1.5 mt-[9px] bg-accent-400 rounded-full"></span><span class="text-warm-700 leading-relaxed">${inlineFmt(trimmed.slice(2))}</span></div>`);
         continue;
       }
 
-      // Numbered list item
+      // Numbered list
       const numMatch = trimmed.match(/^(\d+)\.\s+(.*)/);
       if (numMatch) {
         if (inParagraph) { output.push('</p>'); inParagraph = false; }
         if (!inList) { output.push('<div class="space-y-1 my-3">'); inList = true; }
-        const content = numMatch[2]
-          .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-primary-900">$1</strong>');
-        output.push(`<div class="flex items-start gap-3 py-1"><span class="flex-shrink-0 w-6 h-6 bg-accent-500 text-white rounded-full flex items-center justify-center text-xs font-bold">${numMatch[1]}</span><span class="text-warm-700 leading-relaxed">${content}</span></div>`);
+        output.push(`<div class="flex items-start gap-3 py-1"><span class="flex-shrink-0 w-6 h-6 bg-accent-500 text-white rounded-full flex items-center justify-center text-xs font-bold">${numMatch[1]}</span><span class="text-warm-700 leading-relaxed">${inlineFmt(numMatch[2])}</span></div>`);
         continue;
       }
 
-      // Regular text line
+      // Regular text
       if (inList) { output.push('</div>'); inList = false; }
-      const processed = trimmed
-        .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-primary-900">$1</strong>')
-        .replace(/⭐⭐/g, '<span class="text-amber-500">★★</span>')
-        .replace(/⭐/g, '<span class="text-amber-500">★</span>');
-
       if (!inParagraph) {
-        output.push(`<p class="mb-3 text-warm-700 leading-relaxed">${processed}`);
+        output.push(`<p class="mb-3 text-warm-700 leading-relaxed">${inlineFmt(trimmed)}`);
         inParagraph = true;
       } else {
-        output.push(` ${processed}`);
+        output.push(` ${inlineFmt(trimmed)}`);
       }
     }
 
     if (inList) output.push('</div>');
     if (inParagraph) output.push('</p>');
-
     return output.join('\n');
   };
+
+  // Alias: markdownToHtml for intro/conclusion (no card grid, just prose)
+  const markdownToHtml = markdownToHtmlSimple;
 
   // Helper to render property showcase
   const renderPropertyShowcase = (showcase: PropertyShowcase) => (
@@ -644,7 +767,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                               </h2>
                               <div
                                 dangerouslySetInnerHTML={{
-                                  __html: markdownToHtml(section.content)
+                                  __html: renderSectionContent(section.content)
                                 }}
                               />
                             </section>
