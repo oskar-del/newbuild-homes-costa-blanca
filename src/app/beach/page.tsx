@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: 'New build properties near the best beaches. Walking distance to the Mediterranean.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/beach',
+  },
 };
 
 // Format price helper

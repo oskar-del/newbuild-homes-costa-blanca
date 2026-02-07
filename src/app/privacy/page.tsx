@@ -5,6 +5,9 @@ import { breadcrumbSchema, toJsonLd } from '@/lib/schema';
 export const metadata: Metadata = {
   title: 'Privacy Policy | New Build Homes Costa Blanca',
   description: 'Privacy Policy for New Build Homes Costa Blanca. Learn how we collect, use, and protect your personal data.',
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/privacy',
+  },
 };
 
 export default function PrivacyPage() {

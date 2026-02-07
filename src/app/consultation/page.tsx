@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     description: 'Schedule a free consultation with our Costa Blanca property experts.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/consultation',
+  },
 };
 
 export default function ConsultationPage() {

@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     description: 'Browse 100+ trusted property developers building new homes across Costa Blanca.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/builders',
+  },
 };
 
 // Format price

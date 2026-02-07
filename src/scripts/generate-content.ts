@@ -230,23 +230,31 @@ Make content unique, engaging, and optimized for "new build villa ${property.tow
 
 async function generateImageAlts(property: PropertyData): Promise<{ url: string; alt: string }[]> {
   const alts: { url: string; alt: string }[] = [];
-  
+  const type = property.propertyType.toLowerCase();
+  const town = property.town;
+  const priceStr = property.price ? `€${Math.round(property.price / 1000)}k ` : '';
+
+  // Search-query style alt tags - what people actually type into Google
+  const altPatterns = [
+    `New build ${type} for sale ${town} Costa Blanca Spain`,
+    `${type} with pool ${town} Spain new build ${priceStr}`.trim(),
+    `Modern kitchen new build ${type} ${town} Costa Blanca`,
+    `${property.bedrooms || 3} bedroom ${type} ${town} Spain interior`,
+    `New build bathroom ${type} ${town} Costa Blanca`,
+    `${type} terrace views ${town} Spain Mediterranean`,
+    `Communal pool new build ${type} ${town} Costa Blanca`,
+    `New build ${type} ${town} Spain ${priceStr}exterior`.trim(),
+    `${type} living area ${town} Costa Blanca new development`,
+    `${property.projectName} new build homes ${town} Spain`,
+  ];
+
   for (let i = 0; i < property.images.length; i++) {
-    const imageType = i === 0 ? 'exterior view' : 
-                      i === 1 ? 'interior living area' :
-                      i === 2 ? 'kitchen' :
-                      i === 3 ? 'bedroom' :
-                      i === 4 ? 'bathroom' :
-                      i === 5 ? 'terrace' :
-                      i === 6 ? 'pool area' :
-                      `view ${i + 1}`;
-    
     alts.push({
       url: property.images[i],
-      alt: `${property.projectName} ${property.town} - ${imageType} of this new build ${property.propertyType.toLowerCase()} in Costa Blanca`,
+      alt: altPatterns[i % altPatterns.length],
     });
   }
-  
+
   return alts;
 }
 

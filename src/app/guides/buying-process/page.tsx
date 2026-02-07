@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import LeadFormAdvanced from '@/components/LeadFormAdvanced';
 import JustLaunchedDevelopments from '@/components/JustLaunchedDevelopments';
-import { breadcrumbSchema, faqSchema, toJsonLd } from '@/lib/schema';
+import { breadcrumbSchema, faqSchema, howToSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'How to Buy Property in Spain 2026 | Complete Buying Process Guide',
@@ -61,9 +61,58 @@ export default function BuyingProcessPage() {
 
   const faqSchemaData = faqSchema(buyingFaqs);
 
+  const howToSchemaData = howToSchema({
+    name: 'How to Buy Property in Spain',
+    description: 'Complete step-by-step guide to purchasing new build property in Costa Blanca, Spain. From NIE numbers to notary completion.',
+    totalTime: 'PT8W',
+    steps: [
+      {
+        name: 'Property Search & Selection',
+        text: 'Define your requirements: location, property type, budget, and timeline. Choose between off-plan (12-24 months delivery), under construction (6-12 months), or key-ready properties. Consider visiting Costa Blanca to see developments in person.',
+        url: 'https://newbuildhomescostablanca.com/guides/buying-process/#step-1'
+      },
+      {
+        name: 'Reservation Agreement',
+        text: 'Sign a reservation agreement and pay a deposit of €3,000-€10,000 to take the property off the market. This is usually held for 30-60 days while you arrange finances and paperwork, and is typically deducted from the purchase price.',
+        url: 'https://newbuildhomescostablanca.com/guides/buying-process/#step-2'
+      },
+      {
+        name: 'Getting Your NIE Number',
+        text: 'Apply for your NIE (Número de Identificación de Extranjero) Spanish tax identification number. You can apply at the Foreigners Office in Spain, at a Spanish Embassy/Consulate, or grant power of attorney to a lawyer. Processing typically takes 1-4 weeks.',
+        url: 'https://newbuildhomescostablanca.com/guides/buying-process/#step-3'
+      },
+      {
+        name: 'Opening a Spanish Bank Account',
+        text: 'Open a Spanish bank account at major banks like Sabadell, CaixaBank, or Santander. You will need your NIE, passport, and proof of income. This is required for paying the purchase price, taxes, utilities, and mortgage payments.',
+        url: 'https://newbuildhomescostablanca.com/guides/buying-process/#step-4'
+      },
+      {
+        name: 'Private Purchase Contract',
+        text: 'Sign the Contrato de Compraventa (binding purchase contract) and pay 20-30% of the purchase price. Ensure the contract includes property specifications, payment schedule, expected completion date, penalty clauses for delays, and bank guarantee details.',
+        url: 'https://newbuildhomescostablanca.com/guides/buying-process/#step-5'
+      },
+      {
+        name: 'Stage Payments During Construction',
+        text: 'For off-plan properties, make payments linked to construction milestones. Typical schedule: Reservation (€3,000-10,000), Contract signing (20-30%), Construction (20-30%), Completion (40-50%). Keep all payment receipts and bank guarantee certificates.',
+        url: 'https://newbuildhomescostablanca.com/guides/buying-process/#step-6'
+      },
+      {
+        name: 'Snagging Inspection',
+        text: 'Before completion, conduct a snagging inspection to identify any defects in paintwork, doors, windows, plumbing, electrical installations, tiling, flooring, and air conditioning. The developer must fix issues before completion or agree to a retention from the final payment.',
+        url: 'https://newbuildhomescostablanca.com/guides/buying-process/#step-7'
+      },
+      {
+        name: 'Completion at the Notary',
+        text: 'Complete the final step at a Spanish notary where you sign the Escritura (title deed), pay the final balance, pay IVA (VAT) and Stamp Duty, and receive the keys. You can attend in person or grant Power of Attorney to your lawyer.',
+        url: 'https://newbuildhomescostablanca.com/guides/buying-process/#step-8'
+      }
+    ]
+  });
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(howToSchemaData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(faqSchemaData) }} />
 
     <main className="min-h-screen bg-white">

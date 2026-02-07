@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import LeadFormAdvanced from '@/components/LeadFormAdvanced';
+import { howToSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'NIE Number Spain 2026 | How to Apply & Get Your Spanish Tax ID',
@@ -9,7 +10,48 @@ export const metadata: Metadata = {
 };
 
 export default function NIENumberPage() {
+  const howToSchemaData = howToSchema({
+    name: 'How to Get Your NIE Number in Spain',
+    description: 'Complete guide to obtaining your Número de Identificación de Extranjero (NIE) - your Spanish tax identification number required for property purchases.',
+    totalTime: 'PT3W',
+    steps: [
+      {
+        name: 'Understand What an NIE Is',
+        text: 'The NIE (Número de Identificación de Extranjero) is a unique identification number assigned to foreigners in Spain. It\'s your Spanish tax identification number and is required for buying or selling property, opening a bank account, signing contracts, paying taxes, and working in Spain.',
+        url: 'https://newbuildhomescostablanca.com/guides/nie-number/#what-is-nie'
+      },
+      {
+        name: 'Choose Your Application Method',
+        text: 'You have two options: Apply in Spain at the Oficina de Extranjería (Foreigners Office) or Comisaría de Policía (Police Station), or apply from your home country at the Spanish Embassy or Consulate. The embassy option is often easier with more available appointments and English-speaking staff.',
+        url: 'https://newbuildhomescostablanca.com/guides/nie-number/#how-to-apply'
+      },
+      {
+        name: 'Gather Required Documents',
+        text: 'Collect your valid passport (original and photocopy), recent passport-sized photo, completed EX-15 form, proof of reason for NIE (like a property reservation contract), and Modelo 790 Código 012 tax form with fee payment (approximately €12).',
+        url: 'https://newbuildhomescostablanca.com/guides/nie-number/#requirements'
+      },
+      {
+        name: 'Submit Your Application',
+        text: 'Submit all documents and forms to the Foreigners Office, Police Station, or Spanish Embassy/Consulate. If applying in Spain, you will need to book an appointment online through the Spanish government appointment system.',
+        url: 'https://newbuildhomescostablanca.com/guides/nie-number/#how-to-apply'
+      },
+      {
+        name: 'Receive Your NIE Certificate',
+        text: 'Processing typically takes same day to 2 weeks if applying in Spain, or 2-4 weeks if applying from abroad. You will receive your NIE certificate with your unique NIE number. The number itself never expires - it\'s yours for life.',
+        url: 'https://newbuildhomescostablanca.com/guides/nie-number/#costs-timeline'
+      },
+      {
+        name: 'Alternative: Grant Power of Attorney',
+        text: 'If you can\'t visit Spain or struggle to get an appointment, grant Power of Attorney (Poder Notarial) to a Spanish lawyer. Sign the document (at a Spanish consulate or notarized locally), send your original documents to the lawyer, and they will submit the application and collect your NIE certificate.',
+        url: 'https://newbuildhomescostablanca.com/guides/nie-number/#via-lawyer'
+      }
+    ]
+  });
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(howToSchemaData) }} />
+
     <main className="min-h-screen bg-white">
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 text-white py-16">
@@ -260,5 +302,6 @@ export default function NIENumberPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

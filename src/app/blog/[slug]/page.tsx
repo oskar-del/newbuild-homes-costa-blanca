@@ -224,6 +224,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: 'article',
       publishedTime: article.publishedAt,
     },
+    alternates: {
+      canonical: `https://newbuildhomescostablanca.com/blog/${slug}`,
+    },
   };
 }
 

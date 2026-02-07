@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     description: 'New build properties in Costa Calida, Murcia. Mar Menor beaches, golf resorts, authentic Spanish lifestyle.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/costa-calida',
+  },
 };
 
 // Costa Calida/Murcia towns

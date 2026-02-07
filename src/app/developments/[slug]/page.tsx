@@ -253,6 +253,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         description: enhanced.metaDescription || '',
         images: images.slice(0, 3),
       },
+      alternates: {
+        canonical: `https://newbuildhomescostablanca.com/developments/${slug}`,
+      },
     };
   }
 
@@ -266,6 +269,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title,
     description,
     openGraph: { title: development.name, description, images: development.mainImage ? [development.mainImage] : undefined },
+    alternates: {
+      canonical: `https://newbuildhomescostablanca.com/developments/${slug}`,
+    },
   };
 }
 

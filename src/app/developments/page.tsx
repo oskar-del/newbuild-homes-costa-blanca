@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     title: 'New Build Developments Costa Blanca | Find Your Perfect Project',
     description: 'Explore new build developments across Costa Blanca. Key-ready homes, golf properties, beachfront living.',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/developments',
+  },
 };
 
 // Helper to format price

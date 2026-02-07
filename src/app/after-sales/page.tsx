@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     title: 'After Sales Services | New Build Homes Costa Blanca',
     description: 'Property management, interior design, furniture packs and more for your Spanish property.',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/after-sales',
+  },
 };
 
 const CONTACT = {

@@ -40,6 +40,15 @@ function getPropertyTitle(property: UnifiedProperty): string {
   return `${beds}${type}`;
 }
 
+// Generate search-query style alt tag for SEO
+function getPropertyAlt(property: UnifiedProperty): string {
+  const type = (property.propertyType || 'property').toLowerCase();
+  const beds = property.bedrooms ? `${property.bedrooms} bedroom ` : '';
+  const town = property.town || 'Costa Blanca';
+  const priceStr = property.price ? ` €${Math.round(property.price / 1000)}k` : '';
+  return `${beds}new build ${type} for sale ${town} Spain${priceStr}`.trim();
+}
+
 // Get badge type based on property features - refined colours
 function getBadgeType(property: UnifiedProperty): { text: string; className: string } | null {
   if (isKeyReady(property)) {
@@ -75,7 +84,7 @@ export default function PropertyCard({ property }: PropertyCardProps) {
       <div className="relative h-[200px]">
         <Image
           src={imageUrl}
-          alt={getPropertyTitle(property)}
+          alt={getPropertyAlt(property)}
           fill
           className="object-cover"
           sizes="300px"

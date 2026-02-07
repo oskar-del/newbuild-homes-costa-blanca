@@ -34,7 +34,7 @@ export const beachImages: StockImage[] = [
   {
     id: 'YZ8Jc6TiH2A',
     url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e',
-    alt: 'White sand beach with turquoise water and distant buildings along the coastline',
+    alt: 'Costa Blanca beach white sand turquoise Mediterranean sea Spain',
     description: 'Beautiful Mediterranean-style beach with crystal clear water',
     photographer: 'Sean Oulashin',
     tags: ['beach', 'turquoise', 'sand', 'coastline', 'tropical'],
@@ -42,7 +42,7 @@ export const beachImages: StockImage[] = [
   {
     id: 'XpcavhaqPa4',
     url: 'https://images.unsplash.com/photo-1519046904884-53103b34b206',
-    alt: 'Pristine beach with white sand and turquoise Mediterranean water',
+    alt: 'Pristine white sand beach Mediterranean Costa Blanca Spain vacation',
     description: 'Classic beach scene with summer vibes',
     photographer: 'Shifaaz shamoon',
     tags: ['beach', 'white-sand', 'turquoise', 'summer'],
@@ -50,7 +50,7 @@ export const beachImages: StockImage[] = [
   {
     id: 'yYZAY0iaAgM',
     url: 'https://images.unsplash.com/photo-1473116763249-2faaef81ccda',
-    alt: 'Beautiful beach with turquoise water and blue sky, warm sand meeting sapphire sea',
+    alt: 'Turquoise water beach Costa Blanca Spain Mediterranean sea property',
     description: 'Minimalist surf study with warm sand and shifting aqua tones',
     photographer: 'Frank McKenna',
     tags: ['beach', 'blue-sky', 'turquoise', 'minimalist'],
@@ -58,7 +58,7 @@ export const beachImages: StockImage[] = [
   {
     id: 'qg9SyEN27pk',
     url: 'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57',
-    alt: 'Sandy beach with calm turquoise water and distant green hills',
+    alt: 'Sandy beach calm turquoise Costa Blanca new build properties Spain',
     description: 'Peaceful beach scene with rolling hills in background',
     photographer: 'Cristina Gottardi',
     tags: ['beach', 'calm', 'hills', 'peaceful'],
@@ -66,7 +66,7 @@ export const beachImages: StockImage[] = [
   {
     id: 'uRr-MRaADLo',
     url: 'https://images.unsplash.com/photo-1520942702018-0862200e6873',
-    alt: 'Beautiful turquoise water meets pristine white sand beach',
+    alt: 'White sand Mediterranean beach Costa Blanca Spain for sale vacation',
     description: 'Crystal clear waters meeting soft white sand',
     photographer: 'Ishan Seefromthesky',
     tags: ['beach', 'turquoise', 'white-sand', 'pristine'],
@@ -74,7 +74,7 @@ export const beachImages: StockImage[] = [
   {
     id: 'V1hb2SLP-80',
     url: 'https://images.unsplash.com/photo-1506929562872-bb421503ef21',
-    alt: 'Beautiful beach with turquoise water and gentle waves rolling onto shore',
+    alt: 'Beach waves rolling turquoise water Costa Blanca Spain Mediterranean',
     description: 'Waves gently breaking on tropical beach',
     photographer: 'Chen Mizrach',
     tags: ['beach', 'waves', 'turquoise', 'tropical'],
@@ -82,7 +82,7 @@ export const beachImages: StockImage[] = [
   {
     id: 'kIdAUx6U0s8',
     url: 'https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6',
-    alt: 'Tropical beach with turquoise water and natural shade from palm trees',
+    alt: 'Beach palm trees turquoise water Costa Blanca Spain Mediterranean shade',
     description: 'Shaded beach area perfect for relaxation',
     photographer: 'Rachel Claire',
     tags: ['beach', 'tropical', 'shade', 'palm-trees'],
@@ -97,7 +97,7 @@ export const golfImages: StockImage[] = [
   {
     id: 'golf-fairway-1',
     url: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b',
-    alt: 'Scenic view of a golf course on a sunny day with blue sky and green fairway',
+    alt: 'Golf course fairway Costa Blanca Spain sunny day green new build',
     description: 'Sunny day at the golf course with serene landscapes',
     photographer: 'Peter Drew',
     tags: ['golf', 'fairway', 'sunny', 'blue-sky', 'green'],
@@ -105,7 +105,7 @@ export const golfImages: StockImage[] = [
   {
     id: 'golf-swing-1',
     url: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa',
-    alt: 'Golfer taking a swing on a sunny golf course',
+    alt: 'Golfer swing Costa Blanca Spain golf course property for sale',
     description: 'Action shot of golfer on the course',
     photographer: 'Courtney Cook',
     tags: ['golf', 'golfer', 'swing', 'action', 'sunny'],
@@ -113,7 +113,7 @@ export const golfImages: StockImage[] = [
   {
     id: 'golf-sunset-1',
     url: 'https://images.unsplash.com/photo-1592919505780-303950717480',
-    alt: 'Sunset shines over a lush green golf course with golden light',
+    alt: 'Golf course sunset Costa Blanca Spain green fairway luxury property',
     description: 'Beautiful sunset over golf course fairway',
     photographer: 'Sugar Golf',
     tags: ['golf', 'sunset', 'golden-hour', 'lush', 'green'],
@@ -121,7 +121,7 @@ export const golfImages: StockImage[] = [
   {
     id: 'golf-course-1',
     url: 'https://images.unsplash.com/photo-1600783245777-080fd7ff9253',
-    alt: 'Golf course at sunset with scenic panoramic view and palm trees lining the fairway',
+    alt: 'Golf course sunset panoramic palm trees Costa Blanca Spain property',
     description: 'Panoramic golf course view with palm trees',
     photographer: 'Lo Sarkin',
     tags: ['golf', 'sunset', 'panoramic', 'palm-trees', 'fairway'],
@@ -129,7 +129,7 @@ export const golfImages: StockImage[] = [
   {
     id: 'golf-green-1',
     url: 'https://images.unsplash.com/photo-1611374243147-44a702c2d44c',
-    alt: 'Golf green with flag and manicured lawn under blue sky',
+    alt: 'Golf green flag putting Costa Blanca Spain new build villa property',
     description: 'Well-maintained putting green with flag',
     photographer: 'Robert Ruggiero',
     tags: ['golf', 'green', 'flag', 'putting', 'manicured'],
@@ -144,7 +144,7 @@ export const villaPoolImages: StockImage[] = [
   {
     id: 'pool-palm-1',
     url: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791',
-    alt: 'Large swimming pool surrounded by palm trees at Spanish resort',
+    alt: 'Swimming pool palm trees new build villa Costa Blanca Spain for sale',
     description: 'Resort-style swimming pool with Mediterranean vibes',
     photographer: 'Humphrey Muleba',
     tags: ['pool', 'palm-trees', 'spain', 'resort', 'tropical'],
@@ -152,7 +152,7 @@ export const villaPoolImages: StockImage[] = [
   {
     id: 'pool-villa-1',
     url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9',
-    alt: 'Modern swimming pool with palm trees at Mediterranean villa',
+    alt: 'Modern villa pool Mediterranean Costa Blanca Spain new build property',
     description: 'Modern villa exterior with infinity pool',
     photographer: 'Francesca Tosolini',
     tags: ['pool', 'palm-trees', 'villa', 'modern', 'luxury'],
@@ -160,7 +160,7 @@ export const villaPoolImages: StockImage[] = [
   {
     id: 'pool-reflection-1',
     url: 'https://images.unsplash.com/photo-1572331165267-854da2b021a1',
-    alt: 'Reflection of palm trees and white buildings in swimming pool water',
+    alt: 'Pool reflection palm trees villa Costa Blanca Spain new build houses',
     description: 'Palm tree reflections on pool surface',
     photographer: 'Benjamin Child',
     tags: ['pool', 'reflection', 'palm-trees', 'buildings'],
@@ -168,7 +168,7 @@ export const villaPoolImages: StockImage[] = [
   {
     id: 'pool-aerial-1',
     url: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811',
-    alt: 'Aerial view of luxury swimming pool surrounded by palm trees',
+    alt: 'Aerial pool luxury villa palm trees Costa Blanca Spain new build',
     description: 'Bird\'s eye view of luxury villa pool',
     photographer: 'Tomas Jasovsky',
     tags: ['pool', 'aerial', 'luxury', 'palm-trees', 'villa'],
@@ -176,7 +176,7 @@ export const villaPoolImages: StockImage[] = [
   {
     id: 'pool-terrace-1',
     url: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914',
-    alt: 'Palm trees reflected in calm blue swimming pool water on sunny day',
+    alt: 'Pool terrace palm trees Costa Blanca Spain new build villa property',
     description: 'Summer pool scene with terrace and loungers',
     photographer: 'Expect Best',
     tags: ['pool', 'palm-trees', 'terrace', 'summer', 'blue-sky'],
@@ -184,7 +184,7 @@ export const villaPoolImages: StockImage[] = [
   {
     id: 'villa-seaview-1',
     url: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750',
-    alt: 'Luxury villa with private pool overlooking the sea in Costa Blanca, Spain',
+    alt: 'Luxury villa pool sea view Costa Blanca Spain new build property for sale',
     description: 'Costa Blanca luxury property with pool and sea views',
     location: 'Costa Blanca, Spain',
     photographer: 'Ralph (Ravi) Kayden',
@@ -200,7 +200,7 @@ export const marketFoodImages: StockImage[] = [
   {
     id: 'market-fruit-1',
     url: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9',
-    alt: 'Colorful display of fresh vegetables and fruits at Spanish market',
+    alt: 'Spanish market vegetables fruit Costa Blanca Mediterranean food local',
     description: 'Fresh produce at Mediterranean market stall',
     photographer: 'Peter Wendt',
     tags: ['market', 'fruits', 'vegetables', 'spain', 'fresh', 'colorful'],
@@ -208,7 +208,7 @@ export const marketFoodImages: StockImage[] = [
   {
     id: 'market-veg-1',
     url: 'https://images.unsplash.com/photo-1542838132-92c53300491e',
-    alt: 'Fresh vegetables and fruits on display at local market stall',
+    alt: 'Fresh market vegetables Costa Blanca Spain Mediterranean produce local',
     description: 'Market stall with fresh Mediterranean produce',
     photographer: 'nrd',
     tags: ['market', 'vegetables', 'fruits', 'fresh', 'food'],
@@ -216,7 +216,7 @@ export const marketFoodImages: StockImage[] = [
   {
     id: 'market-spain-1',
     url: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5',
-    alt: 'Bustling Spanish food market with tapas and local delicacies',
+    alt: 'Spanish market tapas Costa Blanca Mediterranean food local lifestyle',
     description: 'Traditional Spanish market atmosphere',
     photographer: 'Jay Wennington',
     tags: ['market', 'tapas', 'spain', 'food', 'restaurant'],
@@ -224,7 +224,7 @@ export const marketFoodImages: StockImage[] = [
   {
     id: 'paella-1',
     url: 'https://images.unsplash.com/photo-1534080564583-6be75777b70a',
-    alt: 'Traditional Spanish paella with seafood and rice',
+    alt: 'Spanish paella seafood Costa Blanca Mediterranean cuisine traditional',
     description: 'Authentic paella dish - classic Spanish cuisine',
     photographer: 'Mae Mu',
     tags: ['food', 'paella', 'spain', 'seafood', 'mediterranean'],
@@ -239,7 +239,7 @@ export const oldTownImages: StockImage[] = [
   {
     id: 'old-town-1',
     url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64',
-    alt: 'Narrow cobblestone street between old stone buildings in historic Spanish town',
+    alt: 'Spanish town cobblestone street Costa Blanca traditional architecture old',
     description: 'Historic Spanish town street with white buildings',
     photographer: 'Marco Chilese',
     tags: ['old-town', 'cobblestone', 'historic', 'spain', 'architecture'],
@@ -247,7 +247,7 @@ export const oldTownImages: StockImage[] = [
   {
     id: 'old-town-2',
     url: 'https://images.unsplash.com/photo-1509840841025-9088ba78a826',
-    alt: 'Cobblestone street lined with shops and cafes in charming Mediterranean old town',
+    alt: 'Old town cobblestone shops cafes Costa Blanca Spain Mediterranean street',
     description: 'Charming old town shopping street',
     photographer: 'David Bruyndonckx',
     tags: ['old-town', 'cobblestone', 'shops', 'street', 'mediterranean'],
@@ -255,7 +255,7 @@ export const oldTownImages: StockImage[] = [
   {
     id: 'old-town-plaza-1',
     url: 'https://images.unsplash.com/photo-1543783207-ec64e4d95325',
-    alt: 'Traditional Spanish plaza with terracotta buildings and outdoor cafes',
+    alt: 'Spanish plaza terracotta buildings cafes Costa Blanca traditional town',
     description: 'Spanish town plaza with outdoor dining',
     location: 'Spain',
     photographer: 'Willian Justen de Vasconcellos',
@@ -264,7 +264,7 @@ export const oldTownImages: StockImage[] = [
   {
     id: 'white-village-1',
     url: 'https://images.unsplash.com/photo-1509806452196-a178a7fa5b74',
-    alt: 'Traditional white Spanish village houses with terracotta roofs and narrow streets',
+    alt: 'White village Spain Costa Blanca traditional Andalusian architecture old town',
     description: 'Typical Andalusian white village architecture',
     photographer: 'Victoriano Izquierdo',
     tags: ['old-town', 'white-village', 'spain', 'andalusia', 'architecture'],
@@ -279,7 +279,7 @@ export const marinaImages: StockImage[] = [
   {
     id: 'marina-1',
     url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5',
-    alt: 'Boats moored in calm marina water on sunny Mediterranean day',
+    alt: 'Marina boats yachts Costa Blanca Spain Mediterranean harbor for sale',
     description: 'Peaceful marina scene with moored yachts',
     photographer: 'Vidar Nordli-Mathisen',
     tags: ['marina', 'boats', 'harbor', 'calm', 'water', 'yacht'],
@@ -287,7 +287,7 @@ export const marinaImages: StockImage[] = [
   {
     id: 'marina-spain-1',
     url: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee',
-    alt: 'Traditional colorful fishing boats in Mediterranean fishing village harbor',
+    alt: 'Fishing village boats harbor Costa Blanca Spain Mediterranean traditional',
     description: 'Traditional Mediterranean fishing port',
     photographer: 'James Coleman',
     tags: ['marina', 'fishing-boats', 'colorful', 'mediterranean', 'traditional'],
@@ -295,7 +295,7 @@ export const marinaImages: StockImage[] = [
   {
     id: 'marina-sunset-1',
     url: 'https://images.unsplash.com/photo-1514649923863-ceaf75b7ec00',
-    alt: 'Marina at sunset with luxury yachts and golden reflections on water',
+    alt: 'Marina sunset luxury yachts Costa Blanca Spain Mediterranean property',
     description: 'Sunset over luxury marina with yachts',
     photographer: 'Alonso Reyes',
     tags: ['marina', 'sunset', 'yacht', 'luxury', 'golden-hour'],
@@ -303,7 +303,7 @@ export const marinaImages: StockImage[] = [
   {
     id: 'sailboat-1',
     url: 'https://images.unsplash.com/photo-1500514966906-fe245eea9344',
-    alt: 'White sailboat on calm blue Mediterranean sea',
+    alt: 'Sailboat Mediterranean sea Costa Blanca Spain sailing yacht property',
     description: 'Sailboat on the Mediterranean',
     photographer: 'Bobby Burch',
     tags: ['sailboat', 'sea', 'mediterranean', 'sailing', 'blue'],

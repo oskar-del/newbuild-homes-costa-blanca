@@ -4,6 +4,9 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Buying Guides | New Build Property in Spain',
   description: 'Complete guides to buying new build property in Costa Blanca. NIE numbers, mortgages, taxes, costs and step-by-step buying process for international buyers.',
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/guides',
+  },
 };
 
 const guides = [

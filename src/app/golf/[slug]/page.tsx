@@ -1107,6 +1107,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: `Everything you need to know about living at ${course.name}. Golf lifestyle, schools, costs, community.`,
       type: 'website',
     },
+    alternates: {
+      canonical: `https://newbuildhomescostablanca.com/golf/${slug}`,
+    },
   };
 }
 

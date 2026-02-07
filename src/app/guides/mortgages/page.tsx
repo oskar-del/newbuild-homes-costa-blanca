@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import LeadFormAdvanced from '@/components/LeadFormAdvanced';
+import { howToSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Spanish Mortgages for Foreigners 2026 | Non-Resident Guide',
@@ -9,7 +10,58 @@ export const metadata: Metadata = {
 };
 
 export default function MortgagesPage() {
+  const howToSchemaData = howToSchema({
+    name: 'How to Get a Spanish Mortgage for Foreign Buyers',
+    description: 'Complete guide to obtaining a mortgage in Spain as a non-resident. Current rates ~3.15%, LTV 60-70%, requirements for British and international buyers.',
+    totalTime: 'PT10W',
+    steps: [
+      {
+        name: 'Check Your Eligibility',
+        text: 'Spanish banks lend to foreign nationals and non-residents. EU/EEA non-residents can typically borrow 60-70% LTV, requiring 30-40% deposit. You will need proof of stable income, tax returns, and bank statements. Employment status (employed vs. self-employed) affects documentation requirements.',
+        url: 'https://newbuildhomescostablanca.com/guides/mortgages/#can-foreigners'
+      },
+      {
+        name: 'Gather Required Documentation',
+        text: 'Collect valid passport, NIE number, last 2-3 years tax returns, last 3-6 months payslips (or business accounts if self-employed), employment contract, last 3-6 months bank statements, proof of deposit funds, and details of existing debts. All documents should be translated to Spanish.',
+        url: 'https://newbuildhomescostablanca.com/guides/mortgages/#requirements'
+      },
+      {
+        name: 'Choose Rate Type and Get Pre-Approval',
+        text: 'Select between fixed rate (currently 3.5-4.5%), variable rate (Euribor + 1-2%), or mixed rate (fixed then variable). Contact Spanish banks directly or use a mortgage broker. Submit initial financial information for pre-approval showing how much you can borrow.',
+        url: 'https://newbuildhomescostablanca.com/guides/mortgages/#interest-rates'
+      },
+      {
+        name: 'Find Your Property and Submit Full Application',
+        text: 'Once you have found a property and signed a reservation, submit your complete application to the bank. Bank reviews all documentation and your credit profile. This typically takes 2-4 weeks.',
+        url: 'https://newbuildhomescostablanca.com/guides/mortgages/#application-process'
+      },
+      {
+        name: 'Property Valuation',
+        text: 'The bank arranges an independent valuation (tasación) of the property. You pay for this (€300-500). Your LTV is calculated based on the valuation figure, not the purchase price. If valuation is lower than purchase price, your borrowing amount decreases.',
+        url: 'https://newbuildhomescostablanca.com/guides/mortgages/#application-process'
+      },
+      {
+        name: 'Receive Formal Mortgage Offer',
+        text: 'Bank issues a binding offer (Oferta Vinculante) detailing loan amount, interest rate, term, monthly payment, and all conditions. This offer is valid for minimum 10 days by Spanish law. Review all terms carefully.',
+        url: 'https://newbuildhomescostablanca.com/guides/mortgages/#application-process'
+      },
+      {
+        name: 'Accept Offer and Arrange Completion',
+        text: 'Accept the mortgage offer in writing. Coordinate with the notary to schedule completion date for both property purchase and mortgage deed signing. Both happen on the same day. Bank representative attends the notary signing.',
+        url: 'https://newbuildhomescostablanca.com/guides/mortgages/#application-process'
+      },
+      {
+        name: 'Complete at Notary and Receive Funds',
+        text: 'Sign the Escritura (property deed) and mortgage deed at the notary. Pay final balance and all costs. Bank transfers mortgage funds same day. You receive keys and become the legal owner. Total timeline: 6-10 weeks from full application to completion.',
+        url: 'https://newbuildhomescostablanca.com/guides/mortgages/#application-process'
+      }
+    ]
+  });
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(howToSchemaData) }} />
+
     <main className="min-h-screen bg-white">
       {/* Hero */}
       <section className="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 text-white py-16">
@@ -426,5 +478,6 @@ export default function MortgagesPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     title: 'New Build Properties Costa Blanca | Villas & Houses for Sale',
     description: 'Browse 1000+ new build villas and houses for sale across Costa Blanca.',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/properties',
+  },
 };
 
 // Town lifestyle data for filtered views
@@ -448,26 +451,26 @@ export default async function PropertiesPage({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex flex-wrap gap-3">
               <Link
-                href="/properties?keyready=true"
+                href="/properties/key-ready"
                 className="inline-flex items-center gap-1.5 px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm font-medium hover:bg-green-100 transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 Key Ready ({keyReadyCount})
               </Link>
               <Link
-                href="/properties?type=apartment"
+                href="/properties/apartments"
                 className="inline-flex items-center gap-1.5 px-4 py-2 bg-warm-100 text-primary-900 rounded-full text-sm font-medium hover:bg-warm-200 transition-colors"
               >
                 Apartments
               </Link>
               <Link
-                href="/properties?type=villa"
+                href="/properties/villas"
                 className="inline-flex items-center gap-1.5 px-4 py-2 bg-warm-100 text-primary-900 rounded-full text-sm font-medium hover:bg-warm-200 transition-colors"
               >
                 Villas
               </Link>
               <Link
-                href="/properties?maxprice=300000"
+                href="/properties/under-300k"
                 className="inline-flex items-center gap-1.5 px-4 py-2 bg-warm-100 text-primary-900 rounded-full text-sm font-medium hover:bg-warm-200 transition-colors"
               >
                 Under €300k
@@ -619,7 +622,7 @@ export default async function PropertiesPage({
                 </h2>
                 <p className="text-warm-500 mt-2">Charming villages with authentic Spanish character and excellent value</p>
               </div>
-              <Link href="/properties?region=inland" className="hidden md:flex items-center gap-2 text-accent-600 hover:text-accent-700 font-medium">
+              <Link href="/properties/inland" className="hidden md:flex items-center gap-2 text-accent-600 hover:text-accent-700 font-medium">
                 View all {inlandProperties.length} properties
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
@@ -646,7 +649,7 @@ export default async function PropertiesPage({
               ))}
             </div>
 
-            <Link href="/properties?region=inland" className="md:hidden flex items-center justify-center gap-2 text-accent-600 hover:text-accent-700 font-medium mt-6">
+            <Link href="/properties/inland" className="md:hidden flex items-center justify-center gap-2 text-accent-600 hover:text-accent-700 font-medium mt-6">
               View all {inlandProperties.length} properties →
             </Link>
           </div>

@@ -102,7 +102,7 @@ export default function DevelopmentCard(props: DevelopmentCardProps) {
       <div className="relative h-52 overflow-hidden">
         <Image
           src={image || '/placeholder-development.svg'}
-          alt={`${name} - New build development in ${town}`}
+          alt={`New build ${propertyTypes?.[0]?.toLowerCase() || 'homes'} for sale ${town} Spain ${name}`}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-700"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"

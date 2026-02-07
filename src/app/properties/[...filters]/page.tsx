@@ -263,12 +263,20 @@ const FILTER_DEFINITIONS: Record<string, { config: FilterConfig; title: string; 
     title: 'New Build Properties Costa Blanca North',
     description: 'New builds in Costa Blanca North. Jávea, Moraira, Calpe, Altea. Premium coastal living.'
   },
+
+  // Inland
+  'inland': {
+    config: { region: 'inland' },
+    title: 'Inland New Build Properties Costa Blanca | Village & Country Homes',
+    description: 'New build villas and townhouses in charming inland villages. Algorfa, Rojales, Ciudad Quesada, Jalón Valley. Authentic Spanish character, excellent value, 20 minutes from the coast.'
+  },
 };
 
 // South Costa Blanca towns
 const SOUTH_TOWNS = ['Torrevieja', 'Orihuela Costa', 'Guardamar del Segura', 'Pilar de la Horadada', 'San Miguel de Salinas', 'Los Montesinos', 'Rojales', 'Ciudad Quesada', 'La Marina', 'Santa Pola'];
 const NORTH_TOWNS = ['Jávea', 'Moraira', 'Calpe', 'Altea', 'Benidorm', 'Dénia', 'Benissa', 'Teulada', 'Finestrat', 'La Nucia', 'Alfaz del Pi', 'Albir', 'Villajoyosa', 'El Campello', 'Polop', 'Benitachell'];
 const COSTA_CALIDA_TOWNS = ['San Javier', 'San Pedro del Pinatar', 'Los Alcázares', 'La Manga', 'Cartagena', 'Mazarrón', 'Torre Pacheco', 'Sucina', 'Murcia'];
+const INLAND_TOWNS = ['Algorfa', 'Rojales', 'Ciudad Quesada', 'Benijófar', 'San Fulgencio', 'Jalón', 'Orba', 'Pedreguer', 'Pinoso', 'Hondón de las Nieves', 'Catral', 'Dolores', 'Almoradí', 'Callosa de Segura'];
 
 function matchesFilter(property: UnifiedProperty, config: FilterConfig): boolean {
   if (config.type && property.propertyType !== config.type) return false;
@@ -283,6 +291,9 @@ function matchesFilter(property: UnifiedProperty, config: FilterConfig): boolean
   }
   if (config.region === 'costa-calida') {
     if (!COSTA_CALIDA_TOWNS.some(t => property.town.toLowerCase().includes(t.toLowerCase()))) return false;
+  }
+  if (config.region === 'inland') {
+    if (!INLAND_TOWNS.some(t => property.town.toLowerCase().includes(t.toLowerCase()))) return false;
   }
   if (config.features?.includes('key-ready')) {
     const desc = (property.descriptions?.en || '').toLowerCase();
@@ -317,6 +328,9 @@ export async function generateMetadata({ params }: { params: Promise<{ filters: 
       title: definition.title,
       description: definition.description,
       type: 'website',
+    },
+    alternates: {
+      canonical: `https://newbuildhomescostablanca.com/properties/${slug}`,
     },
   };
 }

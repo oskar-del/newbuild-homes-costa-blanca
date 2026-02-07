@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     description: 'New build homes in inland Costa Blanca. More space, better value, authentic Spain.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/inland',
+  },
 };
 
 const CONTACT = {

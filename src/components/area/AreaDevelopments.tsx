@@ -109,7 +109,7 @@ export default function AreaDevelopments({
                       {heroImage ? (
                         <Image
                           src={heroImage}
-                          alt={`${dev.displayName || dev.name} - New Build Development`}
+                          alt={`New build ${dev.propertyTypes?.[0]?.toLowerCase() || 'homes'} for sale ${areaName} Spain ${dev.displayName || dev.name}`}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-300"
                           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -140,7 +140,7 @@ export default function AreaDevelopments({
                           <div key={idx} className="relative flex-1 h-12 overflow-hidden rounded">
                             <Image
                               src={img}
-                              alt={`${dev.displayName || dev.name} - Image ${idx + 1}`}
+                              alt={`${dev.displayName || dev.name} new build ${areaName} Costa Blanca Spain`}
                               fill
                               className="object-cover"
                               sizes="80px"

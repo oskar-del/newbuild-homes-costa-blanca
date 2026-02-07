@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     description: 'Your guide to Mediterranean living in Spain.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/blog',
+  },
 };
 
 interface Article {

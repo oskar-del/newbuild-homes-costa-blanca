@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     description: 'Premium building plots with full bespoke build service. Architects, builders, legals - we handle everything.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/land-plots',
+  },
 };
 
 const CONTACT = {

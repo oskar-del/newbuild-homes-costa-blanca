@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     title: 'About Us | New Build Homes Costa Blanca',
     description: '15+ years helping international buyers find their dream home in Spain. Complete selection of new builds.',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/about',
+  },
 };
 
 const CONTACT = {

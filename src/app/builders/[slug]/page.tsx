@@ -144,6 +144,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
       title: enhanced.content.metaTitle,
       description: enhanced.content.metaDescription,
+      alternates: {
+        canonical: `https://newbuildhomescostablanca.com/builders/${slug}`,
+      },
     };
   }
 
@@ -156,6 +159,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${builder.name} | Property Developer Costa Blanca`,
     description: `View ${builder.developmentCount} developments by ${builder.name} in ${builder.towns.slice(0, 3).join(', ')}. New build homes from ${builder.priceRange}. Trusted Costa Blanca developer.`,
+    alternates: {
+      canonical: `https://newbuildhomescostablanca.com/builders/${slug}`,
+    },
   };
 }
 

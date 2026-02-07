@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     title: 'Costa Blanca South Developments',
     description: 'Explore new build properties in Costa Blanca South from €145,000.',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/developments/costa-blanca-south',
+  },
 };
 
 // Helper to format price

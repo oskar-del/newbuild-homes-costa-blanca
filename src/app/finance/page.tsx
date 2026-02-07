@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     description: 'Compare Spanish mortgage rates and get expert finance advice for your property purchase.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/finance',
+  },
 };
 
 const CONTACT = {

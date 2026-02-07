@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     title: 'Costa Blanca Areas | Living & Property Guides',
     description: 'Discover the best areas to live in Costa Blanca. Comprehensive guides to top locations.',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/areas',
+  },
 };
 
 interface Area {

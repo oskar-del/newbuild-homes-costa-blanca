@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     description: 'From Finestrat to Denia. Mountain views, hidden calas, Michelin restaurants. Properties from €220,000 to €3.5M+',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/developments/costa-blanca-north',
+  },
 };
 
 const CONTACT = {

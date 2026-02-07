@@ -47,6 +47,9 @@ export const metadata: Metadata = {
     title: 'Golf Course Properties Costa Blanca & Murcia | New Builds on Golf Resorts',
     description: 'Find new build homes on golf resorts across Costa Blanca and Murcia from €150,000.',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/golf',
+  },
 };
 
 const CONTACT = {

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { breadcrumbSchema, toJsonLd, faqSchema } from '@/lib/schema';
+import { breadcrumbSchema, toJsonLd, faqSchema, howToSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Tourist Rental License Valencia 2026 | Complete Guide to Holiday Letting in Costa Blanca',
@@ -67,9 +67,58 @@ export default function TouristRentalLicensePage() {
 
   const faqSchemaData = faqSchema(rentalFaqs);
 
+  const howToSchemaData = howToSchema({
+    name: 'How to Get a Tourist Rental License in Valencia',
+    description: 'Complete guide to obtaining a Tourist Rental License (Vivienda Turística) for your Costa Blanca property. New 2025 regulations, requirements, costs, and application process.',
+    totalTime: 'PT4W',
+    steps: [
+      {
+        name: 'Understand the Requirements',
+        text: 'Your property must have a valid Habitability Certificate (Cédula de Habitabilidad), Energy Performance Certificate (minimum E rating), minimum room sizes, direct ventilation and natural light, hot and cold water, and air conditioning. New build properties typically meet these easily.',
+        url: 'https://newbuildhomescostablanca.com/guides/tourist-rental-license/#requirements'
+      },
+      {
+        name: 'Obtain Required Certificates',
+        text: 'Get an Energy Performance Certificate (€100-200) and Habitability Certificate (€100-300). New build properties may already have energy certificates. Total cost typically €200-500 for certificates.',
+        url: 'https://newbuildhomescostablanca.com/guides/tourist-rental-license/#costs'
+      },
+      {
+        name: 'Gather Documentation',
+        text: 'Collect property deeds, both certificates, community approval (if applicable), and proof of ownership or authorization to rent. Ensure all documents are properly prepared and any translations are certified.',
+        url: 'https://newbuildhomescostablanca.com/guides/tourist-rental-license/#process'
+      },
+      {
+        name: 'Complete the Declaración Responsable',
+        text: 'Fill out the Declaración Responsable (responsible declaration) application form with your property details, owner information, and certification that your property meets all requirements.',
+        url: 'https://newbuildhomescostablanca.com/guides/tourist-rental-license/#process'
+      },
+      {
+        name: 'Submit Your Application',
+        text: 'Submit the completed Declaración Responsable and all documents to the Valencia Tourism Registry online or in person. Include all required certificates and proof of ownership.',
+        url: 'https://newbuildhomescostablanca.com/guides/tourist-rental-license/#process'
+      },
+      {
+        name: 'Receive Your VT Number',
+        text: 'Once approved (typically 2-4 weeks), you receive your official VT registration number. This is your Tourist Rental License number (Vivienda Turística).',
+        url: 'https://newbuildhomescostablanca.com/guides/tourist-rental-license/#process'
+      },
+      {
+        name: 'Display License on All Listings',
+        text: 'Your VT number must appear on all advertisements, booking platforms (Airbnb, Booking.com, VRBO), websites, and at the property entrance. Since 2024, platforms verify VT numbers with the regional database.',
+        url: 'https://newbuildhomescostablanca.com/guides/tourist-rental-license/#process'
+      },
+      {
+        name: 'Set Up Property Management',
+        text: 'Choose whether to self-manage or use a professional property manager. Many owners prefer professional management for guest communications, check-ins, cleaning, maintenance, and legal compliance, especially if they do not live near the property.',
+        url: 'https://newbuildhomescostablanca.com/guides/tourist-rental-license/'
+      }
+    ]
+  });
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(howToSchemaData) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(faqSchemaData) }} />
 
       <main className="min-h-screen bg-warm-50">

@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     title: 'Luxury Villas Costa Blanca | €800k+ Premium Properties',
     description: 'Discover luxury villas and bespoke properties in Costa Blanca from €800,000+. Exclusive sea view villas.',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/luxury',
+  },
 };
 
 // Contact info

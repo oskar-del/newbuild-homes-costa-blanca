@@ -400,14 +400,17 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const data = getArea(slug);
-  
+
   if (!data) {
     return { title: 'Area Not Found' };
   }
-  
+
   return {
     title: data.content.metaTitle,
     description: data.content.metaDescription,
+    alternates: {
+      canonical: `https://newbuildhomescostablanca.com/areas/${slug}`,
+    },
   };
 }
 

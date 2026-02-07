@@ -14,6 +14,30 @@ const GUIDE_SLUGS = [
   'tourist-rental-license',
 ];
 
+// All blog article slugs
+const BLOG_SLUGS = [
+  '90-day-rule-spain-property-owners',
+  'algorfa-vs-coastal-living',
+  'best-beaches-costa-blanca',
+  'builder-warranty-spain-10-year',
+  'buying-off-plan-spain-guide',
+  'buying-property-spain-process',
+  'cost-of-living-costa-blanca',
+  'digital-nomad-visa-spain-2026',
+  'golf-lifestyle-costa-blanca',
+  'healthcare-costa-blanca-expats',
+  'la-finca-golf-property-guide',
+  'la-zenia-vs-cabo-roig-where-to-buy',
+  'nie-number-spain-guide',
+  'non-lucrative-visa-spain-property',
+  'open-bank-account-spain-non-resident',
+  'power-of-attorney-spain-property',
+  'snagging-inspection-spain-new-build',
+  'spanish-mortgages-guide',
+  'spanish-property-costs-taxes',
+  'stage-payments-off-plan-spain',
+];
+
 // All golf course slugs
 const GOLF_COURSE_SLUGS = [
   'serena-golf',
@@ -50,6 +74,8 @@ const FILTER_SLUGS = [
   'under-200k', 'under-300k', 'luxury-over-500k', 'luxury-over-1m',
   // Regions
   'costa-blanca-south', 'costa-blanca-north',
+  // Combined regions & features
+  'costa-blanca', 'costa-calida', 'key-ready', 'inland',
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -171,6 +197,49 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'yearly',
       priority: 0.3,
     },
+    // Pages previously missing from sitemap
+    {
+      url: `${baseUrl}/beach`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/consultation`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/costa-calida`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/land-plots`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/developments/costa-blanca-south`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/developments/costa-blanca-north`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
   ];
 
   // Guide pages
@@ -213,6 +282,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
+  // Blog article pages
+  const blogPages: MetadataRoute.Sitemap = BLOG_SLUGS.map((slug) => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
   // Programmatic property filter pages (SEO)
   const filterPages: MetadataRoute.Sitemap = FILTER_SLUGS.map((slug) => ({
     url: `${baseUrl}/properties/${slug}`,
@@ -233,6 +310,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...staticPages,
     ...guidePages,
     ...golfPages,
+    ...blogPages,
     ...developmentPages,
     ...areaPages,
     ...builderPages,

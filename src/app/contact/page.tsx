@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     title: 'Contact Us | New Build Homes Costa Blanca',
     description: 'Get in touch for expert guidance on buying new build properties in Costa Blanca.',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/contact',
+  },
 };
 
 export default function ContactPage() {

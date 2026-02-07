@@ -497,4 +497,45 @@ For investors, Costa Calida represents emerging market opportunity with developm
       { label: "Apartments", href: "/properties/apartments" },
     ],
   },
+
+  inland: {
+    faqs: [
+      {
+        question: "Why buy an inland property in Costa Blanca instead of coastal?",
+        answer: "Inland Costa Blanca offers 30-50% lower property prices compared to equivalent coastal homes, larger plots with more outdoor space, authentic Spanish village character, and warmer summer evenings without coastal humidity. Most inland towns sit just 15-25 minutes from beaches, giving you the best of both worlds. You enjoy genuine Spanish community life, lower cost of living, and peaceful surroundings while remaining close to coastal amenities, airports, and international facilities.",
+      },
+      {
+        question: "Which inland towns are best for buying a new build property?",
+        answer: "Popular inland towns include Algorfa and Rojales (near La Finca Golf, 15 min from beaches), Ciudad Quesada (established expat community with excellent amenities), Jalón Valley (wine region with mountain views), and Pinoso (country living with large villa plots). Each offers distinct advantages: Algorfa for golf lifestyle, Ciudad Quesada for community, Jalón for authentic Valencian culture, and Pinoso for space and tranquility. All benefit from excellent road connections to both coast and Alicante airport.",
+      },
+      {
+        question: "How much do inland new build properties cost in Costa Blanca?",
+        answer: "Inland new builds range from around €130,000 for apartments in towns like Rojales or Benijófar to €350,000-€500,000 for detached villas with private pools and large plots in Pinoso or Hondón Valley. Three-bedroom villas with pools in Algorfa or Ciudad Quesada typically cost €250,000-€350,000 — significantly less than equivalent coastal properties. The price advantage allows buyers to get substantially more property, land, and features for their budget.",
+      },
+      {
+        question: "What is the lifestyle like in inland Costa Blanca?",
+        answer: "Inland towns offer authentic Spanish daily life with local markets, traditional fiestas, family-run restaurants, and genuine community atmosphere. Many have established international communities providing English-speaking social clubs, events, and support networks. The pace of life is relaxed, with excellent local healthcare facilities, supermarkets, and dining. Golf courses, hiking trails, and natural parks provide outdoor recreation, while coastal beaches and attractions remain a short drive away.",
+      },
+      {
+        question: "Are inland properties a good investment in Costa Blanca?",
+        answer: "Inland properties offer strong value proposition with lower entry costs, growing demand as coastal prices increase, and solid rental potential particularly during golf season and spring/autumn months. Appreciation has been consistent at 3-5% annually as more buyers discover the value advantage. The growing trend toward remote working has increased demand for spacious inland villas with home offices. Properties near golf courses like La Finca and Vistabella command premium rental rates.",
+      },
+    ],
+    intro: `Inland Costa Blanca combines the best of Mediterranean living with authentic Spanish village character and exceptional property value. Towns like Algorfa, Rojales, Ciudad Quesada, and the Jalón Valley offer new build homes at 30-50% below coastal prices, with larger plots, more space, and genuine community atmosphere — all within a short drive of pristine beaches and international airports.
+
+The region's appeal lies in its balance: peaceful residential living surrounded by almond groves, vineyards, and mountain scenery, yet connected to coastal amenities via excellent road networks. Championship golf courses at La Finca, Vistabella, and Las Ramblas attract year-round visitors, while traditional Spanish markets, fiestas, and village life provide cultural richness that coastal resort towns often lack.
+
+For buyers seeking space, value, and authentic Spanish living without sacrificing modern comforts or beach access, inland Costa Blanca represents one of the Mediterranean's best-kept property secrets. New developments combine contemporary architecture with generous plot sizes, private pools, and mountain or countryside views.`,
+    whyBuy: `Inland Costa Blanca delivers exceptional value — a three-bedroom villa with pool and garden that might cost €450,000 on the coast often starts at €250,000-€300,000 inland. The savings extend beyond purchase price: lower community fees, reduced IBI taxes, and more affordable daily living costs compared to tourist-heavy coastal areas.
+
+For lifestyle buyers, the appeal is authentic Spain — morning coffee in a village plaza, weekly farmers' markets, neighbourhood fiestas, and genuine community connections. For investors, growing demand from remote workers and golf tourists creates rental opportunities, while the price gap with coastal areas continues to narrow, supporting appreciation. The combination of lower entry costs, strong rental yields, and steady appreciation makes inland properties an increasingly attractive proposition.`,
+    marketInsight: `The inland Costa Blanca market shows growing momentum as coastal property prices climb 5-8% annually, pushing value-conscious buyers to discover inland alternatives. Properties in the €200,000-€350,000 range — particularly villas with pools near golf courses — demonstrate strongest demand. Remote working trends have accelerated interest in spacious inland homes with gardens and home offices. Towns within 20 minutes of the coast and near golf resorts see fastest appreciation. The market benefits from infrastructure improvements including new road connections and expanded healthcare facilities serving the growing international community.`,
+    relatedSearches: [
+      { label: "Costa Blanca South", href: "/properties/costa-blanca-south" },
+      { label: "Villas", href: "/properties/villas" },
+      { label: "Properties Under €300k", href: "/properties/under-300k" },
+      { label: "Properties Under €200k", href: "/properties/under-200k" },
+      { label: "Golf Properties", href: "/golf" },
+    ],
+  },
 };

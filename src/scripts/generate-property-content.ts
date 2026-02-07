@@ -187,7 +187,7 @@ Generate the following JSON (respond ONLY with valid JSON, no markdown):
   "faqs": [
     {"question": "Specific question about this property or location", "answer": "Detailed, helpful answer (2-4 sentences)"}
   ],
-  "imageAlts": ["Descriptive alt text for each image - be specific about what's shown"],
+  "imageAlts": ["Search-query style alt tags - write what buyers type into Google, e.g. '3 bedroom villa with pool ${property.town} Spain', 'Modern kitchen new build ${property.town} Costa Blanca', 'Sea view apartment ${property.town} Spain €250k'. Each alt MUST include the town name and 'Spain' or 'Costa Blanca'. NO generic labels like 'exterior view' or 'interior shot'."],
   "whyBuyReasons": ["8 compelling reasons to buy THIS specific property"]
 }
 
