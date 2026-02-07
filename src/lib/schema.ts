@@ -598,54 +598,42 @@ export function generatePropertyAltTag(property: {
   zone?: string;
   propertyType?: string;
   bedrooms?: number;
+  price?: number;
   deliveryDate?: string;
   imageIndex?: number;
   imageType?: 'exterior' | 'interior' | 'pool' | 'terrace' | 'kitchen' | 'bedroom' | 'bathroom' | 'view' | 'building';
 }): string {
-  const parts: string[] = [];
+  // Generate search-query style alt tags (what people actually type into Google)
+  // instead of generic descriptive alt tags
+  const type = (property.propertyType || 'property').toLowerCase();
+  const town = property.town || 'Costa Blanca';
+  const beds = property.bedrooms ? `${property.bedrooms} bedroom ` : '';
+  const priceStr = property.price ? `€${Math.round(property.price / 1000)}k ` : '';
 
-  // Image type descriptor
-  if (property.imageType) {
-    const typeMap: Record<string, string> = {
-      'exterior': 'Exterior view of',
-      'interior': 'Interior of',
-      'pool': 'Swimming pool at',
-      'terrace': 'Terrace at',
-      'kitchen': 'Modern kitchen in',
-      'bedroom': 'Bedroom in',
-      'bathroom': 'Bathroom in',
-      'view': 'Views from',
-      'building': 'Building facade of'
-    };
-    parts.push(typeMap[property.imageType] || '');
+  // Different alt tag patterns based on image type for natural variation
+  const imageType = property.imageType || 'exterior';
+  switch (imageType) {
+    case 'exterior':
+      return `${beds}new build ${type} ${town} Spain ${priceStr}exterior`.trim();
+    case 'interior':
+      return `Inside a ${beds}${type} in ${town} Costa Blanca modern interior`.trim();
+    case 'pool':
+      return `${type} with private pool ${town} Spain new build`.trim();
+    case 'terrace':
+      return `${beds}${type} terrace views ${town} Costa Blanca`.trim();
+    case 'kitchen':
+      return `Modern kitchen new build ${priceStr}${type} ${town}`.trim();
+    case 'bedroom':
+      return `${beds}${type} master bedroom ${town} Spain new build`.trim();
+    case 'bathroom':
+      return `Modern bathroom new build ${type} ${town} Costa Blanca`.trim();
+    case 'view':
+      return `Sea view ${beds}${type} ${town} Spain Mediterranean`.trim();
+    case 'building':
+      return `New build ${type} development ${town} Costa Blanca ${priceStr}`.trim();
+    default:
+      return `${beds}new build ${type} for sale ${town} Spain ${priceStr}`.trim();
   }
-
-  // Property name and type
-  if (property.propertyType) {
-    parts.push(`${property.propertyType.toLowerCase()}`);
-  }
-  parts.push(property.name);
-
-  // Developer
-  if (property.developer) {
-    parts.push(`by ${property.developer}`);
-  }
-
-  // Location
-  const location = property.zone ? `${property.zone}, ${property.town}` : property.town;
-  parts.push(`in ${location}`);
-
-  // Bedrooms
-  if (property.bedrooms) {
-    parts.push(`- ${property.bedrooms} bedroom`);
-  }
-
-  // Delivery
-  if (property.deliveryDate) {
-    parts.push(`- Ready ${property.deliveryDate}`);
-  }
-
-  return parts.join(' ').replace(/\s+/g, ' ').trim();
 }
 
 export function generateDevelopmentAltTag(development: {
@@ -662,36 +650,25 @@ export function generateDevelopmentAltTag(development: {
   golfCourse?: string;
   imageIndex?: number;
 }): string {
-  const parts: string[] = [];
+  // Generate search-query style alt tags for development images
+  const location = development.zone || development.town;
+  const types = development.propertyTypes?.join(' and ').toLowerCase() || 'properties';
+  const statusText = development.status === 'key-ready' ? 'key ready' : 'new build';
 
-  // Development name
-  parts.push(development.name);
+  // Vary alt tags based on image index for natural diversity
+  const index = development.imageIndex || 0;
+  const variations = [
+    `${statusText} ${types} for sale ${location} Spain ${development.name}`,
+    `${development.name} new build development ${development.town} Costa Blanca`,
+    development.isBeachProperty && development.beachName
+      ? `New ${types} near ${development.beachName} ${development.town} Spain`
+      : `${types} ${location} Spain by ${development.developer}`,
+    development.isGolfProperty && development.golfCourse
+      ? `Golf property ${development.golfCourse} ${development.town} new build ${types}`
+      : `${development.developer} ${types} ${development.town} Costa Blanca`,
+  ];
 
-  // Developer
-  parts.push(`by ${development.developer}`);
-
-  // Location with beach/golf context
-  if (development.isBeachProperty && development.beachName) {
-    parts.push(`near ${development.beachName}`);
-  } else if (development.isGolfProperty && development.golfCourse) {
-    parts.push(`at ${development.golfCourse}`);
-  }
-
-  parts.push(`in ${development.zone || development.town}, Spain`);
-
-  // Property types
-  if (development.propertyTypes?.length) {
-    parts.push(`- ${development.propertyTypes.join(' and ')}s`);
-  }
-
-  // Status
-  if (development.status === 'key-ready') {
-    parts.push('- Key ready now');
-  } else if (development.deliveryQuarter) {
-    parts.push(`- Ready ${development.deliveryQuarter}`);
-  }
-
-  return parts.join(' ').replace(/\s+/g, ' ').trim();
+  return variations[index % variations.length].replace(/\s+/g, ' ').trim();
 }
 
 // ==========================================

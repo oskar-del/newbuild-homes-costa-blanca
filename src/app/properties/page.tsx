@@ -9,7 +9,7 @@ import { getRegionForTown, REGIONS, normalizeTownName } from '@/lib/feed-config'
 import PropertyFilters from '@/components/PropertyFilters';
 import SortDropdown from '@/components/SortDropdown';
 import PropertySearch from '@/components/PropertySearch';
-import { collectionPageSchema, breadcrumbSchema, toJsonLd } from '@/lib/schema';
+import { collectionPageSchema, breadcrumbSchema, faqSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'New Build Properties Costa Blanca | Villas & Houses for Sale',
@@ -73,6 +73,37 @@ const NORTH_TOWNS = ['javea', 'moraira', 'calpe', 'altea', 'benidorm', 'denia', 
 const GOLF_KEYWORDS = ['golf', 'la finca', 'villamartin', 'las colinas', 'campoamor', 'las ramblas', 'vistabella', 'algorfa'];
 const INLAND_TOWNS = ['algorfa', 'rojales', 'ciudad quesada', 'benijofar', 'san fulgencio', 'jalon', 'orba', 'pedreguer'];
 const COSTA_CALIDA_TOWNS = ['san javier', 'san pedro del pinatar', 'santiago de la ribera', 'los alcazares', 'la manga', 'cartagena', 'mazarron', 'puerto de mazarron', 'aguilas', 'torre pacheco', 'sucina', 'roldan', 'murcia'];
+
+const MAIN_PAGE_FAQS = [
+  {
+    question: 'Why buy a new build property in Spain?',
+    answer: 'New build properties in Spain offer modern energy-efficient designs, 10-year structural warranties, customization options during construction, and lower maintenance costs. They typically include communal amenities like pools and gardens, come with full legal guarantees through bank-backed deposits, and often appreciate faster than resale properties during the first years.'
+  },
+  {
+    question: 'How much does it cost to buy a new build in Costa Blanca?',
+    answer: 'New build prices in Costa Blanca range from around €150,000 for apartments in southern areas like Torrevieja to over €2 million for luxury villas in Jávea or Moraira. Budget for an additional 10-13% on top of the purchase price for taxes, notary fees, legal costs, and registry fees. Non-resident buyers typically need a 30-40% deposit for mortgage financing.'
+  },
+  {
+    question: 'What is the difference between Costa Blanca North and South?',
+    answer: 'Costa Blanca South (Torrevieja to Pilar de la Horadada) offers more affordable properties, established expat communities, and year-round sunshine with less rainfall. Costa Blanca North (Jávea to Benidorm) is the premium market with dramatic mountain coastline, higher property prices, more authentic Spanish culture, and greener landscapes. Both areas enjoy 300+ sunshine days per year.'
+  },
+  {
+    question: 'What does key-ready mean for a new build?',
+    answer: 'A key-ready property is a new build that is fully completed and available for immediate occupation. You can view the finished property before purchasing, avoid construction delays, and move in within weeks of completing the purchase. Key-ready homes still come with full new build warranties and guarantees from the developer.'
+  },
+  {
+    question: 'Can non-EU citizens buy property in Spain?',
+    answer: 'Yes, there are no restrictions on non-EU citizens buying property in Spain. You will need a NIE number (tax identification number for foreigners), which your lawyer can arrange. Purchases over €500,000 may qualify for Spain\'s Golden Visa residency program. The buying process typically takes 4-8 weeks from reservation to completion.'
+  },
+  {
+    question: 'What ongoing costs should I expect as a property owner in Spain?',
+    answer: 'Annual costs include IBI property tax (€300-€1,500 depending on value), community fees for shared amenities (€50-€200/month), home insurance (€200-€500/year), and utility connections. Non-resident owners also pay annual income tax on deemed rental income. Total annual running costs typically range from €2,000-€5,000 depending on property size and location.'
+  },
+  {
+    question: 'Is Costa Blanca property a good investment?',
+    answer: 'Costa Blanca property has shown consistent appreciation of 3-6% annually in recent years, with rental yields of 5-8% in popular tourist areas. Strong demand from Northern European buyers, limited new land for development, excellent transport links via Alicante-Elche Airport, and year-round rental potential make it an attractive investment. The region benefits from 300+ days of sunshine and established tourism infrastructure.'
+  },
+];
 
 function formatPrice(price: number): string {
   return new Intl.NumberFormat('en-EU', {
@@ -372,6 +403,7 @@ export default async function PropertiesPage({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(collectionSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(faqSchema(MAIN_PAGE_FAQS)) }} />
 
       <main className="min-h-screen bg-warm-50">
         {/* Hero with Search */}
@@ -648,6 +680,23 @@ export default async function PropertiesPage({
                 <span className="text-warm-500">+ {towns.length - 24} more locations</span>
               </div>
             )}
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-light text-primary-900 mb-10 text-center">
+              Frequently Asked <span className="font-semibold">Questions</span>
+            </h2>
+            <div className="space-y-6">
+              {MAIN_PAGE_FAQS.map((faq, index) => (
+                <div key={index} className="bg-warm-50 rounded-xl p-6 border border-warm-100">
+                  <h3 className="text-lg font-semibold text-primary-900 mb-3">{faq.question}</h3>
+                  <p className="text-warm-600 leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

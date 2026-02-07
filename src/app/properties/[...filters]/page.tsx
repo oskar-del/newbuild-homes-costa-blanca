@@ -4,7 +4,8 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getAllProperties } from '@/lib/unified-feed-service';
 import { UnifiedProperty } from '@/lib/unified-property';
-import { breadcrumbSchema, collectionPageSchema, toJsonLd } from '@/lib/schema';
+import { breadcrumbSchema, collectionPageSchema, faqSchema, toJsonLd } from '@/lib/schema';
+import { PROPERTIES_SEO_CONTENT } from '@/data/properties-seo-content';
 
 // SEO Filter Configuration
 // Maps URL slugs to filter criteria
@@ -364,10 +365,16 @@ export default async function FilteredPropertiesPage({ params }: { params: Promi
   // Get related filter suggestions
   const relatedFilters = getRelatedFilters(slug, definition.config);
 
+  // Get SEO content for this filter page
+  const seoContent = PROPERTIES_SEO_CONTENT[slug];
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(collectionSchema) }} />
+      {seoContent?.faqs && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(faqSchema(seoContent.faqs)) }} />
+      )}
 
       <main className="min-h-screen bg-warm-50">
         {/* Hero Section */}
@@ -498,30 +505,128 @@ export default async function FilteredPropertiesPage({ params }: { params: Promi
           </div>
         </section>
 
-        {/* SEO Content Section */}
-        <section className="py-12 bg-white border-t border-warm-200">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl">
-              <h2 className="text-2xl font-semibold text-primary-900 mb-4">
-                About {definition.title}
-              </h2>
-              <div className="prose prose-warm max-w-none">
-                <p className="text-warm-700 leading-relaxed">
-                  {definition.description} Browse our selection of {properties.length} available properties
-                  and find your perfect new build home in Spain. All properties are from trusted developers
-                  with full guarantees and after-sales support.
-                </p>
-                {definition.config.town && (
-                  <p className="text-warm-700 leading-relaxed mt-4">
-                    Interested in learning more about life in {definition.config.town}?
-                    Visit our comprehensive <Link href={`/areas/${definition.config.town.toLowerCase().replace(/\s+/g, '-')}`} className="text-accent-600 hover:underline">{definition.config.town} area guide</Link> for
-                    information on beaches, amenities, healthcare, and the property market.
+        {/* Rich SEO Content */}
+        {seoContent && (
+          <>
+            {/* Market Overview & Why Buy Section */}
+            <section className="py-12 bg-white border-t border-warm-200">
+              <div className="container mx-auto px-4">
+                <div className="max-w-4xl">
+                  <h2 className="text-2xl font-semibold text-primary-900 mb-6">
+                    {definition.title}
+                  </h2>
+                  <div className="prose prose-warm max-w-none text-warm-700 leading-relaxed space-y-4">
+                    {seoContent.intro.split('\n\n').map((paragraph, i) => (
+                      <p key={i}>{paragraph}</p>
+                    ))}
+                  </div>
+
+                  {seoContent.whyBuy && (
+                    <div className="mt-8">
+                      <h3 className="text-xl font-semibold text-primary-900 mb-4">
+                        Why Choose {definition.title.replace('New Build ', '').replace(' Costa Blanca', '').replace(' Costa Calida (Murcia)', '')}?
+                      </h3>
+                      <div className="prose prose-warm max-w-none text-warm-700 leading-relaxed space-y-4">
+                        {seoContent.whyBuy.split('\n\n').map((paragraph, i) => (
+                          <p key={i}>{paragraph}</p>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {seoContent.marketInsight && (
+                    <div className="mt-8 bg-primary-50 rounded-xl p-6">
+                      <h3 className="text-lg font-semibold text-primary-900 mb-3 flex items-center gap-2">
+                        <svg className="w-5 h-5 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                        Market Insight
+                      </h3>
+                      <p className="text-warm-700 leading-relaxed">{seoContent.marketInsight}</p>
+                    </div>
+                  )}
+
+                  {/* Area Guide Link */}
+                  {definition.config.town && (
+                    <p className="text-warm-700 leading-relaxed mt-6">
+                      Interested in learning more about life in {definition.config.town}?
+                      Visit our comprehensive <Link href={`/areas/${definition.config.town.toLowerCase().replace(/\s+/g, '-')}`} className="text-accent-600 hover:underline font-medium">{definition.config.town} area guide</Link> for
+                      information on beaches, amenities, healthcare, and the property market.
+                    </p>
+                  )}
+                </div>
+              </div>
+            </section>
+
+            {/* FAQ Section */}
+            {seoContent.faqs.length > 0 && (
+              <section className="py-12 bg-warm-50 border-t border-warm-200">
+                <div className="container mx-auto px-4">
+                  <div className="max-w-4xl">
+                    <h2 className="text-2xl font-semibold text-primary-900 mb-8">
+                      Frequently Asked Questions
+                    </h2>
+                    <div className="space-y-6">
+                      {seoContent.faqs.map((faq, index) => (
+                        <div key={index} className="bg-white rounded-xl p-6 border border-warm-200">
+                          <h3 className="text-lg font-semibold text-primary-900 mb-3">{faq.question}</h3>
+                          <p className="text-warm-700 leading-relaxed">{faq.answer}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </section>
+            )}
+
+            {/* Related Searches */}
+            {seoContent.relatedSearches.length > 0 && (
+              <section className="py-8 bg-white border-t border-warm-200">
+                <div className="container mx-auto px-4">
+                  <div className="max-w-4xl">
+                    <h3 className="text-sm font-medium text-warm-500 uppercase tracking-wide mb-4">Related Searches</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {seoContent.relatedSearches.map((item, i) => (
+                        <Link
+                          key={i}
+                          href={item.href}
+                          className="bg-warm-100 hover:bg-accent-50 text-warm-700 hover:text-accent-700 px-4 py-2 rounded-full text-sm font-medium transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </section>
+            )}
+          </>
+        )}
+
+        {/* Fallback SEO content when no seoContent exists */}
+        {!seoContent && (
+          <section className="py-12 bg-white border-t border-warm-200">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl">
+                <h2 className="text-2xl font-semibold text-primary-900 mb-4">
+                  About {definition.title}
+                </h2>
+                <div className="prose prose-warm max-w-none">
+                  <p className="text-warm-700 leading-relaxed">
+                    {definition.description} Browse our selection of {properties.length} available properties
+                    and find your perfect new build home in Spain. All properties are from trusted developers
+                    with full guarantees and after-sales support.
                   </p>
-                )}
+                  {definition.config.town && (
+                    <p className="text-warm-700 leading-relaxed mt-4">
+                      Interested in learning more about life in {definition.config.town}?
+                      Visit our comprehensive <Link href={`/areas/${definition.config.town.toLowerCase().replace(/\s+/g, '-')}`} className="text-accent-600 hover:underline">{definition.config.town} area guide</Link> for
+                      information on beaches, amenities, healthcare, and the property market.
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* CTA Section */}
         <section className="py-12 bg-primary-900 text-white">

@@ -80,7 +80,8 @@ export function categorizeImageByUrl(url: string): ImageCategory {
 }
 
 /**
- * Generate SEO-friendly alt tag based on category and context
+ * Generate search-query style alt tags (what people type into Google)
+ * instead of generic descriptive alt tags
  */
 export function generateAltTag(
   category: ImageCategory,
@@ -88,31 +89,31 @@ export function generateAltTag(
   town: string,
   propertyType?: string
 ): string {
-  const location = `${developmentName} in ${town}`;
+  const type = (propertyType || 'property').toLowerCase();
 
   switch (category) {
     case 'aerial':
-      return `Aerial view of ${location} new build development`;
+      return `New build development ${town} Spain aerial view ${developmentName}`;
     case 'exterior':
-      return `${location} - modern new build exterior`;
+      return `New build ${type} for sale ${town} Costa Blanca ${developmentName}`;
     case 'pool':
-      return `Communal swimming pool at ${location}`;
+      return `${type} with pool ${town} Spain new build community`;
     case 'garden':
-      return `Landscaped gardens at ${location}`;
+      return `New build ${type} gardens ${town} Costa Blanca outdoor space`;
     case 'interior-living':
-      return `Spacious living area in ${propertyType || 'property'} at ${location}`;
+      return `Modern ${type} living room ${town} Spain new build interior`;
     case 'interior-kitchen':
-      return `Modern fitted kitchen at ${location}`;
+      return `Modern kitchen new build ${type} ${town} Costa Blanca`;
     case 'interior-bedroom':
-      return `Bedroom in ${propertyType || 'property'} at ${location}`;
+      return `${type} bedroom ${town} Spain new build ${developmentName}`;
     case 'interior-bathroom':
-      return `Contemporary bathroom at ${location}`;
+      return `Modern bathroom new build ${type} ${town} Costa Blanca`;
     case 'terrace':
-      return `Private terrace at ${location}`;
+      return `${type} terrace views ${town} Spain Mediterranean`;
     case 'view':
-      return `Stunning views from ${location}`;
+      return `Sea view ${type} ${town} Costa Blanca Spain`;
     default:
-      return `${location} - new build ${propertyType || 'property'} in Spain`;
+      return `New build ${type} ${town} Spain for sale ${developmentName}`;
   }
 }
 
