@@ -8,6 +8,7 @@ import LeadForm from '@/components/LeadForm';
 import { getAllDevelopments, Development } from '@/lib/development-service';
 import { breadcrumbSchema, toJsonLd, articleSchema, placeSchema } from '@/lib/schema';
 import { LifestyleBanner, SectionCardImage, ImageGrid } from '@/components/area/SectionImage';
+import { getBlogPostsForArea } from '@/lib/blog-area-mapping';
 import {
   beachImages,
   golfImages,
@@ -475,6 +476,9 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       bedrooms: dev.minBedrooms || null,
       image: dev.images?.[0] || FALLBACK_IMAGE,
     }));
+
+  // Get related blog articles for this area
+  const relatedBlogPosts = getBlogPostsForArea(slug, 3);
 
   // Get hero image - use first development image if available, otherwise stock image
   const heroImage = data.heroImage ||
@@ -1094,6 +1098,35 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                             </p>
                           )}
                         </div>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* Related Blog Articles */}
+              {relatedBlogPosts.length > 0 && (
+                <section className="bg-accent-50 rounded-sm p-6">
+                  <h2 className="font-bold text-primary-900 text-xl mb-4">
+                    Guides for Buying in {data.name}
+                  </h2>
+                  <div className="grid md:grid-cols-3 gap-4">
+                    {relatedBlogPosts.map(post => (
+                      <Link
+                        key={post.slug}
+                        href={`/blog/${post.slug}`}
+                        className="bg-white rounded-sm p-4 hover:shadow-md transition-shadow group"
+                      >
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="bg-accent-100 text-accent-800 px-2 py-0.5 rounded text-xs font-medium">
+                            {post.category}
+                          </span>
+                          <span className="text-warm-400 text-xs">{post.readTime} min</span>
+                        </div>
+                        <h3 className="font-semibold text-primary-900 mb-1 group-hover:text-accent-600 transition-colors line-clamp-2">
+                          {post.title}
+                        </h3>
+                        <p className="text-warm-500 text-sm line-clamp-2">{post.description}</p>
                       </Link>
                     ))}
                   </div>

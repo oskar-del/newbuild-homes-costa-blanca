@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "siteName": "New Build Homes Costa Blanca",
+    "siteTagline": "Your Costa Blanca New Build Property Specialists",
+    "defaultTitle": "New Build Homes Costa Blanca | Modern Properties in Spain",
+    "defaultDescription": "Find your dream new build property in Costa Blanca, Spain. Villas, apartments, and townhouses from trusted developers."
+  },
+  "nav": {
+    "buy": "Buy",
+    "developments": "Developments",
+    "areas": "Areas",
+    "luxury": "Luxury",
+    "golf": "Golf",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "allProperties": "All Properties",
+    "allDevelopments": "All Developments",
+    "allAreas": "All Areas",
+    "costaBlancanSouth": "Costa Blanca South",
+    "costaBlancanNorth": "Costa Blanca North",
+    "buyersGuides": "Buyer Guides"
+  },
+  "property": {
+    "bedrooms": "Bedrooms",
+    "bathrooms": "Bathrooms",
+    "builtArea": "m² Built",
+    "plotArea": "m² Plot",
+    "bed": "bed",
+    "beds": "beds",
+    "bath": "bath",
+    "baths": "baths",
+    "price": "Price",
+    "from": "From",
+    "contactForPrice": "Contact for Price",
+    "features": "All Features",
+    "aboutProperty": "About This Property",
+    "investmentPotential": "Investment Potential",
+    "whyBuy": "Why Buy This Property?",
+    "similarProperties": "Similar Properties",
+    "viewAllProperties": "View All Properties",
+    "exploreMore": "Explore More Properties",
+    "keyReady": "Key Ready",
+    "offPlan": "Off-Plan",
+    "underConstruction": "Under Construction",
+    "completed": "Completed",
+    "pool": "Pool",
+    "seaView": "Sea View",
+    "golfView": "Golf View",
+    "garden": "Garden",
+    "terrace": "Terrace",
+    "parking": "Parking"
+  },
+  "amenities": {
+    "title": "Nearby Amenities",
+    "beach": "Beach",
+    "supermarket": "Supermarket",
+    "hospital": "Hospital",
+    "schools": "Schools",
+    "golfCourse": "Golf Course",
+    "airport": "Airport",
+    "approximate": "Approximate distances. Contact us for exact property location."
+  },
+  "cta": {
+    "whatsappUs": "WhatsApp Us",
+    "whatsappNow": "WhatsApp Now",
+    "callNow": "Call Now",
+    "call": "Call",
+    "requestInfo": "Request Information",
+    "requestVideoTour": "Request Video Tour",
+    "requestFloorPlans": "Request Floor Plans",
+    "scheduleVideoCall": "Schedule Video Call",
+    "bookConsultation": "Book Free Consultation",
+    "getMortgageQuote": "Get Mortgage Quote",
+    "requestPriceList": "Request Price List",
+    "getLatestPrices": "Get Latest Prices",
+    "viewOnMap": "View on Map",
+    "browseDevelopments": "Browse Developments",
+    "exploreAreas": "Explore Areas",
+    "wontLastLong": "This Won't Last Long",
+    "wontLastLongDesc": "Quality properties in {town} are selling fast. Secure your viewing before someone else does.",
+    "readyToFind": "Ready to Find Your Dream Home?",
+    "readyToFindDesc": "Browse our selection of new build properties across Costa Blanca. From golf villas to sea-view apartments.",
+    "needExpertHelp": "Need Expert Help?",
+    "needFinancing": "Need Financing?",
+    "mortgageDesc": "Get mortgage quotes from multiple Spanish banks with our partner Habeno."
+  },
+  "form": {
+    "yourName": "Your name",
+    "email": "Email address",
+    "phone": "Phone (optional)",
+    "message": "Message",
+    "thankYou": "Thank you!",
+    "wellBeInTouch": "We'll be in touch within 24 hours."
+  },
+  "resources": {
+    "title": "Helpful Resources",
+    "buyingProcessGuide": "Buying Process Guide",
+    "buyingProcessDesc": "Step-by-step guide for foreign buyers",
+    "nieGuide": "NIE Number Guide",
+    "nieDesc": "How to get your Spanish tax ID",
+    "mortgageGuide": "Mortgage Guide",
+    "mortgageDesc": "Financing options for non-residents",
+    "areaGuide": "Area Guide: {town}",
+    "areaGuideDesc": "Discover the local lifestyle"
+  },
+  "blog": {
+    "continueReading": "Continue Reading",
+    "continueReadingDesc": "More guides to help you buy property in Spain",
+    "guidesForBuying": "Guides for Buying in {area}",
+    "minRead": "{minutes} min read",
+    "quickAnswer": "Quick Answer",
+    "faqs": "Frequently Asked Questions",
+    "exploreAreas": "Explore These Areas",
+    "tableOfContents": "Table of Contents",
+    "theBottomLine": "The Bottom Line"
+  },
+  "area": {
+    "newBuildProperties": "New Build Properties in {area}",
+    "whyLiveIn": "Why Live in {area}?",
+    "faqsAbout": "Frequently Asked Questions about {area}",
+    "aboutArea": "About {area}",
+    "lifeIn": "Life in {area}",
+    "exploreAreaGuide": "Explore {area} Area Guide"
+  },
+  "development": {
+    "builtBy": "Built by {builder}",
+    "delivery": "Delivery",
+    "unitsAvailable": "units available",
+    "viewDevelopment": "View Development"
+  },
+  "footer": {
+    "copyright": "© {year} New Build Homes Costa Blanca. All rights reserved.",
+    "trustedBy": "Trusted by buyers from",
+    "googleReviews": "Google Reviews"
+  },
+  "share": {
+    "title": "Share",
+    "whatsapp": "Share on WhatsApp",
+    "facebook": "Share on Facebook",
+    "twitter": "Share on X",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied to clipboard!"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist or has been moved."
+  },
+  "cookies": {
+    "essentialOnly": "Essential Only",
+    "acceptAll": "Accept All"
+  }
+}

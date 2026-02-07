@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import fs from 'fs';
 import path from 'path';
@@ -207,6 +208,42 @@ function getArticle(slug: string): ArticleContent | null {
   return null;
 }
 
+function getRelatedArticles(currentSlug: string, limit: number = 3): { slug: string; title: string; category: string; readTime: number; excerpt: string }[] {
+  try {
+    const articlesDir = path.join(process.cwd(), 'src', 'content', 'articles');
+    const files = fs.readdirSync(articlesDir).filter(f => f.endsWith('.json'));
+    const currentArticle = getArticle(currentSlug);
+    const currentAreas = currentArticle?.relatedAreas || [];
+    const currentCategory = currentArticle?.category || '';
+
+    const candidates = files
+      .map(f => JSON.parse(fs.readFileSync(path.join(articlesDir, f), 'utf-8')))
+      .filter(a => a.slug !== currentSlug);
+
+    // Score by relevance: same areas > same category > other
+    const scored = candidates.map(a => {
+      let score = 0;
+      const areas = a.relatedAreas || [];
+      const sharedAreas = areas.filter((area: string) => currentAreas.includes(area));
+      score += sharedAreas.length * 3;
+      if (a.category === currentCategory) score += 2;
+      return { ...a, score };
+    });
+
+    scored.sort((a: any, b: any) => b.score - a.score);
+
+    return scored.slice(0, limit).map((a: any) => ({
+      slug: a.slug,
+      title: a.title,
+      category: a.category,
+      readTime: a.readTime,
+      excerpt: a.excerpt || '',
+    }));
+  } catch {
+    return [];
+  }
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const article = getArticle(slug);
@@ -243,6 +280,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     { name: 'Blog', url: 'https://newbuildhomescostablanca.com/blog/' },
     { name: article.title, url: `https://newbuildhomescostablanca.com/blog/${slug}/` },
   ]);
+
+  // Get related articles for "Read More" section
+  const relatedArticles = getRelatedArticles(slug, 3);
 
   // Check if content is structured (comparison article) or simple markdown
   const isStructuredContent = typeof article.content === 'object';
@@ -346,9 +386,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       </a>
 
       <main id="top" className="min-h-screen bg-warm-50">
-        {/* Hero */}
-        <section className="bg-primary-900 py-12 md:py-16">
-          <div className="max-w-4xl mx-auto px-6">
+        {/* Hero with optional image */}
+        <section className="relative bg-primary-900 py-12 md:py-16 overflow-hidden">
+          {article.image && (
+            <div className="absolute inset-0">
+              <Image
+                src={article.image}
+                alt={article.title}
+                fill
+                className="object-cover opacity-20"
+                priority
+                unoptimized
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-900 via-primary-900/95 to-primary-900/80" />
+            </div>
+          )}
+          <div className="max-w-4xl mx-auto px-6 relative z-10">
             <nav className="text-warm-400 text-sm mb-6">
               <Link href="/" className="hover:text-white transition-colors">Home</Link>
               <span className="mx-2">›</span>
@@ -360,6 +413,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <div className="flex items-center gap-3 mb-4">
               <span className="bg-accent-500 text-white text-xs font-medium px-3 py-1 rounded">{article.category}</span>
               <span className="text-warm-400 text-sm">{article.readTime} min read</span>
+              {article.updatedAt && article.updatedAt !== article.publishedAt && (
+                <span className="text-success-400 text-xs font-medium bg-success-400/10 px-2 py-0.5 rounded">Updated {new Date(article.updatedAt).toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}</span>
+              )}
             </div>
 
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-4">
@@ -685,6 +741,38 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             </div>
           </div>
         </section>
+
+        {/* Related Articles */}
+        {relatedArticles.length > 0 && (
+          <section className="py-12 bg-warm-100">
+            <div className="max-w-7xl mx-auto px-6">
+              <h2 className="text-2xl font-bold text-primary-900 mb-2 text-center">Continue Reading</h2>
+              <p className="text-warm-500 text-center mb-8">More guides to help you buy property in Spain</p>
+              <div className="grid md:grid-cols-3 gap-6">
+                {relatedArticles.map((related) => (
+                  <Link
+                    key={related.slug}
+                    href={`/blog/${related.slug}`}
+                    className="bg-white rounded-lg overflow-hidden border border-warm-200 hover:shadow-lg transition-shadow group"
+                  >
+                    <div className="p-6">
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="bg-accent-100 text-accent-800 text-xs font-medium px-2 py-0.5 rounded">
+                          {related.category}
+                        </span>
+                        <span className="text-warm-400 text-xs">{related.readTime} min read</span>
+                      </div>
+                      <h3 className="font-bold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors line-clamp-2">
+                        {related.title}
+                      </h3>
+                      <p className="text-warm-500 text-sm line-clamp-2">{related.excerpt}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Bottom CTA */}
         <section className="py-12 bg-primary-900">
