@@ -68,22 +68,39 @@ export interface AIGeneratedContent {
  * Nested format was used by older Miralbo content and project-level content.
  */
 function normalizeFlatContent(data: any, slug: string): AIGeneratedContent {
-  return {
+  // Build locationSection from either dedicated field or legacy format
+  const locationSection = data.locationSection || { intro: '', highlights: [] };
+
+  // Normalize features section (prompt uses "featuresSection", interface expects "propertyFeatures")
+  const propertyFeatures = data.propertyFeatures || data.featuresSection || { intro: '', features: [] };
+  if (propertyFeatures.highlights && !propertyFeatures.features) {
+    propertyFeatures.features = propertyFeatures.highlights;
+  }
+
+  const normalized: any = {
     slug: data.slug || slug,
     metaTitle: data.metaTitle || '',
     metaDescription: data.metaDescription || '',
     content: {
-      heroIntro: data.heroIntro || '',
-      locationSection: data.locationSection || { intro: '', highlights: [] },
-      propertyFeatures: data.propertyFeatures || { intro: '', features: [] },
+      heroIntro: data.heroIntro || data.propertyDescription || '',
+      locationSection,
+      propertyFeatures,
       investmentSection: data.investmentSection || '',
-      whyBuySection: data.whyBuySection || [],
+      whyBuySection: data.whyBuySection || data.whyBuyReasons || [],
       faqs: data.faqs || [],
       conclusion: data.conclusion || '',
+      // Preserve separate sections if they exist (new format from updated prompt)
+      areaSection: data.areaSection || '',
+      lifestyleSection: data.lifestyleSection || '',
     },
+    imageAlts: data.imageAlts?.map((alt: any) =>
+      typeof alt === 'string' ? { alt } : alt
+    ),
     // Flat format files don't have property/images data — that comes from the feed
     property: undefined,
   };
+
+  return normalized;
 }
 
 /**
@@ -193,8 +210,22 @@ export function convertAIToPropertyContent(aiContent: AIGeneratedContent): any {
   const content = aiContent.content as any; // Type flexibility for new fields
 
   // Handle both old and new format for area/lifestyle sections
-  const areaSection = content.areaSection || content.locationSection?.intro || '';
-  const lifestyleSection = content.lifestyleSection || content.locationSection?.intro || '';
+  // FIX: Avoid duplicating locationSection.intro into both areaSection AND lifestyleSection
+  const hasSeperateSections = !!(content.areaSection || content.lifestyleSection);
+  let areaSection = '';
+  let lifestyleSection = '';
+
+  if (hasSeperateSections) {
+    // New format: dedicated fields exist
+    areaSection = content.areaSection || '';
+    lifestyleSection = content.lifestyleSection || '';
+  } else if (content.locationSection?.intro) {
+    // Old format: only locationSection.intro exists.
+    // Use it for areaSection only — lifestyleSection left empty so template generator fills it
+    areaSection = content.locationSection.intro;
+    lifestyleSection = ''; // Will fall back to template in PropertyPageClient
+  }
+
   const locationHighlights = content.locationHighlights || content.locationSection?.highlights || [];
 
   // Handle new imageAlts format (with index) and old format (with url)
