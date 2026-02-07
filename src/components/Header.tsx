@@ -40,8 +40,8 @@ const NAV_ITEMS = [
     href: '/developments',
     submenu: [
       { label: 'All Developments', href: '/developments' },
-      { label: 'Costa Blanca South', href: '/areas/costa-blanca-south' },
-      { label: 'Costa Blanca North', href: '/areas/costa-blanca-north' },
+      { label: 'Costa Blanca South', href: '/developments/costa-blanca-south' },
+      { label: 'Costa Blanca North', href: '/developments/costa-blanca-north' },
       { label: 'Costa Calida (Murcia)', href: '/areas/costa-calida' },
       { label: 'Our Builders', href: '/builders' },
     ],
