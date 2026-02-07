@@ -327,6 +327,36 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       ]
     : [];
 
+  // Emoji mapping for section headings (matches area page emoji-header pattern)
+  const sectionEmojis: Record<string, string> = {
+    'beach': '🏖️', 'beaches': '🏖️', 'coast': '🏖️', 'coastal': '🏖️', 'sea': '🌊', 'swim': '🏊',
+    'golf': '⛳', 'course': '⛳',
+    'property': '🏠', 'properties': '🏠', 'buying': '🏠', 'purchase': '🏠', 'investment': '📈', 'market': '📊', 'price': '💶', 'cost': '💶',
+    'family': '👨‍👩‍👧‍👦', 'children': '👨‍👩‍👧‍👦', 'school': '🎓', 'education': '🎓',
+    'dining': '🍽️', 'restaurant': '🍽️', 'food': '🍽️', 'tapas': '🍽️',
+    'shopping': '🛍️', 'shop': '🛍️',
+    'healthcare': '🏥', 'hospital': '🏥', 'medical': '🏥', 'health': '🏥',
+    'transport': '✈️', 'airport': '✈️', 'travel': '✈️', 'getting': '✈️',
+    'lifestyle': '🌴', 'living': '🌴', 'life': '🌴', 'community': '🤝', 'expat': '🤝',
+    'legal': '⚖️', 'law': '⚖️', 'tax': '⚖️', 'taxes': '⚖️', 'nie': '⚖️', 'visa': '🛂', 'residency': '🛂', 'beckham': '⚖️',
+    'scenery': '🏔️', 'nature': '🌿', 'hiking': '🥾', 'walk': '🥾', 'activities': '🏞️', 'sport': '⚽', 'watersport': '🏄',
+    'season': '☀️', 'weather': '☀️', 'climate': '☀️', 'summer': '☀️', 'winter': '❄️',
+    'snorkel': '🤿', 'diving': '🤿', 'underwater': '🤿',
+    'hidden': '💎', 'secret': '💎', 'gem': '💎', 'tip': '💡', 'practical': '📋',
+    'step': '📋', 'process': '📋', 'guide': '📖', 'how': '📖', 'understanding': '📖',
+    'rental': '🔑', 'rent': '🔑', 'mortgage': '🏦', 'finance': '🏦',
+    'comparison': '⚖️', 'versus': '⚖️', 'vs': '⚖️',
+    'event': '🎉', 'fiesta': '🎉', 'festival': '🎉',
+    'why': '✨', 'best': '🏆', 'top': '🏆', 'recommend': '🏆',
+  };
+  const getSectionEmoji = (title: string): string => {
+    const lower = title.toLowerCase();
+    for (const [keyword, emoji] of Object.entries(sectionEmojis)) {
+      if (lower.includes(keyword)) return emoji;
+    }
+    return '📌';
+  };
+
   // Enhanced markdown-to-HTML conversion with rich styling
   const markdownToHtml = (text: string) => {
     const lines = text.split('\n');
@@ -349,7 +379,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         if (inList) { output.push('</div>'); inList = false; }
         if (inParagraph) { output.push('</p>'); inParagraph = false; }
         const title = trimmed.replace(/^## /, '');
-        output.push(`<h2 class="text-2xl font-semibold text-primary-900 mt-10 mb-4 pl-4 border-l-4 border-accent-500">${title}</h2>`);
+        output.push(`<h2 class="text-2xl font-bold text-primary-900 mt-10 mb-4 pl-4 border-l-4 border-accent-500">${title}</h2>`);
         continue;
       }
 
@@ -358,17 +388,46 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         if (inList) { output.push('</div>'); inList = false; }
         if (inParagraph) { output.push('</p>'); inParagraph = false; }
         const title = trimmed.replace(/^### /, '');
-        output.push(`<h3 class="text-lg font-semibold text-primary-900 mt-6 mb-3">${title}</h3>`);
+        output.push(`<h3 class="text-lg font-bold text-primary-900 mt-6 mb-3">${title}</h3>`);
         continue;
       }
 
-      // Standalone bold line = subheading card (e.g. **Beach Name** or **Label:**)
+      // Callout/tip detection — "Tip:", "Pro tip:", "Note:", "Important:", "Local tip:"
+      const calloutMatch = trimmed.match(/^\*\*(Tip|Pro tip|Note|Important|Local tip|Warning|Remember)\*?\*?[:]\s*(.*)/i);
+      if (calloutMatch) {
+        if (inList) { output.push('</div>'); inList = false; }
+        if (inParagraph) { output.push('</p>'); inParagraph = false; }
+        const label = calloutMatch[1];
+        const text = calloutMatch[2].replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-primary-900">$1</strong>');
+        const isWarning = label.toLowerCase() === 'warning' || label.toLowerCase() === 'important';
+        const bgColor = isWarning ? 'bg-amber-50 border-amber-400' : 'bg-accent-50 border-accent-400';
+        const iconEmoji = isWarning ? '⚠️' : '💡';
+        output.push(`<div class="my-4 p-4 ${bgColor} border-l-4 rounded-r-sm"><div class="flex items-start gap-3"><span class="flex-shrink-0 text-lg">${iconEmoji}</span><div><span class="font-bold text-primary-900 text-sm uppercase tracking-wide">${label}</span><p class="text-warm-700 mt-1 leading-relaxed">${text}</p></div></div></div>`);
+        continue;
+      }
+
+      // Standalone bold line with optional stars = feature card (matches area-page amenity style)
       const boldLineMatch = trimmed.match(/^\*\*(.*?)\*\*\s*(⭐*)\s*$/);
       if (boldLineMatch) {
         if (inList) { output.push('</div>'); inList = false; }
         if (inParagraph) { output.push('</p>'); inParagraph = false; }
-        const stars = boldLineMatch[2] ? ` <span class="text-amber-500 ml-1">${'★'.repeat(boldLineMatch[2].length)}</span>` : '';
-        output.push(`<div class="mt-5 mb-2 font-semibold text-primary-900 text-[15px] flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full flex-shrink-0"></span><span>${boldLineMatch[1]}${stars}</span></div>`);
+        const starCount = boldLineMatch[2] ? boldLineMatch[2].length : 0;
+        const stars = starCount > 0 ? ` <span class="text-amber-500 ml-1">${'★'.repeat(starCount)}</span>` : '';
+        // Use area-page-style colored left border card for starred items, simple subheading for others
+        if (starCount > 0) {
+          output.push(`<div class="mt-5 mb-2 pl-4 border-l-4 border-amber-400 py-1"><span class="font-bold text-primary-900 text-[15px]">${boldLineMatch[1]}${stars}</span></div>`);
+        } else {
+          output.push(`<div class="mt-5 mb-2 font-semibold text-primary-900 text-[15px] flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full flex-shrink-0"></span><span>${boldLineMatch[1]}</span></div>`);
+        }
+        continue;
+      }
+
+      // Standalone bold line with arrow/colon content = feature card (e.g. "**Orihuela Costa Properties → ...**")
+      const boldArrowMatch = trimmed.match(/^\*\*(.*?(?:→|Properties|Options|Access).*?)\*\*\s*$/);
+      if (boldArrowMatch) {
+        if (inList) { output.push('</div>'); inList = false; }
+        if (inParagraph) { output.push('</p>'); inParagraph = false; }
+        output.push(`<div class="mt-6 mb-2 bg-primary-50 rounded-sm p-3 border-l-4 border-primary-300"><span class="font-bold text-primary-900 text-[15px]">${boldArrowMatch[1]}</span></div>`);
         continue;
       }
 
@@ -390,7 +449,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         if (!inList) { output.push('<div class="space-y-1 my-3">'); inList = true; }
         const content = numMatch[2]
           .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-primary-900">$1</strong>');
-        output.push(`<div class="flex items-start gap-3 py-1"><span class="flex-shrink-0 w-5 h-5 bg-accent-100 text-accent-700 rounded-full flex items-center justify-center text-xs font-bold">${numMatch[1]}</span><span class="text-warm-700 leading-relaxed">${content}</span></div>`);
+        output.push(`<div class="flex items-start gap-3 py-1"><span class="flex-shrink-0 w-6 h-6 bg-accent-500 text-white rounded-full flex items-center justify-center text-xs font-bold">${numMatch[1]}</span><span class="text-warm-700 leading-relaxed">${content}</span></div>`);
         continue;
       }
 
@@ -507,14 +566,15 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <div className="grid lg:grid-cols-3 gap-12">
               {/* Main Content */}
               <article className="lg:col-span-2">
-                <div className="bg-white p-6 md:p-8 rounded-lg border border-warm-200">
+                <div className="bg-white p-6 md:p-8 rounded-sm border border-warm-200">
                   {isStructuredContent ? (
                     <div className="prose prose-lg max-w-none">
-                      {/* Quick Answer Box - Featured Snippet Optimization */}
+                      {/* Quick Answer Box - Featured Snippet Optimization (matches area investment card style) */}
                       {structuredContent.quickAnswer && (
-                        <div className="mb-8 p-5 bg-accent-50 border-l-4 border-accent-500 rounded-r-lg">
-                          <div className="flex items-center gap-2 mb-2">
-                            <span className="text-accent-600 font-semibold text-sm uppercase tracking-wide">Quick Answer</span>
+                        <div className="mb-8 bg-gradient-to-br from-primary-50 to-accent-50 rounded-sm p-5 border border-accent-200">
+                          <div className="flex items-center gap-2 mb-3">
+                            <span className="flex-shrink-0 w-7 h-7 bg-accent-500 text-white rounded-full flex items-center justify-center text-sm">✓</span>
+                            <span className="text-primary-900 font-bold text-sm uppercase tracking-wide">Quick Answer</span>
                           </div>
                           <p className="text-warm-800 font-medium leading-relaxed m-0">
                             {structuredContent.quickAnswer}
@@ -538,9 +598,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
                       {/* Table of Contents - Collapsible on mobile */}
                       {tableOfContents.length > 3 && (
-                        <nav className="mb-10 bg-warm-50 rounded-lg border border-warm-200" aria-label="Table of contents">
+                        <nav className="mb-10 bg-warm-50 rounded-sm border border-warm-200" aria-label="Table of contents">
                           <details className="group" open>
-                            <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-primary-900 hover:bg-warm-100 rounded-t-lg transition-colors">
+                            <summary className="flex items-center justify-between p-5 cursor-pointer font-bold text-primary-900 hover:bg-warm-100 rounded-t-sm transition-colors">
                               <span className="flex items-center gap-2">
                                 <span className="text-accent-500">📖</span> In This Article
                               </span>
@@ -562,7 +622,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                         </nav>
                       )}
 
-                      {/* Sections with Rich Visual Styling */}
+                      {/* Sections with Rich Visual Styling (area-page pattern) */}
                       {structuredContent.sections?.map((section: ArticleSection, index: number) => {
                         const sectionShowcases = allShowcases.filter(
                           s => s.position === 'after-section' && s.afterSection === index
@@ -571,15 +631,16 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                         const borderColors = ['border-accent-500', 'border-blue-500', 'border-emerald-500', 'border-orange-500', 'border-purple-500', 'border-rose-500'];
                         const borderColor = borderColors[index % borderColors.length];
                         const isAlt = index % 2 === 1;
+                        const emoji = getSectionEmoji(section.title);
 
                         return (
                           <div key={index}>
                             <section
                               id={slugify(section.title)}
-                              className={`scroll-mt-20 ${isAlt ? 'bg-warm-50/80 -mx-6 md:-mx-8 px-6 md:px-8 py-6 rounded-lg my-4' : 'mb-8'}`}
+                              className={`scroll-mt-20 ${isAlt ? 'bg-warm-50/80 -mx-6 md:-mx-8 px-6 md:px-8 py-6 rounded-sm my-4' : 'mb-8'}`}
                             >
-                              <h2 className={`text-2xl font-semibold text-primary-900 mb-5 pl-4 border-l-4 ${borderColor}`}>
-                                {section.title}
+                              <h2 className={`text-2xl font-bold text-primary-900 mb-5 pl-4 border-l-4 ${borderColor}`}>
+                                {emoji} {section.title}
                               </h2>
                               <div
                                 dangerouslySetInnerHTML={{
@@ -650,10 +711,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                       {/* Property Showcases - Before Conclusion */}
                       {getShowcasesByPosition('before-conclusion').map(renderPropertyShowcase)}
 
-                      {/* Conclusion */}
-                      <section className="mt-10 p-6 md:p-8 bg-gradient-to-br from-accent-50 to-warm-50 rounded-lg border border-accent-200">
-                        <h2 className="text-xl font-semibold text-primary-900 mb-4 flex items-center gap-3">
-                          <span className="w-8 h-8 bg-accent-500 text-white rounded-full flex items-center justify-center text-sm flex-shrink-0">✓</span>
+                      {/* Conclusion — matches area page gradient CTA style */}
+                      <section className="mt-10 p-6 md:p-8 bg-gradient-to-r from-accent-500 to-primary-800 rounded-sm text-white [&_p]:text-white/90 [&_strong]:text-white [&_div]:text-white/90">
+                        <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                          <span className="w-8 h-8 bg-white/20 text-white rounded-full flex items-center justify-center text-sm flex-shrink-0">✓</span>
                           The Bottom Line
                         </h2>
                         <div
@@ -666,21 +727,21 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                       {/* Consultation CTA - Before FAQs */}
                       {(showConsultationCTA === true || showConsultationCTA === 'before-faqs') && <InlineConsultationCTA />}
 
-                      {/* FAQs - Styled with accent border */}
+                      {/* FAQs - Area-page style */}
                       {structuredContent.faqs && structuredContent.faqs.length > 0 && (
                         <section id="faqs" className="mt-10 scroll-mt-20">
-                          <h2 className="text-2xl font-semibold text-primary-900 mb-6 pl-4 border-l-4 border-accent-500">Frequently Asked Questions</h2>
-                          <div className="space-y-3">
+                          <h2 className="text-2xl font-bold text-primary-900 mb-6">Frequently Asked Questions</h2>
+                          <div className="space-y-4">
                             {structuredContent.faqs.map((faq: FAQ, index: number) => (
-                              <details key={index} className="bg-white border border-warm-200 rounded-lg group shadow-sm hover:shadow-md transition-shadow">
-                                <summary className="flex items-center justify-between p-5 cursor-pointer font-medium text-primary-900 hover:bg-warm-50 transition-colors min-h-[56px]">
+                              <details key={index} className="group border border-warm-200 rounded-sm">
+                                <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-primary-900 hover:bg-warm-50 transition-colors">
                                   <span className="pr-4 flex items-center gap-3">
-                                    <span className="flex-shrink-0 w-6 h-6 bg-accent-100 text-accent-700 rounded-full flex items-center justify-center text-xs font-bold">{index + 1}</span>
+                                    <span className="flex-shrink-0 w-6 h-6 bg-accent-500 text-white rounded-full flex items-center justify-center text-xs font-bold">{index + 1}</span>
                                     {faq.question}
                                   </span>
-                                  <span className="ml-2 text-warm-400 group-open:rotate-180 transition-transform flex-shrink-0">▼</span>
+                                  <span className="ml-4 flex-shrink-0 text-gray-400 group-open:rotate-180 transition-transform">▼</span>
                                 </summary>
-                                <div className="px-5 pb-5 text-warm-700 leading-relaxed border-t border-warm-100 ml-9">
+                                <div className="px-4 pb-4 text-warm-700">
                                   {faq.answer}
                                 </div>
                               </details>
@@ -690,7 +751,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                       )}
 
                       {/* Mobile CTA - Shows on mobile only */}
-                      <div className="mt-8 p-5 bg-primary-900 rounded-lg text-white lg:hidden">
+                      <div className="mt-8 p-5 bg-primary-900 rounded-sm text-white lg:hidden">
                         <h3 className="font-semibold text-lg mb-2">Ready to Find Your Property?</h3>
                         <p className="text-warm-300 text-sm mb-4">
                           Get personalized recommendations from our Costa Blanca experts.
@@ -711,24 +772,20 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                         </div>
                       </div>
 
-                      {/* Related Areas Links */}
+                      {/* Related Areas Links — area-page style */}
                       {article.relatedAreas && article.relatedAreas.length > 0 && (
-                        <section className="mt-8 p-6 bg-warm-50 rounded-lg border border-warm-200">
-                          <h3 className="font-semibold text-primary-900 mb-4 flex items-center gap-2">
-                            <svg className="w-5 h-5 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Explore These Areas
+                        <section className="mt-8 p-6 bg-accent-50 rounded-sm">
+                          <h3 className="font-bold text-primary-900 mb-4 flex items-center gap-2">
+                            📍 Explore These Areas
                           </h3>
                           <div className="flex flex-wrap gap-2">
                             {article.relatedAreas.map((area: string) => (
                               <Link
                                 key={area}
                                 href={`/areas/${area}`}
-                                className="bg-white px-4 py-2 rounded-lg border border-warm-200 text-accent-600 hover:border-accent-500 hover:bg-accent-50 hover:shadow-sm transition-all font-medium text-sm"
+                                className="bg-white px-4 py-2 rounded-sm border border-warm-200 text-accent-600 hover:border-accent-500 hover:shadow-md transition-all font-medium text-sm group"
                               >
-                                {area.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')} →
+                                {area.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')} <span className="group-hover:text-accent-600">→</span>
                               </Link>
                             ))}
                           </div>
@@ -747,28 +804,28 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               {/* Sidebar */}
               <aside className="lg:col-span-1 space-y-6">
                 {/* Contact Card */}
-                <div className="bg-primary-900 p-6 rounded-lg text-white sticky top-6">
+                <div className="bg-primary-900 p-6 rounded-sm text-white sticky top-6">
                   <h3 className="font-semibold text-lg mb-3">Need Expert Help?</h3>
                   <p className="text-warm-300 text-sm mb-4">
                     Get personalized property recommendations from our Costa Blanca specialists.
                   </p>
                   <div className="space-y-3">
                     <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20bd5a] text-white py-3 rounded-lg font-medium transition-colors">
+                      className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20bd5a] text-white py-3 rounded-sm font-medium transition-colors">
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                       </svg>
                       WhatsApp Us
                     </a>
                     <a href={`tel:${CONTACT.phone}`}
-                      className="flex items-center justify-center gap-2 w-full bg-accent-500 hover:bg-accent-600 text-white py-3 rounded-lg font-medium transition-colors">
+                      className="flex items-center justify-center gap-2 w-full bg-accent-500 hover:bg-accent-600 text-white py-3 rounded-sm font-medium transition-colors">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                       {CONTACT.phone}
                     </a>
                     <Link href="/consultation"
-                      className="flex items-center justify-center gap-2 w-full bg-white/10 hover:bg-white/20 text-white py-3 rounded-lg font-medium transition-colors border border-white/20">
+                      className="flex items-center justify-center gap-2 w-full bg-white/10 hover:bg-white/20 text-white py-3 rounded-sm font-medium transition-colors border border-white/20">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                       </svg>
@@ -788,7 +845,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 </div>
 
                 {/* Related Links */}
-                <div className="bg-white p-6 rounded-lg border border-warm-200">
+                <div className="bg-white p-6 rounded-sm border border-warm-200">
                   <h3 className="font-semibold text-primary-900 mb-4">Explore Properties</h3>
                   <ul className="space-y-3">
                     <li>
@@ -828,13 +885,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 </div>
 
                 {/* Latest Price CTA */}
-                <div className="bg-gradient-to-br from-accent-500 to-accent-600 p-6 rounded-lg text-white">
+                <div className="bg-gradient-to-br from-accent-500 to-accent-600 p-6 rounded-sm text-white">
                   <h3 className="font-semibold text-lg mb-2">Get Latest Prices</h3>
                   <p className="text-white/90 text-sm mb-4">
                     Prices change frequently. Get today's prices and availability direct from developers.
                   </p>
                   <Link href="/contact?subject=price-request"
-                    className="block w-full bg-white text-accent-600 hover:bg-warm-50 text-center py-3 rounded-lg font-semibold transition-colors">
+                    className="block w-full bg-white text-accent-600 hover:bg-warm-50 text-center py-3 rounded-sm font-semibold transition-colors">
                     Request Price List
                   </Link>
                 </div>
@@ -854,7 +911,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   <Link
                     key={related.slug}
                     href={`/blog/${related.slug}`}
-                    className="bg-white rounded-lg overflow-hidden border border-warm-200 hover:shadow-lg transition-shadow group"
+                    className="bg-white rounded-sm overflow-hidden border border-warm-200 hover:shadow-lg transition-shadow group"
                   >
                     <div className="p-6">
                       <div className="flex items-center gap-2 mb-3">
@@ -883,13 +940,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               Book a free consultation with our property experts. We'll help you find the perfect property in Costa Blanca.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/consultation" className="bg-accent-500 hover:bg-accent-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors flex items-center gap-2">
+              <Link href="/consultation" className="bg-accent-500 hover:bg-accent-600 text-white font-semibold px-8 py-4 rounded-sm transition-colors flex items-center gap-2">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 Book Free Consultation
               </Link>
-              <Link href="/developments" className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg transition-colors border border-white/20">
+              <Link href="/developments" className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-sm transition-colors border border-white/20">
                 Browse Developments
               </Link>
             </div>
