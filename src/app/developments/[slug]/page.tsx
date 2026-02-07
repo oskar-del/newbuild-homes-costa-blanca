@@ -24,6 +24,8 @@ import {
   developmentSchema,
   faqSchema,
   aggregateRatingSchema,
+  realEstateListingSchema,
+  organizationSchema,
 } from '@/lib/schema';
 
 // Contact info - centralized
@@ -351,12 +353,92 @@ function EnhancedDevelopmentPage({
                     content.heroIntro.toLowerCase().includes('q1 2027') ||
                     content.heroIntro.toLowerCase().includes('q2 2027');
 
+  // ================================================================
+  // DYNAMIC SCHEMA GENERATION — 10/10 SEO
+  // Generate all structured data from actual content
+  // ================================================================
+  const pageUrl = `https://newbuildhomescostablanca.com/developments/${data.slug}`;
+
+  // 1. BreadcrumbList — navigation path
+  const schemaBreadcrumbGenerated = breadcrumbSchema([
+    { name: 'Home', url: 'https://newbuildhomescostablanca.com/' },
+    { name: 'Developments', url: 'https://newbuildhomescostablanca.com/developments/' },
+    { name: property.town, url: `https://newbuildhomescostablanca.com/areas/${property.town.toLowerCase().replace(/\s+/g, '-')}/` },
+    { name: data.projectName, url: `${pageUrl}/` },
+  ]);
+
+  // 2. Product with AggregateOffer — development as purchasable product
+  const schemaDevelopmentGenerated = developmentSchema({
+    name: data.projectName,
+    description: data.metaDescription,
+    url: pageUrl,
+    images: property.images,
+    priceFrom: property.price || 0,
+    developer: property.developer,
+    developerUrl: `https://newbuildhomescostablanca.com/builders/${property.developerSlug}`,
+    address: { town: property.town, region: property.province },
+    propertyTypes: [property.propertyType || 'Apartment'],
+    bedroomRange: property.bedrooms ? `${property.bedrooms}` : undefined,
+    totalUnits: data.unitsAvailable || units.length || undefined,
+    status: isKeyReady ? 'key-ready' : isOffPlan ? 'off-plan' : 'under-construction',
+    deliveryDate: isOffPlan ? '2027' : undefined,
+    features: content.propertyFeatures.features,
+  });
+
+  // 3. FAQPage — critical for rich results
+  const schemaFAQGenerated = content.faqs && content.faqs.length > 0
+    ? faqSchema(content.faqs)
+    : null;
+
+  // 4. RealEstateListing — specific property listing data
+  const schemaListingGenerated = realEstateListingSchema({
+    name: `${data.projectName} - New Build ${property.propertyType || 'Apartment'} in ${property.town}`,
+    description: data.metaDescription,
+    price: property.price,
+    images: property.images,
+    url: pageUrl,
+    bedrooms: property.bedrooms || undefined,
+    bathrooms: property.bathrooms || undefined,
+    floorSize: property.builtSize || undefined,
+    address: { town: property.town, region: property.province },
+    propertyType: property.propertyType,
+  });
+
+  // 5. Organization — the developer/builder
+  const schemaOrgGenerated = organizationSchema({
+    name: property.developer,
+    description: `${property.developer} - Property developer in ${property.town}, Costa Blanca, Spain`,
+    url: `https://newbuildhomescostablanca.com/builders/${property.developerSlug}`,
+  });
+
+  // 6. HomeAndConstructionBusiness — the agency
+  const schemaBusinessGenerated = homeAndConstructionBusinessSchema({
+    name: 'New Build Homes Costa Blanca',
+    description: 'Specialist new build property agency in Costa Blanca, Spain. Helping international buyers find their perfect home.',
+    url: 'https://newbuildhomescostablanca.com',
+    priceRange: '€€€',
+    address: {
+      streetAddress: 'Calle Canonigo Torres 8',
+      town: 'Torrevieja',
+      region: 'Alicante',
+      postalCode: '03181',
+    },
+    telephone: '+34634044970',
+    email: 'info@newbuildhomescostablanca.com',
+    areaServed: ['Costa Blanca', property.town, 'Torrevieja', 'Orihuela Costa', 'Alicante'],
+  });
+
   return (
     <>
-      {/* Schema Markup */}
-      {schemaProduct && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaProduct) }} />}
-      {schemaFAQ && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }} />}
-      {schemaBreadcrumb && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumb) }} />}
+      {/* ================================================================ */}
+      {/* SCHEMA MARKUP — Dynamic SEO structured data */}
+      {/* ================================================================ */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBreadcrumbGenerated) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaDevelopmentGenerated) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaListingGenerated) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgGenerated) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBusinessGenerated) }} />
+      {schemaFAQGenerated && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQGenerated) }} />}
 
       {/* ================================================================== */}
       {/* STICKY CTA BAR - Always visible on scroll */}
@@ -564,55 +646,6 @@ function EnhancedDevelopmentPage({
               )}
 
               {/* ============================================================ */}
-              {/* AVAILABLE UNITS - Link to individual property pages */}
-              {/* ============================================================ */}
-              {units.length > 0 && (
-                <section>
-                  <h2 className="text-2xl font-bold text-primary-900 mb-6 flex items-center gap-3">
-                    <svg className="w-6 h-6 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-                    Available Units ({units.length})
-                  </h2>
-                  <div className="grid md:grid-cols-2 gap-5">
-                    {units.map((unit) => (
-                      <Link
-                        key={unit.id || unit.ref}
-                        href={`/properties/${unit.ref}`}
-                        className="group bg-white rounded-lg overflow-hidden border border-warm-200 hover:shadow-lg hover:border-accent-300 transition-all"
-                      >
-                        <div className="relative h-48">
-                          <Image
-                            src={unit.images?.[0] || '/images/placeholder-property.jpg'}
-                            alt={`${unit.bedrooms || 0} bed ${unit.propertyType || 'Property'} in ${data.projectName}`}
-                            fill
-                            className="object-cover group-hover:scale-105 transition-transform duration-500"
-                            unoptimized
-                          />
-                          <div className="absolute top-2 right-2 bg-white/90 backdrop-blur-sm text-primary-900 text-xs font-bold px-3 py-1.5 rounded-full">
-                            Ref: {unit.ref}
-                          </div>
-                        </div>
-                        <div className="p-4">
-                          <h3 className="font-semibold text-primary-900 group-hover:text-accent-600 transition-colors text-lg">
-                            {unit.bedrooms || 0} Bed {unit.propertyType || 'Property'}
-                          </h3>
-                          <p className="text-warm-500 text-sm mt-1">
-                            {unit.bathrooms || 0} bath{(unit.bathrooms || 0) !== 1 ? 's' : ''} • {unit.size || 0}m²
-                          </p>
-                          <div className="flex items-center justify-between mt-3">
-                            <p className="text-accent-600 font-bold text-xl">{formatPrice(unit.price || 0)}</p>
-                            <span className="text-accent-500 text-sm font-medium group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
-                              View details
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                            </span>
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              {/* ============================================================ */}
               {/* DISTANCE MATRIX - Key for SEO and user experience */}
               {/* ============================================================ */}
               <section className="bg-white rounded-xl p-6 border border-warm-200 shadow-sm">
@@ -694,6 +727,55 @@ function EnhancedDevelopmentPage({
                   </Link>
                 </div>
               </section>
+
+              {/* ============================================================ */}
+              {/* AVAILABLE UNITS - Link to individual property pages */}
+              {/* ============================================================ */}
+              {units.length > 0 && (
+                <section>
+                  <h2 className="text-2xl font-bold text-primary-900 mb-6 flex items-center gap-3">
+                    <svg className="w-6 h-6 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                    Available Units ({units.length})
+                  </h2>
+                  <div className="grid md:grid-cols-2 gap-5">
+                    {units.map((unit) => (
+                      <Link
+                        key={unit.id || unit.ref}
+                        href={`/properties/${unit.ref}`}
+                        className="group bg-white rounded-lg overflow-hidden border border-warm-200 hover:shadow-lg hover:border-accent-300 transition-all"
+                      >
+                        <div className="relative h-48">
+                          <Image
+                            src={unit.images?.[0] || '/images/placeholder-property.jpg'}
+                            alt={`${unit.bedrooms || 0} bed ${unit.propertyType || 'Property'} in ${data.projectName}`}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            unoptimized
+                          />
+                          <div className="absolute top-2 right-2 bg-white/90 backdrop-blur-sm text-primary-900 text-xs font-bold px-3 py-1.5 rounded-full">
+                            Ref: {unit.ref}
+                          </div>
+                        </div>
+                        <div className="p-4">
+                          <h3 className="font-semibold text-primary-900 group-hover:text-accent-600 transition-colors text-lg">
+                            {unit.bedrooms || 0} Bed {unit.propertyType || 'Property'}
+                          </h3>
+                          <p className="text-warm-500 text-sm mt-1">
+                            {unit.bathrooms || 0} bath{(unit.bathrooms || 0) !== 1 ? 's' : ''} • {unit.size || 0}m²
+                          </p>
+                          <div className="flex items-center justify-between mt-3">
+                            <p className="text-accent-600 font-bold text-xl">{formatPrice(unit.price || 0)}</p>
+                            <span className="text-accent-500 text-sm font-medium group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                              View details
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                            </span>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )}
 
               {/* Location Section */}
               <section>
