@@ -48,6 +48,7 @@ interface AreaContent {
   region?: string;
   heroImage?: string;
   cardImage?: string;
+  childAreas?: string[];
   externalLinks?: {
     beaches?: { name: string; url?: string; googleMaps?: string; description?: string }[];
     healthcare?: { name: string; googleMaps: string; distance: string };
@@ -225,32 +226,128 @@ function normalizeAreaContent(rawData: any, slug: string): AreaContent {
   };
 }
 
+function normalizeRegionContent(rawData: any, slug: string): AreaContent {
+  const c = rawData.content || {};
+
+  // Build golf section from region format
+  const golfCourses = (c.golfSection?.topCourses || []).map((course: any) => ({
+    name: course.name,
+    distance: '',
+    driveTime: '',
+    holes: course.holes || 18,
+    url: '',
+    googleMaps: '',
+    description: course.description || '',
+  }));
+
+  // Build amenities from practicalInfo
+  const practicalInfo = c.practicalInfo || {};
+
+  // Build lifestyle section
+  const lifestyleSection = {
+    intro: c.lifestyleSection?.intro || '',
+    highlights: c.lifestyleSection?.highlights || [],
+  };
+
+  // Build property market text
+  const marketOverview = c.propertyMarketSection?.overview || '';
+  const priceGuide = (c.propertyMarketSection?.priceGuide || [])
+    .map((p: any) => `${p.type}: ${p.range} (${p.notes})`)
+    .join('. ');
+  const propertyMarketSection = (marketOverview ? marketOverview + '\n\n' : '') + (priceGuide ? priceGuide : '');
+
+  // Build "why live here" from majorAreas
+  const whyLiveHereSection = (c.majorAreas || []).map((area: any) =>
+    `${area.name}: ${area.description} Best for: ${area.bestFor}. Prices from ${area.priceRange}.`
+  );
+
+  // Build amenities section
+  const amenitiesSection = {
+    beaches: (c.beachesSection?.highlights || []).map((b: any) => `${b.name} (${b.type}): ${b.description}`).join('\n\n'),
+    dining: '',
+    shopping: '',
+    healthcare: practicalInfo.healthcare || '',
+    transport: practicalInfo.transport || '',
+  };
+
+  return {
+    slug: rawData.slug || slug,
+    name: rawData.name || slug.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+    propertyCount: 0, // Will be updated dynamically
+    propertyTypes: ['Apartment', 'Villa', 'Townhouse', 'Penthouse'],
+    priceRange: rawData.priceRange || { min: 150000, max: 1000000 },
+    region: rawData.name,
+    heroImage: rawData.heroImage,
+    cardImage: rawData.cardImage,
+    childAreas: rawData.childAreas || [],
+    golf: golfCourses.length > 0 ? {
+      intro: c.golfSection?.intro || '',
+      courses: golfCourses,
+    } : undefined,
+    content: {
+      metaTitle: c.metaTitle || `${rawData.name} Property Guide`,
+      metaDescription: c.metaDescription || '',
+      heroIntro: c.heroIntro || '',
+      lifestyleSection,
+      amenitiesSection,
+      propertyMarketSection,
+      whyLiveHereSection,
+      faqs: (c.faqs || []).map((f: any) => ({ question: f.question, answer: f.answer })),
+      conclusion: c.conclusion || '',
+    },
+    developments: [],
+    schema: rawData.schema || {},
+    schemaFAQ: rawData.schemaFAQ || {},
+  };
+}
+
 function getArea(slug: string): AreaContent | null {
+  // First check areas
   const areaPath = path.join(process.cwd(), 'src', 'content', 'areas', `${slug}.json`);
-  
-  if (!fs.existsSync(areaPath)) {
-    return null;
+  if (fs.existsSync(areaPath)) {
+    try {
+      const rawData = JSON.parse(fs.readFileSync(areaPath, 'utf-8'));
+      return normalizeAreaContent(rawData, slug);
+    } catch (error) {
+      console.error(`Error loading area ${slug}:`, error);
+      return null;
+    }
   }
-  
-  try {
-    const rawData = JSON.parse(fs.readFileSync(areaPath, 'utf-8'));
-    return normalizeAreaContent(rawData, slug);
-  } catch (error) {
-    console.error(`Error loading area ${slug}:`, error);
-    return null;
+
+  // Fallback: check regions directory
+  const regionPath = path.join(process.cwd(), 'src', 'content', 'regions', `${slug}.json`);
+  if (fs.existsSync(regionPath)) {
+    try {
+      const rawData = JSON.parse(fs.readFileSync(regionPath, 'utf-8'));
+      return normalizeRegionContent(rawData, slug);
+    } catch (error) {
+      console.error(`Error loading region ${slug}:`, error);
+      return null;
+    }
   }
+
+  return null;
 }
 
 function getAllAreaSlugs(): string[] {
+  const slugs: string[] = [];
+
   const areasDir = path.join(process.cwd(), 'src', 'content', 'areas');
-  
-  if (!fs.existsSync(areasDir)) {
-    return [];
+  if (fs.existsSync(areasDir)) {
+    slugs.push(...fs.readdirSync(areasDir)
+      .filter(file => file.endsWith('.json'))
+      .map(file => file.replace('.json', '')));
   }
-  
-  return fs.readdirSync(areasDir)
-    .filter(file => file.endsWith('.json'))
-    .map(file => file.replace('.json', ''));
+
+  // Also include region pages
+  const regionsDir = path.join(process.cwd(), 'src', 'content', 'regions');
+  if (fs.existsSync(regionsDir)) {
+    slugs.push(...fs.readdirSync(regionsDir)
+      .filter(file => file.endsWith('.json'))
+      .map(file => file.replace('.json', '')));
+  }
+
+  return [...new Set(slugs)];
 }
 
 export async function generateStaticParams() {
@@ -287,6 +384,10 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const areaNameLower = data.name.toLowerCase();
   const slugLower = slug.toLowerCase();
 
+  // For region pages, match against child areas
+  const isRegionPage = !!(data as any).childAreas?.length;
+  const childAreaNames = ((data as any).childAreas || []).map((s: string) => s.toLowerCase().replace(/-/g, ' '));
+
   // Filter developments that match this area by town field
   // Handle compound towns like "Moraira_Teulada" by splitting on underscores
   const allMatchingDevelopments = allDevelopments
@@ -296,6 +397,14 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       const townParts = town.split(/[\s_-]+/);
       const zoneParts = zone.split(/[\s_-]+/);
 
+      // Region page: match against any child area
+      if (isRegionPage) {
+        return childAreaNames.some((child: string) =>
+          town.includes(child) || zone.includes(child) || child.includes(town)
+        );
+      }
+
+      // Normal area page logic
       // Check direct includes
       if (town.includes(areaNameLower) || town.includes(slugLower) ||
           zone.includes(areaNameLower) || zone.includes(slugLower)) return true;

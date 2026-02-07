@@ -40,8 +40,8 @@ const NAV_ITEMS = [
     href: '/developments',
     submenu: [
       { label: 'All Developments', href: '/developments' },
-      { label: 'Costa Blanca South', href: '/developments?region=south' },
-      { label: 'Costa Blanca North', href: '/developments?region=north' },
+      { label: 'Costa Blanca South', href: '/areas/costa-blanca-south' },
+      { label: 'Costa Blanca North', href: '/areas/costa-blanca-north' },
       { label: 'Costa Calida (Murcia)', href: '/areas/costa-calida' },
       { label: 'Our Builders', href: '/builders' },
     ],
@@ -50,8 +50,8 @@ const NAV_ITEMS = [
     label: 'Areas',
     href: '/areas',
     submenu: [
-      { label: 'Costa Blanca South', href: '/areas?region=south' },
-      { label: 'Costa Blanca North', href: '/areas?region=north' },
+      { label: 'Costa Blanca South', href: '/areas/costa-blanca-south' },
+      { label: 'Costa Blanca North', href: '/areas/costa-blanca-north' },
       { label: 'Costa Calida (Murcia)', href: '/areas/costa-calida' },
       { label: 'Torrevieja', href: '/areas/torrevieja' },
       { label: 'Orihuela Costa', href: '/areas/orihuela-costa' },
