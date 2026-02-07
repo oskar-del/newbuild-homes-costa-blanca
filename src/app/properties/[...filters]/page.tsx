@@ -230,6 +230,27 @@ const FILTER_DEFINITIONS: Record<string, { config: FilterConfig; title: string; 
     description: 'Ultra-luxury new builds from €1M. The finest villas on Costa Blanca.'
   },
 
+  // Costa Blanca (combined)
+  'costa-blanca': {
+    config: { region: 'costa-blanca' },
+    title: 'New Build Properties Costa Blanca',
+    description: 'All new build properties across Costa Blanca. From sunny South to prestigious North coastline. Villas, apartments and townhouses.'
+  },
+
+  // Costa Calida
+  'costa-calida': {
+    config: { region: 'costa-calida' },
+    title: 'New Build Properties Costa Calida (Murcia)',
+    description: 'New build homes in Costa Calida and Murcia region. Mar Menor, La Manga, Cartagena. Warm waters and authentic Spanish living.'
+  },
+
+  // Key-Ready
+  'key-ready': {
+    config: { features: ['key-ready'] },
+    title: 'Key-Ready New Build Homes Costa Blanca',
+    description: 'Move-in ready new build properties available now. No waiting - collect your keys and start living your Spanish dream immediately.'
+  },
+
   // Region filters
   'costa-blanca-south': {
     config: { region: 'south' },
@@ -246,6 +267,7 @@ const FILTER_DEFINITIONS: Record<string, { config: FilterConfig; title: string; 
 // South Costa Blanca towns
 const SOUTH_TOWNS = ['Torrevieja', 'Orihuela Costa', 'Guardamar del Segura', 'Pilar de la Horadada', 'San Miguel de Salinas', 'Los Montesinos', 'Rojales', 'Ciudad Quesada', 'La Marina', 'Santa Pola'];
 const NORTH_TOWNS = ['Jávea', 'Moraira', 'Calpe', 'Altea', 'Benidorm', 'Dénia', 'Benissa', 'Teulada', 'Finestrat', 'La Nucia', 'Alfaz del Pi', 'Albir', 'Villajoyosa', 'El Campello', 'Polop', 'Benitachell'];
+const COSTA_CALIDA_TOWNS = ['San Javier', 'San Pedro del Pinatar', 'Los Alcázares', 'La Manga', 'Cartagena', 'Mazarrón', 'Torre Pacheco', 'Sucina', 'Murcia'];
 
 function matchesFilter(property: UnifiedProperty, config: FilterConfig): boolean {
   if (config.type && property.propertyType !== config.type) return false;
@@ -255,6 +277,18 @@ function matchesFilter(property: UnifiedProperty, config: FilterConfig): boolean
   if (config.maxPrice && (property.price || 0) > config.maxPrice) return false;
   if (config.region === 'south' && !SOUTH_TOWNS.includes(property.town)) return false;
   if (config.region === 'north' && !NORTH_TOWNS.includes(property.town)) return false;
+  if (config.region === 'costa-blanca') {
+    if (!SOUTH_TOWNS.includes(property.town) && !NORTH_TOWNS.includes(property.town)) return false;
+  }
+  if (config.region === 'costa-calida') {
+    if (!COSTA_CALIDA_TOWNS.some(t => property.town.toLowerCase().includes(t.toLowerCase()))) return false;
+  }
+  if (config.features?.includes('key-ready')) {
+    const desc = (property.descriptions?.en || '').toLowerCase();
+    const isKeyReady = desc.includes('key ready') || desc.includes('keys ready') || desc.includes('key-ready') ||
+                       desc.includes('ready to move') || desc.includes('immediate delivery');
+    if (!isKeyReady) return false;
+  }
   return true;
 }
 
@@ -403,52 +437,58 @@ export default async function FilteredPropertiesPage({ params }: { params: Promi
                 </Link>
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {properties.map((property) => (
                   <Link
                     key={property.reference}
                     href={`/properties/${property.reference}`}
-                    className="group bg-white rounded-sm overflow-hidden border border-warm-200 hover:shadow-xl hover:border-accent-500 transition-all"
+                    className="group bg-white rounded-xl overflow-hidden border border-warm-200 hover:shadow-xl transition-all duration-300"
                   >
                     {/* Image */}
-                    <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="relative h-64 overflow-hidden">
                       <Image
                         src={property.images[0]?.url || '/images/placeholder-property.jpg'}
                         alt={`${property.propertyType} in ${property.town}`}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         unoptimized
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-                      {/* Price Badge */}
-                      {property.price && (
-                        <div className="absolute bottom-3 left-3">
-                          <span className="bg-white text-primary-900 px-3 py-1 rounded-sm font-semibold text-lg">
-                            {formatPrice(property.price)}
-                          </span>
-                        </div>
-                      )}
+                      {/* Badges */}
+                      <div className="absolute top-3 left-3 flex gap-2">
+                        <span className="bg-accent-500 text-white text-xs font-semibold px-3 py-1 rounded-full">New Build</span>
+                        {property.propertyType && (
+                          <span className="bg-white/90 text-primary-900 text-xs font-medium px-3 py-1 rounded-full">{property.propertyType}</span>
+                        )}
+                      </div>
+
+                      {/* Price */}
+                      <div className="absolute bottom-3 left-3">
+                        <span className="text-2xl font-bold text-white">
+                          {property.price ? formatPrice(property.price) : 'Price on Request'}
+                        </span>
+                      </div>
                     </div>
 
                     {/* Content */}
                     <div className="p-4">
-                      <h3 className="font-semibold text-primary-900 group-hover:text-accent-600 transition-colors line-clamp-1">
-                        {`${property.bedrooms} Bed ${property.propertyType} in ${property.town}`}
+                      <h3 className="font-semibold text-primary-900 group-hover:text-accent-600 transition-colors line-clamp-1 mb-2">
+                        {property.bedrooms > 0 ? `${property.bedrooms}-Bedroom ` : ''}{property.propertyType} in {property.town}
                       </h3>
-                      <p className="text-warm-600 text-sm mt-1">{property.town}</p>
 
-                      <div className="flex items-center gap-4 mt-3 text-sm text-warm-500">
-                        {property.bedrooms > 0 && (
-                          <span>{property.bedrooms} bed</span>
-                        )}
-                        {property.bathrooms > 0 && (
-                          <span>{property.bathrooms} bath</span>
-                        )}
-                        {property.builtArea > 0 && (
-                          <span>{property.builtArea}m²</span>
-                        )}
+                      <div className="flex items-center gap-4 text-sm text-warm-500">
+                        {property.bedrooms > 0 && <span>{property.bedrooms} beds</span>}
+                        {property.bathrooms > 0 && <span>{property.bathrooms} baths</span>}
+                        {property.builtArea > 0 && <span>{property.builtArea}m²</span>}
+                      </div>
+
+                      <div className="flex items-center justify-between mt-3 pt-3 border-t border-warm-100">
+                        <span className="text-warm-400 text-xs">Ref: {property.reference}</span>
+                        <span className="text-accent-600 font-medium text-sm flex items-center gap-1">
+                          View Details →
+                        </span>
                       </div>
                     </div>
                   </Link>

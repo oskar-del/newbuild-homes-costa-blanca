@@ -72,6 +72,7 @@ const SOUTH_TOWNS = ['torrevieja', 'orihuela costa', 'guardamar', 'pilar de la h
 const NORTH_TOWNS = ['javea', 'moraira', 'calpe', 'altea', 'benidorm', 'denia', 'benissa', 'benitachell', 'cumbre del sol', 'teulada'];
 const GOLF_KEYWORDS = ['golf', 'la finca', 'villamartin', 'las colinas', 'campoamor', 'las ramblas', 'vistabella', 'algorfa'];
 const INLAND_TOWNS = ['algorfa', 'rojales', 'ciudad quesada', 'benijofar', 'san fulgencio', 'jalon', 'orba', 'pedreguer'];
+const COSTA_CALIDA_TOWNS = ['san javier', 'san pedro del pinatar', 'santiago de la ribera', 'los alcazares', 'la manga', 'cartagena', 'mazarron', 'puerto de mazarron', 'aguilas', 'torre pacheco', 'sucina', 'roldan', 'murcia'];
 
 function formatPrice(price: number): string {
   return new Intl.NumberFormat('en-EU', {
@@ -84,6 +85,23 @@ function formatPrice(price: number): string {
 function hasPool(property: ParsedProperty): boolean {
   const desc = (property.description || '').toLowerCase();
   return desc.includes('pool') || desc.includes('piscina');
+}
+
+function isPropertyKeyReady(property: ParsedProperty): boolean {
+  const desc = (property.description || '').toLowerCase();
+  const status = (property.status || '').toLowerCase();
+  return desc.includes('key ready') || desc.includes('keys ready') || desc.includes('key-ready') ||
+         desc.includes('ready to move') || desc.includes('immediate delivery') || desc.includes('entrega inmediata') ||
+         desc.includes('keys in hand') || status.includes('key ready') || status.includes('key-ready');
+}
+
+function getFeaturedProperties(properties: ParsedProperty[], count: number = 6): ParsedProperty[] {
+  const keyReady = properties.filter(p => isPropertyKeyReady(p));
+  const others = properties.filter(p => !isPropertyKeyReady(p));
+  const firstRow = keyReady.slice(0, Math.min(3, Math.ceil(count / 2)));
+  const remaining = count - firstRow.length;
+  const secondRow = [...others, ...keyReady.slice(firstRow.length)].slice(0, remaining);
+  return [...firstRow, ...secondRow];
 }
 
 export default async function PropertiesPage({
@@ -148,6 +166,7 @@ export default async function PropertiesPage({
   const northProperties = allProperties.filter(p => NORTH_TOWNS.some(t => p.town?.toLowerCase().includes(t)));
   const golfProperties = allProperties.filter(p => GOLF_KEYWORDS.some(k => p.town?.toLowerCase().includes(k) || p.description?.toLowerCase().includes('golf')));
   const inlandProperties = allProperties.filter(p => INLAND_TOWNS.some(t => p.town?.toLowerCase().includes(t)));
+  const costaCalidaProperties = allProperties.filter(p => COSTA_CALIDA_TOWNS.some(t => p.town?.toLowerCase().includes(t)));
 
   // Get top towns by property count
   const getTopTowns = (props: ParsedProperty[], limit: number = 5) => {
@@ -162,8 +181,18 @@ export default async function PropertiesPage({
       .map(([town, count]) => ({ town, count, avgPrice: Math.round(props.filter(p => p.town === town).reduce((sum, p) => sum + (p.price || 0), 0) / count) }));
   };
 
-  const topSouthTowns = getTopTowns(southProperties);
-  const topNorthTowns = getTopTowns(northProperties);
+  const topSouthTowns = getTopTowns(southProperties, 8);
+  const topNorthTowns = getTopTowns(northProperties, 8);
+  const topGolfTowns = getTopTowns(golfProperties, 6);
+  const topInlandTowns = getTopTowns(inlandProperties, 6);
+
+  // Featured properties per section (key-ready first)
+  const southFeatured = getFeaturedProperties(southProperties);
+  const northFeatured = getFeaturedProperties(northProperties);
+  const golfFeatured = getFeaturedProperties(golfProperties);
+  const inlandFeatured = getFeaturedProperties(inlandProperties);
+
+  const keyReadyCount = allProperties.filter(isPropertyKeyReady).length;
 
   // Schemas
   const breadcrumbs = breadcrumbSchema([
@@ -338,7 +367,7 @@ export default async function PropertiesPage({
     );
   }
 
-  // Default view - Show all properties with regional sections
+  // Default view - Show all properties with regional sections and featured property cards
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }} />
@@ -382,6 +411,39 @@ export default async function PropertiesPage({
           </div>
         </section>
 
+        {/* Quick Filter Bar - Category pills */}
+        <section className="bg-white border-b border-warm-200 sticky top-0 z-30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div className="flex flex-wrap gap-3">
+              <Link
+                href="/properties?keyready=true"
+                className="inline-flex items-center gap-1.5 px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm font-medium hover:bg-green-100 transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                Key Ready ({keyReadyCount})
+              </Link>
+              <Link
+                href="/properties?type=apartment"
+                className="inline-flex items-center gap-1.5 px-4 py-2 bg-warm-100 text-primary-900 rounded-full text-sm font-medium hover:bg-warm-200 transition-colors"
+              >
+                Apartments
+              </Link>
+              <Link
+                href="/properties?type=villa"
+                className="inline-flex items-center gap-1.5 px-4 py-2 bg-warm-100 text-primary-900 rounded-full text-sm font-medium hover:bg-warm-200 transition-colors"
+              >
+                Villas
+              </Link>
+              <Link
+                href="/properties?maxprice=300000"
+                className="inline-flex items-center gap-1.5 px-4 py-2 bg-warm-100 text-primary-900 rounded-full text-sm font-medium hover:bg-warm-200 transition-colors"
+              >
+                Under €300k
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Costa Blanca South Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -393,38 +455,34 @@ export default async function PropertiesPage({
                 </h2>
                 <p className="text-warm-500 mt-2">Year-round sunshine, golf courses, and established expat communities</p>
               </div>
-              <Link href="/properties?region=south" className="hidden md:flex items-center gap-2 text-accent-600 hover:text-accent-700 font-medium">
+              <Link href="/properties/costa-blanca-south" className="hidden md:flex items-center gap-2 text-accent-600 hover:text-accent-700 font-medium">
                 View all {southProperties.length} properties
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
             </div>
 
-            <div className="grid md:grid-cols-5 gap-4">
-              {topSouthTowns.map((item, i) => (
+            {/* Property Grid - 3x2 */}
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {southFeatured.slice(0, 6).map(property => (
+                <LargePropertyCard key={property.id} property={property} />
+              ))}
+            </div>
+
+            {/* Area Pills */}
+            <div className="flex flex-wrap gap-2.5">
+              {topSouthTowns.map(item => (
                 <Link
                   key={item.town}
                   href={`/properties?town=${encodeURIComponent(item.town)}`}
-                  className={`group relative rounded-xl overflow-hidden ${i === 0 ? 'md:col-span-2 md:row-span-2' : ''}`}
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-warm-100 hover:bg-warm-200 rounded-full text-sm font-medium text-primary-900 transition-colors"
                 >
-                  <div className={`relative ${i === 0 ? 'h-80 md:h-full' : 'h-40'}`}>
-                    <Image
-                      src={`https://picsum.photos/seed/${item.town.replace(/\s/g, '')}/600/400`}
-                      alt={item.town}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      unoptimized
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-white font-semibold text-lg">{item.town}</h3>
-                      <p className="text-warm-200 text-sm">{item.count} properties from {formatPrice(item.avgPrice * 0.6)}</p>
-                    </div>
-                  </div>
+                  {item.town}
+                  <span className="text-warm-500">({item.count})</span>
                 </Link>
               ))}
             </div>
 
-            <Link href="/properties?region=south" className="md:hidden flex items-center justify-center gap-2 text-accent-600 hover:text-accent-700 font-medium mt-6">
+            <Link href="/properties/costa-blanca-south" className="md:hidden flex items-center justify-center gap-2 text-accent-600 hover:text-accent-700 font-medium mt-6">
               View all {southProperties.length} properties →
             </Link>
           </div>
@@ -441,107 +499,129 @@ export default async function PropertiesPage({
                 </h2>
                 <p className="text-warm-500 mt-2">Dramatic coastline, prestigious villas, and Mediterranean elegance</p>
               </div>
-              <Link href="/properties?region=north" className="hidden md:flex items-center gap-2 text-accent-600 hover:text-accent-700 font-medium">
+              <Link href="/properties/costa-blanca-north" className="hidden md:flex items-center gap-2 text-accent-600 hover:text-accent-700 font-medium">
                 View all {northProperties.length} properties
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
             </div>
 
-            <div className="grid md:grid-cols-5 gap-4">
-              {topNorthTowns.map((item, i) => (
+            {/* Property Grid - 3x2 */}
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {northFeatured.slice(0, 6).map(property => (
+                <LargePropertyCard key={property.id} property={property} />
+              ))}
+            </div>
+
+            {/* Area Pills */}
+            <div className="flex flex-wrap gap-2.5">
+              {topNorthTowns.map(item => (
                 <Link
                   key={item.town}
                   href={`/properties?town=${encodeURIComponent(item.town)}`}
-                  className={`group relative rounded-xl overflow-hidden ${i === 0 ? 'md:col-span-2 md:row-span-2' : ''}`}
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-white hover:bg-warm-50 rounded-full text-sm font-medium text-primary-900 transition-colors"
                 >
-                  <div className={`relative ${i === 0 ? 'h-80 md:h-full' : 'h-40'}`}>
-                    <Image
-                      src={`https://picsum.photos/seed/${item.town.replace(/\s/g, '')}north/600/400`}
-                      alt={item.town}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      unoptimized
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-white font-semibold text-lg">{item.town}</h3>
-                      <p className="text-warm-200 text-sm">{item.count} properties from {formatPrice(item.avgPrice * 0.6)}</p>
-                    </div>
-                  </div>
+                  {item.town}
+                  <span className="text-warm-500">({item.count})</span>
                 </Link>
               ))}
             </div>
 
-            <Link href="/properties?region=north" className="md:hidden flex items-center justify-center gap-2 text-accent-600 hover:text-accent-700 font-medium mt-6">
+            <Link href="/properties/costa-blanca-north" className="md:hidden flex items-center justify-center gap-2 text-accent-600 hover:text-accent-700 font-medium mt-6">
               View all {northProperties.length} properties →
             </Link>
           </div>
         </section>
 
-        {/* Category Cards: Golf, Inland, Luxury */}
+        {/* Golf Properties Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-light text-primary-900 mb-8 text-center">
-              Browse by <span className="font-semibold">Lifestyle</span>
-            </h2>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              {/* Golf Properties */}
-              <Link href="/properties?region=golf" className="group relative rounded-2xl overflow-hidden h-72">
-                <Image
-                  src="https://picsum.photos/seed/golfcourse/600/400"
-                  alt="Golf Properties"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  unoptimized
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <span className="bg-green-500 text-white text-xs font-medium px-3 py-1 rounded-full">Golf Living</span>
-                  <h3 className="text-white font-semibold text-2xl mt-3">Golf Properties</h3>
-                  <p className="text-warm-200 text-sm mt-1">{golfProperties.length} properties on or near golf courses</p>
-                </div>
-              </Link>
-
-              {/* Inland Properties */}
-              <Link href="/properties?region=inland" className="group relative rounded-2xl overflow-hidden h-72">
-                <Image
-                  src="https://picsum.photos/seed/inlandspain/600/400"
-                  alt="Inland Properties"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  unoptimized
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <span className="bg-amber-500 text-white text-xs font-medium px-3 py-1 rounded-full">Best Value</span>
-                  <h3 className="text-white font-semibold text-2xl mt-3">Inland Living</h3>
-                  <p className="text-warm-200 text-sm mt-1">{inlandProperties.length} properties in peaceful inland towns</p>
-                </div>
-              </Link>
-
-              {/* Luxury Properties */}
-              <Link href="/luxury" className="group relative rounded-2xl overflow-hidden h-72">
-                <Image
-                  src="https://picsum.photos/seed/luxuryvilla/600/400"
-                  alt="Luxury Properties"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  unoptimized
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <span className="bg-primary-900 text-white text-xs font-medium px-3 py-1 rounded-full">Premium</span>
-                  <h3 className="text-white font-semibold text-2xl mt-3">Luxury Villas €800k+</h3>
-                  <p className="text-warm-200 text-sm mt-1">Exclusive properties in prime locations</p>
-                </div>
+            <div className="flex items-end justify-between mb-8">
+              <div>
+                <span className="text-accent-500 font-medium text-sm uppercase tracking-wide">Golf Living</span>
+                <h2 className="text-3xl md:text-4xl font-light text-primary-900 mt-2">
+                  <span className="font-semibold">Golf</span> Properties
+                </h2>
+                <p className="text-warm-500 mt-2">Premium properties on or near championship golf courses</p>
+              </div>
+              <Link href="/golf" className="hidden md:flex items-center gap-2 text-accent-600 hover:text-accent-700 font-medium">
+                View all {golfProperties.length} properties
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
             </div>
+
+            {/* Property Grid - 3x2 */}
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {golfFeatured.slice(0, 6).map(property => (
+                <LargePropertyCard key={property.id} property={property} />
+              ))}
+            </div>
+
+            {/* Area Pills */}
+            <div className="flex flex-wrap gap-2.5">
+              {topGolfTowns.map(item => (
+                <Link
+                  key={item.town}
+                  href={`/properties?town=${encodeURIComponent(item.town)}`}
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-warm-100 hover:bg-warm-200 rounded-full text-sm font-medium text-primary-900 transition-colors"
+                >
+                  {item.town}
+                  <span className="text-warm-500">({item.count})</span>
+                </Link>
+              ))}
+            </div>
+
+            <Link href="/golf" className="md:hidden flex items-center justify-center gap-2 text-accent-600 hover:text-accent-700 font-medium mt-6">
+              View all {golfProperties.length} properties →
+            </Link>
+          </div>
+        </section>
+
+        {/* Inland Living Section */}
+        <section className="py-16 bg-warm-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-end justify-between mb-8">
+              <div>
+                <span className="text-accent-500 font-medium text-sm uppercase tracking-wide">Best Value</span>
+                <h2 className="text-3xl md:text-4xl font-light text-primary-900 mt-2">
+                  <span className="font-semibold">Inland</span> Living
+                </h2>
+                <p className="text-warm-500 mt-2">Charming villages with authentic Spanish character and excellent value</p>
+              </div>
+              <Link href="/properties?region=inland" className="hidden md:flex items-center gap-2 text-accent-600 hover:text-accent-700 font-medium">
+                View all {inlandProperties.length} properties
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </Link>
+            </div>
+
+            {/* Property Grid - 3x2 */}
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {inlandFeatured.slice(0, 6).map(property => (
+                <LargePropertyCard key={property.id} property={property} />
+              ))}
+            </div>
+
+            {/* Area Pills */}
+            <div className="flex flex-wrap gap-2.5">
+              {topInlandTowns.map(item => (
+                <Link
+                  key={item.town}
+                  href={`/properties?town=${encodeURIComponent(item.town)}`}
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-white hover:bg-warm-50 rounded-full text-sm font-medium text-primary-900 transition-colors"
+                >
+                  {item.town}
+                  <span className="text-warm-500">({item.count})</span>
+                </Link>
+              ))}
+            </div>
+
+            <Link href="/properties?region=inland" className="md:hidden flex items-center justify-center gap-2 text-accent-600 hover:text-accent-700 font-medium mt-6">
+              View all {inlandProperties.length} properties →
+            </Link>
           </div>
         </section>
 
         {/* All Locations Grid */}
-        <section className="py-16 bg-warm-100">
+        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-light text-primary-900 mb-8 text-center">
               All <span className="font-semibold">Locations</span>
@@ -554,7 +634,7 @@ export default async function PropertiesPage({
                   <Link
                     key={town}
                     href={`/properties?town=${encodeURIComponent(town)}`}
-                    className="bg-white rounded-lg p-4 hover:shadow-md transition-shadow group"
+                    className="bg-warm-50 rounded-lg p-4 hover:shadow-md transition-shadow group"
                   >
                     <h3 className="font-medium text-primary-900 group-hover:text-accent-600 transition-colors">{town}</h3>
                     <p className="text-warm-500 text-sm">{count} properties</p>
@@ -599,6 +679,7 @@ function LargePropertyCard({ property }: { property: ParsedProperty }) {
   const mainImage = property.images[0] || '/images/placeholder-property.jpg';
   const imageCount = property.images.length;
   const hasPoolFeature = hasPool(property);
+  const keyReady = isPropertyKeyReady(property);
 
   // Format town name nicely
   const displayTown = (property.town || '').split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
@@ -625,6 +706,11 @@ function LargePropertyCard({ property }: { property: ParsedProperty }) {
             <span className="bg-accent-500 text-white text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wide">
               New Build
             </span>
+            {keyReady && (
+              <span className="bg-green-500 text-white text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wide">
+                Key Ready
+              </span>
+            )}
             {property.propertyType && (
               <span className="bg-white/95 backdrop-blur-sm text-primary-900 text-xs font-medium px-3 py-1.5 rounded-full">
                 {property.propertyType}
