@@ -629,21 +629,43 @@ function EnhancedDevelopmentPage({
               </section>
 
               {/* Image Gallery */}
-              {property.images.length > 1 && (
-                <section>
-                  <h2 className="text-2xl font-bold text-primary-900 mb-6 flex items-center gap-3">
-                    <svg className="w-6 h-6 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                    Gallery
-                  </h2>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                    {property.images.slice(0, 9).map((image, i) => (
-                      <div key={i} className={`relative rounded-lg overflow-hidden ${i === 0 ? 'col-span-2 row-span-2 aspect-[4/3]' : 'aspect-[4/3]'}`}>
-                        <Image src={image} alt={getAlt(image, i)} fill className="object-cover hover:scale-105 transition-transform duration-500" unoptimized />
-                      </div>
-                    ))}
-                  </div>
-                </section>
-              )}
+              {/* Deduplicate images: when multiple units share same building, */}
+              {/* only show unique images by grouping by filename suffix */}
+              {(() => {
+                // Group images by filename (e.g., "15-1.jpg" vs "16-1.jpg")
+                // Keep one image per unique filename suffix to avoid showing
+                // the same building exterior from multiple unit photo sets
+                const seen = new Set<string>();
+                const uniqueImages = property.images.filter(url => {
+                  const filename = url.split('/').pop() || url;
+                  // Extract the suffix part (e.g., "1.jpg" from "15-1.jpg" or "16-1.jpg")
+                  const suffixMatch = filename.match(/[-_](\d+)\.\w+$/);
+                  const suffix = suffixMatch ? suffixMatch[1] : filename;
+                  if (seen.has(suffix)) return false;
+                  seen.add(suffix);
+                  return true;
+                });
+                // If dedup didn't help much (all unique suffixes), just take first unit's images
+                const galleryImages = uniqueImages.length < property.images.length
+                  ? uniqueImages.slice(0, 6)
+                  : property.images.slice(0, 3);
+
+                return galleryImages.length > 1 ? (
+                  <section>
+                    <h2 className="text-2xl font-bold text-primary-900 mb-6 flex items-center gap-3">
+                      <svg className="w-6 h-6 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                      Gallery
+                    </h2>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                      {galleryImages.map((image, i) => (
+                        <div key={i} className={`relative rounded-lg overflow-hidden ${i === 0 ? 'col-span-2 row-span-2 aspect-[4/3]' : 'aspect-[4/3]'}`}>
+                          <Image src={image} alt={getAlt(image, i)} fill className="object-cover hover:scale-105 transition-transform duration-500" unoptimized />
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                ) : null;
+              })()}
 
               {/* ============================================================ */}
               {/* DISTANCE MATRIX - Key for SEO and user experience */}

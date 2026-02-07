@@ -586,7 +586,11 @@ function aggregateDevelopmentData(allProperties: Property[]) {
       if (property.plotArea > 0) developments[devKey].plotAreas.push(property.plotArea);
       if (property.type) developments[devKey].propertyTypes.push(property.type);
       if (property.pool) developments[devKey].hasPool = true;
-      if (property.images?.length) developments[devKey].images.push(...property.images.slice(0, 3));
+      // Only take images from the FIRST unit to avoid visual duplicates
+      // (all units in same building have same exterior photos)
+      if (property.images?.length && developments[devKey].images.length === 0) {
+        developments[devKey].images.push(...property.images.slice(0, 3));
+      }
       if (!developments[devKey].town && property.town) developments[devKey].town = property.town;
     }
   }
