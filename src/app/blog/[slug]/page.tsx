@@ -327,21 +327,93 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       ]
     : [];
 
-  // Simple markdown-to-HTML conversion function
+  // Enhanced markdown-to-HTML conversion with rich styling
   const markdownToHtml = (text: string) => {
-    return text
-      .replace(/## (.*)/g, '<h2 class="text-2xl font-semibold text-primary-900 mt-8 mb-4">$1</h2>')
-      .replace(/### (.*)/g, '<h3 class="text-xl font-semibold text-primary-900 mt-6 mb-3">$1</h3>')
-      .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold">$1</strong>')
-      .replace(/\n\n/g, '</p><p class="mb-4 text-warm-700 leading-relaxed">')
-      .replace(/^- (.*)/gm, '<li class="ml-4 mb-2 list-disc list-inside">$1</li>')
-      .replace(/^\d\. (.*)/gm, '<li class="ml-4 mb-2 list-decimal list-inside">$1</li>');
-  };
+    const lines = text.split('\n');
+    const output: string[] = [];
+    let inList = false;
+    let inParagraph = false;
 
-  // For backwards compatibility with old markdown content
-  const contentHtml = typeof article.content === 'string'
-    ? markdownToHtml(article.content)
-    : '';
+    for (let i = 0; i < lines.length; i++) {
+      const trimmed = lines[i].trim();
+
+      // Empty line — close open blocks
+      if (!trimmed) {
+        if (inList) { output.push('</div>'); inList = false; }
+        if (inParagraph) { output.push('</p>'); inParagraph = false; }
+        continue;
+      }
+
+      // h2 sub-headers within section content
+      if (trimmed.startsWith('## ')) {
+        if (inList) { output.push('</div>'); inList = false; }
+        if (inParagraph) { output.push('</p>'); inParagraph = false; }
+        const title = trimmed.replace(/^## /, '');
+        output.push(`<h2 class="text-2xl font-semibold text-primary-900 mt-10 mb-4 pl-4 border-l-4 border-accent-500">${title}</h2>`);
+        continue;
+      }
+
+      // h3 sub-headers
+      if (trimmed.startsWith('### ')) {
+        if (inList) { output.push('</div>'); inList = false; }
+        if (inParagraph) { output.push('</p>'); inParagraph = false; }
+        const title = trimmed.replace(/^### /, '');
+        output.push(`<h3 class="text-lg font-semibold text-primary-900 mt-6 mb-3">${title}</h3>`);
+        continue;
+      }
+
+      // Standalone bold line = subheading card (e.g. **Beach Name** or **Label:**)
+      const boldLineMatch = trimmed.match(/^\*\*(.*?)\*\*\s*(⭐*)\s*$/);
+      if (boldLineMatch) {
+        if (inList) { output.push('</div>'); inList = false; }
+        if (inParagraph) { output.push('</p>'); inParagraph = false; }
+        const stars = boldLineMatch[2] ? ` <span class="text-amber-500 ml-1">${'★'.repeat(boldLineMatch[2].length)}</span>` : '';
+        output.push(`<div class="mt-5 mb-2 font-semibold text-primary-900 text-[15px] flex items-center gap-2"><span class="w-1.5 h-1.5 bg-accent-500 rounded-full flex-shrink-0"></span><span>${boldLineMatch[1]}${stars}</span></div>`);
+        continue;
+      }
+
+      // Bullet list item
+      if (trimmed.startsWith('- ')) {
+        if (inParagraph) { output.push('</p>'); inParagraph = false; }
+        if (!inList) { output.push('<div class="space-y-0.5 my-3 pl-1">'); inList = true; }
+        const content = trimmed.slice(2)
+          .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-primary-900">$1</strong>')
+          .replace(/⭐/g, '<span class="text-amber-500">★</span>');
+        output.push(`<div class="flex items-start gap-2.5 py-1"><span class="flex-shrink-0 w-1.5 h-1.5 mt-[9px] bg-accent-400 rounded-full"></span><span class="text-warm-700 leading-relaxed">${content}</span></div>`);
+        continue;
+      }
+
+      // Numbered list item
+      const numMatch = trimmed.match(/^(\d+)\.\s+(.*)/);
+      if (numMatch) {
+        if (inParagraph) { output.push('</p>'); inParagraph = false; }
+        if (!inList) { output.push('<div class="space-y-1 my-3">'); inList = true; }
+        const content = numMatch[2]
+          .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-primary-900">$1</strong>');
+        output.push(`<div class="flex items-start gap-3 py-1"><span class="flex-shrink-0 w-5 h-5 bg-accent-100 text-accent-700 rounded-full flex items-center justify-center text-xs font-bold">${numMatch[1]}</span><span class="text-warm-700 leading-relaxed">${content}</span></div>`);
+        continue;
+      }
+
+      // Regular text line
+      if (inList) { output.push('</div>'); inList = false; }
+      const processed = trimmed
+        .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-primary-900">$1</strong>')
+        .replace(/⭐⭐/g, '<span class="text-amber-500">★★</span>')
+        .replace(/⭐/g, '<span class="text-amber-500">★</span>');
+
+      if (!inParagraph) {
+        output.push(`<p class="mb-3 text-warm-700 leading-relaxed">${processed}`);
+        inParagraph = true;
+      } else {
+        output.push(` ${processed}`);
+      }
+    }
+
+    if (inList) output.push('</div>');
+    if (inParagraph) output.push('</p>');
+
+    return output.join('\n');
+  };
 
   // Helper to render property showcase
   const renderPropertyShowcase = (showcase: PropertyShowcase) => (
@@ -452,9 +524,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
                       {/* Intro */}
                       <div
-                        className="mb-8"
+                        className="mb-8 text-lg"
                         dangerouslySetInnerHTML={{
-                          __html: `<p class="mb-4 text-warm-700 leading-relaxed text-lg">${markdownToHtml(structuredContent.intro)}</p>`
+                          __html: markdownToHtml(structuredContent.intro)
                         }}
                       />
 
@@ -490,23 +562,40 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                         </nav>
                       )}
 
-                      {/* Sections with Property Showcases */}
+                      {/* Sections with Rich Visual Styling */}
                       {structuredContent.sections?.map((section: ArticleSection, index: number) => {
                         const sectionShowcases = allShowcases.filter(
                           s => s.position === 'after-section' && s.afterSection === index
                         );
                         const isMidPoint = index === Math.floor((structuredContent.sections?.length || 0) / 2);
+                        const borderColors = ['border-accent-500', 'border-blue-500', 'border-emerald-500', 'border-orange-500', 'border-purple-500', 'border-rose-500'];
+                        const borderColor = borderColors[index % borderColors.length];
+                        const isAlt = index % 2 === 1;
 
                         return (
                           <div key={index}>
-                            <section id={slugify(section.title)} className="mb-8 scroll-mt-20">
-                              <h2 className="text-2xl font-semibold text-primary-900 mb-4">{section.title}</h2>
+                            <section
+                              id={slugify(section.title)}
+                              className={`scroll-mt-20 ${isAlt ? 'bg-warm-50/80 -mx-6 md:-mx-8 px-6 md:px-8 py-6 rounded-lg my-4' : 'mb-8'}`}
+                            >
+                              <h2 className={`text-2xl font-semibold text-primary-900 mb-5 pl-4 border-l-4 ${borderColor}`}>
+                                {section.title}
+                              </h2>
                               <div
                                 dangerouslySetInnerHTML={{
-                                  __html: `<p class="mb-4 text-warm-700 leading-relaxed">${markdownToHtml(section.content)}</p>`
+                                  __html: markdownToHtml(section.content)
                                 }}
                               />
                             </section>
+
+                            {/* Elegant divider between sections */}
+                            {!isAlt && index < (structuredContent.sections?.length || 0) - 1 && sectionShowcases.length === 0 && !isMidPoint && (
+                              <div className="flex items-center gap-4 my-6">
+                                <div className="flex-1 h-px bg-warm-200" />
+                                <span className="text-warm-300 text-xs">●</span>
+                                <div className="flex-1 h-px bg-warm-200" />
+                              </div>
+                            )}
 
                             {/* Property Showcases after this section */}
                             {sectionShowcases.map(renderPropertyShowcase)}
@@ -562,11 +651,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                       {getShowcasesByPosition('before-conclusion').map(renderPropertyShowcase)}
 
                       {/* Conclusion */}
-                      <section className="mt-10 p-6 bg-accent-50 rounded-lg border border-accent-200">
-                        <h2 className="text-xl font-semibold text-primary-900 mb-4">The Bottom Line</h2>
+                      <section className="mt-10 p-6 md:p-8 bg-gradient-to-br from-accent-50 to-warm-50 rounded-lg border border-accent-200">
+                        <h2 className="text-xl font-semibold text-primary-900 mb-4 flex items-center gap-3">
+                          <span className="w-8 h-8 bg-accent-500 text-white rounded-full flex items-center justify-center text-sm flex-shrink-0">✓</span>
+                          The Bottom Line
+                        </h2>
                         <div
                           dangerouslySetInnerHTML={{
-                            __html: `<p class="text-warm-700 leading-relaxed">${markdownToHtml(structuredContent.conclusion)}</p>`
+                            __html: markdownToHtml(structuredContent.conclusion)
                           }}
                         />
                       </section>
@@ -574,18 +666,21 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                       {/* Consultation CTA - Before FAQs */}
                       {(showConsultationCTA === true || showConsultationCTA === 'before-faqs') && <InlineConsultationCTA />}
 
-                      {/* FAQs - Optimized for mobile touch targets */}
+                      {/* FAQs - Styled with accent border */}
                       {structuredContent.faqs && structuredContent.faqs.length > 0 && (
                         <section id="faqs" className="mt-10 scroll-mt-20">
-                          <h2 className="text-2xl font-semibold text-primary-900 mb-6">Frequently Asked Questions</h2>
+                          <h2 className="text-2xl font-semibold text-primary-900 mb-6 pl-4 border-l-4 border-accent-500">Frequently Asked Questions</h2>
                           <div className="space-y-3">
                             {structuredContent.faqs.map((faq: FAQ, index: number) => (
-                              <details key={index} className="bg-white border border-warm-200 rounded-lg group shadow-sm">
+                              <details key={index} className="bg-white border border-warm-200 rounded-lg group shadow-sm hover:shadow-md transition-shadow">
                                 <summary className="flex items-center justify-between p-5 cursor-pointer font-medium text-primary-900 hover:bg-warm-50 transition-colors min-h-[56px]">
-                                  <span className="pr-4">{faq.question}</span>
+                                  <span className="pr-4 flex items-center gap-3">
+                                    <span className="flex-shrink-0 w-6 h-6 bg-accent-100 text-accent-700 rounded-full flex items-center justify-center text-xs font-bold">{index + 1}</span>
+                                    {faq.question}
+                                  </span>
                                   <span className="ml-2 text-warm-400 group-open:rotate-180 transition-transform flex-shrink-0">▼</span>
                                 </summary>
-                                <div className="px-5 pb-5 text-warm-700 leading-relaxed border-t border-warm-100">
+                                <div className="px-5 pb-5 text-warm-700 leading-relaxed border-t border-warm-100 ml-9">
                                   {faq.answer}
                                 </div>
                               </details>
@@ -618,14 +713,20 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
                       {/* Related Areas Links */}
                       {article.relatedAreas && article.relatedAreas.length > 0 && (
-                        <section className="mt-8 p-6 bg-warm-50 rounded-lg">
-                          <h3 className="font-semibold text-primary-900 mb-3">Explore These Areas</h3>
+                        <section className="mt-8 p-6 bg-warm-50 rounded-lg border border-warm-200">
+                          <h3 className="font-semibold text-primary-900 mb-4 flex items-center gap-2">
+                            <svg className="w-5 h-5 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            Explore These Areas
+                          </h3>
                           <div className="flex flex-wrap gap-2">
                             {article.relatedAreas.map((area: string) => (
                               <Link
                                 key={area}
                                 href={`/areas/${area}`}
-                                className="bg-white px-4 py-2 rounded border border-warm-200 text-accent-600 hover:border-accent-500 hover:bg-accent-50 transition-colors"
+                                className="bg-white px-4 py-2 rounded-lg border border-warm-200 text-accent-600 hover:border-accent-500 hover:bg-accent-50 hover:shadow-sm transition-all font-medium text-sm"
                               >
                                 {area.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')} →
                               </Link>
@@ -637,7 +738,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   ) : (
                     <div
                       className="prose prose-lg max-w-none"
-                      dangerouslySetInnerHTML={{ __html: `<p class="mb-4 text-warm-700 leading-relaxed">${contentHtml}</p>` }}
+                      dangerouslySetInnerHTML={{ __html: markdownToHtml(typeof article.content === 'string' ? article.content : '') }}
                     />
                   )}
                 </div>
