@@ -21,6 +21,9 @@ import { notFound } from 'next/navigation';
 import { getPropertyByRef, fetchXMLFeed, toUnifiedFormat } from '@/lib/xml-parser';
 import { generatePropertyContent, PropertyContent } from '@/lib/property-content-generator';
 import { loadAIContent, convertAIToPropertyContent } from '@/lib/ai-content-loader';
+import { developments, developers } from '@/data/developments';
+import fs from 'fs';
+import path from 'path';
 import PropertyPageClient from './PropertyPageClient';
 
 // ====================
@@ -218,30 +221,48 @@ function generateLocalBusinessSchema() {
   };
 }
 
-function generateBreadcrumbSchema(property: any) {
+function generateBreadcrumbSchema(property: any, developmentData?: { slug: string; name: string } | null) {
+  const items: any[] = [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://newbuildhomescostablanca.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Properties',
+      item: 'https://newbuildhomescostablanca.com/properties',
+    },
+  ];
+
+  if (developmentData) {
+    items.push({
+      '@type': 'ListItem',
+      position: 3,
+      name: developmentData.name,
+      item: `https://newbuildhomescostablanca.com/developments/${developmentData.slug}`,
+    });
+    items.push({
+      '@type': 'ListItem',
+      position: 4,
+      name: `${property.propertyType || 'Property'} in ${property.town || 'Costa Blanca'}`,
+      item: `https://newbuildhomescostablanca.com/properties/${property.reference || property.id}`,
+    });
+  } else {
+    items.push({
+      '@type': 'ListItem',
+      position: 3,
+      name: `${property.propertyType || 'Property'} in ${property.town || 'Costa Blanca'}`,
+      item: `https://newbuildhomescostablanca.com/properties/${property.reference || property.id}`,
+    });
+  }
+
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://newbuildhomescostablanca.com',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Properties',
-        item: 'https://newbuildhomescostablanca.com/properties',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: `${property.propertyType || 'Property'} in ${property.town || 'Costa Blanca'}`,
-        item: `https://newbuildhomescostablanca.com/properties/${property.reference || property.id}`,
-      },
-    ],
+    itemListElement: items,
   };
 }
 
@@ -318,11 +339,10 @@ export default async function PropertyPage({ params }: PageProps) {
     console.log(`📝 Using template content for ${reference}`);
   }
 
-  // Generate JSON-LD schemas
+  // Generate JSON-LD schemas (breadcrumb generated after linkingData below)
   const productSchema = generateProductSchema(property, content);
   const faqSchema = generateFAQSchema(content);
   const localBusinessSchema = generateLocalBusinessSchema();
-  const breadcrumbSchema = generateBreadcrumbSchema(property);
   const placeSchema = generatePlaceSchema(property);
   const speakableSchema = generateSpeakableSchema(property, content);
 
@@ -337,6 +357,76 @@ export default async function PropertyPage({ params }: PageProps) {
     validThrough: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
     url: `https://newbuildhomescostablanca.com/properties/${property.reference}`,
   };
+
+  // ====================
+  // INTERNAL LINKING DATA
+  // ====================
+
+  // Find matching development
+  const devName = property.developmentName || '';
+  const matchedDevelopment = developments.find(d =>
+    d.name.toLowerCase() === devName.toLowerCase() ||
+    (d.displayName && d.displayName.toLowerCase() === devName.toLowerCase())
+  );
+
+  // Find matching builder/developer
+  const builderName = property.developer || '';
+  const matchedBuilder = Object.values(developers).find(d =>
+    d.name.toLowerCase() === builderName.toLowerCase() ||
+    d.displayName.toLowerCase() === builderName.toLowerCase()
+  );
+  const builderSlug = matchedBuilder
+    ? Object.keys(developers).find(key => developers[key] === matchedBuilder) || ''
+    : '';
+
+  // Find related blog articles by area
+  let relatedArticles: { slug: string; title: string; category: string; readTime: number }[] = [];
+  try {
+    const articlesDir = path.join(process.cwd(), 'src/content/articles');
+    const articleFiles = fs.readdirSync(articlesDir).filter(f => f.endsWith('.json'));
+    const townSlugForMatch = (property.town || '').toLowerCase().replace(/\s+/g, '-');
+
+    for (const file of articleFiles) {
+      const articleData = JSON.parse(fs.readFileSync(path.join(articlesDir, file), 'utf-8'));
+      const areas: string[] = articleData.relatedAreas || [];
+      // Match if article's relatedAreas includes this property's town slug
+      // or if the article is a general guide (no specific areas = relevant to all)
+      const isAreaMatch = areas.some(a =>
+        a === townSlugForMatch ||
+        townSlugForMatch.includes(a) ||
+        a.includes(townSlugForMatch)
+      );
+      if (isAreaMatch) {
+        relatedArticles.push({
+          slug: articleData.slug,
+          title: articleData.title,
+          category: articleData.category,
+          readTime: articleData.readTime,
+        });
+      }
+    }
+    // Limit to 3 most relevant
+    relatedArticles = relatedArticles.slice(0, 3);
+  } catch (error) {
+    console.error('Error loading related articles:', error);
+  }
+
+  // Build linking data to pass to client
+  const linkingData = {
+    development: matchedDevelopment ? {
+      slug: matchedDevelopment.slug,
+      name: matchedDevelopment.displayName || matchedDevelopment.name,
+      status: matchedDevelopment.status,
+    } : null,
+    builder: matchedBuilder ? {
+      slug: builderSlug,
+      name: matchedBuilder.displayName || matchedBuilder.name,
+    } : null,
+    relatedArticles,
+  };
+
+  // Generate breadcrumb schema (needs linkingData)
+  const breadcrumbSchema = generateBreadcrumbSchema(property, linkingData.development);
 
   // Fetch similar properties - PRIORITIZE same town first, then fill with same region
   let similarProperties: any[] = [];
@@ -402,6 +492,7 @@ export default async function PropertyPage({ params }: PageProps) {
         property={property as any}
         content={content}
         similarProperties={similarProperties}
+        linkingData={linkingData}
       />
     </>
   );

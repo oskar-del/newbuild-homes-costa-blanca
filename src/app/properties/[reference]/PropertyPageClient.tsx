@@ -50,10 +50,17 @@ const AGENT_PHOTO = 'https://hanssonhertzell.se/media/images/teams/thumbnails/o_
 // INTERFACES
 // ====================
 
+interface LinkingData {
+  development: { slug: string; name: string; status: string } | null;
+  builder: { slug: string; name: string } | null;
+  relatedArticles: { slug: string; title: string; category: string; readTime: number }[];
+}
+
 interface PropertyPageClientProps {
   property: UnifiedProperty;
   content: PropertyContent;
   similarProperties: UnifiedProperty[];
+  linkingData: LinkingData;
 }
 
 // ====================
@@ -254,7 +261,7 @@ function PropertyCard({ property }: { property: UnifiedProperty }) {
 // MAIN COMPONENT
 // ====================
 
-export default function PropertyPageClient({ property, content, similarProperties }: PropertyPageClientProps) {
+export default function PropertyPageClient({ property, content, similarProperties, linkingData }: PropertyPageClientProps) {
   // State
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -355,12 +362,20 @@ export default function PropertyPageClient({ property, content, similarPropertie
 
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* ==================== BREADCRUMB ==================== */}
-        <nav className="flex items-center gap-2 text-sm text-warm-500 mb-6">
+        <nav className="flex items-center gap-2 text-sm text-warm-500 mb-6 flex-wrap">
           <Link href="/" className="hover:text-accent-600">Home</Link>
           <span>›</span>
           <Link href="/properties" className="hover:text-accent-600">Properties</Link>
+          {linkingData.development && (
+            <>
+              <span>›</span>
+              <Link href={`/developments/${linkingData.development.slug}`} className="hover:text-accent-600">
+                {linkingData.development.name}
+              </Link>
+            </>
+          )}
           <span>›</span>
-          <span className="text-warm-700">{property.reference || property.id}</span>
+          <span className="text-warm-700">{property.propertyType} in {property.town}</span>
         </nav>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -419,9 +434,40 @@ export default function PropertyPageClient({ property, content, similarPropertie
               <div className="flex flex-wrap items-center gap-3 text-warm-600 mb-4">
                 <span className="font-medium">{property.town}, {property.province || 'Alicante'}</span>
                 <span className="text-warm-300">•</span>
-                <span className="bg-accent-100 text-accent-800 px-3 py-1 rounded-full text-sm font-medium">
+                <Link
+                  href={`/properties/${slugify(property.propertyType || 'property')}s`}
+                  className="bg-accent-100 text-accent-800 px-3 py-1 rounded-full text-sm font-medium hover:bg-accent-200 transition-colors"
+                >
                   {property.propertyType || 'Property'}
-                </span>
+                </Link>
+                {linkingData.development && (
+                  <>
+                    <span className="text-warm-300">•</span>
+                    <Link
+                      href={`/developments/${linkingData.development.slug}`}
+                      className="text-accent-600 hover:text-accent-700 font-medium flex items-center gap-1"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                      </svg>
+                      {linkingData.development.name}
+                    </Link>
+                  </>
+                )}
+                {linkingData.builder && (
+                  <>
+                    <span className="text-warm-300">•</span>
+                    <Link
+                      href={`/builders/${linkingData.builder.slug}`}
+                      className="text-accent-600 hover:text-accent-700 font-medium flex items-center gap-1"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                      Built by {linkingData.builder.name}
+                    </Link>
+                  </>
+                )}
                 <span className="text-warm-300">•</span>
                 <a
                   href={mapsUrl}
@@ -891,6 +937,121 @@ export default function PropertyPageClient({ property, content, similarPropertie
                 </Link>
               </div>
             </div>
+
+            {/* ==================== EXPLORE MORE PROPERTIES ==================== */}
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-warm-100">
+              <h2 className="text-xl font-bold text-primary-900 mb-4 flex items-center gap-2">
+                <svg className="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                Explore More Properties
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                {property.town && (
+                  <Link
+                    href={`/properties/${slugify(property.town)}`}
+                    className="flex items-center gap-2 p-3 rounded-lg bg-primary-50 hover:bg-primary-100 transition-colors group"
+                  >
+                    <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    </svg>
+                    <span className="text-sm font-medium text-primary-800">All in {property.town}</span>
+                  </Link>
+                )}
+                {property.propertyType && (
+                  <Link
+                    href={`/properties/${slugify(property.propertyType)}s`}
+                    className="flex items-center gap-2 p-3 rounded-lg bg-accent-50 hover:bg-accent-100 transition-colors group"
+                  >
+                    <svg className="w-5 h-5 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    <span className="text-sm font-medium text-accent-800">All {property.propertyType}s</span>
+                  </Link>
+                )}
+                {property.bedrooms > 0 && (
+                  <Link
+                    href={`/properties/${property.bedrooms}-bed`}
+                    className="flex items-center gap-2 p-3 rounded-lg bg-warm-100 hover:bg-warm-200 transition-colors group"
+                  >
+                    <svg className="w-5 h-5 text-warm-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                    </svg>
+                    <span className="text-sm font-medium text-warm-700">{property.bedrooms} Bedroom Homes</span>
+                  </Link>
+                )}
+                {property.price && property.price < 300000 && (
+                  <Link
+                    href="/properties/under-300k"
+                    className="flex items-center gap-2 p-3 rounded-lg bg-success-50 hover:bg-success-100 transition-colors group"
+                  >
+                    <svg className="w-5 h-5 text-success-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-sm font-medium text-success-700">Under €300k</span>
+                  </Link>
+                )}
+                <Link
+                  href="/properties/key-ready"
+                  className="flex items-center gap-2 p-3 rounded-lg bg-success-50 hover:bg-success-100 transition-colors group"
+                >
+                  <svg className="w-5 h-5 text-success-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                  </svg>
+                  <span className="text-sm font-medium text-success-700">Key Ready</span>
+                </Link>
+                {property.region && (
+                  <Link
+                    href={`/properties/${slugify(property.region)}`}
+                    className="flex items-center gap-2 p-3 rounded-lg bg-primary-50 hover:bg-primary-100 transition-colors group"
+                  >
+                    <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                    </svg>
+                    <span className="text-sm font-medium text-primary-800">{property.region}</span>
+                  </Link>
+                )}
+              </div>
+            </div>
+
+            {/* ==================== RELATED BLOG ARTICLES ==================== */}
+            {linkingData.relatedArticles.length > 0 && (
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-warm-100">
+                <h2 className="text-xl font-bold text-primary-900 mb-4 flex items-center gap-2">
+                  <svg className="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                  Guides for Buying in {property.town || 'Costa Blanca'}
+                </h2>
+                <div className="space-y-3">
+                  {linkingData.relatedArticles.map((article) => (
+                    <Link
+                      key={article.slug}
+                      href={`/blog/${article.slug}`}
+                      className="flex items-center gap-4 p-3 rounded-lg hover:bg-warm-50 transition-colors group"
+                    >
+                      <div className="w-10 h-10 bg-accent-100 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-accent-200 transition-colors">
+                        <svg className="w-5 h-5 text-accent-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="font-medium text-primary-900 group-hover:text-accent-700 transition-colors line-clamp-1">
+                          {article.title}
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-warm-500">
+                          <span className="bg-warm-100 px-2 py-0.5 rounded text-xs">{article.category}</span>
+                          <span>{article.readTime} min read</span>
+                        </div>
+                      </div>
+                      <svg className="w-5 h-5 text-warm-400 group-hover:text-accent-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* ==================== FAQ ACCORDION ==================== */}
             <div className="bg-white rounded-xl p-6 shadow-sm border border-warm-100">
