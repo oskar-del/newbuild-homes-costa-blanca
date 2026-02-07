@@ -289,7 +289,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
   // Filter developments that match this area by town field
   // Handle compound towns like "Moraira_Teulada" by splitting on underscores
-  const developments = allDevelopments
+  const allMatchingDevelopments = allDevelopments
     .filter(dev => {
       const town = (dev.town || '').toLowerCase().replace(/_/g, ' ');
       const zone = (dev.zone || '').toLowerCase().replace(/_/g, ' ');
@@ -305,8 +305,14 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       if (zoneParts.some(part => part.includes(areaNameLower) || areaNameLower.includes(part))) return true;
 
       return false;
-    })
-    .slice(0, 8) // Limit to 8 properties
+    });
+
+  // Update property count based on actual developments found
+  data.propertyCount = allMatchingDevelopments.length;
+
+  // Take only first 8 for display on page
+  const developments = allMatchingDevelopments
+    .slice(0, 8)
     .map(dev => ({
       name: dev.name || 'New Build Property',
       slug: dev.slug,

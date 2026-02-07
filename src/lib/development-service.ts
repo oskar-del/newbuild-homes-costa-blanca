@@ -562,18 +562,68 @@ export async function getAllDevelopments(): Promise<Development[]> {
 
 /**
  * Get a single development by slug
+ *
+ * Fallback strategy:
+ * 1. First tries to find by dynamic slug (from name)
+ * 2. If not found, checks static developments.ts data for matching slug
+ *
+ * This handles cases where static slugs differ from what createSlug() would generate,
+ * e.g., "GRECIA II" -> dynamic slug "grecia-ii" but static slug is "grecia-ii-la-finca"
  */
 export async function getDevelopmentBySlug(slug: string): Promise<Development | null> {
   const developments = await getAllDevelopments();
-  return developments.find(d => d.slug === slug) || null;
+
+  // First try: exact match by dynamic slug
+  const development = developments.find(d => d.slug === slug);
+  if (development) {
+    return development;
+  }
+
+  // Fallback: check static developments data for matching slug
+  try {
+    const { developments: staticDevelopments } = await import('@/data/developments');
+    const staticDevelopment = staticDevelopments.find(d => d.slug === slug);
+
+    if (staticDevelopment) {
+      // Convert static development format to service Development format
+      // Find the matching development in our dynamically generated list by name
+      const dynamicDev = developments.find(d => d.name.toUpperCase() === staticDevelopment.name.toUpperCase());
+      if (dynamicDev) {
+        return dynamicDev;
+      }
+    }
+  } catch (error) {
+    console.error('[DEV-SERVICE] Failed to load static developments fallback:', error);
+  }
+
+  return null;
 }
 
 /**
  * Get all development slugs (for static generation)
+ *
+ * Returns all unique slugs including:
+ * - Dynamic slugs generated from development names
+ * - Static slugs from developments.ts that differ from dynamic slugs
+ *
+ * This ensures Next.js static generation covers all valid development routes
  */
 export async function getAllDevelopmentSlugs(): Promise<string[]> {
   const developments = await getAllDevelopments();
-  return developments.map(d => d.slug);
+  const dynamicSlugs = developments.map(d => d.slug);
+
+  // Add static development slugs that may differ from dynamic ones
+  let staticSlugs: string[] = [];
+  try {
+    const { developments: staticDevelopments } = await import('@/data/developments');
+    staticSlugs = staticDevelopments.map(d => d.slug);
+  } catch (error) {
+    console.error('[DEV-SERVICE] Failed to load static development slugs:', error);
+  }
+
+  // Combine and deduplicate
+  const allSlugs = [...new Set([...dynamicSlugs, ...staticSlugs])];
+  return allSlugs;
 }
 
 /**
