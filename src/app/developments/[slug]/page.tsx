@@ -168,23 +168,66 @@ function getBuilderContent(builderSlug: string): BuilderContent | null {
 }
 
 // Check for enhanced content JSON
+// Priority: 1) projects/ directory (AI-generated development content)
+//           2) developments/ directory (only if it has correct nested format)
 function getEnhancedContent(slug: string): EnhancedContent | null {
+  // First check projects directory (AI-generated development/project content from generate-all-content.ts)
+  const projectPath = path.join(process.cwd(), 'src', 'content', 'projects', `${slug}.json`);
+  if (fs.existsSync(projectPath)) {
+    try {
+      const data = JSON.parse(fs.readFileSync(projectPath, 'utf-8'));
+      if (data.projectName && data.content) {
+        return data;
+      }
+    } catch { /* skip invalid files */ }
+  }
+
+  // Fallback: check developments directory (legacy Miralbo content files with nested format)
   const contentPath = path.join(process.cwd(), 'src', 'content', 'developments', `${slug}.json`);
   if (!fs.existsSync(contentPath)) return null;
   try {
-    return JSON.parse(fs.readFileSync(contentPath, 'utf-8'));
+    const data = JSON.parse(fs.readFileSync(contentPath, 'utf-8'));
+    // Only use if it has the correct nested format (projectName + content wrapper)
+    // Skip flat-format files (those are for property pages via ai-content-loader.ts)
+    if (data.projectName && data.content) {
+      return data;
+    }
+    return null;
   } catch {
     return null;
   }
 }
 
-// Get all slugs from both sources
+// Get all slugs from enhanced content sources (projects/ and correctly-formatted developments/)
 function getEnhancedSlugs(): string[] {
+  const slugs: string[] = [];
+
+  // Read from projects directory (AI-generated development/project content)
+  const projectsDir = path.join(process.cwd(), 'src', 'content', 'projects');
+  if (fs.existsSync(projectsDir)) {
+    slugs.push(
+      ...fs.readdirSync(projectsDir)
+        .filter(file => file.endsWith('.json') && file !== 'index.json')
+        .map(file => file.replace('.json', ''))
+    );
+  }
+
+  // Also read from developments directory, but ONLY files with correct nested format
+  // (skip flat-format property files like n7911.json — those are for /properties/ pages)
   const contentDir = path.join(process.cwd(), 'src', 'content', 'developments');
-  if (!fs.existsSync(contentDir)) return [];
-  return fs.readdirSync(contentDir)
-    .filter(file => file.endsWith('.json') && file !== 'index.json')
-    .map(file => file.replace('.json', ''));
+  if (fs.existsSync(contentDir)) {
+    for (const file of fs.readdirSync(contentDir)) {
+      if (!file.endsWith('.json') || file === 'index.json') continue;
+      try {
+        const data = JSON.parse(fs.readFileSync(path.join(contentDir, file), 'utf-8'));
+        if (data.projectName && data.content) {
+          slugs.push(file.replace('.json', ''));
+        }
+      } catch { /* skip invalid files */ }
+    }
+  }
+
+  return [...new Set(slugs)];
 }
 
 export async function generateStaticParams() {
