@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import { DM_Sans } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 import { organizationSchema, websiteSchema, localBusinessSchema, toJsonLd } from '@/lib/schema';
 import Header from '@/components/Header';
@@ -9,12 +9,18 @@ import CookieConsent from '@/components/CookieConsent';
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
-// Load DM Sans font
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  display: 'swap',
+// Use system font stack with DM Sans loaded via CSS fallback
+// Google Fonts import moved to globals.css @import for reliability
+const dmSans = localFont({
+  src: [
+    { path: '../fonts/DMSans-Regular.woff2', weight: '400', style: 'normal' },
+    { path: '../fonts/DMSans-Medium.woff2', weight: '500', style: 'normal' },
+    { path: '../fonts/DMSans-SemiBold.woff2', weight: '600', style: 'normal' },
+    { path: '../fonts/DMSans-Bold.woff2', weight: '700', style: 'normal' },
+  ],
   variable: '--font-dm-sans',
+  display: 'swap',
+  fallback: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
 });
 
 export const metadata: Metadata = {

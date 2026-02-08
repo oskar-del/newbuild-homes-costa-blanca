@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { UnifiedProperty } from '@/lib/unified-property';
@@ -41,12 +42,13 @@ function getPropertyTitle(property: UnifiedProperty): string {
 }
 
 // Generate search-query style alt tag for SEO
-function getPropertyAlt(property: UnifiedProperty): string {
+function getPropertyAlt(property: UnifiedProperty, imageIndex: number = 0): string {
   const type = (property.propertyType || 'property').toLowerCase();
   const beds = property.bedrooms ? `${property.bedrooms} bedroom ` : '';
   const town = property.town || 'Costa Blanca';
   const priceStr = property.price ? ` €${Math.round(property.price / 1000)}k` : '';
-  return `${beds}new build ${type} for sale ${town} Spain${priceStr}`.trim();
+  const photoNum = imageIndex > 0 ? ` photo ${imageIndex + 1}` : '';
+  return `${beds}new build ${type} for sale ${town} Spain${priceStr}${photoNum}`.trim();
 }
 
 // Get badge type based on property features - refined colours
@@ -73,26 +75,92 @@ function getBadgeType(property: UnifiedProperty): { text: string; className: str
 export default function PropertyCard({ property }: PropertyCardProps) {
   const badge = getBadgeType(property);
   const keyReady = isKeyReady(property);
-  const imageUrl = property.images?.[0]?.url || '/placeholder-property.jpg';
+  const images = property.images?.filter(img => img.url) || [];
+  const imageCount = images.length;
+  const hasMultipleImages = imageCount > 1;
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const goToPrev = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentImageIndex(prev => (prev === 0 ? imageCount - 1 : prev - 1));
+  }, [imageCount]);
+
+  const goToNext = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentImageIndex(prev => (prev === imageCount - 1 ? 0 : prev + 1));
+  }, [imageCount]);
+
+  const currentImage = images[currentImageIndex]?.url || '/placeholder-property.jpg';
 
   return (
     <Link
       href={`/properties/${property.reference}`}
       className="block min-w-[300px] max-w-[300px] bg-warm-50 rounded-lg overflow-hidden border border-warm-200 hover:shadow-medium transition-all duration-250 hover:-translate-y-0.5 flex-shrink-0"
     >
-      {/* Image */}
-      <div className="relative h-[200px]">
+      {/* Image with navigation arrows */}
+      <div className="relative h-[200px] group/image">
         <Image
-          src={imageUrl}
-          alt={getPropertyAlt(property)}
+          src={currentImage}
+          alt={getPropertyAlt(property, currentImageIndex)}
           fill
           className="object-cover"
           sizes="300px"
           unoptimized
         />
+
+        {/* Navigation arrows - visible on hover */}
+        {hasMultipleImages && (
+          <>
+            <button
+              onClick={goToPrev}
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-primary-900 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-200 shadow-sm z-10"
+              aria-label="Previous photo"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={goToNext}
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-primary-900 flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-opacity duration-200 shadow-sm z-10"
+              aria-label="Next photo"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            {/* Dot indicators */}
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-10">
+              {images.slice(0, 5).map((_, idx) => (
+                <span
+                  key={idx}
+                  className={`w-1.5 h-1.5 rounded-full transition-colors ${
+                    idx === currentImageIndex ? 'bg-white' : 'bg-white/50'
+                  }`}
+                />
+              ))}
+              {imageCount > 5 && (
+                <span className="text-white text-[10px] leading-none ml-0.5">+{imageCount - 5}</span>
+              )}
+            </div>
+          </>
+        )}
+
+        {/* Badge */}
         {badge && (
-          <span className={`absolute top-3 left-3 px-3 py-1 rounded text-xs font-medium text-white ${badge.className}`}>
+          <span className={`absolute top-3 left-3 px-3 py-1 rounded text-xs font-medium text-white ${badge.className} z-10`}>
             {badge.text}
+          </span>
+        )}
+
+        {/* Image count */}
+        {hasMultipleImages && (
+          <span className="absolute top-3 right-3 bg-black/50 text-white text-[10px] px-2 py-0.5 rounded z-10">
+            {currentImageIndex + 1}/{imageCount}
           </span>
         )}
       </div>

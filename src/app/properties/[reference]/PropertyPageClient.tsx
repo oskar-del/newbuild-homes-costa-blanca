@@ -265,6 +265,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
   // State
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [galleryIndex, setGalleryIndex] = useState(0);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [formData, setFormData] = useState({
     name: '',
@@ -383,22 +384,51 @@ export default function PropertyPageClient({ property, content, similarPropertie
           <div className="lg:col-span-2 space-y-8">
             {/* ==================== IMAGE GALLERY ==================== */}
             <div className="space-y-3">
-              {/* Main Image */}
-              <div 
+              {/* Main Image with inline arrows */}
+              <div
                 className="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden cursor-pointer group"
-                onClick={() => openLightbox(0)}
+                onClick={() => openLightbox(galleryIndex)}
               >
                 <Image
-                  src={mainImage}
-                  alt={content.imageAltTags[0] || content.seoTitle}
+                  src={images[galleryIndex]?.url || mainImage}
+                  alt={content.imageAltTags[galleryIndex] || content.seoTitle}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                   priority
                   sizes="(max-width: 1024px) 100vw, 66vw"
+                  unoptimized
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
-                <div className="absolute bottom-4 right-4 bg-primary-900/80 text-white px-3 py-1 rounded-lg text-sm">
-                  Click to view all {images.length} photos
+
+                {/* Inline navigation arrows */}
+                {images.length > 1 && (
+                  <>
+                    <button
+                      onClick={(e) => { e.stopPropagation(); setGalleryIndex(prev => prev === 0 ? images.length - 1 : prev - 1); }}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-primary-900 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md z-10"
+                      aria-label="Previous photo"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                      </svg>
+                    </button>
+                    <button
+                      onClick={(e) => { e.stopPropagation(); setGalleryIndex(prev => prev === images.length - 1 ? 0 : prev + 1); }}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white text-primary-900 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-md z-10"
+                      aria-label="Next photo"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  </>
+                )}
+
+                {/* Photo counter */}
+                <div className="absolute bottom-4 right-4 bg-primary-900/80 text-white px-3 py-1 rounded-lg text-sm flex items-center gap-2">
+                  <span>{galleryIndex + 1} / {images.length}</span>
+                  <span className="text-white/60">|</span>
+                  <span>Click for fullscreen</span>
                 </div>
               </div>
               
