@@ -289,15 +289,30 @@ function parseMiralboFeed(xml: string): Property[] {
   }));
 }
 
-// Parse Background Properties feed
+// Parse Background Properties feed — ONLY new builds (saleType=1) and land/plots
 function parseBackgroundFeed(xml: string): Property[] {
   const parser = new XMLParser({ ignoreAttributes: false });
   const parsed = parser.parse(xml);
   const properties = parsed?.sooprema?.properties?.property || [];
   const propArray = Array.isArray(properties) ? properties : [properties];
-  
-  // Note: Remove strict filter - feed structure may vary
-  return propArray.map((p: any) => ({
+
+  let skippedResales = 0;
+  const filtered = propArray.filter((p: any) => {
+    const saleType = String(p.saleType || p.saletype || p.sale_type || '');
+    const propertyType = safeStr(p.type).toLowerCase();
+    const isNewBuild = saleType === '1';
+    const isLand = propertyType.includes('land') || propertyType.includes('plot') ||
+                   propertyType.includes('terreno') || propertyType.includes('solar');
+    if (!isNewBuild && !isLand) {
+      skippedResales++;
+      return false;
+    }
+    return true;
+  });
+
+  console.log(`[Background Feed] Total: ${propArray.length}, Kept: ${filtered.length} (new builds + land), Skipped: ${skippedResales} resales`);
+
+  return filtered.map((p: any) => ({
       reference: String(p.reference || ''),
       title: safeStr(p.title),
       description: safeStr(p.description),
@@ -409,7 +424,7 @@ async function generatePropertyContent(property: Property): Promise<any> {
 
   const response = await anthropic.messages.create({
     model: AI_MODEL,
-    max_tokens: 3500, // Increased for more comprehensive content
+    max_tokens: 5000, // Increased for more comprehensive content
     system: JSON_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: prompt }],
   });
@@ -445,7 +460,7 @@ async function generateAreaContent(town: string, properties: Property[]): Promis
 
   const response = await anthropic.messages.create({
     model: AI_MODEL,
-    max_tokens: 3500, // Increased for comprehensive area content
+    max_tokens: 5000, // Increased for comprehensive area content
     system: JSON_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: prompt }],
   });

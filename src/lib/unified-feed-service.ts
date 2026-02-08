@@ -304,19 +304,22 @@ async function parseBackgroundFeed(): Promise<UnifiedProperty[]> {
     const properties: UnifiedProperty[] = [];
     
     const items = Array.isArray(data) ? data : data.properties || [];
-    
+    let skipped = 0;
+
     for (const item of items) {
       try {
         const property = parseBackgroundProperty(item);
         if (property) {
           properties.push(property);
+        } else {
+          skipped++;
         }
       } catch (e) {
         // Silent fail for individual properties
       }
     }
-    
-    console.log(`Parsed ${properties.length} properties from Background feed`);
+
+    console.log(`[Background JSON] Parsed ${items.length} total, kept ${properties.length} (new builds + land), skipped ${skipped} resales`);
     return properties;
   } catch (error) {
     console.error('Error fetching Background feed:', error);
@@ -326,15 +329,20 @@ async function parseBackgroundFeed(): Promise<UnifiedProperty[]> {
 
 /**
  * Parse Background Properties XML feed (when it redirects to XML)
+ *
+ * IMPORTANT: Only include new build properties (saleType=1) and land/plots.
+ * The Background feed contains resales too, which we do NOT want on a new build site.
  */
 function parseBackgroundXmlFeed(xml: string): UnifiedProperty[] {
   const properties: UnifiedProperty[] = [];
-  
+  let totalParsed = 0;
+  let skippedNotNewBuild = 0;
+
   // Try to match property/listing elements
-  const propertyMatches = xml.match(/<property>[\s\S]*?<\/property>/g) || 
-                          xml.match(/<listing>[\s\S]*?<\/listing>/g) || 
+  const propertyMatches = xml.match(/<property>[\s\S]*?<\/property>/g) ||
+                          xml.match(/<listing>[\s\S]*?<\/listing>/g) ||
                           [];
-  
+
   for (const propXml of propertyMatches) {
     try {
       const getValue = (tag: string): string => {
@@ -344,13 +352,26 @@ function parseBackgroundXmlFeed(xml: string): UnifiedProperty[] {
         if (simpleMatch) return simpleMatch[1].trim();
         return '';
       };
-      
+
+      totalParsed++;
+
+      // FILTER: Only allow new builds (saleType=1) and land/plots
+      const saleType = getValue('saleType') || getValue('saletype') || getValue('sale_type');
+      const propertyType = (getValue('type') || '').toLowerCase();
+      const isNewBuild = saleType === '1';
+      const isLand = propertyType.includes('land') || propertyType.includes('plot') || propertyType.includes('terreno') || propertyType.includes('solar');
+
+      if (!isNewBuild && !isLand) {
+        skippedNotNewBuild++;
+        continue;
+      }
+
       const reference = getValue('id') || getValue('ref') || getValue('reference');
       if (!reference) continue;
-      
+
       // Parse images
       const images: PropertyImage[] = [];
-      const imageMatches = propXml.match(/<image[^>]*>[\s\S]*?<\/image>/g) || 
+      const imageMatches = propXml.match(/<image[^>]*>[\s\S]*?<\/image>/g) ||
                            propXml.match(/<photo[^>]*>([^<]*)<\/photo>/g) || [];
       for (const imgXml of imageMatches) {
         const urlMatch = imgXml.match(/<url>([^<]*)<\/url>/) || imgXml.match(/>([^<]+)</);
@@ -358,13 +379,13 @@ function parseBackgroundXmlFeed(xml: string): UnifiedProperty[] {
           images.push({ url: urlMatch[1], caption: '' });
         }
       }
-      
+
       const property: UnifiedProperty = {
         id: `bp-${reference}`,
         reference,
         source: 'background-properties',
         town: getValue('town') || getValue('location') || getValue('city'),
-        locationDetail: '',
+        locationDetail: getValue('zone') || '',
         province: getValue('province') || 'Alicante',
         region: determineRegion(getValue('town') || getValue('location') || ''),
         latitude: parseFloat(getValue('latitude')) || 0,
@@ -385,25 +406,40 @@ function parseBackgroundXmlFeed(xml: string): UnifiedProperty[] {
         hasParking: false,
         hasSeaview: false,
         hasGolfview: false,
+        isNewBuild: isNewBuild,
+        zone: getValue('zone') || undefined,
       };
-      
+
       properties.push(property);
     } catch (e) {
       // Silent fail
     }
   }
-  
-  console.log(`[Background] Parsed ${properties.length} properties from XML feed`);
+
+  console.log(`[Background XML] Parsed ${totalParsed} total, kept ${properties.length} (new builds + land), skipped ${skippedNotNewBuild} resales`);
   return properties;
 }
 
 /**
- * Parse a single Background Properties item
+ * Parse a single Background Properties item (JSON format)
+ *
+ * IMPORTANT: Only include new build properties (saleType=1) and land/plots.
+ * Returns null for resale properties that should not appear on the site.
  */
 function parseBackgroundProperty(item: any): UnifiedProperty | null {
   const reference = item.reference || item.ref || item.id;
   if (!reference) return null;
-  
+
+  // FILTER: Only allow new builds (saleType=1) and land/plots
+  const saleType = String(item.saleType || item.saletype || item.sale_type || '');
+  const rawType = String(item.type || item.property_type || '').toLowerCase();
+  const isNewBuild = saleType === '1';
+  const isLand = rawType.includes('land') || rawType.includes('plot') || rawType.includes('terreno') || rawType.includes('solar');
+
+  if (!isNewBuild && !isLand) {
+    return null; // Skip resale properties
+  }
+
   // Parse images
   const images: PropertyImage[] = [];
   const imageList = item.images || item.photos || [];
@@ -413,19 +449,19 @@ function parseBackgroundProperty(item: any): UnifiedProperty | null {
       images.push({ url, caption: '' });
     }
   }
-  
+
   // Parse descriptions
   const descriptions: PropertyDescription = {};
   if (item.description) {
-    descriptions.en = typeof item.description === 'string' 
-      ? item.description 
+    descriptions.en = typeof item.description === 'string'
+      ? item.description
       : item.description.en || item.description.english || '';
   }
-  
+
   // Parse features
   const features: string[] = item.features || [];
   const featuresLower = features.map((f: string) => f.toLowerCase()).join(' ');
-  
+
   // Determine property type
   let propertyType = item.type || item.property_type || 'Property';
   const typeMapping: Record<string, string> = {
@@ -434,6 +470,10 @@ function parseBackgroundProperty(item: any): UnifiedProperty | null {
     'townhouse': 'Townhouse',
     'penthouse': 'Penthouse',
     'bungalow': 'Bungalow',
+    'land': 'Land',
+    'plot': 'Land',
+    'terreno': 'Land',
+    'solar': 'Land',
   };
   for (const [key, value] of Object.entries(typeMapping)) {
     if (propertyType.toLowerCase().includes(key)) {
@@ -441,12 +481,12 @@ function parseBackgroundProperty(item: any): UnifiedProperty | null {
       break;
     }
   }
-  
+
   return {
     id: `bp-${reference}`,
     reference,
     source: 'background-properties',
-    
+
     // Location
     town: item.town || item.location || item.city || '',
     locationDetail: item.location_detail || '',
@@ -454,24 +494,24 @@ function parseBackgroundProperty(item: any): UnifiedProperty | null {
     region: determineRegion(item.town || item.location || ''),
     latitude: parseFloat(item.latitude) || 0,
     longitude: parseFloat(item.longitude) || 0,
-    
+
     // Property details
     propertyType,
     bedrooms: parseInt(item.bedrooms) || parseInt(item.rooms) || 0,
     bathrooms: parseInt(item.bathrooms) || parseInt(item.baths) || 0,
     builtArea: parseFloat(item.built_area) || parseFloat(item.size) || 0,
     plotArea: parseFloat(item.plot_area) || parseFloat(item.plot) || 0,
-    
+
     // Pricing
     price: parseFloat(item.price) || 0,
     currency: item.currency || 'EUR',
-    
+
     // Media
     images,
-    
+
     // Descriptions
     descriptions,
-    
+
     // Features
     features,
     hasPool: featuresLower.includes('pool'),
@@ -480,6 +520,8 @@ function parseBackgroundProperty(item: any): UnifiedProperty | null {
     hasParking: featuresLower.includes('parking') || featuresLower.includes('garage'),
     hasSeaview: featuresLower.includes('sea view'),
     hasGolfview: featuresLower.includes('golf'),
+    isNewBuild: isNewBuild,
+    zone: item.zone || undefined,
   };
 }
 
