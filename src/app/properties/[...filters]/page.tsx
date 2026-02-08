@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { fetchXMLFeed, toUnifiedFormat } from '@/lib/xml-parser';
-import { getPropertyDevelopmentInfo } from '@/data/property-development-mapping';
+import { getPropertyDevelopmentInfo, propertyMapping } from '@/data/property-development-mapping';
 import { breadcrumbSchema, collectionPageSchema, faqSchema, toJsonLd } from '@/lib/schema';
 import { PROPERTIES_SEO_CONTENT } from '@/data/properties-seo-content';
+import PropertyImageCarousel from '@/components/PropertyImageCarousel';
 
 // SEO Filter Configuration
 // Maps URL slugs to filter criteria
@@ -20,10 +20,30 @@ interface FilterConfig {
   region?: string;
 }
 
-// Key Ready properties by reference (manual list maintained in PropertyCard.tsx too)
-const KEY_READY_REFERENCES = [
-  'N6299', 'N8535', 'N8770', 'N8550', 'N9300',
-];
+// Compute key-ready properties from ALL delivery dates in the development mapping
+// A property is key-ready if its delivery date is in the past or within 60 days
+function getKeyReadyReferences(): Set<string> {
+  const keyReadySet = new Set<string>();
+  const now = Date.now();
+  const sixtyDaysMs = 60 * 24 * 60 * 60 * 1000;
+
+  for (const [reference, devInfo] of Object.entries(propertyMapping)) {
+    if (!devInfo?.deliveryDate) continue;
+
+    // Parse delivery date (format: DD-MM-YYYY)
+    const parts = devInfo.deliveryDate.split('-');
+    if (parts.length !== 3) continue;
+    const deliveryDate = new Date(`${parts[2]}-${parts[1]}-${parts[0]}`);
+
+    if (!isNaN(deliveryDate.getTime()) && deliveryDate.getTime() <= now + sixtyDaysMs) {
+      keyReadySet.add(reference);
+    }
+  }
+
+  return keyReadySet;
+}
+
+const KEY_READY_REFERENCES = getKeyReadyReferences();
 
 // Normalize property type from raw feed values to canonical names
 function normalizePropertyType(rawType: string): string {
@@ -350,7 +370,7 @@ function matchesFilter(property: any, config: FilterConfig): boolean {
                            desc.includes('ready to move') || desc.includes('immediate delivery') ||
                            desc.includes('move in') || desc.includes('available now') ||
                            desc.includes('completed') || desc.includes('entrega inmediata');
-    const isKeyReadyRef = KEY_READY_REFERENCES.includes(property.reference);
+    const isKeyReadyRef = KEY_READY_REFERENCES.has(property.reference);
     const isKeyReadyStatus = property.constructionStatus === 'key-ready' || property.constructionStatus === 'completed';
     if (!isKeyReadyDesc && !isKeyReadyRef && !isKeyReadyStatus) return false;
   }
@@ -409,19 +429,22 @@ export default async function FilteredPropertiesPage({ params }: { params: Promi
 
   // Fetch from xml-parser (same source as detail page) to prevent 404s
   const rawProperties = await fetchXMLFeed();
+  const today = new Date('2026-02-08'); // Today's date
   const allProperties = rawProperties.map(p => {
     const u = toUnifiedFormat(p);
     // Get development mapping for constructionStatus
     const devInfo = getPropertyDevelopmentInfo(p.ref);
     let constructionStatus: string | undefined;
     if (devInfo?.deliveryDate) {
-      const parts = devInfo.deliveryDate.split(/[-/]/);
-      const deliveryDate = parts[0].length === 4
-        ? new Date(`${parts[0]}-${parts[1]}-${parts[2]}`)
-        : new Date(`${parts[2]}-${parts[1]}-${parts[0]}`);
+      const parts = devInfo.deliveryDate.split('-');
+      const deliveryDate = new Date(`${parts[2]}-${parts[1]}-${parts[0]}`);
       if (!isNaN(deliveryDate.getTime())) {
-        const sixtyDaysFromNow = new Date(Date.now() + 60 * 24 * 60 * 60 * 1000);
-        if (deliveryDate <= sixtyDaysFromNow) constructionStatus = 'key-ready';
+        const sixtyDaysFromNow = new Date(today.getTime() + 60 * 24 * 60 * 60 * 1000);
+        if (deliveryDate <= sixtyDaysFromNow && deliveryDate >= today) {
+          constructionStatus = 'key-ready';
+        } else if (deliveryDate < today) {
+          constructionStatus = 'completed';
+        }
       }
     }
     return {
@@ -465,7 +488,7 @@ export default async function FilteredPropertiesPage({ params }: { params: Promi
   const segments: PropertySegment[] = [];
 
   if (slug === 'costa-blanca' && properties.length > 0) {
-    const keyReady = properties.filter(p => KEY_READY_REFERENCES.includes(p.reference) ||
+    const keyReady = properties.filter(p => KEY_READY_REFERENCES.has(p.reference) ||
       p.constructionStatus === 'key-ready' ||
       (p.descriptions?.en || '').toLowerCase().includes('key ready'));
     const seaView = properties.filter(p => p.hasSeaview && !keyReady.includes(p));
@@ -517,6 +540,21 @@ export default async function FilteredPropertiesPage({ params }: { params: Promi
     if (other.length > 0) segments.push({ title: 'Other Properties Under €300K', emoji: '🏗️', properties: other });
   }
 
+  if (slug === 'costa-calida' && properties.length > 0) {
+    // Group by town for Costa Calida
+    const townGroups = new Map<string, typeof properties>();
+    properties.forEach(p => {
+      const town = p.town || 'Other';
+      if (!townGroups.has(town)) townGroups.set(town, []);
+      townGroups.get(town)!.push(p);
+    });
+    // Sort towns by count (most properties first)
+    const sortedTowns = [...townGroups.entries()].sort((a, b) => b[1].length - a[1].length);
+    for (const [town, townProps] of sortedTowns) {
+      segments.push({ title: town, emoji: '📍', properties: townProps });
+    }
+  }
+
   if (slug === 'apartments' && properties.length > 0) {
     const south = properties.filter(p =>
       SOUTH_TOWNS.some(t => (p.town || '').toLowerCase().includes(t.toLowerCase())));
@@ -529,31 +567,29 @@ export default async function FilteredPropertiesPage({ params }: { params: Promi
     if (other.length > 0) segments.push({ title: 'More Apartments', emoji: '🏢', properties: other });
   }
 
-  // Helper to render a property card
+  // Helper to render a property card with image carousel
   const renderPropertyCard = (property: typeof properties[0]) => (
     <Link
       key={property.reference}
       href={`/properties/${property.reference}`}
       className="group bg-white rounded-xl overflow-hidden border border-warm-200 hover:shadow-xl transition-all duration-300"
     >
-      <div className="relative h-64 overflow-hidden">
-        <Image
-          src={property.images[0]?.url || '/images/placeholder-property.jpg'}
+      {/* Image carousel with arrows */}
+      <div className="relative">
+        <PropertyImageCarousel
+          images={property.images || []}
           alt={`${property.propertyType} in ${property.town}`}
-          fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          unoptimized
+          height="h-64"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-        <div className="absolute top-3 left-3 flex gap-2">
+        {/* Badges overlaid on carousel */}
+        <div className="absolute top-3 left-3 flex gap-2 z-20 pointer-events-none">
           <span className="bg-accent-500 text-white text-xs font-semibold px-3 py-1 rounded-full">New Build</span>
           {property.propertyType && (
             <span className="bg-white/90 text-primary-900 text-xs font-medium px-3 py-1 rounded-full">{property.propertyType}</span>
           )}
         </div>
-        <div className="absolute bottom-3 left-3">
-          <span className="text-2xl font-bold text-white">
+        <div className="absolute bottom-3 left-3 z-20 pointer-events-none">
+          <span className="text-2xl font-bold text-white drop-shadow-lg">
             {property.price ? formatPrice(property.price) : 'Price on Request'}
           </span>
         </div>
