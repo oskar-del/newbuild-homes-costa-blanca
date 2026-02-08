@@ -84,6 +84,69 @@ export default function GuidesPage() {
         </div>
       </section>
 
+      {/* Featured Destination Guides */}
+      <section className="py-12 bg-white border-b border-warm-200">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-xs text-accent-500 font-bold tracking-widest uppercase mb-3">Destination Guides</div>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link
+              href="/guides/torrevieja"
+              className="block bg-primary-900 rounded-xl overflow-hidden hover:shadow-xl transition-shadow group"
+            >
+              <div className="p-5 md:p-6">
+                <span className="text-3xl mb-2 block">🚁</span>
+                <h2 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-accent-400 transition-colors">
+                  Living in Torrevieja
+                </h2>
+                <p className="text-warm-300 mb-3 text-sm">
+                  7 neighborhoods with helicopter drone photography. The definitive Costa Blanca South guide.
+                </p>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-xs bg-accent-500/20 text-accent-400 px-2 py-0.5 rounded">104+ photos</span>
+                  <span className="text-xs bg-accent-500/20 text-accent-400 px-2 py-0.5 rounded">7 zones</span>
+                </div>
+              </div>
+            </Link>
+            <Link
+              href="/guides/javea"
+              className="block bg-primary-900 rounded-xl overflow-hidden hover:shadow-xl transition-shadow group"
+            >
+              <div className="p-5 md:p-6">
+                <span className="text-3xl mb-2 block">🏔️</span>
+                <h2 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-accent-400 transition-colors">
+                  Living in Jávea
+                </h2>
+                <p className="text-warm-300 mb-3 text-sm">
+                  4 neighborhoods from Arenal beach to Montgó mountain. Premium north coast living.
+                </p>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-xs bg-accent-500/20 text-accent-400 px-2 py-0.5 rounded">4 neighborhoods</span>
+                  <span className="text-xs bg-accent-500/20 text-accent-400 px-2 py-0.5 rounded">7 beaches</span>
+                </div>
+              </div>
+            </Link>
+            <Link
+              href="/guides/costa-blanca-north"
+              className="block bg-primary-900 rounded-xl overflow-hidden hover:shadow-xl transition-shadow group"
+            >
+              <div className="p-5 md:p-6">
+                <span className="text-3xl mb-2 block">🧭</span>
+                <h2 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-accent-400 transition-colors">
+                  Costa Blanca North
+                </h2>
+                <p className="text-warm-300 mb-3 text-sm">
+                  6 towns compared — Jávea, Moraira, Altea, Calpe, Denia & Benissa with aerial photography.
+                </p>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-xs bg-accent-500/20 text-accent-400 px-2 py-0.5 rounded">6 towns</span>
+                  <span className="text-xs bg-accent-500/20 text-accent-400 px-2 py-0.5 rounded">Region guide</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Guides Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">

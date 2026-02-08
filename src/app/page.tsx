@@ -419,6 +419,143 @@ export default function HomePage() {
       </section>
 
       {/* ============================================ */}
+      {/* DESTINATION GUIDES - Immersive area guides */}
+      {/* ============================================ */}
+      <section className="py-14 bg-primary-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-8">
+            <div className="flex items-center justify-center gap-4 mb-2">
+              <div className="w-10 h-px bg-accent-500" />
+              <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
+                Explore Destinations
+              </span>
+              <div className="w-10 h-px bg-accent-500" />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-light text-white">
+              Complete <span className="font-semibold">Living Guides</span>
+            </h2>
+            <p className="text-warm-300 mt-2 max-w-xl mx-auto text-sm">
+              The most comprehensive neighborhood guides on the internet — with aerial photography, property prices, and insider tips.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-5 max-w-6xl mx-auto">
+            {/* Torrevieja Guide */}
+            <Link
+              href="/guides/torrevieja"
+              className="group relative bg-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-accent-500/50 hover:bg-white/10 transition-all"
+            >
+              <div className="relative h-44 overflow-hidden">
+                <Image
+                  src="/images/Drone 2/Areas & Zones/Torrevieja/La Mata/La Mata ( 1) .jpg"
+                  alt="Aerial drone view of Torrevieja coastline and beaches"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900 via-primary-900/40 to-transparent" />
+                <div className="absolute top-3 left-3">
+                  <span className="bg-accent-500 text-white text-xs font-bold px-2 py-1 rounded-sm uppercase">
+                    Super Guide
+                  </span>
+                </div>
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-bold text-white mb-1.5 group-hover:text-accent-400 transition-colors">
+                  Living in Torrevieja
+                </h3>
+                <p className="text-warm-300 text-sm mb-3">
+                  7 neighborhoods with helicopter drone photography. Costa Blanca South.
+                </p>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-xs bg-white/10 text-warm-300 px-2 py-0.5 rounded">104+ photos</span>
+                  <span className="text-xs bg-white/10 text-warm-300 px-2 py-0.5 rounded">7 zones</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Jávea Guide */}
+            <Link
+              href="/guides/javea"
+              className="group relative bg-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-accent-500/50 hover:bg-white/10 transition-all"
+            >
+              <div className="relative h-44 overflow-hidden">
+                <Image
+                  src="/images/Area canvas/Javea.png"
+                  alt="Aerial view of Jávea coastline with Montgó mountain"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900 via-primary-900/40 to-transparent" />
+                <div className="absolute top-3 left-3">
+                  <span className="bg-accent-500 text-white text-xs font-bold px-2 py-1 rounded-sm uppercase">
+                    Super Guide
+                  </span>
+                </div>
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-bold text-white mb-1.5 group-hover:text-accent-400 transition-colors">
+                  Living in Jávea
+                </h3>
+                <p className="text-warm-300 text-sm mb-3">
+                  4 neighborhoods beneath Montgó mountain. Costa Blanca North.
+                </p>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-xs bg-white/10 text-warm-300 px-2 py-0.5 rounded">4 neighborhoods</span>
+                  <span className="text-xs bg-white/10 text-warm-300 px-2 py-0.5 rounded">7 beaches</span>
+                  <span className="text-xs bg-white/10 text-warm-300 px-2 py-0.5 rounded">20 min</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Costa Blanca North Guide */}
+            <Link
+              href="/guides/costa-blanca-north"
+              className="group relative bg-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-accent-500/50 hover:bg-white/10 transition-all"
+            >
+              <div className="relative h-44 overflow-hidden">
+                <Image
+                  src="/images/Area canvas/Calpe.png"
+                  alt="Aerial view of Calpe and Peñón de Ifach"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900 via-primary-900/40 to-transparent" />
+                <div className="absolute top-3 left-3">
+                  <span className="bg-emerald-500 text-white text-xs font-bold px-2 py-1 rounded-sm uppercase">
+                    Region Guide
+                  </span>
+                </div>
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-bold text-white mb-1.5 group-hover:text-accent-400 transition-colors">
+                  Costa Blanca North
+                </h3>
+                <p className="text-warm-300 text-sm mb-3">
+                  6 towns compared with aerial photography. The complete region overview.
+                </p>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-xs bg-white/10 text-warm-300 px-2 py-0.5 rounded">6 towns</span>
+                  <span className="text-xs bg-white/10 text-warm-300 px-2 py-0.5 rounded">Region guide</span>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className="text-center mt-6">
+            <Link href="/guides" className="text-accent-400 hover:text-accent-300 text-sm font-medium transition-colors">
+              View All Guides →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
       {/* AFFORDABLE KEY-READY SECTION */}
       {/* ============================================ */}
       <section className="py-14 md:py-18 bg-warm-50">
