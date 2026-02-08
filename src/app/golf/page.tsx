@@ -33,8 +33,8 @@ function getCoursesWithImages(): GolfCourse[] {
 }
 
 export const metadata: Metadata = {
-  title: 'Golf Course Properties Costa Blanca & Murcia | New Builds on Golf Resorts',
-  description: 'Find new build homes on Costa Blanca and Murcia golf resorts. Properties at Serena Golf, La Finca, Vistabella, Roda Golf, and more. Golf lifestyle from €150,000.',
+  title: 'Golf Course Properties Costa Blanca & Murcia | 22 Courses, 100+ Properties',
+  description: 'Find new build homes near 22 golf courses across Costa Blanca North, South, and Murcia. From La Sella and Jávea to Las Colinas and Serena Golf. Golf lifestyle from €120,000.',
   openGraph: {
     title: 'Golf Course Properties Costa Blanca & Murcia',
     description: 'New build homes on Costa Blanca and Murcia golf resorts. Golf lifestyle from €150,000.',
@@ -61,7 +61,7 @@ const CONTACT = {
 const golfFaqs = [
   {
     question: 'What are the best golf resorts to buy property in Costa Blanca and Murcia?',
-    answer: 'For variety and value, Serena Golf near Los Alcázares has the most new build options with 34+ properties. La Finca in Algorfa and Vistabella offer excellent courses with modern developments from €150,000. For premium golf, Altorreal and Villaitana (Puig Campana) feature courses by legends like Nicklaus and Ballesteros.',
+    answer: 'For variety and value, Serena Golf near Los Alcázares has the most new build options with 34+ properties. La Finca in Algorfa and Vistabella offer excellent courses with developments from €120,000. For premium golf, Las Colinas (award-winning, Top 10 in Spain), La Sella near Denia (27 holes, Olazábal design, Marriott resort), and Villaitana in Finestrat (36 holes, Nicklaus and Ballesteros designs) are outstanding. In the Jávea-Calpe corridor, Club de Golf Jávea and Club de Golf Ifach offer charming courses in the most sought-after areas.',
   },
   {
     question: 'How much does a golf property cost in Costa Blanca?',
@@ -84,8 +84,8 @@ const golfFaqs = [
     answer: 'Serena Golf near Los Alcázares currently has the most new build properties with multiple developments from builders like Grupo Vermell, AMAL, and others. La Finca in Algorfa also has strong supply with several active developments.',
   },
   {
-    question: 'Are there any Jack Nicklaus-designed courses with properties?',
-    answer: 'Yes! Villaitana (Puig Campana Golf) in Finestrat features courses designed by both Jack Nicklaus and Severiano Ballesteros. Prime Home Alicante\'s Green & Blue development offers properties here from around €350,000.',
+    question: 'Which famous designers have courses in Costa Blanca?',
+    answer: 'Costa Blanca boasts an impressive collection of designer courses. Jack Nicklaus and Severiano Ballesteros designed the two courses at Villaitana (Finestrat). José María Olazábal designed La Sella\'s 27 holes near Denia. Ballesteros also designed Alicante Golf. Ryder Cup captain Manuel Piñero designed Vistabella and Aguilón. Cabell B. Robinson designed the award-winning Las Colinas. Dave Thomas designed multiple Murcia courses including Serena Golf and Hacienda del Álamo.',
   },
 ];
 
@@ -381,8 +381,8 @@ export default function GolfPage() {
   const northCourses = coursesWithImages.filter(c => c.region === 'north');
   const almeriaCourses = coursesWithImages.filter(c => c.region === 'almeria');
 
-  // Featured course is La Finca (our most established Costa Blanca course)
-  const featuredCourse = coursesWithImages.find(c => c.slug === 'la-finca-golf') || coursesWithImages[0];
+  // Featured course - Las Colinas (most prestigious south course)
+  const featuredCourse = coursesWithImages.find(c => c.slug === 'las-colinas-golf') || coursesWithImages[0];
 
   // Total properties across all courses
   const totalProperties = getTotalGolfProperties();
@@ -583,25 +583,52 @@ export default function GolfPage() {
         )}
 
         {/* ============================================ */}
-        {/* PREMIUM & UNIQUE COURSES */}
+        {/* COSTA BLANCA NORTH COURSES */}
         {/* ============================================ */}
-        {(northCourses.length > 0 || almeriaCourses.length > 0) && (
+        {northCourses.length > 0 && (
           <section className="py-14 bg-white">
             <div className="max-w-7xl mx-auto px-6">
               <div className="flex items-center gap-4 mb-2">
-                <div className="w-10 h-px bg-purple-500" />
-                <span className="text-purple-600 text-xs font-medium tracking-widest uppercase">
+                <div className="w-10 h-px bg-emerald-500" />
+                <span className="text-emerald-600 text-xs font-medium tracking-widest uppercase">
+                  Premium Region
+                </span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
+                Costa Blanca <span className="font-semibold">North</span>
+              </h2>
+              <p className="text-warm-600 mb-8">
+                {northCourses.length} golf courses from Alicante to Denia — Olazábal, Nicklaus, and Ballesteros designs in Spain&apos;s most prestigious coastal region. Premium properties near Jávea, Altea, Calpe, and Finestrat.
+              </p>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {northCourses.map((course) => (
+                  <GolfCourseCard key={course.slug} course={course} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ============================================ */}
+        {/* ALMERÍA COURSES */}
+        {/* ============================================ */}
+        {almeriaCourses.length > 0 && (
+          <section className="py-14 bg-warm-50">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="flex items-center gap-4 mb-2">
+                <div className="w-10 h-px bg-orange-500" />
+                <span className="text-orange-600 text-xs font-medium tracking-widest uppercase">
                   Something Different
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
-                Premium & <span className="font-semibold">Unique</span> Courses
+                <span className="font-semibold">Almería</span> — Desert Golf
               </h2>
               <p className="text-warm-600 mb-8">
-                From Nicklaus-designed luxury to Europe's only desert course - for buyers seeking something special.
+                {almeriaCourses.length} unique courses in unspoilt Almería province. From Europe&apos;s only desert course to dramatic mountain-and-sea layouts — for buyers seeking something truly different.
               </p>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {[...northCourses, ...almeriaCourses].map((course) => (
+                {almeriaCourses.map((course) => (
                   <GolfCourseCard key={course.slug} course={course} />
                 ))}
               </div>
