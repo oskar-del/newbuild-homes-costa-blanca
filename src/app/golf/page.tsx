@@ -9,20 +9,30 @@ import {
   getCoursesByPropertyCount,
 } from '@/lib/golf-courses';
 import { breadcrumbSchema, toJsonLd, faqSchema } from '@/lib/schema';
-// 12 UNIQUE property images - one per golf course, verified working URLs
+// Golf course images - own drone photos where available, golf Unsplash for others
 const GOLF_COURSE_IMAGES: Record<string, string> = {
-  'serena-golf': 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80',
-  'hacienda-del-alamo': 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80',
-  'peraleja-golf': 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
-  'altorreal-golf': 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
-  'roda-golf': 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
-  'la-finca-golf': 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
-  'vistabella-golf': 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=800&q=80',
-  'lo-romero-golf': 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80',
-  'la-marquesa-golf': 'https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80',
-  'puig-campana-golf': 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80',
-  'aguilon-golf': 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80',
-  'desert-springs': 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80',
+  'campoamor-golf': '/images/Drone 2/Golf/Campoamor Golf (1).jpg',
+  'villamartin-golf': '/images/Drone 2/Golf/Villa Martin Golf.jpg',
+  'las-ramblas-golf': 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&q=80',
+  'las-colinas-golf': 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80',
+  'la-finca-golf': 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&q=80',
+  'vistabella-golf': 'https://images.unsplash.com/photo-1600166898405-da9535204843?w=800&q=80',
+  'la-marquesa-golf': 'https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=800&q=80',
+  'lo-romero-golf': 'https://images.unsplash.com/photo-1611374243147-44a702c2d44c?w=800&q=80',
+  'aguilon-golf': 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&q=80',
+  'serena-golf': 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80',
+  'hacienda-del-alamo': 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&q=80',
+  'roda-golf': 'https://images.unsplash.com/photo-1600166898405-da9535204843?w=800&q=80',
+  'peraleja-golf': 'https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=800&q=80',
+  'altorreal-golf': 'https://images.unsplash.com/photo-1611374243147-44a702c2d44c?w=800&q=80',
+  'puig-campana-golf': 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&q=80',
+  'desert-springs': 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80',
+  'la-sella-golf': 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&q=80',
+  'javea-golf': 'https://images.unsplash.com/photo-1600166898405-da9535204843?w=800&q=80',
+  'ifach-golf': 'https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=800&q=80',
+  'bernia-golf': 'https://images.unsplash.com/photo-1611374243147-44a702c2d44c?w=800&q=80',
+  'bonalba-golf': 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&q=80',
+  'alicante-golf': 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80',
 };
 
 function getCoursesWithImages(): GolfCourse[] {

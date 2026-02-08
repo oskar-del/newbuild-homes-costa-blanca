@@ -114,7 +114,7 @@ function getArticles(): Article[] {
         publishedAt: content.publishedAt || new Date().toISOString(),
         readTime: content.readTime || 5,
         featured: content.featured || false,
-        image: SLUG_IMAGES[slug] || CATEGORY_IMAGES[content.category] || `https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop`,
+        image: content.image || SLUG_IMAGES[slug] || CATEGORY_IMAGES[content.category] || `https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop`,
         tags: content.tags || [],
       });
     } catch {

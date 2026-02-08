@@ -1270,15 +1270,15 @@ export default async function GolfCoursePage({ params }: { params: Promise<{ slu
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white p-6 rounded-xl border border-warm-200">
-                <h3 className="font-semibold text-primary-900 mb-3">🏌️ Golf & Resort</h3>
+                <h3 className="font-semibold text-primary-900 mb-3">Golf & Resort</h3>
                 <p className="text-warm-600 text-sm">{lifestyle.lifestyle.overview}</p>
               </div>
               <div className="bg-white p-6 rounded-xl border border-warm-200">
-                <h3 className="font-semibold text-primary-900 mb-3">☀️ Daily Life</h3>
+                <h3 className="font-semibold text-primary-900 mb-3">Daily Life</h3>
                 <p className="text-warm-600 text-sm">{lifestyle.lifestyle.dailyLife}</p>
               </div>
               <div className="bg-white p-6 rounded-xl border border-warm-200">
-                <h3 className="font-semibold text-primary-900 mb-3">👥 Community</h3>
+                <h3 className="font-semibold text-primary-900 mb-3">Community</h3>
                 <p className="text-warm-600 text-sm">{lifestyle.lifestyle.community}</p>
               </div>
             </div>
@@ -1315,8 +1315,9 @@ export default async function GolfCoursePage({ params }: { params: Promise<{ slu
         {/* ============================================ */}
         <section className="py-12 bg-blue-50">
           <div className="max-w-7xl mx-auto px-6">
+            <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Destinations</span>
             <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
-              🏖️ Nearest <span className="font-semibold">Beaches</span>
+              Nearest <span className="font-semibold">Beaches</span>
             </h2>
             <p className="text-warm-600 mb-6">Mediterranean beaches within easy reach</p>
             <div className="grid md:grid-cols-3 gap-4">
@@ -1343,8 +1344,9 @@ export default async function GolfCoursePage({ params }: { params: Promise<{ slu
         {/* ============================================ */}
         <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-6">
+            <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Wellness</span>
             <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-6">
-              🏥 Healthcare & <span className="font-semibold">Medical</span>
+              Healthcare & <span className="font-semibold">Medical</span>
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-warm-50 p-6 rounded-xl border border-warm-200">
@@ -1380,8 +1382,9 @@ export default async function GolfCoursePage({ params }: { params: Promise<{ slu
         {/* ============================================ */}
         <section className="py-12 bg-warm-50">
           <div className="max-w-7xl mx-auto px-6">
+            <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Culture</span>
             <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
-              🛒 Local <span className="font-semibold">Markets</span>
+              Local <span className="font-semibold">Markets</span>
             </h2>
             <p className="text-warm-600 mb-6">Weekly markets are a highlight of Spanish life</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -1402,8 +1405,9 @@ export default async function GolfCoursePage({ params }: { params: Promise<{ slu
         {/* ============================================ */}
         <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-6">
+            <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Culture</span>
             <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
-              🎉 Events & <span className="font-semibold">Fiestas</span>
+              Events & <span className="font-semibold">Fiestas</span>
             </h2>
             <p className="text-warm-600 mb-6">Local celebrations and golf club events</p>
             <div className="grid md:grid-cols-2 gap-4">
@@ -1427,8 +1431,9 @@ export default async function GolfCoursePage({ params }: { params: Promise<{ slu
         {/* ============================================ */}
         <section className="py-12 bg-primary-900 text-white">
           <div className="max-w-7xl mx-auto px-6">
+            <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide block mb-4">Community</span>
             <h2 className="text-2xl md:text-3xl font-light mb-6">
-              👥 The <span className="font-semibold">Expat Community</span>
+              The <span className="font-semibold">Expat Community</span>
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="bg-white/10 p-5 rounded-xl">
@@ -1456,8 +1461,9 @@ export default async function GolfCoursePage({ params }: { params: Promise<{ slu
         {/* ============================================ */}
         <section className="py-12 bg-warm-50">
           <div className="max-w-7xl mx-auto px-6">
+            <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Living Costs</span>
             <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
-              💰 Cost of <span className="font-semibold">Living</span>
+              Cost of <span className="font-semibold">Living</span>
             </h2>
             <p className="text-warm-600 mb-6">Monthly expenses for golf resort living</p>
             <div className="bg-white rounded-xl border border-warm-200 overflow-hidden">
@@ -1488,8 +1494,9 @@ export default async function GolfCoursePage({ params }: { params: Promise<{ slu
         {/* ============================================ */}
         <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-6">
+            <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Market Analysis</span>
             <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-6">
-              📈 Investment <span className="font-semibold">Potential</span>
+              Investment <span className="font-semibold">Potential</span>
             </h2>
             <div className="grid md:grid-cols-3 gap-6 mb-6">
               <div className="bg-success-50 p-6 rounded-xl border border-success-200 text-center">
@@ -1517,8 +1524,9 @@ export default async function GolfCoursePage({ params }: { params: Promise<{ slu
         {/* ============================================ */}
         <section className="py-12 bg-warm-100" id="properties">
           <div className="max-w-7xl mx-auto px-6">
+            <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Available Homes</span>
             <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
-              🏠 Properties at <span className="font-semibold">{course.shortName}</span>
+              Properties at <span className="font-semibold">{course.shortName}</span>
             </h2>
             <p className="text-warm-600 mb-8">
               {developments.length > 0 ? `${developments.length} developments with new build homes` : 'Contact us for the latest availability'}
@@ -1549,7 +1557,7 @@ export default async function GolfCoursePage({ params }: { params: Promise<{ slu
               </div>
             ) : (
               <div className="bg-white rounded-xl p-8 text-center border border-warm-200">
-                <p className="text-4xl mb-4">🏌️</p>
+                <p className="text-4xl mb-4">⛳</p>
                 <h3 className="text-xl font-semibold text-primary-900 mb-2">Properties Coming Soon</h3>
                 <p className="text-warm-600 mb-6">New developments near {course.name} are added regularly.</p>
                 <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-lg font-medium">
