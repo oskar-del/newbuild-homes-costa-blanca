@@ -8,8 +8,19 @@
   "readTime": 15,
   "featured": false,
   "author": "New Build Homes Costa Blanca",
-  "tags": ["uk-pension", "state-pension", "frozen", "index-linked", "spain", "retirement"],
-  "relatedAreas": ["Torrevieja", "Orihuela", "Costa Blanca"],
+  "tags": [
+    "uk-pension",
+    "state-pension",
+    "frozen",
+    "index-linked",
+    "spain",
+    "retirement"
+  ],
+  "relatedAreas": [
+    "Torrevieja",
+    "Orihuela",
+    "Costa Blanca"
+  ],
   "content": {
     "quickAnswer": "UK state pension continues to be paid abroad to Spain and remains index-linked (increasing with UK inflation). Spain recognizes UK pensions under EU reciprocal agreements. Tax treatment follows the UK-Spain double taxation treaty. Private pensions and SIPPs can be drawn in Spain, though QROPS/ROPS transfers have strict conditions. Proper planning maximizes income and minimizes taxes.",
     "intro": "One of the most important decisions for British retirees is understanding how their UK pensions work when living in Spain. The good news: UK state pensions are paid abroad and continue to be index-linked, meaning they increase annually. However, the taxation, regulatory framework, and optimization strategies are complex.\n\nThis guide explains everything you need to know about drawing UK pensions in Spain, from state pension basics through private pension options, helping you maximize retirement income while staying compliant with both UK and Spanish tax authorities.",
@@ -145,5 +156,6 @@
         "answer": "The treaty prevents paying tax twice on the same income. Generally, Spain has the right to tax your UK pension. The UK withholds some tax (typically 20%), and Spain calculates total tax due. If Spain tax is higher, you pay the difference. If lower, you get a refund. File returns in both countries to reconcile."
       }
     ]
-  }
+  },
+  "image": "/images/SPanish life/2.png"
 }

@@ -8,8 +8,20 @@
   "readTime": 14,
   "featured": false,
   "author": "New Build Homes Costa Blanca",
-  "tags": ["british", "healthcare", "S1", "GHIC", "private-insurance", "NHS", "reciprocal"],
-  "relatedAreas": ["Torrevieja", "Orihuela", "Costa Blanca"],
+  "tags": [
+    "british",
+    "healthcare",
+    "S1",
+    "GHIC",
+    "private-insurance",
+    "NHS",
+    "reciprocal"
+  ],
+  "relatedAreas": [
+    "Torrevieja",
+    "Orihuela",
+    "Costa Blanca"
+  ],
   "content": {
     "quickAnswer": "British pensioners use S1 forms (applied before moving) for free Spanish healthcare. Visitors under 90 days use GHIC cards (emergency only). Pre-retirement residents face a gap period requiring private insurance (€50-200/month). Private insurance supplements Spanish public healthcare. Understanding your coverage status before moving prevents healthcare disruptions.",
     "intro": "Healthcare is perhaps the most anxiety-provoking aspect of moving to Spain for British nationals. The system is completely different from the NHS, rules changed post-Brexit, and timing is critical—miss one step and you're paying privately.\n\nThe good news: Spain has excellent healthcare at a fraction of UK costs. The challenge: Understanding which option applies to you and applying well in advance. This guide demystifies healthcare coverage for British nationals in Spain, from S1 forms through private insurance, ensuring you're never without coverage.",
@@ -157,5 +169,6 @@
         "answer": "Yes, many people do. Use S1 for routine GP care (free) and private for rapid specialist access or services not in public system (dental, private rooms, therapies). This provides good coverage balance. Private insurance is supplementary."
       }
     ]
-  }
+  },
+  "image": "/images/Healthcare/1.png"
 }
