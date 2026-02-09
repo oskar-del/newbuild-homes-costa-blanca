@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getBlogPostsForArea } from '@/lib/blog-area-mapping';
 
 export const metadata: Metadata = {
   title: 'Costa Blanca North Guide 2026: Jávea, Moraira, Altea, Calpe & Denia | Property & Lifestyle',
@@ -196,6 +197,10 @@ const faqSchema = {
 };
 
 export default function CostaBlancaNorthGuidePage() {
+  // Get related blog articles for Costa Blanca North region
+  // The function will look for articles tagged with the area slug and fall back to general guides
+  const articles = getBlogPostsForArea('costa-blanca-north', 3);
+
   return (
     <main className="min-h-screen bg-warm-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -497,6 +502,28 @@ export default function CostaBlancaNorthGuidePage() {
           </div>
         </div>
       </section>
+
+      {/* Latest Articles Section */}
+      {articles.length > 0 && (
+        <section className="py-16 bg-warm-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-primary-900 mb-2">Latest Articles About Costa Blanca North</h2>
+            <p className="text-warm-500 mb-8">Expert insights and guides for this region</p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {articles.map((article: any) => (
+                <a key={article.slug} href={`/blog/${article.slug}`} className="bg-white rounded-sm border border-warm-200 overflow-hidden hover:shadow-lg hover:border-accent-500 transition-all">
+                  <div className="p-6">
+                    <span className="text-xs font-medium text-accent-600 uppercase tracking-wider">{article.category}</span>
+                    <h3 className="text-lg font-semibold text-primary-900 mt-2 line-clamp-2">{article.title}</h3>
+                    <p className="text-warm-500 text-sm mt-2 line-clamp-3">{article.description}</p>
+                    <span className="text-accent-600 text-sm font-medium mt-4 inline-block">Read more →</span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-primary-900 to-primary-800">

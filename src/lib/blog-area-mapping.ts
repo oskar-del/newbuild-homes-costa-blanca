@@ -20,7 +20,7 @@ export interface RelatedBlogPost {
 }
 
 // Cache to avoid re-reading files on every page render
-let cachedArticles: { slug: string; title: string; excerpt: string; category: string; readTime: number; relatedAreas: string[] }[] | null = null;
+let cachedArticles: { slug: string; title: string; excerpt: string; category: string; readTime: number; relatedAreas: string[]; tags: string[] }[] | null = null;
 
 function loadAllArticles() {
   if (cachedArticles) return cachedArticles;
@@ -38,6 +38,7 @@ function loadAllArticles() {
         category: data.category || 'Guide',
         readTime: data.readTime || 5,
         relatedAreas: data.relatedAreas || [],
+        tags: data.tags || [],
       };
     });
 
@@ -135,4 +136,29 @@ export function getBlogPostsForArea(areaSlug: string, limit: number = 3): Relate
     .slice(0, remaining);
 
   return [...areaSpecific, ...generals];
+}
+
+/**
+ * Get blog posts by tag.
+ * Filters articles by their tags array.
+ *
+ * @param tag - The tag to filter by (e.g., 'golf', 'investment')
+ * @param limit - Maximum articles to return (default 3)
+ * @returns Array of blog posts with the specified tag
+ */
+export function getBlogPostsByTag(tag: string, limit: number = 3): RelatedBlogPost[] {
+  const articles = loadAllArticles();
+  const tagLower = tag.toLowerCase();
+
+  const matched = articles.filter(article => {
+    return article.tags.some(t => t.toLowerCase() === tagLower);
+  });
+
+  return matched.slice(0, limit).map(article => ({
+    slug: article.slug,
+    title: article.title,
+    description: article.excerpt,
+    category: article.category,
+    readTime: article.readTime,
+  }));
 }

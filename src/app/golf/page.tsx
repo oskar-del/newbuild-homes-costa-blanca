@@ -8,6 +8,7 @@ import {
   getTotalGolfProperties,
   getCoursesByPropertyCount,
 } from '@/lib/golf-courses';
+import { getBlogPostsByTag } from '@/lib/blog-area-mapping';
 import { breadcrumbSchema, toJsonLd, faqSchema } from '@/lib/schema';
 // Golf course images - own drone photos + verified Unsplash golf course IDs
 const GOLF_COURSE_IMAGES: Record<string, string> = {
@@ -398,6 +399,9 @@ export default function GolfPage() {
 
   // Total properties across all courses
   const totalProperties = getTotalGolfProperties();
+
+  // Get related golf articles for bottom of page
+  const golfArticles = getBlogPostsByTag('golf', 3);
 
   return (
     <>
@@ -904,6 +908,45 @@ export default function GolfPage() {
             </div>
           </div>
         </section>
+
+        {/* ============================================ */}
+        {/* GOLF GUIDES & ARTICLES */}
+        {/* ============================================ */}
+        {golfArticles.length > 0 && (
+          <section className="py-12 bg-warm-50">
+            <div className="max-w-7xl mx-auto px-6">
+              <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
+                Golf Guides & <span className="font-semibold">Resources</span>
+              </h2>
+              <p className="text-warm-600 mb-8">
+                Expert insights and practical guides for golf lifestyle living in Spain
+              </p>
+              <div className="grid md:grid-cols-3 gap-6">
+                {golfArticles.map((article) => (
+                  <a
+                    key={article.slug}
+                    href={`/blog/${article.slug}`}
+                    className="bg-white rounded-lg border border-warm-200 p-6 hover:shadow-lg hover:border-accent-500 transition-all group"
+                  >
+                    <span className="text-xs font-medium text-accent-600 uppercase tracking-wider">
+                      {article.category}
+                    </span>
+                    <h3 className="text-lg font-semibold text-primary-900 mt-3 line-clamp-2 group-hover:text-accent-600 transition-colors">
+                      {article.title}
+                    </h3>
+                    <p className="text-warm-600 text-sm mt-2 line-clamp-2">
+                      {article.description}
+                    </p>
+                    <div className="flex items-center justify-between mt-4 pt-4 border-t border-warm-100">
+                      <span className="text-accent-600 text-sm font-medium">Read more →</span>
+                      <span className="text-xs text-warm-400">{article.readTime} min read</span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
       </main>
     </>
   );

@@ -89,6 +89,14 @@ const CATEGORIES = {
     bgColor: 'bg-emerald-50',
     textColor: 'text-emerald-600',
   },
+  top10: {
+    title: 'Top 10 Lists',
+    description: 'Curated rankings of the best Costa Blanca has to offer',
+    icon: '',
+    color: 'from-purple-500 to-indigo-600',
+    bgColor: 'bg-purple-50',
+    textColor: 'text-purple-600',
+  },
 };
 
 // Get articles from content directory
@@ -127,6 +135,11 @@ function getArticles(): Article[] {
 
 // Group articles by type
 function groupArticles(articles: Article[]) {
+  const top10 = articles.filter(a =>
+    a.category === 'Top 10' ||
+    a.slug.includes('top-10-')
+  );
+
   const lifestyle = articles.filter(a =>
     a.category === 'Lifestyle' ||
     a.slug.includes('beach') ||
@@ -154,7 +167,7 @@ function groupArticles(articles: Article[]) {
     a.slug.includes('la-finca')
   );
 
-  return { lifestyle, buying, areas, golf };
+  return { top10, lifestyle, buying, areas, golf };
 }
 
 function formatDate(dateStr: string): string {
@@ -296,7 +309,7 @@ function CategorySection({
 export default function BlogPage() {
   const articles = getArticles();
   const featuredArticle = articles.find(a => a.featured) || articles[0];
-  const { lifestyle, buying, areas, golf } = groupArticles(articles);
+  const { top10, lifestyle, buying, areas, golf } = groupArticles(articles);
 
   const breadcrumbs = breadcrumbSchema([
     { name: 'Home', url: 'https://newbuildhomescostablanca.com/' },
@@ -340,6 +353,9 @@ export default function BlogPage() {
 
                 {/* Quick Links */}
                 <div className="grid grid-cols-2 gap-3">
+                  <a href="#top10" className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl p-4 text-center transition-colors">
+                    <span className="text-white text-sm font-medium">Top 10</span>
+                  </a>
                   <a href="#lifestyle" className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl p-4 text-center transition-colors">
                     <span className="text-white text-sm font-medium">Lifestyle</span>
                   </a>
@@ -348,9 +364,6 @@ export default function BlogPage() {
                   </a>
                   <a href="#areas" className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl p-4 text-center transition-colors">
                     <span className="text-white text-sm font-medium">Area Guides</span>
-                  </a>
-                  <a href="#golf" className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl p-4 text-center transition-colors">
-                    <span className="text-white text-sm font-medium">Golf Living</span>
                   </a>
                 </div>
               </div>
@@ -387,8 +400,13 @@ export default function BlogPage() {
           </div>
         </section>
 
+        {/* Top 10 Section */}
+        <div id="top10" className="bg-white">
+          <CategorySection category="top10" articles={top10} config={CATEGORIES.top10} />
+        </div>
+
         {/* Lifestyle Section */}
-        <div id="lifestyle">
+        <div id="lifestyle" className="bg-warm-100">
           <CategorySection category="lifestyle" articles={lifestyle} config={CATEGORIES.lifestyle} />
         </div>
 

@@ -13,6 +13,7 @@ import {
   getGolfCoursesByRegion,
 } from '@/lib/golf-courses';
 import { getDevelopmentsByGolfCourse } from '@/lib/development-service';
+import { getBlogPostsByTag } from '@/lib/blog-area-mapping';
 import LeadForm from '@/components/LeadForm';
 import InteractiveAreaMap from '@/components/area/InteractiveAreaMap';
 import { breadcrumbSchema, faqSchema, toJsonLd } from '@/lib/schema';
@@ -1931,6 +1932,9 @@ export default async function GolfCoursePage({ params }: { params: Promise<{ slu
   // Get developments near this golf course
   const developments = await getDevelopmentsByGolfCourse(course.nearbyTowns);
 
+  // Get related golf blog articles
+  const golfArticles = getBlogPostsByTag('golf', 2);
+
   // Get other golf courses in same region
   const sameRegionCourses = getGolfCoursesByRegion(course.region).filter(c => c.slug !== course.slug);
   const otherCourses = sameRegionCourses.length > 0
@@ -2440,6 +2444,41 @@ export default async function GolfCoursePage({ params }: { params: Promise<{ slu
                       <span className="text-accent-600 font-medium text-sm">From {formatPrice(c.priceFrom)}</span>
                     </div>
                   </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ============================================ */}
+        {/* RELATED GOLF ARTICLES */}
+        {/* ============================================ */}
+        {golfArticles.length > 0 && (
+          <section className="py-12 bg-warm-50">
+            <div className="max-w-7xl mx-auto px-6">
+              <h2 className="text-2xl font-light text-primary-900 mb-6">
+                Golf Guides & <span className="font-semibold">Articles</span>
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                {golfArticles.map((article) => (
+                  <a
+                    key={article.slug}
+                    href={`/blog/${article.slug}`}
+                    className="bg-white rounded-lg border border-warm-200 p-6 hover:shadow-lg hover:border-accent-500 transition-all"
+                  >
+                    <span className="text-xs font-medium text-accent-600 uppercase tracking-wider">
+                      {article.category}
+                    </span>
+                    <h3 className="text-lg font-semibold text-primary-900 mt-2 line-clamp-2">
+                      {article.title}
+                    </h3>
+                    <p className="text-warm-600 text-sm mt-2 line-clamp-2">
+                      {article.description}
+                    </p>
+                    <span className="text-accent-600 text-sm font-medium mt-4 inline-block">
+                      Read more →
+                    </span>
+                  </a>
                 ))}
               </div>
             </div>
