@@ -866,7 +866,7 @@ export default function VillamartinPage() {
                   </div>
                 </div>
 
-                <div className="bg-blue-50 rounded-xl p-6">
+                <div className="bg-warm-50 rounded-xl p-6">
                   <h3 className="font-bold text-primary-900 mb-3">📱 Facebook Groups to Join</h3>
                   <div className="flex flex-wrap gap-2">
                     {expatInfo.facebookGroups.map((group) => (

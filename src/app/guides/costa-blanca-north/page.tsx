@@ -531,17 +531,14 @@ export default function CostaBlancaNorthGuidePage() {
           <h2 className="text-2xl font-bold text-primary-900 mb-6">Destination Guides</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/guides/javea" className="bg-white rounded-xl p-6 border border-warm-200 hover:shadow-lg transition-shadow group">
-              <div className="text-3xl mb-3">🏔️</div>
               <h3 className="font-bold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">Living in Jávea</h3>
               <p className="text-warm-600 text-sm">4 neighborhoods, 7 beaches. The complete guide to Costa Blanca North&apos;s most popular town.</p>
             </Link>
             <Link href="/guides/torrevieja" className="bg-white rounded-xl p-6 border border-warm-200 hover:shadow-lg transition-shadow group">
-              <div className="text-3xl mb-3">🚁</div>
               <h3 className="font-bold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">Living in Torrevieja</h3>
               <p className="text-warm-600 text-sm">7 neighborhoods, 104+ drone photos. The definitive guide to Costa Blanca South.</p>
             </Link>
             <Link href="/guides/north-vs-south" className="bg-white rounded-xl p-6 border border-warm-200 hover:shadow-lg transition-shadow group">
-              <div className="text-3xl mb-3">🧭</div>
               <h3 className="font-bold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">North vs South</h3>
               <p className="text-warm-600 text-sm">Compare the two regions side by side — pricing, lifestyle, and which suits you best.</p>
             </Link>

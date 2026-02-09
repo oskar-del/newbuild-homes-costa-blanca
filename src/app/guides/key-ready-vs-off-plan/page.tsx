@@ -43,7 +43,7 @@ export default function KeyReadyVsOffPlanPage() {
               <h2 className="font-bold text-lg mb-3 text-primary-900">Quick Comparison</h2>
               <div className="grid md:grid-cols-2 gap-4 text-sm">
                 <div className="bg-success-50 rounded-lg p-4">
-                  <h3 className="font-bold text-success-800 mb-2">🔑 Key Ready</h3>
+                  <h3 className="font-bold text-success-800 mb-2">Key Ready</h3>
                   <ul className="text-success-700 space-y-1">
                     <li>• Move in within weeks</li>
                     <li>• What you see is what you get</li>
@@ -53,7 +53,7 @@ export default function KeyReadyVsOffPlanPage() {
                   </ul>
                 </div>
                 <div className="bg-blue-50 rounded-lg p-4">
-                  <h3 className="font-bold text-blue-800 mb-2">📋 Off-Plan</h3>
+                  <h3 className="font-bold text-blue-800 mb-2">Off-Plan</h3>
                   <ul className="text-blue-700 space-y-1">
                     <li>• Wait 12-24 months</li>
                     <li>• Buy from plans/renders</li>
@@ -204,7 +204,7 @@ export default function KeyReadyVsOffPlanPage() {
 
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div className="bg-white rounded-xl shadow p-5">
-                <h3 className="font-bold text-success-800 mb-4">🔑 Key Ready Payment</h3>
+                <h3 className="font-bold text-success-800 mb-4">Key Ready Payment</h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between">
                     <span>Reservation</span>
@@ -562,17 +562,14 @@ export default function KeyReadyVsOffPlanPage() {
           <h2 className="text-2xl font-bold mb-8 text-center">Related Guides</h2>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <Link href="/guides/why-new-build" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
-              <div className="text-3xl mb-3">🏗️</div>
               <h3 className="font-bold mb-2">Why New Build?</h3>
               <p className="text-warm-600 text-sm">10 reasons to choose new construction</p>
             </Link>
             <Link href="/guides/buying-process" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
-              <div className="text-3xl mb-3">🏠</div>
               <h3 className="font-bold mb-2">Buying Process</h3>
               <p className="text-warm-600 text-sm">Step-by-step purchase guide</p>
             </Link>
             <Link href="/guides/costs-taxes" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
-              <div className="text-3xl mb-3">💰</div>
               <h3 className="font-bold mb-2">Costs & Taxes</h3>
               <p className="text-warm-600 text-sm">Full breakdown of buying costs</p>
             </Link>

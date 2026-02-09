@@ -60,7 +60,7 @@ const CATEGORIES = {
   lifestyle: {
     title: 'Lifestyle & Living',
     description: 'Everything about Mediterranean life - beaches, cost of living, healthcare, and daily life',
-    icon: '☀️',
+    icon: '',
     color: 'from-pink-500 to-orange-500',
     bgColor: 'bg-pink-50',
     textColor: 'text-pink-600',
@@ -68,7 +68,7 @@ const CATEGORIES = {
   buying: {
     title: 'Buying Guides',
     description: 'Step-by-step guides to purchasing property in Spain',
-    icon: '🏠',
+    icon: '',
     color: 'from-primary-600 to-primary-800',
     bgColor: 'bg-primary-50',
     textColor: 'text-primary-600',
@@ -76,7 +76,7 @@ const CATEGORIES = {
   areas: {
     title: 'Area Comparisons',
     description: 'North vs South, beach vs inland - find your perfect location',
-    icon: '📍',
+    icon: '',
     color: 'from-accent-500 to-accent-700',
     bgColor: 'bg-accent-50',
     textColor: 'text-accent-600',
@@ -84,7 +84,7 @@ const CATEGORIES = {
   golf: {
     title: 'Golf & Sports',
     description: 'Golf courses, sports facilities, and active lifestyle guides',
-    icon: '⛳',
+    icon: '',
     color: 'from-emerald-500 to-green-700',
     bgColor: 'bg-emerald-50',
     textColor: 'text-emerald-600',
@@ -270,7 +270,7 @@ function CategorySection({
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-4">
-            <span className="text-4xl">{config.icon}</span>
+            {config.icon && <span className="text-4xl">{config.icon}</span>}
             <div>
               <h2 className="text-2xl font-bold text-primary-900">{config.title}</h2>
               <p className="text-warm-600 text-sm">{config.description}</p>
@@ -341,19 +341,15 @@ export default function BlogPage() {
                 {/* Quick Links */}
                 <div className="grid grid-cols-2 gap-3">
                   <a href="#lifestyle" className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl p-4 text-center transition-colors">
-                    <span className="text-2xl block mb-1">☀️</span>
                     <span className="text-white text-sm font-medium">Lifestyle</span>
                   </a>
                   <a href="#buying" className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl p-4 text-center transition-colors">
-                    <span className="text-2xl block mb-1">🏠</span>
                     <span className="text-white text-sm font-medium">Buying Guides</span>
                   </a>
                   <a href="#areas" className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl p-4 text-center transition-colors">
-                    <span className="text-2xl block mb-1">📍</span>
                     <span className="text-white text-sm font-medium">Area Guides</span>
                   </a>
                   <a href="#golf" className="bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl p-4 text-center transition-colors">
-                    <span className="text-2xl block mb-1">⛳</span>
                     <span className="text-white text-sm font-medium">Golf Living</span>
                   </a>
                 </div>
@@ -430,7 +426,6 @@ export default function BlogPage() {
         {/* Newsletter CTA */}
         <section className="py-16 bg-gradient-to-r from-accent-500 to-accent-600">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <span className="text-5xl block mb-4">✉️</span>
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">Stay Updated</h2>
             <p className="text-white/90 mb-8 max-w-xl mx-auto">
               Get new articles, property market updates, and insider tips delivered weekly.
@@ -456,14 +451,12 @@ export default function BlogPage() {
           <div className="max-w-5xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-8">
               <Link href="/properties" className="group block bg-gradient-to-br from-primary-900 to-primary-700 rounded-2xl p-8 hover:shadow-2xl transition-all">
-                <span className="text-4xl block mb-4">🏡</span>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-accent-300 transition-colors">Browse Properties</h3>
                 <p className="text-warm-300 mb-4">Explore 1000+ new build homes across Costa Blanca.</p>
                 <span className="text-accent-400 font-semibold">View Properties →</span>
               </Link>
 
               <Link href="/contact" className="group block bg-gradient-to-br from-accent-500 to-accent-700 rounded-2xl p-8 hover:shadow-2xl transition-all">
-                <span className="text-4xl block mb-4">💬</span>
                 <h3 className="text-xl font-bold text-white mb-2">Get Expert Advice</h3>
                 <p className="text-white/90 mb-4">Our local team can answer your questions.</p>
                 <span className="text-white font-semibold">Contact Us →</span>

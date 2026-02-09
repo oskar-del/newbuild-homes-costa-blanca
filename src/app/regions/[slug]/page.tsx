@@ -201,7 +201,7 @@ export default async function RegionPage({ params }: { params: Promise<{ slug: s
           <section className="bg-accent-50 border-b border-accent-200 py-6">
             <div className="max-w-7xl mx-auto px-6">
               <div className="flex gap-3 items-start">
-                <span className="text-accent-600 text-xl">💡</span>
+                <span className="text-accent-600 text-xl">•</span>
                 <div>
                   <span className="text-accent-700 font-semibold text-sm uppercase tracking-wide">Quick Summary</span>
                   <p className="text-warm-800 mt-1 leading-relaxed">{region.content.quickAnswer}</p>
@@ -333,9 +333,8 @@ export default async function RegionPage({ params }: { params: Promise<{ slug: s
                   {Array.isArray(region.content.beachesSection.highlights) && region.content.beachesSection.highlights.length > 0 && (
                     <div className="grid md:grid-cols-2 gap-4">
                       {region.content.beachesSection.highlights.map((beach, idx) => (
-                      <div key={idx} className="p-4 bg-gradient-to-br from-blue-50 to-accent-50 rounded-lg">
+                      <div key={idx} className="p-4 bg-gradient-to-br from-warm-50 to-accent-50 rounded-lg">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-2xl">🏖️</span>
                           <h4 className="font-semibold text-primary-900">{beach.name}</h4>
                         </div>
                         <span className="inline-block bg-accent-100 text-accent-700 text-xs px-2 py-1 rounded mb-2">{beach.type}</span>
@@ -416,26 +415,26 @@ export default async function RegionPage({ params }: { params: Promise<{ slug: s
                   <h2 className="text-2xl font-semibold text-primary-900 mb-6">Practical Information</h2>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <h3 className="font-semibold text-primary-900 mb-2 flex items-center gap-2">
-                        <span className="text-xl">🏥</span> Healthcare
+                      <h3 className="font-semibold text-primary-900 mb-2">
+                        Healthcare
                       </h3>
                       <p className="text-warm-600 text-sm leading-relaxed">{region.content.practicalInfo.healthcare}</p>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary-900 mb-2 flex items-center gap-2">
-                        <span className="text-xl">✈️</span> Transport
+                      <h3 className="font-semibold text-primary-900 mb-2">
+                        Transport
                       </h3>
                       <p className="text-warm-600 text-sm leading-relaxed">{region.content.practicalInfo.transport}</p>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary-900 mb-2 flex items-center gap-2">
-                        <span className="text-xl">💰</span> Cost of Living
+                      <h3 className="font-semibold text-primary-900 mb-2">
+                        Cost of Living
                       </h3>
                       <p className="text-warm-600 text-sm leading-relaxed">{region.content.practicalInfo.costOfLiving}</p>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-primary-900 mb-2 flex items-center gap-2">
-                        <span className="text-xl">🗣️</span> Language
+                      <h3 className="font-semibold text-primary-900 mb-2">
+                        Language
                       </h3>
                       <p className="text-warm-600 text-sm leading-relaxed">{region.content.practicalInfo.language}</p>
                     </div>

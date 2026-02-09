@@ -500,11 +500,11 @@ export default function GolfPage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-10">
               <div className="flex items-center justify-center gap-4 mb-3">
-                <div className="w-10 h-px bg-primary-700" />
-                <span className="text-primary-700 text-xs font-medium tracking-widest uppercase">
+                <div className="w-10 h-px bg-primary-900" />
+                <span className="text-primary-900 text-xs font-medium tracking-widest uppercase">
                   The Smart Choice
                 </span>
-                <div className="w-10 h-px bg-primary-700" />
+                <div className="w-10 h-px bg-primary-900" />
               </div>
               <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
                 Why Buy on a Golf Course?
@@ -571,8 +571,8 @@ export default function GolfPage() {
           <section id="costa-calida" className="py-14 bg-warm-50">
             <div className="max-w-7xl mx-auto px-6">
               <div className="flex items-center gap-4 mb-2">
-                <div className="w-10 h-px bg-blue-500" />
-                <span className="text-blue-600 text-xs font-medium tracking-widest uppercase">
+                <div className="w-10 h-px bg-accent-500" />
+                <span className="text-accent-600 text-xs font-medium tracking-widest uppercase">
                   Best Value Region
                 </span>
               </div>
@@ -601,8 +601,8 @@ export default function GolfPage() {
           <section className="py-14 bg-white">
             <div className="max-w-7xl mx-auto px-6">
               <div className="flex items-center gap-4 mb-2">
-                <div className="w-10 h-px bg-emerald-500" />
-                <span className="text-emerald-600 text-xs font-medium tracking-widest uppercase">
+                <div className="w-10 h-px bg-accent-500" />
+                <span className="text-accent-600 text-xs font-medium tracking-widest uppercase">
                   Premium Region
                 </span>
               </div>
@@ -628,8 +628,8 @@ export default function GolfPage() {
           <section className="py-14 bg-warm-50">
             <div className="max-w-7xl mx-auto px-6">
               <div className="flex items-center gap-4 mb-2">
-                <div className="w-10 h-px bg-orange-500" />
-                <span className="text-orange-600 text-xs font-medium tracking-widest uppercase">
+                <div className="w-10 h-px bg-accent-500" />
+                <span className="text-accent-600 text-xs font-medium tracking-widest uppercase">
                   Something Different
                 </span>
               </div>

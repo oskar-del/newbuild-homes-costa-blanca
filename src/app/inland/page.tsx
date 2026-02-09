@@ -58,7 +58,7 @@ function PropertyCard({ property }: { property: ParsedProperty }) {
 
       <div className="p-4">
         <h3 className="font-semibold text-primary-900 mb-2 line-clamp-1 group-hover:text-accent-600 transition-colors">
-          {property.title || `${property.propertyType} in ${property.town}`}
+          {(property as any).aiContent?.title || property.title || `${property.propertyType} in ${property.town}`}
         </h3>
 
         <div className="flex items-center gap-4 text-warm-600 text-sm mb-3">

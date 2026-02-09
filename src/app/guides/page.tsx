@@ -14,7 +14,7 @@ const guides = [
     title: 'The Buying Process',
     slug: 'buying-process',
     description: 'Step-by-step guide to purchasing new build property in Spain. From reservation to completion, everything you need to know.',
-    icon: '🏠',
+    icon: '',
     readTime: '12 min read',
     category: 'essential',
   },
@@ -22,7 +22,7 @@ const guides = [
     title: 'NIE Number Guide',
     slug: 'nie-number',
     description: 'How to obtain your NIE (Número de Identificación de Extranjero) - essential for buying property in Spain.',
-    icon: '📋',
+    icon: '',
     readTime: '8 min read',
     category: 'essential',
   },
@@ -30,7 +30,7 @@ const guides = [
     title: 'Costs & Taxes',
     slug: 'costs-taxes',
     description: 'Complete breakdown of purchase costs, taxes, and ongoing expenses when buying new build property in Spain.',
-    icon: '💰',
+    icon: '',
     readTime: '10 min read',
     category: 'essential',
   },
@@ -38,7 +38,7 @@ const guides = [
     title: 'Mortgages for Foreigners',
     slug: 'mortgages',
     description: 'How to get a Spanish mortgage as a non-resident. Banks, rates, requirements, and step-by-step application process.',
-    icon: '🏦',
+    icon: '',
     readTime: '10 min read',
     category: 'essential',
   },
@@ -46,7 +46,7 @@ const guides = [
     title: 'Why Buy New Build?',
     slug: 'why-new-build',
     description: 'The advantages of buying new build over resale property in Spain - guarantees, energy efficiency, and modern design.',
-    icon: '✨',
+    icon: '',
     readTime: '6 min read',
     category: 'decision',
   },
@@ -54,7 +54,7 @@ const guides = [
     title: 'Key-Ready vs Off-Plan',
     slug: 'key-ready-vs-off-plan',
     description: 'Should you buy a completed property or off-plan? Pros and cons of each option for international buyers.',
-    icon: '🔑',
+    icon: '',
     readTime: '8 min read',
     category: 'decision',
   },
@@ -62,7 +62,7 @@ const guides = [
     title: 'North vs South Costa Blanca',
     slug: 'north-vs-south',
     description: 'Compare the two distinct regions - prestigious northern coast vs affordable southern beaches. Find your perfect location.',
-    icon: '🧭',
+    icon: '',
     readTime: '10 min read',
     category: 'decision',
   },
@@ -94,7 +94,6 @@ export default function GuidesPage() {
               className="block bg-primary-900 rounded-xl overflow-hidden hover:shadow-xl transition-shadow group"
             >
               <div className="p-5 md:p-6">
-                <span className="text-3xl mb-2 block">🚁</span>
                 <h2 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-accent-400 transition-colors">
                   Living in Torrevieja
                 </h2>
@@ -112,7 +111,6 @@ export default function GuidesPage() {
               className="block bg-primary-900 rounded-xl overflow-hidden hover:shadow-xl transition-shadow group"
             >
               <div className="p-5 md:p-6">
-                <span className="text-3xl mb-2 block">🏔️</span>
                 <h2 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-accent-400 transition-colors">
                   Living in Jávea
                 </h2>
@@ -130,7 +128,6 @@ export default function GuidesPage() {
               className="block bg-primary-900 rounded-xl overflow-hidden hover:shadow-xl transition-shadow group"
             >
               <div className="p-5 md:p-6">
-                <span className="text-3xl mb-2 block">🧭</span>
                 <h2 className="text-lg md:text-xl font-bold text-white mb-2 group-hover:text-accent-400 transition-colors">
                   Costa Blanca North
                 </h2>
@@ -220,17 +217,14 @@ export default function GuidesPage() {
           <h2 className="text-3xl font-bold text-center mb-8">Why Trust Our Guides?</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="text-3xl mb-3">🇪🇸</div>
               <h3 className="font-semibold mb-2">Local Expertise</h3>
               <p className="text-warm-600 text-sm">Based in Costa Blanca with years of experience helping international buyers</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl mb-3">📝</div>
               <h3 className="font-semibold mb-2">Up-to-Date Information</h3>
               <p className="text-warm-600 text-sm">Regularly updated to reflect current Spanish property laws and regulations</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl mb-3">🌍</div>
               <h3 className="font-semibold mb-2">International Focus</h3>
               <p className="text-warm-600 text-sm">Written specifically for British, European, and international buyers</p>
             </div>
@@ -239,23 +233,23 @@ export default function GuidesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-warm-100">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-4">Have Questions?</h2>
           <p className="text-warm-600 mb-6 max-w-xl mx-auto">
-            Our team is here to help guide you through the buying process. 
+            Our team is here to help guide you through the buying process.
             Get in touch for personalized advice.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link
               href="/contact"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              className="bg-accent-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-accent-600 transition-colors"
             >
               Contact Us
             </Link>
-            <a 
+            <a
               href="https://wa.me/34634044970"
-              className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+              className="bg-accent-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-accent-600 transition-colors"
             >
               WhatsApp
             </a>

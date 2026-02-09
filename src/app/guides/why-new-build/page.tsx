@@ -727,17 +727,14 @@ export default function WhyNewBuildPage() {
           <h2 className="text-2xl font-bold mb-8 text-center">Related Guides</h2>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <Link href="/guides/buying-process" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
-              <div className="text-3xl mb-3">🏠</div>
               <h3 className="font-bold mb-2">Buying Process</h3>
               <p className="text-warm-600 text-sm">Step-by-step new build purchase guide</p>
             </Link>
             <Link href="/guides/costs-taxes" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
-              <div className="text-3xl mb-3">💰</div>
               <h3 className="font-bold mb-2">Costs & Taxes</h3>
               <p className="text-warm-600 text-sm">Full breakdown of buying costs</p>
             </Link>
             <Link href="/guides/mortgages" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
-              <div className="text-3xl mb-3">🏦</div>
               <h3 className="font-bold mb-2">Mortgages</h3>
               <p className="text-warm-600 text-sm">Financing for foreign buyers</p>
             </Link>

@@ -164,8 +164,13 @@ function PropertyCard({ property }: { property: BPProperty }) {
 
 // Generate SEO-optimized title for property
 function generatePropertyTitle(p: BPProperty): string {
+  // Check if property has AI-generated content first
+  if ((p as any).aiContent?.title) {
+    return (p as any).aiContent.title;
+  }
+
   const parts: string[] = [];
-  
+
   // Start with key feature if available
   if (p.pool) {
     parts.push('Stunning');
@@ -174,19 +179,19 @@ function generatePropertyTitle(p: BPProperty): string {
   } else {
     parts.push('Modern');
   }
-  
+
   // Bedrooms and type
   parts.push(`${p.bedrooms} Bedroom ${p.type}`);
-  
+
   // Key selling point
   if (p.pool) {
     parts.push('with Private Pool');
   } else if (p.views && p.views.toLowerCase() !== 'none') {
     parts.push(`with ${p.views} Views`);
   }
-  
+
   // Location
   parts.push(`in ${p.town}`);
-  
+
   return parts.join(' ');
 }

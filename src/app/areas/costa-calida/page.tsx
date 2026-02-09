@@ -348,11 +348,11 @@ export default async function CostaCalidaPage() {
         {/* ============================================ */}
         {/* BEACH PROPERTIES */}
         {/* ============================================ */}
-        <section className="py-14 bg-gradient-to-b from-cyan-50 to-white" id="beach">
+        <section className="py-14 bg-gradient-to-b from-warm-50 to-white" id="beach">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-center gap-4 mb-2">
-              <div className="w-10 h-px bg-cyan-600" />
-              <span className="text-cyan-600 text-xs font-medium tracking-widest uppercase">
+              <div className="w-10 h-px bg-accent-500" />
+              <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
                 Beach Living
               </span>
             </div>
@@ -364,19 +364,19 @@ export default async function CostaCalidaPage() {
             </p>
 
             {/* Mar Menor Info */}
-            <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-xl p-6 md:p-8 mb-10 text-white">
+            <div className="bg-gradient-to-r from-primary-900 to-primary-800 rounded-xl p-6 md:p-8 mb-10 text-white">
               <div className="grid md:grid-cols-3 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold mb-2">🌡️ Warmer Waters</h3>
-                  <p className="text-cyan-100 text-sm">Mar Menor is 5-7°C warmer than the Mediterranean. Swimming season extends from April to November.</p>
+                  <p className="text-warm-300 text-sm">Mar Menor is 5-7°C warmer than the Mediterranean. Swimming season extends from April to November.</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2">👨‍👩‍👧‍👦 Family Friendly</h3>
-                  <p className="text-cyan-100 text-sm">Shallow, calm waters make it perfect for children and water sports. No waves, no currents.</p>
+                  <p className="text-warm-300 text-sm">Shallow, calm waters make it perfect for children and water sports. No waves, no currents.</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2">💆 Therapeutic Mud</h3>
-                  <p className="text-cyan-100 text-sm">Famous mud baths at Lo Pagán used for centuries for skin and joint therapy.</p>
+                  <p className="text-warm-300 text-sm">Famous mud baths at Lo Pagán used for centuries for skin and joint therapy.</p>
                 </div>
               </div>
             </div>
@@ -390,7 +390,7 @@ export default async function CostaCalidaPage() {
                     <div className="relative h-48 bg-warm-200">
                       <Image src={dev.images[0] || FALLBACK_IMAGE} alt={dev.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" unoptimized />
                       <div className="absolute top-3 left-3">
-                        <span className="bg-cyan-600 text-white text-xs font-bold px-2 py-1 rounded">Mar Menor</span>
+                        <span className="bg-accent-500 text-white text-xs font-bold px-2 py-1 rounded">Mar Menor</span>
                       </div>
                     </div>
                     <div className="p-4">

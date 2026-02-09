@@ -571,17 +571,17 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
             
             <div className="flex flex-wrap gap-4 text-sm">
               <span className="bg-white/20 px-4 py-2 rounded-full">
-                🏠 {data.propertyCount} New Builds
+                {data.propertyCount} New Builds
               </span>
               <span className="bg-white/20 px-4 py-2 rounded-full">
-                💶 From €{data.priceRange.min.toLocaleString()}
+                From €{data.priceRange.min.toLocaleString()}
               </span>
               <span className="bg-white/20 px-4 py-2 rounded-full">
-                🌴 {data.region || 'Costa Blanca'}
+                {data.region || 'Costa Blanca'}
               </span>
               {golf && golf.courses && (
                 <span className="bg-white/20 px-4 py-2 rounded-full">
-                  ⛳ {golf.courses.length} Golf Courses Nearby
+                  {golf.courses.length} Golf Courses Nearby
                 </span>
               )}
             </div>
@@ -643,7 +643,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               {externalLinks?.beaches && externalLinks.beaches.length > 0 && (
                 <section>
                   <h2 className="text-2xl font-bold text-primary-900 mb-6">
-                    🏖️ Beaches in {data.name}
+                    Beaches in {data.name}
                   </h2>
 
                   {/* Beach lifestyle image */}
@@ -686,8 +686,8 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                           {beach.description && (
                             <p className="text-warm-600 text-sm mb-2">{beach.description}</p>
                           )}
-                          <span className="text-blue-600 text-sm font-medium">
-                            📍 View on Google Maps →
+                          <span className="text-accent-600 text-sm font-medium">
+                            View on Google Maps →
                           </span>
                         </div>
                       </a>
@@ -734,7 +734,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                                   rel="noopener noreferrer"
                                   className="inline-flex items-center gap-1 bg-success-500 hover:bg-success-600 text-white px-4 py-2 rounded-sm text-sm font-medium transition-colors"
                                 >
-                                  🌐 Website
+                                  Website
                                 </a>
                               )}
                               {course.googleMaps && (
@@ -742,9 +742,9 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                                   href={course.googleMaps}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-sm text-sm font-medium transition-colors"
+                                  className="inline-flex items-center gap-1 bg-accent-500 hover:bg-accent-600 text-white px-4 py-2 rounded-sm text-sm font-medium transition-colors"
                                 >
-                                  📍 Directions
+                                  Directions
                                 </a>
                               )}
                             </div>
@@ -772,18 +772,18 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                 />
 
                 <div className="mt-8 space-y-6">
-                  <div className="border-l-4 border-orange-500 pl-4">
-                    <h3 className="font-bold text-primary-900 mb-2">🍽️ Dining</h3>
+                  <div className="border-l-4 border-accent-500 pl-4">
+                    <h3 className="font-bold text-primary-900 mb-2">Dining</h3>
                     <p className="text-warm-700">{content.amenitiesSection.dining}</p>
                   </div>
 
-                  <div className="border-l-4 border-purple-500 pl-4">
-                    <h3 className="font-bold text-primary-900 mb-2">🛍️ Shopping</h3>
+                  <div className="border-l-4 border-accent-500 pl-4">
+                    <h3 className="font-bold text-primary-900 mb-2">Shopping</h3>
                     <p className="text-warm-700">{content.amenitiesSection.shopping}</p>
                   </div>
-                  
+
                   <div className="border-l-4 border-red-500 pl-4">
-                    <h3 className="font-bold text-primary-900 mb-2">🏥 Healthcare</h3>
+                    <h3 className="font-bold text-primary-900 mb-2">Healthcare</h3>
                     <p className="text-warm-700">{content.amenitiesSection.healthcare}</p>
                     {externalLinks?.healthcare && (
                       <div className="mt-3 flex flex-wrap gap-2">
@@ -791,7 +791,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                           href={externalLinks.healthcare.googleMaps}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-blue-600 hover:underline text-sm"
+                          className="inline-flex items-center gap-1 text-accent-600 hover:underline text-sm"
                         >
                           📍 {externalLinks.healthcare.name} ({externalLinks.healthcare.distance})
                         </a>
@@ -800,7 +800,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                   </div>
                   
                   <div className="border-l-4 border-success-500 pl-4">
-                    <h3 className="font-bold text-primary-900 mb-2">✈️ Transport</h3>
+                    <h3 className="font-bold text-primary-900 mb-2">Transport</h3>
                     <p className="text-warm-700">{content.amenitiesSection.transport}</p>
                     {externalLinks?.airport && (
                       <div className="mt-3 flex flex-wrap gap-2">
@@ -808,7 +808,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                           href={externalLinks.airport.googleMaps}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-blue-600 hover:underline text-sm"
+                          className="inline-flex items-center gap-1 text-accent-600 hover:underline text-sm"
                         >
                           📍 {externalLinks.airport.name} ({externalLinks.airport.distance}, {externalLinks.airport.driveTime})
                         </a>
@@ -853,7 +853,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     <div className="grid md:grid-cols-2 gap-3">
                       {content.investmentAnalysis.highlights.map((highlight, i) => (
                         <div key={i} className="flex items-start gap-3 p-3 border border-warm-200 rounded-sm">
-                          <span className="text-accent-500 text-lg">📈</span>
+                          <span className="text-accent-500 text-lg">•</span>
                           <span className="text-warm-700">{highlight}</span>
                         </div>
                       ))}
@@ -952,7 +952,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                   <div className="space-y-3">
                     {content.schools.schools.map((school, i) => (
                       <div key={i} className="flex items-start gap-4 p-4 border border-warm-200 rounded-sm">
-                        <span className="flex-shrink-0 text-2xl">🎓</span>
+                        <span className="flex-shrink-0 text-2xl">•</span>
                         <div className="flex-1">
                           <div className="flex flex-wrap items-center gap-2 mb-1">
                             <h3 className="font-bold text-primary-900">{school.name}</h3>
@@ -961,7 +961,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                             </span>
                           </div>
                           <p className="text-warm-600 text-sm">{school.description}</p>
-                          <p className="text-warm-500 text-xs mt-1">📍 {school.distance}</p>
+                          <p className="text-warm-500 text-xs mt-1">{school.distance}</p>
                         </div>
                       </div>
                     ))}
@@ -978,7 +978,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                   <p className="text-warm-700 mb-6">{content.natureActivities.intro}</p>
                   <div className="grid md:grid-cols-2 gap-4">
                     {content.natureActivities.activities.map((activity, i) => (
-                      <div key={i} className="bg-gradient-to-br from-green-50 to-blue-50 rounded-sm p-4 border border-green-100">
+                      <div key={i} className="bg-gradient-to-br from-warm-50 to-accent-50 rounded-sm p-4 border border-warm-100">
                         <div className="flex items-start gap-3">
                           <span className="flex-shrink-0 text-xl">
                             {activity.type === 'Golf' ? '⛳' :
@@ -991,7 +991,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                           </span>
                           <div>
                             <h3 className="font-bold text-primary-900 mb-1">{activity.name}</h3>
-                            <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">{activity.type}</span>
+                            <span className="text-xs bg-accent-100 text-accent-700 px-2 py-0.5 rounded-full">{activity.type}</span>
                             <p className="text-warm-600 text-sm mt-2">{activity.description}</p>
                           </div>
                         </div>
@@ -1028,7 +1028,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     <div className="grid md:grid-cols-2 gap-3">
                       {content.expatCommunity.highlights.map((highlight, i) => (
                         <div key={i} className="flex items-start gap-3 p-3 bg-warm-50 rounded-sm">
-                          <span className="text-accent-500">🤝</span>
+                          <span className="text-accent-500">•</span>
                           <span className="text-warm-700">{highlight}</span>
                         </div>
                       ))}
@@ -1163,7 +1163,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       <details key={i} className="group border border-warm-200 rounded-sm">
                         <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-primary-900 hover:bg-warm-50">
                           {faq.question}
-                          <span className="ml-4 flex-shrink-0 text-gray-400 group-open:rotate-180 transition-transform">
+                          <span className="ml-4 flex-shrink-0 text-warm-400 group-open:rotate-180 transition-transform">
                             ▼
                           </span>
                         </summary>
@@ -1184,15 +1184,15 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     href={CONTACT.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-sm font-medium transition-colors"
+                    className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-3 rounded-sm font-medium transition-colors"
                   >
-                    📱 WhatsApp Us
+                    WhatsApp Us
                   </a>
                   <a
                     href={`tel:${CONTACT.phone}`}
                     className="inline-flex items-center gap-2 bg-white text-accent-500 hover:bg-gray-100 px-6 py-3 rounded-sm font-medium transition-colors"
                   >
-                    📞 {CONTACT.phone}
+                    {CONTACT.phone}
                   </a>
                 </div>
               </section>
@@ -1238,9 +1238,9 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                       href={externalLinks.tourism.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline font-medium text-sm"
+                      className="text-accent-600 hover:underline font-medium text-sm"
                     >
-                      🌐 Official {data.name} Tourism →
+                      Official {data.name} Tourism →
                     </a>
                   </div>
                 )}
@@ -1251,15 +1251,15 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     href={CONTACT.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded-sm font-medium transition-colors"
+                    className="block w-full bg-[#25D366] hover:bg-[#20bd5a] text-white text-center py-3 rounded-sm font-medium transition-colors"
                   >
-                    📱 WhatsApp
+                    WhatsApp
                   </a>
                   <a
                     href={`tel:${CONTACT.phone}`}
-                    className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-sm font-medium transition-colors"
+                    className="block w-full bg-accent-500 hover:bg-accent-600 text-white text-center py-3 rounded-sm font-medium transition-colors"
                   >
-                    📞 Call Now
+                    Call Now
                   </a>
                   <a
                     href={CONTACT.habeno}
@@ -1267,7 +1267,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                     rel="noopener noreferrer"
                     className="block w-full bg-gray-100 hover:bg-gray-200 text-warm-700 text-center py-3 rounded-sm font-medium transition-colors"
                   >
-                    💰 Get Mortgage Quote
+                    Get Mortgage Quote
                   </a>
                 </div>
               </div>
@@ -1276,19 +1276,19 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               <div className="bg-warm-50 rounded-sm p-6">
                 <h3 className="font-bold text-primary-900 mb-4">Explore Other Areas</h3>
                 <div className="space-y-2">
-                  <Link href="/areas/torrevieja" className="block text-blue-600 hover:underline">
+                  <Link href="/areas/torrevieja" className="block text-accent-600 hover:underline">
                     Torrevieja
                   </Link>
-                  <Link href="/areas/javea" className="block text-blue-600 hover:underline">
+                  <Link href="/areas/javea" className="block text-accent-600 hover:underline">
                     Jávea
                   </Link>
-                  <Link href="/areas/moraira" className="block text-blue-600 hover:underline">
+                  <Link href="/areas/moraira" className="block text-accent-600 hover:underline">
                     Moraira
                   </Link>
-                  <Link href="/areas/benidorm" className="block text-blue-600 hover:underline">
+                  <Link href="/areas/benidorm" className="block text-accent-600 hover:underline">
                     Benidorm
                   </Link>
-                  <Link href="/areas/calpe" className="block text-blue-600 hover:underline">
+                  <Link href="/areas/calpe" className="block text-accent-600 hover:underline">
                     Calpe
                   </Link>
                 </div>

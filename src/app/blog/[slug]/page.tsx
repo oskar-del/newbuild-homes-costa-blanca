@@ -327,41 +327,17 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       ]
     : [];
 
-  // Emoji mapping for section headings (matches area page emoji-header pattern)
-  const sectionEmojis: Record<string, string> = {
-    'beach': '🏖️', 'beaches': '🏖️', 'coast': '🏖️', 'coastal': '🏖️', 'sea': '🌊', 'swim': '🏊',
-    'golf': '⛳', 'course': '⛳',
-    'property': '🏠', 'properties': '🏠', 'buying': '🏠', 'purchase': '🏠', 'investment': '📈', 'market': '📊', 'price': '💶', 'cost': '💶',
-    'family': '👨‍👩‍👧‍👦', 'children': '👨‍👩‍👧‍👦', 'school': '🎓', 'education': '🎓',
-    'dining': '🍽️', 'restaurant': '🍽️', 'food': '🍽️', 'tapas': '🍽️',
-    'shopping': '🛍️', 'shop': '🛍️',
-    'healthcare': '🏥', 'hospital': '🏥', 'medical': '🏥', 'health': '🏥',
-    'transport': '✈️', 'airport': '✈️', 'travel': '✈️', 'getting': '✈️',
-    'lifestyle': '🌴', 'living': '🌴', 'life': '🌴', 'community': '🤝', 'expat': '🤝',
-    'legal': '⚖️', 'law': '⚖️', 'tax': '⚖️', 'taxes': '⚖️', 'nie': '⚖️', 'visa': '🛂', 'residency': '🛂', 'beckham': '⚖️',
-    'scenery': '🏔️', 'nature': '🌿', 'hiking': '🥾', 'walk': '🥾', 'activities': '🏞️', 'sport': '⚽', 'watersport': '🏄',
-    'season': '☀️', 'weather': '☀️', 'climate': '☀️', 'summer': '☀️', 'winter': '❄️',
-    'snorkel': '🤿', 'diving': '🤿', 'underwater': '🤿',
-    'hidden': '💎', 'secret': '💎', 'gem': '💎', 'tip': '💡', 'practical': '📋',
-    'step': '📋', 'process': '📋', 'guide': '📖', 'how': '📖', 'understanding': '📖',
-    'rental': '🔑', 'rent': '🔑', 'mortgage': '🏦', 'finance': '🏦',
-    'comparison': '⚖️', 'versus': '⚖️', 'vs': '⚖️',
-    'event': '🎉', 'fiesta': '🎉', 'festival': '🎉',
-    'why': '✨', 'best': '🏆', 'top': '🏆', 'recommend': '🏆',
-  };
+  // Section emoji mapping removed - using clean design
   const getSectionEmoji = (title: string): string => {
-    const lower = title.toLowerCase();
-    for (const [keyword, emoji] of Object.entries(sectionEmojis)) {
-      if (lower.includes(keyword)) return emoji;
-    }
-    return '📌';
+    return '';
   };
 
   // Inline text formatting (bold, stars)
   const inlineFmt = (text: string) => text
     .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-primary-900">$1</strong>')
     .replace(/⭐⭐/g, '<span class="text-amber-500">★★</span>')
-    .replace(/⭐/g, '<span class="text-amber-500">★</span>');
+    .replace(/⭐/g, '<span class="text-amber-500">★</span>')
+    .replace(/[🌴☀️🏠💶🏖️🍽️🛍️🏥✈️🤝⚖️🌿🥾🏔️❄️🤿💎💡📋📖🔑🏦🎉✨🏆]/g, '');
 
   // ── Card detection: parse content into card groups ──
   // A "card" = bold heading line (**Title** with optional stars) + bullet items
@@ -472,7 +448,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   };
 
   // Render a card grid (area-page style)
-  const borderCardColors = ['border-accent-500', 'border-blue-500', 'border-emerald-500', 'border-orange-500', 'border-purple-500', 'border-rose-500'];
+  const borderCardColors = ['border-accent-500', 'border-accent-500', 'border-accent-500', 'border-accent-500', 'border-accent-500', 'border-accent-500'];
   const renderCardGrid = (cards: ContentCard[]): string => {
     const cardHtmls = cards.map((card, idx) => {
       const borderColor = borderCardColors[idx % borderCardColors.length];
@@ -533,8 +509,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         if (inParagraph) { output.push('</p>'); inParagraph = false; }
         const isWarning = calloutMatch[1].toLowerCase() === 'warning' || calloutMatch[1].toLowerCase() === 'important';
         const bgColor = isWarning ? 'bg-amber-50 border-amber-400' : 'bg-accent-50 border-accent-400';
-        const iconEmoji = isWarning ? '⚠️' : '💡';
-        output.push(`<div class="my-4 p-4 ${bgColor} border-l-4 rounded-r-sm"><div class="flex items-start gap-3"><span class="flex-shrink-0 text-lg">${iconEmoji}</span><div><span class="font-bold text-primary-900 text-sm uppercase tracking-wide">${calloutMatch[1]}</span><p class="text-warm-700 mt-1 leading-relaxed">${inlineFmt(calloutMatch[2])}</p></div></div></div>`);
+        output.push(`<div class="my-4 p-4 ${bgColor} border-l-4 rounded-r-sm"><div class="flex items-start gap-3"><div><span class="font-bold text-primary-900 text-sm uppercase tracking-wide">${calloutMatch[1]}</span><p class="text-warm-700 mt-1 leading-relaxed">${inlineFmt(calloutMatch[2])}</p></div></div></div>`);
         continue;
       }
 
@@ -725,7 +700,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                           <details className="group" open>
                             <summary className="flex items-center justify-between p-5 cursor-pointer font-bold text-primary-900 hover:bg-warm-100 rounded-t-sm transition-colors">
                               <span className="flex items-center gap-2">
-                                <span className="text-accent-500">📖</span> In This Article
+                                In This Article
                               </span>
                               <span className="text-warm-400 group-open:rotate-180 transition-transform text-sm">▼</span>
                             </summary>
@@ -751,7 +726,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                           s => s.position === 'after-section' && s.afterSection === index
                         );
                         const isMidPoint = index === Math.floor((structuredContent.sections?.length || 0) / 2);
-                        const borderColors = ['border-accent-500', 'border-blue-500', 'border-emerald-500', 'border-orange-500', 'border-purple-500', 'border-rose-500'];
+                        const borderColors = ['border-accent-500', 'border-accent-500', 'border-accent-500', 'border-accent-500', 'border-accent-500', 'border-accent-500'];
                         const borderColor = borderColors[index % borderColors.length];
                         const isAlt = index % 2 === 1;
                         const emoji = getSectionEmoji(section.title);
@@ -862,7 +837,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                                     <span className="flex-shrink-0 w-6 h-6 bg-accent-500 text-white rounded-full flex items-center justify-center text-xs font-bold">{index + 1}</span>
                                     {faq.question}
                                   </span>
-                                  <span className="ml-4 flex-shrink-0 text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                                  <span className="ml-4 flex-shrink-0 text-warm-400 group-open:rotate-180 transition-transform">▼</span>
                                 </summary>
                                 <div className="px-4 pb-4 text-warm-700">
                                   {faq.answer}
@@ -899,7 +874,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                       {article.relatedAreas && article.relatedAreas.length > 0 && (
                         <section className="mt-8 p-6 bg-accent-50 rounded-sm">
                           <h3 className="font-bold text-primary-900 mb-4 flex items-center gap-2">
-                            📍 Explore These Areas
+                            Explore These Areas
                           </h3>
                           <div className="flex flex-wrap gap-2">
                             {article.relatedAreas.map((area: string) => (
@@ -958,12 +933,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
                   {/* Trust indicators */}
                   <div className="mt-5 pt-5 border-t border-white/10">
-                    <p className="text-warm-400 text-xs mb-2">Trusted by buyers from</p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {['🇬🇧', '🇩🇪', '🇸🇪', '🇳🇴', '🇳🇱', '🇧🇪'].map((flag) => (
-                        <span key={flag} className="text-lg">{flag}</span>
-                      ))}
-                    </div>
+                    <p className="text-warm-400 text-xs mb-2">Trusted by international buyers</p>
                   </div>
                 </div>
 

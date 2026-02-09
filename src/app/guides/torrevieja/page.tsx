@@ -313,16 +313,6 @@ export default function TorreviejaGuidePage() {
                         <ul className="space-y-3">
                           {zone.amenities.map((amenity, i) => (
                             <li key={i} className="flex items-start gap-3 text-sm">
-                              <span className="text-accent-500 mt-0.5">
-                                {amenity.type === 'beach' && '🏖️'}
-                                {amenity.type === 'shopping' && '🛍️'}
-                                {amenity.type === 'dining' && '🍽️'}
-                                {amenity.type === 'healthcare' && '🏥'}
-                                {amenity.type === 'transport' && '🚌'}
-                                {amenity.type === 'park' && '🌳'}
-                                {amenity.type === 'school' && '🏫'}
-                                {amenity.type === 'sport' && '⚽'}
-                              </span>
                               <div>
                                 <div className="font-medium text-primary-900">{amenity.name}</div>
                                 {amenity.distance && (

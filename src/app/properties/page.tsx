@@ -797,7 +797,7 @@ function LargePropertyCard({ property }: { property: ParsedProperty }) {
       <div className="p-5">
         {/* Title */}
         <h3 className="text-lg font-semibold text-primary-900 group-hover:text-accent-600 transition-colors mb-2 line-clamp-1">
-          {property.bedrooms && property.bedrooms > 0 ? `${property.bedrooms}-Bedroom ` : ''}{property.propertyType}
+          {(property as any).aiContent?.title || `${property.bedrooms && property.bedrooms > 0 ? `${property.bedrooms}-Bedroom ` : ''}${property.propertyType}`}
           {property.developmentName && <span className="font-normal text-warm-500"> · {property.developmentName}</span>}
         </h3>
 

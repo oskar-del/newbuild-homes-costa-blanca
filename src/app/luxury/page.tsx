@@ -551,7 +551,7 @@ export default async function LuxuryPage() {
                     </div>
                     <div className="p-5">
                       <h3 className="font-medium text-primary-900 mb-1 group-hover:text-accent-600 transition-colors">
-                        {property.bedrooms}-Bed {property.propertyType}
+                        {(property as any).aiContent?.title || `${property.bedrooms}-Bed ${property.propertyType}`}
                       </h3>
                       <p className="text-sm text-warm-500 mb-3">
                         <Link href={`/areas/${property.town.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-accent-600">
@@ -644,7 +644,7 @@ export default async function LuxuryPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <h3 className="font-medium text-primary-900 mb-1 group-hover:text-accent-600 transition-colors line-clamp-1 text-sm">
-                    {property.bedrooms}-Bed {property.propertyType}
+                    {(property as any).aiContent?.title || `${property.bedrooms}-Bed ${property.propertyType}`}
                   </h3>
                   <p className="text-sm text-warm-500 mb-1">{property.town}</p>
                   <div className="flex items-center justify-between">

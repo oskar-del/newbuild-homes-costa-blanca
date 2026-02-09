@@ -575,17 +575,14 @@ export default function NorthVsSouthPage() {
           <h2 className="text-2xl font-bold mb-8 text-center">Related Guides</h2>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <Link href="/guides/why-new-build" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
-              <div className="text-3xl mb-3">🏗️</div>
               <h3 className="font-bold mb-2">Why New Build?</h3>
               <p className="text-warm-600 text-sm">10 reasons to choose new construction</p>
             </Link>
             <Link href="/guides/buying-process" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
-              <div className="text-3xl mb-3">🏠</div>
               <h3 className="font-bold mb-2">Buying Process</h3>
               <p className="text-warm-600 text-sm">Step-by-step purchase guide</p>
             </Link>
             <Link href="/guides/key-ready-vs-off-plan" className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition-shadow">
-              <div className="text-3xl mb-3">🔑</div>
               <h3 className="font-bold mb-2">Key Ready vs Off-Plan</h3>
               <p className="text-warm-600 text-sm">Which purchase type suits you?</p>
             </Link>

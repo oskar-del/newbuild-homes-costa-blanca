@@ -385,7 +385,7 @@ export default async function AreasPage() {
                 <div className="flex items-center gap-4 mb-3">
                   <div className="w-10 h-px bg-warm-500" />
                   <span className="text-warm-400 text-xs font-medium tracking-widest uppercase">
-                    ☀️ {southData.tagline}
+                    {southData.tagline}
                   </span>
                 </div>
                 <h2 className="text-2xl md:text-3xl font-light text-white mb-3">
@@ -498,7 +498,7 @@ export default async function AreasPage() {
                 <div className="flex items-center gap-4 mb-3">
                   <div className="w-10 h-px bg-accent-500" />
                   <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
-                    ✨ {northData.tagline}
+                    {northData.tagline}
                   </span>
                 </div>
                 <h2 className="text-2xl md:text-3xl font-light text-white mb-3">
@@ -687,13 +687,13 @@ export default async function AreasPage() {
                   rel="noopener noreferrer"
                   className="bg-accent-500 hover:bg-accent-600 text-white font-medium px-6 py-3 rounded-sm transition-colors inline-flex items-center gap-2"
                 >
-                  💬 WhatsApp Us
+                  WhatsApp Us
                 </a>
                 <a
                   href="tel:+34634044970"
                   className="bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-3 rounded-sm transition-colors border border-white/20"
                 >
-                  📞 +34 634 044 970
+                  +34 634 044 970
                 </a>
               </div>
             </div>

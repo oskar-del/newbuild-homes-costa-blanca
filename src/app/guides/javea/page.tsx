@@ -275,17 +275,6 @@ export default function JaveaGuidePage() {
                     {zone.amenities.map((amenity, i) => (
                       <div key={i} className="flex items-center justify-between text-sm">
                         <div className="flex items-center gap-2">
-                          <span className="text-warm-400">
-                            {amenity.type === 'beach' && '🏖️'}
-                            {amenity.type === 'shopping' && '🛍️'}
-                            {amenity.type === 'dining' && '🍽️'}
-                            {amenity.type === 'healthcare' && '🏥'}
-                            {amenity.type === 'transport' && '🚌'}
-                            {amenity.type === 'park' && '🌿'}
-                            {amenity.type === 'school' && '🏫'}
-                            {amenity.type === 'sport' && '⛵'}
-                            {amenity.type === 'golf' && '⛳'}
-                          </span>
                           <span className="text-warm-700">{amenity.name}</span>
                         </div>
                         {amenity.distance && (
@@ -468,13 +457,6 @@ export default function JaveaGuidePage() {
               <div className="grid sm:grid-cols-2 gap-4">
                 {javeaActivities.map((activity) => (
                   <div key={activity.name} className="flex gap-3">
-                    <div className="text-accent-500 text-lg mt-0.5">
-                      {activity.type === 'Hiking' && '🥾'}
-                      {activity.type === 'Walking' && '🚶'}
-                      {activity.type === 'Water Sports' && '🚣'}
-                      {activity.type === 'Golf' && '⛳'}
-                      {activity.type === 'Sailing' && '⛵'}
-                    </div>
                     <div>
                       <h4 className="font-bold text-primary-900 text-sm">{activity.name}</h4>
                       <p className="text-warm-600 text-sm">{activity.description}</p>
@@ -634,17 +616,14 @@ export default function JaveaGuidePage() {
           <h2 className="text-2xl font-bold text-primary-900 mb-6">Related Guides</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/guides/torrevieja" className="bg-warm-50 rounded-xl p-6 border border-warm-200 hover:shadow-lg transition-shadow group">
-              <div className="text-3xl mb-3">🚁</div>
               <h3 className="font-bold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">Torrevieja Guide</h3>
               <p className="text-warm-600 text-sm">7 neighborhoods, 104+ drone photos. The complete guide to Costa Blanca South&apos;s most popular city.</p>
             </Link>
             <Link href="/guides/north-vs-south" className="bg-warm-50 rounded-xl p-6 border border-warm-200 hover:shadow-lg transition-shadow group">
-              <div className="text-3xl mb-3">🧭</div>
               <h3 className="font-bold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">North vs South</h3>
               <p className="text-warm-600 text-sm">Compare the two regions — prestigious northern coast vs affordable southern beaches.</p>
             </Link>
             <Link href="/guides/buying-process" className="bg-warm-50 rounded-xl p-6 border border-warm-200 hover:shadow-lg transition-shadow group">
-              <div className="text-3xl mb-3">🏠</div>
               <h3 className="font-bold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">Buying Process</h3>
               <p className="text-warm-600 text-sm">Step-by-step guide to purchasing property in Spain, from reservation to completion.</p>
             </Link>
