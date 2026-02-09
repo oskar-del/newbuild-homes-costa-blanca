@@ -1,14 +1,17 @@
 #!/usr/bin/env npx tsx
 /**
  * Multi-Feed AI Content Generator
- * 
+ *
  * Generates SEO content for:
  * - Properties (unique descriptions, titles, FAQs)
  * - Areas (comprehensive guides)
  * - Builders (profiles)
- * 
+ *
  * Supports feeds: Miralbo, Background Properties, REDSP (future)
  */
+
+// Fix SSL certificate issues with feed URLs (same as .env.local NODE_TLS_REJECT_UNAUTHORIZED=0)
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 import Anthropic from '@anthropic-ai/sdk';
 import * as fs from 'fs';
@@ -256,8 +259,14 @@ interface Property {
 
 // Fetch and parse XML feed
 async function fetchFeed(url: string): Promise<string> {
+  console.log(`   Fetching: ${url.substring(0, 80)}...`);
   const response = await fetch(url);
-  return response.text();
+  const text = await response.text();
+  console.log(`   Response: status=${response.status}, length=${text.length} chars`);
+  if (text.length < 100) {
+    console.log(`   Response body: ${text.substring(0, 100)}`);
+  }
+  return text;
 }
 
 // Parse Miralbo feed
@@ -295,6 +304,20 @@ function parseBackgroundFeed(xml: string): Property[] {
   const parsed = parser.parse(xml);
   const properties = parsed?.sooprema?.properties?.property || [];
   const propArray = Array.isArray(properties) ? properties : [properties];
+
+  // Diagnostic: show what saleType values exist in the feed
+  const saleTypeValues: Record<string, number> = {};
+  propArray.forEach((p: any) => {
+    const st = String(p.saleType || p.saletype || p.sale_type || '(empty)');
+    saleTypeValues[st] = (saleTypeValues[st] || 0) + 1;
+  });
+  console.log(`[Background Feed] saleType distribution:`, saleTypeValues);
+  // Show first property's raw keys for debugging
+  if (propArray.length > 0) {
+    const firstP = propArray[0];
+    console.log(`[Background Feed] First property keys: ${Object.keys(firstP).join(', ')}`);
+    console.log(`[Background Feed] First property saleType raw value: "${firstP.saleType}" / "${firstP.saletype}" / "${firstP.sale_type}"`);
+  }
 
   let skippedResales = 0;
   const filtered = propArray.filter((p: any) => {
@@ -338,8 +361,14 @@ function parseBackgroundFeed(xml: string): Property[] {
 function parseRedspFeed(xml: string): Property[] {
   const parser = new XMLParser({ ignoreAttributes: false });
   const parsed = parser.parse(xml);
+  // Debug: show top-level keys
+  console.log(`[REDSP Feed] Parsed XML top-level keys: ${Object.keys(parsed || {}).join(', ')}`);
   const properties = parsed?.root?.property || [];
   const propArray = Array.isArray(properties) ? properties : [properties];
+  console.log(`[REDSP Feed] Found ${propArray.length} properties in feed`);
+  if (propArray.length > 0) {
+    console.log(`[REDSP Feed] First property keys: ${Object.keys(propArray[0]).join(', ')}`);
+  }
 
   // Note: REDSP feed is already filtered for new builds, no need to filter again
   return propArray.map((p: any) => ({
