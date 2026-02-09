@@ -62,6 +62,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/golf',
+    languages: {
+      'en': 'https://newbuildhomescostablanca.com/golf',
+      'sv': 'https://newbuildhomescostablanca.com/sv/golf',
+    },
   },
 };
 

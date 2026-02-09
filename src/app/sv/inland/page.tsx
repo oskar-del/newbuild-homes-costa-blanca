@@ -5,18 +5,17 @@ import { fetchInlandProperties, formatPrice, ParsedProperty, REGIONS } from '@/l
 import { breadcrumbSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Inland Properties Costa Blanca | New Builds Away From the Coast',
-  description: 'Discover new build properties in inland Costa Blanca and Costa Calida. More space, better value, and authentic Spanish living in towns like Algorfa, Rojales, Polop, and more.',
+  title: 'Inlandsboende — Nybyggen Costa Blanca | Mer Plats • Bättre Värde',
+  description: 'Upptäck nya byggnader i inlandet i Costa Blanca och Costa Calida. Mer utrymme, bättre pris och autentiskt spanskt levande i städer som Algorfa, Rojales, Polop och fler. Vi talar svenska!',
   openGraph: {
-    title: 'Inland Properties Costa Blanca',
-    description: 'New build homes in inland Costa Blanca. More space, better value, authentic Spain.',
+    title: 'Inlandsboende — Nybyggen Costa Blanca',
+    description: 'Nya bostäder i inlandet Costa Blanca. Mer plats, bättre värde, genuina Spanien.',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://newbuildhomescostablanca.com/inland',
+    canonical: 'https://newbuildhomescostablanca.com/sv/inland',
     languages: {
-      'en': 'https://newbuildhomescostablanca.com/inland',
-      'sv': 'https://newbuildhomescostablanca.com/sv/inland',
+      en: 'https://newbuildhomescostablanca.com/inland',
     },
   },
 };
@@ -32,13 +31,13 @@ function PropertyCard({ property }: { property: ParsedProperty }) {
 
   return (
     <Link
-      href={`/properties/${property.ref}`}
+      href={`/sv/properties/${property.ref}`}
       className="group block bg-white rounded-sm border border-warm-200 overflow-hidden hover:shadow-xl hover:border-accent-500 transition-all"
     >
       <div className="relative aspect-[4/3] overflow-hidden">
         <Image
           src={mainImage}
-          alt={`${property.propertyType} in ${property.town}`}
+          alt={`${property.propertyType} i ${property.town}`}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-700"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -55,14 +54,14 @@ function PropertyCard({ property }: { property: ParsedProperty }) {
         {/* Price */}
         <div className="absolute bottom-3 left-3">
           <span className="text-white font-semibold text-lg">
-            {property.price ? formatPrice(property.price) : 'POA'}
+            {property.price ? formatPrice(property.price) : 'Pris på förfrågan'}
           </span>
         </div>
       </div>
 
       <div className="p-4">
         <h3 className="font-semibold text-primary-900 mb-2 line-clamp-1 group-hover:text-accent-600 transition-colors">
-          {(property as any).aiContent?.title || property.title || `${property.propertyType} in ${property.town}`}
+          {(property as any).aiContent?.title || property.title || `${property.propertyType} i ${property.town}`}
         </h3>
 
         <div className="flex items-center gap-4 text-warm-600 text-sm mb-3">
@@ -71,7 +70,7 @@ function PropertyCard({ property }: { property: ParsedProperty }) {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
               </svg>
-              {property.bedrooms} bed
+              {property.bedrooms} rum
             </span>
           )}
           {property.bathrooms && (
@@ -79,7 +78,7 @@ function PropertyCard({ property }: { property: ParsedProperty }) {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10v11M20 10v11" />
               </svg>
-              {property.bathrooms} bath
+              {property.bathrooms} bad
             </span>
           )}
           {property.size && (
@@ -106,7 +105,7 @@ function WhatsAppCTA() {
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all group"
-      aria-label="Chat on WhatsApp"
+      aria-label="Chatta på WhatsApp"
     >
       <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
@@ -134,18 +133,18 @@ export default async function InlandPropertiesPage() {
 
   // Debug logging (server-side)
   if (typeof window === 'undefined') {
-    console.log('[INLAND PAGE] Total:', properties.length);
-    console.log('[INLAND PAGE] South CB:', southInland.length, '| North CB:', northInland.length, '| Costa Calida:', costaCalidaInland.length, '| Unmatched:', otherInland.length);
-    console.log('[INLAND PAGE] Regions found:', [...new Set(properties.map(p => p.region))].join(', '));
+    console.log('[INLAND SV PAGE] Total:', properties.length);
+    console.log('[INLAND SV PAGE] South CB:', southInland.length, '| North CB:', northInland.length, '| Costa Calida:', costaCalidaInland.length, '| Unmatched:', otherInland.length);
+    console.log('[INLAND SV PAGE] Regions found:', [...new Set(properties.map(p => p.region))].join(', '));
     if (otherInland.length > 0) {
-      console.log('[INLAND PAGE] Unmatched towns:', [...new Set(otherInland.map(p => p.town))].join(', '));
+      console.log('[INLAND SV PAGE] Unmatched towns:', [...new Set(otherInland.map(p => p.town))].join(', '));
     }
   }
 
   // Breadcrumb schema
   const breadcrumbs = breadcrumbSchema([
-    { name: 'Home', url: 'https://newbuildhomescostablanca.com/' },
-    { name: 'Inland Properties', url: 'https://newbuildhomescostablanca.com/inland/' },
+    { name: 'Hem', url: 'https://newbuildhomescostablanca.com/sv/' },
+    { name: 'Inlandsboende', url: 'https://newbuildhomescostablanca.com/sv/inland/' },
   ]);
 
   return (
@@ -164,43 +163,50 @@ export default async function InlandPropertiesPage() {
 
           <div className="relative max-w-7xl mx-auto px-6">
             <nav className="text-warm-400 text-sm mb-6">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+              <Link href="/sv" className="hover:text-white transition-colors">Hem</Link>
               <span className="mx-2">›</span>
-              <span className="text-white">Inland Properties</span>
+              <span className="text-white">Inlandsboende</span>
             </nav>
 
             <div className="max-w-3xl">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-10 h-px bg-accent-500" />
                 <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
-                  More Space • Better Value
+                  Mer Plats • Bättre Värde
                 </span>
               </div>
 
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-4">
-                Inland <span className="font-semibold">New Builds</span>
+                Inlandsboende <span className="font-semibold">— Nybyggen</span>
               </h1>
 
               <p className="text-warm-300 text-lg leading-relaxed mb-8">
-                Discover the real Spain with our selection of new build properties in inland Costa Blanca.
-                Enjoy larger plots, traditional villages, golf courses, and prices up to 40% lower than coastal areas
-                - all within 20-30 minutes of the beaches.
+                Upptäck det autentiska Spanien med vår urval av nya byggnader i inlandet Costa Blanca.
+                Njut av större tomter, traditionella byar, golfbanor och priser upp till 40% lägre än kustzonen
+                - allt inom 20-30 minuter från stränderna.
               </p>
 
               {/* Stats */}
               <div className="flex flex-wrap gap-6 mb-8">
                 <div>
                   <div className="text-2xl font-semibold text-white">{properties.length}</div>
-                  <div className="text-warm-400 text-sm">Properties</div>
+                  <div className="text-warm-400 text-sm">Bostäder</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-semibold text-white">From {formatPrice(lowestPrice)}</div>
-                  <div className="text-warm-400 text-sm">Starting Price</div>
+                  <div className="text-2xl font-semibold text-white">Från {formatPrice(lowestPrice)}</div>
+                  <div className="text-warm-400 text-sm">Startpris</div>
                 </div>
                 <div>
                   <div className="text-2xl font-semibold text-white">{formatPrice(avgPrice)}</div>
-                  <div className="text-warm-400 text-sm">Average Price</div>
+                  <div className="text-warm-400 text-sm">Medelpris</div>
                 </div>
+              </div>
+
+              {/* Swedish highlight */}
+              <div className="bg-white/10 border border-white/20 rounded-sm p-4 mb-8">
+                <p className="text-warm-200 text-sm">
+                  <span className="font-semibold">Vi talar svenska!</span> En villa med stor tomt kostar ofta mindre än en etta i Vasastan, Stockholm.
+                </p>
               </div>
 
               {/* CTAs */}
@@ -214,13 +220,13 @@ export default async function InlandPropertiesPage() {
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                   </svg>
-                  WhatsApp Us
+                  Chatta på WhatsApp
                 </a>
                 <Link
-                  href="/developments"
+                  href="/sv/developments"
                   className="bg-white/10 hover:bg-white/20 text-white px-5 py-2.5 rounded-sm font-medium transition-colors border border-white/20 text-sm"
                 >
-                  View All Developments
+                  Visa alla projekt
                 </Link>
               </div>
             </div>
@@ -232,10 +238,10 @@ export default async function InlandPropertiesPage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-3">
-                Why Buy <span className="font-semibold">Inland?</span>
+                Varför Köpa <span className="font-semibold">Inåt Landet?</span>
               </h2>
               <p className="text-warm-600 max-w-2xl mx-auto">
-                Many buyers are discovering that inland Costa Blanca offers excellent value and a more authentic Spanish lifestyle.
+                Många köpare från Sverige och Skandinavien upptäcker att inlandet Costa Blanca erbjuder utmärkt värde och en mer autentisk spansk livsstil.
               </p>
             </div>
 
@@ -246,8 +252,8 @@ export default async function InlandPropertiesPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-primary-900 mb-2">Better Value</h3>
-                <p className="text-warm-600 text-sm">Properties can be 30-40% cheaper than coastal equivalents with the same build quality.</p>
+                <h3 className="font-semibold text-primary-900 mb-2">Bättre Värde</h3>
+                <p className="text-warm-600 text-sm">Fastigheter kan vara 30-40% billigare än kustbor med samma byggnadskvalitet.</p>
               </div>
 
               <div className="text-center p-6 bg-warm-50 rounded-sm">
@@ -256,8 +262,8 @@ export default async function InlandPropertiesPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-primary-900 mb-2">More Space</h3>
-                <p className="text-warm-600 text-sm">Larger plots and gardens. Many properties have 500m²+ plots compared to 100-200m² on the coast.</p>
+                <h3 className="font-semibold text-primary-900 mb-2">Mer Utrymme</h3>
+                <p className="text-warm-600 text-sm">Större tomter och trädgårdar. Många fastigheter har 500m²+ tomter jämfört med 100-200m² vid kusten.</p>
               </div>
 
               <div className="text-center p-6 bg-warm-50 rounded-sm">
@@ -266,8 +272,8 @@ export default async function InlandPropertiesPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-primary-900 mb-2">Authentic Spain</h3>
-                <p className="text-warm-600 text-sm">Traditional villages, local markets, and Spanish culture. Less touristy, more authentic living.</p>
+                <h3 className="font-semibold text-primary-900 mb-2">Genuina Spanien</h3>
+                <p className="text-warm-600 text-sm">Traditionella byar, lokala marknader och spansk kultur. Mindre turistiskt, mer autentiskt levande.</p>
               </div>
 
               <div className="text-center p-6 bg-warm-50 rounded-sm">
@@ -276,8 +282,26 @@ export default async function InlandPropertiesPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                   </svg>
                 </div>
-                <h3 className="font-semibold text-primary-900 mb-2">Near the Coast</h3>
-                <p className="text-warm-600 text-sm">Most inland towns are just 20-30 minutes from the beach. Best of both worlds!</p>
+                <h3 className="font-semibold text-primary-900 mb-2">Nära Kusten</h3>
+                <p className="text-warm-600 text-sm">De flesta inlandsstäder ligger bara 20-30 minuter från stranden. Det bästa av två världar!</p>
+              </div>
+            </div>
+
+            {/* Golf and Swedish communities highlight */}
+            <div className="grid md:grid-cols-2 gap-6 mt-10">
+              <div className="bg-blue-50 border border-blue-200 rounded-sm p-6">
+                <h3 className="font-semibold text-primary-900 mb-2">Golfkvinnorna älskar inlandet</h3>
+                <p className="text-warm-600 text-sm">
+                  Ett fantastiskt klimat året runt för golf - inte för varmt på sommaren, aldrig för kallt på vintern.
+                  Många av Spaniens bästa golfbanor ligger inåt landet, perfekt för svenska golfare.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-sm p-6">
+                <h3 className="font-semibold text-primary-900 mb-2">Svenska gemenskaper</h3>
+                <p className="text-warm-600 text-sm">
+                  Vega Baja är hem för många svenska familjer och expats. En redan etablerad gemenskap, svenska restauranger,
+                  och svenska lagliga och skatterådgivare som förstår dina behov.
+                </p>
               </div>
             </div>
           </div>
@@ -291,17 +315,17 @@ export default async function InlandPropertiesPage() {
                 <div className="max-w-2xl">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="bg-accent-500 text-white text-xs font-bold px-3 py-1 rounded-sm uppercase">
-                      Most Popular
+                      Mest Populär
                     </span>
-                    <span className="text-warm-500 text-sm">{southInland.length} properties available</span>
+                    <span className="text-warm-500 text-sm">{southInland.length} fastigheter tillgängliga</span>
                   </div>
                   <h2 className="text-2xl md:text-3xl font-light text-primary-900">
-                    Costa Blanca <span className="font-semibold">South Inland</span>
+                    Costa Blanca <span className="font-semibold">Söder — Inland</span>
                   </h2>
                   <p className="text-warm-600 mt-2 leading-relaxed">
-                    The Vega Baja region offers the best value for money in the Costa Blanca. Towns like
-                    Algorfa, Rojales, and San Miguel de Salinas combine excellent golf courses, traditional
-                    Spanish markets, and easy access to beaches - all at prices 30-40% lower than the coast.
+                    Vega Baja-regionen erbjuder bästa pengarvärdet i Costa Blanca. Städer som Algorfa, Rojales och San Miguel de Salinas
+                    kombinerar utmärkta golfbanor, traditionella spanska marknader och lätt tillgång till stränderna -
+                    allt till priser 30-40% lägre än kusten.
                   </p>
                 </div>
               </div>
@@ -315,10 +339,10 @@ export default async function InlandPropertiesPage() {
               {southInland.length > 6 && (
                 <div className="text-center mt-8">
                   <Link
-                    href="/properties?area=inland-south"
+                    href="/sv/properties?area=inland-south"
                     className="inline-flex items-center gap-2 bg-primary-900 text-white px-6 py-2.5 rounded-sm font-medium hover:bg-primary-800 transition-colors"
                   >
-                    View all {southInland.length} South Inland properties
+                    Visa alla {southInland.length} södra inlandsfastigheter
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -338,17 +362,17 @@ export default async function InlandPropertiesPage() {
                   <div className="flex items-center gap-4 mb-2">
                     <div className="w-10 h-px bg-accent-500" />
                     <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
-                      Mountain & Valley Living
+                      Berg & Dalbor
                     </span>
-                    <span className="text-warm-500 text-sm">{northInland.length} properties</span>
+                    <span className="text-warm-500 text-sm">{northInland.length} fastigheter</span>
                   </div>
                   <h2 className="text-2xl md:text-3xl font-light text-primary-900">
-                    Costa Blanca <span className="font-semibold">North Inland</span>
+                    Costa Blanca <span className="font-semibold">Norr — Inland</span>
                   </h2>
                   <p className="text-warm-600 mt-2 leading-relaxed">
-                    Escape to the stunning Jalon Valley wine region, the charming mountain town of Polop,
-                    or the bustling La Nucia. The North offers dramatic scenery, cooler summers, and a
-                    more established expat community - perfect for those seeking a quieter pace of life.
+                    Flykta till den fantastiska Jalon Valley vinregionen, den charmiga bergsstaden Polop,
+                    eller det livliga La Nucia. Norr erbjuder dramatisk scenery, svalare somrar och
+                    en mer etablerad expat-gemenskap - perfekt för dem som söker en lugn livsstil.
                   </p>
                 </div>
               </div>
@@ -362,10 +386,10 @@ export default async function InlandPropertiesPage() {
               {northInland.length > 6 && (
                 <div className="text-center mt-8">
                   <Link
-                    href="/properties?area=inland-north"
+                    href="/sv/properties?area=inland-north"
                     className="inline-flex items-center gap-2 text-accent-600 font-medium hover:text-accent-700 transition-colors"
                   >
-                    View all {northInland.length} North Inland properties
+                    Visa alla {northInland.length} norra inlandsfastigheter
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -387,15 +411,15 @@ export default async function InlandPropertiesPage() {
                     <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
                       Murcia Region
                     </span>
-                    <span className="text-warm-500 text-sm">{costaCalidaInland.length} properties</span>
+                    <span className="text-warm-500 text-sm">{costaCalidaInland.length} fastigheter</span>
                   </div>
                   <h2 className="text-2xl md:text-3xl font-light text-primary-900">
-                    Costa Calida <span className="font-semibold">Inland</span>
+                    Costa Calida <span className="font-semibold">— Inland</span>
                   </h2>
                   <p className="text-warm-600 mt-2 leading-relaxed">
-                    The Murcia region offers exceptional value with a more Spanish feel. Towns like
-                    Torre Pacheco and Fuente Álamo provide authentic rural living with easy access
-                    to both the Mar Menor beaches and Murcia city.
+                    Murcia-regionen erbjuder exceptionellt värde med en mer spansk känsla. Städer som
+                    Torre Pacheco och Fuente Álamo tillhandahåller autentiskt lantligt levande med lätt åtkomst
+                    till både Mar Menor-stränderna och Murcia stad.
                   </p>
                 </div>
               </div>
@@ -409,10 +433,10 @@ export default async function InlandPropertiesPage() {
               {costaCalidaInland.length > 6 && (
                 <div className="text-center mt-8">
                   <Link
-                    href="/properties?area=inland-calida"
+                    href="/sv/properties?area=inland-calida"
                     className="inline-flex items-center gap-2 text-accent-600 font-medium hover:text-accent-700 transition-colors"
                   >
-                    View all {costaCalidaInland.length} Costa Calida Inland properties
+                    Visa alla {costaCalidaInland.length} Costa Calida inlandsfastigheter
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -432,14 +456,14 @@ export default async function InlandPropertiesPage() {
                   <div className="flex items-center gap-4 mb-2">
                     <div className="w-10 h-px bg-accent-500" />
                     <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
-                      Complete Collection
+                      Komplett Samling
                     </span>
                   </div>
                   <h2 className="text-2xl md:text-3xl font-light text-primary-900">
-                    All Inland <span className="font-semibold">Properties</span>
+                    Alla Inlands <span className="font-semibold">Fastigheter</span>
                   </h2>
                   <p className="text-warm-600 mt-1">
-                    Browse all {properties.length} inland new build properties
+                    Bläddra genom alla {properties.length} nya inlandsfastigheter
                   </p>
                 </div>
               </div>
@@ -460,29 +484,29 @@ export default async function InlandPropertiesPage() {
               <div className="flex items-center justify-center gap-4 mb-3">
                 <div className="w-10 h-px bg-accent-500" />
                 <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
-                  Explore Areas
+                  Utforska Områden
                 </span>
                 <div className="w-10 h-px bg-accent-500" />
               </div>
               <h2 className="text-2xl md:text-3xl font-light text-white mb-3">
-                Popular Inland Towns
+                Populära Inlandsstäder
               </h2>
             </div>
 
             <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
               {[
-                { name: 'Algorfa', region: 'South', golf: true },
-                { name: 'Rojales', region: 'South', golf: true },
-                { name: 'San Miguel de Salinas', region: 'South' },
-                { name: 'Benijofar', region: 'South' },
-                { name: 'Polop', region: 'North', mountain: true },
-                { name: 'La Nucia', region: 'North' },
-                { name: 'Jalon Valley', region: 'North', wine: true },
-                { name: 'Finestrat', region: 'North', mountain: true },
+                { name: 'Algorfa', region: 'Söder', golf: true },
+                { name: 'Rojales', region: 'Söder', golf: true },
+                { name: 'San Miguel de Salinas', region: 'Söder' },
+                { name: 'Benijofar', region: 'Söder' },
+                { name: 'Polop', region: 'Norr', mountain: true },
+                { name: 'La Nucia', region: 'Norr' },
+                { name: 'Jalon Valley', region: 'Norr', wine: true },
+                { name: 'Finestrat', region: 'Norr', mountain: true },
               ].map((area) => (
                 <Link
                   key={area.name}
-                  href={`/areas/${area.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  href={`/sv/areas/${area.name.toLowerCase().replace(/\s+/g, '-')}`}
                   className="group bg-white/10 hover:bg-white/20 p-4 rounded-sm transition-colors"
                 >
                   <h3 className="font-medium text-white group-hover:text-accent-400 transition-colors">
@@ -491,8 +515,8 @@ export default async function InlandPropertiesPage() {
                   <div className="flex items-center gap-2 mt-1">
                     <span className="text-warm-400 text-sm">Costa Blanca {area.region}</span>
                     {area.golf && <span className="text-xs bg-green-500/20 text-green-400 px-1.5 py-0.5 rounded">Golf</span>}
-                    {area.mountain && <span className="text-xs bg-blue-500/20 text-blue-400 px-1.5 py-0.5 rounded">Mountain</span>}
-                    {area.wine && <span className="text-xs bg-purple-500/20 text-purple-400 px-1.5 py-0.5 rounded">Wine</span>}
+                    {area.mountain && <span className="text-xs bg-blue-500/20 text-blue-400 px-1.5 py-0.5 rounded">Berg</span>}
+                    {area.wine && <span className="text-xs bg-purple-500/20 text-purple-400 px-1.5 py-0.5 rounded">Vin</span>}
                   </div>
                 </Link>
               ))}
@@ -504,11 +528,11 @@ export default async function InlandPropertiesPage() {
         <section className="py-16 bg-warm-50">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-4">
-              Want to Explore Inland Options?
+              Vill du Utforska Inlandsalternativ?
             </h2>
             <p className="text-warm-600 leading-relaxed mb-8 max-w-2xl mx-auto">
-              Our team can arrange viewings of inland properties and help you understand the benefits of each area.
-              We&apos;ll show you the local amenities, drive times to the coast, and help you find the perfect balance.
+              Vårt team kan ordna visningar av inlandsfastigheter och hjälpa dig förstå fördelarna med varje område.
+              Vi visar dig lokala bekvämligheter, körtider till kusten och hjälper dig hitta den perfekta balansen.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
@@ -520,13 +544,13 @@ export default async function InlandPropertiesPage() {
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                 </svg>
-                Chat on WhatsApp
+                Chatta på WhatsApp
               </a>
               <Link
-                href="/contact"
+                href="/sv/contact"
                 className="bg-primary-900 hover:bg-primary-800 text-white font-medium px-8 py-3 rounded-sm transition-colors"
               >
-                Contact Form
+                Kontaktformulär
               </Link>
             </div>
           </div>

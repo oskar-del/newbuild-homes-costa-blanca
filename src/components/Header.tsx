@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 // Refined Design System Colours
 const BRAND = {
@@ -95,6 +96,53 @@ const NAV_ITEMS = [
   },
 ];
 
+// Language switcher component
+function LanguageSwitcher({ className = '' }: { className?: string }) {
+  const pathname = usePathname();
+  const isSwedish = pathname.startsWith('/sv');
+
+  // Build the alternate language path
+  const getAlternatePath = () => {
+    if (isSwedish) {
+      // Remove /sv prefix to go to English
+      const englishPath = pathname.replace(/^\/sv/, '') || '/';
+      return englishPath;
+    } else {
+      // Add /sv prefix to go to Swedish
+      return `/sv${pathname}`;
+    }
+  };
+
+  return (
+    <Link
+      href={getAlternatePath()}
+      className={`inline-flex items-center gap-1.5 text-sm font-medium transition-colors ${className}`}
+      title={isSwedish ? 'Switch to English' : 'Byt till svenska'}
+    >
+      <span className={`inline-block w-5 h-3.5 rounded-sm overflow-hidden border border-warm-300 ${
+        isSwedish ? 'opacity-50' : 'ring-1 ring-accent-500'
+      }`}>
+        <svg viewBox="0 0 60 42" className="w-full h-full">
+          <rect width="60" height="42" fill="#012169"/>
+          <path d="M0,0 L60,42 M60,0 L0,42" stroke="#fff" strokeWidth="7"/>
+          <path d="M0,0 L60,42 M60,0 L0,42" stroke="#C8102E" strokeWidth="4"/>
+          <path d="M30,0 V42 M0,21 H60" stroke="#fff" strokeWidth="11"/>
+          <path d="M30,0 V42 M0,21 H60" stroke="#C8102E" strokeWidth="7"/>
+        </svg>
+      </span>
+      <span className={`inline-block w-5 h-3.5 rounded-sm overflow-hidden border border-warm-300 ${
+        isSwedish ? 'ring-1 ring-accent-500' : 'opacity-50'
+      }`}>
+        <svg viewBox="0 0 60 42" className="w-full h-full">
+          <rect width="60" height="42" fill="#006AA7"/>
+          <rect x="18" width="6" height="42" fill="#FECC02"/>
+          <rect y="18" width="60" height="6" fill="#FECC02"/>
+        </svg>
+      </span>
+    </Link>
+  );
+}
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
@@ -112,6 +160,9 @@ export default function Header() {
             <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-accent-500 transition-colors flex items-center gap-1">
               <span>💬</span> WhatsApp
             </a>
+            <div className="border-l border-white/20 pl-3 ml-1">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       </div>
@@ -239,6 +290,12 @@ export default function Header() {
                 )}
               </div>
             ))}
+
+            {/* Language Switcher - Mobile */}
+            <div className="py-3 border-b border-warm-200 flex items-center justify-between">
+              <span className="text-warm-600 text-sm">Language</span>
+              <LanguageSwitcher />
+            </div>
 
             {/* Mobile CTA buttons */}
             <div className="mt-4 flex flex-col gap-3">

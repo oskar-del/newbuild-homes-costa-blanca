@@ -6,22 +6,17 @@ import { formatPrice } from '@/lib/unified-property';
 import { breadcrumbSchema, toJsonLd, faqSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Luxury Villas Costa Blanca | €800k+ Premium Properties',
-  description: 'Discover luxury villas and bespoke properties in Costa Blanca from €800,000. Sea views, private pools, and premium locations in Jávea, Moraira, and exclusive enclaves.',
+  title: 'Lyxvillor Costa Blanca | Premiumfastigheter från €800k',
+  description: 'Upptäck lyxvillor och exklusiva fastigheter på Costa Blanca från 800 000 euro. Havsutsikt, privata pooler och premiumlägen i Jávea, Moraira och exklusiva enklaver. Svensk service.',
   openGraph: {
-    title: 'Luxury Villas Costa Blanca | Premium Properties €800k+',
-    description: 'Discover luxury villas and bespoke properties in Costa Blanca. Sea views, private pools, premium locations.',
+    title: 'Lyxvillor Costa Blanca | Premiumfastigheter €800k+',
+    description: 'Upptäck lyxvillor och exklusiva fastigheter på Costa Blanca. Havsutsikt, privata pooler, premiumlägen.',
     type: 'website',
-    url: 'https://newbuildhomescostablanca.com/luxury',
+    url: 'https://newbuildhomescostablanca.com/sv/luxury',
     siteName: 'New Build Homes Costa Blanca',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Luxury Villas Costa Blanca | €800k+ Premium Properties',
-    description: 'Discover luxury villas and bespoke properties in Costa Blanca from €800,000+. Exclusive sea view villas.',
-  },
   alternates: {
-    canonical: 'https://newbuildhomescostablanca.com/luxury',
+    canonical: 'https://newbuildhomescostablanca.com/sv/luxury',
     languages: {
       'en': 'https://newbuildhomescostablanca.com/luxury',
       'sv': 'https://newbuildhomescostablanca.com/sv/luxury',
@@ -83,62 +78,62 @@ const luxuryAreas = [
   {
     name: 'Jávea',
     slug: 'javea',
-    description: 'Historic port town with sandy beaches, marina, and Montgó mountain backdrop. Premium villa zones include Cap Martí and Monte Olimpo.',
+    description: 'Historisk hamn med sandstränder, marina och Montgó-berget i bakgrunden. Premiumvillzoner omfattar Cap Martí och Monte Olimpo.',
     priceRange: '€800k - €5M+',
-    highlights: ['Sandy Arenal Beach', 'Michelin restaurants', '300+ days sunshine'],
+    highlights: ['Arenal Beach', 'Michelin-restauranger', '300+ dagar sol per år'],
   },
   {
     name: 'Moraira',
     slug: 'moraira',
-    description: 'Exclusive enclave with pristine coves, yacht club, and international community. Quieter than Jávea with exceptional privacy.',
+    description: 'Exklusiv enklave med orörda vikar, segelklubb och internationell gemenskap. Lugn känsla med exceptionell integritet.',
     priceRange: '€1M - €8M+',
-    highlights: ['Private coves', 'Yacht club', 'Low-density building'],
+    highlights: ['Privata vikar', 'Segelklubb', 'Låg bebyggelsedensitet'],
   },
   {
     name: 'Altea',
     slug: 'altea',
-    description: 'Artist\'s village with whitewashed old town, cultural scene, and stunning sunset views. Hills above offer spectacular sea views.',
+    description: 'Konstnärsby med vitkalkade gamla stan, kulturscen och fantastisk solnedgångsutsikt. Kullar ovan med spektakulär havsutsikt.',
     priceRange: '€700k - €3M+',
-    highlights: ['Cultural hub', 'Old town charm', 'Art galleries'],
+    highlights: ['Kulturhub', 'Gamla stadscharm', 'Konstgallerier'],
   },
   {
     name: 'Cumbre del Sol',
     slug: 'cumbre-del-sol',
-    description: 'Clifftop development between Jávea and Moraira with dramatic sea views and modern infrastructure. Private community feel.',
+    description: 'Bergsutsiktsutbyggnad mellan Jávea och Moraira med dramatisk havsutsikt och modern infrastruktur. Privatgemenskap.',
     priceRange: '€600k - €2M+',
-    highlights: ['Cliff-top views', 'Gated community', 'Modern infrastructure'],
+    highlights: ['Bergsutsikt', 'Gated community', 'Modern infrastruktur'],
   },
 ];
 
-// FAQs for SEO
+// Swedish FAQs for SEO
 const luxuryFaqs = [
   {
-    question: 'What areas have the best luxury villas in Costa Blanca?',
-    answer: 'The most prestigious luxury villa areas are Jávea (especially Cap Martí and Monte Olimpo), Moraira, Altea Hills, Cumbre del Sol, and Benissa coast. These areas offer the best combination of sea views, privacy, and quality infrastructure.',
+    question: 'Vilka områden har de bästa lyxvillorna på Costa Blanca?',
+    answer: 'De mest prestigefyllda lyxvillområdena är Jávea (särskilt Cap Martí och Monte Olimpo), Moraira, Altea Hills, Cumbre del Sol och Benissa kust. Dessa områden erbjuder den bästa kombinationen av havsutsikt, integritet och kvalitetsinfrastruktur.',
   },
   {
-    question: 'What is the typical price for a luxury villa in Costa Blanca?',
-    answer: 'Luxury villas in Costa Blanca typically start from €800,000 and can exceed €5 million for exceptional properties. Bespoke new builds in prime locations like Jávea or Moraira usually range from €1.5M to €3M for 4-5 bedroom villas with pools and sea views.',
+    question: 'Vad kostar en lyxvilla på Costa Blanca jämfört med Sverige?',
+    answer: 'En lyxvilla på €1,5-2 miljoner på Costa Blanca med havsutsikt och pool skulle kosta €4-6 miljoner på samma nivå i eller runt Stockholm. Costa Blanca erbjuder ofta 50% bättre värde för samma specifikationer och ofta bättre väder året runt.',
   },
   {
-    question: 'Are new build luxury villas a good investment in Spain?',
-    answer: 'Yes, Costa Blanca luxury properties have shown consistent appreciation, particularly in the €1M+ segment. New builds offer modern energy efficiency, lower maintenance, and builder warranties. The rental market for luxury villas is strong, especially during peak summer months.',
+    question: 'Är nybyggda lyxvillor en bra investering?',
+    answer: 'Ja, Costa Blancas lyxfastigheter har visat konsekvent värdeökning, särskilt inom €1M+ segmentet. Nybyggen erbjuder modern energieffektivitet, lägre underhåll och garantier från byggherre. Hyresmarknaden för lyxvillor är stark, särskilt under högsäsongen.',
   },
   {
-    question: 'What taxes apply when buying luxury property in Spain?',
-    answer: 'For new builds, VAT (IVA) of 10% plus stamp duty of 1.5% applies. Running costs include IBI (property tax), typically 0.4-1.1% of cadastral value annually, and non-resident income tax if you don\'t rent it out.',
+    question: 'Vilka skatter gäller vid köp av lyxfastighet i Spanien?',
+    answer: 'För nybyggen gäller moms (IVA) på 10% plus stämpelskatt på 1,5%. Driftskostnader inkluderar IBI (fastighetsskatt), typiskt 0,4-1,1% av taxeringsvärde årligen, och om du inte hyr ut betalar du icke-residentskatten på hyresintäkter.',
   },
   {
-    question: 'Can I get a mortgage for luxury property as a non-resident?',
-    answer: 'Yes, Spanish banks offer mortgages to non-residents typically up to 60-70% loan-to-value for luxury properties. We work with Habeno mortgage specialists who can arrange competitive financing for international buyers.',
+    question: 'Kan jag få bolån som svensk medborgare?',
+    answer: 'Ja, spanska banker erbjuder bolån till icke-residenter, typiskt upp till 60-70% låne-till-värde för lyxfastigheter. Vi arbetar med Habeno-hypoteksspecialister som kan ordna konkurrenskraftig finansiering för internationella köpare.',
   },
   {
-    question: 'How long does it take to buy a property in Spain?',
-    answer: 'The purchase process typically takes 6-8 weeks from signing the reservation contract to completion. For off-plan luxury villas, construction periods vary from 12-24 months depending on the project.',
+    question: 'Hur lång tid tar det att köpa fastighet i Spanien?',
+    answer: 'Köpprocessen tar typiskt 6-8 veckor från underteckning av reservationskontrakt till färdigställning. För bygget av lyxvillor från grunden varierar byggperioder från 12-24 månader beroende på projektet.',
   },
 ];
 
-export default async function LuxuryPage() {
+export default async function LuxuryPageSv() {
   const allProperties = await fetchXMLFeed();
 
   // Filter luxury properties (€800k+)
@@ -152,8 +147,8 @@ export default async function LuxuryPage() {
 
   // Schema
   const breadcrumbs = breadcrumbSchema([
-    { name: 'Home', url: 'https://newbuildhomescostablanca.com/' },
-    { name: 'Luxury', url: 'https://newbuildhomescostablanca.com/luxury/' },
+    { name: 'Hem', url: 'https://newbuildhomescostablanca.com/sv/' },
+    { name: 'Lyx', url: 'https://newbuildhomescostablanca.com/sv/luxury/' },
   ]);
 
   const faqSchemaData = faqSchema(luxuryFaqs);
@@ -182,7 +177,7 @@ export default async function LuxuryPage() {
               href="#consultation"
               className="flex-1 flex items-center justify-center gap-2 bg-accent-500 text-white py-4 font-medium"
             >
-              Get Consultation
+              Boka Rådgivning
             </a>
           </div>
         </div>
@@ -194,7 +189,7 @@ export default async function LuxuryPage() {
           <div className="absolute inset-0">
             <Image
               src={featuredMiralbo[0].image}
-              alt="Luxury villa in Costa Blanca"
+              alt="Lyxvilla på Costa Blanca"
               fill
               className="object-cover opacity-40"
               priority
@@ -205,9 +200,9 @@ export default async function LuxuryPage() {
 
           <div className="relative max-w-7xl mx-auto px-6 py-20 md:py-28">
             <nav className="text-warm-400 text-sm mb-8">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+              <Link href="/sv/" className="hover:text-white transition-colors">Hem</Link>
               <span className="mx-2">›</span>
-              <span className="text-white">Luxury Collection</span>
+              <span className="text-white">Lyxsamlingen</span>
             </nav>
 
             <div className="grid lg:grid-cols-5 gap-12 items-start">
@@ -215,41 +210,45 @@ export default async function LuxuryPage() {
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-px bg-accent-500" />
                   <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
-                    Premium Properties
+                    Premiumfastigheter
                   </span>
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
-                  Luxury <span className="font-semibold">Collection</span>
+                  Lyx <span className="font-semibold">samlingen</span>
                 </h1>
 
-                <p className="text-warm-200 text-lg leading-relaxed mb-8 max-w-2xl">
-                  Exceptional properties from €800,000. Bespoke villas, sea views, and prime locations
-                  across Costa Blanca North and South. Each property handpicked for discerning buyers.
+                <p className="text-warm-200 text-lg leading-relaxed mb-4 max-w-2xl">
+                  Exceptionella fastigheter från €800 000. Skräddarsydda villor, havsutsikt och premiumlägen på Costa Blanca.
+                  Varje fastighet handplockad för erfarna köpare.
+                </p>
+
+                <p className="text-accent-300 text-base leading-relaxed mb-8 max-w-2xl font-medium">
+                  Exklusiva fastigheter från 800 000 euro — motsvarar en tvåa i Stockholms innerstad
                 </p>
 
                 {/* Stats */}
                 <div className="flex flex-wrap gap-8 mb-8">
                   <div>
                     <div className="text-3xl font-semibold text-white">{luxuryProperties.length}</div>
-                    <div className="text-warm-400 text-sm">Luxury Properties</div>
+                    <div className="text-warm-400 text-sm">Lyxfastigheter</div>
                   </div>
                   <div>
                     <div className="text-3xl font-semibold text-white">€800k</div>
-                    <div className="text-warm-400 text-sm">Starting From</div>
+                    <div className="text-warm-400 text-sm">Från och med</div>
                   </div>
                   <div>
                     <div className="text-3xl font-semibold text-white">{bespokeProperties.length}</div>
-                    <div className="text-warm-400 text-sm">Bespoke €2M+</div>
+                    <div className="text-warm-400 text-sm">Skräddarsydd €2M+</div>
                   </div>
                 </div>
 
                 <div className="flex flex-wrap gap-4">
                   <Link
-                    href="#collection"
+                    href="/sv/luxury#collection"
                     className="bg-accent-500 hover:bg-accent-600 text-white font-medium px-6 py-3 rounded-sm transition-colors inline-flex items-center gap-2"
                   >
-                    Browse Collection
+                    Utforska Samlingen
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -269,28 +268,28 @@ export default async function LuxuryPage() {
               {/* Hero Lead Capture Form */}
               <div className="lg:col-span-2 hidden lg:block">
                 <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20">
-                  <h3 className="text-lg font-semibold text-white mb-1">Private Consultation</h3>
-                  <p className="text-warm-300 text-sm mb-4">Get personalized luxury property recommendations</p>
+                  <h3 className="text-lg font-semibold text-white mb-1">Personlig Rådgivning</h3>
+                  <p className="text-warm-300 text-sm mb-4">Få skräddarsydda lyxfastighetsrekommendationer</p>
                   <form
-                    name="luxury-consultation"
+                    name="luxury-consultation-sv"
                     method="POST"
                     data-netlify="true"
                     className="space-y-3"
                   >
-                    <input type="hidden" name="form-name" value="luxury-consultation" />
-                    <input type="hidden" name="source" value="luxury-hero" />
+                    <input type="hidden" name="form-name" value="luxury-consultation-sv" />
+                    <input type="hidden" name="source" value="luxury-hero-sv" />
                     <input
                       type="text"
                       name="name"
                       required
-                      placeholder="Your name"
+                      placeholder="Ditt namn"
                       className="w-full px-4 py-2.5 bg-white/10 border border-white/20 rounded text-white placeholder-warm-400 focus:outline-none focus:ring-2 focus:ring-accent-500"
                     />
                     <input
                       type="email"
                       name="email"
                       required
-                      placeholder="Email address"
+                      placeholder="E-postadress"
                       className="w-full px-4 py-2.5 bg-white/10 border border-white/20 rounded text-white placeholder-warm-400 focus:outline-none focus:ring-2 focus:ring-accent-500"
                     />
                     <select
@@ -306,11 +305,11 @@ export default async function LuxuryPage() {
                       type="submit"
                       className="w-full bg-accent-500 hover:bg-accent-600 text-white font-medium py-3 rounded transition-colors"
                     >
-                      Request Consultation
+                      Boka Rådgivning
                     </button>
                   </form>
                   <p className="text-warm-400 text-xs mt-3 text-center">
-                    We respond within 2 hours • No obligation
+                    Vi svarar inom 2 timmar • Helt utan förpliktelse
                   </p>
                 </div>
               </div>
@@ -332,10 +331,10 @@ export default async function LuxuryPage() {
                 <div className="w-10 h-px bg-accent-500" />
               </div>
               <h2 className="text-2xl md:text-3xl font-light text-white">
-                Featured Bespoke Villas
+                Utvalda Skräddarsydda Villor
               </h2>
               <p className="text-warm-400 mt-2 text-sm">
-                Architectural excellence in Jávea's most prestigious locations
+                Arkitektonisk excellens på Jáveas mest prestigefyllda platser
               </p>
             </div>
           </div>
@@ -344,7 +343,7 @@ export default async function LuxuryPage() {
             {featuredMiralbo.slice(0, 2).map((villa) => (
               <Link
                 key={villa.slug}
-                href={`/developments/${villa.slug}`}
+                href={`/sv/developments/${villa.slug}`}
                 className="group relative overflow-hidden"
               >
                 <div
@@ -371,11 +370,11 @@ export default async function LuxuryPage() {
                       {formatPrice(villa.price)}
                     </span>
                     <span className="text-warm-300 text-sm">
-                      {villa.bedrooms} bed · {villa.builtArea}m² · {villa.plotArea}m² plot
+                      {villa.bedrooms} rum · {villa.builtArea}m² · {villa.plotArea}m² tomt
                     </span>
                   </div>
                   <div className="mt-3 flex items-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
-                    View Property
+                    Visa egendom
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -387,7 +386,7 @@ export default async function LuxuryPage() {
 
           {/* Full-width feature */}
           <Link
-            href={`/developments/${featuredMiralbo[2].slug}`}
+            href={`/sv/developments/${featuredMiralbo[2].slug}`}
             className="group relative block h-[400px] overflow-hidden"
           >
             <div
@@ -405,23 +404,23 @@ export default async function LuxuryPage() {
                   {featuredMiralbo[2].zone}
                 </span>
                 <span className="bg-white/20 text-white text-xs px-3 py-1.5 rounded-sm backdrop-blur-sm">
-                  Sea & Montgó Views
+                  Hav & Montgó-vy
                 </span>
               </div>
               <h3 className="text-2xl md:text-3xl font-light text-white mb-2 group-hover:text-accent-300 transition-colors">
                 {featuredMiralbo[2].title}
               </h3>
-              <p className="text-warm-300 text-sm mb-4">{featuredMiralbo[2].town} — Contemporary Mediterranean Living</p>
+              <p className="text-warm-300 text-sm mb-4">{featuredMiralbo[2].town} — Samtida medelhavsboendet</p>
               <div className="flex items-center gap-6 mb-4">
                 <span className="text-2xl font-semibold text-white">
                   {formatPrice(featuredMiralbo[2].price)}
                 </span>
                 <span className="text-warm-300 text-sm">
-                  {featuredMiralbo[2].bedrooms} bed · {featuredMiralbo[2].bathrooms} bath · {featuredMiralbo[2].builtArea}m²
+                  {featuredMiralbo[2].bedrooms} rum · {featuredMiralbo[2].bathrooms} bad · {featuredMiralbo[2].builtArea}m²
                 </span>
               </div>
               <div className="flex items-center gap-2 text-accent-400 font-medium group-hover:gap-3 transition-all">
-                Discover This Villa
+                Upptäck denna villa
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -439,15 +438,15 @@ export default async function LuxuryPage() {
               <div className="flex items-center justify-center gap-4 mb-3">
                 <div className="w-10 h-px bg-primary-700" />
                 <span className="text-primary-700 text-xs font-medium tracking-widest uppercase">
-                  Premium Locations
+                  Premiumlägen
                 </span>
                 <div className="w-10 h-px bg-primary-700" />
               </div>
               <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-2">
-                Costa Blanca's Luxury Hotspots
+                Costa Blancas Lyxigaste Områden
               </h2>
               <p className="text-warm-600 max-w-2xl mx-auto">
-                The most sought-after locations for discerning buyers seeking exceptional properties with sea views and Mediterranean lifestyle.
+                De mest eftertraktade lägena för erfarna köpare som söker exceptionella fastigheter med havsutsikt och medelhavsliv.
               </p>
             </div>
 
@@ -455,7 +454,7 @@ export default async function LuxuryPage() {
               {luxuryAreas.map((area) => (
                 <Link
                   key={area.slug}
-                  href={`/areas/${area.slug}`}
+                  href={`/sv/areas/${area.slug}`}
                   className="group bg-white rounded-lg p-6 border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
                 >
                   <h3 className="text-xl font-semibold text-primary-900 group-hover:text-accent-600 transition-colors mb-2">
@@ -478,7 +477,7 @@ export default async function LuxuryPage() {
                     ))}
                   </div>
                   <div className="mt-4 pt-4 border-t border-warm-100 flex items-center gap-2 text-accent-600 text-sm font-medium group-hover:gap-3 transition-all">
-                    View {area.name} Guide
+                    Visa {area.name} Guide
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -500,14 +499,14 @@ export default async function LuxuryPage() {
                   <div className="flex items-center gap-4 mb-2">
                     <div className="w-10 h-px bg-primary-700" />
                     <span className="text-primary-700 text-xs font-medium tracking-widest uppercase">
-                      Bespoke Collection
+                      Skräddarsydd Samling
                     </span>
                   </div>
                   <h2 className="text-2xl md:text-3xl font-light text-primary-900">
-                    Ultra Luxury €2M+
+                    Exklusiv Lyx €2M+
                   </h2>
                   <p className="text-warm-600 mt-1 text-sm">
-                    {bespokeProperties.length} exceptional estates for the most discerning buyers
+                    {bespokeProperties.length} exceptionella fastigheter för de mest erfarna köparna
                   </p>
                 </div>
                 <a
@@ -517,7 +516,7 @@ export default async function LuxuryPage() {
                   className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-medium px-5 py-2.5 rounded-sm transition-colors text-sm"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                  Inquire via WhatsApp
+                  Förfrågan via WhatsApp
                 </a>
               </div>
 
@@ -525,13 +524,13 @@ export default async function LuxuryPage() {
                 {bespokeProperties.slice(0, 6).map((property) => (
                   <Link
                     key={property.ref}
-                    href={`/properties/${property.ref}`}
+                    href={`/sv/properties/${property.ref}`}
                     className="group bg-warm-50 rounded-sm overflow-hidden hover:shadow-xl transition-all duration-300 border border-warm-200"
                   >
                     <div className="relative h-64 overflow-hidden">
                       <Image
                         src={property.images?.[0] || '/images/placeholder.jpg'}
-                        alt={`${property.bedrooms} bed ${property.propertyType} in ${property.town}`}
+                        alt={`${property.bedrooms} rum ${property.propertyType} på {${property.town}`}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -539,7 +538,7 @@ export default async function LuxuryPage() {
                       />
                       <div className="absolute top-3 left-3 flex gap-2">
                         <span className="bg-primary-900 text-white text-xs px-2 py-1 rounded-sm">
-                          Bespoke
+                          Skräddarsydd
                         </span>
                         {(property.description || '').toLowerCase().includes('pool') && (
                           <span className="bg-accent-500 text-white text-xs px-2 py-1 rounded-sm">
@@ -555,17 +554,17 @@ export default async function LuxuryPage() {
                     </div>
                     <div className="p-5">
                       <h3 className="font-medium text-primary-900 mb-1 group-hover:text-accent-600 transition-colors">
-                        {(property as any).aiContent?.title || `${property.bedrooms}-Bed ${property.propertyType}`}
+                        {(property as any).aiContent?.title || `${property.bedrooms}-Rum ${property.propertyType}`}
                       </h3>
                       <p className="text-sm text-warm-500 mb-3">
-                        <Link href={`/areas/${property.town.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-accent-600">
+                        <Link href={`/sv/areas/${property.town.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-accent-600">
                           {property.town}
                         </Link>
                       </p>
                       <div className="flex items-center gap-4 text-sm text-warm-600">
-                        <span>{property.bedrooms} bed</span>
+                        <span>{property.bedrooms} rum</span>
                         <span className="text-warm-300">•</span>
-                        <span>{property.bathrooms} bath</span>
+                        <span>{property.bathrooms} bad</span>
                         <span className="text-warm-300">•</span>
                         <span>{property.size}m²</span>
                       </div>
@@ -577,10 +576,10 @@ export default async function LuxuryPage() {
               {bespokeProperties.length > 6 && (
                 <div className="text-center mt-8">
                   <Link
-                    href="/properties?minPrice=2000000"
+                    href="/sv/properties?minPrice=2000000"
                     className="inline-flex items-center gap-2 text-primary-900 font-medium hover:text-accent-600 transition-colors group"
                   >
-                    View All {bespokeProperties.length} Bespoke Properties
+                    Visa alla {bespokeProperties.length} Skräddarsydda Fastigheter
                     <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -601,21 +600,21 @@ export default async function LuxuryPage() {
                 <div className="flex items-center gap-4 mb-2">
                   <div className="w-10 h-px bg-accent-500" />
                   <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
-                    Premium Collection
+                    Premiumsamling
                   </span>
                 </div>
                 <h2 className="text-2xl md:text-3xl font-light text-primary-900">
-                  Luxury Villas €800k – €2M
+                  Lyxvillor €800k – €2M
                 </h2>
                 <p className="text-warm-600 mt-1 text-sm">
-                  {premiumProperties.length} premium properties across Costa Blanca
+                  {premiumProperties.length} premiumfastigheter över Costa Blanca
                 </p>
               </div>
               <Link
-                href="/properties?minPrice=800000&maxPrice=2000000"
+                href="/sv/properties?minPrice=800000&maxPrice=2000000"
                 className="inline-flex items-center gap-2 text-primary-900 font-medium hover:text-accent-600 transition-colors group text-sm"
               >
-                View All
+                Visa alla
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -626,13 +625,13 @@ export default async function LuxuryPage() {
               {premiumProperties.slice(0, 12).map((property) => (
                 <Link
                   key={property.ref}
-                  href={`/properties/${property.ref}`}
+                  href={`/sv/properties/${property.ref}`}
                   className="group"
                 >
                   <div className="relative h-56 overflow-hidden rounded-sm mb-3">
                     <Image
                       src={property.images?.[0] || '/images/placeholder.jpg'}
-                      alt={`${property.bedrooms} bed ${property.propertyType} in ${property.town}`}
+                      alt={`${property.bedrooms} rum ${property.propertyType} på {${property.town}`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -648,7 +647,7 @@ export default async function LuxuryPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <h3 className="font-medium text-primary-900 mb-1 group-hover:text-accent-600 transition-colors line-clamp-1 text-sm">
-                    {(property as any).aiContent?.title || `${property.bedrooms}-Bed ${property.propertyType}`}
+                    {(property as any).aiContent?.title || `${property.bedrooms}-Rum ${property.propertyType}`}
                   </h3>
                   <p className="text-sm text-warm-500 mb-1">{property.town}</p>
                   <div className="flex items-center justify-between">
@@ -656,7 +655,7 @@ export default async function LuxuryPage() {
                       {formatPrice(property.price || 0)}
                     </span>
                     <span className="text-xs text-warm-400">
-                      {property.bedrooms} bed · {property.size}m²
+                      {property.bedrooms} rum · {property.size}m²
                     </span>
                   </div>
                 </Link>
@@ -666,10 +665,10 @@ export default async function LuxuryPage() {
             {premiumProperties.length > 12 && (
               <div className="text-center mt-10">
                 <Link
-                  href="/properties?minPrice=800000&maxPrice=2000000"
+                  href="/sv/properties?minPrice=800000&maxPrice=2000000"
                   className="inline-flex items-center gap-2 bg-primary-900 hover:bg-primary-800 text-white font-medium px-6 py-3 rounded-sm transition-colors"
                 >
-                  View All {premiumProperties.length} Premium Properties
+                  Visa alla {premiumProperties.length} Premiumfastigheter
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -690,16 +689,15 @@ export default async function LuxuryPage() {
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-10 h-px bg-accent-500" />
                   <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
-                    Ultimate Customization
+                    Total Anpassning
                   </span>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
-                  Build Your <span className="font-semibold">Dream Villa</span>
+                  Bygg Din <span className="font-semibold">Drömvilla</span>
                 </h2>
                 <p className="text-warm-200 text-lg leading-relaxed mb-8">
-                  Own a prime plot in Costa Blanca's most exclusive locations and create a bespoke villa designed
-                  exactly to your specifications. We provide complete turnkey support from land acquisition to
-                  handing you the keys.
+                  Ägna en premiumtomt på Costa Blancas mest exklusiva lägen och skapa en skräddarsydd villa utformad
+                  helt enligt dina önskemål. Vi tillhandahåller fullständig support från markköp till nyckelbunden leverans.
                 </p>
 
                 {/* Services Grid */}
@@ -711,8 +709,8 @@ export default async function LuxuryPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-medium mb-1">Plot Selection</h3>
-                      <p className="text-warm-300 text-sm">Premium plots with sea views, golf frontage, or private settings</p>
+                      <h3 className="text-white font-medium mb-1">Tomtval</h3>
+                      <p className="text-warm-300 text-sm">Premiumtomter med havsutsikt, golfnära lägen eller privat miljö</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -722,8 +720,8 @@ export default async function LuxuryPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-medium mb-1">Architect & Design</h3>
-                      <p className="text-warm-300 text-sm">Work with award-winning architects for your bespoke design</p>
+                      <h3 className="text-white font-medium mb-1">Arkitekt & Design</h3>
+                      <p className="text-warm-300 text-sm">Arbeta med prisbakande arkitekter för din skräddarsydda design</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -733,8 +731,8 @@ export default async function LuxuryPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-medium mb-1">Project Management</h3>
-                      <p className="text-warm-300 text-sm">Full oversight of construction, quality control, and timelines</p>
+                      <h3 className="text-white font-medium mb-1">Projektledning</h3>
+                      <p className="text-warm-300 text-sm">Fullständig övervakning av byggnation, kvalitetskontroll och tidplan</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -744,18 +742,18 @@ export default async function LuxuryPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-medium mb-1">Legal & Finance</h3>
-                      <p className="text-warm-300 text-sm">Complete legal support, permits, and construction financing</p>
+                      <h3 className="text-white font-medium mb-1">Juridik & Finansiering</h3>
+                      <p className="text-warm-300 text-sm">Fullständigt juridiskt stöd, tillstånd och byggfinansiering</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex flex-wrap gap-4">
                   <Link
-                    href="/properties?type=Land&minPrice=500000"
+                    href="/sv/properties?type=Land&minPrice=500000"
                     className="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-medium px-6 py-3 rounded-md transition-colors"
                   >
-                    View Premium Plots €500k+
+                    Se Premiumtomter €500k+
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -767,51 +765,51 @@ export default async function LuxuryPage() {
                     className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-3 rounded-md transition-colors border border-white/20"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    Discuss Your Project
+                    Diskutera Ditt Projekt
                   </a>
                 </div>
               </div>
 
               {/* Right: Stats & Highlights */}
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <h3 className="text-white text-xl font-medium mb-6">Why Build Custom?</h3>
+                <h3 className="text-white text-xl font-medium mb-6">Varför bygga skräddarsytt?</h3>
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="text-3xl font-bold text-accent-400">01</div>
                     <div>
-                      <h4 className="text-white font-medium mb-1">Complete Control</h4>
-                      <p className="text-warm-300 text-sm">Design every room, choose every finish, and create spaces that match your lifestyle perfectly.</p>
+                      <h4 className="text-white font-medium mb-1">Fullständig Kontroll</h4>
+                      <p className="text-warm-300 text-sm">Designa varje rum, välj varje finish och skapa utrymmen som passar din livsstil perfekt.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="text-3xl font-bold text-accent-400">02</div>
                     <div>
-                      <h4 className="text-white font-medium mb-1">Prime Locations</h4>
-                      <p className="text-warm-300 text-sm">Access exclusive plots in Jávea, Moraira, and Altea that aren't available with finished properties.</p>
+                      <h4 className="text-white font-medium mb-1">Premiumlägen</h4>
+                      <p className="text-warm-300 text-sm">Få tillgång till exklusiva tomter på Jávea, Moraira och Altea som inte är tillgängliga för färdiga fastigheter.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="text-3xl font-bold text-accent-400">03</div>
                     <div>
-                      <h4 className="text-white font-medium mb-1">Better Value</h4>
-                      <p className="text-warm-300 text-sm">Building custom often costs 15-20% less than buying equivalent finished luxury properties.</p>
+                      <h4 className="text-white font-medium mb-1">Bättre Värde</h4>
+                      <p className="text-warm-300 text-sm">Skräddarsytt byggande kostar ofta 15-20% mindre än köp av motsvarande färdiga lyxfastigheter.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="text-3xl font-bold text-accent-400">04</div>
                     <div>
-                      <h4 className="text-white font-medium mb-1">Future-Proof</h4>
-                      <p className="text-warm-300 text-sm">Incorporate smart home technology, sustainable features, and modern energy efficiency from day one.</p>
+                      <h4 className="text-white font-medium mb-1">Framtidssäker</h4>
+                      <p className="text-warm-300 text-sm">Inkorporera smarthemsteknik, hållbara funktioner och modern energieffektivitet från dag ett.</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-white/10">
-                  <p className="text-warm-300 text-sm mb-3">Typical build timeline:</p>
+                  <p className="text-warm-300 text-sm mb-3">Typisk byggidslinje:</p>
                   <div className="flex items-center gap-2">
-                    <span className="bg-accent-500 text-white text-sm font-medium px-3 py-1 rounded-full">12-18 months</span>
-                    <span className="text-warm-400 text-sm">from plot to completion</span>
+                    <span className="bg-accent-500 text-white text-sm font-medium px-3 py-1 rounded-full">12-18 månader</span>
+                    <span className="text-warm-400 text-sm">från tomt till färdigställning</span>
                   </div>
                 </div>
               </div>
@@ -828,12 +826,12 @@ export default async function LuxuryPage() {
               <div className="flex items-center justify-center gap-4 mb-3">
                 <div className="w-10 h-px bg-primary-700" />
                 <span className="text-primary-700 text-xs font-medium tracking-widest uppercase">
-                  Common Questions
+                  Vanliga Frågor
                 </span>
                 <div className="w-10 h-px bg-primary-700" />
               </div>
               <h2 className="text-2xl md:text-3xl font-light text-primary-900">
-                Luxury Property FAQs
+                Vanliga Frågor om Lyxfastigheter
               </h2>
             </div>
 
@@ -865,15 +863,15 @@ export default async function LuxuryPage() {
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-10 h-px bg-accent-500" />
                   <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
-                    Exclusive Service
+                    Exklusiv Service
                   </span>
                 </div>
                 <h2 className="text-2xl md:text-3xl font-light text-white mb-4">
-                  Private Property Consultation
+                  Personlig Fastighetsrådgivning
                 </h2>
                 <p className="text-warm-300 leading-relaxed mb-6">
-                  Looking for something specific? Our luxury property specialists can arrange private viewings,
-                  access off-market listings, and provide personalized guidance throughout your purchase.
+                  Söker du något specifikt? Våra lyxfastighetsspecialister kan arrangera privata visningar,
+                  ge tillgång till hemliga listor och tillhandahålla personlig vägledning genom hela ditt köp.
                 </p>
 
                 {/* Trust Elements */}
@@ -882,25 +880,25 @@ export default async function LuxuryPage() {
                     <svg className="w-5 h-5 text-success-400" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-warm-200 text-sm">15+ years experience</span>
+                    <span className="text-warm-200 text-sm">15+ års erfarenhet</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <svg className="w-5 h-5 text-success-400" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-warm-200 text-sm">5 languages spoken</span>
+                    <span className="text-warm-200 text-sm">Vi talar svenska</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <svg className="w-5 h-5 text-success-400" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-warm-200 text-sm">100% independent</span>
+                    <span className="text-warm-200 text-sm">100% oberoende</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <svg className="w-5 h-5 text-success-400" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-warm-200 text-sm">Off-market access</span>
+                    <span className="text-warm-200 text-sm">Åtkomst till hemliga listor</span>
                   </div>
                 </div>
 
@@ -925,54 +923,54 @@ export default async function LuxuryPage() {
 
               {/* Consultation Form */}
               <div className="bg-white rounded-lg p-6 shadow-xl">
-                <h3 className="text-xl font-semibold text-primary-900 mb-1">Request Consultation</h3>
-                <p className="text-warm-500 text-sm mb-5">We'll contact you within 2 hours</p>
+                <h3 className="text-xl font-semibold text-primary-900 mb-1">Boka Rådgivning</h3>
+                <p className="text-warm-500 text-sm mb-5">Vi kontaktar dig inom 2 timmar</p>
                 <form
-                  name="luxury-consultation-footer"
+                  name="luxury-consultation-footer-sv"
                   method="POST"
                   data-netlify="true"
                   className="space-y-4"
                 >
-                  <input type="hidden" name="form-name" value="luxury-consultation-footer" />
-                  <input type="hidden" name="source" value="luxury-footer" />
+                  <input type="hidden" name="form-name" value="luxury-consultation-footer-sv" />
+                  <input type="hidden" name="source" value="luxury-footer-sv" />
 
                   <div>
-                    <label htmlFor="name-footer" className="block text-sm font-medium text-primary-900 mb-1">Name *</label>
+                    <label htmlFor="name-footer" className="block text-sm font-medium text-primary-900 mb-1">Namn *</label>
                     <input
                       type="text"
                       name="name"
                       id="name-footer"
                       required
-                      placeholder="Your full name"
+                      placeholder="Ditt fullständiga namn"
                       className="w-full px-4 py-2.5 border border-warm-300 rounded focus:outline-none focus:ring-2 focus:ring-accent-500"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="email-footer" className="block text-sm font-medium text-primary-900 mb-1">Email *</label>
+                    <label htmlFor="email-footer" className="block text-sm font-medium text-primary-900 mb-1">E-post *</label>
                     <input
                       type="email"
                       name="email"
                       id="email-footer"
                       required
-                      placeholder="your@email.com"
+                      placeholder="din@epostadress.com"
                       className="w-full px-4 py-2.5 border border-warm-300 rounded focus:outline-none focus:ring-2 focus:ring-accent-500"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="phone-footer" className="block text-sm font-medium text-primary-900 mb-1">Phone</label>
+                    <label htmlFor="phone-footer" className="block text-sm font-medium text-primary-900 mb-1">Telefon</label>
                     <input
                       type="tel"
                       name="phone"
                       id="phone-footer"
-                      placeholder="+44 7XXX XXXXXX"
+                      placeholder="+46 7XX XXX XXX"
                       className="w-full px-4 py-2.5 border border-warm-300 rounded focus:outline-none focus:ring-2 focus:ring-accent-500"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="budget-footer" className="block text-sm font-medium text-primary-900 mb-1">Budget Range</label>
+                    <label htmlFor="budget-footer" className="block text-sm font-medium text-primary-900 mb-1">Budget</label>
                     <select
                       name="budget"
                       id="budget-footer"
@@ -986,12 +984,12 @@ export default async function LuxuryPage() {
                   </div>
 
                   <div>
-                    <label htmlFor="areas-footer" className="block text-sm font-medium text-primary-900 mb-1">Preferred Areas</label>
+                    <label htmlFor="areas-footer" className="block text-sm font-medium text-primary-900 mb-1">Föredragna Områden</label>
                     <input
                       type="text"
                       name="areas"
                       id="areas-footer"
-                      placeholder="e.g., Jávea, Moraira, Altea"
+                      placeholder="t.ex., Jávea, Moraira, Altea"
                       className="w-full px-4 py-2.5 border border-warm-300 rounded focus:outline-none focus:ring-2 focus:ring-accent-500"
                     />
                   </div>
@@ -1000,11 +998,11 @@ export default async function LuxuryPage() {
                     type="submit"
                     className="w-full bg-accent-500 hover:bg-accent-600 text-white font-medium py-3 rounded transition-colors"
                   >
-                    Request Consultation
+                    Boka Rådgivning
                   </button>
 
                   <p className="text-xs text-warm-400 text-center">
-                    By submitting, you agree to our privacy policy.
+                    Genom att skicka in godkänner du vår integritetspolicy.
                   </p>
                 </form>
               </div>

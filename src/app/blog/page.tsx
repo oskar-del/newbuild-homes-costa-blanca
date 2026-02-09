@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/blog',
+    languages: {
+      'en': 'https://newbuildhomescostablanca.com/blog',
+      'sv': 'https://newbuildhomescostablanca.com/sv/blog',
+    },
   },
 };
 

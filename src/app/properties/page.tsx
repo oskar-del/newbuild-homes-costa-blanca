@@ -28,6 +28,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/properties',
+    languages: {
+      'en': 'https://newbuildhomescostablanca.com/properties',
+      'sv': 'https://newbuildhomescostablanca.com/sv/properties',
+    },
   },
 };
 
