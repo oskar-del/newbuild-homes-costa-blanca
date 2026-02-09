@@ -19,7 +19,7 @@
 
 export const DEFAULT_LOCALE = 'en';
 
-export const SUPPORTED_LOCALES = ['en'] as const; // Add 'sv', 'es', etc. when ready
+export const SUPPORTED_LOCALES = ['en', 'sv'] as const;
 
 export type Locale = (typeof SUPPORTED_LOCALES)[number];
 
@@ -36,15 +36,15 @@ export const LOCALE_NAMES: Record<string, string> = {
 };
 
 export const LOCALE_FLAGS: Record<string, string> = {
-  en: '🇬🇧',
-  sv: '🇸🇪',
-  es: '🇪🇸',
-  de: '🇩🇪',
-  nl: '🇳🇱',
-  fr: '🇫🇷',
-  no: '🇳🇴',
-  da: '🇩🇰',
-  fi: '🇫🇮',
+  en: 'en',
+  sv: 'sv',
+  es: 'es',
+  de: 'de',
+  nl: 'nl',
+  fr: 'fr',
+  no: 'no',
+  da: 'da',
+  fi: 'fi',
 };
 
 /**

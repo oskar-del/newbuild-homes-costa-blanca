@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "siteName": "Nybyggen Costa Blanca",
+    "siteTagline": "Din specialist för nybyggda bostäder på Costa Blanca",
+    "defaultTitle": "Nybyggen Costa Blanca | Moderna bostäder i Spanien",
+    "defaultDescription": "Hitta din drömbostad bland våra nybyggda fastigheter på Costa Blanca, Spanien. Villor, lägenheter och radhus från ansedda byggare."
+  },
+  "nav": {
+    "buy": "Köp",
+    "developments": "Projekt",
+    "areas": "Områden",
+    "luxury": "Lyx",
+    "golf": "Golf",
+    "about": "Om oss",
+    "blog": "Blogg",
+    "contact": "Kontakt",
+    "allProperties": "Alla bostäder",
+    "allDevelopments": "Alla projekt",
+    "allAreas": "Alla områden",
+    "costaBlancanSouth": "Costa Blanca Söder",
+    "costaBlancanNorth": "Costa Blanca Norr",
+    "buyersGuides": "Köparguider"
+  },
+  "property": {
+    "bedrooms": "Sovrum",
+    "bathrooms": "Badrum",
+    "builtArea": "m² bostad",
+    "plotArea": "m² tomt",
+    "bed": "sovrum",
+    "beds": "sovrum",
+    "bath": "badrum",
+    "baths": "badrum",
+    "price": "Pris",
+    "from": "Från",
+    "contactForPrice": "Kontakta för pris",
+    "features": "Alla egenskaper",
+    "aboutProperty": "Om denna bostad",
+    "investmentPotential": "Investeringsmöjligheter",
+    "whyBuy": "Varför köpa denna bostad?",
+    "similarProperties": "Liknande bostäder",
+    "viewAllProperties": "Se alla bostäder",
+    "exploreMore": "Utforska fler bostäder",
+    "keyReady": "Inflyttningsklart",
+    "offPlan": "Projekt",
+    "underConstruction": "Under byggning",
+    "completed": "Klart",
+    "pool": "Pool",
+    "seaView": "Havsutsikt",
+    "golfView": "Golffältutsikt",
+    "garden": "Trädgård",
+    "terrace": "Terrass",
+    "parking": "Parkering"
+  },
+  "amenities": {
+    "title": "Närliggande service",
+    "beach": "Strand",
+    "supermarket": "Mataffär",
+    "hospital": "Sjukhus",
+    "schools": "Skolor",
+    "golfCourse": "Golfbana",
+    "airport": "Flygplats",
+    "approximate": "Ungefärliga avstånd. Kontakta oss för exakt läge."
+  },
+  "cta": {
+    "whatsappUs": "Skriv på WhatsApp",
+    "whatsappNow": "WhatsApp nu",
+    "callNow": "Ring nu",
+    "call": "Ring",
+    "requestInfo": "Beställ information",
+    "requestVideoTour": "Begär videotour",
+    "requestFloorPlans": "Begär planritningar",
+    "scheduleVideoCall": "Boka videosamtal",
+    "bookConsultation": "Boka gratis rådgivning",
+    "getMortgageQuote": "Få bolåneförslag",
+    "requestPriceList": "Begär prislista",
+    "getLatestPrices": "Få senaste priser",
+    "viewOnMap": "Visa på karta",
+    "browseDevelopments": "Bläddra projekt",
+    "exploreAreas": "Utforska områden",
+    "wontLastLong": "Detta går inte att vänta på",
+    "wontLastLongDesc": "Nya kvalitetsbostäder på Costa Blanca går snabbt. Säkra din visning innan någon annan gör det.",
+    "readyToFind": "Redo att hitta din drömbostad?",
+    "readyToFindDesc": "Bläddra bland våra nybyggda bostäder på Costa Blanca. Från golfvillor till lägenheter med havsutsikt.",
+    "needExpertHelp": "Behöver du experthjälp?",
+    "needFinancing": "Behöver du finansiering?",
+    "mortgageDesc": "Få bolåneförslag från flera spanska banker via vår partner Habeno."
+  },
+  "form": {
+    "yourName": "Ditt namn",
+    "email": "E-postadress",
+    "phone": "Telefon (frivilligt)",
+    "message": "Meddelande",
+    "thankYou": "Tack!",
+    "wellBeInTouch": "Vi kontaktar dig inom 24 timmar."
+  },
+  "resources": {
+    "title": "Användbara resurser",
+    "buyingProcessGuide": "Guide till köpprocessen",
+    "buyingProcessDesc": "Steg-för-steg guide för utländska köpare",
+    "nieGuide": "NIE-guide",
+    "nieDesc": "Hur du får ditt spanska skattekonto",
+    "mortgageGuide": "Bolåneguide",
+    "mortgageDesc": "Finansieringsmöjligheter för icke-bosatta",
+    "areaGuide": "Områdesguide: {town}",
+    "areaGuideDesc": "Upptäck den lokala livsstilen"
+  },
+  "blog": {
+    "continueReading": "Läs mer",
+    "continueReadingDesc": "Fler guider för att hjälpa dig köpa bostad i Spanien",
+    "guidesForBuying": "Guider för köp på {area}",
+    "minRead": "{minutes} min läsning",
+    "quickAnswer": "Snabbt svar",
+    "faqs": "Vanliga frågor",
+    "exploreAreas": "Utforska dessa områden",
+    "tableOfContents": "Innehållsförteckning",
+    "theBottomLine": "Avslutningsvis"
+  },
+  "area": {
+    "newBuildProperties": "Nybyggda bostäder på {area}",
+    "whyLiveIn": "Varför bo på {area}?",
+    "faqsAbout": "Vanliga frågor om {area}",
+    "aboutArea": "Om {area}",
+    "lifeIn": "Livet på {area}",
+    "exploreAreaGuide": "Utforska {area} områdesguide"
+  },
+  "development": {
+    "builtBy": "Byggt av {builder}",
+    "delivery": "Leverans",
+    "unitsAvailable": "bostäder tillgängliga",
+    "viewDevelopment": "Se projekt"
+  },
+  "footer": {
+    "copyright": "© {year} Nybyggen Costa Blanca. Alla rättigheter förbehållna.",
+    "trustedBy": "Betrodd av köpare från",
+    "googleReviews": "Google-recensioner"
+  },
+  "share": {
+    "title": "Dela",
+    "whatsapp": "Dela på WhatsApp",
+    "facebook": "Dela på Facebook",
+    "twitter": "Dela på X",
+    "copyLink": "Kopiera länk",
+    "linkCopied": "Länk kopierad!"
+  },
+  "notFound": {
+    "title": "Sidan hittades inte",
+    "description": "Sidan du söker finns inte eller har flyttats."
+  },
+  "cookies": {
+    "essentialOnly": "Endast nödvändiga",
+    "acceptAll": "Acceptera alla"
+  }
+}
