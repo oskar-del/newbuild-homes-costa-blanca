@@ -1,0 +1,668 @@
+import { Metadata } from 'next';
+import Link from 'next/link';
+import Image from 'next/image';
+import fs from 'fs';
+import path from 'path';
+import regionsData from '@/content/regions.json';
+import { getAllDevelopments } from '@/lib/development-service';
+
+export const metadata: Metadata = {
+  title: 'Områden Costa Blanca | Bostadsguider & Boendeguider',
+  description: 'Upptäck de bästa områdena på Costa Blanca. Omfattande guider till Jávea, Moraira, Algorfa och mer med fastighetslistor och livsstilsinformation för svenska köpare.',
+  openGraph: {
+    title: 'Områden Costa Blanca | Bostadsguider & Boendeguider',
+    description: 'Utforska de bästa områdena på Costa Blanca. Jávea, Moraira, Calpe och andra premiumpremier.',
+    type: 'website',
+    url: 'https://newbuildhomescostablanca.com/sv/areas',
+    siteName: 'New Build Homes Costa Blanca',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Områden Costa Blanca | Bostadsguider',
+    description: 'Upptäck de bästa områdena på Costa Blanca med omfattande guider.',
+  },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/sv/areas',
+    languages: {
+      'en': 'https://newbuildhomescostablanca.com/areas',
+      'sv': 'https://newbuildhomescostablanca.com/sv/areas',
+    },
+  },
+};
+
+interface Area {
+  slug: string;
+  name: string;
+  propertyCount: number;
+  propertyTypes: string[];
+  priceRange: { min: number; max: number };
+  cardImage?: string;
+}
+
+function extractAreaName(rawData: any, filename: string): string {
+  const slug = filename.replace('.json', '');
+  if (rawData.name) return rawData.name;
+  if (rawData.metaTitle) {
+    const match = rawData.metaTitle.match(/Living in ([^:|]+)/i) ||
+                  rawData.metaTitle.match(/^([^:|]+)/);
+    if (match) return match[1].trim();
+  }
+  return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
+function normalizeAreaToCard(rawData: any, filename: string): Area {
+  const slug = rawData.slug || filename.replace('.json', '');
+  const name = extractAreaName(rawData, filename);
+  let priceRange = rawData.priceRange || { min: 200000, max: 1000000 };
+  if (rawData.propertyMarket?.priceRange && typeof rawData.propertyMarket.priceRange === 'string') {
+    const priceStr = rawData.propertyMarket.priceRange;
+    const prices = priceStr.match(/[\d,]+/g);
+    if (prices && prices.length >= 2) {
+      priceRange = {
+        min: parseInt(prices[0].replace(/,/g, ''), 10) || 200000,
+        max: parseInt(prices[1].replace(/,/g, ''), 10) || 1000000,
+      };
+    }
+  }
+  let propertyTypes = rawData.propertyTypes || ['Lägenheter', 'Villor'];
+  if (!rawData.propertyTypes && rawData.propertyMarket?.overview) {
+    const overview = rawData.propertyMarket.overview.toLowerCase();
+    const types: string[] = [];
+    if (overview.includes('villa')) types.push('Villor');
+    if (overview.includes('apartment')) types.push('Lägenheter');
+    if (overview.includes('townhouse')) types.push('Radhus');
+    if (overview.includes('penthouse')) types.push('Penthouse');
+    if (types.length > 0) propertyTypes = types;
+  }
+  return {
+    slug,
+    name,
+    propertyCount: rawData.propertyCount || 0,
+    propertyTypes,
+    priceRange,
+    cardImage: rawData.cardImage,
+  };
+}
+
+function getAllAreasRaw(): Area[] {
+  const areasDir = path.join(process.cwd(), 'src', 'content', 'areas');
+  if (!fs.existsSync(areasDir)) {
+    return [];
+  }
+  const files = fs.readdirSync(areasDir).filter(file => file.endsWith('.json'));
+  return files.map(file => {
+    try {
+      const content = JSON.parse(fs.readFileSync(path.join(areasDir, file), 'utf-8'));
+      return normalizeAreaToCard(content, file);
+    } catch (error) {
+      const slug = file.replace('.json', '');
+      return {
+        slug,
+        name: slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+        propertyCount: 0,
+        propertyTypes: ['Fastigheter'],
+        priceRange: { min: 200000, max: 1000000 },
+      };
+    }
+  });
+}
+
+async function getAllAreasWithCounts(): Promise<Area[]> {
+  const areas = getAllAreasRaw();
+  const developments = await getAllDevelopments();
+  const usedImages = new Set<string>();
+
+  const matchesArea = (dev: typeof developments[0], areaName: string, slug: string) => {
+    const town = (dev.town || '').toLowerCase().trim().replace(/_/g, ' ');
+    const zone = (dev.zone || '').toLowerCase().trim().replace(/_/g, ' ');
+    const areaLower = areaName.toLowerCase();
+    const slugLower = slug.toLowerCase().replace(/-/g, ' ');
+    if (!town && !zone) return false;
+    const normalize = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const areaNorm = normalize(areaLower);
+    const townNorm = normalize(town);
+    const zoneNorm = normalize(zone);
+    const townParts = town.split(/[\s_-]+/);
+    const zoneParts = zone.split(/[\s_-]+/);
+    if (town) {
+      if (town.includes(areaLower) || areaLower.includes(town) ||
+          townNorm.includes(areaNorm) || areaNorm.includes(townNorm) ||
+          townParts.some(part => part.includes(areaLower) || areaLower.includes(part)) ||
+          townParts.some(part => normalize(part).includes(areaNorm) || areaNorm.includes(normalize(part))))
+        return true;
+    }
+    if (zone) {
+      if (zone.includes(areaLower) || areaLower.includes(zone) ||
+          zoneNorm.includes(areaNorm) || areaNorm.includes(zoneNorm) ||
+          zoneParts.some(part => part.includes(areaLower) || areaLower.includes(part)) ||
+          zoneParts.some(part => normalize(part).includes(areaNorm) || areaNorm.includes(normalize(part))))
+        return true;
+    }
+    return false;
+  };
+
+  return areas.map(area => {
+    const matchingDevs = developments.filter(dev => matchesArea(dev, area.name, area.slug));
+    let devImage: string | undefined;
+    for (const dev of matchingDevs) {
+      const possibleImages = [dev.mainImage, ...(dev.images || [])].filter(img => img && img.startsWith('http'));
+      for (const img of possibleImages) {
+        if (!usedImages.has(img)) {
+          devImage = img;
+          usedImages.add(img);
+          break;
+        }
+      }
+      if (devImage) break;
+    }
+    const finalImage = devImage || area.cardImage;
+    if (finalImage) usedImages.add(finalImage);
+    return {
+      ...area,
+      propertyCount: matchingDevs.length,
+      cardImage: finalImage,
+    };
+  });
+}
+
+export default async function AreasPageSv() {
+  const areas = await getAllAreasWithCounts();
+  const southData = regionsData['costa-blanca-south'];
+  const northData = regionsData['costa-blanca-north'];
+  const southTowns = southData.popularTowns.map(t => t.toLowerCase());
+  const northTowns = northData.popularTowns.map(t => t.toLowerCase());
+  const sortByPropertyCount = (a: Area, b: Area) => b.propertyCount - a.propertyCount;
+
+  const southAreas = areas
+    .filter(a => southTowns.some(t => a.name.toLowerCase().includes(t) || a.slug.includes(t.replace(' ', '-'))))
+    .sort(sortByPropertyCount);
+
+  const northAreas = areas
+    .filter(a => northTowns.some(t => a.name.toLowerCase().includes(t) || a.slug.includes(t.replace(' ', '-'))))
+    .sort(sortByPropertyCount);
+
+  const otherAreas = areas
+    .filter(a => !southAreas.includes(a) && !northAreas.includes(a))
+    .sort(sortByPropertyCount);
+
+  return (
+    <main className="min-h-screen bg-warm-50">
+      {/* Hero */}
+      <section className="relative bg-primary-900 py-16 md:py-20">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-800 to-primary-950" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-6">
+          <nav className="text-warm-400 text-sm mb-6">
+            <Link href="/sv" className="hover:text-white transition-colors">Hem</Link>
+            <span className="mx-2">›</span>
+            <span className="text-white">Områden</span>
+          </nav>
+
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-10 h-px bg-accent-500" />
+              <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
+                Hitta din ideala location
+              </span>
+            </div>
+
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-4">
+              Områden på Costa Blanca <span className="font-semibold">- Din Guide</span>
+            </h1>
+
+            <p className="text-warm-300 text-lg leading-relaxed mb-8">
+              Från soliga södern med prisvärda nybyggen till prestigefulla norden. Utforska våra detaljerade guider för att hitta ditt perfekta hörn av Costa Blanca.
+            </p>
+
+            {/* Quick Stats */}
+            <div className="flex flex-wrap gap-8">
+              <div>
+                <div className="text-2xl font-semibold text-white">{areas.length}+</div>
+                <div className="text-warm-400 text-sm">Områdesguider</div>
+              </div>
+              <div>
+                <div className="text-2xl font-semibold text-white">320+</div>
+                <div className="text-warm-400 text-sm">Soldagar/år</div>
+              </div>
+              <div>
+                <div className="text-2xl font-semibold text-white">50+ km</div>
+                <div className="text-warm-400 text-sm">Stränder</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Region Selector */}
+      <section className="py-10 bg-white border-b border-warm-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* South Card */}
+            <a
+              href="#south"
+              className="group relative bg-warm-50 rounded-sm p-6 border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <h3 className="text-lg font-semibold text-primary-900 group-hover:text-accent-600 transition-colors">
+                    Costa Blanca Söder
+                  </h3>
+                  <p className="text-accent-500 text-sm font-medium">Sol, värde & livsstil</p>
+                </div>
+                <div className="text-right">
+                  <div className="text-lg font-semibold text-primary-900">€245k</div>
+                  <div className="text-warm-500 text-xs">Medelpris</div>
+                </div>
+              </div>
+              <p className="text-warm-600 text-sm mb-4 line-clamp-2">Soliga stränder från Torrevieja till Pilar de la Horadada. Prisvärda nybyggen, världsklass golf och 320+ soldagar.</p>
+              <div className="flex flex-wrap gap-2">
+                {['Torrevieja', 'Algorfa', 'Orihuela', 'Pilar'].map(town => (
+                  <span key={town} className="bg-warm-200 text-warm-700 text-xs px-2 py-1 rounded">
+                    {town}
+                  </span>
+                ))}
+              </div>
+            </a>
+
+            {/* North Card */}
+            <a
+              href="#north"
+              className="group relative bg-warm-50 rounded-sm p-6 border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <h3 className="text-lg font-semibold text-primary-900 group-hover:text-accent-600 transition-colors">
+                    Costa Blanca Norr
+                  </h3>
+                  <p className="text-accent-500 text-sm font-medium">Prestige, skönhet & exklusivitet</p>
+                </div>
+                <div className="text-right">
+                  <div className="text-lg font-semibold text-primary-900">€650k</div>
+                  <div className="text-warm-500 text-xs">Medelpris</div>
+                </div>
+              </div>
+              <p className="text-warm-600 text-sm mb-4 line-clamp-2">Dramatiska kustklingor, charmanta gamla städer och exklusiva fastigheter. Från Jávea till Moraira.</p>
+              <div className="flex flex-wrap gap-2">
+                {['Jávea', 'Moraira', 'Calpe', 'Altea'].map(town => (
+                  <span key={town} className="bg-warm-200 text-warm-700 text-xs px-2 py-1 rounded">
+                    {town}
+                  </span>
+                ))}
+              </div>
+            </a>
+
+            {/* Costa Cálida Card */}
+            <Link
+              href="/sv/areas/costa-calida"
+              className="group relative bg-primary-900 rounded-sm p-6 border border-primary-800 hover:border-accent-500 hover:shadow-lg transition-all"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <h3 className="text-lg font-semibold text-white group-hover:text-accent-400 transition-colors">
+                    Costa Cálida
+                  </h3>
+                  <p className="text-accent-400 text-sm font-medium">Bäst värde i Spanien</p>
+                </div>
+                <div className="text-right">
+                  <div className="text-lg font-semibold text-white">€179k</div>
+                  <div className="text-warm-400 text-xs">Medelpris</div>
+                </div>
+              </div>
+              <p className="text-warm-300 text-sm mb-4 line-clamp-2">
+                Murcias Mar Menor-region. Championship golf, årligt solsken, 25-40% billigare än Costa Blanca.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {['Los Alcázares', 'San Javier', 'Roda Golf'].map(town => (
+                  <span key={town} className="bg-white/10 text-warm-300 text-xs px-2 py-1 rounded">
+                    {town}
+                  </span>
+                ))}
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* COSTA BLANCA SOUTH SECTION */}
+      <section id="south" className="relative">
+        <div className="bg-warm-800 py-8">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="w-10 h-px bg-warm-500" />
+                  <span className="text-warm-400 text-xs font-medium tracking-widest uppercase">
+                    Sol, värde & livsstil
+                  </span>
+                </div>
+                <h2 className="text-2xl md:text-3xl font-light text-white mb-3">
+                  Costa Blanca Söder
+                </h2>
+                <p className="text-warm-300 leading-relaxed">
+                  Solknutna stränder från Torrevieja till Pilar de la Horadada. Känd för prisvärda nybyggen, världsklass golf och över 320 soldagar per år.
+                </p>
+              </div>
+              <div className="grid grid-cols-3 gap-4">
+                <div className="text-center">
+                  <div className="text-2xl font-semibold text-white">320+</div>
+                  <div className="text-warm-400 text-xs">Soldagar</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-semibold text-white">8+</div>
+                  <div className="text-warm-400 text-xs">Golfbanor</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-semibold text-white">€245k</div>
+                  <div className="text-warm-400 text-xs">Medelpris</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* South Areas Grid */}
+        <div className="py-10 bg-warm-50">
+          <div className="max-w-7xl mx-auto px-6">
+            {southAreas.length > 0 ? (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {southAreas.map(area => (
+                  <Link
+                    key={area.slug}
+                    href={`/sv/areas/${area.slug}`}
+                    className="group bg-white rounded-sm overflow-hidden hover:shadow-xl transition-all duration-300 border border-warm-200"
+                  >
+                    {area.cardImage && (
+                      <div className="relative h-48 overflow-hidden">
+                        <Image
+                          src={area.cardImage}
+                          alt={area.name}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          unoptimized
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 p-4">
+                          <div className="text-lg font-semibold text-white">
+                            Från €{area.priceRange.min.toLocaleString()}
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                    <div className="p-4 bg-primary-900">
+                      <h3 className="font-medium text-white mb-1 group-hover:text-accent-400 transition-colors text-lg">
+                        {area.name}
+                      </h3>
+                      <div className="flex items-center gap-3 text-warm-400 text-sm">
+                        <span>{area.propertyTypes.slice(0, 2).join(' • ')}</span>
+                      </div>
+                      <div className="mt-3 flex items-center justify-between text-sm">
+                        {area.propertyCount > 0 && (
+                          <span className="text-warm-500">{area.propertyCount} fastigheter</span>
+                        )}
+                        <span className="text-accent-400 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                          Utforska
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        </div>
+
+        {/* Lifestyle Quote */}
+        <div className="bg-warm-100 py-8 border-y border-warm-200">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <p className="text-warm-700 text-lg italic leading-relaxed">
+              "Morgonkaffe med utsikt över saltsjöarna, eftermiddagsrundor på La Finca, kvällstapas i Torrevieja hamn. Det här är liv på Costa Blanca söder."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* COSTA BLANCA NORTH SECTION */}
+      <section id="north" className="relative">
+        <div className="bg-primary-900 py-8">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="w-10 h-px bg-accent-500" />
+                  <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
+                    Prestige, skönhet & exklusivitet
+                  </span>
+                </div>
+                <h2 className="text-2xl md:text-3xl font-light text-white mb-3">
+                  Costa Blanca Norr
+                </h2>
+                <p className="text-warm-300 leading-relaxed">
+                  Dramatiska kustklingor, charmanta gamla städer och exklusiva fastigheter. Från Jávea till Moraira - Spaniens mest prestigefyllda Medelhavsdestination.
+                </p>
+              </div>
+              <div className="grid grid-cols-3 gap-4">
+                <div className="text-center">
+                  <div className="text-2xl font-semibold text-white">300+</div>
+                  <div className="text-warm-400 text-xs">Soldagar</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-semibold text-white">5+</div>
+                  <div className="text-warm-400 text-xs">Michelin-rest.</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-semibold text-white">€650k</div>
+                  <div className="text-warm-400 text-xs">Medelpris</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* North Areas Grid */}
+        <div className="py-10 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            {northAreas.length > 0 ? (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {northAreas.map(area => (
+                  <Link
+                    key={area.slug}
+                    href={`/sv/areas/${area.slug}`}
+                    className="group bg-warm-50 rounded-sm overflow-hidden hover:shadow-xl transition-all duration-300 border border-primary-200"
+                  >
+                    {area.cardImage && (
+                      <div className="relative h-48 overflow-hidden">
+                        <Image
+                          src={area.cardImage}
+                          alt={area.name}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          unoptimized
+                        />
+                        <div className="absolute top-3 left-3">
+                          <span className="bg-primary-900 text-white text-xs font-medium px-2 py-1 rounded-sm">
+                            Premium
+                          </span>
+                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 p-4">
+                          <div className="text-lg font-semibold text-white">
+                            Från €{area.priceRange.min.toLocaleString()}
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                    <div className="p-4 bg-warm-50 border-t-4 border-accent-500">
+                      <h3 className="font-medium text-primary-900 mb-1 group-hover:text-accent-600 transition-colors text-lg">
+                        {area.name}
+                      </h3>
+                      <div className="flex items-center gap-3 text-warm-600 text-sm">
+                        <span>{area.propertyTypes.slice(0, 2).join(' • ')}</span>
+                      </div>
+                      <div className="mt-3 flex items-center justify-between text-sm">
+                        {area.propertyCount > 0 && (
+                          <span className="text-warm-500">{area.propertyCount} fastigheter</span>
+                        )}
+                        <span className="text-primary-900 font-medium flex items-center gap-1 group-hover:text-accent-600 group-hover:gap-2 transition-all">
+                          Utforska
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            ) : null}
+          </div>
+        </div>
+
+        {/* Lifestyle Quote */}
+        <div className="bg-primary-50 py-8 border-y border-primary-100">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <p className="text-primary-800 text-lg italic leading-relaxed">
+              "Vakna till havsvy och Montgós silhuett, lunch vid stranden, kvällspromenad genom Jáveaspns gamla stad. Det här är liv på Costa Blanca norr."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Light CTA */}
+      <section className="py-8 px-4 bg-white">
+        <div className="max-w-4xl mx-auto bg-warm-50 border border-warm-200 rounded-sm p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div>
+            <p className="text-primary-900 font-medium text-lg">Vill du utforska utvecklingar i dessa områden?</p>
+            <p className="text-warm-500 text-sm mt-1">Kontakta oss för senaste tillgänglighet, ritningar eller för att boka en visning</p>
+          </div>
+          <div className="flex gap-3">
+            <a href="https://wa.me/34634044970" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 bg-primary-900 text-white rounded-sm text-sm font-medium hover:bg-primary-800 transition-colors">
+              WhatsApp
+            </a>
+            <a href="/sv/contact" className="px-5 py-2.5 border border-primary-900 text-primary-900 rounded-sm text-sm font-medium hover:bg-primary-900 hover:text-white transition-colors">
+              Kontakta oss
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Other Areas */}
+      {otherAreas.length > 0 && (
+        <section className="py-14 bg-warm-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-3">
+                Fler Costa Blanca-områden
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {otherAreas.map(area => (
+                <Link
+                  key={area.slug}
+                  href={`/sv/areas/${area.slug}`}
+                  className="group bg-white rounded-sm overflow-hidden hover:shadow-xl transition-all duration-300 border border-warm-200"
+                >
+                  {area.cardImage && (
+                    <div className="relative h-40 overflow-hidden">
+                      <Image
+                        src={area.cardImage}
+                        alt={area.name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        unoptimized
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-3">
+                        <div className="text-sm font-semibold text-white">
+                          Från €{area.priceRange.min.toLocaleString()}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  <div className="p-4">
+                    <h3 className="font-semibold text-primary-900 mb-1 group-hover:text-accent-600 transition-colors">
+                      {area.name}
+                    </h3>
+                    <p className="text-warm-600 text-sm mb-2">{area.propertyTypes.slice(0, 3).join(', ')}</p>
+                    <div className="flex items-center justify-between text-sm">
+                      {area.propertyCount > 0 && (
+                        <span className="text-warm-500">{area.propertyCount} fastigheter</span>
+                      )}
+                      <span className="text-accent-500 font-medium flex items-center gap-1 group-hover:gap-2 transition-all ml-auto">
+                        Utforska
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Final CTA */}
+      <section className="bg-primary-900 py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-10 h-px bg-accent-500" />
+                <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
+                  Personlig service
+                </span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-light text-white mb-4">
+                Osäker på vilket område som passar dig?
+              </h2>
+              <p className="text-warm-300 leading-relaxed mb-6">
+                Med så många fantastiska platser att välja mellan kan det vara överväldigande. Berätta för oss dina prioriteringar - budget, livsstil, närhet till strand eller golf - och vi rekommenderar det perfekta området för dig.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-accent-500 hover:bg-accent-600 text-white font-medium px-6 py-3 rounded-sm transition-colors inline-flex items-center gap-2"
+                >
+                  Kontakta oss via WhatsApp
+                </a>
+                <a
+                  href="tel:+34634044970"
+                  className="bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-3 rounded-sm transition-colors border border-white/20"
+                >
+                  +34 634 044 970
+                </a>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white/10 p-5 rounded-sm">
+                <div className="text-2xl font-semibold text-white mb-1">15+</div>
+                <div className="text-warm-300 text-sm">År lokal kunskap</div>
+              </div>
+              <div className="bg-white/10 p-5 rounded-sm">
+                <div className="text-2xl font-semibold text-white mb-1">500+</div>
+                <div className="text-warm-300 text-sm">Familjer hjälpta</div>
+              </div>
+              <div className="bg-white/10 p-5 rounded-sm">
+                <div className="text-2xl font-semibold text-white mb-1">Fri</div>
+                <div className="text-warm-300 text-sm">Konsultation</div>
+              </div>
+              <div className="bg-white/10 p-5 rounded-sm">
+                <div className="text-2xl font-semibold text-white mb-1">5</div>
+                <div className="text-warm-300 text-sm">Språk</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
