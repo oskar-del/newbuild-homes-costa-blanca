@@ -32,60 +32,76 @@ export interface StockImage {
 
 export const beachImages: StockImage[] = [
   {
-    id: 'YZ8Jc6TiH2A',
-    url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e',
-    alt: 'Costa Blanca beach white sand turquoise Mediterranean sea Spain',
-    description: 'Beautiful Mediterranean-style beach with crystal clear water',
-    photographer: 'Sean Oulashin',
-    tags: ['beach', 'turquoise', 'sand', 'coastline', 'tropical'],
+    id: 'cala-capitan-beach',
+    url: '/images/Drone 2/Beaches/Cala Capitan.jpg',
+    alt: 'Cala Capitan beach aerial drone view Costa Blanca Spain',
+    description: 'Beautiful aerial view of Cala Capitan beach',
+    location: 'Cala Capitan, Costa Blanca',
+    tags: ['beach', 'drone', 'aerial', 'turquoise', 'coastline'],
   },
   {
-    id: 'XpcavhaqPa4',
-    url: 'https://images.unsplash.com/photo-1519046904884-53103b34b206',
-    alt: 'Pristine white sand beach Mediterranean Costa Blanca Spain vacation',
-    description: 'Classic beach scene with summer vibes',
-    photographer: 'Shifaaz shamoon',
-    tags: ['beach', 'white-sand', 'turquoise', 'summer'],
+    id: 'la-mata-beach',
+    url: '/images/Drone 2/Beaches/La Mata Beach.jpg',
+    alt: 'La Mata beach aerial drone view Costa Blanca Spain',
+    description: 'Stunning aerial view of La Mata beach',
+    location: 'La Mata, Costa Blanca',
+    tags: ['beach', 'drone', 'aerial', 'turquoise', 'white-sand'],
   },
   {
-    id: 'yYZAY0iaAgM',
-    url: 'https://images.unsplash.com/photo-1473116763249-2faaef81ccda',
-    alt: 'Turquoise water beach Costa Blanca Spain Mediterranean sea property',
-    description: 'Minimalist surf study with warm sand and shifting aqua tones',
-    photographer: 'Frank McKenna',
-    tags: ['beach', 'blue-sky', 'turquoise', 'minimalist'],
+    id: 'la-zenia-beach',
+    url: '/images/Drone 2/Beaches/La Zenia Beach.jpg',
+    alt: 'La Zenia beach aerial drone view Costa Blanca Spain',
+    description: 'Aerial view of the popular La Zenia beach',
+    location: 'La Zenia, Costa Blanca',
+    tags: ['beach', 'drone', 'aerial', 'turquoise', 'summer'],
   },
   {
-    id: 'qg9SyEN27pk',
-    url: 'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57',
-    alt: 'Sandy beach calm turquoise Costa Blanca new build properties Spain',
-    description: 'Peaceful beach scene with rolling hills in background',
-    photographer: 'Cristina Gottardi',
-    tags: ['beach', 'calm', 'hills', 'peaceful'],
+    id: 'playa-cabo-roig',
+    url: '/images/Drone 2/Beaches/Playa Cabo Roig.jpg',
+    alt: 'Playa Cabo Roig beach aerial drone view Costa Blanca Spain',
+    description: 'Scenic aerial view of Playa Cabo Roig',
+    location: 'Playa Cabo Roig, Costa Blanca',
+    tags: ['beach', 'drone', 'aerial', 'turquoise', 'peaceful'],
   },
   {
-    id: 'uRr-MRaADLo',
-    url: 'https://images.unsplash.com/photo-1520942702018-0862200e6873',
-    alt: 'White sand Mediterranean beach Costa Blanca Spain for sale vacation',
-    description: 'Crystal clear waters meeting soft white sand',
-    photographer: 'Ishan Seefromthesky',
-    tags: ['beach', 'turquoise', 'white-sand', 'pristine'],
+    id: 'playa-flamenca-beach',
+    url: '/images/Drone 2/Beaches/Playa Flamenca Beach.jpg',
+    alt: 'Playa Flamenca beach aerial drone view Costa Blanca Spain',
+    description: 'Beautiful aerial view of Playa Flamenca',
+    location: 'Playa Flamenca, Costa Blanca',
+    tags: ['beach', 'drone', 'aerial', 'turquoise', 'white-sand'],
   },
   {
-    id: 'V1hb2SLP-80',
-    url: 'https://images.unsplash.com/photo-1506929562872-bb421503ef21',
-    alt: 'Beach waves rolling turquoise water Costa Blanca Spain Mediterranean',
-    description: 'Waves gently breaking on tropical beach',
-    photographer: 'Chen Mizrach',
-    tags: ['beach', 'waves', 'turquoise', 'tropical'],
+    id: 'playa-los-locos',
+    url: '/images/Drone 2/Beaches/Playa Los Locos.jpg',
+    alt: 'Playa Los Locos beach aerial drone view Costa Blanca Spain',
+    description: 'Aerial view of the vibrant Playa Los Locos',
+    location: 'Playa Los Locos, Costa Blanca',
+    tags: ['beach', 'drone', 'aerial', 'turquoise', 'tropical'],
   },
   {
-    id: 'kIdAUx6U0s8',
-    url: 'https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6',
-    alt: 'Beach palm trees turquoise water Costa Blanca Spain Mediterranean shade',
-    description: 'Shaded beach area perfect for relaxation',
-    photographer: 'Rachel Claire',
-    tags: ['beach', 'tropical', 'shade', 'palm-trees'],
+    id: 'playa-los-naufragos',
+    url: '/images/Drone 2/Beaches/Playa Los Naufragos.jpg',
+    alt: 'Playa Los Naufragos beach aerial drone view Costa Blanca Spain',
+    description: 'Scenic aerial view of Playa Los Naufragos',
+    location: 'Playa Los Naufragos, Costa Blanca',
+    tags: ['beach', 'drone', 'aerial', 'turquoise', 'pristine'],
+  },
+  {
+    id: 'playa-del-cura',
+    url: '/images/Drone 2/Beaches/Playa del Cura.jpg',
+    alt: 'Playa del Cura beach aerial drone view Costa Blanca Spain',
+    description: 'Beautiful aerial view of Playa del Cura',
+    location: 'Playa del Cura, Costa Blanca',
+    tags: ['beach', 'drone', 'aerial', 'turquoise', 'waves'],
+  },
+  {
+    id: 'punta-prima-beach',
+    url: '/images/Drone 2/Beaches/Punta Prima beach.jpg',
+    alt: 'Punta Prima beach aerial drone view Costa Blanca Spain',
+    description: 'Stunning aerial view of Punta Prima beach',
+    location: 'Punta Prima, Costa Blanca',
+    tags: ['beach', 'drone', 'aerial', 'turquoise', 'shade'],
   },
 ];
 
@@ -95,44 +111,48 @@ export const beachImages: StockImage[] = [
 
 export const golfImages: StockImage[] = [
   {
-    id: 'golf-fairway-1',
+    id: 'campoamor-golf',
+    url: '/images/Drone 2/Golf/Campoamor Golf (1).jpg',
+    alt: 'Campoamor Golf course aerial drone view Costa Blanca Spain',
+    description: 'Aerial view of Campoamor Golf course',
+    location: 'Campoamor, Costa Blanca',
+    tags: ['golf', 'drone', 'aerial', 'fairway', 'green'],
+  },
+  {
+    id: 'villa-martin-golf',
+    url: '/images/Drone 2/Golf/Villa Martin Golf.jpg',
+    alt: 'Villa Martin Golf course aerial drone view Costa Blanca Spain',
+    description: 'Scenic aerial view of Villa Martin Golf course',
+    location: 'Villa Martin, Costa Blanca',
+    tags: ['golf', 'drone', 'aerial', 'fairway', 'green'],
+  },
+  {
+    id: 'golf-fairway-unsplash',
     url: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b',
-    alt: 'Golf course fairway Costa Blanca Spain sunny day green new build',
+    alt: 'Golf course fairway Costa Blanca Spain sunny day green',
     description: 'Sunny day at the golf course with serene landscapes',
-    photographer: 'Peter Drew',
     tags: ['golf', 'fairway', 'sunny', 'blue-sky', 'green'],
   },
   {
-    id: 'golf-swing-1',
+    id: 'golf-swing-unsplash',
     url: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa',
-    alt: 'Golfer swing Costa Blanca Spain golf course property for sale',
+    alt: 'Golfer swing Costa Blanca Spain golf course property',
     description: 'Action shot of golfer on the course',
-    photographer: 'Courtney Cook',
     tags: ['golf', 'golfer', 'swing', 'action', 'sunny'],
   },
   {
-    id: 'golf-sunset-1',
-    url: 'https://images.unsplash.com/photo-1592919505780-303950717480',
-    alt: 'Golf course sunset Costa Blanca Spain green fairway luxury property',
-    description: 'Beautiful sunset over golf course fairway',
-    photographer: 'Sugar Golf',
-    tags: ['golf', 'sunset', 'golden-hour', 'lush', 'green'],
+    id: 'golf-course-unsplash',
+    url: 'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96',
+    alt: 'Golf course fairway Costa Blanca Spain green property',
+    description: 'Beautiful golf course fairway landscape',
+    tags: ['golf', 'fairway', 'green', 'peaceful', 'landscape'],
   },
   {
-    id: 'golf-course-1',
-    url: 'https://images.unsplash.com/photo-1600783245777-080fd7ff9253',
-    alt: 'Golf course sunset panoramic palm trees Costa Blanca Spain property',
-    description: 'Panoramic golf course view with palm trees',
-    photographer: 'Lo Sarkin',
-    tags: ['golf', 'sunset', 'panoramic', 'palm-trees', 'fairway'],
-  },
-  {
-    id: 'golf-green-1',
-    url: 'https://images.unsplash.com/photo-1611374243147-44a702c2d44c',
-    alt: 'Golf green flag putting Costa Blanca Spain new build villa property',
-    description: 'Well-maintained putting green with flag',
-    photographer: 'Robert Ruggiero',
-    tags: ['golf', 'green', 'flag', 'putting', 'manicured'],
+    id: 'golf-sunset-unsplash',
+    url: 'https://images.unsplash.com/photo-1624722610740-71fa0eb2cd5b',
+    alt: 'Golf course at golden hour Costa Blanca Spain sunset',
+    description: 'Golf course during golden hour with warm lighting',
+    tags: ['golf', 'sunset', 'golden-hour', 'landscape', 'fairway'],
   },
 ];
 
@@ -315,6 +335,21 @@ export const marinaImages: StockImage[] = [
 // ==========================================
 
 export const lifestyleImages: StockImage[] = [
+  {
+    id: 'spanish-life-1',
+    url: '/images/SPanish life/1-10.png',
+    alt: 'Spanish Mediterranean lifestyle Costa Blanca Spain',
+    description: 'Authentic Spanish Mediterranean lifestyle scene',
+    tags: ['lifestyle', 'spain', 'mediterranean', 'culture'],
+  },
+  {
+    id: 'spanish-life-polop',
+    url: '/images/SPanish life/Polop.png',
+    alt: 'Polop village lifestyle Spain Costa Blanca Mediterranean',
+    description: 'Traditional Spanish village lifestyle in Polop',
+    location: 'Polop, Costa Blanca',
+    tags: ['lifestyle', 'spain', 'mediterranean', 'village'],
+  },
   ...villaPoolImages.filter(img => img.tags.includes('luxury')),
   ...beachImages.filter(img => img.tags.includes('tropical')),
 ];
@@ -388,27 +423,155 @@ export function getImagesByLocation(location: string): StockImage[] {
  */
 export const areaImageSuggestions: Record<string, { hero: StockImage; lifestyle: StockImage[] }> = {
   'algorfa': {
-    hero: golfImages[0], // Golf course for La Finca
-    lifestyle: [golfImages[2], villaPoolImages[5]],
+    hero: golfImages[0], // Campoamor Golf
+    lifestyle: [golfImages[1], villaPoolImages[5]],
+  },
+  'altea': {
+    hero: {
+      id: 'altea-area',
+      url: '/images/Area canvas/altea.png',
+      alt: 'Altea town Mediterranean Costa Blanca Spain',
+      description: 'Beautiful aerial view of Altea town',
+      location: 'Altea, Costa Blanca',
+      tags: ['area', 'town', 'mediterranean'],
+    },
+    lifestyle: [lifestyleImages[0], lifestyleImages[1]],
+  },
+  'benidorm': {
+    hero: {
+      id: 'benidorm-area',
+      url: '/images/Area canvas/Benidorm.png',
+      alt: 'Benidorm town Mediterranean Costa Blanca Spain',
+      description: 'Aerial view of Benidorm town',
+      location: 'Benidorm, Costa Blanca',
+      tags: ['area', 'town', 'mediterranean'],
+    },
+    lifestyle: [lifestyleImages[0], lifestyleImages[1]],
+  },
+  'benissa': {
+    hero: {
+      id: 'benissa-area',
+      url: '/images/Area canvas/Benissa.png',
+      alt: 'Benissa village Mediterranean Costa Blanca Spain',
+      description: 'Scenic view of Benissa village',
+      location: 'Benissa, Costa Blanca',
+      tags: ['area', 'village', 'mediterranean'],
+    },
+    lifestyle: [lifestyleImages[1], lifestyleImages[0]],
+  },
+  'benitachell': {
+    hero: {
+      id: 'benitachell-area',
+      url: '/images/Area canvas/Benitachell.png',
+      alt: 'Benitachell village Mediterranean Costa Blanca Spain',
+      description: 'Beautiful view of Benitachell',
+      location: 'Benitachell, Costa Blanca',
+      tags: ['area', 'village', 'mediterranean'],
+    },
+    lifestyle: [lifestyleImages[1], lifestyleImages[0]],
+  },
+  'calpe': {
+    hero: {
+      id: 'calpe-area',
+      url: '/images/Area canvas/Calpe.png',
+      alt: 'Calpe town Mediterranean Costa Blanca Spain',
+      description: 'Scenic aerial view of Calpe',
+      location: 'Calpe, Costa Blanca',
+      tags: ['area', 'town', 'mediterranean'],
+    },
+    lifestyle: [beachImages[0], lifestyleImages[0]],
+  },
+  'denia': {
+    hero: {
+      id: 'denia-area',
+      url: '/images/Area canvas/Denia.png',
+      alt: 'Denia town Mediterranean Costa Blanca Spain',
+      description: 'Beautiful view of Denia town',
+      location: 'Denia, Costa Blanca',
+      tags: ['area', 'town', 'mediterranean'],
+    },
+    lifestyle: [beachImages[1], lifestyleImages[0]],
+  },
+  'finestrat': {
+    hero: {
+      id: 'finestrat-area',
+      url: '/images/Area canvas/Finestrat.png',
+      alt: 'Finestrat village Mediterranean Costa Blanca Spain',
+      description: 'Scenic view of Finestrat',
+      location: 'Finestrat, Costa Blanca',
+      tags: ['area', 'village', 'mediterranean'],
+    },
+    lifestyle: [lifestyleImages[0], lifestyleImages[1]],
   },
   'guardamar-del-segura': {
-    hero: beachImages[0], // Beach scene
-    lifestyle: [beachImages[4], marinaImages[1]],
+    hero: {
+      id: 'guardamar-area',
+      url: '/images/Area canvas/Guardamar.png',
+      alt: 'Guardamar town Mediterranean Costa Blanca Spain',
+      description: 'Aerial view of Guardamar',
+      location: 'Guardamar, Costa Blanca',
+      tags: ['area', 'town', 'mediterranean'],
+    },
+    lifestyle: [beachImages[1], marinaImages[1]],
+  },
+  'javea': {
+    hero: {
+      id: 'javea-area',
+      url: '/images/Area canvas/Javea.png',
+      alt: 'Javea town Mediterranean Costa Blanca Spain',
+      description: 'Beautiful view of Javea',
+      location: 'Javea, Costa Blanca',
+      tags: ['area', 'town', 'mediterranean'],
+    },
+    lifestyle: [beachImages[2], lifestyleImages[0]],
+  },
+  'moraira': {
+    hero: {
+      id: 'moraira-area',
+      url: '/images/Area canvas/Moraira.png',
+      alt: 'Moraira village Mediterranean Costa Blanca Spain',
+      description: 'Scenic view of Moraira',
+      location: 'Moraira, Costa Blanca',
+      tags: ['area', 'village', 'mediterranean'],
+    },
+    lifestyle: [beachImages[3], lifestyleImages[1]],
+  },
+  'polop': {
+    hero: {
+      id: 'polop-area',
+      url: '/images/Area canvas/Polop.png',
+      alt: 'Polop village Mediterranean Costa Blanca Spain',
+      description: 'Traditional view of Polop village',
+      location: 'Polop, Costa Blanca',
+      tags: ['area', 'village', 'mediterranean'],
+    },
+    lifestyle: [lifestyleImages[1], oldTownImages[0]],
+  },
+  'san-miguel-de-salinas': {
+    hero: {
+      id: 'san-miguel-salinas-area',
+      url: '/images/Area canvas/San miguel de salinas.png',
+      alt: 'San Miguel de Salinas village Mediterranean Costa Blanca Spain',
+      description: 'View of San Miguel de Salinas',
+      location: 'San Miguel de Salinas, Costa Blanca',
+      tags: ['area', 'village', 'mediterranean'],
+    },
+    lifestyle: [lifestyleImages[0], lifestyleImages[1]],
   },
   'torrevieja': {
-    hero: marinaImages[1], // Marina/port
-    lifestyle: [beachImages[1], marketFoodImages[0]],
+    hero: beachImages[4], // La Zenia Beach (near Torrevieja)
+    lifestyle: [beachImages[2], marketFoodImages[0]],
   },
   'orihuela-costa': {
-    hero: beachImages[2], // Beach scene
+    hero: beachImages[3], // Playa Cabo Roig
     lifestyle: [villaPoolImages[0], golfImages[0]],
   },
   'la-zenia': {
-    hero: beachImages[5], // Waves beach
-    lifestyle: [villaPoolImages[2], beachImages[3]],
+    hero: beachImages[2], // La Zenia Beach
+    lifestyle: [villaPoolImages[2], beachImages[5]],
   },
   'villamartin': {
-    hero: golfImages[3], // Golf sunset
+    hero: golfImages[0], // Campoamor Golf
     lifestyle: [villaPoolImages[4], oldTownImages[2]],
   },
 };

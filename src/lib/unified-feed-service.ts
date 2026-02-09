@@ -13,6 +13,7 @@
  */
 
 import { UnifiedProperty, PropertyImage, PropertyDescription } from './unified-property';
+import { loadAIContent } from './ai-content-loader';
 import { getPropertyDevelopmentInfo } from '@/data/property-development-mapping';
 import { getMiralboStaticProperties, MiralboProperty } from '@/data/miralbo-static-properties';
 import https from 'https';
@@ -964,6 +965,27 @@ export async function getAllProperties(): Promise<UnifiedProperty[]> {
     const luxuryProps = getLuxurySampleProperties();
     console.log(`Adding ${luxuryProps.length} luxury sample properties to ${allProperties.length} feed properties`);
     allProperties = [...allProperties, ...luxuryProps];
+  }
+
+  // Attach AI-generated content (titles, descriptions) to properties
+  let aiLoaded = 0;
+  for (const prop of allProperties) {
+    const rawAI = loadAIContent(prop.reference);
+    if (rawAI) {
+      const metaTitle = (rawAI as any).metaTitle || '';
+      const title = metaTitle.replace(' | New Build Homes Costa Blanca', '').trim();
+      prop.aiContent = {
+        title: title || `${prop.bedrooms ? prop.bedrooms + '-Bed ' : ''}${prop.propertyType || 'Property'} in ${prop.town || 'Costa Blanca'}`,
+        highlights: (rawAI as any).highlights || [],
+        lifestyleDescription: (rawAI as any).content?.lifestyleSection || (rawAI as any).lifestyleSection || '',
+        investmentPotential: (rawAI as any).content?.investmentSection || (rawAI as any).investmentSection || '',
+        seoDescription: (rawAI as any).metaDescription || '',
+      };
+      aiLoaded++;
+    }
+  }
+  if (aiLoaded > 0) {
+    console.log(`Loaded AI content for ${aiLoaded}/${allProperties.length} properties`);
   }
 
   // Update cache

@@ -1008,6 +1008,810 @@ const GOLF_LIFESTYLE_DATA: Record<string, GolfCourseLifestyle> = {
       { id: 'garrucha', name: 'Garrucha', type: 'shopping', coordinates: [37.1845, -1.8234], distance: '20 min', description: 'Fishing village' },
     ],
   },
+
+  // LAS COLINAS GOLF
+  'las-colinas-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=1200&q=80',
+    introduction: 'Las Colinas Golf & Country Club is an award-winning 18-hole course set within a protected nature reserve on Costa Blanca South. This premium resort community offers the perfect blend of championship golf, luxury living, and natural beauty - repeatedly voted Spain\'s best golf destination. Surrounded by Mediterranean pine forests and featuring Cabell Robinson\'s masterful design, Las Colinas attracts discerning buyers seeking 5-star resort living.',
+    whyLiveHere: [
+      '18-hole championship course designed by Cabell Robinson (opened 2010)',
+      'Award-winning course - repeatedly voted Spain\'s best',
+      'Unique setting: surrounded by protected nature reserve and Mediterranean pine forests',
+      '5-star resort community with premium amenities and facilities',
+      'International community with Scandinavian, British, Belgian, and Dutch residents',
+      'Premium properties from €395,000 to €2.5M+',
+      'Strong rental investment potential in luxury market'
+    ],
+    lifestyle: {
+      overview: 'Las Colinas epitomizes luxury resort living. The nature reserve setting creates a peaceful, exclusive atmosphere where residents enjoy championship golf, spa facilities, and the natural beauty of protected forest surroundings. This is Costa Blanca\'s most prestigious golf destination.',
+      dailyLife: 'Days start with golf in stunning natural surroundings, followed by lunch at the award-winning clubhouse overlooking the course. Afternoons feature spa treatments, tennis, or nature walks through the reserve. Evenings bring fine dining at the resort restaurants or socializing with fellow residents.',
+      community: 'A sophisticated international community of successful professionals and retirees. The clubhouse serves as the social hub with regular fine dining events, golf tournaments, and cultural activities. Members are primarily British, Scandinavian, Belgian, and Dutch, creating a cosmopolitan atmosphere.',
+    },
+    schools: [
+      { name: 'El Limonar International School', type: 'British International', distance: '25 min', curriculum: 'British (GCSE, A-Level)', fees: '€5,000-8,000/year', ages: '3-18', url: 'https://www.ellimonarinternational.com/', note: 'Top choice for expat families. Excellent academic results, strong international community.' },
+      { name: 'Kings College Murcia', type: 'British International', distance: '50 min', curriculum: 'British (IB available)', fees: '€8,000-12,000/year', ages: '2-18', url: 'https://murcia.kingscollegeschools.org/', note: 'Premium IB programme option for older students.' },
+      { name: 'CEIP Virgen del Rosario', type: 'Spanish Public', distance: '10 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local Spanish immersion option.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital Universitario de Torrevieja', distance: '20 min', description: 'Modern full-service hospital with 24hr emergency care, English-speaking staff, and private wing available.', googleMaps: 'https://maps.google.com/?q=Hospital+de+Torrevieja' },
+      healthCenter: { name: 'Centro de Salud Campoamor', distance: '5 min' },
+      pharmacies: 'Multiple pharmacies in Campoamor and surrounding areas',
+      privateOptions: 'Most expats use private insurance (Sanitas, Adeslas, ASISA) - €100-180/month for comprehensive cover including specialists',
+    },
+    beaches: [
+      { name: 'Playa de Campoamor', distance: '10 min', description: 'Pristine Blue Flag beach with family-friendly facilities, water sports, and excellent seafood restaurants along the promenade.', googleMaps: 'https://maps.google.com/?q=Playa+Campoamor+Orihuela' },
+      { name: 'Playa de La Zenia', distance: '15 min', description: 'Popular sandy beach near La Zenia Boulevard shopping center with full facilities and vibrant beachfront scene.', googleMaps: 'https://maps.google.com/?q=Playa+La+Zenia+Orihuela' },
+      { name: 'Playa Flamenca', distance: '15 min', description: 'Charming village beach with traditional Spanish atmosphere, local restaurants, and calm waters.', googleMaps: 'https://maps.google.com/?q=Playa+Flamenca+Orihuela' },
+    ],
+    markets: [
+      { name: 'Campoamor Local Market', day: 'Wednesday & Saturday', time: '8am - 1pm', distance: '5 min', description: 'Traditional Spanish market with fresh produce, fish, and local products. Good selection of meats and vegetables.', googleMaps: 'https://maps.google.com/?q=Mercado+Campoamor' },
+      { name: 'Orihuela Market', day: 'Tuesday & Friday', time: '8am - 2pm', distance: '15 min', description: 'Larger comprehensive market with wider selection and traditional Spanish atmosphere.', googleMaps: 'https://maps.google.com/?q=Mercado+Orihuela+Costa' },
+      { name: 'Rojales Sunday Market', day: 'Sunday', time: '9am - 2pm', distance: '20 min', description: 'Massive expat favorite with hundreds of stalls, excellent bargains, and lively atmosphere.', googleMaps: 'https://maps.google.com/?q=Mercadillo+Rojales' },
+    ],
+    events: [
+      { name: 'Las Colinas Golf Championships', when: 'Year-round (monthly)', description: 'Regular tournaments, competitions, and social golf events at the club for all handicap levels.' },
+      { name: 'Orihuela Medieval Fair', when: 'February', description: 'Historic city transforms into a medieval marketplace with period costumes, entertainment, and food stalls.' },
+      { name: 'Fiestas Patronales', when: 'August', description: 'Week-long celebrations in nearby Campoamor with street parties, concerts, fireworks, and traditional events.' },
+      { name: 'Noche de San Juan', when: 'June 23rd', description: 'Beach bonfires and all-night celebrations at Campoamor and La Zenia beaches with fireworks.' },
+    ],
+    expat: {
+      population: 'Approximately 45% international residents in Las Colinas area',
+      nationalities: 'Predominantly British, Scandinavian (Norwegian, Swedish, Danish), Belgian, Dutch, and German',
+      socialHub: 'Las Colinas Golf clubhouse with fine dining, spa facilities, and regular social events. Residents organize exclusive dinners and cultural activities.',
+      facebookGroups: ['Las Colinas Golf & Country Club', 'Campoamor Expat Community', 'Orihuela Costa Internationals'],
+      integration: 'Easy integration through the clubhouse community. English widely spoken. Strong network of international residents. Regular welcome events for newcomers.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€600 - €1,200/year', notes: 'Orihuela municipality rates, varies by property value' },
+      { category: 'Community Fees', cost: '€150 - €250/month', notes: 'Includes premium facilities, security, landscaping, and nature reserve maintenance' },
+      { category: 'Utilities (Electric/Water)', cost: '€120 - €220/month', notes: 'Higher in summer for AC; good solar potential' },
+      { category: 'Golf Membership', cost: '€2,000 - €3,500/year', notes: 'Substantial discount on green fees, social benefits' },
+      { category: 'Health Insurance', cost: '€100 - €180/month', notes: 'Private cover recommended for quick access to specialists' },
+      { category: 'Weekly Shop (2 people)', cost: '€100 - €150', notes: '20-25% cheaper than UK; supermarkets and local markets available' },
+    ],
+    investment: {
+      overview: 'Las Colinas has delivered exceptional returns, outperforming wider Costa Blanca market. Award-winning status, nature reserve setting, and limited development have constrained supply while demand remains strong. Premium positioning attracts affluent buyers and strong rental demand.',
+      priceGrowth: '+55% over 5 years',
+      rentalYield: '5-7% achievable in luxury rental market',
+      outlook: 'Expected continued appreciation of 7-10% annually. Limited development potential due to nature reserve protection ensures scarcity value. Strong demand from affluent international buyers.',
+    },
+    faqs: [
+      { question: 'Why is Las Colinas voted Spain\'s best golf course?', answer: 'The combination of Cabell Robinson\'s masterful design, pristine natural setting within a protected nature reserve, and resort facilities creates an exceptional experience. Awards reflect both the course quality and lifestyle amenities.' },
+      { question: 'Is the nature reserve setting restrictive for residents?', answer: 'No - it\'s a major advantage! The protected forest provides privacy, maintains property values, and creates beautiful surroundings. You benefit from natural beauty without development pressure.' },
+      { question: 'What are property values like at Las Colinas?', answer: 'Properties range from €395,000 for smaller apartments to €2.5M+ for luxury villas. Premium positioning means values appreciate steadily. Strong rental demand from international families seeking luxury resorts.' },
+      { question: 'Do I need to be a golf member to live at Las Colinas?', answer: 'No, but most residents choose membership. The clubhouse and facilities are the social center. Excellent value if you play regularly; optional for those focused on the resort lifestyle.' },
+      { question: 'How far is Las Colinas from major amenities?', answer: 'Campoamor Beach is 10 minutes. La Zenia Boulevard shopping (150+ stores) is 15 minutes. Alicante Airport is 30 minutes. Perfect balance of tranquility and accessibility.' },
+      { question: 'What is the investment potential?', answer: 'Exceptional. Limited supply due to nature reserve protection, strong international demand, and award-winning status. Properties have appreciated 55% over 5 years with rental yields of 5-7%.' },
+    ],
+    mapLocations: [
+      { id: 'las-colinas', name: 'Las Colinas Golf', type: 'golf', coordinates: [37.9156, -0.7834], distance: 'Center', description: 'Award-winning championship course', googleMapsLink: 'https://maps.google.com/?q=Las+Colinas+Golf+Orihuela' },
+      { id: 'campoamor-beach', name: 'Playa de Campoamor', type: 'beach', coordinates: [37.9234, -0.7745], distance: '10 min', description: 'Blue Flag beach with facilities', googleMapsLink: 'https://maps.google.com/?q=Playa+Campoamor' },
+      { id: 'la-zenia', name: 'La Zenia Boulevard', type: 'shopping', coordinates: [37.9150, -0.7464], distance: '15 min', description: '150+ stores shopping center', googleMapsLink: 'https://maps.google.com/?q=La+Zenia+Boulevard' },
+      { id: 'hospital', name: 'Hospital Torrevieja', type: 'hospital', coordinates: [37.9780, -0.6847], distance: '20 min', description: '24hr emergency care', googleMapsLink: 'https://maps.google.com/?q=Hospital+de+Torrevieja' },
+      { id: 'el-limonar', name: 'El Limonar School', type: 'school', coordinates: [37.9383, -0.7925], distance: '25 min', description: 'British international school', googleMapsLink: 'https://maps.google.com/?q=El+Limonar+International+School' },
+      { id: 'airport', name: 'Alicante Airport', type: 'airport', coordinates: [38.2822, -0.5582], distance: '30 min', description: 'International flights', googleMapsLink: 'https://maps.google.com/?q=Alicante+Airport' },
+    ],
+  },
+
+  // CAMPOAMOR GOLF
+  'campoamor-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=1200&q=80',
+    introduction: 'Real Club de Golf Campoamor is one of Costa Blanca\'s most established and respected golf courses, set in the heart of Dehesa de Campoamor. Designed by Juanio Losáñez and opened in 1989, this championship 18-hole course has become the centerpiece of a thriving, mature golf community. Perfect for those seeking established residency with strong British and Scandinavian roots.',
+    whyLiveHere: [
+      '18-hole championship course designed by Juanio Losáñez (opened 1989)',
+      'One of Costa Blanca\'s most established golf communities',
+      'Mature, welcoming community with strong social infrastructure',
+      'Mix of permanent residents and holiday home owners',
+      'Traditional golf culture with excellent club facilities',
+      'Properties from €120,000 (apartments) to €800,000 (villas)',
+      'Walking distance to Campoamor Beach'
+    ],
+    lifestyle: {
+      overview: 'Campoamor offers traditional golf community living in an established setting. The course has been the social center for 35+ years, creating a mature, welcoming community where neighbors become friends. Strong sense of belonging and tradition.',
+      dailyLife: 'Morning rounds followed by lunch at the clubhouse bar and terrace. Afternoons might include beach walks, shopping at Zenia Boulevard, or relaxing at home. Evenings bring club social events, restaurant dinners, or gatherings with friends made through golf.',
+      community: 'Predominantly British and Scandinavian, with a welcoming, well-established community. The 35+ year history means strong social bonds and well-run club events. Active ladies\' and men\'s sections with regular competitions and social activities.',
+    },
+    schools: [
+      { name: 'El Limonar International School', type: 'British International', distance: '22 min', curriculum: 'British (GCSE, A-Level)', fees: '€5,000-8,000/year', ages: '3-18', url: 'https://www.ellimonarinternational.com/', note: 'Most popular choice for expat families in the area.' },
+      { name: 'Kings College Alicante', type: 'British International', distance: '40 min', curriculum: 'British (IB available)', fees: '€8,000-12,000/year', ages: '2-18', url: 'https://alicante.kingscollegeschools.org/', note: 'Premium option with IB programme.' },
+      { name: 'CEIP La Zenia', type: 'Spanish Public', distance: '8 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local Spanish school for immersion option.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital Universitario de Torrevieja', distance: '18 min', description: 'Modern full-service hospital with 24hr emergency, English-speaking staff, and excellent facilities.', googleMaps: 'https://maps.google.com/?q=Hospital+de+Torrevieja' },
+      healthCenter: { name: 'Centro de Salud Campoamor', distance: '5 min' },
+      pharmacies: 'Multiple pharmacies in Campoamor and La Zenia areas',
+      privateOptions: 'Private insurance widely used (Sanitas, Adeslas, ASISA) - €80-150/month for comprehensive cover',
+    },
+    beaches: [
+      { name: 'Playa de Campoamor', distance: '0.5 km', description: 'Walking distance from community! Blue Flag beach with family facilities, water sports, and seafood restaurants on the promenade.', googleMaps: 'https://maps.google.com/?q=Playa+Campoamor' },
+      { name: 'Playa de Cabo Roig', distance: '5 min', description: 'Small, sheltered cove with calm waters, great for families. Excellent local beach restaurants.', googleMaps: 'https://maps.google.com/?q=Playa+Cabo+Roig' },
+      { name: 'Playa La Zenia', distance: '10 min', description: 'Popular sandy beach with full facilities and vibrant beachfront atmosphere near Zenia Boulevard.', googleMaps: 'https://maps.google.com/?q=Playa+La+Zenia' },
+    ],
+    markets: [
+      { name: 'Campoamor Local Market', day: 'Wednesday & Saturday', time: '8am - 1pm', distance: '3 min', description: 'Traditional Spanish market with fresh produce, fish, and meats. Very convenient for residents.', googleMaps: 'https://maps.google.com/?q=Mercado+Campoamor' },
+      { name: 'Orihuela Market', day: 'Tuesday & Friday', time: '8am - 2pm', distance: '12 min', description: 'Larger comprehensive market with wide selection of goods.', googleMaps: 'https://maps.google.com/?q=Mercado+Orihuela' },
+      { name: 'La Zenia Boulevard', day: 'Daily', time: '10am - 10pm', distance: '8 min', description: '150+ stores including supermarkets, restaurants, and entertainment. Major shopping destination.', googleMaps: 'https://maps.google.com/?q=La+Zenia+Boulevard' },
+    ],
+    events: [
+      { name: 'Real Club de Golf Campoamor Tournaments', when: 'Year-round (weekly)', description: 'Regular club competitions and social golf events for all levels. Active community participation.' },
+      { name: 'Campoamor Fiestas Patronales', when: 'August', description: 'Traditional village celebrations with street parties, music, fireworks, and cultural events.' },
+      { name: 'Orihuela Medieval Fair', when: 'February', description: 'Nearby Orihuela hosts spectacular medieval-themed fair with costumed performances and events.' },
+      { name: 'Noche de San Juan', when: 'June 23rd', description: 'Beach bonfires and all-night celebrations at Campoamor and nearby beaches with fireworks.' },
+    ],
+    expat: {
+      population: 'Approximately 50% international residents - well-established expat community',
+      nationalities: 'Predominantly British, Scandinavian (Norwegian, Swedish), with German, Belgian, and Dutch residents',
+      socialHub: 'Real Club de Golf Campoamor clubhouse - central gathering point with regular quiz nights, competitions, dinners, and social events',
+      facebookGroups: ['Campoamor Golf Community', 'Orihuela Costa Expats', 'British Community Costa Blanca'],
+      integration: 'Very easy! Well-established community welcomes newcomers. English widely spoken. Strong club infrastructure and social events facilitate quick integration.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€450 - €900/year', notes: 'Orihuela municipality rates vary by property value' },
+      { category: 'Community Fees', cost: '€100 - €140/month', notes: 'Includes maintenance, security, and services' },
+      { category: 'Utilities (Electric/Water)', cost: '€100 - €200/month', notes: 'Higher in summer with AC usage' },
+      { category: 'Golf Membership', cost: '€1,200 - €2,500/year', notes: 'Excellent value vs green fees; significant member discounts' },
+      { category: 'Health Insurance', cost: '€80 - €150/month', notes: 'Private cover widely used and recommended' },
+      { category: 'Weekly Shop (2 people)', cost: '€85 - €125', notes: '20-30% cheaper than UK' },
+    ],
+    investment: {
+      overview: 'Campoamor has proven durability as an investment. Established community, mature course infrastructure, and consistent demand from international buyers provide stability. Properties appeal to both permanent residents and holiday renters.',
+      priceGrowth: '+42% over 5 years',
+      rentalYield: '5-6% achievable',
+      outlook: 'Steady appreciation expected. Community maturity and established reputation provide consistent demand. Good option for those seeking stability over dramatic growth.',
+    },
+    faqs: [
+      { question: 'How long has Campoamor Golf been established?', answer: 'Since 1989 - over 35 years! This maturity creates a well-established community with excellent club facilities and strong social infrastructure.' },
+      { question: 'What is the community like?', answer: 'Predominantly British and Scandinavian with a very welcoming atmosphere. Well-established social structure through the golf club makes integration easy. Strong sense of community.' },
+      { question: 'Can I walk to the beach?', answer: 'Yes! Campoamor Beach is just a 5-minute walk away. Many residents walk there daily for swimming and dining at beachfront restaurants.' },
+      { question: 'What are the rental possibilities?', answer: 'Good demand for rentals, especially September-June. Yields of 5-6% are achievable. Many owners use properties part-year and rent other times.' },
+      { question: 'Are there shopping facilities nearby?', answer: 'La Zenia Boulevard (150+ stores) is just 8 minutes away. Local markets and supermarkets are nearby. Excellent shopping without going far.' },
+    ],
+    mapLocations: [
+      { id: 'campoamor-golf', name: 'Real Club Golf Campoamor', type: 'golf', coordinates: [37.9267, -0.7834], distance: 'Center', description: 'Championship 18-hole course', googleMapsLink: 'https://maps.google.com/?q=Real+Club+Golf+Campoamor' },
+      { id: 'campoamor-beach', name: 'Playa de Campoamor', type: 'beach', coordinates: [37.9234, -0.7745], distance: 'Walking distance', description: 'Blue Flag beach', googleMapsLink: 'https://maps.google.com/?q=Playa+Campoamor' },
+      { id: 'la-zenia', name: 'La Zenia Boulevard', type: 'shopping', coordinates: [37.9150, -0.7464], distance: '8 min', description: 'Major shopping center', googleMapsLink: 'https://maps.google.com/?q=La+Zenia+Boulevard' },
+      { id: 'hospital', name: 'Hospital Torrevieja', type: 'hospital', coordinates: [37.9780, -0.6847], distance: '18 min', description: '24hr emergency', googleMapsLink: 'https://maps.google.com/?q=Hospital+de+Torrevieja' },
+      { id: 'cabo-roig', name: 'Playa Cabo Roig', type: 'beach', coordinates: [37.9089, -0.7834], distance: '5 min', description: 'Sheltered cove', googleMapsLink: 'https://maps.google.com/?q=Playa+Cabo+Roig' },
+    ],
+  },
+
+  // VILLAMARTIN GOLF
+  'villamartin-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=1200&q=80',
+    introduction: 'Villamartin Golf Course is one of Costa Blanca\'s original courses, dating back to 1972. This championship 18-hole course designed by Putman & Sons has hosted major European Tour events and remains a centerpiece of a thriving community. The iconic Villamartin Plaza serves as a social hub, and the community is famous for its strong British expat culture and established lifestyle.',
+    whyLiveHere: [
+      '18-hole championship course (opened 1972) - one of Costa Blanca\'s oldest',
+      'Hosted major European Tour events - prestigious pedigree',
+      'Famous Villamartin Plaza - active social center of the community',
+      'Iconic British expat community with 50+ years of tradition',
+      'Properties from €89,000 (studios) to €500,000 (villas)',
+      'Walking distance to La Zenia Boulevard shopping',
+      'Vibrant village atmosphere with established restaurants and bars'
+    ],
+    lifestyle: {
+      overview: 'Villamartin epitomizes classic Costa Blanca golf community living. The iconic Plaza is the heart of the village where residents gather for morning coffee, lunch, evening drinks, and socializing. The established community feels like home to many international residents.',
+      dailyLife: 'Morning golf followed by breakfast at one of the Plaza bars. Afternoons feature shopping at La Zenia Boulevard or pool time. Evenings bring Plaza social gatherings, restaurants, or club events. Strong sense of routine and community rhythm.',
+      community: 'One of Costa Blanca\'s most established British expat communities with deep roots and strong social bonds. The Plaza is central to community life - everyone knows each other. Quiz nights, competitions, and social events are well-organized.',
+    },
+    schools: [
+      { name: 'El Limonar International School', type: 'British International', distance: '20 min', curriculum: 'British (GCSE, A-Level)', fees: '€5,000-8,000/year', ages: '3-18', url: 'https://www.ellimonarinternational.com/', note: 'Popular choice for expat families in the area.' },
+      { name: 'Kings College Alicante', type: 'British International', distance: '38 min', curriculum: 'British (IB available)', fees: '€8,000-12,000/year', ages: '2-18', url: 'https://alicante.kingscollegeschools.org/', note: 'Premium IB programme option.' },
+      { name: 'CEIP La Zenia', type: 'Spanish Public', distance: '5 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local Spanish school.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital Universitario de Torrevieja', distance: '15 min', description: 'Full-service modern hospital with 24hr emergency, English-speaking staff available.', googleMaps: 'https://maps.google.com/?q=Hospital+de+Torrevieja' },
+      healthCenter: { name: 'Centro de Salud Villamartin', distance: '3 min' },
+      pharmacies: 'Multiple pharmacies in Villamartin Plaza and surrounding areas',
+      privateOptions: 'Private insurance common (Sanitas, Adeslas) - €80-150/month for comprehensive cover',
+    },
+    beaches: [
+      { name: 'Playa La Zenia', distance: '10 min', description: 'Popular sandy beach near shopping center with full family facilities and vibrant atmosphere.', googleMaps: 'https://maps.google.com/?q=Playa+La+Zenia' },
+      { name: 'Playa Cabo Roig', distance: '10 min', description: 'Smaller sheltered cove with calm waters, perfect for families. Excellent local restaurants.', googleMaps: 'https://maps.google.com/?q=Playa+Cabo+Roig' },
+      { name: 'Playa Flamenca', distance: '12 min', description: 'Charming village beach with traditional Spanish feel and excellent seafood restaurants.', googleMaps: 'https://maps.google.com/?q=Playa+Flamenca' },
+    ],
+    markets: [
+      { name: 'Villamartin Local Market', day: 'Thursday & Sunday', time: '8am - 1pm', distance: '2 min', description: 'Convenient local market in the Plaza area with fresh produce and household items.', googleMaps: 'https://maps.google.com/?q=Mercado+Villamartin' },
+      { name: 'La Zenia Boulevard', day: 'Daily', time: '10am - 10pm', distance: 'Walking distance', description: '150+ stores, supermarkets, restaurants. Direct walk from Villamartin.', googleMaps: 'https://maps.google.com/?q=La+Zenia+Boulevard' },
+      { name: 'Orihuela Market', day: 'Tuesday & Friday', time: '8am - 2pm', distance: '12 min', description: 'Traditional Spanish market with comprehensive selection.', googleMaps: 'https://maps.google.com/?q=Mercado+Orihuela' },
+    ],
+    events: [
+      { name: 'Villamartin Golf Tournament Season', when: 'Year-round', description: 'Regular club competitions, especially busy September-June. Strong participant base.' },
+      { name: 'Villamartin Plaza Events', when: 'Throughout the year', description: 'Regular social gatherings, parties, and community events at the iconic Plaza. Music and entertainment.' },
+      { name: 'Fiestas Patronales', when: 'August', description: 'Traditional village celebrations with street parties, fireworks, and cultural events.' },
+      { name: 'Noche de San Juan', when: 'June 23rd', description: 'Beach celebrations at La Zenia with bonfires and all-night parties.' },
+    ],
+    expat: {
+      population: 'Approximately 60% international - one of Costa Blanca\'s strongest expat communities',
+      nationalities: 'Predominantly British with Scandinavian, German, Belgian, and Dutch residents',
+      socialHub: 'Villamartin Plaza is THE gathering place - bars, restaurants, and social events center around it. Golf clubhouse also active.',
+      facebookGroups: ['Villamartin Golf & Community', 'Villamartin Plaza', 'Costa Blanca British Expats'],
+      integration: 'Extremely easy! One of the most established expat communities on Costa Blanca. Everyone is welcoming and social infrastructure is excellent.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€350 - €700/year', notes: 'Orihuela rates are competitive' },
+      { category: 'Community Fees', cost: '€80 - €120/month', notes: 'Varies by property size and development' },
+      { category: 'Utilities (Electric/Water)', cost: '€90 - €180/month', notes: 'Higher in summer' },
+      { category: 'Golf Membership', cost: '€1,200 - €2,000/year', notes: 'Great value for regular players' },
+      { category: 'Health Insurance', cost: '€80 - €150/month', notes: 'Private insurance widely used' },
+      { category: 'Weekly Shop (2 people)', cost: '€80 - €120', notes: 'Very affordable, 25-30% cheaper than UK' },
+    ],
+    investment: {
+      overview: 'Villamartin offers solid, proven investment performance. The established community, iconic status, and proximity to La Zenia Boulevard ensure steady demand. Good mix of permanent residents and holiday rentals.',
+      priceGrowth: '+38% over 5 years',
+      rentalYield: '4-6% achievable',
+      outlook: 'Expected continued steady appreciation. Community maturity and proven track record provide confidence. Good option for investors seeking established, stable market.',
+    },
+    faqs: [
+      { question: 'How old is Villamartin Golf Course?', answer: 'Opened in 1972, making it one of Costa Blanca\'s oldest courses. It has hosted European Tour events and is legendary in golf circles.' },
+      { question: 'What makes the Villamartin Plaza special?', answer: 'It\'s the social heart of the community where residents gather daily. Dozens of bars and restaurants, live music, cultural events - it\'s where friendships are made!' },
+      { question: 'Is Villamartin good for families?', answer: 'Absolutely! Established community with good schools nearby, shopping at La Zenia Boulevard, beaches 10 minutes away, and plenty of family-friendly activities.' },
+      { question: 'What is the British community like?', answer: 'Strong, welcoming 50+ year community. You\'ll find familiar British culture (pubs, humor, traditions) mixed with Spanish lifestyle. Very inclusive of newcomers.' },
+      { question: 'Can I rent out my property?', answer: 'Yes, good rental demand especially September-June. Yields of 4-6% are achievable. Many owners split time between living there and renting.' },
+    ],
+    mapLocations: [
+      { id: 'villamartin-golf', name: 'Villamartin Golf Course', type: 'golf', coordinates: [37.9356, -0.7578], distance: 'Center', description: 'Championship 18-hole course since 1972', googleMapsLink: 'https://maps.google.com/?q=Villamartin+Golf+Course' },
+      { id: 'villamartin-plaza', name: 'Villamartin Plaza', type: 'shopping', coordinates: [37.9367, -0.7567], distance: 'Center', description: 'Social hub with restaurants and bars', googleMapsLink: 'https://maps.google.com/?q=Villamartin+Plaza' },
+      { id: 'la-zenia', name: 'La Zenia Boulevard', type: 'shopping', coordinates: [37.9150, -0.7464], distance: 'Walking distance', description: '150+ stores shopping', googleMapsLink: 'https://maps.google.com/?q=La+Zenia+Boulevard' },
+      { id: 'la-zenia-beach', name: 'Playa La Zenia', type: 'beach', coordinates: [37.9156, -0.7445], distance: '10 min', description: 'Sandy beach', googleMapsLink: 'https://maps.google.com/?q=Playa+La+Zenia' },
+      { id: 'hospital', name: 'Hospital Torrevieja', type: 'hospital', coordinates: [37.9780, -0.6847], distance: '15 min', description: '24hr emergency', googleMapsLink: 'https://maps.google.com/?q=Hospital+de+Torrevieja' },
+    ],
+  },
+
+  // LAS RAMBLAS GOLF
+  'las-ramblas-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=1200&q=80',
+    introduction: 'Las Ramblas Golf is the sister course to the legendary Villamartin, offering a more challenging and dramatic layout designed by Putman & Sons. Set between Villamartin and Campoamor with stunning elevation changes and coastal views, this 18-hole championship course combines technical golf with spectacular scenery. The course is gaining reputation as a golfer\'s course with excellent value properties.',
+    whyLiveHere: [
+      '18-hole championship course designed by Putman & Sons (opened 1991)',
+      'Sister course to famous Villamartin - premium pedigree',
+      'More challenging layout than Villamartin - technical and demanding',
+      'Dramatic elevation changes with coastal views',
+      'Proximity to Villamartin Plaza social scene',
+      'Properties from €99,000 to €450,000',
+      'Strong sense of community between two courses'
+    ],
+    lifestyle: {
+      overview: 'Las Ramblas offers a perfect balance - challenging golf with a friendly community atmosphere. The course design demands respect from golfers, while the close proximity to Villamartin\'s iconic Plaza provides vibrant social life. Ideal for serious golfers who also value community.',
+      dailyLife: 'Mornings on the challenging course, followed by lunch at the clubhouse or Plaza restaurants. Afternoons feature relaxation or exploration of nearby villages and beaches. Evenings bring social activities at Villamartin Plaza or club events.',
+      community: 'A passionate golf community attracting serious players who appreciate technical courses. Close relationship with Villamartin community creates a larger social network. Friendly, welcoming atmosphere despite being a golfer-focused course.',
+    },
+    schools: [
+      { name: 'El Limonar International School', type: 'British International', distance: '20 min', curriculum: 'British (GCSE, A-Level)', fees: '€5,000-8,000/year', ages: '3-18', url: 'https://www.ellimonarinternational.com/', note: 'Popular choice for expat families.' },
+      { name: 'Kings College Alicante', type: 'British International', distance: '40 min', curriculum: 'British (IB available)', fees: '€8,000-12,000/year', ages: '2-18', url: 'https://alicante.kingscollegeschools.org/', note: 'Premium option with IB.' },
+      { name: 'CEIP Villamartin', type: 'Spanish Public', distance: '8 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local Spanish school.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital Universitario de Torrevieja', distance: '16 min', description: 'Modern full-service hospital with 24hr emergency, English-speaking staff.', googleMaps: 'https://maps.google.com/?q=Hospital+de+Torrevieja' },
+      healthCenter: { name: 'Centro de Salud Villamartin', distance: '5 min' },
+      pharmacies: 'Pharmacies in Villamartin and surrounding areas',
+      privateOptions: 'Private insurance recommended - Sanitas, Adeslas available. €80-150/month for comprehensive cover.',
+    },
+    beaches: [
+      { name: 'Playa Cabo Roig', distance: '10 min', description: 'Sheltered cove with calm waters and excellent local seafood restaurants. Perfect for families.', googleMaps: 'https://maps.google.com/?q=Playa+Cabo+Roig' },
+      { name: 'Playa Flamenca', distance: '10 min', description: 'Charming village beach with traditional Spanish atmosphere and local restaurants.', googleMaps: 'https://maps.google.com/?q=Playa+Flamenca' },
+      { name: 'Playa La Zenia', distance: '12 min', description: 'Popular sandy beach with full facilities near shopping center.', googleMaps: 'https://maps.google.com/?q=Playa+La+Zenia' },
+    ],
+    markets: [
+      { name: 'Villamartin Local Market', day: 'Thursday & Sunday', time: '8am - 1pm', distance: '2 min', description: 'Convenient local market with fresh produce.', googleMaps: 'https://maps.google.com/?q=Mercado+Villamartin' },
+      { name: 'La Zenia Boulevard', day: 'Daily', time: '10am - 10pm', distance: '10 min', description: '150+ stores shopping center, very close by.', googleMaps: 'https://maps.google.com/?q=La+Zenia+Boulevard' },
+      { name: 'Orihuela Market', day: 'Tuesday & Friday', time: '8am - 2pm', distance: '12 min', description: 'Traditional Spanish market with wide selection.', googleMaps: 'https://maps.google.com/?q=Mercado+Orihuela' },
+    ],
+    events: [
+      { name: 'Las Ramblas Golf Tournaments', when: 'Year-round', description: 'Regular club competitions for all handicap levels. Course demands attract serious golfers.' },
+      { name: 'Shared Villamartin Plaza Events', when: 'Throughout the year', description: 'Easy access to Villamartin Plaza social calendar - shared community benefits.' },
+      { name: 'Fiestas Patronales', when: 'August', description: 'Traditional village celebrations in nearby Villamartin and Campoamor.' },
+      { name: 'Noche de San Juan', when: 'June 23rd', description: 'Beach celebrations and bonfires at nearby beaches.' },
+    ],
+    expat: {
+      population: 'Approximately 40% international residents',
+      nationalities: 'British, Scandinavian, German, Belgian, Dutch - similar to Villamartin area',
+      socialHub: 'Las Ramblas clubhouse plus easy access to Villamartin Plaza. Proximity to Villamartin means shared social infrastructure.',
+      facebookGroups: ['Las Ramblas Golf Community', 'Villamartin & Las Ramblas Golfers', 'Orihuela Costa Community'],
+      integration: 'Good integration through golf community and Villamartin proximity. English widely spoken. Established social infrastructure.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€350 - €650/year', notes: 'Competitive Orihuela rates' },
+      { category: 'Community Fees', cost: '€80 - €120/month', notes: 'Varies by development' },
+      { category: 'Utilities (Electric/Water)', cost: '€90 - €180/month', notes: 'Higher in summer' },
+      { category: 'Golf Membership', cost: '€1,200 - €2,200/year', notes: 'Good value for demanding course' },
+      { category: 'Health Insurance', cost: '€80 - €150/month', notes: 'Private cover recommended' },
+      { category: 'Weekly Shop (2 people)', cost: '€80 - €120', notes: 'Affordable, 25-30% cheaper than UK' },
+    ],
+    investment: {
+      overview: 'Las Ramblas offers good value in an established area. The challenging course attracts serious golfers, while proximity to Villamartin provides social benefits. Growing appreciation as the course gains reputation.',
+      priceGrowth: '+35% over 5 years',
+      rentalYield: '4-5% achievable',
+      outlook: 'Expected steady appreciation. Reputation as challenging golfer\'s course attracts dedicated players. Good opportunity for serious golf investors.',
+    },
+    faqs: [
+      { question: 'How does Las Ramblas compare to Villamartin?', answer: 'Sister courses with different characters. Las Ramblas is more challenging with dramatic elevation changes and technical shots. Villamartin is more accessible. Play both for the full experience!' },
+      { question: 'Is Las Ramblas for serious golfers only?', answer: 'No, all handicaps welcome. But the course is challenging - golfers who enjoy a technical test will love it. Handicap 15+ may find it demanding.' },
+      { question: 'Can I use both Villamartin and Las Ramblas facilities?', answer: 'Many members hold dual memberships. Check with the clubs about membership packages that cover both courses.' },
+      { question: 'What is Villamartin Plaza like?', answer: 'Just minutes away! Iconic social hub with dozens of bars, restaurants, live music, and community events. Easy to access the social scene.' },
+      { question: 'Is there good rental potential?', answer: 'Yes, 4-5% yields achievable. Growing reputation of the course attracts golfers seeking challenging rounds. Good holiday rental market.' },
+    ],
+    mapLocations: [
+      { id: 'las-ramblas', name: 'Las Ramblas Golf', type: 'golf', coordinates: [37.9278, -0.7623], distance: 'Center', description: 'Championship 18-hole course', googleMapsLink: 'https://maps.google.com/?q=Las+Ramblas+Golf+Course' },
+      { id: 'villamartin', name: 'Villamartin Golf', type: 'golf', coordinates: [37.9356, -0.7578], distance: '1 km', description: 'Sister course', googleMapsLink: 'https://maps.google.com/?q=Villamartin+Golf+Course' },
+      { id: 'villamartin-plaza', name: 'Villamartin Plaza', type: 'shopping', coordinates: [37.9367, -0.7567], distance: '1 km', description: 'Social hub', googleMapsLink: 'https://maps.google.com/?q=Villamartin+Plaza' },
+      { id: 'cabo-roig', name: 'Playa Cabo Roig', type: 'beach', coordinates: [37.9089, -0.7834], distance: '10 min', description: 'Sheltered beach', googleMapsLink: 'https://maps.google.com/?q=Playa+Cabo+Roig' },
+      { id: 'la-zenia', name: 'La Zenia Boulevard', type: 'shopping', coordinates: [37.9150, -0.7464], distance: '10 min', description: 'Shopping center', googleMapsLink: 'https://maps.google.com/?q=La+Zenia+Boulevard' },
+    ],
+  },
+
+  // JAVEA GOLF
+  'javea-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=1200&q=80',
+    introduction: 'Club de Golf Jávea is a charming 9-hole course nestled between the iconic Montgó mountain and the Mediterranean Sea in one of Spain\'s most prestigious coastal towns. Jávea (Xàbia) is renowned for its natural beauty, sailing culture, and international sophistication. This intimate course serves a premium lifestyle community of discerning buyers seeking authentic Mediterranean living with world-class amenities.',
+    whyLiveHere: [
+      '9-hole par 34 championship course in stunning mountain-sea setting',
+      'Located in Jávea - one of Spain\'s most beautiful and prestigious towns',
+      'Unique position between Montgó mountain and Mediterranean Sea',
+      'Premium international community (British, German, French, Dutch)',
+      'Properties from €300,000 to €3M+ (exclusive luxury market)',
+      'World-class sailing, diving, hiking, and watersports culture',
+      'Authentic Mediterranean lifestyle with fine dining and culture'
+    ],
+    lifestyle: {
+      overview: 'Jávea Golf offers a sophisticated, cosmopolitan lifestyle in one of Spain\'s most beautiful coastal settings. The intimate 9-hole course is just one element of a rich lifestyle including sailing, hiking, fine dining, and cultural pursuits. This is for discerning buyers seeking authentic Mediterranean living.',
+      dailyLife: 'Mornings might include golf, sailing, or hiking Montgó. Lunch at a beachfront restaurant or in the charming old town. Afternoons feature beach time, cultural activities, or exploring local galleries and shops. Evenings bring fine dining, sailing social events, or concerts.',
+      community: 'An international community of successful professionals, artists, and retirees. British, German, French, and Dutch residents create a cosmopolitan atmosphere. Strong interests in sailing, culture, and outdoor activities. Exclusive but welcoming social circles.',
+    },
+    schools: [
+      { name: 'Xàbia International College', type: 'International', distance: '3 km', curriculum: 'International Baccalaureate', fees: '€10,000-14,000/year', ages: '3-18', url: 'https://www.xabiainternationalcollege.com/', note: 'Premium IB school serving the international community.' },
+      { name: 'Lady Elizabeth School', type: 'British International', distance: '8 km', curriculum: 'British', fees: '€8,000-12,000/year', ages: '3-18', url: 'https://www.ladyelizabeth.es/', note: 'Well-established British school.' },
+      { name: 'Colegio Estilo Jávea', type: 'Spanish/International', distance: '2 km', curriculum: 'Spanish with English emphasis', fees: '€5,000-8,000/year', ages: '3-16', note: 'Local option with good English programme.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital de Dénia', distance: '12 km', description: 'Modern hospital in Dénia with 24hr emergency, excellent English-speaking staff, and private wing available.', googleMaps: 'https://maps.google.com/?q=Hospital+Marino+Denia' },
+      healthCenter: { name: 'Centro de Salud Jávea', distance: '2 km' },
+      pharmacies: 'Multiple pharmacies throughout Jávea town',
+      privateOptions: 'Private insurance widely used (Adeslas, Mapfre, Quirónsalud) - €120-200/month for comprehensive cover. Many doctors speak English.',
+    },
+    beaches: [
+      { name: 'Playa del Arenal', distance: '10 min', description: 'Beautiful long sandy beach right in Jávea center with full facilities, restaurants, and perfect for families. The main beach.', googleMaps: 'https://maps.google.com/?q=Playa+Arenal+Javea' },
+      { name: 'Playa Granadella', distance: '15 min', description: 'Stunning small cove with crystal-clear turquoise water, surrounded by cliffs. One of Costa Blanca\'s most beautiful beaches. Excellent for snorkeling.', googleMaps: 'https://maps.google.com/?q=Playa+Granadella+Javea' },
+      { name: 'Playa Bol Nou', distance: '8 min', description: 'Small family beach within walking distance of town center. Calm waters, good restaurants nearby.', googleMaps: 'https://maps.google.com/?q=Playa+Bol+Nou+Javea' },
+    ],
+    markets: [
+      { name: 'Jávea Central Market (Mercadona)', day: 'Daily', time: '9am - 9pm', distance: '2 km', description: 'Modern supermarket in town center with excellent produce, organic options, and wine selection.', googleMaps: 'https://maps.google.com/?q=Mercadona+Javea' },
+      { name: 'Weekly Street Market', day: 'Tuesday & Thursday', time: '8am - 1pm', distance: '2 km', description: 'Traditional Spanish market in the old town with fresh produce, fish, artisanal goods. Charming atmosphere.', googleMaps: 'https://maps.google.com/?q=Mercado+Javea' },
+      { name: 'Farmer\'s Market at Montgó', day: 'Saturday morning', time: '9am - 1pm', distance: '3 km', description: 'Organic and local producer market with artisanal foods, vegetables, and crafts.', googleMaps: 'https://maps.google.com/?q=Montgó+Farmers+Market+Javea' },
+    ],
+    events: [
+      { name: 'Jávea Sailing Club Events', when: 'Year-round', description: 'Regular regattas, sailing competitions, and social gatherings. Strong sailing culture.' },
+      { name: 'Montgó Festival', when: 'September', description: 'Art, music, and cultural festival celebrating the mountain. Outdoor concerts and performances.' },
+      { name: 'Fiestas Patronales', when: 'July 25-28', description: 'Town celebration honoring patron saint with parades, concerts, fireworks, and cultural events.' },
+      { name: 'Semana Santa', when: 'March/April', description: 'Easter processions with solemn religious traditions and cultural significance.' },
+    ],
+    expat: {
+      population: 'Approximately 35-40% international residents - sophisticated international community',
+      nationalities: 'British, German, French, Dutch, Scandinavian, with other European nationalities',
+      socialHub: 'Sailing Club, Jávea harbor and promenade, fine dining restaurants, cultural venues, art galleries',
+      facebookGroups: ['Jávea International Community', 'Expats in Jávea', 'Costa Blanca North Expats'],
+      integration: 'Selective but welcoming international community. English widely spoken among expats. Strong shared interests in sailing, culture, and outdoor activities.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€800 - €1,600/year', notes: 'Jávea premium location - higher than inland areas' },
+      { category: 'Community Fees', cost: '€150 - €300/month', notes: 'Premium properties and developments' },
+      { category: 'Utilities (Electric/Water)', cost: '€120 - €250/month', notes: 'Higher due to sea access, AC usage' },
+      { category: 'Sailing/Club Memberships', cost: '€1,500 - €3,000/year', notes: 'Jávea Sailing Club popular with residents' },
+      { category: 'Health Insurance', cost: '€120 - €200/month', notes: 'Private insurance recommended for quality care' },
+      { category: 'Weekly Shop (2 people)', cost: '€120 - €180', notes: 'Premium location means higher grocery costs' },
+    ],
+    investment: {
+      overview: 'Jávea properties command premium prices due to location, natural beauty, and international prestige. Properties appreciate steadily as demand from affluent international buyers remains strong. Rental yields lower than inland areas but property appreciation significant.',
+      priceGrowth: '+50% over 5 years',
+      rentalYield: '4-6% achievable (lower than inland but strong property appreciation)',
+      outlook: 'Expected continued appreciation as Jávea remains one of Spain\'s most desirable coastal towns. Limited development due to Montgó protection ensures scarcity value.',
+    },
+    faqs: [
+      { question: 'Why is Jávea considered so special?', answer: 'Jávea is consistently rated one of Spain\'s most beautiful towns. The combination of Montgó mountain, pristine beaches, sailing culture, and cosmopolitan international community creates a unique, sophisticated lifestyle.' },
+      { question: 'Is the 9-hole course enough for serious golfers?', answer: 'It\'s an intimate course, but serious golfers will play bigger courses in the area (Ifach, Cumbre del Sol, Mijas) just 20-45 minutes away. Jávea Golf is about the lifestyle, not just golf.' },
+      { question: 'What is the sailing culture like?', answer: 'Excellent! Jávea Sailing Club is very active with regular regattas, social sailing events, and excellent facilities. The harbor and calm waters make it perfect for sailing.' },
+      { question: 'What is hiking Montgó like?', answer: 'Outstanding! Montgó mountain offers spectacular trails with Mediterranean views. Multiple difficulty levels from easy walks to challenging hikes. A must-do activity in Jávea.' },
+      { question: 'Is Jávea good for families?', answer: 'Yes, especially affluent families. Excellent international schools, beautiful beaches, outdoor activities, and safe community. Higher cost of living than inland areas.' },
+      { question: 'What are property values like?', answer: 'Premium location means premium prices - €300,000-500,000 for 2-bed apartments, €1M-3M+ for luxury villas. But properties hold value well and appreciate steadily.' },
+    ],
+    mapLocations: [
+      { id: 'javea-golf', name: 'Club de Golf Jávea', type: 'golf', coordinates: [38.7489, -0.1756], distance: 'Center', description: '9-hole course between mountain and sea', googleMapsLink: 'https://maps.google.com/?q=Club+de+Golf+Javea+Xabia' },
+      { id: 'montgó', name: 'Montgó Mountain', type: 'shopping', coordinates: [38.7523, -0.1645], distance: '1 km', description: 'Iconic mountain with hiking trails', googleMapsLink: 'https://maps.google.com/?q=Montgó+mountain+Javea' },
+      { id: 'arenal-beach', name: 'Playa del Arenal', type: 'beach', coordinates: [38.7389, -0.1667], distance: '10 min', description: 'Main town beach', googleMapsLink: 'https://maps.google.com/?q=Playa+Arenal+Javea' },
+      { id: 'granadella', name: 'Playa Granadella', type: 'beach', coordinates: [38.7234, -0.1512], distance: '15 min', description: 'Most beautiful beach', googleMapsLink: 'https://maps.google.com/?q=Playa+Granadella+Javea' },
+      { id: 'sailing-club', name: 'Jávea Sailing Club', type: 'shopping', coordinates: [38.7389, -0.1756], distance: '1 km', description: 'Active sailing hub', googleMapsLink: 'https://maps.google.com/?q=Javea+Sailing+Club' },
+      { id: 'hospital', name: 'Hospital Dénia', type: 'hospital', coordinates: [38.8245, -0.1034], distance: '12 km', description: 'Modern hospital', googleMapsLink: 'https://maps.google.com/?q=Hospital+Marino+Denia' },
+    ],
+  },
+
+  // LA SELLA GOLF
+  'la-sella-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1200&q=80',
+    introduction: 'La Sella Golf Resort is a premium destination where mountains meet the sea on the Costa Blanca North. This 27-hole resort offers three distinct 9-hole courses designed by Ryder Cup captain José María Olazábal, combining championship golf with luxury resort living and stunning coastal scenery.',
+    whyLiveHere: [
+      '27 holes (3x9) designed by José María Olazábal',
+      'Mountains meet the sea in Dénia area',
+      'Premium resort with 4-star hotel and spa',
+      'Properties from €250,000 to €1.5M',
+      'Mix of permanent residents and holiday homes',
+      'Close proximity to international schools'
+    ],
+    lifestyle: {
+      overview: 'La Sella Golf Resort offers a luxury lifestyle blending championship golf with Mediterranean beach culture. The resort facilities rival any European destination, with world-class amenities and a sophisticated international community.',
+      dailyLife: 'Morning golf on one of three courses, lunch at the resort restaurants overlooking the sea, afternoon at the spa or beach clubs. Evenings bring fine dining at the hotel restaurants or socializing at the golf clubhouse.',
+      community: 'An affluent international community with British, Scandinavian, Dutch, and French residents. Strong sense of sophistication with regular charity events and galas. Perfect for those seeking an upscale lifestyle.',
+    },
+    schools: [
+      { name: 'Jávea International School', type: 'International', distance: '15 min', curriculum: 'IB & British', fees: '€8,000-12,000/year', ages: '3-18', url: 'https://www.javea-int.com/', note: 'Prestigious school with excellent results and international curriculum.' },
+      { name: 'Dénia International College', type: 'International', distance: '10 min', curriculum: 'Spanish/International', fees: '€7,000-10,000/year', ages: '3-18', note: 'Bilingual program focusing on quality education.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital Dénia', distance: '15 min', description: 'Modern public hospital with 24hr emergency, English-speaking staff, and private clinics available.', googleMaps: 'https://maps.google.com/?q=Hospital+de+Denia' },
+      healthCenter: { name: 'Centro de Salud Dénia', distance: '10 min' },
+      pharmacies: 'Multiple pharmacies in Dénia town center and resort area',
+      privateOptions: 'Several private clinics in Dénia. Comprehensive private insurance available.',
+    },
+    beaches: [
+      { name: 'Las Marinas Beach (Dénia)', distance: '10 min', description: 'Beautiful sandy beach with clear Mediterranean waters, perfect for swimming and water sports.', googleMaps: 'https://maps.google.com/?q=Playa+Las+Marinas+Denia' },
+      { name: 'Punta Negra Coves', distance: '8 min', description: 'Secluded coves with crystal-clear waters ideal for snorkeling and relaxation.', googleMaps: 'https://maps.google.com/?q=Cala+Punta+Negra+Denia' },
+      { name: 'Jávea Beaches', distance: '20 min', description: 'Multiple sandy beaches with promenades, restaurants, and water activities.', googleMaps: 'https://maps.google.com/?q=Playas+Javea' },
+    ],
+    markets: [
+      { name: 'Dénia Central Market', day: 'Daily', time: '8am - 2pm', distance: '12 min', description: 'Traditional Spanish market with fresh fish, produce, and local products. Historic building with local character.', googleMaps: 'https://maps.google.com/?q=Mercado+Central+Denia' },
+      { name: 'Jávea Street Market', day: 'Tuesday & Friday', time: '8am - 2pm', distance: '18 min', description: 'Excellent local market with fresh products and crafts.', googleMaps: 'https://maps.google.com/?q=Mercadillo+Javea' },
+      { name: 'La Vila Market', day: 'Wednesday', time: '9am - 1pm', distance: '15 min', description: 'Local produce market in charming town center.', googleMaps: 'https://maps.google.com/?q=Mercado+La+Vila' },
+    ],
+    events: [
+      { name: 'Dénia Fiestas Patronales', when: 'May', description: 'Week-long festival celebrating the patron saint with parades, concerts, fireworks, and traditional celebrations.' },
+      { name: 'La Sella Golf Championships', when: 'Year-round', description: 'Regular tournaments on the three Olazábal courses with exciting competitions for all handicap levels.' },
+      { name: 'Jávea Classic Car Festival', when: 'September', description: 'Spectacular parade of classic and vintage cars through beautiful Jávea with exhibitions and test drives.' },
+    ],
+    expat: {
+      population: 'Approximately 35% international residents in La Sella area',
+      nationalities: 'Predominantly British, Scandinavian, Dutch, French, Belgian',
+      socialHub: 'La Sella Golf clubhouse and resort restaurants. Regular social events and charity galas.',
+      facebookGroups: ['La Sella Golf Community', 'Dénia Expats', 'Costa Blanca North Living'],
+      integration: 'Welcoming community of affluent international residents. Excellent English spoken throughout resort and Dénia.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€600 - €1,200/year', notes: 'Dénia rates for premium properties' },
+      { category: 'Community Fees', cost: '€150 - €250/month', notes: 'Full resort facilities, maintenance, security' },
+      { category: 'Utilities', cost: '€150 - €250/month', notes: 'Higher with air conditioning' },
+      { category: 'Golf Membership', cost: '€2,500 - €4,500/year', notes: 'Access to all three courses' },
+      { category: 'Health Insurance', cost: '€120 - €200/month', notes: 'Private comprehensive cover' },
+      { category: 'Weekly Shop (2 people)', cost: '€100 - €150', notes: 'Premium local products available' },
+    ],
+    investment: {
+      overview: 'La Sella properties appreciate steadily as part of an exclusive resort. Premium positioning and hotel revenue potential create strong investment appeal.',
+      priceGrowth: '+45% over 5 years',
+      rentalYield: '5-7% achievable',
+      outlook: 'Continued appreciation expected as resort reputation grows. Limited inventory maintains values.',
+    },
+    faqs: [
+      { question: 'Who designed La Sella Golf courses?', answer: 'All three 9-hole courses were designed by José María Olazábal, a legendary golfer and Ryder Cup captain. Each course has its own character while maintaining championship standards.' },
+      { question: 'Can I rent my property through the hotel?', answer: 'Yes, many owners utilize the resort\'s rental management service. Holiday rentals generate 5-7% annual yields, and the property is professionally maintained.' },
+      { question: 'Is La Sella suitable for families?', answer: 'Absolutely. The resort has excellent facilities for children, nearby international schools, and a family-friendly atmosphere alongside the luxury amenities.' },
+      { question: 'What makes La Sella different from other Costa Blanca resorts?', answer: 'The Olazábal course design, Mediterranean coastal setting, and 4-star resort infrastructure create a unique premium experience that rivals major European destinations.' },
+      { question: 'How close is La Sella to Alicante airport?', answer: 'About 90 minutes drive from Alicante airport. Dénia has better connections to Valencia airport (90 min) for some European destinations.' },
+    ],
+    mapLocations: [
+      { id: 'la-sella', name: 'La Sella Golf Resort', type: 'golf', coordinates: [38.8234, -0.1234], distance: 'Center', description: '27 holes by Olazábal' },
+      { id: 'denia-beach', name: 'Las Marinas Beach', type: 'beach', coordinates: [38.8456, -0.1050], distance: '10 min', description: 'Sandy Mediterranean beach' },
+      { id: 'hospital', name: 'Hospital Dénia', type: 'hospital', coordinates: [38.8523, -0.1289], distance: '15 min', description: 'Modern hospital with emergency' },
+      { id: 'javea', name: 'Jávea Town', type: 'shopping', coordinates: [38.7945, -0.1723], distance: '20 min', description: 'Picturesque coastal town' },
+    ],
+  },
+
+  // IFACH GOLF
+  'ifach-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1200&q=80',
+    introduction: 'Club de Golf Ifach is an intimate 9-hole course set against the stunning backdrop of Peñón de Ifach rock formation. This charming course offers a strong social community and direct access to Calpe and Moraira beaches. Perfect for those seeking genuine Spanish golf club atmosphere combined with Mediterranean charm.',
+    whyLiveHere: [
+      '9 holes with mountain backdrop of Peñón de Ifach',
+      'Intimate club atmosphere with strong community',
+      'Stunning coastal scenery and Calpe/Moraira nearby',
+      'Properties from €200,000 to €1.2M',
+      'Access to some of Costa Blanca\'s best beaches',
+      'Authentic Spanish golf club experience'
+    ],
+    lifestyle: {
+      overview: 'Ifach Golf offers an authentic Mediterranean lifestyle with genuine Spanish golf club character. The intimate course fosters strong friendships, with members often gathering at the clubhouse for post-golf socializing.',
+      dailyLife: 'Morning golf on the scenic 9-hole course, lunch at the clubhouse with views of Peñón de Ifach, afternoons at nearby Calpe or Moraira beaches, and evenings enjoying tapas in charming beach villages.',
+      community: 'A tight-knit international community where everyone knows each other. Mix of Spanish members and international residents creates authentic cultural exchange. Active ladies\' and men\'s sections.',
+    },
+    schools: [
+      { name: 'Calpe International School', type: 'International', distance: '12 min', curriculum: 'Spanish/English', fees: '€6,500-9,500/year', ages: '3-18', note: 'Bilingual school with strong academic reputation.' },
+      { name: 'CEIP Benissa', type: 'Spanish Public', distance: '8 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local public school with good Spanish immersion.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital Quirónsalud Benidorm', distance: '20 min', description: 'Private hospital with excellent facilities and English-speaking doctors.', googleMaps: 'https://maps.google.com/?q=Hospital+Quironsalud+Benidorm' },
+      healthCenter: { name: 'Centro de Salud Calpe', distance: '10 min' },
+      pharmacies: 'Multiple pharmacies in Calpe and Benissa town centers',
+      privateOptions: 'Several private clinics in Calpe. Private insurance available at reasonable rates.',
+    },
+    beaches: [
+      { name: 'Calpe Beaches', distance: '10 min', description: 'Beautiful sandy beaches adjacent to Peñón de Ifach rock formation. Excellent water quality and facilities.', googleMaps: 'https://maps.google.com/?q=Playas+Calpe' },
+      { name: 'Moraira Coves', distance: '15 min', description: 'Secluded Mediterranean coves with crystal-clear waters, ideal for swimming and snorkeling.', googleMaps: 'https://maps.google.com/?q=Calas+Moraira' },
+      { name: 'Benissa Beaches', distance: '12 min', description: 'Quieter beaches with good facilities and less crowding.', googleMaps: 'https://maps.google.com/?q=Playas+Benissa' },
+    ],
+    markets: [
+      { name: 'Calpe Saturday Market', day: 'Saturday', time: '8am - 2pm', distance: '10 min', description: 'Large market with fresh produce, clothing, and local goods. Great atmosphere and food stalls.', googleMaps: 'https://maps.google.com/?q=Mercadillo+Calpe+Saturday' },
+      { name: 'Benissa Wednesday Market', day: 'Wednesday', time: '8am - 1pm', distance: '8 min', description: 'Traditional Spanish market with fresh fish, produce, and local specialties.', googleMaps: 'https://maps.google.com/?q=Mercado+Benissa' },
+      { name: 'Moraira Fish Market', day: 'Daily', time: '8am - 12pm', distance: '15 min', description: 'Direct fish auctions at the port with authentic Mediterranean character.', googleMaps: 'https://maps.google.com/?q=Lonja+Moraira' },
+    ],
+    events: [
+      { name: 'Calpe Fiestas Patronales', when: 'July-August', description: 'Extended summer festival with concerts, parades, fireworks, and cultural events celebrating the season.' },
+      { name: 'Ifach Golf Tournament', when: 'Year-round', description: 'Regular club competitions fostering community spirit and friendly rivalry among members.' },
+      { name: 'Peñón de Ifach Festival', when: 'May', description: 'Celebration of the iconic rock formation with environmental awareness events and guided nature walks.' },
+    ],
+    expat: {
+      population: 'Approximately 30% international residents in Calpe area',
+      nationalities: 'British, Scandinavian, Dutch, German, French, Spanish',
+      socialHub: 'Ifach Golf clubhouse and Calpe seafront restaurants. Regular social events and competitions.',
+      facebookGroups: ['Ifach Golf Community', 'Calpe Expats', 'Benissa Living'],
+      integration: 'Welcoming community with strong Spanish character. Mix of cultures creates authentic atmosphere. English spoken but some Spanish useful.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€500 - €900/year', notes: 'Calpe/Benissa rates' },
+      { category: 'Community Fees', cost: '€100 - €150/month', notes: 'Typical for residential communities' },
+      { category: 'Utilities', cost: '€120 - €200/month', notes: 'Summer air conditioning costs' },
+      { category: 'Golf Membership', cost: '€800 - €1,500/year', notes: 'Excellent value for 9-hole course' },
+      { category: 'Health Insurance', cost: '€100 - €180/month', notes: 'Private or public options available' },
+      { category: 'Weekly Shop (2 people)', cost: '€90 - €130', notes: 'Good local produce available' },
+    ],
+    investment: {
+      overview: 'Ifach properties benefit from proximity to Calpe and Moraira beaches and strong holiday rental demand. The authentic golf club character attracts both buyers and renters.',
+      priceGrowth: '+40% over 5 years',
+      rentalYield: '4-6% achievable',
+      outlook: 'Steady appreciation expected as Calpe and Moraira maintain popularity with tourists and quality residents.',
+    },
+    faqs: [
+      { question: 'Why is it called "Ifach"?', answer: 'The course is named after Peñón de Ifach, the iconic 332-meter rock formation that dominates Calpe\'s landscape. It\'s one of Spain\'s most recognizable geographic features.' },
+      { question: 'Is Ifach Golf a traditional Spanish club?', answer: 'Yes, it maintains authentic Spanish golf club character with a welcoming international membership. You\'ll experience genuine Spanish golf culture.' },
+      { question: 'Can I visit Peñón de Ifach?', answer: 'Yes! It\'s a short drive away with a famous hiking trail to the summit offering spectacular coastal views. Many residents enjoy regular visits.' },
+      { question: 'What are Moraira coves like?', answer: 'Moraira coves are stunning Mediterranean coves with crystal-clear water and quiet villages. Much less crowded than Calpe and perfect for snorkeling.' },
+      { question: 'Is there a rental market for properties at Ifach?', answer: 'Yes, proximity to Calpe beaches makes properties attractive for holiday rentals, achieving 4-6% yields. Strong summer demand.' },
+    ],
+    mapLocations: [
+      { id: 'ifach', name: 'Club de Golf Ifach', type: 'golf', coordinates: [38.6412, -0.0456], distance: 'Center', description: '9 holes with Ifach backdrop' },
+      { id: 'penon-ifach', name: 'Peñón de Ifach', type: 'beach', coordinates: [38.6389, -0.0234], distance: '5 min', description: 'Iconic rock formation' },
+      { id: 'calpe-beach', name: 'Calpe Beaches', type: 'beach', coordinates: [38.6456, -0.0289], distance: '10 min', description: 'Sandy Mediterranean beaches' },
+      { id: 'moraira', name: 'Moraira', type: 'shopping', coordinates: [38.6723, 0.0256], distance: '15 min', description: 'Charming village with restaurants' },
+    ],
+  },
+
+  // BERNIA GOLF
+  'bernia-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1200&q=80',
+    introduction: 'Real de Faula Golf (Bernia Golf) is the most scenic 9-hole course on the Costa Blanca, set beneath the dramatic Sierra de Bernia mountain range. This exclusive small community offers panoramic coastal views, luxury villas, and one of Spain\'s most spectacular golf settings.',
+    whyLiveHere: [
+      'Most scenic 9-hole course on Costa Blanca',
+      'Sierra de Bernia mountain backdrop',
+      'Small luxury community with panoramic views',
+      'Properties from €350,000 to €2M+',
+      'Exclusive residential setting',
+      'Access to Altea and Albir beaches'
+    ],
+    lifestyle: {
+      overview: 'Bernia Golf offers an exclusive mountain luxury lifestyle with stunning Mediterranean panoramas. This prestigious community caters to discerning residents seeking privacy, natural beauty, and world-class golf in an intimate setting.',
+      dailyLife: 'Morning golf on the spectacular scenic course, lunch on the terrace overlooking the Mediterranean, afternoon relaxation by private pools or exploring mountain trails, and evenings enjoying fine dining.',
+      community: 'An exclusive community of affluent international residents seeking privacy and quality. Mix of families and couples choosing a peaceful mountain setting. Strong neighborhood bonds.',
+    },
+    schools: [
+      { name: 'Altea International School', type: 'International', distance: '15 min', curriculum: 'IB & British', fees: '€7,500-11,000/year', ages: '3-18', note: 'Prestigious international school with excellent facilities.' },
+      { name: 'CEIP Altea', type: 'Spanish Public', distance: '12 min', curriculum: 'Spanish National', fees: 'Free', ages: '3-12', note: 'Local public school with good reputation.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital Marina Salud', distance: '20 min', description: 'Private hospital in Denia with excellent doctors and English-speaking staff.', googleMaps: 'https://maps.google.com/?q=Hospital+Marina+Salud+Denia' },
+      healthCenter: { name: 'Centro de Salud Altea', distance: '10 min' },
+      pharmacies: 'Multiple pharmacies in Altea town center',
+      privateOptions: 'Private clinics available in Altea and Benidorm. Comprehensive insurance available.',
+    },
+    beaches: [
+      { name: 'Altea Beach', distance: '10 min', description: 'Charming beach with promenade, restaurants, and the iconic white dome church. Excellent atmosphere and facilities.', googleMaps: 'https://maps.google.com/?q=Playa+Altea' },
+      { name: 'Albir Beach', distance: '15 min', description: 'Long sandy beach with parks, restaurants, and calm waters perfect for swimming.', googleMaps: 'https://maps.google.com/?q=Playa+Albir' },
+      { name: 'Benidorm Beaches', distance: '20 min', description: 'Famous sandy beaches with full facilities and vibrant promenade.', googleMaps: 'https://maps.google.com/?q=Playas+Benidorm' },
+    ],
+    markets: [
+      { name: 'Altea Tuesday Market', day: 'Tuesday', time: '8am - 1pm', distance: '10 min', description: 'Good local market with fresh produce, fish, and local products in charming town center.', googleMaps: 'https://maps.google.com/?q=Mercado+Altea' },
+      { name: 'Benidorm Saturday Market', day: 'Saturday', time: '8am - 2pm', distance: '18 min', description: 'Large market with hundreds of stalls selling everything from produce to crafts.', googleMaps: 'https://maps.google.com/?q=Mercadillo+Benidorm+Saturday' },
+      { name: 'Albir Market', day: 'Thursday', time: '8am - 1pm', distance: '15 min', description: 'Local market with fresh produce and household items.', googleMaps: 'https://maps.google.com/?q=Mercado+Albir' },
+    ],
+    events: [
+      { name: 'Altea Fiestas Patronales', when: 'July-August', description: 'Summer festival with concerts, events, and celebrations. The iconic dome church is beautifully illuminated.' },
+      { name: 'Bernia Golf Championship', when: 'Year-round', description: 'Regular tournaments on this exclusive course with spectacular mountain views.' },
+      { name: 'Sierra de Bernia Nature Events', when: 'Various', description: 'Hiking and nature tours in the dramatic mountain range, popular with residents.' },
+    ],
+    expat: {
+      population: 'Approximately 40% international residents in Altea Heights area',
+      nationalities: 'British, Scandinavian, Dutch, German, Belgian, French',
+      socialHub: 'Bernia Golf clubhouse and private community events. Altea seafront restaurants.',
+      facebookGroups: ['Bernia Golf Community', 'Altea Expats', 'Altea Heights Living'],
+      integration: 'Exclusive community with established international residents. English widely spoken. Cultural events and social gatherings.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€800 - €1,500/year', notes: 'Premium mountain properties' },
+      { category: 'Community Fees', cost: '€200 - €300/month', notes: 'Maintenance of exclusive infrastructure' },
+      { category: 'Utilities', cost: '€150 - €250/month', notes: 'Mountain property considerations' },
+      { category: 'Golf Membership', cost: '€2,000 - €3,500/year', notes: 'Exclusive course access' },
+      { category: 'Health Insurance', cost: '€130 - €220/month', notes: 'Comprehensive private cover' },
+      { category: 'Weekly Shop (2 people)', cost: '€110 - €160', notes: 'Premium local products' },
+    ],
+    investment: {
+      overview: 'Bernia Golf properties command premium prices due to exclusive location, panoramic views, and limited supply. Strong appeal to luxury market buyers.',
+      priceGrowth: '+48% over 5 years',
+      rentalYield: '4-5% achievable',
+      outlook: 'Continued appreciation as exclusive mountain communities remain highly sought-after destinations.',
+    },
+    faqs: [
+      { question: 'Why is the scenery so spectacular at Bernia?', answer: 'The Sierra de Bernia mountain range provides a dramatic backdrop, while the location offers sweeping Mediterranean views from most properties. It\'s one of Europe\'s most beautiful golf settings.' },
+      { question: 'Is Bernia Golf a private club?', answer: 'It\'s an exclusive community course with limited membership. The intimate scale and mountain setting create a unique, prestigious golfing experience.' },
+      { question: 'What about hiking in Sierra de Bernia?', answer: 'The mountain range offers excellent hiking trails with spectacular views. Many residents enjoy regular nature walks and exploration of the peaks.' },
+      { question: 'Can I visit Altea town?', answer: 'Yes, charming Altea with its iconic white dome church and seafront restaurants is just 10 minutes away. Famous for art galleries and bohemian atmosphere.' },
+      { question: 'Are these luxury villas easy to rent?', answer: 'Yes, the panoramic views and exclusive location make these properties attractive for high-end holiday rentals. However, yields are modest (4-5%) as this is primarily a luxury residence community.' },
+    ],
+    mapLocations: [
+      { id: 'bernia', name: 'Real de Faula Golf (Bernia)', type: 'golf', coordinates: [38.5834, -0.1456], distance: 'Center', description: 'Scenic mountain course' },
+      { id: 'sierra-bernia', name: 'Sierra de Bernia', type: 'beach', coordinates: [38.5912, -0.1612], distance: '5 min', description: 'Mountain range backdrop' },
+      { id: 'altea-beach', name: 'Altea Beach', type: 'beach', coordinates: [38.5945, -0.1023], distance: '10 min', description: 'Charming coastal town' },
+      { id: 'altea-town', name: 'Altea Town Center', type: 'shopping', coordinates: [38.5956, -0.1089], distance: '10 min', description: 'Art galleries and restaurants' },
+    ],
+  },
+
+  // BONALBA GOLF
+  'bonalba-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1200&q=80',
+    introduction: 'Bonalba Golf near Alicante offers an excellent location combining city convenience with resort golf living. This 18-hole championship course is just 15 minutes from Alicante airport and city center, making it ideal for buyers seeking connectivity to both North and South Costa Blanca.',
+    whyLiveHere: [
+      '18-hole championship course, par 72',
+      'Just 15 minutes from Alicante airport',
+      'Close to Alicante city center for services',
+      'Properties from €150,000 to €500,000',
+      'Good connectivity to both North and South Costa Blanca',
+      'Mix of golf resort and urban residential'
+    ],
+    lifestyle: {
+      overview: 'Bonalba Golf offers a practical lifestyle combining city amenities with golf resort facilities. Perfect for those who want access to urban services while enjoying golf and resort living.',
+      dailyLife: 'Morning golf at the championship course, shopping and dining in Alicante city, afternoon at the resort pools or exploring nearby beaches. Evenings in trendy Alicante restaurants or relaxing at the clubhouse.',
+      community: 'A diverse community of international and Spanish residents. Mix of golfers and non-golfers attracted by the location and value. Active social calendar at the resort.',
+    },
+    schools: [
+      { name: 'Kings College Alicante', type: 'British International', distance: '20 min', curriculum: 'British (IB available)', fees: '€8,000-12,000/year', ages: '2-18', url: 'https://alicante.kingscollegeschools.org/', note: 'Premium option with IB programme and excellent facilities.' },
+      { name: 'Colegio El Limonar', type: 'British International', distance: '25 min', curriculum: 'British', fees: '€5,000-8,000/year', ages: '3-18', note: 'Popular British curriculum school.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital Quirónsalud Torrevieja', distance: '25 min', description: 'Modern private hospital with excellent facilities and English-speaking doctors.', googleMaps: 'https://maps.google.com/?q=Hospital+Quironsalud+Torrevieja' },
+      healthCenter: { name: 'Centro de Salud Mutxamel', distance: '5 min' },
+      pharmacies: 'Multiple pharmacies throughout Alicante and Mutxamel',
+      privateOptions: 'Several private clinics in Alicante city center. Comprehensive private insurance available.',
+    },
+    beaches: [
+      { name: 'San Juan Beach', distance: '15 min', description: 'Beautiful sandy beach near the airport with water sports, restaurants, and full facilities. Family-friendly atmosphere.', googleMaps: 'https://maps.google.com/?q=Playa+San+Juan+Alicante' },
+      { name: 'Alicante City Beaches', distance: '20 min', description: 'Urban beaches with promenade, restaurants, bars, and vibrant atmosphere.', googleMaps: 'https://maps.google.com/?q=Playas+Alicante+Postiguet' },
+      { name: 'Torrevieja Beaches', distance: '30 min', description: 'Longer sandy beaches with good facilities and family appeal.', googleMaps: 'https://maps.google.com/?q=Playas+Torrevieja' },
+    ],
+    markets: [
+      { name: 'Alicante Central Market (Mercado Central)', day: 'Daily', time: '8am - 2pm', distance: '20 min', description: 'Historic market building with excellent fresh fish, produce, and local specialties. A must-visit iconic Alicante institution.', googleMaps: 'https://maps.google.com/?q=Mercado+Central+Alicante' },
+      { name: 'Alicante Tuesday Market', day: 'Tuesday', time: '8am - 2pm', distance: '18 min', description: 'Large street market with clothing, household items, and fresh produce.', googleMaps: 'https://maps.google.com/?q=Mercadillo+Alicante+Tuesday' },
+      { name: 'Mutxamel Market', day: 'Friday', time: '8am - 1pm', distance: '5 min', description: 'Local market with fresh produce and everyday items.', googleMaps: 'https://maps.google.com/?q=Mercado+Mutxamel' },
+    ],
+    events: [
+      { name: 'Bonalba Golf Tournaments', when: 'Year-round', description: 'Regular championships and social tournaments at the course with excellent facilities.' },
+      { name: 'Alicante Fiestas de San Juan', when: 'June', description: 'City-wide festival with beach bonfires, parties, and celebrations. Vibrant atmosphere throughout Alicante.' },
+      { name: 'Alicante Mediterranean Food Festival', when: 'October', description: 'Celebration of Mediterranean cuisine with tastings, cooking demos, and cultural events.' },
+    ],
+    expat: {
+      population: 'Approximately 25% international residents in Bonalba area',
+      nationalities: 'British, Scandinavian, Dutch, German, Spanish',
+      socialHub: 'Bonalba Golf clubhouse and Alicante city center restaurants and bars',
+      facebookGroups: ['Bonalba Golf Community', 'Alicante Expats', 'Costa Blanca Central Living'],
+      integration: 'Welcoming community with good English spoken. Easy integration through golf club or city lifestyle.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€300 - €600/year', notes: 'Mutxamel rates for resort properties' },
+      { category: 'Community Fees', cost: '€80 - €120/month', notes: 'Golf resort and common areas' },
+      { category: 'Utilities', cost: '€100 - €180/month', notes: 'Alicante area rates' },
+      { category: 'Golf Membership', cost: '€1,200 - €2,500/year', notes: 'Good value 18-hole course' },
+      { category: 'Health Insurance', cost: '€90 - €170/month', notes: 'Private insurance available' },
+      { category: 'Weekly Shop (2 people)', cost: '€85 - €125', notes: 'City prices, good value' },
+    ],
+    investment: {
+      overview: 'Bonalba benefits from proximity to Alicante airport and city services. Good value compared to coastal resorts, with solid rental demand.',
+      priceGrowth: '+35% over 5 years',
+      rentalYield: '5-6% achievable',
+      outlook: 'Steady appreciation as airport proximity and city connectivity remain attractive.',
+    },
+    faqs: [
+      { question: 'Why choose Bonalba over coastal resorts?', answer: 'You get airport and city convenience with golf and resort living. Properties are 30-40% cheaper than coastal equivalents, while offering easy access to everything.' },
+      { question: 'How close is the airport really?', answer: '15 minutes from Alicante airport. Perfect if you want easy access for family visits or holidays. You can be poolside quickly after landing.' },
+      { question: 'Can I easily access the North (Costa Blanca North)?', answer: 'Yes, Bonalba is centrally located. The North coast (La Finca, Vistabella) is 45-60 minutes away. Good balance of accessibility.' },
+      { question: 'What is Alicante city like?', answer: 'Modern Mediterranean city with excellent restaurants, shopping, cultural venues, and nightlife. The castle offers amazing views. Much more vibrant than golf resort villages.' },
+      { question: 'What is the rental market like at Bonalba?', answer: 'Very strong, especially with airport-adjacent location. Business travelers, tourists, and family visitors all seek short-term rentals. 5-6% yields are achievable.' },
+    ],
+    mapLocations: [
+      { id: 'bonalba', name: 'Bonalba Golf', type: 'golf', coordinates: [38.3723, -0.3589], distance: 'Center', description: '18-hole championship course' },
+      { id: 'airport', name: 'Alicante Airport', type: 'airport', coordinates: [38.2822, -0.5582], distance: '15 min', description: 'International airport' },
+      { id: 'san-juan', name: 'San Juan Beach', type: 'beach', coordinates: [38.3456, -0.3234], distance: '15 min', description: 'Sandy beach near airport' },
+      { id: 'alicante-city', name: 'Alicante City Center', type: 'shopping', coordinates: [38.3452, -0.4812], distance: '20 min', description: 'Historic city with restaurants and shopping' },
+    ],
+  },
+
+  // ALICANTE GOLF
+  'alicante-golf': {
+    heroImage: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=1200&q=80',
+    introduction: 'Alicante Golf is a unique urban-golf-beach combination located at Playa de San Juan. This established 18-hole course sits adjacent to a beautiful sandy beach with immediate access to beachfront restaurants, bars, and the vibrant San Juan beach culture.',
+    whyLiveHere: [
+      '18-hole course established 1998, par 72',
+      'Adjacent to Playa de San Juan beach',
+      'Walking distance to beachfront restaurants and bars',
+      'Properties from €180,000 to €600,000',
+      'Urban-golf-beach lifestyle unique on Costa Blanca',
+      'Perfect for permanent residents wanting city + golf'
+    ],
+    lifestyle: {
+      overview: 'Alicante Golf offers a unique lifestyle blending championship golf with immediate beach and urban culture. This is for those who want golf without giving up city excitement and beach access.',
+      dailyLife: 'Morning golf overlooking the Mediterranean, lunch at beachfront restaurants, afternoon swimming or beach strolls, evenings enjoying bars and dining on the paseo. Perfect balance of sport and lifestyle.',
+      community: 'Diverse community of golf enthusiasts and beach-lifestyle seekers. Mix of Spanish and international residents. Young and active atmosphere. Very social with abundant dining and entertainment options.',
+    },
+    schools: [
+      { name: 'Kings College Alicante', type: 'British International', distance: '15 min', curriculum: 'British (IB available)', fees: '€8,000-12,000/year', ages: '2-18', url: 'https://alicante.kingscollegeschools.org/', note: 'Excellent British curriculum with IB option.' },
+      { name: 'El Limonar International School', type: 'British International', distance: '20 min', curriculum: 'British', fees: '€5,000-8,000/year', ages: '3-18', note: 'Reputable British school with strong community.' },
+    ],
+    healthcare: {
+      hospital: { name: 'Hospital Universitario de San Juan', distance: '5 min', description: 'Modern public teaching hospital with excellent emergency facilities and English-speaking doctors.', googleMaps: 'https://maps.google.com/?q=Hospital+Universitario+de+San+Juan+Alicante' },
+      healthCenter: { name: 'Centro de Salud San Juan', distance: '3 min' },
+      pharmacies: 'Multiple pharmacies on the beach promenade and San Juan area',
+      privateOptions: 'Several private clinics nearby. Comprehensive private insurance available.',
+    },
+    beaches: [
+      { name: 'San Juan Beach (Adjacent)', distance: 'Walking distance', description: 'Long sandy beach with calm waters, excellent facilities, restaurants, and the vibrant San Juan beach culture. Literally steps from the course.', googleMaps: 'https://maps.google.com/?q=Playa+San+Juan+Alicante' },
+      { name: 'Alicante City Beaches (Postiguet)', distance: '5 min', description: 'Urban beaches with promenade, bars, and cultural atmosphere in the heart of the city.', googleMaps: 'https://maps.google.com/?q=Playa+del+Postiguet+Alicante' },
+      { name: 'El Saladar Beach', distance: '10 min', description: 'Quieter beach option south of San Juan with protected dunes and natural areas.', googleMaps: 'https://maps.google.com/?q=Playa+El+Saladar+Alicante' },
+    ],
+    markets: [
+      { name: 'Alicante Central Market', day: 'Daily', time: '8am - 2pm', distance: '10 min', description: 'Historic market building with legendary fresh fish counter, produce, and local specialties. An Alicante institution you must visit.', googleMaps: 'https://maps.google.com/?q=Mercado+Central+Alicante' },
+      { name: 'San Juan Market', day: 'Wednesday & Friday', time: '8am - 1pm', distance: '5 min', description: 'Local market with fresh produce and household items right near the beach.', googleMaps: 'https://maps.google.com/?q=Mercado+San+Juan+Alicante' },
+      { name: 'Alicante Tuesday Market', day: 'Tuesday', time: '8am - 2pm', distance: '8 min', description: 'Large street market with clothing, goods, and food items.', googleMaps: 'https://maps.google.com/?q=Mercadillo+Alicante+Tuesday' },
+    ],
+    events: [
+      { name: 'Alicante Fiestas de San Juan', when: 'June', description: 'City-wide celebration with beach bonfires, parties, concerts, and cultural events. San Juan beach is the epicenter of festivities.' },
+      { name: 'Alicante Golf Tournaments', when: 'Year-round', description: 'Regular tournaments and championships at the course with excellent facilities and beach club atmosphere.' },
+      { name: 'Beach Events & Water Sports Festivals', when: 'Summer', description: 'Regular events on San Juan Beach including volleyball tournaments, music festivals, and water sports celebrations.' },
+    ],
+    expat: {
+      population: 'Approximately 30% international residents in San Juan area',
+      nationalities: 'British, Scandinavian, Dutch, German, Spanish, French',
+      socialHub: 'Alicante Golf clubhouse and San Juan beach promenade restaurants and bars. Very active social scene.',
+      facebookGroups: ['Alicante Golf Community', 'San Juan Living', 'Alicante Expats'],
+      integration: 'Highly welcoming community with excellent English spoken. Easy integration through golf, beach, or city lifestyle.',
+    },
+    costOfLiving: [
+      { category: 'Property Tax (IBI)', cost: '€400 - €800/year', notes: 'Alicante city rates' },
+      { category: 'Community Fees', cost: '€90 - €140/month', notes: 'Urban golf resort maintenance' },
+      { category: 'Utilities', cost: '€120 - €200/month', notes: 'City area with air conditioning' },
+      { category: 'Golf Membership', cost: '€1,200 - €2,500/year', notes: 'Urban course access' },
+      { category: 'Health Insurance', cost: '€100 - €180/month', notes: 'Private coverage available' },
+      { category: 'Weekly Shop (2 people)', cost: '€90 - €140', notes: 'City prices with excellent food options' },
+    ],
+    investment: {
+      overview: 'Alicante Golf properties appeal to those wanting permanent urban lifestyle combined with golf. The beach adjacency and city location create unique demand profile.',
+      priceGrowth: '+40% over 5 years',
+      rentalYield: '5-7% achievable',
+      outlook: 'Strong rental potential from tourists, business travelers, and beach-lovers seeking golf. Unique positioning maintains value.',
+    },
+    faqs: [
+      { question: 'Is it really walking distance to the beach?', answer: 'Yes! The 1st hole starts adjacent to San Juan Beach. You can literally walk from your home to the beach in minutes. It\'s a unique golf-and-beach-living combination.' },
+      { question: 'What is San Juan Beach like?', answer: 'A beautiful long sandy beach with calm waters, excellent restaurants and bars, water sports, and a lively Mediterranean atmosphere. Perfect for families and beach lifestyle lovers.' },
+      { question: 'Is Alicante Golf course difficult?', answer: 'It\'s a championship course suitable for all levels. The design balances challenge with playability, and the sea views make every hole memorable.' },
+      { question: 'Can I really live a city lifestyle here?', answer: 'Absolutely. You have the golf course, beach access, and Alicante city center (10 min) with restaurants, shopping, nightlife, and culture. Perfect balance for those who don\'t want to give up city life.' },
+      { question: 'What is the rental market like?', answer: 'Excellent! The beach adjacency and golf course attract tourists and travelers year-round. Rental yields of 5-7% are achievable with consistent demand.' },
+    ],
+    mapLocations: [
+      { id: 'alicante-golf', name: 'Alicante Golf', type: 'golf', coordinates: [38.3478, -0.3012], distance: 'Center', description: '18-hole urban course' },
+      { id: 'san-juan-beach', name: 'San Juan Beach', type: 'beach', coordinates: [38.3512, -0.2956], distance: 'Adjacent', description: 'Sandy beach with restaurants' },
+      { id: 'alicante-city', name: 'Alicante City Center', type: 'shopping', coordinates: [38.3452, -0.4812], distance: '10 min', description: 'Urban culture and dining' },
+      { id: 'hospital', name: 'Hospital San Juan', type: 'hospital', coordinates: [38.3289, -0.2845], distance: '5 min', description: 'Modern hospital' },
+    ],
+  },
 };
 
 // Generate default lifestyle data for courses without specific data
@@ -1500,11 +2304,11 @@ export default async function GolfCoursePage({ params }: { params: Promise<{ slu
             </h2>
             <div className="grid md:grid-cols-3 gap-6 mb-6">
               <div className="bg-success-50 p-6 rounded-xl border border-success-200 text-center">
-                <p className="text-4xl font-bold text-success-600">{lifestyle.investment.priceGrowth}</p>
+                <p className="text-2xl font-bold text-success-600">{lifestyle.investment.priceGrowth}</p>
                 <p className="text-success-700">5-Year Growth</p>
               </div>
               <div className="bg-accent-50 p-6 rounded-xl border border-accent-200 text-center">
-                <p className="text-4xl font-bold text-accent-600">{lifestyle.investment.rentalYield}</p>
+                <p className="text-2xl font-bold text-accent-600">{lifestyle.investment.rentalYield}</p>
                 <p className="text-accent-700">Rental Yield</p>
               </div>
               <div className="bg-primary-50 p-6 rounded-xl border border-primary-200 text-center">
@@ -1557,7 +2361,6 @@ export default async function GolfCoursePage({ params }: { params: Promise<{ slu
               </div>
             ) : (
               <div className="bg-white rounded-xl p-8 text-center border border-warm-200">
-                <p className="text-4xl mb-4">⛳</p>
                 <h3 className="text-xl font-semibold text-primary-900 mb-2">Properties Coming Soon</h3>
                 <p className="text-warm-600 mb-6">New developments near {course.name} are added regularly.</p>
                 <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-lg font-medium">
@@ -1576,7 +2379,7 @@ export default async function GolfCoursePage({ params }: { params: Promise<{ slu
           <section className="py-12 bg-white">
             <div className="max-w-7xl mx-auto px-6">
               <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-6">
-                📍 Area <span className="font-semibold">Map</span>
+                Area <span className="font-semibold">Map</span>
               </h2>
               <div className="h-[400px] rounded-xl overflow-hidden border border-warm-200">
                 <InteractiveAreaMap
@@ -1595,7 +2398,7 @@ export default async function GolfCoursePage({ params }: { params: Promise<{ slu
         <section className="py-12 bg-warm-50">
           <div className="max-w-4xl mx-auto px-6">
             <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-6 text-center">
-              ❓ Frequently Asked <span className="font-semibold">Questions</span>
+              Frequently Asked <span className="font-semibold">Questions</span>
             </h2>
             <div className="space-y-3">
               {lifestyle.faqs.map((faq, i) => (
