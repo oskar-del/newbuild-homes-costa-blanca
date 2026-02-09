@@ -187,7 +187,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/guides/taxes-costs" className="hover:text-white transition-colors">
+                  <Link href="/guides/costs-taxes" className="hover:text-white transition-colors">
                     Taxes &amp; Costs
                   </Link>
                 </li>
