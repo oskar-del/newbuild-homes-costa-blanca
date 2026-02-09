@@ -75,10 +75,10 @@ const NAV_ITEMS = [
     href: '/golf',
     submenu: [
       { label: 'Golf Properties', href: '/golf' },
-      { label: 'La Finca Golf', href: '/golf/la-finca' },
-      { label: 'Villamartín Golf', href: '/golf/villamartin' },
-      { label: 'Las Ramblas Golf', href: '/golf/las-ramblas' },
-      { label: 'Lo Romero Golf', href: '/golf/lo-romero' },
+      { label: 'La Finca Golf', href: '/golf/la-finca-golf' },
+      { label: 'Villamartín Golf', href: '/golf/villamartin-golf' },
+      { label: 'Las Ramblas Golf', href: '/golf/las-ramblas-golf' },
+      { label: 'Lo Romero Golf', href: '/golf/lo-romero-golf' },
     ],
   },
   {
