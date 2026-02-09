@@ -1,8 +1,12 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getAllDevelopments } from '@/lib/development-service';
+import {
+  getAllDevelopments,
+  Development,
+} from '@/lib/development-service';
 import { GOLF_COURSES, getGolfCoursesByRegion } from '@/lib/golf-courses';
+import { getCardImages } from '@/lib/image-categorization';
 import LeadForm from '@/components/LeadForm';
 import { breadcrumbSchema, toJsonLd } from '@/lib/schema';
 
@@ -36,6 +40,180 @@ function formatPrice(price: number): string {
     currency: 'EUR',
     maximumFractionDigits: 0,
   }).format(price);
+}
+
+// Development Card Component - Matches main developments page style
+function DevelopmentCard({ dev }: { dev: Development }) {
+  // Get intelligently categorized images
+  const cardImages = getCardImages(dev.images || [], dev.name, dev.town);
+  const hasMultipleImages = cardImages.secondary.length >= 2;
+
+  // Check if we have real images
+  const hasRealImages = dev.images && dev.images.length > 0 && !dev.images[0]?.includes('placeholder');
+  const imageSource = hasRealImages
+    ? (dev.images[0]?.includes('backgroundproperties') ? 'BP' :
+       dev.images[0]?.includes('feedmedia') ? 'REDSP' :
+       dev.images[0]?.includes('redsp') ? 'REDSP' : 'Feed')
+    : 'Placeholder';
+
+  return (
+    <Link
+      href={`/developments/${dev.slug}`}
+      className="group block overflow-hidden rounded-sm transition-all duration-300 bg-white border border-warm-200 hover:shadow-xl hover:border-accent-500"
+    >
+      {/* Image Gallery - Square aspect ratio */}
+      <div className="relative">
+        {/* Main Image */}
+        <div className="relative aspect-square overflow-hidden">
+          <Image
+            src={cardImages.main.url}
+            alt={cardImages.main.alt}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+          {/* Status Badge - Top Left */}
+          <div className="absolute top-3 left-3">
+            {dev.status === 'key-ready' && (
+              <span className="bg-accent-500 text-white text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wide">
+                Key Ready
+              </span>
+            )}
+            {dev.status === 'under-construction' && (
+              <span className="bg-amber-500 text-white text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wide">
+                Building
+              </span>
+            )}
+            {dev.status === 'off-plan' && (
+              <span className="bg-blue-500 text-white text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wide">
+                Off-Plan
+              </span>
+            )}
+          </div>
+
+          {/* Units count - Top Right */}
+          <div className="absolute top-3 right-3">
+            <span className="bg-black/50 backdrop-blur-sm text-white text-[10px] font-medium px-2 py-1 rounded-sm">
+              {dev.totalUnits} units
+            </span>
+          </div>
+
+          {/* Name & Location Overlay - Bottom */}
+          <div className="absolute bottom-0 left-0 right-0 p-3">
+            <div className="text-white">
+              <h3 className="font-semibold text-sm leading-tight mb-0.5 group-hover:text-accent-300 transition-colors">
+                {dev.name}
+              </h3>
+              <p className="text-warm-300 text-xs">{dev.town}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Two Smaller Property Images - Below Main */}
+        {hasMultipleImages && (
+          <div className="grid grid-cols-2 gap-0.5 mt-0.5">
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src={cardImages.secondary[0].url}
+                alt={cardImages.secondary[0].alt}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 640px) 25vw, 15vw"
+              />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src={cardImages.secondary[1]?.url || cardImages.secondary[0].url}
+                alt={cardImages.secondary[1]?.alt || cardImages.secondary[0].alt}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 640px) 25vw, 15vw"
+              />
+              {/* "More photos" overlay on last image */}
+              {dev.images && dev.images.length > 3 && (
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                  <span className="text-white text-xs font-medium">+{dev.images.length - 3}</span>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Content - Enhanced info section */}
+      <div className="px-3 py-3 bg-white">
+        {/* Price & Move-in */}
+        <div className="flex items-center justify-between mb-2">
+          <div className="text-base font-semibold text-primary-900">
+            From {formatPrice(dev.priceFrom)}
+          </div>
+          {dev.deliveryQuarter && (
+            <div className={`text-[10px] font-medium px-2 py-1 rounded-sm ${
+              dev.status === 'key-ready'
+                ? 'bg-accent-100 text-accent-700'
+                : 'bg-accent-100 text-accent-700'
+            }`}>
+              {dev.status === 'key-ready' ? 'Move In Now' : dev.deliveryQuarter}
+            </div>
+          )}
+        </div>
+
+        {/* Bedroom breakdown */}
+        <div className="text-xs mb-2 text-warm-600">
+          {dev.bedroomBreakdown?.length > 0
+            ? dev.bedroomBreakdown.slice(0, 3).join(', ') + (dev.bedroomBreakdown.length > 3 ? ' +more' : '')
+            : `${dev.bedroomRange} bed`
+          }
+          {dev.sizeRange && ` · ${dev.sizeRange}`}
+        </div>
+
+        {/* Amenities icons */}
+        {dev.amenities && dev.amenities.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 mb-2">
+            {dev.hasPool && (
+              <span className="inline-flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded bg-blue-50 text-blue-600">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                </svg>
+                Pool
+              </span>
+            )}
+            {dev.hasGym && (
+              <span className="inline-flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded bg-purple-50 text-purple-600">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h4v12H4zM16 6h4v12h-4zM8 10h8v4H8z" />
+                </svg>
+                Gym
+              </span>
+            )}
+            {dev.hasSpa && (
+              <span className="inline-flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded bg-teal-50 text-teal-600">
+                ✨ Spa
+              </span>
+            )}
+            {dev.hasSeaview && (
+              <span className="inline-flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded bg-cyan-50 text-cyan-600">
+                🌊 Sea View
+              </span>
+            )}
+            {dev.hasGolfview && (
+              <span className="inline-flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded bg-green-50 text-green-600">
+                ⛳ Golf
+              </span>
+            )}
+          </div>
+        )}
+
+        {/* Developer & Zone */}
+        <div className="text-[11px] text-warm-500">
+          {dev.developer}
+          {dev.zone && ` · ${dev.zone}`}
+        </div>
+      </div>
+    </Link>
+  );
 }
 
 // Fallback image for developments without photos
@@ -322,22 +500,9 @@ export default async function CostaCalidaPage() {
             {golfProperties.length > 0 && (
               <>
                 <h3 className="text-xl font-semibold text-primary-900 mb-4">Featured Golf Developments</h3>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
                   {golfProperties.slice(0, 6).map(dev => (
-                    <Link key={dev.slug} href={`/developments/${dev.slug}`}
-                      className="group bg-white border border-warm-200 rounded-sm overflow-hidden hover:shadow-xl transition-all">
-                      <div className="relative h-48 bg-warm-200">
-                        <Image src={dev.images[0] || FALLBACK_IMAGE} alt={dev.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" unoptimized />
-                        <div className="absolute top-3 left-3">
-                          <span className="bg-accent-500 text-white text-xs font-bold px-2 py-1 rounded-sm">Golf Resort</span>
-                        </div>
-                      </div>
-                      <div className="p-4">
-                        <h4 className="font-semibold text-primary-900 mb-1 group-hover:text-accent-600 transition-colors">{dev.name}</h4>
-                        <p className="text-warm-500 text-sm mb-2">{dev.town}</p>
-                        {dev.priceFrom && <p className="text-accent-600 font-bold">From {formatPrice(dev.priceFrom)}</p>}
-                      </div>
-                    </Link>
+                    <DevelopmentCard key={dev.slug} dev={dev} />
                   ))}
                 </div>
               </>
@@ -383,22 +548,9 @@ export default async function CostaCalidaPage() {
 
             {/* Beach Properties */}
             {beachProperties.length > 0 ? (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
                 {beachProperties.slice(0, 6).map(dev => (
-                  <Link key={dev.slug} href={`/developments/${dev.slug}`}
-                    className="group bg-white border border-warm-200 rounded-xl overflow-hidden hover:shadow-xl transition-all">
-                    <div className="relative h-48 bg-warm-200">
-                      <Image src={dev.images[0] || FALLBACK_IMAGE} alt={dev.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" unoptimized />
-                      <div className="absolute top-3 left-3">
-                        <span className="bg-accent-500 text-white text-xs font-bold px-2 py-1 rounded">Mar Menor</span>
-                      </div>
-                    </div>
-                    <div className="p-4">
-                      <h4 className="font-semibold text-primary-900 mb-1 group-hover:text-accent-600 transition-colors">{dev.name}</h4>
-                      <p className="text-warm-500 text-sm mb-2">{dev.town}</p>
-                      {dev.priceFrom && <p className="text-accent-600 font-bold">From {formatPrice(dev.priceFrom)}</p>}
-                    </div>
-                  </Link>
+                  <DevelopmentCard key={dev.slug} dev={dev} />
                 ))}
               </div>
             ) : (
@@ -451,22 +603,9 @@ export default async function CostaCalidaPage() {
 
             {/* Inland Properties */}
             {inlandProperties.length > 0 ? (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
                 {inlandProperties.slice(0, 6).map(dev => (
-                  <Link key={dev.slug} href={`/developments/${dev.slug}`}
-                    className="group bg-white border border-warm-200 rounded-xl overflow-hidden hover:shadow-xl transition-all">
-                    <div className="relative h-48 bg-warm-200">
-                      <Image src={dev.images[0] || FALLBACK_IMAGE} alt={dev.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" unoptimized />
-                      <div className="absolute top-3 left-3">
-                        <span className="bg-amber-600 text-white text-xs font-bold px-2 py-1 rounded">Best Value</span>
-                      </div>
-                    </div>
-                    <div className="p-4">
-                      <h4 className="font-semibold text-primary-900 mb-1 group-hover:text-accent-600 transition-colors">{dev.name}</h4>
-                      <p className="text-warm-500 text-sm mb-2">{dev.town}</p>
-                      {dev.priceFrom && <p className="text-accent-600 font-bold">From {formatPrice(dev.priceFrom)}</p>}
-                    </div>
-                  </Link>
+                  <DevelopmentCard key={dev.slug} dev={dev} />
                 ))}
               </div>
             ) : (
@@ -496,24 +635,9 @@ export default async function CostaCalidaPage() {
                 Premium villas and exclusive developments in Costa Cálida's finest locations.
               </p>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                {luxuryProperties.slice(0, 4).map(dev => (
-                  <Link key={dev.slug} href={`/developments/${dev.slug}`}
-                    className="group bg-white border border-warm-200 rounded-xl overflow-hidden hover:shadow-xl transition-all">
-                    <div className="relative h-64 bg-warm-200">
-                      <Image src={dev.images[0] || FALLBACK_IMAGE} alt={dev.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" unoptimized />
-                      <div className="absolute top-3 left-3">
-                        <span className="bg-gradient-to-r from-amber-500 to-amber-600 text-white text-xs font-bold px-3 py-1 rounded">
-                          ✨ Luxury
-                        </span>
-                      </div>
-                    </div>
-                    <div className="p-5">
-                      <h4 className="text-xl font-semibold text-primary-900 mb-1 group-hover:text-accent-600 transition-colors">{dev.name}</h4>
-                      <p className="text-warm-500 text-sm mb-3">{dev.town}</p>
-                      {dev.priceFrom && <p className="text-accent-600 font-bold text-lg">From {formatPrice(dev.priceFrom)}</p>}
-                    </div>
-                  </Link>
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
+                {luxuryProperties.slice(0, 6).map(dev => (
+                  <DevelopmentCard key={dev.slug} dev={dev} />
                 ))}
               </div>
             </div>

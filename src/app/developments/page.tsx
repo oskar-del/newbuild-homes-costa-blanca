@@ -691,6 +691,26 @@ export default async function DevelopmentsPage() {
         )}
 
         {/* ============================================ */}
+        {/* LIGHT CONTACT CTA - Between Torrevieja & Orihuela Costa */}
+        {/* ============================================ */}
+        <section className="py-8 px-4">
+          <div className="max-w-4xl mx-auto bg-warm-50 border border-warm-200 rounded-sm p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div>
+              <p className="text-primary-900 font-medium text-lg">Looking for your dream property?</p>
+              <p className="text-warm-500 text-sm mt-1">Contact us for latest availability, floorplans, or to book a viewing</p>
+            </div>
+            <div className="flex gap-3">
+              <a href="https://wa.me/34634044970" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 bg-primary-900 text-white rounded-sm text-sm font-medium hover:bg-primary-800 transition-colors">
+                WhatsApp
+              </a>
+              <a href="/contact" className="px-5 py-2.5 border border-primary-900 text-primary-900 rounded-sm text-sm font-medium hover:bg-primary-900 hover:text-white transition-colors">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ============================================ */}
         {/* ORIHUELA COSTA - Golf & Beach Paradise */}
         {/* ============================================ */}
         {orihuelaCostaDevelopments.length > 0 && (

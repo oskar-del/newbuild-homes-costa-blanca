@@ -611,6 +611,26 @@ export default async function PropertiesPage({
           </div>
         </section>
 
+        {/* ============================================ */}
+        {/* LIGHT CONTACT CTA - Between Golf & Inland Living */}
+        {/* ============================================ */}
+        <section className="py-8 px-4 bg-warm-50">
+          <div className="max-w-4xl mx-auto bg-white border border-warm-200 rounded-sm p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div>
+              <p className="text-primary-900 font-medium text-lg">Find your perfect Costa Blanca home</p>
+              <p className="text-warm-500 text-sm mt-1">Contact us for latest availability, floorplans, or to book a viewing</p>
+            </div>
+            <div className="flex gap-3">
+              <a href="https://wa.me/34634044970" target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 bg-primary-900 text-white rounded-sm text-sm font-medium hover:bg-primary-800 transition-colors">
+                WhatsApp
+              </a>
+              <a href="/contact" className="px-5 py-2.5 border border-primary-900 text-primary-900 rounded-sm text-sm font-medium hover:bg-primary-900 hover:text-white transition-colors">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Inland Living Section */}
         <section className="py-16 bg-warm-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -663,19 +683,23 @@ export default async function PropertiesPage({
             </h2>
 
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-              {towns.slice(0, 24).map(town => {
-                const count = allProperties.filter(p => p.town === town).length;
-                return (
+              {towns
+                .map(town => ({
+                  town,
+                  count: allProperties.filter(p => p.town === town).length,
+                }))
+                .filter(({ count }) => count > 0)
+                .slice(0, 24)
+                .map(({ town, count }) => (
                   <Link
                     key={town}
                     href={`/properties?town=${encodeURIComponent(town)}`}
                     className="bg-warm-50 rounded-lg p-4 hover:shadow-md transition-shadow group"
                   >
                     <h3 className="font-medium text-primary-900 group-hover:text-accent-600 transition-colors">{town}</h3>
-                    <p className="text-warm-500 text-sm">{count} properties</p>
+                    <p className="text-warm-500 text-sm">{count} {count === 1 ? 'property' : 'properties'}</p>
                   </Link>
-                );
-              })}
+                ))}
             </div>
 
             {towns.length > 24 && (
