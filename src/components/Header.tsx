@@ -104,6 +104,9 @@ const LANGUAGES = [
   { code: 'nl-be', prefix: '/nl-be', label: 'Vlaams', short: 'BE', flag: { bg: '#000', type: 'be' } },
   { code: 'fr', prefix: '/fr', label: 'Fran\u00e7ais', short: 'FR', flag: { bg: '#002395', type: 'fr' } },
   { code: 'no', prefix: '/no', label: 'Norsk', short: 'NO', flag: { bg: '#BA0C2F', type: 'no' } },
+  { code: 'de', prefix: '/de', label: 'Deutsch', short: 'DE', flag: { bg: '#000', type: 'de' } },
+  { code: 'pl', prefix: '/pl', label: 'Polski', short: 'PL', flag: { bg: '#DC143C', type: 'pl' } },
+  { code: 'ru', prefix: '/ru', label: '\u0420\u0443\u0441\u0441\u043a\u0438\u0439', short: 'RU', flag: { bg: '#0039A6', type: 'ru' } },
 ];
 
 function FlagIcon({ type }: { type: string }) {
@@ -160,12 +163,35 @@ function FlagIcon({ type }: { type: string }) {
           <rect y="17" width="60" height="8" fill="#00205B"/>
         </svg>
       );
+    case 'de':
+      return (
+        <svg viewBox="0 0 60 42" className="w-full h-full">
+          <rect width="60" height="14" fill="#000"/>
+          <rect y="14" width="60" height="14" fill="#DD0000"/>
+          <rect y="28" width="60" height="14" fill="#FFCC00"/>
+        </svg>
+      );
+    case 'pl':
+      return (
+        <svg viewBox="0 0 60 42" className="w-full h-full">
+          <rect width="60" height="21" fill="#FFF"/>
+          <rect y="21" width="60" height="21" fill="#DC143C"/>
+        </svg>
+      );
+    case 'ru':
+      return (
+        <svg viewBox="0 0 60 42" className="w-full h-full">
+          <rect width="60" height="14" fill="#FFF"/>
+          <rect y="14" width="60" height="14" fill="#0039A6"/>
+          <rect y="28" width="60" height="14" fill="#D52B1E"/>
+        </svg>
+      );
     default:
       return null;
   }
 }
 
-// Language switcher component — dropdown with 6 languages
+// Language switcher component — dropdown with 9 languages
 function LanguageSwitcher({ className = '' }: { className?: string }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -203,7 +229,7 @@ function LanguageSwitcher({ className = '' }: { className?: string }) {
       {open && (
         <>
           <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} />
-          <div className="absolute right-0 top-full mt-2 bg-white border border-warm-200 rounded-sm shadow-lg z-50 min-w-[160px] py-1">
+          <div className="absolute right-0 top-full mt-2 bg-white border border-warm-200 rounded-sm shadow-lg z-50 min-w-[160px] max-h-[320px] overflow-y-auto py-1">
             {LANGUAGES.map(lang => (
               <Link
                 key={lang.code}

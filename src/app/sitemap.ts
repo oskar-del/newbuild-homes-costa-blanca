@@ -36,7 +36,7 @@ const GUIDE_SLUGS = [
 ];
 
 // Language configurations for i18n sitemap
-const LANGUAGE_PREFIXES = ['sv', 'nl', 'nl-be', 'fr', 'no'] as const;
+const LANGUAGE_PREFIXES = ['sv', 'nl', 'nl-be', 'fr', 'no', 'de', 'pl', 'ru'] as const;
 
 // Core pages that exist in all languages
 const I18N_CORE_PAGES = [
@@ -76,6 +76,19 @@ const I18N_GUIDE_PAGES: Record<string, string[]> = {
   no: [
     'kjopsprosessen', 'nie-nummer', 'kostnader-skatt', 'boliglan',
     'hvorfor-nybygg', 'innflyttingsklar-tegning', 'nord-vs-sor',
+  ],
+  de: [
+    'kaufprozess', 'nie-nummer', 'kosten-steuern', 'hypothek',
+    'warum-neubau', 'schluesselfertig-vs-planverkauf', 'nord-vs-sued',
+    'torrevieja', 'javea', 'costa-blanca-nord',
+  ],
+  pl: [
+    'proces-zakupu', 'numer-nie', 'koszty-podatki', 'kredyt-hipoteczny',
+    'dlaczego-nowy-budynek', 'pod-klucz-vs-plan', 'polnoc-vs-poludnie',
+  ],
+  ru: [
+    'process-pokupki', 'nomer-nie', 'rashody-nalogi', 'ipoteka',
+    'pochemu-novostroyka', 'pod-klyuch-vs-plan', 'sever-vs-yug',
   ],
 };
 
