@@ -302,8 +302,8 @@ const FILTER_DEFINITIONS: Record<string, { config: FilterConfig; title: string; 
   // Key-Ready
   'key-ready': {
     config: { features: ['key-ready'] },
-    title: 'Key-Ready New Build Homes Costa Blanca',
-    description: 'Move-in ready new build properties available now. No waiting - collect your keys and start living your Spanish dream immediately.'
+    title: 'Key Ready Property in Costa Blanca 2026 | Move-In Ready New Builds',
+    description: 'Browse key ready properties for sale in Costa Blanca. Completed new build villas, apartments & townhouses available now. No waiting - collect your keys and start living in Spain immediately.'
   },
 
   // Region filters
