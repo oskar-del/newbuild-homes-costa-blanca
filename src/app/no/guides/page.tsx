@@ -62,7 +62,7 @@ const buyerGuides: BuyerGuide[] = [
     id: 'north-vs-south',
     title: 'Nord vs Sør Costa Blanca',
     description: 'Sammenlign de to regionene — eksklusiv nord vs prisværdig sør',
-    href: '/no/guides/nord-vs-sør',
+    href: '/no/guides/nord-vs-sor',
   },
 ];
 
