@@ -1,7 +1,5 @@
 'use client';
 
-export const revalidate = 3600;
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { fetchXMLFeed, ParsedProperty } from '@/lib/xml-parser';
@@ -78,11 +76,7 @@ function getFeaturedProperties(properties: ParsedProperty[], count: number = 6):
   return [...firstRow, ...secondRow];
 }
 
-export default function RUPropertiesPage({
-  searchParams,
-}: {
-  searchParams: { town?: string; beds?: string; type?: string; sort?: string; region?: string };
-}) {
+export default function RUPropertiesPage() {
   const [properties, setProperties] = useState<ParsedProperty[]>([]);
   const [loading, setLoading] = useState(true);
   const [towns, setTowns] = useState<string[]>([]);
