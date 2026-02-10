@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     languages: {
       'en': 'https://newbuildhomescostablanca.com/guides/benidorm-finestrat',
       'sv': 'https://newbuildhomescostablanca.com/sv/guides/benidorm-finestrat',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/benidorm-finestrat',
     },
   },
 };

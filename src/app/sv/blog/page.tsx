@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     languages: {
       'en': 'https://newbuildhomescostablanca.com/blog',
       'sv': 'https://newbuildhomescostablanca.com/sv/blog',
+      'nl': 'https://newbuildhomescostablanca.com/nl/blog',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-BE/blog',
+      'fr': 'https://newbuildhomescostablanca.com/fr/blog',
+      'no': 'https://newbuildhomescostablanca.com/no/blog',
+      'x-default': 'https://newbuildhomescostablanca.com/blog',
     },
   },
 };

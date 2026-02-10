@@ -16,6 +16,13 @@ export const metadata: Metadata = {
     title: 'Tourist Rental License Valencia 2026 | Holiday Letting Guide',
     description: 'Everything you need to know about holiday letting licenses in Costa Blanca.',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/guides/tourist-rental-license',
+    languages: {
+      'en': 'https://newbuildhomescostablanca.com/guides/tourist-rental-license',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/tourist-rental-license',
+    },
+  },
 };
 
 const CONTACT = {

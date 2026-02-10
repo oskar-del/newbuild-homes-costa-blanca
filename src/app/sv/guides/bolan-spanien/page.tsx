@@ -89,10 +89,14 @@ const BolanSpanienPage = () => {
       <Head>
         <title>Bolån i Spanien - Guide för Svenska Köpare | Newbuild Spain</title>
         <meta name="description" content="Guide till bolånefinansiering för svenska köpare av fastighet i Spanien. Spanska banker, LTV, räntor och process." />
-        <link rel="canonical" href="https://newbuild.es/sv/guides/bolan-spanien" />
-        <link rel="alternate" hrefLang="sv" href="https://newbuild.es/sv/guides/bolan-spanien" />
-        <link rel="alternate" hrefLang="en" href="https://newbuild.es/guides/mortgages-spain" />
-        <link rel="alternate" hrefLang="es" href="https://newbuild.es/guides/hipotecas-espana" />
+        <link rel="canonical" href="https://newbuildhomescostablanca.com/sv/guides/bolan-spanien" />
+        <link rel="alternate" hrefLang="sv" href="https://newbuildhomescostablanca.com/sv/guides/bolan-spanien" />
+        <link rel="alternate" hrefLang="en" href="https://newbuildhomescostablanca.com/guides/mortgages-spain" />
+        <link rel="alternate" hrefLang="nl" href="https://newbuildhomescostablanca.com/nl/guides/hypotheken-spanje" />
+        <link rel="alternate" hrefLang="nl-BE" href="https://newbuildhomescostablanca.com/nl-BE/guides/hypotheken-spanje" />
+        <link rel="alternate" hrefLang="fr" href="https://newbuildhomescostablanca.com/fr/guides/hypotheques-espagne" />
+        <link rel="alternate" hrefLang="no" href="https://newbuildhomescostablanca.com/no/guides/lan-spania" />
+        <link rel="alternate" hrefLang="x-default" href="https://newbuildhomescostablanca.com/guides/mortgages-spain" />
       </Head>
 
       <main className="min-h-screen bg-white">

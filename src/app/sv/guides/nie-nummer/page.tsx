@@ -180,10 +180,14 @@ const NieNummerPage = () => {
       <Head>
         <title>NIE-nummer - Hur Skaffar Jag NIE i Spanien? | Newbuild Spain</title>
         <meta name="description" content="Guide till att skaffa NIE-nummer för svenska köpare av fastighet i Spanien. Process i Sverige och Spanien, dokument och tips." />
-        <link rel="canonical" href="https://newbuild.es/sv/guides/nie-nummer" />
-        <link rel="alternate" hrefLang="sv" href="https://newbuild.es/sv/guides/nie-nummer" />
-        <link rel="alternate" hrefLang="en" href="https://newbuild.es/guides/nie-number" />
-        <link rel="alternate" hrefLang="es" href="https://newbuild.es/guides/numero-nie" />
+        <link rel="canonical" href="https://newbuildhomescostablanca.com/sv/guides/nie-nummer" />
+        <link rel="alternate" hrefLang="sv" href="https://newbuildhomescostablanca.com/sv/guides/nie-nummer" />
+        <link rel="alternate" hrefLang="en" href="https://newbuildhomescostablanca.com/guides/nie-number" />
+        <link rel="alternate" hrefLang="nl" href="https://newbuildhomescostablanca.com/nl/guides/nie-nummer" />
+        <link rel="alternate" hrefLang="nl-BE" href="https://newbuildhomescostablanca.com/nl-BE/guides/nie-nummer" />
+        <link rel="alternate" hrefLang="fr" href="https://newbuildhomescostablanca.com/fr/guides/numero-nie" />
+        <link rel="alternate" hrefLang="no" href="https://newbuildhomescostablanca.com/no/guides/nie-nummer" />
+        <link rel="alternate" hrefLang="x-default" href="https://newbuildhomescostablanca.com/guides/nie-number" />
       </Head>
 
       <main className="min-h-screen bg-white">

@@ -10,6 +10,11 @@ export const metadata: Metadata = {
     languages: {
       'en': 'https://newbuildhomescostablanca.com/guides/costa-blanca-north',
       'sv': 'https://newbuildhomescostablanca.com/sv/guides/costa-blanca-north',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/costa-blanca-noord',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-BE/guides/costa-blanca-noord',
+      'fr': 'https://newbuildhomescostablanca.com/fr/guides/costa-blanca-nord',
+      'no': 'https://newbuildhomescostablanca.com/no/guides/costa-blanca-nord',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/costa-blanca-north',
     },
   },
 };

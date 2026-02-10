@@ -26,8 +26,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/guides/orihuela-costa',
     languages: {
-      en: 'https://newbuildhomescostablanca.com/guides/orihuela-costa',
-      sv: 'https://newbuildhomescostablanca.com/sv/guides/orihuela-costa',
+      'en': 'https://newbuildhomescostablanca.com/guides/orihuela-costa',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/orihuela-costa',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/orihuela-costa',
     },
   },
 };

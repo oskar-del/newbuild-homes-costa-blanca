@@ -8,8 +8,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/fr/guides/hypotheque',
     languages: {
-      en: 'https://newbuildhomescostablanca.com/guides/mortgages',
-      fr: 'https://newbuildhomescostablanca.com/fr/guides/hypotheque',
+      'en': 'https://newbuildhomescostablanca.com/guides/mortgages',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/bolan-spanien',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/hypotheek',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides/hypotheek',
+      'fr': 'https://newbuildhomescostablanca.com/fr/guides/hypotheque',
+      'no': 'https://newbuildhomescostablanca.com/no/guides/boliglan',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/mortgages',
     },
   },
 };

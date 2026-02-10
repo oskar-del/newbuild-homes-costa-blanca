@@ -8,8 +8,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/nl-be/guides/torrevieja',
     languages: {
-      en: 'https://newbuildhomescostablanca.com/guides/torrevieja',
+      'en': 'https://newbuildhomescostablanca.com/guides/torrevieja',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/torrevieja',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/torrevieja',
       'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides/torrevieja',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/torrevieja',
     },
   },
 };

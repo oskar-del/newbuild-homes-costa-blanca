@@ -6,6 +6,18 @@ export const metadata: Metadata = {
   title: 'Property Costs & Taxes Spain 2026 | Complete Buying Cost Guide',
   description: 'Full breakdown of buying costs and taxes for new build property in Spain. IVA 10%, stamp duty 1.5%, notary, legal fees. Budget calculator for Costa Blanca.',
   keywords: 'property costs Spain, taxes buying Spain, IVA Spain, stamp duty Spain, notary fees Spain, Costa Blanca costs',
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/guides/costs-taxes',
+    languages: {
+      'en': 'https://newbuildhomescostablanca.com/guides/costs-taxes',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/kostnader-skatter',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/kosten-belasting',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides/kosten-belasting',
+      'fr': 'https://newbuildhomescostablanca.com/fr/guides/frais-impots',
+      'no': 'https://newbuildhomescostablanca.com/no/guides/kostnader-skatt',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/costs-taxes',
+    },
+  },
 };
 
 export default function CostsTaxesPage() {

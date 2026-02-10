@@ -19,7 +19,12 @@ export const metadata: Metadata = {
     canonical: 'https://newbuildhomescostablanca.com/fr/areas',
     languages: {
       'en': 'https://newbuildhomescostablanca.com/areas',
+      'sv': 'https://newbuildhomescostablanca.com/sv/areas',
+      'nl': 'https://newbuildhomescostablanca.com/nl/areas',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/areas',
       'fr': 'https://newbuildhomescostablanca.com/fr/areas',
+      'no': 'https://newbuildhomescostablanca.com/no/areas',
+      'x-default': 'https://newbuildhomescostablanca.com/areas',
     },
   },
 };

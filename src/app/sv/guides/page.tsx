@@ -5,11 +5,16 @@ export const metadata: Metadata = {
   title: 'Köpguider | Svenska Köpares Guide till Spansk Fastighet',
   description: 'Komprehensiva guider för svenska köpare av nybygge i Spanien. NIE-nummer, bolån, kostnader, och köpprocessen förklarad.',
   alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/sv/guides',
     languages: {
-      en: 'https://newbuild.se/guides',
-      sv: 'https://newbuild.se/sv/guides',
+      en: 'https://newbuildhomescostablanca.com/guides',
+      sv: 'https://newbuildhomescostablanca.com/sv/guides',
+      nl: 'https://newbuildhomescostablanca.com/nl/guides',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-BE/guides',
+      fr: 'https://newbuildhomescostablanca.com/fr/guides',
+      no: 'https://newbuildhomescostablanca.com/no/guides',
+      'x-default': 'https://newbuildhomescostablanca.com/guides',
     },
-    canonical: 'https://newbuild.se/sv/guides',
   },
 };
 

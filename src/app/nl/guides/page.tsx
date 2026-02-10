@@ -5,12 +5,15 @@ export const metadata: Metadata = {
   title: 'Koopgidsen | Nederlandse Kopers Gids voor Spaans Onroerend Goed',
   description: 'Omvattende gidsen voor Nederlandse kopers van nieuwbouw in Spanje. NIE-nummer, hypotheek, kosten en het koopproces uitgelegd.',
   alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/nl/guides',
     languages: {
       'en': 'https://newbuildhomescostablanca.com/guides',
       'sv': 'https://newbuildhomescostablanca.com/sv/guides',
       'nl': 'https://newbuildhomescostablanca.com/nl/guides',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides',
+      'fr': 'https://newbuildhomescostablanca.com/fr/guides',
+      'no': 'https://newbuildhomescostablanca.com/no/guides',
     },
-    canonical: 'https://newbuildhomescostablanca.com/nl/guides',
   },
 };
 

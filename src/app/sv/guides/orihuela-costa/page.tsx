@@ -10,6 +10,11 @@ export const metadata: Metadata = {
     languages: {
       'en': 'https://newbuildhomescostablanca.com/guides/orihuela-costa',
       'sv': 'https://newbuildhomescostablanca.com/sv/guides/orihuela-costa',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/orihuela-costa',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-BE/guides/orihuela-costa',
+      'fr': 'https://newbuildhomescostablanca.com/fr/guides/orihuela-costa',
+      'no': 'https://newbuildhomescostablanca.com/no/guides/orihuela-costa',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/orihuela-costa',
     },
   },
 };

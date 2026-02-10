@@ -202,11 +202,16 @@ export const metadata: Metadata = {
   title: 'Costa Blanca Nord vs Söder — Vilken Passar Dig? | Svenska Guider',
   description: 'Jämför Costa Blanca Nord (exklusiv, dyr) vs Söder (prisvärd, svensk gemenskap). Priser, aktiviteter, hälsovård, golf, shopping och mera.',
   alternates: {
+    canonical: `https://${DOMAIN}/sv/guides/north-vs-south`,
     languages: {
       en: `https://${DOMAIN}/guides/north-vs-south`,
       sv: `https://${DOMAIN}/sv/guides/north-vs-south`,
+      nl: `https://${DOMAIN}/nl/guides/noord-vs-zuid`,
+      'nl-BE': `https://${DOMAIN}/nl-BE/guides/noord-vs-zuid`,
+      fr: `https://${DOMAIN}/fr/guides/nord-vs-sud`,
+      no: `https://${DOMAIN}/no/guides/nord-vs-sør`,
+      'x-default': `https://${DOMAIN}/guides/north-vs-south`,
     },
-    canonical: `https://${DOMAIN}/sv/guides/north-vs-south`,
   },
 };
 

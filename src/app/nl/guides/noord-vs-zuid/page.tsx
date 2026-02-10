@@ -8,8 +8,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/nl/guides/noord-vs-zuid',
     languages: {
-      en: 'https://newbuildhomescostablanca.com/guides/north-vs-south',
-      nl: 'https://newbuildhomescostablanca.com/nl/guides/noord-vs-zuid',
+      'en': 'https://newbuildhomescostablanca.com/guides/north-vs-south',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/nord-vs-syd',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/noord-vs-zuid',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides/noord-vs-zuid',
+      'x-default': 'https://newbuildhomescostablanca.com',
     },
   },
 };

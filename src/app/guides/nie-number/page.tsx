@@ -7,6 +7,18 @@ export const metadata: Metadata = {
   title: 'NIE Number Spain 2026 | How to Apply & Get Your Spanish Tax ID',
   description: 'Complete guide to getting your NIE number in Spain. Online application, Spanish embassy, requirements & costs. Essential for buying property in Costa Blanca.',
   keywords: 'NIE number Spain, Spanish tax ID, foreigner identification Spain, NIE application, buy property Spain NIE',
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/guides/nie-number',
+    languages: {
+      'en': 'https://newbuildhomescostablanca.com/guides/nie-number',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/nie-nummer',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/nie-nummer',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides/nie-nummer',
+      'fr': 'https://newbuildhomescostablanca.com/fr/guides/nie',
+      'no': 'https://newbuildhomescostablanca.com/no/guides/nie-nummer',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/nie-number',
+    },
+  },
 };
 
 export default function NIENumberPage() {

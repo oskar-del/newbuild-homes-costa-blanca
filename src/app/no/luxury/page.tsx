@@ -15,8 +15,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/no/luxury',
     languages: {
-      en: 'https://newbuildhomescostablanca.com/luxury',
-      no: 'https://newbuildhomescostablanca.com/no/luxury',
+      'en': 'https://newbuildhomescostablanca.com/luxury',
+      'sv': 'https://newbuildhomescostablanca.com/sv/luxury',
+      'nl': 'https://newbuildhomescostablanca.com/nl/luxury',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/luxury',
+      'fr': 'https://newbuildhomescostablanca.com/fr/luxury',
+      'no': 'https://newbuildhomescostablanca.com/no/luxury',
+      'x-default': 'https://newbuildhomescostablanca.com/luxury',
     },
   },
 };

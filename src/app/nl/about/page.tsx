@@ -21,7 +21,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/nl/about',
     languages: {
-      en: 'https://newbuildhomescostablanca.com/about',
+      'en': 'https://newbuildhomescostablanca.com/about',
+      'sv': 'https://newbuildhomescostablanca.com/sv/about',
+      'nl': 'https://newbuildhomescostablanca.com/nl/about',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/about',
+      'fr': 'https://newbuildhomescostablanca.com/fr/about',
+      'no': 'https://newbuildhomescostablanca.com/no/about',
     },
   },
 };

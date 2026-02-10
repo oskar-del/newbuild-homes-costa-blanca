@@ -5,11 +5,16 @@ export const metadata: Metadata = {
   title: 'Guides d\'Achat | Comment Acheter une Maison en Espagne',
   description: 'Guides complets pour les acheteurs français. Processus d\'achat, NIE, frais, hypothèques, taxes et tout ce que vous devez savoir.',
   alternates: {
-    languages: {
-      en: 'https://newbuildhomescostablanca.com/guides',
-      fr: 'https://newbuildhomescostablanca.com/fr/guides',
-    },
     canonical: 'https://newbuildhomescostablanca.com/fr/guides',
+    languages: {
+      'en': 'https://newbuildhomescostablanca.com/guides',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides',
+      'fr': 'https://newbuildhomescostablanca.com/fr/guides',
+      'no': 'https://newbuildhomescostablanca.com/no/guides',
+      'x-default': 'https://newbuildhomescostablanca.com/guides',
+    },
   },
 };
 

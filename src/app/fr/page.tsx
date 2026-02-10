@@ -42,6 +42,7 @@ export const metadata: Metadata = {
       'nl': 'https://newbuildhomescostablanca.com/nl',
       'nl-BE': 'https://newbuildhomescostablanca.com/nl-be',
       'fr': 'https://newbuildhomescostablanca.com/fr',
+      'no': 'https://newbuildhomescostablanca.com/no',
       'x-default': 'https://newbuildhomescostablanca.com',
     },
   },

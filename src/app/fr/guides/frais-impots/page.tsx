@@ -8,8 +8,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/fr/guides/frais-impots',
     languages: {
-      en: 'https://newbuildhomescostablanca.com/guides/costs-taxes',
-      fr: 'https://newbuildhomescostablanca.com/fr/guides/frais-impots',
+      'en': 'https://newbuildhomescostablanca.com/guides/costs-taxes',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/kostnader-skatter',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/kosten-belasting',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides/kosten-belasting',
+      'fr': 'https://newbuildhomescostablanca.com/fr/guides/frais-impots',
+      'no': 'https://newbuildhomescostablanca.com/no/guides/kostnader-skatt',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/costs-taxes',
     },
   },
 };

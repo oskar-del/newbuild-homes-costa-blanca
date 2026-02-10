@@ -7,6 +7,18 @@ export const metadata: Metadata = {
   title: 'Spanish Mortgages for Foreigners 2026 | Non-Resident Guide',
   description: 'How to get a mortgage in Spain as a non-resident. Current rates ~3.15%, LTV 60-70%, requirements for British & EU buyers. Compare 15+ banks.',
   keywords: 'Spanish mortgage non-resident, mortgage Spain foreigners, property finance Spain, Costa Blanca mortgage, British buyer mortgage Spain',
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/guides/mortgages',
+    languages: {
+      'en': 'https://newbuildhomescostablanca.com/guides/mortgages',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/bolan-spanien',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/hypotheek',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides/hypotheek',
+      'fr': 'https://newbuildhomescostablanca.com/fr/guides/hypotheque',
+      'no': 'https://newbuildhomescostablanca.com/no/guides/boliglan',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/mortgages',
+    },
+  },
 };
 
 export default function MortgagesPage() {

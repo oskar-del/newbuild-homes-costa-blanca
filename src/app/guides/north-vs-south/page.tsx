@@ -6,6 +6,17 @@ export const metadata: Metadata = {
   title: 'Costa Blanca North vs South | Which Region is Right For You?',
   description: 'Compare Costa Blanca North and South: climate, property prices, expat communities, beaches, and lifestyle. Find your ideal Spanish home location.',
   keywords: 'Costa Blanca north vs south, Costa Blanca comparison, Jávea vs Torrevieja, property Spain regions, where to buy Costa Blanca',
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/guides/north-vs-south',
+    languages: {
+      'en': 'https://newbuildhomescostablanca.com/guides/north-vs-south',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/north-vs-south',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/noord-vs-zuid',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides/noord-vs-zuid',
+      'no': 'https://newbuildhomescostablanca.com/no/guides/nord-vs-sor',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/north-vs-south',
+    },
+  },
 };
 
 export default function NorthVsSouthPage() {

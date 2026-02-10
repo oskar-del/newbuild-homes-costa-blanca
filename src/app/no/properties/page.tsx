@@ -29,8 +29,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/no/properties',
     languages: {
-      en: 'https://newbuildhomescostablanca.com/properties',
-      no: 'https://newbuildhomescostablanca.com/no/properties',
+      'en': 'https://newbuildhomescostablanca.com/properties',
+      'sv': 'https://newbuildhomescostablanca.com/sv/properties',
+      'nl': 'https://newbuildhomescostablanca.com/nl/properties',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/properties',
+      'fr': 'https://newbuildhomescostablanca.com/fr/properties',
+      'no': 'https://newbuildhomescostablanca.com/no/properties',
+      'x-default': 'https://newbuildhomescostablanca.com/properties',
     },
   },
   keywords: ['kjøpe bolig spania', 'nybygg costa blanca', 'villa pris', 'nybyggede hus spania', 'boliger costa blanca'],

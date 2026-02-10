@@ -12,6 +12,17 @@ export const metadata: Metadata = {
     description: 'Why savvy buyers choose new build over resale in Costa Blanca. Launch pricing, guarantees, and modern specs.',
     type: 'article',
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/guides/why-new-build',
+    languages: {
+      'en': 'https://newbuildhomescostablanca.com/guides/why-new-build',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/why-new-build',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/waarom-nieuwbouw',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides/waarom-nieuwbouw',
+      'no': 'https://newbuildhomescostablanca.com/no/guides/hvorfor-nybygg',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/why-new-build',
+    },
+  },
 };
 
 export default function WhyNewBuildPage() {

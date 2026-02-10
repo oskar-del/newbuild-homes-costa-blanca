@@ -8,8 +8,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/nl-be/guides/kant-en-klaar-vs-ritning',
     languages: {
-      en: 'https://newbuildhomescostablanca.com/guides/key-ready-vs-off-plan',
+      'en': 'https://newbuildhomescostablanca.com/guides/key-ready-vs-off-plan',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/key-ready-vs-off-plan',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/kant-en-klaar-vs-ritning',
       'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides/kant-en-klaar-vs-ritning',
+      'no': 'https://newbuildhomescostablanca.com/no/guides/innflyttingsklar-tegning',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/key-ready-vs-off-plan',
     },
   },
 };

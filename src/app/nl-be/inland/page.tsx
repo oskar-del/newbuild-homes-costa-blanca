@@ -15,9 +15,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/nl-be/inland',
     languages: {
-      en: 'https://newbuildhomescostablanca.com/inland',
-      nl: 'https://newbuildhomescostablanca.com/nl/inland',
-      'nl-be': 'https://newbuildhomescostablanca.com/nl-be/inland',
+      'en': 'https://newbuildhomescostablanca.com/inland',
+      'sv': 'https://newbuildhomescostablanca.com/sv/inland',
+      'nl': 'https://newbuildhomescostablanca.com/nl/inland',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/inland',
+      'fr': 'https://newbuildhomescostablanca.com/fr/inland',
+      'no': 'https://newbuildhomescostablanca.com/no/inland',
+      'x-default': 'https://newbuildhomescostablanca.com/inland',
     },
   },
 };

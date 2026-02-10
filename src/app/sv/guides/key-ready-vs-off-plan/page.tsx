@@ -195,11 +195,16 @@ export const metadata: Metadata = {
   title: 'Inflyttningsklart vs Köpa på Ritning — Komplett Jämförelse | Svenska Guider',
   description: 'Jämför fördelar och nackdelar med key-ready vs off-plan nybygge. Betalningsplaner, risker, tidsplan och exempel. Vilken passar dig?',
   alternates: {
+    canonical: `https://${DOMAIN}/sv/guides/key-ready-vs-off-plan`,
     languages: {
       en: `https://${DOMAIN}/guides/key-ready-vs-off-plan`,
       sv: `https://${DOMAIN}/sv/guides/key-ready-vs-off-plan`,
+      nl: `https://${DOMAIN}/nl/guides/opleverings-vs-bouwtekening`,
+      'nl-BE': `https://${DOMAIN}/nl-BE/guides/opleverings-vs-bouwtekening`,
+      fr: `https://${DOMAIN}/fr/guides/cle-ready-vs-sur-plans`,
+      no: `https://${DOMAIN}/no/guides/innflytting-vs-på-tegning`,
+      'x-default': `https://${DOMAIN}/guides/key-ready-vs-off-plan`,
     },
-    canonical: `https://${DOMAIN}/sv/guides/key-ready-vs-off-plan`,
   },
 };
 

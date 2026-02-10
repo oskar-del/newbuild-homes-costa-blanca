@@ -151,10 +151,14 @@ const KostnaderSkattersPage = () => {
       <Head>
         <title>Kostnader & Skatter - Vad Kostar Det Att Köpa i Spanien? | Newbuild Spain</title>
         <meta name="description" content="Detaljerad guide över alla kostnader för att köpa fastighet i Spanien. IVA, stämpelskatt, juridiska kostnader och löpande avgifter för svenska köpare." />
-        <link rel="canonical" href="https://newbuild.es/sv/guides/kostnader-skatter" />
-        <link rel="alternate" hrefLang="sv" href="https://newbuild.es/sv/guides/kostnader-skatter" />
-        <link rel="alternate" hrefLang="en" href="https://newbuild.es/guides/costs-taxes" />
-        <link rel="alternate" hrefLang="es" href="https://newbuild.es/guides/costos-impuestos" />
+        <link rel="canonical" href="https://newbuildhomescostablanca.com/sv/guides/kostnader-skatter" />
+        <link rel="alternate" hrefLang="sv" href="https://newbuildhomescostablanca.com/sv/guides/kostnader-skatter" />
+        <link rel="alternate" hrefLang="en" href="https://newbuildhomescostablanca.com/guides/costs-taxes" />
+        <link rel="alternate" hrefLang="nl" href="https://newbuildhomescostablanca.com/nl/guides/kosten-belastingen" />
+        <link rel="alternate" hrefLang="nl-BE" href="https://newbuildhomescostablanca.com/nl-BE/guides/kosten-belastingen" />
+        <link rel="alternate" hrefLang="fr" href="https://newbuildhomescostablanca.com/fr/guides/couts-taxes" />
+        <link rel="alternate" hrefLang="no" href="https://newbuildhomescostablanca.com/no/guides/kostnader-skatter" />
+        <link rel="alternate" hrefLang="x-default" href="https://newbuildhomescostablanca.com/guides/costs-taxes" />
       </Head>
 
       <main className="min-h-screen bg-white">

@@ -185,11 +185,16 @@ export const metadata: Metadata = {
   title: 'Varför Köpa Nybygge i Spanien — Fördelar och Jämförelse | Svenska Guider',
   description: 'Läs om fördelarna med att köpa nybygge på Costa Blanca. Jämför priser, energieffektivitet, 10-årsgaranti, och transparenta kostnader. Perfekt för svenska köpare.',
   alternates: {
+    canonical: `https://${DOMAIN}/sv/guides/why-new-build`,
     languages: {
       en: `https://${DOMAIN}/guides/why-new-build`,
       sv: `https://${DOMAIN}/sv/guides/why-new-build`,
+      nl: `https://${DOMAIN}/nl/guides/waarom-nieuwbouw`,
+      'nl-BE': `https://${DOMAIN}/nl-BE/guides/waarom-nieuwbouw`,
+      fr: `https://${DOMAIN}/fr/guides/pourquoi-neuf`,
+      no: `https://${DOMAIN}/no/guides/hvorfor-nybygg`,
+      'x-default': `https://${DOMAIN}/guides/why-new-build`,
     },
-    canonical: `https://${DOMAIN}/sv/guides/why-new-build`,
   },
 };
 

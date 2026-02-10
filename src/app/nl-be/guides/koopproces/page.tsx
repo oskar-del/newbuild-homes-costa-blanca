@@ -8,8 +8,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/nl-be/guides/koopproces',
     languages: {
-      en: 'https://newbuildhomescostablanca.com/guides/buying-process',
+      'en': 'https://newbuildhomescostablanca.com/guides/buying-process',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/kopprocessen',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/koopproces',
       'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides/koopproces',
+      'fr': 'https://newbuildhomescostablanca.com/fr/guides/processus-achat',
+      'no': 'https://newbuildhomescostablanca.com/no/guides/kjopsprosessen',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/buying-process',
     },
   },
 };

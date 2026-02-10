@@ -10,6 +10,11 @@ export const metadata: Metadata = {
     languages: {
       'en': 'https://newbuildhomescostablanca.com/guides/javea',
       'sv': 'https://newbuildhomescostablanca.com/sv/guides/javea',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/javea',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-BE/guides/javea',
+      'fr': 'https://newbuildhomescostablanca.com/fr/guides/javea',
+      'no': 'https://newbuildhomescostablanca.com/no/guides/javea',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/javea',
     },
   },
 };

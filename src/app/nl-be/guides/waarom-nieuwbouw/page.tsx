@@ -8,8 +8,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/nl-be/guides/waarom-nieuwbouw',
     languages: {
-      en: 'https://newbuildhomescostablanca.com/guides/why-new-build',
+      'en': 'https://newbuildhomescostablanca.com/guides/why-new-build',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/why-new-build',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/waarom-nieuwbouw',
       'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides/waarom-nieuwbouw',
+      'no': 'https://newbuildhomescostablanca.com/no/guides/hvorfor-nybygg',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/why-new-build',
     },
   },
 };

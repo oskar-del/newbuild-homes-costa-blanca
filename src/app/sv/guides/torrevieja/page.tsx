@@ -10,6 +10,11 @@ export const metadata: Metadata = {
     languages: {
       'en': 'https://newbuildhomescostablanca.com/guides/torrevieja',
       'sv': 'https://newbuildhomescostablanca.com/sv/guides/torrevieja',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/torrevieja',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-BE/guides/torrevieja',
+      'fr': 'https://newbuildhomescostablanca.com/fr/guides/torrevieja',
+      'no': 'https://newbuildhomescostablanca.com/no/guides/torrevieja',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/torrevieja',
     },
   },
 };

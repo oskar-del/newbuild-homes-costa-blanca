@@ -8,8 +8,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/nl-be/guides/javea',
     languages: {
-      en: 'https://newbuildhomescostablanca.com/guides/javea',
+      'en': 'https://newbuildhomescostablanca.com/guides/javea',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/javea',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/javea',
       'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides/javea',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/javea',
     },
   },
 };

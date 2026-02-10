@@ -6,6 +6,17 @@ export const metadata: Metadata = {
   title: 'Key Ready vs Off-Plan Property Spain | Which to Buy?',
   description: 'Compare key ready and off-plan properties in Spain. Payment schedules, risks, savings, and which option suits your situation. Expert guide for 2026.',
   keywords: 'key ready vs off plan Spain, off plan property Spain, new build payment schedule, buying off plan Costa Blanca',
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com/guides/key-ready-vs-off-plan',
+    languages: {
+      'en': 'https://newbuildhomescostablanca.com/guides/key-ready-vs-off-plan',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/key-ready-vs-off-plan',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/kant-en-klaar-vs-ritning',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides/kant-en-klaar-vs-ritning',
+      'no': 'https://newbuildhomescostablanca.com/no/guides/innflyttingsklar-tegning',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/key-ready-vs-off-plan',
+    },
+  },
 };
 
 export default function KeyReadyVsOffPlanPage() {

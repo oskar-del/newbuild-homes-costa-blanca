@@ -136,10 +136,14 @@ const KopprocessenPage = () => {
       <Head>
         <title>Köpprocessen - Steg för Steg Guide för Svenska Köpare | Newbuild Spain</title>
         <meta name="description" content="Lär dig hur du köper fastighet i Spanien steg för steg. Från NIE-nummer till nyckelöverlämning - vår kompletta guide för svenska köpare." />
-        <link rel="canonical" href="https://newbuild.es/sv/guides/kopprocessen" />
-        <link rel="alternate" hrefLang="sv" href="https://newbuild.es/sv/guides/kopprocessen" />
-        <link rel="alternate" hrefLang="en" href="https://newbuild.es/guides/buying-process" />
-        <link rel="alternate" hrefLang="es" href="https://newbuild.es/guides/proceso-compra" />
+        <link rel="canonical" href="https://newbuildhomescostablanca.com/sv/guides/kopprocessen" />
+        <link rel="alternate" hrefLang="sv" href="https://newbuildhomescostablanca.com/sv/guides/kopprocessen" />
+        <link rel="alternate" hrefLang="en" href="https://newbuildhomescostablanca.com/guides/buying-process" />
+        <link rel="alternate" hrefLang="nl" href="https://newbuildhomescostablanca.com/nl/guides/kopen-proces" />
+        <link rel="alternate" hrefLang="nl-BE" href="https://newbuildhomescostablanca.com/nl-BE/guides/kopen-proces" />
+        <link rel="alternate" hrefLang="fr" href="https://newbuildhomescostablanca.com/fr/guides/processus-achat" />
+        <link rel="alternate" hrefLang="no" href="https://newbuildhomescostablanca.com/no/guides/kjopsprocess" />
+        <link rel="alternate" hrefLang="x-default" href="https://newbuildhomescostablanca.com/guides/buying-process" />
       </Head>
 
       <main className="min-h-screen bg-white">

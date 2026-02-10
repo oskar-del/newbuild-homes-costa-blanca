@@ -8,8 +8,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/nl/guides/nie-nummer',
     languages: {
-      en: 'https://newbuildhomescostablanca.com/guides/nie-number',
-      nl: 'https://newbuildhomescostablanca.com/nl/guides/nie-nummer',
+      'en': 'https://newbuildhomescostablanca.com/guides/nie-number',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/nie-nummer',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/nie-nummer',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides/nie-nummer',
+      'fr': 'https://newbuildhomescostablanca.com/fr/guides/nie',
+      'no': 'https://newbuildhomescostablanca.com/no/guides/nie-nummer',
     },
   },
 };

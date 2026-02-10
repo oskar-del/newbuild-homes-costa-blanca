@@ -17,6 +17,13 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/guides/javea',
+    languages: {
+      'en': 'https://newbuildhomescostablanca.com/guides/javea',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides/javea',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides/javea',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides/javea',
+      'x-default': 'https://newbuildhomescostablanca.com/guides/javea',
+    },
   },
   openGraph: {
     title: 'Living in Jávea 2026: Complete Neighborhood Guide',
