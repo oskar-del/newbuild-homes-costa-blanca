@@ -66,36 +66,57 @@
 - [x] Added hreflang alternates to all 10 English pages
 - [x] Created translate-articles.ts batch translation script
 
-## COMMITS (all local, ready to push)
-1. `3d5de55` — Stock images + header golf links
-2. `823ab0c` — Design cleanup (emojis, colors — 23 files)
-3. `36a60a0` — Costa Calida cards, property counter, CTA boxes
-4. `f0d139e` — 5 Top 10 blog articles
-5. `207b7c4` — Related articles wired to super guides, golf, blog
-6. `bbc0aa9` — Generation script SSL fix + diagnostics
-7. `1403687` — 201 AI-generated content files
-8. `86e0e5a` — Swedish i18n infrastructure (config, middleware, locale, homepage)
-9. `71ea206` — Swedish translation script
-10. `cf1d32e` — Swedish properties, areas, golf, blog, contact pages
-11. `9a306e6` — Swedish devs, luxury, inland, about + language switcher + hreflang
-12. `9789725` — 67 new AI-generated development descriptions
+### Super Guides
+- [x] Torrevieja (existing, with drone photos + data files)
+- [x] Jávea (existing)
+- [x] Costa Blanca North (existing)
+- [x] Orihuela Costa (NEW — 996 lines, 6 neighborhoods, golf, beaches, FAQs)
+- [x] Benidorm & Finestrat (NEW — 1095 lines, 9 neighborhoods, property market, lifestyle)
+
+### Original Swedish Blog Articles (not translations)
+- [x] "Att Köpa Bostad i Spanien Som Svensk" — NIE, Skatteverket, SBAB/Skandia
+- [x] "Stockholmspris vs Costa Blanca" — Price comparisons with SEK conversions
+- [x] "Svenska Livet på Costa Blanca" — Swedish community, kyrkan, SIS school
+- [x] "Golf i Spanien för Svenska Golfare" — Courses, green fees vs Bro Hof
+
+### YouTube Video Infrastructure
+- [x] YOUTUBE-SCRIPT.md — Claude browser prompt for generating YouTube listings
+- [x] src/lib/video-mapping.ts — Video-to-area/property mapping (mirrors blog system)
+- [x] src/components/VideoCard.tsx — 3 variants (card/inline/hero) with in-place YouTube embed
+- [x] src/content/videos/_example.json — JSON template for video entries
+- [x] Functions: getVideosForArea(), getVideosByTag(), getVideoForProperty(), getFeaturedVideos()
+
+## COMMITS (ready to push)
+1-12: (previously pushed)
 13. `20c9c3f` — 8 more Top 10 blog articles
+14. `4f12481` — PROJECT-STATUS.md for session continuity
+15. `2f7eafb` — 78 AI-generated development descriptions (overnight run)
+16. `7b88397` — Orihuela Costa + Benidorm/Finestrat super guides + 4 Swedish articles
+17. `ee85362` — YouTube video infrastructure (mapping, VideoCard, listing script)
 
 ## PENDING TASKS
 
 ### Must Do (User Action Required)
-- [ ] `git push` — 13 commits waiting
-- [ ] Top up Claude API credits (Haiku)
-- [ ] Run: `npx tsx src/scripts/generate-all-content.ts && npx tsx src/scripts/translate-articles.ts`
+- [ ] `git push` — multiple commits waiting
+- [ ] Generation + translation scripts running in terminal
 - [ ] Commit generated content after scripts complete
+- [ ] Upload first YouTube video and create JSON entry in src/content/videos/
+
+### YouTube — Next Steps
+- [ ] Upload first video to YouTube (use YOUTUBE-SCRIPT.md prompt)
+- [ ] Create video JSON file in src/content/videos/[slug].json
+- [ ] Wire VideoSection into homepage (featured videos)
+- [ ] Wire VideoSection into super guides (area videos)
+- [ ] Wire VideoSection into property detail pages
+- [ ] Create /videos page listing all videos
+- [ ] Create YouTube channel playlists (see YOUTUBE-SCRIPT.md)
 
 ### Swedish — Remaining Work
-- [ ] Run translation script to translate 135+ English blog articles to Swedish
+- [ ] Translation script running (translating 135+ articles to Swedish)
 - [ ] Swedish property detail pages (currently redirects to English)
 - [ ] Swedish guide pages (/sv/guides/)
 - [ ] Localized alt tags for images in Swedish version
 - [ ] Swedish-specific meta descriptions targeting Swedish Google queries
-- [ ] Swedish-specific blog content ("Att köpa bostad i Spanien som svensk", Stockholm price comparisons)
 
 ### Content — Future Articles
 - [ ] Area-specific articles to further populate related cards on super guides
@@ -108,7 +129,7 @@
 ### Features — Deferred
 - [ ] Automated blog agent (scheduled content generation — needs shortcut infrastructure)
 - [ ] Swedish property detail pages with full translation
-- [ ] More super guide pages (Benidorm, Alicante, Murcia etc.)
+- [ ] More super guide pages (Alicante, Murcia, Guardamar etc.)
 
 ## TECHNICAL NOTES
 
@@ -140,3 +161,12 @@
 - Middleware: src/middleware.ts detects locale from path
 - Locale file: src/i18n/locales/sv.json
 - Config: src/i18n/config.ts (SUPPORTED_LOCALES: ['en', 'sv'])
+
+### YouTube Video System
+- Video JSONs: src/content/videos/[slug].json (see _example.json for format)
+- Mapping: src/lib/video-mapping.ts (same pattern as blog-area-mapping.ts)
+- Component: src/components/VideoCard.tsx (card/inline/hero variants)
+- VideoSection: Drop-in grid section for any page
+- YouTube listing prompt: YOUTUBE-SCRIPT.md (copy into Claude browser)
+- Uses youtube-nocookie.com for privacy-friendly embeds
+- Thumbnails auto-fetched from YouTube CDN
