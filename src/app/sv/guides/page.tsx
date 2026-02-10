@@ -1,8 +1,5 @@
-'use client';
-
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Köpguider | Svenska Köpares Guide till Spansk Fastighet',
@@ -62,28 +59,28 @@ const buyerGuides: BuyerGuide[] = [
     title: 'Köpprocessen',
     description: 'Steg-för-steg guide till att köpa nybygge i Spanien',
     icon: '📖',
-    href: '/sv/guides/buying-process',
+    href: '/sv/guides/kopprocessen',
   },
   {
     id: 'nie-number',
     title: 'NIE-nummer Guide',
     description: 'Hur du skaffar ditt NIE-nummer — obligatoriskt för fastighetsköp',
     icon: '✓',
-    href: '/sv/guides/nie-number',
+    href: '/sv/guides/nie-nummer',
   },
   {
     id: 'costs-taxes',
     title: 'Kostnader & Skatter',
     description: 'Komplett uppdelning av köpkostnader, skatter och löpande utgifter',
     icon: '📈',
-    href: '/sv/guides/costs-taxes',
+    href: '/sv/guides/kostnader-skatter',
   },
   {
     id: 'mortgages',
     title: 'Bolån för Utländska Köpare',
     description: 'Hur du får bolån i Spanien som svensk. SBAB, Skandia och spanska banker.',
     icon: '📞',
-    href: '/sv/guides/mortgages',
+    href: '/sv/guides/bolan-spanien',
   },
   {
     id: 'why-new-build',
@@ -262,7 +259,7 @@ export default function SwedishGuidesPage() {
                 <p className="text-3xl font-bold">CaixaBank, BBVA</p>
               </div>
             </div>
-            <Link href="/sv/guides/mortgages">
+            <Link href="/sv/guides/bolan-spanien">
               <button className="bg-accent-500 hover:bg-accent-600 text-white font-bold py-3 px-8 rounded-lg transition-colors">
                 Se Bolånealternativ
               </button>

@@ -4,7 +4,8 @@ import Image from 'next/image';
 import fs from 'fs';
 import path from 'path';
 import regionsData from '@/content/regions.json';
-import { getAllDevelopments } from '@/lib/development-service';
+import { getAllDevelopments, Development } from '@/lib/development-service';
+import { breadcrumbSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Områden Costa Blanca | Bostadsguider & Boendeguider',
@@ -39,23 +40,26 @@ interface Area {
   cardImage?: string;
 }
 
-function extractAreaName(rawData: any, filename: string): string {
+function extractAreaName(rawData: Record<string, unknown>, filename: string): string {
   const slug = filename.replace('.json', '');
-  if (rawData.name) return rawData.name;
+  if (rawData.name) return String(rawData.name);
   if (rawData.metaTitle) {
-    const match = rawData.metaTitle.match(/Living in ([^:|]+)/i) ||
-                  rawData.metaTitle.match(/^([^:|]+)/);
+    const metaTitle = String(rawData.metaTitle);
+    const match = metaTitle.match(/Living in ([^:|]+)/i) ||
+                  metaTitle.match(/^([^:|]+)/);
     if (match) return match[1].trim();
   }
   return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 }
 
-function normalizeAreaToCard(rawData: any, filename: string): Area {
-  const slug = rawData.slug || filename.replace('.json', '');
+function normalizeAreaToCard(rawData: Record<string, unknown>, filename: string): Area {
+  const slug = String(rawData.slug || filename.replace('.json', ''));
   const name = extractAreaName(rawData, filename);
-  let priceRange = rawData.priceRange || { min: 200000, max: 1000000 };
-  if (rawData.propertyMarket?.priceRange && typeof rawData.propertyMarket.priceRange === 'string') {
-    const priceStr = rawData.propertyMarket.priceRange;
+
+  let priceRange: { min: number; max: number } = (rawData.priceRange as { min: number; max: number }) || { min: 200000, max: 1000000 };
+  const propertyMarket = rawData.propertyMarket as Record<string, unknown>;
+  if (propertyMarket?.priceRange && typeof propertyMarket.priceRange === 'string') {
+    const priceStr = propertyMarket.priceRange;
     const prices = priceStr.match(/[\d,]+/g);
     if (prices && prices.length >= 2) {
       priceRange = {
@@ -64,9 +68,10 @@ function normalizeAreaToCard(rawData: any, filename: string): Area {
       };
     }
   }
-  let propertyTypes = rawData.propertyTypes || ['Lägenheter', 'Villor'];
-  if (!rawData.propertyTypes && rawData.propertyMarket?.overview) {
-    const overview = rawData.propertyMarket.overview.toLowerCase();
+
+  let propertyTypes: string[] = (rawData.propertyTypes as string[]) || ['Lägenheter', 'Villor'];
+  if (!rawData.propertyTypes && propertyMarket?.overview) {
+    const overview = String(propertyMarket.overview).toLowerCase();
     const types: string[] = [];
     if (overview.includes('villa')) types.push('Villor');
     if (overview.includes('apartment')) types.push('Lägenheter');
@@ -74,13 +79,14 @@ function normalizeAreaToCard(rawData: any, filename: string): Area {
     if (overview.includes('penthouse')) types.push('Penthouse');
     if (types.length > 0) propertyTypes = types;
   }
+
   return {
     slug,
     name,
-    propertyCount: rawData.propertyCount || 0,
+    propertyCount: (rawData.propertyCount as number) || 0,
     propertyTypes,
     priceRange,
-    cardImage: rawData.cardImage,
+    cardImage: rawData.cardImage as string | undefined,
   };
 }
 
@@ -112,18 +118,20 @@ async function getAllAreasWithCounts(): Promise<Area[]> {
   const developments = await getAllDevelopments();
   const usedImages = new Set<string>();
 
-  const matchesArea = (dev: typeof developments[0], areaName: string, slug: string) => {
+  const matchesArea = (dev: Development, areaName: string, _slug: string): boolean => {
     const town = (dev.town || '').toLowerCase().trim().replace(/_/g, ' ');
     const zone = (dev.zone || '').toLowerCase().trim().replace(/_/g, ' ');
     const areaLower = areaName.toLowerCase();
-    const slugLower = slug.toLowerCase().replace(/-/g, ' ');
     if (!town && !zone) return false;
-    const normalize = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+    const normalize = (s: string): string => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     const areaNorm = normalize(areaLower);
     const townNorm = normalize(town);
     const zoneNorm = normalize(zone);
+
     const townParts = town.split(/[\s_-]+/);
     const zoneParts = zone.split(/[\s_-]+/);
+
     if (town) {
       if (town.includes(areaLower) || areaLower.includes(town) ||
           townNorm.includes(areaNorm) || areaNorm.includes(townNorm) ||
@@ -145,7 +153,13 @@ async function getAllAreasWithCounts(): Promise<Area[]> {
     const matchingDevs = developments.filter(dev => matchesArea(dev, area.name, area.slug));
     let devImage: string | undefined;
     for (const dev of matchingDevs) {
-      const possibleImages = [dev.mainImage, ...(dev.images || [])].filter(img => img && img.startsWith('http'));
+      const mainImage = dev.mainImage;
+      const images = dev.images || [];
+      const possibleImages = [
+        mainImage,
+        ...images
+      ].filter((img): img is string => !!img && img.startsWith('http'));
+
       for (const img of possibleImages) {
         if (!usedImages.has(img)) {
           devImage = img;
@@ -155,8 +169,10 @@ async function getAllAreasWithCounts(): Promise<Area[]> {
       }
       if (devImage) break;
     }
+
     const finalImage = devImage || area.cardImage;
     if (finalImage) usedImages.add(finalImage);
+
     return {
       ...area,
       propertyCount: matchingDevs.length,
@@ -165,13 +181,15 @@ async function getAllAreasWithCounts(): Promise<Area[]> {
   });
 }
 
-export default async function AreasPageSv() {
+export default async function AreasPageSv(): Promise<JSX.Element> {
   const areas = await getAllAreasWithCounts();
   const southData = regionsData['costa-blanca-south'];
   const northData = regionsData['costa-blanca-north'];
-  const southTowns = southData.popularTowns.map(t => t.toLowerCase());
-  const northTowns = northData.popularTowns.map(t => t.toLowerCase());
-  const sortByPropertyCount = (a: Area, b: Area) => b.propertyCount - a.propertyCount;
+
+  const southTowns = ((southData.popularTowns as string[]) || []).map(t => t.toLowerCase());
+  const northTowns = ((northData.popularTowns as string[]) || []).map(t => t.toLowerCase());
+
+  const sortByPropertyCount = (a: Area, b: Area): number => b.propertyCount - a.propertyCount;
 
   const southAreas = areas
     .filter(a => southTowns.some(t => a.name.toLowerCase().includes(t) || a.slug.includes(t.replace(' ', '-'))))
@@ -185,8 +203,16 @@ export default async function AreasPageSv() {
     .filter(a => !southAreas.includes(a) && !northAreas.includes(a))
     .sort(sortByPropertyCount);
 
+  const breadcrumbs = breadcrumbSchema([
+    { name: 'Hem', url: 'https://newbuildhomescostablanca.com/sv' },
+    { name: 'Områden', url: 'https://newbuildhomescostablanca.com/sv/areas' },
+  ]);
+
   return (
-    <main className="min-h-screen bg-warm-50">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }} />
+
+      <main className="min-h-screen bg-warm-50">
       {/* Hero */}
       <section className="relative bg-primary-900 py-16 md:py-20">
         <div className="absolute inset-0 opacity-10">
@@ -252,13 +278,13 @@ export default async function AreasPageSv() {
                   <p className="text-accent-500 text-sm font-medium">Sol, värde & livsstil</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-lg font-semibold text-primary-900">€245k</div>
+                  <div className="text-lg font-semibold text-primary-900">{String((southData.stats as Record<string, unknown>).averagePrice || '')}</div>
                   <div className="text-warm-500 text-xs">Medelpris</div>
                 </div>
               </div>
-              <p className="text-warm-600 text-sm mb-4 line-clamp-2">Soliga stränder från Torrevieja till Pilar de la Horadada. Prisvärda nybyggen, världsklass golf och 320+ soldagar.</p>
+              <p className="text-warm-600 text-sm mb-4 line-clamp-2">{southData.shortDescription}</p>
               <div className="flex flex-wrap gap-2">
-                {['Torrevieja', 'Algorfa', 'Orihuela', 'Pilar'].map(town => (
+                {((southData.popularTowns as string[]) || []).slice(0, 4).map(town => (
                   <span key={town} className="bg-warm-200 text-warm-700 text-xs px-2 py-1 rounded">
                     {town}
                   </span>
@@ -274,18 +300,18 @@ export default async function AreasPageSv() {
               <div className="flex items-start justify-between mb-3">
                 <div>
                   <h3 className="text-lg font-semibold text-primary-900 group-hover:text-accent-600 transition-colors">
-                    Costa Blanca Norr
+                    Costa Blanca Nord
                   </h3>
                   <p className="text-accent-500 text-sm font-medium">Prestige, skönhet & exklusivitet</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-lg font-semibold text-primary-900">€650k</div>
+                  <div className="text-lg font-semibold text-primary-900">{String((northData.stats as Record<string, unknown>).averagePrice || '')}</div>
                   <div className="text-warm-500 text-xs">Medelpris</div>
                 </div>
               </div>
-              <p className="text-warm-600 text-sm mb-4 line-clamp-2">Dramatiska kustklingor, charmanta gamla städer och exklusiva fastigheter. Från Jávea till Moraira.</p>
+              <p className="text-warm-600 text-sm mb-4 line-clamp-2">{northData.shortDescription}</p>
               <div className="flex flex-wrap gap-2">
-                {['Jávea', 'Moraira', 'Calpe', 'Altea'].map(town => (
+                {((northData.popularTowns as string[]) || []).slice(0, 4).map(town => (
                   <span key={town} className="bg-warm-200 text-warm-700 text-xs px-2 py-1 rounded">
                     {town}
                   </span>
@@ -311,10 +337,10 @@ export default async function AreasPageSv() {
                 </div>
               </div>
               <p className="text-warm-300 text-sm mb-4 line-clamp-2">
-                Murcias Mar Menor-region. Championship golf, årligt solsken, 25-40% billigare än Costa Blanca.
+                Murcias Mar Menor-region. Championship-golf, året runt sol, 25-40% billigare än Costa Blanca.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['Los Alcázares', 'San Javier', 'Roda Golf'].map(town => (
+                {['Los Alcázares', 'San Javier', 'Roda Golf', 'Mar Menor'].map(town => (
                   <span key={town} className="bg-white/10 text-warm-300 text-xs px-2 py-1 rounded">
                     {town}
                   </span>
@@ -334,27 +360,27 @@ export default async function AreasPageSv() {
                 <div className="flex items-center gap-4 mb-3">
                   <div className="w-10 h-px bg-warm-500" />
                   <span className="text-warm-400 text-xs font-medium tracking-widest uppercase">
-                    Sol, värde & livsstil
+                    {String((southData as Record<string, unknown>).tagline || 'Sol, värde & livsstil')}
                   </span>
                 </div>
                 <h2 className="text-2xl md:text-3xl font-light text-white mb-3">
-                  Costa Blanca Söder
+                  {southData.name}
                 </h2>
                 <p className="text-warm-300 leading-relaxed">
-                  Solknutna stränder från Torrevieja till Pilar de la Horadada. Känd för prisvärda nybyggen, världsklass golf och över 320 soldagar per år.
+                  {southData.shortDescription}
                 </p>
               </div>
               <div className="grid grid-cols-3 gap-4">
                 <div className="text-center">
-                  <div className="text-2xl font-semibold text-white">320+</div>
+                  <div className="text-2xl font-semibold text-white">{String((southData.stats as Record<string, unknown>).sunnyDays || '')}</div>
                   <div className="text-warm-400 text-xs">Soldagar</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-semibold text-white">8+</div>
+                  <div className="text-2xl font-semibold text-white">{String((southData.stats as Record<string, unknown>).golfCourses || '')}</div>
                   <div className="text-warm-400 text-xs">Golfbanor</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-semibold text-white">€245k</div>
+                  <div className="text-2xl font-semibold text-white">{String((southData.stats as Record<string, unknown>).averagePrice || '')}</div>
                   <div className="text-warm-400 text-xs">Medelpris</div>
                 </div>
               </div>
@@ -420,7 +446,7 @@ export default async function AreasPageSv() {
         <div className="bg-warm-100 py-8 border-y border-warm-200">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <p className="text-warm-700 text-lg italic leading-relaxed">
-              "Morgonkaffe med utsikt över saltsjöarna, eftermiddagsrundor på La Finca, kvällstapas i Torrevieja hamn. Det här är liv på Costa Blanca söder."
+              "{southData.lifestyle}"
             </p>
           </div>
         </div>
@@ -435,27 +461,27 @@ export default async function AreasPageSv() {
                 <div className="flex items-center gap-4 mb-3">
                   <div className="w-10 h-px bg-accent-500" />
                   <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
-                    Prestige, skönhet & exklusivitet
+                    {String((northData as Record<string, unknown>).tagline || 'Prestige, skönhet & exklusivitet')}
                   </span>
                 </div>
                 <h2 className="text-2xl md:text-3xl font-light text-white mb-3">
-                  Costa Blanca Norr
+                  {northData.name}
                 </h2>
                 <p className="text-warm-300 leading-relaxed">
-                  Dramatiska kustklingor, charmanta gamla städer och exklusiva fastigheter. Från Jávea till Moraira - Spaniens mest prestigefyllda Medelhavsdestination.
+                  {northData.shortDescription}
                 </p>
               </div>
               <div className="grid grid-cols-3 gap-4">
                 <div className="text-center">
-                  <div className="text-2xl font-semibold text-white">300+</div>
+                  <div className="text-2xl font-semibold text-white">{String((northData.stats as Record<string, unknown>).sunnyDays || '')}</div>
                   <div className="text-warm-400 text-xs">Soldagar</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-semibold text-white">5+</div>
+                  <div className="text-2xl font-semibold text-white">{String((northData.stats as Record<string, unknown>).michelinRestaurants || '')}</div>
                   <div className="text-warm-400 text-xs">Michelin-rest.</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-semibold text-white">€650k</div>
+                  <div className="text-2xl font-semibold text-white">{String((northData.stats as Record<string, unknown>).averagePrice || '')}</div>
                   <div className="text-warm-400 text-xs">Medelpris</div>
                 </div>
               </div>
@@ -526,7 +552,7 @@ export default async function AreasPageSv() {
         <div className="bg-primary-50 py-8 border-y border-primary-100">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <p className="text-primary-800 text-lg italic leading-relaxed">
-              "Vakna till havsvy och Montgós silhuett, lunch vid stranden, kvällspromenad genom Jáveaspns gamla stad. Det här är liv på Costa Blanca norr."
+              "{northData.lifestyle}"
             </p>
           </div>
         </div>
@@ -663,6 +689,7 @@ export default async function AreasPageSv() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
 }
