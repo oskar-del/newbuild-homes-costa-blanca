@@ -22,6 +22,7 @@ import { getPropertyByRef, fetchXMLFeed, toUnifiedFormat } from '@/lib/xml-parse
 import { generatePropertyContent, PropertyContent } from '@/lib/property-content-generator';
 import { loadAIContent, convertAIToPropertyContent } from '@/lib/ai-content-loader';
 import { developments, developers } from '@/data/developments';
+import { getVideoForProperty, getVideosForDevelopment, VideoCard } from '@/lib/video-mapping';
 import fs from 'fs';
 import path from 'path';
 import PropertyPageClient from './PropertyPageClient';
@@ -411,6 +412,23 @@ export default async function PropertyPage({ params }: PageProps) {
     console.error('Error loading related articles:', error);
   }
 
+  // Fetch video for this property (by reference or development slug)
+  let propertyVideo: VideoCard | null = null;
+  try {
+    // First try to find a video directly for this property reference
+    propertyVideo = getVideoForProperty(property.reference);
+
+    // If no direct match, try to find videos for this development
+    if (!propertyVideo && matchedDevelopment) {
+      const devVideos = getVideosForDevelopment(matchedDevelopment.slug, 1);
+      if (devVideos.length > 0) {
+        propertyVideo = devVideos[0];
+      }
+    }
+  } catch (error) {
+    console.error('Error fetching property video:', error);
+  }
+
   // Build linking data to pass to client
   const linkingData = {
     development: matchedDevelopment ? {
@@ -423,6 +441,7 @@ export default async function PropertyPage({ params }: PageProps) {
       name: matchedBuilder.displayName || matchedBuilder.name,
     } : null,
     relatedArticles,
+    propertyVideo,
   };
 
   // Generate breadcrumb schema (needs linkingData)

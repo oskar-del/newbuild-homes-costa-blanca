@@ -32,6 +32,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { UnifiedProperty } from '@/lib/unified-property';
 import { PropertyContent } from '@/lib/property-content-generator';
+import VideoCard from '@/components/VideoCard';
 
 // ====================
 // CONSTANTS
@@ -54,6 +55,15 @@ interface LinkingData {
   development: { slug: string; name: string; status: string } | null;
   builder: { slug: string; name: string } | null;
   relatedArticles: { slug: string; title: string; category: string; readTime: number }[];
+  propertyVideo: {
+    slug: string;
+    title: string;
+    youtubeId: string;
+    description: string;
+    category: string;
+    duration: string;
+    price: number | null;
+  } | null;
 }
 
 interface PropertyPageClientProps {
@@ -1084,6 +1094,31 @@ export default function PropertyPageClient({ property, content, similarPropertie
                     </Link>
                   ))}
                 </div>
+              </div>
+            )}
+
+            {/* ==================== VIDEO TOUR ==================== */}
+            {linkingData.propertyVideo && (
+              <div className="bg-white rounded-xl p-6 shadow-sm border border-warm-100">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-1 h-8 bg-accent-500 rounded-full" />
+                  <div>
+                    <span className="text-accent-600 text-xs font-medium tracking-widest uppercase">
+                      Multimedia
+                    </span>
+                    <h2 className="text-xl font-light text-primary-900">Video Tour</h2>
+                  </div>
+                </div>
+                <VideoCard
+                  slug={linkingData.propertyVideo.slug}
+                  title={linkingData.propertyVideo.title}
+                  youtubeId={linkingData.propertyVideo.youtubeId}
+                  description={linkingData.propertyVideo.description}
+                  category={linkingData.propertyVideo.category}
+                  duration={linkingData.propertyVideo.duration}
+                  price={linkingData.propertyVideo.price}
+                  variant="hero"
+                />
               </div>
             )}
 

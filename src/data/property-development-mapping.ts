@@ -659,11 +659,14 @@ export const propertyMapping: Record<string, PropertyDevelopmentInfo> = {
   'SP870': { developer: 'OH COSTABLANCA', development: 'EUCALIPTUS 52', deliveryDate: '01-12-2027', zone: 'Pinar del Advocat' },
 
   // ==========================================
-  // DULY - LA HOYA (Torrevieja, Lo Sedit)
+  // DULY - LA HOYA (Torrevieja, La Siesta)
   // ==========================================
-  'N9166': { developer: 'DULY', development: 'LA HOYA', deliveryDate: '01-03-2027', zone: 'Lo Sedit' },
-  'N9164': { developer: 'DULY', development: 'LA HOYA', deliveryDate: '01-03-2027', zone: 'Lo Sedit' },
-  'N9165': { developer: 'DULY', development: 'LA HOYA', deliveryDate: '01-03-2027', zone: 'Lo Sedit' },
+  'N9166': { developer: 'DULY', development: 'LA HOYA', deliveryDate: '01-03-2027', zone: 'La Siesta' },
+  'N9164': { developer: 'DULY', development: 'LA HOYA', deliveryDate: '01-03-2027', zone: 'La Siesta' },
+  'N9165': { developer: 'DULY', development: 'LA HOYA', deliveryDate: '01-03-2027', zone: 'La Siesta' },
+  'N9184': { developer: 'DULY', development: 'LA HOYA', deliveryDate: '01-03-2027', zone: 'La Siesta' },
+  'N9185': { developer: 'DULY', development: 'LA HOYA', deliveryDate: '01-03-2027', zone: 'La Siesta' },
+  'N9186': { developer: 'DULY', development: 'LA HOYA', deliveryDate: '01-03-2027', zone: 'La Siesta' },
 
   // ==========================================
   // CHERRICO VILLAS DEVELOPMENTS - FALCO B (Benicco, Montemor)

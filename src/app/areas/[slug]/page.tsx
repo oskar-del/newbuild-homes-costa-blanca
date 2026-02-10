@@ -9,6 +9,8 @@ import { getAllDevelopments, Development } from '@/lib/development-service';
 import { breadcrumbSchema, toJsonLd, articleSchema, placeSchema } from '@/lib/schema';
 import { LifestyleBanner, SectionCardImage, ImageGrid } from '@/components/area/SectionImage';
 import { getBlogPostsForArea } from '@/lib/blog-area-mapping';
+import { getVideosForArea } from '@/lib/video-mapping';
+import VideoCard from '@/components/VideoCard';
 import {
   beachImages,
   golfImages,
@@ -1103,6 +1105,81 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
                   </div>
                 </section>
               )}
+
+              {/* Video Tours Section */}
+              {(() => {
+                const areaVideos = getVideosForArea(slug, 3);
+
+                if (areaVideos.length === 0) return null;
+
+                if (areaVideos.length === 1) {
+                  // Single video: hero banner variant
+                  const video = areaVideos[0];
+                  return (
+                    <section className="bg-primary-900 rounded-sm p-8 md:p-12">
+                      <div className="grid md:grid-cols-2 gap-8 items-center">
+                        <div className="text-white">
+                          <div className="flex items-center gap-3 mb-4">
+                            <div className="w-8 h-px bg-accent-500" />
+                            <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
+                              Video Tour
+                            </span>
+                          </div>
+                          <h2 className="text-3xl font-light mb-4">
+                            Explore {data.name} in Video
+                          </h2>
+                          <p className="text-warm-200 mb-6 leading-relaxed">
+                            {video.description}
+                          </p>
+                          <div className="flex items-center gap-2 text-warm-300 text-sm">
+                            <span className="inline-block bg-accent-500 rounded-full px-3 py-1">
+                              {video.category}
+                            </span>
+                            {video.duration && <span>{video.duration}</span>}
+                            {video.price && <span className="text-accent-300 font-medium">From €{video.price.toLocaleString()}</span>}
+                          </div>
+                        </div>
+                        <div>
+                          <VideoCard
+                            {...video}
+                            variant="hero"
+                          />
+                        </div>
+                      </div>
+                    </section>
+                  );
+                }
+
+                // Multiple videos: grid/carousel variant
+                return (
+                  <section className="py-12 bg-warm-50">
+                    <div className="max-w-7xl mx-auto px-6">
+                      <div className="text-center mb-8">
+                        <div className="flex items-center justify-center gap-4 mb-2">
+                          <div className="w-10 h-px bg-accent-500" />
+                          <span className="text-accent-600 text-xs font-medium tracking-widest uppercase">
+                            Video Tours
+                          </span>
+                          <div className="w-10 h-px bg-accent-500" />
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-light text-primary-900">
+                          Video Tours of {data.name}
+                        </h2>
+                      </div>
+
+                      <div className={`grid grid-cols-1 ${areaVideos.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3'} gap-6`}>
+                        {areaVideos.map((video) => (
+                          <VideoCard
+                            key={video.slug}
+                            {...video}
+                            variant="card"
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </section>
+                );
+              })()}
 
               {/* Related Blog Articles */}
               {relatedBlogPosts.length > 0 && (
