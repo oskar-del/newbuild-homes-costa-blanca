@@ -50,6 +50,42 @@ const buyerGuides: BuyerGuide[] = [
     description: 'Guide complet du numéro d\'identification fiscale pour les étrangers',
     href: '/fr/guides/nie',
   },
+  {
+    id: 'pourquoi-neuf',
+    title: 'Pourquoi Acheter Neuf',
+    description: 'Avantages des maisons neuves: garanties, prix, financement, taxes',
+    href: '/fr/guides/pourquoi-neuf',
+  },
+  {
+    id: 'cle-en-main-vs-sur-plan',
+    title: 'Clé en Main vs Sur Plan',
+    description: 'Comparaison complète: prix, délais, risques, et financement',
+    href: '/fr/guides/cle-en-main-vs-sur-plan',
+  },
+  {
+    id: 'nord-vs-sud',
+    title: 'Nord vs Sud Costa Blanca',
+    description: 'Comparaison détaillée: prix, climat, style de vie, infrastructure',
+    href: '/fr/guides/nord-vs-sud',
+  },
+  {
+    id: 'torrevieja',
+    title: 'Torrevieja - Guide Super',
+    description: 'Guide complet de Torrevieja: communauté française, prix, quartiers',
+    href: '/fr/guides/torrevieja',
+  },
+  {
+    id: 'javea',
+    title: 'Jávea - Guide Premium',
+    description: 'Guide prestige de Jávea: investissement, rendement, lifestyle',
+    href: '/fr/guides/javea',
+  },
+  {
+    id: 'costa-blanca-nord',
+    title: 'Costa Blanca Nord',
+    description: 'Guide complet du Nord: Jávea, Altea, Moraira, comparaison villes',
+    href: '/fr/guides/costa-blanca-nord',
+  },
 ];
 
 export default function FRGuidesPage() {
@@ -76,7 +112,7 @@ export default function FRGuidesPage() {
             <p className="text-lg text-warm-600">Tout de l'achat d'une propriété étape par étape</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {buyerGuides.map((guide) => (
               <Link key={guide.id} href={guide.href}>
                 <div className="bg-white border-2 border-warm-200 rounded-sm p-6 hover:border-accent-500 hover:shadow-lg transition-all h-full group">

@@ -68,6 +68,24 @@ const buyerGuides: BuyerGuide[] = [
     description: 'Sammenlign de to regionene — eksklusiv nord vs prisværdig sør',
     href: '/no/guides/nord-vs-sor',
   },
+  {
+    id: 'torrevieja',
+    title: 'Torrevieja',
+    description: 'Fullstendig guide til Torrevieja for norske kjøpere og bosettere',
+    href: '/no/guides/torrevieja',
+  },
+  {
+    id: 'javea',
+    title: 'Jávea',
+    description: 'Ekslusiv guide til Jávea for norske investorer',
+    href: '/no/guides/javea',
+  },
+  {
+    id: 'costa-blanca-nord',
+    title: 'Costa Blanca Nord',
+    description: 'Komplett guide til Nord Costa Blanca for norske kjøpere',
+    href: '/no/guides/costa-blanca-nord',
+  },
 ];
 
 const trustPoints = [

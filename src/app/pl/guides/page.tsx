@@ -77,6 +77,27 @@ const guides = [
     link: '/pl/guides/polnoc-vs-poludnie',
     icon: 'D',
     color: 'bg-indigo-50 border-indigo-200'
+  },
+  {
+    title: 'Torrevieja',
+    description: 'Pełny przewodnik po Torrevieja dla polskich kupujących',
+    link: '/pl/guides/torrevieja',
+    icon: 'T',
+    color: 'bg-pink-50 border-pink-200'
+  },
+  {
+    title: 'Jávea',
+    description: 'Ekskluzywy przewodnik po Jávea dla polskich inwestorów',
+    link: '/pl/guides/javea',
+    icon: 'J',
+    color: 'bg-cyan-50 border-cyan-200'
+  },
+  {
+    title: 'Costa Blanca Północ',
+    description: 'Pełny przewodnik po Północnej Costa Blanca dla polskich kupujących',
+    link: '/pl/guides/costa-blanca-polnoc',
+    icon: 'C',
+    color: 'bg-amber-50 border-amber-200'
   }
 ];
 

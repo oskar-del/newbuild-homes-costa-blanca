@@ -85,10 +85,13 @@ const I18N_GUIDE_PAGES: Record<string, string[]> = {
   ],
   fr: [
     'processus-achat', 'frais-impots', 'hypotheque', 'nie',
+    'pourquoi-neuf', 'cle-en-main-vs-sur-plan', 'nord-vs-sud',
+    'torrevieja', 'javea', 'costa-blanca-nord',
   ],
   no: [
     'kjopsprosessen', 'nie-nummer', 'kostnader-skatt', 'boliglan',
     'hvorfor-nybygg', 'innflyttingsklar-tegning', 'nord-vs-sor',
+    'torrevieja', 'javea', 'costa-blanca-nord',
   ],
   de: [
     'kaufprozess', 'nie-nummer', 'kosten-steuern', 'hypothek',
@@ -98,10 +101,12 @@ const I18N_GUIDE_PAGES: Record<string, string[]> = {
   pl: [
     'proces-zakupu', 'numer-nie', 'koszty-podatki', 'kredyt-hipoteczny',
     'dlaczego-nowy-budynek', 'pod-klucz-vs-plan', 'polnoc-vs-poludnie',
+    'torrevieja', 'javea', 'costa-blanca-polnoc',
   ],
   ru: [
     'process-pokupki', 'nomer-nie', 'rashody-nalogi', 'ipoteka',
     'pochemu-novostroyka', 'pod-klyuch-vs-plan', 'sever-vs-yug',
+    'torrevieja', 'javea', 'costa-blanca-sever',
   ],
 };
 
