@@ -17,6 +17,19 @@ function getAllBlogSlugs(): string[] {
   }
 }
 
+// Read blog article slugs for a specific language
+function getLangBlogSlugs(lang: string): string[] {
+  const articlesDir = path.join(process.cwd(), 'src/content/articles', lang);
+  try {
+    if (!fs.existsSync(articlesDir)) return [];
+    return fs.readdirSync(articlesDir)
+      .filter(f => f.endsWith('.json'))
+      .map(f => f.replace('.json', ''));
+  } catch {
+    return [];
+  }
+}
+
 // All guide pages (including super guides)
 const GUIDE_SLUGS = [
   'buying-process',
@@ -383,8 +396,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   );
 
-  const totalUrls = staticPages.length + guidePages.length + golfPages.length + blogPages.length + developmentPages.length + areaPages.length + builderPages.length + filterPages.length + propertyPages.length + i18nCorePages.length + i18nGuidePages.length;
-  console.log(`[Sitemap] Total URLs: ${totalUrls} (including ${i18nCorePages.length + i18nGuidePages.length} i18n pages)`);
+  // i18n pages - blog articles in all languages
+  const i18nBlogPages: MetadataRoute.Sitemap = LANGUAGE_PREFIXES.flatMap((lang) =>
+    getLangBlogSlugs(lang).map((slug) => ({
+      url: `${baseUrl}/${lang}/blog/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    }))
+  );
+
+  const totalUrls = staticPages.length + guidePages.length + golfPages.length + blogPages.length + developmentPages.length + areaPages.length + builderPages.length + filterPages.length + propertyPages.length + i18nCorePages.length + i18nGuidePages.length + i18nBlogPages.length;
+  console.log(`[Sitemap] Total URLs: ${totalUrls} (including ${i18nCorePages.length + i18nGuidePages.length + i18nBlogPages.length} i18n pages)`);
 
   return [
     ...staticPages,
@@ -398,5 +421,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...propertyPages,
     ...i18nCorePages,
     ...i18nGuidePages,
+    ...i18nBlogPages,
   ];
 }

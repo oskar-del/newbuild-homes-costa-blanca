@@ -6,6 +6,18 @@ export const metadata: Metadata = {
   description: 'Complete guides to buying new build property in Costa Blanca. NIE numbers, mortgages, taxes, costs and step-by-step buying process for international buyers.',
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/guides',
+    languages: {
+      'en': 'https://newbuildhomescostablanca.com/guides',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides',
+      'fr': 'https://newbuildhomescostablanca.com/fr/guides',
+      'no': 'https://newbuildhomescostablanca.com/no/guides',
+      'de': 'https://newbuildhomescostablanca.com/de/guides',
+      'pl': 'https://newbuildhomescostablanca.com/pl/guides',
+      'ru': 'https://newbuildhomescostablanca.com/ru/guides',
+      'x-default': 'https://newbuildhomescostablanca.com/guides',
+    },
   },
 };
 
