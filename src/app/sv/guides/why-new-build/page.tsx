@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -195,7 +193,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function WhyNewBuildPage(): React.ReactElement {
+export default function WhyNewBuildPage() {
   return (
     <>
       <main className="min-h-screen bg-white">

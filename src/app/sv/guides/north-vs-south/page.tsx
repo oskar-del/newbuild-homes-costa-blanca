@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -212,7 +210,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function NorthVsSouthPage(): React.ReactElement {
+export default function NorthVsSouthPage() {
   return (
     <>
       <main className="min-h-screen bg-white">

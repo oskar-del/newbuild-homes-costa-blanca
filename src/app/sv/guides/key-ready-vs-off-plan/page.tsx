@@ -1,6 +1,3 @@
-'use client';
-
-import React, { useState } from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { breadcrumbSchema, toJsonLd } from '@/lib/schema';
@@ -206,9 +203,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function KeyReadyVsOffPlanPage(): React.ReactElement {
-  const [expandedScenario, setExpandedScenario] = useState<number | null>(null);
-
+export default function KeyReadyVsOffPlanPage() {
   return (
     <>
       <main className="min-h-screen bg-white">
@@ -516,8 +511,6 @@ export default function KeyReadyVsOffPlanPage(): React.ReactElement {
                 <details
                   key={idx}
                   className="group bg-white rounded-sm border border-gray-200 hover:border-accent-500 transition"
-                  open={expandedScenario === idx}
-                  onToggle={() => setExpandedScenario(expandedScenario === idx ? null : idx)}
                 >
                   <summary className="cursor-pointer p-6 flex items-start justify-between">
                     <div className="flex-1 text-left">
