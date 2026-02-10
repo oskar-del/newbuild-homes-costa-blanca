@@ -31,7 +31,53 @@ const GUIDE_SLUGS = [
   'torrevieja',
   'javea',
   'costa-blanca-north',
+  'orihuela-costa',
+  'benidorm-finestrat',
 ];
+
+// Language configurations for i18n sitemap
+const LANGUAGE_PREFIXES = ['sv', 'nl', 'nl-be', 'fr', 'no'] as const;
+
+// Core pages that exist in all languages
+const I18N_CORE_PAGES = [
+  '', // homepage
+  '/properties',
+  '/developments',
+  '/areas',
+  '/blog',
+  '/golf',
+  '/contact',
+  '/luxury',
+  '/inland',
+  '/about',
+  '/guides',
+];
+
+// Guide sub-pages per language (slug mappings)
+const I18N_GUIDE_PAGES: Record<string, string[]> = {
+  sv: [
+    'kopprocessen', 'nie-nummer', 'kostnader-skatter', 'bolan-spanien',
+    'why-new-build', 'key-ready-vs-off-plan', 'north-vs-south',
+    'torrevieja', 'javea', 'costa-blanca-north', 'orihuela-costa',
+  ],
+  nl: [
+    'koopproces', 'nie-nummer', 'kosten-belasting', 'hypotheek',
+    'waarom-nieuwbouw', 'kant-en-klaar-vs-ritning', 'noord-vs-zuid',
+    'torrevieja', 'javea', 'costa-blanca-noord',
+  ],
+  'nl-be': [
+    'koopproces', 'nie-nummer', 'kosten-belasting', 'hypotheek',
+    'waarom-nieuwbouw', 'kant-en-klaar-vs-ritning', 'noord-vs-zuid',
+    'torrevieja', 'javea', 'costa-blanca-noord',
+  ],
+  fr: [
+    'processus-achat', 'frais-impots', 'hypotheque', 'nie',
+  ],
+  no: [
+    'kjopsprosessen', 'nie-nummer', 'kostnader-skatt', 'boliglan',
+    'hvorfor-nybygg', 'innflyttingsklar-tegning', 'nord-vs-sor',
+  ],
+};
 
 // All programmatic filter pages for SEO
 const FILTER_SLUGS = [
@@ -304,7 +350,28 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  console.log(`[Sitemap] Total URLs: ${staticPages.length + guidePages.length + golfPages.length + blogPages.length + developmentPages.length + areaPages.length + builderPages.length + filterPages.length + propertyPages.length}`);
+  // i18n pages - core pages in all languages
+  const i18nCorePages: MetadataRoute.Sitemap = LANGUAGE_PREFIXES.flatMap((lang) =>
+    I18N_CORE_PAGES.map((pagePath) => ({
+      url: `${baseUrl}/${lang}${pagePath}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: pagePath === '' ? 0.9 : 0.7,
+    }))
+  );
+
+  // i18n pages - guide sub-pages in all languages
+  const i18nGuidePages: MetadataRoute.Sitemap = LANGUAGE_PREFIXES.flatMap((lang) =>
+    (I18N_GUIDE_PAGES[lang] || []).map((slug) => ({
+      url: `${baseUrl}/${lang}/guides/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    }))
+  );
+
+  const totalUrls = staticPages.length + guidePages.length + golfPages.length + blogPages.length + developmentPages.length + areaPages.length + builderPages.length + filterPages.length + propertyPages.length + i18nCorePages.length + i18nGuidePages.length;
+  console.log(`[Sitemap] Total URLs: ${totalUrls} (including ${i18nCorePages.length + i18nGuidePages.length} i18n pages)`);
 
   return [
     ...staticPages,
@@ -316,5 +383,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...builderPages,
     ...filterPages,
     ...propertyPages,
+    ...i18nCorePages,
+    ...i18nGuidePages,
   ];
 }
