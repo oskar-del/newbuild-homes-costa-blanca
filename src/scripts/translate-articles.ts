@@ -11,18 +11,18 @@ const anthropic = new Anthropic({
 
 // Paths
 const ARTICLES_DIR = path.join(process.cwd(), 'src', 'content', 'articles');
-const SV_ARTICLES_DIR = path.join(process.cwd(), 'src', 'content', 'sv', 'articles');
+const SV_ARTICLES_DIR = path.join(process.cwd(), 'src', 'content', 'articles', 'sv');
 
 // Create Swedish content directories if they don't exist
 function ensureDirectoriesExist() {
-  const svContentDir = path.join(process.cwd(), 'src', 'content', 'sv');
-
-  if (!fs.existsSync(svContentDir)) {
-    fs.mkdirSync(svContentDir, { recursive: true });
-  }
-
   if (!fs.existsSync(SV_ARTICLES_DIR)) {
     fs.mkdirSync(SV_ARTICLES_DIR, { recursive: true });
+  }
+
+  // Also create legacy path for backward compatibility
+  const legacyDir = path.join(process.cwd(), 'src', 'content', 'sv', 'articles');
+  if (!fs.existsSync(legacyDir)) {
+    fs.mkdirSync(legacyDir, { recursive: true });
   }
 }
 
@@ -129,46 +129,70 @@ ${JSON.stringify(article, null, 2)}
 
 Respond with ONLY valid JSON, no other text. The JSON must be the same structure with only text values translated.`;
 
-  try {
-    console.log(`   Translating with Claude Haiku...`);
+  const MAX_RETRIES = 2;
 
-    const message = await anthropic.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 4096,
-      messages: [
-        {
-          role: 'user',
-          content: translationPrompt,
-        },
-      ],
-    });
+  for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      console.log(`   Translating with Claude Haiku...${attempt > 0 ? ` (retry ${attempt})` : ''}`);
 
-    const responseText = message.content[0].type === 'text' ? message.content[0].text : '';
+      const message = await anthropic.messages.create({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 8192,
+        messages: [
+          {
+            role: 'user',
+            content: translationPrompt,
+          },
+        ],
+      });
 
-    // Extract JSON from response (in case there's any surrounding text)
-    const jsonMatch = responseText.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) {
-      throw new Error('No JSON found in response');
+      const responseText = message.content[0].type === 'text' ? message.content[0].text : '';
+
+      // Extract JSON from response (in case there's any surrounding text)
+      const jsonMatch = responseText.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) {
+        throw new Error('No JSON found in response');
+      }
+
+      let jsonStr = jsonMatch[0];
+
+      // Attempt to fix common JSON issues from LLM output
+      // Fix trailing commas before closing brackets/braces
+      jsonStr = jsonStr.replace(/,\s*([}\]])/g, '$1');
+      // Fix missing commas between string values (e.g. "value1" "value2")
+      jsonStr = jsonStr.replace(/"\s*\n\s*"/g, '",\n"');
+
+      const translatedArticle = JSON.parse(jsonStr) as TranslatedArticle;
+
+      // Ensure category is properly translated
+      if (translatedArticle.category in categoryTranslations) {
+        translatedArticle.category = categoryTranslations[translatedArticle.category];
+      }
+
+      return translatedArticle;
+    } catch (error) {
+      if (attempt < MAX_RETRIES) {
+        console.log(`   ⚠️ JSON parse error, retrying... (${error instanceof Error ? error.message : String(error)})`);
+        await sleep(2000);
+        continue;
+      }
+      console.error(`Error translating article after ${MAX_RETRIES + 1} attempts: ${error}`);
+      throw error;
     }
-
-    const translatedArticle = JSON.parse(jsonMatch[0]) as TranslatedArticle;
-
-    // Ensure category is properly translated
-    if (translatedArticle.category in categoryTranslations) {
-      translatedArticle.category = categoryTranslations[translatedArticle.category];
-    }
-
-    return translatedArticle;
-  } catch (error) {
-    console.error(`Error translating article: ${error}`);
-    throw error;
   }
+
+  throw new Error('Unexpected: exhausted all retries');
 }
 
-// Save translated article
+// Save translated article (to both paths for compatibility)
 function saveTranslatedArticle(article: TranslatedArticle, slug: string) {
-  const filePath = path.join(SV_ARTICLES_DIR, `${slug}.json`);
-  fs.writeFileSync(filePath, JSON.stringify(article, null, 2), 'utf-8');
+  // Primary path: src/content/articles/sv/ (used by blog routes)
+  const primaryPath = path.join(SV_ARTICLES_DIR, `${slug}.json`);
+  fs.writeFileSync(primaryPath, JSON.stringify(article, null, 2), 'utf-8');
+
+  // Legacy path: src/content/sv/articles/ (backward compatibility)
+  const legacyPath = path.join(process.cwd(), 'src', 'content', 'sv', 'articles', `${slug}.json`);
+  fs.writeFileSync(legacyPath, JSON.stringify(article, null, 2), 'utf-8');
 }
 
 // Sleep function for rate limiting
