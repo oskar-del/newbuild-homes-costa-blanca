@@ -222,7 +222,7 @@ interface HeroArticleProps {
 }
 
 function HeroArticle({ article }: HeroArticleProps): JSX.Element {
-  const href: string = `/blog/${article.slug}`;
+  const href: string = `/nl-be/blog/${article.slug}`;
 
   return (
     <Link
@@ -263,7 +263,7 @@ function HeroArticle({ article }: HeroArticleProps): JSX.Element {
 }
 
 function ArticleCard({ article }: { article: Article }): JSX.Element {
-  const href: string = `/blog/${article.slug}`;
+  const href: string = `/nl-be/blog/${article.slug}`;
 
   return (
     <Link href={href} className="group block bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-xl transition-all border border-warm-100">

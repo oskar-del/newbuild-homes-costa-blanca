@@ -1,5 +1,21 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
+
+const LANG = 'pl';
+const ARTICLES_DIR = path.join(process.cwd(), 'src', 'content', 'articles', LANG);
+
+interface Article {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  publishedAt: string;
+  readTime: number;
+  featured?: boolean;
+  tags?: string[];
+}
 
 export const metadata: Metadata = {
   title: 'Blog Nieruchomości Costa Blanca | Artykuły i Poradniki',
@@ -28,51 +44,40 @@ export const metadata: Metadata = {
   },
 };
 
+function getAllArticles(): Article[] {
+  try {
+    if (!fs.existsSync(ARTICLES_DIR)) return [];
+    return fs.readdirSync(ARTICLES_DIR)
+      .filter(f => f.endsWith('.json'))
+      .map(f => {
+        const data = JSON.parse(fs.readFileSync(path.join(ARTICLES_DIR, f), 'utf-8'));
+        return {
+          slug: data.slug,
+          title: data.title,
+          excerpt: data.excerpt,
+          category: data.category,
+          publishedAt: data.publishedAt,
+          readTime: data.readTime,
+          featured: data.featured,
+          tags: data.tags,
+        };
+      })
+      .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+  } catch {
+    return [];
+  }
+}
+
+function formatDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString('pl-PL', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+}
+
 export default function PolishBlogPage() {
-  const posts = [
-    {
-      title: 'Przewodnik Kupującego po Costa Blance',
-      excerpt: 'Wszystko, co musisz wiedzieć o kupowaniu domu w Hiszpanii, od NIE do hipoteki.',
-      link: '/pl/guides/proces-zakupu',
-      date: 'Ostatnio zaktualizowany',
-      category: 'Poradnik'
-    },
-    {
-      title: 'Dlaczego Kupić Nowy Dom Zamiast Starego',
-      excerpt: 'Porównanie nowych domów z istniejącymi nieruchomościami. Przyczyny, dla których nowe domy są lepsze.',
-      link: '/pl/guides/dlaczego-nowy-budynek',
-      date: 'Ostatnio zaktualizowany',
-      category: 'Porady'
-    },
-    {
-      title: 'Kredyty Hipoteczne w Hiszpanii dla Polskich Kupujących',
-      excerpt: 'Jak uzyskać kredyt hipoteczny w Hiszpanii. Porównanie banków i opcji finansowania.',
-      link: '/pl/guides/kredyt-hipoteczny',
-      date: 'Ostatnio zaktualizowany',
-      category: 'Finansowanie'
-    },
-    {
-      title: 'Numer NIE - Co to jest i Jak Go Uzyskać',
-      excerpt: 'Przewodnik krok po kroku dotyczący uzyskania numeru NIE (Numer Identyfikacji Cudzoziemca).',
-      link: '/pl/guides/numer-nie',
-      date: 'Ostatnio zaktualizowany',
-      category: 'Poradnik'
-    },
-    {
-      title: 'Koszty i Podatki - Pełny Przegląd',
-      excerpt: 'Jakie dodatkowe koszty ponosisz przy kupnie domu w Hiszpanii? Podatek IBI, transferowy i inne.',
-      link: '/pl/guides/koszty-podatki',
-      date: 'Ostatnio zaktualizowany',
-      category: 'Finansowanie'
-    },
-    {
-      title: 'Gotowy do Zamieszkania vs Plan',
-      excerpt: 'Różnice między domami gotowymi a budowaniem od zera. Zalety i wady każdej opcji.',
-      link: '/pl/guides/pod-klucz-vs-plan',
-      date: 'Ostatnio zaktualizowany',
-      category: 'Porady'
-    }
-  ];
+  const articles = getAllArticles();
 
   return (
     <main className="min-h-screen bg-warm-50">
@@ -94,28 +99,31 @@ export default function PolishBlogPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {posts.map((post, idx) => (
+            {articles.map((article) => (
               <Link
-                key={idx}
-                href={post.link}
+                key={article.slug}
+                href={`/pl/blog/${article.slug}`}
                 className="group bg-warm-50 rounded-sm p-8 border border-warm-200 hover:shadow-lg hover:border-accent-300 transition-all"
               >
                 <div className="mb-4">
                   <span className="inline-block bg-accent-100 text-accent-700 text-xs font-medium px-3 py-1 rounded mb-3">
-                    {post.category}
+                    {article.category}
                   </span>
                   <h3 className="text-xl font-semibold text-primary-900 group-hover:text-accent-600 transition-colors">
-                    {post.title}
+                    {article.title}
                   </h3>
                 </div>
                 <p className="text-warm-600 text-sm mb-4">
-                  {post.excerpt}
+                  {article.excerpt}
                 </p>
-                <div className="text-accent-600 font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
-                  Czytaj Artykuł
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                <div className="flex items-center justify-between">
+                  <span className="text-warm-500 text-xs">{formatDate(article.publishedAt)}</span>
+                  <div className="text-accent-600 font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+                    Czytaj więcej
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </div>
               </Link>
             ))}

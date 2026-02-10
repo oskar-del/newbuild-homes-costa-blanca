@@ -1,5 +1,21 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
+
+const LANG = 'de';
+const ARTICLES_DIR = path.join(process.cwd(), 'src', 'content', 'articles', LANG);
+
+interface Article {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  publishedAt: string;
+  readTime: number;
+  featured?: boolean;
+  tags?: string[];
+}
 
 export const metadata: Metadata = {
   title: 'Costa Blanca Blog | Tipps & Leitfäden für Käufer',
@@ -21,47 +37,41 @@ export const metadata: Metadata = {
   },
 };
 
-const blogPosts = [
-  {
-    title: 'Steuern beim Immobilienkauf in Spanien - Alles was Sie wissen müssen',
-    excerpt: 'Ein Leitfaden durch die spanischen Steuern für deutsche Käufer. Verstehen Sie AJD, Grunderwerbsteuer und jährliche Steuerverpflichtungen.',
-    category: 'Steuern',
-    date: '15. Januar 2024',
-  },
-  {
-    title: 'Costa Blanca Nord vs. Süd - Welche Region passt zu Ihnen?',
-    excerpt: 'Vergleichen Sie die besten Aspekte der Nord- und Südküste. Klima, Preise, Lebensstil und Gemeinschaften erklärt.',
-    category: 'Regionen',
-    date: '10. Januar 2024',
-  },
-  {
-    title: 'Hypotheken für Ausländer in Spanien - Schritt für Schritt',
-    excerpt: 'Wie deutsche Käufer in Spanien eine Hypothek bekommen. Anforderungen, Dokumente und Top-Banken erklärt.',
-    category: 'Finanzen',
-    date: '5. Januar 2024',
-  },
-  {
-    title: 'NIE-Nummer für Ausländer in Spanien beantragen',
-    excerpt: 'Der vollständige Leitfaden zur Beantragung Ihrer NIE-Nummer - Ihre Steuernummer in Spanien. Erforderliche Dokumente und Schritte.',
-    category: 'Rechtlich',
-    date: '28. Dezember 2023',
-  },
-  {
-    title: 'Schlüsselfertig vs. Planverkauf - Was Sie kaufen sollten',
-    excerpt: 'Verstehen Sie die Unterschiede zwischen schlüsselfertigen Häusern und Off-Plan-Käufen. Vorteile, Risiken und was für Sie passt.',
-    category: 'Kaufberatung',
-    date: '20. Dezember 2023',
-  },
-  {
-    title: 'Die besten Golfgemeinschaften an der Costa Blanca',
-    excerpt: 'Entdecken Sie die Top-Golfplätze und Gemeinschaften an der Costa Blanca. Villamartin, La Finca, Las Colinas und mehr.',
-    category: 'Golf',
-    date: '15. Dezember 2023',
-  },
-];
+function getAllArticles(): Article[] {
+  try {
+    if (!fs.existsSync(ARTICLES_DIR)) return [];
+    return fs.readdirSync(ARTICLES_DIR)
+      .filter(f => f.endsWith('.json'))
+      .map(f => {
+        const data = JSON.parse(fs.readFileSync(path.join(ARTICLES_DIR, f), 'utf-8'));
+        return {
+          slug: data.slug,
+          title: data.title,
+          excerpt: data.excerpt,
+          category: data.category,
+          publishedAt: data.publishedAt,
+          readTime: data.readTime,
+          featured: data.featured,
+          tags: data.tags,
+        };
+      })
+      .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+  } catch {
+    return [];
+  }
+}
+
+function formatDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString('de-DE', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+}
 
 export default function BlogPage() {
-  const categories = [...new Set(blogPosts.map(p => p.category))];
+  const articles = getAllArticles();
+  const categories = [...new Set(articles.map(a => a.category))];
 
   return (
     <main className="min-h-screen bg-warm-50">
@@ -93,27 +103,31 @@ export default function BlogPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {blogPosts.map((post, index) => (
-              <div key={index} className="bg-warm-50 rounded-sm p-6 border border-warm-200 hover:shadow-lg transition-all">
+            {articles.map((article) => (
+              <Link
+                key={article.slug}
+                href={`/de/blog/${article.slug}`}
+                className="group bg-warm-50 rounded-sm p-6 border border-warm-200 hover:shadow-lg transition-all"
+              >
                 <div className="flex items-start justify-between mb-3">
                   <span className="inline-block bg-accent-100 text-accent-700 text-xs font-bold px-2.5 py-1 rounded-sm">
-                    {post.category}
+                    {article.category}
                   </span>
-                  <span className="text-xs text-warm-500">{post.date}</span>
+                  <span className="text-xs text-warm-500">{formatDate(article.publishedAt)}</span>
                 </div>
-                <h3 className="text-xl font-light text-primary-900 mb-2">
-                  {post.title}
+                <h3 className="text-xl font-light text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">
+                  {article.title}
                 </h3>
                 <p className="text-warm-700 text-sm mb-4">
-                  {post.excerpt}
+                  {article.excerpt}
                 </p>
-                <div className="flex items-center gap-2 text-accent-600 hover:text-accent-700 font-medium text-sm cursor-pointer">
+                <div className="flex items-center gap-2 text-accent-600 hover:text-accent-700 font-medium text-sm">
                   Weiterlesen
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -1,5 +1,21 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
+
+const LANG = 'ru';
+const ARTICLES_DIR = path.join(process.cwd(), 'src', 'content', 'articles', LANG);
+
+interface Article {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  publishedAt: string;
+  readTime: number;
+  featured?: boolean;
+  tags?: string[];
+}
 
 export const metadata: Metadata = {
   title: 'Блог Коста Бланка | Советы По Покупке Недвижимости',
@@ -22,40 +38,41 @@ export const metadata: Metadata = {
   },
 };
 
-const BLOG_POSTS = [
-  {
-    title: 'Золотая Виза Испании: Полное Руководство для Русских Инвесторов',
-    excerpt: 'Узнайте всё о программе Golden Visa и как покупка дома стоимостью 500.000 евро даёт вам вид на жительство в Испании.',
-    date: 'Декабрь 2024',
-  },
-  {
-    title: 'Налоги На Имущество В Испании: IBI, Транспортный Налог и Другое',
-    excerpt: 'Полное объяснение налогов, которые платят собственники недвижимости в Испании и как их минимизировать.',
-    date: 'Ноябрь 2024',
-  },
-  {
-    title: 'Получение НИЕ (Номера Идентификации Иностранца) В Испании',
-    excerpt: 'Пошаговый процесс получения НИЕ для иностранцев. Требуется ли это при покупке дома?',
-    date: 'Октябрь 2024',
-  },
-  {
-    title: 'Ипотека В Испании для Русскоговорящих Покупателей',
-    excerpt: 'Сравнение испанских банков, требования к кредиту и процессе финансирования покупки недвижимости.',
-    date: 'Сентябрь 2024',
-  },
-  {
-    title: 'Готовый Дом vs. На Стадии Планирования: Плюсы и Минусы',
-    excerpt: 'Анализ преимуществ и недостатков покупки готовой новостройки или дома в процессе строительства.',
-    date: 'Август 2024',
-  },
-  {
-    title: 'Торревьеха vs. Хавеа: Какой Город Выбрать На Коста Бланка?',
-    excerpt: 'Подробное сравнение двух популярных городов: цены, климат, образ жизни и сообщества.',
-    date: 'Июль 2024',
-  },
-];
+function getAllArticles(): Article[] {
+  try {
+    if (!fs.existsSync(ARTICLES_DIR)) return [];
+    return fs.readdirSync(ARTICLES_DIR)
+      .filter(f => f.endsWith('.json'))
+      .map(f => {
+        const data = JSON.parse(fs.readFileSync(path.join(ARTICLES_DIR, f), 'utf-8'));
+        return {
+          slug: data.slug,
+          title: data.title,
+          excerpt: data.excerpt,
+          category: data.category,
+          publishedAt: data.publishedAt,
+          readTime: data.readTime,
+          featured: data.featured,
+          tags: data.tags,
+        };
+      })
+      .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+  } catch {
+    return [];
+  }
+}
+
+function formatDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString('ru-RU', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+}
 
 export default function RUBlogPage() {
+  const articles = getAllArticles();
+
   return (
     <main className="min-h-screen bg-warm-50">
       <section className="bg-primary-900 py-16 md:py-24">
@@ -72,24 +89,30 @@ export default function RUBlogPage() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-8">
-            {BLOG_POSTS.map((post, i) => (
+            {articles.map((article) => (
               <Link
-                key={i}
-                href="#"
+                key={article.slug}
+                href={`/ru/blog/${article.slug}`}
                 className="group block bg-warm-50 rounded-sm p-8 border border-warm-200 hover:shadow-lg hover:border-accent-200 transition-all"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <span className="text-sm text-warm-500">{post.date}</span>
-                  <span className="text-accent-600 font-medium text-sm group-hover:text-accent-700">
-                    Читать Статью
-                  </span>
+                  <span className="text-sm text-warm-500">{formatDate(article.publishedAt)}</span>
+                  <div className="flex items-center gap-1 text-accent-600 font-medium text-sm group-hover:text-accent-700">
+                    Читать далее
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </div>
                 <h3 className="text-2xl font-semibold text-primary-900 group-hover:text-accent-600 mb-3 transition-colors">
-                  {post.title}
+                  {article.title}
                 </h3>
                 <p className="text-warm-600">
-                  {post.excerpt}
+                  {article.excerpt}
                 </p>
+                <div className="mt-4 text-sm text-warm-500">
+                  {article.readTime} мин чтения
+                </div>
               </Link>
             ))}
           </div>

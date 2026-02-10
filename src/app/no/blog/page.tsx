@@ -1,6 +1,22 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
 import { breadcrumbSchema, toJsonLd } from '@/lib/schema';
+
+const LANG = 'no';
+const ARTICLES_DIR = path.join(process.cwd(), 'src', 'content', 'articles', LANG);
+
+interface Article {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  publishedAt: string;
+  readTime: number;
+  featured?: boolean;
+  tags?: string[];
+}
 
 export const metadata: Metadata = {
   title: 'Blog | New Build Homes Costa Blanca',
@@ -21,70 +37,52 @@ export const metadata: Metadata = {
       'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/blog',
       'fr': 'https://newbuildhomescostablanca.com/fr/blog',
       'no': 'https://newbuildhomescostablanca.com/no/blog',
+      'de': 'https://newbuildhomescostablanca.com/de/blog',
+      'pl': 'https://newbuildhomescostablanca.com/pl/blog',
+      'ru': 'https://newbuildhomescostablanca.com/ru/blog',
       'x-default': 'https://newbuildhomescostablanca.com/blog',
     },
   },
 };
 
-const blogPosts = [
-  {
-    title: 'Hvordan får du NIE-nummer? Komplett guide for nordmenn',
-    excerpt: 'Et NIE-nummer (Número de Identidad de Extranjero) er nødvendig for å kjøpe eiendom i Spania. Her er det komplette prosessen.',
-    date: 'Januar 2025',
-    category: 'Juridisk',
-    readTime: '5 min',
-  },
-  {
-    title: 'Kostnader ved boligkjøp: Alle gebyrene du må vite om',
-    excerpt: 'Kjøp av bolig i Spania koster mer enn bare kjøpesummen. Vi bryter ned alle kostnadene.',
-    date: 'Januar 2025',
-    category: 'Økonomi',
-    readTime: '6 min',
-  },
-  {
-    title: 'Boliglån fra norske banker — Hva betyr det?',
-    excerpt: 'DNB, Nordea og SpareBank 1 tilbyr lån for spansk eiendom. Slik fungerer det.',
-    date: 'Desember 2024',
-    category: 'Finansiering',
-    readTime: '7 min',
-  },
-  {
-    title: 'Alfaz del Pi — Norske bygden på Costa Blanca',
-    excerpt: 'Over 30% av befolkningen i Alfaz del Pi er norske. Lær om norsksenteret, skolen og samfunnet.',
-    date: 'Desember 2024',
-    category: 'Samfunn',
-    readTime: '5 min',
-  },
-  {
-    title: 'Costa Blanca Nord vs Sør — Hva er forskjellen?',
-    excerpt: 'Søk eller nord? En detaljert sammenligning av prisene, kulturen og livsstilen i hver region.',
-    date: 'Desember 2024',
-    category: 'Områder',
-    readTime: '8 min',
-  },
-  {
-    title: 'Formuesskatt på utenlandsk eiendom — Norske skatter forklart',
-    excerpt: 'Som norsk eier av spansk bolig skal du rapportere eiendommen til skatteetaten og betale formuesskatt.',
-    date: 'November 2024',
-    category: 'Skatt',
-    readTime: '6 min',
-  },
-];
+function getAllArticles(): Article[] {
+  try {
+    if (!fs.existsSync(ARTICLES_DIR)) return [];
+    return fs.readdirSync(ARTICLES_DIR)
+      .filter(f => f.endsWith('.json'))
+      .map(f => {
+        const data = JSON.parse(fs.readFileSync(path.join(ARTICLES_DIR, f), 'utf-8'));
+        return {
+          slug: data.slug,
+          title: data.title,
+          excerpt: data.excerpt,
+          category: data.category,
+          publishedAt: data.publishedAt,
+          readTime: data.readTime,
+          featured: data.featured,
+          tags: data.tags,
+        };
+      })
+      .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+  } catch {
+    return [];
+  }
+}
+
+function formatDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString('nb-NO', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+}
 
 export default function NOBlogPage() {
+  const articles = getAllArticles();
   const breadcrumbs = breadcrumbSchema([
     { name: 'Hjem', url: 'https://newbuildhomescostablanca.com/no/' },
     { name: 'Blog', url: 'https://newbuildhomescostablanca.com/no/blog/' },
   ]);
-
-  const categoryColors: Record<string, string> = {
-    'Juridisk': 'bg-blue-100 text-blue-700',
-    'Økonomi': 'bg-green-100 text-green-700',
-    'Finansiering': 'bg-purple-100 text-purple-700',
-    'Samfunn': 'bg-pink-100 text-pink-700',
-    'Områder': 'bg-orange-100 text-orange-700',
-    'Skatt': 'bg-red-100 text-red-700',
-  };
 
   return (
     <>
@@ -114,32 +112,36 @@ export default function NOBlogPage() {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {blogPosts.map((post, index) => (
-                <div key={index} className="bg-white rounded-sm border border-warm-200 overflow-hidden hover:shadow-lg transition-all">
+              {articles.map((article) => (
+                <Link
+                  key={article.slug}
+                  href={`/no/blog/${article.slug}`}
+                  className="group bg-white rounded-sm border border-warm-200 overflow-hidden hover:shadow-lg transition-all"
+                >
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
-                      <span className={`text-xs font-semibold px-3 py-1 rounded-full ${categoryColors[post.category]}`}>
-                        {post.category}
+                      <span className="text-xs font-semibold px-3 py-1 rounded-full bg-accent-100 text-accent-700">
+                        {article.category}
                       </span>
-                      <span className="text-warm-500 text-xs">{post.readTime}</span>
+                      <span className="text-warm-500 text-xs">{article.readTime} min lesetid</span>
                     </div>
 
-                    <h3 className="text-xl font-semibold text-primary-900 mb-3 leading-tight">
-                      {post.title}
+                    <h3 className="text-xl font-semibold text-primary-900 mb-3 leading-tight group-hover:text-accent-600 transition-colors">
+                      {article.title}
                     </h3>
 
                     <p className="text-warm-600 text-sm mb-4 line-clamp-3">
-                      {post.excerpt}
+                      {article.excerpt}
                     </p>
 
                     <div className="flex items-center justify-between pt-4 border-t border-warm-100">
-                      <span className="text-warm-500 text-xs">{post.date}</span>
-                      <Link href="#" className="text-accent-600 hover:text-accent-700 font-semibold text-sm">
-                        Les Mer →
-                      </Link>
+                      <span className="text-warm-500 text-xs">{formatDate(article.publishedAt)}</span>
+                      <span className="text-accent-600 hover:text-accent-700 font-semibold text-sm">
+                        Les mer →
+                      </span>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

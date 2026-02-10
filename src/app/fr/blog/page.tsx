@@ -1,6 +1,22 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
 import { breadcrumbSchema, toJsonLd } from '@/lib/schema';
+
+const LANG = 'fr';
+const ARTICLES_DIR = path.join(process.cwd(), 'src', 'content', 'articles', LANG);
+
+interface Article {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  publishedAt: string;
+  readTime: number;
+  featured?: boolean;
+  tags?: string[];
+}
 
 export const metadata: Metadata = {
   title: 'Blog | Conseils Immobilier Costa Blanca',
@@ -21,51 +37,48 @@ export const metadata: Metadata = {
       'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/blog',
       'fr': 'https://newbuildhomescostablanca.com/fr/blog',
       'no': 'https://newbuildhomescostablanca.com/no/blog',
+      'de': 'https://newbuildhomescostablanca.com/de/blog',
+      'pl': 'https://newbuildhomescostablanca.com/pl/blog',
+      'ru': 'https://newbuildhomescostablanca.com/ru/blog',
       'x-default': 'https://newbuildhomescostablanca.com/blog',
     },
   },
 };
 
-const blogPosts = [
-  {
-    slug: 'acheter-neuf-espagne',
-    title: 'Pourquoi Acheter du Neuf en Espagne?',
-    excerpt: 'Découvrez les avantages des maisons neuves par rapport aux propriétés existantes.',
-    category: 'Guide',
-  },
-  {
-    slug: 'frais-taxes-espagne',
-    title: 'Tous les Frais et Taxes d\'Achat en Espagne',
-    excerpt: 'Comprendre les 10-13% de frais supplémentaires lors d\'un achat immobilier.',
-    category: 'Finances',
-  },
-  {
-    slug: 'hypotheque-etrangers',
-    title: 'Hypothèques pour les Étrangers en Espagne',
-    excerpt: 'Comment obtenir un financement hypothécaire en tant qu\'acheteur français.',
-    category: 'Financement',
-  },
-  {
-    slug: 'nie-numero',
-    title: 'Obtenir Votre Numéro NIE en Espagne',
-    excerpt: 'Guide complet du numéro d\'identification fiscale pour les étrangers.',
-    category: 'Documentation',
-  },
-  {
-    slug: 'costa-blanca-sud-nord',
-    title: 'Costa Blanca Sud vs Nord: Quelle Région Choisir?',
-    excerpt: 'Comparaison détaillée des deux régions principales de la Costa Blanca.',
-    category: 'Régions',
-  },
-  {
-    slug: 'processus-achat-spagne',
-    title: 'Étapes du Processus d\'Achat en Espagne',
-    excerpt: 'Guide étape par étape du processus d\'acquisition immobilière en Espagne.',
-    category: 'Guide',
-  },
-];
+function getAllArticles(): Article[] {
+  try {
+    if (!fs.existsSync(ARTICLES_DIR)) return [];
+    return fs.readdirSync(ARTICLES_DIR)
+      .filter(f => f.endsWith('.json'))
+      .map(f => {
+        const data = JSON.parse(fs.readFileSync(path.join(ARTICLES_DIR, f), 'utf-8'));
+        return {
+          slug: data.slug,
+          title: data.title,
+          excerpt: data.excerpt,
+          category: data.category,
+          publishedAt: data.publishedAt,
+          readTime: data.readTime,
+          featured: data.featured,
+          tags: data.tags,
+        };
+      })
+      .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+  } catch {
+    return [];
+  }
+}
+
+function formatDate(dateStr: string): string {
+  return new Date(dateStr).toLocaleDateString('fr-FR', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+}
 
 export default function FRBlogPage() {
+  const articles = getAllArticles();
   const breadcrumbs = breadcrumbSchema([
     { name: 'Accueil', url: 'https://newbuildhomescostablanca.com/fr/' },
     { name: 'Blog', url: 'https://newbuildhomescostablanca.com/fr/blog/' },
@@ -92,30 +105,33 @@ export default function FRBlogPage() {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {blogPosts.map((post) => (
+              {articles.map((article) => (
                 <Link
-                  key={post.slug}
-                  href={`/fr/blog/${post.slug}`}
+                  key={article.slug}
+                  href={`/fr/blog/${article.slug}`}
                   className="group bg-white rounded-sm overflow-hidden hover:shadow-lg transition-all duration-300 border border-warm-200"
                 >
                   <div className="bg-gradient-to-br from-primary-900 to-primary-800 h-40 flex items-end p-4">
                     <span className="bg-accent-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                      {post.category}
+                      {article.category}
                     </span>
                   </div>
                   <div className="p-6">
                     <h3 className="text-lg font-semibold text-primary-900 group-hover:text-accent-600 transition-colors mb-3">
-                      {post.title}
+                      {article.title}
                     </h3>
                     <p className="text-warm-600 text-sm mb-4">
-                      {post.excerpt}
+                      {article.excerpt}
                     </p>
-                    <span className="text-accent-600 font-medium text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                      Lire l'Article
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </span>
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-warm-500">{formatDate(article.publishedAt)}</span>
+                      <span className="text-accent-600 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Lire la suite
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                    </div>
                   </div>
                 </Link>
               ))}
