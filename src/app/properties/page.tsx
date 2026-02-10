@@ -31,6 +31,11 @@ export const metadata: Metadata = {
     languages: {
       'en': 'https://newbuildhomescostablanca.com/properties',
       'sv': 'https://newbuildhomescostablanca.com/sv/properties',
+      'nl': 'https://newbuildhomescostablanca.com/nl/properties',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/properties',
+      'fr': 'https://newbuildhomescostablanca.com/fr/properties',
+      'no': 'https://newbuildhomescostablanca.com/no/properties',
+      'x-default': 'https://newbuildhomescostablanca.com/properties',
     },
   },
 };

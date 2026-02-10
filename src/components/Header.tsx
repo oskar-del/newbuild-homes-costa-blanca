@@ -96,32 +96,20 @@ const NAV_ITEMS = [
   },
 ];
 
-// Language switcher component
-function LanguageSwitcher({ className = '' }: { className?: string }) {
-  const pathname = usePathname();
-  const isSwedish = pathname.startsWith('/sv');
+// Language configurations
+const LANGUAGES = [
+  { code: 'en', prefix: '', label: 'English', short: 'EN', flag: { bg: '#012169', type: 'uk' } },
+  { code: 'sv', prefix: '/sv', label: 'Svenska', short: 'SV', flag: { bg: '#006AA7', type: 'se' } },
+  { code: 'nl', prefix: '/nl', label: 'Nederlands', short: 'NL', flag: { bg: '#21468B', type: 'nl' } },
+  { code: 'nl-be', prefix: '/nl-be', label: 'Vlaams', short: 'BE', flag: { bg: '#000', type: 'be' } },
+  { code: 'fr', prefix: '/fr', label: 'Fran\u00e7ais', short: 'FR', flag: { bg: '#002395', type: 'fr' } },
+  { code: 'no', prefix: '/no', label: 'Norsk', short: 'NO', flag: { bg: '#BA0C2F', type: 'no' } },
+];
 
-  // Build the alternate language path
-  const getAlternatePath = () => {
-    if (isSwedish) {
-      // Remove /sv prefix to go to English
-      const englishPath = pathname.replace(/^\/sv/, '') || '/';
-      return englishPath;
-    } else {
-      // Add /sv prefix to go to Swedish
-      return `/sv${pathname}`;
-    }
-  };
-
-  return (
-    <Link
-      href={getAlternatePath()}
-      className={`inline-flex items-center gap-1.5 text-sm font-medium transition-colors ${className}`}
-      title={isSwedish ? 'Switch to English' : 'Byt till svenska'}
-    >
-      <span className={`inline-block w-5 h-3.5 rounded-sm overflow-hidden border border-warm-300 ${
-        isSwedish ? 'opacity-50' : 'ring-1 ring-accent-500'
-      }`}>
+function FlagIcon({ type }: { type: string }) {
+  switch (type) {
+    case 'uk':
+      return (
         <svg viewBox="0 0 60 42" className="w-full h-full">
           <rect width="60" height="42" fill="#012169"/>
           <path d="M0,0 L60,42 M60,0 L0,42" stroke="#fff" strokeWidth="7"/>
@@ -129,17 +117,112 @@ function LanguageSwitcher({ className = '' }: { className?: string }) {
           <path d="M30,0 V42 M0,21 H60" stroke="#fff" strokeWidth="11"/>
           <path d="M30,0 V42 M0,21 H60" stroke="#C8102E" strokeWidth="7"/>
         </svg>
-      </span>
-      <span className={`inline-block w-5 h-3.5 rounded-sm overflow-hidden border border-warm-300 ${
-        isSwedish ? 'ring-1 ring-accent-500' : 'opacity-50'
-      }`}>
+      );
+    case 'se':
+      return (
         <svg viewBox="0 0 60 42" className="w-full h-full">
           <rect width="60" height="42" fill="#006AA7"/>
           <rect x="18" width="6" height="42" fill="#FECC02"/>
           <rect y="18" width="60" height="6" fill="#FECC02"/>
         </svg>
-      </span>
-    </Link>
+      );
+    case 'nl':
+      return (
+        <svg viewBox="0 0 60 42" className="w-full h-full">
+          <rect width="60" height="14" fill="#AE1C28"/>
+          <rect y="14" width="60" height="14" fill="#FFF"/>
+          <rect y="28" width="60" height="14" fill="#21468B"/>
+        </svg>
+      );
+    case 'be':
+      return (
+        <svg viewBox="0 0 60 42" className="w-full h-full">
+          <rect width="20" height="42" fill="#000"/>
+          <rect x="20" width="20" height="42" fill="#FAE042"/>
+          <rect x="40" width="20" height="42" fill="#ED2939"/>
+        </svg>
+      );
+    case 'fr':
+      return (
+        <svg viewBox="0 0 60 42" className="w-full h-full">
+          <rect width="20" height="42" fill="#002395"/>
+          <rect x="20" width="20" height="42" fill="#FFF"/>
+          <rect x="40" width="20" height="42" fill="#ED2939"/>
+        </svg>
+      );
+    case 'no':
+      return (
+        <svg viewBox="0 0 60 42" className="w-full h-full">
+          <rect width="60" height="42" fill="#BA0C2F"/>
+          <rect x="16" width="12" height="42" fill="#FFF"/>
+          <rect y="15" width="60" height="12" fill="#FFF"/>
+          <rect x="18" width="8" height="42" fill="#00205B"/>
+          <rect y="17" width="60" height="8" fill="#00205B"/>
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
+// Language switcher component — dropdown with 6 languages
+function LanguageSwitcher({ className = '' }: { className?: string }) {
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+
+  // Detect current locale from path
+  const currentLang = LANGUAGES.find(l => l.prefix && pathname.startsWith(l.prefix)) || LANGUAGES[0];
+
+  // Build path for a target language
+  const getPathForLang = (lang: typeof LANGUAGES[number]) => {
+    // Strip current prefix
+    let basePath = pathname;
+    if (currentLang.prefix) {
+      basePath = pathname.replace(new RegExp(`^${currentLang.prefix}`), '') || '/';
+    }
+    // Add target prefix
+    return lang.prefix ? `${lang.prefix}${basePath === '/' ? '' : basePath}` : basePath;
+  };
+
+  return (
+    <div className={`relative ${className}`}>
+      <button
+        onClick={() => setOpen(!open)}
+        className="inline-flex items-center gap-1.5 text-sm font-medium transition-colors hover:text-accent-500"
+        aria-label="Select language"
+      >
+        <span className="inline-block w-5 h-3.5 rounded-sm overflow-hidden border border-warm-300">
+          <FlagIcon type={currentLang.flag.type} />
+        </span>
+        <span className="text-xs">{currentLang.short}</span>
+        <svg className={`w-3 h-3 transition-transform ${open ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      {open && (
+        <>
+          <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} />
+          <div className="absolute right-0 top-full mt-2 bg-white border border-warm-200 rounded-sm shadow-lg z-50 min-w-[160px] py-1">
+            {LANGUAGES.map(lang => (
+              <Link
+                key={lang.code}
+                href={getPathForLang(lang)}
+                onClick={() => setOpen(false)}
+                className={`flex items-center gap-2.5 px-3 py-2 text-sm hover:bg-warm-50 transition-colors ${
+                  lang.code === currentLang.code ? 'bg-warm-50 text-accent-600 font-medium' : 'text-primary-900'
+                }`}
+              >
+                <span className="inline-block w-5 h-3.5 rounded-sm overflow-hidden border border-warm-200 flex-shrink-0">
+                  <FlagIcon type={lang.flag.type} />
+                </span>
+                <span>{lang.label}</span>
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
   );
 }
 

@@ -65,6 +65,11 @@ export const metadata: Metadata = {
     languages: {
       'en': 'https://newbuildhomescostablanca.com/golf',
       'sv': 'https://newbuildhomescostablanca.com/sv/golf',
+      'nl': 'https://newbuildhomescostablanca.com/nl/golf',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/golf',
+      'fr': 'https://newbuildhomescostablanca.com/fr/golf',
+      'no': 'https://newbuildhomescostablanca.com/no/golf',
+      'x-default': 'https://newbuildhomescostablanca.com/golf',
     },
   },
 };
