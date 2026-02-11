@@ -114,13 +114,11 @@ const CATEGORIES: Record<string, CategoryConfig> = {
 };
 
 function getArticles(): Article[] {
-  const nlArticlesDir: string = path.join(process.cwd(), 'src', 'content', 'nl', 'articles');
-  const enArticlesDir: string = path.join(process.cwd(), 'src', 'content', 'articles');
+  const nlArticlesDir: string = path.join(process.cwd(), 'src', 'content', 'articles', 'nl');
 
   const articles: Article[] = [];
-  const nlSlugs: Set<string> = new Set();
 
-  // Load Dutch articles first (these will be highlighted)
+  // Load Dutch articles only
   if (fs.existsSync(nlArticlesDir)) {
     const files: string[] = fs.readdirSync(nlArticlesDir).filter((f: string) => f.endsWith('.json'));
     for (const file of files) {
@@ -129,7 +127,6 @@ function getArticles(): Article[] {
           fs.readFileSync(path.join(nlArticlesDir, file), 'utf-8')
         ) as Record<string, unknown>;
         const slug: string = file.replace('.json', '');
-        nlSlugs.add(slug);
         articles.push({
           slug,
           title: (content.title as string) || 'Zonder titel',
@@ -143,38 +140,6 @@ function getArticles(): Article[] {
           isDutch: true,
           locale: 'nl',
         });
-      } catch {
-        // Skip invalid files
-      }
-    }
-  }
-
-  // Load English articles as complementary content
-  if (fs.existsSync(enArticlesDir)) {
-    const files: string[] = fs.readdirSync(enArticlesDir).filter((f: string) => f.endsWith('.json'));
-    for (const file of files) {
-      try {
-        const content = JSON.parse(
-          fs.readFileSync(path.join(enArticlesDir, file), 'utf-8')
-        ) as Record<string, unknown>;
-        const slug: string = file.replace('.json', '');
-
-        // Only add English articles that don't have Dutch equivalents
-        if (!nlSlugs.has(slug)) {
-          articles.push({
-            slug,
-            title: (content.title as string) || 'Untitled',
-            excerpt: (content.excerpt as string) || '',
-            category: translateCategory((content.category as string) || 'General'),
-            publishedAt: (content.publishedAt as string) || new Date().toISOString(),
-            readTime: (content.readTime as number) || 5,
-            featured: (content.featured as boolean) || false,
-            image: (content.image as string | undefined) || SLUG_IMAGES[slug] || CATEGORY_IMAGES[translateCategory((content.category as string))] || 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop',
-            tags: (content.tags as string[]) || [],
-            isDutch: false,
-            locale: 'en',
-          });
-        }
       } catch {
         // Skip invalid files
       }
@@ -264,7 +229,7 @@ interface HeroArticleProps {
 }
 
 function HeroArticle({ article }: HeroArticleProps): JSX.Element {
-  const href: string = article.isDutch ? `/nl/blog/${article.slug}` : `/blog/${article.slug}`;
+  const href: string = `/nl/blog/${article.slug}`;
 
   return (
     <Link
@@ -310,7 +275,7 @@ function HeroArticle({ article }: HeroArticleProps): JSX.Element {
 }
 
 function ArticleCard({ article }: { article: Article }): JSX.Element {
-  const href: string = article.isDutch ? `/nl/blog/${article.slug}` : `/blog/${article.slug}`;
+  const href: string = `/nl/blog/${article.slug}`;
 
   return (
     <Link href={href} className="group block bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-xl transition-all border border-warm-100">

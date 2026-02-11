@@ -111,29 +111,30 @@ const CATEGORIES: Record<string, CategoryConfig> = {
 };
 
 function getArticles(): Article[] {
-  const enArticlesDir: string = path.join(process.cwd(), 'src', 'content', 'articles');
+  const nlBeArticlesDir: string = path.join(process.cwd(), 'src', 'content', 'articles', 'nl-be');
   const articles: Article[] = [];
 
-  if (fs.existsSync(enArticlesDir)) {
-    const files: string[] = fs.readdirSync(enArticlesDir).filter((f: string) => f.endsWith('.json'));
+  // Load Belgian Dutch articles only
+  if (fs.existsSync(nlBeArticlesDir)) {
+    const files: string[] = fs.readdirSync(nlBeArticlesDir).filter((f: string) => f.endsWith('.json'));
     for (const file of files) {
       try {
         const content = JSON.parse(
-          fs.readFileSync(path.join(enArticlesDir, file), 'utf-8')
+          fs.readFileSync(path.join(nlBeArticlesDir, file), 'utf-8')
         ) as Record<string, unknown>;
         const slug: string = file.replace('.json', '');
         articles.push({
           slug,
           title: (content.title as string) || 'Zonder titel',
           excerpt: (content.excerpt as string) || '',
-          category: translateCategory((content.category as string) || 'Algemeen'),
+          category: (content.category as string) || 'Algemeen',
           publishedAt: (content.publishedAt as string) || new Date().toISOString(),
           readTime: (content.readTime as number) || 5,
           featured: (content.featured as boolean) || false,
-          image: (content.image as string | undefined) || SLUG_IMAGES[slug] || CATEGORY_IMAGES[translateCategory((content.category as string))] || 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop',
+          image: (content.image as string | undefined) || SLUG_IMAGES[slug] || CATEGORY_IMAGES[(content.category as string) || ''] || 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop',
           tags: (content.tags as string[]) || [],
-          isDutch: false,
-          locale: 'en',
+          isDutch: true,
+          locale: 'nl-be',
         });
       } catch {
         // Skip invalid files
