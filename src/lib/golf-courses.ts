@@ -146,7 +146,7 @@ export const GOLF_COURSES: GolfCourse[] = [
     priceFrom: 170000,
     propertyCount: 7,
     gradient: 'from-primary-900 to-primary-800',
-    image: 'https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?w=800&q=80',
     tier: 'growing',
   },
   {
@@ -181,7 +181,7 @@ export const GOLF_COURSES: GolfCourse[] = [
     priceFrom: 350000,
     propertyCount: 4,
     gradient: 'from-primary-900 to-primary-800',
-    image: 'https://images.unsplash.com/photo-1600166898405-da9535204843?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1624722610740-71fa0eb2cd5b?w=800&q=80',
     tier: 'premium',
     builders: [
       { name: 'Taylor Wimpey España', slug: 'taylor-wimpey' }
@@ -219,7 +219,7 @@ export const GOLF_COURSES: GolfCourse[] = [
     priceFrom: 195000,
     propertyCount: 3,
     gradient: 'from-primary-900 to-primary-800',
-    image: 'https://images.unsplash.com/photo-1600166898405-da9535204843?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1624722610740-71fa0eb2cd5b?w=800&q=80',
     tier: 'lifestyle',
   },
 
@@ -262,7 +262,7 @@ export const GOLF_COURSES: GolfCourse[] = [
     priceFrom: 150000,
     propertyCount: 14,
     gradient: 'from-primary-900 to-primary-800',
-    image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80',
     tier: 'value',
     builders: [
       { name: 'Contrimar', slug: 'contrimar' }
@@ -373,7 +373,7 @@ export const GOLF_COURSES: GolfCourse[] = [
     priceFrom: 165000,
     propertyCount: 1,
     gradient: 'from-primary-900 to-primary-800',
-    image: 'https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?w=800&q=80',
     tier: 'value',
   },
 
@@ -448,7 +448,7 @@ export const GOLF_COURSES: GolfCourse[] = [
     priceFrom: 120000,
     propertyCount: 3,
     gradient: 'from-primary-900 to-primary-800',
-    image: 'https://images.unsplash.com/photo-1600166898405-da9535204843?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1624722610740-71fa0eb2cd5b?w=800&q=80',
     tier: 'popular',
   },
   {
@@ -523,7 +523,7 @@ export const GOLF_COURSES: GolfCourse[] = [
     priceFrom: 350000,
     propertyCount: 5,
     gradient: 'from-primary-900 to-primary-800',
-    image: 'https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?w=800&q=80',
     tier: 'premium',
   },
 
@@ -605,7 +605,7 @@ export const GOLF_COURSES: GolfCourse[] = [
     priceFrom: 200000,
     propertyCount: 2,
     gradient: 'from-primary-900 to-primary-800',
-    image: 'https://images.unsplash.com/photo-1592919505780-303950717480?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80',
     tier: 'value',
   },
   {
@@ -641,7 +641,7 @@ export const GOLF_COURSES: GolfCourse[] = [
     priceFrom: 300000,
     propertyCount: 3,
     gradient: 'from-primary-900 to-primary-800',
-    image: 'https://images.unsplash.com/photo-1600166898405-da9535204843?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1624722610740-71fa0eb2cd5b?w=800&q=80',
     tier: 'premium',
   },
   {
@@ -710,7 +710,7 @@ export const GOLF_COURSES: GolfCourse[] = [
     priceFrom: 250000,
     propertyCount: 2,
     gradient: 'from-primary-900 to-primary-800',
-    image: 'https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?w=800&q=80',
     tier: 'lifestyle',
   },
   {
@@ -749,7 +749,7 @@ export const GOLF_COURSES: GolfCourse[] = [
     priceFrom: 220000,
     propertyCount: 3,
     gradient: 'from-primary-900 to-primary-800',
-    image: 'https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=800&q=80',
     tier: 'lifestyle',
   },
   {
@@ -786,7 +786,7 @@ export const GOLF_COURSES: GolfCourse[] = [
     priceFrom: 350000,
     propertyCount: 3,
     gradient: 'from-primary-900 to-primary-800',
-    image: 'https://images.unsplash.com/photo-1611374243147-44a702c2d44c?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?w=800&q=80',
     tier: 'premium',
     builders: [
       { name: 'Prime Home Alicante', slug: 'prime-home-alicante' }
@@ -831,7 +831,7 @@ export const GOLF_COURSES: GolfCourse[] = [
     priceFrom: 200000,
     propertyCount: 4,
     gradient: 'from-primary-900 to-primary-800',
-    image: 'https://images.unsplash.com/photo-1600155537657-d064a60f5f12?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1624722610740-71fa0eb2cd5b?w=800&q=80',
     tier: 'value',
   },
   {
@@ -866,7 +866,7 @@ export const GOLF_COURSES: GolfCourse[] = [
     priceFrom: 250000,
     propertyCount: 2,
     gradient: 'from-primary-900 to-primary-800',
-    image: 'https://images.unsplash.com/photo-1547234935-80c7145ec969?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=800&q=80',
     tier: 'unique',
   },
 ];

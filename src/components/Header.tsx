@@ -20,81 +20,175 @@ const CONTACT = {
   whatsapp: 'https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0',
 };
 
-// Navigation structure
+// Navigation structure — keys used for translation lookup
 const NAV_ITEMS = [
   {
-    label: 'Buy',
+    key: 'buy',
     href: '/properties',
     submenu: [
-      { label: 'All Properties', href: '/properties' },
-      { label: 'Costa Blanca', href: '/properties/costa-blanca' },
-      { label: 'Costa Calida (Murcia)', href: '/properties/costa-calida' },
-      { label: 'Key-Ready Homes', href: '/properties/key-ready' },
-      { label: 'Apartments', href: '/properties/apartments' },
-      { label: 'Villas', href: '/properties/villas' },
-      { label: 'Under €300k', href: '/properties/under-300k' },
-      { label: 'Finance & Mortgages', href: '/finance' },
+      { key: 'allProperties', href: '/properties' },
+      { key: 'costaBlanca', href: '/properties/costa-blanca' },
+      { key: 'costaCalida', href: '/properties/costa-calida' },
+      { key: 'keyReady', href: '/properties/key-ready' },
+      { key: 'apartments', href: '/properties/apartments' },
+      { key: 'villas', href: '/properties/villas' },
+      { key: 'under300k', href: '/properties/under-300k' },
+      { key: 'finance', href: '/finance' },
     ],
   },
   {
-    label: 'Developments',
+    key: 'developments',
     href: '/developments',
     submenu: [
-      { label: 'All Developments', href: '/developments' },
-      { label: 'Costa Blanca South', href: '/developments/costa-blanca-south' },
-      { label: 'Costa Blanca North', href: '/developments/costa-blanca-north' },
-      { label: 'Costa Calida (Murcia)', href: '/areas/costa-calida' },
-      { label: 'Our Builders', href: '/builders' },
+      { key: 'allDevelopments', href: '/developments' },
+      { key: 'cbSouth', href: '/developments/costa-blanca-south' },
+      { key: 'cbNorth', href: '/developments/costa-blanca-north' },
+      { key: 'costaCalida', href: '/areas/costa-calida' },
+      { key: 'builders', href: '/builders' },
     ],
   },
   {
-    label: 'Areas',
+    key: 'areas',
     href: '/areas',
     submenu: [
-      { label: 'Costa Blanca South', href: '/areas/costa-blanca-south' },
-      { label: 'Costa Blanca North', href: '/areas/costa-blanca-north' },
-      { label: 'Costa Calida (Murcia)', href: '/areas/costa-calida' },
-      { label: 'Torrevieja', href: '/areas/torrevieja' },
-      { label: 'Orihuela Costa', href: '/areas/orihuela-costa' },
-      { label: 'Jávea', href: '/areas/javea' },
-      { label: 'View All Areas', href: '/areas' },
+      { key: 'cbSouth', href: '/areas/costa-blanca-south' },
+      { key: 'cbNorth', href: '/areas/costa-blanca-north' },
+      { key: 'costaCalida', href: '/areas/costa-calida' },
+      { key: 'torrevieja', href: '/areas/torrevieja' },
+      { key: 'orihuelaCosta', href: '/areas/orihuela-costa' },
+      { key: 'javea', href: '/areas/javea' },
+      { key: 'viewAllAreas', href: '/areas' },
     ],
   },
   {
-    label: 'Luxury',
+    key: 'luxury',
     href: '/luxury',
     submenu: [
-      { label: 'Luxury Collection', href: '/luxury' },
-      { label: 'Villas €800k-€2M', href: '/luxury?maxPrice=2000000' },
-      { label: 'Bespoke €2M+', href: '/luxury?minPrice=2000000' },
-      { label: 'Sea View Properties', href: '/properties?features=sea-view&minPrice=800000' },
-      { label: 'Jávea & Moraira', href: '/luxury?region=north' },
+      { key: 'luxuryCollection', href: '/luxury' },
+      { key: 'villas800k', href: '/luxury?maxPrice=2000000' },
+      { key: 'bespoke2m', href: '/luxury?minPrice=2000000' },
+      { key: 'seaView', href: '/properties?features=sea-view&minPrice=800000' },
+      { key: 'javeaMoraira', href: '/luxury?region=north' },
     ],
   },
   {
-    label: 'Golf',
+    key: 'golf',
     href: '/golf',
     submenu: [
-      { label: 'Golf Properties', href: '/golf' },
-      { label: 'La Finca Golf', href: '/golf/la-finca-golf' },
-      { label: 'Villamartín Golf', href: '/golf/villamartin-golf' },
-      { label: 'Las Ramblas Golf', href: '/golf/las-ramblas-golf' },
-      { label: 'Lo Romero Golf', href: '/golf/lo-romero-golf' },
+      { key: 'golfProperties', href: '/golf' },
+      { key: 'laFinca', href: '/golf/la-finca-golf' },
+      { key: 'villamartin', href: '/golf/villamartin-golf' },
+      { key: 'lasRamblas', href: '/golf/las-ramblas-golf' },
+      { key: 'loRomero', href: '/golf/lo-romero-golf' },
     ],
   },
   {
-    label: 'About',
+    key: 'about',
     href: '/about',
     submenu: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Buyer Guides', href: '/guides' },
-      { label: 'After Sales Services', href: '/after-sales' },
-      { label: 'Finance & Mortgages', href: '/finance' },
-      { label: 'Blog', href: '/blog' },
-      { label: 'Contact', href: '/contact' },
+      { key: 'aboutUs', href: '/about' },
+      { key: 'buyerGuides', href: '/guides' },
+      { key: 'afterSales', href: '/after-sales' },
+      { key: 'finance', href: '/finance' },
+      { key: 'blog', href: '/blog' },
+      { key: 'contact', href: '/contact' },
     ],
   },
 ];
+
+// Translations for all navigation labels per language code
+const NAV_LABELS: Record<string, Record<string, string>> = {
+  en: {
+    buy: 'Buy', allProperties: 'All Properties', costaBlanca: 'Costa Blanca', costaCalida: 'Costa Calida (Murcia)',
+    keyReady: 'Key-Ready Homes', apartments: 'Apartments', villas: 'Villas', under300k: 'Under €300k', finance: 'Finance & Mortgages',
+    developments: 'Developments', allDevelopments: 'All Developments', cbSouth: 'Costa Blanca South', cbNorth: 'Costa Blanca North', builders: 'Our Builders',
+    areas: 'Areas', torrevieja: 'Torrevieja', orihuelaCosta: 'Orihuela Costa', javea: 'Jávea', viewAllAreas: 'View All Areas',
+    luxury: 'Luxury', luxuryCollection: 'Luxury Collection', villas800k: 'Villas €800k-€2M', bespoke2m: 'Bespoke €2M+', seaView: 'Sea View Properties', javeaMoraira: 'Jávea & Moraira',
+    golf: 'Golf', golfProperties: 'Golf Properties', laFinca: 'La Finca Golf', villamartin: 'Villamartín Golf', lasRamblas: 'Las Ramblas Golf', loRomero: 'Lo Romero Golf',
+    about: 'About', aboutUs: 'About Us', buyerGuides: 'Buyer Guides', afterSales: 'After Sales Services', blog: 'Blog', contact: 'Contact',
+    contactUs: 'Contact Us', tagline: 'Your Costa Blanca New Build Property Specialists',
+  },
+  sv: {
+    buy: 'Köp', allProperties: 'Alla bostäder', costaBlanca: 'Costa Blanca', costaCalida: 'Costa Calida (Murcia)',
+    keyReady: 'Inflyttningsklara', apartments: 'Lägenheter', villas: 'Villor', under300k: 'Under €300k', finance: 'Finansiering & Bolån',
+    developments: 'Projekt', allDevelopments: 'Alla projekt', cbSouth: 'Costa Blanca Söder', cbNorth: 'Costa Blanca Norr', builders: 'Våra byggare',
+    areas: 'Områden', torrevieja: 'Torrevieja', orihuelaCosta: 'Orihuela Costa', javea: 'Jávea', viewAllAreas: 'Alla områden',
+    luxury: 'Lyx', luxuryCollection: 'Lyxkollektion', villas800k: 'Villor €800k-€2M', bespoke2m: 'Exklusiva €2M+', seaView: 'Havsutsikt', javeaMoraira: 'Jávea & Moraira',
+    golf: 'Golf', golfProperties: 'Golfbostäder', laFinca: 'La Finca Golf', villamartin: 'Villamartín Golf', lasRamblas: 'Las Ramblas Golf', loRomero: 'Lo Romero Golf',
+    about: 'Om oss', aboutUs: 'Om oss', buyerGuides: 'Köparguider', afterSales: 'Efterservice', blog: 'Blogg', contact: 'Kontakt',
+    contactUs: 'Kontakta oss', tagline: 'Din specialist för nybyggda bostäder på Costa Blanca',
+  },
+  nl: {
+    buy: 'Kopen', allProperties: 'Alle woningen', costaBlanca: 'Costa Blanca', costaCalida: 'Costa Calida (Murcia)',
+    keyReady: 'Instapklaar', apartments: 'Appartementen', villas: "Villa's", under300k: 'Onder €300k', finance: 'Financiering & Hypotheek',
+    developments: 'Projecten', allDevelopments: 'Alle projecten', cbSouth: 'Costa Blanca Zuid', cbNorth: 'Costa Blanca Noord', builders: 'Onze bouwers',
+    areas: 'Gebieden', torrevieja: 'Torrevieja', orihuelaCosta: 'Orihuela Costa', javea: 'Jávea', viewAllAreas: 'Alle gebieden',
+    luxury: 'Luxe', luxuryCollection: 'Luxe collectie', villas800k: "Villa's €800k-€2M", bespoke2m: 'Exclusief €2M+', seaView: 'Zeezicht', javeaMoraira: 'Jávea & Moraira',
+    golf: 'Golf', golfProperties: 'Golfwoningen', laFinca: 'La Finca Golf', villamartin: 'Villamartín Golf', lasRamblas: 'Las Ramblas Golf', loRomero: 'Lo Romero Golf',
+    about: 'Over ons', aboutUs: 'Over ons', buyerGuides: 'Koopgidsen', afterSales: 'Naservice', blog: 'Blog', contact: 'Contact',
+    contactUs: 'Neem contact op', tagline: 'Uw specialist voor nieuwbouwwoningen aan de Costa Blanca',
+  },
+  'nl-be': {
+    buy: 'Kopen', allProperties: 'Alle woningen', costaBlanca: 'Costa Blanca', costaCalida: 'Costa Calida (Murcia)',
+    keyReady: 'Instapklaar', apartments: 'Appartementen', villas: "Villa's", under300k: 'Onder €300k', finance: 'Financiering & Hypotheek',
+    developments: 'Projecten', allDevelopments: 'Alle projecten', cbSouth: 'Costa Blanca Zuid', cbNorth: 'Costa Blanca Noord', builders: 'Onze bouwers',
+    areas: 'Gebieden', torrevieja: 'Torrevieja', orihuelaCosta: 'Orihuela Costa', javea: 'Jávea', viewAllAreas: 'Alle gebieden',
+    luxury: 'Luxe', luxuryCollection: 'Luxe collectie', villas800k: "Villa's €800k-€2M", bespoke2m: 'Exclusief €2M+', seaView: 'Zeezicht', javeaMoraira: 'Jávea & Moraira',
+    golf: 'Golf', golfProperties: 'Golfwoningen', laFinca: 'La Finca Golf', villamartin: 'Villamartín Golf', lasRamblas: 'Las Ramblas Golf', loRomero: 'Lo Romero Golf',
+    about: 'Over ons', aboutUs: 'Over ons', buyerGuides: 'Koopgidsen', afterSales: 'Naservice', blog: 'Blog', contact: 'Contact',
+    contactUs: 'Neem contact op', tagline: 'Uw specialist voor nieuwbouwwoningen aan de Costa Blanca',
+  },
+  fr: {
+    buy: 'Acheter', allProperties: 'Tous les biens', costaBlanca: 'Costa Blanca', costaCalida: 'Costa Calida (Murcia)',
+    keyReady: 'Clé en main', apartments: 'Appartements', villas: 'Villas', under300k: 'Moins de €300k', finance: 'Financement & Prêts',
+    developments: 'Programmes', allDevelopments: 'Tous les programmes', cbSouth: 'Costa Blanca Sud', cbNorth: 'Costa Blanca Nord', builders: 'Nos promoteurs',
+    areas: 'Régions', torrevieja: 'Torrevieja', orihuelaCosta: 'Orihuela Costa', javea: 'Jávea', viewAllAreas: 'Toutes les régions',
+    luxury: 'Luxe', luxuryCollection: 'Collection luxe', villas800k: 'Villas €800k-€2M', bespoke2m: 'Sur mesure €2M+', seaView: 'Vue mer', javeaMoraira: 'Jávea & Moraira',
+    golf: 'Golf', golfProperties: 'Biens golf', laFinca: 'La Finca Golf', villamartin: 'Villamartín Golf', lasRamblas: 'Las Ramblas Golf', loRomero: 'Lo Romero Golf',
+    about: 'À propos', aboutUs: 'À propos', buyerGuides: "Guides d'achat", afterSales: 'Service après-vente', blog: 'Blog', contact: 'Contact',
+    contactUs: 'Contactez-nous', tagline: 'Votre spécialiste en immobilier neuf sur la Costa Blanca',
+  },
+  no: {
+    buy: 'Kjøp', allProperties: 'Alle eiendommer', costaBlanca: 'Costa Blanca', costaCalida: 'Costa Calida (Murcia)',
+    keyReady: 'Innflyttingsklare', apartments: 'Leiligheter', villas: 'Villaer', under300k: 'Under €300k', finance: 'Finansiering & Boliglån',
+    developments: 'Prosjekter', allDevelopments: 'Alle prosjekter', cbSouth: 'Costa Blanca Sør', cbNorth: 'Costa Blanca Nord', builders: 'Våre utbyggere',
+    areas: 'Områder', torrevieja: 'Torrevieja', orihuelaCosta: 'Orihuela Costa', javea: 'Jávea', viewAllAreas: 'Alle områder',
+    luxury: 'Luksus', luxuryCollection: 'Luksuskolleksjon', villas800k: 'Villaer €800k-€2M', bespoke2m: 'Eksklusive €2M+', seaView: 'Havutsikt', javeaMoraira: 'Jávea & Moraira',
+    golf: 'Golf', golfProperties: 'Golfeiendommer', laFinca: 'La Finca Golf', villamartin: 'Villamartín Golf', lasRamblas: 'Las Ramblas Golf', loRomero: 'Lo Romero Golf',
+    about: 'Om oss', aboutUs: 'Om oss', buyerGuides: 'Kjøperguider', afterSales: 'Ettersalgsservice', blog: 'Blogg', contact: 'Kontakt',
+    contactUs: 'Kontakt oss', tagline: 'Din spesialist for nybygg på Costa Blanca',
+  },
+  de: {
+    buy: 'Kaufen', allProperties: 'Alle Immobilien', costaBlanca: 'Costa Blanca', costaCalida: 'Costa Calida (Murcia)',
+    keyReady: 'Schlüsselfertig', apartments: 'Apartments', villas: 'Villen', under300k: 'Unter €300k', finance: 'Finanzierung & Hypothek',
+    developments: 'Projekte', allDevelopments: 'Alle Projekte', cbSouth: 'Costa Blanca Süd', cbNorth: 'Costa Blanca Nord', builders: 'Unsere Bauträger',
+    areas: 'Gebiete', torrevieja: 'Torrevieja', orihuelaCosta: 'Orihuela Costa', javea: 'Jávea', viewAllAreas: 'Alle Gebiete',
+    luxury: 'Luxus', luxuryCollection: 'Luxuskollektion', villas800k: 'Villen €800k-€2M', bespoke2m: 'Exklusiv €2M+', seaView: 'Meerblick', javeaMoraira: 'Jávea & Moraira',
+    golf: 'Golf', golfProperties: 'Golf-Immobilien', laFinca: 'La Finca Golf', villamartin: 'Villamartín Golf', lasRamblas: 'Las Ramblas Golf', loRomero: 'Lo Romero Golf',
+    about: 'Über uns', aboutUs: 'Über uns', buyerGuides: 'Kaufratgeber', afterSales: 'After-Sales-Service', blog: 'Blog', contact: 'Kontakt',
+    contactUs: 'Kontakt', tagline: 'Ihr Spezialist für Neubauimmobilien an der Costa Blanca',
+  },
+  pl: {
+    buy: 'Kup', allProperties: 'Wszystkie nieruchomości', costaBlanca: 'Costa Blanca', costaCalida: 'Costa Calida (Murcia)',
+    keyReady: 'Pod klucz', apartments: 'Apartamenty', villas: 'Wille', under300k: 'Poniżej €300k', finance: 'Finansowanie & Kredyty',
+    developments: 'Inwestycje', allDevelopments: 'Wszystkie inwestycje', cbSouth: 'Costa Blanca Południe', cbNorth: 'Costa Blanca Północ', builders: 'Nasi deweloperzy',
+    areas: 'Regiony', torrevieja: 'Torrevieja', orihuelaCosta: 'Orihuela Costa', javea: 'Jávea', viewAllAreas: 'Wszystkie regiony',
+    luxury: 'Luksus', luxuryCollection: 'Kolekcja luksusowa', villas800k: 'Wille €800k-€2M', bespoke2m: 'Ekskluzywne €2M+', seaView: 'Widok na morze', javeaMoraira: 'Jávea & Moraira',
+    golf: 'Golf', golfProperties: 'Nieruchomości golfowe', laFinca: 'La Finca Golf', villamartin: 'Villamartín Golf', lasRamblas: 'Las Ramblas Golf', loRomero: 'Lo Romero Golf',
+    about: 'O nas', aboutUs: 'O nas', buyerGuides: 'Poradniki kupujących', afterSales: 'Obsługa posprzedażowa', blog: 'Blog', contact: 'Kontakt',
+    contactUs: 'Skontaktuj się', tagline: 'Twój specjalista od nowych nieruchomości na Costa Blanca',
+  },
+  ru: {
+    buy: 'Купить', allProperties: 'Все объекты', costaBlanca: 'Коста Бланка', costaCalida: 'Коста Калида (Мурсия)',
+    keyReady: 'Под ключ', apartments: 'Квартиры', villas: 'Виллы', under300k: 'До €300к', finance: 'Финансирование и ипотека',
+    developments: 'Проекты', allDevelopments: 'Все проекты', cbSouth: 'Коста Бланка Юг', cbNorth: 'Коста Бланка Север', builders: 'Наши застройщики',
+    areas: 'Районы', torrevieja: 'Торревьеха', orihuelaCosta: 'Ориуэла Коста', javea: 'Хавеа', viewAllAreas: 'Все районы',
+    luxury: 'Люкс', luxuryCollection: 'Люкс коллекция', villas800k: 'Виллы €800к-€2М', bespoke2m: 'Эксклюзив €2М+', seaView: 'Вид на море', javeaMoraira: 'Хавеа и Морайра',
+    golf: 'Гольф', golfProperties: 'Гольф-недвижимость', laFinca: 'La Finca Golf', villamartin: 'Villamartín Golf', lasRamblas: 'Las Ramblas Golf', loRomero: 'Lo Romero Golf',
+    about: 'О нас', aboutUs: 'О нас', buyerGuides: 'Гиды покупателя', afterSales: 'Послепродажное обслуживание', blog: 'Блог', contact: 'Контакты',
+    contactUs: 'Связаться', tagline: 'Ваш специалист по новостройкам на Коста Бланке',
+  },
+};
 
 // Language configurations — nl-be MUST come before nl so prefix detection works correctly
 const LANGUAGES = [
@@ -264,6 +358,15 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const langPrefix = useCurrentLangPrefix();
+  const pathname = usePathname();
+
+  // Detect current language code for translations
+  const currentLangCode = LANGUAGES.filter(l => l.prefix)
+    .sort((a, b) => b.prefix.length - a.prefix.length)
+    .find(l => pathname.startsWith(l.prefix))?.code || 'en';
+
+  // Get label for a nav key in current language
+  const t = (key: string) => NAV_LABELS[currentLangCode]?.[key] || NAV_LABELS.en[key] || key;
 
   // Prepend current language prefix to internal links
   const localizeHref = (href: string) => {
@@ -280,7 +383,7 @@ export default function Header() {
       {/* Top bar with contact info */}
       <div className="bg-primary-900 text-white py-2 px-4 text-sm hidden md:block">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <span className="text-warm-300">Your Costa Blanca New Build Property Specialists</span>
+          <span className="text-warm-300">{t('tagline')}</span>
           <div className="flex items-center gap-4">
             <a href={`tel:${CONTACT.phone}`} className="hover:text-accent-500 transition-colors flex items-center gap-1">
               <span>📞</span> {CONTACT.phone}
@@ -313,12 +416,12 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {NAV_ITEMS.map((item) => (
-              <div key={item.label} className="relative group">
+              <div key={item.key} className="relative group">
                 <Link
                   href={localizeHref(item.href)}
                   className="px-4 py-2 text-warm-700 hover:text-primary-900 font-medium transition-colors flex items-center gap-1"
                 >
-                  {item.label}
+                  {t(item.key)}
                   {item.submenu && (
                     <svg className="w-4 h-4 text-warm-500 group-hover:text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -335,7 +438,7 @@ export default function Header() {
                           href={localizeHref(subItem.href)}
                           className="block px-4 py-2 text-warm-700 hover:bg-warm-100 hover:text-primary-900 transition-colors"
                         >
-                          {subItem.label}
+                          {t(subItem.key)}
                         </Link>
                       ))}
                     </div>
@@ -359,7 +462,7 @@ export default function Header() {
               href={localizeHref('/contact')}
               className="flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white px-4 py-2 rounded-md font-medium transition-colors text-sm"
             >
-              Contact Us
+              {t('contactUs')}
             </Link>
           </div>
 
@@ -385,15 +488,15 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-warm-300 pt-4">
             {NAV_ITEMS.map((item) => (
-              <div key={item.label} className="border-b border-warm-200 last:border-0">
+              <div key={item.key} className="border-b border-warm-200 last:border-0">
                 <button
                   className="w-full flex items-center justify-between py-3 text-warm-800 font-medium"
-                  onClick={() => setOpenSubmenu(openSubmenu === item.label ? null : item.label)}
+                  onClick={() => setOpenSubmenu(openSubmenu === item.key ? null : item.key)}
                 >
-                  {item.label}
+                  {t(item.key)}
                   {item.submenu && (
                     <svg
-                      className={`w-4 h-4 transition-transform ${openSubmenu === item.label ? 'rotate-180' : ''}`}
+                      className={`w-4 h-4 transition-transform ${openSubmenu === item.key ? 'rotate-180' : ''}`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -402,7 +505,7 @@ export default function Header() {
                     </svg>
                   )}
                 </button>
-                {item.submenu && openSubmenu === item.label && (
+                {item.submenu && openSubmenu === item.key && (
                   <div className="pl-4 pb-3">
                     {item.submenu.map((subItem) => (
                       <Link
@@ -411,7 +514,7 @@ export default function Header() {
                         className="block py-2 text-warm-600 hover:text-primary-900"
                         onClick={() => setMobileMenuOpen(false)}
                       >
-                        {subItem.label}
+                        {t(subItem.key)}
                       </Link>
                     ))}
                   </div>
