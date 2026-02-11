@@ -2,6 +2,7 @@
 
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import { useLocalizeHref } from '@/lib/useLocale';
 
 interface PropertyFiltersProps {
   towns: string[];
@@ -12,6 +13,7 @@ interface PropertyFiltersProps {
 export default function PropertyFilters({ towns, types, bedOptions }: PropertyFiltersProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const localizeHref = useLocalizeHref();
   
   const currentTown = searchParams.get('town') || '';
   const currentBeds = searchParams.get('beds') || '';
@@ -75,7 +77,7 @@ export default function PropertyFilters({ towns, types, bedOptions }: PropertyFi
 
       {hasFilters && (
         <Link
-          href="/properties"
+          href={localizeHref('/properties')}
           className="px-4 py-2 text-sm text-red-600 hover:text-red-700 font-medium hover:bg-red-50 rounded-lg transition-colors"
         >
           ✕ Clear

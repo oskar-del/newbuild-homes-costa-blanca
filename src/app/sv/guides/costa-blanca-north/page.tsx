@@ -367,7 +367,7 @@ export default function CostaBancaNorthSvGuide() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/guides"
+                href="/sv/guides"
                 className="bg-accent-500 hover:bg-accent-600 text-white font-medium px-8 py-3 rounded-sm transition-colors inline-flex items-center gap-2"
               >
                 Se Alla Guider (Engelska)

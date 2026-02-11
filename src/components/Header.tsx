@@ -96,12 +96,12 @@ const NAV_ITEMS = [
   },
 ];
 
-// Language configurations
+// Language configurations — nl-be MUST come before nl so prefix detection works correctly
 const LANGUAGES = [
   { code: 'en', prefix: '', label: 'English', short: 'EN', flag: { bg: '#012169', type: 'uk' } },
   { code: 'sv', prefix: '/sv', label: 'Svenska', short: 'SV', flag: { bg: '#006AA7', type: 'se' } },
-  { code: 'nl', prefix: '/nl', label: 'Nederlands', short: 'NL', flag: { bg: '#21468B', type: 'nl' } },
   { code: 'nl-be', prefix: '/nl-be', label: 'Vlaams', short: 'BE', flag: { bg: '#000', type: 'be' } },
+  { code: 'nl', prefix: '/nl', label: 'Nederlands', short: 'NL', flag: { bg: '#21468B', type: 'nl' } },
   { code: 'fr', prefix: '/fr', label: 'Fran\u00e7ais', short: 'FR', flag: { bg: '#002395', type: 'fr' } },
   { code: 'no', prefix: '/no', label: 'Norsk', short: 'NO', flag: { bg: '#BA0C2F', type: 'no' } },
   { code: 'de', prefix: '/de', label: 'Deutsch', short: 'DE', flag: { bg: '#000', type: 'de' } },
@@ -252,9 +252,28 @@ function LanguageSwitcher({ className = '' }: { className?: string }) {
   );
 }
 
+// Detect current language prefix from pathname
+function useCurrentLangPrefix() {
+  const pathname = usePathname();
+  // Check longer prefixes first (nl-be before nl)
+  const sorted = LANGUAGES.filter(l => l.prefix).sort((a, b) => b.prefix.length - a.prefix.length);
+  return sorted.find(l => pathname.startsWith(l.prefix))?.prefix || '';
+}
+
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+  const langPrefix = useCurrentLangPrefix();
+
+  // Prepend current language prefix to internal links
+  const localizeHref = (href: string) => {
+    if (!langPrefix) return href;
+    // Don't prefix external links or anchors
+    if (href.startsWith('http') || href.startsWith('#') || href.startsWith('tel:') || href.startsWith('mailto:')) return href;
+    // Root path: /sv instead of /sv/
+    if (href === '/') return langPrefix;
+    return `${langPrefix}${href}`;
+  };
 
   return (
     <header className="bg-warm-50 border-b border-warm-300 sticky top-0 z-50">
@@ -280,7 +299,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo - Clean round logo only */}
-          <Link href="/" className="flex items-center">
+          <Link href={localizeHref('/')} className="flex items-center">
             <Image
               src="/images/logo/logo-round.png"
               alt="New Build Homes Costa Blanca"
@@ -296,7 +315,7 @@ export default function Header() {
             {NAV_ITEMS.map((item) => (
               <div key={item.label} className="relative group">
                 <Link
-                  href={item.href}
+                  href={localizeHref(item.href)}
                   className="px-4 py-2 text-warm-700 hover:text-primary-900 font-medium transition-colors flex items-center gap-1"
                 >
                   {item.label}
@@ -313,7 +332,7 @@ export default function Header() {
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.href}
-                          href={subItem.href}
+                          href={localizeHref(subItem.href)}
                           className="block px-4 py-2 text-warm-700 hover:bg-warm-100 hover:text-primary-900 transition-colors"
                         >
                           {subItem.label}
@@ -337,7 +356,7 @@ export default function Header() {
               <span>💬</span> WhatsApp
             </a>
             <Link
-              href="/contact"
+              href={localizeHref('/contact')}
               className="flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white px-4 py-2 rounded-md font-medium transition-colors text-sm"
             >
               Contact Us
@@ -388,7 +407,7 @@ export default function Header() {
                     {item.submenu.map((subItem) => (
                       <Link
                         key={subItem.href}
-                        href={subItem.href}
+                        href={localizeHref(subItem.href)}
                         className="block py-2 text-warm-600 hover:text-primary-900"
                         onClick={() => setMobileMenuOpen(false)}
                       >

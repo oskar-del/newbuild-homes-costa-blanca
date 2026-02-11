@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useLocalizeHref } from '@/lib/useLocale';
 
 interface PriceData {
   type: string;
@@ -52,6 +53,7 @@ export default function InvestmentAnalysis({
   marketInsight,
   marketContext,
 }: InvestmentAnalysisProps) {
+  const localizeHref = useLocalizeHref();
   const formatCurrency = (value: number) =>
     new Intl.NumberFormat('en-GB', {
       style: 'currency',
@@ -218,7 +220,7 @@ export default function InvestmentAnalysis({
             </div>
 
             <Link
-              href="/consultation?subject=investment"
+              href={localizeHref('/consultation?subject=investment')}
               className="block w-full bg-white text-accent-600 font-semibold text-center py-3 rounded-lg mt-6 hover:bg-warm-50 transition-colors"
             >
               Get Investment Analysis
@@ -296,7 +298,7 @@ export default function InvestmentAnalysis({
         {/* CTA */}
         <div className="mt-12 text-center">
           <Link
-            href="/consultation"
+            href={localizeHref('/consultation')}
             className="inline-flex items-center gap-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

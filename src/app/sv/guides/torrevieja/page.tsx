@@ -207,7 +207,7 @@ export default function TorreviejaSvGuide() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                href="/guides/torrevieja"
+                href="/sv/guides/torrevieja"
                 className="bg-accent-500 hover:bg-accent-600 text-white font-medium px-8 py-3 rounded-sm transition-colors inline-flex items-center gap-2"
               >
                 Läs Fullständig Guide (Engelska)

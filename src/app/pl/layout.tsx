@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Nybyggen Costa Blanca | Moderna Bostäder i Spanien',
-    template: '%s | Nybyggen Costa Blanca',
+    default: 'Nowe Budowy Costa Blanca | Nowoczesne Nieruchomości w Hiszpanii',
+    template: '%s | Nowe Budowy Costa Blanca',
   },
-  description: 'Hitta din drömbostad på Costa Blanca, Spanien. Villor, lägenheter och radhus från pålitliga byggherrar.',
+  description: 'Znajdź wymarzoną nieruchomość na Costa Blanca w Hiszpanii. Wille, apartamenty i domy szeregowe od sprawdzonych deweloperów.',
   alternates: {
-    canonical: 'https://newbuildhomescostablanca.com/sv',
+    canonical: 'https://newbuildhomescostablanca.com/pl',
     languages: {
       'en': 'https://newbuildhomescostablanca.com',
       'sv': 'https://newbuildhomescostablanca.com/sv',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function SwedishLayout({
+export default function PolishLayout({
   children,
 }: {
   children: React.ReactNode;

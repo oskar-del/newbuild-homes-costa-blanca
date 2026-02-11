@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 // Refined Design System
 const BRAND = {
@@ -15,8 +18,25 @@ const CONTACT = {
   googleReviews: 'https://www.google.com/search?q=hansson+hertzell+reviews',
 };
 
+// Language prefixes — nl-be before nl (longer prefix first)
+const LANG_PREFIXES = ['/nl-be', '/sv', '/nl', '/fr', '/no', '/de', '/pl', '/ru'];
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const pathname = usePathname();
+
+  // Detect current language prefix from pathname (longest match first)
+  const langPrefix = LANG_PREFIXES
+    .sort((a, b) => b.length - a.length)
+    .find(p => pathname.startsWith(p)) || '';
+
+  // Prepend language prefix to internal links
+  const l = (href: string) => {
+    if (!langPrefix) return href;
+    if (href.startsWith('http') || href.startsWith('#') || href.startsWith('tel:') || href.startsWith('mailto:')) return href;
+    if (href === '/') return langPrefix;
+    return `${langPrefix}${href}`;
+  };
 
   return (
     <>
@@ -31,7 +51,7 @@ export default function Footer() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/properties"
+              href={l('/properties')}
               className="inline-flex items-center justify-center gap-2 bg-white text-primary-900 font-medium px-8 py-4 rounded-md hover:bg-warm-100 transition-colors"
             >
               View All Properties
@@ -64,7 +84,7 @@ export default function Footer() {
 
             {/* Brand */}
             <div className="lg:col-span-1">
-              <Link href="/" className="flex items-center gap-3 mb-4">
+              <Link href={l('/')} className="flex items-center gap-3 mb-4">
                 <Image
                   src="/images/logo/logo-round.png"
                   alt="New Build Homes Costa Blanca"
@@ -98,32 +118,32 @@ export default function Footer() {
               <h3 className="font-medium mb-4 text-accent-500">Costa Blanca South</h3>
               <ul className="space-y-2 text-warm-400 text-sm">
                 <li>
-                  <Link href="/areas/torrevieja" className="hover:text-white transition-colors">
+                  <Link href={l('/areas/torrevieja')} className="hover:text-white transition-colors">
                     Torrevieja
                   </Link>
                 </li>
                 <li>
-                  <Link href="/areas/orihuela-costa" className="hover:text-white transition-colors">
+                  <Link href={l('/areas/orihuela-costa')} className="hover:text-white transition-colors">
                     Orihuela Costa
                   </Link>
                 </li>
                 <li>
-                  <Link href="/areas/villamartin" className="hover:text-white transition-colors">
+                  <Link href={l('/areas/villamartin')} className="hover:text-white transition-colors">
                     Villamartin
                   </Link>
                 </li>
                 <li>
-                  <Link href="/areas/guardamar" className="hover:text-white transition-colors">
+                  <Link href={l('/areas/guardamar')} className="hover:text-white transition-colors">
                     Guardamar del Segura
                   </Link>
                 </li>
                 <li>
-                  <Link href="/inland" className="hover:text-white transition-colors">
+                  <Link href={l('/inland')} className="hover:text-white transition-colors">
                     Inland Properties
                   </Link>
                 </li>
                 <li>
-                  <Link href="/golf" className="hover:text-white transition-colors">
+                  <Link href={l('/golf')} className="hover:text-white transition-colors">
                     Golf Properties
                   </Link>
                 </li>
@@ -135,32 +155,32 @@ export default function Footer() {
               <h3 className="font-medium mb-4 text-accent-500">Costa Blanca North</h3>
               <ul className="space-y-2 text-warm-400 text-sm">
                 <li>
-                  <Link href="/areas/javea" className="hover:text-white transition-colors">
+                  <Link href={l('/areas/javea')} className="hover:text-white transition-colors">
                     Javea / Xabia
                   </Link>
                 </li>
                 <li>
-                  <Link href="/areas/moraira" className="hover:text-white transition-colors">
+                  <Link href={l('/areas/moraira')} className="hover:text-white transition-colors">
                     Moraira
                   </Link>
                 </li>
                 <li>
-                  <Link href="/areas/calpe" className="hover:text-white transition-colors">
+                  <Link href={l('/areas/calpe')} className="hover:text-white transition-colors">
                     Calpe
                   </Link>
                 </li>
                 <li>
-                  <Link href="/areas/altea" className="hover:text-white transition-colors">
+                  <Link href={l('/areas/altea')} className="hover:text-white transition-colors">
                     Altea
                   </Link>
                 </li>
                 <li>
-                  <Link href="/areas/denia" className="hover:text-white transition-colors">
+                  <Link href={l('/areas/denia')} className="hover:text-white transition-colors">
                     Denia
                   </Link>
                 </li>
                 <li>
-                  <Link href="/areas/benidorm" className="hover:text-white transition-colors">
+                  <Link href={l('/areas/benidorm')} className="hover:text-white transition-colors">
                     Benidorm
                   </Link>
                 </li>
@@ -172,32 +192,32 @@ export default function Footer() {
               <h3 className="font-medium mb-4 text-accent-500">Buyer Guides</h3>
               <ul className="space-y-2 text-warm-400 text-sm">
                 <li>
-                  <Link href="/guides/buying-process" className="hover:text-white transition-colors">
+                  <Link href={l('/guides/buying-process')} className="hover:text-white transition-colors">
                     Buying Process
                   </Link>
                 </li>
                 <li>
-                  <Link href="/guides/nie-number" className="hover:text-white transition-colors">
+                  <Link href={l('/guides/nie-number')} className="hover:text-white transition-colors">
                     NIE Number Guide
                   </Link>
                 </li>
                 <li>
-                  <Link href="/guides/mortgages" className="hover:text-white transition-colors">
+                  <Link href={l('/guides/mortgages')} className="hover:text-white transition-colors">
                     Spanish Mortgages
                   </Link>
                 </li>
                 <li>
-                  <Link href="/guides/costs-taxes" className="hover:text-white transition-colors">
+                  <Link href={l('/guides/costs-taxes')} className="hover:text-white transition-colors">
                     Taxes &amp; Costs
                   </Link>
                 </li>
                 <li>
-                  <Link href="/guides/tourist-rental-license" className="hover:text-white transition-colors">
+                  <Link href={l('/guides/tourist-rental-license')} className="hover:text-white transition-colors">
                     Tourist Rental License
                   </Link>
                 </li>
                 <li>
-                  <Link href="/after-sales" className="hover:text-white transition-colors">
+                  <Link href={l('/after-sales')} className="hover:text-white transition-colors">
                     After Sales Services
                   </Link>
                 </li>
@@ -237,7 +257,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <Link href="/contact" className="hover:text-white transition-colors flex items-center gap-2">
+                  <Link href={l('/contact')} className="hover:text-white transition-colors flex items-center gap-2">
                     Contact Form
                   </Link>
                 </li>
@@ -255,13 +275,13 @@ export default function Footer() {
           <div className="border-t border-primary-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-warm-500 text-sm">
             <p>&copy; {currentYear} New Build Homes Costa Blanca. All rights reserved.</p>
             <div className="flex gap-6">
-              <Link href="/privacy" className="hover:text-white transition-colors">
+              <Link href={l('/privacy')} className="hover:text-white transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-white transition-colors">
+              <Link href={l('/terms')} className="hover:text-white transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/sitemap" className="hover:text-white transition-colors">
+              <Link href={l('/sitemap')} className="hover:text-white transition-colors">
                 Sitemap
               </Link>
             </div>

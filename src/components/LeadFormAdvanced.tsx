@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import Link from 'next/link';
+import { useLocalizeHref } from '@/lib/useLocale';
 
 interface LeadFormAdvancedProps {
   title?: string;
@@ -50,6 +51,7 @@ export default function LeadFormAdvanced({
   ctaText = 'Send My Request',
   source,
 }: LeadFormAdvancedProps) {
+  const localizeHref = useLocalizeHref();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -411,7 +413,7 @@ export default function LeadFormAdvanced({
         {/* Privacy */}
         <p className={`text-xs text-center ${isHero ? 'text-white/40' : 'text-warm-400'}`}>
           By submitting, you agree to our{' '}
-          <Link href="/privacy" className="underline hover:no-underline">privacy policy</Link>.
+          <Link href={localizeHref('/privacy')} className="underline hover:no-underline">privacy policy</Link>.
           We'll never share your data.
         </p>
       </form>

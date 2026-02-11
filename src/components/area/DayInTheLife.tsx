@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useLocalizeHref } from '@/lib/useLocale';
 
 interface TimelineItem {
   time: string;
@@ -40,6 +41,7 @@ export default function DayInTheLife({
   ctaText = 'Find Your Home Here',
   ctaLink = '/developments',
 }: DayInTheLifeProps) {
+  const localizeHref = useLocalizeHref();
   const timelineRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -217,7 +219,7 @@ export default function DayInTheLife({
             {/* Quick Actions */}
             <div className="mt-6 space-y-3">
               <Link
-                href="/consultation"
+                href={localizeHref('/consultation')}
                 className="flex items-center gap-3 p-4 bg-warm-50 rounded-xl hover:bg-warm-100 transition-colors"
               >
                 <span className="text-2xl">📅</span>

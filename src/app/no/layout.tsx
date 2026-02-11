@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Nybyggen Costa Blanca | Moderna Bostäder i Spanien',
-    template: '%s | Nybyggen Costa Blanca',
+    default: 'Nybygg Costa Blanca | Moderne Boliger i Spania',
+    template: '%s | Nybygg Costa Blanca',
   },
-  description: 'Hitta din drömbostad på Costa Blanca, Spanien. Villor, lägenheter och radhus från pålitliga byggherrar.',
+  description: 'Finn din drømmebolig på Costa Blanca, Spania. Villaer, leiligheter og rekkehus fra pålitlige utbyggere.',
   alternates: {
-    canonical: 'https://newbuildhomescostablanca.com/sv',
+    canonical: 'https://newbuildhomescostablanca.com/no',
     languages: {
       'en': 'https://newbuildhomescostablanca.com',
       'sv': 'https://newbuildhomescostablanca.com/sv',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function SwedishLayout({
+export default function NorwegianLayout({
   children,
 }: {
   children: React.ReactNode;

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useLocalizeHref } from '@/lib/useLocale';
 
 interface ConsultationFormProps {
   title?: string;
@@ -29,6 +30,7 @@ export default function ConsultationForm({
   propertyInterest,
   variant = 'default'
 }: ConsultationFormProps) {
+  const localizeHref = useLocalizeHref();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -345,6 +347,7 @@ export default function ConsultationForm({
 
 // Export a compact inline version for articles
 export function InlineConsultationCTA() {
+  const localizeHref = useLocalizeHref();
   return (
     <div className="bg-gradient-to-r from-accent-500 to-accent-600 rounded-xl p-6 my-8">
       <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -354,7 +357,7 @@ export function InlineConsultationCTA() {
         </div>
         <div className="flex flex-col sm:flex-row gap-3">
           <a
-            href="/consultation"
+            href={localizeHref('/consultation')}
             className="inline-flex items-center justify-center gap-2 bg-white hover:bg-warm-50 text-accent-600 px-6 py-3 rounded-lg font-semibold transition-colors"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

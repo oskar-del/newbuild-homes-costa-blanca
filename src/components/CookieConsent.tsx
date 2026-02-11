@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useLocalizeHref } from '@/lib/useLocale';
 
 export default function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false);
+  const localizeHref = useLocalizeHref();
 
   useEffect(() => {
     // Check if user has already made a choice
@@ -39,7 +41,7 @@ export default function CookieConsent() {
             <p className="text-sm text-warm-700">
               We use cookies to improve your experience on our site. Essential cookies are necessary for the site to function.
               Analytics cookies help us understand how you use our site.{' '}
-              <Link href="/privacy" className="text-accent-600 hover:underline">
+              <Link href={localizeHref('/privacy')} className="text-accent-600 hover:underline">
                 Read our Privacy Policy
               </Link>
             </p>
