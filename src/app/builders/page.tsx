@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllBuilders, getDevelopmentStats } from '@/lib/development-service';
-import { breadcrumbSchema, toJsonLd } from '@/lib/schema';
+import { breadcrumbSchema, faqSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Property Developers Costa Blanca | 100+ Trusted Builders',
@@ -75,11 +75,44 @@ export default async function BuildersPage() {
     { name: 'Builders', url: 'https://newbuildhomescostablanca.com/builders/' },
   ]);
 
+  // FAQ data for schema and page
+  const faqs = [
+    {
+      question: 'How do you vet property developers in Costa Blanca?',
+      answer: 'We evaluate every builder on their track record, financial stability, construction quality, delivery timelines, and after-sales service. We visit completed projects, speak with previous buyers, and verify that all building licences and insurance are in place before recommending any developer to our clients.',
+    },
+    {
+      question: 'Is it cheaper to buy directly from a developer or through an agent?',
+      answer: 'In Spain, new build prices are set by the developer and are the same whether you buy directly or through an agent like us. The developer pays our commission, so our service is completely free for buyers. You get the same price plus full buyer support, legal guidance, and multilingual assistance at no extra cost.',
+    },
+    {
+      question: 'What is the difference between major and established builders?',
+      answer: 'Major builders typically have 5 or more active developments across multiple regions, with hundreds of units under construction. Established builders have 2-4 active projects and often specialise in specific areas or property types. Both categories have proven track records — the distinction helps buyers understand the scale and focus of each developer.',
+    },
+    {
+      question: 'Do all builders offer payment plans for off-plan properties?',
+      answer: 'Most developers in Costa Blanca offer structured payment plans for off-plan purchases. A typical arrangement involves a reservation fee (€3,000–€10,000), followed by 20-30% on signing the purchase contract, staged payments during construction, and the remaining balance on completion. Each builder has their own terms, and we help negotiate the best payment structure for your situation.',
+    },
+    {
+      question: 'What warranty do new build properties in Spain come with?',
+      answer: 'Spanish law (Ley de Ordenación de la Edificación) requires all new builds to carry a 10-year structural warranty, a 3-year warranty on habitability issues (waterproofing, insulation), and a 1-year warranty on finishing defects. Developers must have a decenal insurance policy in place before selling. We ensure all our builders comply with these legal requirements.',
+    },
+    {
+      question: 'Can I visit builder showrooms and construction sites?',
+      answer: 'Yes, we organise free viewing trips to Costa Blanca where you can visit multiple builder showrooms, completed properties, and active construction sites. We provide transport, translation, and expert guidance throughout. Contact us to arrange a personalised viewing itinerary tailored to your budget and preferences.',
+    },
+  ];
+  const faqJsonLd = faqSchema(faqs);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: toJsonLd(faqJsonLd) }}
       />
 
       <main className="min-h-screen bg-warm-50">
@@ -416,6 +449,87 @@ export default async function BuildersPage() {
                   From first viewing to key handover, we guide you through every step of buying from a Spanish developer.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* EDITORIAL: HOW WE SELECT BUILDERS */}
+        <section className="py-14 bg-white border-t border-warm-200">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="text-center mb-8">
+              <div className="flex items-center justify-center gap-4 mb-3">
+                <div className="w-10 h-px bg-accent-500" />
+                <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
+                  Our Process
+                </span>
+                <div className="w-10 h-px bg-accent-500" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-light text-primary-900">
+                How We Select <span className="font-semibold">Trusted Builders</span>
+              </h2>
+            </div>
+
+            <div className="prose prose-warm max-w-none text-warm-700 leading-relaxed space-y-4">
+              <p>
+                Choosing the right developer is one of the most important decisions when buying a new build property in Spain. Unlike resale purchases, you&apos;re trusting a builder to deliver a home that may not exist yet — and the stakes are high. That&apos;s why we personally vet every developer we work with before recommending them to our clients.
+              </p>
+              <p>
+                Our due diligence process covers five key areas: <strong>financial stability</strong> (we verify the developer has sufficient funding and bank guarantees to complete the project), <strong>construction quality</strong> (we visit completed projects and speak with previous buyers), <strong>delivery track record</strong> (we check whether past projects were completed on time and to specification), <strong>legal compliance</strong> (all building licences, insurance, and bank guarantee documentation must be in order), and <strong>after-sales service</strong> (we assess how the builder handles snagging lists and warranty claims).
+              </p>
+              <p>
+                The Costa Blanca property market has {builders.length}+ active developers, ranging from major national house builders like TM Grupo Inmobiliario and Grupo Presto with dozens of simultaneous developments, to smaller local specialists who focus on bespoke villas in specific towns. Both categories offer excellent quality — the right choice depends on your budget, location preference, and whether you want a standardised product or something more personalised.
+              </p>
+              <p>
+                Working with us gives you access to every builder&apos;s portfolio at the same price as buying direct. In Spain, new build prices are fixed by the developer — agents don&apos;t add a markup. The developer pays our commission, which means you get free buyer support, contract review, legal guidance, and multilingual assistance without paying a cent more than you would going direct.
+              </p>
+            </div>
+
+            {/* Quick links to related pages */}
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/developments" className="text-sm bg-warm-100 hover:bg-accent-100 text-primary-900 hover:text-accent-700 px-4 py-2 rounded-full border border-warm-200 hover:border-accent-300 transition-all">
+                Browse All Developments
+              </Link>
+              <Link href="/developments/costa-blanca-north" className="text-sm bg-warm-100 hover:bg-accent-100 text-primary-900 hover:text-accent-700 px-4 py-2 rounded-full border border-warm-200 hover:border-accent-300 transition-all">
+                North Developments
+              </Link>
+              <Link href="/guides/buying-process" className="text-sm bg-warm-100 hover:bg-accent-100 text-primary-900 hover:text-accent-700 px-4 py-2 rounded-full border border-warm-200 hover:border-accent-300 transition-all">
+                Buying Process Guide
+              </Link>
+              <Link href="/blog/snagging-inspection-spain-new-build" className="text-sm bg-warm-100 hover:bg-accent-100 text-primary-900 hover:text-accent-700 px-4 py-2 rounded-full border border-warm-200 hover:border-accent-300 transition-all">
+                Snagging Inspections
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ SECTION */}
+        <section className="py-14 bg-warm-50 border-t border-warm-200">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-light text-primary-900">
+                Frequently Asked <span className="font-semibold">Questions</span>
+              </h2>
+            </div>
+
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <details
+                  key={index}
+                  className="group bg-white rounded-sm border border-warm-200 overflow-hidden"
+                >
+                  <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-warm-50 transition-colors">
+                    <h3 className="font-medium text-primary-900 pr-4 text-left">
+                      {faq.question}
+                    </h3>
+                    <svg className="w-5 h-5 text-warm-400 flex-shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="px-5 pb-5 text-warm-600 leading-relaxed border-t border-warm-100 pt-4">
+                    {faq.answer}
+                  </div>
+                </details>
+              ))}
             </div>
           </div>
         </section>
