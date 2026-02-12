@@ -1,16 +1,16 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
+import { fetchInlandProperties, formatPrice, ParsedProperty, REGIONS } from '@/lib/xml-parser';
 import { breadcrumbSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Propriétés Intérieures Costa Blanca | Villages Authentiques',
-  description: 'Découvrez des maisons neuves dans les charmants villages intérieurs de la Costa Blanca avec authenticité espagnole et excellent rapport qualité-prix.',
+  title: 'Propriétés à l\'intérieur des terres Costa Blanca | Nouvelles Constructions Loin de la Côte',
+  description: 'Découvrez les propriétés de nouvelle construction à l\'intérieur des terres de Costa Blanca et Costa Calida. Plus d\'espace, meilleure valeur et vie espagnole authentique dans des villes comme Algorfa, Rojales, Polop et plus encore.',
   openGraph: {
-    title: 'Propriétés Intérieures Costa Blanca | Villages Villageois Espagnols',
-    description: 'Maisons neuves dans les plus beaux villages intérieurs avec vie authentique espagnole.',
+    title: 'Propriétés à l\'intérieur des terres Costa Blanca',
+    description: 'Maisons neuves à l\'intérieur des terres de Costa Blanca. Plus d\'espace, meilleure valeur, Espagne authentique.',
     type: 'website',
-    url: 'https://newbuildhomescostablanca.com/fr/inland',
-    siteName: 'Maisons Neuves Costa Blanca',
   },
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/fr/inland',
@@ -21,115 +21,514 @@ export const metadata: Metadata = {
       'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/inland',
       'fr': 'https://newbuildhomescostablanca.com/fr/inland',
       'no': 'https://newbuildhomescostablanca.com/no/inland',
+      'de': 'https://newbuildhomescostablanca.com/de/inland',
+      'pl': 'https://newbuildhomescostablanca.com/pl/inland',
+      'ru': 'https://newbuildhomescostablanca.com/ru/inland',
       'x-default': 'https://newbuildhomescostablanca.com/inland',
     },
   },
 };
 
-export default function FRInlandPage() {
+const CONTACT = {
+  whatsapp: 'https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0',
+  phone: '+34 634 044 970',
+};
+
+// Property Card for inland properties
+function PropertyCard({ property }: { property: ParsedProperty }) {
+  const mainImage = property.images?.[0] || '/images/placeholder-property.jpg';
+
+  return (
+    <Link
+      href={`/properties/${property.ref}`}
+      className="group block bg-white rounded-sm border border-warm-200 overflow-hidden hover:shadow-xl hover:border-accent-500 transition-all"
+    >
+      <div className="relative aspect-[4/3] overflow-hidden">
+        <Image
+          src={mainImage}
+          alt={`${property.propertyType} in ${property.town}`}
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-700"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+        {/* Town badge */}
+        <div className="absolute top-3 left-3">
+          <span className="bg-primary-900/80 text-white text-xs font-medium px-2 py-1 rounded-sm">
+            {property.town}
+          </span>
+        </div>
+
+        {/* Price */}
+        <div className="absolute bottom-3 left-3">
+          <span className="text-white font-semibold text-lg">
+            {property.price ? formatPrice(property.price) : 'POA'}
+          </span>
+        </div>
+      </div>
+
+      <div className="p-4">
+        <h3 className="font-semibold text-primary-900 mb-2 line-clamp-1 group-hover:text-accent-600 transition-colors">
+          {(property as any).aiContent?.title || property.title || `${property.propertyType} in ${property.town}`}
+        </h3>
+
+        <div className="flex items-center gap-4 text-warm-600 text-sm mb-3">
+          {property.bedrooms && (
+            <span className="flex items-center gap-1">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+              {property.bedrooms} chambres
+            </span>
+          )}
+          {property.bathrooms && (
+            <span className="flex items-center gap-1">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10v11M20 10v11" />
+              </svg>
+              {property.bathrooms} salles de bain
+            </span>
+          )}
+          {property.size && (
+            <span className="flex items-center gap-1">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+              </svg>
+              {property.size}m²
+            </span>
+          )}
+        </div>
+
+        <p className="text-sm text-warm-500">{property.propertyType}</p>
+      </div>
+    </Link>
+  );
+}
+
+// WhatsApp CTA
+function WhatsAppCTA() {
+  return (
+    <a
+      href={CONTACT.whatsapp}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all group"
+      aria-label="Chat on WhatsApp"
+    >
+      <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+  );
+}
+
+export default async function InlandPropertiesPage() {
+  const properties = await fetchInlandProperties();
+
+  const southInland = properties.filter(p => p.region === 'costa-blanca-south-inland');
+  const northInland = properties.filter(p => p.region === 'costa-blanca-north-inland');
+  const costaCalidaInland = properties.filter(p => p.region === 'costa-calida-inland');
+
+  const otherInland = properties.filter(p => !p.region);
+
+  const prices = properties.map(p => p.price).filter((p): p is number => p !== null && p > 0);
+  const lowestPrice = prices.length > 0 ? Math.min(...prices) : 0;
+  const avgPrice = prices.length > 0 ? Math.round(prices.reduce((a, b) => a + b, 0) / prices.length) : 0;
+
+  if (typeof window === 'undefined') {
+    console.log('[INLAND PAGE] Total:', properties.length);
+    console.log('[INLAND PAGE] South CB:', southInland.length, '| North CB:', northInland.length, '| Costa Calida:', costaCalidaInland.length, '| Unmatched:', otherInland.length);
+    console.log('[INLAND PAGE] Regions found:', [...new Set(properties.map(p => p.region))].join(', '));
+    if (otherInland.length > 0) {
+      console.log('[INLAND PAGE] Unmatched towns:', [...new Set(otherInland.map(p => p.town))].join(', '));
+    }
+  }
+
   const breadcrumbs = breadcrumbSchema([
-    { name: 'Accueil', url: 'https://newbuildhomescostablanca.com/fr/' },
-    { name: 'Intérieur', url: 'https://newbuildhomescostablanca.com/fr/inland/' },
+    { name: 'Accueil', url: 'https://newbuildhomescostablanca.com/' },
+    { name: 'Propriétés à l\'intérieur des terres', url: 'https://newbuildhomescostablanca.com/fr/inland/' },
   ]);
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }}
+      />
 
       <main className="min-h-screen bg-warm-50">
-        <section className="bg-primary-900 py-16 md:py-24">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center max-w-3xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-light text-white mb-6">
-                Propriétés de <span className="font-semibold">l'Intérieur</span> Costa Blanca
+        {/* HERO */}
+        <section className="relative bg-primary-900 py-16 md:py-20">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary-800 to-primary-950" />
+          </div>
+
+          <div className="relative max-w-7xl mx-auto px-6">
+            <nav className="text-warm-400 text-sm mb-6">
+              <Link href="/fr" className="hover:text-white transition-colors">Accueil</Link>
+              <span className="mx-2">›</span>
+              <span className="text-white">Propriétés à l\'intérieur des terres</span>
+            </nav>
+
+            <div className="max-w-3xl">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-10 h-px bg-accent-500" />
+                <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
+                  Plus d'espace • Meilleure valeur
+                </span>
+              </div>
+
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-4">
+                Nouvelles constructions <span className="font-semibold">à l\'intérieur des terres</span>
               </h1>
-              <p className="text-warm-300 text-lg">
-                Découvrez des villages espagnols authentiques avec charme, communauté et meilleur rapport qualité-prix.
+
+              <p className="text-warm-300 text-lg leading-relaxed mb-8">
+                Découvrez le cœur de l\'Espagne avec notre sélection de propriétés de nouvelle construction à l\'intérieur des terres de Costa Blanca.
+                Profitez de plus grands terrains, de villages traditionnels, de terrains de golf et de prix jusqu\'à 40% inférieurs aux zones côtières
+                - le tout à 20-30 minutes des plages.
+              </p>
+
+              {/* Stats */}
+              <div className="flex flex-wrap gap-6 mb-8">
+                <div>
+                  <div className="text-2xl font-semibold text-white">{properties.length}</div>
+                  <div className="text-warm-400 text-sm">Propriétés</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-semibold text-white">À partir de {formatPrice(lowestPrice)}</div>
+                  <div className="text-warm-400 text-sm">Prix de départ</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-semibold text-white">{formatPrice(avgPrice)}</div>
+                  <div className="text-warm-400 text-sm">Prix moyen</div>
+                </div>
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={CONTACT.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#25D366] hover:bg-[#20bd5a] text-white px-5 py-2.5 rounded-sm font-medium transition-colors inline-flex items-center gap-2 text-sm"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                  Contactez-nous par WhatsApp
+                </a>
+                <Link
+                  href="/fr/developments"
+                  className="bg-white/10 hover:bg-white/20 text-white px-5 py-2.5 rounded-sm font-medium transition-colors border border-white/20 text-sm"
+                >
+                  Voir tous les développements
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* WHY INLAND */}
+        <section className="py-14 bg-white border-b border-warm-200">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-3">
+                Pourquoi acheter <span className="font-semibold">à l\'intérieur des terres?</span>
+              </h2>
+              <p className="text-warm-600 max-w-2xl mx-auto">
+                De nombreux acheteurs découvrent que Costa Blanca à l\'intérieur des terres offre un excellent rapport qualité-prix et un style de vie espagnol plus authentique.
               </p>
             </div>
-          </div>
-        </section>
 
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-3xl font-light text-primary-900 mb-8">
-              Pourquoi Choisir <span className="font-semibold">l'Intérieur?</span>
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-warm-50 rounded-sm p-6 border border-warm-200">
-                <h3 className="text-lg font-semibold text-primary-900 mb-3">Meilleur Rapport Qualité-Prix</h3>
-                <p className="text-warm-600">Moins cher que la côte tout en gardant la qualité. Plus d'espace pour votre argent.</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="text-center p-6 bg-warm-50 rounded-sm">
+                <div className="w-14 h-14 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-primary-900 mb-2">Meilleure valeur</h3>
+                <p className="text-warm-600 text-sm">Les propriétés peuvent être 30-40% moins chères que les équivalents côtiers avec la même qualité de construction.</p>
               </div>
-              <div className="bg-warm-50 rounded-sm p-6 border border-warm-200">
-                <h3 className="text-lg font-semibold text-primary-900 mb-3">Authenticité Espagnole</h3>
-                <p className="text-warm-600">Vraie vie villageoise avec marchés locaux, restaurants familiaux et culture vivante.</p>
+
+              <div className="text-center p-6 bg-warm-50 rounded-sm">
+                <div className="w-14 h-14 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-primary-900 mb-2">Plus d\'espace</h3>
+                <p className="text-warm-600 text-sm">Terrains et jardins plus grands. De nombreuses propriétés ont des terrains de 500m²+ par rapport à 100-200m² sur la côte.</p>
               </div>
-              <div className="bg-warm-50 rounded-sm p-6 border border-warm-200">
-                <h3 className="text-lg font-semibold text-primary-900 mb-3">Communauté Établie</h3>
-                <p className="text-warm-600">Villages agricoles avec communautés établies d'expatriés et réseaux solides.</p>
+
+              <div className="text-center p-6 bg-warm-50 rounded-sm">
+                <div className="w-14 h-14 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-primary-900 mb-2">Espagne authentique</h3>
+                <p className="text-warm-600 text-sm">Villages traditionnels, marchés locaux et culture espagnole. Moins touristique, plus authentique.</p>
               </div>
-              <div className="bg-warm-50 rounded-sm p-6 border border-warm-200">
-                <h3 className="text-lg font-semibold text-primary-900 mb-3">Nature & Tranquillité</h3>
-                <p className="text-warm-600">Campagne verdoyante, sentiers de randonnée et vie paisible loin de l'agitation côtière.</p>
-              </div>
-              <div className="bg-warm-50 rounded-sm p-6 border border-warm-200">
-                <h3 className="text-lg font-semibold text-primary-900 mb-3">Potentiel d'Investissement</h3>
-                <p className="text-warm-600">Zone en croissance avec infrastructure améliorée et préservation du caractère traditionnel.</p>
-              </div>
-              <div className="bg-warm-50 rounded-sm p-6 border border-warm-200">
-                <h3 className="text-lg font-semibold text-primary-900 mb-3">Proximité de la Côte</h3>
-                <p className="text-warm-600">À seulement 20-30 minutes des plages du sud de la Costa Blanca.</p>
+
+              <div className="text-center p-6 bg-warm-50 rounded-sm">
+                <div className="w-14 h-14 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-primary-900 mb-2">Près de la côte</h3>
+                <p className="text-warm-600 text-sm">La plupart des villes intérieures sont à 20-30 minutes de la plage. Le meilleur des deux mondes!</p>
               </div>
             </div>
           </div>
         </section>
 
+        {/* COSTA BLANCA SOUTH INLAND */}
+        {southInland.length > 0 && (
+          <section className="py-14 bg-warm-50">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+                <div className="max-w-2xl">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="bg-accent-500 text-white text-xs font-bold px-3 py-1 rounded-sm uppercase">
+                      Plus populaire
+                    </span>
+                    <span className="text-warm-500 text-sm">{southInland.length} propriétés disponibles</span>
+                  </div>
+                  <h2 className="text-2xl md:text-3xl font-light text-primary-900">
+                    Costa Blanca <span className="font-semibold">Sud à l\'intérieur</span>
+                  </h2>
+                  <p className="text-warm-600 mt-2 leading-relaxed">
+                    La région de Vega Baja offre le meilleur rapport qualité-prix de Costa Blanca. Des villes comme Algorfa, Rojales et San Miguel de Salinas combinent d\'excellents terrains de golf, des marchés espagnols traditionnels et un accès facile aux plages - le tout à des prix 30-40% inférieurs à la côte.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {southInland.slice(0, 6).map((property) => (
+                  <PropertyCard key={property.ref} property={property} />
+                ))}
+              </div>
+
+              {southInland.length > 6 && (
+                <div className="text-center mt-8">
+                  <Link
+                    href="/properties?area=inland-south"
+                    className="inline-flex items-center gap-2 bg-primary-900 text-white px-6 py-2.5 rounded-sm font-medium hover:bg-primary-800 transition-colors"
+                  >
+                    Voir toutes les {southInland.length} propriétés du sud à l\'intérieur
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+
+        {/* COSTA BLANCA NORTH INLAND */}
+        {northInland.length > 0 && (
+          <section className="py-14 bg-white border-b border-warm-200">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+                <div className="max-w-2xl">
+                  <div className="flex items-center gap-4 mb-2">
+                    <div className="w-10 h-px bg-accent-500" />
+                    <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
+                      Vie en montagne et vallée
+                    </span>
+                    <span className="text-warm-500 text-sm">{northInland.length} propriétés</span>
+                  </div>
+                  <h2 className="text-2xl md:text-3xl font-light text-primary-900">
+                    Costa Blanca <span className="font-semibold">Nord à l\'intérieur</span>
+                  </h2>
+                  <p className="text-warm-600 mt-2 leading-relaxed">
+                    Échappez-vous à la magnifique région viticole de la Vallée de Jalon, à la charmante ville de montagne de Polop, ou à la dynamique La Nucia. Le Nord offre des paysages spectaculaires, des étés plus frais et une communauté d\'expatriés plus établie - parfait pour ceux qui cherchent un rythme de vie plus tranquille.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {northInland.slice(0, 6).map((property) => (
+                  <PropertyCard key={property.ref} property={property} />
+                ))}
+              </div>
+
+              {northInland.length > 6 && (
+                <div className="text-center mt-8">
+                  <Link
+                    href="/properties?area=inland-north"
+                    className="inline-flex items-center gap-2 text-accent-600 font-medium hover:text-accent-700 transition-colors"
+                  >
+                    Voir toutes les {northInland.length} propriétés du nord à l\'intérieur
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+
+        {/* COSTA CALIDA INLAND */}
+        {costaCalidaInland.length > 0 && (
+          <section className="py-14 bg-warm-50">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+                <div className="max-w-2xl">
+                  <div className="flex items-center gap-4 mb-2">
+                    <div className="w-10 h-px bg-accent-500" />
+                    <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
+                      Région de Murcie
+                    </span>
+                    <span className="text-warm-500 text-sm">{costaCalidaInland.length} propriétés</span>
+                  </div>
+                  <h2 className="text-2xl md:text-3xl font-light text-primary-900">
+                    Costa Calida <span className="font-semibold">à l\'intérieur</span>
+                  </h2>
+                  <p className="text-warm-600 mt-2 leading-relaxed">
+                    La région de Murcie offre un excellent rapport qualité-prix avec une ambiance plus espagnole. Des villes comme Torre Pacheco et Fuente Álamo offrent une vie rurale authentique avec accès facile aux plages de Mar Menor et à la ville de Murcie.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {costaCalidaInland.slice(0, 6).map((property) => (
+                  <PropertyCard key={property.ref} property={property} />
+                ))}
+              </div>
+
+              {costaCalidaInland.length > 6 && (
+                <div className="text-center mt-8">
+                  <Link
+                    href="/properties?area=inland-calida"
+                    className="inline-flex items-center gap-2 text-accent-600 font-medium hover:text-accent-700 transition-colors"
+                  >
+                    Voir toutes les {costaCalidaInland.length} propriétés de Costa Calida à l\'intérieur
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+
+        {/* ALL INLAND PROPERTIES */}
+        {properties.length > 0 && (
+          <section className="py-14 bg-white border-b border-warm-200">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+                <div>
+                  <div className="flex items-center gap-4 mb-2">
+                    <div className="w-10 h-px bg-accent-500" />
+                    <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
+                      Collection complète
+                    </span>
+                  </div>
+                  <h2 className="text-2xl md:text-3xl font-light text-primary-900">
+                    Toutes les propriétés <span className="font-semibold">à l\'intérieur</span>
+                  </h2>
+                  <p className="text-warm-600 mt-1">
+                    Parcourez les {properties.length} propriétés de nouvelle construction à l\'intérieur
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {properties.map((property) => (
+                  <PropertyCard key={property.ref} property={property} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* POPULAR INLAND AREAS */}
+        <section className="py-14 bg-primary-900">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-10">
+              <div className="flex items-center justify-center gap-4 mb-3">
+                <div className="w-10 h-px bg-accent-500" />
+                <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
+                  Explorer les zones
+                </span>
+                <div className="w-10 h-px bg-accent-500" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-light text-white mb-3">
+                Villes intérieures populaires
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {[
+                { name: 'Algorfa', region: 'Sud', golf: true },
+                { name: 'Rojales', region: 'Sud', golf: true },
+                { name: 'San Miguel de Salinas', region: 'Sud' },
+                { name: 'Benijofar', region: 'Sud' },
+                { name: 'Polop', region: 'Nord', mountain: true },
+                { name: 'La Nucia', region: 'Nord' },
+                { name: 'Vallée de Jalon', region: 'Nord', wine: true },
+                { name: 'Finestrat', region: 'Nord', mountain: true },
+              ].map((area) => (
+                <Link
+                  key={area.name}
+                  href={`/areas/${area.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="group bg-white/10 hover:bg-white/20 p-4 rounded-sm transition-colors"
+                >
+                  <h3 className="font-medium text-white group-hover:text-accent-400 transition-colors">
+                    {area.name}
+                  </h3>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="text-warm-400 text-sm">Costa Blanca {area.region}</span>
+                    {area.golf && <span className="text-xs bg-green-500/20 text-green-400 px-1.5 py-0.5 rounded">Golf</span>}
+                    {area.mountain && <span className="text-xs bg-blue-500/20 text-blue-400 px-1.5 py-0.5 rounded">Montagne</span>}
+                    {area.wine && <span className="text-xs bg-purple-500/20 text-purple-400 px-1.5 py-0.5 rounded">Vin</span>}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
         <section className="py-16 bg-warm-50">
-          <div className="max-w-7xl mx-auto px-6">
-            <h2 className="text-3xl font-light text-primary-900 mb-8">
-              Villages Populaires de <span className="font-semibold">l'Intérieur</span>
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-4">
+              Vous voulez explorer les options intérieures?
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-sm p-6 border border-warm-200">
-                <h3 className="text-lg font-semibold text-primary-900 mb-2">Algorfa</h3>
-                <p className="text-warm-600 mb-3">Zone de golf populaire avec excellente infrastructure, restaurants et accès aux terrains de golf.</p>
-                <p className="text-sm text-accent-600 font-medium">À partir de €180k</p>
-              </div>
-              <div className="bg-white rounded-sm p-6 border border-warm-200">
-                <h3 className="text-lg font-semibold text-primary-900 mb-2">Rojales</h3>
-                <p className="text-warm-600 mb-3">Ville agricole charmante avec vie villageoise authentique et communauté d'expatriés établie.</p>
-                <p className="text-sm text-accent-600 font-medium">À partir de €150k</p>
-              </div>
-              <div className="bg-white rounded-sm p-6 border border-warm-200">
-                <h3 className="text-lg font-semibold text-primary-900 mb-2">Ciudad Quesada</h3>
-                <p className="text-warm-600 mb-3">Développement planifié avec équipements, communauté internationale et excellent rapport qualité-prix.</p>
-                <p className="text-sm text-accent-600 font-medium">À partir de €165k</p>
-              </div>
-              <div className="bg-white rounded-sm p-6 border border-warm-200">
-                <h3 className="text-lg font-semibold text-primary-900 mb-2">Jalon</h3>
-                <p className="text-warm-600 mb-3">Village viticole traditionnel dans les montagnes avec vue spectaculaire et vie tranquille.</p>
-                <p className="text-sm text-accent-600 font-medium">À partir de €175k</p>
-              </div>
+            <p className="text-warm-600 leading-relaxed mb-8 max-w-2xl mx-auto">
+              Notre équipe peut organiser des visites de propriétés à l\'intérieur des terres et vous aider à comprendre les avantages de chaque zone.
+              Nous vous montrerons les équipements locaux, les temps de trajet jusqu\'à la côte et vous aiderons à trouver le meilleur équilibre.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href={CONTACT.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-medium px-8 py-3 rounded-sm transition-colors inline-flex items-center gap-2"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Discuter sur WhatsApp
+              </a>
+              <Link
+                href="/fr/contact"
+                className="bg-primary-900 hover:bg-primary-800 text-white font-medium px-8 py-3 rounded-sm transition-colors"
+              >
+                Formulaire de contact
+              </Link>
             </div>
           </div>
         </section>
 
-        <section className="py-16 bg-primary-900">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-light text-white mb-6">
-              Découvrez la Vie <span className="font-semibold">de l'Intérieur</span>
-            </h2>
-            <p className="text-warm-300 mb-8">
-              Parlons de ce qui correspond à votre style de vie. Authentique, tranquille, accessible et encore authentiquement espagnol.
-            </p>
-            <Link
-              href="/fr/contact"
-              className="bg-accent-500 hover:bg-accent-600 text-white font-medium px-8 py-3 rounded-sm transition-all inline-flex items-center gap-2"
-            >
-              Contactez-Nous
-            </Link>
-          </div>
-        </section>
+        <WhatsAppCTA />
       </main>
     </>
   );
