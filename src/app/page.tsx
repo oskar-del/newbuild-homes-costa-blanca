@@ -865,7 +865,7 @@ export default function HomePage() {
         {/* View All Inland Link */}
         <div className="bg-warm-800 py-4 text-center">
           <Link
-            href="/inland"
+            href="/properties/inland"
             className="inline-flex items-center gap-2 text-white font-medium hover:text-accent-400 transition-colors group text-sm"
           >
             Explore All Inland Properties
@@ -1220,6 +1220,22 @@ export default function HomePage() {
             </Link>
           </div>
 
+          {/* Quick Links: Budget & Region */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            <Link href="/properties/under-300k" className="text-xs bg-warm-100 hover:bg-accent-100 text-primary-900 hover:text-accent-700 px-3 py-1.5 rounded-full border border-warm-200 hover:border-accent-300 transition-all">
+              Under €300k
+            </Link>
+            <Link href="/developments/costa-blanca-north" className="text-xs bg-warm-100 hover:bg-accent-100 text-primary-900 hover:text-accent-700 px-3 py-1.5 rounded-full border border-warm-200 hover:border-accent-300 transition-all">
+              North Developments
+            </Link>
+            <Link href="/properties/inland" className="text-xs bg-warm-100 hover:bg-accent-100 text-primary-900 hover:text-accent-700 px-3 py-1.5 rounded-full border border-warm-200 hover:border-accent-300 transition-all">
+              Inland Properties
+            </Link>
+            <Link href="/builders" className="text-xs bg-warm-100 hover:bg-accent-100 text-primary-900 hover:text-accent-700 px-3 py-1.5 rounded-full border border-warm-200 hover:border-accent-300 transition-all">
+              All Builders
+            </Link>
+          </div>
+
           {/* Property Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {featured.northProperties.map((property) => (
@@ -1344,15 +1360,15 @@ export default function HomePage() {
               </div>
             </Link>
 
-            {/* Guide Card 3: Mortgages */}
+            {/* Guide Card 3: NIE Number */}
             <Link
-              href="/guides/mortgages"
+              href="/guides/nie-number"
               className="group relative bg-warm-50 rounded-sm overflow-hidden border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
             >
               <div className="relative h-40 overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80"
-                  alt="House keys and mortgage documents"
+                  src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80"
+                  alt="Spanish NIE number application documents"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -1361,16 +1377,16 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent" />
                 <div className="absolute bottom-3 left-3">
                   <span className="bg-success-600 text-white text-xs font-bold px-2 py-1 rounded-sm uppercase">
-                    Finance
+                    Essential
                   </span>
                 </div>
               </div>
               <div className="p-5">
                 <h3 className="font-semibold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">
-                  Spanish Mortgages for Foreigners
+                  NIE Number Spain 2026
                 </h3>
                 <p className="text-warm-600 text-sm leading-relaxed">
-                  How to get a mortgage in Spain. Requirements, rates, and how much you can borrow.
+                  How to apply for your Spanish tax ID. Step-by-step process, documents needed, and costs.
                 </p>
                 <div className="mt-4 flex items-center gap-2 text-accent-600 text-sm font-medium group-hover:gap-3 transition-all">
                   Read Guide
@@ -1392,6 +1408,123 @@ export default function HomePage() {
               <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* EXPLORE AREAS - Internal links for SEO */}
+      {/* ============================================ */}
+      <section className="py-10 bg-warm-50 border-t border-warm-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+            <div>
+              <h2 className="text-xl md:text-2xl font-light text-primary-900">
+                Explore <span className="font-semibold">Costa Blanca Areas</span>
+              </h2>
+              <p className="text-warm-600 text-sm mt-1">
+                From seaside towns to peaceful inland villages — find the perfect location for your new home.
+              </p>
+            </div>
+            <Link
+              href="/areas"
+              className="inline-flex items-center gap-2 bg-primary-900 text-white px-5 py-2.5 rounded-sm font-medium hover:bg-primary-800 transition-colors group text-sm whitespace-nowrap"
+            >
+              View All Areas
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+            {[
+              { name: 'Jávea', slug: 'javea', tag: 'North' },
+              { name: 'Moraira', slug: 'moraira', tag: 'North' },
+              { name: 'Calpe', slug: 'calpe', tag: 'North' },
+              { name: 'Torrevieja', slug: 'torrevieja', tag: 'South' },
+              { name: 'Aspe', slug: 'aspe', tag: 'Inland' },
+              { name: 'Orihuela Costa', slug: 'orihuela-costa', tag: 'South' },
+              { name: 'Altea', slug: 'altea', tag: 'North' },
+              { name: 'Guardamar', slug: 'guardamar-del-segura', tag: 'South' },
+              { name: 'San Miguel', slug: 'san-miguel-de-salinas', tag: 'South' },
+              { name: 'Pinoso', slug: 'pinoso', tag: 'Inland' },
+              { name: 'Benidorm', slug: 'benidorm', tag: 'North' },
+              { name: 'Dénia', slug: 'denia', tag: 'North' },
+            ].map((area) => (
+              <Link
+                key={area.slug}
+                href={`/areas/${area.slug}`}
+                className="group bg-white rounded-sm p-3 border border-warm-200 hover:border-accent-500 hover:shadow-md transition-all text-center"
+              >
+                <span className="block font-medium text-primary-900 group-hover:text-accent-600 transition-colors text-sm">
+                  {area.name}
+                </span>
+                <span className="text-xs text-warm-500">{area.tag}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* FROM THE BLOG - Recent articles for SEO */}
+      {/* ============================================ */}
+      <section className="py-10 bg-white border-t border-warm-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+            <div>
+              <h2 className="text-xl md:text-2xl font-light text-primary-900">
+                From the <span className="font-semibold">Blog</span>
+              </h2>
+            </div>
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 text-primary-900 font-medium hover:text-accent-600 transition-colors group text-sm"
+            >
+              All Articles
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/blog/snagging-inspection-spain-new-build" className="group">
+              <div className="bg-warm-50 rounded-sm p-5 border border-warm-200 hover:border-accent-500 hover:shadow-md transition-all h-full">
+                <span className="text-xs bg-accent-100 text-accent-700 px-2 py-1 rounded-sm font-medium">Buying Guide</span>
+                <h3 className="font-semibold text-primary-900 mt-3 mb-2 group-hover:text-accent-600 transition-colors">
+                  Snagging Inspections: What to Check in Your New Build
+                </h3>
+                <p className="text-warm-600 text-sm leading-relaxed">
+                  A comprehensive guide to new build snagging inspections in Spain — what to look for, when to do it, and your legal rights.
+                </p>
+              </div>
+            </Link>
+
+            <Link href="/blog/torrevieja-property-guide" className="group">
+              <div className="bg-warm-50 rounded-sm p-5 border border-warm-200 hover:border-accent-500 hover:shadow-md transition-all h-full">
+                <span className="text-xs bg-primary-100 text-primary-700 px-2 py-1 rounded-sm font-medium">Area Guide</span>
+                <h3 className="font-semibold text-primary-900 mt-3 mb-2 group-hover:text-accent-600 transition-colors">
+                  Torrevieja Property Guide 2026
+                </h3>
+                <p className="text-warm-600 text-sm leading-relaxed">
+                  Everything you need to know about buying property in Torrevieja: neighborhoods, prices, lifestyle, and tips.
+                </p>
+              </div>
+            </Link>
+
+            <Link href="/blog/cost-of-living-spain" className="group">
+              <div className="bg-warm-50 rounded-sm p-5 border border-warm-200 hover:border-accent-500 hover:shadow-md transition-all h-full">
+                <span className="text-xs bg-warm-200 text-warm-700 px-2 py-1 rounded-sm font-medium">Living in Spain</span>
+                <h3 className="font-semibold text-primary-900 mt-3 mb-2 group-hover:text-accent-600 transition-colors">
+                  Cost of Living in Spain 2026
+                </h3>
+                <p className="text-warm-600 text-sm leading-relaxed">
+                  Monthly costs, utilities, groceries, healthcare — a realistic breakdown for expats on the Costa Blanca.
+                </p>
+              </div>
             </Link>
           </div>
         </div>

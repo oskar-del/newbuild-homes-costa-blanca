@@ -5,6 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import regionsData from '@/content/regions.json';
 import { getAllDevelopments } from '@/lib/development-service';
+import { breadcrumbSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Costa Blanca Areas | Living & Property Guides',
@@ -243,7 +244,17 @@ export default async function AreasPage() {
     .filter(a => !southAreas.includes(a) && !northAreas.includes(a))
     .sort(sortByPropertyCount);
 
+  const breadcrumbs = breadcrumbSchema([
+    { name: 'Home', url: 'https://newbuildhomescostablanca.com/' },
+    { name: 'Areas', url: 'https://newbuildhomescostablanca.com/areas/' },
+  ]);
+
   return (
+    <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }}
+    />
     <main className="min-h-screen bg-warm-50">
       {/* Hero */}
       <section className="relative bg-primary-900 py-16 md:py-20">
@@ -752,5 +763,6 @@ export default async function AreasPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }
