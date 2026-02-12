@@ -350,7 +350,7 @@ export default function PropertyPageClient({
                     <span className="text-stone-700 hover:text-amber-700">Mortgage Guide</span>
                   </Link>
                   <Link 
-                    href="/guides/taxes-costs" 
+                    href="/guides/costs-taxes" 
                     className="flex items-center gap-2 p-3 bg-stone-100 rounded-lg hover:bg-amber-50 hover:border-amber-200 border border-transparent transition"
                   >
                     <span className="text-amber-600">💶</span>

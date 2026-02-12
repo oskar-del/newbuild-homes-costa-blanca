@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import regionsData from '@/content/regions.json';
 import { getAllDevelopments } from '@/lib/development-service';
-import { breadcrumbSchema, toJsonLd } from '@/lib/schema';
+import { breadcrumbSchema, faqSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Costa Blanca Areas | Living & Property Guides',
@@ -249,11 +249,44 @@ export default async function AreasPage() {
     { name: 'Areas', url: 'https://newbuildhomescostablanca.com/areas/' },
   ]);
 
+  // FAQ data
+  const faqs = [
+    {
+      question: "What's the best area to live in Costa Blanca?",
+      answer: "There's no single best area—it depends entirely on your lifestyle and priorities. Costa Blanca South (Benidorm, Torrevieja, Orihuela) offers excellent value, vibrant beach life, and abundant amenities, making it perfect for families and retirees on a budget. Costa Blanca North (Jávea, Moraira, Benissa, Denia) appeals to those seeking a more upscale, tranquil Mediterranean lifestyle with excellent dining and natural beauty. Your ideal choice is determined by whether you prioritise affordability and social community or exclusivity and coastal sophistication.",
+    },
+    {
+      question: "What's the difference between Costa Blanca North and South?",
+      answer: "Costa Blanca South is more developed, affordable, and social—average property prices from €200,000 to €400,000, with high British and Northern European expat populations. It features long sandy beaches, vibrant nightlife, and abundant restaurants and bars. Costa Blanca North is more exclusive and prestigious, with prices from €400,000 upward, craggy coves, Michelin-starred restaurants, and a quieter, more refined atmosphere favoured by wealthier buyers. North is also more Spanish in character, with smaller villages, better weather patterns (slightly less summer heat), and a slower pace of life.",
+    },
+    {
+      question: "Which Costa Blanca areas are most popular with British expats?",
+      answer: "Torrevieja, Orihuela Costa, and Benidorm dominate the South with the largest British communities—some neighbourhoods are almost entirely British-owned with familiar shops, pubs, and services. In the North, Jávea and Moraira attract affluent British buyers, though in smaller numbers. The South is particularly popular with retirees and those on modest pensions due to lower costs and established expat infrastructure, while the North appeals more to wealthy British professionals and business owners seeking upscale retirement.",
+    },
+    {
+      question: "How much do properties cost in different Costa Blanca areas?",
+      answer: "Costa Blanca South ranges from €180,000 for basic apartments to €600,000+ for quality villas, with the greatest selection between €250,000–€400,000. Benidorm and beachfront locations command premiums, while inland towns like Orihuela offer better value. Costa Blanca North starts at €400,000 for modest properties and easily exceeds €1.5 million for premium villas in prime locations like Jávea or Moraira. Premium clifftop properties in the North regularly reach €2 million–€5 million. Your budget effectively determines which region is realistic.",
+    },
+    {
+      question: "Which areas have the best beaches?",
+      answer: "Costa Blanca South excels with long, wide sandy beaches ideal for families—Playa del Torres and Playa de Levante in Benidorm, and Playa Flamenca in Orihuela Costa are vibrant and well-serviced. The North offers more dramatic scenery: Cala Finestrat, Cala Moraira, and Cala de Finestrat feature smaller, picturesque coves framed by pines and cliffs, perfect for those preferring intimate settings over bustling resort beaches. The South beaches suit those who enjoy social atmosphere and water sports facilities, while the North appeals to those seeking quieter, more scenic swimming.",
+    },
+    {
+      question: "Is it better to live near the coast or inland?",
+      answer: "Coastal properties offer beach proximity, sea views, and strong rental income potential but command premium prices (often €200,000–€500,000 more) and experience more humidity, salt air corrosion, and higher tourist traffic in summer. Inland areas (Orihuela town, Altea, Callosa) are significantly cheaper, quieter, enjoy clearer air and lower humidity, yet lack beach access. Coastal suits those prioritising lifestyle and investment returns; inland suits budget-conscious buyers seeking tranquility and authentic Spanish village life. Consider your budget and lifestyle: beach living isn't essential for happiness in Costa Blanca.",
+    },
+  ];
+  const faqJsonLd = faqSchema(faqs);
+
   return (
     <>
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }}
+    />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: toJsonLd(faqJsonLd) }}
     />
     <main className="min-h-screen bg-warm-50">
       {/* Hero */}
@@ -759,6 +792,38 @@ export default async function AreasPage() {
                 <div className="text-warm-300 text-sm">Languages</div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ SECTION */}
+      <section className="py-14 bg-warm-50 border-t border-warm-200">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900">
+              Frequently Asked <span className="font-semibold">Questions</span>
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <details
+                key={index}
+                className="group bg-white rounded-sm border border-warm-200 overflow-hidden"
+              >
+                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-warm-50 transition-colors">
+                  <h3 className="font-medium text-primary-900 pr-4 text-left">
+                    {faq.question}
+                  </h3>
+                  <svg className="w-5 h-5 text-warm-400 flex-shrink-0 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-5 pb-5 text-warm-600 leading-relaxed border-t border-warm-100 pt-4">
+                  {faq.answer}
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>

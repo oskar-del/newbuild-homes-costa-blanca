@@ -7,7 +7,7 @@ import {
   getAllBuilders,
   Development,
 } from '@/lib/development-service';
-import { breadcrumbSchema, collectionPageSchema, toJsonLd } from '@/lib/schema';
+import { breadcrumbSchema, collectionPageSchema, faqSchema, toJsonLd } from '@/lib/schema';
 import { getCardImages } from '@/lib/image-categorization';
 import { filterDevelopmentsByTags, TaggedDevelopment } from '@/lib/tag-service';
 
@@ -453,6 +453,36 @@ export default async function DevelopmentsPage() {
     })),
   });
 
+  // FAQ Data - New build developments in Costa Blanca
+  const faqs = [
+    {
+      question: 'What is a new build development?',
+      answer: 'A new build development is a residential project built by established developers featuring modern apartments, villas, or townhouses. Costa Blanca developments offer contemporary designs, modern amenities, and often communal facilities like pools, gyms, and gardens. New builds typically include guarantees covering structure and major components, providing security for buyers investing in off-plan or under-construction properties.'
+    },
+    {
+      question: 'How do I reserve a property in a new development?',
+      answer: 'To reserve a property, first identify which development interests you by reviewing available units and floorplans. Contact us to schedule a viewing or request documentation. Once you\'ve selected a property, you\'ll typically sign a reservation agreement with the developer and deposit a small fee (usually 500-2,000 EUR). After contract signing, you\'ll pay according to the agreed payment schedule, with key handover at completion.'
+    },
+    {
+      question: 'What payment plan options are available for off-plan purchases?',
+      answer: 'Most off-plan Costa Blanca developments offer flexible payment plans typically structured as: 30% deposit upon contract signing, with the remaining 70% paid in installments during construction, and final payment at completion. Some developments offer alternative structures including 20/80 splits or smaller monthly payments. Bank-backed payment guarantees protect buyer funds throughout the process, ensuring your money is held in escrow rather than with the developer.'
+    },
+    {
+      question: 'Can I customise my property in a new development?',
+      answer: 'Customization options vary by project and construction stage. Off-plan properties offer the most flexibility for changes to colour schemes, materials, kitchen, and bathroom selections—typically available during the first 6-12 months of purchase. Under-construction properties may have limited options. Key-ready properties generally come fully finished with limited customization. Always review the specific development\'s customization policy before purchasing.'
+    },
+    {
+      question: 'What are bank guarantees and why are they important?',
+      answer: 'Bank guarantees (garantías bancarias) protect off-plan buyers by ensuring developers cannot use your deposit money for other purposes—funds are held in an independent escrow account. Required by Spanish property law for off-plan sales, they protect you if the developer faces financial difficulties before completion. This is a crucial safeguard, especially for substantial off-plan deposits, ensuring your investment is secure throughout the construction period.'
+    },
+    {
+      question: 'How long does it take from reservation to key handover?',
+      answer: 'Timelines vary significantly: key-ready properties transfer immediately after purchase completion (1-2 months from contract). Under-construction projects typically take 12-24 months from reservation to handover. Off-plan developments can take 18-36 months or longer depending on project size and complexity. Delivery dates are specified in the purchase agreement, though delays occasionally occur due to unforeseen circumstances. Always confirm scheduled completion dates with the developer.'
+    }
+  ];
+
+  const faqJsonLd = faqSchema(faqs);
+
   return (
     <>
       <script
@@ -462,6 +492,10 @@ export default async function DevelopmentsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: toJsonLd(collectionSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: toJsonLd(faqJsonLd) }}
       />
 
       <main className="min-h-screen bg-warm-50">
@@ -1020,7 +1054,7 @@ export default async function DevelopmentsPage() {
                     </li>
                   </ul>
                   <Link
-                    href="/costa-blanca-north"
+                    href="/developments/costa-blanca-north"
                     className="inline-block mt-6 bg-accent-500 hover:bg-accent-600 text-white font-medium px-6 py-2 rounded-sm transition-colors"
                   >
                     Discover the North
@@ -1199,6 +1233,78 @@ export default async function DevelopmentsPage() {
             </div>
           </section>
         )}
+
+        {/* ============================================ */}
+        {/* FAQ - New Build Developments */}
+        {/* ============================================ */}
+        <section className="py-14 bg-warm-50">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-4 mb-3">
+                <div className="w-10 h-px bg-accent-500" />
+                <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
+                  Questions Answered
+                </span>
+                <div className="w-10 h-px bg-accent-500" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-4">
+                Frequently Asked <span className="font-semibold">Questions</span>
+              </h2>
+              <p className="text-warm-600 max-w-2xl mx-auto">
+                Everything you need to know about buying new build properties in Costa Blanca. From off-plan purchases to bank guarantees, we've got the answers.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              {faqs.map((faq, index) => (
+                <details
+                  key={index}
+                  className="group bg-white rounded-sm border border-warm-200 overflow-hidden hover:border-accent-300 transition-colors"
+                >
+                  <summary className="flex items-center justify-between cursor-pointer px-6 py-4 font-medium text-primary-900 hover:text-accent-600 transition-colors">
+                    <span className="text-lg">{faq.question}</span>
+                    <svg
+                      className="w-5 h-5 text-accent-500 flex-shrink-0 ml-4 transition-transform duration-300 group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                  </summary>
+                  <div className="px-6 pb-4 pt-2 text-warm-700 leading-relaxed border-t border-warm-100">
+                    {faq.answer}
+                  </div>
+                </details>
+              ))}
+            </div>
+
+            {/* CTA within FAQ section */}
+            <div className="mt-12 p-6 bg-gradient-to-r from-accent-500/10 to-primary-900/10 border border-accent-200 rounded-sm text-center">
+              <p className="text-primary-900 font-medium mb-3">Still have questions about new build developments?</p>
+              <p className="text-warm-600 mb-6 text-sm">Our team of property experts are ready to help you navigate the Costa Blanca market and find your perfect home.</p>
+              <div className="flex flex-wrap justify-center gap-3">
+                <a
+                  href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-2 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-sm transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                  Ask on WhatsApp
+                </a>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 px-6 py-2 border border-primary-900 text-primary-900 hover:bg-primary-900 hover:text-white font-medium rounded-sm transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ============================================ */}
         {/* CTA - Personal Guidance */}

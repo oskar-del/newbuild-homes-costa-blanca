@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { fetchInlandProperties, formatPrice, ParsedProperty, REGIONS } from '@/lib/xml-parser';
-import { breadcrumbSchema, toJsonLd } from '@/lib/schema';
+import { breadcrumbSchema, faqSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Inland Properties Costa Blanca | New Builds Away From the Coast',
@@ -156,11 +156,45 @@ export default async function InlandPropertiesPage() {
     { name: 'Inland Properties', url: 'https://newbuildhomescostablanca.com/inland/' },
   ]);
 
+  // FAQ data for inland properties
+  const faqs = [
+    {
+      question: 'Why are inland properties cheaper than coastal ones?',
+      answer: 'Inland properties in Costa Blanca are typically 30-40% cheaper than coastal equivalents due to lower land costs, less touristy demand, and reduced property taxes. Towns like Pinoso and Aspe offer exceptional value with new builds ranging from €150,000-€300,000 compared to €300,000-€2,000,000+ on the coast, while maintaining the same high build quality.'
+    },
+    {
+      question: 'What areas count as "inland" Costa Blanca?',
+      answer: 'Inland Costa Blanca includes the South (Vega Baja region) with towns like Algorfa, Rojales, and Benijofar; the North with Polop, La Nucia, and the Jalon Valley wine region; and areas further south like Pinoso, Aspe, Hondon Valley, and Crevillente. These regions offer diverse lifestyles from golf-oriented communities to mountain villages and traditional Spanish towns.'
+    },
+    {
+      question: 'How far is inland Costa Blanca from the beach?',
+      answer: 'Most inland areas are just 20-30 minutes by car from the coast. South Inland areas like Algorfa reach beaches in 25-30 minutes, while North Inland towns like Polop are similarly close. Towns further inland like Crevillente are 40-50 minutes from the coast, making it easy to enjoy beach days while maintaining a quieter lifestyle.'
+    },
+    {
+      question: 'Are inland properties a good investment?',
+      answer: 'Yes, inland properties represent strong value for both owner-occupiers and investors. The 30-40% price advantage compared to coastal properties, combined with strong rental demand from holiday rentals and expat communities, makes inland investments attractive. Areas like Algorfa and Rojales with golf courses have proven strong returns, while emerging towns offer appreciation potential.'
+    },
+    {
+      question: 'What types of properties are available inland?',
+      answer: 'Inland developments offer a full range of new build options: modern villas with pools and gardens, spacious apartments in gated communities, townhouses, and bungalows. Many inland properties feature larger plots (500m²+) compared to coastal properties (100-200m²), offering more privacy and outdoor space at better prices.'
+    },
+    {
+      question: 'Do inland areas have good amenities and infrastructure?',
+      answer: 'Absolutely. Inland towns feature supermarkets, restaurants, bars, medical facilities, and golf courses. South areas like Algorfa and Rojales have excellent golf infrastructure and international communities. North regions offer mountain scenery and wine culture. Spanish towns provide authentic markets and local services, with easy access to major cities like Alicante and Murcia.'
+    }
+  ];
+
+  const faqJsonLd = faqSchema(faqs);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: toJsonLd(faqJsonLd) }}
       />
 
       <main className="min-h-screen bg-warm-50">
@@ -503,6 +537,49 @@ export default async function InlandPropertiesPage() {
                     {area.wine && <span className="text-xs bg-purple-500/20 text-purple-400 px-1.5 py-0.5 rounded">Wine</span>}
                   </div>
                 </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ SECTION */}
+        <section className="py-14 bg-white border-b border-warm-200">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-light text-primary-900 mb-3">
+                Frequently Asked <span className="font-semibold">Questions</span>
+              </h2>
+              <p className="text-warm-600 max-w-2xl mx-auto">
+                Have questions about inland Costa Blanca properties? Here are answers to some common questions.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              {faqs.map((faq, index) => (
+                <details
+                  key={index}
+                  className="group bg-white rounded-sm border border-warm-200 overflow-hidden"
+                >
+                  <summary className="flex items-center justify-between cursor-pointer p-5 select-none hover:bg-warm-50 transition-colors">
+                    <span className="font-medium text-primary-900 pr-4">{faq.question}</span>
+                    <svg
+                      className="w-5 h-5 text-warm-500 flex-shrink-0 transition-transform group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                      />
+                    </svg>
+                  </summary>
+                  <div className="px-5 pb-5 text-warm-600 text-sm leading-relaxed border-t border-warm-100">
+                    {faq.answer}
+                  </div>
+                </details>
               ))}
             </div>
           </div>
