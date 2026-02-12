@@ -1,10 +1,23 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
+import { breadcrumbSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'О Нас | Новостройки Коста Бланка',
-  description: 'Узнайте о нашей компании. Более 15 лет опыта помощи русскоговорящим покупателям недвижимости на Коста Бланка. Команда с местными знаниями.',
-  keywords: 'о нас, компания, опыт коста бланка, русскоговорящая помощь',
+  description: 'Ваш надёжный партнёр при поиске новостроек на Коста Бланка и Коста Калида. Экспертная помощь для российских, казахских и белорусских покупателей недвижимости в Испании.',
+  openGraph: {
+    title: 'О Нас | Новостройки Коста Бланка',
+    description: 'Ваш надёжный партнёр при поиске новостроек на Коста Бланка и Коста Калида.',
+    type: 'website',
+    url: 'https://newbuildhomescostablanca.com/ru/about',
+    siteName: 'New Build Homes Costa Blanca',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'О Нас | Новостройки Коста Бланка',
+    description: 'Более 15 лет помощи международным покупателям в поиске новостроек на Коста Бланка. Полный выбор новых проектов.',
+  },
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/ru/about',
     languages: {
@@ -22,183 +35,435 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RUAboutPage() {
+const CONTACT = {
+  whatsapp: 'https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0',
+  phone: '+34 634 044 970',
+  email: 'info@newbuildhomescostablanca.com',
+};
+
+// Компонент для карточки ценностного предложения
+function ValueCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <main className="min-h-screen bg-warm-50">
-      <section className="bg-primary-900 py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-light text-white mb-4">
-            О <span className="font-semibold">Нас</span>
-          </h1>
-          <p className="text-warm-300 max-w-2xl mx-auto">
-            Помощь русскоговорящим покупателям найти дом своей мечты на Коста Бланка.
-          </p>
-        </div>
-      </section>
+    <div className="text-center">
+      <div className="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4">
+        {icon}
+      </div>
+      <h3 className="text-lg font-semibold text-primary-900 mb-2">{title}</h3>
+      <p className="text-warm-600 text-sm leading-relaxed">{description}</p>
+    </div>
+  );
+}
 
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="mb-12">
-            <h2 className="text-3xl font-light text-primary-900 mb-6">
-              Наша <span className="font-semibold">История</span>
-            </h2>
-            <div className="space-y-6 text-warm-600 leading-relaxed">
-              <p>
-                Более 15 лет назад мы начали с простой идеи: помочь русскоговорящим покупателям найти недвижимость на Коста Бланка. Наша команда складывалась из экспертов с глубокими знаниями испанского рынка и большим опытом работы с международными клиентами.
+export default function RUAboutPage() {
+  const breadcrumbs = breadcrumbSchema([
+    { name: 'Главная', url: 'https://newbuildhomescostablanca.com/ru/' },
+    { name: 'О нас', url: 'https://newbuildhomescostablanca.com/ru/about/' },
+  ]);
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }} />
+
+      <main className="min-h-screen bg-warm-50">
+        {/* Секция Hero */}
+        <section className="relative bg-primary-900 py-20 md:py-28">
+          <div className="absolute inset-0 opacity-20">
+            <Image
+              src="/images/costa-blanca-aerial.jpg"
+              alt="Побережье Коста Бланка"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-primary-900/80 to-primary-900" />
+
+          <div className="relative max-w-7xl mx-auto px-6">
+            <nav className="text-warm-400 text-sm mb-6">
+              <Link href="/ru" className="hover:text-white transition-colors">Главная</Link>
+              <span className="mx-2">›</span>
+              <span className="text-white">О нас</span>
+            </nav>
+
+            <div className="max-w-3xl">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-10 h-px bg-accent-500" />
+                <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
+                  Кто Мы
+                </span>
+              </div>
+
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-6">
+                Ваш партнёр в поиске <span className="font-semibold">идеального дома</span>
+              </h1>
+
+              <p className="text-warm-300 text-lg leading-relaxed mb-8">
+                Мы специализируемся исключительно на новостройках на Коста Бланка и Коста Калида.
+                Наши глубокие знания местного рынка, доверительные отношения с застройщиками и
+                приверженность персонализированному обслуживанию делают нас идеальным выбором для
+                международных покупателей, ищущих свой дом на солнечном испанском побережье.
               </p>
-              <p>
-                Со временем мы выросли в одну из ведущих компаний в регионе. Наш успех основан на одном простом принципе: положить интересы клиента на первое место. Мы не только помогаем с поиском дома, но и сопровождаем через весь процесс покупки, налоговых вопросов и переезда.
-              </p>
-              <p>
-                Сегодня мы помогли более чем тысячам клиентов из России, Казахстана, Беларуси и других стран СНГ найти свой дом на Коста Бланка. Каждая история успеха мотивирует нас делать нашу работу ещё лучше.
-              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href={CONTACT.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-3 rounded-sm font-medium transition-colors inline-flex items-center gap-2"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                  Напишите нам
+                </a>
+                <Link
+                  href="/ru/developments"
+                  className="bg-accent-500 hover:bg-accent-600 text-white px-6 py-3 rounded-sm font-medium transition-colors"
+                >
+                  Просмотреть объекты
+                </Link>
+              </div>
             </div>
           </div>
+        </section>
 
-          <div className="grid md:grid-cols-3 gap-8 my-16">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-accent-500 mb-2">15+</div>
-              <p className="text-warm-600 text-sm">Лет Опыта</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-accent-500 mb-2">1000+</div>
-              <p className="text-warm-600 text-sm">Довольных Клиентов</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-accent-500 mb-2">500+</div>
-              <p className="text-warm-600 text-sm">Доступных Домов</p>
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-3xl font-light text-primary-900 mb-6">
-              Наша <span className="font-semibold">Команда</span>
-            </h2>
-            <p className="text-warm-600 mb-8">
-              Мы группа профессионалов с глубокой знаниевой базой испанского рынка и культуры. Все члены команды говорят по-русски и понимают специфику работы с русскоговорящими клиентами.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {[
-                {
-                  role: 'Руководитель Проектов',
-                  desc: 'Специалист по недвижимости с опытом 12+ лет. Знает каждый дом на Коста Бланка.',
-                },
-                {
-                  role: 'Юридический Консультант',
-                  desc: 'Адвокат с специализацией на иностранных инвесторах. Знает все налоги и законы.',
-                },
-                {
-                  role: 'Финансовый Советник',
-                  desc: 'Помогает с ипотекой и финансовым планированием. Работает с испанскими банками.',
-                },
-                {
-                  role: 'Менеджер По Клиентам',
-                  desc: 'Поддержка на русском языке от первого контакта до получения ключей.',
-                },
-              ].map((member, i) => (
-                <div key={i} className="bg-warm-50 rounded-sm p-6 border border-warm-200">
-                  <h3 className="text-lg font-semibold text-primary-900 mb-2">{member.role}</h3>
-                  <p className="text-warm-600 text-sm">{member.desc}</p>
+        {/* Секция "Наша История" */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-10 h-px bg-accent-500" />
+                  <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
+                    Наша история
+                  </span>
                 </div>
-              ))}
+                <h2 className="text-3xl font-light text-primary-900 mb-6">
+                  Доступ к <span className="font-semibold">каждой новостройке</span>
+                </h2>
+                <div className="space-y-4 text-warm-700 leading-relaxed">
+                  <p>
+                    Мы предоставляем доступ к <strong>полному выбору новостроек</strong> на Коста Бланка и
+                    Коста Калида. Если дом строится в регионе, мы можем показать его вам.
+                  </p>
+                  <p>
+                    За более чем 15 лет мы наладили отношения со всеми крупными застройщиками региона.
+                    Это означает, что вы видите всё — от элитных виллапроектов до крупномасштабных
+                    курортных комплексов — всё в одном месте.
+                  </p>
+                  <p>
+                    Но мы это не просто поиск недвижимости. Мы собрали сеть надежных профессионалов для
+                    поддержки вашего всего пути: <strong>строителей, архитекторов, дизайнеров интерьеров,
+                    адвокатов, налоговых консультантов и специалистов по ипотеке</strong>. Всё необходимое
+                    для покупки дома в Испании.
+                  </p>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="aspect-[4/3] rounded-sm overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+                    alt="Современная новостройка вилла"
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <div className="text-4xl font-bold mb-1">100+</div>
+                    <div className="text-warm-200">Надёжных застройщиков</div>
+                  </div>
+                </div>
+                <div className="absolute -bottom-6 -right-6 bg-accent-500 text-white p-6 rounded-sm shadow-xl">
+                  <div className="text-3xl font-bold mb-1">15+</div>
+                  <div className="text-sm">Лет опыта</div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-16 bg-warm-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-light text-primary-900 mb-12 text-center">
-            Наши <span className="font-semibold">Ценности</span>
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Прозрачность',
-                desc: 'Полная информация о каждом доме, цене и процессе. Никаких скрытых комиссий.',
-              },
-              {
-                title: 'Профессионализм',
-                desc: 'Опытные команды, которые знают каждый аспект покупки недвижимости в Испании.',
-              },
-              {
-                title: 'Поддержка',
-                desc: 'Помощь на русском языке на каждом шаге. Мы с вами от начала до конца.',
-              },
-              {
-                title: 'Интегральность',
-                desc: 'Честные рекомендации основаны на ваших потребностях, а не на комиссиях.',
-              },
-              {
-                title: 'Качество',
-                desc: 'Только лучшие дома от надёжных застройщиков с гарантиями и лицензиями.',
-              },
-              {
-                title: 'Сервис',
-                desc: 'Дополнительные услуги: помощь с НИЕ, налогами, оформлением, адаптацией.',
-              },
-            ].map((value, i) => (
-              <div key={i} className="bg-white rounded-sm p-6 border border-warm-100">
-                <h3 className="text-lg font-semibold text-primary-900 mb-3">{value.title}</h3>
-                <p className="text-warm-600 text-sm">{value.desc}</p>
+        {/* Секция "Почему выбрать нас" */}
+        <section className="py-16 bg-warm-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <div className="w-10 h-px bg-accent-500" />
+                <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
+                  Почему выбрать нас
+                </span>
+                <div className="w-10 h-px bg-accent-500" />
               </div>
-            ))}
+              <h2 className="text-3xl font-light text-primary-900">
+                Что нас <span className="font-semibold">выделяет</span>
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <ValueCard
+                icon={
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                }
+                title="Полный выбор"
+                description="Доступ ко всем новостройкам на Коста Бланка и Коста Калида. Если строится — мы покажем."
+              />
+              <ValueCard
+                icon={
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                }
+                title="Надёжная сеть"
+                description="Строители, архитекторы, адвокаты, налоговые консультанты — полная команда специалистов."
+              />
+              <ValueCard
+                icon={
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                }
+                title="Проверенные застройщики"
+                description="Каждый строитель тщательно проверен на качество и надёжность."
+              />
+              <ValueCard
+                icon={
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                }
+                title="Полная поддержка"
+                description="От первого просмотра до получения ключей и дальше — мы с вами на каждом этапе."
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-light text-primary-900 mb-6">
-            Почему Выбрать <span className="font-semibold">Нас</span>
-          </h2>
-          <p className="text-warm-600 mb-12 max-w-2xl mx-auto">
-            У нас есть всё что нужно для успешной покупки недвижимости на Коста Бланка.
-          </p>
+        {/* Секция "Наши услуги" */}
+        <section className="py-16 bg-white border-y border-warm-200">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-light text-primary-900 mb-4">
+                Как мы вам <span className="font-semibold">помогаем</span>
+              </h2>
+              <p className="text-warm-600 max-w-2xl mx-auto">
+                Покупка новостройки в Испании — захватывающий процесс. Вот как мы делаем его гладким и безстрессным.
+              </p>
+            </div>
 
-          <div className="space-y-4 text-left max-w-2xl mx-auto">
-            {[
-              'Русскоговорящая команда, живущая на Коста Бланка',
-              'Доступ к эксклюзивным предложениям и новым проектам',
-              'Помощь со всеми правовыми и налоговыми вопросами',
-              'Содействие в получении НИЕ и Golden Visa',
-              'Консультации по ипотеке с испанскими банками',
-              'Поддержка при переезде и адаптации',
-              'Сеть контактов: адвокаты, нотариусы, архитекторы',
-              '4,9 звезды на Google от 127 реальных клиентов',
-            ].map((benefit, i) => (
-              <div key={i} className="flex items-center gap-3 p-3 bg-warm-50 rounded-sm border border-warm-200">
-                <svg className="w-5 h-5 text-accent-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-warm-50 p-6 rounded-sm border border-warm-200">
+                <div className="w-10 h-10 bg-primary-900 text-white rounded-full flex items-center justify-center mb-4 font-bold">1</div>
+                <h3 className="text-lg font-semibold text-primary-900 mb-2">Поиск объекта</h3>
+                <p className="text-warm-600 text-sm">
+                  Расскажите нам о ваших требованиях и бюджете. Мы отберём лучшие новостройки из нашего обширного портфеля.
+                </p>
+              </div>
+
+              <div className="bg-warm-50 p-6 rounded-sm border border-warm-200">
+                <div className="w-10 h-10 bg-primary-900 text-white rounded-full flex items-center justify-center mb-4 font-bold">2</div>
+                <h3 className="text-lg font-semibold text-primary-900 mb-2">Просмотры</h3>
+                <p className="text-warm-600 text-sm">
+                  Мы организуем просмотры и сопровождаем вас, предоставляя экспертные знания о каждом проекте и районе.
+                </p>
+              </div>
+
+              <div className="bg-warm-50 p-6 rounded-sm border border-warm-200">
+                <div className="w-10 h-10 bg-primary-900 text-white rounded-full flex items-center justify-center mb-4 font-bold">3</div>
+                <h3 className="text-lg font-semibold text-primary-900 mb-2">Экспертная помощь</h3>
+                <p className="text-warm-600 text-sm">
+                  Мы проводим переговоры и оформляем документы от вашего имени, используя наши отношения с застройщиками.
+                </p>
+              </div>
+
+              <div className="bg-warm-50 p-6 rounded-sm border border-warm-200">
+                <div className="w-10 h-10 bg-primary-900 text-white rounded-full flex items-center justify-center mb-4 font-bold">4</div>
+                <h3 className="text-lg font-semibold text-primary-900 mb-2">Юридическая поддержка</h3>
+                <p className="text-warm-600 text-sm">
+                  Мы подключаем вас к надёжным англоговорящим адвокатам, специализирующимся на испанских сделках с недвижимостью.
+                </p>
+              </div>
+
+              <div className="bg-warm-50 p-6 rounded-sm border border-warm-200">
+                <div className="w-10 h-10 bg-primary-900 text-white rounded-full flex items-center justify-center mb-4 font-bold">5</div>
+                <h3 className="text-lg font-semibold text-primary-900 mb-2">Обновления строительства</h3>
+                <p className="text-warm-600 text-sm">
+                  При покупке по проекту мы держим вас в курсе хода строительства с регулярными фото и отчётами.
+                </p>
+              </div>
+
+              <div className="bg-warm-50 p-6 rounded-sm border border-warm-200">
+                <div className="w-10 h-10 bg-primary-900 text-white rounded-full flex items-center justify-center mb-4 font-bold">6</div>
+                <h3 className="text-lg font-semibold text-primary-900 mb-2">Передача ключей</h3>
+                <p className="text-warm-600 text-sm">
+                  Мы участвуем в финальной инспекции и передаче ключей, обеспечивая полное соответствие всем требованиям.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Секция "Зона охвата" */}
+        <section className="py-16 bg-warm-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-10 h-px bg-accent-500" />
+                  <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
+                    Наша зона охвата
+                  </span>
+                </div>
+                <h2 className="text-3xl font-light text-primary-900 mb-6">
+                  Коста Бланка & <span className="font-semibold">Коста Калида</span>
+                </h2>
+                <p className="text-warm-700 mb-6 leading-relaxed">
+                  Мы охватываем всю Коста Бланка от Дении на севере до Торревьехи на юге,
+                  плюс регион Коста Калида вокруг Мурсии. Это включает все популярные районы для
+                  международных покупателей.
+                </p>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <h4 className="font-semibold text-primary-900 mb-2">Коста Бланка Север</h4>
+                    <ul className="text-warm-600 text-sm space-y-1">
+                      <li>• Халеа и Морайра</li>
+                      <li>• Кальпе и Алтеа</li>
+                      <li>• Бенидорм и Финестрат</li>
+                      <li>• Виллахойоса</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-primary-900 mb-2">Коста Бланка Юг</h4>
+                    <ul className="text-warm-600 text-sm space-y-1">
+                      <li>• Торревьеха</li>
+                      <li>• Ориуэла Коста</li>
+                      <li>• Гвардамар</li>
+                      <li>• Сьюдад Кесада</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-primary-900 mb-2">Коста Калида</h4>
+                    <ul className="text-warm-600 text-sm space-y-1">
+                      <li>• Мар Менор</li>
+                      <li>• Лос Алькасарес</li>
+                      <li>• Сан Педро дель Пинатар</li>
+                      <li>• Мазаррон</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-primary-900 mb-2">Гольф резорты</h4>
+                    <ul className="text-warm-600 text-sm space-y-1">
+                      <li>• Лас Колинас</li>
+                      <li>• Вилламартин</li>
+                      <li>• Ла Финка</li>
+                      <li>• Виставелла</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-primary-900 p-8 rounded-sm text-white">
+                <h3 className="text-xl font-semibold mb-4">Свяжитесь с нами</h3>
+                <p className="text-warm-300 mb-6">
+                  Готовы начать поиск? Свяжитесь с нами для бесплатной консультации без обязательств.
+                </p>
+
+                <div className="space-y-4">
+                  <a
+                    href={CONTACT.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-white hover:text-accent-400 transition-colors"
+                  >
+                    <div className="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                      </svg>
+                    </div>
+                    <span>Напишите нам на WhatsApp</span>
+                  </a>
+
+                  <a href={`tel:${CONTACT.phone}`} className="flex items-center gap-3 text-white hover:text-accent-400 transition-colors">
+                    <div className="w-10 h-10 bg-accent-500 rounded-full flex items-center justify-center">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </div>
+                    <span>{CONTACT.phone}</span>
+                  </a>
+
+                  <a href={`mailto:${CONTACT.email}`} className="flex items-center gap-3 text-white hover:text-accent-400 transition-colors">
+                    <div className="w-10 h-10 bg-warm-600 rounded-full flex items-center justify-center">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <span>{CONTACT.email}</span>
+                  </a>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-white/20">
+                  <p className="text-warm-400 text-sm">
+                    Часы работы: Понедельник - Пятница, 9:00 - 18:00 (CET)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Финальное предложение */}
+        <section className="py-16 bg-primary-900">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-2xl md:text-3xl font-light text-white mb-4">
+              Готовы найти дом своей мечты в Испании?
+            </h2>
+            <p className="text-warm-300 mb-8 max-w-2xl mx-auto">
+              Просмотрите наш обширный портфель новостроек или свяжитесь с нами для персональных рекомендаций.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                href="/ru/developments"
+                className="bg-accent-500 hover:bg-accent-600 text-white font-medium px-8 py-3 rounded-sm transition-colors"
+              >
+                Просмотреть проекты
+              </Link>
+              <Link
+                href="/ru/properties"
+                className="bg-white text-primary-900 hover:bg-warm-50 font-medium px-8 py-3 rounded-sm transition-colors"
+              >
+                Все объекты
+              </Link>
+              <a
+                href={CONTACT.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-medium px-8 py-3 rounded-sm transition-colors inline-flex items-center gap-2"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                 </svg>
-                <span className="text-warm-700">{benefit}</span>
-              </div>
-            ))}
+                Чат в WhatsApp
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-16 bg-primary-900">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-light text-white mb-4">
-            Готовы Начать <span className="font-semibold">Поиск?</span>
-          </h2>
-          <p className="text-warm-300 mb-8">
-            Свяжитесь с нами сегодня для бесплатной консультации.
-          </p>
-          <Link
-            href="/ru/contact"
-            className="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-medium px-8 py-3 rounded-sm transition-all"
-          >
-            Начать Консультацию
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
-        </div>
-      </section>
-    </main>
+        {/* Плавающая кнопка WhatsApp */}
+        <a
+          href={CONTACT.whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all group"
+          aria-label="Чат на WhatsApp"
+        >
+          <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </a>
+      </main>
+    </>
   );
 }
