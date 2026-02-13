@@ -202,7 +202,12 @@ function getArticle(slug: string): ArticleContent | null {
   const filePath = path.join(articlesDir, `${slug}.json`);
 
   if (fs.existsSync(filePath)) {
-    return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    try {
+      return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    } catch (error) {
+      console.error(`Error parsing article ${slug}:`, error);
+      return null;
+    }
   }
 
   return null;
@@ -217,8 +222,14 @@ function getRelatedArticles(currentSlug: string, limit: number = 3): { slug: str
     const currentCategory = currentArticle?.category || '';
 
     const candidates = files
-      .map(f => JSON.parse(fs.readFileSync(path.join(articlesDir, f), 'utf-8')))
-      .filter(a => a.slug !== currentSlug);
+      .map(f => {
+        try {
+          return JSON.parse(fs.readFileSync(path.join(articlesDir, f), 'utf-8'));
+        } catch {
+          return null;
+        }
+      })
+      .filter((a): a is any => a !== null && a.slug !== currentSlug);
 
     // Score by relevance: same areas > same category > other
     const scored = candidates.map(a => {

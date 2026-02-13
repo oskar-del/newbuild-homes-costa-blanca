@@ -27,7 +27,14 @@ interface ArticleContent {
 
 function getArticle(slug: string): ArticleContent | null {
   const filePath = path.join(ARTICLES_DIR, `${slug}.json`);
-  if (fs.existsSync(filePath)) return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  if (fs.existsSync(filePath)) {
+    try {
+      return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    } catch (error) {
+      console.error(`Error parsing article ${slug}:`, error);
+      return null;
+    }
+  }
   return null;
 }
 
@@ -35,8 +42,14 @@ function getRelatedArticles(currentSlug: string, limit = 3) {
   try {
     if (!fs.existsSync(ARTICLES_DIR)) return [];
     return fs.readdirSync(ARTICLES_DIR).filter(f => f.endsWith('.json'))
-      .map(f => JSON.parse(fs.readFileSync(path.join(ARTICLES_DIR, f), 'utf-8')))
-      .filter((a: ArticleContent) => a.slug !== currentSlug).slice(0, limit)
+      .map(f => {
+        try {
+          return JSON.parse(fs.readFileSync(path.join(ARTICLES_DIR, f), 'utf-8'));
+        } catch {
+          return null;
+        }
+      })
+      .filter((a): a is any => a !== null && a.slug !== currentSlug).slice(0, limit)
       .map((a: ArticleContent) => ({ slug: a.slug, title: a.title, category: a.category, readTime: a.readTime, excerpt: a.excerpt }));
   } catch { return []; }
 }

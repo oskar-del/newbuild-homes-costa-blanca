@@ -86,7 +86,12 @@ function getRegion(slug: string): RegionContent | null {
   const filePath = path.join(regionsDir, `${slug}.json`);
 
   if (fs.existsSync(filePath)) {
-    return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    try {
+      return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    } catch (error) {
+      console.error(`Error parsing region ${slug}:`, error);
+      return null;
+    }
   }
 
   return null;
