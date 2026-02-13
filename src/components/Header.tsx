@@ -293,15 +293,58 @@ function LanguageSwitcher({ className = '' }: { className?: string }) {
   // Detect current locale from path
   const currentLang = LANGUAGES.find(l => l.prefix && pathname.startsWith(l.prefix)) || LANGUAGES[0];
 
-  // Build path for a target language
+  // Build path for a target language — with fallback for untranslated subpages
   const getPathForLang = (lang: typeof LANGUAGES[number]) => {
-    // Strip current prefix
+    // Strip current prefix to get base path
     let basePath = pathname;
     if (currentLang.prefix) {
       basePath = pathname.replace(new RegExp(`^${currentLang.prefix}`), '') || '/';
     }
-    // Add target prefix
-    return lang.prefix ? `${lang.prefix}${basePath === '/' ? '' : basePath}` : basePath;
+
+    // If switching to English, always use the base path (all English pages exist)
+    if (!lang.prefix) return basePath;
+
+    // Top-level pages that exist for ALL languages
+    const alwaysTranslated = [
+      '/', '/areas', '/blog', '/properties', '/developments',
+      '/contact', '/about', '/guides', '/golf', '/luxury', '/inland', '/builders',
+    ];
+
+    if (alwaysTranslated.includes(basePath)) {
+      return `${lang.prefix}${basePath === '/' ? '' : basePath}`;
+    }
+
+    // Blog articles — translated versions exist for all languages
+    if (basePath.startsWith('/blog/')) {
+      return `${lang.prefix}${basePath}`;
+    }
+
+    // Area detail pages — re-exports exist for all languages
+    if (basePath.startsWith('/areas/')) {
+      return `${lang.prefix}${basePath}`;
+    }
+
+    // Guide subpages — some are translated, most are English-only
+    // Fall back to /guides index for the target language
+    if (basePath.startsWith('/guides/')) {
+      // Only these guide slugs are the same across all languages
+      const universalGuides = ['/guides/torrevieja', '/guides/javea'];
+      if (universalGuides.includes(basePath)) {
+        return `${lang.prefix}${basePath}`;
+      }
+      // Other guides: fall back to guides index in target language
+      return `${lang.prefix}/guides`;
+    }
+
+    // Properties/developments/golf/builders detail pages — English only
+    // Fall back to the section index in target language
+    if (basePath.startsWith('/properties/')) return `${lang.prefix}/properties`;
+    if (basePath.startsWith('/developments/')) return `${lang.prefix}/developments`;
+    if (basePath.startsWith('/golf/')) return `${lang.prefix}/golf`;
+    if (basePath.startsWith('/builders/')) return `${lang.prefix}/builders`;
+
+    // Default: try the translated path (works for any new routes added later)
+    return `${lang.prefix}${basePath === '/' ? '' : basePath}`;
   };
 
   return (
