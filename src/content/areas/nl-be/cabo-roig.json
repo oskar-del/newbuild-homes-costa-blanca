@@ -1,0 +1,519 @@
+{
+  "slug": "cabo-roig",
+  "name": "Cabo Roig",
+  "region": "Costa Blanca South",
+  "parentArea": "orihuela-costa",
+  "heroImage": "/images/areas/cabo-roig-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Appartement",
+    "Penthouse",
+    "Grondgebonden woning",
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 210000,
+    "max": 850000
+  },
+  "coordinates": {
+    "lat": 37.9312,
+    "lng": -0.7295
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Orihuela Costa Tourism",
+      "url": "https://www.orihuelaturistica.es/",
+      "description": "Official Orihuela tourism portal"
+    },
+    "beaches": [
+      {
+        "name": "Cala Capitán",
+        "googleMaps": "https://maps.google.com/?q=Cala+Capitan+Cabo+Roig",
+        "description": "Stunning rocky cove with crystal-clear water, rock pools, and excellent snorkeling",
+        "blueFlag": true
+      },
+      {
+        "name": "Cala Caleta",
+        "googleMaps": "https://maps.google.com/?q=Cala+Caleta+Cabo+Roig",
+        "description": "Smaller cove with natural beauty, quieter atmosphere"
+      },
+      {
+        "name": "Playa de La Zenia",
+        "googleMaps": "https://maps.google.com/?q=37.9373,-0.7364",
+        "description": "Wide sandy beach just north, full facilities",
+        "distance": "1 km"
+      }
+    ],
+    "shopping": [
+      {
+        "name": "La Zenia Boulevard",
+        "googleMaps": "https://maps.google.com/?q=37.9414,-0.7281",
+        "url": "https://www.lazeniaboulevard.es/",
+        "description": "Europe's largest open-air shopping center, 150+ stores",
+        "distance": "2 km"
+      },
+      {
+        "name": "Cabo Roig Strip",
+        "googleMaps": "https://maps.google.com/?q=Cabo+Roig+Comercial",
+        "description": "Traditional shops, restaurants, and the famous Saturday market"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "10 km",
+      "driveTime": "12 minuutn"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "52 km",
+      "driveTime": "38 minuutn"
+    }
+  },
+  "golf": {
+    "intro": "Cabo Roig sits at the gateway to Orihuela Costa's golf triangle. While the harbor and beaches are the main draw, world-class golf is just minuutn away. The area attracts golfers seeking Mediterranean character alongside their fairways.",
+    "courses": [
+      {
+        "name": "Villamartin Golf",
+        "distance": "4 km",
+        "driveTime": "6 minuutn",
+        "holes": 18,
+        "url": "https://www.villamartingolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Villamartin+Golf",
+        "description": "Championship course since 1972. Hosted European Tour events. The heart of expat golfing."
+      },
+      {
+        "name": "Las Ramblas Golf",
+        "distance": "5 km",
+        "driveTime": "7 minuutn",
+        "holes": 18,
+        "url": "https://www.lasramblasgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Las+Ramblas+Golf+Orihuela",
+        "description": "Dramatic course with elevation changes and Mediterranean views."
+      },
+      {
+        "name": "Campoamor Golf",
+        "distance": "3 km",
+        "driveTime": "5 minuutn",
+        "holes": 18,
+        "url": "https://www.campoamorgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Campoamor+Golf",
+        "description": "Nearest course to Cabo Roig. Well-maintained and suitable for all levels."
+      },
+      {
+        "name": "Las Colinas Golf",
+        "distance": "10 km",
+        "driveTime": "12 minuutn",
+        "holes": 18,
+        "url": "https://www.lascolinasgolf.es/",
+        "googleMaps": "https://maps.google.com/?q=Las+Colinas+Golf",
+        "description": "Award-winning course ranked among Spain's best. Premium experience."
+      }
+    ]
+  },
+  "localMarket": {
+    "saturdayMarket": {
+      "name": "Cabo Roig Saturday Market",
+      "location": "Calle de la Ciguena",
+      "googleMaps": "https://maps.google.com/?q=Cabo+Roig+Saturday+Market",
+      "hours": "Saturdays 8:00 - 14:00",
+      "description": "One of the best markets on the coast. Fresh produce, fish, flowers, clothing, crafts, and bargains. Locals and tourists alike flock here."
+    }
+  },
+  "content": {
+    "metaTitle": "Wonen in Cabo Roig 2026 | Maritiem Costa Blanca | Vastgoedgids",
+    "metaDescription": "Complete gids voor wonen in Cabo Roig - maritiem erfgoed. Lighthouse, zee, rustig. Eigendomsmarkt van €400.000+.",
+    "quickAnswer": "Cabo Roig is Costa Blanca South's most characterful coastal village, with a charming harbor, crystal-clear rocky coves (Cala Capitán), and the famous Saturday market. Properties start at €210,000 for apartments, €280,000 for townhouses, and €450,000 for villas. It's 5-12 minuutn from 4 championship golf courses.",
+    "heroIntro": "If you've ever dreamed of the authentic Mediterranean—fishing boats bobbing in a small harbor, crystal-clear coves carved into the coastline, fresh seafood served as the sun sets over the sea—Cabo Roig is where that dream becomes reality.\n\nThis small coastal enclave on Orihuela Costa has somehow preserved its character despite the development that transformed neighboring areas. The harbor remains the heart of the community, its restaurants famous across the region for grilled fish and paella with a view. The Saturday market draws visitors from miles around, its stalls spilling through the streets with fresh produce, flowers, clothing, and treasures. And the beaches—rocky coves with water so clear you can see the bottom from ten meters—offer something different from the wide sandy stretches elsewhere.",
+    "lifestyleSection": {
+      "intro": "Life in Cabo Roig moves at Mediterranean pace. The harbor is where mornings begin—coffee at a terrace watching fishermen sort their catch. The coves invite swimming in water that feels like a natural swimming pool, rock formations creating private spaces even in summer. The Saturday market is a social event as much as shopping—running into neighbors, discovering the week's freshest produce, perhaps a glass of something cold afterward.\n\nThe community here tends toward those seeking authenticity over convenience. Yes, La Zenia Boulevard is just 2 km away when you need modern shopping. But the appeal of Cabo Roig is its difference—the feeling that you've found something special that mass tourism hasn't touched.",
+      "highlights": [
+        "Charming harbor with fresh seafood restaurants",
+        "Crystal-clear rocky coves—Cala Capitán, Cala Caleta",
+        "Famous Saturday market—one of the coast's best",
+        "Traditional Mediterranean character preserved",
+        "La Zenia Boulevard just 2 km away",
+        "4 championship golf courses within 12 minuutn",
+        "More upscale, quieter than neighboring areas",
+        "Strong international community with Spanish integration"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Cabo Roig's beaches are different—and that's the point. Cala Capitán is the jewel: a rocky cove with crystal-clear turquoise water, natural rock pools perfect for children, and excellent snorkeling. Cala Caleta offers similar beauty with fewer crowds. For traditional sandy beach, La Zenia is just 1 km north. The coastline here rewards exploration—hidden spots, dramatic rocks, that perfect swimming hole.",
+      "dining": "The harbor restaurants are legendary. Fresh fish grilled simply, arroz caldero (the local rice dish), prawns that were swimming this morning—this is Spanish coastal cooking at its finest. Prices are reasonable, views are included. The commercial strip along the main road offers everything from British pubs to Italian trattorias. For variety, La Zenia Boulevard's 30+ restaurants are 5 minuutn away.",
+      "shopping": "Cabo Roig has traditional shops, supermarkets, and pharmacies for daily needs. But the real shopping experience is the Saturday market—hundreds of stalls, fresh produce, fish, flowers, clothing, housewares, and the indefinable treasures that make markets special. For major shopping, La Zenia Boulevard (2 km) has 150+ stores including all major brands.",
+      "healthcare": "Hospital Universitario de Torrevieja is 10 km away (12 minuutn), with comprehensive services and English-speaking staff. Several private clinics, dentists, and 24-uur pharmacies serve the area. Many healthcare providers are accustomed to international patients given the expat population.",
+      "transport": "Alicante-Elche Airport is 52 km away (38 minuutn via AP-7). Murcia-Corvera Airport is 35 km (28 minuutn). A car is recommended for maximum convenience, though the area is walkable for daily needs. Coastal buses connect to Torrevieja and other towns. Taxis are readily available."
+    },
+    "neighborhoods": [
+      {
+        "name": "Harbor Area (Puerto)",
+        "description": "Premium location overlooking the harbor. Walking distance to restaurants and coves. Highest prices but unbeatable location. Mostly apartments and townhouses."
+      },
+      {
+        "name": "Cala Capitán",
+        "description": "Properties near the famous cove. Mix of established villas and newer developments. Sea views available from elevated positions."
+      },
+      {
+        "name": "Commercial Strip",
+        "description": "Along the main road. Good access to shops and restaurants. More affordable than harbor area. Mix of property types."
+      },
+      {
+        "name": "Towards La Zenia",
+        "description": "Northern edge, convenient for both Cabo Roig character and La Zenia Boulevard. Newer developments with modern specifications."
+      }
+    ],
+    "propertyMarketSection": "Cabo Roig commands a slight premium over neighboring areas, reflecting its character and desirability. New build apartments start from around €210,000-380,000, townhouses from €280,000-480,000, and villas from €450,000-850,000. Harbor-view and cove-proximity properties are particularly sought after.\n\nThe rental market is strong with a slightly different profile than La Zenia. Cabo Roig attracts couples, golf groups, and those seeking authentic Mediterranean experience over shopping convenience. Rentals tend toward longer stays with higher per-night rates. Premium properties near the harbor achieve excellent yields.\n\nResale properties often offer larger plots and established gardens. Some of the most desirable properties in Orihuela Costa are older villas in Cabo Roig with character that new builds can't replicate.",
+    "whyLiveHereSection": [
+      "Authentic Mediterranean character—harbor, coves, markets",
+      "Crystal-clear rocky beaches unlike anywhere else",
+      "Famous Saturday market at your doorstep",
+      "Fresh seafood dining at the harbor",
+      "La Zenia Boulevard convenience just 2 km away",
+      "4 championship golf courses within 12 minuutn",
+      "More exclusive, quieter atmosphere",
+      "Strong property values due to limited supply"
+    ],
+    "faqs": [
+      {
+        "question": "What makes Cabo Roig different from La Zenia?",
+        "answer": "Cabo Roig has more traditional Mediterranean character with its charming harbor, rocky coves, and famous Saturday market. La Zenia is more modern and commercial, centered on the Boulevard shopping center and sandy beach. Cabo Roig is slightly more upscale and quieter. They're adjacent, so you can enjoy both."
+      },
+      {
+        "question": "What is the Cabo Roig Saturday Market?",
+        "answer": "One of the best markets on Costa Blanca—hundreds of stalls selling fresh produce, fish, flowers, clothing, crafts, and household items. It runs every Saturday from 8 AM to 2 PM and draws visitors from across the region. It's as much a social event as shopping."
+      },
+      {
+        "question": "Is Cabo Roig good for beaches?",
+        "answer": "Yes, but different from typical Spanish beaches. Cala Capitán and Cala Caleta are rocky coves with crystal-clear water, natural rock pools, and excellent snorkeling. If you prefer sandy beaches, La Zenia Beach is just 1 km north. The rocky coves are Cabo Roig's unique selling point."
+      },
+      {
+        "question": "What are property prices in Cabo Roig?",
+        "answer": "Cabo Roig commands slight premiums over neighboring areas. Apartments start from €210,000, townhouses from €280,000, and villas from €450,000. Harbor-view properties are particularly sought after. Overall prices are 10-15% higher than equivalent La Zenia properties."
+      },
+      {
+        "question": "How far is Cabo Roig from golf courses?",
+        "answer": "Cabo Roig has excellent golf access: Campoamor Golf (3 km), Villamartin (4 km), Las Ramblas (5 km), and Las Colinas (10 km). All are within 12 minuutn drive. The area attracts golfers seeking Mediterranean character alongside their game."
+      },
+      {
+        "question": "Is Cabo Roig good for rental investment?",
+        "answer": "Yes, with a different profile than mass-market areas. Cabo Roig attracts couples, golfers, and those seeking authentic Mediterranean experience. Rentals tend toward longer stays at premium rates. Harbor-view and cove-proximity properties perform particularly well."
+      },
+      {
+        "question": "What is the dining scene like in Cabo Roig?",
+        "answer": "The harbor restaurants are legendary for fresh seafood—grilled fish, paella, prawns that were caught that morning. The main strip offers international options. It's widely considered the best seafood dining on Orihuela Costa. Reservations recommended in high season."
+      },
+      {
+        "question": "Is English widely spoken in Cabo Roig?",
+        "answer": "Yes, English is widely spoken due to the international community. Most restaurants, shops, and services cater to English speakers. The community has significant Scandinavian presence alongside British residents. Spanish integration is easier here than in some areas."
+      },
+      {
+        "question": "How far is La Zenia Boulevard from Cabo Roig?",
+        "answer": "La Zenia Boulevard is just 2 km from Cabo Roig—about 5 minuutn by car or a 20-minuut walk. You get the traditional character of Cabo Roig with the shopping convenience of the Boulevard close by. Best of both worlds."
+      },
+      {
+        "question": "Is Cabo Roig suitable for families?",
+        "answer": "Yes, particularly families who appreciate authentic Mediterranean character. The rock pools at Cala Capitán are perfect for children, the community is safe, and La Zenia's facilities are close by. It's quieter than La Zenia, which some families prefer."
+      }
+    ],
+    "conclusion": "Cabo Roig offers something increasingly rare on Costa Blanca: genuine Mediterranean character that hasn't been lost to development. The harbor, the coves, the Saturday market—these aren't manufactured attractions but authentic pieces of coastal life. For buyers seeking quality over quantity, character over convenience, Cabo Roig rewards handsomely.\n\nReady to explore properties in Cabo Roig? Our team specializes in this distinctive area, understanding what makes it special and who it suits best. Whether you're seeking a harbor-view apartment, a villa near the coves, or an investment in quality, we'll guide you through every step.",
+    "investmentAnalysis": {
+      "rentalYield": "5-7% on quality apartments, 6-8% on harbor-view properties",
+      "annualAppreciation": "3-4% annually, steady growth from character premium and limited supply",
+      "overview": "Cabo Roig's rental market attracts quality-focused visitors and golfers willing to pay premium nightly rates. The limited supply of harbor properties and rocky coves creates sustained demand. Character premium justifies prices higher than equivalent La Zenia properties.",
+      "highlights": [
+        "Harbor-view apartments command premium rental rates",
+        "Couples and golf groups seeking authentic experience drive strong bookings",
+        "Saturday market and restaurant scene creates tourist attraction value",
+        "Limited supply of quality properties maintains price strength",
+        "Longer average stays at premium rates than mass-market areas"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Cabo Roig's cost of living reflects its more upmarket positioning compared to neighboring areas. Daily expenses are higher than inland towns but comparable to other coastal resort communities.",
+      "items": [
+        {
+          "category": "Rent (2-bed apartment)",
+          "cost": "€750-1200",
+          "notes": "Harbor-view significantly more; commercial strip less expensive"
+        },
+        {
+          "category": "Utilities (monthly)",
+          "cost": "€100-150",
+          "notes": "Air conditioning essential in summer, increases seasonal bills"
+        },
+        {
+          "category": "Groceries (weekly)",
+          "cost": "€70-100",
+          "notes": "Higher than inland; tourist season affects availability and prices"
+        },
+        {
+          "category": "Restaurant meal (3-course)",
+          "cost": "€18-28",
+          "notes": "Harbor seafood restaurants more expensive than average"
+        },
+        {
+          "category": "Cafe coffee",
+          "cost": "€1.50-2.00",
+          "notes": "Beachfront and harbor locations command premium prices"
+        },
+        {
+          "category": "Healthcare (monthly)",
+          "cost": "€80-130",
+          "notes": "Private insurance recommended for faster specialist access"
+        },
+        {
+          "category": "Property taxes (annual)",
+          "cost": "€500-800",
+          "notes": "IBI for typical coastal apartment or villa"
+        },
+        {
+          "category": "Saturday market visit",
+          "cost": "€30-50",
+          "notes": "Fresh produce and household items add to weekly shopping"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Cabo Roig's event calendar balances traditional Spanish fiestas with events celebrating its maritime heritage. The Saturday market is arguably the biggest regular attraction.",
+      "events": [
+        {
+          "name": "Saturday Market (Mercado de los Sábados)",
+          "month": "Year-round, weekly",
+          "description": "One of Costa Blanca's largest and most famous markets, stretching along Calle de la Cigüeña with hundreds of stalls, fresh produce, fish, flowers, and crafts"
+        },
+        {
+          "name": "Fiestas Patronales (Patron Saint Fiesta)",
+          "month": "July",
+          "description": "Orihuela Costa-wide celebration with parades, live music, food stalls, and harbor celebrations specific to Cabo Roig"
+        },
+        {
+          "name": "Fiesta del Mar (Sea Festival)",
+          "month": "August",
+          "description": "Maritime-focused celebration with beach activities, boat races, and seafood competitions highlighting Cabo Roig's harbor heritage"
+        },
+        {
+          "name": "Semana Santa (Holy Week)",
+          "month": "March/April",
+          "description": "Religious processions through the harbor area with traditional Spanish ceremonies"
+        },
+        {
+          "name": "Christmas Markets at the Harbor",
+          "month": "December",
+          "description": "Festive season markets and decorations around the harbor, special holiday dining at restaurants"
+        },
+        {
+          "name": "New Year's Eve Celebrations",
+          "month": "December 31",
+          "description": "Harbor parties, fireworks over the water, and traditional Spanish 12-grape celebration"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Cabo Roig itself has limited school options, with most families using nearby Orihuela Costa schools or international alternatives in La Zenia and Torrevieja.",
+      "schools": [
+        {
+          "name": "Colegio Público Orihuela Costa",
+          "type": "Public Primary & Secondary",
+          "distance": "5 km, 7 minuutn by car",
+          "description": "Spanish public school serving the Orihuela Costa area with bilingual education programs"
+        },
+        {
+          "name": "International Schools (La Zenia)",
+          "type": "International Primary & Secondary",
+          "distance": "2 km, 5 minuutn by car",
+          "description": "British and other international curriculum schools near La Zenia Boulevard for expat families"
+        },
+        {
+          "name": "Colegio Privado (Private Schools)",
+          "type": "Private education",
+          "distance": "Nearby Torrevieja and La Zenia",
+          "description": "Various private school options with English-language instruction and Spanish curriculum alternatives"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Cabo Roig's natural attractions center on its distinctive rocky coastline, clear Mediterranean waters, and marine activities. The focus is water-based rather than inland nature.",
+      "activities": [
+        {
+          "name": "Snorkeling at Cala Capitán",
+          "type": "Water sports",
+          "description": "Crystal-clear rocky cove with abundant marine life, excellent visibility, and natural rock formations perfect for exploration"
+        },
+        {
+          "name": "Swimming in Cala Caleta",
+          "type": "Water recreation",
+          "description": "Smaller, quieter cove with similar water clarity, ideal for families and those seeking peaceful swimming"
+        },
+        {
+          "name": "Coastal walking paths",
+          "type": "Nature walks",
+          "description": "Scenic trails along cliffs overlooking the Mediterranean, connecting different coves and viewpoints"
+        },
+        {
+          "name": "Sailing and boat trips",
+          "type": "Water activities",
+          "description": "Harbor-based sailing experiences, fishing trips, or boat excursions along the Costa Blanca coast"
+        },
+        {
+          "name": "Fishing from the rocks",
+          "type": "Recreation",
+          "description": "Traditional Spanish fishing from rocky outcrops, popular for both sport and sustenance fishing"
+        },
+        {
+          "name": "Sunset viewing from harbor",
+          "type": "Leisure",
+          "description": "Spectacular Mediterranean sunsets over the harbor, best experienced from waterfront terraces"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Cabo Roig has a well-established, sophisticated expatriate community that leans toward quality-conscious buyers. The international population is significant but integrated with Spanish culture.",
+      "highlights": [
+        "Sophisticated expat community focused on quality of life",
+        "Strong British presence alongside Scandinavian, German, and other Europeans",
+        "Integration with Spanish culture valued alongside expat social infrastructure",
+        "Golf clubs and yacht clubs provide natural community gathering points",
+        "Less transient than mass-market resorts—many long-term residents and permanent settlers"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "German",
+        "Dutch",
+        "French",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Cabo Roig",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning harbor walk",
+          "description": "Start the day with a walk along the harbor watching fishing boats, stopping for café con leche at a waterfront bar"
+        },
+        {
+          "time": "10:00",
+          "activity": "Saturday market (weekly)",
+          "description": "Shop the famous market for fresh produce, fish, flowers, and discover treasures among the hundreds of stalls"
+        },
+        {
+          "time": "13:00",
+          "activity": "Lunch at harbor restaurant",
+          "description": "Main meal featuring fresh grilled fish, arroz caldero, or seafood paella overlooking the water"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta or beach time",
+          "description": "Afternoon rest or swimming in one of the rocky coves with crystal-clear water"
+        },
+        {
+          "time": "17:00",
+          "activity": "Golf at nearby course",
+          "description": "Round at Villamartin (4 km), Las Ramblas (5 km), or Campoamor (3 km) golf courses"
+        },
+        {
+          "time": "20:00",
+          "activity": "Paseo and aperitif",
+          "description": "Evening stroll through town, greeting friends, drinks at a favorite bar"
+        },
+        {
+          "time": "21:00",
+          "activity": "Dinner at restaurant",
+          "description": "Evening meal (lighter than lunch), often at the harbor for sunset views and fresh seafood"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7295!3d37.9312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCabo%20Roig!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Cabo Roig",
+    "description": "Cabo Roig is a characterful coastal village in Orihuela Costa, Costa Blanca South, known for its charming harbor, crystal-clear rocky coves (Cala Capitán), famous Saturday market, and fresh seafood restaurants.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.9312",
+      "longitude": "-0.7295"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cabo Roig",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Orihuela Costa, Costa Blanca, Spain"
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Charming Harbor",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Rocky Coves (Cala Capitán)",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Famous Saturday Market",
+        "value": true
+      }
+    ]
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What makes Cabo Roig different from La Zenia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cabo Roig has more traditional Mediterranean character with its charming harbor, rocky coves, and famous Saturday market. La Zenia is more modern and commercial. Cabo Roig is slightly more upscale and quieter."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Cabo Roig Saturday Market?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "One of the best markets on Costa Blanca—hundreds of stalls selling fresh produce, fish, flowers, clothing, and crafts. Every Saturday 8 AM to 2 PM."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are property prices in Cabo Roig?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Apartments start from €210,000, townhouses from €280,000, and villas from €450,000. Prices are 10-15% higher than equivalent La Zenia properties due to character and demand."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Cabo Roig good for beaches?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cabo Roig has unique rocky coves (Cala Capitán, Cala Caleta) with crystal-clear water and natural rock pools. Sandy La Zenia Beach is just 1 km away."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Cabo Roig from golf courses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Excellent access: Campoamor Golf (3 km), Villamartin (4 km), Las Ramblas (5 km), Las Colinas (10 km). All within 12 minuutn drive."
+        }
+      }
+    ]
+  }
+}

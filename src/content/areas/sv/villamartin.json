@@ -1,0 +1,574 @@
+{
+  "slug": "villamartin",
+  "name": "Villamartin",
+  "region": "Costa Blanca Söder",
+  "parentArea": "orihuela-costa",
+  "heroImage": "/images/areas/villamartin-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600585154253-f7ceae9e2b8c?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartment",
+    "Penthouse",
+    "Townhouse",
+    "Villa",
+    "Bungalow"
+  ],
+  "priceRange": {
+    "min": 185000,
+    "max": 750000
+  },
+  "coordinates": {
+    "lat": 37.9428,
+    "lng": -0.7689
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Villamartin Tourism",
+      "url": "https://www.orihuelaturistica.es/",
+      "description": "Official Orihuela tourism portal"
+    },
+    "beaches": [
+      {
+        "name": "Playa de La Zenia",
+        "googleMaps": "https://maps.google.com/?q=37.9373,-0.7364",
+        "description": "Nearest Blue Flag beach, 10 minutes drive",
+        "distance": "5 km",
+        "blueFlag": true
+      },
+      {
+        "name": "Playa Flamenca",
+        "googleMaps": "https://maps.google.com/?q=37.9265,-0.7295",
+        "description": "Family-friendly beach with calm waters",
+        "distance": "6 km"
+      },
+      {
+        "name": "Cala Capitán (Cabo Roig)",
+        "googleMaps": "https://maps.google.com/?q=37.9352,-0.7342",
+        "description": "Rocky cove with crystal-clear water",
+        "distance": "7 km"
+      }
+    ],
+    "shopping": [
+      {
+        "name": "La Zenia Boulevard",
+        "googleMaps": "https://maps.google.com/?q=37.9414,-0.7281",
+        "url": "https://www.lazeniaboulevard.es/",
+        "description": "Europe's largest open-air shopping center, 150+ stores",
+        "distance": "3 km"
+      },
+      {
+        "name": "Villamartin Plaza",
+        "googleMaps": "https://maps.google.com/?q=Villamartin+Plaza",
+        "description": "Local hub with restaurants, bars, and weekly market"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "12 km",
+      "driveTime": "15 minutes"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "55 km",
+      "driveTime": "40 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Villamartin isn't just near golf—it IS golf. Built around the legendary Villamartin Golf Club, this urbanization was designed from the ground up for golfers. Wake up, walk to the first tee, and be on the fairway within minutes. The sound of club meeting ball is the morning alarm here.",
+    "courses": [
+      {
+        "name": "Villamartin Golf Club",
+        "distance": "0 km",
+        "driveTime": "Walking distance",
+        "holes": 18,
+        "url": "https://www.villamartingolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Villamartin+Golf",
+        "designer": "Robert Putman",
+        "yearOpened": 1972,
+        "description": "The heart of Villamartin. This championship course hosted European Tour events and remains one of Costa Blanca's most respected layouts. Mature trees, well-maintained fairways, challenging greens."
+      },
+      {
+        "name": "Las Ramblas Golf",
+        "distance": "2 km",
+        "driveTime": "4 minutes",
+        "holes": 18,
+        "url": "https://www.lasramblasgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Las+Ramblas+Golf+Orihuela",
+        "description": "Dramatic elevation changes with stunning Mediterranean views. One of the region's most scenic courses."
+      },
+      {
+        "name": "Campoamor Golf",
+        "distance": "4 km",
+        "driveTime": "6 minutes",
+        "holes": 18,
+        "url": "https://www.campoamorgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Campoamor+Golf",
+        "description": "Well-maintained course suitable for all levels. Excellent clubhouse and practice facilities."
+      },
+      {
+        "name": "Las Colinas Golf & Country Club",
+        "distance": "8 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "url": "https://www.lascolinasgolf.es/",
+        "googleMaps": "https://maps.google.com/?q=Las+Colinas+Golf",
+        "designer": "Cabell Robinson",
+        "description": "Award-winning course consistently ranked in Spain's top 10. Premium facilities and stunning design."
+      },
+      {
+        "name": "Vistabella Golf",
+        "distance": "12 km",
+        "driveTime": "15 minutes",
+        "holes": 18,
+        "url": "https://www.vistabellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+        "description": "Modern course with excellent practice range. Popular with residents for its friendly atmosphere."
+      }
+    ]
+  },
+  "localMarket": {
+    "saturdayMarket": {
+      "name": "Villamartin Wednesday Market",
+      "location": "Villamartin Plaza area",
+      "googleMaps": "https://maps.google.com/?q=Villamartin+Plaza+Market",
+      "hours": "Wednesdays 8:00 - 14:00",
+      "description": "Local market with fresh produce, clothing, and household items"
+    }
+  },
+  "content": {
+    "metaTitle": "Bo i Villamartin 2026 | Nybyggda hem på Costa Blanca",
+    "metaDescription": "Komplett guide till Villamartin, golfens huvudstad på Costa Blanca Söder. Fastigheter från €185k, 5 banor inom 15 minuter, berömda Plaza, blomstrande expatkommunitet.",
+    "quickAnswer": "Villamartin är golfens huvudstad på Costa Blanca Söder, byggd omkring den berömda Villamartin Golf Club (est. 1972). Fastigheter sträcker sig från €185 000 lägenheter till €750 000 villor, med 5 mästarskapsbanor inom 15 minuter. Den berömda Villamartin Plaza är hjärtat i expatkommunikationen.",
+    "heroIntro": "Det finns ett ögonblick varje morgon i Villamartin när solen träffar första fairway, sprinklerna dansar över välskötade greens, och de tidiga grupperna dyker upp på horisonten. Det här är inte bara en plats där människor spelar golf—det är en plats byggd helt omkring spelet.\n\nVillamartin skapades på tidigt 1970-tal med en vision som var före sin tid: designa ett samhälle där golf är vävet in i det dagliga livets struktur. Ett halvsekel senare har den visionen mognat till en av Costa Blancas mest eftertraktade adresser. Mästerskapskanalen som ger området sitt namn är omgiven av låga villor, radhus och lägenheter, många med direkt fairway-vyer. Den berömda Villamartin Plaza surrar av liv varje kväll, dess restauranger och barer är samlingsplatsen för ett samhälle som sträcker sig över dussintals nationaliteter.",
+    "lifestyleSection": {
+      "intro": "Att leva i Villamartin betyder att golf alltid är till hands, men livet här handlar om mycket mer än spelet. Plaza är det sociala epicentret—en speciellt byggd kvadrat omgiven av restauranger, barer och kaféer där samhället samlas varje kväll. Vilken kväll som helst hörs ett dussintal språk, även om engelska dominerar. Vänskaper bildas snabbt här.\n\nDagen börjar vanligtvis med kaffe på din favoritterrass, kanske en rond på en av de fem banorna inom 15 minuter, lunch på klubbhuset och kvällar tillbaka på Plaza och ser världen gå förbi. Det är en rytm som lockar pensionärer, fjärrarbetare och alla som drömde om att göra golf till en livsstil snarare än en hobby.",
+      "highlights": [
+        "5 mästarskapsbanor inom 15 minuters körning",
+        "Berömda Villamartin Plaza—samhällets sociala hjärta",
+        "Villamartin Golf Club (1972) vid din dörr",
+        "Stor, etablerad expatkommunitet—omedelbar socialt liv",
+        "La Zenia Boulevard bara 3 km bort",
+        "Blue Flag-strander 10 minuters körning",
+        "Fastigheter med direkt golfbana-vyer tillgängliga",
+        "Året runt golfklimat—320+ soliga dagar"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Villamartin ligger inlandet men stränder är bara 10 minuter bort. La Zenia Beach erbjuder Blue Flag-guldstrand med fulla faciliteter—livräddare, strandpubar, solstolar. Playa Flamenca är idealisk för familjer med lugnt, grunt vatten. För något speciellt erbjuder de steniga vikarna vid Cabo Roig kristallklart snorkling och färsk skaldjur vid hamnen.",
+      "dining": "Villamartin Plaza är känd för sin restaurangs scen—spanska tapas, brittiska pubar, italienska trattorias och allt däremellan. Golfklubben erbjuder utmärkt mat med utsikt över banan. För variation har La Zenia Boulevard (3 km) 30+ restauranger, och Cabo Roigs hamn serverar de färskaste skaldjur på kusten.",
+      "shopping": "Dagliga varor är tillgängliga på lokala supermarknader inom Villamartin. För seriös shopping är La Zenia Boulevard bara 3 km bort—över 150 butiker inklusive Primark, Zara, Media Markt och en stor Mercadona. Onsdagsmarknaden på Plaza erbjuder färsk produce och lokala varor.",
+      "healthcare": "Hospital Universitario de Torrevieja ligger 12 km bort (15 minuter), med omfattande tjänster och engelsktalande personal. Flera privata kliniker och tandläkare tjänar Villamartin-området, många med engelsktalande utövare. Flera 24-timmarspharmakor finns i närheten. Den stora expatkommunikationen innebär att sjukvårdstjänster är väl anpassade för internationella patienter.",
+      "transport": "Alicante-Elche Airport ligger 55 km bort (40 minuter via AP-7 motorvägen). Murcia-Corvera Airport är 35 km (30 minuter). En bil rekommenderas för Villamartin—medan många bekvämligheter är inom gångavstånd från Plaza, kräver strander och shopping transport. Taxilar är lätt tillgängliga och expatkommunikationen organiserar ofta bildelning."
+    },
+    "neighborhoods": [
+      {
+        "name": "Villamartin Golf",
+        "description": "Fastigheter direkt på eller med utsikt över banan. Premiumpriser men oöverträffat för golfspelare. Mix av lägenheter, radhus och villor med fairway-vyer."
+      },
+      {
+        "name": "Plaza Area",
+        "description": "Nära den berömda Villamartin Plaza. Gångavstånd till restauranger, barer och samhällsliv. Populär bland dem som prioriterar social åtkomst framför golfvyer."
+      },
+      {
+        "name": "Las Ramblas Side",
+        "description": "Fastigheter mot Las Ramblas Golf. Något lägre priser, fortfarande utmärkt golfåtkomst. Vissa havsutsikter från upphöjda positioner."
+      },
+      {
+        "name": "Outer Urbanizations",
+        "description": "Större tomter och mer plats till lägre priser. 5-10 minuters körning till Plaza. Idealisk för dem som vill ha privathet med samhällsåtkomst."
+      }
+    ],
+    "propertyMarketSection": "Villamartin erbjuder starkt värde för golffokuserat liv. Nybyggda lägenheter startar från omkring €185 000-250 000, radhus från €250 000-400 000 och villor från €400 000-750 000. Golfvypegenskaper kräver premier på 15-25% men erbjuder verkligt livsstylsvärde och hyresinkomstpotential.\n\n**Featured Development: La Vista Boulevard** – Moderna 3-bäddade villor från €489 900 med privata pooler, nära Villamartin Golf. Contemporär design med solarium, garage och högspec-finishes.\n\nHyresmarknaden är särskilt stark—golftourister söker Villamartin året runt, särskilt under vår och höst när europeiska banor är stängda. Fastigheter med pooler, golfvyer och gångavstånd till Plaza uppnår beläggningsgrader som överstiger 70% årligen.\n\nÅterförsäljningsegenskaper erbjuder utmärkt värde för dem som söker omedelbar ockupation eller större tomter. Det etablerade samhället och mogna trädgårdar gör återförsäljningar attraktiva för permanenta invånare.",
+    "whyLiveHereSection": [
+      "5 mästarskapsbanor inom 15 minuter—omöjlig densitet",
+      "Berömda Villamartin Plaza med omedelbar socialt liv",
+      "Stor, välkommen expatkommunitet som talar ditt språk",
+      "Stark hyresinkomstpotential från golftourism",
+      "La Zenia Boulevard shopping bara 3 km bort",
+      "Blue Flag-strander 10 minuters körning",
+      "Etablerat samhälle med beprövad livsstil",
+      "Utmärkt värde jämfört med motsvarande golfsamhällen"
+    ],
+    "featuredProperties": [
+      {
+        "title": "La Vista Boulevard Villa",
+        "reference": "N6299",
+        "price": 489900,
+        "type": "Villa",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "features": [
+          "Private Pool",
+          "Near Villamartin Golf",
+          "Modern Design"
+        ],
+        "description": "Contemporary 3-bed villa with private pool, walking distance to Villamartin Golf. Solarium, garage, and high-spec finishes."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Är Villamartin bra för golf?",
+        "answer": "Villamartin är utan tvivel den bästa golfplatsen på Costa Blanca Söder. Fem mästarskapsbanor ligger inom 15 minuter: Villamartin Golf (0 km), Las Ramblas (2 km), Campoamor (4 km), Las Colinas (8 km) och Vistabella (12 km). Året-runt-klimatet möjliggör golf 365 dagar om året."
+      },
+      {
+        "question": "Vad är Villamartin Plaza?",
+        "answer": "Villamartin Plaza är samhällets berömda sociala nav—en speciellt byggd kvadrat omgiven av restauranger, barer och kaféer. Det är där den internationella kommunikationen samlas varje kväll, med dussintals matstopp och en surr atmosfär året runt. Det är hjärtat i expat socialt liv i Orihuela Costa."
+      },
+      {
+        "question": "Hur långt är Villamartin från stranden?",
+        "answer": "Blue Flag-strander ligger cirka 5 km bort (10 minuters körning). La Zenia Beach är närmast med fullständiga faciliteter. Playa Flamenca och Cabo Roigs steniga vikar är också lätt nåbara. Många invånare föredrar det inlandsliv under veckan och strandtagar på helgerna."
+      },
+      {
+        "question": "Vilka är fastighetspriser i Villamartin?",
+        "answer": "Nybyggda lägenheter startar från omkring €185 000, radhus från €250 000 och villor från €400 000. Golfvypegenskaper kräver 15-25% premier. Återförsäljningar kan erbjuda bättre värde för omedelbar ockupation. Totalt sett erbjuder Villamartin utmärkt värde jämfört med motsvarande golfsamhällen."
+      },
+      {
+        "question": "Är Villamartin bra för hyresinvestering?",
+        "answer": "Ja, Villamartin har stark hyrespotential. Golftourister söker området året runt, särskilt vår och höst när europeiska banor stängs. Fastigheter med pooler, golfvyer och Plaza-åtkomst uppnår 70%+ årlig beläggning. Kombinationen av golf, shopping och strander skapar varierande efterfrågan."
+      },
+      {
+        "question": "Talas engelska omfattande i Villamartin?",
+        "answer": "Engelska är det dominerande språket i Villamartin på grund av den stora brittiska expatkommunikationen. De flesta företag, restauranger och tjänster vänder sig till engelsktalare. Många är brittiska. Du kan leva bekvämt utan spanska, även om att lära dig lite berikar upplevelsen."
+      },
+      {
+        "question": "Vilka nationaliteter bor i Villamartin?",
+        "answer": "Villamartin har en mångsidig internationell kommunitet med brittiska invånare historiskt dominerande. Skandinaver (svenska, norska, danska), holländare, belgier, irländare och tyska invånare blir allt vanligare. Plaza-värden ett kosmopolitiska blandning varje kväll."
+      },
+      {
+        "question": "Hur långt är Villamartin från Alicante Airport?",
+        "answer": "Alicante-Elche Airport ligger ungefär 55 km från Villamartin, och tar omkring 40 minuter via AP-7 motorvägen. Murcia-Corvera Airport är närmare på 35 km (30 minuter), och erbjuder ytterligare flygalternativ särskilt med Ryanair."
+      },
+      {
+        "question": "Hur ser det dagliga livet ut i Villamartin?",
+        "answer": "En typisk dag: morgonkaffe på din terrass, kanske en rond golf, lunch på klubbhuset eller en Plaza-restaurang, eftermiddags siesta eller badhustid, sedan kvällsdrycker och middag på Plaza. Samhället är socialt och välkomnande—att göra vänner är lätt om du deltar."
+      },
+      {
+        "question": "Är Villamartin lämpligt för permanent boende?",
+        "answer": "Absolut. Till skillnad från några orter områden har Villamartin en stor permanent bosatt befolkning. Tjänster drivs året runt, samhället är aktivt i alla årstider och milda vintrar (16-18°C genomsnitt) gör utomhusboende möjligt året runt. Många invånare bor här heltid."
+      }
+    ],
+    "conclusion": "Villamartin erbjuder något sällsynt: ett äkta golflivsstils-samhälle med beprövad appell och utmärkt värde. Oavsett om du söker en semesterbostad med hyresintäkter, ett pensionärsparadis eller helt enkelt en plats där golf är vävet in i det dagliga livet, levererar Villamartin. Plaza, banorna, samhället—de har välkomnat nykomlingar i femtio år.\n\nÄr du redo att utforska fastigheter i Villamartin? Vårt team specialiserar sig på att matcha internationella köpare med det perfekta golflivsstils hemmet. Från fairway-lägenheter till lyxvillor, vägleder vi dig genom varje steg.",
+    "investmentAnalysis": {
+      "rentalYield": "6-9%",
+      "annualAppreciation": "4-6%",
+      "overview": "Villamartin är den premiere investerings plats för golffokuserade fastigheter på Costa Blanca Söder. Ryktet om Villamartin Golf Club, etablerat samhälle och densitet av banor inom 15 minuter skapar omöjlig efterfrågan från golftourister. Den berömda Plaza lockar permanenta invånare och säkerställer stark långsiktig kapitalstabilitet.",
+      "highlights": [
+        "Golftourism driver konsistent året-runt-efterfrågan, särskilt vår & höst",
+        "Golfvypegenskaper uppnår premium hyrestaxa på 8-10% årligen",
+        "Etablerad 50-årstrakt av stabilt samhälle och fastighetsstegring",
+        "Villamartin Plaza skapar vibrerande socialt nav som lockar permanenta invånare",
+        "Begränsad ny leverans ökar värdet på befintliga fastigheter"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Att leva i Villamartin är utmärkt värde för en golflivsstils-destination, med kostnader måttliga trots samhällets lyxkvalitet.",
+      "items": [
+        {
+          "category": "Matvaror (månatlig, par)",
+          "cost": "€310-430",
+          "notes": "Villamartin supermarknader, Plaza-butiker, La Zenia Boulevard i närheten"
+        },
+        {
+          "category": "Hushållskostnader (elektricitet, vatten, gas)",
+          "cost": "€120-180",
+          "notes": "Något lägre än strandområden; mindre AC behövs inlandet"
+        },
+        {
+          "category": "Gemenskapsavgifter",
+          "cost": "€80-180",
+          "notes": "Varierar efter utveckling; golfvypegenskaper högre"
+        },
+        {
+          "category": "IBI (Kommunalskatt)",
+          "cost": "€550-1300/år",
+          "notes": "Baserat på fastighetsvärde; etablerat område med måttliga taxor"
+        },
+        {
+          "category": "Restaurangbesök (per person)",
+          "cost": "€15-28",
+          "notes": "Plaza-restauranger €18-35; golfclub-mat €20-40"
+        },
+        {
+          "category": "Golfplatsavgifter",
+          "cost": "€50-90",
+          "notes": "Villamartin och närliggande banor; medlemskapsrabatter tillgängliga"
+        },
+        {
+          "category": "Underhållning & Socialt",
+          "cost": "€60-120",
+          "notes": "Golftävlingar, klubbmedlemskap, sociala evenemang"
+        },
+        {
+          "category": "Bilkostnader",
+          "cost": "€130-200",
+          "notes": "Essentiell för golfåtkomst; strander och shopping kräver transport"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Villamartin är värd för en vibrerande eventkalender centrerad omkring golf, med säsongsbetonade turneringar och firanden som samlar samhället.",
+      "events": [
+        {
+          "name": "Villamartin Golf Championship",
+          "month": "April",
+          "description": "Större vårturnering som lockar golfspelare från hela Europa, med gala-middag på Plaza"
+        },
+        {
+          "name": "Plaza Spring Festival",
+          "month": "Maj",
+          "description": "Firande av vår med mat, musik och festiviteter genom Villamartin Plaza"
+        },
+        {
+          "name": "Members' Golf Cup",
+          "month": "September",
+          "description": "Invånarnas mästarskaps-turnering med handicapdivis för alla förmågor"
+        },
+        {
+          "name": "Autumn Grand Tournament",
+          "month": "Oktober",
+          "description": "Större golfturnering som sammanfaller med högkonjunktur som européer återvänder från sommar"
+        },
+        {
+          "name": "Villamartin Community Day",
+          "month": "Juni",
+          "description": "Årlig samling som firar samhället med sporttävlingar och familjeaktiviteter på Plaza"
+        },
+        {
+          "name": "New Year Gala & Golf",
+          "month": "December-Januari",
+          "description": "Festliga säsongsiranden med Nyårs-turnering och gala-middag som välkomnar det nya året"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Villamartin har tillgång till högkvalitativa utbildningsinstitutioner, med internationella skolor som tjänar den betydande expatfamiljekommunikationen.",
+      "schools": [
+        {
+          "name": "International School of Alicante",
+          "type": "Internationell (IB)",
+          "distance": "18 min",
+          "description": "Högkvalificerad IB-certifierad skola som erbjuder omfattande läroplan från grundskola till gymnasiet"
+        },
+        {
+          "name": "El Limonar International School",
+          "type": "Internationell (Brittisk)",
+          "distance": "22 min",
+          "description": "Brittisk läroplansskola med utmärkta A-level resultat och pastoral vård"
+        },
+        {
+          "name": "Colegio Público Orihuela Costa",
+          "type": "Spansk statlig",
+          "distance": "12 min",
+          "description": "Spansk offentlig skola som tjänar det bredare Orihuela Costa-området"
+        },
+        {
+          "name": "IES Joanot Martorell",
+          "type": "Spansk statlig",
+          "distance": "15 min",
+          "description": "Gymnasieskola som erbjuder omfattande spansk utbildning"
+        },
+        {
+          "name": "Happy Kids International Nursery",
+          "type": "Internationell förskola",
+          "distance": "8 min",
+          "description": "Engelskt språk förskola och pre-skola för unga barn"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Även om Villamartin är golffokuserat erbjuder det utmärkt åtkomst till varierande naturaktiviteter från strander till saltsjöar och vandringsvägar.",
+      "activities": [
+        {
+          "name": "Villamartin Golf Club",
+          "type": "Golf",
+          "description": "Samhällets hjärta—mästarskaps 18-håls bana vid din dörr"
+        },
+        {
+          "name": "Las Ramblas Golf",
+          "type": "Golf",
+          "description": "Dramatisk bana med medelhavsvy bara 2 km bort"
+        },
+        {
+          "name": "Campoamor Golf",
+          "type": "Golf",
+          "description": "Pittoresk bana 4 km bort lämplig för alla golfare"
+        },
+        {
+          "name": "La Zenia Beach",
+          "type": "Strand",
+          "description": "Blue Flag-strand med utmärkta faciliteter (10 minuters körning)"
+        },
+        {
+          "name": "Playa Flamenca Beach",
+          "type": "Strand",
+          "description": "Familjvänlig strand med lugnt vatten och naturlig miljö"
+        },
+        {
+          "name": "Cykelvägar",
+          "type": "Cykling",
+          "description": "Pittoreska vägar som förbinder Villamartin med omgivande områden"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Villamartin är det etablerade hjärtat i Costa Blancas expatriate golf-community. Med över 50 år historia har det utvecklat ett moget, välkomnande samhälle centrerat omkring den berömda Plaza. Den övervägande brittiska populationen kompletteras alltmer av andra nationaliteter, alla dragna av golflivsstilen och det tätt sammanvävda sociala vävet. Engelska dominerar och att integrera sig i detta golffokuserade samhälle är ansträngningslöst.",
+      "highlights": [
+        "Etablerad 50-årigs expatriate-community med beprövad social infrastruktur",
+        "Berömda Villamartin Plaza som det sociala och kulturella hjärtat",
+        "Stark golfgemenskap med veckovisa tävlingar och turneringar",
+        "Engelska talt omfattande; många brittiska ägda företag",
+        "Många klubbar, organisationer och organisationer för invånare",
+        "Multigenerativ community från unga familjer till aktiva pensionärer",
+        "Ryktet lockar likasinnade golfentusiaster från världen över",
+        "Starkt känsla av tillhörighet och etablerade vänskapsnätverk"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "French",
+        "Swiss",
+        "Australian",
+        "American"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "En typisk dag i Villamartin",
+      "entries": [
+        {
+          "time": "07:30",
+          "activity": "Morgonkaffe",
+          "description": "Terrass-kaffe medan du tittar på golfspelare på Villamartin-banan från din fastighet"
+        },
+        {
+          "time": "09:00",
+          "activity": "Golfrond",
+          "description": "Spela på Villamartin eller en av fyra andra banor inom 15 minuter"
+        },
+        {
+          "time": "13:00",
+          "activity": "Klubbhus lunch",
+          "description": "Efterrond-måltid med medgolfare på Villamartin klubbhuset"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta & Pool",
+          "description": "Eftermiddag vila och simning vid din fastighets pool"
+        },
+        {
+          "time": "17:00",
+          "activity": "Strandutflykt",
+          "description": "Kör 10 minuter till La Zenia Beach för kvällssimning och solnedgång"
+        },
+        {
+          "time": "19:30",
+          "activity": "Plaza Aperitivo",
+          "description": "Drycker och tapas på en av de berömda Plaza-barerna och träffa vänner och grannar"
+        },
+        {
+          "time": "21:00",
+          "activity": "Plaza Middag",
+          "description": "Middag på en av de många Plaza-restaurangerna med internationell mat"
+        },
+        {
+          "time": "23:00",
+          "activity": "Kväll på Plaza",
+          "description": "Sista dryck eller promenad runt den upplysta plaza och njut av den levande kvällsatmosfären"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7689!3d37.9428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63bab000000%3A0x400a1f000000!2sVillamartin%2C%20Orihuela%20Costa%2C%20Alicante%2C%20Spain!5e0!3m2!1sen!2ses!4v1640000000000"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Villamartin",
+    "description": "Villamartin is a golf-focused residential community in Orihuela Costa, Costa Blanca South, built around the famous Villamartin Golf Club. Known for its international community, social Plaza, and access to 5 championship courses within 15 minutes.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.9428",
+      "longitude": "-0.7689"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Villamartin",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Orihuela Costa, Costa Blanca, Spain"
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Championship Golf Course",
+        "value": "Villamartin Golf Club (since 1972)"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Golf Courses Within 15 Minutes",
+        "value": "5"
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Famous Social Plaza",
+        "value": true
+      }
+    ]
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Villamartin good for golf?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Villamartin is arguably the best golf location on Costa Blanca South. Five championship courses are within 15 minutes: Villamartin Golf (0 km), Las Ramblas, Campoamor, Las Colinas, and Vistabella. Year-round climate allows golf 365 days."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Villamartin Plaza?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Villamartin Plaza is the famous social hub of the community—restaurants, bars, and cafés where the international community gathers every evening. It's the heart of expat social life in Orihuela Costa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are property prices in Villamartin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "New build apartments start from around €185,000, townhouses from €250,000, and villas from €400,000. Golf-view properties command 15-25% premiums."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Villamartin from the beach?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Blue Flag beaches are about 5 km away (10 minutes drive). La Zenia Beach is closest with full facilities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Villamartin good for rental investment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Villamartin has strong rental potential. Golf tourists seek the area year-round, achieving 70%+ annual occupancy for well-located properties."
+        }
+      }
+    ]
+  }
+}

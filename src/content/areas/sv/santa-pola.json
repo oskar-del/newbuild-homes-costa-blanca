@@ -1,0 +1,455 @@
+{
+  "slug": "santa-pola",
+  "name": "Santa Pola",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/santa-pola-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 10,
+  "propertyTypes": [
+    "Apartment",
+    "Penthouse",
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 245000,
+    "max": 530000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Santa Pola Town Hall",
+      "url": "https://www.santapola.es/",
+      "description": "Official Santa Pola municipality website"
+    },
+    "beaches": [
+      {
+        "name": "Playa Centro",
+        "googleMaps": "https://maps.google.com/?q=Playa+Centro+Santa+Pola",
+        "description": "Main beach with Blue Flag status, excellent facilities and proximity to amenities"
+      },
+      {
+        "name": "Playa Paraíso",
+        "googleMaps": "https://maps.google.com/?q=Playa+Paraiso+Santa+Pola",
+        "description": "Quieter beach offering calm waters perfect for families and swimmers"
+      },
+      {
+        "name": "Tabarca Island",
+        "googleMaps": "https://maps.google.com/?q=Tabarca+Island+Santa+Pola",
+        "description": "Day-trip island destination with pristine beaches and Mediterranean charm accessible by ferry"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital de Santa Pola",
+      "googleMaps": "https://maps.google.com/?q=Hospital+Santa+Pola",
+      "url": "https://www.sanitpola.es/",
+      "distance": "5 km (10 min)"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "35 km",
+      "driveTime": "30-40 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Santa Pola is perfectly positioned for golf enthusiasts with multiple championship courses within easy reach. The nearby courses offer diverse layouts and excellent Mediterranean views. Golfers enjoy year-round play in this strategic location combining coastal living with golf lifestyle.",
+    "courses": [
+      {
+        "name": "Club de Golf Villamartín",
+        "distance": "10 km",
+        "driveTime": "15 minutes",
+        "holes": 18,
+        "url": "https://www.villamartingolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Villamartín+Golf",
+        "description": "Championship course with water features and excellent facilities near the coast"
+      },
+      {
+        "name": "Club de Golf Campoamor",
+        "distance": "12 km",
+        "driveTime": "18 minutes",
+        "holes": 18,
+        "url": "https://www.campoamorgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Campoamor+Golf",
+        "description": "Prestigious course with scenic coastal views and championship layout"
+      },
+      {
+        "name": "Las Ramblas Golf",
+        "distance": "15 km",
+        "driveTime": "20 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Las+Ramblas+Golf",
+        "description": "Modern course with contemporary design and excellent amenities"
+      },
+      {
+        "name": "Club de Golf La Marquesa",
+        "distance": "20 km",
+        "driveTime": "25 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=La+Marquesa+Golf",
+        "description": "Scenic inland course with Mediterranean landscaping"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Bo i Santa Pola 2026 | Nybyggda hem Costa Blanca",
+    "metaDescription": "Komplette guide till att bo i Santa Pola - Costa Blancas bästa värde. 40% billigare än ö-fastigheter, 8% årlig värdestegring, stark hyresavkastning. Från €245 000. Bästa värde-destination.",
+    "heroIntro": "Santa Pola står som en av Costa Blancas mest övertygande destinationer för köpare som prioriterar värde, autenticitet och livskvalitet. Denna blomstrande kuststad erbjuder en exceptionell kombination av prisvärdhet, etablerat internationellt samhälle och närhet till fantastiska Blue Flag-strander – allt till priser 40% billigare än jämförbara spanska ö-fastigheter. Med fastigheter från €245 000 till €530 000 erbjuder Santa Pola prisvärd inträde till medelhavsboende med stark hyrespotential och beprövad värdestegring.\n\nStaden sömlöst blandar modern bekvämlighet med traditionell spansk karaktär, och erbjuder allt från moderna supermarknader och sjukvårdsfaciliteter till autentiska marknader och familjedrivna restauranger. Det strategiska läget endast 35 kilometer från Alicante-flygplats, kombinerat med utmärkta väganslutningar och närliggande championship-golfbanor, gör Santa Pola idealisk för de som söker både livsstil och finansiell prestanda. Med en trend om 8% årlig värdestegring och tillförlitlig hyresavkastning som medelvärdiga €800 veckovis, representerar Santa Pola en övertygande investeringsmöjlighet för kräsna fastighetsköpare.",
+    "lifestyleSection": {
+      "intro": "Livet i Santa Pola kretsar kring en medelhavsrytm av sol, hav och social anslutning...",
+      "highlights": [
+        "Exceptional value—properties 40% cheaper than Spanish island equivalents",
+        "Strong established expat community with English widely spoken",
+        "Proven price appreciation—8% annual growth supporting investments",
+        "Excellent rental potential—€800/week typical vacation rates",
+        "Blue Flag beaches within 20 minutes of town center",
+        "Close proximity to Alicante Airport (35 km, 30-40 min)",
+        "Multiple championship golf courses within 20 minutes",
+        "Modern healthcare and international services for expats"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Santa Pola enjoys excellent beach access with Playa Centro offering a Blue Flag beach with comprehensive facilities, lifeguards, and equipment rentals. Playa Paraíso provides a quieter alternative with calm waters ideal for families. Day-trip ferry service to Tabarca Island offers pristine Mediterranean beaches and authentic island atmosphere. All beaches feature quality amenities and water sports options.",
+      "dining": "Santa Pola's culinary scene expertly blends traditional Spanish cuisine with international flavors. The fishing port ensures fresh seafood daily, with numerous waterfront restaurants specializing in paella and local fish preparations. The Saturday and Sunday markets add authentic local flavor where residents shop for fresh produce and regional specialties. International restaurants cater to the diverse expat community. Dining remains remarkably affordable with excellent value available.",
+      "shopping": "Shopping in Santa Pola offers excellent value combining modern supermarkets with traditional markets. Mercadona, Lidl, and Consum provide extensive product ranges at competitive prices. Local markets offer fresh produce, fish, meat, and regional specialties at significantly lower costs than supermarket alternatives. The combination of modern retail and traditional markets ensures both convenience and authentic shopping experience.",
+      "healthcare": "Santa Pola residents have excellent access to comprehensive healthcare services, with a modern regional hospital located within 10 minutes ensuring emergency care is readily available. Private clinics throughout the area provide modern facilities and specialized services. English-speaking doctors are available across both public and private sectors. Prescription medications are affordable compared to Northern European prices, and private health insurance is reasonably priced.",
+      "transport": "Santa Pola is well-connected by road with modern highways providing easy access to other Costa Blanca towns. The A-7 motorway links the town to Alicante (25 km), Benidorm (40 km), and beyond. Local roads are generally well-maintained and well-signed. Alicante-Elche Airport is approximately 35 kilometers away (30-40 minute drive), offering international flights. Local bus services connect to nearby towns, though a personal vehicle is recommended for maximum flexibility."
+    },
+    "propertyMarketSection": "Santa Pola's property market demonstrates robust health with consistent demand from both Spanish and international buyers. Prices have appreciated 8% year-on-year, reflecting growing recognition of the town's value proposition and desirability as a residential destination. The market remains relatively stable compared to heavily speculative coastal areas, offering genuine value and sustainable growth potential. Stock levels remain healthy with diverse options available across multiple price points.\n\nProperty values have shown steady appreciation driven by affordability relative to nearby coastal towns, established infrastructure, and growing international recognition. Apartments and penthouses dominate available inventory, offering excellent value with modern specifications. The rental market performs exceptionally well, with typical 7-night vacation rentals averaging €800, translating to annual yields of 6-8% depending on occupancy. Long-term rentals to expatriates provide stable income for buy-to-let investors.\n\nThe combination of affordable entry prices, positive rental yields, favorable price trends, and proximity to Alicante Airport positions Santa Pola as an increasingly attractive destination for property investors seeking sustainable returns.",
+    "whyLiveHereSection": [
+      "Exceptional value with properties 40% cheaper than island equivalents",
+      "Strong established expat community with English widely spoken",
+      "Reliable 8% annual price appreciation supporting investments",
+      "Excellent rental potential with €800/week typical rates",
+      "Blue Flag beaches within 20 minutes of town center",
+      "Alicante Airport proximity (35 km) for international access",
+      "Multiple championship golf courses within easy reach",
+      "Modern healthcare and comprehensive services"
+    ],
+    "faqs": [
+      {
+        "question": "Är Santa Pola en bra plats att köpa fastighet?",
+        "answer": "Ja, absolut. Santa Pola kombinerar autentiska spanska liv med moderna bekvämligheter, utmärkt värde för pengarna och välkomnande internationell community. Den etablerade expat-närvaron betyder att engelska talar omfattande, sjukvården är utmärkt med engelsktalande läkare och det finns högkvalitativa internationella skolor. Med priser 40% billigare än öalternativ, starkt hyrespotential och konsekvent 8% årlig appreciation, erbjuder Santa Pola både livsstilsfördelar och sund finansiell fundament."
+      },
+      {
+        "question": "Vad är levnadskostnaden i Santa Pola?",
+        "answer": "Costa Blancas totala levnadskostnad är 20-30% lägre än Nordeuropa eller Storbritannien. Matvaror på spanska supermarknader är mycket överkomliga, särskilt produce från lokala marknader. Att äta ute förblir rimligt med en god måltid som kostar €12-18. Verktyg är måttliga och underhålls alternativ är många och billiga. Sjukvård och privat försäkringskostnader är märkbart lägre än motsvarande tjänster i Storbritannien. De totala månadskostnaderna för ett par ligger typiskt €1 200-1 800 beroende på livsstilspreferenser."
+      },
+      {
+        "question": "Vad är hyrespotentialet för investeringsfastigheter?",
+        "answer": "Hyrespotential är stark, med typisk 7-nätts semesteruthyrning i genomsnitt €800, översättning till årlig avkastning på 6-8% beroende på beläggningsgrad och säsongsefterfrågan. Långtidshyresmarknader fungerar också bra, vilket ger stabil inkomst för köpare som köper hyrning. Kapitaluppskattning på 8% årligen föreslår frisk långsiktig tillväxt, särskilt när området får internationell igenkänning. Kombinationen av överkomliga inträdespriser, positiv hyresavkastning och gynnsam pris-trend gör Santa Pola attraktiv för fastigheter investerare."
+      },
+      {
+        "question": "Kan utlänningar köpa fastighet i Spanien?",
+        "answer": "Ja, utländska medborgare kan köpa fastighet i Spanien utan begränsningar. EU-medborgare ansiktsanpassas ingen ytterligare krav, medan icke-EU-medborgare kan behöva erhålla en NIE (spansk skattebeteckningsnummer) och följa valutaregler. Processen är enkel och väletablerad, med många fastighetsmäklare erfarna i assistansen till internationella köpare. Juridisk kostnad omfattar typiskt 7-10% av inköpspris, inklusive skatter, notariavgifter och registrering."
+      },
+      {
+        "question": "Hur långt är Santa Pola från flygplatsen?",
+        "answer": "Alicante-Elche Airport ligger ungefär 35 kilometer bort (30-40 minuters körning), och erbjuder internationella flygningar till de flesta europeiska destinationer och Storbritannien. Flygtid från de flesta brittiska flygplatserna till Alicante är typiskt 2,5-3 timmar, med många dagliga flygningar tillgängliga. Budgetflygbussarna erbjuder konkurrenskraftiga priser, vilket gör helg-besök och upprätthållande av brittiska förbindelser genomförbar."
+      },
+      {
+        "question": "Finns det en bra expatriate-community i Santa Pola?",
+        "answer": "Ja, Santa Pola har en stark, välkomnande internationell community med engelska talar omfattande i butiker, restauranger och sociala platser. Den etablerade expatriate-närvaron omfattar många sociala klubbar, professionella nätverk och engelsktalande tjänster. Integration för nykomlingar är enkel, och communityn är känd för att vara hjälpsam och inkluderande. Många invånare upprätthåller hem på båda platserna eller återvänder regelbundna för att besöka familjen."
+      },
+      {
+        "question": "Vilken sjukvård är tillgänglig för internationella invånare?",
+        "answer": "Santa Pola erbjuder utmärkt sjukvård genom offentliga sjukhus, privata kliniker och många engelsktalande läkare. Sjukvårdens kvalitet rivaliserar med västeuropeiska standarder, med många medicinska yrkesmän som tränas internationellt. EU-invånare kan få tillgång till det spanska offentliga sjukvårdssystemet, medan andra kan erhålla privat försäkring till rimliga priser. Receptbelagda mediciner är betydligt billigare än brittiska priser."
+      },
+      {
+        "question": "Kan du få bolån i Spanien som utlänning?",
+        "answer": "Ja, utländska köpare kan erhålla bolån i Spanien, även om alternativ är något begränsade jämfört med spanska medborgare. Stora banker och specialistlångivare erbjuder bolån till icke-invånare, typiskt kräver ett NIE-nummer och inkomstbevis. LTV-kvoter (lånevärdekvoter) är allmänt 60-80% och räntorna är konkurrenskraftiga med Nordeuropa. Många internationella köpare upptäcker att säkerställande av spanska bolån vid sidan av eller istället för brittiska bolån kan optimera finansieringsstrategier."
+      },
+      {
+        "question": "Vilka är fastighetsskatter i Santa Pola?",
+        "answer": "Årlig fastighetssbeskattning (IBI) sträcker sig typiskt från 0,4% till 1,1% av cadastral värde. Tilläggsökostnader inkluderar gemenskapsavgifter för lägenheter (€50-200 månatlig), verktyg och årlig icke-invånarbeskattning om tillämpligt. Totalt är de löpande kostnaderna rimliga jämfört med nordeuropeiska standarder och betydligt lägre än brittiska motsvarigheter."
+      },
+      {
+        "question": "Hur jämför sig Santa Pola med andra Costa Blanca-städer?",
+        "answer": "Santa Pola erbjuder mer värde än många andra Costa Blanca-städer, med fastigheter i genomsnitt 40% billigare än öalternativ. Det etablerade expatriate-samhället erbjuder utmärkta stödnätverk, medan närheten till Alicante Airport gör det idealisk för dem som kräver frekvent internationell resa. Till skillnad från helt säsongsbaserade bruksort bibehåller Santa Pola året-runt aktivitet med permanenta invånare och all-seasons-bekvämligheter."
+      }
+    ],
+    "conclusion": "Redo att upptäcka Santa Polas exceptionella kombination av värde, livsstil och investeringspotential? Våra fastighetsspeckalisters har djup marknadskunskap och förstår vad som gör Santa Pola en sådan tvingande destination. Oavsett om du söker en överkomlig första fastighet i Spanien, en hyresinvestering med starkt återvändande eller ett permanent medelhavshem, hjälper vi dig att hitta din perfekta fastighet. Kontakta oss idag för att utforska tillgängliga alternativ och påbörja din Santa Pola-resa.",
+    "investmentAnalysis": {
+      "rentalYield": "6-8%",
+      "annualAppreciation": "8%",
+      "overview": "Santa Pola represents an exceptional investment opportunity for those prioritizing value and returns. The combination of affordable entry prices (€245-530k), reliable 8% annual appreciation, and strong rental yields (€800/week typical) creates compelling fundamentals. Limited new supply and growing international recognition support continued appreciation.",
+      "highlights": [
+        "Affordable entry prices vs island equivalents (40% cheaper)",
+        "Strong 8% annual price appreciation",
+        "Reliable rental yields of €800/week average",
+        "Long-term rental markets providing stable income",
+        "Growing international recognition driving demand"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Santa Pola offers exceptional value with costs 20-30% lower than Northern Europe. The established international community has created competitive services and pricing. Day-to-day living expenses remain very manageable with excellent value available through local markets and supermarkets.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-380",
+          "notes": "Mercadona, Lidl, and Consum in town; local markets excellent value"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€110-160",
+          "notes": "Higher in summer with air conditioning; winter heating minimal"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€60-120",
+          "notes": "Varies by apartment; often includes pool and facilities"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€450-950/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€12-22",
+          "notes": "Menu del día €10; international restaurants €18-30"
+        },
+        {
+          "category": "Golf green fees",
+          "cost": "€45-75",
+          "notes": "Nearby courses; membership discounts available"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Excellent broadband coverage available"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Useful for regional exploration and daily activities"
+        },
+        {
+          "category": "Entertainment & Activities",
+          "cost": "€60-120",
+          "notes": "Water sports €30-60; cultural events €10-20"
+        },
+        {
+          "category": "Healthcare (private insurance)",
+          "cost": "€60-100",
+          "notes": "EU residents access public system; private insurance optional"
+        },
+        {
+          "category": "Beer (per half-liter)",
+          "cost": "€1.50-2.50",
+          "notes": "Bars €2.50-3.50; supermarkets very cheap"
+        },
+        {
+          "category": "Wine (bottle)",
+          "cost": "€5-15",
+          "notes": "Local Spanish wines excellent value"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Santa Pola celebrates a vibrant calendar of traditional Spanish festivals and community events throughout the year, reflecting both local heritage and international community.",
+      "events": [
+        {
+          "name": "Las Fallas",
+          "month": "March",
+          "description": "Iconic Valencian spring festival with fireworks, parades, and burning of wooden structures—extraordinary spectacle"
+        },
+        {
+          "name": "Semana Santa",
+          "month": "April",
+          "description": "Religious processions with elaborate floats, traditional music, and community participation"
+        },
+        {
+          "name": "Fiesta de la Sal (Salt Festival)",
+          "month": "June",
+          "description": "Celebration of Santa Pola's salt-harvesting heritage with exhibitions, food, and cultural performances"
+        },
+        {
+          "name": "Summer Music Festival",
+          "month": "July-August",
+          "description": "International music performances featuring various genres at venues throughout the town"
+        },
+        {
+          "name": "Fiesta Mayor",
+          "month": "August",
+          "description": "Patron saint celebration with parades, music, fireworks, and traditional dances"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "June",
+          "description": "Midsummer night celebration with bonfires, music, dancing, and traditional rituals on beaches"
+        },
+        {
+          "name": "Christmas Market & Festival",
+          "month": "December",
+          "description": "Festive season with artisan market, holiday lights, and special dining events"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Santa Pola area offers excellent educational options for families, with international schools, British curriculum institutions, and quality Spanish public schools.",
+      "schools": [
+        {
+          "name": "Elian's British School",
+          "type": "International (British)",
+          "distance": "25 min (La Nucía)",
+          "description": "Prestigious British curriculum school with excellent facilities and strong academic record"
+        },
+        {
+          "name": "Colegio Público Santa Pola",
+          "type": "Spanish State",
+          "distance": "5 min",
+          "description": "Quality Spanish primary school serving the local community"
+        },
+        {
+          "name": "Academia Bilingüe",
+          "type": "Private (Bilingual)",
+          "distance": "8 min",
+          "description": "Private school with English and Spanish instruction"
+        },
+        {
+          "name": "Instituto Secundario",
+          "type": "Spanish State",
+          "distance": "10 min",
+          "description": "Modern Spanish secondary school with quality facilities"
+        },
+        {
+          "name": "International School of Alicante",
+          "type": "International (IB)",
+          "distance": "30 min",
+          "description": "International Baccalaureate school with comprehensive curriculum"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Santa Pola's coastal setting offers diverse outdoor activities combining beach recreation, water sports, and regional exploration.",
+      "activities": [
+        {
+          "name": "Blue Flag Beaches",
+          "type": "Beach",
+          "description": "Excellent swimming, sunbathing, and water sports at maintained Blue Flag beaches within town"
+        },
+        {
+          "name": "Tabarca Island Day Trips",
+          "type": "Adventure",
+          "description": "Ferry service to pristine Mediterranean island with authentic charm and pristine beaches"
+        },
+        {
+          "name": "Water Sports",
+          "type": "Water Sports",
+          "description": "Paddleboarding, windsurfing, sailing, and diving in Mediterranean waters"
+        },
+        {
+          "name": "Championship Golf",
+          "type": "Golf",
+          "description": "Multiple courses within 20 minutes (Villamartín, Campoamor, Las Ramblas)"
+        },
+        {
+          "name": "Coastal Cycling",
+          "type": "Cycling",
+          "description": "Scenic coastal paths suitable for all abilities with Mediterranean views"
+        },
+        {
+          "name": "Fishing",
+          "type": "Recreation",
+          "description": "Recreational and competitive fishing opportunities from beaches and boats"
+        },
+        {
+          "name": "Hiking & Nature Walks",
+          "type": "Hiking",
+          "description": "Coastal trails and inland routes exploring the region's natural beauty"
+        },
+        {
+          "name": "Marina Activities",
+          "type": "Water Sports",
+          "description": "Sailing clubs, charter companies, and boat rentals at the active fishing port marina"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Santa Pola hosts a vibrant and welcoming international community with strong British, German, Scandinavian, and Dutch populations. The community is well-organized, established, and provides extensive support networks for those seeking authentic Mediterranean living with international friendship.",
+      "highlights": [
+        "Established international community with English widely spoken",
+        "Strong social infrastructure with clubs and community organizations",
+        "Multilingual services—healthcare, retail, legal—for expatriates",
+        "Regular international events and social gatherings",
+        "Professional networks facilitating business connections",
+        "Easy integration for newcomers",
+        "Authentic Mediterranean living balanced with international amenities"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "French",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Santa Pola",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Market Visit & Coffee",
+          "description": "Start at the lively market purchasing fresh produce from local vendors or enjoy coffee at a beachfront café"
+        },
+        {
+          "time": "10:00",
+          "activity": "Beach or Water Activities",
+          "description": "Swim at Blue Flag beaches, paddleboard, or enjoy water sports in Mediterranean waters"
+        },
+        {
+          "time": "13:00",
+          "activity": "Leisurely Lunch",
+          "description": "Enjoy fresh seafood or paella at a waterfront restaurant or traditional tapas bar"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta & Relaxation",
+          "description": "Rest during afternoon heat, relax at your home, or spend time at a local café"
+        },
+        {
+          "time": "17:00",
+          "activity": "Golf or Recreation",
+          "description": "Play at nearby championship courses or engage in cycling, hiking, or other outdoor activities"
+        },
+        {
+          "time": "19:00",
+          "activity": "Evening Paseo",
+          "description": "Stroll through town center or along the marina, greeting friends and neighbors"
+        },
+        {
+          "time": "20:30",
+          "activity": "Dinner & Socializing",
+          "description": "Enjoy tapas and wine with friends at a local restaurant or international establishment"
+        },
+        {
+          "time": "22:30",
+          "activity": "Evening Activity",
+          "description": "Join friends at a beach bar, cultural event, or return home to relax"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.5535!3d37.9980!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63b00000000000%3A0x400a1c000000!2sSanta+Pola%2C+Alicante%2C+Spain!5e0!3m2!1sen!2ses!4v1640000000000"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Santa Pola",
+    "description": "Santa Pola is Costa Blanca's best value destination with properties 40% cheaper than islands, 8% annual appreciation, strong rental yields, and excellent expat community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.9980",
+      "longitude": "-0.5535"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santa Pola",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    }
+  }
+}

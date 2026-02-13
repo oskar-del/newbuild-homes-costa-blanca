@@ -1,0 +1,456 @@
+{
+  "slug": "moraira",
+  "name": "Moraira",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/moraira-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80&fit=crop",
+  "propertyCount": 23,
+  "propertyTypes": [
+    "Villa",
+    "Land",
+    "Apartment"
+  ],
+  "priceRange": {
+    "min": 240000,
+    "max": 4500000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Moraira Tourism",
+      "url": "https://www.moraira.org/",
+      "description": "Moraira official tourism information"
+    },
+    "beaches": [
+      {
+        "name": "El Portet Beach",
+        "googleMaps": "https://maps.google.com/?q=El+Portet+Moraira",
+        "description": "Award-winning Blue Flag beach with crystal waters and excellent facilities"
+      },
+      {
+        "name": "Playa de l'Ampolla",
+        "googleMaps": "https://maps.google.com/?q=Playa+Ampolla+Moraira",
+        "description": "Family-friendly main beach with soft sand and Mediterranean charm"
+      },
+      {
+        "name": "Cala Cap Blanc",
+        "googleMaps": "https://maps.google.com/?q=Cala+Cap+Blanc+Moraira",
+        "description": "Secluded cove with pristine waters and dramatic coastal scenery"
+      }
+    ],
+    "healthcare": {
+      "name": "Centro de Salud Teulada-Moraira",
+      "googleMaps": "https://maps.google.com/?q=Centro+Salud+Moraira",
+      "distance": "In town"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "110 km",
+      "driveTime": "70 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Moraira is perfectly positioned for golf enthusiasts with championship courses offering world-class play with Mediterranean views. Club de Golf Ifach and Jávea Golf are just 15 minutes away, while La Sella Golf is 20 minutes distant. Golfers enjoy exceptional facilities combined with Moraira's sophisticated coastal lifestyle.",
+    "courses": [
+      {
+        "name": "Club de Golf Ifach",
+        "distance": "12 km",
+        "driveTime": "15 minutes",
+        "holes": 18,
+        "url": "https://www.ifachgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Ifach+Golf+Club",
+        "description": "Prestigious course near Calpe with views of iconic Peñón de Ifach"
+      },
+      {
+        "name": "Jávea Golf Club",
+        "distance": "12 km",
+        "driveTime": "15 minutes",
+        "holes": 18,
+        "url": "https://www.javeagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Javea+Golf+Club",
+        "description": "Championship course with stunning mountain and sea views"
+      },
+      {
+        "name": "La Sella Golf Resort",
+        "distance": "18 km",
+        "driveTime": "20 minutes",
+        "holes": 18,
+        "url": "https://www.lasella.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Sella+Golf",
+        "description": "Championship course with Montgó mountain backdrop and excellent facilities"
+      },
+      {
+        "name": "Don Cayo Golf Club",
+        "distance": "25 km",
+        "driveTime": "30 minutes",
+        "holes": 18,
+        "url": "https://www.doncayogolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Don+Cayo+Golf",
+        "description": "Parkland course near Benidorm with scenic views"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Bo i Moraira 2026 | Nybyggda hem Costa Blanca",
+    "metaDescription": "Komplette guide till att bo i Moraira - Costa Blancas mest exklusiva destination. Blue Flag-strander, förstklassig expatgemenskap, 25% billigare än Mallorca, från €240 000.",
+    "heroIntro": "Moraira står som Costa Blancas mest exklusiva och sofistikerade kustdestination, en pittoresk stad som är synonymt med raffinerad medelhavslivsstil. Liggandes mellan de populära destinationerna Jávea och Denia erbjuder denna charmanta enklav den perfekta balansen mellan lugn strandliv och överklassig bostadskomfort. Med endast 23 premiumfastigheter från €240 000 till €4,5 miljoner behåller Moraira en exklusiv, lugn atmosfär som appellerar till kräsna internationella medborgare som söker sofistication över massor.\n\nStaden är hem till ett blomstrande överklassigt expatsamhälle dominerat av brittiska, tyska och nederländska invånare som har etablerat en utmärkt sofistikerad, raffinerad karaktär. Till skillnad från travlare strandstäder bevarar Moraira avsiktligt sin lugna charm, vilket gör det idealiskt för de som prioriterar livskvalitet, privatliv och tillgång till naturlig skönhet. Kombinationen av världsklass bekvämligheter, exceptionella Blue Flag-strander, dramatisk kustsceografi och exklusivt internationellt samhälle gör Moraira ett allt mer attraktivt val för fastighetsköpare och långvarig bosatts som söker medelhavslivsstil utförda på högsta nivåer. Fastigheter här är 25% mer prisvärd än jämförbara Mallorca-fastigheter.",
+    "lifestyleSection": {
+      "intro": "Livet i Moraira kretsar kring en medelhavsrytm av sol, hav och social anslutning...",
+      "highlights": [
+        "Exclusive, sophisticated atmosphere with select international community",
+        "Award-winning Blue Flag beaches with crystal Mediterranean waters",
+        "Dramatic Cap d'Or coastline offering stunning scenery and privacy",
+        "Upscale expat community emphasizing quality and authenticity",
+        "World-class amenities and services catering to discerning residents",
+        "Championship golf courses within 15-20 minutes",
+        "Strong appreciation and limited supply ensuring exclusivity",
+        "25% more affordable than comparable Mallorca properties"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Moraira is blessed with exceptional beaches, including the award-winning El Portet with its Blue Flag designation and crystal-clear Mediterranean waters. Playa de l'Ampolla offers a family-friendly main beach with soft sand and excellent facilities. Cala Cap Blanc provides a more secluded alternative near the dramatic lighthouse with pristine coves. All beaches feature excellent facilities, water sports equipment rentals, and beachfront restaurants.",
+      "dining": "Moraira's culinary scene reflects its sophisticated character, with excellent restaurants serving Mediterranean cuisine and international flavors. The waterfront area offers upscale dining establishments, while the town center harbors intimate restaurants with authentic charm. Fresh seafood features prominently, sourced from the active fishing port. Wine selection emphasizes Spanish and international varieties. Dining standards rival comparable European coastal destinations.",
+      "shopping": "Shopping in Moraira combines practical supermarkets (Mercadona, Consum, Masymas) with the charming Friday market offering fresh produce and local goods. The town center features independent boutiques and specialty shops. For extended shopping, Denia (20 min) and Jávea (15 min) offer additional options. The emphasis is on quality and authenticity rather than commercial volume.",
+      "healthcare": "Moraira offers comprehensive healthcare access with Centro de Salud Teulada-Moraira providing local medical services. Hospital de Denia is just 25 minutes away for specialist care. The region boasts several excellent private clinics staffed with English-speaking doctors. Healthcare standards are high, and medical professionals in this area have significant experience treating international residents.",
+      "transport": "Moraira benefits from excellent motorway connections via the AP-7 toll motorway, providing straightforward access to Alicante, Valencia, and Barcelona. The town is well-connected to nearby Jávea (15 minutes), Denia (20 minutes), and Altea (40 minutes). Alicante Airport is approximately 110 km away (70 minutes drive). Local driving is easy with good road conditions. Public transport is limited; car ownership is essential."
+    },
+    "propertyMarketSection": "Moraira's real estate market is characterized by exclusivity and strong fundamentals. With only 23 premium properties available, the town maintains an ultra-selective market that attracts serious buyers seeking coastal Mediterranean living at the highest levels. The market shows robust health with a +5% year-on-year growth trend, indicating steady appreciation and sustained demand from international buyers seeking exclusivity.\n\nProperty values have demonstrated steady appreciation driven by limited supply, strong international demand, and Moraira's reputation as a sophisticated destination. Villas with premium locations, privacy, and access to cultural amenities command premium prices. The rental market performs well for high-end properties, with affluent tourists seeking luxury accommodations willing to pay premium rates. Properties are 25% less expensive than comparable Mallorca properties, offering superior value for Mediterranean coastal living.\n\nThe combination of limited supply, strong appreciation, and Moraira's exclusive positioning ensures robust long-term value. Properties here attract serious buyers prioritizing both lifestyle quality and financial performance.",
+    "whyLiveHereSection": [
+      "Exclusive, sophisticated atmosphere with select international community",
+      "Stunning natural beauty with Blue Flag beaches and dramatic coastline",
+      "Exceptional property appreciation (+5% annually) supporting investments",
+      "Comprehensive amenities within short distances",
+      "Mediterranean climate with 300+ days of sunshine",
+      "25% more affordable than comparable Mallorca properties",
+      "World-class dining and cultural offerings",
+      "Strong sense of community and belonging"
+    ],
+    "faqs": [
+      {
+        "question": "Är Moraira en bra plats att köpa fastighet?",
+        "answer": "Ja, Moraira är en utmärkt plats att leva för dem som söker förfinad kust medelhavslivsstil. Staden kombinerar naturlig skönhet, sofistikerad bekvämligheter och välkomnande internationell community samtidigt som den upprätthåller genuin lugn och exklusivitet. Det är särskilt lämpat för proffs, pensionärer och familjer som prioriterar livskvalitet över turistaktiviteter. Uppskattningen på +5% årligen och exklusiv positionering gör det till en sund investering."
+      },
+      {
+        "question": "Är Moraira dyr?",
+        "answer": "Moraira är positionerat som en lyxdestination, men det erbjuder exceptionell värde inom Costa Blanca-sammanhang. Fastigheter är 25% mindre dyra än jämförbara Mallorca-fastigheter medan de erbjuder överlägsen bekvämligheter och sofistikering. Priserna sträcker sig från €240 000 för mark till €4 500 000 för premiumvillor, tillgängliga inom olika budgetar för seriösa köpare som söker kvalitet."
+      },
+      {
+        "question": "Varför är Moraira så populär med lyxköpare?",
+        "answer": "Morairas popularitet härrör från dess unika kombination av fantastisk Blue Flag-strander, upmarketexpat-community, sofistikerad medelhavslivsstil, närhet till världsklass-golfbanor och framgångsrik bevarelse av autentisk karaktär. Staden lockar dem som söker exklusivitet snarare än masturism, vilket gör det allt mer önskvärt."
+      },
+      {
+        "question": "Är Moraira bra för familjer?",
+        "answer": "Absolut. Moraira är utmärkt för familjer med tillgång till Lady Elizabeth School (15 minuter) och Laude Newton College (40 minuter), säkra strander idealiska för barn, omfattande sjukvård, supermarknader med internationella produkter och aktiviteter lämpliga för alla åldrar. Den lugnare, säkrare atmosfären tilltalkar föräldrar, medan strander och vattensporter engagerar barn."
+      },
+      {
+        "question": "Vad är levnadskostnaden i Moraira?",
+        "answer": "Levnadskostnaden varierar beroende på livsstil. Fastighetspris sträcker sig från €240 000-€4 500 000 med genomsnittlig hyresavkastning på €1 600 veckovis. Dagliga utgifter för matvaror, restauranger och tjänster är rimliga jämfört med Nordeuropa, även om internationella restauranger och upmarkeetablissemanger kräver premiumpriser. Totalt erbjuder Moraira bra värde för sofistikerad medelhavskväliv."
+      },
+      {
+        "question": "Hur är Moraira expatriate-communityn?",
+        "answer": "Moraira har en blomstrande, upmarket expatriate-community främst omfattande brittiska, tyska och holländska invånare. Denna internationella grupp har etablerat en sofistikerad, välkomnande atmosfär karakteriserad av diskrethet och kvalitet. Communityn aktivt deltar i sociala evenemang, matlagning och kulturella aktiviteter medan de respekterar stadens fredliga karaktär."
+      },
+      {
+        "question": "Vilka sjukhus tjänar Moraira?",
+        "answer": "Moraira tjänas av Centro de Salud Teulada-Moraira för lokala medicinska tjänster, Hospital de Denia (25 minuter) för specialistomsorg och många engelsktalande privata kliniker genom regionen. Sjukvårdsstandarden är höga med många läkare erfarna i behandlingen av internationella invånare."
+      },
+      {
+        "question": "Vilka är de bästa stränderna i Moraira?",
+        "answer": "Moraira uppvisar exceptionella strander inklusive El Portet (prisbelönt Blue Flag-strand), Playa de l'Ampolla (huvudfamiljestr AND), Cala Andrago och Cala Cap Blanc (avskild vik). Alla erbjuder klart medelhavsvatten, utmärkta faciliteter och fantastisk kustscenäring perfekt för simning, snorkling och vattensporter."
+      },
+      {
+        "question": "Hur jämför sig Moraira med andra Costa Blanca-städer?",
+        "answer": "Moraira kräver premiumpriser och exklusivitet på grund av dess sofistikerad atmosfär, naturlig skönhet och begränsad utveckling. Till skillnad från mer trafikerade strrandorter upprätthåller Moraira genuin karaktär med betoning på livskvalitet. Det tilltalas dem som prioriterar exklusivitet och autentisk liv, vilket gör det unikt på Costa Blanca."
+      },
+      {
+        "question": "Vad är hyrespotentialet för investeringsfastigheter?",
+        "answer": "Hyrespotential är stark, driven av efterfrågan från välbärgade turister som söker lyxligi logi. Högklassiga fastigheter med havsutsikter, privatliv och närhet till attraktioner kräver premium veckovistrad (€1 600+ genomsnitt). Den sofistikerade klientelen söker kvalitetsfastigheter över budgetalternativ. Begränsat utbud och exklusiv positionering stöder starka hyrestaxa."
+      }
+    ],
+    "conclusion": "Redo att uppleva Morairas unika blandning av exklusiv medelhavslivsstil och sofistikerad livsstil? Våra fastighetsspeckalisters förstår denna förfinad marknad och kan vägleda dig mot fastigheter som matchar dina ambitioner. Oavsett om du söker en villa med panorama havsutsikter, strandfrontingendom eller en investering med starkt uppskattning potential, hjälper vi dig att hitta ditt perfekta Moraira-hem. Kontakta oss idag för att utforska tillgängliga fastigheter och påbörja din resa till Costa Blancas mest exklusiva destination.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "5%",
+      "overview": "Moraira represents an exceptional investment opportunity for those seeking both capital appreciation and luxury lifestyle. Rental demand from affluent tourists ensures strong yields, while limited supply and Moraira's reputation support steady appreciation. Properties are 25% less expensive than Mallorca equivalents, offering superior value for Mediterranean coastal living.",
+      "highlights": [
+        "Strong demand from affluent tourists for luxury accommodations",
+        "Limited supply (23 properties) supporting steady appreciation",
+        "5% annual appreciation outpacing inflation",
+        "Exclusive positioning attracting discerning international buyers",
+        "25% more affordable than comparable Mallorca properties"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Moraira's cost of living reflects its upscale positioning, though remains reasonable for such an exclusive destination. International restaurants and upscale establishments command premium prices, though still less expensive than northern Europe. Grocery costs are reasonable when shopping at supermarkets.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€320-420",
+          "notes": "Mercadona, Consum provide competitive pricing; local markets good value"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€140-200",
+          "notes": "Higher in summer with air conditioning; winter heating minimal"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€80-200",
+          "notes": "Varies by property; villa fees typically lower than apartments"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€1500-4000/year",
+          "notes": "Annual property tax based on cadastral value; premium properties higher"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€18-38",
+          "notes": "Menu del día €14-18; international restaurants €30-60; fine dining €60+"
+        },
+        {
+          "category": "Golf green fees",
+          "cost": "€60-100",
+          "notes": "Nearby courses; membership discounts available"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€45-70",
+          "notes": "Excellent fiber optic coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€200-320",
+          "notes": "Essential for independence and regional exploration"
+        },
+        {
+          "category": "Entertainment (galleries, shows, activities)",
+          "cost": "€100-180",
+          "notes": "Cultural events variable; many free activities available"
+        },
+        {
+          "category": "Healthcare (private insurance)",
+          "cost": "€100-150",
+          "notes": "EU residents access public system; private supplementary recommended"
+        },
+        {
+          "category": "Beer (per half-liter)",
+          "cost": "€2.00-3.50",
+          "notes": "Bars €3.00-4.50; supermarkets cheaper"
+        },
+        {
+          "category": "Wine (bottle)",
+          "cost": "€8-22",
+          "notes": "Spanish wines good value; premium/imported wines more expensive"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Moraira celebrates cultural events and festivals throughout the year that blend local traditions with international celebrations.",
+      "events": [
+        {
+          "name": "Fiesta Mayor",
+          "month": "August",
+          "description": "Patron saint celebration with parades, music, fireworks, and traditional festivities"
+        },
+        {
+          "name": "Summer Music Festival",
+          "month": "July-August",
+          "description": "International performances featuring classical, jazz, and world music"
+        },
+        {
+          "name": "Art Exhibitions",
+          "month": "Year-round",
+          "description": "Rotating gallery exhibitions featuring local and international artists"
+        },
+        {
+          "name": "Market Day",
+          "month": "Fridays",
+          "description": "Weekly market with fresh produce, local crafts, and regional specialties"
+        },
+        {
+          "name": "Sailing Regattas",
+          "month": "Throughout year",
+          "description": "Competitive sailing events attracting yachtsmen from across Europe"
+        },
+        {
+          "name": "Wine & Food Festival",
+          "month": "May-June",
+          "description": "Celebration of local wines and Mediterranean cuisine with tastings"
+        },
+        {
+          "name": "Christmas Market & Festival",
+          "month": "December",
+          "description": "Festive season with artisan market, holiday lights, and special events"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Moraira itself has limited educational options, but nearby areas are well-served with prestigious international schools.",
+      "schools": [
+        {
+          "name": "Lady Elizabeth School",
+          "type": "International (British)",
+          "distance": "15 min",
+          "description": "Prestigious British curriculum school with strong academics and facilities"
+        },
+        {
+          "name": "Laude Newton College",
+          "type": "International (British)",
+          "distance": "40 min",
+          "description": "Secondary education with comprehensive curriculum and excellent placement"
+        },
+        {
+          "name": "Colegio Público Teulada",
+          "type": "Spanish State",
+          "distance": "8 min",
+          "description": "Local Spanish school with quality education and cultural immersion"
+        },
+        {
+          "name": "Academia Bilingüe",
+          "type": "Private (Bilingual)",
+          "distance": "12 min",
+          "description": "Private school with English and Spanish instruction"
+        },
+        {
+          "name": "Xabiga International School",
+          "type": "International (Bilingual)",
+          "distance": "20 min",
+          "description": "International school with English and Spanish programming"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Moraira's coastal setting offers diverse outdoor activities combining beach recreation, water sports, hiking, and cultural pursuits.",
+      "activities": [
+        {
+          "name": "Blue Flag Beach Swimming & Water Sports",
+          "type": "Beach",
+          "description": "El Portet and other beaches offer excellent swimming, paddleboarding, windsurfing, and diving"
+        },
+        {
+          "name": "Coastal Hiking & Walking",
+          "type": "Hiking",
+          "description": "Dramatic coastal paths offering spectacular Mediterranean views and natural beauty"
+        },
+        {
+          "name": "Scuba Diving & Snorkeling",
+          "type": "Water Sports",
+          "description": "Crystal-clear waters offer exceptional diving with reefs, caves, and marine life"
+        },
+        {
+          "name": "Marina Yacht Sailing",
+          "type": "Water Sports",
+          "description": "Active marina with sailing clubs, charter companies, and sailing courses"
+        },
+        {
+          "name": "Championship Golf",
+          "type": "Golf",
+          "description": "Ifach and Jávea Golf (15 min), La Sella Golf (20 min) offer championship play"
+        },
+        {
+          "name": "Rock Climbing",
+          "type": "Adventure",
+          "description": "Cap d'Or and coastal cliffs provide rock climbing opportunities with dramatic views"
+        },
+        {
+          "name": "Kayaking & Paddleboarding",
+          "type": "Water Sports",
+          "description": "Explore hidden coves and coastline in calm Mediterranean waters"
+        },
+        {
+          "name": "Wine Tasting & Culinary Tours",
+          "type": "Cultural",
+          "description": "Experience regional wines and Mediterranean cuisine at local establishments"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Moraira hosts a select and sophisticated international community, characterized by British, German, and Dutch residents who share appreciation for refined living and authentic Mediterranean character. The community is welcoming yet selective, providing excellent support networks for those seeking an elevated expatriate lifestyle.",
+      "highlights": [
+        "Sophisticated international community with emphasis on quality of life",
+        "Selective, welcoming environment respecting discretion and privacy",
+        "English widely spoken with multilingual services available",
+        "Active yet refined social calendar with cultural and dining events",
+        "Established professional networks and business connections",
+        "Community organizations focusing on quality living",
+        "Respect for authenticity and genuine Mediterranean living"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "French",
+        "Belgian",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Moraira",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee & Harbor Walk",
+          "description": "Start the day with coffee overlooking the marina, watching fishing boats and yachts"
+        },
+        {
+          "time": "10:00",
+          "activity": "Beach or Water Activities",
+          "description": "Swim at El Portet Blue Flag beach or engage in diving, sailing, or water sports"
+        },
+        {
+          "time": "13:00",
+          "activity": "Leisurely Lunch",
+          "description": "Enjoy fresh seafood at a waterfront restaurant with Mediterranean views"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta & Relaxation",
+          "description": "Rest during afternoon heat, relax at home or visit a local café"
+        },
+        {
+          "time": "17:00",
+          "activity": "Golf or Coastal Activity",
+          "description": "Play at nearby championship courses or hike coastal paths with panoramic views"
+        },
+        {
+          "time": "19:00",
+          "activity": "Evening Paseo",
+          "description": "Stroll through town and along the marina, greeting friends and neighbors"
+        },
+        {
+          "time": "20:30",
+          "activity": "Fine Dining Experience",
+          "description": "Enjoy dinner at an upscale restaurant with wine and meaningful conversation"
+        },
+        {
+          "time": "22:30",
+          "activity": "Evening Social Activity",
+          "description": "Join friends at a cultural event or return home to relax under Mediterranean stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d0.0138!3d38.7381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60e0000000000%3A0x400a1c000000!2sMoreira%2C+Alicante%2C+Spain!5e0!3m2!1sen!2ses!4v1640000000000"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Moraira",
+    "description": "Moraira is Costa Blanca's most exclusive destination with Blue Flag beaches, sophisticated expat community, dramatic coastal beauty, and 25% more affordable than Mallorca.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.7381",
+      "longitude": "0.0138"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Moraira",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    }
+  }
+}

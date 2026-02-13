@@ -1,0 +1,598 @@
+{
+  "slug": "guardamar-del-segura",
+  "name": "Guardamar del Segura",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/guardamar-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600047509358-9dc75507daeb?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Appartement",
+    "Penthouse",
+    "Grondgebonden woning",
+    "Villa",
+    "Bungalow"
+  ],
+  "priceRange": {
+    "min": 175000,
+    "max": 600000
+  },
+  "coordinates": {
+    "lat": 38.0894,
+    "lng": -0.6542
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Guardamar del Segura Tourism",
+      "url": "https://www.guardamardelsegura.es/",
+      "description": "Official Guardamar tourism website"
+    },
+    "beaches": [
+      {
+        "name": "Playa Centro (Blue Flag)",
+        "googleMaps": "https://maps.google.com/?q=Playa+Centro+Guardamar",
+        "description": "Main beach with full facilities, golden sand, and pine forest backdrop",
+        "blueFlag": true
+      },
+      {
+        "name": "Playa de la Roqueta",
+        "googleMaps": "https://maps.google.com/?q=Playa+Roqueta+Guardamar",
+        "description": "Natural beach between the dunes, quieter atmosphere"
+      },
+      {
+        "name": "Playa del Moncayo",
+        "googleMaps": "https://maps.google.com/?q=Playa+Moncayo+Guardamar",
+        "description": "Long sandy stretch backed by protected dunes"
+      },
+      {
+        "name": "Les Ortigues Natural Beach",
+        "googleMaps": "https://maps.google.com/?q=Les+Ortigues+Guardamar",
+        "description": "Protected natural beach in the dune system, pristine environment"
+      }
+    ],
+    "nature": [
+      {
+        "name": "Dunas de Guardamar",
+        "googleMaps": "https://maps.google.com/?q=Dunas+Guardamar",
+        "description": "Protected dune system with walking trails and pine forests"
+      },
+      {
+        "name": "Parque Natural de las Lagunas de La Mata y Torrevieja",
+        "googleMaps": "https://maps.google.com/?q=Lagunas+Torrevieja",
+        "description": "Salt lake nature reserve with flamingos and walking trails",
+        "distance": "5 km"
+      },
+      {
+        "name": "River Segura Mouth",
+        "googleMaps": "https://maps.google.com/?q=Desembocadura+Rio+Segura",
+        "description": "Natural wetland where the Segura meets the Mediterranean"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "10 km",
+      "driveTime": "12 minuutn"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "35 km",
+      "driveTime": "28 minuutn"
+    }
+  },
+  "golf": {
+    "intro": "Guardamar is ideally positioned between the Orihuela Costa golf cluster to the south and Alicante courses to the north. Several championship courses are within easy reach.",
+    "courses": [
+      {
+        "name": "La Finca Golf",
+        "distance": "12 km",
+        "driveTime": "15 minuutn",
+        "holes": 18,
+        "url": "https://www.lafincagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Finca+Golf+Algorfa",
+        "description": "Championship course designed by Pepe Gancedo with beautiful lake features."
+      },
+      {
+        "name": "La Marquesa Golf",
+        "distance": "10 km",
+        "driveTime": "12 minuutn",
+        "holes": 18,
+        "url": "https://www.lamarquesagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Marquesa+Golf",
+        "description": "Well-maintained course popular with residents. Good practice facilities."
+      },
+      {
+        "name": "Vistabella Golf",
+        "distance": "15 km",
+        "driveTime": "18 minuutn",
+        "holes": 18,
+        "url": "https://www.vistabellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+        "description": "Modern course with excellent facilities and friendly atmosphere."
+      },
+      {
+        "name": "Villamartin Golf",
+        "distance": "20 km",
+        "driveTime": "22 minuutn",
+        "holes": 18,
+        "url": "https://www.villamartingolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Villamartin+Golf",
+        "description": "Famous championship course, former European Tour venue."
+      }
+    ]
+  },
+  "localMarket": {
+    "wednesdayMarket": {
+      "name": "Guardamar Wednesday Market",
+      "location": "Town center and Paseo de la Sal",
+      "googleMaps": "https://maps.google.com/?q=Mercado+Guardamar",
+      "hours": "Wednesdays 8:00 - 14:00",
+      "description": "Large traditional market with fresh produce, fish, clothing, and local goods"
+    },
+    "sundayMarket": {
+      "name": "Guardamar Sunday Market",
+      "location": "El Raso area",
+      "googleMaps": "https://maps.google.com/?q=Mercadillo+El+Raso+Guardamar",
+      "hours": "Sundays 8:00 - 14:00",
+      "description": "Popular flea market in the urbanization area"
+    }
+  },
+  "content": {
+    "metaTitle": "Wonen in Guardamar del Segura 2026 | Costa Blanca duin strand | Vastgoedgids",
+    "metaDescription": "Complete gids voor wonen in Guardamar - bekend voor duinen. Rustig, vogelparadijs, maritiem erfgoed. Eigendomsmarkt van €250.000.",
+    "quickAnswer": "Guardamar del Segura offers Costa Blanca's most natural setting—protected dune system, pine forests, and 11 km of beaches. Properties start at €175,000 for apartments, €250,000 for townhouses, and €350,000 for villas. Just 28 minuutn from Alicante Airport, it's the closest major resort to the airport.",
+    "heroIntro": "Where the River Segura meets the Mediterranean, a remarkable landscape unfolds. Protected dunes rise behind pristine beaches, blanketed by the pine forests that generations of local residents planted to hold back the advancing sands. This is Guardamar del Segura—a town that feels different from anywhere else on Costa Blanca.\n\nThe story of Guardamar is one of human tenacity. In the late 1800s, engineers led by Francisco Mira y Botella began an ambitious project to stabilize the dunes that threatened to engulf the town. They planted over 600,000 pine trees, creating the unique landscape that defines Guardamar today. Those forests now provide shade for walking trails, the dunes are protected natural habitat, and the beaches stretch for 11 kilometers with an intimacy that mass tourism hasn't discovered.\n\nFor buyers seeking nature alongside their Mediterranean home, Guardamar offers something truly special.",
+    "lifestyleSection": {
+      "intro": "Life in Guardamar revolves around the outdoors. Morning walks through the pine forests, swimming in waters that feel cleaner than anywhere on the coast, cycling along the river paths, watching flamingos at the nearby salt lakes. This is a town for those who value nature as much as sunshine.\n\nThe town itself is authentic Spanish—weekly markets, traditional tapas bars, festivals that have run for generations. The international community is present but smaller than Orihuela Costa, meaning more genuine integration with Spanish life. English is spoken in tourist areas but Spanish helps here more than elsewhere.",
+      "highlights": [
+        "11 km of natural beaches backed by protected dunes",
+        "Unique pine forest landscape—walking and cycling trails",
+        "Flamingos at La Mata salt lakes (5 km)",
+        "Just 28 minuutn from Alicante Airport—closest resort area",
+        "Authentic Spanish town with traditional markets",
+        "Excellent value properties vs. coastal neighbors",
+        "River Segura mouth wetlands for nature lovers",
+        "Quieter, more natural alternative to Orihuela Costa"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Guardamar's 11 km of beaches are among the most natural on Costa Blanca. Playa Centro offers Blue Flag facilities with a pine forest backdrop unique to this town. Playa de la Roqueta and Playa del Moncayo stretch between the dunes with golden sand and smaller crowds. For true nature lovers, Les Ortigues is a protected natural beach within the dune system—no development, just pristine Mediterranean coast.",
+      "dining": "The town center has excellent traditional Spanish restaurants—fresh fish, paella, tapas. The paseo (promenade) offers seaside dining with sunset views. International options are fewer than Orihuela Costa but quality is high. Wednesday market days bring special atmosphere with outdoor cafés buzzing. For variety, Torrevieja (10 km) and La Zenia (15 km) are close.",
+      "shopping": "Guardamar has a good selection of local shops, supermarkets, and pharmacies in the town center. The Wednesday market is a highlight—traditional Spanish market with fresh produce, fish, clothing, and household goods. Sunday's flea market at El Raso draws bargain hunters. For major shopping, Habaneras in Torrevieja (10 km) or La Zenia Boulevard (15 km) are accessible.",
+      "healthcare": "Hospital Universitario de Torrevieja is 10 km away (12 minuutn), with comprehensive services and English-speaking staff. Local medical centers and pharmacies serve the town. Private clinics in Torrevieja offer additional options. The healthcare infrastructure is excellent for the size of the town.",
+      "transport": "Alicante-Elche Airport is just 35 km away (28 minuutn)—the closest of any major Costa Blanca resort. This is a genuine advantage for frequent travelers. Murcia-Corvera Airport is 50 km (40 minuutn). A car is recommended as public transport is limited. The N-332 coastal road and AP-7 motorway provide good connections."
+    },
+    "neighborhoods": [
+      {
+        "name": "Town Center",
+        "description": "Traditional Spanish atmosphere. Walking distance to beaches, shops, and restaurants. Mix of older properties and newer developments. Lower prices, genuine local life."
+      },
+      {
+        "name": "El Raso",
+        "description": "Large urbanization inland of the town. Popular with expats. Lower prices, larger properties. Sunday market. More residential feel."
+      },
+      {
+        "name": "Guardamar Hills",
+        "description": "Elevated positions with sea and country views. Larger villas on bigger plots. Quieter, more exclusive. Requires transport for daily needs."
+      },
+      {
+        "name": "Beachfront / La Roqueta",
+        "description": "Properties close to beaches and pine forests. Premium location for nature lovers. Mix of apartments and villas. Highest prices but unbeatable setting."
+      }
+    ],
+    "propertyMarketSection": "Guardamar offers exceptional value compared to neighboring coastal areas. New build apartments start from around €175,000-300,000, townhouses from €250,000-400,000, and villas from €350,000-600,000. This represents 15-25% less than equivalent properties in Orihuela Costa while offering superior natural environment.\n\n**Featured Development: Oasis Laguna** – Modern 2-bed apartments from €225,000 in El Raso with laguna-style communal pools and spa. Contemporary design with terraces overlooking landscaped grounds.\n\n**Featured Development: Vista Azul XXXVII** – 3-bed apartments from €299,900 near the beach with communal pool. Modern specifications in established development.\n\nThe rental market is developing, particularly for nature-focused holidays and long stays. Airport proximity is a genuine advantage for rental properties. The market is less saturated than Orihuela Costa, offering opportunities for early investors.",
+    "whyLiveHereSection": [
+      "11 km of natural beaches—Costa Blanca's finest",
+      "Protected dunes and pine forests—unique environment",
+      "Just 28 minuutn from Alicante Airport—closest resort",
+      "Excellent value—15-25% less than Orihuela Costa",
+      "Authentic Spanish town with genuine local life",
+      "Flamingos at La Mata salt lakes nearby",
+      "Quieter alternative to mass-tourism areas",
+      "Nature lovers' paradise with easy beach access"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Oasis Laguna Apartment",
+        "reference": "N8207",
+        "price": 225000,
+        "type": "Apartment",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "features": [
+          "Laguna Views",
+          "Communal Pool",
+          "Spa"
+        ],
+        "description": "Modern 2-bed apartment in El Raso with laguna-style pools and spa facilities."
+      },
+      {
+        "title": "Vista Azul XXXVII",
+        "reference": "N7033",
+        "price": 299900,
+        "type": "Apartment",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "features": [
+          "Near Beach",
+          "3 Bedrooms",
+          "Pool"
+        ],
+        "description": "Spacious 3-bed apartment near the beach with communal pool."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What makes Guardamar del Segura special?",
+        "answer": "Guardamar has a unique landscape of protected dunes and pine forests backing 11 km of natural beaches. The forests were planted in the 1800s to stabilize the dunes and now create a distinctive environment unlike anywhere else on Costa Blanca. It's nature-focused while remaining convenient for modern life."
+      },
+      {
+        "question": "How far is Guardamar from Alicante Airport?",
+        "answer": "Just 35 km, which takes about 28 minuutn via the N-332 or AP-7. Guardamar is the closest major Costa Blanca resort to Alicante Airport—a genuine advantage for frequent travelers or those renting to visitors."
+      },
+      {
+        "question": "What are property prices in Guardamar del Segura?",
+        "answer": "Guardamar offers excellent value: apartments from €175,000, townhouses from €250,000, and villas from €350,000. This is 15-25% less than equivalent properties in Orihuela Costa while offering a superior natural environment."
+      },
+      {
+        "question": "Is Guardamar good for beaches?",
+        "answer": "Guardamar has 11 km of beaches—among the most natural on Costa Blanca. The beaches are backed by protected dunes and pine forests rather than high-rises. Playa Centro has Blue Flag status; Les Ortigues is a protected natural beach. The water quality is excellent."
+      },
+      {
+        "question": "How does Guardamar compare to Orihuela Costa?",
+        "answer": "Guardamar is quieter, more natural, and more authentically Spanish. Orihuela Costa has more commercial development, bigger expat community, and more nightlife. Guardamar offers 15-25% better property value. Orihuela Costa has more golf (though Guardamar has good access too). Choose based on priorities."
+      },
+      {
+        "question": "Is English widely spoken in Guardamar?",
+        "answer": "Less so than in Orihuela Costa. Tourist areas and some businesses cater to English speakers, but the town is more Spanish in character. Basic Spanish helps significantly here. Many residents appreciate this as part of the authentic experience."
+      },
+      {
+        "question": "What is the nature like around Guardamar?",
+        "answer": "Exceptional. The protected dune system has walking and cycling trails through pine forests. The River Segura mouth is a wetland habitat. La Mata salt lakes (5 km) host flamingos and other wildlife. It's a nature lover's paradise while being just 10 minuutn from Torrevieja."
+      },
+      {
+        "question": "Is Guardamar good for golf?",
+        "answer": "Yes, with excellent access to multiple courses: La Finca (15 min), La Marquesa (12 min), Vistabella (18 min), and Villamartin (22 min). It's not a golf-centric community like Villamartin, but golfers have plenty of options nearby."
+      },
+      {
+        "question": "What is the rental potential in Guardamar?",
+        "answer": "Growing, with good potential. The market is less saturated than Orihuela Costa. Airport proximity is a genuine advantage. Nature-focused and long-stay holidays are the primary market. Early investors may benefit from developing demand."
+      },
+      {
+        "question": "Is Guardamar suitable for year-round living?",
+        "answer": "Absolutely. Unlike some resort areas, Guardamar is a real Spanish town with year-round services, permanent residents, and authentic local life. Winters are mild (16-18°C average), and the town maintains activity throughout the year. Many expats live here permanently."
+      }
+    ],
+    "conclusion": "Guardamar del Segura offers something rare on Costa Blanca: genuine natural beauty combined with excellent value and authentic Spanish life. The dunes, the pines, the pristine beaches—these aren't marketing slogans but daily reality. For buyers who prioritize nature over nightlife, authenticity over anglicization, Guardamar rewards handsomely.\n\nReady to explore properties in Guardamar del Segura? Our team understands this distinctive area and can help match you with properties that capture its unique appeal. From beachside apartments to hillside villas, we'll guide you through every step.",
+    "investmentAnalysis": {
+      "rentalYield": "5-7%",
+      "annualAppreciation": "4-6%",
+      "overview": "Guardamar offers strong investment potential for buyers seeking growth in a developing market. As awareness of the town's natural beauty and airport proximity increases, rental demand is rising. The lower property prices compared to Orihuela Costa present excellent value for long-term appreciation, particularly for nature-focused tourism and golf visitors.",
+      "highlights": [
+        "15-25% lower prices than equivalent Orihuela Costa properties",
+        "Growing rental market from nature and airport travelers",
+        "Closest resort to Alicante Airport creates rental opportunities",
+        "Unique environment attracts premium 'eco-tourism' customers",
+        "Early mover advantage in developing market with strong growth potential"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Guardamar offers exceptional value for living on a natural Spanish coast. Costs are lower than most established resort areas while maintaining excellent amenities and authentic local services.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€270-360",
+          "notes": "Local markets, small supermarkets, Wednesday market excellent for fresh produce"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-150",
+          "notes": "Lower than beach areas; good ventilation reduces cooling needs"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-100",
+          "notes": "Generally lower than resort areas; varies by development"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-900/year",
+          "notes": "Lower than nearby commercial resort areas"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€12-22",
+          "notes": "Authentic Spanish restaurants €15-25; beach chiringuitos €10-18"
+        },
+        {
+          "category": "Beach & Recreation",
+          "cost": "€30-60",
+          "notes": "Beach activities, nature guides, local excursions"
+        },
+        {
+          "category": "Golf fees",
+          "cost": "€40-70",
+          "notes": "La Finca, La Marquesa nearby; lower than resort courses"
+        },
+        {
+          "category": "Car expenses",
+          "cost": "€120-190",
+          "notes": "Car useful for airport, golf, neighboring areas"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Guardamar celebrates traditional Spanish culture with authentic festivals that maintain local traditions while welcoming the growing international community.",
+      "events": [
+        {
+          "name": "Fiestas de Guardamar",
+          "month": "July-August",
+          "description": "Annual festivities honoring the patron saint with fireworks, processions, paella competitions, and bullfights"
+        },
+        {
+          "name": "Wednesday Market Festival",
+          "month": "Weekly Wednesdays",
+          "description": "Traditional Spanish market with fresh produce, local goods, crafts, and social gathering"
+        },
+        {
+          "name": "Nature & Environment Festival",
+          "month": "May",
+          "description": "Celebration of Guardamar's unique ecosystem with guided dune walks, environmental talks, and conservation events"
+        },
+        {
+          "name": "Sunday Flea Market",
+          "month": "Every Sunday",
+          "description": "Popular El Raso flea market with local finds, antiques, and household items"
+        },
+        {
+          "name": "Spanish Gastronomy Festival",
+          "month": "September",
+          "description": "Celebration of local and regional cuisine with cooking demonstrations and traditional dish tastings"
+        },
+        {
+          "name": "Christmas & New Year Celebrations",
+          "month": "December",
+          "description": "Traditional Spanish holiday festivities with lights, nativity scenes, and family gatherings"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Guardamar serves families with access to Spanish state schools and nearby international institutions, with a good selection for both permanent and temporary residents.",
+      "schools": [
+        {
+          "name": "Colegio Público Guardamar",
+          "type": "Spanish State",
+          "distance": "5 min",
+          "description": "Local primary school serving the town with authentic Spanish education"
+        },
+        {
+          "name": "IES Guardamar del Segura",
+          "type": "Spanish State",
+          "distance": "8 min",
+          "description": "Secondary school offering Spanish education for ages 12-18"
+        },
+        {
+          "name": "International School of Alicante",
+          "type": "International (IB)",
+          "distance": "25 min",
+          "description": "Nearby international school with IB curriculum for comprehensive education"
+        },
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "30 min",
+          "description": "British curriculum option available by commute from Guardamar"
+        },
+        {
+          "name": "Guardamar Nursery School",
+          "type": "Spanish Nursery",
+          "distance": "3 min",
+          "description": "Local preschool and nursery for youngest children"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Guardamar is a nature lover's paradise with protected dunes, pine forests, pristine beaches, and diverse wildlife habitats.",
+      "activities": [
+        {
+          "name": "Dunas de Guardamar Nature Reserve",
+          "type": "Nature Reserve",
+          "description": "Protected dune system with walking trails through original pine forests, unique ecosystem"
+        },
+        {
+          "name": "Playa Centro Blue Flag Beach",
+          "type": "Beach",
+          "description": "Main beach with pine forest backdrop, lifeguards, and excellent facilities"
+        },
+        {
+          "name": "Les Ortigues Protected Beach",
+          "type": "Nature Beach",
+          "description": "Pristine natural beach within dune system, no development, true wilderness setting"
+        },
+        {
+          "name": "Cycling Trails",
+          "type": "Cycling",
+          "description": "Scenic coastal paths and riverside routes perfect for family cycling"
+        },
+        {
+          "name": "River Segura Wetlands",
+          "type": "Nature Reserve",
+          "description": "Where the river meets Mediterranean—wetland habitat for birds and wildlife"
+        },
+        {
+          "name": "La Mata Salt Lakes",
+          "type": "Nature Reserve",
+          "description": "Nearby salt lakes with flamingos and birdwatching (5 km drive)"
+        },
+        {
+          "name": "Beach Fishing",
+          "type": "Fishing",
+          "description": "Traditional fishing spots and rod fishing opportunities in clean waters"
+        },
+        {
+          "name": "Water Sports",
+          "type": "Water Activities",
+          "description": "Paddleboarding, kayaking, and swimming in protected coves"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Guardamar's expatriate community is smaller and more integrated than resort areas, attracting nature-conscious residents seeking authentic Spanish lifestyle. Rather than clustering in expat zones, the international community here blends with locals. English is spoken in some businesses and among residents, but Spanish is more necessary and appreciated than in larger resorts.",
+      "highlights": [
+        "Smaller, more integrated international community",
+        "Nature-focused residents seeking authentic lifestyle",
+        "Strong connection to local Spanish community and traditions",
+        "Growing expat presence but not dominant cultural force",
+        "Emphasis on environmental and cultural respect",
+        "Personal friendships bridge expat and Spanish communities",
+        "Genuine integration rather than parallel societies",
+        "Residents often become semi-permanent or permanent settlers"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "French",
+        "Spanish",
+        "Swiss",
+        "Italian",
+        "Other European"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Guardamar del Segura",
+      "entries": [
+        {
+          "time": "07:00",
+          "activity": "Pine Forest Walk",
+          "description": "Morning walk through the protected dune system and pine forests, breathing in clean air"
+        },
+        {
+          "time": "08:30",
+          "activity": "Beach Breakfast",
+          "description": "Coffee and breakfast at a beachfront chiringuito watching fishermen and early swimmers"
+        },
+        {
+          "time": "10:00",
+          "activity": "Beach Swimming",
+          "description": "Long swim in pristine waters with far fewer crowds than resort beaches"
+        },
+        {
+          "time": "12:30",
+          "activity": "Market or Lunch",
+          "description": "Visit Wednesday market for fresh produce or lunch at a traditional Spanish restaurant"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta & Reading",
+          "description": "Afternoon rest in your property with time for reading or relaxation"
+        },
+        {
+          "time": "17:00",
+          "activity": "Nature Activity",
+          "description": "Hiking trail through dunes, birdwatching at salt lakes, or cycling along river paths"
+        },
+        {
+          "time": "19:30",
+          "activity": "Evening Promenade",
+          "description": "Sunset walk along the beach or through town center, greeting neighbors"
+        },
+        {
+          "time": "21:00",
+          "activity": "Spanish Dinner",
+          "description": "Authentic Spanish dinner at local restaurant with fresh fish and regional specialties"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.6542!3d38.0894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63a5d000000%3A0x400a1b000000!2sGuardamar%20del%20Segura%2C%20Alicante%2C%20Spain!5e0!3m2!1sen!2ses!4v1640000000000"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Guardamar del Segura",
+    "description": "Guardamar del Segura is a coastal town in Costa Blanca South known for its protected dune system, pine forests, and 11 km of natural beaches. Located where the River Segura meets the Mediterranean, it offers a unique natural environment and authentic Spanish lifestyle.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.0894",
+      "longitude": "-0.6542"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Guardamar del Segura",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Protected Dune System",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Pine Forest Trails",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Natural Beaches",
+        "value": "11 km"
+      }
+    ]
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What makes Guardamar del Segura special?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Guardamar has a unique landscape of protected dunes and pine forests backing 11 km of natural beaches. The forests were planted in the 1800s to stabilize the dunes, creating a distinctive environment unlike anywhere else on Costa Blanca."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Guardamar from Alicante Airport?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Just 35 km (28 minuutn). Guardamar is the closest major Costa Blanca resort to Alicante Airport—a genuine advantage for frequent travelers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are property prices in Guardamar del Segura?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Apartments from €175,000, townhouses from €250,000, villas from €350,000. This is 15-25% less than equivalent Orihuela Costa properties."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Guardamar compare to Orihuela Costa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Guardamar is quieter, more natural, and more authentically Spanish with 15-25% better property value. Orihuela Costa has more development, bigger expat community, and more golf options."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Guardamar good for beaches?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Guardamar has 11 km of beaches backed by protected dunes and pine forests—among the most natural on Costa Blanca. Playa Centro has Blue Flag status."
+        }
+      }
+    ]
+  }
+}

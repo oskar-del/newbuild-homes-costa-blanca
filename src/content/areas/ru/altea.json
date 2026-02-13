@@ -1,0 +1,446 @@
+{
+  "slug": "altea",
+  "name": "Altea",
+  "region": "Costa Blanca Central",
+  "heroImage": "/images/areas/altea-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80&fit=crop",
+  "propertyCount": 5,
+  "propertyTypes": [
+    "Villa",
+    "Apartment",
+    "Townhouse"
+  ],
+  "priceRange": {
+    "min": 1760000,
+    "max": 2690000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Altea Town Hall",
+      "url": "https://www.altea.es/",
+      "description": "Official Altea municipality website"
+    },
+    "beaches": [
+      {
+        "name": "Playa de la Roda",
+        "googleMaps": "https://maps.google.com/?q=Playa+Roda+Altea",
+        "description": "Main beach with soft sand, Blue Flag status, and excellent facilities"
+      },
+      {
+        "name": "Cap Negret",
+        "googleMaps": "https://maps.google.com/?q=Cap+Negret+Altea",
+        "description": "Scenic pebble beach near the lighthouse with crystal waters and dramatic cliffs"
+      },
+      {
+        "name": "Playa del Bol Nou",
+        "googleMaps": "https://maps.google.com/?q=Playa+Bol+Nou+Altea",
+        "description": "Smaller cove beach ideal for swimmers seeking calm waters and intimate settings"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Comarcal Marina Baixa",
+      "googleMaps": "https://maps.google.com/?q=Hospital+Marina+Baixa+Altea",
+      "url": "https://www.marinabaixa.es/",
+      "distance": "15 km (20 min)"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "70 km",
+      "driveTime": "45-60 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Altea is perfectly positioned for golf enthusiasts with multiple championship courses within easy reach. Club de Golf Don Cayo and the prestigious Altea Golf Club offer stunning mountain and sea views, while several courses in nearby Benidorm and Calpe are within 15 minutes. Golfers enjoy playing on exceptional layouts while enjoying the Mediterranean climate.",
+    "courses": [
+      {
+        "name": "Club de Golf Don Cayo",
+        "distance": "5 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "url": "https://www.doncayogolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Don+Cayo+Golf+Club",
+        "description": "Championship parkland course with excellent facilities and dramatic mountain views"
+      },
+      {
+        "name": "Altea Golf Club",
+        "distance": "8 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Altea+Golf+Club",
+        "description": "Prestigious course with challenging layout, stunning sea and mountain views"
+      },
+      {
+        "name": "Ifach Golf Club",
+        "distance": "10 km",
+        "driveTime": "15 minutes",
+        "holes": 18,
+        "url": "https://www.ifachgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Ifach+Golf+Club",
+        "description": "Prestigious course near Calpe with views of the iconic Peñón de Ifach"
+      },
+      {
+        "name": "Las Rejas Golf Club",
+        "distance": "12 km",
+        "driveTime": "18 minutes",
+        "holes": 18,
+        "url": "https://www.lasrejasgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Las+Rejas+Golf",
+        "description": "Championship course with well-maintained fairways and Mediterranean backdrop"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Жизнь в Altea 2026 | Новостройки Коста Бланка",
+    "metaDescription": "Полное руководство по проживанию в Алтее - художественная жемчужина Коста Бланки. Культовая синяя церковь, художественные галереи, утонченное сообщество экспатов, от 1,76M€.",
+    "heroIntro": "Алтеа предстает как один из самых очаровательных прибрежных драгоценных камней Коста Бланки, знаменитая своими живописными белыми улицами и аутентичной архитектурой. Это установившийся художественный город привлек художников и деятелей культуры со всего мира.",
+    "lifestyleSection": {
+      "intro": "Жизнь в Алтее вращается вокруг аутентичного средиземноморского ритма, объединенного с культурной чувствительностью. Русское, немецкое, британское и скандинавское сообщества гармонично сосуществуют.",
+      "highlights": [
+        "Аутентичная архитектура",
+        "Живая художественная сцена",
+        "Творческое сообщество",
+        "Гастрономия",
+        "Близость",
+        "Спокойствие",
+        "Международное сообщество",
+        "Культура"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Алтея обладает доступом к нескольким небольшим живописным пляжам, предлагающим спокойную альтернативу крупным прибрежным направлениям.",
+      "dining": "Алтея предлагает утонченную кулинарную сцену, отражающую культурную атмосферу с прекрасными ресторанами.",
+      "shopping": "Алтея предлагает очаровательные покупки, сочетающие независимые бутики со спокойствием.",
+      "healthcare": "Алтея пользуется хорошей медицинской помощью с близостью к Hospital Marina Baixa.",
+      "transport": "Алтея имеет превосходный доступ к транспорту через автостраду AP-7."
+    },
+    "propertyMarketSection": "Рынок недвижимости Алтеи предлагает уникальные черты, отражающие статус художественной общины.",
+    "whyLiveHereSection": [
+      "Аутентичная архитектура",
+      "Художественная сцена",
+      "Творческое сообщество",
+      "Гастрономия",
+      "Близость",
+      "Спокойствие",
+      "Международное сообщество",
+      "Альтернатива"
+    ],
+    "faqs": [
+      {
+        "question": "Для художников?",
+        "answer": "Да, с установившейся художественной сценой и приемлемыми издержками."
+      },
+      {
+        "question": "Безопасность?",
+        "answer": "Безопасное и стабильное окружение."
+      },
+      {
+        "question": "Социальная жизнь?",
+        "answer": "Активная вокруг искусства и культуры."
+      },
+      {
+        "question": "Школы?",
+        "answer": "Местные и международные варианты."
+      },
+      {
+        "question": "Лучший сезон?",
+        "answer": "Весна и осень для идеального климата."
+      },
+      {
+        "question": "Are there good schools in Altea for families with children?",
+        "answer": "Altea itself has limited international school options, but nearby areas are well-served. Lady Elizabeth School (15 minutes) in Jávea and Laude Newton College (40 minutes) provide prestigious British curriculum education. Spanish state schools in Altea and surrounding areas offer excellent education with cultural immersion. Many families choose Spanish schools for full integration while maintaining English through private tutoring. The established expat community can provide personalized recommendations."
+      },
+      {
+        "question": "What property taxes should I expect in Altea?",
+        "answer": "Annual property tax (IBI) for luxury villas typically ranges from €2,000-€5,000+ depending on cadastral value. Additional costs include community fees if applicable (€100-€300 monthly), utilities (€150-€300 monthly), and property insurance (€800-€1,500 annually). Wealth tax may apply to high-value properties for non-residents. Overall annual costs should be budgeted at 2-3% of property purchase price, which is reasonable for a premium Mediterranean location."
+      },
+      {
+        "question": "How easy is it to renovate or build property in Altea?",
+        "answer": "Altea has strict planning regulations designed to preserve the town's character and natural environment. Building permissions require careful navigation and can be time-consuming. Renovation projects are generally more straightforward than new construction. It's essential to work with local legal advisors experienced in Altea's planning requirements. The effort to obtain permissions reflects the town's commitment to maintaining its unique character, which ultimately protects property values."
+      },
+      {
+        "question": "What healthcare quality can I expect in Altea?",
+        "answer": "Healthcare in Altea is excellent through local private clinics and nearby Hospital Marina Baixa (15 minutes). EU residents access the Spanish public healthcare system, while others obtain private insurance easily. Many doctors have trained internationally and serve the expatriate community. The region's healthcare standards match Western European norms. Specialist services are available in nearby towns, with Alicante's major hospital (45 minutes) for complex treatments."
+      },
+      {
+        "question": "How does Altea compare to nearby Calpe and Benidorm?",
+        "answer": "Altea commands premium prices and exclusivity due to its artistic heritage and sophisticated atmosphere. Calpe offers iconic natural beauty (Peñón de Ifach) and strong Russian/German community but is more resort-oriented. Benidorm provides urban energy, entertainment, and larger international community but lacks Altea's artistic character. Altea is ideal for those prioritizing cultural engagement and exclusivity, while Calpe suits nature lovers and Benidorm appeals to those seeking cosmopolitan lifestyle and entertainment."
+      }
+    ],
+    "conclusion": "Готовы испытать аутентичную жизнь в Алтее? Наши специалисты понимают уникальный рынок Алтеи.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Алтея представляет уникальную инвестиционную возможность для ценящих культуру и качество жизни.",
+      "highlights": [
+        "Стабильный рынок",
+        "Аутентичные объекты",
+        "Стабильная доходность",
+        "Постепенная апreciация",
+        "Культурное значение"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Алтея предлагает разумную стоимость жизни для премиального прибережного направления.",
+      "items": [
+        {
+          "category": "Продукты",
+          "cost": "€300-400",
+          "notes": "Рынки"
+        },
+        {
+          "category": "Коммунальные услуги",
+          "cost": "€110-180",
+          "notes": "Скромные"
+        },
+        {
+          "category": "Сборы",
+          "cost": "€70-180",
+          "notes": "Переменные"
+        },
+        {
+          "category": "IBI",
+          "cost": "€500-1200/год",
+          "notes": "Ежегодно"
+        },
+        {
+          "category": "Ужин",
+          "cost": "€18-35",
+          "notes": "Премиум"
+        },
+        {
+          "category": "Культура",
+          "cost": "€40-80",
+          "notes": "Деятельность"
+        },
+        {
+          "category": "Интернет",
+          "cost": "€40-60",
+          "notes": "Волокно"
+        },
+        {
+          "category": "Машина",
+          "cost": "€100-200",
+          "notes": "Практично"
+        },
+        {
+          "category": "Развлечение",
+          "cost": "€60-100",
+          "notes": "Доступно"
+        },
+        {
+          "category": "Страховка",
+          "cost": "€50-100",
+          "notes": "Дополнительно"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Altea celebrates a vibrant calendar of cultural events, artistic exhibitions, and traditional Spanish festivals throughout the year, reflecting the town's rich heritage and creative community.",
+      "events": [
+        {
+          "name": "Art & Culture Festival",
+          "month": "April-May",
+          "description": "Celebration of local and international artists featuring gallery exhibitions, street performances, sculpture installations, and cultural performances throughout the old town"
+        },
+        {
+          "name": "Semana Santa (Holy Week)",
+          "month": "April",
+          "description": "Religious processions blending Spanish tradition with local custom, featuring elaborate floats and community participation creating solemn and meaningful atmosphere"
+        },
+        {
+          "name": "Jazz in Altea",
+          "month": "July-August",
+          "description": "International jazz festival featuring world-class musicians performing at venues throughout town, attracting music lovers from across Europe"
+        },
+        {
+          "name": "Summer Art Exhibitions",
+          "month": "June-September",
+          "description": "Rotating gallery exhibitions showcasing international and Spanish artists, with openings featuring receptions and cultural celebrations"
+        },
+        {
+          "name": "Altea Fiesta Mayor",
+          "month": "August",
+          "description": "Traditional patron saint celebration with parades, music, fireworks, traditional dances, and street celebrations lasting several days"
+        },
+        {
+          "name": "International Film Festival",
+          "month": "September-October",
+          "description": "Screening of independent and international films at various venues, attracting cinephiles and creative professionals"
+        },
+        {
+          "name": "Christmas Market & Festival",
+          "month": "December",
+          "description": "Festive season with artisan market, holiday lights, nativity scenes, carol performances, and special dining events at restaurants"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "While Altea itself has limited international school options, the surrounding area offers excellent educational choices for families, with prestigious British, international, and Spanish schools within accessible distances.",
+      "schools": [
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British)",
+          "distance": "20 min (Jávea)",
+          "description": "Long-established British international school with primary and secondary campuses, strong university placement record, and comprehensive facilities"
+        },
+        {
+          "name": "Colegio Público Altea",
+          "type": "Spanish State",
+          "distance": "5 min",
+          "description": "Local Spanish primary school serving the community with strong academics and cultural integration opportunities"
+        },
+        {
+          "name": "Academia Bilingüe Altea",
+          "type": "Private (Bilingual)",
+          "distance": "8 min",
+          "description": "Private school with English and Spanish instruction, smaller classes, and emphasis on cultural and artistic development"
+        },
+        {
+          "name": "Elian's British School",
+          "type": "International (British)",
+          "distance": "25 min (La Nucía)",
+          "description": "Prestigious British curriculum school with excellent facilities and experienced staff familiar with expatriate families"
+        },
+        {
+          "name": "Colegio Secundario Marina Alta",
+          "type": "Spanish State",
+          "distance": "10 min",
+          "description": "Spanish secondary school offering quality education with support for international families"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Altea's exceptional setting combines stunning coastal beauty with mountain scenery and cultural activities, offering diverse outdoor and indoor experiences for active lifestyles.",
+      "activities": [
+        {
+          "name": "Sierra de Bernia Hiking",
+          "type": "Hiking",
+          "description": "Dramatic mountain range providing challenging trails with panoramic views of the coast and interior—popular with experienced hikers and walkers"
+        },
+        {
+          "name": "Playa de la Roda & Cap Negret Swimming",
+          "type": "Beach",
+          "description": "Picturesque pebble beaches with crystal-clear waters ideal for swimming, snorkeling, and enjoying Mediterranean scenery"
+        },
+        {
+          "name": "Scuba Diving & Snorkeling",
+          "type": "Water Sports",
+          "description": "Clear Mediterranean waters around Altea offer exceptional diving with underwater reefs, caves, and marine life—several dive centers provide instruction"
+        },
+        {
+          "name": "Gallery Visits & Art Walking Tours",
+          "type": "Cultural",
+          "description": "The old town harbors numerous galleries and artists' studios offering insights into the creative process and local artistic heritage"
+        },
+        {
+          "name": "Golf at Championship Courses",
+          "type": "Golf",
+          "description": "Don Cayo Golf Club (5 min) and Altea Golf Club (8 min) offer championship play with Mediterranean and mountain views"
+        },
+        {
+          "name": "Marina Yacht Sailing",
+          "type": "Water Sports",
+          "description": "Altea's marina hosts sailing clubs and charter companies offering day sails, sunset cruises, and sailing courses"
+        },
+        {
+          "name": "Coastal Cycling Routes",
+          "type": "Cycling",
+          "description": "Scenic coastal paths connecting Altea to nearby towns with varying difficulty levels and Mediterranean views"
+        },
+        {
+          "name": "Cultural Events & Performances",
+          "type": "Cultural",
+          "description": "Regular jazz performances, theatrical productions, film screenings, and cultural events throughout the year celebrating arts and creativity"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Altea hosts a sophisticated and culturally engaged international community, characterized by British, German, Dutch, Scandinavian, and French residents who share appreciation for artistic expression, quality of life, and authentic Mediterranean living. The community is welcoming, well-organized, and provides excellent support networks for those seeking a refined expatriate lifestyle.",
+      "highlights": [
+        "Sophisticated international community with emphasis on culture and quality of life",
+        "Active artistic and cultural community with galleries, studios, and creative events",
+        "English widely spoken with multilingual services catering to expatriates",
+        "Social clubs, hobby groups, and charitable organizations providing community connection",
+        "Regular cultural events, art exhibitions, and performances throughout the year",
+        "Established professional networks facilitating business connections and opportunities",
+        "Respect for authenticity and genuine living rather than commercialized expat infrastructure"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "French",
+        "Belgian",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Altea",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee & Old Town Stroll",
+          "description": "Start the day with coffee at a plaza café in the whitewashed old town, watching the blue dome church glow in morning light"
+        },
+        {
+          "time": "10:00",
+          "activity": "Gallery Visit or Beach Walk",
+          "description": "Explore local galleries featuring artists' work, or take a scenic walk along the pebble beach with Mediterranean views"
+        },
+        {
+          "time": "13:00",
+          "activity": "Leisurely Lunch",
+          "description": "Enjoy fresh seafood at a marina restaurant or traditional Spanish dish at an old town establishment, appreciating local cuisine"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta & Cultural Activity",
+          "description": "Rest during the afternoon heat, then visit a gallery opening, attend an artist's studio session, or simply relax at your villa"
+        },
+        {
+          "time": "17:00",
+          "activity": "Golf or Mountain Activity",
+          "description": "Play at Don Cayo or Altea Golf Clubs, or hike Sierra de Bernia trails enjoying panoramic views"
+        },
+        {
+          "time": "19:00",
+          "activity": "Evening Paseo",
+          "description": "Walk through the old town, greeting friends and neighbors while watching the sunset illuminate the church dome"
+        },
+        {
+          "time": "20:30",
+          "activity": "Dinner & Entertainment",
+          "description": "Enjoy fine dining at a marina restaurant, traditional Spanish tapas, or international cuisine with wine and meaningful conversation"
+        },
+        {
+          "time": "22:30",
+          "activity": "Evening Cultural Activity",
+          "description": "Attend a jazz performance, art opening, theatrical production, or simply enjoy stargazing from your terrace"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.0722!3d38.5885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6247d00000000%3A0x400a1c000000!2sAltea%2C%20Alicante%2C%20Spain!5e0!3m2!1sen!2ses!4v1640000000000"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Altea",
+    "description": "Altea is Costa Blanca's most artistic destination, known for its iconic blue-domed church, thriving art community, sophisticated expat population, and picturesque Mediterranean setting.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.5885",
+      "longitude": "-0.0722"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Altea",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    }
+  }
+}

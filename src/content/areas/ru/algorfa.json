@@ -1,0 +1,476 @@
+{
+  "slug": "algorfa",
+  "name": "Algorfa",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/algorfa-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Villa",
+    "Townhouse",
+    "Apartment"
+  ],
+  "priceRange": {
+    "min": 195000,
+    "max": 550000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Algorfa Town Hall",
+      "url": "https://www.algorfa.es/",
+      "description": "Official Algorfa municipality website"
+    },
+    "beaches": [
+      {
+        "name": "Playa de Guardamar",
+        "googleMaps": "https://maps.google.com/?q=Playa+de+Guardamar+del+Segura",
+        "description": "Beautiful dune-backed beach (15 min drive)"
+      },
+      {
+        "name": "Playa de La Mata",
+        "googleMaps": "https://maps.google.com/?q=Playa+de+La+Mata+Torrevieja",
+        "description": "Long natural beach with dunes (20 min drive)"
+      },
+      {
+        "name": "Playa del Cura",
+        "googleMaps": "https://maps.google.com/?q=Playa+del+Cura+Torrevieja",
+        "description": "Main Torrevieja beach (25 min drive)"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "15 km (18 min)"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "40 km",
+      "driveTime": "30 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Algorfa is home to one of Costa Blanca's finest golf courses—La Finca Golf Resort. This championship course designed by Pepe Gancedo has made Algorfa a premier destination for golf lifestyle living. The area offers direct access to world-class golf while remaining just 15 minutes from the coast.",
+    "courses": [
+      {
+        "name": "La Finca Golf Resort",
+        "distance": "0 km",
+        "driveTime": "In Algorfa",
+        "holes": 18,
+        "url": "https://www.lafincagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Finca+Golf+Algorfa",
+        "description": "Championship 18-hole course designed by Pepe Gancedo. Beautiful parkland layout with lake features, wide fairways and challenging greens. Home to numerous developments and the heart of golf lifestyle in the Vega Baja."
+      },
+      {
+        "name": "Vistabella Golf",
+        "distance": "5 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "url": "https://www.visttabellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+        "description": "Newer course with modern facilities and excellent conditions. Desert-style layout with strategic bunkering."
+      },
+      {
+        "name": "La Marquesa Golf",
+        "distance": "8 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=La+Marquesa+Golf",
+        "description": "Challenging course near Ciudad Quesada with beautiful Mediterranean landscaping."
+      },
+      {
+        "name": "Lo Romero Golf",
+        "distance": "12 km",
+        "driveTime": "15 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Lo+Romero+Golf",
+        "description": "Scenic inland course with mountain views and well-maintained greens."
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Жизнь в Algorfa | Руководство по недвижимости La Finca Golf Costa Blanca",
+    "metaDescription": "Полное руководство по жизни в Алгорфе, доме La Finca Golf Resort. Гольф-образ жизни недвижимость, спокойное сельское проживание, 15 минут до пляжей. Новостройки от €195 000.",
+    "heroIntro": "Алгорфа предлагает непревзойденный образ жизни гольфа на Costa Blanca South, сосредоточенный вокруг престижного La Finca Golf Resort. Этот спокойный внутренний муниципалитет сочетает спокойствие сельской Испании с современными удобствами и легким доступом к побережью—всего в 15 минутах от красивых пляжей Гуардамара.\n\nОсобенность Алгорфы заключается в идеальном балансе, который она предлагает: просыпайтесь с видом на fairways и пальмы, сыграйте в круг чемпионского гольфа, затем отправляйтесь на пляж на обед. Регион стал магнитом для международных покупателей, ищущих высокачественные новые виллы с прямым доступом к полю для гольфа по ценам значительно ниже прибрежных аналогов.",
+    "lifestyleSection": {
+      "intro": "Life in Algorfa revolves around the outdoors. La Finca Golf Resort isn't just a golf course—it's a community where residents enjoy a relaxed Mediterranean lifestyle. Morning rounds of golf, afternoon siestas by the pool, evening tapas in the village square—this is what draws people to make Algorfa their home.\n\nDespite its rural setting, Algorfa offers surprising convenience. The village center has essential services including supermarkets, restaurants, banks, and pharmacies. For larger shopping or dining options, Torrevieja and Guardamar are within 20 minutes, while Zenia Boulevard—one of Europe's largest open-air shopping centers—is just 25 minutes away.",
+      "highlights": [
+        "Home to La Finca Golf Resort—championship 18-hole course",
+        "Peaceful rural setting with authentic Spanish village atmosphere",
+        "15 minutes to Guardamar beaches and nature reserves",
+        "Excellent value—golf villas from €300,000 vs €500,000+ on coast",
+        "Multiple golf courses within 15 minutes (La Finca, Vistabella, La Marquesa)",
+        "Easy airport access—30 minutes to Alicante",
+        "Growing international community with English-speaking services",
+        "Year-round sunshine with 300+ sunny days annually"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "While Algorfa is inland, beautiful beaches are easily accessible. Guardamar del Segura (15 min) offers stunning dune-backed beaches with crystal-clear water—considered some of the best in the region. La Mata beach (20 min) provides a more natural setting with protected dunes. Torrevieja's urban beaches (25 min) offer seafront promenades, restaurants, and facilities.",
+      "dining": "Algorfa village has traditional Spanish restaurants and bars serving authentic local cuisine. The La Finca clubhouse offers excellent dining with golf course views. For more variety, Guardamar has a beautiful seafront lined with fish restaurants, while Torrevieja and Orihuela Costa provide extensive dining options from casual tapas to fine dining.",
+      "shopping": "Algorfa village covers daily essentials with small supermarkets, a bakery, and local shops. For larger shopping, Guardamar and Rojales (10 min) have major supermarkets including Mercadona, Lidl, and Consum. Zenia Boulevard (25 min) offers 150+ stores including major fashion brands, electronics, and a hypermarket.",
+      "healthcare": "Hospital Universitario de Torrevieja is 15 km away with comprehensive services and English-speaking staff. Local health centers in Algorfa handle routine care. The area is well-served by private clinics, dentists, and pharmacies. Ambulance response times are excellent due to the municipality's central location.",
+      "transport": "Algorfa sits at the crossroads of the N-332 coastal road and inland routes, making it perfectly connected. Alicante Airport is 40 km (30 minutes via AP-7 motorway). Murcia Airport is 45 km (35 minutes). While a car is essential for daily life, many residents find this a small trade-off for the peace and value Algorfa offers."
+    },
+    "propertyMarketSection": "Algorfa's property market is dominated by modern new build developments around La Finca Golf. Villas with private pools start from approximately €300,000-350,000—offering exceptional value compared to similar properties on the coast which would cost €500,000+. Townhouses and linked villas from €195,000 provide an entry point to golf lifestyle living.\n\nThe area has seen significant development activity from established builders including Contrimar (Oasis villas series), with new phases regularly coming to market. Properties sell well to international buyers—particularly British, Scandinavian, and Belgian golfers—seeking permanent or holiday homes with golf access.\n\nInvestment potential is strong. Golf properties rent well year-round, with the extended golf season (playable 11+ months) ensuring consistent demand. The combination of affordable purchase prices and strong rental yields makes Algorfa particularly attractive for investors.",
+    "whyLiveHereSection": [
+      "Championship golf on your doorstep at La Finca Resort",
+      "Exceptional value—golf villas 30-40% cheaper than coastal equivalents",
+      "Peaceful rural lifestyle without sacrificing convenience",
+      "Just 15 minutes to stunning Guardamar beaches",
+      "Multiple golf courses within easy reach (4+ within 15 min)",
+      "Authentic Spanish village atmosphere",
+      "Strong rental market for golf holiday lets",
+      "30 minutes to Alicante Airport"
+    ],
+    "faqs": [
+      {
+        "question": "Is Algorfa a good place to buy property?",
+        "answer": "Algorfa offers excellent value for golf lifestyle buyers. Properties here cost 30-40% less than equivalent golf-front homes on the coast while offering the same quality new builds and amenities. The area has a strong international community, easy beach access (15 min), and proven rental potential. For golfers or those seeking peaceful living with coastal proximity, it's hard to beat."
+      },
+      {
+        "question": "How far is Algorfa from the beach?",
+        "answer": "Algorfa is approximately 15 km from Guardamar del Segura's beautiful beaches, taking about 15 minutes by car. Torrevieja's beaches are around 20 km (20-25 minutes). While you need a car to reach the coast, the drive is straightforward and the trade-off is significantly lower property prices and a more peaceful lifestyle."
+      },
+      {
+        "question": "What is La Finca Golf like?",
+        "answer": "La Finca Golf is an 18-hole championship course designed by renowned Spanish architect Pepe Gancedo. The parkland-style layout features wide fairways, challenging greens, and attractive water features. It's maintained to a high standard year-round and offers excellent value for members and visitors. The clubhouse has good dining facilities with views over the course."
+      },
+      {
+        "question": "What property types are available in Algorfa?",
+        "answer": "Algorfa offers primarily new build villas and townhouses around La Finca Golf. Townhouses and linked villas start from approximately €195,000, while detached villas with private pools range from €300,000-550,000. Most developments include pools, landscaped gardens, and terraces as standard. Contrimar's Oasis series is particularly popular."
+      },
+      {
+        "question": "Is Algorfa suitable for permanent living?",
+        "answer": "Yes, many international residents live in Algorfa year-round. The village has essential services including supermarkets, restaurants, pharmacy, and bank. Larger amenities in Torrevieja and Guardamar are 15-20 minutes away. The growing English-speaking community and mild climate (300+ sunny days) make it comfortable for permanent residents."
+      },
+      {
+        "question": "How far is Algorfa from Alicante Airport?",
+        "answer": "Alicante-Elche Airport is approximately 40 km from Algorfa, taking around 30 minutes via the AP-7 motorway. This makes Algorfa very accessible for international travel and convenient for visitors. Murcia-Corvera Airport is slightly further at 45 km (35 minutes)."
+      },
+      {
+        "question": "What is the rental market like in Algorfa?",
+        "answer": "Golf properties in Algorfa rent well, particularly for golf holidays which extend beyond the typical summer season. La Finca Golf is playable year-round, attracting golfers from October to May when northern Europe is cold. Well-presented villas with pools achieve good rental returns. The combination of affordable purchase prices and strong yields makes investment attractive."
+      },
+      {
+        "question": "Are there other golf courses near Algorfa?",
+        "answer": "Algorfa is perfectly positioned for multi-course golf. Within 15 minutes you'll find Vistabella Golf (8 min), La Marquesa Golf (10 min), and Lo Romero Golf (15 min). The wider Orihuela Costa area offers Villamartín, Las Ramblas, Campoamor, and more—over 10 courses within 30 minutes."
+      },
+      {
+        "question": "What are property prices like in Algorfa compared to the coast?",
+        "answer": "Algorfa offers significantly better value than coastal locations. A 3-bedroom villa with pool and golf views in Algorfa might cost €350,000-400,000, while an equivalent property in Villamartín or Campoamor (on the coast) would be €500,000-650,000. This 30-40% saving makes Algorfa attractive for buyers prioritizing value and golf access."
+      },
+      {
+        "question": "Is there a community feel in Algorfa?",
+        "answer": "Algorfa has a strong community feel, particularly around La Finca Golf. The resort attracts like-minded residents who enjoy the golf lifestyle, and there are regular social events, competitions, and gatherings. The village itself maintains authentic Spanish character with local fiestas throughout the year. It's easy to make friends, especially if you enjoy golf."
+      }
+    ],
+    "conclusion": "Ready to explore golf lifestyle properties in Algorfa? Our team specializes in La Finca Golf developments and can show you the full range of available villas and townhouses. Whether you're seeking a permanent golf home, a holiday retreat, or an investment property with strong rental potential, we'll help you find the perfect property in this exceptional location.",
+    "investmentAnalysis": {
+      "rentalYield": "5-7%",
+      "annualAppreciation": "4-6%",
+      "overview": "Algorfa offers compelling investment potential for golf-focused property buyers. The combination of lower entry prices than coastal equivalents, strong rental demand from golf tourists, and a proven market creates an attractive investment profile. Properties near La Finca Golf Resort command consistent rental demand throughout the extended golf season (October-May).",
+      "highlights": [
+        "Golf properties command premium rental rates year-round",
+        "Lower entry prices than coastal equivalents with similar rental returns",
+        "Growing demand from international buyers driving appreciation",
+        "Short-term holiday lets popular with golf tourists"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Algorfa are significantly lower than Northern Europe and competitive with other inland areas. The village offers all essential services with good value, while maintaining proximity to larger shopping areas.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-380",
+          "notes": "Mercadona, Lidl, and local markets in Algorfa and nearby Rojales"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€110-160",
+          "notes": "Higher in summer with air conditioning, winter heating minimal"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€60-120",
+          "notes": "Varies by development; golf course access included in some"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€450-950/year",
+          "notes": "Annual property tax based on property value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€12-22",
+          "notes": "Menu del día around €10; international restaurants €18-30"
+        },
+        {
+          "category": "Golf green fees",
+          "cost": "€45-85",
+          "notes": "La Finca membership discounts; weekday rates lower"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Excellent broadband coverage; several providers available"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for daily life in inland location"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Algorfa celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the modern international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, fireworks, bullfights, and street celebrations lasting several days"
+        },
+        {
+          "name": "La Finca Golf Tournament",
+          "month": "September",
+          "description": "Annual championship tournament attracting golfers from across Europe with prize money and social events"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration marking the end of spring with flower displays, food stalls, and community gatherings in the village square"
+        },
+        {
+          "name": "Día de la Comunidad Valenciana",
+          "month": "October",
+          "description": "Regional day celebration with traditional paella competitions and cultural performances"
+        },
+        {
+          "name": "Christmas Market & Festival",
+          "month": "December",
+          "description": "Festive season with market stalls, lights, nativity scenes, and Spanish Christmas traditions"
+        },
+        {
+          "name": "Año Nuevo Golf Gala",
+          "month": "December",
+          "description": "New Year's golf tournament and gala dinner at La Finca clubhouse for residents and visitors"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Algorfa have access to schools in the surrounding area, with several international schools nearby serving the expatriate community.",
+      "schools": [
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "25 min",
+          "description": "British curriculum primary and secondary school with excellent facilities and strong academic record"
+        },
+        {
+          "name": "Colegio San Vicente Ferrer",
+          "type": "Spanish State",
+          "distance": "10 min",
+          "description": "Local Spanish primary school in Rojales serving the village community"
+        },
+        {
+          "name": "Colegio Público Juan Sempere",
+          "type": "Spanish State",
+          "distance": "8 min",
+          "description": "Spanish state secondary school in Algorfa offering education to ages 12-18"
+        },
+        {
+          "name": "International School of Alicante",
+          "type": "International (IB)",
+          "distance": "30 min",
+          "description": "International Baccalaureate school with comprehensive curriculum in English"
+        },
+        {
+          "name": "Guardamar Spanish School",
+          "type": "Spanish State",
+          "distance": "15 min",
+          "description": "Beachside location with modern facilities serving local area"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Despite its inland location, Algorfa offers excellent outdoor activities with golf, nature reserves, beaches, and cycling routes nearby.",
+      "activities": [
+        {
+          "name": "La Finca Golf",
+          "type": "Golf",
+          "description": "Championship 18-hole course on your doorstep with daily green fees and membership options"
+        },
+        {
+          "name": "Guardamar Dunes Nature Reserve",
+          "type": "Nature Reserve",
+          "description": "Protected dune system with walking and cycling trails through pine forests (15 min drive)"
+        },
+        {
+          "name": "La Mata Salt Lakes",
+          "type": "Nature Reserve",
+          "description": "Spectacular pink and green salt lakes with walking trails and birdwatching opportunities (20 min drive)"
+        },
+        {
+          "name": "River Segura Cycling Route",
+          "type": "Cycling",
+          "description": "Scenic riverside cycling path connecting Guardamar to inland towns, flat and family-friendly (nearby)"
+        },
+        {
+          "name": "Guardamar Beaches",
+          "type": "Beach",
+          "description": "Beautiful dune-backed beaches perfect for swimming and water sports (15 min drive)"
+        },
+        {
+          "name": "Vega Baja Hiking Trails",
+          "type": "Hiking",
+          "description": "Countryside hiking trails through agricultural areas and villages in the surrounding region"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Algorfa has a growing international community, particularly among golf enthusiasts and retirees. While smaller than coastal resort areas, it offers a welcoming environment with English widely spoken in golf and social circles. The community is characterized by a blend of active golfing enthusiasts and those seeking peaceful rural living.",
+      "highlights": [
+        "Active golf social scene with weekly tournaments and monthly competitions",
+        "Growing number of international shops and English-speaking services",
+        "Regular community events, dinners, and social gatherings",
+        "Strong British presence alongside Scandinavian, Belgian, and Dutch residents",
+        "English widely spoken in golf clubs, shops, and restaurants",
+        "Many long-term residents providing a stable expat community",
+        "Less crowded and commercialized than coastal resort areas"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Belgian",
+        "Dutch",
+        "German",
+        "Irish",
+        "French",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Algorfa",
+      "entries": [
+        {
+          "time": "07:30",
+          "activity": "Morning Coffee",
+          "description": "Start the day with coffee on your terrace overlooking the golf course, watching golfers tee off"
+        },
+        {
+          "time": "09:00",
+          "activity": "Golf Round",
+          "description": "Walk to La Finca Golf for a morning 18 holes, enjoying the course's beautiful parkland layout"
+        },
+        {
+          "time": "13:00",
+          "activity": "Lunch at the Clubhouse",
+          "description": "Post-round meal with friends at La Finca clubhouse with views over the fairways"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta & Pool",
+          "description": "Return home for a relaxing siesta and afternoon swim in your private or communal pool"
+        },
+        {
+          "time": "17:00",
+          "activity": "Beach Trip",
+          "description": "Drive 15 minutes to Guardamar's stunning beaches for an evening swim and sunset views"
+        },
+        {
+          "time": "19:30",
+          "activity": "Evening Walk",
+          "description": "Stroll through the village center, greeting neighbors and enjoying the cooler evening air"
+        },
+        {
+          "time": "20:30",
+          "activity": "Tapas Dinner",
+          "description": "Enjoy traditional Spanish tapas at a local village restaurant or golf club dining room"
+        },
+        {
+          "time": "22:30",
+          "activity": "Stargazing",
+          "description": "End the day under clear skies from your terrace with a nightcap, enjoying the peaceful silence"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7928!3d38.0647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63a15d89555555%3A0x400a1c000000!2sAlgorfa%2C%20Alicante%2C%20Spain!5e0!3m2!1sen!2ses!4v1640000000000"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Algorfa",
+    "description": "Algorfa is an inland municipality in Costa Blanca South, Spain, home to the prestigious La Finca Golf Resort. Known for golf lifestyle living, quality new build developments, and easy access to Guardamar beaches.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.0647",
+      "longitude": "-0.7928"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Algorfa",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "La Finca Golf Resort",
+        "value": true
+      }
+    ]
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Algorfa a good place to buy property?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Algorfa offers excellent value for golf lifestyle buyers. Properties here cost 30-40% less than equivalent golf-front homes on the coast while offering the same quality new builds. The area has a strong international community, easy beach access (15 min), and proven rental potential."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Algorfa from the beach?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Algorfa is approximately 15 km from Guardamar del Segura's beaches, taking about 15 minutes by car. Torrevieja's beaches are around 20 km (20-25 minutes)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is La Finca Golf like?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La Finca Golf is an 18-hole championship course designed by renowned Spanish architect Pepe Gancedo. The parkland-style layout features wide fairways, challenging greens, and attractive water features, maintained to a high standard year-round."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What property types are available in Algorfa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Algorfa offers primarily new build villas and townhouses around La Finca Golf. Townhouses start from approximately €195,000, while detached villas with private pools range from €300,000-550,000."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Algorfa from Alicante Airport?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alicante-Elche Airport is approximately 40 km from Algorfa, taking around 30 minutes via the AP-7 motorway."
+        }
+      }
+    ]
+  }
+}

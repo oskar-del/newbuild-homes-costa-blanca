@@ -1,0 +1,454 @@
+{
+  "slug": "calpe",
+  "name": "Calpe",
+  "region": "Costa Blanca Central",
+  "heroImage": "/images/areas/calpe-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&q=80&fit=crop",
+  "propertyCount": 17,
+  "propertyTypes": [
+    "Villa",
+    "Apartment",
+    "Penthouse"
+  ],
+  "priceRange": {
+    "min": 479000,
+    "max": 2450000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Calpe Town Hall",
+      "url": "https://www.calpe.es/",
+      "description": "Official Calpe municipality website"
+    },
+    "beaches": [
+      {
+        "name": "Playa Arenal-Bol",
+        "googleMaps": "https://maps.google.com/?q=Playa+Arenal+Bol+Calpe",
+        "description": "Stunning 2km sandy beach with crystal-clear waters and Blue Flag status"
+      },
+      {
+        "name": "Playa Calalga",
+        "googleMaps": "https://maps.google.com/?q=Playa+Calalga+Calpe",
+        "description": "Smaller beach with calm waters, perfect for families and swimmers"
+      },
+      {
+        "name": "Peñón de Ifach Coves",
+        "googleMaps": "https://maps.google.com/?q=Penon+de+Ifach+Calpe",
+        "description": "Hidden coves beneath the iconic rock formation with crystal waters"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Comarcal Marina Baixa",
+      "googleMaps": "https://maps.google.com/?q=Hospital+Marina+Baixa+Calpe",
+      "url": "https://www.marinabaixa.es/",
+      "distance": "15 km (20 min)"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "75 km",
+      "driveTime": "1 hour"
+    }
+  },
+  "golf": {
+    "intro": "Calpe is surrounded by some of Costa Blanca's finest golf courses. The nearby Ifach Golf Club and Don Cayo Golf Course offer championship play with stunning Mediterranean views. Golfers in Calpe enjoy access to multiple 18-hole courses within 15 minutes, making it a paradise for those seeking both coastal living and serious golf pursuits.",
+    "courses": [
+      {
+        "name": "Ifach Golf Club",
+        "distance": "3 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "url": "https://www.ifachgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Ifach+Golf+Club",
+        "description": "Prestigious course overlooking the Peñón de Ifach with challenging layout and excellent facilities"
+      },
+      {
+        "name": "Don Cayo Golf Club",
+        "distance": "5 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "url": "https://www.doncayogolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Don+Cayo+Golf+Club",
+        "description": "Championship course with parkland layout and scenic mountain backdrop"
+      },
+      {
+        "name": "Altea Golf Club",
+        "distance": "8 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Altea+Golf+Club",
+        "description": "Challenging course near Altea with stunning sea and mountain views"
+      },
+      {
+        "name": "Las Rejas Golf Course",
+        "distance": "15 km",
+        "driveTime": "18 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Las+Rejas+Golf+Benidorm",
+        "description": "Well-maintained course with diverse terrain and excellent facilities"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Bo i Calpe 2026 | Nybyggda hem Costa Blanca",
+    "metaDescription": "Komplette guide till att bo i Calpe - hem för Peñón de Ifach. Fantastiska strander, stark rysk/tysk expatkommunitet, medelhavslivsstil. Nybyggda från €479 000.",
+    "heroIntro": "Calpe står som en av Medelhavet mest ikoniska kustdestinationer, omedelbar igenkännlig av den dramatiska Peñón de Ifach-bergformationen som reser sig 332 meter från havet som en väktare över denna förtrollande Costa Blanca-stad. Denna pittoreska fiskstad har utvecklats till ett sofistikerat internationellt samhälle samtidigt som det bevarar sin autentiska spanska karaktär, som blandar traditionell kultur med moderna bekvämligheter och världsklass infrastruktur.\n\nStaden erbjuder en oöverträffad medelhavslivsstil där invånare vaknar till vyer av dramatiska klippor, njuter av världsklass-stränder med kristallklart vatten och omfamnar ett vibrerande internationellt samhälle. Calpes strategiska läge ger lätt tillgång till Valencia och Alicante medan staden bevarar en avslappnad, by-liknande atmosfär. Kombinationen av naturlig skönhet, etablerat expat-nätverk (särskilt stark rysk och tysk population), utmärkt sjukvård och moderna bekvämligheter skapar ett oemotståndligt tilltal för fastighetsköpare som söker den ultimata Costa Blanca-upplevelsen.\n\nMed fastigheter från €479 000 till €2,45 miljoner erbjuder Calpe mångfaldiga alternativ för kräsna köpare. Den starka hyresmarknaden, stigande fastighetsvärden och årets alla dagar appell gör Calpe både en livsstilsdestination och en välgrundad investeringsmöjlighet.",
+    "lifestyleSection": {
+      "intro": "Livet i Calpe kretsar kring en medelhavsrytm av sol, hav och social anslutning...",
+      "highlights": [
+        "Iconic Peñón de Ifach Natural Park—dramatic 332m rock formation and hiking destination",
+        "Two exceptional Blue Flag beaches—Arenal-Bol (2km) and Calalga—with crystal-clear Mediterranean waters",
+        "Sophisticated international community with strong Russian, German, and Northern European presence",
+        "Premier marina with luxury yachts, waterfront restaurants, and excellent boating facilities",
+        "Multiple championship golf courses within 15 minutes—Ifach, Don Cayo, and Altea",
+        "Excellent healthcare with international doctors and modern facilities",
+        "Year-round sunshine (300+ days) enabling constant outdoor lifestyle",
+        "Direct access to Valencia and Alicante while maintaining small-town charm"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Calpe is blessed with exceptional beaches that rival any Mediterranean destination. The stunning Playa Arenal-Bol stretches for nearly 2 kilometers of soft sand backed by the iconic Peñón de Ifach, offering crystal-clear waters perfect for swimming and water sports. The smaller Playa Calalga provides a quieter alternative with calm, shallow waters ideal for families. Hidden coves beneath the Peñón itself offer intimate swimming spots accessible by boat or a short hike. All beaches maintain Blue Flag status, indicating excellent water quality and amenities.",
+      "dining": "Calpe's culinary scene expertly balances fresh Mediterranean seafood with international sophistication. The town is famous for its locally-caught fish and traditional paella preparations, with numerous waterfront restaurants specializing in arroz con costra (Valencian rice baked in a crust). The marina area hosts upscale establishments serving fine Mediterranean cuisine with sea views, while the old town preserves traditional Spanish tavernas. The substantial Russian, German, and British communities have contributed excellent international restaurants and authentic pubs, creating remarkable culinary diversity. Fresh produce markets, local fishmongers, and specialty shops complete the gastronomic landscape.",
+      "shopping": "Shopping in Calpe combines modern convenience with authentic local markets. The Wednesday and Sunday markets offer fresh produce, local crafts, and specialty items in traditional settings, while supermarkets including Mercadona, Consum, and Lidl provide comprehensive grocery options. La Marina Shopping Center and nearby retail parks offer international brands and household goods. The town center features boutique shops, pharmacies, and specialty stores catering to the international community with products from multiple countries. For extensive shopping, Benidorm's major centers are just 25 minutes away.",
+      "healthcare": "Calpe provides excellent healthcare through the modern Hospital Comarcal Marina Baixa just 15 minutes away, featuring 24-hour emergency services, specialized departments, and English-speaking staff familiar with treating international patients. Multiple private clinics throughout the town offer contemporary facilities and multilingual practitioners. Many doctors in Calpe have trained internationally and specifically cater to the expatriate community. Dentistry is exceptional with numerous English-speaking practitioners offering high-quality care at very reasonable costs.",
+      "transport": "Calpe enjoys excellent road connections via the AP-7 autopista and scenic N-332 coastal road, providing easy access to Valencia (130 km north) and Alicante (75 km south). Local driving is straightforward with well-maintained roads and adequate parking facilities, though summer months see increased traffic. Alicante Airport is approximately 1 hour away via motorway, offering extensive European connections. The TRAM light rail system connects Benidorm to Alicante, providing an alternative to car travel for regional journeys. Within Calpe, most amenities are accessible by foot or local buses."
+    },
+    "propertyMarketSection": "Calpe's property market remains exceptionally robust, driven by the town's unique natural beauty, established international community, and year-round appeal. The market demonstrates strong fundamentals with consistent demand from European buyers seeking Mediterranean lifestyle properties. Current inventory focuses on luxury developments with modern amenities, sea views, and proximity to beaches or the Peñón.\n\nProperty values have shown steady appreciation, particularly for properties with spectacular views of the iconic rock formation or direct beach/marina access. Apartments and penthouses in beachfront locations command premium prices, reflecting their rarity and desirability. The rental market performs exceptionally well, with holiday properties achieving strong returns year-round, while long-term rentals to expatriates provide stable income for investors.\n\nThe combination of natural beauty, established infrastructure, strong international community, and proven rental potential positions Calpe as an excellent investment location. Properties here attract serious buyers prioritizing lifestyle and capital appreciation—this is not a speculative market but rather a destination for those seeking quality Mediterranean living.",
+    "whyLiveHereSection": [
+      "Iconic Peñón de Ifach—one of the Mediterranean's most dramatic natural landmarks",
+      "Exceptional beaches with crystal-clear waters and Blue Flag status",
+      "Thriving, sophisticated international community with English and German widely spoken",
+      "Multiple championship golf courses within walking distance",
+      "Excellent healthcare with English-speaking doctors and modern facilities",
+      "Strong property appreciation and excellent rental market potential",
+      "Year-round Mediterranean climate with 300+ days of sunshine",
+      "Easy access to Valencia and Alicante while maintaining small-town atmosphere"
+    ],
+    "faqs": [
+      {
+        "question": "Vad gör Calpe speciell jämfört med andra Costa Blanca-städer?",
+        "answer": "Calpes definierande drag är den ikoniska Peñón de Ifach, en dramatisk 332-meters bergformation som skapar ett omöjligt landskap unikt på Costa Blanca. Kombinerat med exceptionella strander, ett sofistikerat och välkomnande internationellt samhälle (särskilt starka ryska och tyska befolkningar), utmärkta marinaanläggningar och mästarskapsbanor, erbjuder Calpe en distinkt kombination som sällan finns någon annanstans. Staden bevarar autentisk spansk karaktär medan den erbjuder världsklassamlaggningar."
+      },
+      {
+        "question": "Är Calpe ett bra året-runt-destinat?",
+        "answer": "Absolut. Calpes medelhavsklim med 300+ soltimmar gör det idealiskt för året-runt boende. Vintertemperaturer förblir milda (genomsnitt 12-15°C), vilket möjliggör strandbesök och utomhusaktiviteter även i januari. Skuldersäsongerna (april-maj och september-oktober) är särskilt angenäma. Sommaren medför värme modererad av havsbris, vilket gör klimatet konsekvent bekvämt året runt."
+      },
+      {
+        "question": "Hur stor är den internationella kommunikationen i Calpe?",
+        "answer": "Calpe har en av Costa Blancas mest betydande och varierande internationella samhällen. De ryska och tyska befolkningarna är särskilt framträdande, tillsammans med betydande brittiska, skandinaviska och holländska samhällen. Detta skapar en verkligt mångkulturell miljö där engelska och tyska talar omfattande, och många internationella tjänster, restauranger och sociala klubbar vänder sig till expatriates. Integrationen för nykomlingar är exceptionellt smidig."
+      },
+      {
+        "question": "Vilka är fastighets-investeringsutsikterna i Calpe?",
+        "answer": "Calpe erbjuder starka investeringsfundamenten. Fastighetsvärden har visat stadigt starkande, särskilt för premiärlokationer med havsutsikter. Hyresavkastningen är utmärkt på grund av året-runt-appeladen och stark internationell efterfrågan. Semesteruthyrningsundell uppnår starkt veckovistrad (€1 500-3 000+ på sommaren), medan långtidshyra till expatriates förser stabil inkomst. Kombinationen av livsstilsappeal och ekonomisk prestanda gör Calpe till en attraktiv investeringsplats."
+      },
+      {
+        "question": "Hur lätt är det att få tillgång till andra Costa Blanca-destinationer från Calpe?",
+        "answer": "Calpe är idealiskt positionerat—Benidorm är bara 25 km söder (30 minuter), Altea är 8 km söder (10 minuter) och Denia är 25 km norr (30 minuter). AP-7 motorvägen erbjuder snabb tillgång till Valencia (130 km, 1,5 timmar) och Alicante (75 km, 1 timme). Detta gör Calpe perfekt för dem som vill utforska den bredare regionen medan de bibehåller en bas på en exceptionell plats."
+      },
+      {
+        "question": "Kan du klättra Peñón de Ifach?",
+        "answer": "Ja, Peñón de Ifach Natural Park erbjuder vandringsvägar till toppen, även om den slutliga delen kräver någon klättring och rekommenderas endast för dem med rimlig kondition och erfarenhet. Besökscentret tillhandahåller information om vägar och säkerhet. Vyerna från toppen är absolut spektakulär, och erbjuder panoramavutsikter över Costa Blanca och Medelhavet. Tillgesta 1,5-2 timmar för den kompletta klättringen."
+      },
+      {
+        "question": "Vad är levnadskostnaden i Calpe?",
+        "answer": "Calpes levnadskostnad är rimlig jämfört med Nordeuropa. Dagvaror vid supermarknader är måttligt prissatta (något högre än inlandområden på grund av turisttrafik). Att äta ute förblir överkomligt med meny del días runt €11-15 och internationella restauranger €20-35. Verktygen drivs €120-180 månadsvis beroende på säsong. Gemenskapsavgifter för lägenheter varierar €80-200 månadsvis. Totalt kan ett par leva bekvämt på €1 500-2 000 månadsvis inklusive hyra."
+      },
+      {
+        "question": "Finns det goda internationella skolor i Calpe?",
+        "answer": "Calpe själv har begränsade internationella skolalternativ, men närliggande områden är väl betjänade. Elian's British School (La Nucía, 30 minuter), Laude Lady Elizabeth School (Jávea, 20 minuter) och American School of Valencia (1,5 timmar) är populära val. Många familjer använder också spanska statsskolor som erbjuder utmärkt utbildning och hjälp med integration. Det etablerade expatriate-samhället kan ge rekommendationer baserat på erfarenhet."
+      },
+      {
+        "question": "Hur får jag tillgång till Alicante Airport från Calpe?",
+        "answer": "Alicante Airport ligger cirka 75 km söder om Calpe (ungefär 1 timmes körning via AP-7 motorvägen). Direktbussar drivs regelbundet och erbjuder ett budgetvänsligt alternativ till biluthyrning. De flesta invånare arrangerar flygplats-överföringar med lokala leverantörer eller hyr bilar för större flexibilitet. Resan är enkel, med utmärkta väganslutningar som gör flygplatsbesök bekvämt."
+      },
+      {
+        "question": "Vilka kulturella evenemang inträffar året runt i Calpe?",
+        "answer": "Calpe underhåller en vibrerande eventkalender. Traditionella spanska fester inkluderar Las Fallas (mars) med fyrverkerier och parader, och Moros y Cristianos (sommar) som firar historiska konfikter mellan mauriska och kristna krafter. Internationella evenemang återspeglar den varierande komuniktionen, med vin-smakning, kulturella prestationer och utställningar året runt. Staden firar både spansk arv och internationella traditioner, vilket skapar en unik blandning av kulturella upplevelser."
+      }
+    ],
+    "conclusion": "Redo att omfamna medelhavslivsstil i Calpe? Våra fastighetsspeckalisters har djup kunskap om marknaden och förstår vad som gör varje område i Calpe unikt. Oavsett om du söker en lyxpentthouse med havsutsikter över Peñón, en strandvilla eller en investeringsfastighet med starkt hyrespotential, hjälper vi dig att hitta ditt perfekta Calpe-hem. Kontakta oss idag för att utforska tillgängliga fastigheter och påbörja din resa till Costa Blanca-boende.",
+    "investmentAnalysis": {
+      "rentalYield": "6-8%",
+      "annualAppreciation": "4-6%",
+      "overview": "Calpe represents an exceptional investment opportunity due to its unique natural beauty, established international community, and year-round appeal. The combination of strong holiday rental demand (€1,500-3,000+ weekly) and steady long-term rental market creates consistent income. Properties with premium locations—particularly those with views of the Peñón de Ifach or direct beach access—command strong rental rates and demonstrate appreciation potential.",
+      "highlights": [
+        "Exceptional holiday rental demand year-round with premium weekly rates",
+        "Iconic natural landmark (Peñón de Ifach) creates enduring property value",
+        "Strong expatriate community ensures steady long-term rental demand",
+        "Property appreciation supported by limited supply and continued demand",
+        "Tax-efficient rental income structures available for property investors"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Calpe offers reasonable cost of living compared to Northern European cities and other premium Costa Blanca locations. The established international community has created competitive services and pricing. While beachfront living commands premium prices, day-to-day expenses remain manageable with good value available through local markets and supermarkets.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€320-420",
+          "notes": "Mercadona, Consum, Lidl in town center; local markets offer better value"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€130-200",
+          "notes": "Higher in summer with air conditioning; winter heating minimal due to mild climate"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€80-200",
+          "notes": "Varies by building and included amenities; beachfront apartments typically higher"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€600-1500/year",
+          "notes": "Annual property tax based on cadastral value; premium locations higher"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€14-26",
+          "notes": "Menu del día €11-15; international restaurants €22-35; fresh seafood premium"
+        },
+        {
+          "category": "Golf green fees",
+          "cost": "€50-95",
+          "notes": "Ifach Golf and Don Cayo membership discounts; weekday rates lower than weekends"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€40-60",
+          "notes": "Excellent fiber optic coverage; multiple providers available"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for accessing broader region; parking available but can be challenging in summer"
+        },
+        {
+          "category": "Entertainment (cinema, activities)",
+          "cost": "€50-100",
+          "notes": "Movies €8-10; water sports €30-60; hiking Peñón free"
+        },
+        {
+          "category": "Healthcare (private insurance)",
+          "cost": "€60-120",
+          "notes": "EU residents access public system; private supplementary insurance recommended"
+        },
+        {
+          "category": "Beer (per half-liter)",
+          "cost": "€1.50-2.50",
+          "notes": "Bars €2.50-3.50; supermarkets notably cheaper"
+        },
+        {
+          "category": "Wine (bottle)",
+          "cost": "€5-15",
+          "notes": "Local Spanish wines excellent value; premium imports more expensive"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Calpe celebrates a vibrant calendar of traditional Spanish festivals and international events throughout the year, reflecting both the town's heritage and its diverse international community.",
+      "events": [
+        {
+          "name": "Las Fallas",
+          "month": "March",
+          "description": "Iconic Valencian spring festival with fireworks, parades, light displays, and the burning of wooden structures (fallas) on the final night—an extraordinary spectacle that transforms the town"
+        },
+        {
+          "name": "Moros y Cristianos",
+          "month": "July-August",
+          "description": "Annual reenactment celebration of the historical conflict between Moorish and Christian forces, featuring colorful costumes, parades, mock battles, and traditional music—deeply rooted in regional culture"
+        },
+        {
+          "name": "International Food & Wine Festival",
+          "month": "May",
+          "description": "Celebration of Calpe's gastronomic heritage featuring tastings from local restaurants, international wines, cooking demonstrations, and cultural performances throughout the marina area"
+        },
+        {
+          "name": "Noche de San Juan (Midsummer Night)",
+          "month": "June",
+          "description": "Ancient celebration marking summer solstice with bonfires on the beach, music, dancing, and traditional rituals—a magical night watched by locals and visitors alike"
+        },
+        {
+          "name": "Peñón Climbing Challenge",
+          "month": "September",
+          "description": "Annual sports event where participants race to the summit of the Peñón de Ifach, combining athletic competition with celebration of the town's iconic landmark"
+        },
+        {
+          "name": "Calpe Nautical Festival",
+          "month": "October",
+          "description": "Celebration of maritime heritage featuring boat parades, water sports demonstrations, diving exhibits, and sailing competitions throughout the marina and harbor"
+        },
+        {
+          "name": "Christmas Market & Festival",
+          "month": "December",
+          "description": "Festive season with market stalls, holiday lights illuminating the Peñón, nativity scenes, Spanish Christmas traditions, and special dining events at restaurants throughout the town"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "While Calpe itself has limited international school options, the surrounding area offers excellent educational choices for families, with quality British, international, and Spanish schools within accessible distances.",
+      "schools": [
+        {
+          "name": "Elian's British School",
+          "type": "International (British)",
+          "distance": "30 min (La Nucía)",
+          "description": "Prestigious British curriculum school with excellent facilities, strong academic record, and experienced staff familiar with expatriate families"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British)",
+          "distance": "20 min (Jávea)",
+          "description": "Long-established British international school with secondary campus, strong university placement record, and comprehensive facilities"
+        },
+        {
+          "name": "Colegio Público Marina Alta",
+          "type": "Spanish State",
+          "distance": "5 min",
+          "description": "Local Spanish primary and secondary school serving the community with strong academic standards and cultural integration"
+        },
+        {
+          "name": "Academia Ifach",
+          "type": "Private (Spanish/Bilingual)",
+          "distance": "10 min",
+          "description": "Private school emphasizing Spanish language with English bilingual program, smaller class sizes, and international student population"
+        },
+        {
+          "name": "American School of Valencia",
+          "type": "International (American)",
+          "distance": "90 min",
+          "description": "IB and American curriculum school for families prioritizing American educational standards and university placement in the US"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Calpe's exceptional natural setting offers abundant outdoor activities combining beach, mountain, water sports, and hiking opportunities within easy reach of the town center.",
+      "activities": [
+        {
+          "name": "Peñón de Ifach Hiking",
+          "type": "Hiking/Nature",
+          "description": "Iconic 332-meter rock formation offering marked trails to the summit with spectacular panoramic views of the Costa Blanca—approximately 1.5-2 hours round trip with varying difficulty levels"
+        },
+        {
+          "name": "Playa Arenal-Bol Swimming & Beach Sports",
+          "type": "Beach",
+          "description": "2-kilometer Blue Flag beach with crystal-clear Mediterranean waters perfect for swimming, paddleboarding, windsurfing, and beach volleyball with excellent facilities"
+        },
+        {
+          "name": "Diving & Snorkeling",
+          "type": "Water Sports",
+          "description": "Crystal-clear waters around Calpe offer exceptional diving conditions with underwater reefs, caves, and marine life—numerous dive centers offer instruction and guided trips"
+        },
+        {
+          "name": "Marina Yacht Sailing",
+          "type": "Water Sports",
+          "description": "Calpe's premier marina hosts sailing clubs and charter companies offering day sails, bareboat rentals, and sailing courses for all experience levels"
+        },
+        {
+          "name": "Golf at Championship Courses",
+          "type": "Golf",
+          "description": "Ifach Golf Club and Don Cayo Golf Course offer championship 18-hole play within 5-10 minutes of town, with stunning views and professional facilities"
+        },
+        {
+          "name": "Coastal Cycling Routes",
+          "type": "Cycling",
+          "description": "Scenic cycling paths along the coast connecting Calpe to Altea and beyond, offering family-friendly routes with Mediterranean views"
+        },
+        {
+          "name": "Sierra de Bernia Mountain Adventures",
+          "type": "Hiking",
+          "description": "Dramatic mountain range inland from Calpe offering challenging hiking trails, rock climbing opportunities, and breathtaking interior views away from the coast"
+        },
+        {
+          "name": "Kayaking in Hidden Coves",
+          "type": "Water Sports",
+          "description": "Rent sea kayaks to explore hidden coves beneath the Peñón and along the rugged coastline, experiencing secluded beaches and marine caves accessible only by water"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Calpe hosts one of the Costa Blanca's most sophisticated and diverse international communities, characterized by strong Russian, German, British, and Scandinavian populations who have created a genuinely multicultural environment. The community is organized, welcoming, and provides extensive support networks for newcomers seeking to establish themselves on the Costa Blanca.",
+      "highlights": [
+        "Exceptionally diverse international community with English, German, Russian widely spoken",
+        "Strong social infrastructure including numerous clubs, associations, and community organizations",
+        "Multilingual services—healthcare, legal, real estate—specifically catering to expatriates",
+        "Regular international events, wine tastings, cultural performances, and social gatherings",
+        "Established expat business networks facilitating professional connections and opportunities",
+        "English-language media, shops, and restaurants making daily life seamless for non-Spanish speakers"
+      ],
+      "nationalities": [
+        "Russian",
+        "German",
+        "British",
+        "Scandinavian (Swedish, Danish, Norwegian)",
+        "Dutch",
+        "Belgian",
+        "French",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Calpe",
+      "entries": [
+        {
+          "time": "07:30",
+          "activity": "Morning Beachside Coffee",
+          "description": "Start the day with café con leche at a beachfront terrace, watching the Peñón de Ifach emerge from morning mist and fishermen beginning their daily work"
+        },
+        {
+          "time": "09:00",
+          "activity": "Beach or Hiking Activity",
+          "description": "Swim at Playa Arenal-Bol or hike the Peñón trails, taking advantage of cooler morning temperatures and fewer crowds"
+        },
+        {
+          "time": "13:00",
+          "activity": "Leisurely Lunch",
+          "description": "Enjoy fresh seafood paella or arroz con costra at a marina restaurant, mingling with fellow residents and enjoying Mediterranean views"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta & Relaxation",
+          "description": "Return home for afternoon siesta, relax by your pool or terrace, or enjoy time at your local café with neighbors"
+        },
+        {
+          "time": "17:00",
+          "activity": "Golf or Water Sports",
+          "description": "Play a round at Ifach or Don Cayo Golf Clubs, or engage in water sports like paddleboarding, sailing, or diving"
+        },
+        {
+          "time": "19:00",
+          "activity": "Evening Paseo",
+          "description": "Stroll through town center and along the marina promenade, greeting friends and neighbors while enjoying the sunset"
+        },
+        {
+          "time": "20:30",
+          "activity": "Dinner & Socializing",
+          "description": "Enjoy tapas and wine at a local restaurant or international establishment with friends from your international community"
+        },
+        {
+          "time": "22:30",
+          "activity": "Stargazing on Your Terrace",
+          "description": "Return home to enjoy clear Mediterranean skies from your terrace, appreciating the peaceful end to another perfect Calpe day"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.1485!3d38.6295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6247f1a3d3d3d3d%3A0x400a1c000000!2sCalpe%2C%20Alicante%2C%20Spain!5e0!3m2!1sen!2ses!4v1640000000000"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Calpe",
+    "description": "Calpe is a picturesque coastal town on Costa Blanca, dominated by the iconic Peñón de Ifach rock formation. Known for exceptional beaches, sophisticated international community, and Mediterranean lifestyle.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.6295",
+      "longitude": "-0.1485"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Calpe",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    }
+  }
+}

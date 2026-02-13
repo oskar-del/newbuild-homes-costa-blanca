@@ -1,0 +1,458 @@
+{
+  "slug": "denia",
+  "name": "Denia",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/denia-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80&fit=crop",
+  "propertyCount": 4,
+  "propertyTypes": [
+    "Villa",
+    "Apartment",
+    "Townhouse"
+  ],
+  "priceRange": {
+    "min": 389300,
+    "max": 1890000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Denia Town Hall",
+      "url": "https://www.denia.net/",
+      "description": "Official Denia municipality website"
+    },
+    "beaches": [
+      {
+        "name": "Las Marinas Beach",
+        "googleMaps": "https://maps.google.com/?q=Las+Marinas+Beach+Denia",
+        "description": "Long sandy beach extending toward Oliva with calm waters and family facilities"
+      },
+      {
+        "name": "Las Rotas Coves",
+        "googleMaps": "https://maps.google.com/?q=Las+Rotas+Denia",
+        "description": "Dramatic rocky coves with crystal-clear waters perfect for snorkeling and diving"
+      },
+      {
+        "name": "Playa Centro",
+        "googleMaps": "https://maps.google.com/?q=Playa+Centro+Denia",
+        "description": "Main town beach with excellent facilities and proximity to restaurants and shops"
+      }
+    ],
+    "healthcare": {
+      "name": "Denia Hospital",
+      "googleMaps": "https://maps.google.com/?q=Denia+Hospital",
+      "url": "https://www.deniahealth.es/",
+      "distance": "2 km (5 min)"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "90 km",
+      "driveTime": "1 hour"
+    }
+  },
+  "golf": {
+    "intro": "Denia is perfectly positioned for golf enthusiasts with championship courses offering diverse layouts and exceptional Mediterranean views. La Sella Golf Resort is the premiere course nearby, with several other excellent options within 20 minutes. Golfers enjoy world-class facilities combined with the cultural richness and gastronomic excellence Denia offers.",
+    "courses": [
+      {
+        "name": "La Sella Golf Resort",
+        "distance": "8 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.lasella.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Sella+Golf+Resort",
+        "description": "Championship course with stunning Montgó mountain views and excellent resort facilities"
+      },
+      {
+        "name": "Oliva Nova Golf",
+        "distance": "15 km",
+        "driveTime": "20 minutes",
+        "holes": 18,
+        "url": "https://www.olivanova.com/",
+        "googleMaps": "https://maps.google.com/?q=Oliva+Nova+Golf",
+        "description": "Modern championship course with scenic coastal views and complete resort amenities"
+      },
+      {
+        "name": "Club de Golf Ifach",
+        "distance": "35 km",
+        "driveTime": "40 minutes",
+        "holes": 18,
+        "url": "https://www.ifachgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Club+Golf+Ifach",
+        "description": "Prestigious course near Calpe with iconic Peñón de Ifach views"
+      },
+      {
+        "name": "Club de Golf Don Cayo",
+        "distance": "40 km",
+        "driveTime": "45 minutes",
+        "holes": 18,
+        "url": "https://www.doncayogolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Don+Cayo+Golf+Club",
+        "description": "Championship parkland course near Benidorm with mountain views"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Bo i Denia 2026 | Nybygg Costa Blanca",
+    "metaDescription": "Komplett guide til å bo i Denia - Costa Blancas UNESCO gastronomisby. Vakre strender, ferge til Ibiza, Montgó-fjell, sterkt ekspatsamfunn, fra 389.300 €.",
+    "heroIntro": "Denia fremstår som en premium kystdestinasjon på nordsiden av Costa Blanca, berømt for spektakulære landskap, sofistikert kosmopolitisk atmosfære. Denne transformerte tradisjonelle fiskeport nå en moderne boligdestinasjon tiltreker internasjonale kjøpere.",
+    "lifestyleSection": {
+      "intro": "Livet i Denia kombinerer kusthavn sjarm med autentisk Middelhav atmosfære og moderne velvilje. Internasjonalt etablert samfunn—særlig russere, tyskere, briter—koexisterer harmonisk.",
+      "highlights": [
+        "Pittoresk meditteranean havn",
+        "Autentisk arkitektur",
+        "Sofistikert internasjonalt samfunn",
+        "Fine dining restauranter",
+        "Spektakulart landskap",
+        "Nærhet til destinasjoner",
+        "Premier marinainfrastruktur",
+        "Kosmopolitisk atmosfære"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Denia har tilgang til flere utmerkede strender inkludert Playa Les Marines og Playa El Bol Nou med spektakulær utsikt.",
+      "dining": "Denia tilbyr unik kulinarisk scene som kombinerer kystkok med internasjonale raffinement med berømmelse.",
+      "shopping": "Denia tilbyr sjarmerende shopping kombinerer uavhengige butikker med moderne komfort.",
+      "healthcare": "Denia drar nytte av utmerket medisinsk omsorg med moderne Hospital Marina Baixa og engelsktalende leger.",
+      "transport": "Denia har utmerket transportadgang via autostrader og maleriske kystveier."
+    },
+    "propertyMarketSection": "Eiendomsmarkedet i Denia er dynamisk med sterkt etterspørsel fra internasjonale kjøpere som søker premium livsstil.",
+    "whyLiveHereSection": [
+      "Pittoresk havn",
+      "Fine dining restauranter",
+      "Kosmopolitisk internasjonalt samfunn",
+      "Spektakulart landskap",
+      "Premier marinafasiliteter",
+      "Nærhet til destinasjoner",
+      "Dynamisk eiendomsmarked",
+      "Sofistikert kombinasjoner"
+    ],
+    "faqs": [
+      {
+        "question": "Hvorfor Denia premium?",
+        "answer": "Kombinerer autentisk sjarm med moderne infrastruktur og internasjonal sofistikasjon."
+      },
+      {
+        "question": "Leieytelse?",
+        "answer": "Sterke 7-10% årlig med internasjonal etterspørsel."
+      },
+      {
+        "question": "Sosialt liv?",
+        "answer": "Vibrant rundt havnen og kulturelle arrangementer."
+      },
+      {
+        "question": "Skoler?",
+        "answer": "Lokale og internasjonale alternativer nærby."
+      },
+      {
+        "question": "Hvordan fra andre?",
+        "answer": "Unik kombinasjon av autentisitet og moderne fasiliteter."
+      },
+      {
+        "question": "Can I live in Denia without a car?",
+        "answer": "Yes, particularly in central Denia where shops, restaurants, beaches, and services are walkable. Bus connections serve surrounding areas, though frequency decreases outside peak season. A car provides more flexibility for exploring the broader Costa Blanca region and accessing golf courses. Many residents find that a car enhances lifestyle but isn't strictly essential for central town living."
+      },
+      {
+        "question": "What is the hiking like in Montgó Natural Park?",
+        "answer": "Montgó offers challenging hiking trails with spectacular panoramic views of the coast and interior. The summit (753 meters) provides breathtaking vistas. Trails vary in difficulty from moderate to challenging, with estimated times of 1.5-2.5 hours depending on route. The park is protected and features diverse flora and fauna. Local hiking guides are available for those preferring organized excursions."
+      },
+      {
+        "question": "What healthcare quality can I expect in Denia?",
+        "answer": "Healthcare in Denia is excellent with Denia Hospital providing comprehensive services including emergency care, specialist departments, and English-speaking staff. Multiple private clinics offer contemporary facilities. EU residents access the Spanish public healthcare system, while others obtain private insurance easily. Many doctors have trained internationally and serve the expatriate community. Alicante's major hospital is 1 hour away for complex treatments."
+      },
+      {
+        "question": "What property taxes should I expect in Denia?",
+        "answer": "Annual property tax (IBI) ranges from €300-1,500 depending on property value and location. Community fees for apartments typically range €50-150 monthly. Budget approximately €3,000-5,000 annually for utilities, insurance, and maintenance on a typical property. Overall annual costs represent approximately 2% of purchase price, which is reasonable for a Mediterranean coastal location."
+      },
+      {
+        "question": "How does Denia compare to nearby Jávea?",
+        "answer": "Denia offers more cultural depth with UNESCO gastronomy status and historical heritage, while Jávea provides stunning natural beauty with dramatic coastal scenery. Denia has better transport links and ferry connections to the islands. Jávea maintains a more exclusive, quieter atmosphere. Both have strong international communities. Choice depends on whether you prioritize cultural richness and dining (Denia) or natural beauty and exclusivity (Jávea)."
+      }
+    ],
+    "conclusion": "Klar for å omfavne sofistikert kystliv i Denia? Våre spesialister har ekspertise på premium Denia-marked.",
+    "investmentAnalysis": {
+      "rentalYield": "6-8%",
+      "annualAppreciation": "4-6%",
+      "overview": "Denia representerer premium investeringsmulighet som kombinerer eksepsjonell livsstilkvalitet og solid leieytelse.",
+      "highlights": [
+        "Eksepsjonell leieytelse 7-10%",
+        "Sterk internasjonal etterspørsel",
+        "Jevn eiendomsappresiering",
+        "Premier infrastruktur",
+        "Sofistikert samfunn"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Denia tilbyr rimelig levekostnad for premium kystdestinasjon med sjarm.",
+      "items": [
+        {
+          "category": "Dagligvarer",
+          "cost": "€350-450",
+          "notes": "Lokale markeder"
+        },
+        {
+          "category": "Forbruk",
+          "cost": "€120-190",
+          "notes": "Moderat"
+        },
+        {
+          "category": "Fellesgebyr",
+          "cost": "€80-200",
+          "notes": "Varierende"
+        },
+        {
+          "category": "IBI",
+          "cost": "€700-1500/år",
+          "notes": "Årlig"
+        },
+        {
+          "category": "Spise ute",
+          "cost": "€20-40",
+          "notes": "Fine dining"
+        },
+        {
+          "category": "Nautisk",
+          "cost": "€60-120",
+          "notes": "Marina"
+        },
+        {
+          "category": "Internet",
+          "cost": "€40-65",
+          "notes": "Fiberdekning"
+        },
+        {
+          "category": "Bil",
+          "cost": "€120-220",
+          "notes": "Praktisk"
+        },
+        {
+          "category": "Underholdning",
+          "cost": "€70-120",
+          "notes": "Kultur"
+        },
+        {
+          "category": "Helseforsikring",
+          "cost": "€70-140",
+          "notes": "Tilleggsprivat"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Denia celebrates a vibrant calendar of traditional Spanish festivals and cultural events throughout the year, blending maritime heritage with regional traditions.",
+      "events": [
+        {
+          "name": "Las Fallas",
+          "month": "March",
+          "description": "Iconic Valencian spring festival with fireworks, parades, light displays, and the burning of wooden structures (fallas)—an extraordinary spectacle"
+        },
+        {
+          "name": "Bous a la Mar (Bulls in the Sea)",
+          "month": "July",
+          "description": "Unique festival featuring bulls running through town streets and into the sea—a fascinating blend of tradition and modern celebration"
+        },
+        {
+          "name": "Semana Santa (Holy Week)",
+          "month": "April",
+          "description": "Religious processions with elaborate floats, traditional music, and community participation creating solemn and meaningful atmosphere"
+        },
+        {
+          "name": "Festa Major de Denia",
+          "month": "August",
+          "description": "Patron saint celebration with parades, music, fireworks, traditional dances, and street celebrations lasting several days"
+        },
+        {
+          "name": "International Food Festival",
+          "month": "May-June",
+          "description": "Celebration of Denia's gastronomic heritage featuring tastings from renowned restaurants, cooking demonstrations, and cultural performances"
+        },
+        {
+          "name": "Summer Jazz & Music Festival",
+          "month": "July-August",
+          "description": "International music performances featuring jazz, classical, and world music at various venues throughout the town"
+        },
+        {
+          "name": "Christmas Market & Festival",
+          "month": "December",
+          "description": "Festive season with artisan market, holiday lights, nativity scenes, and special dining events at restaurants"
+        },
+        {
+          "name": "Port Festival",
+          "month": "June",
+          "description": "Celebration of maritime heritage with boat parades, fishing exhibitions, water sports demonstrations, and seafood festivals"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Denia offers excellent educational options for families, with international schools, British curriculum institutions, and quality Spanish public schools serving the area.",
+      "schools": [
+        {
+          "name": "Xabiga International School",
+          "type": "International (Bilingual)",
+          "distance": "10 min",
+          "description": "International school with English and Spanish instruction, modern facilities, and diverse student body"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British)",
+          "distance": "50 min (Jávea)",
+          "description": "Prestigious British international school with primary and secondary campuses and strong university placement"
+        },
+        {
+          "name": "Colegio Público Denia",
+          "type": "Spanish State",
+          "distance": "5 min",
+          "description": "Quality Spanish public primary and secondary school serving the local community"
+        },
+        {
+          "name": "Academia Bilingüe Denia",
+          "type": "Private (Bilingual)",
+          "distance": "8 min",
+          "description": "Private school with English and Spanish instruction, smaller classes, and international student mix"
+        },
+        {
+          "name": "King's College Alicante",
+          "type": "International (British)",
+          "distance": "60 min (Alicante area)",
+          "description": "British curriculum school with strong academics and comprehensive facilities"
+        },
+        {
+          "name": "Instituto Secundario Marina Alta",
+          "type": "Spanish State",
+          "distance": "10 min",
+          "description": "Modern Spanish secondary school with quality academics and international family support"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Denia's exceptional coastal and mountain setting offers abundant outdoor activities combining beach, water sports, and mountain hiking within easy reach.",
+      "activities": [
+        {
+          "name": "Montgó Natural Park Hiking",
+          "type": "Hiking",
+          "description": "Dramatic mountain with challenging trails offering panoramic coastal and interior views—summit (753m) provides breathtaking vistas"
+        },
+        {
+          "name": "Las Marinas & Las Rotas Swimming",
+          "type": "Beach",
+          "description": "Diverse beaches from sandy to rocky coves offering swimming, sunbathing, and water sports with excellent Mediterranean scenery"
+        },
+        {
+          "name": "Scuba Diving & Snorkeling",
+          "type": "Water Sports",
+          "description": "Crystal-clear waters around Las Rotas offer exceptional diving with underwater reefs, caves, and marine life—several dive centers provide instruction"
+        },
+        {
+          "name": "Yacht Sailing from Club Náutico",
+          "type": "Water Sports",
+          "description": "Denia's premier marina hosts sailing clubs and charter companies offering day sails, sunset cruises, and sailing courses"
+        },
+        {
+          "name": "Golf at Championship Courses",
+          "type": "Golf",
+          "description": "La Sella Golf Resort (12 min) and Oliva Nova Golf (20 min) offer championship play with Mediterranean and mountain views"
+        },
+        {
+          "name": "Kayaking & Paddleboarding",
+          "type": "Water Sports",
+          "description": "Rent equipment to explore the coast, hidden coves, and marine life in calm Mediterranean waters"
+        },
+        {
+          "name": "Coastal Cycling Routes",
+          "type": "Cycling",
+          "description": "Scenic coastal and inland cycling paths with varying difficulty levels and beautiful Mediterranean scenery"
+        },
+        {
+          "name": "Ferry Trips to Balearic Islands",
+          "type": "Adventure",
+          "description": "Year-round ferries to Ibiza (2 hours) and Mallorca (4.5 hours) enable day trips or weekend island escapes"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Denia hosts a vibrant and welcoming international community with strong British, German, Dutch, and Scandinavian populations. The community is well-organized, culturally engaged, and provides extensive support networks for those seeking authentic Mediterranean living combined with international friendship.",
+      "highlights": [
+        "Established international community with English widely spoken",
+        "Strong social infrastructure including clubs, associations, and community groups",
+        "Multilingual services—healthcare, legal, real estate—catering to expatriates",
+        "Regular international events, cultural performances, and social gatherings",
+        "Professional networks facilitating business connections and opportunities",
+        "Respect for authenticity and genuine Mediterranean living",
+        "Easy integration for newcomers seeking welcoming international community"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "French",
+        "Belgian",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Denia",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Market Visit & Coffee",
+          "description": "Start the day at the Mercado Municipal, purchasing fresh produce from local vendors while catching up on town news"
+        },
+        {
+          "time": "10:00",
+          "activity": "Beach or Hiking Activity",
+          "description": "Swim at Las Marinas or Las Rotas beaches, or hike Montgó Natural Park trails enjoying panoramic Mediterranean views"
+        },
+        {
+          "time": "13:00",
+          "activity": "Leisurely Lunch",
+          "description": "Enjoy fresh local gamba roja (red prawns) or authentic paella at a marina restaurant, appreciating Mediterranean cuisine"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta & Relaxation",
+          "description": "Rest during afternoon heat, relax at your villa, or visit a local café with neighbors and friends"
+        },
+        {
+          "time": "17:00",
+          "activity": "Golf or Water Sports",
+          "description": "Play at La Sella Golf Resort, or engage in sailing, diving, or paddleboarding in crystal Mediterranean waters"
+        },
+        {
+          "time": "19:00",
+          "activity": "Evening Paseo",
+          "description": "Stroll along the Esplanada Cervantes and marina area, greeting friends while watching Mediterranean sunset"
+        },
+        {
+          "time": "20:30",
+          "activity": "Fine Dining Experience",
+          "description": "Enjoy dinner at a Michelin-recommended restaurant or traditional tapas bar, celebrating Denia's gastronomic heritage"
+        },
+        {
+          "time": "22:30",
+          "activity": "Evening Social Activity",
+          "description": "Join friends at a beachfront bar, cultural venue, or return to your home to relax under Mediterranean stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.1108!3d38.8435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60d0000000000%3A0x400a1c000000!2sDenia%2C%20Alicante%2C%20Spain!5e0!3m2!1sen!2ses!4v1640000000000"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Denia",
+    "description": "Denia is a UNESCO Creative City of Gastronomy with stunning 20km coastline, historic castle, Montgó mountain, year-round ferry connections to Balearic Islands, and world-class dining.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.8435",
+      "longitude": "-0.1108"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Denia",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    }
+  }
+}

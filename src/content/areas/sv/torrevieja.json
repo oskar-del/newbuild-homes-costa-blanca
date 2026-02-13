@@ -1,0 +1,476 @@
+{
+  "slug": "torrevieja",
+  "name": "Torrevieja",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/torrevieja-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartment",
+    "Penthouse",
+    "Townhouse",
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 180000,
+    "max": 650000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Torrevieja Tourism",
+      "url": "https://www.torrevieja.es/",
+      "description": "Official Torrevieja tourism website"
+    },
+    "beaches": [
+      {
+        "name": "Playa del Cura",
+        "googleMaps": "https://maps.google.com/?q=Playa+del+Cura+Torrevieja",
+        "description": "Main central beach with promenade"
+      },
+      {
+        "name": "Playa de Los Locos",
+        "googleMaps": "https://maps.google.com/?q=Playa+de+Los+Locos+Torrevieja",
+        "description": "Popular family beach with calm waters"
+      },
+      {
+        "name": "Playa de La Mata",
+        "googleMaps": "https://maps.google.com/?q=Playa+de+La+Mata+Torrevieja",
+        "description": "Long natural beach with dunes"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "In town"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "45 km",
+      "driveTime": "35 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Torrevieja omgärdas av utmärkta golfbanor, med över 10 banor inom 30 minuters körning. Regionen är en av Spaniens främsta golfDestinationer med möjlighet att spela året runt.",
+    "courses": [
+      {
+        "name": "Villamartín Golf",
+        "distance": "8 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.villamartingolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Villamartin+Golf",
+        "description": "Championship course opened in 1972. Host to European Tour events. Challenging layout with mature trees."
+      },
+      {
+        "name": "Las Ramblas Golf",
+        "distance": "10 km",
+        "driveTime": "15 minutes",
+        "holes": 18,
+        "url": "https://www.lasramblasgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Las+Ramblas+Golf+Orihuela",
+        "description": "Scenic course with dramatic elevation changes and Mediterranean views."
+      },
+      {
+        "name": "Campoamor Golf",
+        "distance": "12 km",
+        "driveTime": "15 minutes",
+        "holes": 18,
+        "url": "https://www.campoamorgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Campoamor+Golf",
+        "description": "Well-maintained course near the coast, suitable for all levels."
+      },
+      {
+        "name": "La Finca Golf",
+        "distance": "15 km",
+        "driveTime": "18 minutes",
+        "holes": 18,
+        "url": "https://www.lafincagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Finca+Golf+Algorfa",
+        "description": "Championship course designed by Pepe Gancedo. Beautiful setting with lake features."
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Bo i Torrevieja 2026 | Nybyggda hem på Costa Blanca",
+    "metaDescription": "Nybyggda bostäder i Torrevieja, Costa Blanca South. Saltsjömikroklimat, stränder, 100+ nationaliteter. Bläddra bland villor, lägenheter och radhus till salu.",
+    "heroIntro": "Torrevieja är det vibrerande hjärtat av Costa Blanca South och erbjuder en autentisk spansk kustlivsstil kombinerad med enastående fastighetsvärde och ett av Europas största internationella samhällen. Med över 80 000 invånare som representerar 100+ nationaliteter är detta en stad som verkligen omfamnar mångfald samtidigt som den bevarar sin spanska karaktär.\n\nStaden är känd för sina två fantastiska saltsjöar—den rosa Laguna Rosa och den gröna Laguna de Torrevieja—som skapar ett unikt mikroklimat med exceptionellt ren luft. Världshälsoorganisationen har erkänt Torrevieja som ett av Europas hälsosamma klimat, med över 300 soliga dagar årligen och milda vintrar med genomsnitt 16-18°C.",
+    "lifestyleSection": {
+      "intro": "Att leva i Torrevieja erbjuder det bästa från två världar: autentisk spansk kultur med bekvämligheten från ett stort internationellt samhälle. Den berömda fredagsmarknaden är en av Spaniens största och sträcker sig över 2 km med hundratals försäljningsställen. Stranden pulsar av aktivitet året runt, kantad av restauranger, kaféer och traditionella tapasbarer.\n\nStaden bibehåller en genuin spansk atmosfär trots sin internationella befolkning. Du hittar traditionella festas året runt, inklusive den berömda Habaneras körmusikfestivalen i augusti.",
+      "highlights": [
+        "Ett av Europas hälsosamma mikroklimat (WHO-erkänt)",
+        "Stort internationellt samhälle med engelska allmänt talat",
+        "Berömd rosa saltsjö (Laguna Rosa) och naturreservat",
+        "Utmärkt värdepapper jämfört med Costa Blanca North",
+        "Fullständigt universitetssjukhus med engelsktalande personal",
+        "En av Spaniens största gator marknader (Fredag)",
+        "Direktbussförbindelser och 35 minuter till Alicante flygplats",
+        "År runt evenemang och traditionella spanska festivaler"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Torrevieja har Blue Flag-stränder längs sin kustlinje. Playa del Cura är huvudstranden i centrum med en bred promenad perfekt för kvällspromenader. Playa de Los Locos erbjuder lugnt, grunt vatten idealiskt för familjer. För något mer naturligt sträcker sig La Mata beach kilometer med skyddade sanddyner och färre folkmassor.",
+      "dining": "Stranden är kantad av restauranger som serverar färsk fisk—prova den lokala caldero (fiskgryta) eller arroz a banda. Stadscentrum har traditionella spanska tapasbarer tillsammans med internationella alternativ. Hamnen erbjuder matservering vid vattnet med utsikt över fiskebaterna som tar in dagens fångst.",
+      "shopping": "Fredagsmarknaden är legendarisk—en av Spaniens största med allt från färsk frukt till kläder. Habaneras Shopping Center i stan erbjuder stora spanska och internationella märken, en supermarket och biograf. För större shoppingcenter, Zenia Boulevard (15 min) är en av Europas största utomhuscentra.",
+      "healthcare": "Hospital Universitario de Torrevieja är ett modernt universitetssjukhus mitt i stan som erbjuder omfattande tjänster med mycket engelsktalande personal. Många privata kliniker, tandläkare och 24-timmarsfarmaceuter betjänar samhället. Den stora utlandsstationerade befolkningen innebär att det aldrig är svårt att hitta engelsktalande sjukvård.",
+      "transport": "Alicante-Elche flygplats ligger 45 km bort (35 minuter via AP-7 motorvägen). Murcia-Corvera flygplats ligger 40 km (30 minuter). Regelbundna bussar förbinder Alicante, Murcia och omgivande städer. En bil rekommenderas men är inte nödvändig för stadsliv. Den planerade Mediterranea-korridorens järnvägsförbindelse kommer så småningom att ansluta Torrevieja."
+    },
+    "propertyMarketSection": "Torrevieja erbjuder ett exceptionellt värdepapper på Costa Blancas fastighetsmarknad. Nybyggda lägenheter börjar omkring €180 000-220 000 för 2-rumslägenheter, medan villor sträcker sig från €350 000-650 000. Detta representerar betydligt bättre värde än Costa Blanca North och attraherar köpare som söker moderna fastigheter utan premiumprissättning.\n\nMarknaden har sett stark tillväxt de senaste åren, driven av internationell efterfrågan och begränsad nyproduktion. Nya utvecklingsprojekt säljs vanligtvis snabbt, särskilt de nära bekvämligheter eller med havsutsikt.\n\nInvesteringspotentialen är stark—den stora turismindustrin och den internationella boende befolkningen skapar året runt hyresbehov. Fastigheter med pooler och moderna bekvämligheter uppnår starka hyresavkastningar, särskilt under den utökade sommarsäsongen.",
+    "whyLiveHereSection": [
+      "Exceptionellt värdepapper—moderna nybyggen till tillgängliga priser",
+      "WHO-erkänt hälsosamt mikroklimat med året runt sol",
+      "Stort, etablerat internationellt samhälle",
+      "Fullständigt sjukhus och omfattande sjukvård i stan",
+      "Enkel flygplatsåtkomst (35 min till Alicante)",
+      "Unik naturlig skönhet med rosa saltsjöar",
+      "Stark hyresmarknad för investeringsköpare",
+      "Autentisk spansk livsstil med internationella bekvämligheter"
+    ],
+    "faqs": [
+      {
+        "question": "Är Torrevieja ett bra ställe att köpa fastighet?",
+        "answer": "Torrevieja erbjuder utmärkt värdepapper med moderna nybyggen till priser betydligt lägre än Costa Blanca North. Det stora internationella samhället, fullt sjukhus, goda transportförbindelser och stark hyresmarknad gör det attraktivt för både permanenta invånare och investerare. Det WHO-erkända hälsosamma klimatet är ett extra plus."
+      },
+      {
+        "question": "Hur långt är Torrevieja från Alicante flygplats?",
+        "answer": "Alicante-Elche flygplats ligger cirka 45 km från Torrevieja, vilket tar ungefär 35 minuter via AP-7 motorvägen. Murcia-Corvera flygplats är något närmare på 40 km (30 minuter) och erbjuder ytterligare flygsalternativ."
+      },
+      {
+        "question": "Vad är levnadskostnaden i Torrevieja?",
+        "answer": "Torrevieja erbjuder en lägre levnadskostnad än många andra Costa Blanca städer. Matvaror, restauranger och tjänster är skäligt prissatta. Förväntade månatliga levnadskostnader är €1 200-1 800 för ett par inklusive hyra/bolån, el, mat och underhållning—betydligt mindre än norra Europa."
+      },
+      {
+        "question": "Är engelska allmänt talat i Torrevieja?",
+        "answer": "Ja, engelska är allmänt talat i Torrevieja på grund av det stora brittiska och internationella samhället. De flesta butiker, restauranger, sjukvårdsleverantörer och tjänster betjänar engelsktalande. Men att lära sig lite spanska kommer att berika din erfarenhet och uppskattas av lokalbefolkningen."
+      },
+      {
+        "question": "Hur är fastighetspriserna i Torrevieja?",
+        "answer": "Nybyggda lägenheter i Torrevieja börjar omkring €180 000 för 2-rumsenheter. Radhus sträcker sig från €220 000-350 000, medan villor börjar omkring €350 000 och kan nå €650 000+ för lyxfastigheter. Andrahandsfastigheter erbjuder ännu mer prisvärda alternativ."
+      },
+      {
+        "question": "Vad gör Torreviejas klimat speciellt?",
+        "answer": "Torreviejas klimat har erkänts av Världshälsoorganisationen som ett av Europas hälsosamma. Saltsjöarna skapar ett unikt mikroklimat med exceptionellt ren, mineralrik luft. Området åtnjuter över 300 soliga dagar per år med milda vintrar i genomsnitt 16-18°C."
+      },
+      {
+        "question": "Finns det goda sjukvårdsanläggningar i Torrevieja?",
+        "answer": "Torrevieja har utmärkt sjukvård inklusive det moderna Hospital Universitario de Torrevieja med engelsktalande personal. Det finns många privata kliniker, tandläkare och 24-timmarsfarmaceuter. Det stora utlandsstationerade samhället innebär att sjukvården är väl anpassad till internationella patienter."
+      },
+      {
+        "question": "Hur är hyresmarknaden i Torrevieja?",
+        "answer": "Torrevieja har en stark hyresmarknad driven av turism och det internationella samhället. Semesteruthyrningar är populära året runt, med toppkrav på sommaren. Långtidshyrningar är också efterfrågade från utlandsstationerade och pensionärer. Väl belägna fastigheter med pooler och moderna bekvämligheter uppnår de bästa avkastningarna."
+      },
+      {
+        "question": "Vilka är de bästa områdena att köpa i Torrevieja?",
+        "answer": "Populära områden inkluderar stadscenter för bekvämlighet, Playa del Cura för närheten till stranden, La Mata för en lugnare atmosfär nära naturliga stränder och urbanisationer som Aguas Nuevas och Los Balcones för moderna utvecklingar. Varje område erbjuder olika livsstilar och prispunkter."
+      },
+      {
+        "question": "Är Torrevieja lämpligt för familjer?",
+        "answer": "Ja, Torrevieja är mycket familjevänligt med säkra stränder, bra skolor (inklusive internationella alternativ i närheten), många parker och fritidsanläggningar och ett välkomnande samhälle. Den prisvärda levnadskostnaden och bra sjukvården gör det praktiskt för familjer också."
+      }
+    ],
+    "conclusion": "Redo att utforska nya byggda fastigheter i Torrevieja? Vårt team specialiserar sig på att hjälpa internationella köpare att hitta sitt perfekta hem på Costa Blanca South. Oavsett om du letar efter en semesterläghet, permanent bostad eller investeringsfastighet kommer vi att guida dig genom varje steg av köpprocessen.",
+    "investmentAnalysis": {
+      "rentalYield": "6-8%",
+      "annualAppreciation": "4-6%",
+      "overview": "Torrevieja representerar en av Costa Blancas starkaste investeringsmöjligheter. Det stora internationella samhället, etablerad hyresmarknad, närhet till bekvämligheter och året runt turism skapar konsekvent efterfrågan. Det WHO-erkända hälsosamma klimatet attraherar långtidsboende och hälsofokuserade investerare.",
+      "highlights": [
+        "Stort internationellt samhälle driver året runt hyresbehov",
+        "Semesterhyrningspotential kombinerad med permanent bosatt marknad",
+        "Hälsosamt klimat i Europa erkänt av WHO",
+        "Starkt universitetssjukhus attraherar pensionärer och hälsomedvetna köpare",
+        "Över 300 soliga dagar årligen stöder utökad hyressäsong"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Torrevieja erbjuder utmärkt värde för kustnära boende i Spanien. Kostnaderna är lägre än de flesta europeiska kustvägar och konkurrensmässiga med andra Costa Blanca-platser.",
+      "items": [
+        {
+          "category": "Matvaror (månatlig, par)",
+          "cost": "€300-420",
+          "notes": "Stora supermarknader och fredagsmarknad med konkurrenskraftiga priser"
+        },
+        {
+          "category": "Verktyg (elektricitet, vatten, gas)",
+          "cost": "€120-180",
+          "notes": "Högre på sommaren med AC; havsvindar minskar kylbehov"
+        },
+        {
+          "category": "Gemenskap avgifter",
+          "cost": "€70-150",
+          "notes": "Varierar beroende på utveckling; strandnära fastigheter ofta högre"
+        },
+        {
+          "category": "IBI (Kommunal skatt)",
+          "cost": "€500-1200/år",
+          "notes": "Baserat på fastighetsvärde; stadservices ökar något"
+        },
+        {
+          "category": "Äta ute (per person)",
+          "cost": "€14-25",
+          "notes": "Färsk fisk restauranger €20-35; tapasbarer €10-15"
+        },
+        {
+          "category": "Sjukvård (privat)",
+          "cost": "€80-150/månad",
+          "notes": "Privat försäkring; allmän sjukvård tillgänglig för invånare"
+        },
+        {
+          "category": "Strandaktiviteter & klubbar",
+          "cost": "€50-100",
+          "notes": "Strandbarmedlemskap, vattensport, sociala klubbar"
+        },
+        {
+          "category": "Bilkostnader",
+          "cost": "€120-200",
+          "notes": "Lägre bränslepriser än Europa; parkering tillgänglig"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Torrevieja anordnar en livlig kalender av festivaler och evenemang som firar sin unika kultur och stora internationella samhälle.",
+      "events": [
+        {
+          "name": "Festival de Habaneras",
+          "month": "August",
+          "description": "Berömd körmusikfestival som firar den unika Habaneras musiktraditionen med framträdanden i hela stan"
+        },
+        {
+          "name": "Fiestas de Torrevieja",
+          "month": "July-August",
+          "description": "Årliga festiviteter med fyrverkerier, parader, tjurfäktningar och gatufiranden för att hedra stadens skyddshelgon"
+        },
+        {
+          "name": "Sea Festival (Fiesta del Mar)",
+          "month": "June",
+          "description": "Firande av sjöfartstraditionen med båtparader, idrottsdemonstration och fiskgastronomi"
+        },
+        {
+          "name": "Spring Market & Garden Festival",
+          "month": "May",
+          "description": "Firar säsongen med växtförsäljning, blomsterskärmar och utomhusmarknader i hela staden"
+        },
+        {
+          "name": "Semana Santa (Holy Week)",
+          "month": "April",
+          "description": "Traditionella religiösa processioner och firanden med spansk skick och kulturell betydelse"
+        },
+        {
+          "name": "International Community Fair",
+          "month": "October",
+          "description": "Firande av de 100+ nationaliteter som bor i Torrevieja med mat, musik och kulturella framträdanden"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Torrevieja erbjuder en mängd utbildningsalternativ från spanska statsskolor till internationella institutioner som betjänar det stora utlandsstationerade samhället.",
+      "schools": [
+        {
+          "name": "International School of Alicante (Secondary)",
+          "type": "International (IB)",
+          "distance": "20 min",
+          "description": "IB-certifierad skola som erbjuder International Baccalaureate-läroplan för gymnasieelever"
+        },
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "25 min",
+          "description": "Brittisk läroplan skola från förskola genom gymnasiet som erbjuder A-nivåer"
+        },
+        {
+          "name": "Colegio Público Cardenal Cisneros",
+          "type": "Spanish State",
+          "distance": "5 min",
+          "description": "Offentlig spansk skola som erbjuder grundutbildning i stadscenter"
+        },
+        {
+          "name": "IES Joanot Martorell",
+          "type": "Spanish State",
+          "distance": "8 min",
+          "description": "Gymnasieskola som erbjuder omfattande spansk utbildningsläroplan"
+        },
+        {
+          "name": "Happy Kids Nursery",
+          "type": "International Nursery",
+          "distance": "3 min",
+          "description": "Engelsk förskola och förskola betjänar utlandsstationerade familjer"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Torrevieja erbjuder varierande naturaupplevelser från saltsjöutforskning till kustnära aktiviteter och vattensport.",
+      "activities": [
+        {
+          "name": "Laguna Rosa (Pink Salt Lake)",
+          "type": "Nature Reserve",
+          "description": "Unikt rosa saltsjö som erbjuder promenader, fågelskådning och fotografi möjligheter"
+        },
+        {
+          "name": "Laguna de Torrevieja (Green Salt Lake)",
+          "type": "Nature Reserve",
+          "description": "Grönt saltsjö med skyddad livsmiljö för flamingos, härrar och flyttfåglar"
+        },
+        {
+          "name": "Beach Swimming & Water Sports",
+          "type": "Beach",
+          "description": "Flera Blue Flag stränder med livräddare, paddleboard och segling möjligheter"
+        },
+        {
+          "name": "Paseo Marítimo Promenade Walk",
+          "type": "Walking",
+          "description": "Strandpromenad perfekt för kvällspromenader med restauranger och havsutsikt"
+        },
+        {
+          "name": "Yacht Club Activities",
+          "type": "Water Sports",
+          "description": "Segling, båtresor och maritima aktiviteter på den livliga segelkluben"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Villamartin, Las Ramblas och Campoamor banor inom 15-20 minuter"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Torrevieja är hem för ett av Europas största internationella samhällen med över 100 nationaliteter representerade. Den etablerade infrastrukturen för utländska invånare, kombinerad med den vänliga lokala spanska befolkningen, skapar en unik flerkulturell miljö. Engelska talas överallt, och integrering i samhället är problemfri genom många klubbar, organisationer och sociala grupper.",
+      "highlights": [
+        "Ett av Europas största internationella samhällen (100+ nationaliteter)",
+        "Engelska allmänt talat i butiker, restauranger och tjänster",
+        "Många internationella klubbar och sociala organisationer",
+        "Etablerad infrastruktur som vänder sig till utlandsstationerade behov",
+        "Starka sjukvårdstjänster anpassade för internationella invånare",
+        "Enkel integrering genom många sociala grupper och evenemang",
+        "Brittiska pubar, restauranger och butiker i hela stan",
+        "Aktivt pensionärsamhälle med organiserade aktiviteter"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "French",
+        "Irish",
+        "Russian",
+        "Eastern European",
+        "Latin American"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "En typisk dag i Torrevieja",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Beach Walk",
+          "description": "Morgonpromenad längs strandpromenaden med kaffe och tittar på Medelhavet som väcker till liv"
+        },
+        {
+          "time": "09:30",
+          "activity": "Friday Market (Wednesdays)",
+          "description": "Besök en av Spaniens största marknader med hundratals försäljningsställen som säljer frukt, kläder och hantverk"
+        },
+        {
+          "time": "12:30",
+          "activity": "Fresh Fish Lunch",
+          "description": "Njut av caldero (lokalt fisksoppa) eller grillad räka på en strandrestaurang med havsutsikt"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta & Pool",
+          "description": "Återgå hem för eftermiddagsavillot och simma i gemensam pool eller hav om byggnaden är strandnära"
+        },
+        {
+          "time": "17:00",
+          "activity": "Salt Lake Visit",
+          "description": "Kör till Laguna Rosa eller Laguna Verde för kvällsfågelskådning och naturfotografi"
+        },
+        {
+          "time": "19:30",
+          "activity": "Café Aperitivo",
+          "description": "Njut av drycker och tapas på en strandkafé och träffa vänner och grannar"
+        },
+        {
+          "time": "21:00",
+          "activity": "Dinner & Culture",
+          "description": "Äta på en spansk restaurang eller njut av livemusik och teaterframföranden på lokala platser"
+        },
+        {
+          "time": "23:00",
+          "activity": "Evening Promenade",
+          "description": "Slutpromenad längs den upplysta stranden innan vila, njutande av Medelhavet natt"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.6823!3d37.9786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63b7d89700000%3A0x400a1d000000!2sTorrevieja%2C%20Alicante%2C%20Spain!5e0!3m2!1sen!2ses!4v1640000000000"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Torrevieja",
+    "description": "Torrevieja is a coastal city in Costa Blanca South, Spain, known for its salt lakes, healthy climate, international community, and excellent value property market.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.9786",
+      "longitude": "-0.6823"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Torrevieja",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Torrevieja a good place to buy property?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Torrevieja offers excellent value for money with modern new builds at prices significantly lower than Costa Blanca North. The large international community, full hospital, good transport links, and strong rental market make it attractive for both permanent residents and investors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Torrevieja from Alicante Airport?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alicante-Elche Airport is approximately 45 km from Torrevieja, which takes around 35 minutes via the AP-7 motorway. Murcia-Corvera Airport is slightly closer at 40 km (30 minutes)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Torrevieja?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Torrevieja offers a lower cost of living than many other Costa Blanca towns. Expect monthly living costs of €1,200-1,800 for a couple including rent/mortgage, utilities, food, and entertainment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is English widely spoken in Torrevieja?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, English is widely spoken in Torrevieja due to the large British and international community. Most shops, restaurants, healthcare providers, and services cater to English speakers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes the Torrevieja climate special?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Torrevieja's climate has been recognized by the World Health Organization as one of the healthiest in Europe. The salt lakes create a unique microclimate with exceptionally clean, mineral-rich air and over 300 sunny days per year."
+        }
+      }
+    ]
+  }
+}

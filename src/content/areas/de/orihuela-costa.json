@@ -1,0 +1,489 @@
+{
+  "slug": "orihuela-costa",
+  "name": "Orihuela Costa",
+  "region": "Costa Blanca South",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartment",
+    "Penthouse",
+    "Townhouse",
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 195000,
+    "max": 750000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Orihuela Costa Tourism",
+      "url": "https://www.orihuelaturistica.es/",
+      "description": "Official Orihuela tourism website"
+    },
+    "beaches": [
+      {
+        "name": "Playa de La Zenia",
+        "googleMaps": "https://maps.google.com/?q=Playa+de+La+Zenia+Orihuela",
+        "description": "Popular beach with excellent facilities"
+      },
+      {
+        "name": "Playa Flamenca",
+        "googleMaps": "https://maps.google.com/?q=Playa+Flamenca+Beach",
+        "description": "Family-friendly beach with calm waters"
+      },
+      {
+        "name": "Cala Capitán",
+        "googleMaps": "https://maps.google.com/?q=Cala+Capitan+Orihuela",
+        "description": "Scenic cove beach with rocky surroundings"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "10 km"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "55 km",
+      "driveTime": "40 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Orihuela Costa is the golf capital of Costa Blanca South, with more championship courses within a 15-minute drive than anywhere else in the region. The area attracts golfers year-round with its perfect climate and excellent facilities.",
+    "courses": [
+      {
+        "name": "Villamartin Golf",
+        "distance": "2 km",
+        "driveTime": "5 minutes",
+        "holes": 18,
+        "url": "https://www.villamartingolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Villamartin+Golf",
+        "description": "Championship course opened in 1972. Hosted European Tour events. The heart of Villamartin's expat community."
+      },
+      {
+        "name": "Las Ramblas Golf",
+        "distance": "3 km",
+        "driveTime": "5 minutes",
+        "holes": 18,
+        "url": "https://www.lasramblasgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Las+Ramblas+Golf+Orihuela",
+        "description": "Dramatic elevation changes with stunning Mediterranean views. Challenging and scenic."
+      },
+      {
+        "name": "Campoamor Golf",
+        "distance": "5 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "url": "https://www.campoamorgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Campoamor+Golf",
+        "description": "Well-maintained course near the coast. Suitable for all levels with excellent clubhouse."
+      },
+      {
+        "name": "Las Colinas Golf",
+        "distance": "8 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "url": "https://www.lascolinasgolf.es/",
+        "googleMaps": "https://maps.google.com/?q=Las+Colinas+Golf",
+        "description": "Award-winning course consistently ranked among Spain's best. Cabell Robinson design."
+      },
+      {
+        "name": "Vistabella Golf",
+        "distance": "10 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.vistabellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+        "description": "Modern course with excellent practice facilities. Popular with residents."
+      },
+      {
+        "name": "Lo Romero Golf",
+        "distance": "12 km",
+        "driveTime": "15 minutes",
+        "holes": 18,
+        "url": "https://www.loromerogolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Lo+Romero+Golf",
+        "description": "Jack Nicklaus design with challenging layout. Premium facilities."
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Leben in Orihuela Costa 2026 | Neubau Costa Blanca",
+    "metaDescription": "New build properties in Orihuela Costa from €195,000. Golf course villas, beach apartments, La Zenia Boulevard. Browse homes for sale Costa Blanca South.",
+    "heroIntro": "Orihuela Costa ist das führende Golf- und Lifestyleziel an der Costa Blanca Süd, das sich über 16 Kilometer Mittelmeerküste von Punta Prima bis Campoamor erstreckt. Dieses speziell konzipierte Urlaubsgebiet verbindet Weltklasse-Golfplätze, unberührte Strände und Europas größtes Freiluft-Shoppingcenter mit modernen Wohnkomplexen.\n\nWas Orihuela Costa auszeichnet, ist das perfekte Gleichgewicht zwischen Urlaubsausstattungen und authentischem spanischen Leben. Während Urbanisationen wie Villamartin, La Zenia und Cabo Roig die internationale Gemeinschaft bedienen, liegt die historische Stadt Orihuela – eine Kathedralenstadt mit Jahrhundertgeschichte – nur 25 Minuten landeinwärts und bietet kulturelle Tiefe neben Küstenkomfort.",
+    "lifestyleSection": {
+      "intro": "Das Leben in Orihuela Costa dreht sich um Freiluftalltag. Mit sechs Meisterschaftsgolfplätzen innerhalb von 15 Minuten, 16 Kilometern Strände und über 320 Sonnentagen pro Jahr ist dies ein Ziel für diejenigen, die das Mittelmeerklima vollständig nutzen möchten.\n\nDie Gegend hat eine der größten etablierten Expat-Gemeinschaften Spaniens, besonders um Villamartin und La Zenia. Englisch wird weit verbreitet gesprochen, internationale Clubs und Gesellschaften sind reichlich vorhanden, und die Integration in die Gemeinschaft ist mühelos.",
+      "highlights": [
+        "6 Meisterschaftsgolfplätze innerhalb von 15 Minuten",
+        "La Zenia Boulevard – Europas größtes Freiluft-Shoppingcenter",
+        "16 km Strände mit Blauer Flagge",
+        "Etablierte internationale Gemeinschaft mit Clubs und Gesellschaften",
+        "Ausgezeichnete Neubau-Immobilien im Vergleich zur Costa Blanca Nord",
+        "10 Minuten zum Universitätskrankenhaus von Torrevieja",
+        "Ganzjähriger Freiluftalltag mit 320+ Sonnentagen",
+        "Wahl zwischen lebhaften Urlaubsbereichen oder ruhigeren Urbanisationen"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Orihuela Costas 16 Kilometer Küstenlinie umfasst Strände mit Blauer Flagge bei La Zenia, Playa Flamenca, Cabo Roig und Campoamor. Jeder hat ausgezeichnete Einrichtungen einschließlich Strandlokale, Restaurants, Duschen und Barrierefreiheitsangebote. Die Strände haben feinen goldenen Sand und ruhige Gewässer, perfekt für Familien.",
+      "dining": "Von traditionellen spanischen Restaurants in Cabo Roigs Hafen bis zur internationalen Küche im La Zenia Boulevard sind die Speisemöglichkeiten endlos. Der Villamartin Plaza ist berühmt für seine Restaurantszene und lebhafte Atmosphäre. Frische Meeresfrüchte sind reichlich vorhanden – probieren Sie das lokale Arroz Caldero oder gegrillte Garnelen.",
+      "shopping": "La Zenia Boulevard ist das Kronjuwel – über 150 Geschäfte darunter Primark, H&M, Zara, Media Markt, plus Supermärkte, Kinos und Dutzende Restaurants. Es ist eines der größten Freiluft-Shoppingcenter Europas. Kleinere Handelszentren in jeder Urbanisation bieten tägliche Notwendigkeiten.",
+      "healthcare": "Das Universitätskrankenhaus von Torrevieja ist nur 10 km entfernt und bietet umfassende Dienstleistungen mit englischsprachigem Personal. Mehrere private Kliniken, Zahnarztpraxen und 24-Stunden-Apotheken bedienen die Gegend. Die große internationale Gemeinschaft bedeutet, dass Gesundheitsdienste gut an ausländische Patienten angepasst sind.",
+      "transport": "Der Flughafen Alicante-Elche ist 55 km entfernt (40 Minuten über AP-7 Autobahn). Der Flughafen Murcia-Corvera ist 35 km entfernt (30 Minuten). Die Gegend ist straßentechnisch gut angebunden, obwohl ein Auto für den Alltag empfohlen wird. Lokale Busse verbinden die Haupturbanisationen."
+    },
+    "propertyMarketSection": "Orihuela Costa bietet außergewöhnliche Auswahl bei Immobilientypen und Preispunkten. Neue Wohnungen beginnen ab etwa €195.000-250.000, Reihenhäuser ab €250.000-350.000 und Villen ab €400.000-750.000. Dies stellt hervorragende Wertentsprechung im Vergleich zur Costa Blanca Nord dar.\n\nDie Gegend verzeichnet weiterhin starke Entwicklungsaktivität, wobei qualitätsvolle Bauherren wie Taylor Wimpey und lokale Entwickler moderne, hochwertig ausgestattete Häuser liefern. Golfnahe Immobilien erzielen Premium-Preise, bieten aber ausgezeichnetes Vermietungspotential.\n\nRenditen sind stark – die Kombination aus Golf-Tourismus, Strandnähe und Shopping zieht das ganze Jahr über Besucher an. Immobilien mit Pools, Golfblick oder Gehweite zum La Zenia Boulevard erzielen die höchsten Mietrenditen.",
+    "whyLiveHereSection": [
+      "Beispiellose Golfzugang – 6 Plätze innerhalb von 15 Minuten",
+      "La Zenia Boulevard Shopping vor der Tür",
+      "16 km Strände mit Blauer Flagge",
+      "Große, gastfreundliche internationale Gemeinschaft",
+      "Ausgezeichnete Neubau-Immobilien",
+      "Ganzjähriger Freiluftalltag",
+      "Starker Mietmarkt für Investitionen",
+      "Einfacher Zugang zu zwei internationalen Flughäfen"
+    ],
+    "faqs": [
+      {
+        "question": "Ist Orihuela Costa gut zum Golfen?",
+        "answer": "Orihuela Costa ist das beste Golfziel an der Costa Blanca Süd. Sechs Meisterschaftsplätze sind innerhalb von 15 Minuten erreichbar, darunter der berühmte Villamartin, Las Colinas (durchgehend unter Spaniens besten eingestuft) und Campoamor. Die ganzjährige Spielsaison und ausgezeichnete Einrichtungen locken Golfer aus ganz Europa."
+      },
+      {
+        "question": "Was ist La Zenia Boulevard?",
+        "answer": "La Zenia Boulevard ist eines der größten Freiluft-Shoppingcenter Europas, das sich im Herzen von Orihuela Costa befindet. Es verfügt über über 150 Geschäfte darunter Primark, Zara und Media Markt, plus Supermärkte, Kinos, Restaurants und Unterhaltung. Es ist eine Hauptattraktion für Einwohner und Besucher."
+      },
+      {
+        "question": "Wie weit ist Orihuela Costa vom Flughafen Alicante entfernt?",
+        "answer": "Der Flughafen Alicante-Elche ist etwa 55 km von Orihuela Costa entfernt und dauert etwa 40 Minuten über die AP-7 Autobahn. Der Flughafen Murcia-Corvera ist näher bei 35 km (30 Minuten) und bietet zusätzliche Flugoptionen, besonders bei Ryanair."
+      },
+      {
+        "question": "Was sind die besten Gegenden zum Kaufen in Orihuela Costa?",
+        "answer": "Beliebte Gegenden umfassen Villamartin für Golflifestyle und etablierte Gemeinschaft, La Zenia für Strand- und Shoppingzugang, Cabo Roig für seinen charmanten Hafen und Strände, Playa Flamenca für familienfreundliche Umgebung und Campoamor für ruhigere, gehobene Atmosphäre. Jeder bietet unterschiedlichen Charakter und Preispunkte."
+      },
+      {
+        "question": "Wird in Orihuela Costa weit verbreitet Englisch gesprochen?",
+        "answer": "Ja, Englisch wird in Orihuela Costa sehr weit verbreitet gesprochen wegen der großen britischen und internationalen Gemeinschaft. Die meisten Geschäfte, Restaurants, Gesundheitsdienstleister und Dienstleistungen bedienen Englischsprachige. Viele Unternehmen sind tatsächlich in britischer Hand."
+      },
+      {
+        "question": "Wie sind die Immobilienpreise in Orihuela Costa?",
+        "answer": "Neue Wohnungen beginnen ab etwa €195.000, Reihenhäuser ab €250.000 und Villen ab €400.000. Golfimmobilien und diejenigen neben La Zenia Boulevard erzielen Premium-Preise. Insgesamt bietet Orihuela Costa ausgezeichnete Wertentsprechung im Vergleich zur Costa Blanca Nord."
+      },
+      {
+        "question": "Ist Orihuela Costa zum ganzjährigen Wohnen geeignet?",
+        "answer": "Ja, Orihuela Costa ist ausgezeichnet zum ganzjährigen Wohnen geeignet. Anders als manche Saison-Urlaubsorte hat es eine große permanente Wohnbevölkerung mit ganzjährig betriebenen vollständigen Dienstleistungen. Winter sind mild (Durchschnitt 16-18°C) und die Gegend bewahrt das ganze Jahr über eine lebhafte Atmosphäre."
+      },
+      {
+        "question": "Wie ist der Mietmarkt in Orihuela Costa?",
+        "answer": "Orihuela Costa hat einen starken Mietmarkt angetrieben durch Golf-Tourismus, Strandurlaube und Shopping-Besucher im La Zenia Boulevard. Immobilien erzielen das ganze Jahr über gute Auslastung, mit Spitzennachfrage während der Golfsaison (Frühling und Herbst) und Sommerferien. Golfblick und Strandnähe-Immobilien schneiden am besten ab."
+      },
+      {
+        "question": "Gibt es gute Gesundheitseinrichtungen in der Nähe von Orihuela Costa?",
+        "answer": "Das moderne Universitätskrankenhaus von Torrevieja ist nur 10 km entfernt und bietet umfassende Dienstleistungen darunter Notfall und englischsprachiges Personal. Mehrere private Kliniken, Zahnarztpraxen und 24-Stunden-Apotheken bedienen die Gegend. Die Gesundheitsqualität ist ausgezeichnet."
+      },
+      {
+        "question": "Was ist der Unterschied zwischen Villamartin, La Zenia und Cabo Roig?",
+        "answer": "Villamartin konzentriert sich auf den Golfplatz mit etablierter Expat-Gemeinschaft und berühmtem Plaza. La Zenia ist das kommerzielle Zentrum neben Strand und Boulevard-Shopping. Cabo Roig hat einen charmanten Hafen, felsige Buchten und Samstagmarkt mit traditionellerem Flair. Jeder zieht unterschiedliche Käuferprofile an."
+      }
+    ],
+    "conclusion": "Bereit, neue Bauprojekte in Orihuela Costa zu erkunden? Unser Team spezialisiert sich darauf, internationalen Käufern zu helfen, ihr perfektes Zuhause in diesem führenden Golf- und Lifestyleziel zu finden. Egal ob Sie eine Golf-Wohnungen, Strandhaus oder Luxusvilla suchen – wir führen Sie durch jeden Schritt des Kaufprozesses.",
+    "investmentAnalysis": {
+      "rentalYield": "6-9%",
+      "annualAppreciation": "4-7%",
+      "overview": "Orihuela Costa bietet außergewöhnliche Investitionsrenditen aufgrund seines einzigartigen dreifachen Reizes: Meisterschaftsgolfplätze, 16 km Strände mit Blauer Flagge und La Zenia Boulevard Shopping. Die Kombination aus Golf-Tourismus, Strandurlaube und Retail-Besuchern schafft ganzjährige Nachfrage. Immobilien neben Golfplätzen oder Strandnähe erzielen Premium-Mietpreise.",
+      "highlights": [
+        "Dreifache Einkommensquellen: Golf-Tourismus, Strandurlaube, Shopping-Center-Besucher",
+        "Golf-Wohnungen erzielen 8-10% Mietrendite während Spitzenzeiten",
+        "Ganzjähriges Auslastungspotential von verschiedenen Besuchersegmenten",
+        "Nähe zum La Zenia Boulevard treibt Urlaubsnachfrage an",
+        "Etablierter Markt mit konsistenter historischer Wertsteigerung"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Orihuela Costa bietet ausgezeichnete Wertentsprechung für Urlaubswohnen mit Kosten niedriger als vergleichbare Strandorte in Nordeuropa oder Costa Blanca Nord.",
+      "items": [
+        {
+          "category": "Lebensmittel (monatlich, Ehepaar)",
+          "cost": "€320-450",
+          "notes": "Mehrere Supermärkte, La Zenia Boulevard und lokale Märkte"
+        },
+        {
+          "category": "Nebenkosten (Strom, Wasser, Gas)",
+          "cost": "€130-200",
+          "notes": "Meeresbrise hilft beim Kühlen; leicht höher als in Binnengebieten"
+        },
+        {
+          "category": "Gemeinschaftsgebühren",
+          "cost": "€80-200",
+          "notes": "Variiert erheblich je nach Urbanisation; Golf-Wohnungen höher"
+        },
+        {
+          "category": "IBI (Kommunalsteuer)",
+          "cost": "€600-1500/Jahr",
+          "notes": "Basierend auf Immobilienwert; Urlaubslocation erhöht Kosten"
+        },
+        {
+          "category": "Essen gehen (pro Person)",
+          "cost": "€16-30",
+          "notes": "La Zenia Boulevard Restaurants €20-40; lokale Tapas-Bars €12-18"
+        },
+        {
+          "category": "Strand- und Wasseraktivitäten",
+          "cost": "€40-100",
+          "notes": "Strandclub-Mitgliedschaften, Wassersport, Freizeitaktivitäten"
+        },
+        {
+          "category": "Golf (Green Fees)",
+          "cost": "€50-100",
+          "notes": "6 Plätze verfügbar; Mitgliedschaftsoptionen reduzieren Kosten"
+        },
+        {
+          "category": "Autokosten",
+          "cost": "€130-220",
+          "notes": "Manche Gegenden sind zu Fuß erreichbar; Auto nützlich für Flexibilität"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Orihuela Costa veranstaltet das ganze Jahr über einen Kalender von Veranstaltungen, die sowohl traditionelle spanische Kultur als auch die lebhafte internationale Gemeinschaft feiern.",
+      "events": [
+        {
+          "name": "Villamartin Frühlingsfest",
+          "month": "Mai",
+          "description": "Frühlingsfest am berühmten Plaza mit Essen, Musik und Gemeinschaftstreffen"
+        },
+        {
+          "name": "La Zenia Strandfest",
+          "month": "Juli",
+          "description": "Strandfest mit Live-Musik, Essensständen und Unterhaltung entlang der Promenade"
+        },
+        {
+          "name": "Orihuela Mittelalter-Fest",
+          "month": "September",
+          "description": "Historische Nachstellungen und kulturelle Veranstaltungen zum Feiern des Erbes der Kathedralenstadt"
+        },
+        {
+          "name": "Golf-Turnier-Zirkus",
+          "month": "Das ganze Jahr über",
+          "description": "Wöchentliche und monatliche Golf-Wettbewerbe an verschiedenen Plätzen mit gesellschaftlichen Veranstaltungen"
+        },
+        {
+          "name": "Internationale Essen- und Kulturfest",
+          "month": "November",
+          "description": "Feier der vielfältigen internationalen Gemeinschaft mit Essen aus der ganzen Welt"
+        },
+        {
+          "name": "Weihnachtsmärkte und Lichter",
+          "month": "Dezember",
+          "description": "Festliche Saison-Feiern mit Märkten, Lichtern und Feiertagsereignissen in der ganzen Gegend"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Orihuela Costa bietet ausgezeichnete Bildungsoptionen von spanischen Schulen bis zu hoch angesehenen internationalen Institutionen, die die große Expat-Gemeinschaft bedienen.",
+      "schools": [
+        {
+          "name": "International School of Alicante",
+          "type": "Internationales (IB)",
+          "distance": "20 Min",
+          "description": "Hochgeachtete IB-zertifizierte Schule mit vollständigem Lehrplan von Grund- bis Sekundärschule"
+        },
+        {
+          "name": "El Limonar International School",
+          "type": "International (Britisch)",
+          "distance": "25 Min",
+          "description": "Britische Lehrplan-Schule mit ausgezeichneten Einrichtungen und starken Akademischen Ergebnissen"
+        },
+        {
+          "name": "Orihuela Colegio La Campiña",
+          "type": "Private Spanisch",
+          "distance": "15 Min",
+          "description": "Private spanische Schule mit zweisprachiger Ausbildung in der Stadt Orihuela"
+        },
+        {
+          "name": "IES Gerardo Molina",
+          "type": "Spanisches Staatschule",
+          "distance": "10 Min",
+          "description": "Öffentliche Sekundarschule, die die Gegend Orihuela Costa bedient"
+        },
+        {
+          "name": "Centro Público Luis Vives",
+          "type": "Spanisches Staatschule",
+          "distance": "8 Min",
+          "description": "Öffentliche Grundschule im Herzen des Urlaubsgebiets"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Orihuela Costa kombiniert Urlaubsausstattungen mit ausgezeichneten Naturattraktionen, von Golfplätzen über geschützte Strände bis zu Naturschutzgebieten.",
+      "activities": [
+        {
+          "name": "Meisterschafts-Golfplätze",
+          "type": "Golf",
+          "description": "Sechs Plätze innerhalb von 15 Minuten darunter Villamartin, Las Ramblas, Campoamor und Las Colinas"
+        },
+        {
+          "name": "Blaue-Flagge Strand-Schwimmen",
+          "type": "Strand",
+          "description": "Mehrere unberührte Strände mit Einrichtungen, Rettungsschwimmern und Wassersport-Möglichkeiten"
+        },
+        {
+          "name": "Playa Flamenca Strand-Spaziergänge",
+          "type": "Strand",
+          "description": "Langer sandiger Strand perfekt für Morgen- oder Abendspaziergänge und Familienaktivitäten"
+        },
+        {
+          "name": "Cabo Roig Felsige Buchten",
+          "type": "Strand",
+          "description": "Malerische felsige Gegenden perfekt zum Schnorcheln und Erkunden von natürlichen Felsformationen"
+        },
+        {
+          "name": "La Zenia Boulevard Shopping",
+          "type": "Shopping und Freizeit",
+          "description": "Europas größtes Freiluft-Shoppingcenter mit Speisen und Unterhaltung"
+        },
+        {
+          "name": "Fahrrad-Routen",
+          "type": "Fahrradfahren",
+          "description": "Küsten- und Binnenwege verbinden die verschiedenen Urbanisationen"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Orihuela Costa beherbergt eine der größten und am längsten etablierten Expat-Gemeinschaften Spaniens. Mit überwiegend britischen Bewohnern, aber zunehmend vielfältigen Nationalitäten, bietet die Gegend umfangreiche Unterstützungssysteme, englischsprachige Dienstleistungen und zahlreiche Clubs und Organisationen. Die große Gemeinschaft sichert einfache Integration und Freundschaftskreise bilden sich schnell.",
+      "highlights": [
+        "Eine der größten Expat-Gemeinschaften Spaniens mit umfangreichen Unterstützungsnetzwerken",
+        "Englisch wird in Geschäften, Restaurants, Gesundheitswesen und Dienstleistungen weit verbreitet gesprochen",
+        "Zahlreiche internationale Clubs, Sportgruppen und soziale Organisationen",
+        "Britische Pubs, Restaurants und Geschäfte in allen Urbanisationen",
+        "Starke Gemeinschaftsorganisationen veranstalten regelmäßige Ereignisse und Treffen",
+        "Golfclubs dienen als wichtige soziale Zentren für Einwohner",
+        "Etablierte Infrastruktur für Expat-Bedürfnisse und Bedenken",
+        "Multi-generationale Gemeinschaft von jungen Familien bis aktiven Rentnern"
+      ],
+      "nationalities": [
+        "Britisch",
+        "Skandinavisch (Schwedisch, Norwegisch, Dänisch)",
+        "Holländisch",
+        "Belgisch",
+        "Deutsch",
+        "Irisch",
+        "Französisch",
+        "Schweizerisch",
+        "Amerikanisch",
+        "Spanisch"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Ein typischer Tag in Orihuela Costa",
+      "entries": [
+        {
+          "time": "07:30",
+          "activity": "Strand-Schwimmen",
+          "description": "Frühes Morgen-Schwimmen in ruhigen Mittelmeergewässern vor dem Frühstück"
+        },
+        {
+          "time": "09:00",
+          "activity": "Golf-Runde",
+          "description": "Golf-Runde an einem der sechs nahegelegenen Meisterschaftsplätze mit perfekten Spielbedingungen"
+        },
+        {
+          "time": "13:00",
+          "activity": "Golf-Clubhaus Mittagessen",
+          "description": "Mittagessen im Clubhaus mit Freunden, genießen Sie Blicke über den Platz"
+        },
+        {
+          "time": "15:00",
+          "activity": "La Zenia Boulevard",
+          "description": "Nachmittag-Shopping in Europas größtem Freiluft-Mall mit 150+ Geschäften und Restaurants"
+        },
+        {
+          "time": "17:00",
+          "activity": "Strandzeit",
+          "description": "Rückkehr zum Strand zum Nachmittag-Sonnenbaden oder Wassersport-Aktivitäten"
+        },
+        {
+          "time": "19:30",
+          "activity": "Promenadenspaziering",
+          "description": "Abendspaziering entlang der Küste mit einem Getränk in einem Strandchiringuito"
+        },
+        {
+          "time": "21:00",
+          "activity": "Internationales Essen",
+          "description": "Abendessen in einem Restaurant beliebiger Küche im La Zenia Boulevard oder Villamartin Plaza"
+        },
+        {
+          "time": "23:00",
+          "activity": "Gesellschaftliches Treffen",
+          "description": "Getränke in einer Bar oder Disco mit Freunden aus der Expat-Gemeinschaft"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7333!3d37.9333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63b9b0000000%3A0x400a1d000000!2sOrihuela%20Costa%2C%20Alicante%2C%20Spain!5e0!3m2!1sen!2ses!4v1640000000000"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Orihuela Costa",
+    "description": "Orihuela Costa is a premier golf and lifestyle destination on Costa Blanca South, featuring championship golf courses, 16 km of beaches, and Europe's largest open-air shopping center.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.9333",
+      "longitude": "-0.7333"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Orihuela Costa",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Orihuela Costa good for golf?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Orihuela Costa is the best golf destination on Costa Blanca South. Six championship courses are within 15 minutes, including Villamartin and Las Colinas, consistently ranked among Spain's best."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is La Zenia Boulevard?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La Zenia Boulevard is one of Europe's largest open-air shopping centers with over 150 stores, located in the heart of Orihuela Costa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Orihuela Costa from Alicante Airport?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alicante-Elche Airport is approximately 55 km from Orihuela Costa, taking around 40 minutes via the AP-7 motorway."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are property prices like in Orihuela Costa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "New build apartments start from around €195,000, townhouses from €250,000, and villas from €400,000. Orihuela Costa offers excellent value compared to Costa Blanca North."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is English widely spoken in Orihuela Costa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, English is very widely spoken throughout Orihuela Costa due to the large British and international community."
+        }
+      }
+    ]
+  },
+  "cardImage": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&q=80&fit=crop"
+}

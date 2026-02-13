@@ -1,0 +1,465 @@
+{
+  "slug": "benidorm",
+  "name": "Benidorm",
+  "region": "Costa Blanca Central",
+  "heroImage": "/images/areas/benidorm-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80&fit=crop",
+  "propertyCount": 1,
+  "propertyTypes": [
+    "Apartment",
+    "Penthouse",
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 1200000,
+    "max": 3500000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Benidorm Town Hall",
+      "url": "https://www.benidorm.es/",
+      "description": "Official Benidorm municipality website"
+    },
+    "beaches": [
+      {
+        "name": "Playa de Levante",
+        "googleMaps": "https://maps.google.com/?q=Playa+Levante+Benidorm",
+        "description": "3-kilometer sandy beach with Blue Flag status, perfect for families and water sports"
+      },
+      {
+        "name": "Playa de Poniente",
+        "googleMaps": "https://maps.google.com/?q=Playa+Poniente+Benidorm",
+        "description": "2.5-kilometer beach famous for stunning sunsets and golden sand"
+      },
+      {
+        "name": "Cala de Finestrat",
+        "googleMaps": "https://maps.google.com/?q=Cala+Finestrat+Benidorm",
+        "description": "Smaller cove beach with calm, clear waters ideal for families"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Comarcal Marina Baixa",
+      "googleMaps": "https://maps.google.com/?q=Hospital+Marina+Baixa+Benidorm",
+      "url": "https://www.marinabaixa.es/",
+      "distance": "10 km (15 min)"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "45 km",
+      "driveTime": "45 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Benidorm is surrounded by championship golf courses offering world-class play with Mediterranean views. Multiple courses within 15 minutes of the city center ensure golfers enjoy diverse layouts and challenges. The extended playing season (9+ months) makes Benidorm a paradise for those combining golf with luxury coastal living.",
+    "courses": [
+      {
+        "name": "Las Rejas Golf Club",
+        "distance": "5 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "url": "https://www.lasrejasgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Las+Rejas+Golf",
+        "description": "Championship course with rolling fairways and stunning Mediterranean backdrop"
+      },
+      {
+        "name": "Don Cayo Golf Club",
+        "distance": "8 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.doncayogolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Don+Cayo+Golf+Club",
+        "description": "Prestigious parkland course with challenging layout and panoramic views"
+      },
+      {
+        "name": "Meliá Villaitana Golf Club",
+        "distance": "12 km",
+        "driveTime": "15 minutes",
+        "holes": 36,
+        "url": "https://www.meliavillaitana.com/",
+        "googleMaps": "https://maps.google.com/?q=Melia+Villaitana+Golf",
+        "description": "Dual championship courses offering both seaside and mountain layouts with resort facilities"
+      },
+      {
+        "name": "Club de Golf Ifach",
+        "distance": "15 km",
+        "driveTime": "20 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Club+Golf+Ifach",
+        "description": "Challenging course near Calpe with spectacular Peñón de Ifach views"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Leben in Benidorm 2026 | Neubau Costa Blanca",
+    "metaDescription": "Complete guide to living in Benidorm - Spain's most vibrant coastal city. Luxury high-rises, world-class entertainment, 300+ sunny days, from €1.2M. Investment opportunity.",
+    "heroIntro": "Benidorm ist Spaniens größter Badeort – ein Ort, wo 150.000+ Menschen bei 340+ Sonnentagen pro Jahr leben. Es gibt zwei große Strände, einen geschäftigen Hafen, Dutzende von Hochhäusern und Nachtleben, das bis 6 Uhr morgens andauert.\n\nDies ist nicht subtil. Dies ist nicht ruhig. Aber dies ist nicht ein Ort, an dem du dich isoliert fühlen wirst. Es ist lebhaft, international und zu jeder Jahreszeit belebt.",
+    "lifestyleSection": {
+      "intro": "Das Leben in Benidorm ist das Leben in einer echten Stadt an der Costa Blanca. Es gibt Restaurants von überall auf der Welt. Es gibt Clubs, Nachtleben und Dinge zu tun.\n\nDie Gemeinschaft ist vielfältig – vielleicht die vielfältigste an der Costa Blanca. Britisch, deutsch, skandinavisch, spanisch, holländisch – diese sind alles hier.",
+      "highlights": [
+        "Europe's most impressive skyline of modern luxury high-rise developments with sea views",
+        "Two exceptional Blue Flag beaches (Levante & Poniente) totaling 5+ kilometers",
+        "World-class entertainment: Benidorm Palace, theaters, flamenco, music venues",
+        "Sophisticated dining scene with Michelin-recommended restaurants and diverse cuisines",
+        "Year-round sunshine (320+ days) enabling constant outdoor Mediterranean lifestyle",
+        "Thriving international community from 50+ nationalities with extensive expat networks",
+        "Championship golf courses within 15 minutes (Las Rejas, Don Cayo, Meliá Villaitana)",
+        "Modern amenities including Marina with luxury yachts, shopping, and cultural venues"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Benidorm's beaches are among the finest in the Mediterranean. Playa de Levante stretches 3 kilometers of soft sand with Blue Flag status, offering water sports, beach clubs, and a vibrant seafront promenade lined with restaurants and entertainment venues. Playa de Poniente extends 2.5 kilometers and is famous for spectacular golden sunsets reflected in calm waters. The smaller Cala de Finestrat offers a more intimate alternative with crystal-clear waters perfect for families. All beaches feature excellent facilities including lifeguards, changing rooms, and rental equipment for water sports.",
+      "dining": "Benidorm's culinary scene is remarkably diverse, with over 500 restaurants serving everything from traditional Valencian paella to international cuisine. Michelin-recommended establishments like Villa Venecia and L'Anfora offer fine dining with sea views, while the old town's tapas bars provide authentic Spanish experiences and remarkable value. The British and German expat communities have created excellent pubs and restaurants, while the seafront Paseo Marítimo hosts numerous beach clubs and chiringuitos. Multiple markets sell fresh Mediterranean produce, local wines, and gourmet specialties.",
+      "shopping": "Shopping in Benidorm ranges from massive modern centers to charming artisan boutiques. La Marina Shopping Center and Centro Comercial Rincón de Loix offer international brands and modern facilities. The Wednesday and Sunday markets provide fresh produce, local crafts, and authentic goods in traditional settings. For major shopping, the extensive Mendez Alvaro shopping complex provides international brands and department stores. Nearby Altea offers artisan shops and galleries for unique purchases. The combination of modern retail and traditional markets means shopping caters to every preference and budget.",
+      "healthcare": "Benidorm provides excellent healthcare through the modern Hospital Comarcal Marina Baixa with 24-hour emergency services, specialized departments, and English-speaking staff. Numerous private clinics including Clínica Benidorm and HLA Vistahermosa offer contemporary facilities and multilingual practitioners. Many doctors are trained internationally and specifically cater to the expatriate community. Dentistry is exceptional with numerous English-speaking practitioners offering high-quality care at reasonable costs.",
+      "transport": "Benidorm is exceptionally well-connected by road via the AP-7 autopista and N-332 coastal highway, providing easy access to Valencia (140 km north) and Alicante (45 km south). The TRAM light rail system connects directly to Alicante city and airport, running every 30 minutes with a one-hour journey. Local bus services (Llorente Bus) provide comprehensive coverage throughout Benidorm and surrounding towns. Parking is available in numerous underground garages and residential complexes. Within the city, most amenities are within walking distance and cycling is popular."
+    },
+    "propertyMarketSection": "Benidorm's property market demonstrates remarkable resilience and strong fundamentals, particularly in the luxury segment. The city's distinctive skyline of modern high-rise developments offers unparalleled sea views and contemporary amenities that attract international buyers prioritizing premium coastal living. Current market conditions show sustained demand for quality properties, especially those with sea views, modern facilities, and proximity to beaches or golf courses.\n\nProperty values have demonstrated steady appreciation driven by limited supply of new developments and consistent international demand. High-rise apartments and penthouses with panoramic sea views command premium prices reflecting their desirability. Rental market performance is exceptional, with luxury apartments achieving strong returns from both holiday rentals and long-term tenants. The city's year-round appeal, international airport connections, and diverse entertainment options ensure consistent demand.\n\nThe combination of cosmopolitan lifestyle, established infrastructure, modern architecture, and proven investment fundamentals positions Benidorm as Europe's premier Mediterranean coastal investment destination. Properties here attract serious buyers prioritizing both lifestyle quality and financial performance.",
+    "whyLiveHereSection": [
+      "Europe's most impressive modern beachfront architecture with world-class design",
+      "Exceptional beaches with Blue Flag status and year-round accessibility",
+      "Vibrant international community with English widely spoken and multilingual services",
+      "World-class entertainment and dining unmatched anywhere on the Costa Blanca",
+      "Championship golf courses within easy reach with extended playing season",
+      "Excellent healthcare with English-speaking doctors and modern facilities",
+      "Strong property appreciation and excellent rental market potential",
+      "Direct airport access (45 min) making international travel convenient"
+    ],
+    "faqs": [
+      {
+        "question": "What makes Benidorm unique compared to other Costa Blanca destinations?",
+        "answer": "Benidorm's defining characteristic is its cosmopolitan atmosphere created by the distinctive skyline of modern high-rise developments. The combination of world-class beaches, Vegas-style entertainment venues (Benidorm Palace, theaters, flamenco shows), diverse international community (50+ nationalities), exceptional dining, and year-round activities makes Benidorm a dynamic city destination rather than a quiet resort town. It offers the amenities of a major city with Mediterranean coastal living."
+      },
+      {
+        "question": "Is Benidorm good for year-round living?",
+        "answer": "Absolutely. Benidorm's Mediterranean climate with 320+ days of sunshine, comprehensive amenities, diverse entertainment options, and active expat community make it ideal for year-round residence. Unlike many seasonal resort towns, Benidorm maintains vibrant activity throughout the year. Winter temperatures remain mild (15°C average), allowing beach access and outdoor activities. Services, restaurants, and social activities operate year-round ensuring comfort and engagement for permanent residents."
+      },
+      {
+        "question": "How large is the international community in Benidorm?",
+        "answer": "Benidorm has one of the Costa Blanca's largest and most diverse international communities, with residents from 50+ nationalities. The population is exceptionally welcoming and well-organized, with numerous social clubs, professional networks, and English-speaking services. The substantial British, German, Scandinavian, and Dutch communities have created an environment where integration is straightforward. English is widely spoken, and extensive expatriate networks provide support and social connection."
+      },
+      {
+        "question": "What are the investment prospects for property in Benidorm?",
+        "answer": "Benidorm offers strong investment fundamentals. Property values have demonstrated steady appreciation, particularly for premium locations with sea views. Rental yields are excellent due to year-round appeal and strong international demand. Luxury apartments with sea views achieve premium rental rates (€1,500-3,500+ weekly in summer), while long-term rentals to expatriates provide stable income. The combination of lifestyle appeal, established infrastructure, and proven market performance makes Benidorm an attractive investment location."
+      },
+      {
+        "question": "How easy is it to get around Benidorm without a car?",
+        "answer": "Very easy. Benidorm is highly walkable with most amenities within walking distance of major residential areas. The TRAM light rail system connects to Alicante city and airport, running every 30 minutes. Local bus services (Llorente Bus) provide comprehensive coverage throughout the city and surrounding areas. Taxis and ride-sharing apps operate readily. While a car provides flexibility for exploring the wider Costa Blanca, it's not essential for daily life in Benidorm."
+      },
+      {
+        "question": "What are the best neighborhoods to buy property in Benidorm?",
+        "answer": "Top areas include Poniente for romantic sunset views and luxury living, Levante for entertainment access and beachfront vitality, Rincón de Loix for golf proximity and panoramic views, and the Old Town for authentic Spanish charm and walkable character. Each neighborhood offers distinct advantages depending on lifestyle preferences. Premium beachfront areas command highest prices but offer unparalleled views and beach access. Inland areas offer better value while maintaining proximity to amenities."
+      },
+      {
+        "question": "Is Spanish language necessary for living in Benidorm?",
+        "answer": "While learning Spanish is beneficial for cultural integration, Benidorm's large international community means many services, healthcare providers, and businesses operate in English. Many expats live comfortably without fluent Spanish, though basic communication skills are helpful. The established international infrastructure and English-speaking professionals make daily life manageable for non-Spanish speakers. However, learning Spanish enhances cultural integration and opens additional opportunities."
+      },
+      {
+        "question": "How is the internet and utilities infrastructure in Benidorm?",
+        "answer": "Benidorm has excellent fiber optic internet coverage with speeds up to 1GB available from providers like Movistar, Orange, and Vodafone. Mobile coverage is comprehensive with 4G/5G networks available throughout the city. Utilities are reliable with modern infrastructure ensuring consistent electricity, water, and gas supply. The established expat community includes many remote workers, with several co-working spaces available for digital professionals."
+      },
+      {
+        "question": "What entertainment options exist year-round in Benidorm?",
+        "answer": "Benidorm offers exceptional year-round entertainment unmatched elsewhere on the Costa Blanca. The famous Benidorm Palace features Vegas-style shows with international performers. Numerous theaters present flamenco shows, tribute acts, and cultural performances. The city hosts international festivals, wine tastings, and cultural events throughout the year. Beyond formal entertainment, the thriving marina, diverse dining scene, and active expat social calendar ensure constant activity. Both summer and winter seasons offer distinct attractions."
+      },
+      {
+        "question": "What healthcare quality can I expect in Benidorm?",
+        "answer": "Healthcare in Benidorm is excellent with Hospital Comarcal Marina Baixa providing comprehensive services including emergency care and specialist departments. Multiple private clinics offer contemporary facilities. EU residents access Spanish public healthcare while others obtain private insurance easily. Many doctors are trained internationally and specifically serve the expatriate community. The region's healthcare standards match Western European norms, making it safe and reliable for permanent residents and visitors."
+      }
+    ],
+    "conclusion": "Benidorm ist nicht für jeden. Aber wenn du eine echte Stadt magst, mit echten Dingen zu tun, dann ist Benidorm dein Ziel.\n\nBereit, Immobilien in Benidorm zu erkunden? Unser Team spezialisiert sich darauf, internationale Käufer mit wunderschönen Häusern in Spaniens größtem Badeort zu verbinden.",
+    "investmentAnalysis": {
+      "rentalYield": "5-7%",
+      "annualAppreciation": "4-6%",
+      "overview": "Benidorm represents an exceptional investment opportunity due to its year-round appeal, established international market, and strong rental demand. The combination of holiday rental income (€1,500-3,500+ weekly) and long-term rental potential to expatriates creates consistent cash flow. Premium properties with sea views in established developments demonstrate strong capital appreciation driven by limited supply and sustained international demand.",
+      "highlights": [
+        "Exceptional year-round holiday rental demand from European tourists",
+        "Strong long-term rental market to international residents",
+        "Limited new supply supporting steady property appreciation",
+        "World-class amenities and entertainment attracting sustained demand",
+        "Established infrastructure and international airport connectivity"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Benidorm's cost of living is reasonable compared to Northern European cities and other premium Mediterranean destinations. The established international community has created competitive services and pricing. While beachfront and luxury properties command premium prices, day-to-day living costs remain manageable with excellent value available through local markets.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€350-450",
+          "notes": "Multiple supermarkets including Mercadona, Consum, Lidl; markets offer great value"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€150-220",
+          "notes": "Higher in summer with air conditioning; winter heating minimal"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€100-250",
+          "notes": "Varies by building; beachfront apartments typically higher with amenities"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€800-2000/year",
+          "notes": "Annual property tax based on cadastral value; premium locations higher"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€16-30",
+          "notes": "Menu del día €12-17; international restaurants €25-40; premium dining €50+"
+        },
+        {
+          "category": "Golf green fees",
+          "cost": "€55-100",
+          "notes": "Las Rejas, Don Cayo, Meliá Villaitana; membership discounts available"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€45-70",
+          "notes": "Excellent fiber optic coverage; multiple providers competitive rates"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€180-280",
+          "notes": "Optional - not essential for city living; useful for regional exploration"
+        },
+        {
+          "category": "Entertainment (cinema, shows, activities)",
+          "cost": "€100-180",
+          "notes": "Shows €30-60; cinema €8-10; abundant free and low-cost activities"
+        },
+        {
+          "category": "Healthcare (private insurance)",
+          "cost": "€80-150",
+          "notes": "EU residents access public system; private supplementary insurance recommended"
+        },
+        {
+          "category": "Beer (per half-liter)",
+          "cost": "€1.50-3.00",
+          "notes": "Bars €2.50-4.00; supermarkets cheaper; English/German pubs premium"
+        },
+        {
+          "category": "Wine (bottle)",
+          "cost": "€6-20",
+          "notes": "Spanish wines excellent value; imported wines more expensive"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Benidorm celebrates a vibrant calendar of traditional Spanish festivals and international events throughout the year, creating constant cultural activity and entertainment.",
+      "events": [
+        {
+          "name": "Las Fallas",
+          "month": "March",
+          "description": "Iconic Valencian spring festival with fireworks, parades, light displays, and the burning of wooden structures creating an extraordinary spectacle"
+        },
+        {
+          "name": "Semana Santa (Holy Week)",
+          "month": "April",
+          "description": "Religious processions blending Spanish tradition with modern interpretations, featuring elaborate floats, religious imagery, and community participation"
+        },
+        {
+          "name": "Benidorm Fiesta (Moros y Cristianos)",
+          "month": "July",
+          "description": "Annual celebration with costumes, parades, and mock battles reenacting historical conquest, deeply rooted in regional tradition"
+        },
+        {
+          "name": "International Music & Performance Festival",
+          "month": "May-June",
+          "description": "World-class performances including orchestras, ballet, and international artists at various venues throughout the city"
+        },
+        {
+          "name": "Beachfront Wine & Gastronomy Festival",
+          "month": "September",
+          "description": "Celebration of Mediterranean cuisine featuring tastings from renowned local restaurants, wine producers, cooking demonstrations, and cultural performances"
+        },
+        {
+          "name": "Noche de San Juan (Midsummer Night)",
+          "month": "June",
+          "description": "Ancient celebration with bonfires on the beach, music, dancing, and traditional rituals marking the summer solstice"
+        },
+        {
+          "name": "Christmas & New Year Celebrations",
+          "month": "December-January",
+          "description": "Festive season with market stalls, holiday lights, shopping events, special entertainment, and New Year celebrations along the beachfront"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Benidorm area has excellent educational options for families relocating with children, including international schools, British curriculum institutions, and quality Spanish public schools.",
+      "schools": [
+        {
+          "name": "Elian's British School",
+          "type": "International (British)",
+          "distance": "25 min (La Nucía)",
+          "description": "Prestigious British curriculum school with excellent facilities, strong academic record, and staff experienced with expatriate families"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British)",
+          "distance": "30 min (Jávea)",
+          "description": "Long-established British international school with secondary campus, strong university placement, and comprehensive facilities"
+        },
+        {
+          "name": "Colegio Público Marina Alta",
+          "type": "Spanish State",
+          "distance": "10 min",
+          "description": "Local Spanish school serving the community with strong academics and cultural immersion"
+        },
+        {
+          "name": "Academia de Idiomas Benidorm",
+          "type": "Private (Bilingual)",
+          "distance": "5 min",
+          "description": "Private school with Spanish and English instruction, smaller classes, and international student mix"
+        },
+        {
+          "name": "American School of Valencia",
+          "type": "International (IB/American)",
+          "distance": "90 min",
+          "description": "IB and American curriculum option for families prioritizing US education standards"
+        },
+        {
+          "name": "Colegio Público Rufino Blanco",
+          "type": "Spanish State",
+          "distance": "8 min",
+          "description": "Modern Spanish public school with quality facilities and supportive environment for international families"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Benidorm combines urban sophistication with outdoor adventure opportunities, offering diverse activities from beach sports to mountain hiking and world-class golf.",
+      "activities": [
+        {
+          "name": "Beach Swimming & Water Sports",
+          "type": "Beach",
+          "description": "Two exceptional Blue Flag beaches offering swimming, paddleboarding, windsurfing, jet skiing, parasailing, and beach volleyball with professional instruction available"
+        },
+        {
+          "name": "Coastal Hiking & Nature Walks",
+          "type": "Hiking",
+          "description": "Sierra Helada Natural Park offers marked trails with Mediterranean views, coastal paths, and scenic walks accessible from the city center"
+        },
+        {
+          "name": "Scuba Diving & Snorkeling",
+          "type": "Water Sports",
+          "description": "Crystal-clear Mediterranean waters offer exceptional diving with underwater reefs, caves, and marine life—numerous dive centers provide instruction and guided dives"
+        },
+        {
+          "name": "Championship Golf",
+          "type": "Golf",
+          "description": "Las Rejas Golf Club (5 min), Don Cayo Golf Club (8 min), and Meliá Villaitana Golf Club (12 min) offer championship courses with Mediterranean views"
+        },
+        {
+          "name": "Aqualandia Water Park",
+          "type": "Family Activity",
+          "description": "Massive water park with slides, pools, and attractions for all ages—perfect for families and hot summer days"
+        },
+        {
+          "name": "Terra Mítica Theme Park",
+          "type": "Family Activity",
+          "description": "Major theme park with rides, attractions, and themed areas providing family entertainment and excitement"
+        },
+        {
+          "name": "Marina Yacht Sailing",
+          "type": "Water Sports",
+          "description": "Active marina with sailing clubs, charter companies, and sailing courses offering day sails and bareboat rentals"
+        },
+        {
+          "name": "Coastal Cycling Routes",
+          "type": "Cycling",
+          "description": "Scenic coastal cycling paths connecting Benidorm to surrounding areas with family-friendly routes and professional cycling clubs"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Benidorm hosts one of Europe's most diverse and vibrant international communities, with residents from 50+ nationalities creating a genuinely multicultural environment. The expat infrastructure is exceptional, with English widely spoken and comprehensive services catering to international residents. The community is welcoming, well-organized, and provides extensive support networks for those relocating to the Costa Blanca.",
+      "highlights": [
+        "Exceptionally diverse international community from 50+ nationalities worldwide",
+        "Extensive English-speaking infrastructure across healthcare, retail, and services",
+        "Numerous expat social clubs, professional networks, and organized community groups",
+        "Regular international events, cultural performances, and multilingual services",
+        "Established business networks facilitating professional connections and opportunities",
+        "Multiple language exchange groups and cultural organizations",
+        "English-language media and publications covering local news and community information"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Russian",
+        "Belgian",
+        "French",
+        "Irish",
+        "American",
+        "Australian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Benidorm",
+      "entries": [
+        {
+          "time": "07:30",
+          "activity": "Beachfront Breakfast",
+          "description": "Start the day with coffee and breakfast at a beachfront café, watching surfers and swimmers begin their morning activities"
+        },
+        {
+          "time": "09:00",
+          "activity": "Beach Activities or Golf",
+          "description": "Swim at Playa Levante or Poniente, enjoy water sports, or play a round at one of nearby championship golf courses"
+        },
+        {
+          "time": "13:00",
+          "activity": "Leisurely Lunch",
+          "description": "Enjoy fresh seafood at a marina restaurant or tapas in the old town, mingling with fellow residents and enjoying Mediterranean views"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta & Relaxation",
+          "description": "Return to your apartment for siesta, relax on your balcony or terrace, or visit local cafés with neighbors"
+        },
+        {
+          "time": "17:00",
+          "activity": "Shopping or Cultural Activity",
+          "description": "Explore La Marina Shopping Center, visit galleries, or attend a cultural event or exhibition"
+        },
+        {
+          "time": "19:00",
+          "activity": "Evening Paseo",
+          "description": "Stroll along Paseo Marítimo and through the old town, greeting friends and neighbors while enjoying sunset"
+        },
+        {
+          "time": "20:30",
+          "activity": "Dinner & Entertainment",
+          "description": "Enjoy dinner at your choice of 500+ restaurants, then perhaps enjoy a show at Benidorm Palace or visit a theater for entertainment"
+        },
+        {
+          "time": "23:00",
+          "activity": "Evening Social Activity",
+          "description": "Join friends at a beach club, pub, or cultural venue, or enjoy a quiet drink with a view from your apartment"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.1198!3d38.5305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd624f1c00000000%3A0x400a1c000000!2sBenidorm%2C%20Alicante%2C%20Spain!5e0!3m2!1sen!2ses!4v1640000000000"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Benidorm",
+    "description": "Benidorm is Spain's most vibrant coastal city with distinctive high-rise architecture, exceptional beaches, world-class entertainment, and diverse international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.5305",
+      "longitude": "-0.1198"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Benidorm",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    }
+  }
+}
