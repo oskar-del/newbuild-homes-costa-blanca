@@ -31,6 +31,10 @@ export const metadata: Metadata = {
       'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/areas',
       'fr': 'https://newbuildhomescostablanca.com/fr/areas',
       'no': 'https://newbuildhomescostablanca.com/no/areas',
+      'de': 'https://newbuildhomescostablanca.com/de/areas',
+      'pl': 'https://newbuildhomescostablanca.com/pl/areas',
+      'ru': 'https://newbuildhomescostablanca.com/ru/areas',
+      'x-default': 'https://newbuildhomescostablanca.com/areas',
     },
   },
 };
