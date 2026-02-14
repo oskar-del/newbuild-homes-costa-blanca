@@ -2,15 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Przewodniki Kupującego | Nowe Domy Costa Blanca',
-  description: 'Kompletne przewodniki dla kupujących domów na Costa Blance. Wszystko o procesie zakupu, podatkach, kredytach i NIE.',
-  openGraph: {
-    title: 'Przewodniki Kupującego | Nowe Domy Costa Blanca',
-    description: 'Przewodniki i artykuły dla kupujących nieruchomości na Costa Blance.',
-    type: 'website',
-    url: 'https://newbuildhomescostablanca.com/pl/guides',
-    siteName: 'Nowe Domy Costa Blanca',
-  },
+  title: 'Przewodniki Kupującego | Kupno Nieruchomości na Costa Blanca | 2026',
+  description: 'Kompleksowe przewodniki kupującego dla polskich nabywców. Numer NIE, podatki, kredyt hipoteczny, proces zakupu i destinacje.',
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/pl/guides',
     languages: {
@@ -19,8 +12,8 @@ export const metadata: Metadata = {
       'nl': 'https://newbuildhomescostablanca.com/nl/guides',
       'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides',
       'fr': 'https://newbuildhomescostablanca.com/fr/guides',
-      'no': 'https://newbuildhomescostablanca.com/no/guides',
       'de': 'https://newbuildhomescostablanca.com/de/guides',
+      'no': 'https://newbuildhomescostablanca.com/no/guides',
       'pl': 'https://newbuildhomescostablanca.com/pl/guides',
       'ru': 'https://newbuildhomescostablanca.com/ru/guides',
       'x-default': 'https://newbuildhomescostablanca.com/guides',
@@ -28,131 +21,166 @@ export const metadata: Metadata = {
   },
 };
 
-const guides = [
+const essentialGuides = [
   {
-    title: 'Proces Zakupu - Krok Po Kroku',
-    description: 'Kompletny przewodnik po całym procesie zakupu domu w Hiszpanii.',
-    link: '/pl/guides/proces-zakupu',
-    icon: 'P',
-    color: 'bg-blue-50 border-blue-200'
+    title: 'Proces Zakupu',
+    slug: 'proces-zakupu',
+    description: 'Przewodnik krok po kroku do kupna nowej nieruchomości w Hiszpanii. Od rezerwacji do przekazania kluczy.',
+    icon: '📋',
+    readTime: '12 min czytania',
+    category: 'Istotne',
   },
   {
-    title: 'Numer NIE - Co To Jest i Jak Go Uzyskać',
-    description: 'Przewodnik dotyczący uzyskania numeru identyfikacji cudzoziemca (NIE).',
-    link: '/pl/guides/numer-nie',
-    icon: 'N',
-    color: 'bg-green-50 border-green-200'
+    title: 'Numer NIE Guide',
+    slug: 'numer-nie',
+    description: 'Jak uzyskać swój numer NIE — wymagany do kupna nieruchomości w Hiszpanii.',
+    icon: '🪪',
+    readTime: '8 min czytania',
+    category: 'Istotne',
   },
   {
-    title: 'Koszty i Podatki - Pełny Przegląd',
-    description: 'Jakie dodatkowe koszty czekają kupującego? Podatek transferowy, IBI, opłaty notarialne.',
-    link: '/pl/guides/koszty-podatki',
-    icon: 'K',
-    color: 'bg-purple-50 border-purple-200'
+    title: 'Koszty i Podatki',
+    slug: 'koszty-podatki',
+    description: 'Kompletny przegląd kosztów zakupu, podatków i bieżących wydatków dla właścicieli nieruchomości.',
+    icon: '💰',
+    readTime: '10 min czytania',
+    category: 'Istotne',
   },
   {
-    title: 'Kredyty Hipoteczne - Opcje Finansowania',
-    description: 'Jak uzyskać kredyt hipoteczny na Costa Blance. Porównanie banków i opcji.',
-    link: '/pl/guides/kredyt-hipoteczny',
-    icon: 'H',
-    color: 'bg-orange-50 border-orange-200'
+    title: 'Kredyt Hipoteczny',
+    slug: 'kredyt-hipoteczny',
+    description: 'Jak uzyskać kredyt hipoteczny jako polski nabywca w Hiszpanii. Wymagania i procedura.',
+    icon: '🏦',
+    readTime: '10 min czytania',
+    category: 'Istotne',
+  },
+];
+
+const decisionGuides = [
+  {
+    title: 'Dlaczego Nowy Budynek?',
+    slug: 'dlaczego-nowy-budynek',
+    description: 'Zalety nowych budynków w porównaniu ze starszymi nieruchomościami — gwarancje, efektywność energetyczna i nowoczesny design.',
+    icon: '🏗️',
+    readTime: '6 min czytania',
+    category: 'Decyzja',
   },
   {
-    title: 'Dlaczego Kupić Nowy Dom?',
-    description: 'Korzyści kupna nowego domu zamiast istniejącej nieruchomości.',
-    link: '/pl/guides/dlaczego-nowy-budynek',
-    icon: 'N',
-    color: 'bg-red-50 border-red-200'
+    title: 'Pod Klucz vs Plan',
+    slug: 'pod-klucz-vs-plan',
+    description: 'Czy powinienem kupić nieruchomość pod klucz czy w fazie planowania? Zalety i wady dla polskich kupujących.',
+    icon: '🔑',
+    readTime: '8 min czytania',
+    category: 'Decyzja',
   },
   {
-    title: 'Gotowy do Zamieszkania vs Plan',
-    description: 'Różnice między domami gotowymi a budowaniem od zera. Zalety i wady.',
-    link: '/pl/guides/pod-klucz-vs-plan',
-    icon: 'G',
-    color: 'bg-teal-50 border-teal-200'
+    title: 'Północ vs Południe Costa Blanca',
+    slug: 'polnoc-vs-poludnie',
+    description: 'Porównanie obu regionów — ekskluzywna północ vs przystępna cena południa. Znajdź swoją idealną lokalizację.',
+    icon: '🗺️',
+    readTime: '10 min czytania',
+    category: 'Decyzja',
   },
   {
-    title: 'Północ vs Południe Costa Blanki',
-    description: 'Porównanie północy i południa. Gdzie lepiej się mieszka? Ceny, styl życia, atmosfera.',
-    link: '/pl/guides/polnoc-vs-poludnie',
-    icon: 'D',
-    color: 'bg-indigo-50 border-indigo-200'
+    title: 'Licencja Wynajmu Turystycznego',
+    slug: 'licencja-wynajmu-turystycznego',
+    description: 'Wszystko o certyfikatach wynajmu turystycznego w Wspólnocie Walencji — wymagania, procedura i potencjał.',
+    icon: '📜',
+    readTime: '8 min czytania',
+    category: 'Inwestycja',
   },
+];
+
+const destinationGuides = [
   {
     title: 'Torrevieja',
-    description: 'Pełny przewodnik po Torrevieja dla polskich kupujących',
-    link: '/pl/guides/torrevieja',
-    icon: 'T',
-    color: 'bg-pink-50 border-pink-200'
+    description: '7 dzielnic z fotografią dronem. Kompletny przewodnik Costa Blanca Południowej.',
+    href: '/pl/guides/torrevieja',
+    icon: '🏖️',
+    badges: ['100+ Zdjęć', '7 Stref'],
   },
   {
     title: 'Jávea',
-    description: 'Ekskluzywy przewodnik po Jávea dla polskich inwestorów',
-    link: '/pl/guides/javea',
-    icon: 'J',
-    color: 'bg-cyan-50 border-cyan-200'
+    description: '4 dzielnice od plaży Arenal do góry Montgó. Życie na wyłącznym wybrzeżu północnym.',
+    href: '/pl/guides/javea',
+    icon: '⛵',
+    badges: ['4 Dzielnice', '7 Plaż'],
   },
   {
     title: 'Costa Blanca Północ',
-    description: 'Pełny przewodnik po Północnej Costa Blanca dla polskich kupujących',
-    link: '/pl/guides/costa-blanca-polnoc',
-    icon: 'C',
-    color: 'bg-amber-50 border-amber-200'
-  }
+    description: '6 miast porównanych — Jávea, Moraira, Altea, Calpe, Dénia i Benissa z fotografią dronem.',
+    href: '/pl/guides/costa-blanca-polnoc',
+    icon: '🏔️',
+    badges: ['6 Miast', 'Przewodnik Regionu'],
+  },
+  {
+    title: 'Orihuela Costa',
+    description: 'Raj golfowy z La Zenia, Villamartin, Cabo Roig i więcej. Przystępne życie na południowym wybrzeżu.',
+    href: '/pl/guides/orihuela-costa',
+    icon: '⛳',
+    badges: ['6 Obszarów', 'Fokus Golf'],
+  },
+  {
+    title: 'Benidorm & Finestrat',
+    description: 'Najbardziej dynamiczne miasta przybrzeżne Hiszpanii — plaże, życie nocne i zaskakujący potencjał inwestycyjny.',
+    href: '/pl/guides/benidorm-finestrat',
+    icon: '🌇',
+    badges: ['2 Strefy', 'Przewodnik Miasta'],
+  },
 ];
 
-export default function PolishGuidesPage() {
+export default function GuidesPage() {
   return (
-    <main className="min-h-screen bg-warm-50">
-      <section className="relative bg-primary-900 overflow-hidden py-20">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }} />
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6">
-            Przewodniki dla <span className="font-semibold text-accent-400">Kupujących</span>
-          </h1>
-          <p className="text-warm-300 text-lg max-w-3xl mx-auto">
-            Wszystko, co musisz wiedzieć o kupowaniu domu na Costa Blance. Ekspertne porady i poradniki dla polskich kupujących.
+    <main className="min-h-screen bg-white">
+      {/* Hero */}
+      <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white py-20 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-10 h-px bg-accent-500" />
+            <span className="text-accent-400 text-xs font-bold tracking-widest uppercase">Przewodniki Ekspertów</span>
+            <div className="w-10 h-px bg-accent-500" />
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Przewodniki Kupującego</h1>
+          <p className="text-xl text-warm-200 max-w-2xl mx-auto mb-4">
+            Wszystko o kupnie nieruchomości na Costa Blanca.
+            Przewodniki ekspertów napisane dla polskich kupujących.
+          </p>
+          <p className="text-warm-300">
+            Od numeru NIE do kredytu hipotecznego, prowadzimy Cię przez każdy etap procesu.
           </p>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Essential Buyer Guides */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-light text-primary-900">
-              Najważniejsze <span className="font-semibold">Przewodniki</span>
-            </h2>
-            <p className="text-warm-600 mt-3 max-w-2xl mx-auto">
-              Przeczytaj nasze przewodniki i artykuły, aby dowiedzieć się wszystkiego o kupowaniu nieruchomości na Costa Blance.
-            </p>
+            <span className="text-accent-500 text-xs font-bold tracking-widest uppercase">Obowiązkowe</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-2 mb-4">Istotne Przewodniki Kupującego</h2>
+            <p className="text-warm-600 max-w-xl mx-auto">Cztery przewodniki, które każdy kupujący powinien przeczytać przed zakupem w Hiszpanii</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {guides.map((guide, idx) => (
-              <Link
-                key={idx}
-                href={guide.link}
-                className={`${guide.color} border rounded-sm p-8 hover:shadow-lg transition-all group`}
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-accent-600 font-bold text-lg">{guide.icon}</span>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {essentialGuides.map((guide) => (
+              <Link key={guide.slug} href={`/pl/guides/${guide.slug}`}>
+                <div className="bg-white border-2 border-warm-100 rounded-lg p-6 hover:border-accent-500 hover:shadow-lg transition-all h-full group">
+                  <div className="w-12 h-12 bg-accent-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent-500 transition-colors text-xl">
+                    {guide.icon}
                   </div>
-                  <h3 className="text-lg font-semibold text-primary-900 group-hover:text-accent-600 transition-colors">
+                  <span className="text-xs font-bold text-accent-500 tracking-wider uppercase">{guide.category}</span>
+                  <h3 className="text-lg font-bold text-primary-900 mt-1 mb-2 group-hover:text-accent-600 transition-colors">
                     {guide.title}
                   </h3>
-                </div>
-                <p className="text-warm-600 text-sm mb-4">
-                  {guide.description}
-                </p>
-                <div className="text-accent-600 font-medium flex items-center gap-2 group-hover:gap-3 transition-all text-sm">
-                  Czytaj Przewodnik
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  <p className="text-warm-600 text-sm mb-4">{guide.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-warm-400">{guide.readTime}</span>
+                    <span className="text-accent-500 text-sm font-semibold flex items-center gap-1">
+                      Czytaj
+                      <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -160,95 +188,169 @@ export default function PolishGuidesPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-warm-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Destination Guides */}
+      <section className="py-16 px-4 bg-warm-50">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-light text-primary-900">
-              Często Zadawane <span className="font-semibold">Pytania</span>
-            </h2>
+            <span className="text-accent-500 text-xs font-bold tracking-widest uppercase">Odkryj Obszary</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-2 mb-4">Przewodniki Destinacji</h2>
+            <p className="text-warm-600 max-w-xl mx-auto">Kompleksowe przewodniki po najlepszych obszarach na Costa Blanca</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="bg-white rounded-sm p-6 border border-warm-200">
-              <h3 className="font-semibold text-primary-900 mb-2">Ile czasu trwa proces zakupu?</h3>
-              <p className="text-warm-600 text-sm">
-                Zazwyczaj od 4-8 tygodni od zarezerwowania do podpisania aktu notarialnego.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-sm p-6 border border-warm-200">
-              <h3 className="font-semibold text-primary-900 mb-2">Jaki procent zaliczki potrzebuję?</h3>
-              <p className="text-warm-600 text-sm">
-                Zazwyczaj 30-40% do finansowania hipotecznego. Pierwsza zaliczka wynosi 5-10%.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-sm p-6 border border-warm-200">
-              <h3 className="font-semibold text-primary-900 mb-2">Czy mogę ubiegać się o kredyt hipoteczny?</h3>
-              <p className="text-warm-600 text-sm">
-                Tak. Banki w Hiszpanii oferują kredyty dla cudzoziemców. Oprocentowanie 3-5%.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-sm p-6 border border-warm-200">
-              <h3 className="font-semibold text-primary-900 mb-2">Czy potrzebuję numeru NIE?</h3>
-              <p className="text-warm-600 text-sm">
-                Tak, to obowiązkowe. Numer identyfikacji cudzoziemca wymagany do kupna i otworzenia konta bankowego.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-sm p-6 border border-warm-200">
-              <h3 className="font-semibold text-primary-900 mb-2">Jakie są koszty zakupu?</h3>
-              <p className="text-warm-600 text-sm">
-                Około 10-13% powyżej ceny zakupu na podatki, opłaty notarialne i opłaty prawne.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-sm p-6 border border-warm-200">
-              <h3 className="font-semibold text-primary-900 mb-2">Czy mogę wynająć dom?</h3>
-              <p className="text-warm-600 text-sm">
-                Tak. Wiele domów na Costa Blance jest wynajmowanych turystom. Dochód 5-8% rocznie.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-primary-900 rounded-sm p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-light text-white mb-4">
-              Potrzebujesz <span className="font-semibold">Osobistej Konsultacji?</span>
-            </h2>
-            <p className="text-warm-300 mb-8 max-w-2xl mx-auto">
-              Skontaktuj się z nami bezpośrednio. Nasi specjaliści mogą odpowiedzieć na wszystkie Twoje pytania i pomóc Ci znaleźć idealny dom.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/pl/contact" className="bg-accent-500 hover:bg-accent-600 text-white px-8 py-3 rounded-md font-medium transition-colors">
-                Skontaktuj Się
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {destinationGuides.map((dest) => (
+              <Link key={dest.href} href={dest.href}>
+                <div className="bg-primary-900 rounded-lg overflow-hidden hover:shadow-xl transition-shadow h-full group">
+                  <div className="h-32 bg-gradient-to-br from-accent-500/30 to-primary-800 flex items-center justify-center">
+                    <span className="text-5xl">{dest.icon}</span>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-400 transition-colors">
+                      {dest.title}
+                    </h3>
+                    <p className="text-warm-300 text-sm mb-3">{dest.description}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {dest.badges.map((badge, i) => (
+                        <span key={i} className="text-xs bg-accent-500/20 text-accent-400 px-2 py-0.5 rounded">
+                          {badge}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </Link>
-              <a href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-3 rounded-md font-medium flex items-center justify-center gap-2">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                WhatsApp
-              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Decision & Planning Guides */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-accent-500 text-xs font-bold tracking-widest uppercase">Planowanie</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-2 mb-4">Przewodniki Decyzji</h2>
+            <p className="text-warm-600 max-w-xl mx-auto">Podejmij świadome decyzje dotyczące lokalizacji, typu nieruchomości i strategii inwestycyjnej</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {decisionGuides.map((guide) => (
+              <Link key={guide.slug} href={`/pl/guides/${guide.slug}`}>
+                <div className="bg-white border-2 border-warm-100 rounded-lg p-6 hover:border-primary-500 hover:shadow-lg transition-all h-full group">
+                  <div className="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary-500 transition-colors text-xl">
+                    {guide.icon}
+                  </div>
+                  <span className="text-xs font-bold text-primary-600 tracking-wider uppercase">{guide.category}</span>
+                  <h3 className="text-lg font-bold text-primary-900 mt-1 mb-2 group-hover:text-primary-600 transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-warm-600 text-sm mb-4">{guide.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-warm-400">{guide.readTime}</span>
+                    <span className="text-primary-600 text-sm font-semibold flex items-center gap-1">
+                      Czytaj
+                      <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Finance CTA */}
+      <section className="py-16 px-4 bg-gradient-to-r from-primary-900 to-primary-800">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-accent-400 text-xs font-bold tracking-widest uppercase">Finansowanie & Kredyty Hipoteczne</span>
+              <h2 className="text-3xl font-bold text-white mt-2 mb-4">Gotowy do porównania stóp procentowych kredytów hipotecznych?</h2>
+              <p className="text-warm-200 mb-6">
+                Porównaj stawki z ponad 15 bankami hiszpańskimi, zobacz aktualne dane rynkowe i odkryj opcje finansowania
+                dla standardowych i luksusowych nieruchomości.
+              </p>
+              <Link
+                href="/pl/guides/kredyt-hipoteczny"
+                className="inline-block bg-accent-500 hover:bg-accent-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
+                Porównaj Kredyty Hipoteczne &rarr;
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">~3.15%</div>
+                <div className="text-warm-300 text-sm mt-1">Średnia stopa stała</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">70%</div>
+                <div className="text-warm-300 text-sm mt-1">LTV dla nie-rezydenta</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">15+</div>
+                <div className="text-warm-300 text-sm mt-1">Porównywalne banki</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">€800k+</div>
+                <div className="text-warm-300 text-sm mt-1">Opcje luksusowe</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-warm-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-light text-primary-900 mb-6">
-              Chcesz Przeglądać <span className="font-semibold">Nieruchomości?</span>
-            </h2>
-            <Link href="/pl/properties" className="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-medium px-8 py-3 rounded-sm transition-all">
-              Przeglądaj Wszystkie Domy
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
+      {/* Why Trust Us */}
+      <section className="py-16 px-4 bg-warm-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-primary-900 mb-4">Dlaczego Ufać Naszym Przewodnikom?</h2>
+            <p className="text-warm-600">Lokalna ekspertyza połączona ze zrozumieniem międzynarodowym</p>
           </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg p-8 shadow-md border-l-4 border-accent-500">
+              <h3 className="text-xl font-bold text-primary-900 mb-3">Lokalna Ekspertyza</h3>
+              <p className="text-warm-600">Zamieszkały na Costa Blanca z latami doświadczenia w pomaganiu polskim kupującym w radzeniu sobie z hiszpańskim rynkiem nieruchomości.</p>
+            </div>
+            <div className="bg-white rounded-lg p-8 shadow-md border-l-4 border-accent-500">
+              <h3 className="text-xl font-bold text-primary-900 mb-3">Aktualne Informacje</h3>
+              <p className="text-warm-600">Regularnie aktualizowany, aby odzwierciedlać bieżące dane rynku nieruchomości Hiszpanii, przepisy podatkowe i warunki rynkowe.</p>
+            </div>
+            <div className="bg-white rounded-lg p-8 shadow-md border-l-4 border-accent-500">
+              <h3 className="text-xl font-bold text-primary-900 mb-3">Międzynarodowe Podejście</h3>
+              <p className="text-warm-600">Napisane specjalnie dla międzynarodowych kupujących — poruszające unikalne wyzwania takie jak numery NIE, kredyty hipoteczne za granicą i podatki dla nie-rezydentów.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 px-4 bg-gradient-to-r from-accent-500 to-accent-600 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Masz Pytania?</h2>
+          <p className="text-xl text-white/90 mb-8">
+            Nasz zespół jest tutaj, aby poprowadzić Cię przez proces zakupu. Skontaktuj się z nami w celu uzyskania porady osobistej.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/pl/contact"
+              className="bg-primary-900 hover:bg-primary-800 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center gap-2"
+            >
+              Skontaktuj się z Nami
+            </Link>
+            <a
+              href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center gap-2"
+            >
+              WhatsApp
+            </a>
+          </div>
+          <p className="text-white/70 text-sm mt-6">
+            Szybka odpowiedź w ciągu 24 godzin — często znacznie szybciej
+          </p>
         </div>
       </section>
     </main>

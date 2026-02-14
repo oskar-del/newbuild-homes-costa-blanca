@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Koopgidsen | Nederlandse Kopers Gids voor Spaans Onroerend Goed',
+  title: 'Koopgidsen | Nederlandse Kopers Gids voor Spaans Onroerend Goed | Costa Blanca 2026',
   description: 'Omvattende gidsen voor Nederlandse kopers van nieuwbouw in Spanje. NIE-nummer, hypotheek, kosten en het koopproces uitgelegd.',
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/nl/guides',
@@ -12,188 +12,174 @@ export const metadata: Metadata = {
       'nl': 'https://newbuildhomescostablanca.com/nl/guides',
       'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides',
       'fr': 'https://newbuildhomescostablanca.com/fr/guides',
+      'de': 'https://newbuildhomescostablanca.com/de/guides',
       'no': 'https://newbuildhomescostablanca.com/no/guides',
+      'pl': 'https://newbuildhomescostablanca.com/pl/guides',
+      'ru': 'https://newbuildhomescostablanca.com/ru/guides',
+      'x-default': 'https://newbuildhomescostablanca.com/guides',
     },
   },
 };
 
-interface DestinationCard {
-  title: string;
-  description: string;
-  image: string;
-  href: string;
-  icon: string;
-}
-
-interface BuyerGuide {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
-  href: string;
-}
-
-const destinationGuides: DestinationCard[] = [
+const essentialGuides = [
   {
-    title: 'Torrevieja Gids',
-    description: 'Ontdek het strandparadijs met prachtige flora en levendige gemeenschap',
-    image: '/images/destinations/torrevieja.jpg',
-    href: '/nl/guides/torrevieja',
-    icon: '',
+    title: 'Het Koopproces',
+    slug: 'koopproces',
+    description: 'Stap-voor-stap gids voor het kopen van nieuwbouw in Spanje. Van reservering tot sleuteloverdracht.',
+    icon: '📋',
+    readTime: '12 min lezen',
+    category: 'Essentieel',
   },
   {
-    title: 'Jávea Gids',
-    description: 'Klassieke mediterrane charme met bergzicht en exclusieve stranden',
-    image: '/images/destinations/javea.jpg',
+    title: 'NIE-nummer Gids',
+    slug: 'nie-nummer',
+    description: 'Hoe je je NIE-nummer krijgt — verplicht voor vastgoedaankoop in Spanje.',
+    icon: '🪪',
+    readTime: '8 min lezen',
+    category: 'Essentieel',
+  },
+  {
+    title: 'Kosten & Belastingen',
+    slug: 'kosten-belasting',
+    description: 'Volledige uitsplitsing van aankoop kosten, belastingen en lopende uitgaven voor vastgoed eigenaren.',
+    icon: '💰',
+    readTime: '10 min lezen',
+    category: 'Essentieel',
+  },
+  {
+    title: 'Hypotheken voor Buitenlanders',
+    slug: 'hypotheek',
+    description: 'Hoe je een hypotheek in Spanje krijgt als Nederlandse koper. Eisen en stap-voor-stap proces.',
+    icon: '🏦',
+    readTime: '10 min lezen',
+    category: 'Essentieel',
+  },
+];
+
+const decisionGuides = [
+  {
+    title: 'Waarom Nieuwbouw Kopen?',
+    slug: 'waarom-nieuwbouw',
+    description: 'Voordelen van nieuwbouw boven resale — garanties, energieefficiëntie en modern design.',
+    icon: '🏗️',
+    readTime: '6 min lezen',
+    category: 'Besluit',
+  },
+  {
+    title: 'Kant-en-klaar vs Op Ritning',
+    slug: 'kant-en-klaar-vs-ritning',
+    description: 'Moet je kant-en-klaar of op tekening kopen? Voor- en nadelen voor Nederlandse kopers.',
+    icon: '🔑',
+    readTime: '8 min lezen',
+    category: 'Besluit',
+  },
+  {
+    title: 'Noord vs Zuid Costa Blanca',
+    slug: 'noord-vs-zuid',
+    description: 'Vergelijk de twee gebieden — exclusieve noorden vs betaalbare zuiden. Vind jouw perfecte locatie.',
+    icon: '🗺️',
+    readTime: '10 min lezen',
+    category: 'Besluit',
+  },
+  {
+    title: 'Toeristische Verhuurlicentie',
+    slug: 'tourist-rental-license',
+    description: 'Alles over vakantieverhuurlicenties in de Valencia Gemeenschap — vereisten, proces en inkomstpotentieel.',
+    icon: '📜',
+    readTime: '8 min lezen',
+    category: 'Investering',
+  },
+];
+
+const destinationGuides = [
+  {
+    title: 'Torrevieja',
+    description: '7 wijken met drone fotografie. De definitieve Costa Blanca Zuid gids.',
+    href: '/nl/guides/torrevieja',
+    icon: '🏖️',
+    badges: ['104+ foto\'s', '7 zones'],
+  },
+  {
+    title: 'Jávea',
+    description: '4 wijken van Arenal strand naar Montgó berg. Premium Noordkust wonen.',
     href: '/nl/guides/javea',
-    icon: '',
+    icon: '⛵',
+    badges: ['4 wijken', '7 stranden'],
   },
   {
     title: 'Costa Blanca Noord',
-    description: 'Betoverend natuurschoon en luxe projecten in de exclusieve noordregio',
-    image: '/images/destinations/costa-blanca-north.jpg',
+    description: '6 steden vergeleken — Jávea, Moraira, Altea, Calpe, Dénia & Benissa met drone fotografie.',
     href: '/nl/guides/costa-blanca-noord',
-    icon: '',
-  },
-];
-
-const buyerGuides: BuyerGuide[] = [
-  {
-    id: 'buying-process',
-    title: 'Koopproces',
-    description: 'Stap-voor-stap gids voor het kopen van nieuwbouw in Spanje',
-    icon: '',
-    href: '/nl/guides/koopproces',
+    icon: '🏔️',
+    badges: ['6 steden', 'Regiogids'],
   },
   {
-    id: 'nie-number',
-    title: 'NIE-nummer Gids',
-    description: 'Hoe je je NIE-nummer krijgt - verplicht voor vastgoedaankoop',
-    icon: '',
-    href: '/nl/guides/nie-nummer',
+    title: 'Orihuela Costa',
+    description: 'Golfparadijs met La Zenia, Villamartin, Cabo Roig & meer. Betaalbaar Zuidkust wonen.',
+    href: '/nl/guides/orihuela-costa',
+    icon: '⛳',
+    badges: ['6 gebieden', 'Golfgericht'],
   },
   {
-    id: 'costs-taxes',
-    title: 'Kosten & Belastingen',
-    description: 'Volledige uitsplitsing van kosten voor aankoop, belastingen en lopende uitgaven',
-    icon: '',
-    href: '/nl/guides/kosten-belasting',
-  },
-  {
-    id: 'mortgages',
-    title: 'Hypotheken voor Buitenlandse Kopers',
-    description: 'Hoe je een hypotheek in Spanje krijgt als Nederlander. ING, ABN AMRO en Spaanse banken.',
-    icon: '',
-    href: '/nl/guides/hypotheek',
-  },
-  {
-    id: 'why-new-build',
-    title: 'Waarom Nieuwbouw Kopen?',
-    description: 'De voordelen van nieuwbouw versus bestaande bouw',
-    icon: '',
-    href: '/nl/guides/waarom-nieuwbouw',
-  },
-  {
-    id: 'key-ready-vs-off-plan',
-    title: 'Kant-en-klaar vs Op Ritning',
-    description: 'Koop je kant-en-klaar of op tekening?',
-    icon: '',
-    href: '/nl/guides/kant-en-klaar-vs-ritning',
-  },
-  {
-    id: 'north-vs-south',
-    title: 'Noord vs Zuid Costa Blanca',
-    description: 'Vergelijk de twee regio\'s - exclusieve noorden vs betaalbare zuiden',
-    icon: '',
-    href: '/nl/guides/noord-vs-zuid',
-  },
-];
-
-const trustPoints = [
-  {
-    title: 'Lokale Expertise',
-    description: 'Meer dan 15 jaar ervaring op de Costa Blanca vastgoedmarkt',
-  },
-  {
-    title: 'Bijgewerkte Informatie',
-    description: 'De regels veranderen - we houden alles actueel voor Nederlandse kopers',
-  },
-  {
-    title: 'Nederlands Focus',
-    description: 'Geschreven voor Nederlandse kopers, door mensen die je situatie begrijpen',
+    title: 'Benidorm & Finestrat',
+    description: 'Spanje\'s meest dynamische kuststad — stranden, nachtleven en verrassende investeringspotentieel.',
+    href: '/nl/guides/benidorm-finestrat',
+    icon: '🌇',
+    badges: ['2 zones', 'Stadsgids'],
   },
 ];
 
 export default function DutchGuidesPage(): JSX.Element {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-900 to-primary-800 text-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-5xl sm:text-6xl font-light mb-6">Koopgidsen</h1>
-            <p className="text-xl text-warm-200 mb-8 max-w-3xl mx-auto">
-              Alles wat je moet weten om nieuwbouw in Spanje te kopen - speciaal opgesteld voor Nederlandse kopers
-            </p>
-            <p className="text-lg text-warm-300">
-              Van NIE-nummer tot hypotheek, wij leiden je door elke stap van het proces
-            </p>
+    <main className="min-h-screen bg-white">
+      {/* Hero */}
+      <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white py-20 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-10 h-px bg-accent-500" />
+            <span className="text-accent-400 text-xs font-bold tracking-widest uppercase">Expertgidsen</span>
+            <div className="w-10 h-px bg-accent-500" />
           </div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Koopgidsen</h1>
+          <p className="text-xl text-warm-200 max-w-2xl mx-auto mb-4">
+            Alles wat je moet weten over het kopen van nieuwbouw in Costa Blanca.
+            Expertgidsen geschreven voor Nederlandse kopers.
+          </p>
+          <p className="text-warm-300">
+            Van NIE-nummer tot hypotheek, we leiden je door elke stap van het proces.
+          </p>
         </div>
       </section>
 
-      {/* Destination Guides Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-warm-50">
+      {/* Essential Buyer Guides */}
+      <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-light text-primary-900 mb-4">Bestemminsgidsen</h2>
-            <p className="text-lg text-warm-600">Verken de beste gebieden op Costa Blanca</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {destinationGuides.map((destination) => (
-              <Link key={destination.title} href={destination.href}>
-                <div className="bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-xl transition-shadow h-full border border-warm-200">
-                  <div className="relative h-48 bg-gradient-to-br from-accent-400 to-accent-600 flex items-center justify-center">
-                    <span className="text-6xl">{destination.icon || '🏖️'}</span>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-2xl font-light text-primary-900 mb-3">{destination.title}</h3>
-                    <p className="text-warm-600 mb-4">{destination.description}</p>
-                    <div className="flex items-center text-accent-600 font-semibold group">
-                      Lees Gids <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Buyer Guides Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-light text-primary-900 mb-4">Koopgidsen voor Nederlanders</h2>
-            <p className="text-lg text-warm-600">Alles van het koopproces tot belastingen en hypotheken</p>
+            <span className="text-accent-500 text-xs font-bold tracking-widest uppercase">Moet Lezen</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-2 mb-4">Essentiële Kopergidsen</h2>
+            <p className="text-warm-600 max-w-xl mx-auto">De vier gidsen die elke koper moet lezen voordat ze in Spanje kopen</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {buyerGuides.map((guide) => (
-              <Link key={guide.id} href={guide.href}>
-                <div className="bg-white border-2 border-warm-100 rounded-sm p-6 hover:border-accent-500 hover:shadow-lg transition-all h-full group">
-                  <div className="mb-4">
-                    <div className="w-12 h-12 bg-primary-100 rounded-sm flex items-center justify-center group-hover:bg-accent-500 transition-colors text-xl">
-                      {guide.icon}
-                    </div>
+            {essentialGuides.map((guide) => (
+              <Link key={guide.slug} href={`/nl/guides/${guide.slug}`}>
+                <div className="bg-white border-2 border-warm-100 rounded-lg p-6 hover:border-accent-500 hover:shadow-lg transition-all h-full group">
+                  <div className="w-12 h-12 bg-accent-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent-500 transition-colors text-xl">
+                    {guide.icon}
                   </div>
-                  <h3 className="text-lg font-light text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">
+                  <span className="text-xs font-bold text-accent-500 tracking-wider uppercase">{guide.category}</span>
+                  <h3 className="text-lg font-bold text-primary-900 mt-1 mb-2 group-hover:text-accent-600 transition-colors">
                     {guide.title}
                   </h3>
                   <p className="text-warm-600 text-sm mb-4">{guide.description}</p>
-                  <div className="flex items-center text-accent-600 text-sm font-semibold">
-                    Lees Meer <svg className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-warm-400">{guide.readTime}</span>
+                    <span className="text-accent-500 text-sm font-semibold flex items-center gap-1">
+                      Lees
+                      <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
                   </div>
                 </div>
               </Link>
@@ -202,150 +188,171 @@ export default function DutchGuidesPage(): JSX.Element {
         </div>
       </section>
 
-      {/* Dutch-Specific Service Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-warm-50">
+      {/* Destination Guides */}
+      <section className="py-16 px-4 bg-warm-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-light text-primary-900 mb-4">Nederlandse Service & Ondersteuning</h2>
-            <p className="text-lg text-warm-600">We begrijpen de behoeften van Nederlandse kopers</p>
+            <span className="text-accent-500 text-xs font-bold tracking-widest uppercase">Verken Gebieden</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-2 mb-4">Bestemmingsgidsen</h2>
+            <p className="text-warm-600 max-w-xl mx-auto">Diepgaande gidsen voor de beste gebieden op Costa Blanca</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-sm p-8 shadow-sm border border-warm-200">
-              <div className="w-14 h-14 bg-primary-100 rounded-sm flex items-center justify-center mb-4 text-2xl">
-              </div>
-              <h3 className="text-xl font-light text-primary-900 mb-3">Nederlands Sprekende Adviseurs</h3>
-              <p className="text-warm-600">
-                Ons team spreekt Nederlands en begrijpt de uitdagingen en voorkeuren van Nederlandse kopers. We zijn hier voor je in je eigen taal.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-sm p-8 shadow-sm border border-warm-200">
-              <div className="w-14 h-14 bg-primary-100 rounded-sm flex items-center justify-center mb-4 text-2xl">
-              </div>
-              <h3 className="text-xl font-light text-primary-900 mb-3">Nederlandse Juristen</h3>
-              <p className="text-warm-600">
-                We werken met juridische experts die bekend zijn met Nederlandse vastgoedbesluitvorming en kunnen je door Spaanse wet leiden.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-sm p-8 shadow-sm border border-warm-200">
-              <div className="w-14 h-14 bg-primary-100 rounded-sm flex items-center justify-center mb-4 text-2xl">
-              </div>
-              <h3 className="text-xl font-light text-primary-900 mb-3">Belastingen & Autoriteiten</h3>
-              <p className="text-warm-600">
-                Begeleiding omtrent Nederlands belastingvereisten voor buitenlandse eigendommen en hoe dit je economie thuis beïnvloedt.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Finance CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-primary-900 to-primary-800 rounded-sm p-12 text-white text-center">
-            <h2 className="text-3xl sm:text-4xl font-light mb-6">Vergelijk Hypotheekrentals</h2>
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div>
-                <p className="text-warm-200 mb-2">Gemiddelde Rentevoet</p>
-                <p className="text-3xl font-light">3.2 - 4.8%</p>
-              </div>
-              <div>
-                <p className="text-warm-200 mb-2">Nederlandse Banken</p>
-                <p className="text-3xl font-light">ING, ABN AMRO</p>
-              </div>
-              <div>
-                <p className="text-warm-200 mb-2">Spaanse Banken</p>
-                <p className="text-3xl font-light">CaixaBank, BBVA</p>
-              </div>
-            </div>
-            <Link href="/nl/guides/hypotheek">
-              <button className="bg-accent-500 hover:bg-accent-600 text-white font-semibold py-3 px-8 rounded-sm transition-colors">
-                Zie Hypotheekopties
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-warm-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-light text-primary-900 mb-4">Waarom Onze Gidsen Vertrouwen?</h2>
-            <p className="text-lg text-warm-600">Deskundige kennis gecombineerd met Nederlands begrip</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {trustPoints.map((point, index) => (
-              <div key={index} className="bg-white rounded-sm p-8 shadow-sm border-l-4 border-accent-500">
-                <h3 className="text-xl font-light text-primary-900 mb-3">{point.title}</h3>
-                <p className="text-warm-600">{point.description}</p>
-              </div>
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {destinationGuides.map((dest) => (
+              <Link key={dest.href} href={dest.href}>
+                <div className="bg-primary-900 rounded-lg overflow-hidden hover:shadow-xl transition-shadow h-full group">
+                  <div className="h-32 bg-gradient-to-br from-accent-500/30 to-primary-800 flex items-center justify-center">
+                    <span className="text-5xl">{dest.icon}</span>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-400 transition-colors">
+                      {dest.title}
+                    </h3>
+                    <p className="text-warm-300 text-sm mb-3">{dest.description}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {dest.badges.map((badge, i) => (
+                        <span key={i} className="text-xs bg-accent-500/20 text-accent-400 px-2 py-0.5 rounded">
+                          {badge}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent-500 to-accent-600 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-light mb-6">Heb je Vragen?</h2>
-          <p className="text-xl text-white/90 mb-8">
-            Ons Nederlands team is hier om al je vragen over het kopen in Spanje te beantwoorden
-          </p>
+      {/* Decision & Planning Guides */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-accent-500 text-xs font-bold tracking-widest uppercase">Planning</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-2 mb-4">Beslissingsgidsen</h2>
+            <p className="text-warm-600 max-w-xl mx-auto">Maak geïnformeerde keuzes over locatie, eigendomstype en investeringsstrategie</p>
+          </div>
 
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {decisionGuides.map((guide) => (
+              <Link key={guide.slug} href={`/nl/guides/${guide.slug}`}>
+                <div className="bg-white border-2 border-warm-100 rounded-lg p-6 hover:border-primary-500 hover:shadow-lg transition-all h-full group">
+                  <div className="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary-500 transition-colors text-xl">
+                    {guide.icon}
+                  </div>
+                  <span className="text-xs font-bold text-primary-600 tracking-wider uppercase">{guide.category}</span>
+                  <h3 className="text-lg font-bold text-primary-900 mt-1 mb-2 group-hover:text-primary-600 transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-warm-600 text-sm mb-4">{guide.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-warm-400">{guide.readTime}</span>
+                    <span className="text-primary-600 text-sm font-semibold flex items-center gap-1">
+                      Lees
+                      <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Finance CTA */}
+      <section className="py-16 px-4 bg-gradient-to-r from-primary-900 to-primary-800">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-accent-400 text-xs font-bold tracking-widest uppercase">Financiering & Hypotheken</span>
+              <h2 className="text-3xl font-bold text-white mt-2 mb-4">Klaar om Hypotheekrentals te Vergelijken?</h2>
+              <p className="text-warm-200 mb-6">
+                Vergelijk tarieven van 15+ Spaanse banken, zie huidige marktgegevens en verken financieringsopties
+                voor zowel standaard als luxe eigenschappen.
+              </p>
+              <Link
+                href="/nl/guides/hypotheek"
+                className="inline-block bg-accent-500 hover:bg-accent-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
+                Vergelijk Hypotheken &rarr;
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">~3.15%</div>
+                <div className="text-warm-300 text-sm mt-1">Gemiddeld vast tarief</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">70%</div>
+                <div className="text-warm-300 text-sm mt-1">Niet-inwonerslening</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">15+</div>
+                <div className="text-warm-300 text-sm mt-1">Vergeleken banken</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">&euro;800k+</div>
+                <div className="text-warm-300 text-sm mt-1">Luxe opties</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Trust Us */}
+      <section className="py-16 px-4 bg-warm-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-primary-900 mb-4">Waarom Onze Gidsen Vertrouwen?</h2>
+            <p className="text-warm-600">Deskundige kennis gecombineerd met internationaal begrip</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg p-8 shadow-md border-l-4 border-accent-500">
+              <h3 className="text-xl font-bold text-primary-900 mb-3">Lokale Expertise</h3>
+              <p className="text-warm-600">Gevestigd op Costa Blanca met jaren ervaring in het helpen van Nederlandse kopers door de Spaanse vastgoedmarkt navigeren.</p>
+            </div>
+            <div className="bg-white rounded-lg p-8 shadow-md border-l-4 border-accent-500">
+              <h3 className="text-xl font-bold text-primary-900 mb-3">Bijgewerkte Informatie</h3>
+              <p className="text-warm-600">Regelmatig bijgewerkt om huidige Spaanse vastgoedwetten, belastingvoorschriften en marktvoorwaarden weer te geven.</p>
+            </div>
+            <div className="bg-white rounded-lg p-8 shadow-md border-l-4 border-accent-500">
+              <h3 className="text-xl font-bold text-primary-900 mb-3">Internationale Focus</h3>
+              <p className="text-warm-600">Speciaal geschreven voor internationale kopers — behandeling van unieke uitdagingen zoals NIE-nummers, buitenlandse hypotheken en niet-inwonerbelastingen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 px-4 bg-gradient-to-r from-accent-500 to-accent-600 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Heb je Vragen?</h2>
+          <p className="text-xl text-white/90 mb-8">
+            Ons team is hier om je door het koopproces te begeleiden. Contacteer ons voor persoonlijk advies.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/nl/contact">
-              <button className="bg-primary-900 hover:bg-primary-800 text-white font-semibold py-3 px-8 rounded-sm transition-colors inline-flex items-center justify-center gap-2">
-                Neem Contact Op
-              </button>
+            <Link
+              href="/nl/contact"
+              className="bg-primary-900 hover:bg-primary-800 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center gap-2"
+            >
+              Neem Contact Op
             </Link>
-            <a href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">
-              <button className="bg-white hover:bg-warm-100 text-primary-900 font-semibold py-3 px-8 rounded-sm transition-colors inline-flex items-center justify-center gap-2">
-                WhatsApp
-              </button>
+            <a
+              href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center gap-2"
+            >
+              WhatsApp
             </a>
           </div>
-
-          <p className="text-white/80 text-sm mt-6">
-            Snelle reactie binnen 24 uur - meestal veel sneller
+          <p className="text-white/70 text-sm mt-6">
+            Snel antwoord binnen 24 uur — vaak veel sneller
           </p>
         </div>
       </section>
-
-      {/* Footer Navigation */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white border-t border-warm-200">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-semibold text-primary-900 mb-4">Nederlandse Bestemmingen</h3>
-              <ul className="space-y-2">
-                {destinationGuides.map((dest) => (
-                  <li key={dest.title}>
-                    <Link href={dest.href} className="text-accent-600 hover:text-accent-700 transition-colors">
-                      {dest.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-primary-900 mb-4">Koopgidsen</h3>
-              <ul className="space-y-2">
-                {buyerGuides.slice(0, 4).map((guide) => (
-                  <li key={guide.id}>
-                    <Link href={guide.href} className="text-accent-600 hover:text-accent-700 transition-colors">
-                      {guide.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    </main>
   );
 }

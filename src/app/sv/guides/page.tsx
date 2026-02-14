@@ -2,199 +2,184 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Köpguider | Svenska Köpares Guide till Spansk Fastighet',
+  title: 'Köpguider | Svenska Köpares Guide till Spansk Fastighet | Costa Blanca 2026',
   description: 'Komprehensiva guider för svenska köpare av nybygge i Spanien. NIE-nummer, bolån, kostnader, och köpprocessen förklarad.',
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/sv/guides',
     languages: {
-      en: 'https://newbuildhomescostablanca.com/guides',
-      sv: 'https://newbuildhomescostablanca.com/sv/guides',
-      nl: 'https://newbuildhomescostablanca.com/nl/guides',
-      'nl-BE': 'https://newbuildhomescostablanca.com/nl-BE/guides',
-      fr: 'https://newbuildhomescostablanca.com/fr/guides',
-      no: 'https://newbuildhomescostablanca.com/no/guides',
+      'en': 'https://newbuildhomescostablanca.com/guides',
+      'sv': 'https://newbuildhomescostablanca.com/sv/guides',
+      'nl': 'https://newbuildhomescostablanca.com/nl/guides',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides',
+      'fr': 'https://newbuildhomescostablanca.com/fr/guides',
+      'de': 'https://newbuildhomescostablanca.com/de/guides',
+      'no': 'https://newbuildhomescostablanca.com/no/guides',
+      'pl': 'https://newbuildhomescostablanca.com/pl/guides',
+      'ru': 'https://newbuildhomescostablanca.com/ru/guides',
       'x-default': 'https://newbuildhomescostablanca.com/guides',
     },
   },
 };
 
-interface DestinationCard {
-  title: string;
-  description: string;
-  image: string;
-  href: string;
-  icon: string;
-}
-
-interface BuyerGuide {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
-  href: string;
-}
-
-const destinationGuides: DestinationCard[] = [
+const essentialGuides = [
   {
-    title: 'Torrevieja Guide',
-    description: 'Utforska strandparadiset med fantastisk växtlighet och vibrerande gemenskap',
-    image: '/images/destinations/torrevieja.jpg',
-    href: '/sv/guides/torrevieja',
-    icon: '🏖️',
+    title: 'Köpprocessen',
+    slug: 'kopprocessen',
+    description: 'Steg-för-steg guide till att köpa nybygge i Spanien. Från reservation till slutbesiktning.',
+    icon: '📋',
+    readTime: '12 min läsning',
+    category: 'Essentiell',
   },
   {
-    title: 'Jávea Guide',
-    description: 'Klassisk medelhavscharm med bergsutsikt och exklusiva strandplatser',
-    image: '/images/destinations/javea.jpg',
+    title: 'NIE-nummer Guide',
+    slug: 'nie-nummer',
+    description: 'Hur du skaffar ditt NIE-nummer — obligatoriskt för fastighetsköp i Spanien.',
+    icon: '🪪',
+    readTime: '8 min läsning',
+    category: 'Essentiell',
+  },
+  {
+    title: 'Kostnader & Skatter',
+    slug: 'kostnader-skatter',
+    description: 'Komplett uppdelning av köpkostnader, skatter och löpande utgifter för fastighetsägare.',
+    icon: '💰',
+    readTime: '10 min läsning',
+    category: 'Essentiell',
+  },
+  {
+    title: 'Bolån för Utländska Köpare',
+    slug: 'bolan-spanien',
+    description: 'Hur du får bolån i Spanien som svensk. SBAB, Skandia och spanska banker.',
+    icon: '🏦',
+    readTime: '10 min läsning',
+    category: 'Essentiell',
+  },
+];
+
+const decisionGuides = [
+  {
+    title: 'Varför Köpa Nybygge?',
+    slug: 'why-new-build',
+    description: 'Fördelarna med nybygge framför begagnad fastighet — garantier, energieffektivitet och modern design.',
+    icon: '🏗️',
+    readTime: '6 min läsning',
+    category: 'Beslut',
+  },
+  {
+    title: 'Inflyttningsklart vs Ritning',
+    slug: 'key-ready-vs-off-plan',
+    description: 'Skal du köpa färdigt eller på ritning? Fördelar och nackdelar för svenska köpare.',
+    icon: '🔑',
+    readTime: '8 min läsning',
+    category: 'Beslut',
+  },
+  {
+    title: 'Norr vs Söder Costa Blanca',
+    slug: 'north-vs-south',
+    description: 'Jämför de två regionerna — exklusiva norr mot prisvärda söder. Hitta din perfekta plats.',
+    icon: '🗺️',
+    readTime: '10 min läsning',
+    category: 'Beslut',
+  },
+  {
+    title: 'Turistuthyrningslicens',
+    slug: 'tourist-rental-license',
+    description: 'Allt om semesteruthyrningslicenser i Valenciaregionen — krav, process och inkomstpotential.',
+    icon: '📜',
+    readTime: '8 min läsning',
+    category: 'Investering',
+  },
+];
+
+const destinationGuides = [
+  {
+    title: 'Torrevieja',
+    description: '7 stadsdelar med drönarvideo. Den kompletta Costa Blanca Söder-guiden.',
+    href: '/sv/guides/torrevieja',
+    icon: '🏖️',
+    badges: ['100+ foton', '7 zoner'],
+  },
+  {
+    title: 'Jávea',
+    description: '4 stadsdelar från Arenal-stranden till Montgó-berget. Premiumkustliv.',
     href: '/sv/guides/javea',
     icon: '⛵',
+    badges: ['4 stadsdelar', '7 stränder'],
   },
   {
     title: 'Costa Blanca Nord',
-    description: 'Giftiga naturskönhet och lyxiga projekt i den exklusiva nordregionen',
-    image: '/images/destinations/costa-blanca-north.jpg',
+    description: '6 städer jämförda — Jávea, Moraira, Altea, Calpe, Dénia & Benissa med drönarvideo.',
     href: '/sv/guides/costa-blanca-north',
     icon: '🏔️',
-  },
-];
-
-const buyerGuides: BuyerGuide[] = [
-  {
-    id: 'buying-process',
-    title: 'Köpprocessen',
-    description: 'Steg-för-steg guide till att köpa nybygge i Spanien',
-    icon: '📖',
-    href: '/sv/guides/kopprocessen',
+    badges: ['6 städer', 'Regionguide'],
   },
   {
-    id: 'nie-number',
-    title: 'NIE-nummer Guide',
-    description: 'Hur du skaffar ditt NIE-nummer — obligatoriskt för fastighetsköp',
-    icon: '✓',
-    href: '/sv/guides/nie-nummer',
+    title: 'Orihuela Costa',
+    description: 'Golfparadis med La Zenia, Villamartin, Cabo Roig och mera. Prisvärt kustliv.',
+    href: '/sv/guides/orihuela-costa',
+    icon: '⛳',
+    badges: ['6 områden', 'Golfkälla'],
   },
   {
-    id: 'costs-taxes',
-    title: 'Kostnader & Skatter',
-    description: 'Komplett uppdelning av köpkostnader, skatter och löpande utgifter',
-    icon: '📈',
-    href: '/sv/guides/kostnader-skatter',
-  },
-  {
-    id: 'mortgages',
-    title: 'Bolån för Utländska Köpare',
-    description: 'Hur du får bolån i Spanien som svensk. SBAB, Skandia och spanska banker.',
-    icon: '📞',
-    href: '/sv/guides/bolan-spanien',
-  },
-  {
-    id: 'why-new-build',
-    title: 'Varför Köpa Nybygge?',
-    description: 'Fördelarna med nybygge jämfört med begagnat',
-    icon: '📈',
-    href: '/sv/guides/why-new-build',
-  },
-  {
-    id: 'key-ready-vs-off-plan',
-    title: 'Inflyttningsklart vs Ritning',
-    description: 'Ska du köpa färdigt eller på ritning?',
-    icon: '🏠',
-    href: '/sv/guides/key-ready-vs-off-plan',
-  },
-  {
-    id: 'north-vs-south',
-    title: 'Norr vs Söder Costa Blanca',
-    description: 'Jämför de två regionerna — exklusiva norr vs prisvärda söder',
-    icon: '🗺️',
-    href: '/sv/guides/north-vs-south',
-  },
-];
-
-const trustPoints = [
-  {
-    title: 'Lokal Expertis',
-    description: 'Över 15 år av erfarenhet på Costa Blanca fastighetsmarknaden',
-  },
-  {
-    title: 'Uppdaterad Information',
-    description: 'Reglerna ändras — vi håller allt aktuellt för svenska köpare',
-  },
-  {
-    title: 'Svenska Fokus',
-    description: 'Skrivna för svenska köpare, av personer som förstår din situation',
+    title: 'Benidorm & Finestrat',
+    description: 'Spaniens mest dynamiska kuststad — stränder, nattliv och överraskande investeringspotential.',
+    href: '/sv/guides/benidorm-finestrat',
+    icon: '🌇',
+    badges: ['2 zoner', 'Stadguide'],
   },
 ];
 
 export default function SwedishGuidesPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 to-primary-900 text-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-5xl sm:text-6xl font-bold mb-6">Köpguider</h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Allt du behöver veta för att köpa nybygge i Spanien — speciellt framtaget för svenska köpare
-            </p>
-            <p className="text-lg text-blue-200">
-              Från NIE-nummer till bolån, vi guidar dig genom varje steg av processen
-            </p>
+    <main className="min-h-screen bg-white">
+      {/* Hero */}
+      <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white py-20 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-10 h-px bg-accent-500" />
+            <span className="text-accent-400 text-xs font-bold tracking-widest uppercase">Expertguider</span>
+            <div className="w-10 h-px bg-accent-500" />
           </div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Köpguider</h1>
+          <p className="text-xl text-warm-200 max-w-2xl mx-auto mb-4">
+            Allt du behöver veta för att köpa nybygge i Costa Blanca.
+            Expertguider skrivna speciellt för svenska köpare.
+          </p>
+          <p className="text-warm-300">
+            Från NIE-nummer till bolån, vi guidar dig genom varje steg av processen.
+          </p>
         </div>
       </section>
 
-      {/* Destination Guides Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      {/* Essential Buyer Guides */}
+      <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary-900 mb-4">Destinationsguider</h2>
-            <p className="text-lg text-gray-600">Utforska de bästa områdena på Costa Blanca</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {destinationGuides.map((destination) => (
-              <Link key={destination.title} href={destination.href}>
-                <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow h-full">
-                  <div className="relative h-48 bg-gradient-to-br from-blue-400 to-accent-500 flex items-center justify-center">
-                    <span className="text-6xl">{destination.icon}</span>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-primary-900 mb-3">{destination.title}</h3>
-                    <p className="text-gray-600 mb-4">{destination.description}</p>
-                    <div className="flex items-center text-accent-500 font-semibold group">
-                      Läs Guide <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Buyer Guides Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary-900 mb-4">Köparguider för Svenska</h2>
-            <p className="text-lg text-gray-600">Allt från köpprocessen till skatter och bolån</p>
+            <span className="text-accent-500 text-xs font-bold tracking-widest uppercase">Måste Läsa</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-2 mb-4">Essentiella Köparguider</h2>
+            <p className="text-warm-600 max-w-xl mx-auto">De fyra guider varje köpare måste läsa innan köp i Spanien</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {buyerGuides.map((guide) => (
-              <Link key={guide.id} href={guide.href}>
-                <div className="bg-white border-2 border-gray-100 rounded-lg p-6 hover:border-accent-500 hover:shadow-lg transition-all h-full group">
-                  <div className="mb-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-accent-500 transition-colors text-xl">
-                      {guide.icon}
-                    </div>
+            {essentialGuides.map((guide) => (
+              <Link key={guide.slug} href={`/sv/guides/${guide.slug}`}>
+                <div className="bg-white border-2 border-warm-100 rounded-lg p-6 hover:border-accent-500 hover:shadow-lg transition-all h-full group">
+                  <div className="w-12 h-12 bg-accent-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent-500 transition-colors text-xl">
+                    {guide.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-primary-900 mb-2 group-hover:text-accent-500 transition-colors">
+                  <span className="text-xs font-bold text-accent-500 tracking-wider uppercase">{guide.category}</span>
+                  <h3 className="text-lg font-bold text-primary-900 mt-1 mb-2 group-hover:text-accent-600 transition-colors">
                     {guide.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">{guide.description}</p>
-                  <div className="flex items-center text-accent-500 text-sm font-semibold">
-                    Läs Mer <svg className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                  <p className="text-warm-600 text-sm mb-4">{guide.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-warm-400">{guide.readTime}</span>
+                    <span className="text-accent-500 text-sm font-semibold flex items-center gap-1">
+                      Läs
+                      <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
                   </div>
                 </div>
               </Link>
@@ -203,155 +188,171 @@ export default function SwedishGuidesPage() {
         </div>
       </section>
 
-      {/* Swedish-Specific Service Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-accent-50">
+      {/* Destination Guides */}
+      <section className="py-16 px-4 bg-warm-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary-900 mb-4">Svensk Service & Support</h2>
-            <p className="text-lg text-gray-600">Vi förstår svenska köpares behov</p>
+            <span className="text-accent-500 text-xs font-bold tracking-widest uppercase">Utforska Områden</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-2 mb-4">Destinationsguider</h2>
+            <p className="text-warm-600 max-w-xl mx-auto">Djupgående guider till de bästa områdena på Costa Blanca</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-8 shadow-md">
-              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-2xl">
-                👥
-              </div>
-              <h3 className="text-xl font-bold text-primary-900 mb-3">Svenska-Talande Rådgivare</h3>
-              <p className="text-gray-600">
-                Vår team talar svenska och förstår svenska köpares utmaningar och preferenser. Vi är här för dig på ditt eget språk.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg p-8 shadow-md">
-              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-2xl">
-                ⚖️
-              </div>
-              <h3 className="text-xl font-bold text-primary-900 mb-3">Svenska Jurister</h3>
-              <p className="text-gray-600">
-                Vi arbetar med juridiska experter som är familj med svenska fastighetslagstiftning och kan vägleda dig genom spansk lag.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-lg p-8 shadow-md">
-              <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-2xl">
-                📊
-              </div>
-              <h3 className="text-xl font-bold text-primary-900 mb-3">Skatteverket & Myndigheter</h3>
-              <p className="text-gray-600">
-                Vägledning kring svenska skattekrav för utlandsfastigheter och hur detta påverkar din ekonomi hemma i Sverige.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Finance CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-primary-900 to-blue-800 rounded-lg p-12 text-white text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">Jämför Bolåneräntor</h2>
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div>
-                <p className="text-blue-100 mb-2">Genomsnittlig Räntesats</p>
-                <p className="text-3xl font-bold">3.2 - 4.8%</p>
-              </div>
-              <div>
-                <p className="text-blue-100 mb-2">Svenska Banker</p>
-                <p className="text-3xl font-bold">SBAB, Skandia</p>
-              </div>
-              <div>
-                <p className="text-blue-100 mb-2">Spanska Banker</p>
-                <p className="text-3xl font-bold">CaixaBank, BBVA</p>
-              </div>
-            </div>
-            <Link href="/sv/guides/bolan-spanien">
-              <button className="bg-accent-500 hover:bg-accent-600 text-white font-bold py-3 px-8 rounded-lg transition-colors">
-                Se Bolånealternativ
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary-900 mb-4">Varför Lita på Våra Guider?</h2>
-            <p className="text-lg text-gray-600">Expertkunskap kombinerad med svenska förståelse</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {trustPoints.map((point, index) => (
-              <div key={index} className="bg-white rounded-lg p-8 shadow-md border-l-4 border-accent-500">
-                <h3 className="text-xl font-bold text-primary-900 mb-3">{point.title}</h3>
-                <p className="text-gray-600">{point.description}</p>
-              </div>
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {destinationGuides.map((dest) => (
+              <Link key={dest.href} href={dest.href}>
+                <div className="bg-primary-900 rounded-lg overflow-hidden hover:shadow-xl transition-shadow h-full group">
+                  <div className="h-32 bg-gradient-to-br from-accent-500/30 to-primary-800 flex items-center justify-center">
+                    <span className="text-5xl">{dest.icon}</span>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-400 transition-colors">
+                      {dest.title}
+                    </h3>
+                    <p className="text-warm-300 text-sm mb-3">{dest.description}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {dest.badges.map((badge, i) => (
+                        <span key={i} className="text-xs bg-accent-500/20 text-accent-400 px-2 py-0.5 rounded">
+                          {badge}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent-500 to-accent-600 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">Har Du Frågor?</h2>
-          <p className="text-xl text-white/90 mb-8">
-            Vår svenska team är här för att besvara alla dina frågor om att köpa i Spanien
-          </p>
+      {/* Decision & Planning Guides */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-accent-500 text-xs font-bold tracking-widest uppercase">Planering</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-2 mb-4">Beslutsguider</h2>
+            <p className="text-warm-600 max-w-xl mx-auto">Fatta informerade val om plats, fastighetstyp och investeringsstrategi</p>
+          </div>
 
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {decisionGuides.map((guide) => (
+              <Link key={guide.slug} href={`/sv/guides/${guide.slug}`}>
+                <div className="bg-white border-2 border-warm-100 rounded-lg p-6 hover:border-primary-500 hover:shadow-lg transition-all h-full group">
+                  <div className="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary-500 transition-colors text-xl">
+                    {guide.icon}
+                  </div>
+                  <span className="text-xs font-bold text-primary-600 tracking-wider uppercase">{guide.category}</span>
+                  <h3 className="text-lg font-bold text-primary-900 mt-1 mb-2 group-hover:text-primary-600 transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-warm-600 text-sm mb-4">{guide.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-warm-400">{guide.readTime}</span>
+                    <span className="text-primary-600 text-sm font-semibold flex items-center gap-1">
+                      Läs
+                      <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Finance CTA */}
+      <section className="py-16 px-4 bg-gradient-to-r from-primary-900 to-primary-800">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-accent-400 text-xs font-bold tracking-widest uppercase">Finansiering & Bolån</span>
+              <h2 className="text-3xl font-bold text-white mt-2 mb-4">Redo att Jämföra Bolåneräntor?</h2>
+              <p className="text-warm-200 mb-6">
+                Jämför räntor från 15+ spanska banker, se aktuell marknadsdata och utforska finansieringsalternativ
+                för både vanliga och lyxfastigheter.
+              </p>
+              <Link
+                href="/sv/guides/bolan-spanien"
+                className="inline-block bg-accent-500 hover:bg-accent-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
+                Jämför Bolån &rarr;
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">~3.15%</div>
+                <div className="text-warm-300 text-sm mt-1">Genomsnittlig fast räntesats</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">70%</div>
+                <div className="text-warm-300 text-sm mt-1">Icke-invånare LTV</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">15+</div>
+                <div className="text-warm-300 text-sm mt-1">Banker jämförda</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">&euro;800k+</div>
+                <div className="text-warm-300 text-sm mt-1">Lyxalternativ</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Trust Us */}
+      <section className="py-16 px-4 bg-warm-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-primary-900 mb-4">Varför Lita på Våra Guider?</h2>
+            <p className="text-warm-600">Expertkunskap kombinerad med internationell förståelse</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg p-8 shadow-md border-l-4 border-accent-500">
+              <h3 className="text-xl font-bold text-primary-900 mb-3">Lokal Expertis</h3>
+              <p className="text-warm-600">Etablerade på Costa Blanca med årens erfarenhet av att hjälpa svenska köpare navigera den spanska fastighetsmarknaden.</p>
+            </div>
+            <div className="bg-white rounded-lg p-8 shadow-md border-l-4 border-accent-500">
+              <h3 className="text-xl font-bold text-primary-900 mb-3">Uppdaterad Information</h3>
+              <p className="text-warm-600">Regelbundet uppdaterad för att spegla aktuella spanska fastighetslagstiftningar, skatteregleringar och marknadsförhållanden.</p>
+            </div>
+            <div className="bg-white rounded-lg p-8 shadow-md border-l-4 border-accent-500">
+              <h3 className="text-xl font-bold text-primary-900 mb-3">Internationell Fokus</h3>
+              <p className="text-warm-600">Skrivna specifikt för internationella köpare — täcker unika utmaningar som NIE-nummer, utländska bolån och skatter för icke-invånare.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 px-4 bg-gradient-to-r from-accent-500 to-accent-600 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Har Du Frågor?</h2>
+          <p className="text-xl text-white/90 mb-8">
+            Vårt team är här för att vägleda dig genom köpprocessen. Kontakta oss för personlig rådgivning.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/sv/contact">
-              <button className="bg-primary-900 hover:bg-primary-800 text-white font-bold py-3 px-8 rounded-lg transition-colors inline-flex items-center justify-center gap-2">
-                📞
-                Kontakta Oss
-              </button>
+            <Link
+              href="/sv/contact"
+              className="bg-primary-900 hover:bg-primary-800 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center gap-2"
+            >
+              Kontakta Oss
             </Link>
-            <a href="https://wa.me/34123456789">
-              <button className="bg-white hover:bg-gray-100 text-primary-900 font-bold py-3 px-8 rounded-lg transition-colors inline-flex items-center justify-center gap-2">
-                💬
-                WhatsApp
-              </button>
+            <a
+              href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center gap-2"
+            >
+              WhatsApp
             </a>
           </div>
-
-          <p className="text-white/80 text-sm mt-6">
-            Snabb respons inom 24 timmar — ofta mycket snabbare
+          <p className="text-white/70 text-sm mt-6">
+            Snabbt svar inom 24 timmar — ofta mycket snabbare
           </p>
         </div>
       </section>
-
-      {/* Footer Navigation */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white border-t border-gray-200">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-bold text-primary-900 mb-4">Svenska Destinationer</h3>
-              <ul className="space-y-2">
-                {destinationGuides.map((dest) => (
-                  <li key={dest.title}>
-                    <Link href={dest.href} className="text-blue-600 hover:text-accent-500 transition-colors">
-                      {dest.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-primary-900 mb-4">Köparguider</h3>
-              <ul className="space-y-2">
-                {buyerGuides.slice(0, 4).map((guide) => (
-                  <li key={guide.id}>
-                    <Link href={guide.href} className="text-blue-600 hover:text-accent-500 transition-colors">
-                      {guide.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    </main>
   );
 }

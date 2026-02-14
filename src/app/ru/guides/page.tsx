@@ -2,9 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Гайды По Покупке Недвижимости На Коста Бланка',
-  description: 'Полные гайды по процессу покупки, налогам, визам, ипотеке и образу жизни на Коста Бланка для русскоговорящих.',
-  keywords: 'гайды, процесс покупки, налоги, виза, ипотека, коста бланка',
+  title: 'Руководства Покупателя | Покупка Недвижимости на Коста Бланке | 2026',
+  description: 'Полные руководства покупателя для российских покупателей. Номер NIE, налоги, ипотека, процесс покупки и направления.',
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/ru/guides',
     languages: {
@@ -13,8 +12,8 @@ export const metadata: Metadata = {
       'nl': 'https://newbuildhomescostablanca.com/nl/guides',
       'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides',
       'fr': 'https://newbuildhomescostablanca.com/fr/guides',
-      'no': 'https://newbuildhomescostablanca.com/no/guides',
       'de': 'https://newbuildhomescostablanca.com/de/guides',
+      'no': 'https://newbuildhomescostablanca.com/no/guides',
       'pl': 'https://newbuildhomescostablanca.com/pl/guides',
       'ru': 'https://newbuildhomescostablanca.com/ru/guides',
       'x-default': 'https://newbuildhomescostablanca.com/guides',
@@ -22,106 +21,166 @@ export const metadata: Metadata = {
   },
 };
 
-const GUIDES = [
+const essentialGuides = [
   {
+    title: 'Процесс Покупки',
     slug: 'process-pokupki',
-    title: 'Процесс Покупки Недвижимости В Испании',
-    description: 'Полное руководство по всем шагам: от выбора дома до получения ключей. Сроки, документы, деньги.',
-    icon: 'Шаг За Шагом',
+    description: 'Пошаговое руководство по покупке нового дома в Испании. От резервирования до передачи ключей.',
+    icon: '📋',
+    readTime: '12 минут чтения',
+    category: 'Основное',
   },
   {
+    title: 'Номер NIE Guide',
     slug: 'nomer-nie',
-    title: 'Как Получить Номер НИЕ В Испании',
-    description: 'Номер идентификации иностранца (НИЕ) необходим для покупки. Полная инструкция по получению.',
-    icon: 'НИЕ',
+    description: 'Как получить номер NIE — требуется для покупки недвижимости в Испании.',
+    icon: '🪪',
+    readTime: '8 минут чтения',
+    category: 'Основное',
   },
   {
+    title: 'Расходы и Налоги',
     slug: 'rashody-nalogi',
-    title: 'Расходы и Налоги При Покупке',
-    description: 'Налог на передачу имущества (6%), налог на имущество (IBI), коммунальные услуги, финансирование.',
-    icon: 'Финансы',
+    description: 'Полная информация о затратах на покупку, налогах и текущих расходах для владельцев недвижимости.',
+    icon: '💰',
+    readTime: '10 минут чтения',
+    category: 'Основное',
   },
   {
+    title: 'Ипотека',
     slug: 'ipoteka',
-    title: 'Ипотека Для Иностранцев В Испании',
-    description: 'Как получить ипотеку через испанский банк? CaixaBank, BBVA, Santander. Требования и процесс.',
-    icon: 'Деньги',
-  },
-  {
-    slug: 'pochemu-novostroyka',
-    title: 'Почему Выбрать Новостройки Вместо Старых Домов',
-    description: '10-летняя гарантия, энергоэффективность, персонализация, низкие расходы на содержание.',
-    icon: 'Новое',
-  },
-  {
-    slug: 'pod-klyuch-vs-plan',
-    title: 'Готовый Дом vs. На Стадии Планирования',
-    description: 'Сравнение покупки готового дома и на стадии строительства. Плюсы и минусы обоих вариантов.',
-    icon: 'Выбор',
-  },
-  {
-    slug: 'sever-vs-yug',
-    title: 'Север против Юга Коста Бланка',
-    description: 'Подробное сравнение Северной и Южной Коста Бланка. Цены, образ жизни, климат, сообщества.',
-    icon: 'Карта',
-  },
-  {
-    slug: 'torrevieja',
-    title: 'Торревьеха',
-    description: 'Полное руководство по Торревьехе для русских покупателей и переселенцев',
-    icon: 'Город',
-  },
-  {
-    slug: 'javea',
-    title: 'Хавеа',
-    description: 'Эксклюзивное руководство по Хавеа для русских инвесторов',
-    icon: 'Люкс',
-  },
-  {
-    slug: 'costa-blanca-sever',
-    title: 'Северная Коста-Бланка',
-    description: 'Полное руководство по Северной Коста-Бланка для русских покупателей',
-    icon: 'Север',
+    description: 'Как получить ипотеку в Испании как российский покупатель. Требования и процесс.',
+    icon: '🏦',
+    readTime: '10 минут чтения',
+    category: 'Основное',
   },
 ];
 
-export default function RUGuidesPage() {
+const decisionGuides = [
+  {
+    title: 'Почему Новостройка?',
+    slug: 'pochemu-novostroyka',
+    description: 'Преимущества новостроек по сравнению со старыми квартирами — гарантии, энергоэффективность и современный дизайн.',
+    icon: '🏗️',
+    readTime: '6 минут чтения',
+    category: 'Решение',
+  },
+  {
+    title: 'Под Ключ vs План',
+    slug: 'pod-klyuch-vs-plan',
+    description: 'Стоит ли мне покупать квартиру под ключ или по плану? Плюсы и минусы для российских покупателей.',
+    icon: '🔑',
+    readTime: '8 минут чтения',
+    category: 'Решение',
+  },
+  {
+    title: 'Север vs Юг Коста Бланки',
+    slug: 'sever-vs-yug',
+    description: 'Сравнение двух регионов — эксклюзивный север vs доступный юг. Найдите идеальное место для себя.',
+    icon: '🗺️',
+    readTime: '10 минут чтения',
+    category: 'Решение',
+  },
+  {
+    title: 'Туристическое Разрешение',
+    slug: 'turisticheskoe-razreshenie',
+    description: 'Всё о сертификатах туристической аренды в Валенсийском сообществе — требования, процедура и потенциал.',
+    icon: '📜',
+    readTime: '8 минут чтения',
+    category: 'Инвестиция',
+  },
+];
+
+const destinationGuides = [
+  {
+    title: 'Torrevieja',
+    description: '7 районов с аэрофотографией. Полное руководство по Коста Бланке Юг.',
+    href: '/ru/guides/torrevieja',
+    icon: '🏖️',
+    badges: ['100+ Фото', '7 Зон'],
+  },
+  {
+    title: 'Jávea',
+    description: '4 района от пляжа Ареналь до горы Монтгó. Премиальная жизнь на северном побережье.',
+    href: '/ru/guides/javea',
+    icon: '⛵',
+    badges: ['4 Района', '7 Пляжей'],
+  },
+  {
+    title: 'Коста Бланка Север',
+    description: '6 городов сравнены — Jávea, Moraira, Altea, Calpe, Dénia и Benissa с аэрофотографией.',
+    href: '/ru/guides/costa-blanca-sever',
+    icon: '🏔️',
+    badges: ['6 Городов', 'Региональный Гайд'],
+  },
+  {
+    title: 'Orihuela Costa',
+    description: 'Гольф-рай с La Zenia, Villamartin, Cabo Roig и многое другое. Доступная жизнь на южном побережье.',
+    href: '/ru/guides/orihuela-costa',
+    icon: '⛳',
+    badges: ['6 Областей', 'Гольф-Фокус'],
+  },
+  {
+    title: 'Benidorm & Finestrat',
+    description: 'Самый динамичный прибрежный город Испании — пляжи, ночная жизнь и удивительный инвестиционный потенциал.',
+    href: '/ru/guides/benidorm-finestrat',
+    icon: '🌇',
+    badges: ['2 Зоны', 'Городской Гайд'],
+  },
+];
+
+export default function GuidesPage() {
   return (
-    <main className="min-h-screen bg-warm-50">
-      <section className="bg-primary-900 py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-light text-white mb-4">
-            Полезные <span className="font-semibold">Гайды</span>
-          </h1>
-          <p className="text-warm-300 max-w-2xl mx-auto">
-            Всё что нужно знать о покупке недвижимости на Коста Бланка. От процесса до налогов.
+    <main className="min-h-screen bg-white">
+      {/* Hero */}
+      <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white py-20 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-10 h-px bg-accent-500" />
+            <span className="text-accent-400 text-xs font-bold tracking-widest uppercase">Руководства Экспертов</span>
+            <div className="w-10 h-px bg-accent-500" />
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Руководства Покупателя</h1>
+          <p className="text-xl text-warm-200 max-w-2xl mx-auto mb-4">
+            Всё о покупке недвижимости на Коста Бланке.
+            Руководства экспертов, написанные для российских покупателей.
+          </p>
+          <p className="text-warm-300">
+            От номера NIE до ипотеки, мы проведём вас через каждый этап процесса.
           </p>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {GUIDES.map((guide) => (
-              <Link
-                key={guide.slug}
-                href={`/ru/guides/${guide.slug}`}
-                className="group bg-warm-50 rounded-sm p-8 border border-warm-200 hover:shadow-lg hover:border-accent-300 transition-all"
-              >
-                <div className="text-4xl font-bold text-accent-500 mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
-                  {guide.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-primary-900 group-hover:text-accent-600 mb-3 transition-colors">
-                  {guide.title}
-                </h3>
-                <p className="text-warm-600 text-sm mb-6">
-                  {guide.description}
-                </p>
-                <div className="flex items-center text-accent-600 font-medium text-sm group-hover:gap-3 gap-2 transition-all">
-                  Читать Гайд
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+      {/* Essential Buyer Guides */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-accent-500 text-xs font-bold tracking-widest uppercase">Необходимо Прочитать</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-2 mb-4">Основные Руководства Покупателя</h2>
+            <p className="text-warm-600 max-w-xl mx-auto">Четыре руководства, которые каждый покупатель должен прочитать перед покупкой в Испании</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {essentialGuides.map((guide) => (
+              <Link key={guide.slug} href={`/ru/guides/${guide.slug}`}>
+                <div className="bg-white border-2 border-warm-100 rounded-lg p-6 hover:border-accent-500 hover:shadow-lg transition-all h-full group">
+                  <div className="w-12 h-12 bg-accent-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent-500 transition-colors text-xl">
+                    {guide.icon}
+                  </div>
+                  <span className="text-xs font-bold text-accent-500 tracking-wider uppercase">{guide.category}</span>
+                  <h3 className="text-lg font-bold text-primary-900 mt-1 mb-2 group-hover:text-accent-600 transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-warm-600 text-sm mb-4">{guide.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-warm-400">{guide.readTime}</span>
+                    <span className="text-accent-500 text-sm font-semibold flex items-center gap-1">
+                      Читать
+                      <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -129,92 +188,169 @@ export default function RUGuidesPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-warm-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="bg-white rounded-sm p-12 border border-warm-200">
-            <h2 className="text-3xl font-light text-primary-900 mb-6">
-              Не Знаете С <span className="font-semibold">Чего Начать?</span>
-            </h2>
-            <p className="text-warm-600 mb-8 leading-relaxed">
-              Рекомендуем начать с нашего полного гайда по процессу покупки, который объясняет каждый шаг от выбора дома до получения ключей. Затем изучите информацию о налогах и, если применимо, о получении НИЕ и ипотеке.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/ru/guides/process-pokupki"
-                className="bg-accent-500 hover:bg-accent-600 text-white font-medium px-8 py-3 rounded-sm transition-all text-center"
-              >
-                Начать С Процесса
+      {/* Destination Guides */}
+      <section className="py-16 px-4 bg-warm-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-accent-500 text-xs font-bold tracking-widest uppercase">Изучите Направления</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-2 mb-4">Руководства Направлений</h2>
+            <p className="text-warm-600 max-w-xl mx-auto">Полные руководства по лучшим районам Коста Бланки</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {destinationGuides.map((dest) => (
+              <Link key={dest.href} href={dest.href}>
+                <div className="bg-primary-900 rounded-lg overflow-hidden hover:shadow-xl transition-shadow h-full group">
+                  <div className="h-32 bg-gradient-to-br from-accent-500/30 to-primary-800 flex items-center justify-center">
+                    <span className="text-5xl">{dest.icon}</span>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-400 transition-colors">
+                      {dest.title}
+                    </h3>
+                    <p className="text-warm-300 text-sm mb-3">{dest.description}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {dest.badges.map((badge, i) => (
+                        <span key={i} className="text-xs bg-accent-500/20 text-accent-400 px-2 py-0.5 rounded">
+                          {badge}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </Link>
-              <Link
-                href="/ru/contact"
-                className="bg-warm-100 hover:bg-warm-200 text-primary-900 font-medium px-8 py-3 rounded-sm transition-all text-center"
-              >
-                Поговорить С Экспертом
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Decision & Planning Guides */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-accent-500 text-xs font-bold tracking-widest uppercase">Планирование</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-2 mb-4">Руководства по Решениям</h2>
+            <p className="text-warm-600 max-w-xl mx-auto">Принимайте обоснованные решения о местоположении, типе недвижимости и инвестиционной стратегии</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {decisionGuides.map((guide) => (
+              <Link key={guide.slug} href={`/ru/guides/${guide.slug}`}>
+                <div className="bg-white border-2 border-warm-100 rounded-lg p-6 hover:border-primary-500 hover:shadow-lg transition-all h-full group">
+                  <div className="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary-500 transition-colors text-xl">
+                    {guide.icon}
+                  </div>
+                  <span className="text-xs font-bold text-primary-600 tracking-wider uppercase">{guide.category}</span>
+                  <h3 className="text-lg font-bold text-primary-900 mt-1 mb-2 group-hover:text-primary-600 transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-warm-600 text-sm mb-4">{guide.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-warm-400">{guide.readTime}</span>
+                    <span className="text-primary-600 text-sm font-semibold flex items-center gap-1">
+                      Читать
+                      <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Finance CTA */}
+      <section className="py-16 px-4 bg-gradient-to-r from-primary-900 to-primary-800">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-accent-400 text-xs font-bold tracking-widest uppercase">Финансирование & Ипотека</span>
+              <h2 className="text-3xl font-bold text-white mt-2 mb-4">Готовы сравнить ипотечные ставки?</h2>
+              <p className="text-warm-200 mb-6">
+                Сравните ставки более чем 15 испанских банков, посмотрите текущие рыночные данные и изучите варианты финансирования
+                для стандартных и люксовых объектов недвижимости.
+              </p>
+              <Link
+                href="/ru/guides/ipoteka"
+                className="inline-block bg-accent-500 hover:bg-accent-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
+                Сравнить Ипотеки &rarr;
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">~3.15%</div>
+                <div className="text-warm-300 text-sm mt-1">Средняя Фиксированная Ставка</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">70%</div>
+                <div className="text-warm-300 text-sm mt-1">ЛТВ для Нерезидента</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">15+</div>
+                <div className="text-warm-300 text-sm mt-1">Сравнимые Банки</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">€800k+</div>
+                <div className="text-warm-300 text-sm mt-1">Люксовые Опции</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-light text-primary-900 mb-12 text-center">
-            Часто Задаваемые <span className="font-semibold">Вопросы О Гайдах</span>
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                q: 'Сколько времени занимает покупка дома?',
-                a: 'Обычно 4-8 недель от поиска до подписания документов. Готовые дома быстрее, дома на стадии строительства дольше.',
-              },
-              {
-                q: 'Нужен ли мне адвокат при покупке?',
-                a: 'Да, рекомендуется нанять адвоката. Он защищает ваши интересы и помогает с документами и налогами.',
-              },
-              {
-                q: 'Какой депозит нужен для начала?',
-                a: 'Обычно 30-40% от цены для ипотеки. Можно платить и 100% наличными, если у вас есть возможность.',
-              },
-              {
-                q: 'Дорого ли это в содержании?',
-                a: 'Годовые расходы 2000-5000 евро в зависимости от размера и локации. Включает налог на имущество и коммунальные.',
-              },
-              {
-                q: 'Могу ли я сдавать дом в аренду?',
-                a: 'Да, дома в туристических районах легко сдаются в аренду туристам. Доход 5-8% в год возможен.',
-              },
-              {
-                q: 'Как работает Golden Visa?',
-                a: 'Покупка дома за 500.000+ евро дает право на резидентский статус для вас и вашей семьи в Испании.',
-              },
-            ].map((faq, i) => (
-              <div key={i} className="bg-warm-50 rounded-sm p-6 border border-warm-200">
-                <h3 className="text-lg font-semibold text-primary-900 mb-3">{faq.q}</h3>
-                <p className="text-warm-600 text-sm">{faq.a}</p>
-              </div>
-            ))}
+      {/* Why Trust Us */}
+      <section className="py-16 px-4 bg-warm-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-primary-900 mb-4">Почему Доверять Нашим Руководствам?</h2>
+            <p className="text-warm-600">Местная экспертиза в сочетании с международным пониманием</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg p-8 shadow-md border-l-4 border-accent-500">
+              <h3 className="text-xl font-bold text-primary-900 mb-3">Местная Экспертиза</h3>
+              <p className="text-warm-600">Проживаем на Коста Бланке с многолетним опытом помощи российским покупателям в навигации по испанскому рынку недвижимости.</p>
+            </div>
+            <div className="bg-white rounded-lg p-8 shadow-md border-l-4 border-accent-500">
+              <h3 className="text-xl font-bold text-primary-900 mb-3">Актуальная Информация</h3>
+              <p className="text-warm-600">Регулярно обновляется, чтобы отражать текущие данные испанского рынка недвижимости, налоговое законодательство и условия рынка.</p>
+            </div>
+            <div className="bg-white rounded-lg p-8 shadow-md border-l-4 border-accent-500">
+              <h3 className="text-xl font-bold text-primary-900 mb-3">Международный Подход</h3>
+              <p className="text-warm-600">Специально написано для международных покупателей — охватывает уникальные вызовы, такие как номера NIE, иностранные ипотеки и налоги для нерезидентов.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-primary-900">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-light text-white mb-4">
-            У Вас Остались <span className="font-semibold">Вопросы?</span>
-          </h2>
-          <p className="text-warm-300 mb-8">
-            Наша команда готова ответить на любые вопросы о процессе, налогах, визах и образе жизни на Коста Бланка.
+      {/* CTA */}
+      <section className="py-16 px-4 bg-gradient-to-r from-accent-500 to-accent-600 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Есть Вопросы?</h2>
+          <p className="text-xl text-white/90 mb-8">
+            Наша команда здесь, чтобы провести вас через процесс покупки. Свяжитесь с нами для персональной консультации.
           </p>
-          <Link
-            href="/ru/contact"
-            className="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-medium px-8 py-3 rounded-sm transition-all"
-          >
-            Связаться С Нами
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/ru/contact"
+              className="bg-primary-900 hover:bg-primary-800 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center gap-2"
+            >
+              Свяжитесь с Нами
+            </Link>
+            <a
+              href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center gap-2"
+            >
+              WhatsApp
+            </a>
+          </div>
+          <p className="text-white/70 text-sm mt-6">
+            Быстрый ответ в течение 24 часов — часто намного быстрее
+          </p>
         </div>
       </section>
     </main>

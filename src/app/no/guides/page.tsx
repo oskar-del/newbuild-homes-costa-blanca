@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Kjøpsgidser | Norsk Guide for Kjøp av Eiendom i Spania',
-  description: 'Omfattende guider for norske kjøpere av nybyggen i Spania. NIE-nummer, boliglån, kostnader, skatter og kjøpsprosessen forklart.',
+  title: 'Kjøpeguider | Boligkjøp på Costa Blanca | 2026',
+  description: 'Omfattende kjøpeguider for norske boligkjøpere. NIE-nummer, skatter, boliglån, kjøpsprosess og destinasjoner.',
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/no/guides',
     languages: {
@@ -12,137 +12,174 @@ export const metadata: Metadata = {
       'nl': 'https://newbuildhomescostablanca.com/nl/guides',
       'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/guides',
       'fr': 'https://newbuildhomescostablanca.com/fr/guides',
+      'de': 'https://newbuildhomescostablanca.com/de/guides',
       'no': 'https://newbuildhomescostablanca.com/no/guides',
+      'pl': 'https://newbuildhomescostablanca.com/pl/guides',
+      'ru': 'https://newbuildhomescostablanca.com/ru/guides',
       'x-default': 'https://newbuildhomescostablanca.com/guides',
     },
   },
 };
 
-interface BuyerGuide {
-  id: string;
-  title: string;
-  description: string;
-  href: string;
-}
-
-const buyerGuides: BuyerGuide[] = [
+const essentialGuides = [
   {
-    id: 'buying-process',
     title: 'Kjøpsprosessen',
-    description: 'Steg-for-steg guide for å kjøpe nybyggen i Spania',
-    href: '/no/guides/kjopsprosessen',
+    slug: 'kjopsprosessen',
+    description: 'Steg-for-steg veiledning til å kjøpe nybygg i Spania. Fra reservering til nøkkeloverlevering.',
+    icon: '📋',
+    readTime: '12 min lesing',
+    category: 'Essentiell',
   },
   {
-    id: 'nie-number',
     title: 'NIE-nummer Guide',
-    description: 'Hvordan du får NIE-nummer — obligatorisk for eiendomskjøp',
-    href: '/no/guides/nie-nummer',
+    slug: 'nie-nummer',
+    description: 'Hvordan få ditt NIE-nummer — påkrevd for eiendomskjøp i Spania.',
+    icon: '🪪',
+    readTime: '8 min lesing',
+    category: 'Essentiell',
   },
   {
-    id: 'costs-taxes',
     title: 'Kostnader & Skatter',
-    description: 'Full oversikt over kostnader ved kjøp, skatter og løpende utgifter',
-    href: '/no/guides/kostnader-skatt',
+    slug: 'kostnader-skatt',
+    description: 'Fullstendig oversikt over kjøpsomkostninger, skatter og løpende utgifter for eiendomseiere.',
+    icon: '💰',
+    readTime: '10 min lesing',
+    category: 'Essentiell',
   },
   {
-    id: 'mortgages',
-    title: 'Boliglån for Nordmenn',
-    description: 'Hvordan du får boliglån i Spania som norsk kjøper. Norske og spanske banker.',
-    href: '/no/guides/boliglan',
+    title: 'Boliglån for Utlendinger',
+    slug: 'boliglan',
+    description: 'Hvordan få boliglån som norsk kjøper i Spania. Krav og prosess.',
+    icon: '🏦',
+    readTime: '10 min lesing',
+    category: 'Essentiell',
+  },
+];
+
+const decisionGuides = [
+  {
+    title: 'Hvorfor Nybygg?',
+    slug: 'hvorfor-nybygg',
+    description: 'Fordeler med nybygg sammenlignet med brukt eiendom — garantier, energieffektivitet og moderne design.',
+    icon: '🏗️',
+    readTime: '6 min lesing',
+    category: 'Beslutning',
   },
   {
-    id: 'why-new-build',
-    title: 'Hvorfor Kjøpe Nybygg?',
-    description: 'Fordelene med nybygg versus brukt eiendom',
-    href: '/no/guides/hvorfor-nybygg',
-  },
-  {
-    id: 'key-ready-vs-off-plan',
     title: 'Innflyttingsklar vs Tegning',
-    description: 'Kjøper du innflyttingsklar eller på tegning?',
-    href: '/no/guides/innflyttingsklar-tegning',
+    slug: 'innflyttingsklar-tegning',
+    description: 'Skal jeg kjøpe innflyttingsklar eller etter tegning? Fordeler og ulemper for norske kjøpere.',
+    icon: '🔑',
+    readTime: '8 min lesing',
+    category: 'Beslutning',
   },
   {
-    id: 'north-vs-south',
     title: 'Nord vs Sør Costa Blanca',
-    description: 'Sammenlign de to regionene — eksklusiv nord vs prisværdig sør',
-    href: '/no/guides/nord-vs-sor',
+    slug: 'nord-vs-sor',
+    description: 'Sammenligning av de to regionene — eksklusiv nord vs prisvennlig sør. Finn din perfekte lokasjon.',
+    icon: '🗺️',
+    readTime: '10 min lesing',
+    category: 'Beslutning',
   },
   {
-    id: 'torrevieja',
+    title: 'Turistutleielisens',
+    slug: 'tourist-rental-license',
+    description: 'Alt om turistutleiesertifikater i Valenciaregionen — krav, prosess og potensial.',
+    icon: '📜',
+    readTime: '8 min lesing',
+    category: 'Investering',
+  },
+];
+
+const destinationGuides = [
+  {
     title: 'Torrevieja',
-    description: 'Fullstendig guide til Torrevieja for norske kjøpere og bosettere',
+    description: '7 bydeler med dronefotografi. Den komplette Costa Blanca Sør guide.',
     href: '/no/guides/torrevieja',
+    icon: '🏖️',
+    badges: ['100+ Bilder', '7 Zoner'],
   },
   {
-    id: 'javea',
     title: 'Jávea',
-    description: 'Ekslusiv guide til Jávea for norske investorer',
+    description: '4 bydeler fra Arenal strand til Montgó fjell. Premium nordkystliv.',
     href: '/no/guides/javea',
+    icon: '⛵',
+    badges: ['4 Bydeler', '7 Strender'],
   },
   {
-    id: 'costa-blanca-nord',
     title: 'Costa Blanca Nord',
-    description: 'Komplett guide til Nord Costa Blanca for norske kjøpere',
+    description: '6 byer sammenlignet — Jávea, Moraira, Altea, Calpe, Dénia & Benissa med dronefotografi.',
     href: '/no/guides/costa-blanca-nord',
+    icon: '🏔️',
+    badges: ['6 Byer', 'Regionguide'],
+  },
+  {
+    title: 'Orihuela Costa',
+    description: 'Golfparadis med La Zenia, Villamartin, Cabo Roig og mer. Prisvennlig sydkystliv.',
+    href: '/no/guides/orihuela-costa',
+    icon: '⛳',
+    badges: ['6 Områder', 'Golffokus'],
+  },
+  {
+    title: 'Benidorm & Finestrat',
+    description: 'Spanias mest dynamiske kystby — strender, nattliv og overraskende investeringspotensial.',
+    href: '/no/guides/benidorm-finestrat',
+    icon: '🌇',
+    badges: ['2 Zoner', 'Byguide'],
   },
 ];
 
-const trustPoints = [
-  {
-    title: 'Lokal Ekspertise',
-    description: 'Mer enn 15 år erfaring på Costa Blanca eiendomsmarkedet',
-  },
-  {
-    title: 'Oppdatert Informasjon',
-    description: 'Reglene endrer seg — vi holder alt aktuelt for norske kjøpere',
-  },
-  {
-    title: 'Norsk Fokus',
-    description: 'Skrevet for norske kjøpere, av mennesker som forstår situasjonen din',
-  },
-];
-
-export default function NorwegianGuidesPage(): JSX.Element {
+export default function GuidesPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-900 to-primary-800 text-white py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-5xl sm:text-6xl font-light mb-6">Kjøpsgidser</h1>
-            <p className="text-xl text-warm-200 mb-8 max-w-3xl mx-auto">
-              Alt du trenger å vite for å kjøpe nybyggen i Spania — spesielt oppsatt for norske kjøpere
-            </p>
-            <p className="text-lg text-warm-300">
-              Fra NIE-nummer til boliglån, vi leder deg gjennom hvert steg av prosessen
-            </p>
+    <main className="min-h-screen bg-white">
+      {/* Hero */}
+      <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900 text-white py-20 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-10 h-px bg-accent-500" />
+            <span className="text-accent-400 text-xs font-bold tracking-widest uppercase">Ekspertguider</span>
+            <div className="w-10 h-px bg-accent-500" />
           </div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Kjøpeguider</h1>
+          <p className="text-xl text-warm-200 max-w-2xl mx-auto mb-4">
+            Alt du trenger å vite om å kjøpe nybygg på Costa Blanca.
+            Ekspertguider skrevet for norske kjøpere.
+          </p>
+          <p className="text-warm-300">
+            Fra NIE-nummer til boliglån, vi veileder deg gjennom hver del av prosessen.
+          </p>
         </div>
       </section>
 
-      {/* Buyer Guides Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      {/* Essential Buyer Guides */}
+      <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-light text-primary-900 mb-4">Kjøpsgidser for Nordmenn</h2>
-            <p className="text-lg text-warm-600">Alt fra kjøpsprosessen til skatter og boliglån</p>
+            <span className="text-accent-500 text-xs font-bold tracking-widest uppercase">Må lese</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-2 mb-4">Essensielle Kjøperguider</h2>
+            <p className="text-warm-600 max-w-xl mx-auto">De fire guidene som hver kjøper bør lese før kjøp i Spania</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {buyerGuides.map((guide) => (
-              <Link key={guide.id} href={guide.href}>
-                <div className="bg-white border-2 border-warm-100 rounded-sm p-6 hover:border-accent-500 hover:shadow-lg transition-all h-full group">
-                  <div className="mb-4">
-                    <div className="w-12 h-12 bg-primary-100 rounded-sm flex items-center justify-center group-hover:bg-accent-500 transition-colors text-xl">
-                    </div>
+            {essentialGuides.map((guide) => (
+              <Link key={guide.slug} href={`/no/guides/${guide.slug}`}>
+                <div className="bg-white border-2 border-warm-100 rounded-lg p-6 hover:border-accent-500 hover:shadow-lg transition-all h-full group">
+                  <div className="w-12 h-12 bg-accent-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent-500 transition-colors text-xl">
+                    {guide.icon}
                   </div>
-                  <h3 className="text-lg font-light text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">
+                  <span className="text-xs font-bold text-accent-500 tracking-wider uppercase">{guide.category}</span>
+                  <h3 className="text-lg font-bold text-primary-900 mt-1 mb-2 group-hover:text-accent-600 transition-colors">
                     {guide.title}
                   </h3>
                   <p className="text-warm-600 text-sm mb-4">{guide.description}</p>
-                  <div className="flex items-center text-accent-600 text-sm font-semibold">
-                    Les Mer <svg className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-warm-400">{guide.readTime}</span>
+                    <span className="text-accent-500 text-sm font-semibold flex items-center gap-1">
+                      Les
+                      <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
                   </div>
                 </div>
               </Link>
@@ -151,118 +188,171 @@ export default function NorwegianGuidesPage(): JSX.Element {
         </div>
       </section>
 
-      {/* Norwegian-Specific Service Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-warm-50">
+      {/* Destination Guides */}
+      <section className="py-16 px-4 bg-warm-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-light text-primary-900 mb-4">Norsk Service & Støtte</h2>
-            <p className="text-lg text-warm-600">Vi forstår behovet til norske kjøpere</p>
+            <span className="text-accent-500 text-xs font-bold tracking-widest uppercase">Utforsk Områder</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-2 mb-4">Destinasjonsguider</h2>
+            <p className="text-warm-600 max-w-xl mx-auto">Omfattende guider for de beste områdene på Costa Blanca</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-sm p-8 shadow-sm border border-warm-200">
-              <div className="w-14 h-14 bg-primary-100 rounded-sm flex items-center justify-center mb-4 text-2xl">
-              </div>
-              <h3 className="text-xl font-light text-primary-900 mb-3">Norsktalende Rådgivere</h3>
-              <p className="text-warm-600">
-                Vårt team snakker norsk og forstår utfordringene og preferansene til norske kjøpere. Vi er her for deg på ditt eget språk.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-sm p-8 shadow-sm border border-warm-200">
-              <div className="w-14 h-14 bg-primary-100 rounded-sm flex items-center justify-center mb-4 text-2xl">
-              </div>
-              <h3 className="text-xl font-light text-primary-900 mb-3">Juridisk Ekspertise</h3>
-              <p className="text-warm-600">
-                Vi samarbeider med juridiske eksperter som kjenner norsk beslutningsprosess og kan navigere deg gjennom spansk lov.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-sm p-8 shadow-sm border border-warm-200">
-              <div className="w-14 h-14 bg-primary-100 rounded-sm flex items-center justify-center mb-4 text-2xl">
-              </div>
-              <h3 className="text-xl font-light text-primary-900 mb-3">Skatter & Myndigheter</h3>
-              <p className="text-warm-600">
-                Veiledning om norsk skatteplikt for utenlandsk eiendom og hvordan det påvirker økonomien din hjemme.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Finance CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-primary-900 to-primary-800 rounded-sm p-12 text-white text-center">
-            <h2 className="text-3xl sm:text-4xl font-light mb-6">Sammenlign Boliglånsrenter</h2>
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div>
-                <p className="text-warm-200 mb-2">Gjennomsnittlig Rente</p>
-                <p className="text-3xl font-light">3.0 - 4.5%</p>
-              </div>
-              <div>
-                <p className="text-warm-200 mb-2">Norske Banker</p>
-                <p className="text-3xl font-light">DNB, Nordea, SpareBank 1</p>
-              </div>
-              <div>
-                <p className="text-warm-200 mb-2">Spanske Banker</p>
-                <p className="text-3xl font-light">CaixaBank, BBVA</p>
-              </div>
-            </div>
-            <Link href="/no/guides/boliglan">
-              <button className="bg-accent-500 hover:bg-accent-600 text-white font-semibold py-3 px-8 rounded-sm transition-colors">
-                Se Boliglånsalternativer
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-warm-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-light text-primary-900 mb-4">Hvorfor Stole På Våre Guider?</h2>
-            <p className="text-lg text-warm-600">Ekspertkunnskap kombinert med norsk forståelse</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {trustPoints.map((point, index) => (
-              <div key={index} className="bg-white rounded-sm p-8 shadow-sm border-l-4 border-accent-500">
-                <h3 className="text-xl font-light text-primary-900 mb-3">{point.title}</h3>
-                <p className="text-warm-600">{point.description}</p>
-              </div>
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {destinationGuides.map((dest) => (
+              <Link key={dest.href} href={dest.href}>
+                <div className="bg-primary-900 rounded-lg overflow-hidden hover:shadow-xl transition-shadow h-full group">
+                  <div className="h-32 bg-gradient-to-br from-accent-500/30 to-primary-800 flex items-center justify-center">
+                    <span className="text-5xl">{dest.icon}</span>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-accent-400 transition-colors">
+                      {dest.title}
+                    </h3>
+                    <p className="text-warm-300 text-sm mb-3">{dest.description}</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {dest.badges.map((badge, i) => (
+                        <span key={i} className="text-xs bg-accent-500/20 text-accent-400 px-2 py-0.5 rounded">
+                          {badge}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-accent-500 to-accent-600 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-light mb-6">Har Du Spørsmål?</h2>
-          <p className="text-xl text-white/90 mb-8">
-            Vårt norske team er her for å svare på alle dine spørsmål om kjøp av eiendom i Spania
-          </p>
+      {/* Decision & Planning Guides */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-accent-500 text-xs font-bold tracking-widest uppercase">Planlegging</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mt-2 mb-4">Beslutningsguider</h2>
+            <p className="text-warm-600 max-w-xl mx-auto">Ta informerte beslutninger om lokasjon, eiendomstype og investeringsstrategi</p>
+          </div>
 
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {decisionGuides.map((guide) => (
+              <Link key={guide.slug} href={`/no/guides/${guide.slug}`}>
+                <div className="bg-white border-2 border-warm-100 rounded-lg p-6 hover:border-primary-500 hover:shadow-lg transition-all h-full group">
+                  <div className="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary-500 transition-colors text-xl">
+                    {guide.icon}
+                  </div>
+                  <span className="text-xs font-bold text-primary-600 tracking-wider uppercase">{guide.category}</span>
+                  <h3 className="text-lg font-bold text-primary-900 mt-1 mb-2 group-hover:text-primary-600 transition-colors">
+                    {guide.title}
+                  </h3>
+                  <p className="text-warm-600 text-sm mb-4">{guide.description}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-warm-400">{guide.readTime}</span>
+                    <span className="text-primary-600 text-sm font-semibold flex items-center gap-1">
+                      Les
+                      <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Finance CTA */}
+      <section className="py-16 px-4 bg-gradient-to-r from-primary-900 to-primary-800">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-accent-400 text-xs font-bold tracking-widest uppercase">Finansiering & Boliglån</span>
+              <h2 className="text-3xl font-bold text-white mt-2 mb-4">Klar til å sammenligne boliglånsrenter?</h2>
+              <p className="text-warm-200 mb-6">
+                Sammenlign renter fra over 15 spanske banker, se aktuelle markedsdata og utforsk finansieringsalternativer
+                for standard og luksuseiendom.
+              </p>
+              <Link
+                href="/no/guides/boliglan"
+                className="inline-block bg-accent-500 hover:bg-accent-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
+                Sammenlign Boliglån &rarr;
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">~3.15%</div>
+                <div className="text-warm-300 text-sm mt-1">Gjennomsnittlig fast rente</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">70%</div>
+                <div className="text-warm-300 text-sm mt-1">Ikke-bosatt LTV</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">15+</div>
+                <div className="text-warm-300 text-sm mt-1">Sammenlignbare banker</div>
+              </div>
+              <div className="bg-white/10 rounded-xl p-5 text-center">
+                <div className="text-3xl font-bold text-white">€800k+</div>
+                <div className="text-warm-300 text-sm mt-1">Luksuealternativer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Trust Us */}
+      <section className="py-16 px-4 bg-warm-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-primary-900 mb-4">Hvorfor Stole på Våre Guider?</h2>
+            <p className="text-warm-600">Lokal ekspertise kombinert med internasjonalt innsyn</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg p-8 shadow-md border-l-4 border-accent-500">
+              <h3 className="text-xl font-bold text-primary-900 mb-3">Lokal Ekspertise</h3>
+              <p className="text-warm-600">Bosatt på Costa Blanca med mange års erfaring med å hjelpe norske kjøpere gjennom det spanske eiendomsmarkedet.</p>
+            </div>
+            <div className="bg-white rounded-lg p-8 shadow-md border-l-4 border-accent-500">
+              <h3 className="text-xl font-bold text-primary-900 mb-3">Oppdatert Informasjon</h3>
+              <p className="text-warm-600">Regelmessig oppdatert for å gjenspeile gjeldende spanske eiendomsmarkedsdata, skatteregler og markedsforhold.</p>
+            </div>
+            <div className="bg-white rounded-lg p-8 shadow-md border-l-4 border-accent-500">
+              <h3 className="text-xl font-bold text-primary-900 mb-3">Internasjonalt Fokus</h3>
+              <p className="text-warm-600">Skrevet spesielt for internasjonale kjøpere — behandler unike utfordringer som NIE-nummere, utenlandske boliglån og skatter for ikke-bosatte.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 px-4 bg-gradient-to-r from-accent-500 to-accent-600 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Har du Spørsmål?</h2>
+          <p className="text-xl text-white/90 mb-8">
+            Vårt team er her for å veilede deg gjennom kjøpsprosessen. Kontakt oss for personlig rådgivning.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/no/contact">
-              <button className="bg-primary-900 hover:bg-primary-800 text-white font-semibold py-3 px-8 rounded-sm transition-colors inline-flex items-center justify-center gap-2">
-                Kontakt Oss
-              </button>
+            <Link
+              href="/no/contact"
+              className="bg-primary-900 hover:bg-primary-800 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center gap-2"
+            >
+              Kontakt Oss
             </Link>
             <a
               href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white hover:bg-warm-100 text-primary-900 font-semibold py-3 px-8 rounded-sm transition-colors inline-flex items-center justify-center gap-2"
+              className="bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center gap-2"
             >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               WhatsApp
             </a>
           </div>
+          <p className="text-white/70 text-sm mt-6">
+            Rask respons innen 24 timer — ofte mye raskere
+          </p>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
