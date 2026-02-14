@@ -30,19 +30,19 @@
       {
         "name": "Guardamar Beaches",
         "googleMaps": "https://maps.google.com/?q=Playa+Centro+Guardamar",
-        "description": "Natural beaches backed by pine forests",
+        "description": "Natuurlijke stranden omzoomd door dennenbossen",
         "distance": "10 km"
       },
       {
         "name": "La Mata Beach",
         "googleMaps": "https://maps.google.com/?q=Playa+La+Mata+Torrevieja",
-        "description": "Long natural beach near the salt lakes",
+        "description": "Langzaam natuurzandstrand nabij de zoutmeren",
         "distance": "12 km"
       },
       {
         "name": "Orihuela Costa Beaches",
         "googleMaps": "https://maps.google.com/?q=Playa+La+Zenia",
-        "description": "La Zenia, Cabo Roig, and other resort beaches",
+        "description": "La Zenia, Cabo Roig en andere resort-stranden",
         "distance": "15 km"
       }
     ],
@@ -50,19 +50,19 @@
       {
         "name": "Quesada Commercial Center",
         "googleMaps": "https://maps.google.com/?q=Ciudad+Quesada+Rojales",
-        "description": "Local shops, supermarkets, restaurants, and banks"
+        "description": "Lokale winkels, supermarkten, restaurants en banken"
       },
       {
         "name": "Habaneras Shopping Center",
         "googleMaps": "https://maps.google.com/?q=Habaneras+Torrevieja",
-        "description": "Large shopping center in Torrevieja",
+        "description": "Groot winkelcentrum in Torrevieja",
         "distance": "8 km"
       },
       {
         "name": "La Zenia Boulevard",
         "googleMaps": "https://maps.google.com/?q=La+Zenia+Boulevard",
         "url": "https://www.lazeniaboulevard.es/",
-        "description": "Europe's largest open-air shopping center",
+        "description": "Europas grootste openluchtwinkelcentrum",
         "distance": "18 km"
       }
     ],
@@ -71,63 +71,63 @@
       "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
       "url": "https://torrevieja-salud.com/",
       "distance": "8 km",
-      "driveTime": "10 minuutn"
+      "driveTime": "10 minutes"
     },
     "airport": {
       "name": "Alicante-Elche Airport",
       "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
       "url": "https://www.alicante-airport.net/",
       "distance": "40 km",
-      "driveTime": "30 minuutn"
+      "driveTime": "30 minutes"
     }
   },
   "golf": {
-    "intro": "Ciudad Quesada is a golfer's paradise with La Marquesa Golf on its doorstep and multiple courses within 20 minuutn. The area has developed as a golf-focused community with excellent course access at affordable prices.",
+    "intro": "Ciudad Quesada is een golfparadijs met La Marquesa Golf voor je deur en meerdere courses binnen 20 minuten. Het gebied is ontwikkeld als golfgerichte gemeenschap met uitstekende course-toegang tegen betaalbare prijzen.",
     "courses": [
       {
         "name": "La Marquesa Golf",
         "distance": "1 km",
-        "driveTime": "Walking distance",
+        "driveTime": "Loopafstand",
         "holes": 18,
         "url": "https://www.lamarquesagolf.com/",
         "googleMaps": "https://maps.google.com/?q=La+Marquesa+Golf",
-        "description": "The home course of Ciudad Quesada. Well-maintained 18 holes with excellent clubhouse and practice facilities. Popular with residents."
+        "description": "De thuis-course van Ciudad Quesada. Goed onderhouden 18 holes met uitstekende clubhouse en oefenfaciliteiten. Populair bij bewoners."
       },
       {
         "name": "La Finca Golf",
         "distance": "8 km",
-        "driveTime": "10 minuutn",
+        "driveTime": "10 minutes",
         "holes": 18,
         "url": "https://www.lafincagolf.com/",
         "googleMaps": "https://maps.google.com/?q=La+Finca+Golf+Algorfa",
-        "description": "Championship course designed by Pepe Gancedo. Beautiful setting with lake features."
+        "description": "Championship course ontworpen door Pepe Gancedo. Prachtige setting met meer-elementen."
       },
       {
         "name": "Vistabella Golf",
         "distance": "10 km",
-        "driveTime": "12 minuutn",
+        "driveTime": "12 minutes",
         "holes": 18,
         "url": "https://www.vistabellagolf.com/",
         "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
-        "description": "Modern course with excellent facilities. Friendly atmosphere."
+        "description": "Moderne course met uitstekende faciliteiten. Vriendelijke sfeer."
       },
       {
         "name": "Lo Romero Golf",
         "distance": "15 km",
-        "driveTime": "18 minuutn",
+        "driveTime": "18 minutes",
         "holes": 18,
         "url": "https://www.loromerogolf.com/",
         "googleMaps": "https://maps.google.com/?q=Lo+Romero+Golf",
-        "description": "Jack Nicklaus design with challenging layout. Premium facilities."
+        "description": "Jack Nicklaus ontwerp met uitdagende layout. Premium faciliteiten."
       },
       {
         "name": "Villamartin Golf",
         "distance": "20 km",
-        "driveTime": "22 minuutn",
+        "driveTime": "22 minutes",
         "holes": 18,
         "url": "https://www.villamartingolf.com/",
         "googleMaps": "https://maps.google.com/?q=Villamartin+Golf",
-        "description": "Famous championship course with storied history."
+        "description": "Beroemde championship course met indrukwekkende geschiedenis."
       }
     ]
   },
@@ -137,62 +137,62 @@
       "location": "Central Quesada",
       "googleMaps": "https://maps.google.com/?q=Mercado+Ciudad+Quesada",
       "hours": "Saturdays 8:00 - 14:00",
-      "description": "Popular weekly market with fresh produce, clothing, and household items"
+      "description": "Populaire wekelijkse markt met verse producten, kleding en huishoudelijke artikelen"
     }
   },
   "content": {
-    "metaTitle": "Wonen in Ciudad Quesada 2026 | Nieuwbouw Costa Blanca",
-    "metaDescription": "Volledige gids voor wonen in Ciudad Quesada - geplande gemeenschap Costa Blanca South. Golf, zwembaden, internationale gemeenschap. Nieuwbouw vanaf €200.000.",
-    "quickAnswer": "Ciudad Quesada is an established expat community built around La Marquesa Golf, offering excellent value properties from €165,000 apartments to €700,000 golf villas. It's 10-15 minuutn from beaches, 10 minuutn from Torrevieja hospital, and has 5 golf courses within 22 minuutn. Perfect for golf-focused buyers seeking value.",
-    "heroIntro": "Sometimes the best-kept secrets are the ones hidden in plain sight. Ciudad Quesada sits just inland from the Costa Blanca coastline, quietly offering what many buyers search for: a genuine golf lifestyle community with excellent value, proper infrastructure, and a welcoming international population—without the premium prices of beachfront locations.\n\nThe town grew around La Marquesa Golf, and that DNA remains. Golfers are everywhere, the clubhouse is a social hub, and properties with course views command respect if not the crazy premiums you'd pay elsewhere. But Ciudad Quesada has evolved beyond golf into a complete community with shops, restaurants, healthcare, and everything needed for comfortable daily life.\n\nFor buyers who prioritize lifestyle over location snobbery—and savings of 25-35% versus coastal equivalents—Ciudad Quesada rewards investigation.",
+    "metaTitle": "Nieuwbouw in Ciudad Quesada 2026 | Woningen Costa Blanca",
+    "metaDescription": "Gids voor Ciudad Quesada - golfgemeenschap Costa Blanca South, La Marquesa Golf, uitstekende waarde woningen. Vanaf €165k tot €700k. 10 min tot stranden.",
+    "quickAnswer": "Ciudad Quesada is een gevestigde expatgemeenschap gebouwd rond La Marquesa Golf, biedend uitstekende waarde woningen vanaf €165.000 appartementen tot €700.000 golfvilla's. Het ligt 10-15 minuten van stranden, 10 minuten van Torrevieja ziekenhuis en heeft 5 golfbanen binnen 22 minuten. Perfect voor golfgericht gericht kopers die waarde zoeken.",
+    "heroIntro": "Soms zijn de beste bewaarde geheimen degenen die zich openlijk verstoppen. Ciudad Quesada ligt net binnenlands van de Costa Blanca-kustlijn, stilletjes biedend wat veel kopers zoeken: een echte golflevensstijl gemeenschap met uitstekende waarde, juiste infrastructuur en welkome internationale bevolking—zonder de premiumprijs van strandlocaties.\n\nDe stad groeide rond La Marquesa Golf en dat DNA blijft. Golfers zijn overal, het clubhouse is een sociaal centrum en eigendommen met course-uitzicht bevel respect hoewel niet de gekte premiums je elders zou betalen. Maar Ciudad Quesada is voorbij golf geëvolueerd in een volledige gemeenschap met winkels, restaurants, gezondheidszorg en alles nodig voor comfortabel dagelijks leven.\n\nVoor kopers die levensstijl prioriteren boven locatie-snobbisme—en besparingen van 25-35% versus kust-equivalenten—beloont Ciudad Quesada onderzoek.",
     "lifestyleSection": {
-      "intro": "Daily life in Ciudad Quesada has a comfortable rhythm. Morning coffee at your local café, a round at La Marquesa or one of the nearby courses, lunch at the clubhouse or a local restaurant, afternoon by the pool, and evening drinks at one of the many bars where everyone knows your name. It's relaxed, social, and affordable.\n\nThe community is predominantly international—British, Scandinavian, Dutch, German—with English spoken everywhere. Social clubs and activities abound: golf societies, walking groups, charitable organizations, book clubs. Making friends is easy because everyone was new once. The beaches are 10-15 minuutn away when you want them, but the pool and the patio often win.",
+      "intro": "Dagelijks leven in Ciudad Quesada heeft een comfortabel ritme. Ochtendkoffie op je lokale café, een rondje op La Marquesa of een nabijgelegen course, lunch op het clubhouse of lokaal restaurant, middag bij het zwembad en avond dranken in een van de vele bars waar iedereen je naam kent. Het is ontspannen, sociaal en betaalbaar.\n\nDe gemeenschap is overwegend internationaal—Brits, Scandinavisch, Nederlands, Duits—met Engels overal gesproken. Sociale clubs en activiteiten zijn overvloedig: golfsocietappen, wandel groepen, liefdadig organisaties, boekenclubs. Vrienden maken is gemakkelijk omdat iedereen eens nieuw was. De stranden zijn 10-15 minuten weg wanneer je ze wilt, maar het zwembad en terras winnen vaak.",
       "highlights": [
-        "La Marquesa Golf on your doorstep—walk to the first tee",
-        "5 championship golf courses within 22 minuutn",
-        "Excellent value—25-35% less than coastal equivalents",
-        "Established expat community with instant social life",
-        "Full services: shops, restaurants, banks, pharmacies",
-        "Torrevieja hospital just 10 minuutn away",
-        "Beaches at Guardamar 10 minuutn, Orihuela Costa 15 minuutn",
-        "30 minuutn to Alicante Airport—practical access"
+        "La Marquesa Golf voor je deur—loop naar de eerste tee",
+        "5 championship golfbanen binnen 22 minuten",
+        "Uitstekende waarde—25-35% minder dan kust-equivalenten",
+        "Gevestigde expatgemeenschap met instant sociaal leven",
+        "Volledige diensten: winkels, restaurants, banken, apotheken",
+        "Torrevieja ziekenhuis slechts 10 minuten weg",
+        "Stranden bij Guardamar 10 minuten, Orihuela Costa 15 minuten",
+        "30 minuten naar Alicante Luchthaven—praktische toegang"
       ]
     },
     "amenitiesSection": {
-      "beaches": "Ciudad Quesada is inland but beaches are easily accessible. Guardamar's natural beaches with pine forest backdrop are 10 km (12 minuutn). La Mata's long stretch near the salt lakes is similar distance. For resort beaches with full facilities, La Zenia and Orihuela Costa are 15-18 km (15-20 minuutn). Many residents keep beach gear in the car for spontaneous trips.",
-      "dining": "Ciudad Quesada has excellent dining options—Spanish tapas bars, British pubs, international restaurants, and the La Marquesa Golf clubhouse. The commercial center has varied choices. For more variety, Torrevieja (8 km) offers extensive dining, and Orihuela Costa's restaurant scene is 15 minuutn away. The Saturday market adds to the food culture.",
-      "shopping": "The town has comprehensive local shops, supermarkets (including Mercadona and Consum), banks, pharmacies, and all daily necessities. Habaneras shopping center in Torrevieja (8 km) offers more choice. For major shopping, La Zenia Boulevard (18 km) has 150+ stores. The weekly market adds local character.",
-      "healthcare": "Hospital Universitario de Torrevieja is just 8 km away (10 minuutn), with comprehensive services and English-speaking staff. Multiple private clinics, dentists, and opticians serve the area. 24-uur pharmacies are nearby. The healthcare infrastructure is excellent—a major reason retirees choose Ciudad Quesada.",
-      "transport": "Alicante-Elche Airport is 40 km away (30 minuutn via AP-7). Murcia-Corvera Airport is 45 km (35 minuutn). A car is essential for Ciudad Quesada—while local services are walkable, beaches and major shopping require transport. The location is actually well-positioned for exploring the region."
+      "beaches": "Ciudad Quesada is binnenlands maar stranden zijn gemakkelijk bereikbaar. Guardamar's natuurlijke stranden met dennenbosachtergrond zijn 10 km (12 minuten). La Mata's lange stuk nabij de zoutmeren is vergelijkbare afstand. Voor resort-stranden met volledige voorzieningen, La Zenia is 15 km (15 minuten). Veel bewoners houden strandgear in de auto voor spontane trips.",
+      "dining": "Ciudad Quesada heeft uitstekende diningopties—Spaanse tapas bars, Britse pubs, internationale restaurants en La Marquesa Golf clubhouse. Het commercieel centrum heeft diverse keuzes. Voor meer variatie, Torrevieja (8 km) biedt uitgebreide dining en Orihuela Costa's restaurant-scène is 15 minuten weg. De zaterdagmarkt draagt bij aan de voedselcultuur.",
+      "shopping": "De stad heeft uitgebreide lokale winkels, supermarkten (inclusief Mercadona en Consum), banken, apotheken en alles dagelijks nodig. Habaneras winkelcentrum in Torrevieja (8 km) biedt meer keuze. Voor groot winkelen, La Zenia Boulevard (18 km) heeft 150+ winkels. De wekelijkse markt voegt lokaal karakter toe.",
+      "healthcare": "Hospital Universitario de Torrevieja is slechts 8 km weg (10 minuten), met uitgebreide diensten en Engelssprekend personeel. Talrijke particuliere klinieken, tandartsen en opticiens bedienen het gebied. 24-uurs apotheken zijn dicht bij. De gezondheidszorg infrastructuur is uitstekend—een voornaamste reden gepensioneerden Ciudad Quesada kiezen.",
+      "transport": "Alicante-Elche Luchthaven is 40 km weg (30 minuten via AP-7). Murcia-Corvera Luchthaven is 45 km (35 minuten). Een auto is essentieel voor Ciudad Quesada—terwijl lokale diensten voetgangersgebied zijn, stranden en groot winkelen vereisen vervoer. De locatie is eigenlijk goed gepositioneerd voor het verkennen van de regio."
     },
     "neighborhoods": [
       {
         "name": "La Marquesa Area",
-        "description": "Properties closest to La Marquesa Golf. Mix of villas and bungalows, many with golf views. Premium for the area but excellent golf lifestyle value."
+        "description": "Eigendommen het dichtst bij La Marquesa Golf. Mix van villa's en bungalows, veel met golfuitzicht. Premium voor het gebied maar uitstekende golflevensstijl waarde."
       },
       {
         "name": "Quesada Centro",
-        "description": "Near the commercial center. Walking distance to shops and restaurants. More affordable, good community feel. Mix of apartments and townhouses."
+        "description": "Nabij het commercieel centrum. Loopafstand naar winkels en restaurants. Meer betaalbaar, goed gemeenschapsgevoel. Mix van appartementen en townhouses."
       },
       {
         "name": "Lo Pepin",
-        "description": "Established urbanization with mature gardens. Larger plots, villa-focused. Quieter atmosphere. Popular with permanent residents."
+        "description": "Gevestigde urbanisatie met volgroeide tuinen. Grotere percelen, villa-gericht. Rustigere sfeer. Populair bij permanente bewoners."
       },
       {
         "name": "Doña Pepa",
-        "description": "Adjacent urbanization. Mix of property types. Good value and community facilities. Short drive to all amenities."
+        "description": "Aangrenzende urbanisatie. Mix van woontypen. Goede waarde en gemeenschapsfaciliteiten. Korte rit naar alle voorzieningen."
       }
     ],
-    "propertyMarketSection": "Ciudad Quesada offers outstanding value for golf-focused living. New build apartments start from around €165,000-280,000, townhouses/bungalows from €220,000-380,000, and villas from €350,000-700,000. This represents 25-35% less than equivalent properties in Orihuela Costa while offering comparable golf access.\n\n**Featured Development: Vega Golf** – Luxury 3-bed villas from €598,000 with private pools frontline to La Marquesa Golf. Premium specification with underbuild option.\n\n**Featured Development: Luxury Apartments Oceanic** – Premium 4-bed bungalows from €599,000 with pools and golf views. 200m² living space on 400m² plots.\n\nThe rental market is steady rather than spectacular—golf tourism drives demand, particularly spring and autumn. Long-term rentals to expats are also common. The value proposition attracts buyers seeking more home for their money, with rental income as a bonus rather than primary motivation.",
+    "propertyMarketSection": "Ciudad Quesada biedt uitstekende waarde voor golfgericht wonen. Nieuwbouw appartementen starten vanaf ongeveer €165.000-280.000, townhouses/bungalows vanaf €220.000-380.000 en villa's vanaf €350.000-700.000. Dit vertegenwoordigt 25-35% minder dan gelijkwaardige eigendommen in Orihuela Costa terwijl vergelijkbare goltoegang wordt geboden.\n\n**Uitgelichte Ontwikkeling: Vega Golf** – Luxe 3-slaapkamer villa's vanaf €598.000 met privézwembaden vooraan La Marquesa Golf. Premium specificatie met onderbouw optie.\n\n**Uitgelichte Ontwikkeling: Luxury Apartments Oceanic** – Premium 4-slaapkamer bungalows vanaf €599.000 met zwembaden en goltuitzicht. 200m² woonruimte op 400m² percelen.\n\nDe huurmarkt is stabiel eerder dan spectaculair—golftoerist drijft vraag, bijzonder lente en herfst. Langdurige huurders aan expatriaten zijn ook algemeen. De waarde propositie trekt kopers aan golflevensstijl zoeken, met huuropbrengsten als bonus liever dan primaire motivatie.",
     "whyLiveHereSection": [
-      "La Marquesa Golf on your doorstep—serious golf lifestyle",
-      "5 courses within 22 minuutn—variety for every mood",
-      "Outstanding value—25-35% less than coastal equivalent",
-      "Established, welcoming international community",
-      "Complete infrastructure—all services available",
-      "Torrevieja hospital just 10 minuutn away",
-      "Practical airport access—30 minuutn to Alicante",
-      "Beaches close enough when you want them"
+      "La Marquesa Golf voor je deur—echte golflevensstijl",
+      "5 courses binnen 22 minuten—variatie voor elke stemming",
+      "Uitstekende waarde—25-35% minder dan kust-equivalent",
+      "Gevestigde, welkome internationale gemeenschap",
+      "Volledige infrastructuur—alle diensten beschikbaar",
+      "Torrevieja ziekenhuis slechts 10 minuten weg",
+      "Praktische luchthaven toegang—30 minuten naar Alicante",
+      "Stranden dicht genoeg wanneer je ze wilt"
     ],
     "featuredProperties": [
       {
@@ -208,7 +208,7 @@
           "Frontline Golf",
           "Underbuild"
         ],
-        "description": "Luxury 3-bed villa frontline to La Marquesa Golf with private pool and underbuild option."
+        "description": "Luxe 3-slaapkamer villa vooraan La Marquesa Golf met privézwembad en onderbouw optie."
       },
       {
         "title": "Luxury Apartments Oceanic",
@@ -222,206 +222,206 @@
           "Golf Views",
           "4 Bedrooms"
         ],
-        "description": "Premium 4-bed bungalow with 200m² living space, pool, and La Marquesa Golf views."
+        "description": "Premium 4-slaapkamer bungalow met 200m² woonruimte, zwembad en La Marquesa Golf uitzicht."
       }
     ],
     "faqs": [
       {
-        "question": "Is Ciudad Quesada good for golf?",
-        "answer": "Excellent. La Marquesa Golf is within walking distance, and 5 championship courses are within 22 minuutn: La Marquesa (1 km), La Finca (8 km), Vistabella (10 km), Lo Romero (15 km), and Villamartin (20 km). The community was built around golf and it shows."
+        "question": "Is Ciudad Quesada geschikt voor golf?",
+        "answer": "Uitstekend. La Marquesa Golf is op loopafstand en 5 championship courses zijn binnen 22 minuten: La Marquesa (1 km), La Finca (8 km), Vistabella (10 km), Lo Romero (15 km) en Villamartin (20 km). De gemeenschap is gebouwd rond golf en het toont."
       },
       {
-        "question": "How far is Ciudad Quesada from the beach?",
-        "answer": "Guardamar's natural beaches are 10 km (12 minuutn). La Mata beach is similar. For resort beaches with full facilities, La Zenia is 15 km (15 minuutn). Many residents have beach gear in the car for spontaneous trips. It's close enough for regular beach days."
+        "question": "Hoe ver ligt Ciudad Quesada van het strand?",
+        "answer": "Guardamar's natuurlijke stranden zijn 10 km (12 minuten). La Mata strand is vergelijkbare afstand. Voor resort-stranden met volledige voorzieningen, La Zenia is 15 km (15 minuten). Veel bewoners houden strandgear in de auto voor spontane trips. Het is dicht genoeg voor regelmatige strandtochten."
       },
       {
-        "question": "What are property prices in Ciudad Quesada?",
-        "answer": "Apartments from €165,000, townhouses/bungalows from €220,000, and villas from €350,000. Golf-view properties command premiums. Overall, Ciudad Quesada is 25-35% less expensive than coastal equivalents—outstanding value for golf lifestyle."
+        "question": "Hoe zijn eigendomsprijzen in Ciudad Quesada?",
+        "answer": "Appartementen vanaf €165.000, townhouses/bungalows vanaf €220.000 en villa's vanaf €350.000. Golfuitzicht eigendommen brengen premiums. Totaal, Ciudad Quesada is 25-35% goedkoper dan kust-equivalenten—uitstekende waarde voor golflevensstijl."
       },
       {
-        "question": "Is English widely spoken in Ciudad Quesada?",
-        "answer": "Yes, English is the predominant language due to the large British and international expat community. Most businesses, restaurants, and services cater to English speakers. Many are British-owned. You can live comfortably without Spanish."
+        "question": "Wordt er veel Engels gesproken in Ciudad Quesada?",
+        "answer": "Ja, Engels is de overheersende taal vanwege de grote Britse en internationale expatgemeenschap. De meeste bedrijven, restaurants en diensten cateren voor Engelssprekenden. Veel zijn Brits eigendom. Je kunt comfortabel zonder Spaans leven."
       },
       {
-        "question": "What is the expat community like in Ciudad Quesada?",
-        "answer": "Large, established, and welcoming. Predominantly British with significant Scandinavian, Dutch, and German populations. Social clubs, golf societies, charitable organizations, and regular events create easy opportunities to make friends. Most residents describe integration as effortless."
+        "question": "Hoe is de expatgemeenschap in Ciudad Quesada?",
+        "answer": "Groot, gevestigd en welwillend. Overwegend Brits met aanzienlijke Scandinavische, Nederlandse en Duitse populaties. Sociale clubs, golfsocietappen, liefdadig organisaties en regelmatige evenementen creëren gemakkelijke kansen vrienden te maken. De meeste bewoners beschrijven integratie als moeiteloos."
       },
       {
-        "question": "How far is Ciudad Quesada from Alicante Airport?",
-        "answer": "Approximately 40 km, which takes about 30 minuutn via the AP-7 motorway. Murcia-Corvera Airport is 45 km (35 minuutn). Both airports are reasonably accessible for regular travel."
+        "question": "Hoe ver ligt Ciudad Quesada van Alicante Luchthaven?",
+        "answer": "Ongeveer 40 km, wat ongeveer 30 minuten duurt via de AP-7 snelweg. Murcia-Corvera Luchthaven is 45 km (35 minuten). Beide luchthavens zijn redelijk bereikbaar voor regelmatig reizen."
       },
       {
-        "question": "Is Ciudad Quesada good for healthcare?",
-        "answer": "Excellent. Hospital Universitario de Torrevieja is just 8 km away (10 minuutn) with comprehensive services and English-speaking staff. Multiple private clinics, dentists, and 24-uur pharmacies serve the area. Healthcare access is a major attraction for retirees."
+        "question": "Is Ciudad Quesada geschikt voor gezondheidszorg?",
+        "answer": "Uitstekend. Hospital Universitario de Torrevieja is slechts 8 km weg (10 minuten) met uitgebreide diensten en Engelssprekend personeel. Talrijke particuliere klinieken, tandartsen en 24-uurs apotheken bedienen het gebied. Gezondheidszorg toegang is een voornaamste aantrekking voor gepensioneerden."
       },
       {
-        "question": "What services are available in Ciudad Quesada?",
-        "answer": "Complete infrastructure: supermarkets (Mercadona, Consum), banks, pharmacies, restaurants, bars, shops, medical clinics, and all daily necessities. You rarely need to leave the area for routine needs. Weekly market adds local character."
+        "question": "Welke diensten zijn beschikbaar in Ciudad Quesada?",
+        "answer": "Volledige infrastructuur: supermarkten (Mercadona, Consum), banken, apotheken, restaurants, bars, winkels, medische klinieken en alles dagelijks nodig. Je hoeft het gebied zelden te verlaten voor routine behoeften. Wekelijkse markt voegt lokaal karakter toe."
       },
       {
-        "question": "Is Ciudad Quesada suitable for permanent living?",
-        "answer": "Absolutely—it's designed for it. Unlike purely resort areas, Ciudad Quesada has a large permanent population with year-round services. The infrastructure is built for residents, not just tourists. Many expats live here full-time and describe it as having everything needed."
+        "question": "Is Ciudad Quesada geschikt voor permanent wonen?",
+        "answer": "Absoluut—het is erop ontworpen. Anders dan zuiver resort gebieden, Ciudad Quesada heeft grote permanente bevolking met jaarrond diensten. De infrastructuur is gebouwd voor bewoners, niet slechts toeristen. Veel expatriaten wonen hier vol-time en beschrijven het als hebbend alles nodig."
       },
       {
-        "question": "How does Ciudad Quesada compare to Villamartin?",
-        "answer": "Similar golf-focused community, but Ciudad Quesada is more affordable (20-30% less) and further from the coast (10 min vs 5 min to beaches). Villamartin has the famous Plaza for evening social life; Ciudad Quesada has a more dispersed but equally active community. Both excellent for golf lifestyle."
+        "question": "Hoe vergelijkt Ciudad Quesada met Villamartin?",
+        "answer": "Vergelijkbare golfgerichte gemeenschap, maar Ciudad Quesada is meer betaalbaar (20-30% minder) en verder van de kust (10 min vs 5 min naar stranden). Villamartin heeft de beroemde Plaza voor avond sociaal leven; Ciudad Quesada heeft meer verspreide maar even actieve gemeenschap. Beiden uitstekend voor golflevensstijl."
       }
     ],
-    "conclusion": "Ciudad Quesada won't win beauty contests against beachfront locations, and that's exactly the point. This is a practical choice for practical people who want golf lifestyle, international community, complete services, and value for money. The savings—25-35% versus coastal equivalents—buy a lot of extra home, or fund a lot of green fees.\n\nReady to explore properties in Ciudad Quesada? Our team understands the area's appeal and can match you with properties that deliver on the promise of affordable golf lifestyle. From starter apartments to premium golf villas, we'll guide you through every step.",
+    "conclusion": "Ciudad Quesada wint geen schoonheidswedstrijden tegen strandlocaties en dat is precies het punt. Dit is praktische keuze voor praktische mensen die golflevensstijl, internationale gemeenschap, volledige diensten en geldwaarde willen. De besparingen—25-35% versus kust-equivalenten—kopen veel extra huis, of financieren veel groene fees.\n\nKlaar om eigendommen in Ciudad Quesada te verkennen? Ons team begrijpt het gebied's aantrekkingskracht en kan je matchen met eigendommen die op de belofte van betaalbare golflevensstijl afleveren. Van starter appartementen tot premium golfvilla's, we leiden je door elk stap.",
     "investmentAnalysis": {
-      "rentalYield": "4-6% on apartments, 5-7% on golf-view villas",
-      "annualAppreciation": "2-3% annually, steady growth from value positioning",
-      "overview": "Ciudad Quesada's rental market attracts golf tourism during spring and autumn, plus long-term rentals to expats seeking community. The large permanent expat population supports year-round occupancy stability.",
+      "rentalYield": "4-6% op appartementen, 5-7% op golfuitzicht villa's",
+      "annualAppreciation": "2-3% jaarlijks, stabiele groei van waarde positionering",
+      "overview": "Ciudad Quesada's huurmarkt trekt golftoerist gedurende lente en herfst plus langdurige huurders aan expatriaten die gemeenschap zoeken. De grote permanente expatgemeenschap ondersteunt jaarrond bezetting stabiliteit.",
       "highlights": [
-        "Golf tourism drives spring and autumn peak seasons",
-        "Long-term expat rentals provide off-season stability",
-        "Golf-view properties command premium rates and higher occupancy",
-        "Value positioning attracts budget-conscious longer-stay visitors",
-        "Community atmosphere encourages repeat business and referrals"
+        "Golftoerist drijft lente en herfst piekseizoen",
+        "Langdurige expatriat huurders bieden off-seizoen stabiliteit",
+        "Golfuitzicht eigendommen bevel premiumtarieven en hogere bezetting",
+        "Waarde positionering trekt budget-bewuste langer-blijf bezoekers",
+        "Gemeenschapssfeer stimuleert herhaald bedrijf en aanbevelingen"
       ]
     },
     "costOfLiving": {
-      "intro": "Ciudad Quesada's cost of living is excellent—among the lowest on Costa Blanca South while maintaining complete services. The value is reflected in daily expenses across all categories.",
+      "intro": "Ciudad Quesada's levenskost is uitstekend—onder de laagste op Costa Blanca South terwijl volledige diensten behouden. De waarde weerspiegelt in dagelijkse uitgaven over alle categorieën.",
       "items": [
         {
-          "category": "Rent (2-bed apartment)",
+          "category": "Huur (2-slaapkamer appartement)",
           "cost": "€550-800",
-          "notes": "Golf-view premium; town center much cheaper"
+          "notes": "Golfuitzicht premium; stadcentrum veel goedkoper"
         },
         {
-          "category": "Utilities (monthly)",
+          "category": "Nutsvoorzieningen (maandelijks)",
           "cost": "€80-120",
-          "notes": "Moderate due to year-round mild climate"
+          "notes": "Matig vanwege jaarrond mild klimaat"
         },
         {
-          "category": "Groceries (weekly)",
+          "category": "Boodschappen (wekelijks)",
           "cost": "€50-75",
-          "notes": "Local supermarket prices, no tourist inflation"
+          "notes": "Lokale supermarkt prijzen, geen toerist opblazing"
         },
         {
-          "category": "Restaurant meal (3-course)",
+          "category": "Restaurant maaltijd (3-gangen)",
           "cost": "€12-18",
-          "notes": "Mixed Spanish and international establishments at local prices"
+          "notes": "Gemengde Spaanse en internationale vestigingen op lokale prijzen"
         },
         {
-          "category": "Cafe coffee",
+          "category": "Café koffie",
           "cost": "€1.00-1.30",
-          "notes": "Local café prices throughout the town"
+          "notes": "Lokale café prijzen door de hele stad"
         },
         {
-          "category": "Golf green fees",
+          "category": "Golfgreenfees",
           "cost": "€25-45",
-          "notes": "La Marquesa resident rates; visitor rates for other courses"
+          "notes": "La Marquesa bewoner tarieven; bezoeker tarieven voor andere courses"
         },
         {
-          "category": "Healthcare (monthly)",
+          "category": "Gezondheidszorg (maandelijks)",
           "cost": "€60-100",
-          "notes": "Private insurance optional; excellent public healthcare"
+          "notes": "Particuliere verzekering optioneel; uitstekende publieke gezondheidszorg"
         },
         {
-          "category": "Property taxes (annual)",
+          "category": "Eigendomsbelastingen (jaarlijks)",
           "cost": "€250-400",
-          "notes": "IBI for typical apartment or villa, lower than coastal"
+          "notes": "IBI voor typische appartement of villa, lager dan kust"
         }
       ]
     },
     "events": {
-      "intro": "Ciudad Quesada's calendar centers on community events and golf tournaments, reflecting its organized expatriate population and golf-focused lifestyle.",
+      "intro": "Ciudad Quesada's kalender concentreert zich op gemeenschapsevenementen en golftornooien, weergevend zijn georganiseerde expatbevolking en golfgerichte levensstijl.",
       "events": [
         {
           "name": "La Marquesa Golf Club Championships",
           "month": "Monthly",
-          "description": "Regular golf tournaments, monthly competitions, and social events at the main community gathering point"
+          "description": "Regelmatige golftornooien, maandelijkse competities en sociale evenementen op de voornaamste gemeenschaps verzamelplaats"
         },
         {
           "name": "Community Fiestas",
           "month": "July-August",
-          "description": "Community-organized celebrations with music, food, and social activities in the town center"
+          "description": "Gemeenschaps-georganiseerde viering met muziek, voedsel en sociale activiteiten in stadcentrum"
         },
         {
           "name": "Walking Groups & Hiking Events",
           "month": "October-April",
-          "description": "Organized group walks through surrounding countryside, connecting expat residents in social activities"
+          "description": "Georganiseerde groepwandelingen door omringende platteland, verbindend expatbewoners in sociale activiteiten"
         },
         {
           "name": "Charity Events",
           "month": "Year-round",
-          "description": "Regular charity functions, fun runs, and social fundraisers organized by the active international community"
+          "description": "Regelmatige liefdadig functies, pret lopen en sociale fondsenwerver georganiseerd door actieve internationale gemeenschap"
         },
         {
           "name": "Christmas Market & Celebrations",
           "month": "December",
-          "description": "Festive season community events, decorations, and holiday gatherings"
+          "description": "Feestelijk seizoen gemeenschapsevenementen, decoraties en vakantievergtehingen"
         }
       ]
     },
     "schools": {
-      "intro": "Ciudad Quesada has Spanish public schools and nearby international options, making it suitable for families. The established community provides good information on educational choices.",
+      "intro": "Ciudad Quesada heeft Spaanse openbare scholen en nabije internationale opties, makend het geschikt voor gezinnen. De gevestigde gemeenschap biedt goede informatie op onderwijskeuzes.",
       "schools": [
         {
           "name": "Colegio Público Pintor González Peña",
           "type": "Public Primary School",
-          "distance": "Walking distance",
-          "description": "Spanish public school with bilingual education and good reputation among local families"
+          "distance": "Loopafstand",
+          "description": "Spaanse openbare school met tweetalig onderwijs en goed reputatie onder lokale gezinnen"
         },
         {
           "name": "IES Azarquiel",
           "type": "Public Secondary School",
           "distance": "5 km",
-          "description": "Spanish secondary school with various academic and technical options"
+          "description": "Spaanse secundaire school met diverse akademische en technische opties"
         },
         {
           "name": "International Schools (Torrevieja/Orihuela)",
           "type": "International Primary & Secondary",
           "distance": "12-18 km",
-          "description": "British and other international curriculum schools available in nearby Torrevieja and Orihuela Costa areas"
+          "description": "Britse en andere internationale curriculum scholen beschikbaar in nabije Torrevieja en Orihuela Costa gebieden"
         }
       ]
     },
     "natureActivities": {
-      "intro": "Ciudad Quesada's nature activities balance golf lifestyle with outdoor exploration. Nearby salt lakes and beaches offer weekend alternatives to the fairways.",
+      "intro": "Ciudad Quesada's natuuractiviteiten balans golflevensstijl met buitenverkenning. Nabije zoutmeren en stranden bieden weekend alternatieven op de fairways.",
       "activities": [
         {
           "name": "Golf at La Marquesa",
           "type": "Sports",
-          "description": "Walking distance championship course is the primary recreation for most residents, open year-round"
+          "description": "Loopafstand championship course is primaire recreatie voor meeste bewoners, open jaarrond"
         },
         {
           "name": "Birdwatching at La Mata salt lakes",
           "type": "Nature observation",
-          "description": "Flamingos and migrating birds in the protected wetland area, just 10 km away for weekend trips"
+          "description": "Flamingo's en migrerende vogels in beschermd wetland gebied, slechts 10 km weg voor weekend trips"
         },
         {
           "name": "Hiking and walking trails",
           "type": "Outdoor recreation",
-          "description": "Organized group walks through surrounding countryside, particularly active October-April"
+          "description": "Georganiseerde groepwandelingen door omringende platteland, bijzonder actief oktober-april"
         },
         {
           "name": "Cycling in the surrounding rural areas",
           "type": "Active recreation",
-          "description": "Flat terrain and quiet roads through agricultural areas perfect for recreational cycling"
+          "description": "Vlak terrein en rustige wegen door landbouwgebieden perfect voor recreatie fietsen"
         },
         {
           "name": "Beach days at Guardamar",
           "type": "Water recreation",
-          "description": "Natural beaches backed by pine forests, 10 km away, offer weekend family activities"
+          "description": "Natuurlijke stranden omzoomd door dennenbossen, 10 km weg bieden weekend gezinactiviteiten"
         },
         {
           "name": "Multiple golf courses",
           "type": "Sports",
-          "description": "5 championship courses within 22 minuutn provide variety for different moods and skill levels"
+          "description": "5 championship courses binnen 22 minuten bieden variatie voor verschillende stemmingen en vaardigheid niveaus"
         }
       ]
     },
     "expatCommunity": {
-      "intro": "Ciudad Quesada has one of Costa Blanca's largest and most organized expatriate communities. The golf-focused infrastructure naturally creates strong social bonds and easy integration.",
+      "intro": "Ciudad Quesada heeft een van Costa Blanca's grootste en best georganiseerde expatgemeenschappen. De golfgerichte infrastructuur creëert natuurlijk sterke sociale bindingen en gemakkelijke integratie.",
       "highlights": [
-        "Largest golf-focused expat community on Costa Blanca South",
-        "Predominantly British with significant Scandinavian, Dutch, and German presence",
-        "Strong community organizations, clubs, and activities",
-        "Easy integration—everyone was new once, community welcomes newcomers",
-        "Year-round social calendar of golf events, walking groups, and community activities",
-        "English widely spoken; Spanish learning encouraged but not essential"
+        "Grootste golfgerichte expatgemeenschap op Costa Blanca South",
+        "Overwegend Brits met aanzienlijke Scandinavische, Nederlandse en Duitse aanwezigheid",
+        "Sterke gemeenschapsorganisaties, clubs en activiteiten",
+        "Gemakkelijke integratie—iedereen was eens nieuw, gemeenschap welkom nieuwelingen",
+        "Jaarrond sociaal kalender van golfevenementen, wandel groepen en gemeenschapsactiviteiten",
+        "Engels veel gesproken; Spaans leren aangemoedigd maar niet essentieel"
       ],
       "nationalities": [
         "British",
@@ -433,42 +433,42 @@
       ]
     },
     "lifestyleTimeline": {
-      "title": "A Typical Week in Ciudad Quesada",
+      "title": "Een Typische Week in Ciudad Quesada",
       "entries": [
         {
           "time": "08:00",
-          "activity": "Breakfast and newspaper",
-          "description": "Start at home or café with coffee, English newspapers, and planning the day"
+          "activity": "Ontbijt en krant",
+          "description": "Begin thuis of café met koffie, Engelse kranten en planning van de dag"
         },
         {
           "time": "10:00",
-          "activity": "Round at La Marquesa Golf",
-          "description": "Most days include a round at the home course, just minuutn away"
+          "activity": "Rondje op La Marquesa Golf",
+          "description": "De meeste dagen inclusief een rondje op de thuis-course, slechts minuten weg"
         },
         {
           "time": "13:00",
-          "activity": "Lunch at the clubhouse",
-          "description": "Social meal with golf partners at the La Marquesa clubhouse restaurant"
+          "activity": "Lunch op het clubhouse",
+          "description": "Sociaal maaltijd met golfpartners op La Marquesa clubhouse restaurant"
         },
         {
           "time": "15:00",
-          "activity": "Siesta or pool time",
-          "description": "Afternoon rest or swimming in the villa pool"
+          "activity": "Siesta of zwembad tijd",
+          "description": "Middagrust of zwemmen in villa zwembad"
         },
         {
           "time": "17:00",
-          "activity": "Social activity",
-          "description": "Walking group, charity event, or social club meeting—active community calendar"
+          "activity": "Sociale activiteit",
+          "description": "Wandel groep, liefdadig evenement of sociale club vergadering—actieve gemeenschaps kalender"
         },
         {
           "time": "19:00",
-          "activity": "Aperitivo at the clubhouse",
-          "description": "Pre-dinner drinks with friends at the golf club or town center bar"
+          "activity": "Aperitief op het clubhouse",
+          "description": "Voor-diner dranken met vrienden op golfclub of stadcentrum bar"
         },
         {
           "time": "20:30",
-          "activity": "Dinner",
-          "description": "Evening meal at restaurant, clubhouse, or home with friends and neighbors"
+          "activity": "Diner",
+          "description": "Avond maaltijd op restaurant, clubhouse of thuis met vrienden en buren"
         }
       ]
     },
@@ -479,7 +479,7 @@
     "@context": "https://schema.org",
     "@type": "Place",
     "name": "Ciudad Quesada",
-    "description": "Ciudad Quesada is an established expat community in Costa Blanca South built around La Marquesa Golf, offering excellent value properties and a welcoming international atmosphere. Part of Rojales municipality.",
+    "description": "Ciudad Quesada is een gevestigde expatgemeenschap in Costa Blanca South gebouwd rond La Marquesa Golf, biedend uitstekende waarde eigendommen en welwillende internationale sfeer. Onderdeel van Rojales gemeente.",
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": "38.0456",
@@ -499,7 +499,7 @@
       {
         "@type": "LocationFeatureSpecification",
         "name": "Golf Course (La Marquesa)",
-        "value": "Walking distance"
+        "value": "Loopafstand"
       },
       {
         "@type": "LocationFeatureSpecification",
@@ -519,42 +519,42 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Is Ciudad Quesada good for golf?",
+        "name": "Is Ciudad Quesada geschikt voor golf?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Excellent. La Marquesa Golf is within walking distance, and 5 championship courses are within 22 minuutn including La Finca, Vistabella, Lo Romero, and Villamartin."
+          "text": "Uitstekend. La Marquesa Golf is op loopafstand en 5 championship courses zijn binnen 22 minuten inclusief La Finca, Vistabella, Lo Romero en Villamartin."
         }
       },
       {
         "@type": "Question",
-        "name": "What are property prices in Ciudad Quesada?",
+        "name": "Hoe zijn eigendomsprijzen in Ciudad Quesada?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Apartments from €165,000, townhouses from €220,000, villas from €350,000. Ciudad Quesada is 25-35% less expensive than coastal equivalents."
+          "text": "Appartementen vanaf €165.000, townhouses vanaf €220.000, villa's vanaf €350.000. Ciudad Quesada is 25-35% goedkoper dan kust-equivalenten."
         }
       },
       {
         "@type": "Question",
-        "name": "How far is Ciudad Quesada from the beach?",
+        "name": "Hoe ver ligt Ciudad Quesada van het strand?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Guardamar beaches are 10 km (12 minuutn). La Zenia resort beaches are 15 km (15 minuutn). Close enough for regular beach days."
+          "text": "Guardamar stranden zijn 10 km (12 minuten). La Zenia resort stranden zijn 15 km (15 minuten). Dicht genoeg voor regelmatige strandtochten."
         }
       },
       {
         "@type": "Question",
-        "name": "Is English widely spoken in Ciudad Quesada?",
+        "name": "Wordt er veel Engels gesproken in Ciudad Quesada?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, English is predominant due to the large British and international expat community. Most businesses and services cater to English speakers."
+          "text": "Ja, Engels is dominant vanwege grote Britse en internationale expatgemeenschap. De meeste bedrijven en diensten cateren voor Engelssprekenden."
         }
       },
       {
         "@type": "Question",
-        "name": "How far is Ciudad Quesada from Alicante Airport?",
+        "name": "Hoe ver ligt Ciudad Quesada van Alicante Luchthaven?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Approximately 40 km (30 minuutn via AP-7 motorway). Murcia Airport is 45 km (35 minuutn)."
+          "text": "Ongeveer 40 km (30 minuten via AP-7 snelweg). Murcia Luchthaven is 45 km (35 minuten)."
         }
       }
     ]

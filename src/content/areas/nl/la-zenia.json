@@ -31,18 +31,18 @@
       {
         "name": "Playa de La Zenia",
         "googleMaps": "https://maps.google.com/?q=37.9373,-0.7364",
-        "description": "Main beach with Blue Flag status, golden sand, beach bars, and excellent facilities",
+        "description": "Hoofdstrand met Blauwe Vlag-status, goudgeel zand, chiringuitos en uitstekende voorzieningen",
         "blueFlag": true
       },
       {
         "name": "Cala Bosque",
         "googleMaps": "https://maps.google.com/?q=37.9405,-0.7382",
-        "description": "Quieter cove beach just north of the main beach, rocky outcrops and clear waters"
+        "description": "Rustigere covebaai net ten noorden van het hoofdstrand, rotsachtige uitstekende delen en helder water"
       },
       {
         "name": "Cala Capitán",
         "googleMaps": "https://maps.google.com/?q=37.9352,-0.7342",
-        "description": "Scenic cove towards Cabo Roig with natural rock pools and snorkeling opportunities"
+        "description": "Schilderachtige cove richting Cabo Roig met natuurlijke rotspoelen en snorkelgelegenheden"
       }
     ],
     "shopping": [
@@ -50,7 +50,7 @@
         "name": "La Zenia Boulevard",
         "googleMaps": "https://maps.google.com/?q=37.9414,-0.7281",
         "url": "https://www.lazeniaboulevard.es/",
-        "description": "Europe's largest open-air shopping center with 150+ stores, cinema, and restaurants"
+        "description": "Europas grootste openluchtwinkelcentrum met 150+ winkels, bioscoop en restaurants"
       }
     ],
     "healthcare": {
@@ -58,54 +58,54 @@
       "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
       "url": "https://torrevieja-salud.com/",
       "distance": "8 km",
-      "driveTime": "10 minuutn"
+      "driveTime": "10 minutes"
     },
     "airport": {
       "name": "Alicante-Elche Airport",
       "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
       "url": "https://www.alicante-airport.net/",
       "distance": "50 km",
-      "driveTime": "35 minuutn"
+      "driveTime": "35 minutes"
     }
   },
   "golf": {
-    "intro": "La Zenia is perfectly positioned for golf enthusiasts, with six championship courses within a 15-minuut drive. The area is the gateway to the famous Orihuela Costa golf triangle.",
+    "intro": "La Zenia is perfect gepositioneerd voor golfliefhebbers, met zes championship courses binnen 15 minuten rijden. Het gebied is de poort naar de beroemde Orihuela Costa golftriangle.",
     "courses": [
       {
         "name": "Villamartin Golf",
         "distance": "3 km",
-        "driveTime": "5 minuutn",
+        "driveTime": "5 minutes",
         "holes": 18,
         "url": "https://www.villamartingolf.com/",
         "googleMaps": "https://maps.google.com/?q=Villamartin+Golf",
-        "description": "Championship course opened in 1972. Hosted European Tour events. The heart of the expat golfing community."
+        "description": "Championship course geopend in 1972. Gastheer voor European Tour-evenementen. Het hart van de expat golfgemeenschap."
       },
       {
         "name": "Las Ramblas Golf",
         "distance": "4 km",
-        "driveTime": "6 minuutn",
+        "driveTime": "6 minutes",
         "holes": 18,
         "url": "https://www.lasramblasgolf.com/",
         "googleMaps": "https://maps.google.com/?q=Las+Ramblas+Golf+Orihuela",
-        "description": "Dramatic elevation changes with stunning Mediterranean views. Challenging and scenic course."
+        "description": "Dramatische hoogteverschillen met prachtig Mediterraan uitzicht. Uitdagende en schilderachtige course."
       },
       {
         "name": "Campoamor Golf",
         "distance": "6 km",
-        "driveTime": "8 minuutn",
+        "driveTime": "8 minutes",
         "holes": 18,
         "url": "https://www.campoamorgolf.com/",
         "googleMaps": "https://maps.google.com/?q=Campoamor+Golf",
-        "description": "Well-maintained course near the coast. Suitable for all levels with excellent clubhouse facilities."
+        "description": "Goed onderhouden course dicht bij de kust. Geschikt voor alle niveaus met uitstekende clubhousefaciliteiten."
       },
       {
         "name": "Las Colinas Golf & Country Club",
         "distance": "10 km",
-        "driveTime": "12 minuutn",
+        "driveTime": "12 minutes",
         "holes": 18,
         "url": "https://www.lascolinasgolf.es/",
         "googleMaps": "https://maps.google.com/?q=Las+Colinas+Golf",
-        "description": "Award-winning Cabell Robinson design consistently ranked among Spain's top 10 courses."
+        "description": "Bekroond Cabell Robinson-ontwerp dat consistent gerangschikt is onder Spanje's top 10 courses."
       }
     ]
   },
@@ -115,288 +115,288 @@
       "location": "Calle Maestro Torralba",
       "googleMaps": "https://maps.google.com/?q=La+Zenia+Saturday+Market",
       "hours": "Saturdays 8:00 - 14:00",
-      "description": "Popular weekly market with fresh produce, clothing, crafts, and household items"
+      "description": "Populaire wekelijkse markt met verse producten, kleding, ambachten en huishoudelijke artikelen"
     }
   },
   "restaurants": [
     {
       "name": "La Zenia Boulevard Restaurants",
-      "description": "Over 30 restaurants and cafes including international chains and local favorites"
+      "description": "Meer dan 30 restaurants en cafés inclusief internationale ketens en lokale favorieten"
     },
     {
       "name": "Beachfront Chiringuitos",
-      "description": "Traditional Spanish beach bars serving fresh seafood and paella"
+      "description": "Traditionele Spaanse strandbarren met vers zeevruchten en paella"
     }
   ],
   "content": {
-    "metaTitle": "Wonen in La Zenia 2026 | Nieuwbouw Costa Blanca",
-    "metaDescription": "Volledige gids voor wonen in La Zenia - resort bestemming Costa Blanca South. Stranden, shopping, golf. Nieuwbouw vanaf €200.000.",
-    "heroIntro": "La Zenia is the vibrant heart of Orihuela Costa, where beach lifestyle meets world-class shopping. This sought-after coastal community on Costa Blanca South offers the perfect combination of golden beaches, modern amenities, and a thriving international community.\n\nLocated between Cabo Roig and Playa Flamenca, La Zenia has grown from a quiet beach settlement into one of the most desirable addresses on the southern Costa Blanca. The opening of La Zenia Boulevard—Europe's largest open-air shopping center—transformed the area into a destination that attracts both permanent residents and holidaymakers year-round.",
+    "metaTitle": "Nieuwbouw in La Zenia 2026 | Woningen Costa Blanca",
+    "metaDescription": "Volledig gids voor wonen in La Zenia, Orihuela Costa. Blauwe Vlag-stranden, La Zenia Boulevard winkelen, golfbanen in de buurt. Nieuwbouw woningen vanaf €189.000.",
+    "heroIntro": "La Zenia is het levendige hart van Orihuela Costa, waar strandleven samengaat met golfklasse winkelen. Deze gezochte kustgemeenschap aan Costa Blanca South biedt de perfecte combinatie van gouden stranden, moderne voorzieningen en een bloeiende internationale gemeenschap.\n\nGelegen tussen Cabo Roig en Playa Flamenca, is La Zenia uitgegroeid van een rustig strandgebied tot een van de meest gewilde adressen aan de zuidelijke Costa Blanca. De opening van La Zenia Boulevard—Europas grootste openluchtwinkelcentrum—transformeerde het gebied in een bestemming die het hele jaar door permanente bewoners en vakantiegasten aantrekt.",
     "lifestyleSection": {
-      "intro": "Life in La Zenia revolves around the beach and the Boulevard. Start your morning with a coffee at one of the beachfront chiringuitos, spend the afternoon shopping at the Boulevard, and end the day watching the sunset over the Mediterranean. It's a lifestyle that draws people from across Europe.\n\nThe area has a strong international community, predominantly British but increasingly Scandinavian and Dutch. English is spoken everywhere, and integrating into local life is effortless through golf clubs, social groups, and the natural meeting points of beach and shopping.",
+      "intro": "Het leven in La Zenia draait rond het strand en de Boulevard. Begin je dag met een kopje koffie in een van de chiringuitos aan zee, breng je namiddag door met winkelen op de Boulevard, en eindig de dag met het zien van de zonsondergang over de Middellandse Zee. Het is een levensstijl die mensen van over heel Europa aantrekt.\n\nHet gebied heeft een sterke internationale gemeenschap, voornamelijk Brits maar toenemend Scandinavisch en Nederlands. Engels wordt overal gesproken, en integratie in het lokale leven is moeiteloos door golfclubs, sociale groepen en de natuurlijke ontmoetingsplaatsen van strand en winkelen.",
       "highlights": [
-        "Blue Flag Playa de La Zenia with golden sand and calm waters",
-        "La Zenia Boulevard - 150+ stores, cinema, and 30+ restaurants",
-        "Walking distance to beach from most properties",
-        "6 golf courses within 15 minuutn",
-        "Large international expat community",
-        "Weekly Saturday market for fresh produce",
-        "Year-round mild climate - 320+ sunny days",
-        "Excellent bus links along the coast"
+        "Blauwe Vlag Playa de La Zenia met goudgeel zand en kalm water",
+        "La Zenia Boulevard - 150+ winkels, bioscoop en 30+ restaurants",
+        "Loopafstand naar het strand vanaf de meeste woningen",
+        "6 golfbanen binnen 15 minuten",
+        "Grote internationale expatgemeenschap",
+        "Wekelijkse zaterdagmarkt voor verse producten",
+        "Het hele jaar door mild klimaat - 320+ zonnige dagen",
+        "Uitstekende busverbindingen langs de kust"
       ]
     },
     "amenitiesSection": {
-      "beaches": "Playa de La Zenia is the jewel of the area—a wide stretch of golden sand with Blue Flag status, lifeguards in season, beach bars (chiringuitos), sun loungers for hire, and wheelchair access. The calm, shallow waters make it perfect for families. Just north, Cala Bosque offers a quieter alternative, while Cala Capitán to the south provides rocky coves ideal for snorkeling.",
-      "dining": "From traditional Spanish tapas to international cuisine, La Zenia caters to all tastes. The Boulevard alone has over 30 restaurants including Italian, Indian, Chinese, and American options. For authentic Spanish dining, the beachfront chiringuitos serve fresh grilled fish, paella, and cold beer with a view. The nearby Cabo Roig strip offers more upscale dining options.",
-      "shopping": "La Zenia Boulevard is a destination in itself—over 150 stores including Primark, Zara, H&M, Media Markt, Apple reseller, Mercadona supermarket, and Cinesa multiplex cinema. It's one of Europe's largest open-air shopping centers and draws visitors from across the region. For daily essentials, smaller local supermarkets and pharmacies are within walking distance of most properties.",
-      "healthcare": "Hospital Universitario de Torrevieja is just 8 km away (10 minuutn by car), with comprehensive services including emergency care, specialists, and English-speaking staff. Multiple private medical centers, dental clinics, and 24-uur pharmacies serve the area. The international community means healthcare services are well-adapted to foreign patients.",
-      "transport": "Alicante Airport is 50 km away (35 minuutn via the AP-7 toll motorway or 50 minuutn via the free N-332). Murcia-Corvera Airport is 35 km (30 minuutn). Local buses connect La Zenia to Torrevieja, Cartagena, and other coastal towns. However, a car is recommended for maximum convenience. Taxis and ride-sharing are readily available."
+      "beaches": "Playa de La Zenia is het juweeltje van het gebied—een breed goudgeel zandstrand met Blauwe Vlag-status, redders in het seizoen, strandbarren (chiringuitos), ligbedden te huur en toegang voor rolstoelen. Het kalme, ondiepe water maakt het perfect voor gezinnen. Net ten noorden biedt Cala Bosque een rustiger alternatief, terwijl Cala Capitán in het zuiden rotsachtige coves biedt die ideaal zijn voor snorkelen.",
+      "dining": "Van traditioneel Spaanse tapas tot internationale gerechten, La Zenia voldoet aan alle smaken. De Boulevard alleen heeft meer dan 30 restaurants inclusief Italiaans, Indisch, Chinees en Amerikaans. Voor authentiek Spaans eten serveren de chiringuitos aan zee vers gegrilde vis, paella en koud bier met uitzicht. De nabije Cabo Roig strip biedt meer upscale diningopties.",
+      "shopping": "La Zenia Boulevard is op zich al een bestemming—meer dan 150 winkels inclusief Primark, Zara, H&M, Media Markt, Apple-reseller, Mercadona supermarkt en Cinesa multiplex bioscoop. Het is een van Europas grootste openluchtwinkelcentra en trekt bezoekers van over de regio. Voor dagelijkse boodschappen zijn kleinere lokale supermarkten en apotheken op loopafstand van de meeste woningen.",
+      "healthcare": "Hospital Universitario de Torrevieja ligt op slechts 8 km afstand (10 minuten met de auto), met uitgebreide diensten inclusief spoedgevallen, specialisten en Engelssprekend personeel. Meerdere particuliere medische centra, tandartsklineken en 24-uursapotheken bedienen het gebied. De internationale gemeenschap betekent dat gezondheidszorgdiensten goed aangepast zijn aan buitenlandse patiënten.",
+      "transport": "Luchthaven Alicante ligt 50 km verderop (35 minuten via de AP-7 tolweg of 50 minuten via de gratis N-332). Luchthaven Murcia-Corvera ligt 35 km verderop (30 minuten). Lokale bussen verbinden La Zenia met Torrevieja, Cartagena en andere kustplaatsen. Een auto wordt echter aanbevolen voor maximale gemak. Taxi's en autodelen zijn gemakkelijk beschikbaar."
     },
-    "propertyMarketSection": "La Zenia offers excellent value for beachside living on Costa Blanca South. New build apartments typically range from €189,000-350,000, townhouses from €250,000-450,000, and villas from €400,000-650,000. Properties within walking distance of the beach or Boulevard command premium prices.\n\nThe rental market is particularly strong here—the combination of beach, shopping, and golf attracts holiday lets year-round. Properties with pools, air conditioning, and parking achieve the highest yields. Many buyers purchase as holiday homes with rental income, gradually transitioning to permanent residence.\n\nNew developments continue to appear, offering modern specifications including communal pools, underground parking, and energy-efficient design. Resale properties are also available for those seeking immediate occupation or larger plots.",
+    "propertyMarketSection": "La Zenia biedt uitstekende waarde voor strandwonen aan Costa Blanca South. Nieuwbouw appartementen kosten doorgaans €189.000-350.000, townhouses €250.000-450.000 en villa's €400.000-650.000. Woningen op loopafstand van het strand of de Boulevard brengen premiumprijs op.\n\nDe verhuurmarkt is hier bijzonder sterk—de combinatie van strand, winkelen en golf trekt het hele jaar door vakantiegasten aan. Woningen met zwembaden, airconditioning en parkeerplaats behalen de hoogste opbrengsten. Veel kopers kopen als vakantiewoningen met huuropbrengsten, geleidelijk overgaand naar permanent wonen.\n\nNieuwe ontwikkelingen blijven verschijnen, met moderne specificaties inclusief gemeenschappelijke zwembaden, ondergrondse parkeergarages en energiezuinig ontwerp. Woningen met doorverkoop zijn ook beschikbaar voor wie direct kunnen intrekken of grotere percelen zoeken.",
     "neighborhoods": [
       {
         "name": "La Zenia Beachfront",
-        "description": "Premium location within 500m of the beach. Mix of apartments and townhouses. Highest prices but unbeatable convenience."
+        "description": "Premiumlocatie binnen 500m van het strand. Mix van appartementen en townhouses. Hoogste prijzen maar onverslaanbare gemak."
       },
       {
         "name": "Boulevard Area",
-        "description": "Properties near La Zenia Boulevard. Great for shopping access but slightly further from beach. Excellent rental potential."
+        "description": "Woningen nabij La Zenia Boulevard. Geweldig voor winkelgebruik maar iets verder van strand. Uitstekend verhuurpotentieel."
       },
       {
         "name": "La Zenia Mar",
-        "description": "Established urbanization with mix of property types. Good community feel with local shops and restaurants."
+        "description": "Gevestigde urbanisatie met mix van woontypen. Goed gevoel van gemeenschap met lokale winkels en restaurants."
       },
       {
         "name": "Towards Playa Flamenca",
-        "description": "Slightly lower prices, still walking distance to beach. Family-friendly with good schools nearby."
+        "description": "Iets lagere prijzen, nog steeds op loopafstand van het strand. Gezinsvriendelijk met goede scholen in de buurt."
       }
     ],
     "whyLiveHereSection": [
-      "Blue Flag beach within walking distance of most properties",
-      "La Zenia Boulevard shopping on your doorstep—never need to drive far",
-      "Strong international community making integration easy",
-      "Excellent rental potential for holiday investment",
-      "Six championship golf courses within 15 minuutn",
-      "Year-round mild climate with 320+ sunny days",
-      "More affordable than Costa Blanca North with similar lifestyle",
-      "Well-served by two international airports"
+      "Blauwe Vlag-strand op loopafstand van de meeste woningen",
+      "La Zenia Boulevard winkelen voor je deur—je hoeft nooit ver te rijden",
+      "Sterke internationale gemeenschap die integratie gemakkelijk maakt",
+      "Uitstekend verhuurpotentieel voor vakantie-investeringen",
+      "Zes championship golfbanen binnen 15 minuten",
+      "Het hele jaar door mild klimaat met 320+ zonnige dagen",
+      "Betaalbaarder dan Costa Blanca North met vergelijkbare levensstijl",
+      "Goed bereikt door twee internationale luchthavens"
     ],
     "faqs": [
       {
-        "question": "How far is La Zenia beach from La Zenia Boulevard?",
-        "answer": "La Zenia beach is approximately 1 km (10-15 minuut walk) from La Zenia Boulevard. Most properties in the area are within walking distance of both, making it easy to combine beach days with shopping and dining."
+        "question": "Hoe ver ligt het La Zenia-strand van La Zenia Boulevard?",
+        "answer": "Het La Zenia-strand ligt ongeveer 1 km (10-15 minuten loopafstand) van La Zenia Boulevard. De meeste woningen in het gebied liggen op loopafstand van beide, waardoor het gemakkelijk is om strandtijd met winkelen en dineren te combineren."
       },
       {
-        "question": "Is La Zenia good for holiday rentals?",
-        "answer": "Yes, La Zenia is excellent for holiday rentals. The combination of beach, shopping at the Boulevard, and nearby golf courses creates year-round demand. Properties with pools, air conditioning, and parking perform best. The area attracts visitors from across Europe, ensuring occupancy beyond just summer months."
+        "question": "Is La Zenia geschikt voor vakantieverhuren?",
+        "answer": "Ja, La Zenia is uitstekend voor vakantieverhuren. De combinatie van strand, winkelen op de Boulevard en nabije golfbanen creëert het hele jaar door vraag. Woningen met zwembaden, airconditioning en parkeerplaats presteren het best. Het gebied trekt bezoekers van over heel Europa aan, waardoor bezetting ook voorbij de zomermaanden blijft."
       },
       {
-        "question": "What is the difference between La Zenia and Cabo Roig?",
-        "answer": "La Zenia is more commercial and modern, centered around the Boulevard shopping center and beach. Cabo Roig has a more traditional Spanish feel with its charming harbor, rocky coves, and Saturday market. Cabo Roig is slightly more upscale. They're adjacent areas, so you can easily enjoy both."
+        "question": "Wat is het verschil tussen La Zenia en Cabo Roig?",
+        "answer": "La Zenia is meer commercieel en modern, gecentreerd rond het Boulevard winkelcentrum en strand. Cabo Roig heeft een meer traditioneel Spaans gevoel met zijn charmante haven, rotsachtige coves en zaterdagmarkt. Cabo Roig is iets meer upscale. Ze zijn naastgelegen gebieden, dus je kunt gemakkelijk beide genieten."
       },
       {
-        "question": "Are there good restaurants in La Zenia?",
-        "answer": "La Zenia Boulevard alone has over 30 restaurants covering international cuisines. The beachfront has traditional Spanish chiringuitos. For fine dining, nearby Cabo Roig offers upscale options. You'll never run out of places to eat."
+        "question": "Zijn er goede restaurants in La Zenia?",
+        "answer": "La Zenia Boulevard alleen heeft meer dan 30 restaurants met internationale keukens. Het strand heeft traditionele Spaanse chiringuitos. Voor fine dining biedt nabije Cabo Roig upscale opties. Je raakt nooit zonder eten opzitten."
       },
       {
-        "question": "Is English widely spoken in La Zenia?",
-        "answer": "Yes, English is very widely spoken throughout La Zenia due to the large British community. Most shops, restaurants, and services cater to English speakers. Many businesses are British-owned. You can live comfortably without speaking Spanish, though learning some is always appreciated."
+        "question": "Wordt er veel Engels gesproken in La Zenia?",
+        "answer": "Ja, Engels wordt zeer veel gesproken in La Zenia dankzij de grote Britse gemeenschap. De meeste winkels, restaurants en diensten cateren voor Engelssprekenden. Veel bedrijven zijn Brits eigendom. Je kunt comfortabel zonder Spaans leven, hoewel het leren ervan altijd gewaardeerd wordt."
       },
       {
-        "question": "What are property prices like in La Zenia?",
-        "answer": "New build apartments start from around €189,000, townhouses from €250,000, and villas from €400,000. Beachfront and Boulevard-adjacent properties command premiums of 15-25%. La Zenia offers excellent value compared to equivalent locations on Costa Blanca North."
+        "question": "Hoe zijn de vastgoedprijzen in La Zenia?",
+        "answer": "Nieuwbouw appartementen starten vanaf ongeveer €189.000, townhouses vanaf €250.000 en villa's vanaf €400.000. Strand- en Boulevard-nabijgelegen woningen brengen premiums van 15-25%. La Zenia biedt uitstekende waarde vergeleken met gelijkaardige locaties aan Costa Blanca North."
       },
       {
-        "question": "Is La Zenia busy all year round?",
-        "answer": "La Zenia has a permanent resident population that keeps the area alive year-round. Summer is naturally busiest with tourists, but the Boulevard and golf courses ensure activity throughout winter too. The mild climate (average 16-18°C in winter) means outdoor dining and beach walks are possible year-round."
+        "question": "Is La Zenia het hele jaar druk?",
+        "answer": "La Zenia heeft een permanente bevolking die het gebied het hele jaar levendig houdt. Zomer is natuurlijk het drukst met toeristen, maar de Boulevard en golfbanen zorgen ook in de winter voor activiteit. Het milde klimaat (gemiddeld 16-18°C in de winter) betekent dat dineren buiten en strandwandelingen het hele jaar mogelijk zijn."
       },
       {
-        "question": "How far is the nearest hospital from La Zenia?",
-        "answer": "Hospital Universitario de Torrevieja is 8 km away (10 minuutn by car). It's a modern public hospital with emergency services and English-speaking staff. Several private clinics and 24-uur pharmacies are located within La Zenia itself."
+        "question": "Hoe ver ligt het dichtstbijzijnde ziekenhuis van La Zenia?",
+        "answer": "Hospital Universitario de Torrevieja ligt 8 km verderop (10 minuten met de auto). Het is een modern openbaar ziekenhuis met spoedgevallen en Engelssprekend personeel. Meerdere particuliere klinieken en 24-uursapotheken bevinden zich in La Zenia zelf."
       },
       {
-        "question": "Can I walk to everything in La Zenia?",
-        "answer": "Yes, most of La Zenia is walkable. The beach, Boulevard, supermarkets, restaurants, and local services are all within walking distance from most properties. However, a car is useful for golf, exploring other areas, and airport runs. Many residents use bicycles or electric scooters for local trips."
+        "question": "Kan ik alles te voet bereiken in La Zenia?",
+        "answer": "Ja, het grootste deel van La Zenia is voetgangersvriendelijk. Het strand, Boulevard, supermarkten, restaurants en lokale diensten liggen allemaal op loopafstand van de meeste woningen. Een auto is echter nuttig voor golf, het verkennen van andere gebieden en vliegveldritten. Veel bewoners gebruiken fietsen of elektrische scooters voor lokale reizen."
       },
       {
-        "question": "Is La Zenia suitable for families?",
-        "answer": "Absolutely. The calm beach waters, family-friendly restaurants at the Boulevard, cinema, and safe residential areas make La Zenia ideal for families. International schools are within 15-20 minuutn, and healthcare is excellent. The community has many families with children of all ages."
+        "question": "Is La Zenia geschikt voor gezinnen?",
+        "answer": "Absoluut. De kalme strandzee, gezinsvriendelijke restaurants op de Boulevard, bioscoop en veilige woongebieden maken La Zenia ideaal voor gezinnen. Internationale scholen liggen binnen 15-20 minuten, en gezondheidszorg is uitstekend. De gemeenschap heeft veel gezinnen met kinderen van alle leeftijden."
       }
     ],
-    "conclusion": "Ready to explore new build properties in La Zenia? Our team specializes in helping international buyers find their perfect home in this sought-after beach and shopping destination. Whether you're seeking a holiday apartment with rental potential, a family townhouse, or a permanent home in the sun, we'll guide you through every step.",
+    "conclusion": "Klaar om nieuwbouwwoningen in La Zenia te verkennen? Ons team specialiseert zich in het helpen van internationale kopers hun perfecte huis in deze gezochte strand- en winkelbestemming te vinden. Of je nu op zoek bent naar een vakantie-appartement met verhuurpotentieel, een familietownhouse of een permanent huis in de zon, we begeleiden je door elk stap.",
     "investmentAnalysis": {
       "rentalYield": "7-10%",
       "annualAppreciation": "4-7%",
-      "overview": "La Zenia represents one of Costa Blanca's highest-yielding investment locations. The combination of Blue Flag beach, Europe's largest shopping mall, and proximity to golf courses creates unmatched demand diversity. Properties achieve exceptional occupancy rates throughout the year from both tourist and permanent resident markets.",
+      "overview": "La Zenia vertegenwoordigt een van Costa Blanca's hoogste opbrengsteninvesteringslocaties. De combinatie van Blauwe Vlag-strand, Europas grootste winkelcentrum en nabijheid van golfbanen creëert ongeëvenaarde vraagdiversiteit. Woningen bereiken uitzonderlijke bezettingsgraden het hele jaar door van zowel toeristen- als permanente bewonersmarkten.",
       "highlights": [
-        "Highest rental yields on Costa Blanca from multiple demand sources",
-        "Year-round occupancy from beach holidays, shopping visits, and golf",
-        "Beach-adjacent properties command premium rental rates",
-        "La Zenia Boulevard drives consistent visitor flow to the area",
-        "Established track record of strong capital appreciation"
+        "Hoogste verhuuropbrengsten aan Costa Blanca van meerdere vraagbronnen",
+        "Het hele jaar door bezetting van strandvakanties, winkelbezoeken en golf",
+        "Strand-aangrenzende woningen brengen premiumverhuurprijzen op",
+        "La Zenia Boulevard drijft consistent bezoekersstroom naar het gebied",
+        "Gevestigd track record van sterke waardestijging"
       ]
     },
     "costOfLiving": {
-      "intro": "Living in La Zenia offers excellent value for beachside resort living, with costs similar to other established coastal areas but offset by rental income potential for investment properties.",
+      "intro": "Wonen in La Zenia biedt uitstekende waarde voor strandresort-wonen, met kosten vergelijkbaar met andere gevestigde kustgebieden maar gecompenseerd door verhuurinkomstenpotentieel voor investeringseigendommen.",
       "items": [
         {
-          "category": "Groceries (monthly, couple)",
+          "category": "Boodschappen (maandelijks, paar)",
           "cost": "€330-480",
-          "notes": "Mercadona at La Zenia Boulevard; local shops; weekly markets nearby"
+          "notes": "Mercadona op La Zenia Boulevard; lokale winkels; nabije wekelijkse markten"
         },
         {
-          "category": "Utilities (electricity, water, gas)",
+          "category": "Nutsvoorzieningen (elektriciteit, water, gas)",
           "cost": "€140-210",
-          "notes": "Sea breeze reduces cooling; electricity higher in peak summer"
+          "notes": "Zeebriesreduceert koeling; elektriciteit hoger in piekhiempo"
         },
         {
-          "category": "Community fees",
+          "category": "Gemeenschapskosten",
           "cost": "€100-220",
-          "notes": "Higher for beachfront; includes pool, maintenance, security"
+          "notes": "Hoger voor strandfront; inclusief zwembad, onderhoud, beveiliging"
         },
         {
-          "category": "IBI (Council tax)",
+          "category": "IBI (Gemeentelijke belasting)",
           "cost": "€700-1800/year",
-          "notes": "Beachfront properties significantly higher due to location value"
+          "notes": "Strandeigendommen aanzienlijk hoger vanwege locatiewaarde"
         },
         {
-          "category": "Dining out (per person)",
+          "category": "Dineren buiten (per persoon)",
           "cost": "€18-35",
-          "notes": "Boulevard restaurants €25-45; beach chiringuitos €15-20"
+          "notes": "Boulevard restaurants €25-45; strand chiringuitos €15-20"
         },
         {
-          "category": "Beach Clubs & Activities",
+          "category": "Strandenclubs & Activiteiten",
           "cost": "€60-150",
-          "notes": "Beach club memberships, water sports, sun lounger rentals"
+          "notes": "Strandclublidmaatschappen, watersporten, ligbedverhuringen"
         },
         {
-          "category": "Shopping Entertainment",
+          "category": "Winkelvermaak",
           "cost": "€50-120",
-          "notes": "Cinema, restaurants, entertainment at La Zenia Boulevard"
+          "notes": "Bioscoop, restaurants, vermaak op La Zenia Boulevard"
         },
         {
-          "category": "Car expenses",
+          "category": "Uitgaven voor auto",
           "cost": "€100-180",
-          "notes": "Most areas walkable; car useful for flexibility and golf"
+          "notes": "Meeste gebieden voetgangersvriendelijk; auto nuttig voor flexibiliteit en golf"
         }
       ]
     },
     "events": {
-      "intro": "La Zenia and surrounding Orihuela Costa host year-round festivals and events celebrating the vibrant beach and shopping culture.",
+      "intro": "La Zenia en omliggende Orihuela Costa hosten het hele jaar door festivals en evenementen die de levendige strand- en winkelcultuur vieren.",
       "events": [
         {
           "name": "La Zenia Beach Fiesta",
           "month": "June",
-          "description": "Summer festival with beach parties, DJ performances, and entertainment along the shoreline"
+          "description": "Zomerfestival met strandfeesten, DJ-optredens en entertainment langs de kustlijn"
         },
         {
           "name": "Boulevard Festival",
           "month": "July",
-          "description": "Shopping center festival with live music, fashion shows, and special retail events"
+          "description": "Winkelcentrumfestival met live muziek, modetoont en speciale winkelgebeurtevissen"
         },
         {
           "name": "International Food Festival",
           "month": "August",
-          "description": "Celebration of international cuisine with food stalls from around the world"
+          "description": "Viering van internationale keuken met voedselkraampjes van over de hele wereld"
         },
         {
           "name": "La Zenia Sunset Market",
           "month": "Saturday Year-Round",
-          "description": "Weekly market on Calle Maestro Torralba with fresh produce, crafts, and goods"
+          "description": "Wekelijkse markt op Calle Maestro Torralba met verse producten, ambachten en goederen"
         },
         {
           "name": "Sports & Recreation Events",
           "month": "Throughout Year",
-          "description": "Beach volleyball tournaments, paddleboard races, water sports competitions"
+          "description": "Strandvolleybaltoernooien, paddleboardraces, watersporthenderderijkompetitiionen"
         },
         {
           "name": "Christmas & Holiday Markets",
           "month": "December",
-          "description": "Festive celebrations with lights, markets, and holiday events throughout La Zenia"
+          "description": "Feestviering met verlichting, markten en vakantiegebeurtevissen door heel La Zenia"
         }
       ]
     },
     "schools": {
-      "intro": "La Zenia benefits from excellent schooling options serving the large family-oriented expatriate community, from international schools to Spanish education.",
+      "intro": "La Zenia profiteert van uitstekende schoolopties die de grote gezinsgericht expatgemeenschap bedienen, van internationale scholen tot Spaans onderwijs.",
       "schools": [
         {
           "name": "International School of Alicante",
           "type": "International (IB)",
           "distance": "20 min",
-          "description": "Leading IB school with excellent facilities offering comprehensive international curriculum"
+          "description": "Toonaangevende IB-school met uitstekende faciliteiten die uitgebreide internationaal curriculum aanbiedt"
         },
         {
           "name": "El Limonar International School",
           "type": "International (British)",
           "distance": "25 min",
-          "description": "British curriculum specialist with strong academic record and pastoral care"
+          "description": "Brits curriculum-specialist met sterke academische staat en pastoraal welzijn"
         },
         {
           "name": "Colegio Público Playa Flamenca",
           "type": "Spanish State",
           "distance": "8 min",
-          "description": "Public primary school serving the coastal communities of Orihuela Costa"
+          "description": "Openbare basisschool voor de kustgemeenschappen van Orihuela Costa"
         },
         {
           "name": "IES La Zenia",
           "type": "Spanish State",
           "distance": "10 min",
-          "description": "Secondary school offering Spanish education from age 12-18"
+          "description": "Secundaire school met Spaans onderwijs voor leeftijd 12-18"
         },
         {
           "name": "Happy Kids Nursery",
           "type": "International Nursery",
           "distance": "5 min",
-          "description": "English-language nursery and preschool for youngest residents"
+          "description": "Engelse kinderdagopvang en voorschool voor jongste bewoners"
         }
       ]
     },
     "natureActivities": {
-      "intro": "La Zenia combines beach and water activities with nearby nature reserves and golf courses, offering diverse outdoor options.",
+      "intro": "La Zenia combineert strand- en wateractiviteiten met nabije natuurreservaten en golfbanen, wat diverse buitenopties biedt.",
       "activities": [
         {
           "name": "Playa de La Zenia Blue Flag Beach",
           "type": "Beach",
-          "description": "Golden sand beach with lifeguards, beach bars, sun loungers, and full facilities"
+          "description": "Goudgeel zandstrand met redders, strandbarren, ligbedden en volledige faciliteiten"
         },
         {
           "name": "Swimming & Water Sports",
           "type": "Beach",
-          "description": "Safe calm waters perfect for swimming; paddleboarding, windsurfing available"
+          "description": "Veilig kalm water perfect voor zwemmen; paddleboarden, windsurfen beschikbaar"
         },
         {
           "name": "Cala Bosque Quiet Cove",
           "type": "Beach",
-          "description": "Quieter rocky cove north of main beach, ideal for exploring and snorkeling"
+          "description": "Rustigere rotsachtige cove ten noorden van het hoofdstrand, ideaal voor verkennen en snorkelen"
         },
         {
           "name": "Cala Capitán Rocky Exploration",
           "type": "Beach",
-          "description": "Scenic rocky cove towards Cabo Roig with natural pools and snorkeling"
+          "description": "Schilderachtige rotsachtige cove richting Cabo Roig met natuurlijke poelen en snorkelen"
         },
         {
           "name": "Golf at Multiple Courses",
           "type": "Golf",
-          "description": "Six championship courses within 15 minuutn including Villamartin and Las Colinas"
+          "description": "Zes championship courses binnen 15 minuten inclusief Villamartin en Las Colinas"
         },
         {
           "name": "Cycling Routes",
           "type": "Cycling",
-          "description": "Coastal paths connecting La Zenia to Playa Flamenca and beyond"
+          "description": "Kustpaden verbindend La Zenia met Playa Flamenca en verder"
         }
       ]
     },
     "expatCommunity": {
-      "intro": "La Zenia has one of Costa Blanca's most established and welcoming expatriate communities. The area attracts families, retirees, and holiday homeowners, primarily from the UK but increasingly diverse. English is spoken everywhere, and the infrastructure for expatriate life is comprehensive. Community integration is easy through shared interests in beach, shopping, and golf.",
+      "intro": "La Zenia heeft een van Costa Blanca's meest gevestigde en welwillende expatgemeenschappen. Het gebied trekt gezinnen, gepensioneerden en vakantiehuiseigenaren aan, vooral van het VK maar steeds meer divers. Engels wordt overal gesproken, en de infrastructuur voor expatleving is uitgebreid. Gemeenschapsintegratie is gemakkelijk door gedeelde interesses in strand, winkelen en golf.",
       "highlights": [
-        "Large, established British community with strong support networks",
-        "English spoken in nearly all shops, restaurants, and services",
-        "Family-friendly atmosphere with schools and child-oriented amenities",
-        "Strong beach and sports clubs with regular social activities",
-        "Shopping at La Zenia Boulevard creates natural meeting points",
-        "Golf clubs serve as important social hubs",
-        "International community increasingly diverse beyond British",
-        "Numerous expat-oriented social groups and clubs"
+        "Grote, gevestigde Britse gemeenschap met sterke steunnetwerken",
+        "Engels gesproken in bijna alle winkels, restaurants en diensten",
+        "Gezinsvriendelijke sfeer met scholen en kindgerichte voorzieningen",
+        "Sterke strand- en sportclubs met regelmatige sociale activiteiten",
+        "Winkelen op La Zenia Boulevard creëert natuurlijke ontmoetingsplaatsen",
+        "Golfclubs dienen als belangrijke sociale hubs",
+        "Internationale gemeenschap steeds meer divers buiten Brits",
+        "Talrijke expatgericht sociaalgroepen en clubs"
       ],
       "nationalities": [
         "British",
@@ -412,47 +412,47 @@
       ]
     },
     "lifestyleTimeline": {
-      "title": "A Typical Day in La Zenia",
+      "title": "Een Typische Dag in La Zenia",
       "entries": [
         {
           "time": "07:30",
           "activity": "Early Beach Walk",
-          "description": "Morning stroll along Playa de La Zenia beach before the crowds arrive"
+          "description": "Ochtendwandeling langs Playa de La Zenia-strand voordat de drukte aankomt"
         },
         {
           "time": "09:00",
           "activity": "Coffee & Breakfast",
-          "description": "Coffee at a beachfront chiringuito watching swimmers and early walkers"
+          "description": "Koffie in een strandfront chiringuito terwijl je zwemmers en vroege wandelaars kijkt"
         },
         {
           "time": "10:30",
           "activity": "La Zenia Boulevard Shopping",
-          "description": "Shopping, browsing, or catching up with friends at the vast mall"
+          "description": "Winkelen, bladeren of met vrienden bijpraten op het enorme winkelcentrum"
         },
         {
           "time": "13:00",
           "activity": "Boulevard Restaurant Lunch",
-          "description": "Lunch at one of 30+ restaurants offering cuisines from around the world"
+          "description": "Lunch in een van de 30+ restaurants met keukens van over de hele wereld"
         },
         {
           "time": "15:00",
           "activity": "Beach & Pool Time",
-          "description": "Afternoon beach swimming or relaxation at community pool"
+          "description": "Middag zwemmen op het strand of ontspanning bij gemeenschapszwembad"
         },
         {
           "time": "17:00",
           "activity": "Golf or Activities",
-          "description": "Afternoon golf round or water sports activity like paddleboarding"
+          "description": "Middag golfrondje of wateractiviteit zoals paddleboarden"
         },
         {
           "time": "19:30",
           "activity": "Promenade & Drinks",
-          "description": "Evening promenade walk with aperitivo drinks watching sunset"
+          "description": "Avondpromenadewandeling met aperitief-drankjes terwijl je zonsondergang bekijkt"
         },
         {
           "time": "21:00",
           "activity": "Dinner & Entertainment",
-          "description": "Dinner at favorite restaurant then cinema or evening entertainment"
+          "description": "Diner in favorieterestaurant dan bioscoop of avondvermaak"
         }
       ]
     },
@@ -463,7 +463,7 @@
     "@context": "https://schema.org",
     "@type": "Place",
     "name": "La Zenia",
-    "description": "La Zenia is a sought-after coastal community in Orihuela Costa, Costa Blanca South, known for its Blue Flag beach, La Zenia Boulevard shopping center, and excellent golf access.",
+    "description": "La Zenia is een gezochte kustgemeenschap in Orihuela Costa, Costa Blanca South, bekend voor zijn Blauwe Vlag-strand, La Zenia Boulevard winkelcentrum en uitstekende golftoegang.",
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": "37.9389",
@@ -493,7 +493,7 @@
       {
         "@type": "LocationFeatureSpecification",
         "name": "Golf Courses Nearby",
-        "value": "6 courses within 15 minuutn"
+        "value": "6 courses within 15 minutes"
       }
     ]
   },
@@ -503,42 +503,42 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How far is La Zenia beach from La Zenia Boulevard?",
+        "name": "Hoe ver ligt het La Zenia-strand van La Zenia Boulevard?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "La Zenia beach is approximately 1 km (10-15 minuut walk) from La Zenia Boulevard. Most properties are within walking distance of both."
+          "text": "Het La Zenia-strand ligt ongeveer 1 km (10-15 minuten loopafstand) van La Zenia Boulevard. De meeste woningen liggen op loopafstand van beide."
         }
       },
       {
         "@type": "Question",
-        "name": "Is La Zenia good for holiday rentals?",
+        "name": "Is La Zenia geschikt voor vakantieverhuren?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, La Zenia is excellent for holiday rentals with year-round demand from beach, shopping, and golf visitors."
+          "text": "Ja, La Zenia is uitstekend voor vakantieverhuren met het hele jaar door vraag van strand-, winkel- en golfbezoekers."
         }
       },
       {
         "@type": "Question",
-        "name": "What are property prices like in La Zenia?",
+        "name": "Hoe zijn de vastgoedprijzen in La Zenia?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "New build apartments start from around €189,000, townhouses from €250,000, and villas from €400,000. Excellent value compared to Costa Blanca North."
+          "text": "Nieuwbouw appartementen starten vanaf ongeveer €189.000, townhouses vanaf €250.000 en villa's vanaf €400.000. Uitstekende waarde vergeleken met Costa Blanca North."
         }
       },
       {
         "@type": "Question",
-        "name": "Is English widely spoken in La Zenia?",
+        "name": "Wordt er veel Engels gesproken in La Zenia?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, English is very widely spoken due to the large British community. Most businesses cater to English speakers."
+          "text": "Ja, Engels wordt zeer veel gesproken dankzij de grote Britse gemeenschap. De meeste bedrijven cateren voor Engelssprekenden."
         }
       },
       {
         "@type": "Question",
-        "name": "Is La Zenia suitable for families?",
+        "name": "Is La Zenia geschikt voor gezinnen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Absolutely. Calm beach waters, family restaurants, cinema, safe residential areas, and nearby international schools make it ideal for families."
+          "text": "Absoluut. Kalm strandwater, gezinsvriendelijke restaurants, bioscoop, veilige gebieden en nabije internationale scholen maken het ideaal voor gezinnen."
         }
       }
     ]
