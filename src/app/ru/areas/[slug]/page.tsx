@@ -1,14 +1,16 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getArea, getAllAreaSlugs } from '@/lib/area-utils';
+import { getArea, getTranslatedAreaSlugs } from '@/lib/area-utils';
 import { getAreaStrings } from '@/lib/area-i18n';
 import { prepareAreaPageData } from '@/app/areas/[slug]/page';
 import AreaPageContent from '@/components/area/AreaPageContent';
 
 export async function generateStaticParams() {
-  const slugs = getAllAreaSlugs();
+  const slugs = getTranslatedAreaSlugs('ru');
   return slugs.map(slug => ({ slug }));
 }
+
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;

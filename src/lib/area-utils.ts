@@ -386,3 +386,16 @@ export function getAllAreaSlugs(): string[] {
 
   return [...new Set(slugs)];
 }
+
+/**
+ * Get area slugs that have translated content for a specific language.
+ * Only these will be statically generated at build time.
+ * Other slugs will be generated on-demand (ISR).
+ */
+export function getTranslatedAreaSlugs(lang: string): string[] {
+  const langDir = path.join(process.cwd(), 'src', 'content', 'areas', lang);
+  if (!fs.existsSync(langDir)) return [];
+  return fs.readdirSync(langDir)
+    .filter(file => file.endsWith('.json'))
+    .map(file => file.replace('.json', ''));
+}
