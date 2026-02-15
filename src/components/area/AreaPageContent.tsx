@@ -15,6 +15,7 @@ import {
   getImageUrl,
 } from '@/data/stock-images';
 import { breadcrumbSchema, toJsonLd, articleSchema, placeSchema } from '@/lib/schema';
+import LeadForm from '@/components/LeadForm';
 
 interface DevelopmentCard {
   name: string;
@@ -754,6 +755,18 @@ export default function AreaPageContent({
                     {s.getMortgageQuote}
                   </a>
                 </div>
+              </div>
+
+              {/* Lead Form in Sidebar */}
+              <div className="bg-white border border-warm-200 rounded-sm p-6 shadow-lg">
+                <LeadForm
+                  area={data.name}
+                  language={lang}
+                  formType="Area Inquiry"
+                  sourcePage={`${langPrefix}/areas/${data.slug}`}
+                  budgetRange={`€${data.priceRange.min.toLocaleString()} - €${data.priceRange.max.toLocaleString()}`}
+                  compact={true}
+                />
               </div>
 
               <div className="bg-warm-50 rounded-sm p-6">
