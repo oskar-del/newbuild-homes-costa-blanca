@@ -1,172 +1,212 @@
 # Project Status — newbuildhomescostablanca.com
-**Last updated: 2026-02-09**
+
+**Last updated: February 15, 2026**
 
 ## WORKFLOW RULES
 - **ALWAYS update this file before telling Oskar to push**
 - **ALWAYS read this file at the start of a new session**
-- This file tracks everything done, pending, and technical context so we don't lose progress between sessions
+- This file tracks everything done, pending, and technical context
 
-## COMPLETED (all sessions combined)
+---
+
+## COMPLETED (all sessions)
+
+### Website Foundation
+- [x] Next.js 14 site with 1,700+ pages
+- [x] 9-language support (EN, SV, NL, NL-BE, FR, DE, NO, PL, RU)
+- [x] 140+ blog articles
+- [x] Custom 404 pages per language
+- [x] Hreflang SEO across all pages
+- [x] Language switcher with proper routing
+- [x] GSC analysis & 5xx error fixes
+- [x] Property routes for all languages
+- [x] 72 redirect route files (full route audit)
 
 ### Design & Cleanup
-- [x] Replaced 18 Unsplash stock image URLs with local photos (stock-images.ts)
+- [x] Replaced 18 Unsplash stock image URLs with local photos
 - [x] Fixed Header golf links
-- [x] Removed 100+ emojis from 12 files (blog, guides, areas)
-- [x] Fixed off-design-system colors (blue/purple/emerald → primary/accent/warm)
-- [x] Fixed Costa Calida area page to match developments card style
-- [x] Fixed property counter grammar (1 property singular, hide 0-count towns)
-- [x] Added light CTA boxes between sections on developments, properties, areas pages
+- [x] Removed 100+ emojis from 12 files
+- [x] Fixed off-design-system colors → primary/accent/warm
+- [x] Fixed property counter grammar
+- [x] Added CTA boxes between sections
 
 ### Blog & Content
-- [x] Created 13 Top 10 blog articles total:
-  1. top-10-new-build-developments-costa-blanca (featured)
-  2. top-10-beaches-costa-blanca-south
-  3. top-10-golf-courses-costa-blanca
-  4. top-10-areas-buy-property-costa-blanca
-  5. top-10-international-schools-costa-blanca
-  6. top-10-restaurants-torrevieja
-  7. top-10-things-to-do-orihuela-costa
-  8. top-10-reasons-move-spain
-  9. top-10-family-activities-costa-blanca
-  10. top-10-new-build-developers-costa-blanca
-  11. top-10-hidden-gems-costa-blanca-south
-  12. top-10-tips-buying-property-spain
-  13. top-10-beaches-near-javea-moraira
-- [x] Added "Top 10 Lists" category to blog page
-- [x] Built getBlogPostsByTag() cross-site article system
-- [x] Wired related articles to Torrevieja, Jávea, Costa Blanca North super guides (3 each)
-- [x] Wired related articles to golf detail pages (2) and golf landing (3)
+- [x] 13 Top 10 blog articles
+- [x] "Top 10 Lists" category on blog page
+- [x] getBlogPostsByTag() cross-site article system
+- [x] Related articles wired to area pages and golf pages
 
 ### Property Generation
-- [x] Fixed SSL certificate error in generate-all-content.ts
-- [x] Added diagnostic logging to feed fetching
-- [x] Generated 268 AI content files (areas, developments, projects)
+- [x] 268 AI content files generated (areas, developments, projects)
 - [x] ~806 content files exist (96 areas, 533 developments, 172 projects)
-- [x] ~400-500 properties still need generation (API credits ran out mid-run)
 
-### Swedish i18n (Structure Complete)
-- [x] Activated Swedish in SUPPORTED_LOCALES config
-- [x] Created sv.json locale file with culturally adapted translations
-- [x] Created middleware.ts for /sv/ routing
-- [x] Created LocaleContext.tsx
-- [x] Created /sv/ layout with Swedish metadata
-- [x] 11 Swedish pages created:
-  - /sv/ (homepage with "Varför svenskar väljer Costa Blanca")
-  - /sv/properties (full listing with Swedish filters)
-  - /sv/properties/[reference] (redirect to English — interim)
-  - /sv/developments (full Swedish adaptation, 1236 lines)
-  - /sv/areas (region cards with Swedish descriptions)
-  - /sv/golf (22 courses with Swedish lifestyle content)
-  - /sv/luxury (luxury collection with Stockholm price comparisons)
-  - /sv/inland (Swedish value propositions vs Stockholm prices)
-  - /sv/blog (English fallback + Swedish categories)
-  - /sv/contact ("Svenska Tjänster" section)
-  - /sv/about ("Vi talar svenska" emphasis)
-- [x] Added EN/SV language switcher with flag icons to Header (desktop + mobile)
-- [x] Added hreflang alternates to all 10 English pages
-- [x] Created translate-articles.ts batch translation script
+### Super Guides (5 total)
+- [x] Torrevieja, Jávea, Costa Blanca North (existing)
+- [x] Orihuela Costa (996 lines, 6 neighborhoods)
+- [x] Benidorm & Finestrat (1095 lines, 9 neighborhoods)
 
-### Super Guides
-- [x] Torrevieja (existing, with drone photos + data files)
-- [x] Jávea (existing)
-- [x] Costa Blanca North (existing)
-- [x] Orihuela Costa (NEW — 996 lines, 6 neighborhoods, golf, beaches, FAQs)
-- [x] Benidorm & Finestrat (NEW — 1095 lines, 9 neighborhoods, property market, lifestyle)
-
-### Original Swedish Blog Articles (not translations)
-- [x] "Att Köpa Bostad i Spanien Som Svensk" — NIE, Skatteverket, SBAB/Skandia
-- [x] "Stockholmspris vs Costa Blanca" — Price comparisons with SEK conversions
-- [x] "Svenska Livet på Costa Blanca" — Swedish community, kyrkan, SIS school
-- [x] "Golf i Spanien för Svenska Golfare" — Courses, green fees vs Bro Hof
+### Swedish Original Content
+- [x] 4 original Swedish articles (buying guide, price comparison, lifestyle, golf)
+- [x] 11 Swedish pages with full cultural adaptation
+- [x] Translation script for blog articles
 
 ### YouTube Video Infrastructure
-- [x] YOUTUBE-SCRIPT.md — Claude browser prompt for generating YouTube listings
-- [x] src/lib/video-mapping.ts — Video-to-area/property mapping (mirrors blog system)
-- [x] src/components/VideoCard.tsx — 3 variants (card/inline/hero) with in-place YouTube embed
-- [x] src/content/videos/_example.json — JSON template for video entries
-- [x] Functions: getVideosForArea(), getVideosByTag(), getVideoForProperty(), getFeaturedVideos()
+- [x] video-mapping.ts, VideoCard.tsx, video JSON template
+- [x] Functions: getVideosForArea(), getVideosByTag(), etc.
 
-## COMMITS (ready to push)
-1-12: (previously pushed)
-13. `20c9c3f` — 8 more Top 10 blog articles
-14. `4f12481` — PROJECT-STATUS.md for session continuity
-15. `2f7eafb` — 78 AI-generated development descriptions (overnight run)
-16. `7b88397` — Orihuela Costa + Benidorm/Finestrat super guides + 4 Swedish articles
-17. `ee85362` — YouTube video infrastructure (mapping, VideoCard, listing script)
+### Area Pages — Shared Architecture (THIS SESSION)
+- [x] AreaPageContent.tsx — shared server component (775 lines)
+- [x] area-utils.ts — data loading with language fallback (389 lines)
+- [x] area-i18n.ts — 60+ UI labels translated in all 9 languages (575 lines)
+- [x] prepareAreaPageData() helper shared across all language pages
+- [x] All 8 language area pages rewritten from re-exports to actual pages
 
-## PENDING TASKS
+### Area Content — English Upgrades (THIS SESSION)
+- [x] 6 areas upgraded to premium (450+ lines each): Calpe, Benidorm, Altea, Dénia, Santa Pola, Moraira
+- [x] Each includes: investmentAnalysis, costOfLiving, events, schools, natureActivities, expatCommunity, lifestyleTimeline, mapEmbed
+- [x] Javea upgraded with content from javea-xabia.json
 
-### Must Do (User Action Required)
-- [ ] `git push` — multiple commits waiting
-- [ ] Generation + translation scripts running in terminal
-- [ ] Commit generated content after scripts complete
-- [ ] Upload first YouTube video and create JSON entry in src/content/videos/
+### Area Translations — All Languages (THIS SESSION)
+- [x] Swedish: 15/15 fully translated
+- [x] Dutch + NL-BE: 15/15 fully translated
+- [x] German: 15/15 fully translated
+- [x] French: 15/15 fully translated (minor gaps possible)
+- [x] Norwegian: 15/15 fully translated (minor gaps possible)
+- [x] Polish: 15/15 fully translated (minor gaps possible)
+- [x] Russian: 15/15 fully translated (minor gaps possible)
+- [x] Total: 120 translated area JSON files
 
-### YouTube — Next Steps
-- [ ] Upload first video to YouTube (use YOUTUBE-SCRIPT.md prompt)
-- [ ] Create video JSON file in src/content/videos/[slug].json
-- [ ] Wire VideoSection into homepage (featured videos)
-- [ ] Wire VideoSection into super guides (area videos)
-- [ ] Wire VideoSection into property detail pages
-- [ ] Create /videos page listing all videos
-- [ ] Create YouTube channel playlists (see YOUTUBE-SCRIPT.md)
+### Guide Pages (THIS SESSION)
+- [x] Premium guide index redesign (3-tier: Essential, Destination, Decision)
+- [x] All 9 language guide index pages matching premium design
+- [x] Proper emoji icons, gradient hero, Finance CTA, Trust section
 
-### Swedish — Remaining Work
-- [ ] Translation script running (translating 135+ articles to Swedish)
-- [ ] Swedish property detail pages (currently redirects to English)
-- [ ] Swedish guide pages (/sv/guides/)
-- [ ] Localized alt tags for images in Swedish version
-- [ ] Swedish-specific meta descriptions targeting Swedish Google queries
+### Lead Capture System (THIS SESSION)
+- [x] LeadForm.tsx — multilingual component (9 languages), auto-tags area/language/budget/property type
+- [x] LeadFormSection.tsx — translated titles + subtitles per language
+- [x] /api/leads/route.ts — validates input, pushes to Airtable, graceful fallback
+- [x] Airtable "NewBuild Leads" table created with 15 fields
+- [x] Lead form integrated into all area page sidebars
+- [x] scripts/setup-airtable.js for table creation
 
-### Content — Future Articles
-- [ ] Area-specific articles to further populate related cards on super guides
-- [ ] More lifestyle/buyer guide content
+---
 
-### Future Languages
-- [ ] German (de) — next after Swedish is complete
-- [ ] Same infrastructure pattern: /de/ prefix, de.json locale, page templates
+## TO DO — Full Roadmap
 
-### Features — Deferred
-- [ ] Automated blog agent (scheduled content generation — needs shortcut infrastructure)
-- [ ] Swedish property detail pages with full translation
-- [ ] More super guide pages (Alicante, Murcia, Guardamar etc.)
+### Phase 1: Lead Conversion (NEXT — Highest Impact)
+- [ ] Test lead form end-to-end (submit test lead, verify in Airtable)
+- [ ] MailerLite integration — auto-response email on new lead
+  - Personalized by language + area
+  - Include matched properties
+  - Template per language
+- [ ] Property alerts — new development → email matched leads
+- [ ] Lead scoring in Airtable (pages visited, forms filled, emails opened)
+- [ ] WhatsApp Business API sequences (templated follow-ups, property alerts)
 
-## TECHNICAL NOTES
+### Phase 2: Content Distribution & Social
+- [ ] Postiz social scheduling connected to Airtable
+  - Auto-generate social posts from blogs (9 languages)
+  - Property highlights from development data
+  - Area spotlights from guide content
+  - Schedule: Mon=area, Wed=lifestyle, Fri=property
+- [ ] Facebook Page → manual share to language groups
+- [ ] Content repurposing engine (1 blog → email + social + ad copy + video script)
 
-### Generation Script
-- Path: `src/scripts/generate-all-content.ts`
-- Run: `npx tsx src/scripts/generate-all-content.ts`
-- Idempotent: skips existing content files
-- Needs: Internet + Claude API credits (uses Haiku model)
-- SSL fix: `NODE_TLS_REJECT_UNAUTHORIZED='0'` set in script
-- Feeds: Background Properties (145 new builds) + REDSP (1,019 properties)
+### Phase 3: Advertising
+- [ ] Google Ads retargeting pixel on all pages
+- [ ] Dynamic remarketing (area+language specific ads)
+- [ ] PPC campaigns for high-intent keywords per language
+- [ ] Multilingual ad copy auto-generation from Airtable
+- [ ] Comparison content for ads ("Torrevieja vs Stockholm prices")
 
-### Translation Script
-- Path: `src/scripts/translate-articles.ts`
-- Run: `npx tsx src/scripts/translate-articles.ts`
-- Options: `--limit=N` or `--slug=article-name`
-- Output: `src/content/sv/articles/`
-- Uses Claude Haiku, rate limited (1s between calls)
+### Phase 4: Video & Visual Content
+- [ ] Remotion templates for property reels (photos + transitions + text + music)
+- [ ] Property data overlay (price, beds, area) from Airtable
+- [ ] Area highlight reels from photos + guide data
+- [ ] Download project videos → cut into TikTok/Instagram Reels
+- [ ] PDF property brochures auto-generated per development
 
-### Design System
+### Phase 5: Automated Blog System
+- [ ] RSS feed aggregation (Costa Blanca News, The Local, property reports)
+- [ ] AI content generation ("what this means for buyers" angle)
+- [ ] Draft → review → approve → publish workflow in Airtable
+- [ ] Auto-schedule social promotion for new posts
+
+### Phase 6: Feedback Loops & Optimization
+- [ ] Campaign data → Airtable (open rates, clicks, conversions)
+- [ ] Auto-optimize targeting (learn which content works per language/area)
+- [ ] A/B test emails and social formats
+- [ ] Monthly auto-generated market reports
+- [ ] Seasonal campaign triggers (school holidays, feria dates)
+
+### Phase 7: Future Expansion
+- [ ] Fix up hanssonhertzell.com
+- [ ] Build "super site" with resales + new builds using this template
+- [ ] Consider town-based microsites
+- [ ] Referral program tracked in Airtable
+- [ ] Country-specific articles per nationality
+
+---
+
+## Architecture
+
+```
+                    ┌──────────────┐
+                    │   AIRTABLE   │ ← Central Hub
+                    │    (Hub)     │
+                    └──────┬───────┘
+                           │
+        ┌──────────────────┼──────────────────┐
+        │                  │                  │
+        ▼                  ▼                  ▼
+   Properties          Leads            Content
+   (XML feeds)     (website forms)   (blogs, guides)
+        │                  │                  │
+        └────────┬─────────┴──────────┬───────┘
+                 │                    │
+    ┌────────────┼────────────────────┼───────────┐
+    │            │                    │           │
+    ▼            ▼                    ▼           ▼
+MailerLite    Google Ads          Postiz      Remotion
+ (email)    (retargeting)       (social)     (video)
+    │            │                    │           │
+    └────────────┴────────────────────┴───────────┘
+                          │
+                   Feedback Loop
+              (performance → Airtable
+               → optimize targeting)
+```
+
+## Tech Stack
+- Website: Next.js 14 (App Router, TypeScript, Tailwind)
+- Data hub: Airtable (base: appXVnwGv92LfG5j1)
+- Email: MailerLite
+- Social: Postiz
+- Ads: Google Ads
+- Video: Remotion
+- Hosting: Vercel
+- Repo: github.com/oskar-del/newbuild-homes-costa-blanca
+
+## Key Files
+- `src/components/area/AreaPageContent.tsx` — shared area page
+- `src/lib/area-utils.ts` — data loading with language fallback
+- `src/lib/area-i18n.ts` — UI translations (9 languages)
+- `src/components/LeadForm.tsx` — multilingual lead form
+- `src/components/LeadFormSection.tsx` — lead form wrapper
+- `src/app/api/leads/route.ts` — Airtable API integration
+- `src/content/areas/` — 96 English + 120 translated area JSONs
+- `scripts/setup-airtable.js` — Airtable table creation
+
+## Design System
 - Palette: primary-900, accent-500, warm-* (no raw blue/purple/emerald)
 - Font: DM Sans
 - Corners: rounded-sm
 - Schema: Article, FAQPage, BreadcrumbList, GolfCourse
 - No emojis in content
 
-### i18n Architecture
-- English: no prefix (default locale)
-- Swedish: /sv/ prefix
-- Middleware: src/middleware.ts detects locale from path
-- Locale file: src/i18n/locales/sv.json
-- Config: src/i18n/config.ts (SUPPORTED_LOCALES: ['en', 'sv'])
-
-### YouTube Video System
-- Video JSONs: src/content/videos/[slug].json (see _example.json for format)
-- Mapping: src/lib/video-mapping.ts (same pattern as blog-area-mapping.ts)
-- Component: src/components/VideoCard.tsx (card/inline/hero variants)
-- VideoSection: Drop-in grid section for any page
-- YouTube listing prompt: YOUTUBE-SCRIPT.md (copy into Claude browser)
-- Uses youtube-nocookie.com for privacy-friendly embeds
-- Thumbnails auto-fetched from YouTube CDN
+## Environment Variables
+```
+AIRTABLE_API_TOKEN=pat0Hmz38dw8kc2R3.xxx
+AIRTABLE_BASE_ID=appXVnwGv92LfG5j1
+AIRTABLE_TABLE_ID=tblXP5CjfdOULnRiC
+```
