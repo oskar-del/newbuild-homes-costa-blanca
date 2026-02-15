@@ -6,10 +6,19 @@ import { getAllDevelopments } from '@/lib/development-service';
 import { areaImageSuggestions, getImageUrl, villaPoolImages } from '@/data/stock-images';
 import AreaPageContent from '@/components/area/AreaPageContent';
 
+// Only pre-build 15 main premium areas at build time, rest use ISR
+const PRIORITY_AREAS = [
+  'torrevieja', 'algorfa', 'javea', 'calpe', 'benidorm', 'altea',
+  'moraira', 'orihuela-costa', 'guardamar-del-segura', 'villamartin',
+  'la-zenia', 'denia', 'ciudad-quesada', 'cabo-roig', 'santa-pola'
+];
+
 export async function generateStaticParams() {
-  const slugs = getAllAreaSlugs();
-  return slugs.map(slug => ({ slug }));
+  return PRIORITY_AREAS.map(slug => ({ slug }));
 }
+
+// Enable ISR for all other areas - they'll be built on first request
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;

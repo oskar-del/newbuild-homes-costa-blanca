@@ -142,7 +142,7 @@ export default function AreaPageContent({
               {/* Intro */}
               <section>
                 <div className="prose prose-lg max-w-none">
-                  {content.heroIntro.split('\n\n').map((paragraph, i) => (
+                  {(content.heroIntro || '').split('\n\n').map((paragraph, i) => (
                     <p key={i} className="text-warm-700 leading-relaxed">{paragraph}</p>
                   ))}
                 </div>
@@ -154,7 +154,7 @@ export default function AreaPageContent({
                   {t(s.theLifestyle, data.name)}
                 </h2>
                 <div className="prose prose-lg max-w-none mb-6">
-                  {content.lifestyleSection.intro.split('\n\n').map((paragraph, i) => (
+                  {(content.lifestyleSection?.intro || '').split('\n\n').map((paragraph, i) => (
                     <p key={i} className="text-warm-700">{paragraph}</p>
                   ))}
                 </div>
@@ -166,7 +166,7 @@ export default function AreaPageContent({
                   className="mb-6"
                 />
 
-                {content.lifestyleSection.highlights.length > 0 && (
+                {(content.lifestyleSection?.highlights?.length ?? 0) > 0 && (
                   <div className="grid md:grid-cols-2 gap-3">
                     {content.lifestyleSection.highlights.map((highlight, i) => (
                       <div key={i} className="flex items-start gap-3 p-3 bg-accent-50 rounded-sm">
@@ -335,7 +335,7 @@ export default function AreaPageContent({
                     </div>
                     <p className="text-warm-700">{content.investmentAnalysis.overview}</p>
                   </div>
-                  {content.investmentAnalysis.highlights.length > 0 && (
+                  {(content.investmentAnalysis?.highlights?.length ?? 0) > 0 && (
                     <div className="grid md:grid-cols-2 gap-3">
                       {content.investmentAnalysis.highlights.map((highlight, i) => (
                         <div key={i} className="flex items-start gap-3 p-3 border border-warm-200 rounded-sm">
@@ -379,15 +379,15 @@ export default function AreaPageContent({
               )}
 
               {/* Lifestyle Timeline */}
-              {content.lifestyleTimeline && content.lifestyleTimeline.entries.length > 0 && (
+              {(content.lifestyleTimeline?.entries?.length ?? 0) > 0 && (
                 <section>
                   <h2 className="text-2xl font-bold text-primary-900 mb-6">
-                    {content.lifestyleTimeline.title || t(s.typicalDay, data.name)}
+                    {content.lifestyleTimeline!.title || t(s.typicalDay, data.name)}
                   </h2>
                   <div className="relative">
                     <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-accent-200" />
                     <div className="space-y-6">
-                      {content.lifestyleTimeline.entries.map((entry, i) => (
+                      {content.lifestyleTimeline!.entries.map((entry, i) => (
                         <div key={i} className="relative flex gap-6 items-start">
                           <div className="relative z-10 flex-shrink-0 w-12 h-12 bg-accent-500 text-white rounded-full flex items-center justify-center text-xs font-bold shadow-md">
                             {entry.time}
@@ -404,14 +404,14 @@ export default function AreaPageContent({
               )}
 
               {/* Events & Fiestas */}
-              {content.events && content.events.events.length > 0 && (
+              {(content.events?.events?.length ?? 0) > 0 && (
                 <section>
                   <h2 className="text-2xl font-bold text-primary-900 mb-6">
                     {t(s.eventsFiestas, data.name)}
                   </h2>
-                  <p className="text-warm-700 mb-6">{content.events.intro}</p>
+                  <p className="text-warm-700 mb-6">{content.events!.intro}</p>
                   <div className="grid md:grid-cols-2 gap-4">
-                    {content.events.events.map((event, i) => (
+                    {content.events!.events.map((event, i) => (
                       <div key={i} className="border border-warm-200 rounded-sm p-4 hover:shadow-md transition-shadow">
                         <div className="flex items-start gap-3">
                           <div className="flex-shrink-0 bg-accent-100 text-accent-700 px-3 py-1 rounded-full text-sm font-medium">
@@ -429,14 +429,14 @@ export default function AreaPageContent({
               )}
 
               {/* Schools */}
-              {content.schools && content.schools.schools.length > 0 && (
+              {(content.schools?.schools?.length ?? 0) > 0 && (
                 <section>
                   <h2 className="text-2xl font-bold text-primary-900 mb-6">
                     {t(s.schoolsNear, data.name)}
                   </h2>
-                  <p className="text-warm-700 mb-6">{content.schools.intro}</p>
+                  <p className="text-warm-700 mb-6">{content.schools!.intro}</p>
                   <div className="space-y-3">
-                    {content.schools.schools.map((school, i) => (
+                    {content.schools!.schools.map((school, i) => (
                       <div key={i} className="flex items-start gap-4 p-4 border border-warm-200 rounded-sm">
                         <span className="flex-shrink-0 text-2xl">&bull;</span>
                         <div className="flex-1">
@@ -456,12 +456,12 @@ export default function AreaPageContent({
               )}
 
               {/* Nature & Activities */}
-              {content.natureActivities && content.natureActivities.activities.length > 0 && (
+              {(content.natureActivities?.activities?.length ?? 0) > 0 && (
                 <section>
                   <h2 className="text-2xl font-bold text-primary-900 mb-6">{s.natureActivities}</h2>
-                  <p className="text-warm-700 mb-6">{content.natureActivities.intro}</p>
+                  <p className="text-warm-700 mb-6">{content.natureActivities!.intro}</p>
                   <div className="grid md:grid-cols-2 gap-4">
-                    {content.natureActivities.activities.map((activity, i) => (
+                    {content.natureActivities!.activities.map((activity, i) => (
                       <div key={i} className="bg-gradient-to-br from-warm-50 to-accent-50 rounded-sm p-4 border border-warm-100">
                         <div className="flex items-start gap-3">
                           <span className="flex-shrink-0 text-xl">
@@ -492,15 +492,15 @@ export default function AreaPageContent({
                     {t(s.expatCommunity, data.name)}
                   </h2>
                   <div className="prose prose-lg max-w-none mb-6">
-                    {content.expatCommunity.intro.split('\n\n').map((paragraph, i) => (
+                    {(content.expatCommunity?.intro || '').split('\n\n').map((paragraph, i) => (
                       <p key={i} className="text-warm-700">{paragraph}</p>
                     ))}
                   </div>
-                  {content.expatCommunity.nationalities.length > 0 && (
+                  {(content.expatCommunity?.nationalities?.length ?? 0) > 0 && (
                     <div className="mb-6">
                       <h3 className="font-medium text-primary-900 mb-3">{s.internationalCommunity}</h3>
                       <div className="flex flex-wrap gap-2">
-                        {content.expatCommunity.nationalities.map((nat, i) => (
+                        {content.expatCommunity!.nationalities.map((nat, i) => (
                           <span key={i} className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium">
                             {nat}
                           </span>
@@ -508,9 +508,9 @@ export default function AreaPageContent({
                       </div>
                     </div>
                   )}
-                  {content.expatCommunity.highlights.length > 0 && (
+                  {(content.expatCommunity?.highlights?.length ?? 0) > 0 && (
                     <div className="grid md:grid-cols-2 gap-3">
-                      {content.expatCommunity.highlights.map((highlight, i) => (
+                      {content.expatCommunity!.highlights.map((highlight, i) => (
                         <div key={i} className="flex items-start gap-3 p-3 bg-warm-50 rounded-sm">
                           <span className="text-accent-500">&bull;</span>
                           <span className="text-warm-700">{highlight}</span>
@@ -648,7 +648,7 @@ export default function AreaPageContent({
               )}
 
               {/* Why Live Here */}
-              {content.whyLiveHereSection.length > 0 && (
+              {(content.whyLiveHereSection?.length ?? 0) > 0 && (
                 <section>
                   <h2 className="text-2xl font-bold text-primary-900 mb-6">
                     {t(s.whyLiveIn, data.name)}
@@ -665,7 +665,7 @@ export default function AreaPageContent({
               )}
 
               {/* FAQs */}
-              {content.faqs.length > 0 && (
+              {(content.faqs?.length ?? 0) > 0 && (
                 <section>
                   <h2 className="text-2xl font-bold text-primary-900 mb-6">
                     {t(s.faqAbout, data.name)}

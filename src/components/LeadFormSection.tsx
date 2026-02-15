@@ -44,7 +44,7 @@ export default function LeadFormSection({
   propertyType,
   budgetRange,
   developmentName,
-  formType = 'lead-inquiry',
+  formType = 'General Contact',
   sourcePage,
   title,
   subtitle,

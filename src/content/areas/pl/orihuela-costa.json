@@ -471,5 +471,51 @@
       }
     ]
   },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Czy Orihuela Costa jest dobrze dostosowana do golfa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Orihuela Costa to najlepsza destynacja golfowa na Costa Blanca South. Sześć mistrzowskich pól znajduje się w promieniu 15 minut, w tym słynny Villamartin, Las Colinas (konsekwentnie uszeregowany wśród najlepszych w Hiszpanii) i Campoamor. Sezon gry przez cały rok i doskonałe udogodnienia przyciągają golfistów z całej Europy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Co to jest La Zenia Boulevard?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La Zenia Boulevard to jeden z największych na wolnym powietrzu ośrodków handlowych w Europie, położony w sercu Orihuela Costa. Posiada ponad 150 sklepów, w tym duże marki takie jak Primark, Zara i Media Markt, oraz supermarkety, kina, restauracje i rozrywkę. To główna atrakcja dla rezydentów i odwiedzających."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jak daleko jest Orihuela Costa od lotniska Alicante?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lotnisko Alicante-Elche jest oddalone około 55 km od Orihuela Costa, zajmując około 40 minut przez autostradę AP-7. Lotnisko Murcia-Corvera jest bliższe na 35 km (30 minut), oferując dodatkowe opcje lotów."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jakie są ceny nieruchomości w Orihuela Costa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nowe mieszkania zaczynają się od około €195 000, kamieniczki od €250 000 i wille od €400 000. Nieruchomości z widokiem na golf i obok La Zenia Boulevard osiągają ceny premium. Ogólnie Orihuela Costa oferuje doskonałą wartość w porównaniu z Costa Blanca North."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy angielski jest szeroko mówiony w Orihuela Costa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak, angielski jest bardzo szeroko mówiony w Orihuela Costa ze względu na dużą społeczność brytyjską i międzynarodową. Większość sklepów, restauracji i usług obsługuje osoby mówiące po angielsku. Wiele firm jest faktycznie własnością brytyjskiej."
+        }
+      }
+    ]
+  },
   "cardImage": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=800&q=80&fit=crop"
 }

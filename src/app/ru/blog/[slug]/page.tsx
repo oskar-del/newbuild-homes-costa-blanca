@@ -1,3 +1,6 @@
+// ISR: Regenerate blog pages every 24 hours
+export const revalidate = 86400;
+
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -57,9 +60,14 @@ function getRelatedArticles(currentSlug: string, limit = 3) {
 export async function generateStaticParams() {
   try {
     if (!fs.existsSync(ARTICLES_DIR)) return [];
-    return fs.readdirSync(ARTICLES_DIR).filter(f => f.endsWith('.json')).map(f => ({ slug: f.replace('.json', '') }));
+    // Limit to first 5 articles to speed up build
+    // Remaining articles will use ISR (generated on first request)
+    return fs.readdirSync(ARTICLES_DIR).filter(f => f.endsWith('.json')).slice(0, 5).map(f => ({ slug: f.replace('.json', '') }));
   } catch { return []; }
 }
+
+// Enable ISR for remaining articles - they'll be built on first request and cached
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;

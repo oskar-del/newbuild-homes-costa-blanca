@@ -20,6 +20,22 @@ function isValidEmail(email: string): boolean {
   return emailRegex.test(email);
 }
 
+// Map language codes to Airtable singleSelect option names
+function mapLanguage(lang: string): string {
+  const map: Record<string, string> = {
+    'en': 'English',
+    'sv': 'Svenska',
+    'nl': 'Nederlands',
+    'nl-be': 'Nederlands',
+    'fr': 'Francais',
+    'de': 'Deutsch',
+    'no': 'Norsk',
+    'pl': 'Polski',
+    'ru': 'Russian',
+  };
+  return map[lang.toLowerCase()] || 'English';
+}
+
 // Push to Airtable
 async function pushToAirtable(data: LeadData): Promise<boolean> {
   const apiToken = process.env.AIRTABLE_API_TOKEN;
@@ -45,15 +61,18 @@ async function pushToAirtable(data: LeadData): Promise<boolean> {
             fields: {
               'Name': data.name,
               'Email': data.email,
-              'Phone': data.phone || '',
-              'Message': data.message || '',
-              'Area': data.area || '',
-              'Property Type': data.propertyType || '',
-              'Budget Range': data.budgetRange || '',
-              'Development Name': data.developmentName || '',
-              'Form Type': data.formType || 'lead-inquiry',
-              'Source Page': data.sourcePage || '',
-              'Language': data.language || 'en',
+              // Only include optional text fields if they have values
+              ...(data.phone ? { 'Phone': data.phone } : {}),
+              ...(data.message ? { 'Message': data.message } : {}),
+              // singleSelect fields must match exact option names or be omitted
+              ...(data.area ? { 'Area': data.area } : {}),
+              ...(data.propertyType ? { 'Property Type': data.propertyType } : {}),
+              ...(data.budgetRange ? { 'Budget Range': data.budgetRange } : {}),
+              ...(data.developmentName ? { 'Development Name': data.developmentName } : {}),
+              ...(data.formType ? { 'Form Type': data.formType } : {}),
+              ...(data.sourcePage ? { 'Source Page': data.sourcePage } : {}),
+              // Language mapping to match Airtable singleSelect options
+              'Language': mapLanguage(data.language || 'en'),
               'Status': 'New Lead',
               'Created Date': new Date().toISOString(),
             },

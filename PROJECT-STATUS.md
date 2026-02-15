@@ -1,6 +1,6 @@
 # Project Status — newbuildhomescostablanca.com
 
-**Last updated: February 15, 2026**
+**Last updated: February 16, 2026**
 
 ## WORKFLOW RULES
 - **ALWAYS update this file before telling Oskar to push**
@@ -14,7 +14,7 @@
 ### Website Foundation
 - [x] Next.js 14 site with 1,700+ pages
 - [x] 9-language support (EN, SV, NL, NL-BE, FR, DE, NO, PL, RU)
-- [x] 140+ blog articles
+- [x] 158 English blog articles + 323 translated
 - [x] Custom 404 pages per language
 - [x] Hreflang SEO across all pages
 - [x] Language switcher with proper routing
@@ -81,20 +81,44 @@
 - [x] All 9 language guide index pages matching premium design
 - [x] Proper emoji icons, gradient hero, Finance CTA, Trust section
 
-### Lead Capture System (THIS SESSION)
+### Lead Capture System
 - [x] LeadForm.tsx — multilingual component (9 languages), auto-tags area/language/budget/property type
 - [x] LeadFormSection.tsx — translated titles + subtitles per language
 - [x] /api/leads/route.ts — validates input, pushes to Airtable, graceful fallback
 - [x] Airtable "NewBuild Leads" table created with 15 fields
 - [x] Lead form integrated into all area page sidebars
 - [x] scripts/setup-airtable.js for table creation
+- [x] Fixed Airtable API: singleSelect field mapping, language code→name mapping
+- [x] Fixed form type defaults to match Airtable options
+
+### Build & Performance Fixes (Feb 16, 2026)
+- [x] Fixed Netlify OOM: reduced static pages from ~900 to ~250 using ISR
+- [x] English areas: 15 priority areas pre-rendered, rest ISR
+- [x] Localized areas: 15 per language pre-rendered, rest ISR
+- [x] Blog pages: 5 per language pre-rendered, 24hr ISR for rest
+- [x] Properties: 20 pre-rendered, rest ISR
+- [x] Developments: 10 pre-rendered, rest ISR
+- [x] next.config.js: workerThreads=false, cpus=1 for memory reduction
+- [x] AreaPageContent.tsx: defensive optional chaining on all translated content fields
+- [x] Build passes locally at 4GB (was crashing at 8GB before)
+
+### New Blog Articles (Feb 16, 2026)
+- [x] norwegian-buyers-costa-blanca.json — Norwegian buyer's guide
+- [x] russian-buyers-costa-blanca.json — Russian buyer's guide
+- [x] torrevieja-vs-benidorm-where-to-buy.json — Comparison article
+- [x] calpe-vs-javea-where-to-buy.json — Comparison article
+- [x] orihuela-costa-vs-torrevieja-where-to-buy.json — Comparison article
+- [x] new-build-apartments-under-200k-costa-blanca.json — Budget guide
+- [x] luxury-new-build-villas-costa-blanca-500k-plus.json — Luxury guide
+- [x] Total: 158 English articles (was 151)
 
 ---
 
 ## TO DO — Full Roadmap
 
 ### Phase 1: Lead Conversion (NEXT — Highest Impact)
-- [ ] Test lead form end-to-end (submit test lead, verify in Airtable)
+- [x] Test lead form end-to-end (API route tested, Airtable field mapping fixed)
+- [ ] Test on live site after deploy (submit test lead, verify in Airtable)
 - [ ] MailerLite integration — auto-response email on new lead
   - Personalized by language + area
   - Include matched properties
@@ -184,7 +208,7 @@ MailerLite    Google Ads          Postiz      Remotion
 - Social: Postiz
 - Ads: Google Ads
 - Video: Remotion
-- Hosting: Vercel
+- Hosting: Netlify
 - Repo: github.com/oskar-del/newbuild-homes-costa-blanca
 
 ## Key Files

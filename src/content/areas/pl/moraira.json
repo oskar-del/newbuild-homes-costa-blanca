@@ -440,5 +440,51 @@
       "addressRegion": "Alicante",
       "addressCountry": "ES"
     }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Czy Moraira to dobre miejsce do zakupu nieruchomości?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak, Moraira to doskonałe miejsce do życia dla tych, którzy szukają wyrafinowanego przybrzeżnego śródziemnomorskiego życia. Miasteczko łączy naturalne piękno, wyrafinowane udogodnienia i gościnną międzynarodową społeczność, zachowując autentyczność i ekskluzywność. Szczególnie odpowiednie dla profesjonalistów, emerytów i rodzin priorytetyzujących jakość życia ponad działalność turystyczną. +5% roczna aprecjacja i ekskluzywna pozycja sprawiają, że jest to solidna inwestycja."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy Moraira jest droga?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Moraira jest pozycjonowana jako ekskluzywna destynacja, ale oferuje wyjątkową wartość w kontekście Costa Blanki. Nieruchomości są 25% tańsze niż porównywalne nieruchomości na Majorce, przy jednoczesnym oferowaniu wyższych udogodnień i wyrafinowania. Ceny wahają się od €240 000 za ziemię do €4 500 000 za premium wille, dostępne dla różnych budżetów poważnych kupujących szukających jakości."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy Moraira jest odpowiednia dla rodzin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutnie. Moraira jest doskonała dla rodzin dzięki dostępowi do Lady Elizabeth School (15 minut) i Laude Newton College (40 minut), bezpiecznym plażom idealnym dla dzieci, kompleksowej opiece zdrowotnej, supermarketom z produktami międzynarodowymi i aktywnościom odpowiednim dla wszystkich wieku. Spokojniejsza, bezpieczniejsza atmosfera apeluje do rodziców, podczas gdy plaże i sporty wodne angażują dzieci."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jakie pola golfowe są w pobliżu Morairy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Moraira ma doskonały dostęp do golfa z Club de Golf Ifach (15 minut), Jávea Golf (15 minut), La Sella Golf Resort (20 minut) i Don Cayo Golf Club (30 minut). Każde pole oferuje mistrzoskie warunki gry z wspaniałymi widokami śródziemnomorskimi i doskonałymi udogodnieniami."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jakie są najlepsze plaże w Morairy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Moraira ma wyjątkowe plaże, w tym El Portet (nagradzana plaża Błękitnej Flagi), Playa de l'Ampolla (główna plaża przyjazna dla rodzin), Cala Andrago i Cala Cap Blanc (zaciszna zatoczka). Wszystkie oferują czyste wody śródziemnomorskie, doskonałe udogodnienia i wspaniały krajobraz przybrzeżny, idealne do pływania, snorkelingu i sportów wodnych."
+        }
+      }
+    ]
   }
 }

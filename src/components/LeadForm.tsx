@@ -129,7 +129,7 @@ export default function LeadForm({
   propertyType,
   budgetRange,
   developmentName,
-  formType = 'lead-inquiry',
+  formType = 'General Contact',
   className = '',
   sourcePage,
   compact = false,

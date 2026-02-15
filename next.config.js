@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Increase timeout for static page generation (feeds take time to parse)
-  staticPageGenerationTimeout: 300, // 5 minutes instead of default 60s
+  // Reduce memory usage during build
+  experimental: {
+    workerThreads: false,
+    cpus: 1,
+  },
+  // Reduce timeout for static page generation to speed up build
+  staticPageGenerationTimeout: 120, // 2 minutes instead of 5 minutes
   images: {
     // Disable image optimization to prevent memory issues (SIGKILL) during dev/build
     // External images from apinmo, unsplash, etc. were causing Out of Memory crashes

@@ -34,7 +34,9 @@ import PropertyPageClient from './PropertyPageClient';
 export async function generateStaticParams() {
   try {
     const properties = await fetchXMLFeed();
-    return properties.slice(0, 100).map((property) => ({
+    // Reduce from 100 to 20 to minimize build memory usage
+    // Remaining 900+ properties will use ISR (generated on first request)
+    return properties.slice(0, 20).map((property) => ({
       reference: property.ref,
     }));
   } catch (error) {
@@ -42,6 +44,9 @@ export async function generateStaticParams() {
     return [];
   }
 }
+
+// Enable ISR for remaining properties - they'll be built on first request and cached
+export const dynamicParams = true;
 
 // ====================
 // METADATA GENERATION

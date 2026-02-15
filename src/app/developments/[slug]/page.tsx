@@ -238,8 +238,13 @@ export async function generateStaticParams() {
   const enhancedSlugs = getEnhancedSlugs();
   const feedSlugs = await getAllDevelopmentSlugs();
   const allSlugs = [...new Set([...enhancedSlugs, ...feedSlugs])];
-  return allSlugs.map(slug => ({ slug }));
+  // Limit to first 10 slugs to minimize build memory usage
+  // Remaining developments will use ISR (generated on first request)
+  return allSlugs.slice(0, 10).map(slug => ({ slug }));
 }
+
+// Enable ISR for remaining developments - they'll be built on first request and cached
+export const dynamicParams = true;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
