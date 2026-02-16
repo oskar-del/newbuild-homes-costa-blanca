@@ -1393,26 +1393,31 @@ export function generateRentalYieldData(property: UnifiedProperty): YieldDataPoi
 }
 
 export function generateRentalIncomeEstimate(property: UnifiedProperty): RentalEstimate {
-  const price = property.price || 250000;
+  // Use explicit check: price must be a positive number, otherwise use area-appropriate fallback
+  const price = (property.price != null && property.price > 0) ? property.price : 250000;
   const areaInfo = getAreaInfo(property.town || 'Costa Blanca');
-  
+
   // Calculate based on average yield for the area
   const avgYield = (areaInfo.rentalYield.min + areaInfo.rentalYield.max) / 2 / 100;
-  
+
   // Adjust for premium features
   let yieldMultiplier = 1.0;
   if (property.hasPool) yieldMultiplier += 0.1;
   if (property.hasSeaview) yieldMultiplier += 0.08;
   if (property.hasGolfview) yieldMultiplier += 0.05;
-  
+
+  // Adjust for property size (larger = higher income)
+  if (property.bedrooms >= 3) yieldMultiplier += 0.05;
+  if (property.bedrooms >= 4) yieldMultiplier += 0.05;
+
   const annualIncome = Math.round(price * avgYield * yieldMultiplier);
-  const occupancyRate = property.hasPool || property.hasSeaview ? 0.65 : 0.55;
-  
+  const occupancyRate = property.hasPool || property.hasSeaview ? 65 : 55;
+
   return {
     annual: annualIncome,
     monthly: Math.round(annualIncome / 12),
-    weekly: Math.round(annualIncome / 52),
-    occupancyRate: occupancyRate * 100
+    weekly: Math.round((price * avgYield * yieldMultiplier * 1.4) / 26), // Peak weekly = higher rate, 26 peak weeks
+    occupancyRate: occupancyRate
   };
 }
 

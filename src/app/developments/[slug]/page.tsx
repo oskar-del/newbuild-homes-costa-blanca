@@ -7,6 +7,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import fs from 'fs';
 import path from 'path';
+import LeadForm from '@/components/LeadForm';
+import NewsletterCTA from '@/components/NewsletterCTA';
 import {
   getAllDevelopmentSlugs,
   getDevelopmentBySlug,
@@ -1106,96 +1108,33 @@ function EnhancedDevelopmentPage({
                 </div>
               </div>
 
-              {/* Inquiry Form */}
+              {/* Inquiry Form — Airtable connected */}
               <div id="inquiry-form" className="bg-white border border-warm-200 rounded-xl overflow-hidden shadow-lg">
                 <div className="bg-primary-900 px-6 py-4">
                   <h3 className="text-xl font-bold text-white">Get Floor Plans & Availability</h3>
-                  <p className="text-warm-300 text-sm mt-1">We'll respond within 2 hours</p>
+                  <p className="text-warm-300 text-sm mt-1">We&apos;ll respond within 2 hours</p>
                 </div>
-                <form
-                  name={`development-inquiry-${data.slug}`}
-                  method="POST"
-                  data-netlify="true"
-                  className="p-6 space-y-4"
-                >
-                  <input type="hidden" name="form-name" value={`development-inquiry-${data.slug}`} />
-                  <input type="hidden" name="development" value={data.projectName} />
-                  <input type="hidden" name="reference" value={property.ref} />
-
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-primary-900 mb-1">Your Name *</label>
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      required
-                      placeholder="John Smith"
-                      className="w-full px-4 py-3 border border-warm-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-primary-900 mb-1">Email Address *</label>
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      required
-                      placeholder="john@example.com"
-                      className="w-full px-4 py-3 border border-warm-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-primary-900 mb-1">Phone Number</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      id="phone"
-                      placeholder="+44 7XXX XXXXXX"
-                      className="w-full px-4 py-3 border border-warm-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="interest" className="block text-sm font-medium text-primary-900 mb-1">I'm interested in:</label>
-                    <select
-                      name="interest"
-                      id="interest"
-                      className="w-full px-4 py-3 border border-warm-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors bg-white"
-                    >
-                      <option value="floor-plans">Floor plans & specifications</option>
-                      <option value="availability">Current availability</option>
-                      <option value="viewing">Arranging a viewing</option>
-                      <option value="pricing">Detailed pricing</option>
-                      <option value="investment">Investment information</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-primary-900 mb-1">Message (optional)</label>
-                    <textarea
-                      name="message"
-                      id="message"
-                      rows={3}
-                      placeholder="Any specific questions?"
-                      className="w-full px-4 py-3 border border-warm-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500 transition-colors resize-none"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-accent-500 hover:bg-accent-600 text-white font-semibold py-4 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
-                  >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                    Send Inquiry
-                  </button>
-
-                  <p className="text-xs text-warm-500 text-center">
-                    By submitting, you agree to our privacy policy. We never share your details.
-                  </p>
-                </form>
+                <div className="p-6">
+                  <LeadForm
+                    area={property.town || ''}
+                    language="en"
+                    propertyType="New Build"
+                    formType="Development Inquiry"
+                    sourcePage={`/developments/${data.slug}`}
+                    developmentName={data.projectName}
+                    budgetRange={property.price ? `From €${property.price.toLocaleString()}` : ''}
+                    customMessage={`I'd like floor plans and availability for ${data.projectName}`}
+                    compact={false}
+                  />
+                </div>
               </div>
+
+              {/* Newsletter CTA */}
+              <NewsletterCTA
+                type="developments"
+                language="en"
+                sourcePage={`/developments/${data.slug}`}
+              />
 
               {/* Quick Links */}
               <div className="bg-primary-900 border border-primary-700 rounded-xl p-6">

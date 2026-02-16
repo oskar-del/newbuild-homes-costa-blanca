@@ -16,6 +16,7 @@ import {
 } from '@/data/stock-images';
 import { breadcrumbSchema, toJsonLd, articleSchema, placeSchema } from '@/lib/schema';
 import LeadForm from '@/components/LeadForm';
+import NewsletterCTA from '@/components/NewsletterCTA';
 
 interface DevelopmentCard {
   name: string;
@@ -768,6 +769,14 @@ export default function AreaPageContent({
                   compact={true}
                 />
               </div>
+
+              {/* Newsletter CTA for area updates */}
+              <NewsletterCTA
+                type="area"
+                areaName={data.name}
+                language={lang}
+                sourcePage={`${langPrefix}/areas/${data.slug}`}
+              />
 
               <div className="bg-warm-50 rounded-sm p-6">
                 <h3 className="font-bold text-primary-900 mb-4">{s.exploreOtherAreas}</h3>
