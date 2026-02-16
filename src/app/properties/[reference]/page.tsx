@@ -452,6 +452,34 @@ export default async function PropertyPage({ params }: PageProps) {
   // Generate breadcrumb schema (needs linkingData)
   const breadcrumbSchema = generateBreadcrumbSchema(property, linkingData.development);
 
+  // Generate VideoObject schema if video exists (SEO rich snippet)
+  const videoSchema = propertyVideo ? {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: propertyVideo.title,
+    description: propertyVideo.description,
+    thumbnailUrl: `https://img.youtube.com/vi/${propertyVideo.youtubeId}/maxresdefault.jpg`,
+    uploadDate: new Date().toISOString().split('T')[0],
+    duration: propertyVideo.duration ? `PT${propertyVideo.duration.replace(':', 'M')}S` : undefined,
+    contentUrl: `https://www.youtube.com/watch?v=${propertyVideo.youtubeId}`,
+    embedUrl: `https://www.youtube.com/embed/${propertyVideo.youtubeId}`,
+    publisher: {
+      '@type': 'Organization',
+      name: 'New Build Homes Costa Blanca',
+      url: 'https://newbuildhomescostablanca.com',
+    },
+    about: {
+      '@type': 'RealEstateListing',
+      name: content.seoTitle,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: property.town,
+        addressRegion: 'Alicante',
+        addressCountry: 'ES',
+      },
+    },
+  } : null;
+
   // Fetch similar properties - PRIORITIZE same town first, then fill with same region
   let similarProperties: any[] = [];
   try {
@@ -510,6 +538,12 @@ export default async function PropertyPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(realEstateListingSchema) }}
       />
+      {videoSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+        />
+      )}
 
       {/* Client Component with all interactive UI */}
       <PropertyPageClient

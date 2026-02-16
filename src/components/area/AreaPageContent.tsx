@@ -83,6 +83,26 @@ export default function AreaPageContent({
     containedIn: 'Costa Blanca, Spain',
   });
 
+  // VideoObject schema for SEO rich snippets
+  const areaVideos = getVideosForArea(data.slug, 1);
+  const videoSchemaData = areaVideos.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: areaVideos[0].title,
+    description: areaVideos[0].description,
+    thumbnailUrl: `https://img.youtube.com/vi/${areaVideos[0].youtubeId}/maxresdefault.jpg`,
+    uploadDate: new Date().toISOString().split('T')[0],
+    duration: areaVideos[0].duration ? `PT${areaVideos[0].duration.replace(':', 'M')}S` : undefined,
+    contentUrl: `https://www.youtube.com/watch?v=${areaVideos[0].youtubeId}`,
+    embedUrl: `https://www.youtube.com/embed/${areaVideos[0].youtubeId}`,
+    publisher: { '@type': 'Organization', name: 'New Build Homes Costa Blanca', url: 'https://newbuildhomescostablanca.com' },
+    about: {
+      '@type': 'Place',
+      name: data.name,
+      address: { '@type': 'PostalAddress', addressLocality: data.name, addressRegion: 'Alicante', addressCountry: 'ES' },
+    },
+  } : null;
+
   return (
     <>
       {/* Schema Markup */}
@@ -92,6 +112,7 @@ export default function AreaPageContent({
       {schemaFAQ && Object.keys(schemaFAQ).length > 0 && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }} />
       )}
+      {videoSchemaData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchemaData) }} />}
 
       <main className="min-h-screen bg-white">
         {/* Hero Section */}

@@ -443,6 +443,26 @@ function EnhancedDevelopmentPage({
     areaServed: ['Costa Blanca', property.town, 'Torrevieja', 'Orihuela Costa', 'Alicante'],
   });
 
+  // VideoObject schema for SEO rich snippets
+  const devVideos = getVideosForDevelopment(data.slug, 1);
+  const videoSchemaData = devVideos.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: devVideos[0].title,
+    description: devVideos[0].description,
+    thumbnailUrl: `https://img.youtube.com/vi/${devVideos[0].youtubeId}/maxresdefault.jpg`,
+    uploadDate: new Date().toISOString().split('T')[0],
+    duration: devVideos[0].duration ? `PT${devVideos[0].duration.replace(':', 'M')}S` : undefined,
+    contentUrl: `https://www.youtube.com/watch?v=${devVideos[0].youtubeId}`,
+    embedUrl: `https://www.youtube.com/embed/${devVideos[0].youtubeId}`,
+    publisher: { '@type': 'Organization', name: 'New Build Homes Costa Blanca', url: 'https://newbuildhomescostablanca.com' },
+    about: {
+      '@type': 'RealEstateListing',
+      name: data.projectName,
+      address: { '@type': 'PostalAddress', addressLocality: property.town, addressRegion: 'Alicante', addressCountry: 'ES' },
+    },
+  } : null;
+
   return (
     <>
       {/* ================================================================ */}
@@ -454,6 +474,7 @@ function EnhancedDevelopmentPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgGenerated) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaBusinessGenerated) }} />
       {schemaFAQGenerated && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQGenerated) }} />}
+      {videoSchemaData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchemaData) }} />}
 
       {/* ================================================================== */}
       {/* STICKY CTA BAR - Always visible on scroll */}

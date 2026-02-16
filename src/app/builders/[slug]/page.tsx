@@ -17,6 +17,8 @@ import {
   toJsonLd,
 } from '@/lib/schema';
 import DevelopmentCard from '@/components/DevelopmentCard';
+import VideoCard from '@/components/VideoCard';
+import { getVideosByTag } from '@/lib/video-mapping';
 
 const CONTACT = {
   whatsapp: 'https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0',
@@ -207,11 +209,27 @@ async function EnhancedBuilderPage({ data }: { data: EnhancedBuilderContent }) {
     { name: data.name, url: `https://newbuildhomescostablanca.com/builders/${data.slug}/` },
   ]);
 
+  // VideoObject schema for SEO rich snippets
+  const builderVideos = getVideosByTag(data.slug, 1);
+  const videoSchemaData = builderVideos.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: builderVideos[0].title,
+    description: builderVideos[0].description,
+    thumbnailUrl: `https://img.youtube.com/vi/${builderVideos[0].youtubeId}/maxresdefault.jpg`,
+    uploadDate: new Date().toISOString().split('T')[0],
+    duration: builderVideos[0].duration ? `PT${builderVideos[0].duration.replace(':', 'M')}S` : undefined,
+    contentUrl: `https://www.youtube.com/watch?v=${builderVideos[0].youtubeId}`,
+    embedUrl: `https://www.youtube.com/embed/${builderVideos[0].youtubeId}`,
+    publisher: { '@type': 'Organization', name: 'New Build Homes Costa Blanca', url: 'https://newbuildhomescostablanca.com' },
+  } : null;
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFAQ) }} />
+      {videoSchemaData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchemaData) }} />}
 
       <main className="min-h-screen bg-warm-50">
         {/* Hero Section */}
@@ -385,6 +403,29 @@ async function EnhancedBuilderPage({ data }: { data: EnhancedBuilderContent }) {
 
             {/* Sidebar */}
             <aside className="lg:col-span-1 space-y-6">
+              {/* Video Tours */}
+              {(() => {
+                const videos = getVideosByTag(data.slug, 3);
+                if (videos.length === 0) return null;
+                return (
+                  <div className="bg-white border border-warm-200 rounded-sm overflow-hidden shadow-lg">
+                    <div className="p-4 bg-primary-900">
+                      <h3 className="font-semibold text-white flex items-center gap-2">
+                        <svg className="w-5 h-5 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                        </svg>
+                        Video Tours
+                      </h3>
+                    </div>
+                    <div className="p-4 space-y-3">
+                      {videos.map((video) => (
+                        <VideoCard key={video.slug} {...video} variant="inline" />
+                      ))}
+                    </div>
+                  </div>
+                );
+              })()}
+
               {/* Builder Info Card */}
               <div className="bg-white border border-warm-200 rounded-sm p-6 shadow-lg sticky top-6">
                 <h3 className="font-semibold text-primary-900 text-xl mb-4">{data.name}</h3>
