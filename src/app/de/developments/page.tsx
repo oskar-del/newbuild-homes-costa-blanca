@@ -61,7 +61,7 @@ function DevelopmentCard({ dev, variant = 'default' }: { dev: Development; varia
 
   return (
     <Link
-      href={`/developments/${dev.slug}`}
+      href={`/de/developments/${dev.slug}`}
       className={`group block overflow-hidden rounded-sm transition-all duration-300 ${
         isFeatured
           ? 'bg-primary-800/50 hover:bg-primary-800'

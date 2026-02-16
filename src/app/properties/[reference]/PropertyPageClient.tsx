@@ -801,6 +801,44 @@ export default function PropertyPageClient({ property, content, similarPropertie
               );
             })()}
 
+            {/* ==================== LOCATION MAP ==================== */}
+            {property.latitude > 0 && property.longitude !== 0 && (
+              <div className="bg-white rounded-xl overflow-hidden shadow-sm border border-warm-100">
+                <div className="p-6 pb-3">
+                  <h2 className="text-xl font-bold text-primary-900 flex items-center gap-2">
+                    <svg className="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    Location — {property.town}
+                  </h2>
+                  <p className="text-sm text-warm-500 mt-1">Approximate area shown. Contact us for the exact address.</p>
+                </div>
+                <div className="relative h-[350px] w-full">
+                  <iframe
+                    src={`https://www.openstreetmap.org/export/embed.html?bbox=${property.longitude - 0.006},${property.latitude - 0.005},${property.longitude + 0.006},${property.latitude + 0.005}&layer=mapnik&marker=${property.latitude},${property.longitude}`}
+                    className="absolute inset-0 w-full h-full border-0"
+                    loading="lazy"
+                    title={`Map of ${property.propertyType} in ${property.town}`}
+                  />
+                </div>
+                <div className="p-4 bg-warm-50 flex items-center justify-between">
+                  <span className="text-xs text-warm-500">Map shows approximate area (~500m radius)</span>
+                  <a
+                    href={mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-accent-600 hover:text-accent-700 font-medium flex items-center gap-1"
+                  >
+                    Open in Google Maps
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            )}
+
             {/* ==================== MAIN DESCRIPTION ==================== */}
             <div className="bg-white rounded-xl p-6 shadow-sm border border-warm-100">
               <h2 className="text-xl font-bold text-primary-900 mb-4">About This Property</h2>

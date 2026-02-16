@@ -84,6 +84,8 @@ export interface ParsedProperty {
   status: string;
   isNewBuild: boolean;
   ref: string;
+  latitude: number;
+  longitude: number;
 }
 
 export interface ParsedDevelopment {
@@ -249,6 +251,8 @@ function parseProperty(p: any, developerName: string, developerSlug: string): Pa
     town,
     province: p.province || 'Alicante',
     region,
+    latitude: p.latitude ? Number(p.latitude) : 0,
+    longitude: p.longitude ? Number(p.longitude) : 0,
     developer: developerName,
     developerSlug,
     developmentName,
@@ -334,6 +338,8 @@ async function fetchBackgroundFeed(): Promise<ParsedProperty[]> {
         town,
         province,
         region: getRegionForTown(town), // Determine from centralized config
+        latitude: Number(p.location?.latitude) || 0,
+        longitude: Number(p.location?.longitude) || 0,
         developer: 'Background Properties',
         developerSlug: 'background-properties',
         developmentName: title,
@@ -413,6 +419,8 @@ async function fetchMiralboFeed(): Promise<ParsedProperty[]> {
         town,
         province,
         region: getRegionForTown(town),
+        latitude: Number(safeStr(p.latitud || p.lat)) || 0,
+        longitude: Number(safeStr(p.longitud || p.lng)) || 0,
         developer: 'Miralbo Urbana',
         developerSlug: 'miralbo-urbana',
         developmentName,
@@ -672,8 +680,8 @@ export function toUnifiedFormat(p: ParsedProperty): {
     locationDetail: '',
     province: p.province || 'Alicante',
     region: p.region || 'Costa Blanca',
-    latitude: 0,
-    longitude: 0,
+    latitude: p.latitude || 0,
+    longitude: p.longitude || 0,
     propertyType: p.propertyType || 'Property',
     bedrooms: p.bedrooms || 0,
     bathrooms: p.bathrooms || 0,
@@ -794,6 +802,8 @@ export async function fetchLandPlots(minPrice: number = 200000): Promise<ParsedP
         town,
         province,
         region: getRegionForTown(town), // Determine from centralized config
+        latitude: Number(p.location?.latitude) || 0,
+        longitude: Number(p.location?.longitude) || 0,
         developer: 'Background Properties',
         developerSlug: 'background-properties',
         developmentName: title,

@@ -459,7 +459,7 @@ export default function HomePage() {
             >
               <div className="relative h-44 overflow-hidden">
                 <Image
-                  src="/images/Drone 2/Areas & Zones/Torrevieja/La Mata/La Mata ( 1) .jpg"
+                  src="/images/Drone 2/Areas & Zones/Torrevieja/La Mata/La Mata .jpg"
                   alt="Aerial drone view of Torrevieja coastline and beaches"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -783,8 +783,8 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/40 to-transparent group-hover:via-warm-900/50 transition-all duration-500" />
 
             {/* Content Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 p-6">
-              <div className="flex items-center gap-2 mb-2">
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
+              <div className="flex items-center justify-center gap-2 mb-2">
                 <span className="bg-warm-600/90 text-white text-xs px-2 py-1 rounded-sm">
                   {featured.inland1.zone}
                 </span>
@@ -798,7 +798,7 @@ export default function HomePage() {
                 {featured.inland1.title}
               </h3>
               <p className="text-warm-300 text-sm mb-3">{featured.inland1.town}</p>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-center gap-4 mb-3">
                 <span className="text-xl font-semibold text-white">
                   {formatPrice(featured.inland1.price)}
                 </span>
@@ -806,7 +806,7 @@ export default function HomePage() {
                   {featured.inland1.bedrooms} bed · {featured.inland1.builtArea}m²
                 </span>
               </div>
-              <div className="mt-3 flex items-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
+              <div className="mt-3 flex items-center justify-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
                 View Property
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -829,8 +829,8 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-warm-900 via-warm-900/40 to-transparent group-hover:via-warm-900/50 transition-all duration-500" />
 
             {/* Content Overlay */}
-            <div className="absolute bottom-0 left-0 right-0 p-6">
-              <div className="flex items-center gap-2 mb-2">
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
+              <div className="flex items-center justify-center gap-2 mb-2">
                 <span className="bg-warm-600/90 text-white text-xs px-2 py-1 rounded-sm">
                   {featured.inland2.zone}
                 </span>
@@ -844,7 +844,7 @@ export default function HomePage() {
                 {featured.inland2.title}
               </h3>
               <p className="text-warm-300 text-sm mb-3">{featured.inland2.town}</p>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-center gap-4 mb-3">
                 <span className="text-xl font-semibold text-white">
                   {formatPrice(featured.inland2.price)}
                 </span>
@@ -852,7 +852,7 @@ export default function HomePage() {
                   {featured.inland2.bedrooms} bed · {featured.inland2.builtArea}m²
                 </span>
               </div>
-              <div className="mt-3 flex items-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
+              <div className="mt-3 flex items-center justify-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
                 View Property
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -1492,38 +1492,71 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/blog/snagging-inspection-spain-new-build" className="group">
-              <div className="bg-warm-50 rounded-sm p-5 border border-warm-200 hover:border-accent-500 hover:shadow-md transition-all h-full">
-                <span className="text-xs bg-accent-100 text-accent-700 px-2 py-1 rounded-sm font-medium">Buying Guide</span>
-                <h3 className="font-semibold text-primary-900 mt-3 mb-2 group-hover:text-accent-600 transition-colors">
-                  Snagging Inspections: What to Check in Your New Build
-                </h3>
-                <p className="text-warm-600 text-sm leading-relaxed">
-                  A comprehensive guide to new build snagging inspections in Spain — what to look for, when to do it, and your legal rights.
-                </p>
+              <div className="bg-warm-50 rounded-sm border border-warm-200 hover:border-accent-500 hover:shadow-md transition-all h-full overflow-hidden flex flex-col">
+                <div className="relative h-48 overflow-hidden bg-gray-200">
+                  <Image
+                    src="/images/Drone 2/Areas & Zones/Orihuela Costa/La Fuente Center .jpg"
+                    alt="Aerial view of new build properties in Costa Blanca"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    unoptimized
+                  />
+                </div>
+                <div className="p-5 flex-1 flex flex-col">
+                  <span className="text-xs bg-accent-100 text-accent-700 px-2 py-1 rounded-sm font-medium w-fit">Buying Guide</span>
+                  <h3 className="font-semibold text-primary-900 mt-3 mb-2 group-hover:text-accent-600 transition-colors">
+                    Snagging Inspections: What to Check in Your New Build
+                  </h3>
+                  <p className="text-warm-600 text-sm leading-relaxed">
+                    A comprehensive guide to new build snagging inspections in Spain — what to look for, when to do it, and your legal rights.
+                  </p>
+                </div>
               </div>
             </Link>
 
             <Link href="/blog/torrevieja-property-guide" className="group">
-              <div className="bg-warm-50 rounded-sm p-5 border border-warm-200 hover:border-accent-500 hover:shadow-md transition-all h-full">
-                <span className="text-xs bg-primary-100 text-primary-700 px-2 py-1 rounded-sm font-medium">Area Guide</span>
-                <h3 className="font-semibold text-primary-900 mt-3 mb-2 group-hover:text-accent-600 transition-colors">
-                  Torrevieja Property Guide 2026
-                </h3>
-                <p className="text-warm-600 text-sm leading-relaxed">
-                  Everything you need to know about buying property in Torrevieja: neighborhoods, prices, lifestyle, and tips.
-                </p>
+              <div className="bg-warm-50 rounded-sm border border-warm-200 hover:border-accent-500 hover:shadow-md transition-all h-full overflow-hidden flex flex-col">
+                <div className="relative h-48 overflow-hidden bg-gray-200">
+                  <Image
+                    src="/images/Drone 2/Areas & Zones/Torrevieja/La Mata .jpg"
+                    alt="Aerial view of Torrevieja coastline and neighborhoods"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    unoptimized
+                  />
+                </div>
+                <div className="p-5 flex-1 flex flex-col">
+                  <span className="text-xs bg-primary-100 text-primary-700 px-2 py-1 rounded-sm font-medium w-fit">Area Guide</span>
+                  <h3 className="font-semibold text-primary-900 mt-3 mb-2 group-hover:text-accent-600 transition-colors">
+                    Torrevieja Property Guide 2026
+                  </h3>
+                  <p className="text-warm-600 text-sm leading-relaxed">
+                    Everything you need to know about buying property in Torrevieja: neighborhoods, prices, lifestyle, and tips.
+                  </p>
+                </div>
               </div>
             </Link>
 
             <Link href="/blog/cost-of-living-spain" className="group">
-              <div className="bg-warm-50 rounded-sm p-5 border border-warm-200 hover:border-accent-500 hover:shadow-md transition-all h-full">
-                <span className="text-xs bg-warm-200 text-warm-700 px-2 py-1 rounded-sm font-medium">Living in Spain</span>
-                <h3 className="font-semibold text-primary-900 mt-3 mb-2 group-hover:text-accent-600 transition-colors">
-                  Cost of Living in Spain 2026
-                </h3>
-                <p className="text-warm-600 text-sm leading-relaxed">
-                  Monthly costs, utilities, groceries, healthcare — a realistic breakdown for expats on the Costa Blanca.
-                </p>
+              <div className="bg-warm-50 rounded-sm border border-warm-200 hover:border-accent-500 hover:shadow-md transition-all h-full overflow-hidden flex flex-col">
+                <div className="relative h-48 overflow-hidden bg-gray-200">
+                  <Image
+                    src="/images/Drone 2/Areas & Zones/Orihuela Costa/Agua Marina .jpg"
+                    alt="Aerial view of Costa Blanca coastal living area"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    unoptimized
+                  />
+                </div>
+                <div className="p-5 flex-1 flex flex-col">
+                  <span className="text-xs bg-warm-200 text-warm-700 px-2 py-1 rounded-sm font-medium w-fit">Living in Spain</span>
+                  <h3 className="font-semibold text-primary-900 mt-3 mb-2 group-hover:text-accent-600 transition-colors">
+                    Cost of Living in Spain 2026
+                  </h3>
+                  <p className="text-warm-600 text-sm leading-relaxed">
+                    Monthly costs, utilities, groceries, healthcare — a realistic breakdown for expats on the Costa Blanca.
+                  </p>
+                </div>
               </div>
             </Link>
           </div>

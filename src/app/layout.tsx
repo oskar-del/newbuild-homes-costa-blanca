@@ -31,8 +31,8 @@ export const metadata: Metadata = {
   description: 'Find your dream new build property in Costa Blanca. Modern apartments, villas and townhouses from trusted developers. Expert guidance for international buyers.',
   metadataBase: new URL('https://newbuildhomescostablanca.com'),
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
     apple: '/apple-touch-icon.png',
   },
   robots: {

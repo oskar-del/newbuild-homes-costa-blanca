@@ -363,7 +363,7 @@ export default function Footer() {
                   alt="New Build Homes Costa Blanca"
                   width={50}
                   height={50}
-                  className="h-12 w-auto"
+                  className="h-12 w-auto rounded-full object-cover"
                 />
                 <div className="flex flex-col">
                   <span className="text-white font-semibold text-lg leading-tight">NEWBUILD HOMES</span>
