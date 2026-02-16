@@ -284,6 +284,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [galleryIndex, setGalleryIndex] = useState(0);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [showUrgencyForm, setShowUrgencyForm] = useState(false);
   // Form state removed — now using LeadForm component with Airtable integration
   
   // Data
@@ -948,23 +949,41 @@ export default function PropertyPageClient({ property, content, similarPropertie
                 <RentalYieldChart data={content.rentalYieldData} />
               </div>
               
-              {/* Habeno CTA */}
-              <div className="mt-6 p-4 bg-white/70 rounded-lg">
-                <p className="text-warm-600 mb-3">
-                  <strong>Need financing?</strong> We work with Habeno, a mortgage aggregator who compares offers from multiple Spanish banks.
-                </p>
-                <a
-                  href={HABENO_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-success-700 hover:text-success-800 font-semibold"
-                >
-                  Start Your Mortgage Application
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </div>
+              {/* Mortgage Partner CTA — Habeno for <€1M, Lionsgate for €1M+ */}
+              <a
+                href={property.price && property.price >= 1000000
+                  ? 'https://www.lionsgatecapital.com/contact?ref=newbuildhomescostablanca'
+                  : HABENO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 block bg-gradient-to-r from-primary-800 to-primary-900 hover:from-primary-700 hover:to-primary-800 rounded-xl p-6 transition-all group"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-accent-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <h4 className="text-lg font-bold text-white">
+                        {property.price && property.price >= 1000000 ? 'Premium Mortgage Solutions' : 'Get Your Best Mortgage Rate'}
+                      </h4>
+                      <svg className="w-5 h-5 text-accent-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
+                    <p className="text-primary-200 text-sm mb-2">
+                      {property.price && property.price >= 1000000
+                        ? 'Our premium partner Lionsgate Capital specializes in high-value property financing across Spain.'
+                        : 'Our partner Habeno compares mortgage offers from multiple Spanish banks to find you the best rate.'}
+                    </p>
+                    <div className="inline-flex items-center gap-1.5 text-accent-400 text-sm font-semibold">
+                      <span>{property.price && property.price >= 1000000 ? 'Contact Lionsgate Capital' : 'Start Free Mortgage Comparison'}</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
             </div>
 
             {/* ==================== WHY BUY THIS PROPERTY ==================== */}
@@ -1179,16 +1198,16 @@ export default function PropertyPageClient({ property, content, similarPropertie
             </div>
 
             {/* ==================== THIS WON'T LAST LONG — URGENCY + ACTIONS ==================== */}
-            <div className="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 rounded-2xl p-8 text-white">
+            <div className="bg-gradient-to-br from-accent-600 via-accent-500 to-accent-600 rounded-2xl p-8 shadow-lg">
               <div className="text-center mb-6">
-                <div className="inline-flex items-center gap-2 bg-accent-500/20 text-accent-400 px-4 py-1.5 rounded-full text-sm font-medium mb-4">
+                <div className="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-1.5 rounded-full text-sm font-bold mb-4 backdrop-blur-sm">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   High Demand Area
                 </div>
-                <h2 className="text-3xl font-bold mb-2">This Won&apos;t Last Long</h2>
-                <p className="text-primary-200 text-lg max-w-xl mx-auto">
+                <h2 className="text-3xl font-bold text-white mb-2">This Won&apos;t Last Long</h2>
+                <p className="text-white/90 text-lg max-w-xl mx-auto">
                   Quality properties in {property.town} are selling fast. Take the next step before someone else does.
                 </p>
               </div>
@@ -1200,15 +1219,15 @@ export default function PropertyPageClient({ property, content, similarPropertie
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white/10 hover:bg-white/20 rounded-xl p-5 text-center transition-colors group"
+                  className="bg-white rounded-xl p-5 text-center transition-all group hover:shadow-lg hover:-translate-y-1"
                 >
-                  <div className="w-12 h-12 bg-accent-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-primary-900 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
                     </svg>
                   </div>
-                  <h4 className="font-bold mb-1">Request Floor Plans</h4>
-                  <p className="text-sm text-primary-300">Get detailed layouts and specifications</p>
+                  <h4 className="font-bold text-primary-900 mb-1">Request Floor Plans</h4>
+                  <p className="text-sm text-warm-500">Get detailed layouts</p>
                 </a>
 
                 {/* Schedule Video Visit */}
@@ -1216,15 +1235,15 @@ export default function PropertyPageClient({ property, content, similarPropertie
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white/10 hover:bg-white/20 rounded-xl p-5 text-center transition-colors group"
+                  className="bg-white rounded-xl p-5 text-center transition-all group hover:shadow-lg hover:-translate-y-1"
                 >
-                  <div className="w-12 h-12 bg-accent-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-primary-900 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <h4 className="font-bold mb-1">Schedule Video Tour</h4>
-                  <p className="text-sm text-primary-300">See the property from anywhere</p>
+                  <h4 className="font-bold text-primary-900 mb-1">Schedule Video Tour</h4>
+                  <p className="text-sm text-warm-500">See it from anywhere</p>
                 </a>
 
                 {/* Book a Viewing */}
@@ -1232,32 +1251,32 @@ export default function PropertyPageClient({ property, content, similarPropertie
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white/10 hover:bg-white/20 rounded-xl p-5 text-center transition-colors group"
+                  className="bg-white rounded-xl p-5 text-center transition-all group hover:shadow-lg hover:-translate-y-1"
                 >
-                  <div className="w-12 h-12 bg-success-500 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-success-600 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <h4 className="font-bold mb-1">Book a Viewing</h4>
-                  <p className="text-sm text-primary-300">Visit in person — we&apos;ll arrange everything</p>
+                  <h4 className="font-bold text-primary-900 mb-1">Book a Viewing</h4>
+                  <p className="text-sm text-warm-500">We&apos;ll arrange everything</p>
                 </a>
               </div>
 
               {/* Contact Row */}
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm:flex-row gap-3 mb-4">
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 bg-success-600 hover:bg-success-700 text-white py-3.5 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2 text-lg"
+                  className="flex-1 bg-success-600 hover:bg-success-700 text-white py-3.5 rounded-xl font-bold transition-colors flex items-center justify-center gap-2 text-lg shadow-md"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   WhatsApp Now
                 </a>
                 <a
                   href={PHONE_TEL}
-                  className="flex-1 bg-white/15 hover:bg-white/25 text-white py-3.5 rounded-xl font-semibold transition-colors flex items-center justify-center gap-2 text-lg"
+                  className="flex-1 bg-primary-900 hover:bg-primary-800 text-white py-3.5 rounded-xl font-bold transition-colors flex items-center justify-center gap-2 text-lg shadow-md"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -1266,20 +1285,29 @@ export default function PropertyPageClient({ property, content, similarPropertie
                 </a>
               </div>
 
-              {/* Inline Lead Form */}
-              <div className="mt-6 pt-6 border-t border-white/20">
-                <p className="text-center text-primary-200 text-sm mb-4">Or leave your details and we&apos;ll contact you</p>
-                <LeadForm
-                  area={property.town || ''}
-                  language="en"
-                  propertyType={property.propertyType || ''}
-                  formType="Property Inquiry"
-                  sourcePage={`/properties/${property.reference || property.id}`}
-                  budgetRange={property.price ? `€${property.price.toLocaleString()}` : ''}
-                  propertyReference={property.reference || property.id}
-                  customMessage={`I'm interested in this ${property.propertyType?.toLowerCase() || 'property'} (Ref: ${property.reference || property.id})`}
-                  compact={true}
-                />
+              {/* Expandable Lead Form */}
+              <div className="text-center">
+                <button
+                  onClick={() => setShowUrgencyForm(!showUrgencyForm)}
+                  className="text-white/90 hover:text-white text-sm font-medium underline underline-offset-2 transition-colors"
+                >
+                  {showUrgencyForm ? 'Hide contact form' : 'Or leave your details and we\'ll contact you'}
+                </button>
+                {showUrgencyForm && (
+                  <div className="mt-4 bg-white rounded-xl p-5">
+                    <LeadForm
+                      area={property.town || ''}
+                      language="en"
+                      propertyType={property.propertyType || ''}
+                      formType="Property Inquiry"
+                      sourcePage={`/properties/${property.reference || property.id}`}
+                      budgetRange={property.price ? `€${property.price.toLocaleString()}` : ''}
+                      propertyReference={property.reference || property.id}
+                      customMessage={`I'm interested in this ${property.propertyType?.toLowerCase() || 'property'} (Ref: ${property.reference || property.id})`}
+                      compact={true}
+                    />
+                  </div>
+                )}
               </div>
             </div>
 
@@ -1427,32 +1455,44 @@ export default function PropertyPageClient({ property, content, similarPropertie
                 />
               </div>
 
-              {/* Mortgage CTA */}
-              <div className="bg-gradient-to-br from-success-50 to-warm-100 border border-success-200 rounded-xl p-5">
-                <h4 className="font-bold text-primary-900 mb-2">Need Financing?</h4>
-                <p className="text-sm text-warm-600 mb-3">
-                  Get mortgage quotes from multiple Spanish banks with our partner Habeno.
+              {/* Mortgage CTA — Habeno or Lionsgate */}
+              <div className="bg-gradient-to-br from-primary-800 to-primary-900 rounded-xl p-5">
+                <h4 className="font-bold text-white mb-2">
+                  {property.price && property.price >= 1000000 ? 'Premium Financing' : 'Need Financing?'}
+                </h4>
+                <p className="text-sm text-primary-200 mb-3">
+                  {property.price && property.price >= 1000000
+                    ? 'Lionsgate Capital specializes in high-value property mortgages.'
+                    : 'Compare mortgage rates from multiple Spanish banks.'}
                 </p>
                 <a
-                  href={HABENO_URL}
+                  href={property.price && property.price >= 1000000
+                    ? 'https://www.lionsgatecapital.com/contact?ref=newbuildhomescostablanca'
+                    : HABENO_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-success-600 hover:bg-success-700 text-white py-2.5 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
+                  className="w-full bg-accent-500 hover:bg-accent-600 text-white py-2.5 rounded-lg font-bold transition-colors flex items-center justify-center gap-2"
                 >
-                  Get Mortgage Quote
+                  {property.price && property.price >= 1000000 ? 'Contact Lionsgate' : 'Get Mortgage Quote'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>
               </div>
 
-              {/* Newsletter CTA */}
-              <NewsletterCTA
-                type="properties"
-                areaName={property.town || ''}
-                language="en"
-                sourcePage={`/properties/${property.reference || property.id}`}
-              />
+              {/* Newsletter CTA — prominent design */}
+              <div className="bg-gradient-to-br from-accent-500 to-accent-600 rounded-xl p-5 text-white">
+                <h4 className="font-bold text-lg mb-1">Get New Listings First</h4>
+                <p className="text-white/90 text-sm mb-3">
+                  Be the first to know about new properties in {property.town || 'Costa Blanca'}.
+                </p>
+                <NewsletterCTA
+                  type="properties"
+                  areaName={property.town || ''}
+                  language="en"
+                  sourcePage={`/properties/${property.reference || property.id}`}
+                />
+              </div>
 
               {/* Sidebar kept clean — Video Visit + Floorplan CTAs moved to main content "This Won't Last Long" section */}
             </div>

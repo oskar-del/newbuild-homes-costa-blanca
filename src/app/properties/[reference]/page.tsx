@@ -19,7 +19,7 @@ export const revalidate = 3600;
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getPropertyByRef, fetchXMLFeed, toUnifiedFormat } from '@/lib/xml-parser';
-import { generatePropertyContent, PropertyContent } from '@/lib/property-content-generator';
+import { generatePropertyContent, PropertyContent, generateRentalIncomeEstimate } from '@/lib/property-content-generator';
 import { loadAIContent, convertAIToPropertyContent } from '@/lib/ai-content-loader';
 import { developments, developers } from '@/data/developments';
 import { getVideoForProperty, getVideosForDevelopment, VideoCard } from '@/lib/video-mapping';
@@ -337,6 +337,10 @@ export default async function PropertyPage({ params }: PageProps) {
   const content = aiContent
     ? convertAIToPropertyContent(aiContent)
     : generatePropertyContent(property as any);
+
+  // Always calculate rental income from actual property data
+  // (AI content loader doesn't generate numeric rental estimates)
+  content.rentalIncomeEstimate = generateRentalIncomeEstimate(property as any);
 
   // Log which content source is being used
   if (aiContent) {
