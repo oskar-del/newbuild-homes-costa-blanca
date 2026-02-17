@@ -177,6 +177,53 @@ async function pushToMailerLite(data: LeadData): Promise<boolean> {
   }
 }
 
+// Map budget value to Airtable singleSelect options
+function mapBudgetRange(budget: string): string | undefined {
+  if (!budget) return undefined;
+  // Extract numeric value from strings like "€293,000" or "250k-350k"
+  const numStr = budget.replace(/[€$£,\s]/g, '');
+  const num = parseInt(numStr);
+  if (isNaN(num)) {
+    // Already in the right format?
+    const validOptions = ['Under 150k', '150k-250k', '250k-350k', '350k-500k', '500k+'];
+    if (validOptions.includes(budget)) return budget;
+    return undefined; // Skip if we can't map it
+  }
+  if (num < 150000) return 'Under 150k';
+  if (num < 250000) return '150k-250k';
+  if (num < 350000) return '250k-350k';
+  if (num < 500000) return '350k-500k';
+  return '500k+';
+}
+
+// Map form type to Airtable singleSelect options
+function mapFormType(formType: string): string {
+  const map: Record<string, string> = {
+    'Property Inquiry': 'Property Inquiry',
+    'Newsletter Signup': 'Newsletter Signup',
+    'Consultation Request': 'Consultation Request',
+    'General Contact': 'General Contact',
+    'Development Inquiry': 'Development Inquiry',
+    'Area Inquiry': 'Area Inquiry',
+    'Guide Download': 'Guide Download',
+    'Property Alert': 'Property Alert',
+  };
+  return map[formType] || 'General Contact';
+}
+
+// Map property type to Airtable singleSelect options
+function mapPropertyType(propType: string): string | undefined {
+  if (!propType) return undefined;
+  const validOptions = ['Apartment', 'Villa', 'Townhouse', 'Bungalow', 'Penthouse', 'Duplex', 'Other'];
+  // Try exact match first
+  const exact = validOptions.find(o => o.toLowerCase() === propType.toLowerCase());
+  if (exact) return exact;
+  // Try partial match
+  const partial = validOptions.find(o => propType.toLowerCase().includes(o.toLowerCase()));
+  if (partial) return partial;
+  return 'Other';
+}
+
 // Push to Airtable
 async function pushToAirtable(data: LeadData): Promise<boolean> {
   const apiToken = process.env.AIRTABLE_API_TOKEN;
@@ -205,13 +252,14 @@ async function pushToAirtable(data: LeadData): Promise<boolean> {
               // Only include optional text fields if they have values
               ...(data.phone ? { 'Phone': data.phone } : {}),
               ...(data.message ? { 'Message': data.message } : {}),
-              // singleSelect fields must match exact option names or be omitted
+              // singleSelect fields — mapped to match exact Airtable option names
               ...(data.area ? { 'Area': data.area } : {}),
-              ...(data.propertyType ? { 'Property Type': data.propertyType } : {}),
-              ...(data.budgetRange ? { 'Budget Range': data.budgetRange } : {}),
+              ...(mapPropertyType(data.propertyType || '') ? { 'Property Type': mapPropertyType(data.propertyType || '') } : {}),
+              ...(mapBudgetRange(data.budgetRange || '') ? { 'Budget Range': mapBudgetRange(data.budgetRange || '') } : {}),
               ...(data.developmentName ? { 'Development Name': data.developmentName } : {}),
-              ...(data.formType ? { 'Form Type': data.formType } : {}),
-              ...(data.sourcePage ? { 'Source Page': data.sourcePage } : {}),
+              'Form Type': mapFormType(data.formType || 'General Contact'),
+              // Source Page as full URL
+              ...(data.sourcePage ? { 'Source Page': `https://newbuildhomescostablanca.com${data.sourcePage}` } : {}),
               // Language mapping to match Airtable singleSelect options
               'Language': mapLanguage(data.language || 'en'),
               'Status': 'New Lead',
