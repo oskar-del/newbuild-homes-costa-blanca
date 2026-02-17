@@ -236,6 +236,56 @@ async function pushToAirtable(data: LeadData): Promise<boolean> {
     return true;
   }
 
+  // Valid Airtable singleSelect options
+  const validAreas = ['Torrevieja', 'Algorfa', 'Javea', 'Calpe', 'Benidorm', 'Altea', 'Moraira', 'Orihuela Costa', 'Guardamar del Segura', 'Villamartin', 'La Zenia', 'Denia', 'Ciudad Quesada', 'Cabo Roig', 'Santa Pola', 'Other'];
+
+  // Map area with case-insensitive matching
+  function mapArea(area: string): string | undefined {
+    if (!area) return undefined;
+    const match = validAreas.find(a => a.toLowerCase() === area.toLowerCase());
+    if (match) return match;
+    // Partial match
+    const partial = validAreas.find(a => area.toLowerCase().includes(a.toLowerCase()) || a.toLowerCase().includes(area.toLowerCase()));
+    return partial || undefined;
+  }
+
+  // Build fields object, only including singleSelect values that are valid
+  const fields: Record<string, any> = {
+    'Name': data.name,
+    'Email': data.email,
+  };
+
+  // Text fields — always safe
+  if (data.phone) fields['Phone'] = data.phone;
+  if (data.message) fields['Message'] = data.message;
+  if (data.developmentName) fields['Development Name'] = data.developmentName;
+
+  // singleSelect fields — only include if they map to valid options
+  const mappedArea = mapArea(data.area || '');
+  if (mappedArea) fields['Area'] = mappedArea;
+
+  const mappedPropType = mapPropertyType(data.propertyType || '');
+  if (mappedPropType) fields['Property Type'] = mappedPropType;
+
+  const mappedBudget = mapBudgetRange(data.budgetRange || '');
+  if (mappedBudget) fields['Budget Range'] = mappedBudget;
+
+  fields['Form Type'] = mapFormType(data.formType || 'General Contact');
+  fields['Language'] = mapLanguage(data.language || 'en');
+  fields['Status'] = 'New Lead';
+
+  // URL field
+  if (data.sourcePage) {
+    fields['Source Page'] = data.sourcePage.startsWith('http')
+      ? data.sourcePage
+      : `https://newbuildhomescostablanca.com${data.sourcePage}`;
+  }
+
+  // Date field
+  fields['Created Date'] = new Date().toISOString();
+
+  console.log('Airtable payload:', JSON.stringify(fields));
+
   try {
     const response = await fetch(`https://api.airtable.com/v0/${baseId}/${tableId}`, {
       method: 'POST',
@@ -243,36 +293,40 @@ async function pushToAirtable(data: LeadData): Promise<boolean> {
         'Authorization': `Bearer ${apiToken}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        records: [
-          {
-            fields: {
-              'Name': data.name,
-              'Email': data.email,
-              // Only include optional text fields if they have values
-              ...(data.phone ? { 'Phone': data.phone } : {}),
-              ...(data.message ? { 'Message': data.message } : {}),
-              // singleSelect fields — mapped to match exact Airtable option names
-              ...(data.area ? { 'Area': data.area } : {}),
-              ...(mapPropertyType(data.propertyType || '') ? { 'Property Type': mapPropertyType(data.propertyType || '') } : {}),
-              ...(mapBudgetRange(data.budgetRange || '') ? { 'Budget Range': mapBudgetRange(data.budgetRange || '') } : {}),
-              ...(data.developmentName ? { 'Development Name': data.developmentName } : {}),
-              'Form Type': mapFormType(data.formType || 'General Contact'),
-              // Source Page as full URL
-              ...(data.sourcePage ? { 'Source Page': `https://newbuildhomescostablanca.com${data.sourcePage}` } : {}),
-              // Language mapping to match Airtable singleSelect options
-              'Language': mapLanguage(data.language || 'en'),
-              'Status': 'New Lead',
-              'Created Date': new Date().toISOString(),
-            },
-          },
-        ],
-      }),
+      body: JSON.stringify({ records: [{ fields }] }),
     });
 
     if (!response.ok) {
       const errorData = await response.json();
-      console.error('Airtable API error:', errorData);
+      console.error('Airtable API error:', JSON.stringify(errorData));
+
+      // Retry with just basic fields if singleSelect caused the error
+      if (errorData?.error?.type === 'INVALID_MULTIPLE_CHOICE_OPTIONS') {
+        console.log('Retrying Airtable with basic fields only...');
+        const basicFields: Record<string, any> = {
+          'Name': data.name,
+          'Email': data.email,
+        };
+        if (data.phone) basicFields['Phone'] = data.phone;
+        if (data.message) basicFields['Message'] = data.message;
+        basicFields['Created Date'] = new Date().toISOString();
+
+        const retryResponse = await fetch(`https://api.airtable.com/v0/${baseId}/${tableId}`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${apiToken}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ records: [{ fields: basicFields }] }),
+        });
+
+        if (retryResponse.ok) {
+          console.log('Airtable retry succeeded with basic fields');
+          return true;
+        }
+        const retryError = await retryResponse.json();
+        console.error('Airtable retry also failed:', JSON.stringify(retryError));
+      }
       return false;
     }
 
