@@ -36,6 +36,128 @@ function mapLanguage(lang: string): string {
   return map[lang.toLowerCase()] || 'English';
 }
 
+// Map language codes to MailerLite group names
+function getMailerLiteGroups(data: LeadData): string[] {
+  const groups: string[] = [];
+
+  // Language-based group
+  const langGroupMap: Record<string, string> = {
+    'en': 'English Buyers',
+    'sv': 'Swedish Buyers',
+    'nl': 'Dutch Buyers',
+    'nl-be': 'Dutch Buyers',
+    'fr': 'French Buyers',
+    'de': 'German Buyers',
+    'no': 'Norwegian Buyers',
+    'pl': 'Polish Buyers',
+    'ru': 'Russian Buyers',
+    'es': 'Spanish Buyers',
+  };
+  const langGroup = langGroupMap[(data.language || 'en').toLowerCase()];
+  if (langGroup) groups.push(langGroup);
+
+  // Area-based group
+  const area = (data.area || '').toLowerCase();
+  const northAreas = ['javea', 'jávea', 'denia', 'dénia', 'moraira', 'calpe', 'benissa', 'altea', 'benidorm', 'finestrat', 'villajoyosa', 'polop', 'la nucia'];
+  const southAreas = ['torrevieja', 'orihuela', 'guardamar', 'pilar de la horadada', 'san miguel', 'villamartin', 'los montesinos', 'rojales', 'ciudad quesada'];
+
+  if (northAreas.some(a => area.includes(a))) {
+    groups.push('Costa Blanca North');
+  } else if (southAreas.some(a => area.includes(a))) {
+    groups.push('Costa Blanca South');
+  }
+
+  // Newsletter subscribers
+  if (data.formType === 'Newsletter Signup') {
+    groups.push('Newsletter Subscribers');
+  }
+
+  return groups;
+}
+
+// Push to MailerLite
+async function pushToMailerLite(data: LeadData): Promise<boolean> {
+  const apiKey = process.env.MAILERLITE_API_KEY;
+
+  if (!apiKey) {
+    console.warn('MailerLite API key missing. Subscribers will not be added.');
+    return true;
+  }
+
+  try {
+    // Step 1: Add/update subscriber
+    const subscriberResponse = await fetch('https://connect.mailerlite.com/api/subscribers', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({
+        email: data.email,
+        fields: {
+          name: data.name,
+          phone: data.phone || '',
+        },
+        status: 'active',
+      }),
+    });
+
+    if (!subscriberResponse.ok) {
+      const errorData = await subscriberResponse.json();
+      console.error('MailerLite subscriber error:', errorData);
+      return false;
+    }
+
+    const subscriberData = await subscriberResponse.json();
+    const subscriberId = subscriberData.data?.id;
+
+    if (!subscriberId) {
+      console.error('MailerLite: No subscriber ID returned');
+      return false;
+    }
+
+    // Step 2: Assign to groups
+    const groupNames = getMailerLiteGroups(data);
+
+    if (groupNames.length > 0) {
+      // First, fetch all groups to get their IDs
+      const groupsResponse = await fetch('https://connect.mailerlite.com/api/groups?limit=50', {
+        headers: {
+          'Authorization': `Bearer ${apiKey}`,
+          'Accept': 'application/json',
+        },
+      });
+
+      if (groupsResponse.ok) {
+        const groupsData = await groupsResponse.json();
+        const allGroups = groupsData.data || [];
+
+        // Match group names to IDs and assign subscriber
+        for (const groupName of groupNames) {
+          const group = allGroups.find((g: any) => g.name === groupName);
+          if (group) {
+            await fetch(`https://connect.mailerlite.com/api/subscribers/${subscriberId}/groups/${group.id}`, {
+              method: 'POST',
+              headers: {
+                'Authorization': `Bearer ${apiKey}`,
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+              },
+            });
+          }
+        }
+      }
+    }
+
+    console.log(`MailerLite: Added ${data.email} to groups: ${groupNames.join(', ')}`);
+    return true;
+  } catch (error) {
+    console.error('Error pushing to MailerLite:', error);
+    return false;
+  }
+}
+
 // Push to Airtable
 async function pushToAirtable(data: LeadData): Promise<boolean> {
   const apiToken = process.env.AIRTABLE_API_TOKEN;
@@ -136,19 +258,22 @@ export async function POST(request: NextRequest) {
       language: body.language?.trim() || 'en',
     };
 
-    // Push to Airtable
-    const airtableSuccess = await pushToAirtable(leadData);
+    // Push to Airtable and MailerLite in parallel
+    const [airtableSuccess, mailerliteSuccess] = await Promise.all([
+      pushToAirtable(leadData),
+      pushToMailerLite(leadData),
+    ]);
 
-    // Log the lead (optional - for debugging or alternative storage)
-    console.log('Lead received:', leadData);
+    // Log the lead
+    console.log('Lead received:', { ...leadData, airtableSuccess, mailerliteSuccess });
 
     // Always return success to the client (graceful degradation)
-    // This way the user gets positive feedback even if Airtable fails
     return NextResponse.json(
       {
         success: true,
         message: 'Thank you for your inquiry. We will be in touch soon.',
         airtableSuccess,
+        mailerliteSuccess,
       },
       { status: 200 }
     );
