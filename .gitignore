@@ -32,3 +32,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+scripts/setup-email-flows.mjs
+scripts/setup-mailerlite.mjs
+scripts/update-email-template.mjs
+scripts/fix-all-connections.mjs
+scripts/test-airtable.mjs
