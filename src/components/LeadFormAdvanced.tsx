@@ -70,18 +70,20 @@ export default function LeadFormAdvanced({
     setStatus('submitting');
 
     try {
-      const formBody = new URLSearchParams();
-      formBody.append('form-name', formName);
-      Object.entries(formData).forEach(([key, value]) => {
-        if (value) formBody.append(key, value);
-      });
-      if (propertyInterest) formBody.append('propertyInterest', propertyInterest);
-      if (source) formBody.append('source', source);
-
-      const response = await fetch('/', {
+      const response = await fetch('/api/leads', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: formBody.toString(),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          budgetRange: formData.budget,
+          formType: 'Property Inquiry',
+          sourcePage: source || (typeof window !== 'undefined' ? window.location.pathname : ''),
+          language: document.documentElement.lang || 'en',
+          propertyType: propertyInterest || '',
+        }),
       });
 
       if (response.ok) {

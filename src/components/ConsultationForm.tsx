@@ -65,13 +65,18 @@ export default function ConsultationForm({
     setError('');
 
     try {
-      const response = await fetch('/', {
+      const response = await fetch('/api/leads', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'consultation-booking',
-          ...formData,
-        }).toString(),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: `${formData.consultationType} consultation requested for ${formData.preferredDate} at ${formData.preferredTime}. ${formData.propertyInterest ? `Interest: ${formData.propertyInterest}.` : ''} ${formData.message}`.trim(),
+          formType: 'Consultation Request',
+          sourcePage: typeof window !== 'undefined' ? window.location.pathname : '/consultation',
+          language: document.documentElement.lang || 'en',
+        }),
       });
 
       if (response.ok) {
