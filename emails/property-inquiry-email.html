@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Property Inquiry</title>
+    <!--[if mso]>
+    <style type="text/css">
+      body, table, td { font-family: Arial, sans-serif !important; }
+    </style>
+    <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #FDFCFA;">
+    <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #FDFCFA;">
+        <tr>
+            <td align="center" style="padding: 32px 16px;">
+                <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; background-color: #FAF9F7; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(30, 42, 56, 0.06);">
+
+                    <!-- Header -->
+                    <tr>
+                        <td style="padding: 48px 40px 40px; background-color: #1E2A38; text-align: center;">
+                            <div style="width: 40px; height: 2px; background-color: #B39960; margin: 0 auto 20px;"></div>
+                            <h1 style="margin: 0; font-size: 26px; color: #ffffff; font-weight: 600; letter-spacing: -0.3px;">New Build Homes</h1>
+                            <p style="margin: 6px 0 0; font-size: 14px; color: #B39960; font-weight: 500; letter-spacing: 2px; text-transform: uppercase;">Costa Blanca</p>
+                        </td>
+                    </tr>
+
+                    <!-- Personal Response -->
+                    <tr>
+                        <td style="padding: 40px 40px 24px;">
+                            <h2 style="margin: 0 0 16px; font-size: 22px; color: #1E2A38; font-weight: 600; line-height: 1.3;">Thanks for your inquiry, {$name}</h2>
+                            <p style="margin: 0; font-size: 16px; color: #6B7280; line-height: 1.7;">
+                                We've received your interest in property <strong style="color: #1E2A38;">{$property_reference}</strong> in <strong style="color: #1E2A38;">{$property_area}</strong>. One of our team will be in touch within 24 hours with more details.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <!-- Property Card -->
+                    <tr>
+                        <td style="padding: 0 40px 32px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff; border-radius: 8px; border: 1px solid #E8E6E1; overflow: hidden;">
+                                <tr>
+                                    <td style="padding: 24px;">
+                                        <p style="margin: 0 0 4px; font-size: 11px; color: #B39960; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;">Your Property</p>
+                                        <h3 style="margin: 0 0 6px; font-size: 18px; color: #1E2A38; font-weight: 600;">
+                                            {$property_type} in {$property_area}
+                                        </h3>
+                                        <p style="margin: 0 0 4px; font-size: 14px; color: #6B7280;">
+                                            Reference: {$property_reference}
+                                        </p>
+                                        <p style="margin: 0 0 16px; font-size: 18px; color: #1E2A38; font-weight: 700;">
+                                            {$budget_range}
+                                        </p>
+                                        <table role="presentation" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td style="background-color: #1E2A38; border-radius: 6px;">
+                                                    <a href="{$property_url}" style="display: inline-block; padding: 12px 24px; color: #ffffff; text-decoration: none; font-size: 14px; font-weight: 600;">View Full Property Details</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Divider -->
+                    <tr>
+                        <td style="padding: 0 40px;">
+                            <div style="height: 1px; background-color: #E8E6E1;"></div>
+                        </td>
+                    </tr>
+
+                    <!-- What Happens Next — 3 Action Cards -->
+                    <tr>
+                        <td style="padding: 32px 40px 8px;">
+                            <p style="margin: 0 0 4px; font-size: 11px; color: #B39960; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;">What happens next</p>
+                            <h3 style="margin: 0 0 20px; font-size: 18px; color: #1E2A38; font-weight: 600;">Choose how to proceed</h3>
+                        </td>
+                    </tr>
+
+                    <!-- Action 1: Get Floor Plans -->
+                    <tr>
+                        <td style="padding: 0 40px 12px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F7F5F0; border-radius: 8px; border: 1px solid #E8E6E1;">
+                                <tr>
+                                    <td style="padding: 20px 24px;">
+                                        <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td style="vertical-align: top; width: 100%;">
+                                                    <h4 style="margin: 0 0 4px; font-size: 15px; color: #1E2A38; font-weight: 600;">Request Floor Plans &amp; Specs</h4>
+                                                    <p style="margin: 0 0 12px; font-size: 13px; color: #6B7280; line-height: 1.5;">We'll email you detailed layouts within 24 hours</p>
+                                                    <table role="presentation" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td style="background-color: #25D366; border-radius: 6px;">
+                                                                <a href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0" style="display: inline-block; padding: 10px 20px; color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 600;">WhatsApp for Floor Plans</a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Action 2: Book Consultation -->
+                    <tr>
+                        <td style="padding: 0 40px 12px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F7F5F0; border-radius: 8px; border: 1px solid #E8E6E1;">
+                                <tr>
+                                    <td style="padding: 20px 24px;">
+                                        <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <h4 style="margin: 0 0 4px; font-size: 15px; color: #1E2A38; font-weight: 600;">Book a Free 30-min Consultation</h4>
+                                                    <p style="margin: 0 0 12px; font-size: 13px; color: #6B7280; line-height: 1.5;">We'll discuss your requirements, budget, and find the perfect match</p>
+                                                    <table role="presentation" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td style="background-color: #B39960; border-radius: 6px;">
+                                                                <a href="https://newbuildhomescostablanca.com/consultation" style="display: inline-block; padding: 10px 20px; color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 600;">Book Consultation</a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Action 3: Call or WhatsApp -->
+                    <tr>
+                        <td style="padding: 0 40px 32px;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F7F5F0; border-radius: 8px; border: 1px solid #E8E6E1;">
+                                <tr>
+                                    <td style="padding: 20px 24px;">
+                                        <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <h4 style="margin: 0 0 4px; font-size: 15px; color: #1E2A38; font-weight: 600;">Talk to Us Now</h4>
+                                                    <p style="margin: 0 0 12px; font-size: 13px; color: #6B7280; line-height: 1.5;">Have questions? We're here to help</p>
+                                                    <table role="presentation" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td style="border: 1px solid #1E2A38; border-radius: 6px;">
+                                                                <a href="tel:+34634044970" style="display: inline-block; padding: 10px 20px; color: #1E2A38; text-decoration: none; font-size: 13px; font-weight: 600;">Call +34 634 044 970</a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Divider -->
+                    <tr>
+                        <td style="padding: 0 40px;">
+                            <div style="height: 1px; background-color: #E8E6E1;"></div>
+                        </td>
+                    </tr>
+
+                    <!-- Area-Specific Resources -->
+                    <tr>
+                        <td style="padding: 32px 40px;">
+                            <p style="margin: 0 0 4px; font-size: 11px; color: #B39960; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;">Helpful Resources</p>
+                            <h3 style="margin: 0 0 20px; font-size: 18px; color: #1E2A38; font-weight: 600;">Learn More About {$property_area}</h3>
+
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="padding: 10px 0; border-bottom: 1px solid #E8E6E1;">
+                                        <a href="https://newbuildhomescostablanca.com/guides/buying-process" style="color: #1E2A38; text-decoration: none; font-size: 15px; font-weight: 600;">
+                                            The Complete Buyer's Guide →
+                                        </a>
+                                        <p style="margin: 4px 0 0; font-size: 13px; color: #6B7280;">NIE numbers, taxes, notary fees, the full purchase process</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px 0; border-bottom: 1px solid #E8E6E1;">
+                                        <a href="https://newbuildhomescostablanca.com/guides/costs-taxes" style="color: #1E2A38; text-decoration: none; font-size: 15px; font-weight: 600;">
+                                            Costs &amp; Taxes Explained →
+                                        </a>
+                                        <p style="margin: 4px 0 0; font-size: 13px; color: #6B7280;">What you'll actually pay beyond the purchase price</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 10px 0;">
+                                        <a href="https://newbuildhomescostablanca.com/finance" style="color: #1E2A38; text-decoration: none; font-size: 15px; font-weight: 600;">
+                                            Spanish Mortgage Guide →
+                                        </a>
+                                        <p style="margin: 4px 0 0; font-size: 13px; color: #6B7280;">Financing options for international buyers</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Trust Footer -->
+                    <tr>
+                        <td style="padding: 32px 40px; background-color: #1E2A38;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="text-align: center;">
+                                        <div style="width: 30px; height: 2px; background-color: #B39960; margin: 0 auto 16px;"></div>
+                                        <p style="margin: 0 0 8px; font-size: 15px; color: #ffffff; font-weight: 600;">We'll be in touch within 24 hours</p>
+                                        <p style="margin: 0; font-size: 13px; color: #94a3b8; line-height: 1.6;">
+                                            In the meantime, feel free to WhatsApp us anytime at +34 634 044 970
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td style="padding: 32px 40px; background-color: #FAF9F7; border-top: 1px solid #E8E6E1;">
+                            <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td align="center">
+                                        <p style="margin: 0 0 4px; font-size: 14px; color: #1E2A38; font-weight: 600;">New Build Homes Costa Blanca</p>
+                                        <p style="margin: 0 0 16px; font-size: 13px; color: #94a3b8;">Costa Blanca, Spain &nbsp;·&nbsp; +34 634 044 970</p>
+                                        <p style="margin: 0; font-size: 12px; color: #B8B3AA; line-height: 1.6;">
+                                            <a href="{$unsubscribe}" style="color: #B39960; text-decoration: none;">Unsubscribe</a>
+                                            &nbsp;&nbsp;·&nbsp;&nbsp;
+                                            <a href="https://newbuildhomescostablanca.com/privacy" style="color: #B39960; text-decoration: none;">Privacy Policy</a>
+                                            &nbsp;&nbsp;·&nbsp;&nbsp;
+                                            <a href="https://newbuildhomescostablanca.com" style="color: #B39960; text-decoration: none;">Website</a>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

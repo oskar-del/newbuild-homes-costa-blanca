@@ -12,6 +12,7 @@ interface LeadData {
   formType?: string;
   sourcePage?: string;
   language?: string;
+  propertyReference?: string;
 }
 
 // Validate email format
@@ -67,9 +68,14 @@ function getMailerLiteGroups(data: LeadData): string[] {
     groups.push('Costa Blanca South');
   }
 
-  // Newsletter subscribers
+  // Flow-based groups (triggers different email automations)
   if (data.formType === 'Newsletter Signup') {
     groups.push('Newsletter Subscribers');
+  } else if (data.formType === 'Consultation Request') {
+    groups.push('Consultation Requests');
+  } else {
+    // Property Inquiry, Development Inquiry, or any other form
+    groups.push('Property Inquiries');
   }
 
   return groups;
@@ -85,7 +91,11 @@ async function pushToMailerLite(data: LeadData): Promise<boolean> {
   }
 
   try {
-    // Step 1: Add/update subscriber
+    // Step 1: Add/update subscriber with custom fields
+    const propertyUrl = data.sourcePage
+      ? `https://newbuildhomescostablanca.com${data.sourcePage}`
+      : '';
+
     const subscriberResponse = await fetch('https://connect.mailerlite.com/api/subscribers', {
       method: 'POST',
       headers: {
@@ -98,6 +108,15 @@ async function pushToMailerLite(data: LeadData): Promise<boolean> {
         fields: {
           name: data.name,
           phone: data.phone || '',
+          // Custom fields for email personalization
+          property_reference: data.propertyReference || '',
+          property_url: propertyUrl,
+          property_area: data.area || '',
+          property_type: data.propertyType || '',
+          budget_range: data.budgetRange || '',
+          form_type: data.formType || '',
+          source_page: data.sourcePage || '',
+          development_name: data.developmentName || '',
         },
         status: 'active',
       }),
@@ -256,6 +275,7 @@ export async function POST(request: NextRequest) {
       formType: body.formType?.trim() || 'lead-inquiry',
       sourcePage: body.sourcePage?.trim() || undefined,
       language: body.language?.trim() || 'en',
+      propertyReference: body.propertyReference?.trim() || undefined,
     };
 
     // Push to Airtable and MailerLite in parallel
