@@ -370,6 +370,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Pilar de la Horadada's markets reflect the town's dual character—traditional Spanish commerce in the town center and modern retail in the coastal urbanizations. The Saturday market is a favorite with locals and visitors alike.",
+      "markets": [
+        {
+          "name": "Pilar Saturday Market",
+          "day": "Saturday",
+          "time": "08:00 - 14:00",
+          "type": "Produce/General",
+          "distance": "Town center",
+          "description": "Traditional Spanish market with excellent fresh local produce, fish, clothing, and household goods. Popular gathering place with authentic atmosphere.",
+          "googleMaps": "https://maps.google.com/?q=Pilar+de+la+Horadada+Saturday+Market"
+        },
+        {
+          "name": "Torre de la Horadada Market",
+          "day": "Sunday",
+          "time": "08:00 - 14:00",
+          "type": "Coastal Market/General",
+          "distance": "Coastal Area",
+          "description": "Sunday market in the historic Torre de la Horadada area with mix of goods, near excellent seafood restaurants by the watchtower.",
+          "googleMaps": "https://maps.google.com/?q=Torre+de+la+Horadada+Market"
+        },
+        {
+          "name": "Orihuela Saturday Market",
+          "day": "Saturday",
+          "time": "08:00 - 14:00",
+          "type": "Produce/General",
+          "distance": "18 km (20 minutes)",
+          "description": "Large Saturday market in nearby Orihuela featuring extensive fresh produce, regional specialties, clothing, and household items.",
+          "googleMaps": "https://maps.google.com/?q=Orihuela+Saturday+Market"
+        }
+      ]
+    },
     "schools": {
       "intro": "Pilar de la Horadada has Spanish public schools and access to international options in nearby San Javier and Torrevieja.",
       "schools": [

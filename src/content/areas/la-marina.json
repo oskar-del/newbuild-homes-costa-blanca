@@ -195,6 +195,79 @@
         }
       ]
     },
+    "markets": {
+      "intro": "La Marina and surrounding areas offer convenient access to markets and shopping. The nearby towns of Guardamar and Torrevieja host excellent weekly markets featuring fresh local produce, fish, and regional specialties.",
+      "markets": [
+        {
+          "name": "La Marina Saturday Market",
+          "day": "Saturday",
+          "time": "08:00 - 14:00",
+          "type": "Produce/General",
+          "distance": "In community",
+          "description": "Weekly community market with fresh local produce, regional goods, and household items. Convenient on-site shopping for La Marina residents.",
+          "googleMaps": "https://maps.google.com/?q=La+Marina+Saturday+Market"
+        },
+        {
+          "name": "Guardamar Wednesday Market",
+          "day": "Wednesday",
+          "time": "08:00 - 14:00",
+          "type": "Produce/General",
+          "distance": "8 km (10 minutes)",
+          "description": "Popular Wednesday market in nearby beach town Guardamar featuring fresh local produce, fish, and regional goods with coastal atmosphere.",
+          "googleMaps": "https://maps.google.com/?q=Guardamar+Wednesday+Market"
+        },
+        {
+          "name": "Santa Pola Saturday Market",
+          "day": "Saturday",
+          "time": "08:00 - 14:00",
+          "type": "Produce/General",
+          "distance": "12 km (15 minutes)",
+          "description": "Popular Saturday market in nearby Santa Pola with fresh local produce, fish from the active harbor, and household goods. Reflects authentic fishing community character.",
+          "googleMaps": "https://maps.google.com/?q=Santa+Pola+Saturday+Market"
+        }
+      ]
+    },
+    "golf": {
+      "intro": "La Marina is perfectly positioned for golf enthusiasts with multiple championship courses within easy reach. Nearby courses include La Marquesa Golf in Rojales, La Finca Golf in Algorfa, and several others within 20 minutes. Year-round playing conditions make this an ideal golfing destination.",
+      "courses": [
+        {
+          "name": "La Marquesa Golf",
+          "distance": "12 km",
+          "driveTime": "15 minutes",
+          "holes": 18,
+          "url": "https://www.lamarquesagolf.com/",
+          "googleMaps": "https://maps.google.com/?q=La+Marquesa+Golf+Rojales",
+          "description": "Well-maintained championship course popular with residents. Excellent facilities and scenic layout perfect for year-round play."
+        },
+        {
+          "name": "La Finca Golf",
+          "distance": "18 km",
+          "driveTime": "20 minutes",
+          "holes": 18,
+          "url": "https://www.lafincagolf.com/",
+          "googleMaps": "https://maps.google.com/?q=La+Finca+Golf+Algorfa",
+          "description": "Championship course designed by Pepe Gancedo featuring beautiful setting with lake features and excellent facilities."
+        },
+        {
+          "name": "Vistabella Golf",
+          "distance": "20 km",
+          "driveTime": "22 minutes",
+          "holes": 18,
+          "url": "https://www.vistabellagolf.com/",
+          "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+          "description": "Modern course with excellent facilities and challenging layout. Year-round Mediterranean playing conditions."
+        },
+        {
+          "name": "Lo Romero Golf",
+          "distance": "25 km",
+          "driveTime": "25 minutes",
+          "holes": 18,
+          "url": "https://www.loromerogolf.com/",
+          "googleMaps": "https://maps.google.com/?q=Lo+Romero+Golf",
+          "description": "Stunning Jack Nicklaus signature course with premium facilities and challenging championship layout."
+        }
+      ]
+    },
     "schools": {
       "intro": "Families in La Marina have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
       "schools": [

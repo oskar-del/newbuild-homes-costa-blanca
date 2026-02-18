@@ -196,6 +196,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Alicante's markets pulse with Mediterranean life, offering visitors and residents authentic Spanish commerce. The city center hosts multiple markets featuring fresh regional produce, fish from the local port, and artisan goods.",
+      "markets": [
+        {
+          "name": "Alicante Central Market",
+          "day": "Daily",
+          "time": "08:00 - 14:00",
+          "type": "Fresh Produce/Fish",
+          "distance": "City centre",
+          "description": "Historic covered municipal market with daily fresh fish from the fleet, local vegetables, fruits, and regional specialties. Traditional Spanish shopping experience with excellent quality and friendly vendors.",
+          "googleMaps": "https://maps.google.com/?q=Alicante+Central+Market"
+        },
+        {
+          "name": "Mercado de Santa Isabel",
+          "day": "Daily",
+          "time": "08:00 - 14:30",
+          "type": "Produce/General",
+          "distance": "Near city centre",
+          "description": "Traditional market featuring fresh local produce, artisan goods, and regional specialties. Popular with both locals and residents for authentic shopping.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Santa+Isabel+Alicante"
+        },
+        {
+          "name": "El Barrio Market",
+          "day": "Daily",
+          "time": "08:00 - 14:00",
+          "type": "Produce/Clothing",
+          "distance": "City neighbourhoods",
+          "description": "Neighborhood market serving local communities with fresh produce, regional goods, and household items at excellent value for daily shopping.",
+          "googleMaps": "https://maps.google.com/?q=El+Barrio+Market+Alicante"
+        }
+      ]
+    },
     "schools": {
       "intro": "Families in Alicante have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
       "schools": [

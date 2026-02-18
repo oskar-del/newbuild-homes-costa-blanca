@@ -9,8 +9,19 @@
   "featured": false,
   "author": "New Build Homes Costa Blanca",
   "image": "/images/blog/la-sella-golf-resort-javea.webp",
-  "tags": ["la-sella", "golf", "javea", "denia", "olazabal", "luxury", "north"],
-  "relatedAreas": ["javea", "denia"],
+  "tags": [
+    "la-sella",
+    "golf",
+    "javea",
+    "denia",
+    "olazabal",
+    "luxury",
+    "north"
+  ],
+  "relatedAreas": [
+    "denia",
+    "javea"
+  ],
   "content": {
     "quickAnswer": "La Sella Golf Resort features José María Olazábal's prestigious 27-hole course in Jávea. Luxury properties span €350,000-1.2M. Integrated Marriott hotel, spa, tennis, riding facilities, and stunning Montgó Natural Park views create unique north Costa Blanca positioning.",
     "intro": "La Sella Golf Resort stands as the undisputed crown jewel of Costa Blanca golf resorts. Designed by Spanish golfing legend José María Olazábal and anchored by a Marriott hotel, La Sella transcends typical golf community positioning, functioning as a comprehensive luxury resort combining championship golf, world-class hospitality, and premium residential opportunities.\n\nThis guide explores what distinguishes La Sella: the Olazábal course design prestige, the 27-hole championship layout, Marriott integration, comprehensive resort amenities, north Costa Blanca positioning, and property offerings from €350,000 to €1.2M+. For those seeking the apex of Costa Blanca golf resort living, La Sella delivers uncompromisingly.",
@@ -185,7 +196,12 @@
             "builtArea": 280,
             "location": "La Sella Golf Resort",
             "image": "https://fotos15.apinmo.com/7515/24361541/10-1.jpg",
-            "features": ["Private Pool", "Golf View", "Montgó View", "Luxury Finishes"],
+            "features": [
+              "Private Pool",
+              "Golf View",
+              "Montgó View",
+              "Luxury Finishes"
+            ],
             "status": "key-ready",
             "badge": "Signature"
           },
@@ -199,7 +215,12 @@
             "builtArea": 350,
             "location": "La Sella Golf Resort",
             "image": "https://fotos15.apinmo.com/7515/20011159/9-1.jpg",
-            "features": ["Private Pool", "Frontline Golf", "Panoramic Views", "Smart Home"],
+            "features": [
+              "Private Pool",
+              "Frontline Golf",
+              "Panoramic Views",
+              "Smart Home"
+            ],
             "status": "key-ready",
             "badge": "Luxury"
           },
@@ -213,7 +234,11 @@
             "builtArea": 240,
             "location": "La Sella Golf Resort",
             "image": "https://fotos15.apinmo.com/7515/15220071/1-1.jpg",
-            "features": ["Pool Access", "Golf View", "Terraces"],
+            "features": [
+              "Pool Access",
+              "Golf View",
+              "Terraces"
+            ],
             "status": "key-ready",
             "badge": "Premium"
           },
@@ -227,7 +252,12 @@
             "builtArea": 220,
             "location": "La Sella Golf Resort",
             "image": "https://fotos15.apinmo.com/7515/19432786/9-1.jpg",
-            "features": ["Panoramic View", "Rooftop Terrace", "Concierge", "Spa Access"],
+            "features": [
+              "Panoramic View",
+              "Rooftop Terrace",
+              "Concierge",
+              "Spa Access"
+            ],
             "status": "key-ready",
             "badge": "Ultra-Luxury"
           }

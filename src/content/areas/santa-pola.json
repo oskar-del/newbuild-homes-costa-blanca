@@ -285,6 +285,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Santa Pola's weekend markets bring the community together with fresh seafood from the active fishing port, local agricultural produce, and regional specialties. These markets reflect the town's dual identity as a fishing community and coastal resort.",
+      "markets": [
+        {
+          "name": "Santa Pola Saturday Market",
+          "day": "Saturday",
+          "time": "08:00 - 14:00",
+          "type": "Produce/General",
+          "distance": "Town centre",
+          "description": "Popular Saturday market with fresh local produce, fish from the active harbor, flowers, and household goods. Reflects Santa Pola's authentic character as working fishing community.",
+          "googleMaps": "https://maps.google.com/?q=Santa+Pola+Saturday+Market"
+        },
+        {
+          "name": "Santa Pola Fish Market",
+          "day": "Daily",
+          "time": "07:00 - 13:00",
+          "type": "Fish/Seafood",
+          "distance": "Fishing Port",
+          "description": "Daily fish and seafood market at the active fishing port featuring fresh morning catches. Experience authentic Spanish fishing culture and exceptional quality seafood.",
+          "googleMaps": "https://maps.google.com/?q=Santa+Pola+Fish+Market+Port"
+        },
+        {
+          "name": "Elche Wednesday Market",
+          "day": "Wednesday",
+          "time": "08:00 - 14:00",
+          "type": "Produce/General",
+          "distance": "15 km (18 minutes)",
+          "description": "Large Wednesday market in nearby Elche featuring fresh produce from the region's famous groves, artisan goods, and comprehensive household items.",
+          "googleMaps": "https://maps.google.com/?q=Elche+Wednesday+Market"
+        }
+      ]
+    },
     "schools": {
       "intro": "Santa Pola area offers excellent educational options for families, with international schools, British curriculum institutions, and quality Spanish public schools.",
       "schools": [

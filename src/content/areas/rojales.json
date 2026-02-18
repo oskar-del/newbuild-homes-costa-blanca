@@ -311,6 +311,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Rojales is famous for its legendary Sunday market—one of Costa Blanca's largest, stretching along the River Segura. The market is an authentic Spanish experience attracting visitors from across the region. Additional markets serve the surrounding areas.",
+      "markets": [
+        {
+          "name": "Rojales Sunday Market",
+          "day": "Sunday",
+          "time": "08:00 - 14:00",
+          "type": "General/Produce",
+          "distance": "Town centre and riverside",
+          "description": "One of Costa Blanca's largest and most famous markets stretching over 1 km along the River Segura. Hundreds of stalls selling fresh produce, fish, clothing, household goods, and local crafts. Essential Spanish experience drawing visitors from across the region.",
+          "googleMaps": "https://maps.google.com/?q=Rojales+Sunday+Market+Mercado+Domingos"
+        },
+        {
+          "name": "Ciudad Quesada Thursday Market",
+          "day": "Thursday",
+          "time": "08:00 - 14:00",
+          "type": "Produce/General",
+          "distance": "3 km (5 minutes)",
+          "description": "Thursday market in nearby Ciudad Quesada with fresh produce, regional specialties, and household items catering to the urbanization community.",
+          "googleMaps": "https://maps.google.com/?q=Ciudad+Quesada+Thursday+Market"
+        },
+        {
+          "name": "Guardamar Wednesday Market",
+          "day": "Wednesday",
+          "time": "08:00 - 14:00",
+          "type": "Produce/General",
+          "distance": "8 km (10 minutes)",
+          "description": "Popular Wednesday market in beach town Guardamar featuring fresh local produce, fish, and regional goods with coastal atmosphere.",
+          "googleMaps": "https://maps.google.com/?q=Guardamar+Wednesday+Market"
+        }
+      ]
+    },
     "schools": {
       "intro": "Rojales has Spanish public schools suitable for families and access to international options in nearby areas including Ciudad Quesada sector.",
       "schools": [

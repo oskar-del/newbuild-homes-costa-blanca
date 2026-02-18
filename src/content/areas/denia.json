@@ -292,6 +292,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Denia's markets are legendary gathering places where locals and visitors experience authentic Spanish commerce. The Monday market has served this community for generations, offering everything from fresh seafood to seasonal produce from the fertile agricultural region.",
+      "markets": [
+        {
+          "name": "Dénia Monday Market",
+          "day": "Monday",
+          "time": "08:00 - 14:00",
+          "type": "Produce/Fish/General",
+          "distance": "In town centre",
+          "description": "Iconic Monday market stretching through the town center with hundreds of stalls. Fresh seafood from the active fishing port, local produce, flowers, clothing, and regional specialties. A must-visit cultural experience.",
+          "googleMaps": "https://maps.google.com/?q=Denia+Monday+Market"
+        },
+        {
+          "name": "Dénia Municipal Market",
+          "day": "Daily",
+          "time": "08:00 - 14:00",
+          "type": "Fresh Produce/Fish",
+          "distance": "Town centre",
+          "description": "Covered traditional market with daily fresh fish from the fleet, local vegetables, fruits, and regional delicacies. Excellent quality and friendly vendors reflecting Denia's culinary heritage.",
+          "googleMaps": "https://maps.google.com/?q=Denia+Municipal+Market"
+        },
+        {
+          "name": "Javea Thursday Market",
+          "day": "Thursday",
+          "time": "08:00 - 14:00",
+          "type": "Produce/General",
+          "distance": "20 km (25 minutes)",
+          "description": "Popular Thursday market in nearby Javea featuring fresh local produce, artisan crafts, and regional delicacies within easy driving distance.",
+          "googleMaps": "https://maps.google.com/?q=Javea+Thursday+Market"
+        }
+      ]
+    },
     "schools": {
       "intro": "Denia offers excellent educational options for families, with international schools, British curriculum institutions, and quality Spanish public schools serving the area.",
       "schools": [

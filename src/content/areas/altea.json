@@ -286,6 +286,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Altea's markets blend local traditions with the cosmopolitan flair of an artistic community. The weekly Tuesday market showcases fresh produce alongside artisan goods and crafts from local creators, making it both a practical shopping experience and a cultural immersion.",
+      "markets": [
+        {
+          "name": "Altea Saturday Market",
+          "day": "Saturday",
+          "time": "08:00 - 14:00",
+          "type": "Artisan/Crafts",
+          "distance": "In town centre",
+          "description": "Saturday artisan market featuring local artists, craftspeople, and fresh produce. Reflects Altea's artistic heritage with creative items alongside traditional market goods.",
+          "googleMaps": "https://maps.google.com/?q=Altea+Saturday+Market"
+        },
+        {
+          "name": "Altea Old Town Market",
+          "day": "Tuesday",
+          "time": "08:00 - 14:00",
+          "type": "Produce/Artisan",
+          "distance": "Old Town Centre",
+          "description": "Charming weekly market in the historic old town with fresh local produce, regional specialties, and artisan goods. Locals and visitors browse beneath the iconic blue dome.",
+          "googleMaps": "https://maps.google.com/?q=Altea+Old+Town+Market"
+        },
+        {
+          "name": "Benidorm Wednesday Market",
+          "day": "Wednesday",
+          "time": "08:00 - 14:00",
+          "type": "Produce/General",
+          "distance": "10 km (15 minutes)",
+          "description": "Large comprehensive market in nearby Benidorm featuring extensive fresh produce, fish, clothing, and household items at competitive prices.",
+          "googleMaps": "https://maps.google.com/?q=Benidorm+Wednesday+Market"
+        }
+      ]
+    },
     "schools": {
       "intro": "While Altea itself has limited international school options, the surrounding area offers excellent educational choices for families, with prestigious British, international, and Spanish schools within accessible distances.",
       "schools": [

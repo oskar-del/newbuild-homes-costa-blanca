@@ -1124,6 +1124,34 @@ export default function AreaPageContent({
                       </div>
                     </div>
                   )}
+
+                  {(content.expatCommunity?.facebookGroups?.length ?? 0) > 0 && (
+                    <div className="bg-warm-50 rounded-2xl p-6">
+                      <h3 className="font-bold text-primary-900 mb-4">Facebook Groups</h3>
+                      <div className="space-y-2">
+                        {content.expatCommunity!.facebookGroups!.map((group: string, i: number) => (
+                          <div key={i} className="flex items-center gap-2 text-warm-700 text-sm">
+                            <span className="text-blue-500">f</span>
+                            <span>{group}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {(content.expatCommunity?.socialClubs?.length ?? 0) > 0 && (
+                    <div className="bg-warm-50 rounded-2xl p-6">
+                      <h3 className="font-bold text-primary-900 mb-4">Social Clubs & Activities</h3>
+                      <div className="space-y-2">
+                        {content.expatCommunity!.socialClubs!.map((club: string, i: number) => (
+                          <div key={i} className="flex items-center gap-2 text-warm-700 text-sm">
+                            <span className="text-accent-500">●</span>
+                            <span>{club}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -1264,18 +1292,22 @@ export default function AreaPageContent({
               <h2 className="text-2xl font-light text-primary-900 mb-8">
                 {t(s.guidesForBuying, data.name)}
               </h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {relatedBlogPosts.map(post => (
-                  <Link key={post.slug} href={`${langPrefix}/blog/${post.slug}`}
-                    className="bg-warm-50 rounded-2xl p-6 hover:shadow-md transition-shadow group">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="bg-accent-100 text-accent-800 px-2 py-0.5 rounded text-xs font-medium">{post.category}</span>
-                      <span className="text-warm-400 text-xs">{post.readTime} {s.minRead}</span>
-                    </div>
-                    <h3 className="font-semibold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors line-clamp-2">{post.title}</h3>
-                    <p className="text-warm-500 text-sm line-clamp-2">{post.description}</p>
-                  </Link>
-                ))}
+              <div className="relative">
+                <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+                <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+                <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none' }}>
+                  {relatedBlogPosts.map(post => (
+                    <Link key={post.slug} href={`${langPrefix}/blog/${post.slug}`}
+                      className="flex-shrink-0 w-80 bg-warm-50 rounded-2xl p-6 hover:shadow-md transition-shadow group snap-start">
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="bg-accent-100 text-accent-800 px-2 py-0.5 rounded text-xs font-medium">{post.category}</span>
+                        <span className="text-warm-400 text-xs">{post.readTime} {s.minRead}</span>
+                      </div>
+                      <h3 className="font-semibold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors line-clamp-2">{post.title}</h3>
+                      <p className="text-warm-500 text-sm line-clamp-2">{post.description}</p>
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
           </section>

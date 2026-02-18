@@ -9,8 +9,18 @@
   "featured": false,
   "author": "New Build Homes Costa Blanca",
   "image": "/images/blog/las-colinas-golf-property-guide.webp",
-  "tags": ["las-colinas", "golf", "luxury", "campoamor", "orihuela-costa", "international-school"],
-  "relatedAreas": ["orihuela-costa", "campoamor"],
+  "tags": [
+    "las-colinas",
+    "golf",
+    "luxury",
+    "campoamor",
+    "orihuela-costa",
+    "international-school"
+  ],
+  "relatedAreas": [
+    "campoamor",
+    "orihuela-costa"
+  ],
   "content": {
     "quickAnswer": "Las Colinas Golf & Country Club combines an 18-hole Cabell Robinson championship course with premium residential properties ranging €400,000-1.5M for villas and €250,000-500,000 for apartments. The development features an on-site international school, wellness center, and restaurants within a secure gated community on Orihuela Costa.",
     "intro": "Las Colinas Golf & Country Club represents the pinnacle of integrated golf lifestyle communities on Spain's southern Costa Blanca. Far more than just a golf course, Las Colinas is a comprehensive residential resort combining championship golf, educational excellence, wellness facilities, and luxury properties in a securely gated environment.\n\nThis guide examines what makes Las Colinas distinctive: the course design, the residential offerings, the integrated amenities including international education, and the investment case for premium buyers seeking an all-in-one golf lifestyle community.",
@@ -176,7 +186,12 @@
             "builtArea": 155,
             "location": "Las Colinas Golf",
             "image": "https://fotos15.apinmo.com/7515/24361541/10-1.jpg",
-            "features": ["Private Pool", "Golf Views", "Modern Design", "Garage"],
+            "features": [
+              "Private Pool",
+              "Golf Views",
+              "Modern Design",
+              "Garage"
+            ],
             "status": "key-ready",
             "badge": "Near Golf"
           },
@@ -190,7 +205,12 @@
             "builtArea": 200,
             "location": "Las Colinas Golf",
             "image": "https://fotos15.apinmo.com/7515/20011159/9-1.jpg",
-            "features": ["Private Pool", "Frontline Golf", "Solarium", "Underbuilt"],
+            "features": [
+              "Private Pool",
+              "Frontline Golf",
+              "Solarium",
+              "Underbuilt"
+            ],
             "status": "key-ready",
             "badge": "Frontline Golf"
           },
@@ -204,7 +224,12 @@
             "builtArea": 120,
             "location": "Las Colinas Golf",
             "image": "https://fotos15.apinmo.com/7515/19432786/9-1.jpg",
-            "features": ["Communal Pool", "Golf View", "Terrace", "Parking"],
+            "features": [
+              "Communal Pool",
+              "Golf View",
+              "Terrace",
+              "Parking"
+            ],
             "status": "key-ready",
             "badge": "Golf Views"
           },
@@ -218,7 +243,12 @@
             "builtArea": 280,
             "location": "Las Colinas Golf",
             "image": "https://fotos15.apinmo.com/7515/13526381/24-1.jpg",
-            "features": ["Private Pool", "Golf Views", "Spa", "Smart Home"],
+            "features": [
+              "Private Pool",
+              "Golf Views",
+              "Spa",
+              "Smart Home"
+            ],
             "status": "key-ready",
             "badge": "Luxury"
           }

@@ -286,6 +286,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Moraira's weekly markets bring the community together with fresh produce, local crafts, and regional specialties. The vibrant Friday market is a highlight of social life, where residents and visitors browse offerings from local farmers and artisans.",
+      "markets": [
+        {
+          "name": "Moraira Friday Market",
+          "day": "Friday",
+          "time": "08:00 - 14:00",
+          "type": "Produce/General",
+          "distance": "In town centre",
+          "description": "Weekly community market with fresh local produce, fish, flowers, and regional specialties. A genuine Spanish market experience reflecting Moraira's sophisticated character.",
+          "googleMaps": "https://maps.google.com/?q=Moraira+Friday+Market"
+        },
+        {
+          "name": "Teulada Wednesday Market",
+          "day": "Wednesday",
+          "time": "08:00 - 14:00",
+          "type": "Produce/Clothing",
+          "distance": "8 km (10 minutes)",
+          "description": "Popular Wednesday market in nearby Teulada with fresh vegetables, fish, clothing, and household goods at excellent prices.",
+          "googleMaps": "https://maps.google.com/?q=Teulada+Wednesday+Market"
+        },
+        {
+          "name": "Javea Thursday Market",
+          "day": "Thursday",
+          "time": "08:00 - 14:00",
+          "type": "Produce/General",
+          "distance": "12 km (15 minutes)",
+          "description": "Thriving Thursday market in vibrant Javea featuring fresh local produce, artisan crafts, and regional delicacies.",
+          "googleMaps": "https://maps.google.com/?q=Javea+Thursday+Market"
+        }
+      ]
+    },
     "schools": {
       "intro": "Moraira itself has limited educational options, but nearby areas are well-served with prestigious international schools.",
       "schools": [

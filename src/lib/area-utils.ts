@@ -81,6 +81,11 @@ export interface AreaContent {
       intro: string;
       highlights: string[];
       nationalities: string[];
+      facebookGroups?: string[];
+      socialClubs?: string[];
+      language?: string;
+      population?: string;
+      integration?: string;
     };
     lifestyleTimeline?: {
       title: string;

@@ -9,8 +9,20 @@
   "featured": true,
   "author": "New Build Homes Costa Blanca",
   "image": "/images/blog/best-beaches-costa-blanca.webp",
-  "tags": ["beaches", "lifestyle", "costa-blanca", "family", "tourism"],
-  "relatedAreas": ["guardamar-del-segura", "cabo-roig", "la-zenia", "javea-xabia", "calpe"],
+  "tags": [
+    "beaches",
+    "lifestyle",
+    "costa-blanca",
+    "family",
+    "tourism"
+  ],
+  "relatedAreas": [
+    "cabo-roig",
+    "calpe",
+    "guardamar-del-segura",
+    "javea-xabia",
+    "la-zenia"
+  ],
   "content": {
     "quickAnswer": "Costa Blanca offers 200km of Mediterranean coastline with over 170 beaches. Best for families: Playa Flamenca and La Zenia (south), Arenal Javea and Levante Benidorm (north). Best for scenery: Granadella cove, Cala Capitán, Guardamar dunes. Most Blue Flag beaches of any Spanish coast. Water temperature reaches 26°C in summer.",
     "intro": "The Costa Blanca—White Coast—earns its name from the dazzling Mediterranean light that bathes 200 kilometers of shoreline. But within this expanse lies remarkable diversity: rocky coves where the water glows turquoise, long sandy stretches backed by dunes and pines, lively resort beaches with every facility, and hidden gems requiring a hike to discover.\n\nThis guide covers the best beaches for different purposes: family days, quiet escapes, snorkeling adventures, and waterfront property living. Whether you're visiting to explore or researching where to buy, understanding the coastline helps you find your perfect spot.",
@@ -76,7 +88,11 @@
             "builtArea": 75,
             "location": "Mil Palmeras",
             "image": "https://fotos15.apinmo.com/7515/20197743/2-1.jpg",
-            "features": ["Near Beach", "Communal Pool", "Modern"],
+            "features": [
+              "Near Beach",
+              "Communal Pool",
+              "Modern"
+            ],
             "status": "key-ready",
             "badge": "Beach Walking"
           },
@@ -90,7 +106,11 @@
             "builtArea": 64,
             "location": "Guardamar del Segura",
             "image": "https://fotos15.apinmo.com/7515/22029803/6-1.jpg",
-            "features": ["Laguna Views", "Communal Pool", "Spa"],
+            "features": [
+              "Laguna Views",
+              "Communal Pool",
+              "Spa"
+            ],
             "status": "key-ready",
             "badge": "Near Dunes"
           },
@@ -104,7 +124,11 @@
             "builtArea": 85,
             "location": "Guardamar",
             "image": "https://fotos15.apinmo.com/7515/18029874/3-1.jpg",
-            "features": ["3 Bedrooms", "Near Beach", "Pool"],
+            "features": [
+              "3 Bedrooms",
+              "Near Beach",
+              "Pool"
+            ],
             "status": "key-ready",
             "badge": "Family Home"
           },
@@ -118,7 +142,11 @@
             "builtArea": 120,
             "location": "Punta Prima",
             "image": "https://fotos15.apinmo.com/7515/18485041/13-1.jpg",
-            "features": ["Sea Views", "Roof Terrace", "Luxury Finish"],
+            "features": [
+              "Sea Views",
+              "Roof Terrace",
+              "Luxury Finish"
+            ],
             "status": "key-ready",
             "badge": "Sea Views"
           },
@@ -132,7 +160,11 @@
             "builtArea": 200,
             "location": "Campoamor",
             "image": "https://fotos15.apinmo.com/7515/16785944/17-1.jpg",
-            "features": ["4 Bedrooms", "Near Beach", "Premium"],
+            "features": [
+              "4 Bedrooms",
+              "Near Beach",
+              "Premium"
+            ],
             "status": "key-ready",
             "badge": "Coastal Luxury"
           }
@@ -157,7 +189,11 @@
             "builtArea": 189,
             "location": "Valle del Sol, Jávea",
             "image": "https://fotos15.apinmo.com/7515/27406650/9-1.jpg",
-            "features": ["Sea Views", "Private Pool", "Luxury"],
+            "features": [
+              "Sea Views",
+              "Private Pool",
+              "Luxury"
+            ],
             "status": "key-ready",
             "badge": "Costa Blanca North"
           },
@@ -171,7 +207,11 @@
             "builtArea": 82,
             "location": "Las Marinas, Denia",
             "image": "https://fotos15.apinmo.com/7515/22132687/10-1.jpg",
-            "features": ["Sea Views", "Penthouse", "Near Beach"],
+            "features": [
+              "Sea Views",
+              "Penthouse",
+              "Near Beach"
+            ],
             "status": "key-ready",
             "badge": "Coastal Views"
           },
@@ -185,7 +225,11 @@
             "builtArea": 90,
             "location": "Torrevieja",
             "image": "https://fotos15.apinmo.com/7515/15957049/2-1.jpg",
-            "features": ["3 Bedrooms", "Garden", "Communal Pool"],
+            "features": [
+              "3 Bedrooms",
+              "Garden",
+              "Communal Pool"
+            ],
             "status": "key-ready",
             "badge": "Beach Town"
           },
@@ -199,7 +243,11 @@
             "builtArea": 70,
             "location": "Campoamor",
             "image": "https://fotos15.apinmo.com/7515/23360522/7-1.jpg",
-            "features": ["Communal Pool", "Near Golf", "Sea Views"],
+            "features": [
+              "Communal Pool",
+              "Near Golf",
+              "Sea Views"
+            ],
             "status": "key-ready",
             "badge": "Coastal Living"
           }
