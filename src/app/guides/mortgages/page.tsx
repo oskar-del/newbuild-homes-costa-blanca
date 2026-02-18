@@ -449,6 +449,26 @@ export default function MortgagesPage() {
         </div>
       </article>
 
+      {/* Consultation CTA */}
+      <section className="py-16 bg-gradient-to-r from-accent-500 to-accent-600">
+        <div className="container mx-auto px-4 max-w-2xl">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="text-white text-center md:text-left">
+              <h3 className="text-xl font-semibold mb-1">Need Personal Advice?</h3>
+              <p className="text-accent-100">Book a free 30-minute consultation with our experienced property experts — 12+ years on the Costa Blanca</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link href="/consultation" className="inline-flex items-center justify-center gap-2 bg-white hover:bg-warm-50 text-accent-600 px-6 py-3 rounded-lg font-semibold transition-colors">
+                Book Consultation
+              </Link>
+              <a href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                WhatsApp Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lead Form */}
       <section className="py-16 bg-gradient-to-br from-primary-900 to-primary-800">
         <div className="container mx-auto px-4 max-w-2xl">

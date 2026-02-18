@@ -1926,6 +1926,45 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ============================================ */}
+      {/* CONSULTATION CTA SECTION */}
+      {/* ============================================ */}
+      <section className="bg-gradient-to-r from-primary-900 to-primary-800 py-14 md:py-18 text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-light mb-4 leading-tight">
+              Not Sure Where to Start?
+            </h2>
+            <p className="text-lg md:text-xl text-warm-200 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Book a Free 30-Minute Consultation with an experienced real estate agent with over 12 years of experience selling new builds in Costa Blanca. Get honest, personal advice — completely free, no obligation.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/consultation"
+                className="inline-flex items-center justify-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-medium px-8 py-3 rounded-sm transition-all duration-300 w-full sm:w-auto text-center"
+              >
+                Book Free Consultation
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <a
+                href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-success-500 hover:bg-success-600 text-white font-medium px-8 py-3 rounded-sm transition-all duration-300 w-full sm:w-auto text-center"
+              >
+                WhatsApp Us
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
     </>
   );

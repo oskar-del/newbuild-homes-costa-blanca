@@ -864,6 +864,26 @@ export default function OrihuelaCosta() {
         </div>
       </section>
 
+      {/* Consultation CTA */}
+      <section className="py-20 bg-gradient-to-r from-accent-500 to-accent-600">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-white text-center md:text-left">
+              <h3 className="text-2xl font-semibold mb-2">Need Personal Advice?</h3>
+              <p className="text-lg text-accent-100">Book a free 30-minute consultation with our experienced property experts — 12+ years on the Costa Blanca</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+              <Link href="/consultation" className="inline-flex items-center justify-center gap-2 bg-white hover:bg-warm-50 text-accent-600 px-8 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap">
+                Book Consultation
+              </Link>
+              <a href="https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap">
+                WhatsApp Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-primary-900 text-white border-t border-primary-900/10">
         <div className="container mx-auto px-4">

@@ -710,12 +710,17 @@ export default function AreaPageContent({
               <section className="bg-gradient-to-r from-accent-500 to-primary-800 rounded-sm p-8 text-white">
                 <p className="text-lg mb-6">{content.conclusion}</p>
                 <div className="flex flex-wrap gap-4">
+                  <Link href={`${langPrefix}/consultation`}
+                    className="inline-flex items-center gap-2 bg-white text-primary-900 hover:bg-warm-50 px-6 py-3 rounded-sm font-semibold transition-colors">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    Book Free Consultation
+                  </Link>
                   <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-3 rounded-sm font-medium transition-colors">
                     {s.whatsappUs}
                   </a>
                   <a href={`tel:${CONTACT.phone}`}
-                    className="inline-flex items-center gap-2 bg-white text-accent-500 hover:bg-gray-100 px-6 py-3 rounded-sm font-medium transition-colors">
+                    className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-sm font-medium transition-colors">
                     {CONTACT.phone}
                   </a>
                 </div>
@@ -789,6 +794,28 @@ export default function AreaPageContent({
                   budgetRange={`€${data.priceRange.min.toLocaleString()} - €${data.priceRange.max.toLocaleString()}`}
                   compact={true}
                 />
+              </div>
+
+              {/* Free Consultation CTA */}
+              <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-sm p-6 text-white">
+                <h3 className="font-bold text-lg mb-2">Free 30-Min Consultation</h3>
+                <p className="text-warm-200 text-sm mb-4">
+                  Speak with an experienced agent with 12+ years selling new builds on the Costa Blanca. Get honest, personal advice about {data.name} — no obligation.
+                </p>
+                <Link
+                  href={`${langPrefix}/consultation`}
+                  className="block w-full bg-accent-500 hover:bg-accent-600 text-white text-center py-3 rounded-sm font-semibold transition-colors mb-3"
+                >
+                  Book Free Consultation
+                </Link>
+                <a
+                  href={CONTACT.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full bg-[#25D366] hover:bg-[#20bd5a] text-white text-center py-3 rounded-sm font-medium transition-colors"
+                >
+                  Or WhatsApp Us
+                </a>
               </div>
 
               {/* Newsletter CTA for area updates */}
