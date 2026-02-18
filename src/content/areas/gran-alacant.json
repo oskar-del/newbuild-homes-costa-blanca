@@ -194,6 +194,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Gran Alacant and the surrounding area offer excellent market shopping experiences. From the organized Gran Alacant Saturday market to nearby Santa Pola and regional options, fresh produce and local goods are readily available.",
+      "markets": [
+        {
+          "name": "Gran Alacant Saturday Market",
+          "day": "Saturday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "Walking distance",
+          "description": "Local Saturday market with fresh produce, vegetables, fruit, household items, and local goods serving the Gran Alacant community",
+          "googleMaps": "https://maps.google.com/?q=Gran+Alacant+Saturday+Market"
+        },
+        {
+          "name": "Santa Pola Saturday Market",
+          "day": "Saturday",
+          "time": "08:00 - 13:00",
+          "type": "Street Market",
+          "distance": "5 km",
+          "description": "Established Saturday market in Santa Pola featuring fresh seafood, produce, flowers, and local products from nearby vendors",
+          "googleMaps": "https://maps.google.com/?q=Santa+Pola+Saturday+Market"
+        },
+        {
+          "name": "Elche Wednesday Market",
+          "day": "Wednesday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "35 km",
+          "description": "Large regional market in Elche with extensive selection of fresh produce, clothing, household goods, and regional specialties",
+          "googleMaps": "https://maps.google.com/?q=Elche+Wednesday+Market"
+        }
+      ]
+    },
     "schools": {
       "intro": "Families in Gran Alacant have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
       "schools": [

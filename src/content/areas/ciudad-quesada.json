@@ -355,6 +355,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Ciudad Quesada has a vibrant market culture with weekly shopping opportunities in the town and surrounding regions. From the local Thursday market to regional options, fresh produce and local goods are easily accessible.",
+      "markets": [
+        {
+          "name": "Ciudad Quesada Thursday Market",
+          "day": "Thursday",
+          "time": "08:00 - 13:00",
+          "type": "Street Market",
+          "distance": "Town center",
+          "description": "Weekly market in Ciudad Quesada town center with fresh produce, vegetables, household items, and local goods serving residents and visitors",
+          "googleMaps": "https://maps.google.com/?q=Ciudad+Quesada+Thursday+Market"
+        },
+        {
+          "name": "Rojales Sunday Market",
+          "day": "Sunday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "3 km",
+          "description": "Large regional market in Rojales featuring fresh produce, fish, flowers, clothing, crafts, and household items from local and regional vendors",
+          "googleMaps": "https://maps.google.com/?q=Rojales+Sunday+Market"
+        },
+        {
+          "name": "Guardamar Wednesday Market",
+          "day": "Wednesday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "10 km",
+          "description": "Established market in Guardamar with fresh seafood, produce, flowers, and local specialties, backed by natural pine-forested beaches",
+          "googleMaps": "https://maps.google.com/?q=Guardamar+Wednesday+Market"
+        }
+      ]
+    },
     "schools": {
       "intro": "Ciudad Quesada has Spanish public schools and nearby international options, making it suitable for families. The established community provides good information on educational choices.",
       "schools": [

@@ -282,6 +282,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Punta Prima enjoys excellent market access with options in both nearby Torrevieja and across Orihuela Costa. From the famous Torrevieja Friday market to coastal options, shopping is convenient.",
+      "markets": [
+        {
+          "name": "La Zenia Boulevard Market",
+          "day": "Sunday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "10 km",
+          "description": "Popular Sunday market at La Zenia Boulevard with fresh produce, flowers, clothing, and household goods alongside the shopping center",
+          "googleMaps": "https://maps.google.com/?q=La+Zenia+Boulevard+Market"
+        },
+        {
+          "name": "Orihuela Saturday Market",
+          "day": "Saturday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "22 km",
+          "description": "Extensive market in Orihuela town center with hundreds of stalls selling fresh produce, fish, clothing, crafts, and local specialties",
+          "googleMaps": "https://maps.google.com/?q=Orihuela+Saturday+Market"
+        },
+        {
+          "name": "Torrevieja Friday Market",
+          "day": "Friday",
+          "time": "08:00 - 14:00",
+          "type": "General/Produce/Clothing",
+          "distance": "5 km",
+          "description": "One of Spain's largest street markets stretching over 2 km with hundreds of stalls selling fresh produce, fish, clothing, household goods, and crafts",
+          "googleMaps": "https://maps.google.com/?q=Torrevieja+Friday+Market"
+        }
+      ]
+    },
     "schools": {
       "intro": "Punta Prima has good access to international schools in nearby Torrevieja and Orihuela Costa, plus Spanish public school options.",
       "schools": [

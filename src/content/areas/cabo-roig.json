@@ -313,6 +313,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Cabo Roig and surrounding areas offer excellent market shopping experiences. The famous Cabo Roig Saturday market is legendary on the Costa Blanca, complemented by markets in nearby La Zenia and Orihuela.",
+      "markets": [
+        {
+          "name": "Cabo Roig Strip Market",
+          "day": "Wednesday, Saturday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "Town center",
+          "description": "Famous Cabo Roig market running twice weekly with hundreds of stalls selling fresh produce, fish, flowers, clothing, crafts, and treasures. One of Costa Blanca's best markets",
+          "googleMaps": "https://maps.google.com/?q=Cabo+Roig+Strip+Market"
+        },
+        {
+          "name": "La Zenia Boulevard Market",
+          "day": "Sunday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "2 km",
+          "description": "Popular Sunday market at La Zenia Boulevard with fresh produce, flowers, clothing, and household goods",
+          "googleMaps": "https://maps.google.com/?q=La+Zenia+Boulevard+Market"
+        },
+        {
+          "name": "Orihuela Saturday Market",
+          "day": "Saturday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "12 km",
+          "description": "Extensive market in Orihuela town center with hundreds of stalls selling fresh produce, fish, clothing, crafts, and local specialties",
+          "googleMaps": "https://maps.google.com/?q=Orihuela+Saturday+Market"
+        }
+      ]
+    },
     "schools": {
       "intro": "Cabo Roig itself has limited school options, with most families using nearby Orihuela Costa schools or international alternatives in La Zenia and Torrevieja.",
       "schools": [

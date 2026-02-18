@@ -310,6 +310,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Campoamor benefits from excellent market access in the surrounding Orihuela Costa area. From the famous markets at nearby Cabo Roig to fresh produce options at Zoco Campoamor, shopping options are diverse.",
+      "markets": [
+        {
+          "name": "Zoco Market Campoamor",
+          "day": "Sunday",
+          "time": "09:00 - 14:00",
+          "type": "Artisan/Craft Market",
+          "distance": "Walking distance",
+          "description": "Artisan and craft market in Campoamor featuring local crafts, handmade goods, and unique items from local vendors",
+          "googleMaps": "https://maps.google.com/?q=Zoco+Market+Campoamor"
+        },
+        {
+          "name": "Orihuela Saturday Market",
+          "day": "Saturday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "18 km",
+          "description": "Extensive market in Orihuela town center with hundreds of stalls selling fresh produce, fish, clothing, crafts, and local specialties",
+          "googleMaps": "https://maps.google.com/?q=Orihuela+Saturday+Market"
+        },
+        {
+          "name": "Cabo Roig Strip Market",
+          "day": "Wednesday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "8 km",
+          "description": "Famous Cabo Roig market with hundreds of stalls selling fresh produce, fish, flowers, clothing, crafts, and household items",
+          "googleMaps": "https://maps.google.com/?q=Cabo+Roig+Strip+Market"
+        }
+      ]
+    },
     "schools": {
       "intro": "Campoamor relies on nearby international school options in La Zenia and Orihuela Costa, with Spanish public schools available in surrounding areas.",
       "schools": [

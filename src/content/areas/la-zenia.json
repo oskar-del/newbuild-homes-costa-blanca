@@ -316,6 +316,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "La Zenia and surrounding Orihuela Costa host excellent markets showcasing fresh produce, local crafts, and Mediterranean goods. From the famous La Zenia Boulevard Sunday market to Orihuela's Saturday market, there's always fresh options nearby.",
+      "markets": [
+        {
+          "name": "La Zenia Boulevard Market",
+          "day": "Sunday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "1 km",
+          "description": "Popular Sunday market at La Zenia Boulevard with fresh produce, flowers, clothing, and household goods alongside the shopping center",
+          "googleMaps": "https://maps.google.com/?q=La+Zenia+Boulevard+Market"
+        },
+        {
+          "name": "Orihuela Saturday Market",
+          "day": "Saturday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "15 km",
+          "description": "Extensive Saturday market in Orihuela town center with hundreds of stalls selling fresh produce, fish, clothing, crafts, and local specialties",
+          "googleMaps": "https://maps.google.com/?q=Orihuela+Saturday+Market"
+        },
+        {
+          "name": "Zoco Market Campoamor",
+          "day": "Sunday",
+          "time": "09:00 - 14:00",
+          "type": "Artisan/Craft Market",
+          "distance": "8 km",
+          "description": "Artisan and craft market in Campoamor featuring local crafts, handmade goods, and unique items from local vendors",
+          "googleMaps": "https://maps.google.com/?q=Zoco+Market+Campoamor"
+        }
+      ]
+    },
     "schools": {
       "intro": "La Zenia benefits from excellent schooling options serving the large family-oriented expatriate community, from international schools to Spanish education.",
       "schools": [
