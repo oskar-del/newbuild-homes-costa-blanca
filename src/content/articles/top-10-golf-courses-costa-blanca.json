@@ -9,8 +9,27 @@
   "featured": false,
   "author": "New Build Homes Costa Blanca",
   "image": "",
-  "tags": ["golf", "costa-blanca", "lifestyle", "las-colinas", "villamartin", "campoamor", "la-finca", "javea", "property", "real-estate"],
-  "relatedAreas": ["orihuela-costa", "algorfa", "javea", "finestrat", "torrevieja", "denia", "benidorm"],
+  "tags": [
+    "golf",
+    "costa-blanca",
+    "lifestyle",
+    "las-colinas",
+    "villamartin",
+    "campoamor",
+    "la-finca",
+    "javea",
+    "property",
+    "real-estate"
+  ],
+  "relatedAreas": [
+    "orihuela-costa",
+    "algorfa",
+    "javea",
+    "finestrat",
+    "torrevieja",
+    "denia",
+    "benidorm"
+  ],
   "content": {
     "quickAnswer": "The top 10 golf courses on Costa Blanca include Las Colinas Golf (South), La Sella Golf (North), Villamartín Golf (South), Campoamor Golf (South), La Finca Golf (South), Las Ramblas Golf (South), Lo Romero Golf (South), Vistabella Golf (South), Jávea Golf (North), and Bonalba Golf. These courses offer championship designs, excellent condition, and many feature residential properties on-site or nearby.",
     "intro": "Costa Blanca is one of Europe's premier golfing destinations, with 26 courses spread across 120 kilometers of Mediterranean coastline. Whether you're a low handicapper seeking championship challenges or a leisure golfer enjoying year-round sunshine, Costa Blanca delivers exceptional courses designed by world-renowned architects. This guide presents the definitive ranking of the top 10 golf courses, combining course quality, design prestige, condition, facilities, and property development potential. Many buyers are increasingly interested in golf-integrated properties, making these courses essential considerations when purchasing a second home or investment property on the Costa Blanca.",
@@ -25,11 +44,15 @@
         "designer": "Cabell B. Robinson",
         "greenFees": "€55-€85 (varies by season)",
         "yearOpened": 1989,
-        "courseRating": 72.0,
+        "courseRating": 72,
         "slope": 135,
         "description": "Las Colinas Golf & Country Club is consistently ranked as the premier course on Costa Blanca and has hosted numerous international tournaments. Designed by American landscape architect Cabell B. Robinson, this par 71 championship course features impeccable conditioning and strategic bunkering that tests golfers of all abilities. The course is complemented by a short game area designed by Miguel Ángel Jiménez, an academy, driving range, and practice facilities. The surrounding Las Colinas resort offers five-star accommodation, spa facilities, tennis courts, and fine dining. The course presents an exceptional microclimate protected by surrounding terrain, enabling year-round play in premium conditions.",
         "whatsSpecial": "Championship course hosting international tournaments; 18-hole par 71 layout by a world-renowned designer; Exceptional year-round condition; Full resort amenities including five-star hotel and spa; Short game academy designed by tour professional",
-        "nearbyDevelopments": ["Las Colinas Resort", "Dehesa de Campoamor", "Campoamor Golf"],
+        "nearbyDevelopments": [
+          "Las Colinas Resort",
+          "Dehesa de Campoamor",
+          "Campoamor Golf"
+        ],
         "onCourseProperty": true,
         "propertyNote": "Las Colinas Resort offers luxury villa and townhouse options with direct golf course access and membership included.",
         "internalLink": "See our [Las Colinas Golf guide](/golf/las-colinas-golf) for comprehensive property options and investment opportunities."
@@ -44,11 +67,15 @@
         "designer": "José María Olazábal",
         "greenFees": "€60-€85 (varies by course selection)",
         "yearOpened": 1994,
-        "courseRating": 74.0,
+        "courseRating": 74,
         "slope": 137,
         "description": "La Sella Golf Resort is the largest golf facility on Costa Blanca, featuring three distinct nine-hole courses designed by double Masters champion José María Olazábal. Located between Denia and Jávea next to the Montgó Natural Park, the courses offer spectacular sea views and mountain scenery. The three nine-hole sections (South, East, and North) can be combined in various ways to provide different playing experiences, with the most popular configuration yielding par 72. The facility is environmentally certified (ISO 9001 Quality, ISO 14001 Environmental) and includes a full resort hotel, restaurant, golf academy, and comprehensive practice facilities. The courses are particularly impressive for their routing through pine forests with water features on the East nine.",
         "whatsSpecial": "27-hole complex designed by Masters champion; Three distinct nine-hole courses with varied challenges; Spectacular mountain and sea views; Environmental management certification; Integrated resort with hotel and dining; Dramatic natural setting with protected pine forests",
-        "nearbyDevelopments": ["La Sella Golf Resort", "Denia", "Jávea"],
+        "nearbyDevelopments": [
+          "La Sella Golf Resort",
+          "Denia",
+          "Jávea"
+        ],
         "onCourseProperty": true,
         "propertyNote": "La Sella Golf Resort includes villas and apartments within the resort complex with optional golf membership packages.",
         "internalLink": "See our [La Sella Golf guide](/golf/la-sella-golf) for residential options and golf membership details."
@@ -67,7 +94,11 @@
         "slope": 132,
         "description": "Villamartín Golf Club is one of the most established and respected courses on Costa Blanca, having hosted numerous PGA tournaments since its inauguration in 1972. Paul Putman's design cleverly takes advantage of the natural terrain, with tree-lined fairways (predominantly Bermuda grass) and strategic bunkering. The course has hosted legendary golfers including Severiano Ballesteros, José María Olazábal, and Ian Woosnam. Villamartín consistently delivers excellent condition at competitive green fees, making it an outstanding value proposition. The clubhouse terrace is renowned for its welcoming atmosphere and Mediterranean cuisine. The course is within walking distance to the Costa Blanca beaches and close to both Alicante and Murcia airports.",
         "whatsSpecial": "Iconic course hosting major PGA tournaments; Bermuda grass fairways and Penncross greens; Tree-lined fairways with strategic bunker placement; Legendary players' venue; Outstanding value green fees; Established since 1972 with proven maintenance standards",
-        "nearbyDevelopments": ["Villamartín", "Orihuela Costa", "Torrevieja"],
+        "nearbyDevelopments": [
+          "Villamartín",
+          "Orihuela Costa",
+          "Torrevieja"
+        ],
         "onCourseProperty": true,
         "propertyNote": "Properties available within the Villamartín golf community and surrounding residential areas with course access.",
         "internalLink": "See our [Villamartín Golf guide](/golf/villamartin-golf) for available properties and membership options."
@@ -86,7 +117,11 @@
         "slope": 133,
         "description": "Real Club de Golf Campoamor was inaugurated in 1988 by HRH Juan de Borbón, Count of Barcelona, establishing its prestige as one of Costa Blanca's most exclusive courses. The 18-hole par 72 course measures 6,277 metres and is strategically positioned between two interconnected valleys surrounded by gentle rolling hills that create a natural windbreak and microclimate. Wide fairways, elevated tees, and fast greens provide enjoyment for all skill levels. The course features comprehensive facilities including driving range, two putting greens, club hire, electric buggy fleet, locker facilities, and professional coaching services. Handicap limits are 28 for men and 36 for women.",
         "whatsSpecial": "Royal inauguration by Spanish nobility; Strategic valley positioning for protected microclimate; Wide fairways and elevated tees; Fast, championship-condition greens; Complete facilities including electric buggies; Exclusive membership structure",
-        "nearbyDevelopments": ["Lomas de Campoamor", "Dehesa de Campoamor", "Orihuela Costa"],
+        "nearbyDevelopments": [
+          "Lomas de Campoamor",
+          "Dehesa de Campoamor",
+          "Orihuela Costa"
+        ],
         "onCourseProperty": true,
         "propertyNote": "Luxury properties available in the Lomas de Campoamor residential community adjacent to the course.",
         "internalLink": "See our [Campoamor Golf guide](/golf/campoamor-golf) for premium property options and membership information."
@@ -105,7 +140,11 @@
         "slope": 130,
         "description": "La Finca Golf Resort is a comprehensive golf complex featuring two distinctive 18-hole courses designed by renowned Spanish architect Pepe Gancedo. The courses are famous for their unique and dramatic greens—the 7th hole features a square-shaped green resembling English bowls, while the 14th hole presents a circular deep green reminiscent of a Chinese wok. Both courses feature wide, generous fairways suitable for all handicaps while maintaining championship challenge through spectacular green complexes. The resort includes a five-star hotel with spa, tennis courts, paddle tennis, gymnasium, restaurant, and extensive practice facilities. Located 15 minutes from Torrevieja and Guardamar beaches, the courses offer spectacular views and are in immaculate condition year-round.",
         "whatsSpecial": "Dual 18-hole championship courses; Uniquely designed green complexes with artistic flair; Wide fairways suitable for all skill levels; Five-star integrated resort; Comprehensive spa and wellness facilities; Spectacular Mediterranean views",
-        "nearbyDevelopments": ["La Finca Resort", "Algorfa", "Torrevieja"],
+        "nearbyDevelopments": [
+          "La Finca Resort",
+          "Algorfa",
+          "Torrevieja"
+        ],
         "onCourseProperty": true,
         "propertyNote": "La Finca Resort offers villa and apartment options within the resort complex with golf and spa membership packages available.",
         "internalLink": "See our [La Finca Golf guide](/golf/la-finca-golf) for property options and resort membership details."
@@ -120,11 +159,15 @@
         "designer": "Pepe Gancedo",
         "greenFees": "€45-€70",
         "yearOpened": 1991,
-        "courseRating": 72.0,
+        "courseRating": 72,
         "slope": 130,
         "description": "Las Ramblas Golf opened in May 1991 and has become a reference course on Costa Blanca under the design excellence of Pepe Gancedo. Masterfully routed through Mediterranean pine groves and natural wadis, the course combines natural terrain challenges with strategic bunkering. While not exceptionally long, the rugged landscape, wide fast-sloping greens, and tree-lined layout create significant challenge despite moderate yardage. The course is GEO Certified for environmental sustainability practices. The modern clubhouse provides excellent amenities including restaurant, pro shop, and comprehensive practice facilities. A fleet of 60 buggies, 14 premium Callaway club sets, and professional trolleys are available for hire. The course is accessible to both members and daily fee players.",
         "whatsSpecial": "Pepe Gancedo design mastery; Natural terrain integration with wadis and pine groves; GEO Environmental Certification; Wide, fast greens providing excellent playability; 60-buggy modern fleet; Balanced challenge despite moderate length",
-        "nearbyDevelopments": ["Dehesa de Campoamor", "Las Colinas", "Campoamor"],
+        "nearbyDevelopments": [
+          "Dehesa de Campoamor",
+          "Las Colinas",
+          "Campoamor"
+        ],
         "onCourseProperty": false,
         "propertyNote": "Adjacent properties available in the Dehesa de Campoamor development with direct course access.",
         "internalLink": "See our [Las Ramblas Golf guide](/golf/las-ramblas-golf) for nearby residential options and membership information."
@@ -143,7 +186,10 @@
         "slope": 131,
         "description": "Lo Romero Golf Club opened in 2008 and has earned the nickname 'Golf Island' due to its spectacular 18th hole—an island green surrounded by water that mirrors the famous 17th hole at TPC Sawgrass. Designed by Jorge Gallen and Enric Soler, the par 72 course measures 6,628 yards and was carved from a former citrus grove. The wide fairways, fair layout, and elevated position (10km from beaches) provide year-round playability with an average annual temperature of 18 degrees Celsius. The signature island green finishing hole is particularly memorable. Located near both Alicante and San Javier airports via the AP7 motorway, Lo Romero offers excellent value and accessibility. The facility includes a pro shop, driving range, chipping area, putting green, and practice bunkers—no membership required.",
         "whatsSpecial": "Iconic island green 18th hole (TPC Sawgrass signature); Modern design with former citrus grove conversion; Fair, wide fairway layout; Elevated position away from coastal summer heat; Island green finishing hole spectacular views; No membership requirement",
-        "nearbyDevelopments": ["Pilar de la Horadada", "Costa Cálida properties"],
+        "nearbyDevelopments": [
+          "Pilar de la Horadada",
+          "Costa Cálida properties"
+        ],
         "onCourseProperty": false,
         "propertyNote": "Properties available nearby in Pilar de la Horadada with convenient golf access.",
         "internalLink": "See our [Lo Romero Golf guide](/golf/lo-romero-golf) for nearby property options and course amenities."
@@ -162,7 +208,11 @@
         "slope": 129,
         "description": "Vistabella Golf Club is located 12km inland from Mediterranean beaches between Jacarilla and Orihuela, covering over 40 hectares of native Mediterranean trees and flora. Designed by prestigious golfer Manuel Piñero, who brings 30+ years of tournament experience to course design, the par 72 course was fashioned from a former citrus grove. The signature hole is the uphill par-4 8th hole with a generous fairway and elevated green beneath the clubhouse. Three majestic pines form the club's iconic logo, visible from most course locations. The course is suitable for all skill levels while maintaining championship challenge. The facility features 23 floodlit practice bays, putting green, bunker practice area, pro shop, restaurant, and coaching academy. Excellent Mediterranean climate enables year-round golf.",
         "whatsSpecial": "Designed by tour professional Manuel Piñero; 23 floodlit practice bays; Signature uphill 8th hole under clubhouse; Mediterranean natural setting; Converted citrus grove development; Three iconic pines throughout course",
-        "nearbyDevelopments": ["Jacarilla", "Orihuela", "Interior Costa Blanca properties"],
+        "nearbyDevelopments": [
+          "Jacarilla",
+          "Orihuela",
+          "Interior Costa Blanca properties"
+        ],
         "onCourseProperty": false,
         "propertyNote": "Nearby properties in Jacarilla and Orihuela offer convenient access to the course with more affordable inland pricing.",
         "internalLink": "See our [Vistabella Golf guide](/golf/vistabella-golf) for inland property options and investment opportunities."
@@ -181,7 +231,10 @@
         "slope": 127,
         "description": "Jávea Golf Club is a gently sloping nine-hole course opened in 1981 and designed by Francisco Moreno. Located 90km from Alicante toward Valencia, the course is sheltered from Mediterranean winds by Cape San Antonio, creating a perfect microclimate for year-round golf. The course features well-maintained Bermuda greens and fairways flanked by palm, pine, and orange trees. Although modest in length, the course presents significant challenge through 34 strategically placed bunkers protecting nearly all greens with subtle contours and reading difficulty. The playing experience is enhanced through design of different tees for the second nine, creating a virtually 18-hole configuration. Facilities include practice green, driving range, two tennis courts, Olympic-size swimming pool, clubhouse with restaurant and bar, TV room, card room, changing facilities, and caddie services.",
         "whatsSpecial": "Historic nine-hole course with 40+ years of tradition; 34 bunkers creating technical challenge; Perfect microclimate protected by Cape San Antonio; Different tees for second nine creating 18-hole equivalent; Wide fairways with bunker-protected greens; Excellent recreational facilities",
-        "nearbyDevelopments": ["Jávea", "North Costa Blanca resort areas"],
+        "nearbyDevelopments": [
+          "Jávea",
+          "North Costa Blanca resort areas"
+        ],
         "onCourseProperty": false,
         "propertyNote": "Residential options available throughout Jávea including beachfront and inland properties with convenient course access.",
         "internalLink": "See our [Jávea Golf guide](/golf/javea-golf) for North Costa Blanca property options and lifestyle opportunities."
@@ -200,13 +253,17 @@
         "slope": 128,
         "description": "Bonalba Golf & Spa Club is located in Mutxamel, just 2km from San Juan Beach and 2km from Alicante city, providing urban convenience with championship golf. Designed by Ramón Espinosa and opened in 1995, the par 72 parkland course measures 6,096 metres with an ambiance of tranquility. The course features diverse trees, five lakes, fountains, and strategic bunkers. The front nine (holes 1-9) emphasizes technical short-game skills, while the back nine (especially holes 12-18) demands accurate driving for fairway positioning. The facility includes the acclaimed Bonalba Restaurant featuring Mediterranean cuisine and course views, practice putting green, driving range, buggy and trolley hire. The course is within minutes of Alicante airport, making it ideal for travelers. Excellent Mediterranean climate with 18-degree average annual temperature.",
         "whatsSpecial": "Urban location near Alicante city center; Five lakes and water features throughout; Quality restaurant with Mediterranean chef; Technical front nine and driver-demanding back nine; Close to Alicante airport; Diverse parkland setting",
-        "nearbyDevelopments": ["Alicante city", "Mutxamel", "San Juan Beach"],
+        "nearbyDevelopments": [
+          "Alicante city",
+          "Mutxamel",
+          "San Juan Beach"
+        ],
         "onCourseProperty": false,
         "propertyNote": "Urban and beachfront properties available in Alicante and Mutxamel with convenient Bonalba Golf access.",
         "internalLink": "See our [Bonalba Golf guide](/golf/bonalba-golf) for Alicante property options and urban golf living."
       }
     ],
-    "conclusion": "Costa Blanca's top 10 golf courses represent the finest golfing experiences in Southern Spain, with courses designed by world-renowned architects and maintained to championship standards year-round. The diversity is remarkable—from the exclusive resort experience at Las Colinas and La Finca to the historic championship heritage of Villamartín, and from the dramatic natural setting of La Sella in the North to the island green signature holes of Lo Romero. Property buyers increasingly recognize the value of golf-integrated communities, where course proximity enhances both lifestyle quality and investment potential. Whether you're seeking a primary residence, second home, or investment property, Costa Blanca's top-ranked courses provide access to some of Europe's most prestigious golfing communities. Many of these courses feature integrated residential developments with on-course villas and apartments, often including membership packages. The year-round Mediterranean climate (average 18 degrees Celsius) ensures consistent playability, while the relatively affordable green fees compared to northern European courses make regular play economically feasible. For property buyers and golfers alike, Costa Blanca remains unmatched as a golfing destination combining world-class courses with Mediterranean lifestyle and property investment opportunity.",
+    "conclusion": "Costa Blanca's top 10 golf courses represent the finest golfing experiences in Southern Spain, with courses designed by world-renowned architects and maintained to championship standards year-round. The diversity is remarkable—from the exclusive resort experience at Las Colinas and La Finca to the historic championship heritage of Villamartín, and from the dramatic natural setting of La Sella in the North to the island green signature holes of Lo Romero. Property buyers increasingly recognize the value of golf-integrated communities, where course proximity enhances both lifestyle quality and investment potential. Whether you're seeking a primary residence, second home, or investment property, Costa Blanca's top-ranked courses provide access to some of Europe's most prestigious golfing communities. Many of these courses feature integrated residential developments with on-course villas and apartments, often including membership packages. The year-round Mediterranean climate (average 18 degrees Celsius) ensures consistent playability, while the relatively affordable green fees compared to northern European courses make regular play economically feasible. For property buyers and golfers alike, Costa Blanca remains unmatched as a golfing destination combining world-class courses with Mediterranean lifestyle and property investment opportunity.\n\nThinking of making the move to Costa Blanca? Book a free 30-minute consultation with our experienced agents — 12+ years helping buyers find their perfect new build home in Spain.",
     "faqs": [
       {
         "question": "What are the best golf courses on Costa Blanca for beginners?",
