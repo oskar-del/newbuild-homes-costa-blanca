@@ -1,10 +1,9 @@
-import { redirect } from 'next/navigation';
+import { createTranslatedMetadataGenerator, createTranslatedPropertyPage } from '@/lib/translated-property-page';
 
-export default async function LocalizedPropertyPage({
-  params,
-}: {
-  params: Promise<{ reference: string }>;
-}) {
-  const { reference } = await params;
-  redirect(`/properties/${reference}`);
-}
+export const revalidate = 3600;
+export const dynamicParams = true;
+
+const LANG = 'nl-be';
+
+export const generateMetadata = createTranslatedMetadataGenerator(LANG);
+export default createTranslatedPropertyPage(LANG);

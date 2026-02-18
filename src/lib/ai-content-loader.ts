@@ -176,6 +176,45 @@ export function loadAIContent(reference: string): AIGeneratedContent | null {
 }
 
 /**
+ * Load AI-generated content for a property in a specific language.
+ * Falls back to English if no translated version exists.
+ */
+export function loadTranslatedAIContent(reference: string, lang: string): AIGeneratedContent | null {
+  if (!lang || lang === 'en') return loadAIContent(reference);
+
+  const slugVariants = [
+    reference.toLowerCase(),
+    reference.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+    reference.toLowerCase().replace(/_/g, '-'),
+  ];
+
+  const langDir = path.join(DEVELOPMENTS_DIR, lang);
+  if (fs.existsSync(langDir)) {
+    for (const slug of slugVariants) {
+      const filePath = path.join(langDir, `${slug}.json`);
+      if (fs.existsSync(filePath)) {
+        try {
+          const rawContent = fs.readFileSync(filePath, 'utf-8');
+          const parsed = JSON.parse(rawContent);
+          // Translated content uses the same format as English
+          if (parsed.content && parsed.metaTitle) {
+            return parsed as AIGeneratedContent;
+          }
+          if (parsed.heroIntro && parsed.metaTitle) {
+            return normalizeFlatContent(parsed, slug);
+          }
+        } catch (error) {
+          console.error(`❌ Error loading ${lang} AI content for ${reference}:`, error);
+        }
+      }
+    }
+  }
+
+  // Fall back to English
+  return loadAIContent(reference);
+}
+
+/**
  * Check if AI content exists for a property
  */
 export function hasAIContent(reference: string): boolean {

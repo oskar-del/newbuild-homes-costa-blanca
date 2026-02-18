@@ -20,7 +20,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getPropertyByRef, fetchXMLFeed, toUnifiedFormat } from '@/lib/xml-parser';
 import { generatePropertyContent, PropertyContent, generateRentalIncomeEstimate } from '@/lib/property-content-generator';
-import { loadAIContent, convertAIToPropertyContent } from '@/lib/ai-content-loader';
+import { loadAIContent, loadTranslatedAIContent, convertAIToPropertyContent } from '@/lib/ai-content-loader';
 import { developments, developers } from '@/data/developments';
 import { getVideoForProperty, getVideosForDevelopment, VideoCard } from '@/lib/video-mapping';
 import fs from 'fs';
