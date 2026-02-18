@@ -67,7 +67,11 @@ export interface AreaContent {
     };
     schools?: {
       intro: string;
-      schools: { name: string; type: string; distance: string; description: string }[];
+      schools: { name: string; type: string; distance: string; description: string; curriculum?: string; fees?: string; ages?: string; url?: string; location?: string; note?: string }[];
+    };
+    markets?: {
+      intro: string;
+      markets: { name: string; day: string; time: string; type?: string; distance?: string; description: string; googleMaps?: string }[];
     };
     natureActivities?: {
       intro: string;
@@ -151,6 +155,7 @@ export function normalizeAreaContent(rawData: any, slug: string): AreaContent {
     if (rawData.content?.natureActivities) normalized.content.natureActivities = rawData.content.natureActivities;
     if (rawData.content?.expatCommunity) normalized.content.expatCommunity = rawData.content.expatCommunity;
     if (rawData.content?.lifestyleTimeline) normalized.content.lifestyleTimeline = rawData.content.lifestyleTimeline;
+    if (rawData.content?.markets) normalized.content.markets = rawData.content.markets;
     if (rawData.content?.mapEmbed) normalized.content.mapEmbed = rawData.content.mapEmbed;
     return normalized;
   }
