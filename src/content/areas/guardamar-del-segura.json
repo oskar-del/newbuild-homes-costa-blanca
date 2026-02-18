@@ -358,6 +358,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Guardamar's markets offer authentic Spanish shopping experiences with fresh produce, local goods, and traditional market culture. The weekly Wednesday market in the town center is legendary, while the Sunday flea market at El Raso offers bargains and unique finds. Both markets are essential parts of Guardamar's social fabric.",
+      "markets": [
+        {
+          "name": "Guardamar Wednesday Market",
+          "day": "Wednesday",
+          "time": "8am - 1pm",
+          "type": "Fresh Produce/General",
+          "distance": "Town center",
+          "description": "Large traditional market in the heart of Guardamar with fresh produce, fish, clothing, and household items. A genuine Spanish market experience with excellent quality produce and friendly vendors.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Miercoles+Guardamar"
+        },
+        {
+          "name": "Guardamar Sunday Flea Market",
+          "day": "Sunday",
+          "time": "8am - 2pm",
+          "type": "Flea Market/Antiques",
+          "distance": "El Raso urbanization",
+          "description": "Popular flea market in the El Raso area offering second-hand goods, antiques, furniture, and local finds. Great for bargain hunters seeking treasures and unique items.",
+          "googleMaps": "https://maps.google.com/?q=Mercadillo+El+Raso+Guardamar"
+        },
+        {
+          "name": "La Mata Saturday Market",
+          "day": "Saturday",
+          "time": "9am - 1pm",
+          "type": "General/Produce",
+          "distance": "La Mata (5 km)",
+          "description": "Traditional market in the nearby La Mata area serving the northern part of the Costa Blanca South region. Fresh produce, clothing, and household goods with a local atmosphere.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Sabado+La+Mata"
+        }
+      ]
+    },
     "schools": {
       "intro": "Guardamar serves families with access to Spanish state schools and nearby international institutions, with a good selection for both permanent and temporary residents.",
       "schools": [

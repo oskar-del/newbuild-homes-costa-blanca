@@ -233,6 +233,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Jávea's markets combine traditional Spanish market culture with the sophistication expected in this upscale Costa Blanca North destination. The covered market in the old town is the heart of daily shopping, while the nearby port area offers fresh seafood and local specialties. The Thursday market brings the broader region's produce and goods to residents.",
+      "markets": [
+        {
+          "name": "Jávea Thursday Market",
+          "day": "Thursday",
+          "time": "8am - 2pm",
+          "type": "General/Fresh Produce",
+          "distance": "Near Arenal beach area",
+          "description": "Weekly traditional market offering fresh produce, fish, seafood, clothing, and household goods. A quality market serving Jávea's residents with excellent produce and friendly vendors.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Jueves+Javea+Arenal"
+        },
+        {
+          "name": "Jávea Covered Market (Mercado Hall)",
+          "day": "Daily",
+          "time": "8am - 2pm",
+          "type": "Fresh Produce/Fish/Meat",
+          "distance": "Old town center",
+          "description": "Traditional covered market hall in the old town offering fresh local produce, fish, seafood, meat, and specialty items. A charming shopping experience reflecting authentic Spanish market culture.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Cubierto+Javea+Xabia"
+        },
+        {
+          "name": "Dénia Monday Market",
+          "day": "Monday",
+          "time": "8am - 2pm",
+          "type": "General/Flea/Antiques",
+          "distance": "Dénia (15 km)",
+          "description": "Large traditional market in nearby Dénia offering fresh produce, clothing, household goods, and flea market items. Excellent for those seeking wider variety and quality produce from the region.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Lunes+Denia"
+        }
+      ]
+    },
     "schools": {
       "intro": "Jávea has several international school options alongside quality Spanish public schools, making it suitable for families. The sophisticated community supports educational excellence.",
       "schools": [

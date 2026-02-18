@@ -344,6 +344,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Villamartin and the surrounding Orihuela Costa area offer excellent market opportunities with regular traditional Spanish markets. The Wednesday market at Villamartin Plaza is the heart of weekly shopping for residents, while nearby Orihuela town offers one of the region's largest Saturday markets.",
+      "markets": [
+        {
+          "name": "Villamartin Wednesday Market",
+          "day": "Wednesday",
+          "time": "8am - 1:30pm",
+          "type": "Fresh Produce/General",
+          "distance": "Villamartin Plaza (Walking distance)",
+          "description": "Weekly market at the famous Villamartin Plaza with fresh produce, local goods, clothing, and crafts. Social gathering point for residents with excellent quality produce and friendly vendors.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Miercoles+Villamartin+Plaza"
+        },
+        {
+          "name": "Orihuela Saturday Market",
+          "day": "Saturday",
+          "time": "8am - 2pm",
+          "type": "General/Produce/Flea",
+          "distance": "Orihuela city (12 km)",
+          "description": "One of the region's largest traditional markets in the historic city of Orihuela. Hundreds of stalls offering fresh produce, fish, clothing, household goods, and a genuine Spanish market experience.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Sabado+Orihuela+ciudad"
+        },
+        {
+          "name": "Zoco Market (La Zenia)",
+          "day": "Sunday",
+          "time": "9am - 2pm",
+          "type": "Flea Market/Antiques",
+          "distance": "Near La Zenia Boulevard (5 km)",
+          "description": "Popular flea and antique market near La Zenia Boulevard with second-hand goods, collectibles, furniture, and unique finds. Excellent for bargain hunting and finding treasures.",
+          "googleMaps": "https://maps.google.com/?q=Zoco+Market+La+Zenia+Villamartin"
+        }
+      ]
+    },
     "schools": {
       "intro": "Villamartin has access to quality educational institutions, with international schools serving the significant expatriate family community.",
       "schools": [

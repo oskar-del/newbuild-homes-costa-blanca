@@ -10,6 +10,8 @@ import AreaDevelopments from '@/components/area/AreaDevelopments';
 import DayInTheLife from '@/components/area/DayInTheLife';
 import InvestmentAnalysis from '@/components/area/InvestmentAnalysis';
 import InteractiveAreaMap from '@/components/area/InteractiveAreaMap';
+import ParallaxPropertySection from '@/components/area/ParallaxPropertySection';
+import FullWidthPropertyGrid from '@/components/area/FullWidthPropertyGrid';
 import {
   beachImages,
   golfImages,
@@ -305,6 +307,25 @@ interface DevelopmentCard {
   image: string;
 }
 
+// Transform DevelopmentCards into property format for ParallaxPropertySection/FullWidthPropertyGrid
+function developmentsToProperties(developments: DevelopmentCard[], areaName: string) {
+  return developments.map((dev, i) => ({
+    reference: `DEV-${i}`,
+    title: dev.name,
+    price: dev.price || 0,
+    type: dev.propertyType || 'Property',
+    bedrooms: dev.bedrooms || 2,
+    bathrooms: dev.bedrooms || 2,
+    builtArea: dev.bedrooms ? dev.bedrooms * 45 + 30 : 100,
+    location: areaName,
+    image: dev.image || '/images/placeholder.webp',
+    features: dev.propertyType === 'Villa' ? ['Private Pool', 'Garden', 'Parking'] : ['Communal Pool', 'Terrace', 'Storage'],
+    status: 'key-ready' as const,
+    badge: dev.propertyType === 'Villa' ? 'Villa' : 'New Build',
+    slug: dev.slug,
+  }));
+}
+
 interface AreaPageContentProps {
   data: AreaContent;
   developments: DevelopmentCard[];
@@ -517,7 +538,7 @@ export default function AreaPageContent({
                   <div className="grid md:grid-cols-2 gap-3 mt-8">
                     {content.lifestyleSection.highlights.map((highlight, i) => (
                       <div key={i} className="flex items-start gap-3 p-3 bg-accent-50 rounded-xl">
-                        <span className="text-accent-500 text-lg">&check;</span>
+                        <span className="text-accent-500 text-lg">✓</span>
                         <span className="text-warm-700">{highlight}</span>
                       </div>
                     ))}
@@ -575,12 +596,34 @@ export default function AreaPageContent({
                   </div>
                 )}
 
-                {/* Golf Courses Sidebar */}
+                {/* Golf Courses Sidebar — matches Algorfa style with featured course */}
                 {golf && golf.courses && golf.courses.length > 0 && (
                   <div className="bg-warm-50 rounded-2xl p-6">
                     <h3 className="font-bold text-primary-900 text-lg mb-4">{s.golfCourses} {s.nearby}</h3>
+
+                    {/* Featured Course Card */}
+                    {golf.courses[0] && (
+                      <Link href={`${langPrefix}/golf`} className="block bg-accent-500 text-white rounded-xl p-4 mb-4 hover:bg-accent-600 transition-colors group">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <span className="text-xs font-bold uppercase tracking-wide text-white/80">Featured Course</span>
+                            <h4 className="font-bold text-lg">{golf.courses[0].name}</h4>
+                            {golf.courses[0].description && (
+                              <p className="text-white/80 text-sm mt-1 line-clamp-2">{golf.courses[0].description}</p>
+                            )}
+                          </div>
+                          <span className="text-white/60 group-hover:text-white transition-colors">&rarr;</span>
+                        </div>
+                        <div className="flex gap-3 mt-3 text-xs">
+                          <span className="bg-white/20 px-2 py-1 rounded">{golf.courses[0].holes} Holes</span>
+                          <span className="bg-white/20 px-2 py-1 rounded">{golf.courses[0].distance}</span>
+                        </div>
+                      </Link>
+                    )}
+
+                    {/* Other courses */}
                     <div className="space-y-2">
-                      {golf.courses.slice(0, 4).map((course, i) => (
+                      {golf.courses.slice(1, 4).map((course, i) => (
                         <div key={i} className="flex justify-between items-center hover:bg-warm-100 rounded-lg p-2 -mx-2 transition-colors">
                           <span className="text-warm-700">{course.name}</span>
                           <span className="text-warm-500 text-sm">{course.holes}H &bull; {course.distance}</span>
@@ -695,23 +738,51 @@ export default function AreaPageContent({
         )}
 
         {/* ═══════════════════════════════════════════════════════════════
-            DEVELOPMENTS — Using rich AreaDevelopments component
+            DEVELOPMENTS — What's Being Built (always show)
+        ═══════════════════════════════════════════════════════════════ */}
+        <div id="developments" className="scroll-mt-16">
+          <AreaDevelopments
+            areaName={data.name}
+            areaSlug={data.slug}
+            maxDevelopments={6}
+            showLifestyleGuide={true}
+            relatedBlogPosts={relatedBlogPosts.map(post => ({
+              slug: post.slug,
+              title: post.title,
+              description: post.description,
+            }))}
+          />
+        </div>
+
+        {/* ═══════════════════════════════════════════════════════════════
+            PROPERTIES — ParallaxPropertySection (Golf/Featured Properties)
+            Same component as Algorfa page
         ═══════════════════════════════════════════════════════════════ */}
         {developments && developments.length > 0 && (
-          <div id="developments" className="scroll-mt-16">
-            <AreaDevelopments
-              areaName={data.name}
-              areaSlug={data.slug}
-              maxDevelopments={6}
-              showLifestyleGuide={true}
-              relatedBlogPosts={relatedBlogPosts.map(post => ({
-                slug: post.slug,
-                title: post.title,
-                description: post.description,
-              }))}
-            />
-          </div>
+          <ParallaxPropertySection
+            title={`Properties in ${data.name}`}
+            subtitle="Featured New Builds"
+            narrative={`New build developments in ${data.name} offer modern Mediterranean homes with communal or private pools, quality finishes, and excellent value. From apartments to luxury villas, there are options for every budget and lifestyle.`}
+            backgroundImage={heroImage}
+            properties={developmentsToProperties(developments.slice(0, 6), data.name)}
+            ctaText="View All Properties"
+            ctaLink={`${langPrefix}/developments?area=${data.slug}`}
+            theme="dark"
+          />
         )}
+
+        {/* ═══════════════════════════════════════════════════════════════
+            CONSULTATION CTA — Mid-page (matching Algorfa)
+        ═══════════════════════════════════════════════════════════════ */}
+        <section className="py-12 bg-gradient-to-r from-accent-500 to-primary-800">
+          <div className="max-w-4xl mx-auto px-6 text-center text-white">
+            <h3 className="text-2xl font-light mb-3">Want to See {data.name} for Yourself?</h3>
+            <p className="text-white/80 mb-6">Book a free 30-minute consultation with our team. 12+ years of experience helping buyers find their perfect home in Costa Blanca.</p>
+            <Link href={`${langPrefix}/consultation`} className="inline-flex items-center gap-2 bg-white text-primary-900 hover:bg-warm-50 px-8 py-4 rounded-lg font-semibold transition-colors">
+              Book Free Consultation
+            </Link>
+          </div>
+        </section>
 
         {/* ═══════════════════════════════════════════════════════════════
             AMENITIES — Healthcare, Transport, Shopping
@@ -1165,6 +1236,24 @@ export default function AreaPageContent({
             </section>
           );
         })()}
+
+        {/* ═══════════════════════════════════════════════════════════════
+            FULL WIDTH PROPERTY GRID — Same component as Algorfa
+        ═══════════════════════════════════════════════════════════════ */}
+        {developments && developments.length > 0 && (
+          <div id="properties">
+            <FullWidthPropertyGrid
+              title={`Properties in ${data.name}`}
+              subtitle="New Build Homes"
+              properties={developmentsToProperties(developments.slice(0, 6), data.name)}
+              showFilters={true}
+              columns={3}
+              ctaText="View All Properties"
+              ctaLink={`${langPrefix}/developments?area=${data.slug}`}
+              theme="light"
+            />
+          </div>
+        )}
 
         {/* ═══════════════════════════════════════════════════════════════
             RELATED BLOG ARTICLES

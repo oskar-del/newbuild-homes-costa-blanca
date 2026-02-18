@@ -279,6 +279,47 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Orihuela Costa offers excellent market options from traditional Spanish street markets to flea markets and shopping centers. The various urbanizations each have their own regular markets, providing fresh produce, local goods, and traditional shopping experiences alongside modern retail centers like La Zenia Boulevard.",
+      "markets": [
+        {
+          "name": "Orihuela Saturday Market",
+          "day": "Saturday",
+          "time": "8am - 2pm",
+          "type": "General/Produce/Flea",
+          "distance": "Orihuela town center (12 km)",
+          "description": "Large traditional market in the historic city of Orihuela with fresh produce, fish, clothing, and household goods. A genuine Spanish market experience with excellent quality and friendly local vendors.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Sabado+Orihuela"
+        },
+        {
+          "name": "Villamartin Wednesday Market",
+          "day": "Wednesday",
+          "time": "8am - 1:30pm",
+          "type": "Fresh Produce/General",
+          "distance": "Villamartin Plaza area (5 min)",
+          "description": "Weekly market at the famous Villamartin Plaza offering fresh produce, local goods, crafts, and clothing. Established market popular with residents and serving the expat community.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Miercoles+Villamartin"
+        },
+        {
+          "name": "Zoco Market (La Zenia Strip)",
+          "day": "Sunday",
+          "time": "9am - 2pm",
+          "type": "Flea Market/Antiques",
+          "distance": "Near La Zenia Boulevard (10 min)",
+          "description": "Popular flea and antique market near La Zenia Boulevard with second-hand goods, collectibles, furniture, and unique finds. Perfect for bargain hunters and those seeking one-of-a-kind items.",
+          "googleMaps": "https://maps.google.com/?q=Zoco+Market+La+Zenia"
+        },
+        {
+          "name": "Cabo Roig Strip Market",
+          "day": "Wednesday",
+          "time": "9am - 1:30pm",
+          "type": "General/Produce",
+          "distance": "Cabo Roig harbor area (8 km)",
+          "description": "Traditional market in the charming Cabo Roig area with fresh seafood, produce, and local goods. Located near the picturesque harbor with excellent waterfront dining nearby.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Cabo+Roig"
+        }
+      ]
+    },
     "schools": {
       "intro": "Orihuela Costa offers excellent educational options from Spanish state schools to highly-regarded international institutions serving the large expatriate community.",
       "schools": [

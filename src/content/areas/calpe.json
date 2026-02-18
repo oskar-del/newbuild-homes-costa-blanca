@@ -285,6 +285,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Calpe's markets reflect the town's sophisticated character, offering quality produce and goods alongside traditional Spanish market culture. The Wednesday market near the town center and Sunday market draw residents seeking fresh goods, while nearby Altea offers artisan markets showcasing local crafts and specialties.",
+      "markets": [
+        {
+          "name": "Calpe Wednesday Market",
+          "day": "Wednesday",
+          "time": "8am - 1:30pm",
+          "type": "Fresh Produce/General",
+          "distance": "Town center",
+          "description": "Traditional weekly market offering fresh produce, fish, seafood, clothing, and local goods. Quality produce with friendly vendors serving the international and local community.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Miercoles+Calpe"
+        },
+        {
+          "name": "Calpe Sunday Market",
+          "day": "Sunday",
+          "time": "8am - 1:30pm",
+          "type": "Flea Market/General",
+          "distance": "Outskirts",
+          "description": "Weekly flea market and general market offering second-hand goods, antiques, crafts, and household items. Popular with those seeking bargains and unique finds.",
+          "googleMaps": "https://maps.google.com/?q=Mercadillo+Domingo+Calpe"
+        },
+        {
+          "name": "Altea Market",
+          "day": "Tuesday",
+          "time": "8am - 1:30pm",
+          "type": "Artisan/Crafts/Produce",
+          "distance": "Altea (8 km)",
+          "description": "Charming market in the artistic town of Altea featuring local crafts, artisan goods, fresh produce, and unique items. Perfect for those seeking quality handmade products and authentic local culture.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Martes+Altea"
+        }
+      ]
+    },
     "schools": {
       "intro": "While Calpe itself has limited international school options, the surrounding area offers excellent educational choices for families, with quality British, international, and Spanish schools within accessible distances.",
       "schools": [

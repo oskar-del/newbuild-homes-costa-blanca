@@ -263,6 +263,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Torrevieja's markets are legendary on the Costa Blanca, stretching over 2 kilometers and attracting visitors from across Europe. The famous Friday market is one of Spain's largest, offering everything from fresh produce to clothing, household goods, and crafts. Whether seeking local bargains or experiencing authentic Spanish market culture, Torrevieja's markets are essential visits.",
+      "markets": [
+        {
+          "name": "Torrevieja Friday Market",
+          "day": "Friday",
+          "time": "8am - 2pm",
+          "type": "General/Produce/Clothing",
+          "distance": "Town center",
+          "description": "One of Spain's largest street markets, stretching over 2 km with hundreds of stalls selling fresh produce, fish, clothing, household goods, and crafts. An absolute must-visit experience and favorite with the large expat community.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Viernes+Torrevieja"
+        },
+        {
+          "name": "Torrevieja Saturday Market",
+          "day": "Saturday",
+          "time": "8am - 1pm",
+          "type": "Flea Market/Antiques",
+          "distance": "Outskirts",
+          "description": "Popular flea and antique market offering second-hand goods, furniture, collectibles, and local crafts. Great for bargain hunting and finding unique items.",
+          "googleMaps": "https://maps.google.com/?q=Mercadillo+Sabado+Torrevieja"
+        },
+        {
+          "name": "Mercado Municipal Torrevieja",
+          "day": "Daily",
+          "time": "8am - 2pm",
+          "type": "Fresh Produce/Fish",
+          "distance": "Town center",
+          "description": "Covered municipal market offering fresh fish, seafood, produce, and local specialties. A traditional Spanish shopping experience with excellent quality and friendly vendors.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Municipal+Torrevieja"
+        }
+      ]
+    },
     "schools": {
       "intro": "Torrevieja offers a variety of educational options from Spanish state schools to international institutions, serving the large expat community.",
       "schools": [

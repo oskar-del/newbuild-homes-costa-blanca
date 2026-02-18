@@ -11,6 +11,8 @@ import InteractiveAreaMap from '@/components/area/InteractiveAreaMap';
 import AreaDevelopments from '@/components/area/AreaDevelopments';
 import { LifestyleBanner, SectionCardImage, ImageGrid } from '@/components/area/SectionImage';
 import { beachImages, golfImages, marketFoodImages, marinaImages, oldTownImages, getImageUrl } from '@/data/stock-images';
+import LeadForm from '@/components/LeadForm';
+import NewsletterCTA from '@/components/NewsletterCTA';
 
 const CONTACT = {
   whatsapp: 'https://api.whatsapp.com/message/TISVZ2WXY7ERN1?autoload=1&app_absent=0',
@@ -829,6 +831,17 @@ export default function AlgorfaPage() {
           </div>
         </section>
 
+        {/* Consultation CTA */}
+        <section className="py-12 bg-gradient-to-r from-accent-500 to-primary-800">
+          <div className="max-w-4xl mx-auto px-6 text-center text-white">
+            <h3 className="text-2xl font-light mb-3">Want to See Algorfa for Yourself?</h3>
+            <p className="text-white/80 mb-6">Book a free 30-minute consultation with our team. 12+ years of experience helping buyers find their perfect home in Costa Blanca.</p>
+            <Link href="/consultation" className="inline-flex items-center gap-2 bg-white text-primary-900 hover:bg-warm-50 px-8 py-4 rounded-lg font-semibold transition-colors">
+              Book Free Consultation
+            </Link>
+          </div>
+        </section>
+
         {/* Day in the Life */}
         <DayInTheLife
           areaName="Algorfa"
@@ -966,6 +979,28 @@ export default function AlgorfaPage() {
           />
         </div>
 
+        {/* Inline Lead Form */}
+        <section className="py-16 bg-white">
+          <div className="max-w-3xl mx-auto px-6">
+            <div className="text-center mb-8">
+              <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Get In Touch</span>
+              <h2 className="text-3xl font-light text-primary-900 mt-2">
+                Interested in Algorfa?
+              </h2>
+              <p className="text-warm-600 mt-3">Tell us what you are looking for and we will get back to you within 24 hours.</p>
+            </div>
+            <div className="bg-warm-50 rounded-2xl p-8">
+              <LeadForm
+                area="Algorfa"
+                language="en"
+                formType="Area Inquiry"
+                sourcePage="/areas/algorfa"
+                budgetRange="€165,000 - €600,000"
+              />
+            </div>
+          </div>
+        </section>
+
         {/* FAQs */}
         <section id="faqs" className="py-16 bg-white scroll-mt-16">
           <div className="max-w-4xl mx-auto px-6">
@@ -990,6 +1025,18 @@ export default function AlgorfaPage() {
                 </details>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Newsletter */}
+        <section className="py-12 bg-white">
+          <div className="max-w-3xl mx-auto px-6">
+            <NewsletterCTA
+              type="area"
+              areaName="Algorfa"
+              language="en"
+              sourcePage="/areas/algorfa"
+            />
           </div>
         </section>
 

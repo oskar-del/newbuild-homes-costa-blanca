@@ -286,6 +286,38 @@
         }
       ]
     },
+    "markets": {
+      "intro": "Benidorm's markets are legendary on the Costa Blanca, offering everything from fresh Mediterranean produce to clothing, household goods, and antiques. The Wednesday and Sunday markets are major events that draw shoppers from across the region. Combined with the modern La Marina Shopping Center and numerous local supermarkets, Benidorm offers exceptional shopping variety.",
+      "markets": [
+        {
+          "name": "Benidorm Wednesday Market",
+          "day": "Wednesday",
+          "time": "8am - 2pm",
+          "type": "Fresh Produce/General/Flea",
+          "distance": "Near bullring (town area)",
+          "description": "One of the Costa Blanca's largest traditional markets with hundreds of stalls selling fresh produce, fish, seafood, clothing, household goods, and crafts. An essential weekly shopping experience attracting visitors from surrounding areas.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Miercoles+Benidorm+Plaza+Toros"
+        },
+        {
+          "name": "Benidorm Sunday Market",
+          "day": "Sunday",
+          "time": "8am - 2pm",
+          "type": "General/Flea/Antiques",
+          "distance": "Various locations",
+          "description": "Weekly market offering fresh produce, clothing, household goods, antiques, and second-hand items. Another major shopping event popular with residents and visitors.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Domingo+Benidorm"
+        },
+        {
+          "name": "Altea Market",
+          "day": "Tuesday",
+          "time": "8am - 1:30pm",
+          "type": "Artisan/Crafts/Produce",
+          "distance": "Altea (15 km)",
+          "description": "Charming market in the artistic town of Altea offering local crafts, artisan goods, fresh produce, and unique handmade items. Perfect for discovering quality local products and supporting artisans.",
+          "googleMaps": "https://maps.google.com/?q=Mercado+Martes+Altea+cerca+Benidorm"
+        }
+      ]
+    },
     "schools": {
       "intro": "Benidorm area has excellent educational options for families relocating with children, including international schools, British curriculum institutions, and quality Spanish public schools.",
       "schools": [
