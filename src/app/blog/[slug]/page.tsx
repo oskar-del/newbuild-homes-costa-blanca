@@ -274,6 +274,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     alternates: {
       canonical: `https://newbuildhomescostablanca.com/blog/${slug}`,
+      languages: {
+        'en': `https://newbuildhomescostablanca.com/blog/${slug}`,
+        'sv': `https://newbuildhomescostablanca.com/sv/blog/${slug}`,
+        'nl': `https://newbuildhomescostablanca.com/nl/blog/${slug}`,
+        'nl-BE': `https://newbuildhomescostablanca.com/nl-be/blog/${slug}`,
+        'fr': `https://newbuildhomescostablanca.com/fr/blog/${slug}`,
+        'no': `https://newbuildhomescostablanca.com/no/blog/${slug}`,
+        'de': `https://newbuildhomescostablanca.com/de/blog/${slug}`,
+        'pl': `https://newbuildhomescostablanca.com/pl/blog/${slug}`,
+        'ru': `https://newbuildhomescostablanca.com/ru/blog/${slug}`,
+        'x-default': `https://newbuildhomescostablanca.com/blog/${slug}`,
+      },
     },
   };
 }

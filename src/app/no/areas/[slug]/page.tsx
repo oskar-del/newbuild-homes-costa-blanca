@@ -24,7 +24,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: data.content.metaTitle,
     description: data.content.metaDescription,
     alternates: {
-      canonical: `https://newbuildhomescostablanca.com/areas/${slug}`,
+      canonical: `https://newbuildhomescostablanca.com/no/areas/${slug}`,
+      languages: {
+        'en': `https://newbuildhomescostablanca.com/areas/${slug}`,
+        'sv': `https://newbuildhomescostablanca.com/sv/areas/${slug}`,
+        'nl': `https://newbuildhomescostablanca.com/nl/areas/${slug}`,
+        'nl-BE': `https://newbuildhomescostablanca.com/nl-be/areas/${slug}`,
+        'fr': `https://newbuildhomescostablanca.com/fr/areas/${slug}`,
+        'no': `https://newbuildhomescostablanca.com/no/areas/${slug}`,
+        'de': `https://newbuildhomescostablanca.com/de/areas/${slug}`,
+        'pl': `https://newbuildhomescostablanca.com/pl/areas/${slug}`,
+        'ru': `https://newbuildhomescostablanca.com/ru/areas/${slug}`,
+        'x-default': `https://newbuildhomescostablanca.com/areas/${slug}`,
+      },
     },
   };
 }

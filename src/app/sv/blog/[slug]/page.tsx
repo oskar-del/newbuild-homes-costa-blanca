@@ -117,6 +117,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     alternates: {
       canonical: `${BASE_URL}/${LANG}/blog/${slug}`,
+      languages: {
+        'en': `${BASE_URL}/blog/${slug}`,
+        'sv': `${BASE_URL}/sv/blog/${slug}`,
+        'nl': `${BASE_URL}/nl/blog/${slug}`,
+        'nl-BE': `${BASE_URL}/nl-be/blog/${slug}`,
+        'fr': `${BASE_URL}/fr/blog/${slug}`,
+        'no': `${BASE_URL}/no/blog/${slug}`,
+        'de': `${BASE_URL}/de/blog/${slug}`,
+        'pl': `${BASE_URL}/pl/blog/${slug}`,
+        'ru': `${BASE_URL}/ru/blog/${slug}`,
+        'x-default': `${BASE_URL}/blog/${slug}`,
+      },
     },
   };
 }

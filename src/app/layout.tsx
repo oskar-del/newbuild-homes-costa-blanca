@@ -63,6 +63,21 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/images/og-image.jpg'],
   },
+  alternates: {
+    canonical: 'https://newbuildhomescostablanca.com',
+    languages: {
+      'en': 'https://newbuildhomescostablanca.com',
+      'sv': 'https://newbuildhomescostablanca.com/sv',
+      'nl': 'https://newbuildhomescostablanca.com/nl',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be',
+      'fr': 'https://newbuildhomescostablanca.com/fr',
+      'no': 'https://newbuildhomescostablanca.com/no',
+      'de': 'https://newbuildhomescostablanca.com/de',
+      'pl': 'https://newbuildhomescostablanca.com/pl',
+      'ru': 'https://newbuildhomescostablanca.com/ru',
+      'x-default': 'https://newbuildhomescostablanca.com',
+    },
+  },
   verification: {
     // Add your Google Search Console verification code here
     // google: 'your-verification-code',

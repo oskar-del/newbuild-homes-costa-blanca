@@ -100,6 +100,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     alternates: {
       canonical: `https://newbuildhomescostablanca.com/properties/${property.reference}`,
+      languages: {
+        'en': `https://newbuildhomescostablanca.com/properties/${property.reference}`,
+        'sv': `https://newbuildhomescostablanca.com/sv/properties/${property.reference}`,
+        'nl': `https://newbuildhomescostablanca.com/nl/properties/${property.reference}`,
+        'nl-BE': `https://newbuildhomescostablanca.com/nl-be/properties/${property.reference}`,
+        'fr': `https://newbuildhomescostablanca.com/fr/properties/${property.reference}`,
+        'no': `https://newbuildhomescostablanca.com/no/properties/${property.reference}`,
+        'de': `https://newbuildhomescostablanca.com/de/properties/${property.reference}`,
+        'pl': `https://newbuildhomescostablanca.com/pl/properties/${property.reference}`,
+        'ru': `https://newbuildhomescostablanca.com/ru/properties/${property.reference}`,
+        'x-default': `https://newbuildhomescostablanca.com/properties/${property.reference}`,
+      },
     },
     robots: {
       index: true,
