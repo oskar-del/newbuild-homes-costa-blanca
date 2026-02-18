@@ -1,75 +1,70 @@
 {
-  "metaTitle": "Living in Cartagena 2026 | Complete Property & Lifestyle Guide",
-  "metaDescription": "Discover living in Cartagena: 11 properties from €255k-€595k, €2,200/m², established expat community, Blue Flag beaches, international schools & healthcare.",
-  "heroIntro": "Cartagena represents one of Spain's most compelling inland property destinations, offering a perfect blend of authentic Spanish culture, modern amenities, and genuine value for international buyers. This charming historic town has evolved into a thriving community where established expat networks seamlessly integrate with local Spanish traditions, creating a welcoming environment for families, professionals, and retirees alike. With property prices 40% below Spanish island markets and a year-on-year growth rate of 8%, Cartagena presents both lifestyle appeal and investment potential. The town's strategic location provides easy access to multiple Blue Flag beaches, championship golf courses, international schools, and comprehensive healthcare facilities, all while maintaining the authentic character and affordability that attracts discerning property buyers from across Europe. Whether you're seeking a permanent residence, holiday retreat, or investment opportunity, Cartagena delivers exceptional value without compromising on quality of life.",
-  "climate": "Cartagena enjoys a Mediterranean climate characterized by warm, sunny summers and mild winters, making it an ideal year-round destination. Average temperatures range from 8-10°C in winter months to 28-30°C during summer, with over 300 days of annual sunshine. Spring (March-May) and autumn (September-November) offer the most comfortable conditions, with pleasant temperatures ideal for outdoor activities and beach visits. Summer months attract those seeking beach lifestyle, though August can be busy with holiday visitors. Winter remains mild compared to Northern Europe, rarely dropping below freezing, making it perfect for retirees escaping harsh climates. The region experiences minimal rainfall, concentrated mainly in autumn and spring, providing excellent conditions for outdoor living, gardening, and recreational activities throughout most of the year.",
-  "lifestyle": "Life in Cartagena revolves around a harmonious blend of Mediterranean traditions and contemporary comforts. Daily routines often include visits to vibrant local markets, particularly Mercadona and the authentic street markets where fresh produce, seafood, and regional specialties are readily available. The established international community ensures English is commonly spoken throughout the town, easing integration for newcomers. Dining culture flourishes with numerous tapas bars, paella restaurants, and beachfront establishments serving fresh Mediterranean cuisine. Beach culture is integral to daily life, with multiple Blue Flag beaches just 20 minutes away offering swimming, water sports, and sunset gatherings. Social activities center around golf clubs, beach clubs, and cultural events celebrating Cartagena's rich history. The expat community actively organizes social events, language exchanges, and recreational activities, creating abundant opportunities for friendship and networking. Shopping experiences range from modern supermarkets to traditional Spanish markets, while evening paseos (walks) through town centers provide quintessential Mediterranean living. Whether pursuing active outdoor adventures or leisurely café culture, Cartagena's lifestyle accommodates diverse preferences.",
-  "amenities": {
-    "healthcare": {
-      "text": "Cartagena provides comprehensive healthcare services meeting international standards. A regional hospital operates within 30 minutes, supplemented by private clinics offering specialized treatments and shorter wait times. English-speaking doctors are readily available throughout the area, ensuring effective communication for international residents. Private healthcare facilities rival those found in major European cities, with modern equipment and experienced medical professionals. Prescription medications are affordable and easily accessible through local pharmacies. Health insurance for residents combines Spanish social security with optional private coverage, creating flexible healthcare solutions.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes drive",
-        "Private clinics with modern facilities",
-        "English-speaking doctors throughout the area",
-        "Affordable prescription medications and pharmacy services"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping convenience defines Cartagena's retail landscape with excellent variety and value. Major supermarket chains including Mercadona, Lidl, and Consum provide comprehensive grocery options with competitive pricing. These modern stores offer international products alongside local Spanish goods, accommodating diverse dietary preferences. Traditional local markets operate regularly, offering fresh produce, seafood, meats, and regional specialties at authentic prices. Shopping centers provide clothing, electronics, and household goods. The combination of supermarkets and street markets creates flexible shopping options, from quick convenience purchases to leisurely market browsing.",
-      "keyPoints": [
-        "Mercadona supermarket chain with multiple locations",
-        "Lidl and Consum for budget-conscious shopping",
-        "Traditional Spanish markets with fresh local produce",
-        "Shopping centers for clothing and electronics"
-      ]
-    },
-    "education": {
-      "text": "Cartagena's education sector caters to international families through established international schools in the region. British curriculum options provide continuity for UK expat families, maintaining educational standards familiar to anglophone students. Schools combine academic excellence with multicultural environments, creating inclusive communities for children from diverse backgrounds. Local Spanish schools offer quality education with increasingly strong English language programs. International schools facilitate networking among expat families, establishing support systems for newly arrived residents.",
-      "keyPoints": [
-        "International schools in the region offering recognized curricula",
-        "British curriculum options for UK families",
-        "Multicultural school environments",
-        "Local Spanish schools with enhanced English programs"
-      ]
-    },
-    "sports": {
-      "text": "Cartagena's sporting facilities rival those of larger coastal resorts. Multiple Blue Flag beaches within 20 minutes provide perfect settings for swimming, paddleboarding, windsurfing, and beach volleyball. Several championship golf courses nearby cater to enthusiasts of all skill levels, with facilities offering lessons, tournaments, and club memberships. Water sports schools offer training in sailing, diving, and kayaking. Tennis clubs, beach clubs, and fitness centers provide comprehensive recreational options. The Mediterranean location ensures year-round sports activities, from winter golf to summer beach culture.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Several championship golf courses nearby",
-        "Water sports facilities including diving and sailing schools",
-        "Tennis clubs and beach clubs for diverse recreational interests"
-      ]
-    }
+  "slug": "cartagena",
+  "name": "Cartagena",
+  "region": "Murcia",
+  "heroImage": "/images/areas/cartagena-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 11,
+  "propertyTypes": [
+    "Penthouse",
+    "Town House",
+    "Villa",
+    "Apartment - diverse options accommodating different preferences and budgets"
+  ],
+  "priceRange": {
+    "min": 255000,
+    "max": 595000
   },
-  "transport": {
-    "overview": "Bus connections available throughout Cartagena and surrounding areas. Car recommended for flexibility and exploring the region independently.",
-    "airports": "Alicante-Elche Airport (approximately 45 minutes drive), Valencia Airport (approximately 90 minutes drive) providing European flight connections.",
-    "driving": "Excellent motorway connections to Barcelona (400km north), Madrid (400km northwest), and Andalucía (south). Well-maintained national roads connect smaller towns and villages throughout the region.",
-    "public": "Regular bus services connect Cartagena to nearby towns and coastal areas. Limited local public transport makes personal vehicles advantageous for accessing beaches, golf courses, and remote dining establishments.",
-    "keyPoints": [
-      "Car highly recommended for flexibility and exploration",
-      "Direct motorway access to major Spanish cities",
-      "Nearby airports provide European connections",
-      "Bus services available but limited frequency"
+  "externalLinks": {
+    "tourism": {
+      "name": "Cartagena Tourism",
+      "url": "https://www.google.com/search?q=Cartagena%20Spain%20official%20website",
+      "description": "Discover more about Cartagena"
+    },
+    "airport": {
+      "name": "Murcia-Corvera Airport",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "25 km",
+      "driveTime": "20 min"
+    },
+    "healthcare": {
+      "name": "Hospital General Universitario Santa Lucía",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20General%20Universitario%20Santa%20Luc%C3%ADa",
+      "distance": "3 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+Cartagena+Spain",
+        "description": "Beautiful Mediterranean beach nearby"
+      }
     ]
   },
-  "propertyMarket": {
-    "overview": "Cartagena's property market demonstrates strong fundamentals with consistent demand and year-on-year growth of 8%. The market attracts international buyers seeking value, established communities, and Mediterranean lifestyle. Price appreciation, combined with rental income potential, positions properties as sound long-term investments.",
-    "priceRange": "€255,000 - €595,000 for 11 available properties",
-    "popularTypes": "Penthouse, Town House, Villa, Apartment - diverse options accommodating different preferences and budgets",
-    "investment": "Average price of €2,200/m² provides excellent value compared to Spanish island markets (40% less expensive). Typical 7-night rental income of €800 demonstrates strong rental potential, particularly appealing for holiday let investors. Capital growth prospects remain favorable given market trends and continued international demand."
-  },
-  "neighborhoods": [
-    "Historic Old Town: Authentic Cartagena with Roman ruins, narrow streets, and traditional architecture; popular with culture enthusiasts and those seeking character",
-    "Gisbert: Residential neighborhood close to beaches and amenities; popular with families and expats seeking modern convenience",
-    "Ensanche: Modern development area with contemporary properties, shopping centers, and business districts; ideal for professionals",
-    "Punta Negra: Coastal area with beachfront properties and water sports access; favored by active lifestyle seekers",
-    "Los Urrutias: Quieter residential area with excellent family amenities and international school proximity",
-    "Santa Lucía: Developing neighborhood offering newer construction and expanding expat community presence"
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Cartagena 2026 | Complete Property & Lifestyle Guide",
+    "metaDescription": "Discover living in Cartagena: 11 properties from €255k-€595k, €2,200/m², established expat community, Blue Flag beaches, international schools & healthcare.",
+    "heroIntro": "Cartagena represents one of Spain's most compelling inland property destinations, offering a perfect blend of authentic Spanish culture, modern amenities, and genuine value for international buyers. This charming historic town has evolved into a thriving community where established expat networks seamlessly integrate with local Spanish traditions, creating a welcoming environment for families, professionals, and retirees alike. With property prices 40% below Spanish island markets and a year-on-year growth rate of 8%, Cartagena presents both lifestyle appeal and investment potential. The town's strategic location provides easy access to multiple Blue Flag beaches, championship golf courses, international schools, and comprehensive healthcare facilities, all while maintaining the authentic character and affordability that attracts discerning property buyers from across Europe. Whether you're seeking a permanent residence, holiday retreat, or investment opportunity, Cartagena delivers exceptional value without compromising on quality of life.",
+    "lifestyleSection": {
+      "intro": "Life in Cartagena revolves around a harmonious blend of Mediterranean traditions and contemporary comforts. Daily routines often include visits to vibrant local markets, particularly Mercadona and the authentic street markets where fresh produce, seafood, and regional specialties are readily available. The established international community ensures English is commonly spoken throughout the town, easing integration for newcomers. Dining culture flourishes with numerous tapas bars, paella restaurants, and beachfront establishments serving fresh Mediterranean cuisine. Beach culture is integral to daily life, with multiple Blue Flag beaches just 20 minutes away offering swimming, water sports, and sunset gatherings. Social activities center around golf clubs, beach clubs, and cultural events celebrating Cartagena's rich history. The expat community actively organizes social events, language exchanges, and recreational activities, creating abundant opportunities for friendship and networking. Shopping experiences range from modern supermarkets to traditional Spanish markets, while evening paseos (walks) through town centers provide quintessential Mediterranean living. Whether pursuing active outdoor adventures or leisurely café culture, Cartagena's lifestyle accommodates diverse preferences.\n\nCartagena enjoys a Mediterranean climate characterized by warm, sunny summers and mild winters, making it an ideal year-round destination. Average temperatures range from 8-10°C in winter months to 28-30°C during summer, with over 300 days of annual sunshine. Spring (March-May) and autumn (September-November) offer the most comfortable conditions, with pleasant temperatures ideal for outdoor activities and beach visits. Summer months attract those seeking beach lifestyle, though August can be busy with holiday visitors. Winter remains mild compared to Northern Europe, rarely dropping below freezing, making it perfect for retirees escaping harsh climates. The region experiences minimal rainfall, concentrated mainly in autumn and spring, providing excellent conditions for outdoor living, gardening, and recreational activities throughout most of the year.",
+      "highlights": [
+        "Exceptional value: 40% cheaper than Spanish island markets with 8% annual growth potential",
+        "Established expat community with English commonly spoken, easing integration and networking",
+        "Excellent healthcare: Regional hospitals and private clinics with English-speaking doctors within 30 minutes",
+        "Beach lifestyle: Multiple Blue Flag beaches within 20 minutes for swimming, sports, and recreation",
+        "International education: British curriculum schools and quality international education options",
+        "Mediterranean climate: 300+ days annual sunshine with mild winters and warm summers"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Cartagena's sporting facilities rival those of larger coastal resorts. Multiple Blue Flag beaches within 20 minutes provide perfect settings for swimming, paddleboarding, windsurfing, and beach volleyball. Several championship golf courses nearby cater to enthusiasts of all skill levels, with facilities offering lessons, tournaments, and club memberships. Water sports schools offer training in sailing, diving, and kayaking. Tennis clubs, beach clubs, and fitness centers provide comprehensive recreational options. The Mediterranean location ensures year-round sports activities, from winter golf to summer beach culture.",
+      "dining": "Cartagena offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping convenience defines Cartagena's retail landscape with excellent variety and value. Major supermarket chains including Mercadona, Lidl, and Consum provide comprehensive grocery options with competitive pricing. These modern stores offer international products alongside local Spanish goods, accommodating diverse dietary preferences. Traditional local markets operate regularly, offering fresh produce, seafood, meats, and regional specialties at authentic prices. Shopping centers provide clothing, electronics, and household goods. The combination of supermarkets and street markets creates flexible shopping options, from quick convenience purchases to leisurely market browsing.",
+      "healthcare": "Cartagena provides comprehensive healthcare services meeting international standards. A regional hospital operates within 30 minutes, supplemented by private clinics offering specialized treatments and shorter wait times. English-speaking doctors are readily available throughout the area, ensuring effective communication for international residents. Private healthcare facilities rival those found in major European cities, with modern equipment and experienced medical professionals. Prescription medications are affordable and easily accessible through local pharmacies. Health insurance for residents combines Spanish social security with optional private coverage, creating flexible healthcare solutions.",
+      "transport": "Bus connections available throughout Cartagena and surrounding areas. Car recommended for flexibility and exploring the region independently. Alicante-Elche Airport (approximately 45 minutes drive), Valencia Airport (approximately 90 minutes drive) providing European flight connections. Excellent motorway connections to Barcelona (400km north), Madrid (400km northwest), and Andalucía (south). Well-maintained national roads connect smaller towns and villages throughout the region. Regular bus services connect Cartagena to nearby towns and coastal areas. Limited local public transport makes personal vehicles advantageous for accessing beaches, golf courses, and remote dining establishments."
+    },
+    "propertyMarketSection": "Cartagena's property market demonstrates strong fundamentals with consistent demand and year-on-year growth of 8%. The market attracts international buyers seeking value, established communities, and Mediterranean lifestyle. Price appreciation, combined with rental income potential, positions properties as sound long-term investments.\n\nPopular property types include Penthouse, Town House, Villa, Apartment - diverse options accommodating different preferences and budgets.\n\nAverage price of €2,200/m² provides excellent value compared to Spanish island markets (40% less expensive). Typical 7-night rental income of €800 demonstrates strong rental potential, particularly appealing for holiday let investors. Capital growth prospects remain favorable given market trends and continued international demand.",
+    "whyLiveHereSection": [
       "Exceptional value: 40% cheaper than Spanish island markets with 8% annual growth potential",
       "Established expat community with English commonly spoken, easing integration and networking",
       "Excellent healthcare: Regional hospitals and private clinics with English-speaking doctors within 30 minutes",
@@ -77,52 +72,334 @@
       "International education: British curriculum schools and quality international education options",
       "Mediterranean climate: 300+ days annual sunshine with mild winters and warm summers"
     ],
-    "cons": [
-      "Car dependency: While buses exist, personal vehicle essential for beach access and exploring surrounding region",
-      "Summer tourism: Peak season July-August brings crowds to beaches and popular attractions, reducing tranquility",
-      "Language barrier: Outside tourist areas, Spanish language knowledge helpful despite growing English speaker community"
-    ]
+    "faqs": [
+      {
+        "question": "Is Cartagena a good place to live?",
+        "answer": "Absolutely. Cartagena combines authentic Spanish culture with modern amenities, established expat communities, and Mediterranean lifestyle at exceptional value. The town offers excellent healthcare, international education, beautiful beaches, championship golf, and property investment potential with 8% annual growth. English is commonly spoken, easing integration for international residents seeking both lifestyle and investment returns."
+      },
+      {
+        "question": "What is the cost of living in Cartagena?",
+        "answer": "Cartagena offers excellent value with properties 40% cheaper than Spanish island markets. Monthly living costs for a couple typically range €1,200-1,800, depending on lifestyle. Supermarkets like Mercadona and Lidl provide affordable groceries. Dining ranges from €8-15 for casual meals to €25-40 for fine dining. Healthcare costs are minimal with comprehensive insurance available. Overall, Cartagena provides exceptional value compared to Northern European countries or coastal Spanish alternatives."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can purchase property in Spain without restrictions. Non-EU citizens simply require a Spanish Tax Identification Number (NIE). The process involves selecting a property, instructing a Spanish lawyer, conducting searches, arranging financing if needed, and completing the purchase through a notary. Legal requirements are straightforward, making Spanish property ownership accessible to international buyers from anywhere globally."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "No separate visa is required specifically for property purchase. However, if you plan to reside in Spain, visa requirements depend on your nationality. EU/EEA citizens enjoy freedom of movement. Non-EU citizens typically need residency visas (such as the Digital Nomad Visa or Golden Visa for investors) if planning extended stays. Property purchase itself doesn't require visa sponsorship, making it accessible even for tourists."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Beyond the property purchase price, expect additional costs totaling 7-10% of purchase price. These include: notary fees (0.5-1%), registry fees (0.5-1%), legal fees (1-2%), and transfer tax (6-10% depending on region). Property valuation fees, estate agent commissions (if applicable), and insurance are additional considerations. Your Spanish lawyer itemizes all costs transparently before completion, ensuring clarity on total investment required."
+      },
+      {
+        "question": "How much are property taxes in Spain?",
+        "answer": "Property taxes in Spain comprise: annual IBI (wealth tax) averaging 0.4-1.1% of cadastral value (typically 50-70% of market value), resulting in €100-300 annually for average properties. Rental income properties face income tax on earnings (19-45% depending on brackets). Capital gains tax applies if selling at profit (19-23% for EU residents, higher for non-residents). These moderate tax rates contribute to Spain's attractive property investment environment."
+      },
+      {
+        "question": "Can I get a mortgage in Spain as a foreigner?",
+        "answer": "Yes, foreign buyers can obtain Spanish mortgages from banks. Typical requirements include: proof of income, employment contract, credit history, and NIE (Spanish Tax ID). Most banks offer 70-80% loan-to-value ratios. Interest rates are competitive, typically 3-4% for fixed-rate mortgages. Non-EU citizens may face slightly stricter documentation requirements. Working with Spanish mortgage brokers familiar with international applicants streamlines the process considerably."
+      },
+      {
+        "question": "Is Costa Blanca a good place to buy property?",
+        "answer": "Cartagena, positioned in this region, offers exceptional property investment fundamentals. The area features 8% annual growth, established international communities, excellent amenities, and Mediterranean lifestyle. Compared to island markets, properties cost 40% less while offering comparable amenities. Healthcare, education, and beach access are outstanding. Whether seeking primary residence, holiday home, or investment property, the Costa Blanca region, particularly Cartagena, presents compelling value propositions."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Cartagena proves ideal for retirees seeking Mediterranean retirement. Mild winters eliminate harsh weather concerns while year-round activities provide engagement. Healthcare facilities rival Northern Europe with English-speaking doctors available. Established expat communities offer social networks and friendship opportunities. Affordable living costs preserve retirement savings. International schools benefit grandchildren visiting. Golf, beaches, cultural activities, and vibrant restaurant scenes ensure active, fulfilling retirements for those choosing Cartagena."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Cartagena? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "Average price of €2,200/m² provides excellent value compared to Spanish island markets (40% less expensive). Typical 7-night rental income of €800 demonstrates strong rental potential, particularly appealing for holiday let investors. Capital growth prospects remain favorable given market trends and continued international demand.",
+      "highlights": [
+        "Strong holiday rental demand during peak season (May-October)",
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Short-term holiday lets popular with European tourists"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Cartagena are significantly lower than Northern Europe and very competitive within Spain. Coastal living here combines affordability with Mediterranean lifestyle.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Recommended for flexibility"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Cartagena celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "June",
+          "description": "Magical midsummer beach celebrations with bonfires, fireworks, and midnight swimming traditions along the coast"
+        },
+        {
+          "name": "Summer Beach Festival",
+          "month": "July",
+          "description": "Outdoor concerts, food stalls, and cultural events along the waterfront throughout the summer season"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Cartagena have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school offering GCSE and A-Levels with strong extracurricular programmes"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "International (British)",
+          "distance": "25-45 min",
+          "description": "British curriculum primary and secondary school serving the international community"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Cartagena offers excellent outdoor activities year-round, from beach activities and water sports to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Beach & Swimming",
+          "type": "Beach",
+          "description": "Beautiful Mediterranean beaches nearby with crystal-clear waters, perfect for swimming, snorkelling, and sunbathing"
+        },
+        {
+          "name": "Water Sports",
+          "type": "Water Sports",
+          "description": "Paddleboarding, kayaking, windsurfing, and sailing available at nearby beaches and marinas"
+        },
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Cartagena has a thriving international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The coastal location attracts a diverse mix of nationalities, particularly from Northern Europe. English is widely spoken in shops, restaurants, and social settings, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Active international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Cartagena",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the sea breeze and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Beach Walk",
+          "description": "Morning stroll along the beach or promenade, breathing in the fresh Mediterranean air"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Beach Time",
+          "description": "Head to the beach for an afternoon swim in the warm Mediterranean waters"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.9863!3d37.6057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Cartagena a good place to live?",
-      "answer": "Absolutely. Cartagena combines authentic Spanish culture with modern amenities, established expat communities, and Mediterranean lifestyle at exceptional value. The town offers excellent healthcare, international education, beautiful beaches, championship golf, and property investment potential with 8% annual growth. English is commonly spoken, easing integration for international residents seeking both lifestyle and investment returns."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Cartagena",
+    "description": "Cartagena is a  municipality in Murcia, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.6057",
+      "longitude": "-0.9863"
     },
-    {
-      "question": "What is the cost of living in Cartagena?",
-      "answer": "Cartagena offers excellent value with properties 40% cheaper than Spanish island markets. Monthly living costs for a couple typically range €1,200-1,800, depending on lifestyle. Supermarkets like Mercadona and Lidl provide affordable groceries. Dining ranges from €8-15 for casual meals to €25-40 for fine dining. Healthcare costs are minimal with comprehensive insurance available. Overall, Cartagena provides exceptional value compared to Northern European countries or coastal Spanish alternatives."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cartagena",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can purchase property in Spain without restrictions. Non-EU citizens simply require a Spanish Tax Identification Number (NIE). The process involves selecting a property, instructing a Spanish lawyer, conducting searches, arranging financing if needed, and completing the purchase through a notary. Legal requirements are straightforward, making Spanish property ownership accessible to international buyers from anywhere globally."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "No separate visa is required specifically for property purchase. However, if you plan to reside in Spain, visa requirements depend on your nationality. EU/EEA citizens enjoy freedom of movement. Non-EU citizens typically need residency visas (such as the Digital Nomad Visa or Golden Visa for investors) if planning extended stays. Property purchase itself doesn't require visa sponsorship, making it accessible even for tourists."
-    },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Beyond the property purchase price, expect additional costs totaling 7-10% of purchase price. These include: notary fees (0.5-1%), registry fees (0.5-1%), legal fees (1-2%), and transfer tax (6-10% depending on region). Property valuation fees, estate agent commissions (if applicable), and insurance are additional considerations. Your Spanish lawyer itemizes all costs transparently before completion, ensuring clarity on total investment required."
-    },
-    {
-      "question": "How much are property taxes in Spain?",
-      "answer": "Property taxes in Spain comprise: annual IBI (wealth tax) averaging 0.4-1.1% of cadastral value (typically 50-70% of market value), resulting in €100-300 annually for average properties. Rental income properties face income tax on earnings (19-45% depending on brackets). Capital gains tax applies if selling at profit (19-23% for EU residents, higher for non-residents). These moderate tax rates contribute to Spain's attractive property investment environment."
-    },
-    {
-      "question": "Can I get a mortgage in Spain as a foreigner?",
-      "answer": "Yes, foreign buyers can obtain Spanish mortgages from banks. Typical requirements include: proof of income, employment contract, credit history, and NIE (Spanish Tax ID). Most banks offer 70-80% loan-to-value ratios. Interest rates are competitive, typically 3-4% for fixed-rate mortgages. Non-EU citizens may face slightly stricter documentation requirements. Working with Spanish mortgage brokers familiar with international applicants streamlines the process considerably."
-    },
-    {
-      "question": "Is Costa Blanca a good place to buy property?",
-      "answer": "Cartagena, positioned in this region, offers exceptional property investment fundamentals. The area features 8% annual growth, established international communities, excellent amenities, and Mediterranean lifestyle. Compared to island markets, properties cost 40% less while offering comparable amenities. Healthcare, education, and beach access are outstanding. Whether seeking primary residence, holiday home, or investment property, the Costa Blanca region, particularly Cartagena, presents compelling value propositions."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Cartagena proves ideal for retirees seeking Mediterranean retirement. Mild winters eliminate harsh weather concerns while year-round activities provide engagement. Healthcare facilities rival Northern Europe with English-speaking doctors available. Established expat communities offer social networks and friendship opportunities. Affordable living costs preserve retirement savings. International schools benefit grandchildren visiting. Golf, beaches, cultural activities, and vibrant restaurant scenes ensure active, fulfilling retirements for those choosing Cartagena."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Murcia"
     }
-  ],
-  "slug": "cartagena",
-  "town": "Cartagena",
-  "propertyCount": 11,
-  "generatedAt": "2026-02-06T10:07:42.296Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Cartagena a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Cartagena combines authentic Spanish culture with modern amenities, established expat communities, and Mediterranean lifestyle at exceptional value. The town offers excellent healthcare, international education, beautiful beaches, championship golf, and property investment potential with"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Cartagena?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cartagena offers excellent value with properties 40% cheaper than Spanish island markets. Monthly living costs for a couple typically range €1,200-1,800, depending on lifestyle. Supermarkets like Mercadona and Lidl provide affordable groceries. Dining ranges from €8-15 for casual meals to €25-40 for"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can purchase property in Spain without restrictions. Non-EU citizens simply require a Spanish Tax Identification Number (NIE). The process involves selecting a property, instructing a Spanish lawyer, conducting searches, arranging financing if needed, and completing the purchase thro"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No separate visa is required specifically for property purchase. However, if you plan to reside in Spain, visa requirements depend on your nationality. EU/EEA citizens enjoy freedom of movement. Non-EU citizens typically need residency visas (such as the Digital Nomad Visa or Golden Visa for investo"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond the property purchase price, expect additional costs totaling 7-10% of purchase price. These include: notary fees (0.5-1%), registry fees (0.5-1%), legal fees (1-2%), and transfer tax (6-10% depending on region). Property valuation fees, estate agent commissions (if applicable), and insurance"
+        }
+      }
+    ]
+  }
 }

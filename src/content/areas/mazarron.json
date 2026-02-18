@@ -1,75 +1,72 @@
 {
-  "metaTitle": "Living in Mazarron 2026 | Complete Guide to This Spanish Gem",
-  "metaDescription": "Discover living in Mazarron: villas from €239,900, established expat community, beaches & golf nearby. Complete guide to this inland Spanish town.",
-  "heroIntro": "Mazarron is a charming inland town on Spain's Murcia coast, offering an authentic Mediterranean lifestyle without the crowds and high prices of popular beach destinations. This established community has attracted international residents seeking a balanced blend of accessibility, affordability, and authentic Spanish living. With villas available from €239,900—40% less expensive than island markets—Mazarron represents excellent value for property investors and families relocating to Spain. The town benefits from its proximity to championship golf courses, multiple Blue Flag beaches, and a thriving expat community where English is commonly spoken. Whether you're seeking a retirement haven, investment property, or family home, Mazarron offers the perfect combination of modern amenities, natural beauty, and genuine Spanish character.",
-  "climate": "Mazarron enjoys a Mediterranean climate with over 300 days of sunshine annually, making it one of Spain's sunniest regions. Summers are warm and dry, typically ranging from 28-32°C (82-90°F), while winters remain mild at 10-15°C (50-59°F). Spring and autumn are particularly pleasant, offering comfortable temperatures for outdoor activities without summer heat. The region experiences minimal rainfall, concentrated mainly in autumn and winter months. This consistently favorable climate makes Mazarron ideal year-round living, though spring (March-May) and autumn (September-November) offer the most comfortable conditions for outdoor activities. The warm, dry summers perfect beach and golf, while mild winters suit those seeking to escape colder European climates.",
-  "lifestyle": "Daily life in Mazarron centers around a relaxed Mediterranean rhythm, blending modern conveniences with traditional Spanish culture. The town features vibrant local markets offering fresh produce, seafood, and regional specialties, alongside modern supermarkets like Mercadona, Lidl, and Consum. Residents enjoy access to excellent local restaurants serving traditional paella, fresh fish, and international cuisine. The established international community has created a welcoming environment where English is widely spoken, particularly among service providers and younger residents. Weekends often involve visits to nearby Blue Flag beaches for swimming and water sports, or rounds at championship golf courses. Social clubs, hobby groups, and community events provide abundant opportunities for newcomers to integrate. The pace of life is distinctly slower than major cities, allowing residents to enjoy leisurely evening paseos, outdoor dining, and genuine community connections. This balanced lifestyle attracts retirees, remote workers, and families seeking quality living without sacrificing modern amenities.",
-  "amenities": {
-    "healthcare": {
-      "text": "Healthcare in Mazarron is comprehensive and accessible, with a regional hospital located within 30 minutes, supplemented by private clinics throughout the area. English-speaking doctors are readily available, particularly in established private practices catering to the international community. The healthcare system combines public Spanish healthcare with private options, allowing residents flexibility in choosing their preferred providers. Many expatriates appreciate the high standard of medical care at significantly lower costs than Northern Europe. Dental and specialist services are widely available, and private health insurance is affordable and comprehensive.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes drive",
-        "Private clinics with English-speaking doctors",
-        "Affordable dental and specialist care",
-        "Comprehensive private health insurance options"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping in Mazarron caters to all needs, from daily groceries to specialty items. Major supermarkets including Mercadona, Lidl, and Consum provide competitive pricing and wide selections, while local markets offer authentic Spanish produce, fresh fish, and regional delicacies. The town center features independent shops selling everything from clothing to home goods. Regular street markets operate throughout the week, providing opportunities to purchase fresh seasonal produce directly from local farmers. Shopping is convenient, affordable, and offers both modern chain stores and traditional Spanish retail experiences.",
-      "keyPoints": [
-        "Mercadona supermarket chain",
-        "Lidl discount supermarket",
-        "Consum local supermarket",
-        "Traditional Spanish street markets"
-      ]
-    },
-    "education": {
-      "text": "Mazarron serves families well with several international schools in the region offering British curriculum options and other international educational standards. These schools provide an excellent alternative for expatriate families seeking English-language education with international qualifications. Local Spanish schools are also available for families interested in full cultural immersion. The region's educational facilities support both continuity for relocating families and quality preparation for higher education elsewhere in Europe.",
-      "keyPoints": [
-        "International schools with British curriculum",
-        "English-language educational programs",
-        "Regional secondary school options",
-        "Support services for expatriate families"
-      ]
-    },
-    "sports": {
-      "text": "Sports enthusiasts will find Mazarron exceptionally well-served with multiple Blue Flag beaches within 20 minutes offering swimming, windsurfing, paddleboarding, and beach volleyball. Championship golf courses nearby attract players of all abilities, with several highly-rated 18-hole courses within easy driving distance. Water sports facilities provide professional instruction in diving, sailing, and kayaking. Hiking trails through the surrounding countryside offer additional outdoor recreation, while tennis clubs and fitness centers serve year-round fitness needs. The combination of coastal and inland activities creates diverse sporting opportunities.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Several championship golf courses nearby",
-        "Water sports facilities and instruction",
-        "Hiking trails and outdoor activities"
-      ]
-    }
+  "slug": "mazarron",
+  "name": "Mazarron",
+  "region": "Murcia",
+  "heroImage": "/images/areas/mazarron-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 2,
+  "propertyTypes": [
+    "Villa properties dominate Mazarron's market",
+    "offering generous space",
+    "privacy",
+    "and often include gardens",
+    "pools",
+    "and outdoor entertaining areas."
+  ],
+  "priceRange": {
+    "min": 239900,
+    "max": 339900
   },
-  "transport": {
-    "overview": "Bus connections link Mazarron to surrounding towns and regional centers, making public transport viable for local travel. However, a car is strongly recommended for flexibility and accessing coastal beaches, golf courses, and neighboring communities. The town's inland location provides excellent road connectivity without coastal traffic congestion.",
-    "airports": "Alicante-Elche Airport (approximately 90km) is the primary international gateway, served by numerous European airlines. Murcia International Airport (approximately 60km) provides additional flight options. Both airports are accessible via motorway, typically requiring 60-90 minutes driving time.",
-    "driving": "Mazarron benefits from excellent road connectivity via the AP-7 motorway, linking to Cartagena, Murcia city, and northward toward Valencia and Barcelona. Regional roads connect to nearby coastal towns and inland communities. Road conditions are excellent, and driving distances to major cities make weekend excursions convenient.",
-    "public": "Bus services operate regularly between Mazarron and regional destinations, with local town buses providing community transportation. Alicante's tram system is accessible for those making extended regional trips.",
-    "keyPoints": [
-      "Local bus connections available",
-      "90km to Alicante-Elche Airport",
-      "60km to Murcia International Airport",
-      "Car recommended for flexibility and beach/golf access"
+  "externalLinks": {
+    "tourism": {
+      "name": "Mazarron Tourism",
+      "url": "https://www.google.com/search?q=Mazarron%20Spain%20official%20website",
+      "description": "Discover more about Mazarron"
+    },
+    "airport": {
+      "name": "Murcia-Corvera Airport",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "50 km",
+      "driveTime": "35 min"
+    },
+    "healthcare": {
+      "name": "Hospital de la Arrixaca (Murcia)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20de%20la%20Arrixaca%20(Murcia)",
+      "distance": "60 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+Mazarron+Spain",
+        "description": "Beautiful Mediterranean beach nearby"
+      }
     ]
   },
-  "propertyMarket": {
-    "overview": "Mazarron's property market is experiencing healthy growth with a year-on-year increase of 8%, indicating strong appreciation potential. This inland alternative offers exceptional value compared to coastal markets, attracting both owner-occupiers and investment buyers. The established expat community and improving amenities continue driving demand.",
-    "priceRange": "€239,900 - €339,900",
-    "popularTypes": "Villa properties dominate Mazarron's market, offering generous space, privacy, and often include gardens, pools, and outdoor entertaining areas.",
-    "investment": "With an average rental yield of approximately €800 per week (€3,200-3,500 monthly), properties offer attractive rental income potential. Capital appreciation of 8% annually suggests solid long-term value growth. The combination of tourism appeal, golf course proximity, and established expat community creates consistent rental demand. Properties are significantly undervalued at €2,200/m² compared to island markets (40% discount), indicating further appreciation potential."
-  },
-  "neighborhoods": [
-    "Mazarron Puerto: The coastal village offering beach access, seafood restaurants, marina facilities, and tourist amenities while maintaining authentic character",
-    "Mazarron Centro: The traditional town center featuring local architecture, markets, shops, and community services with strong Spanish character",
-    "Las Encarnacion: Residential area combining modern amenities with proximity to beaches and offering good value properties",
-    "Playa Grande: Beachfront area attracting those prioritizing coastal living with beach activities and water sports access",
-    "El Gorguel: Inland neighborhood offering peaceful settings with golf course proximity and rural charm",
-    "San Juan: Developing area with newer construction, modern amenities, and good value for contemporary properties"
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Mazarron 2026 | Complete Guide to This Spanish Gem",
+    "metaDescription": "Discover living in Mazarron: villas from €239,900, established expat community, beaches & golf nearby. Complete guide to this inland Spanish town.",
+    "heroIntro": "Mazarron is a charming inland town on Spain's Murcia coast, offering an authentic Mediterranean lifestyle without the crowds and high prices of popular beach destinations. This established community has attracted international residents seeking a balanced blend of accessibility, affordability, and authentic Spanish living. With villas available from €239,900—40% less expensive than island markets—Mazarron represents excellent value for property investors and families relocating to Spain. The town benefits from its proximity to championship golf courses, multiple Blue Flag beaches, and a thriving expat community where English is commonly spoken. Whether you're seeking a retirement haven, investment property, or family home, Mazarron offers the perfect combination of modern amenities, natural beauty, and genuine Spanish character.",
+    "lifestyleSection": {
+      "intro": "Daily life in Mazarron centers around a relaxed Mediterranean rhythm, blending modern conveniences with traditional Spanish culture. The town features vibrant local markets offering fresh produce, seafood, and regional specialties, alongside modern supermarkets like Mercadona, Lidl, and Consum. Residents enjoy access to excellent local restaurants serving traditional paella, fresh fish, and international cuisine. The established international community has created a welcoming environment where English is widely spoken, particularly among service providers and younger residents. Weekends often involve visits to nearby Blue Flag beaches for swimming and water sports, or rounds at championship golf courses. Social clubs, hobby groups, and community events provide abundant opportunities for newcomers to integrate. The pace of life is distinctly slower than major cities, allowing residents to enjoy leisurely evening paseos, outdoor dining, and genuine community connections. This balanced lifestyle attracts retirees, remote workers, and families seeking quality living without sacrificing modern amenities.\n\nMazarron enjoys a Mediterranean climate with over 300 days of sunshine annually, making it one of Spain's sunniest regions. Summers are warm and dry, typically ranging from 28-32°C (82-90°F), while winters remain mild at 10-15°C (50-59°F). Spring and autumn are particularly pleasant, offering comfortable temperatures for outdoor activities without summer heat. The region experiences minimal rainfall, concentrated mainly in autumn and winter months. This consistently favorable climate makes Mazarron ideal year-round living, though spring (March-May) and autumn (September-November) offer the most comfortable conditions for outdoor activities. The warm, dry summers perfect beach and golf, while mild winters suit those seeking to escape colder European climates.",
+      "highlights": [
+        "Exceptional value: 40% cheaper than island markets with villas from €239,900",
+        "Established expat community with English widely spoken and integration support",
+        "Perfect climate: 300+ days sunshine, mild winters, warm summers",
+        "Beach access: Multiple Blue Flag beaches within 20 minutes for year-round recreation",
+        "Golf paradise: Several championship courses nearby for enthusiasts",
+        "Growing market: 8% annual appreciation indicates healthy investment potential"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Sports enthusiasts will find Mazarron exceptionally well-served with multiple Blue Flag beaches within 20 minutes offering swimming, windsurfing, paddleboarding, and beach volleyball. Championship golf courses nearby attract players of all abilities, with several highly-rated 18-hole courses within easy driving distance. Water sports facilities provide professional instruction in diving, sailing, and kayaking. Hiking trails through the surrounding countryside offer additional outdoor recreation, while tennis clubs and fitness centers serve year-round fitness needs. The combination of coastal and inland activities creates diverse sporting opportunities.",
+      "dining": "Mazarron offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping in Mazarron caters to all needs, from daily groceries to specialty items. Major supermarkets including Mercadona, Lidl, and Consum provide competitive pricing and wide selections, while local markets offer authentic Spanish produce, fresh fish, and regional delicacies. The town center features independent shops selling everything from clothing to home goods. Regular street markets operate throughout the week, providing opportunities to purchase fresh seasonal produce directly from local farmers. Shopping is convenient, affordable, and offers both modern chain stores and traditional Spanish retail experiences.",
+      "healthcare": "Healthcare in Mazarron is comprehensive and accessible, with a regional hospital located within 30 minutes, supplemented by private clinics throughout the area. English-speaking doctors are readily available, particularly in established private practices catering to the international community. The healthcare system combines public Spanish healthcare with private options, allowing residents flexibility in choosing their preferred providers. Many expatriates appreciate the high standard of medical care at significantly lower costs than Northern Europe. Dental and specialist services are widely available, and private health insurance is affordable and comprehensive.",
+      "transport": "Bus connections link Mazarron to surrounding towns and regional centers, making public transport viable for local travel. However, a car is strongly recommended for flexibility and accessing coastal beaches, golf courses, and neighboring communities. The town's inland location provides excellent road connectivity without coastal traffic congestion. Alicante-Elche Airport (approximately 90km) is the primary international gateway, served by numerous European airlines. Murcia International Airport (approximately 60km) provides additional flight options. Both airports are accessible via motorway, typically requiring 60-90 minutes driving time. Mazarron benefits from excellent road connectivity via the AP-7 motorway, linking to Cartagena, Murcia city, and northward toward Valencia and Barcelona. Regional roads connect to nearby coastal towns and inland communities. Road conditions are excellent, and driving distances to major cities make weekend excursions convenient. Bus services operate regularly between Mazarron and regional destinations, with local town buses providing community transportation. Alicante's tram system is accessible for those making extended regional trips."
+    },
+    "propertyMarketSection": "Mazarron's property market is experiencing healthy growth with a year-on-year increase of 8%, indicating strong appreciation potential. This inland alternative offers exceptional value compared to coastal markets, attracting both owner-occupiers and investment buyers. The established expat community and improving amenities continue driving demand.\n\nPopular property types include Villa properties dominate Mazarron's market, offering generous space, privacy, and often include gardens, pools, and outdoor entertaining areas..\n\nWith an average rental yield of approximately €800 per week (€3,200-3,500 monthly), properties offer attractive rental income potential. Capital appreciation of 8% annually suggests solid long-term value growth. The combination of tourism appeal, golf course proximity, and established expat community creates consistent rental demand. Properties are significantly undervalued at €2,200/m² compared to island markets (40% discount), indicating further appreciation potential.",
+    "whyLiveHereSection": [
       "Exceptional value: 40% cheaper than island markets with villas from €239,900",
       "Established expat community with English widely spoken and integration support",
       "Perfect climate: 300+ days sunshine, mild winters, warm summers",
@@ -77,48 +74,330 @@
       "Golf paradise: Several championship courses nearby for enthusiasts",
       "Growing market: 8% annual appreciation indicates healthy investment potential"
     ],
-    "cons": [
-      "Car necessary: Public transport limited, requiring vehicle ownership for practical living",
-      "Summer tourism: Peak season brings crowds to beaches and increased traffic in July-August",
-      "Smaller city: Limited major shopping centers or nightlife compared to Alicante or Murcia city"
-    ]
+    "faqs": [
+      {
+        "question": "Is Mazarron a good place to live?",
+        "answer": "Yes, absolutely. Mazarron offers an excellent combination of affordability, Mediterranean lifestyle, established infrastructure, and a welcoming international community. With villas available from €239,900, year-round sunshine, nearby beaches and golf, and English widely spoken, it's particularly suited for retirees, remote workers, and families. The 8% annual market growth indicates healthy long-term value, while the town maintains authentic Spanish character without the overcrowding of major tourist destinations."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can freely buy property in Spain without citizenship or residence requirements. EU citizens need only a Spanish tax number (NIF), while non-EU nationals require slightly more documentation. The process is transparent and well-regulated. Many property professionals in Mazarron specialize in assisting international buyers through the purchase process, making acquisition straightforward."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Purchase costs in Spain typically total 8-12% of property price, including: transfer tax (6-10%, varying by region), legal fees (1-1.5%), notary fees (0.5-1%), and agency commission (3-5% if using a realtor). Additionally, annual costs include property tax (0.4-1.1% of cadastral value) and optional home insurance. Mazarron's lower property prices mean these percentage-based costs remain very reasonable compared to developed nations."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "No, you do not need a visa specifically to buy property in Spain. EU citizens can purchase freely with just a Spanish tax number (NIF). Non-EU citizens can also purchase without a residency visa, though establishing legal residency afterward (for living in Spain) requires separate visa applications. Property purchase and residency are separate legal processes—many international buyers own Spanish property without permanent residency."
+      },
+      {
+        "question": "What is the cost of living in Mazarron?",
+        "answer": "Cost of living in Mazarron is remarkably affordable compared to Northern Europe or major Spanish cities. A retired couple can comfortably live on €1,500-2,000 monthly including utilities, groceries, dining out, and entertainment. Property rental costs €800-1,200 weekly or €2,800-4,000 monthly. Food, utilities, and local services are 30-40% cheaper than UK or Northern Europe, making Mazarron attractive for those on modest budgets or seeking financial efficiency."
+      },
+      {
+        "question": "Is Costa Blanca a good place to buy property?",
+        "answer": "Yes, Costa Blanca remains an excellent property investment location. The region offers diverse options from coastal resorts to inland towns like Mazarron, providing flexibility for different lifestyles and budgets. Strong tourism, established international communities, favorable climate, and steady appreciation make it attractive. Mazarron specifically offers better value than crowded coastal areas while maintaining beach proximity, excellent amenities, and investment potential."
+      },
+      {
+        "question": "How far is Costa Blanca from the UK?",
+        "answer": "Costa Blanca is approximately 1,200 kilometers (750 miles) from the UK. Flight time from UK airports to Alicante typically takes 2.5-3 hours, with numerous daily direct flights from major UK cities. This proximity makes weekend visits home feasible and supports the large established British community throughout the region. The journey is straightforward and reasonably priced, particularly with budget airlines."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Costa Blanca enjoys Mediterranean climate with approximately 300 days annual sunshine, warm dry summers (28-32°C), and mild winters (10-15°C). Rainfall is minimal, concentrated in autumn/winter. Spring and autumn offer ideal conditions. This consistent favorable weather supports year-round outdoor living and activities. Mazarron specifically benefits from this climate while being slightly less humid than purely coastal areas, making it comfortable for those sensitive to coastal dampness."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Mazarron? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "With an average rental yield of approximately €800 per week (€3,200-3,500 monthly), properties offer attractive rental income potential. Capital appreciation of 8% annually suggests solid long-term value growth. The combination of tourism appeal, golf course proximity, and established expat community creates consistent rental demand. Properties are significantly undervalued at €2,200/m² compared to island markets (40% discount), indicating further appreciation potential.",
+      "highlights": [
+        "Strong holiday rental demand during peak season (May-October)",
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Short-term holiday lets popular with European tourists"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Mazarron are significantly lower than Northern Europe and very competitive within Spain. Coastal living here combines affordability with Mediterranean lifestyle.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Recommended for flexibility"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Mazarron celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "June",
+          "description": "Magical midsummer beach celebrations with bonfires, fireworks, and midnight swimming traditions along the coast"
+        },
+        {
+          "name": "Summer Beach Festival",
+          "month": "July",
+          "description": "Outdoor concerts, food stalls, and cultural events along the waterfront throughout the summer season"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Mazarron have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school offering GCSE and A-Levels with strong extracurricular programmes"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "International (British)",
+          "distance": "25-45 min",
+          "description": "British curriculum primary and secondary school serving the international community"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Mazarron offers excellent outdoor activities year-round, from beach activities and water sports to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Beach & Swimming",
+          "type": "Beach",
+          "description": "Beautiful Mediterranean beaches nearby with crystal-clear waters, perfect for swimming, snorkelling, and sunbathing"
+        },
+        {
+          "name": "Water Sports",
+          "type": "Water Sports",
+          "description": "Paddleboarding, kayaking, windsurfing, and sailing available at nearby beaches and marinas"
+        },
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Mazarron has a thriving international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The coastal location attracts a diverse mix of nationalities, particularly from Northern Europe. English is widely spoken in shops, restaurants, and social settings, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Active international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Mazarron",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the sea breeze and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Beach Walk",
+          "description": "Morning stroll along the beach or promenade, breathing in the fresh Mediterranean air"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Beach Time",
+          "description": "Head to the beach for an afternoon swim in the warm Mediterranean waters"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-1.3136!3d37.5992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Mazarron a good place to live?",
-      "answer": "Yes, absolutely. Mazarron offers an excellent combination of affordability, Mediterranean lifestyle, established infrastructure, and a welcoming international community. With villas available from €239,900, year-round sunshine, nearby beaches and golf, and English widely spoken, it's particularly suited for retirees, remote workers, and families. The 8% annual market growth indicates healthy long-term value, while the town maintains authentic Spanish character without the overcrowding of major tourist destinations."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Mazarron",
+    "description": "Mazarron is a coastal municipality in Murcia, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.5992",
+      "longitude": "-1.3136"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can freely buy property in Spain without citizenship or residence requirements. EU citizens need only a Spanish tax number (NIF), while non-EU nationals require slightly more documentation. The process is transparent and well-regulated. Many property professionals in Mazarron specialize in assisting international buyers through the purchase process, making acquisition straightforward."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mazarron",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Purchase costs in Spain typically total 8-12% of property price, including: transfer tax (6-10%, varying by region), legal fees (1-1.5%), notary fees (0.5-1%), and agency commission (3-5% if using a realtor). Additionally, annual costs include property tax (0.4-1.1% of cadastral value) and optional home insurance. Mazarron's lower property prices mean these percentage-based costs remain very reasonable compared to developed nations."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "No, you do not need a visa specifically to buy property in Spain. EU citizens can purchase freely with just a Spanish tax number (NIF). Non-EU citizens can also purchase without a residency visa, though establishing legal residency afterward (for living in Spain) requires separate visa applications. Property purchase and residency are separate legal processes—many international buyers own Spanish property without permanent residency."
-    },
-    {
-      "question": "What is the cost of living in Mazarron?",
-      "answer": "Cost of living in Mazarron is remarkably affordable compared to Northern Europe or major Spanish cities. A retired couple can comfortably live on €1,500-2,000 monthly including utilities, groceries, dining out, and entertainment. Property rental costs €800-1,200 weekly or €2,800-4,000 monthly. Food, utilities, and local services are 30-40% cheaper than UK or Northern Europe, making Mazarron attractive for those on modest budgets or seeking financial efficiency."
-    },
-    {
-      "question": "Is Costa Blanca a good place to buy property?",
-      "answer": "Yes, Costa Blanca remains an excellent property investment location. The region offers diverse options from coastal resorts to inland towns like Mazarron, providing flexibility for different lifestyles and budgets. Strong tourism, established international communities, favorable climate, and steady appreciation make it attractive. Mazarron specifically offers better value than crowded coastal areas while maintaining beach proximity, excellent amenities, and investment potential."
-    },
-    {
-      "question": "How far is Costa Blanca from the UK?",
-      "answer": "Costa Blanca is approximately 1,200 kilometers (750 miles) from the UK. Flight time from UK airports to Alicante typically takes 2.5-3 hours, with numerous daily direct flights from major UK cities. This proximity makes weekend visits home feasible and supports the large established British community throughout the region. The journey is straightforward and reasonably priced, particularly with budget airlines."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Costa Blanca enjoys Mediterranean climate with approximately 300 days annual sunshine, warm dry summers (28-32°C), and mild winters (10-15°C). Rainfall is minimal, concentrated in autumn/winter. Spring and autumn offer ideal conditions. This consistent favorable weather supports year-round outdoor living and activities. Mazarron specifically benefits from this climate while being slightly less humid than purely coastal areas, making it comfortable for those sensitive to coastal dampness."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Murcia"
     }
-  ],
-  "slug": "mazarron",
-  "town": "Mazarron",
-  "propertyCount": 2,
-  "generatedAt": "2026-02-05T23:14:48.795Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Mazarron a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. Mazarron offers an excellent combination of affordability, Mediterranean lifestyle, established infrastructure, and a welcoming international community. With villas available from €239,900, year-round sunshine, nearby beaches and golf, and English widely spoken, it's particularly su"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can freely buy property in Spain without citizenship or residence requirements. EU citizens need only a Spanish tax number (NIF), while non-EU nationals require slightly more documentation. The process is transparent and well-regulated. Many property professionals in Mazarron special"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Purchase costs in Spain typically total 8-12% of property price, including: transfer tax (6-10%, varying by region), legal fees (1-1.5%), notary fees (0.5-1%), and agency commission (3-5% if using a realtor). Additionally, annual costs include property tax (0.4-1.1% of cadastral value) and optional "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, you do not need a visa specifically to buy property in Spain. EU citizens can purchase freely with just a Spanish tax number (NIF). Non-EU citizens can also purchase without a residency visa, though establishing legal residency afterward (for living in Spain) requires separate visa applications."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Mazarron?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cost of living in Mazarron is remarkably affordable compared to Northern Europe or major Spanish cities. A retired couple can comfortably live on €1,500-2,000 monthly including utilities, groceries, dining out, and entertainment. Property rental costs €800-1,200 weekly or €2,800-4,000 monthly. Food,"
+        }
+      }
+    ]
+  }
 }

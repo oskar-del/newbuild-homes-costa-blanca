@@ -1,75 +1,62 @@
 {
-  "metaTitle": "Living in El Vergel 2026 | Complete Inland Town Guide",
-  "metaDescription": "Discover El Vergel: charming inland town with properties €120k-€695k, established expat community, beaches 20 mins away. Complete living guide inside.",
-  "heroIntro": "El Vergel is a picturesque inland town on Spain's Costa Blanca, offering an authentic Mediterranean lifestyle without the tourist crowds. Nestled in the heart of the region, this charming town attracts a diverse mix of families, retirees, and remote workers seeking affordability and genuine Spanish living. With an established international community where English is commonly spoken, El Vergel provides the perfect balance between local culture and expat comfort. The town's property market remains remarkably accessible, with prices 40% below island markets, making it an excellent choice for those seeking value without compromising on quality of life. Whether you're drawn to the nearby Blue Flag beaches, championship golf courses, or the vibrant local markets, El Vergel offers a compelling alternative to overcrowded coastal developments. The region benefits from excellent healthcare facilities, international schools, and modern amenities, while maintaining the relaxed pace of traditional Spanish village life.",
-  "climate": "El Vergel enjoys a Mediterranean climate with approximately 300 days of sunshine annually. Summers are warm and dry, with temperatures typically ranging from 28-32°C (82-90°F), while winters remain mild at 8-15°C (46-59°F). The best time to visit or relocate is spring (April-May) or autumn (September-October), when temperatures are pleasant and the summer crowds have diminished. Spring brings blooming wildflowers and perfect outdoor weather, while autumn offers comfortable conditions ideal for outdoor activities and property viewings. Winter months are mild enough for year-round outdoor living, though rainfall is concentrated in these cooler months. The climate is ideal for those seeking to escape harsh Northern European winters while avoiding the intensity of peak summer heat.",
-  "lifestyle": "Life in El Vergel revolves around a relaxed Mediterranean rhythm that respects both tradition and modernity. Your daily routine might include morning coffee at a local café, shopping at the authentic weekly markets where locals gather, or exploring the surrounding countryside. The established international community has created a welcoming environment where English is widely spoken, yet genuine Spanish culture remains central to life here. Dining options range from traditional tapas bars to international restaurants catering to the diverse population. The town is perfectly positioned for weekend beach trips—pristine Blue Flag beaches lie just 20 minutes away—while adventure seekers enjoy hiking in nearby hills and exploring charming neighboring villages. Social life flourishes through international clubs, community events, and seasonal fiestas that blend Spanish tradition with multicultural celebration. You'll find yourself part of a genuinely inclusive community where making friends is natural and local knowledge is freely shared.",
-  "amenities": {
+  "slug": "el-vergel",
+  "name": "El Vergel",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/el-vergel-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 3,
+  "propertyTypes": [
+    "Commercial property",
+    "Villa",
+    "Apartamento"
+  ],
+  "priceRange": {
+    "min": 120000,
+    "max": 695000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "El Vergel Tourism",
+      "url": "https://www.google.com/search?q=El%20Vergel%20Spain%20official%20website",
+      "description": "Discover more about El Vergel"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "95 km",
+      "driveTime": "60 min"
+    },
     "healthcare": {
-      "text": "El Vergel's healthcare infrastructure ensures residents have access to excellent medical services. A regional hospital is conveniently located within 30 minutes, providing comprehensive facilities for serious medical needs. The area also features private clinics offering specialized treatment and shorter wait times. English-speaking doctors are readily available throughout the region, removing language barriers for international residents. This combination of public and private healthcare options means you can choose between comprehensive regional facilities or personalized private care, with professional medical attention always within reach.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes drive",
-        "Private clinics with specialist services available",
-        "English-speaking doctors throughout the area",
-        "Comprehensive healthcare coverage for residents"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping in El Vergel caters to every need and budget. Major supermarket chains including Mercadona, Lidl, and Consum provide competitive pricing and quality products familiar to international shoppers. Beyond these modern conveniences, weekly local markets offer fresh produce, local specialties, and authentic Spanish goods at unbeatable prices. The combination of chain stores and traditional markets means you can enjoy both modern shopping convenience and authentic local commerce. Whether seeking bargain groceries or specialty international products, El Vergel's shopping options are comprehensive and affordably priced.",
-      "keyPoints": [
-        "Mercadona supermarket with extensive product range",
-        "Lidl for budget-conscious weekly shopping",
-        "Consum for fresh produce and local goods",
-        "Weekly markets with authentic Spanish products"
-      ]
-    },
-    "education": {
-      "text": "Families relocating to El Vergel will find quality educational options meeting international standards. International schools in the region offer curricula recognized globally, ensuring continuity in your children's education regardless of future relocation. British curriculum options are particularly well-established, reflecting the significant UK expat presence. These schools combine rigorous academics with diverse student populations, creating genuinely international learning environments. From primary through secondary education, quality schooling is readily accessible, making El Vergel an ideal choice for families prioritizing education while seeking a Mediterranean lifestyle.",
-      "keyPoints": [
-        "International schools in the region",
-        "British curriculum educational programs available",
-        "Recognized global academic standards",
-        "Diverse multicultural learning environments"
-      ]
-    },
-    "sports": {
-      "text": "El Vergel is a haven for active lifestyles and recreational pursuits. Multiple Blue Flag beaches within 20 minutes offer swimming, water sports, and coastal relaxation. The area boasts several championship golf courses catering to enthusiasts of all abilities, with professional facilities and stunning Mediterranean settings. Beyond beaches and golf, the region supports hiking, cycling, tennis, and watersports communities. The combination of pristine natural environment and world-class sporting facilities creates endless opportunities for outdoor recreation and wellness.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Championship golf courses nearby",
-        "Water sports and beach activities",
-        "Hiking and cycling trails throughout the region"
-      ]
+      "name": "Hospital de Dénia",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20de%20D%C3%A9nia",
+      "distance": "8 km"
     }
   },
-  "transport": {
-    "overview": "Bus connections available. Car recommended for flexibility.",
-    "airports": "Alicante-Elche Airport (ALC) is approximately 50km away, offering direct flights to major European cities. Valencia Airport (VLC) is roughly 120km north, providing additional flight options and competitive pricing.",
-    "driving": "Excellent motorway connections via the AP-7 and N-332 provide quick access to Alicante, Valencia, and neighboring Costa Blanca towns. Local roads are well-maintained and clearly signposted, making navigation straightforward.",
-    "public": "Regional bus services connect El Vergel to surrounding towns and larger urban centers. Train connections are available at nearby stations for longer-distance travel to Valencia and beyond.",
-    "keyPoints": [
-      "Alicante Airport 50km away with international flights",
-      "AP-7 motorway access for rapid travel",
-      "Local bus network connecting neighboring towns",
-      "Car recommended for maximum flexibility and rural exploration"
-    ]
-  },
-  "propertyMarket": {
-    "overview": "El Vergel's property market represents excellent value in the Costa Blanca region, experiencing consistent growth of 8% year-on-year. The inland location positions it favorably against inflated coastal prices, attracting savvy investors and families seeking affordability without compromise. Market fundamentals remain strong with growing demand from international buyers and robust rental potential.",
-    "priceRange": "€120,000 - €695,000",
-    "popularTypes": "Commercial property, Villa, Apartamento",
-    "investment": "Rental potential is compelling, with typical 7-night rentals commanding €800, supporting strong investment returns. Capital growth outlook remains positive given the region's development trajectory, infrastructure improvements, and increasing international demand. Properties 40% less expensive than island markets provide exceptional value with growth potential."
-  },
-  "neighborhoods": [
-    "Historic Town Center: The authentic heart of El Vergel featuring traditional architecture, weekly markets, family-run restaurants, and central plaza life",
-    "Seafront Properties: Villas and apartments with coastal views just 20 minutes from pristine beaches, ideal for those wanting proximity to water",
-    "Residential Developments: Modern apartment complexes with international resident communities, communal facilities, and family-friendly amenities",
-    "Rural Surroundings: Spacious villas and farmhouses on larger plots offering countryside tranquility while remaining minutes from town services",
-    "Expat Quarter: Areas with concentrated international communities, English-speaking services, and established support networks",
-    "Golf Communities: Properties adjacent to championship courses attracting sports enthusiasts and retired professionals"
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in El Vergel 2026 | Complete Inland Town Guide",
+    "metaDescription": "Discover El Vergel: charming inland town with properties €120k-€695k, established expat community, beaches 20 mins away. Complete living guide inside.",
+    "heroIntro": "El Vergel is a picturesque inland town on Spain's Costa Blanca, offering an authentic Mediterranean lifestyle without the tourist crowds. Nestled in the heart of the region, this charming town attracts a diverse mix of families, retirees, and remote workers seeking affordability and genuine Spanish living. With an established international community where English is commonly spoken, El Vergel provides the perfect balance between local culture and expat comfort. The town's property market remains remarkably accessible, with prices 40% below island markets, making it an excellent choice for those seeking value without compromising on quality of life. Whether you're drawn to the nearby Blue Flag beaches, championship golf courses, or the vibrant local markets, El Vergel offers a compelling alternative to overcrowded coastal developments. The region benefits from excellent healthcare facilities, international schools, and modern amenities, while maintaining the relaxed pace of traditional Spanish village life.",
+    "lifestyleSection": {
+      "intro": "Life in El Vergel revolves around a relaxed Mediterranean rhythm that respects both tradition and modernity. Your daily routine might include morning coffee at a local café, shopping at the authentic weekly markets where locals gather, or exploring the surrounding countryside. The established international community has created a welcoming environment where English is widely spoken, yet genuine Spanish culture remains central to life here. Dining options range from traditional tapas bars to international restaurants catering to the diverse population. The town is perfectly positioned for weekend beach trips—pristine Blue Flag beaches lie just 20 minutes away—while adventure seekers enjoy hiking in nearby hills and exploring charming neighboring villages. Social life flourishes through international clubs, community events, and seasonal fiestas that blend Spanish tradition with multicultural celebration. You'll find yourself part of a genuinely inclusive community where making friends is natural and local knowledge is freely shared.\n\nEl Vergel enjoys a Mediterranean climate with approximately 300 days of sunshine annually. Summers are warm and dry, with temperatures typically ranging from 28-32°C (82-90°F), while winters remain mild at 8-15°C (46-59°F). The best time to visit or relocate is spring (April-May) or autumn (September-October), when temperatures are pleasant and the summer crowds have diminished. Spring brings blooming wildflowers and perfect outdoor weather, while autumn offers comfortable conditions ideal for outdoor activities and property viewings. Winter months are mild enough for year-round outdoor living, though rainfall is concentrated in these cooler months. The climate is ideal for those seeking to escape harsh Northern European winters while avoiding the intensity of peak summer heat.",
+      "highlights": [
+        "Exceptional value: 40% cheaper than island markets while offering superior lifestyle quality",
+        "Established expat community: English widely spoken with genuine international support networks",
+        "Perfect beach access: Multiple Blue Flag beaches just 20 minutes away",
+        "Excellent healthcare: Regional hospital and private clinics with English-speaking doctors",
+        "Strong investment fundamentals: 8% year-on-year market growth with robust rental potential",
+        "Authentic Spanish living: Genuine local culture maintained without overwhelming tourist presence"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "El Vergel is a haven for active lifestyles and recreational pursuits. Multiple Blue Flag beaches within 20 minutes offer swimming, water sports, and coastal relaxation. The area boasts several championship golf courses catering to enthusiasts of all abilities, with professional facilities and stunning Mediterranean settings. Beyond beaches and golf, the region supports hiking, cycling, tennis, and watersports communities. The combination of pristine natural environment and world-class sporting facilities creates endless opportunities for outdoor recreation and wellness.",
+      "dining": "El Vergel offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping in El Vergel caters to every need and budget. Major supermarket chains including Mercadona, Lidl, and Consum provide competitive pricing and quality products familiar to international shoppers. Beyond these modern conveniences, weekly local markets offer fresh produce, local specialties, and authentic Spanish goods at unbeatable prices. The combination of chain stores and traditional markets means you can enjoy both modern shopping convenience and authentic local commerce. Whether seeking bargain groceries or specialty international products, El Vergel's shopping options are comprehensive and affordably priced.",
+      "healthcare": "El Vergel's healthcare infrastructure ensures residents have access to excellent medical services. A regional hospital is conveniently located within 30 minutes, providing comprehensive facilities for serious medical needs. The area also features private clinics offering specialized treatment and shorter wait times. English-speaking doctors are readily available throughout the region, removing language barriers for international residents. This combination of public and private healthcare options means you can choose between comprehensive regional facilities or personalized private care, with professional medical attention always within reach.",
+      "transport": "Bus connections available. Car recommended for flexibility. Alicante-Elche Airport (ALC) is approximately 50km away, offering direct flights to major European cities. Valencia Airport (VLC) is roughly 120km north, providing additional flight options and competitive pricing. Excellent motorway connections via the AP-7 and N-332 provide quick access to Alicante, Valencia, and neighboring Costa Blanca towns. Local roads are well-maintained and clearly signposted, making navigation straightforward. Regional bus services connect El Vergel to surrounding towns and larger urban centers. Train connections are available at nearby stations for longer-distance travel to Valencia and beyond."
+    },
+    "propertyMarketSection": "El Vergel's property market represents excellent value in the Costa Blanca region, experiencing consistent growth of 8% year-on-year. The inland location positions it favorably against inflated coastal prices, attracting savvy investors and families seeking affordability without compromise. Market fundamentals remain strong with growing demand from international buyers and robust rental potential.\n\nPopular property types include Commercial property, Villa, Apartamento.\n\nRental potential is compelling, with typical 7-night rentals commanding €800, supporting strong investment returns. Capital growth outlook remains positive given the region's development trajectory, infrastructure improvements, and increasing international demand. Properties 40% less expensive than island markets provide exceptional value with growth potential.",
+    "whyLiveHereSection": [
       "Exceptional value: 40% cheaper than island markets while offering superior lifestyle quality",
       "Established expat community: English widely spoken with genuine international support networks",
       "Perfect beach access: Multiple Blue Flag beaches just 20 minutes away",
@@ -77,48 +64,319 @@
       "Strong investment fundamentals: 8% year-on-year market growth with robust rental potential",
       "Authentic Spanish living: Genuine local culture maintained without overwhelming tourist presence"
     ],
-    "cons": [
-      "Car essential: While buses exist, personal transport strongly recommended for flexibility and rural exploration",
-      "Smaller town amenities: Less cosmopolitan shopping and dining compared to major cities, though perfectly adequate for daily needs",
-      "Lower international profile: Less widely known than major Costa Blanca destinations, meaning fewer direct flights and information resources"
-    ]
+    "faqs": [
+      {
+        "question": "Is El Vergel a good place to live?",
+        "answer": "Yes, El Vergel is an excellent place to live, particularly for those seeking authentic Spanish lifestyle at exceptional value. The established international community ensures you won't feel isolated, while genuine local culture remains vibrant. With healthcare facilities, international schools, beautiful beaches 20 minutes away, and prices 40% below island markets, El Vergel delivers outstanding quality of life across multiple dimensions."
+      },
+      {
+        "question": "What is the cost of living in El Vergel?",
+        "answer": "Cost of living in El Vergel is remarkably reasonable. Property prices range €120,000-€695,000 with an average of €2,200/m². Rental income from 7-night holiday lets averages €800. Daily expenses including groceries, dining, and utilities are significantly lower than Northern Europe, with supermarkets like Mercadona and Lidl offering competitive pricing. Healthcare and education costs are minimal for residents with established services."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can freely purchase property in Spain without restrictions. Both EU and non-EU citizens have equal rights to property ownership. The process is straightforward when working with reputable property agents and Spanish lawyers. Foreign buyers do require a Spanish tax identification number (NIE), and understanding local property taxes and regulations is advisable. El Vergel's established international community includes many foreign property owners who can share practical guidance."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "No, purchasing property in Spain does not require a visa. However, if you plan to reside in Spain long-term, you'll need appropriate residency documentation. Non-EU citizens can obtain residence permits through various routes including retirement visas, investment visas, or digital nomad visas. EU citizens have freedom of movement and residence rights. Property ownership and residency are separate matters—property purchase itself has no visa requirements."
+      },
+      {
+        "question": "What are the property taxes in Spain?",
+        "answer": "Spain's property taxes include transfer tax (ITP) ranging 6-10% depending on region, payable when purchasing. Annual property ownership tax (IBI) is approximately 0.4-1.1% of assessed property value. Additionally, there's a 3% stamp duty on mortgage registrations. Non-resident property owners pay non-resident income tax on rental revenue. Spanish accountants and property lawyers routinely handle these calculations, ensuring compliance and optimizing tax positions within legal frameworks."
+      },
+      {
+        "question": "Can I get a mortgage in Spain as a foreigner?",
+        "answer": "Yes, foreigners can obtain mortgages in Spain through Spanish banks and international lenders. Most banks require 20-30% down payment, proof of income, employment contracts, and credit history documentation. EU residents typically find mortgage access easier than non-EU citizens. Interest rates are competitive relative to other European markets. Working with international mortgage brokers familiar with your home country's documentation requirements streamlines the process considerably."
+      },
+      {
+        "question": "Is Costa Blanca a good place to buy property?",
+        "answer": "Costa Blanca remains an excellent property investment destination. The region combines established infrastructure, proven rental markets, strong international demand, and proven capital appreciation. El Vergel specifically offers superior value compared to overheated coastal markets. The combination of beaches, healthcare, international schools, and affordable pricing makes Costa Blanca attractive for investors, retirees, and families alike."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Costa Blanca is outstanding for retirees, with El Vergel offering particular advantages. The combination of affordability, excellent healthcare with English-speaking doctors, mild year-round climate, and established expat communities creates ideal retirement conditions. International schools mean you can have grandchildren nearby, while healthcare access ensures medical peace of mind. The relaxed lifestyle, low costs, and supportive communities make this region popular among European retirees."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in El Vergel? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Rental potential is compelling, with typical 7-night rentals commanding €800, supporting strong investment returns. Capital growth outlook remains positive given the region's development trajectory, infrastructure improvements, and increasing international demand. Properties 40% less expensive than island markets provide exceptional value with growth potential.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in El Vergel are significantly lower than Northern Europe and very competitive within Spain. Inland locations like El Vergel offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "El Vergel celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in El Vergel have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school with GCSE and A-Level programmes, excellent facilities and strong academic results"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "British and IB curriculum with outstanding facilities, sports programmes, and multilingual education"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "El Vergel offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "El Vergel has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Diverse European community including British, Scandinavian, Dutch, German, and French residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in El Vergel",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d0.0053!3d38.8289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is El Vergel a good place to live?",
-      "answer": "Yes, El Vergel is an excellent place to live, particularly for those seeking authentic Spanish lifestyle at exceptional value. The established international community ensures you won't feel isolated, while genuine local culture remains vibrant. With healthcare facilities, international schools, beautiful beaches 20 minutes away, and prices 40% below island markets, El Vergel delivers outstanding quality of life across multiple dimensions."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "El Vergel",
+    "description": "El Vergel is a inland municipality in Costa Blanca North, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.8289",
+      "longitude": "0.0053"
     },
-    {
-      "question": "What is the cost of living in El Vergel?",
-      "answer": "Cost of living in El Vergel is remarkably reasonable. Property prices range €120,000-€695,000 with an average of €2,200/m². Rental income from 7-night holiday lets averages €800. Daily expenses including groceries, dining, and utilities are significantly lower than Northern Europe, with supermarkets like Mercadona and Lidl offering competitive pricing. Healthcare and education costs are minimal for residents with established services."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "El Vergel",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can freely purchase property in Spain without restrictions. Both EU and non-EU citizens have equal rights to property ownership. The process is straightforward when working with reputable property agents and Spanish lawyers. Foreign buyers do require a Spanish tax identification number (NIE), and understanding local property taxes and regulations is advisable. El Vergel's established international community includes many foreign property owners who can share practical guidance."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "No, purchasing property in Spain does not require a visa. However, if you plan to reside in Spain long-term, you'll need appropriate residency documentation. Non-EU citizens can obtain residence permits through various routes including retirement visas, investment visas, or digital nomad visas. EU citizens have freedom of movement and residence rights. Property ownership and residency are separate matters—property purchase itself has no visa requirements."
-    },
-    {
-      "question": "What are the property taxes in Spain?",
-      "answer": "Spain's property taxes include transfer tax (ITP) ranging 6-10% depending on region, payable when purchasing. Annual property ownership tax (IBI) is approximately 0.4-1.1% of assessed property value. Additionally, there's a 3% stamp duty on mortgage registrations. Non-resident property owners pay non-resident income tax on rental revenue. Spanish accountants and property lawyers routinely handle these calculations, ensuring compliance and optimizing tax positions within legal frameworks."
-    },
-    {
-      "question": "Can I get a mortgage in Spain as a foreigner?",
-      "answer": "Yes, foreigners can obtain mortgages in Spain through Spanish banks and international lenders. Most banks require 20-30% down payment, proof of income, employment contracts, and credit history documentation. EU residents typically find mortgage access easier than non-EU citizens. Interest rates are competitive relative to other European markets. Working with international mortgage brokers familiar with your home country's documentation requirements streamlines the process considerably."
-    },
-    {
-      "question": "Is Costa Blanca a good place to buy property?",
-      "answer": "Costa Blanca remains an excellent property investment destination. The region combines established infrastructure, proven rental markets, strong international demand, and proven capital appreciation. El Vergel specifically offers superior value compared to overheated coastal markets. The combination of beaches, healthcare, international schools, and affordable pricing makes Costa Blanca attractive for investors, retirees, and families alike."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Costa Blanca is outstanding for retirees, with El Vergel offering particular advantages. The combination of affordability, excellent healthcare with English-speaking doctors, mild year-round climate, and established expat communities creates ideal retirement conditions. International schools mean you can have grandchildren nearby, while healthcare access ensures medical peace of mind. The relaxed lifestyle, low costs, and supportive communities make this region popular among European retirees."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
     }
-  ],
-  "slug": "el-vergel",
-  "town": "El Vergel",
-  "propertyCount": 3,
-  "generatedAt": "2026-02-06T09:54:04.313Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is El Vergel a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, El Vergel is an excellent place to live, particularly for those seeking authentic Spanish lifestyle at exceptional value. The established international community ensures you won't feel isolated, while genuine local culture remains vibrant. With healthcare facilities, international schools, beau"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in El Vergel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cost of living in El Vergel is remarkably reasonable. Property prices range €120,000-€695,000 with an average of €2,200/m². Rental income from 7-night holiday lets averages €800. Daily expenses including groceries, dining, and utilities are significantly lower than Northern Europe, with supermarkets"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can freely purchase property in Spain without restrictions. Both EU and non-EU citizens have equal rights to property ownership. The process is straightforward when working with reputable property agents and Spanish lawyers. Foreign buyers do require a Spanish tax identification numb"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, purchasing property in Spain does not require a visa. However, if you plan to reside in Spain long-term, you'll need appropriate residency documentation. Non-EU citizens can obtain residence permits through various routes including retirement visas, investment visas, or digital nomad visas. EU c"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the property taxes in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Spain's property taxes include transfer tax (ITP) ranging 6-10% depending on region, payable when purchasing. Annual property ownership tax (IBI) is approximately 0.4-1.1% of assessed property value. Additionally, there's a 3% stamp duty on mortgage registrations. Non-resident property owners pay no"
+        }
+      }
+    ]
+  }
 }

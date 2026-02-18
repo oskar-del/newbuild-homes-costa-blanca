@@ -1,75 +1,67 @@
 {
-  "metaTitle": "Living in Jávea Xàbia 2026 | Complete Guide & Property",
-  "metaDescription": "Discover living in Jávea Xàbia. €1.4M-€2.3M villas, established expat community, Blue Flag beaches. Full lifestyle & property guide.",
-  "heroIntro": "Jávea Xàbia represents one of Spain's most attractive inland destinations, combining Mediterranean charm with cosmopolitan living standards. This picturesque town on the Costa Blanca welcomes an established international community that has transformed it into a thriving multicultural hub while preserving its authentic Spanish character. Located just 20 minutes from pristine Blue Flag beaches and surrounded by stunning natural landscapes, Jávea Xàbia offers the perfect balance between peaceful coastal living and vibrant community life. The region attracts discerning property buyers seeking villas in a location that delivers exceptional value—40% less expensive than Spanish island markets—while maintaining world-class amenities, excellent healthcare, and international schools. Whether you're considering retirement, relocation, or investment in Spain, Jávea Xàbia presents compelling reasons: year-on-year property appreciation of 8%, strong rental income potential, and a welcoming environment where English is widely spoken among the thriving expatriate population.",
-  "climate": "Jávea Xàbia enjoys a classic Mediterranean climate with over 300 days of sunshine annually. Summers are warm and dry, with average temperatures reaching 28-30°C (82-86°F), while mild winters average 8-12°C (46-54°F). The spring and autumn months are particularly pleasant, offering ideal weather for outdoor activities without excessive heat. The area experiences minimal rainfall concentrated in autumn and spring, creating the perfect conditions for year-round living and outdoor pursuits. This consistently favorable climate has made Costa Blanca one of Europe's most sought-after destinations for those seeking perpetual warmth and natural light.",
-  "lifestyle": "Daily life in Jávea Xàbia revolves around the perfect fusion of relaxation and activity. The established international community has created a vibrant social scene where English is commonly spoken, making integration seamless for newcomers. Mornings often begin with visits to local markets bursting with Mediterranean produce, while afternoons may involve leisurely beach time at one of the nearby Blue Flag beaches. The town boasts excellent restaurants serving both traditional Spanish cuisine and international dishes, catering to diverse palates. Weekends frequently feature golf outings at championship courses, water sports, or exploration of charming coastal villages nearby. The expat community organizes regular social events, clubs, and activities, ensuring newcomers quickly feel at home. Despite the cosmopolitan population, authentic Spanish traditions remain central to local culture, with vibrant festivals and markets maintaining the town's character. Shopping is convenient with modern supermarkets, while the slower pace of life encourages neighbors to build genuine friendships. This unique combination—Mediterranean beauty, international sophistication, and genuine community—defines the Jávea Xàbia lifestyle.",
-  "amenities": {
-    "healthcare": {
-      "text": "Healthcare provision in Jávea Xàbia is comprehensive and accessible, with a regional hospital located within 30 minutes for specialized treatment. Multiple private clinics throughout the area offer excellent facilities with shorter waiting times and personalized care. A significant advantage for international residents is the prevalence of English-speaking doctors and medical staff, eliminating language barriers during consultations and treatment. Medical standards are high, comparable to Western European facilities, with modern equipment and qualified professionals. Many residents appreciate the balance between public healthcare access and private clinic options, allowing choice based on individual preferences.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes",
-        "Private clinics with English-speaking staff",
-        "Modern medical facilities and equipment",
-        "Affordable healthcare costs compared to UK/US"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping in Jávea Xàbia combines convenience with local character. Major supermarkets including Mercadona, Lidl, and Consum provide familiar shopping experiences with competitive pricing and quality products. Local markets remain vibrant community hubs, offering fresh produce, regional specialties, and authentic Spanish goods at excellent prices. For specialty items, the established international community has encouraged shops stocking familiar brands and international products. This dual system—modern supermarkets for convenience and traditional markets for quality—gives residents flexibility in their shopping preferences while supporting local businesses.",
-      "keyPoints": [
-        "Mercadona supermarket chain",
-        "Lidl for budget-conscious shopping",
-        "Consum stores throughout the area",
-        "Local weekly markets with fresh produce"
-      ]
-    },
-    "education": {
-      "text": "Families relocating to Jávea Xàbia benefit from excellent international education options in the region. Several international schools operate with British curriculum standards, ensuring continuity for children from UK schooling systems. These institutions maintain high academic standards and provide supportive environments for expatriate families. The schools offer comprehensive curricula combining academics with sports, arts, and extracurricular activities. International school communities often facilitate family integration, creating networks of like-minded expatriate parents and children.",
-      "keyPoints": [
-        "International schools with British curriculum",
-        "High academic standards and facilities",
-        "Strong expatriate family communities",
-        "Extracurricular activities and sports programs"
-      ]
-    },
-    "sports": {
-      "text": "Jávea Xàbia is a paradise for sports enthusiasts and leisure seekers. Multiple Blue Flag beaches within 20 minutes offer swimming, paddleboarding, kayaking, and beach volleyball. Several championship golf courses nearby cater to golfers of all abilities, with stunning Mediterranean views and world-class facilities. Beyond water sports and golf, the region supports hiking, cycling, tennis clubs, and fitness facilities. The outdoor lifestyle is integral to the Jávea Xàbia experience, encouraging active living and regular physical activity throughout the year.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Championship golf courses nearby",
-        "Water sports: kayaking, paddleboarding, swimming",
-        "Hiking, cycling, and tennis facilities"
-      ]
-    }
+  "slug": "j-vea-x-bia",
+  "name": "Jávea Xàbia",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/j-vea-x-bia-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 6,
+  "propertyTypes": [
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 1375000,
+    "max": 2250000
   },
-  "transport": {
-    "overview": "Bus connections are available throughout Jávea Xàbia and surrounding areas, providing affordable public transportation options. However, a car is strongly recommended for lifestyle flexibility, as it enables easy access to beaches, restaurants, and neighboring towns without dependency on public schedules.",
-    "airports": "Alicante Airport is approximately 80km away (90 minutes drive), with Valencia Airport about 140km distant. Both airports provide extensive European connections and flights to the UK.",
-    "driving": "Excellent motorway connections link Jávea Xàbia to major towns and cities. The N-332 coastal road connects to numerous destinations, while inland motorways provide rapid access throughout the region.",
-    "public": "Local bus networks connect the town center to beaches, supermarkets, and neighboring communities. Regional bus services link to larger towns for shopping and specialized services.",
-    "keyPoints": [
-      "Alicante Airport 90 minutes away",
-      "Motorway connections to major cities",
-      "Local bus services available",
-      "Car recommended for convenience and flexibility"
+  "externalLinks": {
+    "tourism": {
+      "name": "Jávea Xàbia Tourism",
+      "url": "https://www.google.com/search?q=J%C3%A1vea%20X%C3%A0bia%20Spain%20official%20website",
+      "description": "Discover more about Jávea Xàbia"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "90 km",
+      "driveTime": "60 min"
+    },
+    "healthcare": {
+      "name": "Hospital de Dénia",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20de%20D%C3%A9nia",
+      "distance": "10 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+J%C3%A1vea%20X%C3%A0bia+Spain",
+        "description": "Beautiful Mediterranean beach nearby"
+      }
     ]
   },
-  "propertyMarket": {
-    "overview": "Jávea Xàbia's property market demonstrates consistent strength with year-on-year appreciation of 8%, indicating healthy growth and investment potential. The market attracts both owner-occupiers seeking lifestyle changes and investors recognizing the rental income opportunities. Supply remains limited relative to demand, particularly for quality villas in desirable locations, supporting favorable seller conditions and capital growth prospects.",
-    "priceRange": "€1,375,000 - €2,250,000",
-    "popularTypes": "Villa",
-    "investment": "Villas in Jávea Xàbia command strong rental potential with typical 7-night rentals achieving €800, delivering attractive gross yields. The established expat community and proximity to beaches ensure consistent tourist and long-term rental demand. Capital appreciation of 8% annually, combined with rental income, provides dual investment benefits. Property prices remain 40% less than Spanish island markets, offering exceptional value for quality Mediterranean real estate."
-  },
-  "neighborhoods": [
-    "Jávea Town Center: The heart of the community with markets, restaurants, and local amenities, ideal for those preferring walkable town living with genuine Spanish character.",
-    "Playa de Arenal: The main beach area with restaurants, beach clubs, and water sports facilities, perfect for beach lovers seeking convenience and holiday atmosphere.",
-    "Xabia Port Area: Charming waterfront location with fishing boats, seafood restaurants, and scenic promenades, offering romantic Mediterranean living with authentic atmosphere.",
-    "Villa Dels Nens: Residential neighborhood ideal for families, with proximity to international schools and parks while maintaining quiet, suburban character.",
-    "Muntanya: Hillside location offering elevated properties with stunning views, appealing to those seeking privacy and natural surroundings away from town bustle.",
-    "Granadella: Exclusive coastal neighborhood with nearby secluded beaches, attracting those seeking privacy and natural beauty combined with convenient amenities."
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Jávea Xàbia 2026 | Complete Guide & Property",
+    "metaDescription": "Discover living in Jávea Xàbia. €1.4M-€2.3M villas, established expat community, Blue Flag beaches. Full lifestyle & property guide.",
+    "heroIntro": "Jávea Xàbia represents one of Spain's most attractive inland destinations, combining Mediterranean charm with cosmopolitan living standards. This picturesque town on the Costa Blanca welcomes an established international community that has transformed it into a thriving multicultural hub while preserving its authentic Spanish character. Located just 20 minutes from pristine Blue Flag beaches and surrounded by stunning natural landscapes, Jávea Xàbia offers the perfect balance between peaceful coastal living and vibrant community life. The region attracts discerning property buyers seeking villas in a location that delivers exceptional value—40% less expensive than Spanish island markets—while maintaining world-class amenities, excellent healthcare, and international schools. Whether you're considering retirement, relocation, or investment in Spain, Jávea Xàbia presents compelling reasons: year-on-year property appreciation of 8%, strong rental income potential, and a welcoming environment where English is widely spoken among the thriving expatriate population.",
+    "lifestyleSection": {
+      "intro": "Daily life in Jávea Xàbia revolves around the perfect fusion of relaxation and activity. The established international community has created a vibrant social scene where English is commonly spoken, making integration seamless for newcomers. Mornings often begin with visits to local markets bursting with Mediterranean produce, while afternoons may involve leisurely beach time at one of the nearby Blue Flag beaches. The town boasts excellent restaurants serving both traditional Spanish cuisine and international dishes, catering to diverse palates. Weekends frequently feature golf outings at championship courses, water sports, or exploration of charming coastal villages nearby. The expat community organizes regular social events, clubs, and activities, ensuring newcomers quickly feel at home. Despite the cosmopolitan population, authentic Spanish traditions remain central to local culture, with vibrant festivals and markets maintaining the town's character. Shopping is convenient with modern supermarkets, while the slower pace of life encourages neighbors to build genuine friendships. This unique combination—Mediterranean beauty, international sophistication, and genuine community—defines the Jávea Xàbia lifestyle.\n\nJávea Xàbia enjoys a classic Mediterranean climate with over 300 days of sunshine annually. Summers are warm and dry, with average temperatures reaching 28-30°C (82-86°F), while mild winters average 8-12°C (46-54°F). The spring and autumn months are particularly pleasant, offering ideal weather for outdoor activities without excessive heat. The area experiences minimal rainfall concentrated in autumn and spring, creating the perfect conditions for year-round living and outdoor pursuits. This consistently favorable climate has made Costa Blanca one of Europe's most sought-after destinations for those seeking perpetual warmth and natural light.",
+      "highlights": [
+        "Established international community with English widely spoken, ensuring easy integration and familiar social networks",
+        "Exceptional value: 40% cheaper than Spanish islands with comparable lifestyle and amenities",
+        "Multiple Blue Flag beaches within 20 minutes offering year-round water activities and Mediterranean lifestyle",
+        "Strong property investment potential with 8% annual appreciation and attractive rental yields",
+        "Excellent healthcare facilities with English-speaking doctors and modern private clinics",
+        "Mediterranean climate with 300+ sunny days annually, perfect for outdoor living and year-round activities"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Jávea Xàbia is a paradise for sports enthusiasts and leisure seekers. Multiple Blue Flag beaches within 20 minutes offer swimming, paddleboarding, kayaking, and beach volleyball. Several championship golf courses nearby cater to golfers of all abilities, with stunning Mediterranean views and world-class facilities. Beyond water sports and golf, the region supports hiking, cycling, tennis clubs, and fitness facilities. The outdoor lifestyle is integral to the Jávea Xàbia experience, encouraging active living and regular physical activity throughout the year.",
+      "dining": "Jávea Xàbia offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping in Jávea Xàbia combines convenience with local character. Major supermarkets including Mercadona, Lidl, and Consum provide familiar shopping experiences with competitive pricing and quality products. Local markets remain vibrant community hubs, offering fresh produce, regional specialties, and authentic Spanish goods at excellent prices. For specialty items, the established international community has encouraged shops stocking familiar brands and international products. This dual system—modern supermarkets for convenience and traditional markets for quality—gives residents flexibility in their shopping preferences while supporting local businesses.",
+      "healthcare": "Healthcare provision in Jávea Xàbia is comprehensive and accessible, with a regional hospital located within 30 minutes for specialized treatment. Multiple private clinics throughout the area offer excellent facilities with shorter waiting times and personalized care. A significant advantage for international residents is the prevalence of English-speaking doctors and medical staff, eliminating language barriers during consultations and treatment. Medical standards are high, comparable to Western European facilities, with modern equipment and qualified professionals. Many residents appreciate the balance between public healthcare access and private clinic options, allowing choice based on individual preferences.",
+      "transport": "Bus connections are available throughout Jávea Xàbia and surrounding areas, providing affordable public transportation options. However, a car is strongly recommended for lifestyle flexibility, as it enables easy access to beaches, restaurants, and neighboring towns without dependency on public schedules. Alicante Airport is approximately 80km away (90 minutes drive), with Valencia Airport about 140km distant. Both airports provide extensive European connections and flights to the UK. Excellent motorway connections link Jávea Xàbia to major towns and cities. The N-332 coastal road connects to numerous destinations, while inland motorways provide rapid access throughout the region. Local bus networks connect the town center to beaches, supermarkets, and neighboring communities. Regional bus services link to larger towns for shopping and specialized services."
+    },
+    "propertyMarketSection": "Jávea Xàbia's property market demonstrates consistent strength with year-on-year appreciation of 8%, indicating healthy growth and investment potential. The market attracts both owner-occupiers seeking lifestyle changes and investors recognizing the rental income opportunities. Supply remains limited relative to demand, particularly for quality villas in desirable locations, supporting favorable seller conditions and capital growth prospects.\n\nPopular property types include Villa.\n\nVillas in Jávea Xàbia command strong rental potential with typical 7-night rentals achieving €800, delivering attractive gross yields. The established expat community and proximity to beaches ensure consistent tourist and long-term rental demand. Capital appreciation of 8% annually, combined with rental income, provides dual investment benefits. Property prices remain 40% less than Spanish island markets, offering exceptional value for quality Mediterranean real estate.",
+    "whyLiveHereSection": [
       "Established international community with English widely spoken, ensuring easy integration and familiar social networks",
       "Exceptional value: 40% cheaper than Spanish islands with comparable lifestyle and amenities",
       "Multiple Blue Flag beaches within 20 minutes offering year-round water activities and Mediterranean lifestyle",
@@ -77,48 +69,330 @@
       "Excellent healthcare facilities with English-speaking doctors and modern private clinics",
       "Mediterranean climate with 300+ sunny days annually, perfect for outdoor living and year-round activities"
     ],
-    "cons": [
-      "Car dependency recommended for lifestyle flexibility, though public transport exists, adding ownership costs",
-      "Summer season brings tourist crowds and beach congestion, potentially reducing quiet retreat appeal for some",
-      "Property prices have risen significantly, with entry points now starting at €1.4M for quality villas"
-    ]
+    "faqs": [
+      {
+        "question": "Is Jávea Xàbia a good place to live?",
+        "answer": "Yes, absolutely. Jávea Xàbia offers an exceptional lifestyle combining Mediterranean beauty with modern amenities, established international community, excellent healthcare, and strong property values. The 8% annual property appreciation, thriving expat community, and proximity to beaches create ideal conditions for both retirement and investment. English is widely spoken, integration is seamless, and the cost of living remains reasonable compared to UK and other Western alternatives."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can freely purchase property in Spain without restrictions. EU citizens, UK citizens, and non-EU nationals all have equal rights to buy residential property. You'll need an NIE (Spanish tax identification number), but no visa is required purely for property purchase. The process is straightforward with legal representation, typically completing within 2-3 months."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Beyond the property price, expect 8-10% additional costs covering: transfer tax (6-10% depending on region), legal fees (1-2%), property registration fees, and notary costs (0.5-1%). In Jávea Xàbia, a €1.8M villa would incur approximately €144,000-€180,000 in combined transaction costs. Annual ownership costs include property tax (0.4-1.1% of cadastral value) and community fees if applicable."
+      },
+      {
+        "question": "What is the cost of living in Costa Blanca?",
+        "answer": "Cost of living in Jávea Xàbia is significantly lower than Northern Europe. Monthly expenses for a single person typically range €1,500-€2,500 including accommodation, utilities, groceries, and dining out. Property prices average €2,200/m², making Jávea Xàbia particularly attractive—40% cheaper than island markets. Healthcare is affordable, either through public system (EU citizens) or private clinics (€100-€200 for doctor consultations)."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Costa Blanca, including Jávea Xàbia, is excellent for retirees offering warm climate, affordable living, quality healthcare with English-speaking doctors, and established expatriate communities providing social support. The Mediterranean lifestyle emphasizes outdoor activities keeping retirees active, while modern amenities and international schools (for grandchildren visits) add appeal. Many retirees appreciate healthcare access superior to their home countries at lower costs."
+      },
+      {
+        "question": "How far is Costa Blanca from the UK?",
+        "answer": "Costa Blanca is approximately 1,200km from the UK, with typical flight times of 2-2.5 hours from London airports to Alicante. Multiple daily flights from major UK cities provide convenient accessibility, making visiting family and friends feasible for frequent trips. The short flight distance makes Costa Blanca ideal for Brits seeking European living without permanent relocation burden."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Costa Blanca enjoys exceptional weather with over 300 days of sunshine annually. Summers reach 28-30°C (82-86°F), while winters average 8-12°C (46-54°F). Rainfall is minimal, concentrated in autumn/spring. This Mediterranean climate allows year-round outdoor activities, beach swimming from May to October, and comfortable living without extreme temperature variations, creating ideal conditions for those seeking consistent warmth."
+      },
+      {
+        "question": "Can I get a mortgage in Spain as a foreigner?",
+        "answer": "Yes, foreign property buyers can obtain mortgages in Spain through Spanish banks and international lenders. UK and EU citizens generally find easiest access, though non-EU nationals can also qualify. Typically, lenders offer 70-80% loan-to-value ratios, requiring 20-30% down payment. Interest rates are competitive (2-3%), and the application process takes 2-4 weeks with proper documentation including proof of income and savings."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Jávea Xàbia? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "Villas in Jávea Xàbia command strong rental potential with typical 7-night rentals achieving €800, delivering attractive gross yields. The established expat community and proximity to beaches ensure consistent tourist and long-term rental demand. Capital appreciation of 8% annually, combined with rental income, provides dual investment benefits. Property prices remain 40% less than Spanish island markets, offering exceptional value for quality Mediterranean real estate.",
+      "highlights": [
+        "Strong holiday rental demand during peak season (May-October)",
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Short-term holiday lets popular with European tourists"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Jávea Xàbia are significantly lower than Northern Europe and very competitive within Spain. Coastal living here combines affordability with Mediterranean lifestyle.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Recommended for flexibility"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Jávea Xàbia celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "June",
+          "description": "Magical midsummer beach celebrations with bonfires, fireworks, and midnight swimming traditions along the coast"
+        },
+        {
+          "name": "Summer Beach Festival",
+          "month": "July",
+          "description": "Outdoor concerts, food stalls, and cultural events along the waterfront throughout the summer season"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Jávea Xàbia have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school with GCSE and A-Level programmes, excellent facilities and strong academic results"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "British and IB curriculum with outstanding facilities, sports programmes, and multilingual education"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Jávea Xàbia offers excellent outdoor activities year-round, from beach activities and water sports to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Beach & Swimming",
+          "type": "Beach",
+          "description": "Beautiful Mediterranean beaches nearby with crystal-clear waters, perfect for swimming, snorkelling, and sunbathing"
+        },
+        {
+          "name": "Water Sports",
+          "type": "Water Sports",
+          "description": "Paddleboarding, kayaking, windsurfing, and sailing available at nearby beaches and marinas"
+        },
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Jávea Xàbia has a thriving international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The coastal location attracts a diverse mix of nationalities, particularly from Northern Europe. English is widely spoken in shops, restaurants, and social settings, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Active international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Diverse European community including British, Scandinavian, Dutch, German, and French residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Jávea Xàbia",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the sea breeze and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Beach Walk",
+          "description": "Morning stroll along the beach or promenade, breathing in the fresh Mediterranean air"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Beach Time",
+          "description": "Head to the beach for an afternoon swim in the warm Mediterranean waters"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d0.1661!3d38.7711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Jávea Xàbia a good place to live?",
-      "answer": "Yes, absolutely. Jávea Xàbia offers an exceptional lifestyle combining Mediterranean beauty with modern amenities, established international community, excellent healthcare, and strong property values. The 8% annual property appreciation, thriving expat community, and proximity to beaches create ideal conditions for both retirement and investment. English is widely spoken, integration is seamless, and the cost of living remains reasonable compared to UK and other Western alternatives."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Jávea Xàbia",
+    "description": "Jávea Xàbia is a coastal municipality in Costa Blanca North, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.7711",
+      "longitude": "0.1661"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can freely purchase property in Spain without restrictions. EU citizens, UK citizens, and non-EU nationals all have equal rights to buy residential property. You'll need an NIE (Spanish tax identification number), but no visa is required purely for property purchase. The process is straightforward with legal representation, typically completing within 2-3 months."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jávea Xàbia",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Beyond the property price, expect 8-10% additional costs covering: transfer tax (6-10% depending on region), legal fees (1-2%), property registration fees, and notary costs (0.5-1%). In Jávea Xàbia, a €1.8M villa would incur approximately €144,000-€180,000 in combined transaction costs. Annual ownership costs include property tax (0.4-1.1% of cadastral value) and community fees if applicable."
-    },
-    {
-      "question": "What is the cost of living in Costa Blanca?",
-      "answer": "Cost of living in Jávea Xàbia is significantly lower than Northern Europe. Monthly expenses for a single person typically range €1,500-€2,500 including accommodation, utilities, groceries, and dining out. Property prices average €2,200/m², making Jávea Xàbia particularly attractive—40% cheaper than island markets. Healthcare is affordable, either through public system (EU citizens) or private clinics (€100-€200 for doctor consultations)."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Costa Blanca, including Jávea Xàbia, is excellent for retirees offering warm climate, affordable living, quality healthcare with English-speaking doctors, and established expatriate communities providing social support. The Mediterranean lifestyle emphasizes outdoor activities keeping retirees active, while modern amenities and international schools (for grandchildren visits) add appeal. Many retirees appreciate healthcare access superior to their home countries at lower costs."
-    },
-    {
-      "question": "How far is Costa Blanca from the UK?",
-      "answer": "Costa Blanca is approximately 1,200km from the UK, with typical flight times of 2-2.5 hours from London airports to Alicante. Multiple daily flights from major UK cities provide convenient accessibility, making visiting family and friends feasible for frequent trips. The short flight distance makes Costa Blanca ideal for Brits seeking European living without permanent relocation burden."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Costa Blanca enjoys exceptional weather with over 300 days of sunshine annually. Summers reach 28-30°C (82-86°F), while winters average 8-12°C (46-54°F). Rainfall is minimal, concentrated in autumn/spring. This Mediterranean climate allows year-round outdoor activities, beach swimming from May to October, and comfortable living without extreme temperature variations, creating ideal conditions for those seeking consistent warmth."
-    },
-    {
-      "question": "Can I get a mortgage in Spain as a foreigner?",
-      "answer": "Yes, foreign property buyers can obtain mortgages in Spain through Spanish banks and international lenders. UK and EU citizens generally find easiest access, though non-EU nationals can also qualify. Typically, lenders offer 70-80% loan-to-value ratios, requiring 20-30% down payment. Interest rates are competitive (2-3%), and the application process takes 2-4 weeks with proper documentation including proof of income and savings."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
     }
-  ],
-  "slug": "j-vea-x-bia",
-  "town": "Jávea Xàbia",
-  "propertyCount": 6,
-  "generatedAt": "2026-02-05T23:18:14.775Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Jávea Xàbia a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. Jávea Xàbia offers an exceptional lifestyle combining Mediterranean beauty with modern amenities, established international community, excellent healthcare, and strong property values. The 8% annual property appreciation, thriving expat community, and proximity to beaches create ide"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can freely purchase property in Spain without restrictions. EU citizens, UK citizens, and non-EU nationals all have equal rights to buy residential property. You'll need an NIE (Spanish tax identification number), but no visa is required purely for property purchase. The process is s"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond the property price, expect 8-10% additional costs covering: transfer tax (6-10% depending on region), legal fees (1-2%), property registration fees, and notary costs (0.5-1%). In Jávea Xàbia, a €1.8M villa would incur approximately €144,000-€180,000 in combined transaction costs. Annual owner"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Costa Blanca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cost of living in Jávea Xàbia is significantly lower than Northern Europe. Monthly expenses for a single person typically range €1,500-€2,500 including accommodation, utilities, groceries, and dining out. Property prices average €2,200/m², making Jávea Xàbia particularly attractive—40% cheaper than "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Costa Blanca good for retirees?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costa Blanca, including Jávea Xàbia, is excellent for retirees offering warm climate, affordable living, quality healthcare with English-speaking doctors, and established expatriate communities providing social support. The Mediterranean lifestyle emphasizes outdoor activities keeping retirees activ"
+        }
+      }
+    ]
+  }
 }

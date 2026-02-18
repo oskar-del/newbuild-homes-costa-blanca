@@ -1,34 +1,60 @@
 {
-  "metaTitle": "Living in Lorca, Costa Blanca: Complete Guide & New Villas",
-  "metaDescription": "Discover Lorca on Costa Blanca. 3 new villas €375k-€422k. Climate, lifestyle, amenities & investment guide for expats.",
-  "heroIntro": "Lorca is a charming inland town located in the Murcia region of southeastern Spain, positioned strategically between the vibrant coast and the mountainous interior. Just 35 kilometers from the Mediterranean beaches and only 40 minutes from Alicante Airport, Lorca offers the perfect balance of coastal proximity and authentic Spanish village living. This historic town has undergone significant modernization while maintaining its traditional character, making it an increasingly popular destination for international property buyers seeking value and quality of life.\n\nThe town is famous for its baroque architecture, including the stunning Lorca Castle perched on the hillside, and its rich cultural heritage dating back to Moorish times. In recent years, Lorca has become a hidden gem on the Costa Blanca, attracting families, retirees, and investors who appreciate its genuine Spanish atmosphere, excellent climate, and affordable property prices compared to coastal alternatives. The surrounding countryside features beautiful countryside perfect for outdoor enthusiasts, while modern infrastructure and services ensure all contemporary comforts are readily available.\n\nWith new luxury villa developments emerging in the surrounding urbanizations, Lorca represents an excellent investment opportunity for those seeking Spanish property with strong rental potential and capital appreciation prospects. The combination of authentic culture, Mediterranean climate, modern amenities, and competitive pricing makes Lorca an increasingly attractive choice for European property buyers.",
-  "climate": "Lorca enjoys a Mediterranean climate with warm, sunny days and mild winters typical of the Costa Blanca region. Summer temperatures average 28-32°C (82-90°F) with very little rainfall, while winters are mild with temperatures around 10-14°C (50-57°F). The area receives approximately 300 days of sunshine annually, making it ideal for outdoor activities and outdoor living. Rainfall is concentrated in autumn and spring, with summer months being almost completely dry. This predictable, pleasant climate allows residents to enjoy outdoor activities year-round, from beach trips to hiking in nearby mountains.",
-  "lifestyle": "Lorca offers an authentic Spanish lifestyle away from the hustle of crowded tourist resorts. The town center retains traditional plazas, local tapas bars, and markets where Spanish life unfolds naturally. The expat community in Lorca is growing but remains more integrated and less insular than in coastal areas, creating opportunities for genuine cultural exchange. Residents enjoy leisurely café culture, weekly markets, and local festivals throughout the year, including the famous Holy Week processions that attract visitors from across Spain.\n\nDaily life in Lorca is characterized by a relaxed Mediterranean pace with excellent cost of living compared to northern Europe or coastal Spain. The town center is highly walkable, with essential services within easy reach, while modern shopping centers and supermarkets provide contemporary convenience. The proximity to both mountains and beaches means residents can easily explore natural attractions on weekends. The community is welcoming to newcomers, with increasing numbers of European expats establishing themselves in the area, creating informal networks and support systems while maintaining the authentic local character that makes Lorca special.",
-  "amenities": {
-    "healthcare": "Healthcare in Lorca is well-supported with the Hospital Vega Media providing comprehensive medical services. Private healthcare is also available for those seeking alternative options. The town has numerous pharmacies, dental clinics, and general practitioners throughout the community. For specialized treatments, the larger hospitals in Murcia city (30km) are accessible. EU citizens have access to Spanish public healthcare through reciprocal agreements.",
-    "shopping": "Lorca offers a mix of traditional shopping and modern retail. The town center features local markets, family-run shops, and traditional Spanish stores. The Centro Comercial Lorca provides modern shopping facilities with supermarkets, clothing stores, and daily essentials. Large hypermarkets like Carrefour and Alcampo are located nearby. Weekly markets in the town center offer fresh produce, local goods, and authentic Spanish shopping experience.",
-    "dining": "The dining scene in Lorca ranges from traditional Spanish restaurants serving authentic regional cuisine to modern cafés and casual eateries. The town is known for local specialties including migas (breadcrumb dish) and regional vegetables. Numerous tapas bars line the central streets, offering traditional Spanish drinks and appetizers. International restaurants have begun appearing, catering to the growing expat community while maintaining authentic local flavors. Prices are significantly more affordable than coastal resorts.",
-    "sports": "Lorca and surrounding areas offer excellent outdoor recreation opportunities. Several golf courses are located within 30 minutes, including Campo de Golf de Lorca and Vista Hermosa Golf Club. Beaches are accessible within 35 kilometers at Playa Grande and other Mediterranean coves. The Sierra Espuña mountains offer hiking, walking, and mountain biking trails. Tennis clubs, swimming pools, and fitness centers are available in town. Water sports are easily accessible on the coast."
-  },
-  "transport": {
-    "airports": "Alicante-Elche Airport is approximately 80 kilometers away (50 minutes driving), offering extensive international connections and the main entry point for most residents. Murcia International Airport (San Javier) is 60 kilometers away (45 minutes). Both airports have car rental facilities and are well-connected by motorway to Lorca.",
-    "driving": "Lorca is well-connected via the A-7 motorway, which provides rapid access to both Alicante and Murcia. The town center is easily navigable by car with ample parking. Road connections to the coast are excellent, with the drive to beaches taking approximately 35-40 minutes. Internal roads are modern and well-maintained. Driving is the primary transportation method for most residents.",
-    "public": "Public bus services connect Lorca to surrounding towns and the coast, though services are less frequent than in major cities. Local buses operate within the town center. Long-distance coaches connect to Alicante, Murcia, and other provincial towns. For those preferring not to drive, taxis are available and reasonably priced. Most residents rely on private vehicles for daily transportation."
-  },
-  "propertyMarket": {
-    "overview": "Lorca's property market is experiencing growth as savvy investors recognize the value proposition of this authentic Spanish town. The market remains relatively stable with steady appreciation, particularly for new developments in modern urbanizations. Prices are significantly lower than coastal alternatives while offering comparable climate, amenities, and lifestyle benefits. The market attracts investors seeking rental yields, owner-occupiers seeking value, and retirees seeking affordable quality living.",
-    "priceRange": "€375,000 - €422,000",
-    "popularTypes": "Villa",
-    "investment": "New villa developments in Lorca offer excellent investment potential with strong short-term rental demand from tourists seeking authentic Spanish experiences away from crowded resorts. The price-to-value ratio is attractive compared to coastal properties, with potential for capital appreciation as the area develops. Rental yields are competitive, with many properties achieving 4-6% annual returns through vacation rentals. Long-term appreciation is expected as infrastructure improves and the area becomes better known to international buyers. Properties appeal to both owner-occupiers and pure investment portfolios."
-  },
-  "neighborhoods": [
-    "Urbanización Las Claras - Modern development on town outskirts offering new villas with contemporary amenities, excellent views, and close proximity to amenities while maintaining privacy",
-    "Barrio del Carmen - Historic neighborhood with traditional Spanish character, local restaurants, and authentic town center living experience with heritage architecture",
-    "Urbanización Sierra Espuña - Residential area near the entrance to Sierra Espuña mountains, popular with active residents seeking proximity to hiking and nature activities",
-    "Centro Histórico - The old town featuring historic properties near Lorca Castle, traditional plazas, and cultural attractions with excellent walkability to services"
+  "slug": "lorca",
+  "name": "Lorca",
+  "region": "Murcia",
+  "heroImage": "/images/areas/lorca-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 3,
+  "propertyTypes": [
+    "Villa"
   ],
-  "prosAndCons": {
-    "pros": [
+  "priceRange": {
+    "min": 375000,
+    "max": 422000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Lorca Tourism",
+      "url": "https://www.google.com/search?q=Lorca%20Spain%20official%20website",
+      "description": "Discover more about Lorca"
+    },
+    "airport": {
+      "name": "Murcia-Corvera Airport",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "75 km",
+      "driveTime": "50 min"
+    },
+    "healthcare": {
+      "name": "Hospital Rafael Méndez",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Rafael%20M%C3%A9ndez",
+      "distance": "3 km"
+    }
+  },
+  "content": {
+    "metaTitle": "Living in Lorca, Costa Blanca: Complete Guide & New Villas",
+    "metaDescription": "Discover Lorca on Costa Blanca. 3 new villas €375k-€422k. Climate, lifestyle, amenities & investment guide for expats.",
+    "heroIntro": "Lorca is a charming inland town located in the Murcia region of southeastern Spain, positioned strategically between the vibrant coast and the mountainous interior. Just 35 kilometers from the Mediterranean beaches and only 40 minutes from Alicante Airport, Lorca offers the perfect balance of coastal proximity and authentic Spanish village living. This historic town has undergone significant modernization while maintaining its traditional character, making it an increasingly popular destination for international property buyers seeking value and quality of life.\n\nThe town is famous for its baroque architecture, including the stunning Lorca Castle perched on the hillside, and its rich cultural heritage dating back to Moorish times. In recent years, Lorca has become a hidden gem on the Costa Blanca, attracting families, retirees, and investors who appreciate its genuine Spanish atmosphere, excellent climate, and affordable property prices compared to coastal alternatives. The surrounding countryside features beautiful countryside perfect for outdoor enthusiasts, while modern infrastructure and services ensure all contemporary comforts are readily available.\n\nWith new luxury villa developments emerging in the surrounding urbanizations, Lorca represents an excellent investment opportunity for those seeking Spanish property with strong rental potential and capital appreciation prospects. The combination of authentic culture, Mediterranean climate, modern amenities, and competitive pricing makes Lorca an increasingly attractive choice for European property buyers.",
+    "lifestyleSection": {
+      "intro": "Lorca offers an authentic Spanish lifestyle away from the hustle of crowded tourist resorts. The town center retains traditional plazas, local tapas bars, and markets where Spanish life unfolds naturally. The expat community in Lorca is growing but remains more integrated and less insular than in coastal areas, creating opportunities for genuine cultural exchange. Residents enjoy leisurely café culture, weekly markets, and local festivals throughout the year, including the famous Holy Week processions that attract visitors from across Spain.\n\nDaily life in Lorca is characterized by a relaxed Mediterranean pace with excellent cost of living compared to northern Europe or coastal Spain. The town center is highly walkable, with essential services within easy reach, while modern shopping centers and supermarkets provide contemporary convenience. The proximity to both mountains and beaches means residents can easily explore natural attractions on weekends. The community is welcoming to newcomers, with increasing numbers of European expats establishing themselves in the area, creating informal networks and support systems while maintaining the authentic local character that makes Lorca special.\n\nLorca enjoys a Mediterranean climate with warm, sunny days and mild winters typical of the Costa Blanca region. Summer temperatures average 28-32°C (82-90°F) with very little rainfall, while winters are mild with temperatures around 10-14°C (50-57°F). The area receives approximately 300 days of sunshine annually, making it ideal for outdoor activities and outdoor living. Rainfall is concentrated in autumn and spring, with summer months being almost completely dry. This predictable, pleasant climate allows residents to enjoy outdoor activities year-round, from beach trips to hiking in nearby mountains.",
+      "highlights": [
+        "Excellent value for money compared to coastal Costa Blanca properties with 20-30% price savings",
+        "Authentic Spanish lifestyle with genuine local culture, markets, and traditions not overshadowed by tourism",
+        "Perfect climate year-round with 300+ days of sunshine, ideal for outdoor living and activities",
+        "Convenient location with beaches 35km away, mountains nearby, and Alicante airport 80km distant",
+        "Growing expat community providing support networks while maintaining genuine Spanish character and affordable cost of living",
+        "Strong rental potential for vacation properties and long-term investment with competitive returns"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Lorca and surrounding areas offer excellent outdoor recreation opportunities. Several golf courses are located within 30 minutes, including Campo de Golf de Lorca and Vista Hermosa Golf Club. Beaches are accessible within 35 kilometers at Playa Grande and other Mediterranean coves. The Sierra Espuña mountains offer hiking, walking, and mountain biking trails. Tennis clubs, swimming pools, and fitness centers are available in town. Water sports are easily accessible on the coast.",
+      "dining": "The dining scene in Lorca ranges from traditional Spanish restaurants serving authentic regional cuisine to modern cafés and casual eateries. The town is known for local specialties including migas (breadcrumb dish) and regional vegetables. Numerous tapas bars line the central streets, offering traditional Spanish drinks and appetizers. International restaurants have begun appearing, catering to the growing expat community while maintaining authentic local flavors. Prices are significantly more affordable than coastal resorts.",
+      "shopping": "Lorca offers a mix of traditional shopping and modern retail. The town center features local markets, family-run shops, and traditional Spanish stores. The Centro Comercial Lorca provides modern shopping facilities with supermarkets, clothing stores, and daily essentials. Large hypermarkets like Carrefour and Alcampo are located nearby. Weekly markets in the town center offer fresh produce, local goods, and authentic Spanish shopping experience.",
+      "healthcare": "Healthcare in Lorca is well-supported with the Hospital Vega Media providing comprehensive medical services. Private healthcare is also available for those seeking alternative options. The town has numerous pharmacies, dental clinics, and general practitioners throughout the community. For specialized treatments, the larger hospitals in Murcia city (30km) are accessible. EU citizens have access to Spanish public healthcare through reciprocal agreements.",
+      "transport": "Alicante-Elche Airport is approximately 80 kilometers away (50 minutes driving), offering extensive international connections and the main entry point for most residents. Murcia International Airport (San Javier) is 60 kilometers away (45 minutes). Both airports have car rental facilities and are well-connected by motorway to Lorca. Lorca is well-connected via the A-7 motorway, which provides rapid access to both Alicante and Murcia. The town center is easily navigable by car with ample parking. Road connections to the coast are excellent, with the drive to beaches taking approximately 35-40 minutes. Internal roads are modern and well-maintained. Driving is the primary transportation method for most residents. Public bus services connect Lorca to surrounding towns and the coast, though services are less frequent than in major cities. Local buses operate within the town center. Long-distance coaches connect to Alicante, Murcia, and other provincial towns. For those preferring not to drive, taxis are available and reasonably priced. Most residents rely on private vehicles for daily transportation."
+    },
+    "propertyMarketSection": "Lorca's property market is experiencing growth as savvy investors recognize the value proposition of this authentic Spanish town. The market remains relatively stable with steady appreciation, particularly for new developments in modern urbanizations. Prices are significantly lower than coastal alternatives while offering comparable climate, amenities, and lifestyle benefits. The market attracts investors seeking rental yields, owner-occupiers seeking value, and retirees seeking affordable quality living.\n\nPopular property types include Villa.\n\nNew villa developments in Lorca offer excellent investment potential with strong short-term rental demand from tourists seeking authentic Spanish experiences away from crowded resorts. The price-to-value ratio is attractive compared to coastal properties, with potential for capital appreciation as the area develops. Rental yields are competitive, with many properties achieving 4-6% annual returns through vacation rentals. Long-term appreciation is expected as infrastructure improves and the area becomes better known to international buyers. Properties appeal to both owner-occupiers and pure investment portfolios.",
+    "whyLiveHereSection": [
       "Excellent value for money compared to coastal Costa Blanca properties with 20-30% price savings",
       "Authentic Spanish lifestyle with genuine local culture, markets, and traditions not overshadowed by tourism",
       "Perfect climate year-round with 300+ days of sunshine, ideal for outdoor living and activities",
@@ -36,48 +62,319 @@
       "Growing expat community providing support networks while maintaining genuine Spanish character and affordable cost of living",
       "Strong rental potential for vacation properties and long-term investment with competitive returns"
     ],
-    "cons": [
-      "Public transportation is limited compared to major coastal cities, making a private vehicle essentially necessary for daily life",
-      "The town is less internationally recognized than major Costa Blanca resorts, potentially affecting resale market and rental booking volumes",
-      "Summer temperatures can exceed 30°C, requiring air conditioning for comfort during peak season"
-    ]
+    "faqs": [
+      {
+        "question": "How far is Lorca from the beach?",
+        "answer": "Lorca is approximately 35 kilometers from the Mediterranean coast, making it about 35-40 minutes' drive to popular beaches like Playa Grande. Residents can easily access coastal activities while enjoying the benefits of inland living."
+      },
+      {
+        "question": "Is Lorca a good investment for rental properties?",
+        "answer": "Yes, Lorca offers strong rental investment potential. New villa developments attract tourists seeking authentic Spanish experiences away from crowded resorts. Potential rental yields range from 4-6% annually, with good long-term capital appreciation prospects as the area gains international recognition."
+      },
+      {
+        "question": "What is the expat community like in Lorca?",
+        "answer": "The expat community in Lorca is growing but remains well-integrated with local Spanish culture, unlike some oversaturated coastal areas. You'll find established networks of European residents while still experiencing authentic Spanish lifestyle. The community tends to be composed of serious property investors and quality-of-life seekers rather than purely tourist-focused residents."
+      },
+      {
+        "question": "Can I obtain residency in Spain as a property owner?",
+        "answer": "Property ownership alone doesn't grant residency, but Spain offers various residency options for property owners, including the Non-Lucrative Visa for retirees with sufficient passive income, the Digital Nomad Visa, and investment-based residency programs. Consult with a Spanish legal advisor for options matching your circumstances."
+      },
+      {
+        "question": "What are the costs of living in Lorca?",
+        "answer": "Lorca has significantly lower cost of living compared to northern Europe and coastal Spain. Monthly expenses for a couple typically range from €1,200-€1,800 including utilities, food, transport, and entertainment. Healthcare through the Spanish system is affordable, and property taxes are reasonable, making it ideal for retirees and those seeking value."
+      },
+      {
+        "question": "Is there reliable internet and utilities in Lorca?",
+        "answer": "Yes, Lorca has modern infrastructure including reliable high-speed internet from multiple providers, 24/7 electricity supply, mains water and sewerage systems. New villa developments are equipped with contemporary utilities and fiber optic internet availability."
+      },
+      {
+        "question": "What is the nearest major airport?",
+        "answer": "Alicante-Elche Airport is the primary airport, located approximately 80 kilometers away (50 minutes driving). Murcia International Airport (San Javier) is an alternative option 60 kilometers away. Both airports offer extensive international connections and car rental services."
+      },
+      {
+        "question": "Are new villa developments in Lorca fully furnished?",
+        "answer": "Most new villa developments offer options for fully furnished, semi-furnished, or unfurnished properties. Buyers can typically customize finishes and furniture packages according to preferences. New villas feature modern amenities, air conditioning, modern kitchens, and outdoor spaces suitable for rental or personal use."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Lorca? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "New villa developments in Lorca offer excellent investment potential with strong short-term rental demand from tourists seeking authentic Spanish experiences away from crowded resorts. The price-to-value ratio is attractive compared to coastal properties, with potential for capital appreciation as the area develops. Rental yields are competitive, with many properties achieving 4-6% annual returns through vacation rentals. Long-term appreciation is expected as infrastructure improves and the area becomes better known to international buyers. Properties appeal to both owner-occupiers and pure investment portfolios.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Lorca are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Lorca offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Lorca celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Lorca have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school offering GCSE and A-Levels with strong extracurricular programmes"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "International (British)",
+          "distance": "25-45 min",
+          "description": "British curriculum primary and secondary school serving the international community"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Lorca offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Lorca has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Lorca",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-1.6983!3d37.6717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "How far is Lorca from the beach?",
-      "answer": "Lorca is approximately 35 kilometers from the Mediterranean coast, making it about 35-40 minutes' drive to popular beaches like Playa Grande. Residents can easily access coastal activities while enjoying the benefits of inland living."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Lorca",
+    "description": "Lorca is a  municipality in Murcia, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.6717",
+      "longitude": "-1.6983"
     },
-    {
-      "question": "Is Lorca a good investment for rental properties?",
-      "answer": "Yes, Lorca offers strong rental investment potential. New villa developments attract tourists seeking authentic Spanish experiences away from crowded resorts. Potential rental yields range from 4-6% annually, with good long-term capital appreciation prospects as the area gains international recognition."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lorca",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What is the expat community like in Lorca?",
-      "answer": "The expat community in Lorca is growing but remains well-integrated with local Spanish culture, unlike some oversaturated coastal areas. You'll find established networks of European residents while still experiencing authentic Spanish lifestyle. The community tends to be composed of serious property investors and quality-of-life seekers rather than purely tourist-focused residents."
-    },
-    {
-      "question": "Can I obtain residency in Spain as a property owner?",
-      "answer": "Property ownership alone doesn't grant residency, but Spain offers various residency options for property owners, including the Non-Lucrative Visa for retirees with sufficient passive income, the Digital Nomad Visa, and investment-based residency programs. Consult with a Spanish legal advisor for options matching your circumstances."
-    },
-    {
-      "question": "What are the costs of living in Lorca?",
-      "answer": "Lorca has significantly lower cost of living compared to northern Europe and coastal Spain. Monthly expenses for a couple typically range from €1,200-€1,800 including utilities, food, transport, and entertainment. Healthcare through the Spanish system is affordable, and property taxes are reasonable, making it ideal for retirees and those seeking value."
-    },
-    {
-      "question": "Is there reliable internet and utilities in Lorca?",
-      "answer": "Yes, Lorca has modern infrastructure including reliable high-speed internet from multiple providers, 24/7 electricity supply, mains water and sewerage systems. New villa developments are equipped with contemporary utilities and fiber optic internet availability."
-    },
-    {
-      "question": "What is the nearest major airport?",
-      "answer": "Alicante-Elche Airport is the primary airport, located approximately 80 kilometers away (50 minutes driving). Murcia International Airport (San Javier) is an alternative option 60 kilometers away. Both airports offer extensive international connections and car rental services."
-    },
-    {
-      "question": "Are new villa developments in Lorca fully furnished?",
-      "answer": "Most new villa developments offer options for fully furnished, semi-furnished, or unfurnished properties. Buyers can typically customize finishes and furniture packages according to preferences. New villas feature modern amenities, air conditioning, modern kitchens, and outdoor spaces suitable for rental or personal use."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Murcia"
     }
-  ],
-  "slug": "lorca",
-  "town": "Lorca",
-  "propertyCount": 3,
-  "generatedAt": "2026-02-05T19:35:56.160Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How far is Lorca from the beach?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lorca is approximately 35 kilometers from the Mediterranean coast, making it about 35-40 minutes' drive to popular beaches like Playa Grande. Residents can easily access coastal activities while enjoying the benefits of inland living."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Lorca a good investment for rental properties?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Lorca offers strong rental investment potential. New villa developments attract tourists seeking authentic Spanish experiences away from crowded resorts. Potential rental yields range from 4-6% annually, with good long-term capital appreciation prospects as the area gains international recognit"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the expat community like in Lorca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The expat community in Lorca is growing but remains well-integrated with local Spanish culture, unlike some oversaturated coastal areas. You'll find established networks of European residents while still experiencing authentic Spanish lifestyle. The community tends to be composed of serious property"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I obtain residency in Spain as a property owner?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Property ownership alone doesn't grant residency, but Spain offers various residency options for property owners, including the Non-Lucrative Visa for retirees with sufficient passive income, the Digital Nomad Visa, and investment-based residency programs. Consult with a Spanish legal advisor for op"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of living in Lorca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lorca has significantly lower cost of living compared to northern Europe and coastal Spain. Monthly expenses for a couple typically range from €1,200-€1,800 including utilities, food, transport, and entertainment. Healthcare through the Spanish system is affordable, and property taxes are reasonable"
+        }
+      }
+    ]
+  }
 }

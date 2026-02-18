@@ -1,75 +1,63 @@
 {
-  "metaTitle": "Living in Baños y Mendigo 2026 | Complete Area Guide",
-  "metaDescription": "Discover living in Baños y Mendigo: 13 villas from €389,900. Inland town with 8% growth, established expat community, beaches, golf & excellent amenities.",
-  "heroIntro": "Baños y Mendigo represents one of Spain's most authentic inland destinations, offering discerning buyers a perfect blend of Spanish charm and modern convenience. This thriving town attracts a diverse international community seeking genuine Spanish village life without sacrificing access to world-class amenities. With property prices 40% lower than Spanish island markets and consistent 8% year-on-year growth, Baños y Mendigo presents exceptional value for investors and homebuyers alike. The area has established itself as a premier destination for retirees, families, and digital nomads who appreciate close-knit communities with English-speaking infrastructure. From championship golf courses to pristine Blue Flag beaches just 20 minutes away, this inland gem delivers the Costa Blanca lifestyle at a fraction of island resort prices. Whether you're seeking a permanent residence, investment property, or holiday retreat, Baños y Mendigo offers sophisticated living with authentic Spanish tradition.",
-  "climate": "Baños y Mendigo enjoys a Mediterranean climate characterized by over 300 days of sunshine annually, making it an ideal year-round destination. Summer temperatures range from 28-32°C, while winters remain mild at 10-15°C, rarely dropping below freezing. Spring and autumn offer perfect conditions for outdoor activities, with comfortable temperatures and minimal rainfall. The area experiences low humidity compared to coastal resorts, creating a pleasant microclimate that many residents find superior to beachside alternatives. September and October are particularly beautiful, as summer heat subsides while Mediterranean warmth persists. The inland location provides protection from coastal storms, while seasonal sea breezes moderate summer temperatures. Winter months attract visitors seeking reliable sunshine and warmth without extreme heat, making it increasingly popular with northern European retirees.",
-  "lifestyle": "Daily life in Baños y Mendigo centers around a vibrant community that beautifully balances traditional Spanish culture with modern international living. The established expat community ensures English is commonly spoken throughout town, while local markets offer authentic Spanish produce, fresh seafood, and regional specialties. Residents enjoy leisurely café culture, where morning coffee at central plazas is a cherished tradition. The town supports excellent restaurants ranging from authentic tapas bars to sophisticated dining establishments, catering to diverse palates. Weekend excursions frequently include nearby Blue Flag beaches for swimming and water sports, or championship golf courses for enthusiasts. Cultural activities feature local festivals, art galleries, and traditional Spanish celebrations that welcome newcomers warmly. The international community organizes social groups, language exchanges, and recreational activities, preventing the isolation sometimes felt in smaller towns. Shopping is convenient with modern supermarkets alongside traditional markets, while nearby larger towns provide additional entertainment and services. This balanced lifestyle appeals to those seeking authentic Spain with contemporary comforts.",
-  "amenities": {
+  "slug": "ba-os-y-mendigo",
+  "name": "Baños y Mendigo",
+  "region": "Murcia",
+  "heroImage": "/images/areas/ba-os-y-mendigo-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 13,
+  "propertyTypes": [
+    "Villa properties dominate the market",
+    "offering spacious family homes with land",
+    "private pools",
+    "and traditional Spanish architecture."
+  ],
+  "priceRange": {
+    "min": 389900,
+    "max": 708500
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Baños y Mendigo Tourism",
+      "url": "https://www.google.com/search?q=Ba%C3%B1os%20y%20Mendigo%20Spain%20official%20website",
+      "description": "Discover more about Baños y Mendigo"
+    },
+    "airport": {
+      "name": "Murcia-Corvera Airport",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "20 km",
+      "driveTime": "18 min"
+    },
     "healthcare": {
-      "text": "Healthcare in Baños y Mendigo meets international standards with a regional hospital located within 30 minutes, supplemented by private clinics throughout the area. English-speaking doctors are readily available, eliminating language barriers for international residents. The medical infrastructure includes modern diagnostic facilities, specialist services, and emergency care comparable to major European cities. Private healthcare options provide shorter waiting times and personalized attention, while public healthcare remains accessible to legal residents. Prescription medications are affordable and widely available through local pharmacies. Many international residents appreciate the combination of quality care, reasonable costs, and professional medical staff accustomed to treating expatriates.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes drive",
-        "Private clinics with English-speaking doctors",
-        "Modern diagnostic and specialist facilities",
-        "Affordable prescription medications and pharmacy services"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping facilities in Baños y Mendigo provide excellent variety, combining convenience with authentic Spanish retail culture. Major supermarket chains including Mercadona, Lidl, and Consum offer competitive pricing and extensive product selection, with staff assistance available in multiple languages. Traditional markets operate weekly, featuring fresh produce, artisan goods, and regional specialties at unbeatable prices. The town center contains boutique shops, pharmacies, and specialty stores catering to international clientele. For comprehensive shopping, larger nearby towns provide shopping centers with fashion, electronics, and home goods. The combination of modern supermarkets and traditional markets ensures residents enjoy both convenience and the charm of Spanish market culture.",
-      "keyPoints": [
-        "Mercadona supermarket chain",
-        "Lidl discount supermarket",
-        "Consum local supermarket",
-        "Weekly traditional markets with fresh produce"
-      ]
-    },
-    "education": {
-      "text": "Education options in Baños y Mendigo cater to international families with international schools in the region offering British curriculum alongside Spanish education. These schools maintain high academic standards while fostering multicultural environments where children develop bilingual proficiency. International schools provide stability for expatriate families, with established curricula recognized globally and strong university placement records. The region's education system combines rigorous academics with cultural immersion, allowing children to benefit from Spanish education while maintaining international credentials. Families relocating with school-age children find comprehensive options ensuring continuity in their children's education.",
-      "keyPoints": [
-        "International schools with British curriculum",
-        "Bilingual education programs",
-        "High academic standards and university preparation",
-        "Multicultural learning environment"
-      ]
-    },
-    "sports": {
-      "text": "Baños y Mendigo is a paradise for sports and leisure enthusiasts, with multiple Blue Flag beaches accessible within 20 minutes, offering swimming, water sports, and beach clubs. Several championship golf courses operate nearby, ranging from beginner-friendly to professional-level layouts, attracting golfers worldwide. The region supports tennis clubs, swimming pools, cycling routes, and hiking trails through picturesque countryside. Watersports including paddleboarding, kayaking, and windsurfing are available at nearby beaches. The combination of coastal and inland activities ensures year-round recreational opportunities, with Mediterranean beaches providing summer refreshment and golf courses hosting tournaments throughout the year.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Championship golf courses nearby",
-        "Water sports including paddleboarding and kayaking",
-        "Hiking trails and cycling routes"
-      ]
+      "name": "Hospital General Universitario Reina Sofía (Murcia)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20General%20Universitario%20Reina%20Sof%C3%ADa%20(Murcia)",
+      "distance": "15 km"
     }
   },
-  "transport": {
-    "overview": "Bus connections link Baños y Mendigo to surrounding towns and the wider Costa Blanca region, providing affordable regional transport. However, a car is recommended for maximum flexibility and convenience, enabling easy access to beaches, golf courses, and nearby attractions. The inland location provides quick motorway access to major destinations.",
-    "airports": "Alicante Airport lies approximately 60km away (45-60 minutes drive), serving as the primary international gateway with flights to major European cities. Valencia Airport, located 120km distant, offers additional flight options and connections.",
-    "driving": "Motorway connections provide seamless access to nearby towns, coastal areas, and regional destinations. The well-maintained road infrastructure makes driving straightforward for international visitors. Inland positioning offers advantages with less congested routes compared to coastal alternatives.",
-    "public": "Local buses connect Baños y Mendigo with surrounding municipalities, regional towns, and coastal destinations. Service frequency increases during summer months. Bus stations provide connections to larger towns with additional transport options.",
-    "keyPoints": [
-      "Bus connections to surrounding towns available",
-      "Car recommended for maximum flexibility",
-      "Alicante Airport 60km (45-60 minutes drive)",
-      "Direct motorway access to major destinations"
-    ]
-  },
-  "propertyMarket": {
-    "overview": "Baños y Mendigo's property market demonstrates robust health with consistent 8% year-on-year growth, significantly outperforming many Spanish coastal markets. The inland location attracts value-conscious buyers seeking authentic Spain at competitive prices, creating steady demand from international investors and owner-occupiers. Currently, 13 properties are available, dominated by spacious villas offering excellent value compared to coastal alternatives.",
-    "priceRange": "€389,900 - €708,500",
-    "popularTypes": "Villa properties dominate the market, offering spacious family homes with land, private pools, and traditional Spanish architecture.",
-    "investment": "Rental potential is strong, with typical 7-night rentals commanding €800, appealing to holiday rental investors. The established expat community ensures consistent tourism and rental demand. Capital growth prospects remain positive given market fundamentals, location advantages, and continued interest from international buyers. Properties in Baños y Mendigo appreciate steadily while generating attractive rental yields, making it appealing for buy-to-let investors."
-  },
-  "neighborhoods": [
-    "Centro Histórico: The charming historic center features traditional architecture, authentic restaurants, and pedestrian plazas where community life thrives daily.",
-    "Residencial Villas: An upscale residential area with spacious villa properties, private pools, and proximity to golf courses and beaches.",
-    "Casco Antiguo: The old town quarter preserves medieval charm with narrow streets, local shops, and genuine Spanish character that attracts culture-loving residents.",
-    "Zona Verde: A developing neighborhood emphasizing green spaces, modern amenities, and proximity to nature, appealing to families and outdoor enthusiasts.",
-    "Barrio Internacional: An established area with strong expat presence, international facilities, and English-speaking services ideal for newcomers.",
-    "Outskirts with Land: Expansive properties with substantial land, rural views, and privacy while maintaining convenient town access."
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Baños y Mendigo 2026 | Complete Area Guide",
+    "metaDescription": "Discover living in Baños y Mendigo: 13 villas from €389,900. Inland town with 8% growth, established expat community, beaches, golf & excellent amenities.",
+    "heroIntro": "Baños y Mendigo represents one of Spain's most authentic inland destinations, offering discerning buyers a perfect blend of Spanish charm and modern convenience. This thriving town attracts a diverse international community seeking genuine Spanish village life without sacrificing access to world-class amenities. With property prices 40% lower than Spanish island markets and consistent 8% year-on-year growth, Baños y Mendigo presents exceptional value for investors and homebuyers alike. The area has established itself as a premier destination for retirees, families, and digital nomads who appreciate close-knit communities with English-speaking infrastructure. From championship golf courses to pristine Blue Flag beaches just 20 minutes away, this inland gem delivers the Costa Blanca lifestyle at a fraction of island resort prices. Whether you're seeking a permanent residence, investment property, or holiday retreat, Baños y Mendigo offers sophisticated living with authentic Spanish tradition.",
+    "lifestyleSection": {
+      "intro": "Daily life in Baños y Mendigo centers around a vibrant community that beautifully balances traditional Spanish culture with modern international living. The established expat community ensures English is commonly spoken throughout town, while local markets offer authentic Spanish produce, fresh seafood, and regional specialties. Residents enjoy leisurely café culture, where morning coffee at central plazas is a cherished tradition. The town supports excellent restaurants ranging from authentic tapas bars to sophisticated dining establishments, catering to diverse palates. Weekend excursions frequently include nearby Blue Flag beaches for swimming and water sports, or championship golf courses for enthusiasts. Cultural activities feature local festivals, art galleries, and traditional Spanish celebrations that welcome newcomers warmly. The international community organizes social groups, language exchanges, and recreational activities, preventing the isolation sometimes felt in smaller towns. Shopping is convenient with modern supermarkets alongside traditional markets, while nearby larger towns provide additional entertainment and services. This balanced lifestyle appeals to those seeking authentic Spain with contemporary comforts.\n\nBaños y Mendigo enjoys a Mediterranean climate characterized by over 300 days of sunshine annually, making it an ideal year-round destination. Summer temperatures range from 28-32°C, while winters remain mild at 10-15°C, rarely dropping below freezing. Spring and autumn offer perfect conditions for outdoor activities, with comfortable temperatures and minimal rainfall. The area experiences low humidity compared to coastal resorts, creating a pleasant microclimate that many residents find superior to beachside alternatives. September and October are particularly beautiful, as summer heat subsides while Mediterranean warmth persists. The inland location provides protection from coastal storms, while seasonal sea breezes moderate summer temperatures. Winter months attract visitors seeking reliable sunshine and warmth without extreme heat, making it increasingly popular with northern European retirees.",
+      "highlights": [
+        "40% cheaper than Spanish island markets with excellent value proposition",
+        "Established international community with English commonly spoken",
+        "Consistent 8% annual property appreciation with strong investment fundamentals",
+        "Blue Flag beaches and championship golf courses within 20 minutes",
+        "Authentic Spanish lifestyle with modern international amenities",
+        "Mild Mediterranean climate with 300+ sunshine days annually"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Baños y Mendigo is a paradise for sports and leisure enthusiasts, with multiple Blue Flag beaches accessible within 20 minutes, offering swimming, water sports, and beach clubs. Several championship golf courses operate nearby, ranging from beginner-friendly to professional-level layouts, attracting golfers worldwide. The region supports tennis clubs, swimming pools, cycling routes, and hiking trails through picturesque countryside. Watersports including paddleboarding, kayaking, and windsurfing are available at nearby beaches. The combination of coastal and inland activities ensures year-round recreational opportunities, with Mediterranean beaches providing summer refreshment and golf courses hosting tournaments throughout the year.",
+      "dining": "Baños y Mendigo offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping facilities in Baños y Mendigo provide excellent variety, combining convenience with authentic Spanish retail culture. Major supermarket chains including Mercadona, Lidl, and Consum offer competitive pricing and extensive product selection, with staff assistance available in multiple languages. Traditional markets operate weekly, featuring fresh produce, artisan goods, and regional specialties at unbeatable prices. The town center contains boutique shops, pharmacies, and specialty stores catering to international clientele. For comprehensive shopping, larger nearby towns provide shopping centers with fashion, electronics, and home goods. The combination of modern supermarkets and traditional markets ensures residents enjoy both convenience and the charm of Spanish market culture.",
+      "healthcare": "Healthcare in Baños y Mendigo meets international standards with a regional hospital located within 30 minutes, supplemented by private clinics throughout the area. English-speaking doctors are readily available, eliminating language barriers for international residents. The medical infrastructure includes modern diagnostic facilities, specialist services, and emergency care comparable to major European cities. Private healthcare options provide shorter waiting times and personalized attention, while public healthcare remains accessible to legal residents. Prescription medications are affordable and widely available through local pharmacies. Many international residents appreciate the combination of quality care, reasonable costs, and professional medical staff accustomed to treating expatriates.",
+      "transport": "Bus connections link Baños y Mendigo to surrounding towns and the wider Costa Blanca region, providing affordable regional transport. However, a car is recommended for maximum flexibility and convenience, enabling easy access to beaches, golf courses, and nearby attractions. The inland location provides quick motorway access to major destinations. Alicante Airport lies approximately 60km away (45-60 minutes drive), serving as the primary international gateway with flights to major European cities. Valencia Airport, located 120km distant, offers additional flight options and connections. Motorway connections provide seamless access to nearby towns, coastal areas, and regional destinations. The well-maintained road infrastructure makes driving straightforward for international visitors. Inland positioning offers advantages with less congested routes compared to coastal alternatives. Local buses connect Baños y Mendigo with surrounding municipalities, regional towns, and coastal destinations. Service frequency increases during summer months. Bus stations provide connections to larger towns with additional transport options."
+    },
+    "propertyMarketSection": "Baños y Mendigo's property market demonstrates robust health with consistent 8% year-on-year growth, significantly outperforming many Spanish coastal markets. The inland location attracts value-conscious buyers seeking authentic Spain at competitive prices, creating steady demand from international investors and owner-occupiers. Currently, 13 properties are available, dominated by spacious villas offering excellent value compared to coastal alternatives.\n\nPopular property types include Villa properties dominate the market, offering spacious family homes with land, private pools, and traditional Spanish architecture..\n\nRental potential is strong, with typical 7-night rentals commanding €800, appealing to holiday rental investors. The established expat community ensures consistent tourism and rental demand. Capital growth prospects remain positive given market fundamentals, location advantages, and continued interest from international buyers. Properties in Baños y Mendigo appreciate steadily while generating attractive rental yields, making it appealing for buy-to-let investors.",
+    "whyLiveHereSection": [
       "40% cheaper than Spanish island markets with excellent value proposition",
       "Established international community with English commonly spoken",
       "Consistent 8% annual property appreciation with strong investment fundamentals",
@@ -77,48 +65,320 @@
       "Authentic Spanish lifestyle with modern international amenities",
       "Mild Mediterranean climate with 300+ sunshine days annually"
     ],
-    "cons": [
-      "Car ownership highly recommended despite bus availability for practical daily living",
-      "Smaller town atmosphere means fewer nightlife and entertainment options compared to major resorts",
-      "Summer heat can be intense for those sensitive to Mediterranean temperatures"
-    ]
+    "faqs": [
+      {
+        "question": "Is Baños y Mendigo a good place to live?",
+        "answer": "Yes, absolutely. Baños y Mendigo excels as a residential destination combining authentic Spanish culture, established international infrastructure, excellent value, and genuine community spirit. The established expat community, English-speaking services, proximity to beaches and golf, plus affordable living costs make it ideal for retirees, families, and professionals seeking quality Spanish living without island resort prices."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can freely purchase property in Spain with minimal restrictions. EU citizens enjoy identical rights to Spanish citizens, while non-EU nationals can also buy without limitations. You'll need an NIE number (Spanish tax identification), but no visa is required for property purchase. The process is straightforward with professional legal guidance ensuring smooth transactions."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Property acquisition costs in Spain typically total 8-12% beyond the purchase price, including: transfer tax (6-11% depending on region), notary fees (0.6-1%), registry fees (0.1-0.5%), and legal fees (1-3%). In Baños y Mendigo, with villas ranging from €389,900-€708,500, expect total acquisition costs of €31,000-€85,000. Annual ownership costs include property tax (approximately 0.4-1.1% of value) and maintenance."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "No visa is required specifically to purchase Spanish property. Non-EU citizens can buy without residency permits or visas. However, if you plan to reside in Spain, you may need residency authorization depending on your nationality. EU citizens enjoy unrestricted residency rights. Many property buyers establish their legal position through a Spanish accountant and solicitor without visa requirements."
+      },
+      {
+        "question": "What is the cost of living in Costa Blanca?",
+        "answer": "Cost of living in Costa Blanca, particularly in inland towns like Baños y Mendigo, is significantly lower than northern Europe. Monthly expenses for a couple range from €1,500-€2,500 including: rent/mortgage, utilities, groceries, healthcare, and leisure. Baños y Mendigo residents benefit from lower property costs than coastal alternatives, inexpensive dining out (€10-15 per person), and affordable healthcare. Properties average €2,200/m², representing excellent value."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Absolutely, Costa Blanca is excellent for retirees. The region offers affordable living costs, outstanding healthcare with English-speaking doctors, mild year-round climate, established international communities with social activities, and abundant recreational facilities. Baños y Mendigo specifically appeals to retirees seeking authentic Spain with modern amenities, quiet communities, and value-for-money living. Many retirees enjoy pensioner benefits and favorable tax treatment."
+      },
+      {
+        "question": "How far is Costa Blanca from UK?",
+        "answer": "Costa Blanca lies approximately 1,400km from the UK (direct distance). Flight times from major UK airports to Alicante typically range 2-2.5 hours, making it easily accessible for weekend visits or regular returns. Ferry services from Portsmouth to Spanish ports provide alternative transport. Baños y Mendigo, located inland from the coast, remains conveniently positioned near Alicante Airport for international travel."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Costa Blanca enjoys exceptional Mediterranean weather with over 300 sunshine days annually. Summers are warm (28-32°C) and dry, winters mild (10-15°C), with minimal rainfall. The inland location of Baños y Mendigo provides a pleasant microclimate with less humidity than coastal areas and protection from sea storms. Spring and autumn offer perfect conditions with comfortable temperatures. The climate supports outdoor activities year-round, making it ideal for sun-seeking residents."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Baños y Mendigo? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "5-7%",
+      "annualAppreciation": "4-6%",
+      "overview": "Rental potential is strong, with typical 7-night rentals commanding €800, appealing to holiday rental investors. The established expat community ensures consistent tourism and rental demand. Capital growth prospects remain positive given market fundamentals, location advantages, and continued interest from international buyers. Properties in Baños y Mendigo appreciate steadily while generating attractive rental yields, making it appealing for buy-to-let investors.",
+      "highlights": [
+        "Golf properties command premium rental rates year-round",
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Baños y Mendigo are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Baños y Mendigo offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Baños y Mendigo celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Baños y Mendigo have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school offering GCSE and A-Levels with strong extracurricular programmes"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "International (British)",
+          "distance": "25-45 min",
+          "description": "British curriculum primary and secondary school serving the international community"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Baños y Mendigo offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Championship Golf",
+          "type": "Golf",
+          "description": "Access to world-class golf courses with championship layouts, practice facilities, and clubhouse dining"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Baños y Mendigo has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Baños y Mendigo",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Morning Golf",
+          "description": "Head to the course for a relaxing round of golf, enjoying the perfectly maintained greens and warm sunshine"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-1.05!3d37.9028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Baños y Mendigo a good place to live?",
-      "answer": "Yes, absolutely. Baños y Mendigo excels as a residential destination combining authentic Spanish culture, established international infrastructure, excellent value, and genuine community spirit. The established expat community, English-speaking services, proximity to beaches and golf, plus affordable living costs make it ideal for retirees, families, and professionals seeking quality Spanish living without island resort prices."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Baños y Mendigo",
+    "description": "Baños y Mendigo is a  municipality in Murcia, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.9028",
+      "longitude": "-1.05"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can freely purchase property in Spain with minimal restrictions. EU citizens enjoy identical rights to Spanish citizens, while non-EU nationals can also buy without limitations. You'll need an NIE number (Spanish tax identification), but no visa is required for property purchase. The process is straightforward with professional legal guidance ensuring smooth transactions."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Baños y Mendigo",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Property acquisition costs in Spain typically total 8-12% beyond the purchase price, including: transfer tax (6-11% depending on region), notary fees (0.6-1%), registry fees (0.1-0.5%), and legal fees (1-3%). In Baños y Mendigo, with villas ranging from €389,900-€708,500, expect total acquisition costs of €31,000-€85,000. Annual ownership costs include property tax (approximately 0.4-1.1% of value) and maintenance."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "No visa is required specifically to purchase Spanish property. Non-EU citizens can buy without residency permits or visas. However, if you plan to reside in Spain, you may need residency authorization depending on your nationality. EU citizens enjoy unrestricted residency rights. Many property buyers establish their legal position through a Spanish accountant and solicitor without visa requirements."
-    },
-    {
-      "question": "What is the cost of living in Costa Blanca?",
-      "answer": "Cost of living in Costa Blanca, particularly in inland towns like Baños y Mendigo, is significantly lower than northern Europe. Monthly expenses for a couple range from €1,500-€2,500 including: rent/mortgage, utilities, groceries, healthcare, and leisure. Baños y Mendigo residents benefit from lower property costs than coastal alternatives, inexpensive dining out (€10-15 per person), and affordable healthcare. Properties average €2,200/m², representing excellent value."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Absolutely, Costa Blanca is excellent for retirees. The region offers affordable living costs, outstanding healthcare with English-speaking doctors, mild year-round climate, established international communities with social activities, and abundant recreational facilities. Baños y Mendigo specifically appeals to retirees seeking authentic Spain with modern amenities, quiet communities, and value-for-money living. Many retirees enjoy pensioner benefits and favorable tax treatment."
-    },
-    {
-      "question": "How far is Costa Blanca from UK?",
-      "answer": "Costa Blanca lies approximately 1,400km from the UK (direct distance). Flight times from major UK airports to Alicante typically range 2-2.5 hours, making it easily accessible for weekend visits or regular returns. Ferry services from Portsmouth to Spanish ports provide alternative transport. Baños y Mendigo, located inland from the coast, remains conveniently positioned near Alicante Airport for international travel."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Costa Blanca enjoys exceptional Mediterranean weather with over 300 sunshine days annually. Summers are warm (28-32°C) and dry, winters mild (10-15°C), with minimal rainfall. The inland location of Baños y Mendigo provides a pleasant microclimate with less humidity than coastal areas and protection from sea storms. Spring and autumn offer perfect conditions with comfortable temperatures. The climate supports outdoor activities year-round, making it ideal for sun-seeking residents."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Murcia"
     }
-  ],
-  "slug": "ba-os-y-mendigo",
-  "town": "Baños y Mendigo",
-  "propertyCount": 13,
-  "generatedAt": "2026-02-06T10:03:43.855Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Baños y Mendigo a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. Baños y Mendigo excels as a residential destination combining authentic Spanish culture, established international infrastructure, excellent value, and genuine community spirit. The established expat community, English-speaking services, proximity to beaches and golf, plus affordabl"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can freely purchase property in Spain with minimal restrictions. EU citizens enjoy identical rights to Spanish citizens, while non-EU nationals can also buy without limitations. You'll need an NIE number (Spanish tax identification), but no visa is required for property purchase. The"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Property acquisition costs in Spain typically total 8-12% beyond the purchase price, including: transfer tax (6-11% depending on region), notary fees (0.6-1%), registry fees (0.1-0.5%), and legal fees (1-3%). In Baños y Mendigo, with villas ranging from €389,900-€708,500, expect total acquisition co"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No visa is required specifically to purchase Spanish property. Non-EU citizens can buy without residency permits or visas. However, if you plan to reside in Spain, you may need residency authorization depending on your nationality. EU citizens enjoy unrestricted residency rights. Many property buyer"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Costa Blanca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cost of living in Costa Blanca, particularly in inland towns like Baños y Mendigo, is significantly lower than northern Europe. Monthly expenses for a couple range from €1,500-€2,500 including: rent/mortgage, utilities, groceries, healthcare, and leisure. Baños y Mendigo residents benefit from lower"
+        }
+      }
+    ]
+  }
 }

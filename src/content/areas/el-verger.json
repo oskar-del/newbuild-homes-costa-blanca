@@ -1,75 +1,63 @@
 {
-  "metaTitle": "Living in El Verger 2026 | Complete Guide to Costa Blanca",
-  "metaDescription": "Discover living in El Verger: Properties from €232,000, established expat community, beaches & golf nearby. Cost of living 40% less than Spanish islands.",
-  "heroIntro": "El Verger is a charming inland town on the Costa Blanca that offers an authentic Spanish lifestyle combined with modern amenities and a welcoming international community. Located strategically between the Mediterranean coast and the Valencian hinterland, this hidden gem provides an ideal balance for those seeking Mediterranean living without the overcrowded tourist atmosphere. With 11 quality properties currently available ranging from €232,000 to €555,000, El Verger appeals to families, retirees, and investors looking for excellent value. The town boasts an established expat community where English is commonly spoken, making integration seamless for international buyers. Blue Flag beaches are just 20 minutes away, championship golf courses dot the landscape, and the cost of living is approximately 40% less than Spanish island markets. Whether you're relocating permanently, seeking a vacation home, or looking for investment opportunities, El Verger delivers exceptional quality of life at unbeatable prices.",
-  "climate": "El Verger enjoys a classic Mediterranean climate with approximately 300 days of sunshine annually. Winters are mild, with temperatures averaging 12-15°C, while summers are warm and dry, reaching 28-32°C. Spring and autumn are particularly pleasant, with comfortable temperatures ideal for outdoor activities and beach visits. The region experiences minimal rainfall, concentrated mainly in autumn and spring. This climate makes El Verger perfect year-round living—winters are mild enough to enjoy the outdoors without extreme cold, while summers provide reliable sunshine for beach and golf activities. The low humidity and stable weather patterns create ideal conditions for both residents and visitors throughout the year.",
-  "lifestyle": "Daily life in El Verger revolves around authentic Spanish culture with modern conveniences. The town's vibrant weekly markets offer fresh local produce, seafood, and regional specialties at exceptional prices. Dining ranges from traditional Spanish restaurants serving paella and tapas to international cuisines catering to the established expat community. Beaches are easily accessible—multiple award-winning Blue Flag beaches lie within just 20 minutes, offering water sports, swimming, and leisurely beachside meals. The town maintains a relaxed pace perfect for both active pursuits and relaxation. Golf enthusiasts have access to several championship courses nearby, while cultural events and fiestas bring the community together throughout the year. The established international community ensures English is widely spoken, creating a welcoming environment for newcomers while preserving authentic Spanish charm. Weekend excursions to nearby Dénia, Jávea, or inland villages provide cultural exploration and dining adventures.",
-  "amenities": {
+  "slug": "el-verger",
+  "name": "El Verger",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/el-verger-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 11,
+  "propertyTypes": [
+    "Land",
+    "Apartment",
+    "Town House",
+    "Penthouse"
+  ],
+  "priceRange": {
+    "min": 232000,
+    "max": 555000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "El Verger Tourism",
+      "url": "https://www.google.com/search?q=El%20Verger%20Spain%20official%20website",
+      "description": "Discover more about El Verger"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "95 km",
+      "driveTime": "60 min"
+    },
     "healthcare": {
-      "text": "Healthcare in El Verger meets international standards with comprehensive medical facilities serving residents excellently. A regional hospital is conveniently located within 30 minutes, providing emergency and specialized care. Multiple private clinics throughout the area offer private healthcare options with shorter waiting times. English-speaking doctors are readily available, ensuring clear communication for international residents regarding diagnosis, treatment, and medical advice. The region maintains high healthcare standards comparable to Western Europe, with modern equipment and qualified medical professionals. Many private clinics accept international health insurance and offer competitive pricing for treatments and procedures.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes",
-        "Private clinics with shorter waiting times",
-        "English-speaking doctors available",
-        "Modern medical equipment and international standards"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping facilities in and around El Verger provide convenience and excellent value. Major supermarket chains including Mercadona, Lidl, and Consum offer competitive pricing on groceries, household items, and international products. Local markets operate regularly, offering fresh produce, seafood, and regional specialties at traditional market prices. These markets provide an authentic shopping experience while supporting local farmers and producers. Modern shopping centers nearby provide additional retail options, from clothing to electronics. The combination of supermarkets and traditional markets caters to all shopping preferences and budgets.",
-      "keyPoints": [
-        "Mercadona supermarket chain",
-        "Lidl discount supermarket",
-        "Consum supermarket",
-        "Weekly local markets with fresh produce"
-      ]
-    },
-    "education": {
-      "text": "Education options in the region serve families relocating to El Verger with children. International schools throughout the region provide British curriculum education, ensuring continuity for families transferring from UK education systems. These schools maintain international standards while incorporating local Spanish language and culture instruction. Qualified teachers and modern facilities support academic excellence. Spanish public schools are also available for families preferring integration into the local education system. International schools typically offer extracurricular activities, sports programs, and cultural events enriching student experiences beyond academics.",
-      "keyPoints": [
-        "International schools with British curriculum",
-        "Modern facilities and qualified teachers",
-        "Spanish language instruction integrated",
-        "Comprehensive extracurricular programs"
-      ]
-    },
-    "sports": {
-      "text": "Sports and recreational facilities make El Verger ideal for active lifestyles. Multiple Blue Flag beaches within 20 minutes provide swimming, paddleboarding, kayaking, and coastal walks. Several championship golf courses nearby offer world-class facilities for enthusiasts of all abilities. Tennis clubs, hiking trails through Mediterranean countryside, and water sports facilities ensure diverse activity options. Beach volleyball, beach bars, and seaside restaurants combine recreation with social activities. The mild climate enables year-round sports participation, from winter golfing to summer water sports.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Championship golf courses nearby",
-        "Water sports: paddleboarding, kayaking, swimming",
-        "Hiking trails and outdoor activities"
-      ]
+      "name": "Hospital de Dénia",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20de%20D%C3%A9nia",
+      "distance": "8 km"
     }
   },
-  "transport": {
-    "overview": "Bus connections are available throughout the region, linking El Verger to nearby towns and coastal areas. A car is recommended for maximum flexibility and convenience, enabling independent exploration of surrounding areas, beaches, and amenities.",
-    "airports": "Alicante International Airport is approximately 90 minutes away, serving flights to the UK and throughout Europe. Valencia Airport provides an alternative option approximately 120 minutes distant.",
-    "driving": "El Verger enjoys excellent motorway connections via the A-7 autopista linking the Costa Blanca region. Nearby towns including Dénia (25 minutes), Jávea (30 minutes), and Benidorm (45 minutes) are easily accessible. The wider Valencia region and inland villages are within comfortable driving distance.",
-    "public": "Regional bus services connect El Verger with neighboring towns and coastal areas. These services provide affordable transportation but operate on less frequent schedules than urban areas, making a personal vehicle preferable for convenience.",
-    "keyPoints": [
-      "Car recommended for maximum flexibility",
-      "Bus connections to nearby towns available",
-      "Alicante Airport 90 minutes away",
-      "Easy motorway access via A-7 autopista"
-    ]
-  },
-  "propertyMarket": {
-    "overview": "El Verger's property market demonstrates healthy growth with an impressive 8% year-on-year increase, reflecting rising demand for quality inland locations. The market offers exceptional value with property prices averaging €2,200 per m², approximately 40% less than Spanish island markets. Current availability includes 11 quality properties across diverse categories, providing options for various buyer requirements and budgets.",
-    "priceRange": "€232,000 - €555,000",
-    "popularTypes": "Land, Apartment, Town House, Penthouse",
-    "investment": "El Verger presents excellent investment potential with strong rental demand. Typical 7-night rentals command €800, providing consistent income streams for holiday let investors. Capital growth prospects remain favorable given the 8% annual appreciation trend and increasing recognition of El Verger as a premier Costa Blanca destination. The combination of affordable purchase prices, rental income potential, and capital appreciation makes El Verger attractive for both owner-occupiers and investment portfolios."
-  },
-  "neighborhoods": [
-    "Centro Urbano: The town center offers authentic Spanish atmosphere with local shops, restaurants, and weekly markets. Ideal for those seeking walkable community living with traditional ambiance.",
-    "Playa Cercana: Properties closer to the beach zone provide easier access to coastal amenities, water sports, and beachside dining while maintaining the peaceful inland setting.",
-    "Zona Residencial: Established residential areas feature family-friendly properties with gardens and quieter surroundings, perfect for permanent residents seeking tranquility.",
-    "Campi Verdes: This area offers larger land plots and spacious properties with countryside views, appealing to those desiring more privacy and outdoor space.",
-    "Proximidad Golf: Properties near championship golf courses attract golf enthusiasts with convenient course access and often feature golf-view properties.",
-    "Desarrollo Nueva: Newer development areas showcase modern properties with contemporary amenities, appealing to buyers preferring recently constructed homes with updated features."
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in El Verger 2026 | Complete Guide to Costa Blanca",
+    "metaDescription": "Discover living in El Verger: Properties from €232,000, established expat community, beaches & golf nearby. Cost of living 40% less than Spanish islands.",
+    "heroIntro": "El Verger is a charming inland town on the Costa Blanca that offers an authentic Spanish lifestyle combined with modern amenities and a welcoming international community. Located strategically between the Mediterranean coast and the Valencian hinterland, this hidden gem provides an ideal balance for those seeking Mediterranean living without the overcrowded tourist atmosphere. With 11 quality properties currently available ranging from €232,000 to €555,000, El Verger appeals to families, retirees, and investors looking for excellent value. The town boasts an established expat community where English is commonly spoken, making integration seamless for international buyers. Blue Flag beaches are just 20 minutes away, championship golf courses dot the landscape, and the cost of living is approximately 40% less than Spanish island markets. Whether you're relocating permanently, seeking a vacation home, or looking for investment opportunities, El Verger delivers exceptional quality of life at unbeatable prices.",
+    "lifestyleSection": {
+      "intro": "Daily life in El Verger revolves around authentic Spanish culture with modern conveniences. The town's vibrant weekly markets offer fresh local produce, seafood, and regional specialties at exceptional prices. Dining ranges from traditional Spanish restaurants serving paella and tapas to international cuisines catering to the established expat community. Beaches are easily accessible—multiple award-winning Blue Flag beaches lie within just 20 minutes, offering water sports, swimming, and leisurely beachside meals. The town maintains a relaxed pace perfect for both active pursuits and relaxation. Golf enthusiasts have access to several championship courses nearby, while cultural events and fiestas bring the community together throughout the year. The established international community ensures English is widely spoken, creating a welcoming environment for newcomers while preserving authentic Spanish charm. Weekend excursions to nearby Dénia, Jávea, or inland villages provide cultural exploration and dining adventures.\n\nEl Verger enjoys a classic Mediterranean climate with approximately 300 days of sunshine annually. Winters are mild, with temperatures averaging 12-15°C, while summers are warm and dry, reaching 28-32°C. Spring and autumn are particularly pleasant, with comfortable temperatures ideal for outdoor activities and beach visits. The region experiences minimal rainfall, concentrated mainly in autumn and spring. This climate makes El Verger perfect year-round living—winters are mild enough to enjoy the outdoors without extreme cold, while summers provide reliable sunshine for beach and golf activities. The low humidity and stable weather patterns create ideal conditions for both residents and visitors throughout the year.",
+      "highlights": [
+        "Exceptional value: 40% less expensive than Spanish island markets with properties from €232,000",
+        "Strong market growth: 8% year-on-year appreciation demonstrates healthy investment potential",
+        "Established expat community: English widely spoken with international support networks already in place",
+        "Coastal proximity: Multiple Blue Flag beaches and water sports within 20 minutes",
+        "Recreation: Championship golf courses nearby appeal to enthusiasts of all abilities",
+        "Year-round sunshine: Mediterranean climate with 300+ sunny days annually"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Sports and recreational facilities make El Verger ideal for active lifestyles. Multiple Blue Flag beaches within 20 minutes provide swimming, paddleboarding, kayaking, and coastal walks. Several championship golf courses nearby offer world-class facilities for enthusiasts of all abilities. Tennis clubs, hiking trails through Mediterranean countryside, and water sports facilities ensure diverse activity options. Beach volleyball, beach bars, and seaside restaurants combine recreation with social activities. The mild climate enables year-round sports participation, from winter golfing to summer water sports.",
+      "dining": "El Verger offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping facilities in and around El Verger provide convenience and excellent value. Major supermarket chains including Mercadona, Lidl, and Consum offer competitive pricing on groceries, household items, and international products. Local markets operate regularly, offering fresh produce, seafood, and regional specialties at traditional market prices. These markets provide an authentic shopping experience while supporting local farmers and producers. Modern shopping centers nearby provide additional retail options, from clothing to electronics. The combination of supermarkets and traditional markets caters to all shopping preferences and budgets.",
+      "healthcare": "Healthcare in El Verger meets international standards with comprehensive medical facilities serving residents excellently. A regional hospital is conveniently located within 30 minutes, providing emergency and specialized care. Multiple private clinics throughout the area offer private healthcare options with shorter waiting times. English-speaking doctors are readily available, ensuring clear communication for international residents regarding diagnosis, treatment, and medical advice. The region maintains high healthcare standards comparable to Western Europe, with modern equipment and qualified medical professionals. Many private clinics accept international health insurance and offer competitive pricing for treatments and procedures.",
+      "transport": "Bus connections are available throughout the region, linking El Verger to nearby towns and coastal areas. A car is recommended for maximum flexibility and convenience, enabling independent exploration of surrounding areas, beaches, and amenities. Alicante International Airport is approximately 90 minutes away, serving flights to the UK and throughout Europe. Valencia Airport provides an alternative option approximately 120 minutes distant. El Verger enjoys excellent motorway connections via the A-7 autopista linking the Costa Blanca region. Nearby towns including Dénia (25 minutes), Jávea (30 minutes), and Benidorm (45 minutes) are easily accessible. The wider Valencia region and inland villages are within comfortable driving distance. Regional bus services connect El Verger with neighboring towns and coastal areas. These services provide affordable transportation but operate on less frequent schedules than urban areas, making a personal vehicle preferable for convenience."
+    },
+    "propertyMarketSection": "El Verger's property market demonstrates healthy growth with an impressive 8% year-on-year increase, reflecting rising demand for quality inland locations. The market offers exceptional value with property prices averaging €2,200 per m², approximately 40% less than Spanish island markets. Current availability includes 11 quality properties across diverse categories, providing options for various buyer requirements and budgets.\n\nPopular property types include Land, Apartment, Town House, Penthouse.\n\nEl Verger presents excellent investment potential with strong rental demand. Typical 7-night rentals command €800, providing consistent income streams for holiday let investors. Capital growth prospects remain favorable given the 8% annual appreciation trend and increasing recognition of El Verger as a premier Costa Blanca destination. The combination of affordable purchase prices, rental income potential, and capital appreciation makes El Verger attractive for both owner-occupiers and investment portfolios.",
+    "whyLiveHereSection": [
       "Exceptional value: 40% less expensive than Spanish island markets with properties from €232,000",
       "Strong market growth: 8% year-on-year appreciation demonstrates healthy investment potential",
       "Established expat community: English widely spoken with international support networks already in place",
@@ -77,48 +65,319 @@
       "Recreation: Championship golf courses nearby appeal to enthusiasts of all abilities",
       "Year-round sunshine: Mediterranean climate with 300+ sunny days annually"
     ],
-    "cons": [
-      "Car dependency: While bus connections exist, a personal vehicle is recommended for maximum convenience and flexibility",
-      "Distance to major cities: Valencia and Alicante require 90-120 minutes driving, limiting frequent urban access",
-      "Language considerations: While English is common in expat areas, learning Spanish enhances integration and daily interactions"
-    ]
+    "faqs": [
+      {
+        "question": "Is El Verger a good place to live?",
+        "answer": "Yes, El Verger is an excellent place to live, offering authentic Mediterranean lifestyle at exceptional value. The established international community, English speakers, healthcare facilities, and proximity to beaches create ideal conditions for expats, families, and retirees. The 8% annual property appreciation and lower cost of living compared to island markets make it financially sensible."
+      },
+      {
+        "question": "Is Costa Blanca a good place to buy property?",
+        "answer": "Costa Blanca is one of Spain's premier property investment regions, offering diverse options from coastal resort properties to charming inland towns like El Verger. The region combines Mediterranean lifestyle, excellent healthcare, international schools, and strong tourism-driven rental income potential. Property values have appreciated consistently, making it attractive for both personal use and investment."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can freely purchase property in Spain without restrictions. Non-residents can buy residential and commercial properties as easily as Spanish citizens. Most international buyers work with Spanish solicitors to navigate legal procedures, arrange financing, and ensure smooth transactions. Legal requirements are straightforward, and the process is well-established for international purchasers."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Property purchase costs in Spain typically include: property price, transfer tax (6-10% depending on region), notary fees (0.5-1%), registry fees (0.1%), and legal fees (1-2% typically). In El Verger, with properties ranging €232,000-€555,000, total acquisition costs usually add 8-13% to the purchase price. Mortgage arrangements may incur additional costs. Professional legal guidance ensures transparency regarding all expenses."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "Buying property in Spain doesn't require any specific visa or residence permit for foreign nationals—the transaction is purely commercial. However, to live in Spain permanently or for extended periods, you'll need appropriate visa sponsorship (such as non-lucrative visa, retiree visa, or Golden Visa for significant investment). Our specialists can guide you through residency options suitable to your circumstances."
+      },
+      {
+        "question": "What is the cost of living in Costa Blanca?",
+        "answer": "Costa Blanca offers exceptional value compared to Northern Europe and other Spanish regions. El Verger specifically provides costs approximately 40% lower than island markets. Monthly expenses typically include: utilities (€80-120), groceries (€250-400), dining out (€12-25 per meal), and activities (variable). Healthcare through private insurance costs €100-200 monthly. Retirees can live comfortably on modest pensions."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Costa Blanca is exceptionally popular with retirees, offering mild winters, excellent healthcare, affordable living, and established international communities. El Verger specifically appeals to retirees through property affordability, peaceful atmosphere, proximity to beaches and golf, and English-speaking medical facilities. The Non-Lucrative Visa accommodates retirees with pension income, and the relaxed lifestyle supports active, healthy aging."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Costa Blanca enjoys Mediterranean climate with approximately 300 days of annual sunshine. Winters are mild (12-15°C), rarely requiring heating. Summers are warm (28-32°C) with low humidity. Spring and autumn are particularly pleasant with comfortable temperatures ideal for outdoor activities. Rainfall is minimal and concentrated in autumn/spring. This consistent weather makes year-round outdoor living and beach activities perfectly feasible."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in El Verger? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "El Verger presents excellent investment potential with strong rental demand. Typical 7-night rentals command €800, providing consistent income streams for holiday let investors. Capital growth prospects remain favorable given the 8% annual appreciation trend and increasing recognition of El Verger as a premier Costa Blanca destination. The combination of affordable purchase prices, rental income potential, and capital appreciation makes El Verger attractive for both owner-occupiers and investment portfolios.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in El Verger are significantly lower than Northern Europe and very competitive within Spain. Inland locations like El Verger offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "El Verger celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in El Verger have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school with GCSE and A-Level programmes, excellent facilities and strong academic results"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "British and IB curriculum with outstanding facilities, sports programmes, and multilingual education"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "El Verger offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "El Verger has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Diverse European community including British, Scandinavian, Dutch, German, and French residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in El Verger",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d0.0053!3d38.8289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is El Verger a good place to live?",
-      "answer": "Yes, El Verger is an excellent place to live, offering authentic Mediterranean lifestyle at exceptional value. The established international community, English speakers, healthcare facilities, and proximity to beaches create ideal conditions for expats, families, and retirees. The 8% annual property appreciation and lower cost of living compared to island markets make it financially sensible."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "El Verger",
+    "description": "El Verger is a inland municipality in Costa Blanca North, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.8289",
+      "longitude": "0.0053"
     },
-    {
-      "question": "Is Costa Blanca a good place to buy property?",
-      "answer": "Costa Blanca is one of Spain's premier property investment regions, offering diverse options from coastal resort properties to charming inland towns like El Verger. The region combines Mediterranean lifestyle, excellent healthcare, international schools, and strong tourism-driven rental income potential. Property values have appreciated consistently, making it attractive for both personal use and investment."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "El Verger",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can freely purchase property in Spain without restrictions. Non-residents can buy residential and commercial properties as easily as Spanish citizens. Most international buyers work with Spanish solicitors to navigate legal procedures, arrange financing, and ensure smooth transactions. Legal requirements are straightforward, and the process is well-established for international purchasers."
-    },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Property purchase costs in Spain typically include: property price, transfer tax (6-10% depending on region), notary fees (0.5-1%), registry fees (0.1%), and legal fees (1-2% typically). In El Verger, with properties ranging €232,000-€555,000, total acquisition costs usually add 8-13% to the purchase price. Mortgage arrangements may incur additional costs. Professional legal guidance ensures transparency regarding all expenses."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "Buying property in Spain doesn't require any specific visa or residence permit for foreign nationals—the transaction is purely commercial. However, to live in Spain permanently or for extended periods, you'll need appropriate visa sponsorship (such as non-lucrative visa, retiree visa, or Golden Visa for significant investment). Our specialists can guide you through residency options suitable to your circumstances."
-    },
-    {
-      "question": "What is the cost of living in Costa Blanca?",
-      "answer": "Costa Blanca offers exceptional value compared to Northern Europe and other Spanish regions. El Verger specifically provides costs approximately 40% lower than island markets. Monthly expenses typically include: utilities (€80-120), groceries (€250-400), dining out (€12-25 per meal), and activities (variable). Healthcare through private insurance costs €100-200 monthly. Retirees can live comfortably on modest pensions."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Costa Blanca is exceptionally popular with retirees, offering mild winters, excellent healthcare, affordable living, and established international communities. El Verger specifically appeals to retirees through property affordability, peaceful atmosphere, proximity to beaches and golf, and English-speaking medical facilities. The Non-Lucrative Visa accommodates retirees with pension income, and the relaxed lifestyle supports active, healthy aging."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Costa Blanca enjoys Mediterranean climate with approximately 300 days of annual sunshine. Winters are mild (12-15°C), rarely requiring heating. Summers are warm (28-32°C) with low humidity. Spring and autumn are particularly pleasant with comfortable temperatures ideal for outdoor activities. Rainfall is minimal and concentrated in autumn/spring. This consistent weather makes year-round outdoor living and beach activities perfectly feasible."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
     }
-  ],
-  "slug": "el-verger",
-  "town": "El Verger",
-  "propertyCount": 11,
-  "generatedAt": "2026-02-06T09:57:26.263Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is El Verger a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, El Verger is an excellent place to live, offering authentic Mediterranean lifestyle at exceptional value. The established international community, English speakers, healthcare facilities, and proximity to beaches create ideal conditions for expats, families, and retirees. The 8% annual property"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Costa Blanca a good place to buy property?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costa Blanca is one of Spain's premier property investment regions, offering diverse options from coastal resort properties to charming inland towns like El Verger. The region combines Mediterranean lifestyle, excellent healthcare, international schools, and strong tourism-driven rental income poten"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can freely purchase property in Spain without restrictions. Non-residents can buy residential and commercial properties as easily as Spanish citizens. Most international buyers work with Spanish solicitors to navigate legal procedures, arrange financing, and ensure smooth transaction"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Property purchase costs in Spain typically include: property price, transfer tax (6-10% depending on region), notary fees (0.5-1%), registry fees (0.1%), and legal fees (1-2% typically). In El Verger, with properties ranging €232,000-€555,000, total acquisition costs usually add 8-13% to the purchas"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Buying property in Spain doesn't require any specific visa or residence permit for foreign nationals—the transaction is purely commercial. However, to live in Spain permanently or for extended periods, you'll need appropriate visa sponsorship (such as non-lucrative visa, retiree visa, or Golden Visa"
+        }
+      }
+    ]
+  }
 }

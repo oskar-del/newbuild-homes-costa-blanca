@@ -1,75 +1,62 @@
 {
-  "metaTitle": "Living in El Rafol D'almunia 2026 | Complete Area Guide",
-  "metaDescription": "Discover living in El Rafol D'almunia: property from €289,000, established expat community, Blue Flag beaches. Complete guide to this inland Costa Blanca gem.",
-  "heroIntro": "El Rafol D'almunia represents an authentic Spanish inland experience on the Costa Blanca, offering a perfect blend of traditional village charm and modern amenities. This picturesque town attracts a diverse population including families, retirees, and international investors seeking genuine Spanish culture without the coastal overcrowding. With properties ranging from €289,000 to €690,000, El Rafol D'almunia provides exceptional value compared to island markets—40% less expensive than comparable properties elsewhere in Spain. The town's established international community, where English is commonly spoken, makes integration seamless for newcomers. Located strategically inland yet within 20 minutes of pristine Blue Flag beaches and multiple championship golf courses, El Rafol D'almunia offers the rare combination of peaceful rural living with easy access to world-class recreation. The region boasts excellent healthcare facilities, international schools with British curriculum options, and all essential amenities including major supermarkets, making it an ideal location for families and expats seeking a sustainable, fulfilling lifestyle on the Costa Blanca.",
-  "climate": "El Rafol D'almunia enjoys a Mediterranean climate characterized by warm, dry summers and mild winters, with average temperatures ranging from 8°C in January to 28°C in August. The region receives approximately 300 days of sunshine annually, making it one of Spain's sunniest locations. Spring (March-May) and autumn (September-November) offer perfect living conditions with comfortable temperatures and minimal rainfall. Winters rarely drop below freezing, eliminating the need for extensive heating. The inland location provides protection from coastal wind while maintaining fresh mountain breezes. June through September are hottest, though the elevation moderates extreme heat. This consistently pleasant climate supports an active outdoor lifestyle year-round, from beach visits to golf and hiking adventures. The low rainfall means garden maintenance is manageable, and outdoor activities are rarely disrupted by weather.",
-  "lifestyle": "Daily life in El Rafol D'almunia revolves around a harmonious blend of Spanish tradition and international convenience. The town features vibrant local markets where residents source fresh produce, seafood, and regional specialties—a centerpiece of authentic Spanish living. Restaurants throughout the area serve both traditional paella and international cuisine, catering to the established international community. Weekend activities include exploring pristine Blue Flag beaches just 20 minutes away, playing championship golf courses, or hiking the surrounding countryside. The established expat community ensures English is widely spoken, and numerous social groups facilitate connections among international residents. Traditional Spanish festivals and local celebrations provide cultural immersion, while modern infrastructure ensures convenience. Residents enjoy leisurely café culture, farmers' markets on weekends, and strong neighborhood connections. The town strikes a perfect balance—small enough to feel community-oriented yet large enough to offer sophisticated dining, entertainment, and recreational opportunities. Whether you're seeking active adventure or peaceful relaxation, the lifestyle here accommodates diverse preferences.",
-  "amenities": {
+  "slug": "el-rafol-d-almunia",
+  "name": "El Rafol D'almunia",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/el-rafol-d-almunia-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 2,
+  "propertyTypes": [
+    "Town houses and spacious villas dominate the market",
+    "with renovation projects and new builds available. Town houses suit those preferring walkable neighborhoods",
+    "while villas appeal to families seeking privacy and gardens."
+  ],
+  "priceRange": {
+    "min": 289000,
+    "max": 690000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "El Rafol D'almunia Tourism",
+      "url": "https://www.google.com/search?q=El%20Rafol%20D'almunia%20Spain%20official%20website",
+      "description": "Discover more about El Rafol D'almunia"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "100 km",
+      "driveTime": "65 min"
+    },
     "healthcare": {
-      "text": "Healthcare in El Rafol D'almunia meets the highest international standards with comprehensive medical facilities. A modern regional hospital is located within 30 minutes, providing emergency care and specialized services. Private clinics throughout the area offer rapid access to treatments without lengthy waiting periods, and many practitioners are English-speaking, eliminating language barriers for international residents. General practitioners operate within walking distance of most neighborhoods, and telemedicine services supplement in-person consultations. Prescription medications are readily available through licensed pharmacies. Dental care facilities offer advanced treatments at significantly lower costs than UK or northern European alternatives. The healthcare system is supplemented by private health insurance options tailored for expat communities, providing comprehensive coverage and access to preferred specialists.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes drive",
-        "Private clinics with English-speaking doctors",
-        "Local pharmacies and general practitioners",
-        "Advanced dental care facilities"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping in El Rafol D'almunia provides excellent variety and competitive pricing. Major supermarket chains including Mercadona, Lidl, and Consum operate throughout the town, offering quality products at reasonable prices. These retailers stock international products alongside Spanish staples, accommodating diverse dietary preferences. Traditional local markets operate regularly, featuring fresh produce directly from regional farmers—an authentic Spanish experience and significant cost saving. Specialized shops for bread, meat, and cheese maintain traditional quality standards. Larger shopping centers within 15-20 minutes provide additional retail options including clothing, electronics, and home furnishings. Online shopping services deliver efficiently to residential addresses. The competitive supermarket landscape ensures prices remain reasonable compared to coastal tourist areas.",
-      "keyPoints": [
-        "Mercadona supermarket chain",
-        "Lidl discount supermarket",
-        "Consum local chain",
-        "Traditional farmers markets with fresh produce"
-      ]
-    },
-    "education": {
-      "text": "International schools in the region provide excellent education for families relocating with children. British curriculum options ensure continuity for children from UK backgrounds, with International Baccalaureate programs available at senior levels. These schools maintain high academic standards and employ native English-speaking faculty. Facilities include modern classrooms, sports centers, and technology labs. Spanish language instruction helps children integrate into local communities while maintaining academic progress. School buses operate throughout the area, and many families form carpooling arrangements. Spanish public schools are available as cost-effective alternatives for families committed to full cultural integration. The international school community organizes regular social events, facilitating family connections and support networks.",
-      "keyPoints": [
-        "International schools with British curriculum",
-        "IB programme options available",
-        "Native English-speaking faculty",
-        "Comprehensive sports and activity programs"
-      ]
-    },
-    "sports": {
-      "text": "El Rafol D'almunia is a paradise for sports and leisure enthusiasts. Multiple pristine Blue Flag beaches lie within 20 minutes, offering swimming, paddle boarding, windsurfing, and beach volleyball. Several championship golf courses nearby cater to enthusiasts of all abilities, with professional instruction available. The inland location provides excellent hiking trails through Mediterranean countryside and pine forests. Cycling routes range from leisurely coastal rides to challenging mountain terrain. Water sports clubs organize activities from sailing to scuba diving. Tennis courts, swimming pools, and fitness centers are available throughout the region. The stable climate enables year-round outdoor activities, and the strong expat community organizes regular sporting events and competitions.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Championship golf courses",
-        "Hiking and mountain biking trails",
-        "Water sports centers with professional instruction"
-      ]
+      "name": "Hospital de Dénia",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20de%20D%C3%A9nia",
+      "distance": "10 km"
     }
   },
-  "transport": {
-    "overview": "El Rafol D'almunia offers convenient transport connections with reasonable flexibility. Bus connections link the town to surrounding areas and larger cities. A personal vehicle is recommended for complete flexibility and to maximize exploration of the beautiful surrounding region, though not essential for daily essentials.",
-    "airports": "Alicante Airport (Alicante-Elche) is approximately 45 minutes drive, serving as the primary international gateway with direct flights to major European cities. Valencia Airport lies approximately 90 minutes away, offering alternative flight options and often competitive pricing.",
-    "driving": "Excellent motorway connections link El Rafol D'almunia to major coastal towns and inland cities. The AP-7 motorway provides rapid access to surrounding areas. Local roads are well-maintained, and GPS navigation is reliable. Driving to Benidorm takes approximately 25 minutes, while Valencia is accessible in 90 minutes.",
-    "public": "Regional bus services connect El Rafol D'almunia to nearby towns and major transport hubs. While bus services are functional, frequency can be limited compared to larger cities. For accessing beaches and attractions, buses operate regularly with reasonable timetables.",
-    "keyPoints": [
-      "Bus connections to surrounding areas available",
-      "Personal vehicle recommended for flexibility",
-      "Alicante Airport 45 minutes drive",
-      "Excellent motorway access to coast and inland cities"
-    ]
-  },
-  "propertyMarket": {
-    "overview": "El Rafol D'almunia's property market offers exceptional value with strong growth potential. The market has experienced +8% year-on-year appreciation, outpacing many European property markets. Properties consistently attract international buyers seeking authentic Spanish living combined with investment returns. The market remains relatively undiscovered compared to coastal alternatives, suggesting significant future growth potential as more investors recognize value.",
-    "priceRange": "€289,000 - €690,000",
-    "popularTypes": "Town houses and spacious villas dominate the market, with renovation projects and new builds available. Town houses suit those preferring walkable neighborhoods, while villas appeal to families seeking privacy and gardens.",
-    "investment": "Rental potential is strong with typical 7-night rentals commanding €800, yielding attractive returns particularly during peak summer seasons. The established expat community and proximity to beaches and golf ensure consistent visitor interest. Capital appreciation remains positive as the area develops infrastructure and gains international recognition. Property prices remain 40% below comparable Spanish island markets, suggesting expansion room."
-  },
-  "neighborhoods": [
-    "Casco Antiguo (Old Town): The historic heart featuring traditional Spanish architecture, narrow streets, local restaurants, and authentic atmosphere perfect for those seeking cultural immersion",
-    "Zona Residencial Este: Modern development area with villa communities, family-oriented amenities, and proximity to international schools—ideal for families with children",
-    "Área Campos Verdes: Green area with spacious properties, peaceful countryside setting, privacy, and stunning views of surrounding mountains—perfect for retirees",
-    "Zona Centro Urbano: Central commercial district with supermarkets, restaurants, and services offering convenience without sacrificing neighborhood character",
-    "Lado Montaña: Hillside properties offering elevated views, cooler temperatures, hiking access, and seclusion while remaining close to town amenities",
-    "Barrio Internacional: Established expat neighborhood where English is widely spoken, international businesses operate, and community networks facilitate integration"
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in El Rafol D'almunia 2026 | Complete Area Guide",
+    "metaDescription": "Discover living in El Rafol D'almunia: property from €289,000, established expat community, Blue Flag beaches. Complete guide to this inland Costa Blanca gem.",
+    "heroIntro": "El Rafol D'almunia represents an authentic Spanish inland experience on the Costa Blanca, offering a perfect blend of traditional village charm and modern amenities. This picturesque town attracts a diverse population including families, retirees, and international investors seeking genuine Spanish culture without the coastal overcrowding. With properties ranging from €289,000 to €690,000, El Rafol D'almunia provides exceptional value compared to island markets—40% less expensive than comparable properties elsewhere in Spain. The town's established international community, where English is commonly spoken, makes integration seamless for newcomers. Located strategically inland yet within 20 minutes of pristine Blue Flag beaches and multiple championship golf courses, El Rafol D'almunia offers the rare combination of peaceful rural living with easy access to world-class recreation. The region boasts excellent healthcare facilities, international schools with British curriculum options, and all essential amenities including major supermarkets, making it an ideal location for families and expats seeking a sustainable, fulfilling lifestyle on the Costa Blanca.",
+    "lifestyleSection": {
+      "intro": "Daily life in El Rafol D'almunia revolves around a harmonious blend of Spanish tradition and international convenience. The town features vibrant local markets where residents source fresh produce, seafood, and regional specialties—a centerpiece of authentic Spanish living. Restaurants throughout the area serve both traditional paella and international cuisine, catering to the established international community. Weekend activities include exploring pristine Blue Flag beaches just 20 minutes away, playing championship golf courses, or hiking the surrounding countryside. The established expat community ensures English is widely spoken, and numerous social groups facilitate connections among international residents. Traditional Spanish festivals and local celebrations provide cultural immersion, while modern infrastructure ensures convenience. Residents enjoy leisurely café culture, farmers' markets on weekends, and strong neighborhood connections. The town strikes a perfect balance—small enough to feel community-oriented yet large enough to offer sophisticated dining, entertainment, and recreational opportunities. Whether you're seeking active adventure or peaceful relaxation, the lifestyle here accommodates diverse preferences.\n\nEl Rafol D'almunia enjoys a Mediterranean climate characterized by warm, dry summers and mild winters, with average temperatures ranging from 8°C in January to 28°C in August. The region receives approximately 300 days of sunshine annually, making it one of Spain's sunniest locations. Spring (March-May) and autumn (September-November) offer perfect living conditions with comfortable temperatures and minimal rainfall. Winters rarely drop below freezing, eliminating the need for extensive heating. The inland location provides protection from coastal wind while maintaining fresh mountain breezes. June through September are hottest, though the elevation moderates extreme heat. This consistently pleasant climate supports an active outdoor lifestyle year-round, from beach visits to golf and hiking adventures. The low rainfall means garden maintenance is manageable, and outdoor activities are rarely disrupted by weather.",
+      "highlights": [
+        "Exceptional value: 40% cheaper than Spanish island markets with properties from €289,000",
+        "Established international community with English commonly spoken, easing relocation and integration",
+        "Strategic location: Inland peace with beach access within 20 minutes and multiple championship golf courses",
+        "Consistent year-on-year market appreciation (+8%) suggesting strong investment potential",
+        "Excellent healthcare and international schools with British curriculum options",
+        "Mediterranean climate with 300 days of sunshine annually enabling year-round outdoor lifestyle"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "El Rafol D'almunia is a paradise for sports and leisure enthusiasts. Multiple pristine Blue Flag beaches lie within 20 minutes, offering swimming, paddle boarding, windsurfing, and beach volleyball. Several championship golf courses nearby cater to enthusiasts of all abilities, with professional instruction available. The inland location provides excellent hiking trails through Mediterranean countryside and pine forests. Cycling routes range from leisurely coastal rides to challenging mountain terrain. Water sports clubs organize activities from sailing to scuba diving. Tennis courts, swimming pools, and fitness centers are available throughout the region. The stable climate enables year-round outdoor activities, and the strong expat community organizes regular sporting events and competitions.",
+      "dining": "El Rafol D'almunia offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping in El Rafol D'almunia provides excellent variety and competitive pricing. Major supermarket chains including Mercadona, Lidl, and Consum operate throughout the town, offering quality products at reasonable prices. These retailers stock international products alongside Spanish staples, accommodating diverse dietary preferences. Traditional local markets operate regularly, featuring fresh produce directly from regional farmers—an authentic Spanish experience and significant cost saving. Specialized shops for bread, meat, and cheese maintain traditional quality standards. Larger shopping centers within 15-20 minutes provide additional retail options including clothing, electronics, and home furnishings. Online shopping services deliver efficiently to residential addresses. The competitive supermarket landscape ensures prices remain reasonable compared to coastal tourist areas.",
+      "healthcare": "Healthcare in El Rafol D'almunia meets the highest international standards with comprehensive medical facilities. A modern regional hospital is located within 30 minutes, providing emergency care and specialized services. Private clinics throughout the area offer rapid access to treatments without lengthy waiting periods, and many practitioners are English-speaking, eliminating language barriers for international residents. General practitioners operate within walking distance of most neighborhoods, and telemedicine services supplement in-person consultations. Prescription medications are readily available through licensed pharmacies. Dental care facilities offer advanced treatments at significantly lower costs than UK or northern European alternatives. The healthcare system is supplemented by private health insurance options tailored for expat communities, providing comprehensive coverage and access to preferred specialists.",
+      "transport": "El Rafol D'almunia offers convenient transport connections with reasonable flexibility. Bus connections link the town to surrounding areas and larger cities. A personal vehicle is recommended for complete flexibility and to maximize exploration of the beautiful surrounding region, though not essential for daily essentials. Alicante Airport (Alicante-Elche) is approximately 45 minutes drive, serving as the primary international gateway with direct flights to major European cities. Valencia Airport lies approximately 90 minutes away, offering alternative flight options and often competitive pricing. Excellent motorway connections link El Rafol D'almunia to major coastal towns and inland cities. The AP-7 motorway provides rapid access to surrounding areas. Local roads are well-maintained, and GPS navigation is reliable. Driving to Benidorm takes approximately 25 minutes, while Valencia is accessible in 90 minutes. Regional bus services connect El Rafol D'almunia to nearby towns and major transport hubs. While bus services are functional, frequency can be limited compared to larger cities. For accessing beaches and attractions, buses operate regularly with reasonable timetables."
+    },
+    "propertyMarketSection": "El Rafol D'almunia's property market offers exceptional value with strong growth potential. The market has experienced +8% year-on-year appreciation, outpacing many European property markets. Properties consistently attract international buyers seeking authentic Spanish living combined with investment returns. The market remains relatively undiscovered compared to coastal alternatives, suggesting significant future growth potential as more investors recognize value.\n\nPopular property types include Town houses and spacious villas dominate the market, with renovation projects and new builds available. Town houses suit those preferring walkable neighborhoods, while villas appeal to families seeking privacy and gardens..\n\nRental potential is strong with typical 7-night rentals commanding €800, yielding attractive returns particularly during peak summer seasons. The established expat community and proximity to beaches and golf ensure consistent visitor interest. Capital appreciation remains positive as the area develops infrastructure and gains international recognition. Property prices remain 40% below comparable Spanish island markets, suggesting expansion room.",
+    "whyLiveHereSection": [
       "Exceptional value: 40% cheaper than Spanish island markets with properties from €289,000",
       "Established international community with English commonly spoken, easing relocation and integration",
       "Strategic location: Inland peace with beach access within 20 minutes and multiple championship golf courses",
@@ -77,52 +64,323 @@
       "Excellent healthcare and international schools with British curriculum options",
       "Mediterranean climate with 300 days of sunshine annually enabling year-round outdoor lifestyle"
     ],
-    "cons": [
-      "Public transport is functional but limited compared to larger cities—a personal vehicle significantly enhances flexibility",
-      "Summer heat can be intense (28°C+), requiring air conditioning and outdoor activity adjustments during peak months",
-      "Smaller town environment may feel quiet to those accustomed to major city nightlife and entertainment options"
-    ]
+    "faqs": [
+      {
+        "question": "Is El Rafol D'almunia a good place to live?",
+        "answer": "Yes, absolutely. El Rafol D'almunia excels as a residential destination offering authentic Spanish living combined with modern amenities and an established international community. The +8% annual property appreciation, exceptional healthcare and education facilities, proximity to beaches and golf courses, and 40% cost advantage versus island markets make it particularly attractive for families, retirees, and investors seeking sustainable, fulfilling lifestyles on the Costa Blanca."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can purchase property in Spain without restrictions. Non-residents require a Spanish tax identification number (NIE) and should engage qualified Spanish property lawyers to navigate legal requirements. Most international buyers work with bilingual agents familiar with foreign purchaser needs. The process is straightforward, and thousands of international residents have successfully completed property purchases in Spain."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Property costs vary by location. In El Rafol D'almunia, prices range from €289,000 to €690,000—significantly below coastal alternatives. Beyond purchase price, budget for: 6-8% transfer taxes, legal fees (1-2% of purchase price), notary fees, and registration costs. First-time buyer programs may reduce taxes. Our agents provide detailed cost breakdowns for specific properties."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "Property purchase itself doesn't require a visa. However, residency status depends on individual circumstances. UK nationals should consider post-Brexit visa requirements for long-term residence. We recommend consulting Spanish immigration authorities and healthcare providers regarding your specific situation before purchase."
+      },
+      {
+        "question": "What is the cost of living in Costa Blanca?",
+        "answer": "Cost of living in El Rafol D'almunia is significantly lower than UK or northern European cities. Supermarket groceries are 20-30% cheaper, restaurant meals cost €8-15 for quality dining, utilities are modest, and property taxes remain reasonable. Healthcare and education expenses are lower than many countries. Exact costs depend on lifestyle choices, but international families typically live comfortably on €1,500-2,000 monthly."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Yes, Costa Blanca is exceptional for retirees. El Rafol D'almunia specifically offers excellent healthcare, affordable cost of living, warm climate enabling year-round activities, established international communities providing social connections, and no visa restrictions for EU/EEA retirees. Many Spanish regions provide pensioner-friendly programs, and proximity to beaches and golf ensures active lifestyle opportunities."
+      },
+      {
+        "question": "How far is Costa Blanca from the UK?",
+        "answer": "Costa Blanca is easily accessible from the UK. Alicante Airport (45 minutes from El Rafol D'almunia) offers direct flights to Manchester, London, and other UK cities—typically 2-2.5 hour flight times. Multiple budget airlines provide competitive pricing. Ferry plus driving alternatives exist but flying remains most practical. Many residents maintain dual residences or visit frequently."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Costa Blanca enjoys exceptional Mediterranean climate with 300 days of sunshine annually. Temperatures average 8°C in January and 28°C in August. Spring and autumn provide perfect conditions (15-22°C) for outdoor activities. Winter months are mild with minimal rainfall. Inland El Rafol D'almunia moderates summer heat while avoiding coastal wind. The stable climate enables comfortable year-round living and activities."
+      },
+      {
+        "question": "Can I get a mortgage in Spain as a foreigner?",
+        "answer": "Yes, many Spanish banks offer mortgages to foreign buyers. Typical requirements include NIE (Spanish tax number), proof of income, and property appraisal. Most foreigners obtain 70-80% loan-to-value mortgages. English-speaking mortgage brokers specialize in assisting international purchasers. Interest rates are competitive, and terms typically span 20-30 years. Our team connects clients with experienced mortgage specialists."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in El Rafol D'almunia? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Rental potential is strong with typical 7-night rentals commanding €800, yielding attractive returns particularly during peak summer seasons. The established expat community and proximity to beaches and golf ensure consistent visitor interest. Capital appreciation remains positive as the area develops infrastructure and gains international recognition. Property prices remain 40% below comparable Spanish island markets, suggesting expansion room.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in El Rafol D'almunia are significantly lower than Northern Europe and very competitive within Spain. Inland locations like El Rafol D'almunia offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "El Rafol D'almunia celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in El Rafol D'almunia have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school with GCSE and A-Level programmes, excellent facilities and strong academic results"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "British and IB curriculum with outstanding facilities, sports programmes, and multilingual education"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "El Rafol D'almunia offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "El Rafol D'almunia has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Diverse European community including British, Scandinavian, Dutch, German, and French residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in El Rafol D'almunia",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.0786!3d38.8208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is El Rafol D'almunia a good place to live?",
-      "answer": "Yes, absolutely. El Rafol D'almunia excels as a residential destination offering authentic Spanish living combined with modern amenities and an established international community. The +8% annual property appreciation, exceptional healthcare and education facilities, proximity to beaches and golf courses, and 40% cost advantage versus island markets make it particularly attractive for families, retirees, and investors seeking sustainable, fulfilling lifestyles on the Costa Blanca."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "El Rafol D'almunia",
+    "description": "El Rafol D'almunia is a inland municipality in Costa Blanca North, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.8208",
+      "longitude": "-0.0786"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can purchase property in Spain without restrictions. Non-residents require a Spanish tax identification number (NIE) and should engage qualified Spanish property lawyers to navigate legal requirements. Most international buyers work with bilingual agents familiar with foreign purchaser needs. The process is straightforward, and thousands of international residents have successfully completed property purchases in Spain."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "El Rafol D'almunia",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Property costs vary by location. In El Rafol D'almunia, prices range from €289,000 to €690,000—significantly below coastal alternatives. Beyond purchase price, budget for: 6-8% transfer taxes, legal fees (1-2% of purchase price), notary fees, and registration costs. First-time buyer programs may reduce taxes. Our agents provide detailed cost breakdowns for specific properties."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "Property purchase itself doesn't require a visa. However, residency status depends on individual circumstances. UK nationals should consider post-Brexit visa requirements for long-term residence. We recommend consulting Spanish immigration authorities and healthcare providers regarding your specific situation before purchase."
-    },
-    {
-      "question": "What is the cost of living in Costa Blanca?",
-      "answer": "Cost of living in El Rafol D'almunia is significantly lower than UK or northern European cities. Supermarket groceries are 20-30% cheaper, restaurant meals cost €8-15 for quality dining, utilities are modest, and property taxes remain reasonable. Healthcare and education expenses are lower than many countries. Exact costs depend on lifestyle choices, but international families typically live comfortably on €1,500-2,000 monthly."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Yes, Costa Blanca is exceptional for retirees. El Rafol D'almunia specifically offers excellent healthcare, affordable cost of living, warm climate enabling year-round activities, established international communities providing social connections, and no visa restrictions for EU/EEA retirees. Many Spanish regions provide pensioner-friendly programs, and proximity to beaches and golf ensures active lifestyle opportunities."
-    },
-    {
-      "question": "How far is Costa Blanca from the UK?",
-      "answer": "Costa Blanca is easily accessible from the UK. Alicante Airport (45 minutes from El Rafol D'almunia) offers direct flights to Manchester, London, and other UK cities—typically 2-2.5 hour flight times. Multiple budget airlines provide competitive pricing. Ferry plus driving alternatives exist but flying remains most practical. Many residents maintain dual residences or visit frequently."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Costa Blanca enjoys exceptional Mediterranean climate with 300 days of sunshine annually. Temperatures average 8°C in January and 28°C in August. Spring and autumn provide perfect conditions (15-22°C) for outdoor activities. Winter months are mild with minimal rainfall. Inland El Rafol D'almunia moderates summer heat while avoiding coastal wind. The stable climate enables comfortable year-round living and activities."
-    },
-    {
-      "question": "Can I get a mortgage in Spain as a foreigner?",
-      "answer": "Yes, many Spanish banks offer mortgages to foreign buyers. Typical requirements include NIE (Spanish tax number), proof of income, and property appraisal. Most foreigners obtain 70-80% loan-to-value mortgages. English-speaking mortgage brokers specialize in assisting international purchasers. Interest rates are competitive, and terms typically span 20-30 years. Our team connects clients with experienced mortgage specialists."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
     }
-  ],
-  "slug": "el-rafol-d-almunia",
-  "town": "El Rafol D'almunia",
-  "propertyCount": 2,
-  "generatedAt": "2026-02-09T14:46:22.532Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is El Rafol D'almunia a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. El Rafol D'almunia excels as a residential destination offering authentic Spanish living combined with modern amenities and an established international community. The +8% annual property appreciation, exceptional healthcare and education facilities, proximity to beaches and golf co"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can purchase property in Spain without restrictions. Non-residents require a Spanish tax identification number (NIE) and should engage qualified Spanish property lawyers to navigate legal requirements. Most international buyers work with bilingual agents familiar with foreign purchas"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Property costs vary by location. In El Rafol D'almunia, prices range from €289,000 to €690,000—significantly below coastal alternatives. Beyond purchase price, budget for: 6-8% transfer taxes, legal fees (1-2% of purchase price), notary fees, and registration costs. First-time buyer programs may red"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Property purchase itself doesn't require a visa. However, residency status depends on individual circumstances. UK nationals should consider post-Brexit visa requirements for long-term residence. We recommend consulting Spanish immigration authorities and healthcare providers regarding your specific"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Costa Blanca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cost of living in El Rafol D'almunia is significantly lower than UK or northern European cities. Supermarket groceries are 20-30% cheaper, restaurant meals cost €8-15 for quality dining, utilities are modest, and property taxes remain reasonable. Healthcare and education expenses are lower than many"
+        }
+      }
+    ]
+  }
 }

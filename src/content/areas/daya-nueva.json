@@ -1,75 +1,61 @@
 {
-  "metaTitle": "Living in Daya Nueva 2026 | Complete Expat Guide & Property",
-  "metaDescription": "Discover Daya Nueva on Costa Blanca. Properties €307k-€438k, established expat community, 40% cheaper than islands. Complete living guide.",
-  "heroIntro": "Daya Nueva is a charming inland town on Spain's Costa Blanca, offering an authentic Mediterranean lifestyle away from crowded coastal resorts. This established community has become increasingly popular with international buyers seeking value, authentic Spanish culture, and genuine community connections. With property prices ranging from €307,000 to €438,000, Daya Nueva provides exceptional value compared to island markets—40% less expensive than comparable properties on Spanish islands. The town attracts families, retirees, and lifestyle seekers who appreciate its peaceful setting, excellent amenities, and thriving expat community where English is commonly spoken. Located within striking distance of blue flag beaches, championship golf courses, and vibrant towns, Daya Nueva offers the perfect balance between tranquil living and convenient access to coastal attractions. Whether you're seeking a permanent residence, investment property, or vacation retreat, this inland gem delivers quality living at remarkable value.",
-  "climate": "Daya Nueva enjoys a Mediterranean climate with over 300 days of sunshine annually, making it an ideal destination for sun-seekers and outdoor enthusiasts. Summers are warm and dry, with temperatures typically ranging from 28-32°C (82-90°F), while mild winters rarely drop below 10°C (50°F). Spring and autumn offer perfect conditions for exploring the region, with pleasant temperatures and lower humidity. The area experiences minimal rainfall, mostly during winter months, ensuring outdoor activities remain viable year-round. This consistent, healthy climate has long attracted people seeking therapeutic living conditions and an active outdoor lifestyle. The low humidity and abundant sunshine make Daya Nueva particularly appealing for those with health considerations or preferences for predictable, pleasant weather.",
-  "lifestyle": "Daily life in Daya Nueva perfectly balances authentic Spanish living with cosmopolitan convenience. The established international community ensures English is widely spoken, easing integration for newcomers while maintaining genuine Spanish culture. Local markets buzz with activity, offering fresh produce, regional specialties, and the social experience that defines Mediterranean towns. Restaurants range from traditional tapas bars serving local cuisine to international dining options catering to diverse palates. The lifestyle revolves around outdoor activities—stunning blue flag beaches lie just 20 minutes away, offering swimming, water sports, and beach clubs. Golf enthusiasts enjoy several championship courses nearby, while hiking, cycling, and nature exploration appeal to active residents. The town center features charming plazas perfect for evening paseos, while supermarkets like Mercadona, Lidl, and Consum provide convenient shopping. Social clubs, hobby groups, and organized events create strong community bonds. The expat community is well-established and welcoming, with numerous social organizations facilitating friendships and support networks. This combination creates a lifestyle that's both relaxed and engaging.",
-  "amenities": {
+  "slug": "daya-nueva",
+  "name": "Daya Nueva",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/daya-nueva-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 6,
+  "propertyTypes": [
+    "Villa",
+    "Quad House"
+  ],
+  "priceRange": {
+    "min": 307000,
+    "max": 438000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Daya Nueva Tourism",
+      "url": "https://www.google.com/search?q=Daya%20Nueva%20Spain%20official%20website",
+      "description": "Discover more about Daya Nueva"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "48 km",
+      "driveTime": "32 min"
+    },
     "healthcare": {
-      "text": "Healthcare in Daya Nueva meets international standards with a regional hospital located within 30 minutes, supplemented by private clinics offering specialized services. English-speaking doctors are readily available throughout the area, ensuring medical appointments present no language barriers. The proximity to advanced medical facilities combined with the availability of private healthcare provides residents with excellent options for routine care and specialized treatment. Many private clinics cater specifically to international communities, maintaining familiar standards and procedures. The Spanish healthcare system, supplemented by private alternatives, ensures comprehensive medical coverage for residents and expat families.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes",
-        "Private clinics with English-speaking staff",
-        "Healthcare tailored to international community",
-        "Comprehensive medical coverage options"
-      ]
-    },
-    "shopping": {
-      "text": "Daya Nueva offers diverse shopping options serving all household needs and preferences. Major supermarket chains including Mercadona, Lidl, and Consum provide convenient shopping with competitive prices and quality products. Beyond supermarkets, local markets operate regularly, offering fresh produce, regional specialties, and authentic Spanish shopping experiences. These traditional markets remain central to community life, offering not only food but also social interaction and cultural immersion. Shopping facilities range from neighborhood stores for daily essentials to larger centers for variety and selection.",
-      "keyPoints": [
-        "Mercadona supermarket",
-        "Lidl grocery chain",
-        "Consum markets",
-        "Traditional local markets with fresh produce"
-      ]
-    },
-    "education": {
-      "text": "Families relocating to Daya Nueva benefit from international schools in the region offering British curriculum options alongside Spanish education. These schools provide continuity for children from English-speaking backgrounds while fostering multicultural environments. International schools in the area maintain high academic standards and facilitate smooth transitions for expat families. British curriculum options ensure children maintain educational compatibility if planning future moves or university applications in English-speaking countries. The availability of quality international education makes Daya Nueva attractive for families seeking global standards without sacrificing local integration.",
-      "keyPoints": [
-        "International schools in the region",
-        "British curriculum options available",
-        "High academic standards",
-        "Multicultural learning environments"
-      ]
-    },
-    "sports": {
-      "text": "Sports and recreation define the Daya Nueva lifestyle with multiple blue flag beaches just 20 minutes away, offering swimming, water sports, beach clubs, and coastal activities. Golf enthusiasts enjoy several championship courses nearby, ranging from challenging layouts for experienced golfers to welcoming courses for beginners. Beyond beaches and golf, the region supports hiking, cycling, tennis, and various water sports. The nearby coastline provides endless outdoor recreation opportunities, while the inland location maintains peace and tranquility. This combination of accessible coastal recreation with quiet living creates ideal conditions for active, health-conscious residents.",
-      "keyPoints": [
-        "Blue Flag beaches within 20 minutes",
-        "Championship golf courses nearby",
-        "Water sports and beach clubs",
-        "Hiking and cycling trails in the region"
-      ]
+      "name": "Hospital Vega Baja (Orihuela)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Vega%20Baja%20(Orihuela)",
+      "distance": "14 km"
     }
   },
-  "transport": {
-    "overview": "Bus connections provide local and regional transportation, though a car remains recommended for maximum flexibility and convenience in exploring the surrounding areas.",
-    "airports": "Alicante-Elche Airport (approximately 45 minutes) and Valencia Airport (approximately 90 minutes) provide convenient international access with regular flights to the UK and European destinations.",
-    "driving": "Excellent motorway connections via the AP-7 provide quick access to coastal towns, Alicante, and Valencia. The inland location offers quieter living while maintaining highway convenience for exploring the broader Costa Blanca region.",
-    "public": "Regular bus services connect Daya Nueva to nearby towns, beaches, and larger centers. Regional bus networks provide affordable transportation options for coastal excursions and exploring the surrounding areas.",
-    "keyPoints": [
-      "Bus connections for local and regional travel",
-      "Car recommended for flexibility and exploration",
-      "45 minutes to Alicante Airport",
-      "Highway access to Costa Blanca destinations"
-    ]
-  },
-  "propertyMarket": {
-    "overview": "Daya Nueva's property market demonstrates healthy growth with an 8% year-on-year appreciation trend. The inland location combined with established infrastructure and amenities attracts international buyers seeking value and stability. The market offers genuine investment potential with both capital growth prospects and attractive rental yields.",
-    "priceRange": "€307,000 - €438,000",
-    "popularTypes": "Villa, Quad House",
-    "investment": "Typical 7-night rental achieves approximately €800, providing solid rental income for investment properties. The 8% annual appreciation trend suggests favorable capital growth prospects. Properties priced 40% below island markets offer exceptional value for buyers seeking return on investment combined with personal use potential. The established expat community and tourism proximity support consistent rental demand year-round."
-  },
-  "neighborhoods": [
-    "Central Daya Nueva: The historic heart of town with traditional Spanish architecture, local restaurants, markets, and community plazas. Perfect for those seeking authentic living and walkable daily amenities.",
-    "Residencial Areas: Modern developments with villas and quad houses offering contemporary living, family-friendly environments, and community facilities while maintaining proximity to town center.",
-    "Coastal Approach: Properties within 15-20 minutes of beaches, ideal for those wanting beach access while maintaining inland tranquility and lower property prices.",
-    "Golf-Adjacent Properties: Homes near championship courses, appealing to golf enthusiasts seeking resort-style living with integrated sports facilities.",
-    "Countryside Estates: Secluded properties in surrounding areas offering privacy, larger plots, and rural Spanish lifestyle while maintaining convenient access to town amenities.",
-    "Expat Community Zones: Established neighborhoods with concentrated international populations, English-speaking services, and organized social networks for newcomers."
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Daya Nueva 2026 | Complete Expat Guide & Property",
+    "metaDescription": "Discover Daya Nueva on Costa Blanca. Properties €307k-€438k, established expat community, 40% cheaper than islands. Complete living guide.",
+    "heroIntro": "Daya Nueva is a charming inland town on Spain's Costa Blanca, offering an authentic Mediterranean lifestyle away from crowded coastal resorts. This established community has become increasingly popular with international buyers seeking value, authentic Spanish culture, and genuine community connections. With property prices ranging from €307,000 to €438,000, Daya Nueva provides exceptional value compared to island markets—40% less expensive than comparable properties on Spanish islands. The town attracts families, retirees, and lifestyle seekers who appreciate its peaceful setting, excellent amenities, and thriving expat community where English is commonly spoken. Located within striking distance of blue flag beaches, championship golf courses, and vibrant towns, Daya Nueva offers the perfect balance between tranquil living and convenient access to coastal attractions. Whether you're seeking a permanent residence, investment property, or vacation retreat, this inland gem delivers quality living at remarkable value.",
+    "lifestyleSection": {
+      "intro": "Daily life in Daya Nueva perfectly balances authentic Spanish living with cosmopolitan convenience. The established international community ensures English is widely spoken, easing integration for newcomers while maintaining genuine Spanish culture. Local markets buzz with activity, offering fresh produce, regional specialties, and the social experience that defines Mediterranean towns. Restaurants range from traditional tapas bars serving local cuisine to international dining options catering to diverse palates. The lifestyle revolves around outdoor activities—stunning blue flag beaches lie just 20 minutes away, offering swimming, water sports, and beach clubs. Golf enthusiasts enjoy several championship courses nearby, while hiking, cycling, and nature exploration appeal to active residents. The town center features charming plazas perfect for evening paseos, while supermarkets like Mercadona, Lidl, and Consum provide convenient shopping. Social clubs, hobby groups, and organized events create strong community bonds. The expat community is well-established and welcoming, with numerous social organizations facilitating friendships and support networks. This combination creates a lifestyle that's both relaxed and engaging.\n\nDaya Nueva enjoys a Mediterranean climate with over 300 days of sunshine annually, making it an ideal destination for sun-seekers and outdoor enthusiasts. Summers are warm and dry, with temperatures typically ranging from 28-32°C (82-90°F), while mild winters rarely drop below 10°C (50°F). Spring and autumn offer perfect conditions for exploring the region, with pleasant temperatures and lower humidity. The area experiences minimal rainfall, mostly during winter months, ensuring outdoor activities remain viable year-round. This consistent, healthy climate has long attracted people seeking therapeutic living conditions and an active outdoor lifestyle. The low humidity and abundant sunshine make Daya Nueva particularly appealing for those with health considerations or preferences for predictable, pleasant weather.",
+      "highlights": [
+        "Exceptional value: 40% cheaper than Spanish island markets with similar amenities and lifestyle",
+        "Established expat community: English widely spoken, welcoming international networks, and support systems",
+        "Balanced living: Combine quiet, authentic Spanish living with convenient coastal access and amenities",
+        "Strong rental potential: 8% annual appreciation plus attractive holiday rental income (€800 per week)",
+        "Comprehensive amenities: Healthcare, international schools, shopping, and sports facilities all accessible",
+        "Vibrant culture: Genuine Spanish lifestyle, markets, restaurants, and community engagement"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Sports and recreation define the Daya Nueva lifestyle with multiple blue flag beaches just 20 minutes away, offering swimming, water sports, beach clubs, and coastal activities. Golf enthusiasts enjoy several championship courses nearby, ranging from challenging layouts for experienced golfers to welcoming courses for beginners. Beyond beaches and golf, the region supports hiking, cycling, tennis, and various water sports. The nearby coastline provides endless outdoor recreation opportunities, while the inland location maintains peace and tranquility. This combination of accessible coastal recreation with quiet living creates ideal conditions for active, health-conscious residents.",
+      "dining": "Daya Nueva offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Daya Nueva offers diverse shopping options serving all household needs and preferences. Major supermarket chains including Mercadona, Lidl, and Consum provide convenient shopping with competitive prices and quality products. Beyond supermarkets, local markets operate regularly, offering fresh produce, regional specialties, and authentic Spanish shopping experiences. These traditional markets remain central to community life, offering not only food but also social interaction and cultural immersion. Shopping facilities range from neighborhood stores for daily essentials to larger centers for variety and selection.",
+      "healthcare": "Healthcare in Daya Nueva meets international standards with a regional hospital located within 30 minutes, supplemented by private clinics offering specialized services. English-speaking doctors are readily available throughout the area, ensuring medical appointments present no language barriers. The proximity to advanced medical facilities combined with the availability of private healthcare provides residents with excellent options for routine care and specialized treatment. Many private clinics cater specifically to international communities, maintaining familiar standards and procedures. The Spanish healthcare system, supplemented by private alternatives, ensures comprehensive medical coverage for residents and expat families.",
+      "transport": "Bus connections provide local and regional transportation, though a car remains recommended for maximum flexibility and convenience in exploring the surrounding areas. Alicante-Elche Airport (approximately 45 minutes) and Valencia Airport (approximately 90 minutes) provide convenient international access with regular flights to the UK and European destinations. Excellent motorway connections via the AP-7 provide quick access to coastal towns, Alicante, and Valencia. The inland location offers quieter living while maintaining highway convenience for exploring the broader Costa Blanca region. Regular bus services connect Daya Nueva to nearby towns, beaches, and larger centers. Regional bus networks provide affordable transportation options for coastal excursions and exploring the surrounding areas."
+    },
+    "propertyMarketSection": "Daya Nueva's property market demonstrates healthy growth with an 8% year-on-year appreciation trend. The inland location combined with established infrastructure and amenities attracts international buyers seeking value and stability. The market offers genuine investment potential with both capital growth prospects and attractive rental yields.\n\nPopular property types include Villa, Quad House.\n\nTypical 7-night rental achieves approximately €800, providing solid rental income for investment properties. The 8% annual appreciation trend suggests favorable capital growth prospects. Properties priced 40% below island markets offer exceptional value for buyers seeking return on investment combined with personal use potential. The established expat community and tourism proximity support consistent rental demand year-round.",
+    "whyLiveHereSection": [
       "Exceptional value: 40% cheaper than Spanish island markets with similar amenities and lifestyle",
       "Established expat community: English widely spoken, welcoming international networks, and support systems",
       "Balanced living: Combine quiet, authentic Spanish living with convenient coastal access and amenities",
@@ -77,48 +63,319 @@
       "Comprehensive amenities: Healthcare, international schools, shopping, and sports facilities all accessible",
       "Vibrant culture: Genuine Spanish lifestyle, markets, restaurants, and community engagement"
     ],
-    "cons": [
-      "Car dependency: While bus connections exist, personal vehicle recommended for full flexibility and exploring surrounding areas",
-      "Smaller town feel: Less nightlife and entertainment options compared to larger coastal resorts, though benefits those seeking peaceful living",
-      "Climate extremes: Summers can be quite hot (28-32°C), though rarely uncomfortably humid"
-    ]
+    "faqs": [
+      {
+        "question": "Is Daya Nueva a good place to live?",
+        "answer": "Yes, Daya Nueva offers excellent quality of life combining authentic Spanish culture, modern amenities, and exceptional value. The established expat community ensures seamless integration, English is widely spoken, and comprehensive healthcare, education, and shopping facilities serve all needs. The peaceful inland setting with convenient coastal access within 20 minutes, plus strong property appreciation (8% annually) and rental potential, make it particularly attractive for families, retirees, and investors seeking balanced Mediterranean living."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, non-EU and EU foreign nationals can freely purchase property in Spain. There are minimal restrictions, and the process is straightforward. Most buyers engage local solicitors to navigate paperwork, taxes, and legal requirements. No visa or residency requirement exists for property purchase, making Spanish real estate accessible to international buyers worldwide. Spanish banking services and mortgages are available to qualified foreign buyers."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Beyond the purchase price, typical costs include transfer tax (6-10%), notary fees (1%), registry fees (0.1%), and legal fees (1-2%). These total approximately 8-13% above the property price. In Daya Nueva, properties range €307,000-€438,000, with average per-square-meter pricing at €2,200/m². Additional considerations include annual property tax (0.4-1.1% of property value) and utility costs comparable to other European countries."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "No, purchasing property in Spain doesn't require a visa. Foreign nationals of any nationality can buy property without residency or visa status. However, if planning to reside in Spain longer than 90 days, separate residency arrangements or visa applications may apply depending on your nationality. EU citizens enjoy unrestricted residency rights. Consulting with Spanish immigration authorities or legal advisors provides specific guidance based on individual circumstances."
+      },
+      {
+        "question": "What is the cost of living in Costa Blanca?",
+        "answer": "Costa Blanca offers very affordable living compared to northern Europe. Monthly expenses for a couple average €1,500-€2,500 including rent, utilities, groceries, and leisure activities. Daya Nueva is particularly economical, with properties 40% cheaper than island markets while maintaining comparable amenities. Local markets offer inexpensive fresh produce, Spanish wines cost €5-€15, and dining out remains affordable. Healthcare through Spanish social security is highly subsidized for residents."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Absolutely. Costa Blanca is renowned as one of Europe's premier retirement destinations. Year-round Mediterranean climate, affordable healthcare (including English-speaking doctors), low cost of living, and established communities make it ideal for retirees. Daya Nueva specifically attracts retirees seeking peaceful living away from crowded resorts while maintaining beach access, golf, cultural activities, and social engagement. Many retirees benefit from affordable housing allowing more comfortable lifestyles than equivalent costs in home countries."
+      },
+      {
+        "question": "How far is Costa Blanca from the UK?",
+        "answer": "Costa Blanca lies approximately 1,100 kilometers (680 miles) south of the UK. Flight time from major UK airports to Alicante is typically 2-2.5 hours, with regular daily flights from London, Manchester, Birmingham, and other regional airports. Budget airlines offer competitive fares, and many residents maintain regular UK visits. The accessible distance makes Costa Blanca ideal for those wanting Mediterranean living with convenient UK connections for family visits or business."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Costa Blanca enjoys Mediterranean climate with over 300 sunny days annually. Summers (June-September) are warm and dry, ranging 28-32°C (82-90°F), ideal for beach activities and outdoor pursuits. Winters are mild, rarely dropping below 10°C (50°F), with occasional rainfall. Spring and autumn offer perfect conditions with pleasant temperatures and lower humidity. This consistent climate supports year-round outdoor living, making it attractive for those seeking reliable sunshine and therapeutic weather conditions."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Daya Nueva? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Typical 7-night rental achieves approximately €800, providing solid rental income for investment properties. The 8% annual appreciation trend suggests favorable capital growth prospects. Properties priced 40% below island markets offer exceptional value for buyers seeking return on investment combined with personal use potential. The established expat community and tourism proximity support consistent rental demand year-round.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Daya Nueva are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Daya Nueva offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Daya Nueva celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Daya Nueva have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "20-35 min",
+          "description": "British curriculum school with excellent facilities and strong academic record serving the expat community"
+        },
+        {
+          "name": "Newton College",
+          "type": "International (British/Spanish)",
+          "distance": "25-40 min",
+          "description": "Bilingual international school offering both British and Spanish curricula with modern facilities"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Daya Nueva offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Daya Nueva has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Daya Nueva",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7614!3d38.1089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Daya Nueva a good place to live?",
-      "answer": "Yes, Daya Nueva offers excellent quality of life combining authentic Spanish culture, modern amenities, and exceptional value. The established expat community ensures seamless integration, English is widely spoken, and comprehensive healthcare, education, and shopping facilities serve all needs. The peaceful inland setting with convenient coastal access within 20 minutes, plus strong property appreciation (8% annually) and rental potential, make it particularly attractive for families, retirees, and investors seeking balanced Mediterranean living."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Daya Nueva",
+    "description": "Daya Nueva is a inland municipality in Costa Blanca South, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.1089",
+      "longitude": "-0.7614"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, non-EU and EU foreign nationals can freely purchase property in Spain. There are minimal restrictions, and the process is straightforward. Most buyers engage local solicitors to navigate paperwork, taxes, and legal requirements. No visa or residency requirement exists for property purchase, making Spanish real estate accessible to international buyers worldwide. Spanish banking services and mortgages are available to qualified foreign buyers."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Daya Nueva",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Beyond the purchase price, typical costs include transfer tax (6-10%), notary fees (1%), registry fees (0.1%), and legal fees (1-2%). These total approximately 8-13% above the property price. In Daya Nueva, properties range €307,000-€438,000, with average per-square-meter pricing at €2,200/m². Additional considerations include annual property tax (0.4-1.1% of property value) and utility costs comparable to other European countries."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "No, purchasing property in Spain doesn't require a visa. Foreign nationals of any nationality can buy property without residency or visa status. However, if planning to reside in Spain longer than 90 days, separate residency arrangements or visa applications may apply depending on your nationality. EU citizens enjoy unrestricted residency rights. Consulting with Spanish immigration authorities or legal advisors provides specific guidance based on individual circumstances."
-    },
-    {
-      "question": "What is the cost of living in Costa Blanca?",
-      "answer": "Costa Blanca offers very affordable living compared to northern Europe. Monthly expenses for a couple average €1,500-€2,500 including rent, utilities, groceries, and leisure activities. Daya Nueva is particularly economical, with properties 40% cheaper than island markets while maintaining comparable amenities. Local markets offer inexpensive fresh produce, Spanish wines cost €5-€15, and dining out remains affordable. Healthcare through Spanish social security is highly subsidized for residents."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Absolutely. Costa Blanca is renowned as one of Europe's premier retirement destinations. Year-round Mediterranean climate, affordable healthcare (including English-speaking doctors), low cost of living, and established communities make it ideal for retirees. Daya Nueva specifically attracts retirees seeking peaceful living away from crowded resorts while maintaining beach access, golf, cultural activities, and social engagement. Many retirees benefit from affordable housing allowing more comfortable lifestyles than equivalent costs in home countries."
-    },
-    {
-      "question": "How far is Costa Blanca from the UK?",
-      "answer": "Costa Blanca lies approximately 1,100 kilometers (680 miles) south of the UK. Flight time from major UK airports to Alicante is typically 2-2.5 hours, with regular daily flights from London, Manchester, Birmingham, and other regional airports. Budget airlines offer competitive fares, and many residents maintain regular UK visits. The accessible distance makes Costa Blanca ideal for those wanting Mediterranean living with convenient UK connections for family visits or business."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Costa Blanca enjoys Mediterranean climate with over 300 sunny days annually. Summers (June-September) are warm and dry, ranging 28-32°C (82-90°F), ideal for beach activities and outdoor pursuits. Winters are mild, rarely dropping below 10°C (50°F), with occasional rainfall. Spring and autumn offer perfect conditions with pleasant temperatures and lower humidity. This consistent climate supports year-round outdoor living, making it attractive for those seeking reliable sunshine and therapeutic weather conditions."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
     }
-  ],
-  "slug": "daya-nueva",
-  "town": "Daya Nueva",
-  "propertyCount": 6,
-  "generatedAt": "2026-02-06T10:09:24.927Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Daya Nueva a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Daya Nueva offers excellent quality of life combining authentic Spanish culture, modern amenities, and exceptional value. The established expat community ensures seamless integration, English is widely spoken, and comprehensive healthcare, education, and shopping facilities serve all needs. The"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, non-EU and EU foreign nationals can freely purchase property in Spain. There are minimal restrictions, and the process is straightforward. Most buyers engage local solicitors to navigate paperwork, taxes, and legal requirements. No visa or residency requirement exists for property purchase, mak"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond the purchase price, typical costs include transfer tax (6-10%), notary fees (1%), registry fees (0.1%), and legal fees (1-2%). These total approximately 8-13% above the property price. In Daya Nueva, properties range €307,000-€438,000, with average per-square-meter pricing at €2,200/m². Addit"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, purchasing property in Spain doesn't require a visa. Foreign nationals of any nationality can buy property without residency or visa status. However, if planning to reside in Spain longer than 90 days, separate residency arrangements or visa applications may apply depending on your nationality. "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Costa Blanca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costa Blanca offers very affordable living compared to northern Europe. Monthly expenses for a couple average €1,500-€2,500 including rent, utilities, groceries, and leisure activities. Daya Nueva is particularly economical, with properties 40% cheaper than island markets while maintaining comparabl"
+        }
+      }
+    ]
+  }
 }

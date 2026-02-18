@@ -1,75 +1,61 @@
 {
-  "metaTitle": "Living in Alhama De Murcia 2026 | Complete Guide",
-  "metaDescription": "Discover living in Alhama De Murcia. Properties €191,900-€369,900. Inland town with beaches, golf, expat community & 40% cheaper than islands.",
-  "heroIntro": "Alhama De Murcia is a charming inland town in the Murcia region that offers an authentic Spanish lifestyle with modern conveniences and excellent value for money. Located strategically between the coast and inland attractions, this established community has become increasingly popular among international buyers seeking a balance between peaceful living and accessibility to amenities. The town attracts a diverse demographic including families, retirees, and professionals who appreciate its genuine Spanish character, welcoming expat community where English is commonly spoken, and remarkably affordable property prices—40% less expensive than Spanish island markets. With properties ranging from €191,900 to €369,900, Alhama De Murcia represents one of Spain's most compelling property investment opportunities. The region boasts excellent healthcare facilities, international schools with British curriculum options, championship golf courses, and Blue Flag beaches all within convenient distances. Whether you're seeking a permanent residence, investment property, or holiday home, Alhama De Murcia delivers authentic Mediterranean living without the premium price tag of coastal hotspots.",
-  "climate": "Alhama De Murcia enjoys a Mediterranean climate with warm, dry summers and mild winters, making it an ideal year-round destination. Summer temperatures typically reach 30-35°C (86-95°F) from June to September, while winter months remain pleasant at 12-18°C (54-64°F). The region experiences approximately 300 days of sunshine annually, significantly more than northern Europe. Spring (April-May) and autumn (September-October) offer the most comfortable conditions with temperatures in the low to mid-20s. Rainfall is minimal and concentrated in autumn and winter months. The coastal proximity within 20 minutes provides natural cooling influences during summer heat. For those relocating from northern climates, the consistent sunshine and warm weather greatly improve quality of life and outdoor activity opportunities year-round.",
-  "lifestyle": "Daily life in Alhama De Murcia revolves around authentic Spanish traditions blended with modern international amenities. The town features vibrant local markets where fresh produce, fish, and regional specialties are sold daily, complemented by modern supermarkets like Mercadona and Lidl for familiar international products. The established expat community ensures English is widely spoken, easing the transition for newcomers while maintaining genuine Spanish culture. Dining options range from family-run tapas bars serving traditional dishes to international restaurants catering to diverse tastes. The proximity to Blue Flag beaches within 20 minutes enables regular beach visits, water sports, and coastal dining experiences. Championship golf courses nearby attract enthusiasts of all levels. Social life flourishes through community groups, international clubs, and local events that foster connections among residents. The pace is relaxed yet engaging, allowing residents to balance leisure with cultural exploration. Weekend activities might include exploring nearby villages, beach excursions, golf outings, or discovering regional cuisine at local restaurants and markets.",
-  "amenities": {
+  "slug": "alhama-de-murcia",
+  "name": "Alhama De Murcia",
+  "region": "Murcia",
+  "heroImage": "/images/areas/alhama-de-murcia-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 6,
+  "propertyTypes": [
+    "Villa",
+    "Apartment"
+  ],
+  "priceRange": {
+    "min": 191900,
+    "max": 369900
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Alhama De Murcia Tourism",
+      "url": "https://www.google.com/search?q=Alhama%20De%20Murcia%20Spain%20official%20website",
+      "description": "Discover more about Alhama De Murcia"
+    },
+    "airport": {
+      "name": "Murcia-Corvera Airport",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "30 km",
+      "driveTime": "25 min"
+    },
     "healthcare": {
-      "text": "Healthcare in Alhama De Murcia meets high international standards with excellent facilities readily accessible. A regional hospital is conveniently located within 30 minutes, providing comprehensive emergency and specialized medical services. Private clinics throughout the area offer modern facilities and shorter waiting times for appointments. English-speaking doctors are widely available, ensuring clear communication regarding medical concerns and treatments. The healthcare system combines Spanish efficiency with international standards familiar to expatriates. Many residents appreciate the affordability of healthcare compared to UK and Northern European costs while maintaining quality care equivalent to private practice standards at home.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes",
-        "Private clinics available throughout the area",
-        "English-speaking doctors",
-        "Affordable healthcare costs compared to UK"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping in Alhama De Murcia caters to all needs with a excellent mix of modern supermarkets and traditional Spanish markets. Major chains including Mercadona, Lidl, and Consum provide familiar products and competitive pricing. Local markets offer fresh produce, regional specialties, and authentic Spanish ingredients daily. The town center features independent shops for clothing, pharmacy, and household goods. For larger shopping expeditions, nearby towns offer expanded mall facilities. The combination of modern retail convenience and traditional market shopping provides residents with both familiar international products and authentic local specialties.",
-      "keyPoints": [
-        "Mercadona supermarket chain",
-        "Lidl discount supermarket",
-        "Consum supermarket",
-        "Traditional local markets with fresh produce"
-      ]
-    },
-    "education": {
-      "text": "Families relocating to Alhama De Murcia benefit from excellent educational options including international schools in the region offering British curriculum programs. These institutions provide continuity for children transferring from UK schools, with familiar educational frameworks and English-language instruction. International schools attract families from across Europe and beyond, creating diverse, multicultural learning environments. Spanish language immersion opportunities are also available for those seeking bilingual education. The quality of education combines international standards with local cultural integration, preparing students for university applications worldwide.",
-      "keyPoints": [
-        "International schools in the region",
-        "British curriculum options available",
-        "English-language instruction",
-        "Multicultural learning environments"
-      ]
-    },
-    "sports": {
-      "text": "Sports and leisure enthusiasts find abundant opportunities in Alhama De Murcia's environs. Multiple Blue Flag beaches within 20 minutes provide excellent facilities for swimming, water sports, paddleboarding, and kitesurfing. Several championship golf courses nearby cater to golfers of all abilities, with manicured fairways and professional facilities. Walking trails through the surrounding countryside offer scenic routes for hikers. Cycling opportunities abound on both coastal and inland routes. Tennis courts, swimming pools, and fitness centers serve the local community. The combination of coastal water activities and inland sports creates year-round recreation options.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Several championship golf courses nearby",
-        "Water sports and beach activities",
-        "Hiking and cycling trails throughout the region"
-      ]
+      "name": "Hospital General Universitario Reina Sofía (Murcia)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20General%20Universitario%20Reina%20Sof%C3%ADa%20(Murcia)",
+      "distance": "30 km"
     }
   },
-  "transport": {
-    "overview": "Bus connections are available throughout Alhama De Murcia and surrounding areas, providing affordable local and regional transport. However, a car is recommended for maximum flexibility, particularly for accessing beaches, golf courses, and neighboring towns. The road infrastructure is well-maintained with clear signage and good connectivity.",
-    "airports": "Alicante-Elche Airport is approximately 80 kilometers away with regular international flights to UK and European destinations. Murcia International Airport provides alternative access. Both airports connect easily via motorway, typically requiring 1-1.5 hours driving.",
-    "driving": "Motorway connections link Alhama De Murcia to major regional centers including Murcia city (30 minutes), the coast (20 minutes), and Alicante (90 minutes). Local roads are well-maintained and clearly signposted. The town benefits from strategic positioning between inland and coastal regions.",
-    "public": "Bus services connect the town to regional centers with regular timetables. Train connections to Murcia city and surrounding areas provide additional options. Local taxis and ride-sharing services supplement public transport.",
-    "keyPoints": [
-      "Bus connections available throughout the region",
-      "Car recommended for flexibility and exploring",
-      "Alicante Airport 80km away (1-1.5 hours)",
-      "Motorway access to coast and regional centers"
-    ]
-  },
-  "propertyMarket": {
-    "overview": "Alhama De Murcia's property market demonstrates strong fundamentals with consistent growth and excellent value propositions. The market has experienced +8% year-on-year appreciation, reflecting both local demand and increasing recognition among international investors. Prices remain 40% below Spanish island markets, offering significant value. The established expat community and improving infrastructure continue driving demand.",
-    "priceRange": "€191,900 - €369,900",
-    "popularTypes": "Villa, Apartment",
-    "investment": "The rental market demonstrates healthy potential with typical 7-night rentals commanding €800, attractive for holiday let investors. Capital appreciation projections remain positive based on continued development and increased demand from northern European buyers. The combination of affordable purchase prices, reasonable rental yields, and growing international interest positions Alhama De Murcia as a compelling investment opportunity."
-  },
-  "neighborhoods": [
-    "Town Center: The vibrant heart of Alhama De Murcia featuring shops, restaurants, markets, and community facilities. Ideal for those preferring walkable urban living with easy access to amenities.",
-    "Residential Developments: Modern villa communities on town outskirts offering contemporary homes with private gardens and community facilities. Popular with families seeking space and modern comforts.",
-    "Historic Quarter: Traditional Spanish architecture with character properties offering authentic period features. Attractive to those appreciating heritage and cultural atmosphere.",
-    "Golf Course Communities: Properties near championship golf courses catering to golf enthusiasts. Often featuring resort-style amenities and high-quality finishes.",
-    "Countryside Estates: Properties in surrounding countryside offering rural tranquility while maintaining convenient access to town amenities. Popular with those seeking privacy and natural surroundings.",
-    "Proximity to Coast: Developments positioned strategically to access beaches within 20 minutes while enjoying inland calm. Hybrid lifestyle appealing to those wanting both coastal and countryside benefits."
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Alhama De Murcia 2026 | Complete Guide",
+    "metaDescription": "Discover living in Alhama De Murcia. Properties €191,900-€369,900. Inland town with beaches, golf, expat community & 40% cheaper than islands.",
+    "heroIntro": "Alhama De Murcia is a charming inland town in the Murcia region that offers an authentic Spanish lifestyle with modern conveniences and excellent value for money. Located strategically between the coast and inland attractions, this established community has become increasingly popular among international buyers seeking a balance between peaceful living and accessibility to amenities. The town attracts a diverse demographic including families, retirees, and professionals who appreciate its genuine Spanish character, welcoming expat community where English is commonly spoken, and remarkably affordable property prices—40% less expensive than Spanish island markets. With properties ranging from €191,900 to €369,900, Alhama De Murcia represents one of Spain's most compelling property investment opportunities. The region boasts excellent healthcare facilities, international schools with British curriculum options, championship golf courses, and Blue Flag beaches all within convenient distances. Whether you're seeking a permanent residence, investment property, or holiday home, Alhama De Murcia delivers authentic Mediterranean living without the premium price tag of coastal hotspots.",
+    "lifestyleSection": {
+      "intro": "Daily life in Alhama De Murcia revolves around authentic Spanish traditions blended with modern international amenities. The town features vibrant local markets where fresh produce, fish, and regional specialties are sold daily, complemented by modern supermarkets like Mercadona and Lidl for familiar international products. The established expat community ensures English is widely spoken, easing the transition for newcomers while maintaining genuine Spanish culture. Dining options range from family-run tapas bars serving traditional dishes to international restaurants catering to diverse tastes. The proximity to Blue Flag beaches within 20 minutes enables regular beach visits, water sports, and coastal dining experiences. Championship golf courses nearby attract enthusiasts of all levels. Social life flourishes through community groups, international clubs, and local events that foster connections among residents. The pace is relaxed yet engaging, allowing residents to balance leisure with cultural exploration. Weekend activities might include exploring nearby villages, beach excursions, golf outings, or discovering regional cuisine at local restaurants and markets.\n\nAlhama De Murcia enjoys a Mediterranean climate with warm, dry summers and mild winters, making it an ideal year-round destination. Summer temperatures typically reach 30-35°C (86-95°F) from June to September, while winter months remain pleasant at 12-18°C (54-64°F). The region experiences approximately 300 days of sunshine annually, significantly more than northern Europe. Spring (April-May) and autumn (September-October) offer the most comfortable conditions with temperatures in the low to mid-20s. Rainfall is minimal and concentrated in autumn and winter months. The coastal proximity within 20 minutes provides natural cooling influences during summer heat. For those relocating from northern climates, the consistent sunshine and warm weather greatly improve quality of life and outdoor activity opportunities year-round.",
+      "highlights": [
+        "Exceptional value: Properties 40% cheaper than Spanish islands with comparable or superior amenities",
+        "Established expat community: English widely spoken with excellent social infrastructure and support networks",
+        "Excellent healthcare: Regional hospital and private clinics with English-speaking doctors nearby",
+        "Strong investment potential: +8% annual appreciation with healthy rental yields (€800 per 7 nights)",
+        "International schools: British curriculum options and quality education for families",
+        "Proximity to attractions: Beaches, golf courses, and regional cities all within 20-30 minutes"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Sports and leisure enthusiasts find abundant opportunities in Alhama De Murcia's environs. Multiple Blue Flag beaches within 20 minutes provide excellent facilities for swimming, water sports, paddleboarding, and kitesurfing. Several championship golf courses nearby cater to golfers of all abilities, with manicured fairways and professional facilities. Walking trails through the surrounding countryside offer scenic routes for hikers. Cycling opportunities abound on both coastal and inland routes. Tennis courts, swimming pools, and fitness centers serve the local community. The combination of coastal water activities and inland sports creates year-round recreation options.",
+      "dining": "Alhama De Murcia offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping in Alhama De Murcia caters to all needs with a excellent mix of modern supermarkets and traditional Spanish markets. Major chains including Mercadona, Lidl, and Consum provide familiar products and competitive pricing. Local markets offer fresh produce, regional specialties, and authentic Spanish ingredients daily. The town center features independent shops for clothing, pharmacy, and household goods. For larger shopping expeditions, nearby towns offer expanded mall facilities. The combination of modern retail convenience and traditional market shopping provides residents with both familiar international products and authentic local specialties.",
+      "healthcare": "Healthcare in Alhama De Murcia meets high international standards with excellent facilities readily accessible. A regional hospital is conveniently located within 30 minutes, providing comprehensive emergency and specialized medical services. Private clinics throughout the area offer modern facilities and shorter waiting times for appointments. English-speaking doctors are widely available, ensuring clear communication regarding medical concerns and treatments. The healthcare system combines Spanish efficiency with international standards familiar to expatriates. Many residents appreciate the affordability of healthcare compared to UK and Northern European costs while maintaining quality care equivalent to private practice standards at home.",
+      "transport": "Bus connections are available throughout Alhama De Murcia and surrounding areas, providing affordable local and regional transport. However, a car is recommended for maximum flexibility, particularly for accessing beaches, golf courses, and neighboring towns. The road infrastructure is well-maintained with clear signage and good connectivity. Alicante-Elche Airport is approximately 80 kilometers away with regular international flights to UK and European destinations. Murcia International Airport provides alternative access. Both airports connect easily via motorway, typically requiring 1-1.5 hours driving. Motorway connections link Alhama De Murcia to major regional centers including Murcia city (30 minutes), the coast (20 minutes), and Alicante (90 minutes). Local roads are well-maintained and clearly signposted. The town benefits from strategic positioning between inland and coastal regions. Bus services connect the town to regional centers with regular timetables. Train connections to Murcia city and surrounding areas provide additional options. Local taxis and ride-sharing services supplement public transport."
+    },
+    "propertyMarketSection": "Alhama De Murcia's property market demonstrates strong fundamentals with consistent growth and excellent value propositions. The market has experienced +8% year-on-year appreciation, reflecting both local demand and increasing recognition among international investors. Prices remain 40% below Spanish island markets, offering significant value. The established expat community and improving infrastructure continue driving demand.\n\nPopular property types include Villa, Apartment.\n\nThe rental market demonstrates healthy potential with typical 7-night rentals commanding €800, attractive for holiday let investors. Capital appreciation projections remain positive based on continued development and increased demand from northern European buyers. The combination of affordable purchase prices, reasonable rental yields, and growing international interest positions Alhama De Murcia as a compelling investment opportunity.",
+    "whyLiveHereSection": [
       "Exceptional value: Properties 40% cheaper than Spanish islands with comparable or superior amenities",
       "Established expat community: English widely spoken with excellent social infrastructure and support networks",
       "Excellent healthcare: Regional hospital and private clinics with English-speaking doctors nearby",
@@ -77,48 +63,349 @@
       "International schools: British curriculum options and quality education for families",
       "Proximity to attractions: Beaches, golf courses, and regional cities all within 20-30 minutes"
     ],
-    "cons": [
-      "Car dependency: While bus connections exist, a vehicle is recommended for genuine flexibility and exploring",
-      "Language barrier: While English is common in expat areas, learning Spanish enhances daily integration",
-      "Summer heat: Temperatures reaching 30-35°C may be challenging for those unaccustomed to Mediterranean climate"
+    "faqs": [
+      {
+        "question": "Is Alhama De Murcia a good place to live?",
+        "answer": "Yes, absolutely. Alhama De Murcia offers an excellent combination of authentic Spanish living, affordability, strong community infrastructure, and accessibility to beaches and amenities. The established expat community, modern healthcare facilities, and property values 40% below island markets make it particularly attractive for those seeking quality Mediterranean lifestyle without premium pricing. The +8% year-on-year property appreciation also demonstrates solid investment fundamentals."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, non-Spanish EU and non-EU citizens can freely purchase property in Spain without restrictions. You'll need a Spanish tax identification number (NIE) and must register the property with the Land Registry. The process is straightforward and typically requires 6-8 weeks from offer to completion. Many real estate agents specialize in assisting foreign buyers through the purchase process."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Property purchase costs in Spain typically include: property price, transfer tax (6-10% depending on region), notary fees (0.5-1%), registry fees (0.1%), and legal fees (1-2%). In Alhama De Murcia with average prices €191,900-€369,900, total acquisition costs typically range 8-13% above the purchase price. Some sellers negotiate covering transfer tax in competitive markets."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "No, a visa is not required solely to purchase property in Spain. However, if you plan to reside in Spain, you'll need appropriate immigration status. UK citizens post-Brexit typically qualify for residence permits. It's advisable to consult with Spanish immigration authorities regarding your specific circumstances before purchase."
+      },
+      {
+        "question": "Can I get a mortgage in Spain as a foreigner?",
+        "answer": "Yes, many Spanish banks and international lenders offer mortgages to foreign buyers. Typically, you can borrow up to 80% of the property value. Requirements usually include proof of income, employment contract, and financial references. Interest rates are competitive, currently ranging 3-5% depending on terms and credit profile. Working with a mortgage broker familiar with foreign lending simplifies the process."
+      },
+      {
+        "question": "What is the cost of living in Alhama De Murcia?",
+        "answer": "Cost of living in Alhama De Murcia is significantly lower than UK and northern Europe. Grocery shopping, dining out, and utilities are substantially cheaper. Healthcare costs are minimal with Spanish social security or affordable private insurance. Utility bills average €100-150 monthly for a typical home. Rental market offers value with typical 7-night rentals at €800. Overall, monthly living costs for a couple typically range €1,200-1,800 depending on lifestyle choices."
+      },
+      {
+        "question": "Is Alhama De Murcia good for retirees?",
+        "answer": "Excellent, yes. Alhama De Murcia is ideal for retirees offering affordable living costs, quality healthcare with English-speaking doctors, mild climate, established senior communities, and recreational activities including golf and beach access. The infrastructure suits retirees perfectly with supermarkets, restaurants, and leisure facilities easily accessible. Many retirees successfully maintain pensions from home while enjoying superior quality of life at lower costs than UK."
+      },
+      {
+        "question": "What is the weather like in Alhama De Murcia?",
+        "answer": "Alhama De Murcia enjoys Mediterranean climate with approximately 300 sunshine days annually. Summers (June-September) are warm to hot at 30-35°C, while winters remain mild at 12-18°C. Spring and autumn offer perfect temperatures around 20-25°C. Rainfall is minimal, concentrated in autumn and winter. Coastal proximity within 20 minutes provides natural cooling. Overall, the weather supports outdoor lifestyle year-round with significantly more sunshine than northern Europe."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Alhama De Murcia? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "The rental market demonstrates healthy potential with typical 7-night rentals commanding €800, attractive for holiday let investors. Capital appreciation projections remain positive based on continued development and increased demand from northern European buyers. The combination of affordable purchase prices, reasonable rental yields, and growing international interest positions Alhama De Murcia as a compelling investment opportunity.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Alhama De Murcia are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Alhama De Murcia offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Alhama De Murcia celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Alhama De Murcia have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school offering GCSE and A-Levels with strong extracurricular programmes"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "International (British)",
+          "distance": "25-45 min",
+          "description": "British curriculum primary and secondary school serving the international community"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Alhama De Murcia offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Alhama De Murcia has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Alhama De Murcia",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-1.4239!3d37.8514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Alhama De Murcia",
+    "description": "Alhama De Murcia is a inland municipality in Murcia, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.8514",
+      "longitude": "-1.4239"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Alhama De Murcia",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Murcia"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Alhama De Murcia a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. Alhama De Murcia offers an excellent combination of authentic Spanish living, affordability, strong community infrastructure, and accessibility to beaches and amenities. The established expat community, modern healthcare facilities, and property values 40% below island markets make "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, non-Spanish EU and non-EU citizens can freely purchase property in Spain without restrictions. You'll need a Spanish tax identification number (NIE) and must register the property with the Land Registry. The process is straightforward and typically requires 6-8 weeks from offer to completion. M"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Property purchase costs in Spain typically include: property price, transfer tax (6-10% depending on region), notary fees (0.5-1%), registry fees (0.1%), and legal fees (1-2%). In Alhama De Murcia with average prices €191,900-€369,900, total acquisition costs typically range 8-13% above the purchase"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, a visa is not required solely to purchase property in Spain. However, if you plan to reside in Spain, you'll need appropriate immigration status. UK citizens post-Brexit typically qualify for residence permits. It's advisable to consult with Spanish immigration authorities regarding your specifi"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get a mortgage in Spain as a foreigner?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, many Spanish banks and international lenders offer mortgages to foreign buyers. Typically, you can borrow up to 80% of the property value. Requirements usually include proof of income, employment contract, and financial references. Interest rates are competitive, currently ranging 3-5% dependin"
+        }
+      }
     ]
   },
-  "faqs": [
-    {
-      "question": "Is Alhama De Murcia a good place to live?",
-      "answer": "Yes, absolutely. Alhama De Murcia offers an excellent combination of authentic Spanish living, affordability, strong community infrastructure, and accessibility to beaches and amenities. The established expat community, modern healthcare facilities, and property values 40% below island markets make it particularly attractive for those seeking quality Mediterranean lifestyle without premium pricing. The +8% year-on-year property appreciation also demonstrates solid investment fundamentals."
-    },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, non-Spanish EU and non-EU citizens can freely purchase property in Spain without restrictions. You'll need a Spanish tax identification number (NIE) and must register the property with the Land Registry. The process is straightforward and typically requires 6-8 weeks from offer to completion. Many real estate agents specialize in assisting foreign buyers through the purchase process."
-    },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Property purchase costs in Spain typically include: property price, transfer tax (6-10% depending on region), notary fees (0.5-1%), registry fees (0.1%), and legal fees (1-2%). In Alhama De Murcia with average prices €191,900-€369,900, total acquisition costs typically range 8-13% above the purchase price. Some sellers negotiate covering transfer tax in competitive markets."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "No, a visa is not required solely to purchase property in Spain. However, if you plan to reside in Spain, you'll need appropriate immigration status. UK citizens post-Brexit typically qualify for residence permits. It's advisable to consult with Spanish immigration authorities regarding your specific circumstances before purchase."
-    },
-    {
-      "question": "Can I get a mortgage in Spain as a foreigner?",
-      "answer": "Yes, many Spanish banks and international lenders offer mortgages to foreign buyers. Typically, you can borrow up to 80% of the property value. Requirements usually include proof of income, employment contract, and financial references. Interest rates are competitive, currently ranging 3-5% depending on terms and credit profile. Working with a mortgage broker familiar with foreign lending simplifies the process."
-    },
-    {
-      "question": "What is the cost of living in Alhama De Murcia?",
-      "answer": "Cost of living in Alhama De Murcia is significantly lower than UK and northern Europe. Grocery shopping, dining out, and utilities are substantially cheaper. Healthcare costs are minimal with Spanish social security or affordable private insurance. Utility bills average €100-150 monthly for a typical home. Rental market offers value with typical 7-night rentals at €800. Overall, monthly living costs for a couple typically range €1,200-1,800 depending on lifestyle choices."
-    },
-    {
-      "question": "Is Alhama De Murcia good for retirees?",
-      "answer": "Excellent, yes. Alhama De Murcia is ideal for retirees offering affordable living costs, quality healthcare with English-speaking doctors, mild climate, established senior communities, and recreational activities including golf and beach access. The infrastructure suits retirees perfectly with supermarkets, restaurants, and leisure facilities easily accessible. Many retirees successfully maintain pensions from home while enjoying superior quality of life at lower costs than UK."
-    },
-    {
-      "question": "What is the weather like in Alhama De Murcia?",
-      "answer": "Alhama De Murcia enjoys Mediterranean climate with approximately 300 sunshine days annually. Summers (June-September) are warm to hot at 30-35°C, while winters remain mild at 12-18°C. Spring and autumn offer perfect temperatures around 20-25°C. Rainfall is minimal, concentrated in autumn and winter. Coastal proximity within 20 minutes provides natural cooling. Overall, the weather supports outdoor lifestyle year-round with significantly more sunshine than northern Europe."
-    }
-  ],
-  "slug": "alhama-de-murcia",
-  "town": "Alhama De Murcia",
-  "propertyCount": 6,
-  "generatedAt": "2026-02-06T10:00:14.609Z"
+  "golf": {
+    "intro": "Alhama de Murcia is surrounded by excellent golf courses offering championship-standard play. Multiple courses within 15 minutes provide diverse layouts and challenges for golfers. The region's extended playing season makes it ideal for year-round golf enthusiasts.",
+    "courses": [
+      {
+        "name": "Serena Golf Club",
+        "distance": "12 km",
+        "driveTime": "18 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Serena+Golf+Club",
+        "description": "Championship course with scenic design, quality facilities, and professional coaching available"
+      },
+      {
+        "name": "Hacienda del Álamo Golf Resort",
+        "distance": "8 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.haciendadelalamogolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Hacienda+del+Alamo+Golf",
+        "description": "Luxury resort course with championship layout, spa facilities, and dining options"
+      },
+      {
+        "name": "Altorreal Golf Club",
+        "distance": "15 km",
+        "driveTime": "20 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Altorreal+Golf+Club",
+        "description": "Challenging course with elevated terrain offering panoramic Murcia region views"
+      }
+    ]
+  }
 }

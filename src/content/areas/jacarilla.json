@@ -1,75 +1,62 @@
 {
-  "metaTitle": "Living in Jacarilla 2026 | Complete Inland Costa Blanca Guide",
-  "metaDescription": "Discover living in Jacarilla: properties €158,500-€495,000, established expat community, 40% cheaper than islands. Complete area guide inside.",
-  "heroIntro": "Jacarilla represents one of the Costa Blanca's most authentic and undervalued inland destinations, offering a perfect balance between Spanish tradition and international convenience. This charming town has evolved into a thriving hub for property investors and families seeking genuine Mediterranean living without the overcrowding of coastal resorts. With an established expat community where English is commonly spoken, Jacarilla welcomes international residents while maintaining its distinctive local character and competitive property prices. The town serves as an ideal base for exploring the wider region, with excellent access to pristine Blue Flag beaches, championship golf courses, and world-class healthcare facilities. Whether you're seeking a permanent residence, a holiday home, or an investment opportunity, Jacarilla delivers exceptional value and lifestyle benefits. Properties range from €158,500 to €495,000, with an average price of €2,200 per m², representing 40% savings compared to Spanish island markets. The market has shown consistent growth of +8% year-on-year, reflecting increasing recognition of this destination's investment potential and quality of life.",
-  "climate": "Jacarilla enjoys a Mediterranean climate with over 300 days of sunshine annually, characterized by warm, dry summers and mild winters. Summer temperatures typically range from 28-32°C (82-90°F), while winter months remain pleasant at 10-15°C (50-59°F), making outdoor activities enjoyable year-round. The region experiences minimal rainfall, concentrated in autumn and spring months. Spring (March-May) and autumn (September-November) represent the most pleasant periods, with perfect weather for outdoor pursuits and exploration. Summers are ideal for beach activities and water sports, though many residents prefer to enjoy the quieter shoulder seasons. The consistent, predictable weather patterns make Jacarilla suitable for year-round living, offering relief from harsher northern European climates.",
-  "lifestyle": "Life in Jacarilla blends authentic Spanish culture with international modern convenience. The town features vibrant weekly markets where local vendors sell fresh produce, seafood, and artisanal goods, creating a genuine community atmosphere. Residents enjoy easy access to traditional tapas bars, contemporary restaurants, and international cuisine reflecting the diverse population. The established expat community has created a welcoming environment where English is widely spoken, facilitating integration for newcomers. Daily life includes shopping at familiar supermarket chains like Mercadona and Lidl alongside charming local establishments. Weekends often involve exploring nearby Blue Flag beaches just 20 minutes away, or enjoying championship golf courses scattered throughout the region. The town maintains a relaxed pace while offering cultural events, festivals, and activities that reflect both Spanish heritage and international influences. Social networks are strong, with numerous expat groups organizing everything from language exchanges to dining clubs, creating instant community for new arrivals.",
-  "amenities": {
+  "slug": "jacarilla",
+  "name": "Jacarilla",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/jacarilla-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 4,
+  "propertyTypes": [
+    "Villa",
+    "Apartment",
+    "Penthouse - diverse options serving different buyer preferences and budgets"
+  ],
+  "priceRange": {
+    "min": 158500,
+    "max": 495000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Jacarilla Tourism",
+      "url": "https://www.google.com/search?q=Jacarilla%20Spain%20official%20website",
+      "description": "Discover more about Jacarilla"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "50 km",
+      "driveTime": "35 min"
+    },
     "healthcare": {
-      "text": "Jacarilla benefits from excellent healthcare infrastructure with a regional hospital located within 30 minutes, supplemented by several private clinics offering specialized services. English-speaking doctors are readily available, ensuring communication comfort for international residents. The healthcare system combines Spain's excellent public facilities with private options for those preferring additional choice or specialized treatments. Medical standards are high, with modern equipment and professional staff. Emergency services are responsive, and the region is well-served by health professionals experienced in treating international patients.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes drive",
-        "Private clinics with English-speaking staff",
-        "Modern medical equipment and facilities",
-        "Emergency services readily accessible"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping in Jacarilla caters to all needs with major supermarket chains ensuring familiarity and convenience. Mercadona, Lidl, and Consum provide extensive product ranges, competitive pricing, and modern facilities. Beyond chain stores, traditional local markets offer fresh produce, regional specialties, and authentic Spanish products. Weekly market days create vibrant social hubs where residents interact with local vendors and other shoppers. For specialized shopping, nearby towns offer larger shopping centers and boutique stores. The combination of familiar international chains and authentic local markets ensures residents enjoy both convenience and cultural immersion.",
-      "keyPoints": [
-        "Mercadona supermarket chain",
-        "Lidl discount supermarket",
-        "Consum local supermarket",
-        "Traditional weekly markets with fresh local produce"
-      ]
-    },
-    "education": {
-      "text": "The region provides excellent educational options for families, with international schools offering British curriculum and other international programs. These institutions serve the diverse expat community while maintaining high academic standards. International schools typically feature modern facilities, experienced teaching staff, and curricula recognized globally. In addition to formal schooling, the region supports various educational enrichment activities and cultural programs. Parents benefit from established networks connecting international families and sharing educational resources and experiences.",
-      "keyPoints": [
-        "International schools in the region",
-        "British curriculum options available",
-        "Global academic standards and recognition",
-        "Established networks of international families"
-      ]
-    },
-    "sports": {
-      "text": "Sports and leisure enthusiasts find abundant opportunities in Jacarilla's surroundings. Multiple Blue Flag beaches within 20 minutes offer swimming, water sports including paddleboarding and kayaking, and relaxation. Several championship golf courses nearby cater to enthusiasts of all levels, featuring stunning landscapes and professional facilities. Beyond beaches and golf, residents enjoy hiking, cycling, tennis, and various water activities. The region's sports infrastructure reflects investment in leisure facilities, supporting both casual recreation and competitive pursuits. Year-round sunshine enables outdoor activities throughout the year.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Championship golf courses nearby",
-        "Water sports and beach activities",
-        "Hiking, cycling, and outdoor recreation"
-      ]
+      "name": "Hospital Vega Baja (Orihuela)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Vega%20Baja%20(Orihuela)",
+      "distance": "10 km"
     }
   },
-  "transport": {
-    "overview": "Bus connections link Jacarilla to surrounding towns and regional centers, providing affordable public transport options. However, a car is recommended for flexibility and independence, enabling convenient access to beaches, golf courses, and neighboring areas. The inland location requires personal transport for optimal lifestyle enjoyment.",
-    "airports": "Alicante-Elche Airport (approximately 50 kilometers away) offers extensive international connections with flights to UK, Northern Europe, and worldwide destinations. Valencia Airport provides an alternative for northern connections. Both airports facilitate convenient access for visiting family and international travel.",
-    "driving": "Motorway access connects Jacarilla efficiently to the coastal regions, Valencia, Murcia, and Madrid. Regional roads provide scenic routes through the interior. Driving times: approximately 1 hour to Alicante, 45 minutes to beaches, 30 minutes to larger shopping centers. The inland location offers peaceful surroundings while maintaining accessibility to major destinations.",
-    "public": "Local bus services operated by regional providers connect Jacarilla to nearby towns including Almoradí, San Isidro, and larger centers. Services are reliable though less frequent than coastal regions. Regional train services provide connections to Valencia and Alicante from nearby stations.",
-    "keyPoints": [
-      "Car recommended for optimal flexibility and independence",
-      "Alicante Airport 50km - 1 hour drive with extensive international flights",
-      "Motorway access to coastal regions, Valencia, Madrid",
-      "Local bus services to neighboring towns and regional centers"
-    ]
-  },
-  "propertyMarket": {
-    "overview": "Jacarilla's property market demonstrates strong fundamentals with consistent growth trending +8% year-on-year. The inland location combined with developed infrastructure and established expat community creates sustained demand. Market conditions favor both owner-occupiers and investors, with excellent rental potential supporting holiday letting and long-term tenancy. Property values remain significantly undervalued compared to coastal alternatives, presenting compelling value propositions.",
-    "priceRange": "€158,500 - €495,000",
-    "popularTypes": "Villa, Apartment, Penthouse - diverse options serving different buyer preferences and budgets",
-    "investment": "Rental income potential averages €800 for 7-night periods, supporting 6-8% annual returns. Capital appreciation averaging +8% year-on-year provides wealth growth. Properties 40% cheaper than Spanish island markets deliver exceptional value. The established expat community ensures consistent rental demand and strong resale markets. Both primary residence and investment purchases offer compelling economics."
-  },
-  "neighborhoods": [
-    "Centro Urbano: Jacarilla's vibrant town center featuring traditional architecture, local shops, restaurants, and weekly markets. Perfect for those seeking authentic Spanish community life with convenient amenities.",
-    "Zona Residencial: Modern residential areas with contemporary properties, quiet streets, and family-friendly environments. Ideal for families preferring modern amenities while remaining close to town services.",
-    "Areas Periféricas: Quieter outlying zones offering larger properties, privacy, and rural character. Suitable for those seeking peaceful surroundings with easy town access.",
-    "Villas de Campo: Spacious villa developments combining country living with modern comforts. Popular with families and retirees seeking garden space and outdoor lifestyle.",
-    "Proximidad a Almoradí: Properties benefiting from proximity to the larger neighboring town while maintaining Jacarilla's character. Offers balanced accessibility to expanded amenities.",
-    "Zona de Golf: Properties near championship courses, appealing to golf enthusiasts and those prioritizing sports lifestyle."
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Jacarilla 2026 | Complete Inland Costa Blanca Guide",
+    "metaDescription": "Discover living in Jacarilla: properties €158,500-€495,000, established expat community, 40% cheaper than islands. Complete area guide inside.",
+    "heroIntro": "Jacarilla represents one of the Costa Blanca's most authentic and undervalued inland destinations, offering a perfect balance between Spanish tradition and international convenience. This charming town has evolved into a thriving hub for property investors and families seeking genuine Mediterranean living without the overcrowding of coastal resorts. With an established expat community where English is commonly spoken, Jacarilla welcomes international residents while maintaining its distinctive local character and competitive property prices. The town serves as an ideal base for exploring the wider region, with excellent access to pristine Blue Flag beaches, championship golf courses, and world-class healthcare facilities. Whether you're seeking a permanent residence, a holiday home, or an investment opportunity, Jacarilla delivers exceptional value and lifestyle benefits. Properties range from €158,500 to €495,000, with an average price of €2,200 per m², representing 40% savings compared to Spanish island markets. The market has shown consistent growth of +8% year-on-year, reflecting increasing recognition of this destination's investment potential and quality of life.",
+    "lifestyleSection": {
+      "intro": "Life in Jacarilla blends authentic Spanish culture with international modern convenience. The town features vibrant weekly markets where local vendors sell fresh produce, seafood, and artisanal goods, creating a genuine community atmosphere. Residents enjoy easy access to traditional tapas bars, contemporary restaurants, and international cuisine reflecting the diverse population. The established expat community has created a welcoming environment where English is widely spoken, facilitating integration for newcomers. Daily life includes shopping at familiar supermarket chains like Mercadona and Lidl alongside charming local establishments. Weekends often involve exploring nearby Blue Flag beaches just 20 minutes away, or enjoying championship golf courses scattered throughout the region. The town maintains a relaxed pace while offering cultural events, festivals, and activities that reflect both Spanish heritage and international influences. Social networks are strong, with numerous expat groups organizing everything from language exchanges to dining clubs, creating instant community for new arrivals.\n\nJacarilla enjoys a Mediterranean climate with over 300 days of sunshine annually, characterized by warm, dry summers and mild winters. Summer temperatures typically range from 28-32°C (82-90°F), while winter months remain pleasant at 10-15°C (50-59°F), making outdoor activities enjoyable year-round. The region experiences minimal rainfall, concentrated in autumn and spring months. Spring (March-May) and autumn (September-November) represent the most pleasant periods, with perfect weather for outdoor pursuits and exploration. Summers are ideal for beach activities and water sports, though many residents prefer to enjoy the quieter shoulder seasons. The consistent, predictable weather patterns make Jacarilla suitable for year-round living, offering relief from harsher northern European climates.",
+      "highlights": [
+        "Exceptional value: 40% cheaper than Spanish island markets with €2,200/m² average pricing",
+        "Strong investment returns: +8% year-on-year capital appreciation plus 6-8% rental income potential",
+        "Established expat community with English widely spoken, easing integration and networking",
+        "Excellent healthcare with regional hospital 30 minutes away and English-speaking doctors",
+        "Year-round sunshine with Mediterranean climate perfect for outdoor living",
+        "Direct access to Blue Flag beaches (20 minutes), championship golf courses, and diverse activities"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Sports and leisure enthusiasts find abundant opportunities in Jacarilla's surroundings. Multiple Blue Flag beaches within 20 minutes offer swimming, water sports including paddleboarding and kayaking, and relaxation. Several championship golf courses nearby cater to enthusiasts of all levels, featuring stunning landscapes and professional facilities. Beyond beaches and golf, residents enjoy hiking, cycling, tennis, and various water activities. The region's sports infrastructure reflects investment in leisure facilities, supporting both casual recreation and competitive pursuits. Year-round sunshine enables outdoor activities throughout the year.",
+      "dining": "Jacarilla offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping in Jacarilla caters to all needs with major supermarket chains ensuring familiarity and convenience. Mercadona, Lidl, and Consum provide extensive product ranges, competitive pricing, and modern facilities. Beyond chain stores, traditional local markets offer fresh produce, regional specialties, and authentic Spanish products. Weekly market days create vibrant social hubs where residents interact with local vendors and other shoppers. For specialized shopping, nearby towns offer larger shopping centers and boutique stores. The combination of familiar international chains and authentic local markets ensures residents enjoy both convenience and cultural immersion.",
+      "healthcare": "Jacarilla benefits from excellent healthcare infrastructure with a regional hospital located within 30 minutes, supplemented by several private clinics offering specialized services. English-speaking doctors are readily available, ensuring communication comfort for international residents. The healthcare system combines Spain's excellent public facilities with private options for those preferring additional choice or specialized treatments. Medical standards are high, with modern equipment and professional staff. Emergency services are responsive, and the region is well-served by health professionals experienced in treating international patients.",
+      "transport": "Bus connections link Jacarilla to surrounding towns and regional centers, providing affordable public transport options. However, a car is recommended for flexibility and independence, enabling convenient access to beaches, golf courses, and neighboring areas. The inland location requires personal transport for optimal lifestyle enjoyment. Alicante-Elche Airport (approximately 50 kilometers away) offers extensive international connections with flights to UK, Northern Europe, and worldwide destinations. Valencia Airport provides an alternative for northern connections. Both airports facilitate convenient access for visiting family and international travel. Motorway access connects Jacarilla efficiently to the coastal regions, Valencia, Murcia, and Madrid. Regional roads provide scenic routes through the interior. Driving times: approximately 1 hour to Alicante, 45 minutes to beaches, 30 minutes to larger shopping centers. The inland location offers peaceful surroundings while maintaining accessibility to major destinations. Local bus services operated by regional providers connect Jacarilla to nearby towns including Almoradí, San Isidro, and larger centers. Services are reliable though less frequent than coastal regions. Regional train services provide connections to Valencia and Alicante from nearby stations."
+    },
+    "propertyMarketSection": "Jacarilla's property market demonstrates strong fundamentals with consistent growth trending +8% year-on-year. The inland location combined with developed infrastructure and established expat community creates sustained demand. Market conditions favor both owner-occupiers and investors, with excellent rental potential supporting holiday letting and long-term tenancy. Property values remain significantly undervalued compared to coastal alternatives, presenting compelling value propositions.\n\nPopular property types include Villa, Apartment, Penthouse - diverse options serving different buyer preferences and budgets.\n\nRental income potential averages €800 for 7-night periods, supporting 6-8% annual returns. Capital appreciation averaging +8% year-on-year provides wealth growth. Properties 40% cheaper than Spanish island markets deliver exceptional value. The established expat community ensures consistent rental demand and strong resale markets. Both primary residence and investment purchases offer compelling economics.",
+    "whyLiveHereSection": [
       "Exceptional value: 40% cheaper than Spanish island markets with €2,200/m² average pricing",
       "Strong investment returns: +8% year-on-year capital appreciation plus 6-8% rental income potential",
       "Established expat community with English widely spoken, easing integration and networking",
@@ -77,56 +64,327 @@
       "Year-round sunshine with Mediterranean climate perfect for outdoor living",
       "Direct access to Blue Flag beaches (20 minutes), championship golf courses, and diverse activities"
     ],
-    "cons": [
-      "Car essential for convenient living due to inland location; public transport limited compared to coastal areas",
-      "Smaller town atmosphere means fewer big-city entertainment venues and nightlife options than larger centers",
-      "Summer heat (28-32°C) may challenge those unaccustomed to Mediterranean climate without proper air conditioning"
-    ]
+    "faqs": [
+      {
+        "question": "Is Jacarilla a good place to live?",
+        "answer": "Yes, absolutely. Jacarilla offers an exceptional quality of life combining authentic Spanish culture, established international community, competitive property prices, and strong investment returns. With English-speaking residents, excellent healthcare, and abundant leisure activities, it serves families, retirees, and investors equally well. The +8% year-on-year market growth reflects increasing recognition of Jacarilla's lifestyle and investment benefits."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can purchase property in Spain with minimal restrictions. Non-EU citizens may require a Spanish tax identification number (NIE), but this is straightforward to obtain. EU citizens enjoy equal property rights to Spanish nationals. Most transactions proceed smoothly with proper legal representation. Professional guidance from Spanish property lawyers ensures compliance with all requirements and protects your investment."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Beyond purchase price, Spanish property acquisition involves several costs: transfer tax (6-10% depending on region), notary and registration fees (0.5-1%), and legal representation (0.5-1%). Total acquisition costs typically range 8-12% of purchase price. In Jacarilla, with €158,500-€495,000 properties, this means €12,680-€59,400 in additional costs. Subsequent annual expenses include property tax (0.4-1.1% annually) and home insurance."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "Property purchase itself doesn't require a visa. However, residency intentions differ: EU/EEA citizens enjoy freedom of movement without special visas. Non-EU citizens may consider Spain's various visa options including the Digital Nomad Visa, Student Visa, or Retirement Visa (available from age 45-50 depending on circumstances). Property ownership doesn't directly grant residency; proper visa status depends on your nationality and circumstances. Consult Spanish consulates for specific requirements."
+      },
+      {
+        "question": "What is the cost of living in Costa Blanca?",
+        "answer": "Costa Blanca cost of living varies by location and lifestyle. Jacarilla offers particularly good value with moderate rental costs (€800 for 7-night holiday lets), affordable supermarket shopping, and modest dining expenses. Monthly living costs for a couple might range €1,500-€2,500 depending on preferences, including utilities, food, transport, and entertainment. Healthcare costs are minimal for residents with Spanish health insurance. Jacarilla's inland location provides 40% savings versus coastal resorts, making it one of Costa Blanca's most economical options."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Yes, Costa Blanca, particularly Jacarilla, suits retirees exceptionally well. Benefits include excellent healthcare, affordable living, established retirement communities, pleasant year-round climate, and abundant leisure activities (golf, beaches, hiking). English is widely spoken, easing integration. Low property costs and rental income potential make it financially attractive. The established expat community provides ready-made social networks. Spain offers favorable tax treatments for some retirees. Jacarilla specifically combines peaceful living with convenient access to modern amenities."
+      },
+      {
+        "question": "How far is Costa Blanca from the UK?",
+        "answer": "Costa Blanca is approximately 1,100 kilometers from the UK, with flight times of 2-2.5 hours from London and other major airports. Alicante-Elche Airport, 50km from Jacarilla, offers extensive daily connections to UK cities including London, Manchester, Birmingham, and Glasgow. Budget airlines provide affordable regular services making UK visits convenient and affordable. Ferry options via France provide alternative transport for vehicles and those preferring driving."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Costa Blanca enjoys Mediterranean climate with over 300 days of sunshine annually. Summers are warm to hot (28-32°C), perfect for beach activities. Winters are mild (10-15°C) with occasional rain. Spring and autumn offer ideal temperatures (18-25°C) for outdoor pursuits. Rainfall is minimal, concentrated in autumn/spring. The consistent, predictable climate supports year-round living and activities. Jacarilla's inland location means slightly cooler summers and warmer winters compared to coastal areas, with excellent overall climate conditions."
+      },
+      {
+        "question": "Is Costa Blanca a good place to buy property?",
+        "answer": "Yes, Costa Blanca presents compelling property investment opportunities. The region combines desirable lifestyle amenities, strong rental income potential, and consistent capital appreciation. Jacarilla specifically offers exceptional value at €2,200/m² (40% cheaper than island markets) with +8% year-on-year growth. The established infrastructure, tourism appeal, and international demographic support sustained property demand. Both primary residences and investment purchases benefit from favorable economics. Professional legal and financial guidance ensures successful transactions."
+      },
+      {
+        "question": "How much are property taxes in Spain?",
+        "answer": "Spanish property taxes include: Annual property tax (IBI) of 0.4-1.1% of cadastral value (typically lower than market value), Capital gains tax on sale (19% if held under 1 year, declining to 5% after 30 years for Spanish residents), and Wealth tax (0.2-2.5% depending on region and property value). EU residents may benefit from more favorable capital gains treatment. Non-resident ownership carries additional considerations. Jacarilla's lower property values result in proportionally lower annual tax burdens compared to coastal properties."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Jacarilla? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Rental income potential averages €800 for 7-night periods, supporting 6-8% annual returns. Capital appreciation averaging +8% year-on-year provides wealth growth. Properties 40% cheaper than Spanish island markets deliver exceptional value. The established expat community ensures consistent rental demand and strong resale markets. Both primary residence and investment purchases offer compelling economics.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Jacarilla are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Jacarilla offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Jacarilla celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Jacarilla have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "20-35 min",
+          "description": "British curriculum school with excellent facilities and strong academic record serving the expat community"
+        },
+        {
+          "name": "Newton College",
+          "type": "International (British/Spanish)",
+          "distance": "25-40 min",
+          "description": "Bilingual international school offering both British and Spanish curricula with modern facilities"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Jacarilla offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Jacarilla has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Jacarilla",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.8403!3d38.0831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Jacarilla a good place to live?",
-      "answer": "Yes, absolutely. Jacarilla offers an exceptional quality of life combining authentic Spanish culture, established international community, competitive property prices, and strong investment returns. With English-speaking residents, excellent healthcare, and abundant leisure activities, it serves families, retirees, and investors equally well. The +8% year-on-year market growth reflects increasing recognition of Jacarilla's lifestyle and investment benefits."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Jacarilla",
+    "description": "Jacarilla is a inland municipality in Costa Blanca South, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.0831",
+      "longitude": "-0.8403"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can purchase property in Spain with minimal restrictions. Non-EU citizens may require a Spanish tax identification number (NIE), but this is straightforward to obtain. EU citizens enjoy equal property rights to Spanish nationals. Most transactions proceed smoothly with proper legal representation. Professional guidance from Spanish property lawyers ensures compliance with all requirements and protects your investment."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jacarilla",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Beyond purchase price, Spanish property acquisition involves several costs: transfer tax (6-10% depending on region), notary and registration fees (0.5-1%), and legal representation (0.5-1%). Total acquisition costs typically range 8-12% of purchase price. In Jacarilla, with €158,500-€495,000 properties, this means €12,680-€59,400 in additional costs. Subsequent annual expenses include property tax (0.4-1.1% annually) and home insurance."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "Property purchase itself doesn't require a visa. However, residency intentions differ: EU/EEA citizens enjoy freedom of movement without special visas. Non-EU citizens may consider Spain's various visa options including the Digital Nomad Visa, Student Visa, or Retirement Visa (available from age 45-50 depending on circumstances). Property ownership doesn't directly grant residency; proper visa status depends on your nationality and circumstances. Consult Spanish consulates for specific requirements."
-    },
-    {
-      "question": "What is the cost of living in Costa Blanca?",
-      "answer": "Costa Blanca cost of living varies by location and lifestyle. Jacarilla offers particularly good value with moderate rental costs (€800 for 7-night holiday lets), affordable supermarket shopping, and modest dining expenses. Monthly living costs for a couple might range €1,500-€2,500 depending on preferences, including utilities, food, transport, and entertainment. Healthcare costs are minimal for residents with Spanish health insurance. Jacarilla's inland location provides 40% savings versus coastal resorts, making it one of Costa Blanca's most economical options."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Yes, Costa Blanca, particularly Jacarilla, suits retirees exceptionally well. Benefits include excellent healthcare, affordable living, established retirement communities, pleasant year-round climate, and abundant leisure activities (golf, beaches, hiking). English is widely spoken, easing integration. Low property costs and rental income potential make it financially attractive. The established expat community provides ready-made social networks. Spain offers favorable tax treatments for some retirees. Jacarilla specifically combines peaceful living with convenient access to modern amenities."
-    },
-    {
-      "question": "How far is Costa Blanca from the UK?",
-      "answer": "Costa Blanca is approximately 1,100 kilometers from the UK, with flight times of 2-2.5 hours from London and other major airports. Alicante-Elche Airport, 50km from Jacarilla, offers extensive daily connections to UK cities including London, Manchester, Birmingham, and Glasgow. Budget airlines provide affordable regular services making UK visits convenient and affordable. Ferry options via France provide alternative transport for vehicles and those preferring driving."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Costa Blanca enjoys Mediterranean climate with over 300 days of sunshine annually. Summers are warm to hot (28-32°C), perfect for beach activities. Winters are mild (10-15°C) with occasional rain. Spring and autumn offer ideal temperatures (18-25°C) for outdoor pursuits. Rainfall is minimal, concentrated in autumn/spring. The consistent, predictable climate supports year-round living and activities. Jacarilla's inland location means slightly cooler summers and warmer winters compared to coastal areas, with excellent overall climate conditions."
-    },
-    {
-      "question": "Is Costa Blanca a good place to buy property?",
-      "answer": "Yes, Costa Blanca presents compelling property investment opportunities. The region combines desirable lifestyle amenities, strong rental income potential, and consistent capital appreciation. Jacarilla specifically offers exceptional value at €2,200/m² (40% cheaper than island markets) with +8% year-on-year growth. The established infrastructure, tourism appeal, and international demographic support sustained property demand. Both primary residences and investment purchases benefit from favorable economics. Professional legal and financial guidance ensures successful transactions."
-    },
-    {
-      "question": "How much are property taxes in Spain?",
-      "answer": "Spanish property taxes include: Annual property tax (IBI) of 0.4-1.1% of cadastral value (typically lower than market value), Capital gains tax on sale (19% if held under 1 year, declining to 5% after 30 years for Spanish residents), and Wealth tax (0.2-2.5% depending on region and property value). EU residents may benefit from more favorable capital gains treatment. Non-resident ownership carries additional considerations. Jacarilla's lower property values result in proportionally lower annual tax burdens compared to coastal properties."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
     }
-  ],
-  "slug": "jacarilla",
-  "town": "Jacarilla",
-  "propertyCount": 4,
-  "generatedAt": "2026-02-09T14:40:30.225Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Jacarilla a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. Jacarilla offers an exceptional quality of life combining authentic Spanish culture, established international community, competitive property prices, and strong investment returns. With English-speaking residents, excellent healthcare, and abundant leisure activities, it serves fam"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can purchase property in Spain with minimal restrictions. Non-EU citizens may require a Spanish tax identification number (NIE), but this is straightforward to obtain. EU citizens enjoy equal property rights to Spanish nationals. Most transactions proceed smoothly with proper legal r"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond purchase price, Spanish property acquisition involves several costs: transfer tax (6-10% depending on region), notary and registration fees (0.5-1%), and legal representation (0.5-1%). Total acquisition costs typically range 8-12% of purchase price. In Jacarilla, with €158,500-€495,000 proper"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Property purchase itself doesn't require a visa. However, residency intentions differ: EU/EEA citizens enjoy freedom of movement without special visas. Non-EU citizens may consider Spain's various visa options including the Digital Nomad Visa, Student Visa, or Retirement Visa (available from age 45-"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Costa Blanca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costa Blanca cost of living varies by location and lifestyle. Jacarilla offers particularly good value with moderate rental costs (€800 for 7-night holiday lets), affordable supermarket shopping, and modest dining expenses. Monthly living costs for a couple might range €1,500-€2,500 depending on pre"
+        }
+      }
+    ]
+  }
 }

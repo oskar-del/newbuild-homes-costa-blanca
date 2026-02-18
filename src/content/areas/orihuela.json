@@ -1,75 +1,63 @@
 {
-  "metaTitle": "Living in Orihuela 2026 | Complete Area Guide & Property",
-  "metaDescription": "Discover living in Orihuela: €299k-€1.25m properties, 40% cheaper than islands, established expat community, Blue Flag beaches within 20 minutes.",
-  "heroIntro": "Orihuela stands as one of Costa Blanca's most compelling inland destinations, offering authentic Spanish living combined with modern international amenities. This historic town, nestled in the heart of Alicante province, has emerged as a prime choice for property buyers seeking value, lifestyle, and genuine community. With properties ranging from €299,000 to €1,250,000, Orihuela delivers exceptional value—40% less expensive than Spanish island markets while maintaining excellent quality of life. The town attracts a diverse demographic: retirees seeking affordable Mediterranean living, families valuing excellent schools and safety, and investors recognizing strong rental potential with typical 7-night rentals reaching €800. The established international community ensures English is widely spoken, making transition seamless for British and European buyers. Orihuela combines old-world Spanish charm with modern convenience: Blue Flag beaches lie just 20 minutes away, championship golf courses dot the region, and a modern healthcare system serves residents. The +8% year-on-year market growth reflects increasing recognition of Orihuela as a smart property investment destination. Whether seeking primary residence, holiday home, or investment property, Orihuela offers compelling advantages backed by tangible market momentum and authentic Mediterranean lifestyle.",
-  "climate": "Orihuela enjoys a Mediterranean climate characterized by warm, dry summers and mild winters—perfect for year-round outdoor living. Summer temperatures typically reach 28-32°C (82-90°F), with coastal breezes moderating intensity, while winters remain pleasantly mild at 10-15°C (50-59°F). Rainfall concentrates in autumn and spring, with approximately 300 days of sunshine annually. The best time to experience Orihuela is April-June and September-October, when temperatures are ideal and crowds minimal. Even winter months attract visitors and residents seeking respite from northern European climates. The consistent weather patterns support an active outdoor lifestyle: beach days remain viable November through March, while gardening and outdoor activities flourish year-round. This climate stability particularly appeals to retirees and those with health sensitivities, as temperature extremes are rare. The dry, sunny conditions also contribute to property maintenance ease and reduced energy costs compared to cooler climates.",
-  "lifestyle": "Daily life in Orihuela seamlessly blends Spanish tradition with international convenience. Mornings often begin at local markets—vibrant, authentic experiences where vendors sell fresh produce, regional specialties, and seasonal delicacies. The established international community means English is commonly spoken in shops, restaurants, and social venues, easing daily interactions for newcomers. Afternoons frequently involve leisurely meals at family-run restaurants serving traditional paella, fresh seafood, and tapas alongside international cuisine options. Weekends typically include beach excursions to nearby Blue Flag beaches or rounds at championship golf courses scattered throughout the region. The town hosts regular fiestas and cultural events celebrating Spanish heritage, while English-language social clubs and international groups provide easy community connection. Shopping ranges from traditional markets to modern supermarkets offering both Spanish and familiar international products. The pace is distinctly Mediterranean—less frenetic than coastal resorts yet more developed than remote villages. Sports enthusiasts enjoy year-round activities: golf, water sports, hiking, and cycling. The expat community has created infrastructure making integration smooth: English-speaking services, international schools, and social networks facilitate genuine connections between newcomers and established residents.",
-  "amenities": {
+  "slug": "orihuela",
+  "name": "Orihuela",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/orihuela-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 8,
+  "propertyTypes": [
+    "Villa",
+    "Penthouse",
+    "Town House",
+    "Bungalow"
+  ],
+  "priceRange": {
+    "min": 299000,
+    "max": 1250000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Orihuela Tourism",
+      "url": "https://www.google.com/search?q=Orihuela%20Spain%20official%20website",
+      "description": "Discover more about Orihuela"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "55 km",
+      "driveTime": "40 min"
+    },
     "healthcare": {
-      "text": "Healthcare in Orihuela meets high international standards with comprehensive facilities serving both residents and tourists. A modern regional hospital operates within 30 minutes, equipped with emergency services, surgical facilities, and specialist departments. Multiple private clinics offer alternative options with shorter wait times and English-speaking doctors, accommodating international preferences. The healthcare system integrates Spanish efficiency with modern technology—many practitioners speak English fluently, essential for non-Spanish speakers. Prescription medications are affordable and widely available through pharmacies present throughout town. Health insurance for foreigners is straightforward and competitively priced, with many residents obtaining private coverage through international providers or Spanish providers. Dental services, physiotherapy, and specialist consultations are readily accessible and cost-effective compared to UK private care.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes with full emergency services",
-        "Private clinics with English-speaking doctors",
-        "Affordable prescription medications and pharmacies",
-        "International health insurance options available"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping in Orihuela caters to every preference and budget. Major supermarket chains including Mercadona, Lidl, and Consum provide familiar products, international foods, and Spanish staples at competitive prices. Traditional markets offer fresh produce, local cheeses, cured meats, and fish directly from vendors—an authentic Spanish experience and budget-friendly option. Modern shopping centers contain clothing, electronics, and homeware retailers. The town center maintains independent shops, bakeries, and specialty stores. For specific international products unavailable locally, nearby larger cities provide alternatives. Overall, shopping costs run considerably lower than UK equivalents, particularly for fresh produce and local products, contributing to affordable cost of living.",
-      "keyPoints": [
-        "Mercadona supermarket chain with extensive product range",
-        "Lidl offering budget-friendly European products",
-        "Consum Spanish supermarket with local specialties",
-        "Traditional Spanish markets with fresh produce and local goods"
-      ]
-    },
-    "education": {
-      "text": "Families relocating to Orihuela benefit from educational options combining Spanish and international curricula. International schools throughout the region offer British curriculum options, ensuring continuity for relocating families. These schools maintain high academic standards while fostering multicultural environments reflecting the international community. Spanish public schools provide free education to resident children, though language preparation may benefit younger students. International schools facilitate English-language instruction, familiar teaching methodologies, and international qualifications recognized globally. Teachers often include English-speaking expatriates and Spanish professionals educated abroad. Extracurricular activities emphasize sports, languages, and cultural integration, preparing students for global citizenship.",
-      "keyPoints": [
-        "International schools with British curriculum options",
-        "Spanish public schools offering free education",
-        "English-language instruction and qualified teachers",
-        "Multicultural school environment with global qualifications"
-      ]
-    },
-    "sports": {
-      "text": "Orihuela's sports and leisure facilities rival coastal resorts while maintaining calm, local atmosphere. Multiple Blue Flag beaches lie within 20 minutes, offering safe swimming, water sports, and beach clubs. Several championship golf courses nearby attract enthusiasts of all levels—from beginners enjoying scenic 9-hole courses to scratch golfers challenging championship layouts. Beyond traditional sports, residents enjoy hiking through Alicante countryside, cycling on dedicated routes, water sports including paddleboarding and kayaking, tennis clubs, and fitness facilities. The mild climate enables year-round participation in outdoor activities. Beach bars and clubs provide social venues combining refreshment with coastal ambiance. Golf clubs particularly attract the international community, offering facilities, social events, and competitions fostering connections among residents.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes drive",
-        "Several championship golf courses in the region",
-        "Water sports: paddleboarding, kayaking, swimming",
-        "Hiking and cycling trails through surrounding countryside"
-      ]
+      "name": "Hospital Vega Baja",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Vega%20Baja",
+      "distance": "2 km"
     }
   },
-  "transport": {
-    "overview": "Bus connections link Orihuela to surrounding towns and Alicante, providing public transport options. However, a car is recommended for flexibility, particularly accessing beaches, golf courses, and exploring the broader region. Driving is straightforward with well-maintained roads and logical signage.",
-    "airports": "Alicante-Elche Airport, Spain's 5th busiest, is approximately 50 kilometers south with regular flights to UK airports and European destinations. Valencia Airport, 120 kilometers north, offers additional flight options. Both facilitate easy international access.",
-    "driving": "Orihuela connects via well-maintained motorways to Alicante (45 minutes south), Valencia (2 hours north), and Murcia (1 hour west). Local roads access beaches, golf courses, and neighboring towns. The motorway system is modern and efficient, with reasonable tolls for frequent travelers.",
-    "public": "Regional bus services connect Orihuela to Alicante, coastal towns, and surrounding municipalities. Buses run regularly, though schedules vary seasonally. Train service links larger regional centers, though car travel remains more practical for daily use.",
-    "keyPoints": [
-      "Alicante-Elche Airport 50km away with extensive flight options",
-      "Modern motorway connections to Alicante, Valencia, and Murcia",
-      "Regional bus services to beaches and nearby towns",
-      "Car recommended for daily flexibility and exploring region"
-    ]
-  },
-  "propertyMarket": {
-    "overview": "Orihuela's property market demonstrates healthy growth with +8% year-on-year appreciation, reflecting increasing recognition as a value destination within Costa Blanca. The market attracts international buyers seeking affordable Mediterranean properties with strong rental potential. Supply remains stable with consistent inventory across property types, offering buyers genuine selection without artificial scarcity driving prices upward.",
-    "priceRange": "€299,000 - €1,250,000",
-    "popularTypes": "Villa, Penthouse, Town House, Bungalow",
-    "investment": "Rental potential remains strong: typical 7-night rentals average €800, supporting positive cash flow particularly during peak season. Capital appreciation at 8% annually exceeds many European markets. The 40% price discount versus Spanish island markets provides investors margin for growth as Orihuela's profile increases. Vacation rental platforms facilitate short-term letting, while long-term rentals serve the established expat community. Property prices at €2,200 per square meter represent exceptional value compared to Alicante city or coastal alternatives, while maintaining quality construction and modern amenities."
-  },
-  "neighborhoods": [
-    "Centro Histórico - The historic heart featuring traditional architecture, local restaurants, and authentic Spanish atmosphere near museums and cultural sites",
-    "Residencial Orihuela - Modern suburban area with contemporary villas and townhouses, international residents, quiet streets, and family-oriented environment",
-    "Dehesa - Established neighborhood combining Spanish families and international residents, good schools, shopping facilities, and balanced pricing",
-    "Orihuela Costa - Closer to beaches and golf courses, increasingly popular with property investors, modern developments, rental potential",
-    "San Bartolomé - Residential area popular with young families, proximity to international schools, parks, and community facilities",
-    "Sector Molino - Affordable area with good value properties, local atmosphere, improving infrastructure, and accessibility to main amenities"
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Orihuela 2026 | Complete Area Guide & Property",
+    "metaDescription": "Discover living in Orihuela: €299k-€1.25m properties, 40% cheaper than islands, established expat community, Blue Flag beaches within 20 minutes.",
+    "heroIntro": "Orihuela stands as one of Costa Blanca's most compelling inland destinations, offering authentic Spanish living combined with modern international amenities. This historic town, nestled in the heart of Alicante province, has emerged as a prime choice for property buyers seeking value, lifestyle, and genuine community. With properties ranging from €299,000 to €1,250,000, Orihuela delivers exceptional value—40% less expensive than Spanish island markets while maintaining excellent quality of life. The town attracts a diverse demographic: retirees seeking affordable Mediterranean living, families valuing excellent schools and safety, and investors recognizing strong rental potential with typical 7-night rentals reaching €800. The established international community ensures English is widely spoken, making transition seamless for British and European buyers. Orihuela combines old-world Spanish charm with modern convenience: Blue Flag beaches lie just 20 minutes away, championship golf courses dot the region, and a modern healthcare system serves residents. The +8% year-on-year market growth reflects increasing recognition of Orihuela as a smart property investment destination. Whether seeking primary residence, holiday home, or investment property, Orihuela offers compelling advantages backed by tangible market momentum and authentic Mediterranean lifestyle.",
+    "lifestyleSection": {
+      "intro": "Daily life in Orihuela seamlessly blends Spanish tradition with international convenience. Mornings often begin at local markets—vibrant, authentic experiences where vendors sell fresh produce, regional specialties, and seasonal delicacies. The established international community means English is commonly spoken in shops, restaurants, and social venues, easing daily interactions for newcomers. Afternoons frequently involve leisurely meals at family-run restaurants serving traditional paella, fresh seafood, and tapas alongside international cuisine options. Weekends typically include beach excursions to nearby Blue Flag beaches or rounds at championship golf courses scattered throughout the region. The town hosts regular fiestas and cultural events celebrating Spanish heritage, while English-language social clubs and international groups provide easy community connection. Shopping ranges from traditional markets to modern supermarkets offering both Spanish and familiar international products. The pace is distinctly Mediterranean—less frenetic than coastal resorts yet more developed than remote villages. Sports enthusiasts enjoy year-round activities: golf, water sports, hiking, and cycling. The expat community has created infrastructure making integration smooth: English-speaking services, international schools, and social networks facilitate genuine connections between newcomers and established residents.\n\nOrihuela enjoys a Mediterranean climate characterized by warm, dry summers and mild winters—perfect for year-round outdoor living. Summer temperatures typically reach 28-32°C (82-90°F), with coastal breezes moderating intensity, while winters remain pleasantly mild at 10-15°C (50-59°F). Rainfall concentrates in autumn and spring, with approximately 300 days of sunshine annually. The best time to experience Orihuela is April-June and September-October, when temperatures are ideal and crowds minimal. Even winter months attract visitors and residents seeking respite from northern European climates. The consistent weather patterns support an active outdoor lifestyle: beach days remain viable November through March, while gardening and outdoor activities flourish year-round. This climate stability particularly appeals to retirees and those with health sensitivities, as temperature extremes are rare. The dry, sunny conditions also contribute to property maintenance ease and reduced energy costs compared to cooler climates.",
+      "highlights": [
+        "Exceptional value: 40% cheaper than island markets with €2,200/m² average pricing",
+        "Strong market growth: +8% year-on-year appreciation indicates smart investment timing",
+        "Excellent lifestyle: Blue Flag beaches 20 minutes away, championship golf nearby, year-round sunshine",
+        "Established expat community: English widely spoken, international services, easy integration",
+        "Solid rental potential: €800 average 7-night rentals support investment returns",
+        "Complete amenities: Healthcare, international schools, supermarkets, restaurants all accessible"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Orihuela's sports and leisure facilities rival coastal resorts while maintaining calm, local atmosphere. Multiple Blue Flag beaches lie within 20 minutes, offering safe swimming, water sports, and beach clubs. Several championship golf courses nearby attract enthusiasts of all levels—from beginners enjoying scenic 9-hole courses to scratch golfers challenging championship layouts. Beyond traditional sports, residents enjoy hiking through Alicante countryside, cycling on dedicated routes, water sports including paddleboarding and kayaking, tennis clubs, and fitness facilities. The mild climate enables year-round participation in outdoor activities. Beach bars and clubs provide social venues combining refreshment with coastal ambiance. Golf clubs particularly attract the international community, offering facilities, social events, and competitions fostering connections among residents.",
+      "dining": "Orihuela offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping in Orihuela caters to every preference and budget. Major supermarket chains including Mercadona, Lidl, and Consum provide familiar products, international foods, and Spanish staples at competitive prices. Traditional markets offer fresh produce, local cheeses, cured meats, and fish directly from vendors—an authentic Spanish experience and budget-friendly option. Modern shopping centers contain clothing, electronics, and homeware retailers. The town center maintains independent shops, bakeries, and specialty stores. For specific international products unavailable locally, nearby larger cities provide alternatives. Overall, shopping costs run considerably lower than UK equivalents, particularly for fresh produce and local products, contributing to affordable cost of living.",
+      "healthcare": "Healthcare in Orihuela meets high international standards with comprehensive facilities serving both residents and tourists. A modern regional hospital operates within 30 minutes, equipped with emergency services, surgical facilities, and specialist departments. Multiple private clinics offer alternative options with shorter wait times and English-speaking doctors, accommodating international preferences. The healthcare system integrates Spanish efficiency with modern technology—many practitioners speak English fluently, essential for non-Spanish speakers. Prescription medications are affordable and widely available through pharmacies present throughout town. Health insurance for foreigners is straightforward and competitively priced, with many residents obtaining private coverage through international providers or Spanish providers. Dental services, physiotherapy, and specialist consultations are readily accessible and cost-effective compared to UK private care.",
+      "transport": "Bus connections link Orihuela to surrounding towns and Alicante, providing public transport options. However, a car is recommended for flexibility, particularly accessing beaches, golf courses, and exploring the broader region. Driving is straightforward with well-maintained roads and logical signage. Alicante-Elche Airport, Spain's 5th busiest, is approximately 50 kilometers south with regular flights to UK airports and European destinations. Valencia Airport, 120 kilometers north, offers additional flight options. Both facilitate easy international access. Orihuela connects via well-maintained motorways to Alicante (45 minutes south), Valencia (2 hours north), and Murcia (1 hour west). Local roads access beaches, golf courses, and neighboring towns. The motorway system is modern and efficient, with reasonable tolls for frequent travelers. Regional bus services connect Orihuela to Alicante, coastal towns, and surrounding municipalities. Buses run regularly, though schedules vary seasonally. Train service links larger regional centers, though car travel remains more practical for daily use."
+    },
+    "propertyMarketSection": "Orihuela's property market demonstrates healthy growth with +8% year-on-year appreciation, reflecting increasing recognition as a value destination within Costa Blanca. The market attracts international buyers seeking affordable Mediterranean properties with strong rental potential. Supply remains stable with consistent inventory across property types, offering buyers genuine selection without artificial scarcity driving prices upward.\n\nPopular property types include Villa, Penthouse, Town House, Bungalow.\n\nRental potential remains strong: typical 7-night rentals average €800, supporting positive cash flow particularly during peak season. Capital appreciation at 8% annually exceeds many European markets. The 40% price discount versus Spanish island markets provides investors margin for growth as Orihuela's profile increases. Vacation rental platforms facilitate short-term letting, while long-term rentals serve the established expat community. Property prices at €2,200 per square meter represent exceptional value compared to Alicante city or coastal alternatives, while maintaining quality construction and modern amenities.",
+    "whyLiveHereSection": [
       "Exceptional value: 40% cheaper than island markets with €2,200/m² average pricing",
       "Strong market growth: +8% year-on-year appreciation indicates smart investment timing",
       "Excellent lifestyle: Blue Flag beaches 20 minutes away, championship golf nearby, year-round sunshine",
@@ -77,56 +65,327 @@
       "Solid rental potential: €800 average 7-night rentals support investment returns",
       "Complete amenities: Healthcare, international schools, supermarkets, restaurants all accessible"
     ],
-    "cons": [
-      "Car dependency: While buses exist, personal vehicle recommended for flexibility and beach/golf access",
-      "Language barrier: Spanish proficiency helpful despite English-speaking community for full integration",
-      "Summer heat: July-August temperatures reach 30°C+ with associated air conditioning costs"
-    ]
+    "faqs": [
+      {
+        "question": "Is Orihuela a good place to live?",
+        "answer": "Yes, absolutely. Orihuela offers exceptional value (40% cheaper than Spanish islands), authentic Mediterranean lifestyle, established international community with English widely spoken, excellent healthcare and education, and proximity to beaches and golf. The +8% annual market growth reflects increasing recognition of Orihuela's quality of life and investment potential."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can freely purchase property in Spain without residence requirements or restrictions. Non-residents must obtain a Spanish tax identification number (NIE) before purchase. The process is straightforward through local notaries who handle transfers. Many international buyers in Orihuela successfully navigate purchases without complications."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Beyond purchase price, expect additional costs: 6-8% transfer tax (varies by region), 1-2% notary fees, property registration fees around 0.1% of purchase price, and optional lawyer fees. In Orihuela, a €400,000 property might incur €30,000-€35,000 in additional costs. These costs are lower than UK purchases and transparent, clearly itemized during transactions."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "No visa is required specifically to purchase property in Spain. Non-EU citizens buying property don't need residence permits for the purchase itself. However, if planning to reside in Spain, visa requirements apply based on nationality and intended duration. UK citizens may require visas for stays exceeding 90 days. Consult Spanish embassy guidance for your specific circumstances."
+      },
+      {
+        "question": "How much are property taxes in Spain?",
+        "answer": "Annual property tax (IBI) averages 0.4-1.1% of property value in Alicante province, considerably lower than UK council tax. Transfer tax at purchase is 6-8%. Spanish residents also pay income tax on rental income if letting properties, though rates are competitive. Orihuela residents report significantly lower annual property costs compared to UK equivalents."
+      },
+      {
+        "question": "Can I get a mortgage in Spain as a foreigner?",
+        "answer": "Yes, foreign buyers can obtain Spanish mortgages through Spanish banks, though many opt for UK mortgages if eligible. Spanish mortgages typically require 30% deposit, proof of income, and NIE number. Interest rates remain competitive. Many international property buyers in Orihuela successfully secure mortgages or choose cash purchases leveraging lower property prices."
+      },
+      {
+        "question": "What is the cost of living in Costa Blanca?",
+        "answer": "Costa Blanca offers exceptional value compared to northern Europe. Orihuela particularly stands out at 40% cheaper than island markets. Monthly costs for one person average €1,200-€1,600 including accommodation, utilities, food, and transport. Retirees report comfortable living on €1,500-€2,000 monthly. Dining out remains affordable, supermarket shopping budget-friendly, and utilities reasonable year-round."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Excellent choice for retirees. Costa Blanca offers affordable living (40% cheaper than islands), excellent healthcare with English-speaking doctors, warm climate reducing heating costs, active social communities, and vibrant lifestyle. Orihuela specifically attracts retirees seeking authenticity beyond resort areas. Established expat networks facilitate friendship-building and community integration."
+      },
+      {
+        "question": "How far is Costa Blanca from the UK?",
+        "answer": "Alicante Airport, 50km from Orihuela, offers direct flights to UK airports (London, Manchester, Birmingham) with journey times of 2-2.5 hours flight time. Total travel typically requires 4-5 hours door-to-door. Budget airlines maintain frequent routes at competitive prices, making UK visits convenient and affordable for residents."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Mediterranean climate with 300+ annual sunshine days. Summers (June-September) reach 28-32°C with low humidity and coastal breezes. Winters (December-February) average 10-15°C—pleasantly mild compared to northern Europe. Spring and autumn offer perfect temperatures (20-25°C). Rainfall concentrates in autumn/spring; summers remain reliably dry. Overall, weather supports active year-round outdoor lifestyle."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Orihuela? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Rental potential remains strong: typical 7-night rentals average €800, supporting positive cash flow particularly during peak season. Capital appreciation at 8% annually exceeds many European markets. The 40% price discount versus Spanish island markets provides investors margin for growth as Orihuela's profile increases. Vacation rental platforms facilitate short-term letting, while long-term rentals serve the established expat community. Property prices at €2,200 per square meter represent exceptional value compared to Alicante city or coastal alternatives, while maintaining quality construction and modern amenities.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Orihuela are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Orihuela offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Orihuela celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Orihuela have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "20-35 min",
+          "description": "British curriculum school with excellent facilities and strong academic record serving the expat community"
+        },
+        {
+          "name": "Newton College",
+          "type": "International (British/Spanish)",
+          "distance": "25-40 min",
+          "description": "Bilingual international school offering both British and Spanish curricula with modern facilities"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Orihuela offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Orihuela has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Orihuela",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.9442!3d38.0856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Orihuela a good place to live?",
-      "answer": "Yes, absolutely. Orihuela offers exceptional value (40% cheaper than Spanish islands), authentic Mediterranean lifestyle, established international community with English widely spoken, excellent healthcare and education, and proximity to beaches and golf. The +8% annual market growth reflects increasing recognition of Orihuela's quality of life and investment potential."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Orihuela",
+    "description": "Orihuela is a  municipality in Costa Blanca South, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.0856",
+      "longitude": "-0.9442"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can freely purchase property in Spain without residence requirements or restrictions. Non-residents must obtain a Spanish tax identification number (NIE) before purchase. The process is straightforward through local notaries who handle transfers. Many international buyers in Orihuela successfully navigate purchases without complications."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Orihuela",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Beyond purchase price, expect additional costs: 6-8% transfer tax (varies by region), 1-2% notary fees, property registration fees around 0.1% of purchase price, and optional lawyer fees. In Orihuela, a €400,000 property might incur €30,000-€35,000 in additional costs. These costs are lower than UK purchases and transparent, clearly itemized during transactions."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "No visa is required specifically to purchase property in Spain. Non-EU citizens buying property don't need residence permits for the purchase itself. However, if planning to reside in Spain, visa requirements apply based on nationality and intended duration. UK citizens may require visas for stays exceeding 90 days. Consult Spanish embassy guidance for your specific circumstances."
-    },
-    {
-      "question": "How much are property taxes in Spain?",
-      "answer": "Annual property tax (IBI) averages 0.4-1.1% of property value in Alicante province, considerably lower than UK council tax. Transfer tax at purchase is 6-8%. Spanish residents also pay income tax on rental income if letting properties, though rates are competitive. Orihuela residents report significantly lower annual property costs compared to UK equivalents."
-    },
-    {
-      "question": "Can I get a mortgage in Spain as a foreigner?",
-      "answer": "Yes, foreign buyers can obtain Spanish mortgages through Spanish banks, though many opt for UK mortgages if eligible. Spanish mortgages typically require 30% deposit, proof of income, and NIE number. Interest rates remain competitive. Many international property buyers in Orihuela successfully secure mortgages or choose cash purchases leveraging lower property prices."
-    },
-    {
-      "question": "What is the cost of living in Costa Blanca?",
-      "answer": "Costa Blanca offers exceptional value compared to northern Europe. Orihuela particularly stands out at 40% cheaper than island markets. Monthly costs for one person average €1,200-€1,600 including accommodation, utilities, food, and transport. Retirees report comfortable living on €1,500-€2,000 monthly. Dining out remains affordable, supermarket shopping budget-friendly, and utilities reasonable year-round."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Excellent choice for retirees. Costa Blanca offers affordable living (40% cheaper than islands), excellent healthcare with English-speaking doctors, warm climate reducing heating costs, active social communities, and vibrant lifestyle. Orihuela specifically attracts retirees seeking authenticity beyond resort areas. Established expat networks facilitate friendship-building and community integration."
-    },
-    {
-      "question": "How far is Costa Blanca from the UK?",
-      "answer": "Alicante Airport, 50km from Orihuela, offers direct flights to UK airports (London, Manchester, Birmingham) with journey times of 2-2.5 hours flight time. Total travel typically requires 4-5 hours door-to-door. Budget airlines maintain frequent routes at competitive prices, making UK visits convenient and affordable for residents."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Mediterranean climate with 300+ annual sunshine days. Summers (June-September) reach 28-32°C with low humidity and coastal breezes. Winters (December-February) average 10-15°C—pleasantly mild compared to northern Europe. Spring and autumn offer perfect temperatures (20-25°C). Rainfall concentrates in autumn/spring; summers remain reliably dry. Overall, weather supports active year-round outdoor lifestyle."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
     }
-  ],
-  "slug": "orihuela",
-  "town": "Orihuela",
-  "propertyCount": 8,
-  "generatedAt": "2026-02-09T14:37:28.779Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Orihuela a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. Orihuela offers exceptional value (40% cheaper than Spanish islands), authentic Mediterranean lifestyle, established international community with English widely spoken, excellent healthcare and education, and proximity to beaches and golf. The +8% annual market growth reflects incre"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can freely purchase property in Spain without residence requirements or restrictions. Non-residents must obtain a Spanish tax identification number (NIE) before purchase. The process is straightforward through local notaries who handle transfers. Many international buyers in Orihuela"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond purchase price, expect additional costs: 6-8% transfer tax (varies by region), 1-2% notary fees, property registration fees around 0.1% of purchase price, and optional lawyer fees. In Orihuela, a €400,000 property might incur €30,000-€35,000 in additional costs. These costs are lower than UK "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No visa is required specifically to purchase property in Spain. Non-EU citizens buying property don't need residence permits for the purchase itself. However, if planning to reside in Spain, visa requirements apply based on nationality and intended duration. UK citizens may require visas for stays e"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much are property taxes in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Annual property tax (IBI) averages 0.4-1.1% of property value in Alicante province, considerably lower than UK council tax. Transfer tax at purchase is 6-8%. Spanish residents also pay income tax on rental income if letting properties, though rates are competitive. Orihuela residents report signific"
+        }
+      }
+    ]
+  }
 }

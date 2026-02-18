@@ -1,81 +1,380 @@
 {
-  "metaTitle": "Gata de Gorgos Costa Blanca: Living Guide & Property Market",
-  "metaDescription": "Discover Gata de Gorgos on Costa Blanca. Explore this charming hilltop village with stunning Mediterranean views, vibrant expat community, and properties from €259,999.",
-  "heroIntro": "Perched dramatically on a hilltop in the Alicante province, Gata de Gorgos is a picturesque whitewashed village that captures the authentic essence of Costa Blanca living. This charming settlement has evolved into a thriving destination for international buyers seeking genuine Spanish character combined with modern amenities and excellent infrastructure. The village's elevated position offers breathtaking panoramic views across the Mediterranean landscape, terraced countryside, and towards the coastal towns that have made Costa Blanca famous worldwide.\n\nWith a welcoming international community and a perfect balance between traditional Mediterranean culture and contemporary convenience, Gata de Gorgos appeals to buyers seeking something beyond typical coastal developments. The village maintains its historic charm with narrow cobbled streets, traditional architecture, and local gastronomy while offering modern healthcare, shopping facilities, and recreational opportunities that expat residents have come to expect.\n\nThe current property market presents compelling opportunities for investors and homebuyers, with new build options ranging from €259,999 to €400,000. Whether you're seeking a town house in the village center, a villa with sweeping views, or land for a custom project, Gata de Gorgos combines lifestyle aspirations with genuine investment potential in one of Spain's most desirable regions.",
-  "climate": "Gata de Gorgos enjoys a quintessential Mediterranean climate characterized by approximately 300 days of sunshine annually. Winters are mild with average temperatures between 12-18°C, while summers are warm and typically reach 28-32°C. The village's elevated position provides natural cooling breezes that make even the warmest months comfortable. Rainfall is moderate and concentrated primarily in autumn and spring, with summer months being predominantly dry. This climate is ideal for outdoor living and supports the region's agricultural traditions of orange groves, almond trees, and vineyards that surround the village.",
-  "lifestyle": "Daily life in Gata de Gorgos centers around a genuine community atmosphere where both Spanish residents and international inhabitants coexist harmoniously. The village hosts several weekly markets, traditional fiestas throughout the year, and maintains a lively social calendar that includes art exhibitions, cultural events, and gastronomic celebrations. The expat community is well-established and welcoming, with numerous social clubs, hobby groups, and support networks that facilitate integration while celebrating diverse international backgrounds.\n\nThe pace of life is deliberately slower than coastal areas, encouraging residents to embrace Mediterranean traditions of leisurely meals, afternoon paseos, and community gatherings. The village has developed excellent restaurants and tapas bars serving both traditional Spanish cuisine and international food options, creating a vibrant culinary scene. Local artisans, craft shops, and galleries reflect the village's creative spirit, while the proximity to larger towns ensures that modern shopping, cinema facilities, and entertainment options remain readily accessible.",
-  "amenities": {
-    "healthcare": "Gata de Gorgos is served by a modern medical center with general practitioners, nursing staff, and diagnostic facilities. For specialized treatments and emergency services, the Hospital Marina Baixa in Villajoyosa (approximately 15km away) is a modern regional hospital with comprehensive facilities. Dental clinics and physiotherapy services are available within the village, and the proximity to Benidorm provides access to private hospitals and specialized medical centers.",
-    "shopping": "The village center features a Carrefour Express supermarket, traditional Spanish shops, bakeries, and butchers offering fresh local produce daily. Weekly markets provide fresh fruits, vegetables, and local products at excellent prices. For extensive shopping, the nearby towns of Pego (8km) and Ondara (5km) offer additional retail options. Major shopping centers including Marinas shopping mall and La Marina shopping center are accessible within 20-30 minutes drive.",
-    "dining": "Gata de Gorgos has experienced a culinary renaissance with restaurants serving Mediterranean cuisine, international dishes, and traditional Spanish fare. Local establishments include traditional tapas bars, family-run restaurants serving paella and seafood specialties, and contemporary cuisine venues. The village's agricultural heritage supports farm-to-table dining experiences featuring locally grown oranges, vegetables, and regional wines. Nearby Pego offers additional dining diversity including Indian, Italian, and Asian fusion restaurants.",
-    "sports": "The village offers excellent opportunities for active pursuits including hiking through scenic surrounding countryside, cycling through vineyard routes, and water sports at nearby beaches. Tennis courts and fitness facilities are available locally. The nearest golf courses include Ifach Golf Club in Calpe (25km) and La Sella Golf Resort in Dénia (22km). Beaches at Playa de Bol Nou (8km) and Playa Paraíso (12km) provide swimming, kayaking, and water sports opportunities."
-  },
-  "transport": {
-    "airports": "Alicante-Elche Airport (ALC), Spain's third-busiest airport, is approximately 80km south and provides international connections to major European cities with approximately 90-minute drive time. Valencia Airport (VLC) is 120km north, offering alternative flight options. These distances make the region easily accessible for international residents and visitors.",
-    "driving": "Gata de Gorgos benefits from excellent road infrastructure with the A-7 motorway running parallel to the coast approximately 15km away, providing rapid connections to Alicante, Valencia, and Murcia. The N-332 national road passes near the village, linking coastal towns. Local roads are well-maintained, and driving to nearby amenities in Pego, Ondara, and Benidorm is straightforward. The village's elevated position provides scenic driving routes through agricultural lands and mountain passes.",
-    "public": "Regular bus services connect Gata de Gorgos to surrounding towns including Pego, Ondara, Benidorm, and Alicante through local and regional operators. The Renfe train station in Benidorm (approximately 20km) provides connections to major cities. While public transport is reliable for main destinations, a personal vehicle is recommended for maximum flexibility and exploration of the surrounding countryside."
-  },
-  "propertyMarket": {
-    "overview": "The Gata de Gorgos property market demonstrates healthy demand from European buyers seeking authentic village living with investment potential. The market offers excellent value compared to coastal alternatives while providing strong rental opportunities through international tourism and short-term lettings. New build developments reflect modern construction standards with energy-efficient designs, contemporary amenities, and traditional architectural aesthetics that complement the village character.",
-    "priceRange": "€259,999 - €400,000",
-    "popularTypes": "Town house, Land, Villa",
-    "investment": "Gata de Gorgos presents compelling investment opportunities with strong rental yield potential, particularly through short-term tourism lettings and long-term residential rental markets. New build properties typically command premium rental rates due to modern facilities and quality finishes. The village's increasing popularity and improving infrastructure support property appreciation. Purchase-to-rent ratios are favorable compared to coastal areas, while the international appeal ensures consistent tenant interest. Properties in the village center generate higher returns through tourist lettings, while villa properties with private pools attract long-term residential tenants seeking family accommodation."
-  },
-  "neighborhoods": [
-    "Historic Village Center - Characterized by traditional whitewashed buildings, narrow cobbled streets, and the main square with restaurants and bars. Offers authentic Spanish village atmosphere with walkable access to amenities.",
-    "Urbanización Cumbre del Sol - Established residential area with villas offering panoramic Mediterranean views, developed infrastructure, and community facilities. Popular with families seeking suburban setting within short distance of village center.",
-    "El Bol Nou Area - Newer development zone combining modern housing with proximity to agricultural landscape. Offers contemporary living with easy access to countryside activities.",
-    "Upper Village Properties - Elevated positions throughout village offering dramatic vistas, quieter atmosphere, and impressive sunset views. Often feature terraced gardens and private outdoor spaces."
+  "slug": "gata-de-gorgos",
+  "name": "Gata de Gorgos",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/gata-de-gorgos-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 3,
+  "propertyTypes": [
+    "Town house",
+    "Land",
+    "Villa"
   ],
-  "prosAndCons": {
-    "pros": [
+  "priceRange": {
+    "min": 259999,
+    "max": 400000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Gata de Gorgos Tourism",
+      "url": "https://www.google.com/search?q=Gata%20de%20Gorgos%20Spain%20official%20website",
+      "description": "Discover more about Gata de Gorgos"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "85 km",
+      "driveTime": "55 min"
+    },
+    "healthcare": {
+      "name": "Hospital de Dénia",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20de%20D%C3%A9nia",
+      "distance": "12 km"
+    }
+  },
+  "content": {
+    "metaTitle": "Gata de Gorgos Costa Blanca: Living Guide & Property Market",
+    "metaDescription": "Discover Gata de Gorgos on Costa Blanca. Explore this charming hilltop village with stunning Mediterranean views, vibrant expat community, and properties from €259,999.",
+    "heroIntro": "Perched dramatically on a hilltop in the Alicante province, Gata de Gorgos is a picturesque whitewashed village that captures the authentic essence of Costa Blanca living. This charming settlement has evolved into a thriving destination for international buyers seeking genuine Spanish character combined with modern amenities and excellent infrastructure. The village's elevated position offers breathtaking panoramic views across the Mediterranean landscape, terraced countryside, and towards the coastal towns that have made Costa Blanca famous worldwide.\n\nWith a welcoming international community and a perfect balance between traditional Mediterranean culture and contemporary convenience, Gata de Gorgos appeals to buyers seeking something beyond typical coastal developments. The village maintains its historic charm with narrow cobbled streets, traditional architecture, and local gastronomy while offering modern healthcare, shopping facilities, and recreational opportunities that expat residents have come to expect.\n\nThe current property market presents compelling opportunities for investors and homebuyers, with new build options ranging from €259,999 to €400,000. Whether you're seeking a town house in the village center, a villa with sweeping views, or land for a custom project, Gata de Gorgos combines lifestyle aspirations with genuine investment potential in one of Spain's most desirable regions.",
+    "lifestyleSection": {
+      "intro": "Daily life in Gata de Gorgos centers around a genuine community atmosphere where both Spanish residents and international inhabitants coexist harmoniously. The village hosts several weekly markets, traditional fiestas throughout the year, and maintains a lively social calendar that includes art exhibitions, cultural events, and gastronomic celebrations. The expat community is well-established and welcoming, with numerous social clubs, hobby groups, and support networks that facilitate integration while celebrating diverse international backgrounds.\n\nThe pace of life is deliberately slower than coastal areas, encouraging residents to embrace Mediterranean traditions of leisurely meals, afternoon paseos, and community gatherings. The village has developed excellent restaurants and tapas bars serving both traditional Spanish cuisine and international food options, creating a vibrant culinary scene. Local artisans, craft shops, and galleries reflect the village's creative spirit, while the proximity to larger towns ensures that modern shopping, cinema facilities, and entertainment options remain readily accessible.\n\nGata de Gorgos enjoys a quintessential Mediterranean climate characterized by approximately 300 days of sunshine annually. Winters are mild with average temperatures between 12-18°C, while summers are warm and typically reach 28-32°C. The village's elevated position provides natural cooling breezes that make even the warmest months comfortable. Rainfall is moderate and concentrated primarily in autumn and spring, with summer months being predominantly dry. This climate is ideal for outdoor living and supports the region's agricultural traditions of orange groves, almond trees, and vineyards that surround the village.",
+      "highlights": [
+        "Authentic Spanish village character with genuine local community and minimal mass tourism development",
+        "Exceptional value for money with new build properties offering modern quality at accessible price points compared to coastal alternatives",
+        "Dramatic hilltop setting providing stunning panoramic Mediterranean views and natural cooling breezes throughout warmer months",
+        "Strong rental investment potential through both tourist lettings and long-term residential market with healthy yield returns",
+        "Excellent infrastructure including healthcare, shopping, and dining amenities while maintaining traditional village atmosphere"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "The village offers excellent opportunities for active pursuits including hiking through scenic surrounding countryside, cycling through vineyard routes, and water sports at nearby beaches. Tennis courts and fitness facilities are available locally. The nearest golf courses include Ifach Golf Club in Calpe (25km) and La Sella Golf Resort in Dénia (22km). Beaches at Playa de Bol Nou (8km) and Playa Paraíso (12km) provide swimming, kayaking, and water sports opportunities.",
+      "dining": "Gata de Gorgos has experienced a culinary renaissance with restaurants serving Mediterranean cuisine, international dishes, and traditional Spanish fare. Local establishments include traditional tapas bars, family-run restaurants serving paella and seafood specialties, and contemporary cuisine venues. The village's agricultural heritage supports farm-to-table dining experiences featuring locally grown oranges, vegetables, and regional wines. Nearby Pego offers additional dining diversity including Indian, Italian, and Asian fusion restaurants.",
+      "shopping": "The village center features a Carrefour Express supermarket, traditional Spanish shops, bakeries, and butchers offering fresh local produce daily. Weekly markets provide fresh fruits, vegetables, and local products at excellent prices. For extensive shopping, the nearby towns of Pego (8km) and Ondara (5km) offer additional retail options. Major shopping centers including Marinas shopping mall and La Marina shopping center are accessible within 20-30 minutes drive.",
+      "healthcare": "Gata de Gorgos is served by a modern medical center with general practitioners, nursing staff, and diagnostic facilities. For specialized treatments and emergency services, the Hospital Marina Baixa in Villajoyosa (approximately 15km away) is a modern regional hospital with comprehensive facilities. Dental clinics and physiotherapy services are available within the village, and the proximity to Benidorm provides access to private hospitals and specialized medical centers.",
+      "transport": "Alicante-Elche Airport (ALC), Spain's third-busiest airport, is approximately 80km south and provides international connections to major European cities with approximately 90-minute drive time. Valencia Airport (VLC) is 120km north, offering alternative flight options. These distances make the region easily accessible for international residents and visitors. Gata de Gorgos benefits from excellent road infrastructure with the A-7 motorway running parallel to the coast approximately 15km away, providing rapid connections to Alicante, Valencia, and Murcia. The N-332 national road passes near the village, linking coastal towns. Local roads are well-maintained, and driving to nearby amenities in Pego, Ondara, and Benidorm is straightforward. The village's elevated position provides scenic driving routes through agricultural lands and mountain passes. Regular bus services connect Gata de Gorgos to surrounding towns including Pego, Ondara, Benidorm, and Alicante through local and regional operators. The Renfe train station in Benidorm (approximately 20km) provides connections to major cities. While public transport is reliable for main destinations, a personal vehicle is recommended for maximum flexibility and exploration of the surrounding countryside."
+    },
+    "propertyMarketSection": "The Gata de Gorgos property market demonstrates healthy demand from European buyers seeking authentic village living with investment potential. The market offers excellent value compared to coastal alternatives while providing strong rental opportunities through international tourism and short-term lettings. New build developments reflect modern construction standards with energy-efficient designs, contemporary amenities, and traditional architectural aesthetics that complement the village character.\n\nPopular property types include Town house, Land, Villa.\n\nGata de Gorgos presents compelling investment opportunities with strong rental yield potential, particularly through short-term tourism lettings and long-term residential rental markets. New build properties typically command premium rental rates due to modern facilities and quality finishes. The village's increasing popularity and improving infrastructure support property appreciation. Purchase-to-rent ratios are favorable compared to coastal areas, while the international appeal ensures consistent tenant interest. Properties in the village center generate higher returns through tourist lettings, while villa properties with private pools attract long-term residential tenants seeking family accommodation.",
+    "whyLiveHereSection": [
       "Authentic Spanish village character with genuine local community and minimal mass tourism development",
       "Exceptional value for money with new build properties offering modern quality at accessible price points compared to coastal alternatives",
       "Dramatic hilltop setting providing stunning panoramic Mediterranean views and natural cooling breezes throughout warmer months",
       "Strong rental investment potential through both tourist lettings and long-term residential market with healthy yield returns",
       "Excellent infrastructure including healthcare, shopping, and dining amenities while maintaining traditional village atmosphere"
     ],
-    "cons": [
-      "Hillside location with narrow streets and steep gradients may present challenges for mobility-limited individuals and parking in village center requires adaptation",
-      "Dependence on personal vehicle for maximum flexibility, as public transport serves main routes only and rural exploration requires car access"
-    ]
+    "faqs": [
+      {
+        "question": "Is Gata de Gorgos suitable for year-round living?",
+        "answer": "Absolutely. With over 300 days of sunshine and mild winters averaging 12-18°C, the village is ideal for year-round residence. The elevated position provides natural ventilation and cooling breezes. Modern properties include heating systems for the occasional cool winter days. Many residents enjoy outdoor activities throughout the year, though summer months (July-August) can be warm."
+      },
+      {
+        "question": "What is the expat community like in Gata de Gorgos?",
+        "answer": "The expat community is well-established and welcoming, representing nationalities including British, German, Dutch, Scandinavian, and many others. Social clubs, hobby groups, and organized events facilitate integration and friendship. Spanish residents are typically friendly and accommodating toward international neighbors. The village's size ensures personal connections while maintaining anonymity if preferred."
+      },
+      {
+        "question": "What are the property investment returns in Gata de Gorgos?",
+        "answer": "Rental yields typically range from 5-8% for long-term residential lettings and can exceed 8% through tourist holiday lettings during peak seasons. Properties in the village center and those with pools/outdoor amenities command premium rates. Purchase-to-rent ratios are favorable compared to coastal developments, supporting consistent investment returns while appreciating property values."
+      },
+      {
+        "question": "How close is Gata de Gorgos to beaches?",
+        "answer": "Several beaches are within short driving distance: Playa de Bol Nou (8km), Playa Paraíso (12km), Playa del Torres (14km), and the popular resort town of Benidorm (18km) offers multiple beach options. The 15-20 minute drive times make beach days convenient while maintaining village living benefits."
+      },
+      {
+        "question": "What are the main shopping and dining options?",
+        "answer": "The village center features supermarkets, bakeries, butchers, and traditional Spanish shops. Weekly markets provide fresh produce at excellent prices. Restaurants range from traditional tapas bars to contemporary Mediterranean cuisine establishments. Nearby Pego (8km) and Ondara (5km) offer expanded retail and dining options, while larger shopping centers are accessible within 20-30 minutes."
+      },
+      {
+        "question": "Is it easy to access Alicante Airport from Gata de Gorgos?",
+        "answer": "Yes, Alicante-Elche Airport is approximately 80km south with approximately 90-minute drive time via the A-7 motorway and N-332 national road. The journey is straightforward on well-maintained highways. Valencia Airport (120km north) provides an alternative option. Many residents arrange airport transfers or car rental services for convenience."
+      },
+      {
+        "question": "What are the property taxes and annual costs of ownership?",
+        "answer": "Spanish property ownership involves IBI (annual property tax, typically 0.4-1.1% of cadastral value), community fees for new builds (€100-300 annually), and utilities (€100-200 monthly depending on season and property size). Annual costs are generally modest, making property ownership financially sustainable. Legal requirements include registration in the Spanish property registry and obtaining a Spanish tax identification number."
+      },
+      {
+        "question": "Can I rent out my property when not occupying it?",
+        "answer": "Yes, rental opportunities are excellent. Short-term tourist lettings through platforms like Airbnb generate strong returns during peak seasons. Long-term residential rentals provide stable income. Properties should be legally registered as rental properties with Spanish tax authorities. Professional property management companies handle bookings, cleaning, and guest services for owners preferring hands-off investment approaches."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Gata de Gorgos? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Gata de Gorgos presents compelling investment opportunities with strong rental yield potential, particularly through short-term tourism lettings and long-term residential rental markets. New build properties typically command premium rental rates due to modern facilities and quality finishes. The village's increasing popularity and improving infrastructure support property appreciation. Purchase-to-rent ratios are favorable compared to coastal areas, while the international appeal ensures consistent tenant interest. Properties in the village center generate higher returns through tourist lettings, while villa properties with private pools attract long-term residential tenants seeking family accommodation.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Gata de Gorgos are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Gata de Gorgos offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Gata de Gorgos celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Gata de Gorgos have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school with GCSE and A-Level programmes, excellent facilities and strong academic results"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "British and IB curriculum with outstanding facilities, sports programmes, and multilingual education"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Gata de Gorgos offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Gata de Gorgos has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Diverse European community including British, Scandinavian, Dutch, German, and French residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Gata de Gorgos",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d0.0817!3d38.7733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Gata de Gorgos suitable for year-round living?",
-      "answer": "Absolutely. With over 300 days of sunshine and mild winters averaging 12-18°C, the village is ideal for year-round residence. The elevated position provides natural ventilation and cooling breezes. Modern properties include heating systems for the occasional cool winter days. Many residents enjoy outdoor activities throughout the year, though summer months (July-August) can be warm."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Gata de Gorgos",
+    "description": "Gata de Gorgos is a inland municipality in Costa Blanca North, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.7733",
+      "longitude": "0.0817"
     },
-    {
-      "question": "What is the expat community like in Gata de Gorgos?",
-      "answer": "The expat community is well-established and welcoming, representing nationalities including British, German, Dutch, Scandinavian, and many others. Social clubs, hobby groups, and organized events facilitate integration and friendship. Spanish residents are typically friendly and accommodating toward international neighbors. The village's size ensures personal connections while maintaining anonymity if preferred."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Gata de Gorgos",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What are the property investment returns in Gata de Gorgos?",
-      "answer": "Rental yields typically range from 5-8% for long-term residential lettings and can exceed 8% through tourist holiday lettings during peak seasons. Properties in the village center and those with pools/outdoor amenities command premium rates. Purchase-to-rent ratios are favorable compared to coastal developments, supporting consistent investment returns while appreciating property values."
-    },
-    {
-      "question": "How close is Gata de Gorgos to beaches?",
-      "answer": "Several beaches are within short driving distance: Playa de Bol Nou (8km), Playa Paraíso (12km), Playa del Torres (14km), and the popular resort town of Benidorm (18km) offers multiple beach options. The 15-20 minute drive times make beach days convenient while maintaining village living benefits."
-    },
-    {
-      "question": "What are the main shopping and dining options?",
-      "answer": "The village center features supermarkets, bakeries, butchers, and traditional Spanish shops. Weekly markets provide fresh produce at excellent prices. Restaurants range from traditional tapas bars to contemporary Mediterranean cuisine establishments. Nearby Pego (8km) and Ondara (5km) offer expanded retail and dining options, while larger shopping centers are accessible within 20-30 minutes."
-    },
-    {
-      "question": "Is it easy to access Alicante Airport from Gata de Gorgos?",
-      "answer": "Yes, Alicante-Elche Airport is approximately 80km south with approximately 90-minute drive time via the A-7 motorway and N-332 national road. The journey is straightforward on well-maintained highways. Valencia Airport (120km north) provides an alternative option. Many residents arrange airport transfers or car rental services for convenience."
-    },
-    {
-      "question": "What are the property taxes and annual costs of ownership?",
-      "answer": "Spanish property ownership involves IBI (annual property tax, typically 0.4-1.1% of cadastral value), community fees for new builds (€100-300 annually), and utilities (€100-200 monthly depending on season and property size). Annual costs are generally modest, making property ownership financially sustainable. Legal requirements include registration in the Spanish property registry and obtaining a Spanish tax identification number."
-    },
-    {
-      "question": "Can I rent out my property when not occupying it?",
-      "answer": "Yes, rental opportunities are excellent. Short-term tourist lettings through platforms like Airbnb generate strong returns during peak seasons. Long-term residential rentals provide stable income. Properties should be legally registered as rental properties with Spanish tax authorities. Professional property management companies handle bookings, cleaning, and guest services for owners preferring hands-off investment approaches."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
     }
-  ],
-  "slug": "gata-de-gorgos",
-  "town": "Gata de Gorgos",
-  "propertyCount": 3,
-  "generatedAt": "2026-02-05T19:06:31.830Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Gata de Gorgos suitable for year-round living?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. With over 300 days of sunshine and mild winters averaging 12-18°C, the village is ideal for year-round residence. The elevated position provides natural ventilation and cooling breezes. Modern properties include heating systems for the occasional cool winter days. Many residents enjoy ou"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the expat community like in Gata de Gorgos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The expat community is well-established and welcoming, representing nationalities including British, German, Dutch, Scandinavian, and many others. Social clubs, hobby groups, and organized events facilitate integration and friendship. Spanish residents are typically friendly and accommodating toward"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the property investment returns in Gata de Gorgos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rental yields typically range from 5-8% for long-term residential lettings and can exceed 8% through tourist holiday lettings during peak seasons. Properties in the village center and those with pools/outdoor amenities command premium rates. Purchase-to-rent ratios are favorable compared to coastal "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How close is Gata de Gorgos to beaches?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Several beaches are within short driving distance: Playa de Bol Nou (8km), Playa Paraíso (12km), Playa del Torres (14km), and the popular resort town of Benidorm (18km) offers multiple beach options. The 15-20 minute drive times make beach days convenient while maintaining village living benefits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the main shopping and dining options?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The village center features supermarkets, bakeries, butchers, and traditional Spanish shops. Weekly markets provide fresh produce at excellent prices. Restaurants range from traditional tapas bars to contemporary Mediterranean cuisine establishments. Nearby Pego (8km) and Ondara (5km) offer expanded"
+        }
+      }
+    ]
+  }
 }

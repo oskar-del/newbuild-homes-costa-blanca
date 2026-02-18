@@ -1,81 +1,401 @@
 {
-  "metaTitle": "Living in Alfas del Pi: Costa Blanca Villas Guide",
-  "metaDescription": "Discover Alfas del Pi on Costa Blanca. New build villas from €285,600. Perfect for expats seeking Mediterranean lifestyle near Benidorm.",
-  "heroIntro": "Alfas del Pi is a charming coastal urbanization nestled on the Costa Blanca between Benidorm and Altea, offering an ideal blend of Mediterranean living and modern amenities. This sought-after destination attracts international buyers and expats seeking a peaceful yet well-connected lifestyle in Spain's most popular coastal region. With stunning sea views, excellent infrastructure, and a thriving expat community, Alfas del Pi has become synonymous with quality beachside living at accessible prices. The area perfectly balances the vibrant energy of nearby Benidorm with the tranquility of smaller, more exclusive coastal communities. Currently, the property market features attractive new build villas ranging from €285,600 to €875,000, offering excellent value for both primary residences and investment properties. The microclimate, combined with proximity to world-class amenities, golf courses, and pristine beaches, makes this location increasingly popular among European buyers seeking a second home or permanent relocation.",
-  "climate": "Alfas del Pi enjoys a Mediterranean climate with approximately 300 days of sunshine annually, making it one of Spain's sunniest coastal destinations. Summer temperatures average 28-30°C (82-86°F), while winters remain mild at 12-15°C (54-59°F). The area benefits from sea breezes that temper summer heat, and rainfall is minimal, concentrated mainly in autumn and spring. The proximity to the sea creates a gentle, refreshing microclimate that attracts visitors year-round, with virtually no snow and very rare freezing temperatures.",
-  "lifestyle": "Life in Alfas del Pi revolves around outdoor activities, Mediterranean dining, and a relaxed pace that contrasts beautifully with busy city living. The expat community is well-established and welcoming, with residents hailing primarily from the UK, Germany, Scandinavia, and other European countries. Social clubs, language groups, and community events ensure newcomers quickly integrate into the vibrant international fabric. The atmosphere is sophisticated yet unpretentious, with residents enjoying daily beachside walks, terrace dining, and the famous Costa Blanca nightlife just minutes away in Benidorm. Shopping, healthcare, and essential services are world-class, catering to the international clientele. The lifestyle here emphasizes wellness, outdoor recreation, and the famous Spanish 'dolce vita,' where enjoying quality time with family and friends takes precedence over material pursuits.",
-  "amenities": {
-    "healthcare": "Alfas del Pi benefits from excellent healthcare facilities, including the modern Benidorm Hospital (Hospital de Levante) just 10km away and numerous private clinics throughout the area. International residents appreciate English-speaking medical professionals, modern diagnostic equipment, and comprehensive health services. The nearby Clínica Quirónsalud and Clínica IMED offer specialized treatments and emergency care. Many residents maintain private health insurance for added peace of mind.",
-    "shopping": "The area offers diverse shopping options, from the modern Benidorm Centre commercial complex just 8km away to local supermarkets including Carrefour, Mercadona, and Eroski within walking distance. The Outlet Stores Benidorm provides luxury brand shopping. Local weekly markets in nearby towns offer fresh produce, while specialized shops in Alfas del Pi cater to daily needs. The larger shopping centers in Benidorm are easily accessible by short car journeys.",
-    "dining": "Alfas del Pi's restaurant scene reflects its international character, with excellent seafood establishments, traditional Spanish tapas bars, and international cuisine alongside Mediterranean fine dining. Beachfront restaurants in nearby Playa Paraiso and El Albir offer spectacular sunset dining. The town center features numerous bars and cafes perfect for morning coffee and evening socializing. Nearby Altea, just 7km away, is renowned for its haute cuisine and Michelin-star restaurants, including La Ola and El Farallon.",
-    "sports": "Sports enthusiasts find abundant opportunities in Alfas del Pi. The region hosts several world-class 18-hole golf courses, including Atalaya Golf Club (3km) and Club de Golf Ifach (5km), plus numerous 9-hole courses. Beaches offer water sports including paddleboarding, surfing, and snorkeling. Tennis clubs, cycling routes, and gyms are readily available. The proximity to Benidorm and Altea provides additional sporting venues, while hiking trails in nearby Puig Campana mountain offer spectacular views."
-  },
-  "transport": {
-    "airports": "Alicante-Elche Airport (ALC) is the primary gateway, located 54km south of Alfas del Pi with approximately 50-minute drive time via the AP-7 motorway. Valencia Airport (VLC) is 160km north, offering additional flight options. Both airports provide excellent connections to major European cities, with over 100 destinations served. Ground transportation includes car rentals, organized transfers, and public bus services.",
-    "driving": "Alfas del Pi enjoys excellent road connectivity via the AP-7 motorway, connecting it directly to Benidorm (10km south), Altea (7km north), and Alicante (54km south). The N-332 national road provides alternative routing and local connectivity. Well-maintained highways facilitate easy access throughout the Costa Blanca and beyond toward Valencia or Barcelona. Traffic is generally manageable except during peak summer tourist seasons.",
-    "public": "Public transportation includes the TRAM train system connecting Alicante to Benidorm and beyond, with stations accessible within 15-20 minutes of Alfas del Pi. Extensive bus networks operated by various companies link the area to neighboring towns, beaches, and larger cities. Benidorm's tourist bus network provides beach and entertainment venue connections. The transportation infrastructure is reliable and affordable, though having a car provides greater flexibility for exploring the region."
-  },
-  "propertyMarket": {
-    "overview": "Alfas del Pi's real estate market currently features competitive pricing with strong demand from international buyers seeking modern villas in established coastal communities. New build properties represent excellent value compared to neighboring Altea or Benidorm properties, while offering superior finishes and modern energy efficiency standards. The market shows steady appreciation, with properties maintaining value well due to the area's desirability and limited land availability.",
-    "priceRange": "€285,600 - €875,000",
-    "popularTypes": "Villa - predominantly new build properties with modern designs, typically 2-4 bedrooms, private pools, and contemporary finishes. Properties feature Mediterranean architecture adapted with modern amenities, energy-efficient systems, and premium materials.",
-    "investment": "The area offers strong rental potential, with holiday lettings commanding €100-150 per night during peak season and long-term rental markets providing consistent €800-1,200 monthly returns for modern villas. Property appreciation averages 3-5% annually, supported by consistent international demand, limited new development, and the area's established reputation. The expat-friendly market ensures reliable tenant bases for investors."
-  },
-  "neighborhoods": [
-    "Alfas del Pi Centre - The main urban hub featuring shops, restaurants, and services within walking distance of the beach",
-    "Playa Paraiso - Beachfront urbanization known for pristine sand, water sports facilities, and upscale beachfront restaurants",
-    "El Albir - Northern coastal area offering quieter beaches, hiking access to lighthouse trails, and stunning Mediterranean views",
-    "Sierra Bernia - Hillside location providing panoramic sea and mountain views, peaceful ambiance, and direct beach access via pathways"
+  "slug": "alfas-del-pi",
+  "name": "Alfas del Pi",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/alfas-del-pi-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 2,
+  "propertyTypes": [
+    "Villa - predominantly new build properties with modern designs",
+    "typically 2-4 bedrooms",
+    "private pools",
+    "and contemporary finishes. Properties feature Mediterranean architecture adapted with modern amenities",
+    "energy-efficient systems",
+    "and premium materials."
   ],
-  "prosAndCons": {
-    "pros": [
+  "priceRange": {
+    "min": 285600,
+    "max": 875000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Alfas del Pi Tourism",
+      "url": "https://www.google.com/search?q=Alfas%20del%20Pi%20Spain%20official%20website",
+      "description": "Discover more about Alfas del Pi"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "55 km",
+      "driveTime": "35 min"
+    },
+    "healthcare": {
+      "name": "Hospital Marina Baixa (Villajoyosa)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Marina%20Baixa%20(Villajoyosa)",
+      "distance": "8 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+Alfas%20del%20Pi+Spain",
+        "description": "Beautiful Mediterranean beach nearby"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Living in Alfas del Pi: Costa Blanca Villas Guide",
+    "metaDescription": "Discover Alfas del Pi on Costa Blanca. New build villas from €285,600. Perfect for expats seeking Mediterranean lifestyle near Benidorm.",
+    "heroIntro": "Alfas del Pi is a charming coastal urbanization nestled on the Costa Blanca between Benidorm and Altea, offering an ideal blend of Mediterranean living and modern amenities. This sought-after destination attracts international buyers and expats seeking a peaceful yet well-connected lifestyle in Spain's most popular coastal region. With stunning sea views, excellent infrastructure, and a thriving expat community, Alfas del Pi has become synonymous with quality beachside living at accessible prices. The area perfectly balances the vibrant energy of nearby Benidorm with the tranquility of smaller, more exclusive coastal communities. Currently, the property market features attractive new build villas ranging from €285,600 to €875,000, offering excellent value for both primary residences and investment properties. The microclimate, combined with proximity to world-class amenities, golf courses, and pristine beaches, makes this location increasingly popular among European buyers seeking a second home or permanent relocation.",
+    "lifestyleSection": {
+      "intro": "Life in Alfas del Pi revolves around outdoor activities, Mediterranean dining, and a relaxed pace that contrasts beautifully with busy city living. The expat community is well-established and welcoming, with residents hailing primarily from the UK, Germany, Scandinavia, and other European countries. Social clubs, language groups, and community events ensure newcomers quickly integrate into the vibrant international fabric. The atmosphere is sophisticated yet unpretentious, with residents enjoying daily beachside walks, terrace dining, and the famous Costa Blanca nightlife just minutes away in Benidorm. Shopping, healthcare, and essential services are world-class, catering to the international clientele. The lifestyle here emphasizes wellness, outdoor recreation, and the famous Spanish 'dolce vita,' where enjoying quality time with family and friends takes precedence over material pursuits.\n\nAlfas del Pi enjoys a Mediterranean climate with approximately 300 days of sunshine annually, making it one of Spain's sunniest coastal destinations. Summer temperatures average 28-30°C (82-86°F), while winters remain mild at 12-15°C (54-59°F). The area benefits from sea breezes that temper summer heat, and rainfall is minimal, concentrated mainly in autumn and spring. The proximity to the sea creates a gentle, refreshing microclimate that attracts visitors year-round, with virtually no snow and very rare freezing temperatures.",
+      "highlights": [
+        "Outstanding Mediterranean climate with 300+ sunny days annually and mild winters",
+        "Excellent new build property values ranging €285,600-€875,000 with modern finishes and energy efficiency",
+        "Established international expat community with English-speaking services, social clubs, and support networks",
+        "Proximity to world-class amenities: golf courses, beaches, restaurants, and cultural attractions within 5-15km",
+        "Easy airport access via Alicante-Elche (54km) with excellent road infrastructure and European connectivity"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Sports enthusiasts find abundant opportunities in Alfas del Pi. The region hosts several world-class 18-hole golf courses, including Atalaya Golf Club (3km) and Club de Golf Ifach (5km), plus numerous 9-hole courses. Beaches offer water sports including paddleboarding, surfing, and snorkeling. Tennis clubs, cycling routes, and gyms are readily available. The proximity to Benidorm and Altea provides additional sporting venues, while hiking trails in nearby Puig Campana mountain offer spectacular views.",
+      "dining": "Alfas del Pi's restaurant scene reflects its international character, with excellent seafood establishments, traditional Spanish tapas bars, and international cuisine alongside Mediterranean fine dining. Beachfront restaurants in nearby Playa Paraiso and El Albir offer spectacular sunset dining. The town center features numerous bars and cafes perfect for morning coffee and evening socializing. Nearby Altea, just 7km away, is renowned for its haute cuisine and Michelin-star restaurants, including La Ola and El Farallon.",
+      "shopping": "The area offers diverse shopping options, from the modern Benidorm Centre commercial complex just 8km away to local supermarkets including Carrefour, Mercadona, and Eroski within walking distance. The Outlet Stores Benidorm provides luxury brand shopping. Local weekly markets in nearby towns offer fresh produce, while specialized shops in Alfas del Pi cater to daily needs. The larger shopping centers in Benidorm are easily accessible by short car journeys.",
+      "healthcare": "Alfas del Pi benefits from excellent healthcare facilities, including the modern Benidorm Hospital (Hospital de Levante) just 10km away and numerous private clinics throughout the area. International residents appreciate English-speaking medical professionals, modern diagnostic equipment, and comprehensive health services. The nearby Clínica Quirónsalud and Clínica IMED offer specialized treatments and emergency care. Many residents maintain private health insurance for added peace of mind.",
+      "transport": "Alicante-Elche Airport (ALC) is the primary gateway, located 54km south of Alfas del Pi with approximately 50-minute drive time via the AP-7 motorway. Valencia Airport (VLC) is 160km north, offering additional flight options. Both airports provide excellent connections to major European cities, with over 100 destinations served. Ground transportation includes car rentals, organized transfers, and public bus services. Alfas del Pi enjoys excellent road connectivity via the AP-7 motorway, connecting it directly to Benidorm (10km south), Altea (7km north), and Alicante (54km south). The N-332 national road provides alternative routing and local connectivity. Well-maintained highways facilitate easy access throughout the Costa Blanca and beyond toward Valencia or Barcelona. Traffic is generally manageable except during peak summer tourist seasons. Public transportation includes the TRAM train system connecting Alicante to Benidorm and beyond, with stations accessible within 15-20 minutes of Alfas del Pi. Extensive bus networks operated by various companies link the area to neighboring towns, beaches, and larger cities. Benidorm's tourist bus network provides beach and entertainment venue connections. The transportation infrastructure is reliable and affordable, though having a car provides greater flexibility for exploring the region."
+    },
+    "propertyMarketSection": "Alfas del Pi's real estate market currently features competitive pricing with strong demand from international buyers seeking modern villas in established coastal communities. New build properties represent excellent value compared to neighboring Altea or Benidorm properties, while offering superior finishes and modern energy efficiency standards. The market shows steady appreciation, with properties maintaining value well due to the area's desirability and limited land availability.\n\nPopular property types include Villa - predominantly new build properties with modern designs, typically 2-4 bedrooms, private pools, and contemporary finishes. Properties feature Mediterranean architecture adapted with modern amenities, energy-efficient systems, and premium materials..\n\nThe area offers strong rental potential, with holiday lettings commanding €100-150 per night during peak season and long-term rental markets providing consistent €800-1,200 monthly returns for modern villas. Property appreciation averages 3-5% annually, supported by consistent international demand, limited new development, and the area's established reputation. The expat-friendly market ensures reliable tenant bases for investors.",
+    "whyLiveHereSection": [
       "Outstanding Mediterranean climate with 300+ sunny days annually and mild winters",
       "Excellent new build property values ranging €285,600-€875,000 with modern finishes and energy efficiency",
       "Established international expat community with English-speaking services, social clubs, and support networks",
       "Proximity to world-class amenities: golf courses, beaches, restaurants, and cultural attractions within 5-15km",
       "Easy airport access via Alicante-Elche (54km) with excellent road infrastructure and European connectivity"
     ],
-    "cons": [
-      "Summer tourist season (July-August) brings significant congestion and higher accommodation prices, potentially affecting daily life and service availability",
-      "Rising property values and increased development may gradually change the area's peaceful character, with some residents concerned about over-commercialization"
-    ]
+    "faqs": [
+      {
+        "question": "Is Alfas del Pi suitable for year-round living?",
+        "answer": "Yes, absolutely. With mild winters averaging 12-15°C and 300+ sunny days annually, the climate is highly conducive to year-round living. Modern homes feature efficient heating systems, and the Mediterranean lifestyle remains enjoyable throughout the year. Many permanent residents appreciate the reduced crowds outside summer months."
+      },
+      {
+        "question": "What is the expat community like in Alfas del Pi?",
+        "answer": "The expat community is well-established and welcoming, comprising primarily British, German, Scandinavian, and other European residents. Numerous social clubs, language groups, and community events facilitate integration. English is widely spoken, and most services cater to international clients. The community actively supports newcomers adjusting to Spanish life."
+      },
+      {
+        "question": "How accessible is Alfas del Pi from Alicante Airport?",
+        "answer": "Alicante-Elche Airport is 54km away with approximately 50 minutes drive time via the AP-7 motorway. Car rentals, organized transfer services, and public bus options are available. The drive is straightforward and scenic, following well-maintained highways with excellent signage."
+      },
+      {
+        "question": "What are the rental investment opportunities in Alfas del Pi?",
+        "answer": "Alfas del Pi offers attractive rental yields through both holiday lettings (€100-150 nightly during peak season) and long-term rentals (€800-1,200 monthly). The established tourism infrastructure, proximity to attractions, and consistent international demand support reliable occupancy rates. Property management companies specializing in holiday lettings are readily available."
+      },
+      {
+        "question": "Are there golf facilities near Alfas del Pi?",
+        "answer": "Yes, several world-class 18-hole courses are nearby: Atalaya Golf Club (3km), Club de Golf Ifach (5km), and additional 9-hole courses throughout the region. Courses feature championship-level designs, clubhouse restaurants, and practice facilities. Many new villa residents enjoy membership at nearby clubs."
+      },
+      {
+        "question": "What healthcare facilities are available?",
+        "answer": "Alfas del Pi benefits from excellent healthcare access, including Hospital de Levante in Benidorm (10km away), Clínica Quirónsalud, and multiple private clinics offering English-speaking medical professionals. Modern diagnostic equipment and comprehensive health services cater to international residents. Many expats maintain private health insurance for added peace of mind."
+      },
+      {
+        "question": "Is Alfas del Pi family-friendly?",
+        "answer": "Yes, Alfas del Pi is highly family-friendly with excellent schools, safe neighborhoods, abundant recreational activities, and beautiful beaches. International schools provide quality education. The relaxed atmosphere, outdoor activities, and established expat community with families make it ideal for families seeking Mediterranean living with modern amenities."
+      },
+      {
+        "question": "What is the best time to visit or invest in property in Alfas del Pi?",
+        "answer": "Spring (April-May) and autumn (September-October) offer ideal visiting conditions with pleasant weather and fewer tourists. For property investment, market conditions remain favorable year-round, though property viewings are most convenient during off-season months when you can experience authentic daily life without summer crowds."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Alfas del Pi? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "The area offers strong rental potential, with holiday lettings commanding €100-150 per night during peak season and long-term rental markets providing consistent €800-1,200 monthly returns for modern villas. Property appreciation averages 3-5% annually, supported by consistent international demand, limited new development, and the area's established reputation. The expat-friendly market ensures reliable tenant bases for investors.",
+      "highlights": [
+        "Strong holiday rental demand during peak season (May-October)",
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Short-term holiday lets popular with European tourists"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Alfas del Pi are significantly lower than Northern Europe and very competitive within Spain. Coastal living here combines affordability with Mediterranean lifestyle.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Recommended for flexibility"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Alfas del Pi celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "June",
+          "description": "Magical midsummer beach celebrations with bonfires, fireworks, and midnight swimming traditions along the coast"
+        },
+        {
+          "name": "Summer Beach Festival",
+          "month": "July",
+          "description": "Outdoor concerts, food stalls, and cultural events along the waterfront throughout the summer season"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Alfas del Pi have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school with GCSE and A-Level programmes, excellent facilities and strong academic results"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "British and IB curriculum with outstanding facilities, sports programmes, and multilingual education"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Alfas del Pi offers excellent outdoor activities year-round, from beach activities and water sports to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Beach & Swimming",
+          "type": "Beach",
+          "description": "Beautiful Mediterranean beaches nearby with crystal-clear waters, perfect for swimming, snorkelling, and sunbathing"
+        },
+        {
+          "name": "Water Sports",
+          "type": "Water Sports",
+          "description": "Paddleboarding, kayaking, windsurfing, and sailing available at nearby beaches and marinas"
+        },
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Alfas del Pi has a thriving international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The coastal location attracts a diverse mix of nationalities, particularly from Northern Europe. English is widely spoken in shops, restaurants, and social settings, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Active international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Diverse European community including British, Scandinavian, Dutch, German, and French residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Alfas del Pi",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the sea breeze and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Beach Walk",
+          "description": "Morning stroll along the beach or promenade, breathing in the fresh Mediterranean air"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Beach Time",
+          "description": "Head to the beach for an afternoon swim in the warm Mediterranean waters"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.1003!3d38.5889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Alfas del Pi suitable for year-round living?",
-      "answer": "Yes, absolutely. With mild winters averaging 12-15°C and 300+ sunny days annually, the climate is highly conducive to year-round living. Modern homes feature efficient heating systems, and the Mediterranean lifestyle remains enjoyable throughout the year. Many permanent residents appreciate the reduced crowds outside summer months."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Alfas del Pi",
+    "description": "Alfas del Pi is a coastal municipality in Costa Blanca North, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.5889",
+      "longitude": "-0.1003"
     },
-    {
-      "question": "What is the expat community like in Alfas del Pi?",
-      "answer": "The expat community is well-established and welcoming, comprising primarily British, German, Scandinavian, and other European residents. Numerous social clubs, language groups, and community events facilitate integration. English is widely spoken, and most services cater to international clients. The community actively supports newcomers adjusting to Spanish life."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Alfas del Pi",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "How accessible is Alfas del Pi from Alicante Airport?",
-      "answer": "Alicante-Elche Airport is 54km away with approximately 50 minutes drive time via the AP-7 motorway. Car rentals, organized transfer services, and public bus options are available. The drive is straightforward and scenic, following well-maintained highways with excellent signage."
-    },
-    {
-      "question": "What are the rental investment opportunities in Alfas del Pi?",
-      "answer": "Alfas del Pi offers attractive rental yields through both holiday lettings (€100-150 nightly during peak season) and long-term rentals (€800-1,200 monthly). The established tourism infrastructure, proximity to attractions, and consistent international demand support reliable occupancy rates. Property management companies specializing in holiday lettings are readily available."
-    },
-    {
-      "question": "Are there golf facilities near Alfas del Pi?",
-      "answer": "Yes, several world-class 18-hole courses are nearby: Atalaya Golf Club (3km), Club de Golf Ifach (5km), and additional 9-hole courses throughout the region. Courses feature championship-level designs, clubhouse restaurants, and practice facilities. Many new villa residents enjoy membership at nearby clubs."
-    },
-    {
-      "question": "What healthcare facilities are available?",
-      "answer": "Alfas del Pi benefits from excellent healthcare access, including Hospital de Levante in Benidorm (10km away), Clínica Quirónsalud, and multiple private clinics offering English-speaking medical professionals. Modern diagnostic equipment and comprehensive health services cater to international residents. Many expats maintain private health insurance for added peace of mind."
-    },
-    {
-      "question": "Is Alfas del Pi family-friendly?",
-      "answer": "Yes, Alfas del Pi is highly family-friendly with excellent schools, safe neighborhoods, abundant recreational activities, and beautiful beaches. International schools provide quality education. The relaxed atmosphere, outdoor activities, and established expat community with families make it ideal for families seeking Mediterranean living with modern amenities."
-    },
-    {
-      "question": "What is the best time to visit or invest in property in Alfas del Pi?",
-      "answer": "Spring (April-May) and autumn (September-October) offer ideal visiting conditions with pleasant weather and fewer tourists. For property investment, market conditions remain favorable year-round, though property viewings are most convenient during off-season months when you can experience authentic daily life without summer crowds."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
     }
-  ],
-  "slug": "alfas-del-pi",
-  "town": "Alfas del Pi",
-  "propertyCount": 2,
-  "generatedAt": "2026-02-05T19:21:26.256Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Alfas del Pi suitable for year-round living?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. With mild winters averaging 12-15°C and 300+ sunny days annually, the climate is highly conducive to year-round living. Modern homes feature efficient heating systems, and the Mediterranean lifestyle remains enjoyable throughout the year. Many permanent residents appreciate the redu"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the expat community like in Alfas del Pi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The expat community is well-established and welcoming, comprising primarily British, German, Scandinavian, and other European residents. Numerous social clubs, language groups, and community events facilitate integration. English is widely spoken, and most services cater to international clients. Th"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accessible is Alfas del Pi from Alicante Airport?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alicante-Elche Airport is 54km away with approximately 50 minutes drive time via the AP-7 motorway. Car rentals, organized transfer services, and public bus options are available. The drive is straightforward and scenic, following well-maintained highways with excellent signage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the rental investment opportunities in Alfas del Pi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alfas del Pi offers attractive rental yields through both holiday lettings (€100-150 nightly during peak season) and long-term rentals (€800-1,200 monthly). The established tourism infrastructure, proximity to attractions, and consistent international demand support reliable occupancy rates. Propert"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there golf facilities near Alfas del Pi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, several world-class 18-hole courses are nearby: Atalaya Golf Club (3km), Club de Golf Ifach (5km), and additional 9-hole courses throughout the region. Courses feature championship-level designs, clubhouse restaurants, and practice facilities. Many new villa residents enjoy membership at nearby"
+        }
+      }
+    ]
+  }
 }

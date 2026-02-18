@@ -1,82 +1,378 @@
 {
-  "metaTitle": "Formentera del Segura Costa Blanca: Living Guide & Properties",
-  "metaDescription": "Discover Formentera del Segura on Costa Blanca. Explore villas, lifestyle, amenities, and investment opportunities in this charming Spanish destination.",
-  "heroIntro": "Formentera del Segura is a hidden gem nestled in the southern Costa Blanca, offering a perfect blend of Mediterranean charm, modern amenities, and authentic Spanish coastal living. Located in the province of Alicante, this picturesque town combines the relaxed atmosphere of a traditional fishing village with convenient access to contemporary facilities and services. The town's strategic position makes it an ideal base for those seeking to escape urban hustle while maintaining easy connections to major centers.\n\nWith its pristine beaches, warm hospitality, and growing international community, Formentera del Segura has become increasingly popular among expatriates and investors seeking a Mediterranean lifestyle. The area offers exceptional value compared to more developed coastal resorts, providing a genuine Spanish experience without compromising on comfort and accessibility. Whether you're considering a permanent relocation, a vacation home, or an investment property, Formentera del Segura delivers authentic Costa Blanca living with contemporary conveniences.\n\nThe town's waterfront location, combined with its growing infrastructure and real estate market, makes it an attractive destination for discerning buyers. New developments like modern villas are transforming the area while respecting its traditional character, creating opportunities for both lifestyle seekers and savvy investors in one of Spain's most desirable coastal regions.",
-  "climate": "Formentera del Segura enjoys a classic Mediterranean climate with over 300 days of annual sunshine, mild winters, and warm, dry summers. Average temperatures range from 12°C in winter to 28°C in summer, creating ideal conditions year-round. The cooling sea breezes provide natural relief during hot months, while the region rarely experiences extreme weather. Rainfall is minimal and concentrated primarily in autumn and spring, allowing residents to enjoy outdoor activities throughout the year. This exceptional climate makes the area perfect for beach lovers, outdoor enthusiasts, and those seeking to escape colder European winters.",
-  "lifestyle": "Formentera del Segura embodies the quintessential Costa Blanca lifestyle, offering a relaxed pace while maintaining vibrant social and cultural opportunities. The growing expatriate community, particularly British, German, and Scandinavian residents, has created a welcoming, cosmopolitan atmosphere. The town features popular gathering spots including beachfront restaurants, local bars, and cafes where residents naturally interact. Weekly markets, local festivals, and beach activities provide regular social engagement, while the proximity to larger towns ensures access to diverse entertainment and cultural events.\n\nDaily life revolves around the Mediterranean rhythm - leisurely meals, waterfront walks, and beach activities are integral to the experience. The community is known for its friendliness and mutual support among residents. Practical amenities are conveniently located, allowing residents to maintain an unhurried lifestyle. The area attracts people seeking retirement, remote work opportunities, or lifestyle changes, creating a diverse, welcoming demographic. Whether enjoying morning beach walks, afternoon siestas, or evening paseos, residents benefit from a balanced, healthy lifestyle that prioritizes wellbeing and community connection.",
-  "amenities": {
-    "healthcare": "Formentera del Segura has a local health center providing primary care and emergency services. More comprehensive medical facilities and specialists are available in nearby Guardamar del Segura, just 8km away. The larger city of Torrevieja, 35km south, offers multiple hospitals including Quirónsalud and Hospital Vega del Segura with advanced facilities. Private healthcare options are readily available throughout the region, with many practitioners catering to international residents and English-speaking staff common in established practices.",
-    "shopping": "The town center offers essential retail including supermarkets (Mercadona, Carrefour Express), pharmacies, and local shops. For extensive shopping, the nearby town of Guardamar del Segura provides additional retail options. Larger shopping centers are accessible in Torrevieja, approximately 35km south, including the Torrevieja Shopping Center with major brands and department stores. Weekly markets in Formentera del Segura and surrounding villages offer fresh local produce, textiles, and artisan goods, providing authentic Mediterranean shopping experiences.",
-    "dining": "Formentera del Segura's waterfront is lined with excellent restaurants specializing in fresh seafood and Mediterranean cuisine. Local favorites offer paella, gazpacho, and daily fish catches prepared traditionally. The beachfront promenade features casual chiringuitos serving tapas and refreshments with sea views. International restaurants catering to the expatriate community offer diverse cuisines including Italian, German, and British fare. Nearby Guardamar del Segura adds additional dining options, while Torrevieja provides upscale restaurants and international chains for varied culinary experiences.",
-    "sports": "The town's extensive beaches provide ideal conditions for swimming, paddleboarding, and beach volleyball. Water sports enthusiasts enjoy windsurfing, kitesurfing, and sailing opportunities. The nearby natural park areas offer hiking and cycling trails through protected landscapes. Golf enthusiasts have access to several championship courses within 30-40km, including Oliva Nova Golf Club and Las Ramblas Golf Club. Tennis facilities, gyms, and fitness centers operate throughout the area, while the Segura River supports fishing and water activities. The mild climate enables year-round outdoor recreation and sports pursuits."
-  },
-  "transport": {
-    "airports": "Alicante-Elche Airport (ALC) is 60km north, approximately 50 minutes by car, serving as the primary international gateway with connections worldwide. Murcia Airport (MUR) is 80km south, offering alternative international access. Both airports have efficient car rental services and public transport connections. The proximity to two major airports provides excellent connectivity for residents and investors maintaining international ties.",
-    "driving": "Formentera del Segura benefits from excellent road infrastructure. The N-332 highway runs along the coast, providing direct connections to Guardamar del Segura (8km north), Torrevieja (35km south), and Alicante city (85km north). The well-maintained road network facilitates easy access to neighboring towns and regional destinations. Driving is the primary transportation method, with scenic coastal routes connecting to major centers. The town is approximately 1.5 hours from Alicante's international airport by car.",
-    "public": "Public transportation includes local bus services connecting Formentera del Segura to nearby towns including Guardamar del Segura, Torrevieja, and Alicante through ALSA and regional providers. Bus frequency increases during summer months. Torrevieja train station, 35km south, offers rail connections to Alicante and other regional destinations. Taxis and ride-sharing services operate locally. Most residents rely on personal vehicles for convenience and flexibility, though public transport provides viable alternatives for those preferring not to drive."
-  },
-  "propertyMarket": {
-    "overview": "Formentera del Segura's real estate market presents excellent value and growth potential compared to more developed Costa Blanca areas. The market shows healthy demand from both international buyers seeking Mediterranean homes and local investors recognizing the area's development trajectory. New construction projects are modernizing the housing stock while preserving the town's authentic character. The combination of affordable pricing, improving infrastructure, and growing international interest creates favorable conditions for both owner-occupiers and investors.",
-    "priceRange": "€399,000 - €399,000",
-    "popularTypes": "Villa",
-    "investment": "Formentera del Segura offers compelling investment opportunities with strong rental demand from holiday and long-term tenants. Properties typically achieve 4-6% annual rental yields, with peak season demanding premium rates. The growing expat demographic drives consistent demand for quality residential accommodations. New villas with modern amenities attract discerning renters seeking contemporary facilities. The area's development trajectory, combined with affordable entry prices compared to established resorts, positions Formentera del Segura as an attractive opportunity for investors seeking Mediterranean income-generating assets with capital appreciation potential."
-  },
-  "neighborhoods": [
-    "Playa Centro - The heart of Formentera del Segura featuring beachfront apartments and villas with direct sand access, restaurants, and promenade walks",
-    "Urbanización Playa del Bol Nou - A planned residential community with modern properties offering beach proximity, community facilities, and organized amenities",
-    "Casco Histórico - The traditional old town preserving Spanish architecture, local character, and authentic village atmosphere with independent shops",
-    "Segura Playa - A developing waterfront area combining new construction with Mediterranean views, modern infrastructure, and growing international resident communities"
+  "slug": "formentera-del-segura",
+  "name": "Formentera del Segura",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/formentera-del-segura-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 1,
+  "propertyTypes": [
+    "Villa"
   ],
-  "prosAndCons": {
-    "pros": [
+  "priceRange": {
+    "min": 399000,
+    "max": 399000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Formentera del Segura Tourism",
+      "url": "https://www.google.com/search?q=Formentera%20del%20Segura%20Spain%20official%20website",
+      "description": "Discover more about Formentera del Segura"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "50 km",
+      "driveTime": "35 min"
+    },
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Universitario%20de%20Torrevieja",
+      "distance": "15 km"
+    }
+  },
+  "content": {
+    "metaTitle": "Formentera del Segura Costa Blanca: Living Guide & Properties",
+    "metaDescription": "Discover Formentera del Segura on Costa Blanca. Explore villas, lifestyle, amenities, and investment opportunities in this charming Spanish destination.",
+    "heroIntro": "Formentera del Segura is a hidden gem nestled in the southern Costa Blanca, offering a perfect blend of Mediterranean charm, modern amenities, and authentic Spanish coastal living. Located in the province of Alicante, this picturesque town combines the relaxed atmosphere of a traditional fishing village with convenient access to contemporary facilities and services. The town's strategic position makes it an ideal base for those seeking to escape urban hustle while maintaining easy connections to major centers.\n\nWith its pristine beaches, warm hospitality, and growing international community, Formentera del Segura has become increasingly popular among expatriates and investors seeking a Mediterranean lifestyle. The area offers exceptional value compared to more developed coastal resorts, providing a genuine Spanish experience without compromising on comfort and accessibility. Whether you're considering a permanent relocation, a vacation home, or an investment property, Formentera del Segura delivers authentic Costa Blanca living with contemporary conveniences.\n\nThe town's waterfront location, combined with its growing infrastructure and real estate market, makes it an attractive destination for discerning buyers. New developments like modern villas are transforming the area while respecting its traditional character, creating opportunities for both lifestyle seekers and savvy investors in one of Spain's most desirable coastal regions.",
+    "lifestyleSection": {
+      "intro": "Formentera del Segura embodies the quintessential Costa Blanca lifestyle, offering a relaxed pace while maintaining vibrant social and cultural opportunities. The growing expatriate community, particularly British, German, and Scandinavian residents, has created a welcoming, cosmopolitan atmosphere. The town features popular gathering spots including beachfront restaurants, local bars, and cafes where residents naturally interact. Weekly markets, local festivals, and beach activities provide regular social engagement, while the proximity to larger towns ensures access to diverse entertainment and cultural events.\n\nDaily life revolves around the Mediterranean rhythm - leisurely meals, waterfront walks, and beach activities are integral to the experience. The community is known for its friendliness and mutual support among residents. Practical amenities are conveniently located, allowing residents to maintain an unhurried lifestyle. The area attracts people seeking retirement, remote work opportunities, or lifestyle changes, creating a diverse, welcoming demographic. Whether enjoying morning beach walks, afternoon siestas, or evening paseos, residents benefit from a balanced, healthy lifestyle that prioritizes wellbeing and community connection.\n\nFormentera del Segura enjoys a classic Mediterranean climate with over 300 days of annual sunshine, mild winters, and warm, dry summers. Average temperatures range from 12°C in winter to 28°C in summer, creating ideal conditions year-round. The cooling sea breezes provide natural relief during hot months, while the region rarely experiences extreme weather. Rainfall is minimal and concentrated primarily in autumn and spring, allowing residents to enjoy outdoor activities throughout the year. This exceptional climate makes the area perfect for beach lovers, outdoor enthusiasts, and those seeking to escape colder European winters.",
+      "highlights": [
+        "Exceptional Mediterranean climate with 300+ days of sunshine enabling year-round outdoor activities and beach lifestyle",
+        "Significantly more affordable than established Costa Blanca resorts while maintaining excellent amenities and services",
+        "Growing international community creating welcoming atmosphere with established support networks and social opportunities",
+        "Strategic location providing easy access to Alicante Airport (60km), larger cities, and regional attractions within short distances",
+        "Authentic Spanish coastal living with modern conveniences, pristine beaches, and waterfront dining without excessive tourism overcomplication"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "The town's extensive beaches provide ideal conditions for swimming, paddleboarding, and beach volleyball. Water sports enthusiasts enjoy windsurfing, kitesurfing, and sailing opportunities. The nearby natural park areas offer hiking and cycling trails through protected landscapes. Golf enthusiasts have access to several championship courses within 30-40km, including Oliva Nova Golf Club and Las Ramblas Golf Club. Tennis facilities, gyms, and fitness centers operate throughout the area, while the Segura River supports fishing and water activities. The mild climate enables year-round outdoor recreation and sports pursuits.",
+      "dining": "Formentera del Segura's waterfront is lined with excellent restaurants specializing in fresh seafood and Mediterranean cuisine. Local favorites offer paella, gazpacho, and daily fish catches prepared traditionally. The beachfront promenade features casual chiringuitos serving tapas and refreshments with sea views. International restaurants catering to the expatriate community offer diverse cuisines including Italian, German, and British fare. Nearby Guardamar del Segura adds additional dining options, while Torrevieja provides upscale restaurants and international chains for varied culinary experiences.",
+      "shopping": "The town center offers essential retail including supermarkets (Mercadona, Carrefour Express), pharmacies, and local shops. For extensive shopping, the nearby town of Guardamar del Segura provides additional retail options. Larger shopping centers are accessible in Torrevieja, approximately 35km south, including the Torrevieja Shopping Center with major brands and department stores. Weekly markets in Formentera del Segura and surrounding villages offer fresh local produce, textiles, and artisan goods, providing authentic Mediterranean shopping experiences.",
+      "healthcare": "Formentera del Segura has a local health center providing primary care and emergency services. More comprehensive medical facilities and specialists are available in nearby Guardamar del Segura, just 8km away. The larger city of Torrevieja, 35km south, offers multiple hospitals including Quirónsalud and Hospital Vega del Segura with advanced facilities. Private healthcare options are readily available throughout the region, with many practitioners catering to international residents and English-speaking staff common in established practices.",
+      "transport": "Alicante-Elche Airport (ALC) is 60km north, approximately 50 minutes by car, serving as the primary international gateway with connections worldwide. Murcia Airport (MUR) is 80km south, offering alternative international access. Both airports have efficient car rental services and public transport connections. The proximity to two major airports provides excellent connectivity for residents and investors maintaining international ties. Formentera del Segura benefits from excellent road infrastructure. The N-332 highway runs along the coast, providing direct connections to Guardamar del Segura (8km north), Torrevieja (35km south), and Alicante city (85km north). The well-maintained road network facilitates easy access to neighboring towns and regional destinations. Driving is the primary transportation method, with scenic coastal routes connecting to major centers. The town is approximately 1.5 hours from Alicante's international airport by car. Public transportation includes local bus services connecting Formentera del Segura to nearby towns including Guardamar del Segura, Torrevieja, and Alicante through ALSA and regional providers. Bus frequency increases during summer months. Torrevieja train station, 35km south, offers rail connections to Alicante and other regional destinations. Taxis and ride-sharing services operate locally. Most residents rely on personal vehicles for convenience and flexibility, though public transport provides viable alternatives for those preferring not to drive."
+    },
+    "propertyMarketSection": "Formentera del Segura's real estate market presents excellent value and growth potential compared to more developed Costa Blanca areas. The market shows healthy demand from both international buyers seeking Mediterranean homes and local investors recognizing the area's development trajectory. New construction projects are modernizing the housing stock while preserving the town's authentic character. The combination of affordable pricing, improving infrastructure, and growing international interest creates favorable conditions for both owner-occupiers and investors.\n\nPopular property types include Villa.\n\nFormentera del Segura offers compelling investment opportunities with strong rental demand from holiday and long-term tenants. Properties typically achieve 4-6% annual rental yields, with peak season demanding premium rates. The growing expat demographic drives consistent demand for quality residential accommodations. New villas with modern amenities attract discerning renters seeking contemporary facilities. The area's development trajectory, combined with affordable entry prices compared to established resorts, positions Formentera del Segura as an attractive opportunity for investors seeking Mediterranean income-generating assets with capital appreciation potential.",
+    "whyLiveHereSection": [
       "Exceptional Mediterranean climate with 300+ days of sunshine enabling year-round outdoor activities and beach lifestyle",
       "Significantly more affordable than established Costa Blanca resorts while maintaining excellent amenities and services",
       "Growing international community creating welcoming atmosphere with established support networks and social opportunities",
       "Strategic location providing easy access to Alicante Airport (60km), larger cities, and regional attractions within short distances",
       "Authentic Spanish coastal living with modern conveniences, pristine beaches, and waterfront dining without excessive tourism overcomplication"
     ],
-    "cons": [
-      "Smaller town scale may feel limiting for those requiring extensive nightlife, shopping variety, or cultural institutions found in larger cities",
-      "Summer season brings increased tourism and crowding to beaches and waterfront areas, impacting local tranquility and parking availability",
-      "Language barrier remains for non-Spanish speakers in some local services, though English proficiency is increasing among younger residents and business owners"
-    ]
+    "faqs": [
+      {
+        "question": "What is the best time to visit or move to Formentera del Segura?",
+        "answer": "The ideal moving period is September through November or March through May when temperatures are pleasant (18-25°C), tourism is moderate, and daily life operates at a comfortable pace. Summer offers warmth and beach activities but brings crowds. Winter provides mild weather perfect for outdoor enthusiasts avoiding northern European cold, though some seasonal services reduce operations."
+      },
+      {
+        "question": "What are the main costs of living in Formentera del Segura?",
+        "answer": "Formentera del Segura offers excellent value compared to northern Europe or established resorts. Monthly costs typically include €800-1,200 for utilities, €400-600 for groceries, €300-500 for dining out, and €100-200 for leisure activities. Property costs vary by location and type. International residents often find living costs 30-40% lower than UK or Northern Europe while maintaining equivalent quality of life."
+      },
+      {
+        "question": "Is Formentera del Segura suitable for families with children?",
+        "answer": "Yes, the town provides excellent family-friendly amenities including safe beaches with lifeguards, schools offering international curricula, sports facilities, and community activities. The relaxed pace and Mediterranean climate support healthy child development. Proximity to larger cities ensures access to specialized services. The welcoming expatriate community means families often find established support networks and children's social groups."
+      },
+      {
+        "question": "What nationalities make up the expat community in Formentera del Segura?",
+        "answer": "The expatriate population is diverse, with significant communities from the United Kingdom, Germany, Scandinavia, France, and other European nations, along with some North American residents. This international mix creates cosmopolitan atmosphere while maintaining Spanish authenticity. Most community associations, services, and social groups cater to international residents with multilingual support."
+      },
+      {
+        "question": "How difficult is the bureaucratic process for relocating to Formentera del Segura?",
+        "answer": "Non-EU citizens require appropriate visas, while EU citizens enjoy freedom of movement. The main requirements include proving financial means (approximately €27,000 annual income), obtaining NIE tax numbers, registering with authorities, and establishing Spanish residency. Many international residents hire gestorías (administrative service providers) to navigate procedures. The process typically takes 4-8 weeks with proper preparation. Professional guidance simplifies documentation and compliance requirements."
+      },
+      {
+        "question": "Are there good schools in Formentera del Segura for expat families?",
+        "answer": "Formentera del Segura has Spanish public schools serving local needs. Nearby Guardamar del Segura and Torrevieja offer additional options including international schools providing British, German, and bilingual curricula. Many families choose schools in larger towns with established international reputations. Homeschooling is increasingly popular among expat families seeking tailored education while enjoying Mediterranean lifestyle benefits."
+      },
+      {
+        "question": "What are the property tax obligations for foreign buyers in Formentera del Segura?",
+        "answer": "Foreign property owners pay annual property tax (IBI) calculated as percentage of cadastral value, typically €100-300 annually for residential properties. Rental income generates personal income tax at progressive rates (19-45%). Wealth tax applies to residents with assets exceeding €600,000. Non-resident buyers pay annual non-resident tax on Spanish properties. Professional tax advisors help optimize structures and ensure compliance with Spanish and home country obligations."
+      },
+      {
+        "question": "Can I purchase property in Formentera del Segura as a non-resident?",
+        "answer": "Yes, non-residents can freely purchase property in Spain without restrictions. You'll require a NIE tax identification number, valid passport, and financial documentation. The process involves selecting properties, obtaining valuations, signing preliminary agreements, and completing formal conveyancing. Most transactions complete within 8-12 weeks. It's advisable to hire Spanish lawyers and tax advisors to navigate legal requirements, ensure clear title, and optimize ownership structures for your circumstances."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Formentera del Segura? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Formentera del Segura offers compelling investment opportunities with strong rental demand from holiday and long-term tenants. Properties typically achieve 4-6% annual rental yields, with peak season demanding premium rates. The growing expat demographic drives consistent demand for quality residential accommodations. New villas with modern amenities attract discerning renters seeking contemporary facilities. The area's development trajectory, combined with affordable entry prices compared to established resorts, positions Formentera del Segura as an attractive opportunity for investors seeking Mediterranean income-generating assets with capital appreciation potential.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Formentera del Segura are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Formentera del Segura offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Formentera del Segura celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Formentera del Segura have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "20-35 min",
+          "description": "British curriculum school with excellent facilities and strong academic record serving the expat community"
+        },
+        {
+          "name": "Newton College",
+          "type": "International (British/Spanish)",
+          "distance": "25-40 min",
+          "description": "Bilingual international school offering both British and Spanish curricula with modern facilities"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Formentera del Segura offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Formentera del Segura has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Formentera del Segura",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7267!3d38.0958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "What is the best time to visit or move to Formentera del Segura?",
-      "answer": "The ideal moving period is September through November or March through May when temperatures are pleasant (18-25°C), tourism is moderate, and daily life operates at a comfortable pace. Summer offers warmth and beach activities but brings crowds. Winter provides mild weather perfect for outdoor enthusiasts avoiding northern European cold, though some seasonal services reduce operations."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Formentera del Segura",
+    "description": "Formentera del Segura is a inland municipality in Costa Blanca South, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.0958",
+      "longitude": "-0.7267"
     },
-    {
-      "question": "What are the main costs of living in Formentera del Segura?",
-      "answer": "Formentera del Segura offers excellent value compared to northern Europe or established resorts. Monthly costs typically include €800-1,200 for utilities, €400-600 for groceries, €300-500 for dining out, and €100-200 for leisure activities. Property costs vary by location and type. International residents often find living costs 30-40% lower than UK or Northern Europe while maintaining equivalent quality of life."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Formentera del Segura",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "Is Formentera del Segura suitable for families with children?",
-      "answer": "Yes, the town provides excellent family-friendly amenities including safe beaches with lifeguards, schools offering international curricula, sports facilities, and community activities. The relaxed pace and Mediterranean climate support healthy child development. Proximity to larger cities ensures access to specialized services. The welcoming expatriate community means families often find established support networks and children's social groups."
-    },
-    {
-      "question": "What nationalities make up the expat community in Formentera del Segura?",
-      "answer": "The expatriate population is diverse, with significant communities from the United Kingdom, Germany, Scandinavia, France, and other European nations, along with some North American residents. This international mix creates cosmopolitan atmosphere while maintaining Spanish authenticity. Most community associations, services, and social groups cater to international residents with multilingual support."
-    },
-    {
-      "question": "How difficult is the bureaucratic process for relocating to Formentera del Segura?",
-      "answer": "Non-EU citizens require appropriate visas, while EU citizens enjoy freedom of movement. The main requirements include proving financial means (approximately €27,000 annual income), obtaining NIE tax numbers, registering with authorities, and establishing Spanish residency. Many international residents hire gestorías (administrative service providers) to navigate procedures. The process typically takes 4-8 weeks with proper preparation. Professional guidance simplifies documentation and compliance requirements."
-    },
-    {
-      "question": "Are there good schools in Formentera del Segura for expat families?",
-      "answer": "Formentera del Segura has Spanish public schools serving local needs. Nearby Guardamar del Segura and Torrevieja offer additional options including international schools providing British, German, and bilingual curricula. Many families choose schools in larger towns with established international reputations. Homeschooling is increasingly popular among expat families seeking tailored education while enjoying Mediterranean lifestyle benefits."
-    },
-    {
-      "question": "What are the property tax obligations for foreign buyers in Formentera del Segura?",
-      "answer": "Foreign property owners pay annual property tax (IBI) calculated as percentage of cadastral value, typically €100-300 annually for residential properties. Rental income generates personal income tax at progressive rates (19-45%). Wealth tax applies to residents with assets exceeding €600,000. Non-resident buyers pay annual non-resident tax on Spanish properties. Professional tax advisors help optimize structures and ensure compliance with Spanish and home country obligations."
-    },
-    {
-      "question": "Can I purchase property in Formentera del Segura as a non-resident?",
-      "answer": "Yes, non-residents can freely purchase property in Spain without restrictions. You'll require a NIE tax identification number, valid passport, and financial documentation. The process involves selecting properties, obtaining valuations, signing preliminary agreements, and completing formal conveyancing. Most transactions complete within 8-12 weeks. It's advisable to hire Spanish lawyers and tax advisors to navigate legal requirements, ensure clear title, and optimize ownership structures for your circumstances."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
     }
-  ],
-  "slug": "formentera-del-segura",
-  "town": "Formentera del Segura",
-  "propertyCount": 1,
-  "generatedAt": "2026-02-05T19:32:58.024Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best time to visit or move to Formentera del Segura?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The ideal moving period is September through November or March through May when temperatures are pleasant (18-25°C), tourism is moderate, and daily life operates at a comfortable pace. Summer offers warmth and beach activities but brings crowds. Winter provides mild weather perfect for outdoor enthu"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the main costs of living in Formentera del Segura?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Formentera del Segura offers excellent value compared to northern Europe or established resorts. Monthly costs typically include €800-1,200 for utilities, €400-600 for groceries, €300-500 for dining out, and €100-200 for leisure activities. Property costs vary by location and type. International res"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Formentera del Segura suitable for families with children?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the town provides excellent family-friendly amenities including safe beaches with lifeguards, schools offering international curricula, sports facilities, and community activities. The relaxed pace and Mediterranean climate support healthy child development. Proximity to larger cities ensures a"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What nationalities make up the expat community in Formentera del Segura?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The expatriate population is diverse, with significant communities from the United Kingdom, Germany, Scandinavia, France, and other European nations, along with some North American residents. This international mix creates cosmopolitan atmosphere while maintaining Spanish authenticity. Most communit"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How difficult is the bureaucratic process for relocating to Formentera del Segura?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non-EU citizens require appropriate visas, while EU citizens enjoy freedom of movement. The main requirements include proving financial means (approximately €27,000 annual income), obtaining NIE tax numbers, registering with authorities, and establishing Spanish residency. Many international residen"
+        }
+      }
+    ]
+  }
 }

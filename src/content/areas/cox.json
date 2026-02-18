@@ -1,75 +1,61 @@
 {
-  "metaTitle": "Living in Cox 2026 | Complete Area Guide & Property",
-  "metaDescription": "Discover living in Cox: €209k-€255k properties, established expat community, 8% growth. Blue Flag beaches, international schools & healthcare.",
-  "heroIntro": "Cox is a charming inland town that has become increasingly popular with international buyers seeking authentic Spanish living combined with modern amenities. Located on Spain's Costa Blanca, Cox offers a unique blend of traditional Spanish culture and contemporary convenience, making it an attractive destination for families, retirees, and investors alike. The town boasts an established international community where English is widely spoken, eliminating language barriers for newcomers. With property prices ranging from €209,000 to €255,000 and a strong 8% year-on-year market growth, Cox represents excellent value compared to island markets—40% less expensive than typical Spanish island properties. The area has transformed over the past decade while maintaining its authentic character, with modern infrastructure supporting both permanent residents and those seeking holiday rental income. Whether you're looking for a primary residence, investment property, or vacation home, Cox delivers accessibility, affordability, and lifestyle quality that rival more famous coastal destinations.",
-  "climate": "Cox enjoys a classic Mediterranean climate with over 300 days of sunshine annually, mild winters, and warm, dry summers. Temperatures typically range from 8-10°C in winter to 28-32°C in summer, creating ideal conditions for year-round living. Spring and autumn offer particularly pleasant weather, with comfortable temperatures perfect for outdoor activities and exploration. Rainfall is minimal, concentrated mainly in autumn and winter months, while summer remains consistently dry and perfect for beach visits. The climate is particularly beneficial for those with respiratory issues or seeking to escape harsh winters. The prevailing sea breeze keeps coastal areas cooler during peak summer months, and the proximity to the Mediterranean moderates temperature extremes. This climate makes Cox suitable for people of all ages, from active families to retirees seeking therapeutic weather conditions.",
-  "lifestyle": "Daily life in Cox revolves around the Spanish tradition of community living, with vibrant local markets, family-oriented restaurants, and social gathering spaces throughout town. The established international community has created a welcoming atmosphere where English is commonly spoken, yet you'll experience authentic Spanish traditions and cuisine. Mercadona and Lidl supermarkets provide convenient shopping alongside charming local markets offering fresh produce, fish, and regional specialties. Social activities abound with numerous cafés, tapas bars, and restaurants serving both traditional Spanish and international cuisine. Multiple Blue Flag beaches lie within 20 minutes, offering swimming, water sports, and beach clubs. The expat community organizes regular social events, cultural activities, and networking opportunities, making integration effortless for newcomers. Golf enthusiasts appreciate several championship courses nearby, while hiking, cycling, and outdoor activities are accessible throughout the region. The pace of life remains relaxed and family-friendly, with strong emphasis on leisure, good food, and personal connections—the essence of Mediterranean living.",
-  "amenities": {
+  "slug": "cox",
+  "name": "Cox",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/cox-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 7,
+  "propertyTypes": [
+    "Town House",
+    "Bungalow"
+  ],
+  "priceRange": {
+    "min": 209000,
+    "max": 255000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Cox Tourism",
+      "url": "https://www.google.com/search?q=Cox%20Spain%20official%20website",
+      "description": "Discover more about Cox"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "50 km",
+      "driveTime": "35 min"
+    },
     "healthcare": {
-      "text": "Healthcare in Cox is comprehensive and internationally recognized, with a regional hospital located within 30 minutes providing full medical services and emergency care. Private clinics are readily available throughout the area, offering specialized services and shorter waiting times. English-speaking doctors are commonly found in both public and private facilities, eliminating communication barriers for international residents. The healthcare system maintains European standards while offering exceptional value compared to private healthcare costs in Northern Europe. Many residents appreciate the combination of public healthcare access and affordable private options for non-emergency treatments.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes",
-        "Private clinics with specialist services",
-        "English-speaking medical professionals",
-        "Excellent value healthcare costs"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping in Cox caters to all preferences, from modern supermarkets to traditional Spanish markets. Mercadona offers extensive product selection with competitive pricing, while Lidl provides budget-friendly options for everyday essentials. Consum supermarket serves local communities with quality products and local specialties. Traditional markets operate regularly, featuring fresh produce, fish, and regional foods at excellent prices. The combination of modern retail and traditional markets ensures residents enjoy both convenience and authentic shopping experiences, with access to international products for those seeking familiar brands.",
-      "keyPoints": [
-        "Mercadona supermarket",
-        "Lidl discount supermarket",
-        "Consum local supermarket",
-        "Traditional fresh markets"
-      ]
-    },
-    "education": {
-      "text": "Families relocating to Cox benefit from excellent educational options, including international schools in the region offering British curriculum alternatives to Spanish education. These schools provide continuity for expat families, with English-language instruction and familiar teaching methodologies. International schools in the area maintain high academic standards and facilitate integration with other expat families. Spanish public schools are also available, offering cultural immersion opportunities. The educational infrastructure supports families at all levels, from primary through secondary education, ensuring children's smooth transition to their new home.",
-      "keyPoints": [
-        "International schools with British curriculum",
-        "English-language education options",
-        "High academic standards",
-        "Expat family community in schools"
-      ]
-    },
-    "sports": {
-      "text": "Sports and leisure activities define the Cox lifestyle, with multiple Blue Flag beaches within 20 minutes offering swimming, water sports, and beach clubs. Several championship golf courses nearby cater to enthusiasts of all skill levels, featuring scenic layouts and professional facilities. Coastal proximity enables water sports including paddleboarding, windsurfing, and kayaking. Hiking and cycling trails traverse the surrounding countryside, offering outdoor enthusiasts endless exploration opportunities. Fitness centers, tennis courts, and sporting clubs create an active community culture suitable for families and health-conscious residents seeking an active Mediterranean lifestyle.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Championship golf courses",
-        "Water sports and beach activities",
-        "Hiking and cycling trails"
-      ]
+      "name": "Hospital Vega Baja (Orihuela)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Vega%20Baja%20(Orihuela)",
+      "distance": "8 km"
     }
   },
-  "transport": {
-    "overview": "Bus connections link Cox to surrounding towns and coastal areas, providing convenient public transportation for those preferring not to drive. However, car ownership is recommended for maximum flexibility, enabling easy exploration of the broader Costa Blanca region and access to amenities not directly connected by public transport.",
-    "airports": "Alicante-Elche Airport (approximately 90 kilometers away) provides international connections to UK and European destinations, typically requiring 60-75 minutes by car. Valencia Airport (approximately 150 kilometers) offers alternative international flights. Both airports feature rental car facilities for exploring the region.",
-    "driving": "Cox enjoys excellent road connections via motorways linking to major coastal towns, regional centers, and neighboring communities. Modern highway infrastructure enables easy day trips to Benidorm, Alicante, and other Costa Blanca destinations. Local roads are well-maintained, and international driving licenses are recognized.",
-    "public": "Bus services operate regular routes connecting Cox to surrounding towns, beaches, and regional centers. Services increase during summer months when tourism peaks. Coordination between bus operators ensures connectivity across the Costa Blanca region.",
-    "keyPoints": [
-      "Bus connections to surrounding areas",
-      "Car recommended for flexibility",
-      "90 minutes to Alicante Airport",
-      "Excellent motorway access to Costa Blanca"
-    ]
-  },
-  "propertyMarket": {
-    "overview": "Cox's property market demonstrates robust health with 8% year-on-year growth, reflecting increasing international interest in inland Costa Blanca communities. The market offers excellent value positioning, with prices 40% lower than typical Spanish island markets, attracting investors and owner-occupiers seeking capital appreciation and rental income potential.",
-    "priceRange": "€209,000 - €255,000",
-    "popularTypes": "Town House, Bungalow",
-    "investment": "Rental potential remains strong with typical 7-night holiday lets commanding €800, creating viable investment returns for property owners. The combination of affordability, growth trajectory, and rental demand positions Cox as an attractive investment opportunity. Capital growth outlook is positive given regional development, infrastructure improvements, and increasing expat demand."
-  },
-  "neighborhoods": [
-    "Centro Histórico - The heart of Cox featuring traditional architecture, local restaurants, and authentic Spanish character with proximity to amenities",
-    "Zona Residencial Norte - Modern residential area with newer properties, family homes, and peaceful surroundings ideal for established families",
-    "Área Costa - Properties closer to coastal access within 15-20 minute drive, popular with those prioritizing beach proximity",
-    "Barrio Ampliación - Expanding residential sector with mixture of traditional and contemporary properties offering diverse options",
-    "Zona de Inversores - Area attracting property investors with good rental potential and modern infrastructure development",
-    "Periurbana - Semi-rural surrounding areas maintaining Spanish character while offering larger properties and countryside living"
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Cox 2026 | Complete Area Guide & Property",
+    "metaDescription": "Discover living in Cox: €209k-€255k properties, established expat community, 8% growth. Blue Flag beaches, international schools & healthcare.",
+    "heroIntro": "Cox is a charming inland town that has become increasingly popular with international buyers seeking authentic Spanish living combined with modern amenities. Located on Spain's Costa Blanca, Cox offers a unique blend of traditional Spanish culture and contemporary convenience, making it an attractive destination for families, retirees, and investors alike. The town boasts an established international community where English is widely spoken, eliminating language barriers for newcomers. With property prices ranging from €209,000 to €255,000 and a strong 8% year-on-year market growth, Cox represents excellent value compared to island markets—40% less expensive than typical Spanish island properties. The area has transformed over the past decade while maintaining its authentic character, with modern infrastructure supporting both permanent residents and those seeking holiday rental income. Whether you're looking for a primary residence, investment property, or vacation home, Cox delivers accessibility, affordability, and lifestyle quality that rival more famous coastal destinations.",
+    "lifestyleSection": {
+      "intro": "Daily life in Cox revolves around the Spanish tradition of community living, with vibrant local markets, family-oriented restaurants, and social gathering spaces throughout town. The established international community has created a welcoming atmosphere where English is commonly spoken, yet you'll experience authentic Spanish traditions and cuisine. Mercadona and Lidl supermarkets provide convenient shopping alongside charming local markets offering fresh produce, fish, and regional specialties. Social activities abound with numerous cafés, tapas bars, and restaurants serving both traditional Spanish and international cuisine. Multiple Blue Flag beaches lie within 20 minutes, offering swimming, water sports, and beach clubs. The expat community organizes regular social events, cultural activities, and networking opportunities, making integration effortless for newcomers. Golf enthusiasts appreciate several championship courses nearby, while hiking, cycling, and outdoor activities are accessible throughout the region. The pace of life remains relaxed and family-friendly, with strong emphasis on leisure, good food, and personal connections—the essence of Mediterranean living.\n\nCox enjoys a classic Mediterranean climate with over 300 days of sunshine annually, mild winters, and warm, dry summers. Temperatures typically range from 8-10°C in winter to 28-32°C in summer, creating ideal conditions for year-round living. Spring and autumn offer particularly pleasant weather, with comfortable temperatures perfect for outdoor activities and exploration. Rainfall is minimal, concentrated mainly in autumn and winter months, while summer remains consistently dry and perfect for beach visits. The climate is particularly beneficial for those with respiratory issues or seeking to escape harsh winters. The prevailing sea breeze keeps coastal areas cooler during peak summer months, and the proximity to the Mediterranean moderates temperature extremes. This climate makes Cox suitable for people of all ages, from active families to retirees seeking therapeutic weather conditions.",
+      "highlights": [
+        "Exceptional value - 40% cheaper than island markets with comparable Mediterranean lifestyle and amenities",
+        "Strong market growth of 8% year-on-year indicating positive investment trajectory and appreciation potential",
+        "Established international community with English widely spoken, facilitating seamless integration for newcomers",
+        "Excellent healthcare facilities including English-speaking doctors, regional hospitals, and private clinics within short distances",
+        "Authentic Spanish culture combined with modern infrastructure creating balanced lifestyle experience",
+        "Multiple Blue Flag beaches within 20 minutes and championship golf courses enabling active lifestyle pursuits"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Sports and leisure activities define the Cox lifestyle, with multiple Blue Flag beaches within 20 minutes offering swimming, water sports, and beach clubs. Several championship golf courses nearby cater to enthusiasts of all skill levels, featuring scenic layouts and professional facilities. Coastal proximity enables water sports including paddleboarding, windsurfing, and kayaking. Hiking and cycling trails traverse the surrounding countryside, offering outdoor enthusiasts endless exploration opportunities. Fitness centers, tennis courts, and sporting clubs create an active community culture suitable for families and health-conscious residents seeking an active Mediterranean lifestyle.",
+      "dining": "Cox offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping in Cox caters to all preferences, from modern supermarkets to traditional Spanish markets. Mercadona offers extensive product selection with competitive pricing, while Lidl provides budget-friendly options for everyday essentials. Consum supermarket serves local communities with quality products and local specialties. Traditional markets operate regularly, featuring fresh produce, fish, and regional foods at excellent prices. The combination of modern retail and traditional markets ensures residents enjoy both convenience and authentic shopping experiences, with access to international products for those seeking familiar brands.",
+      "healthcare": "Healthcare in Cox is comprehensive and internationally recognized, with a regional hospital located within 30 minutes providing full medical services and emergency care. Private clinics are readily available throughout the area, offering specialized services and shorter waiting times. English-speaking doctors are commonly found in both public and private facilities, eliminating communication barriers for international residents. The healthcare system maintains European standards while offering exceptional value compared to private healthcare costs in Northern Europe. Many residents appreciate the combination of public healthcare access and affordable private options for non-emergency treatments.",
+      "transport": "Bus connections link Cox to surrounding towns and coastal areas, providing convenient public transportation for those preferring not to drive. However, car ownership is recommended for maximum flexibility, enabling easy exploration of the broader Costa Blanca region and access to amenities not directly connected by public transport. Alicante-Elche Airport (approximately 90 kilometers away) provides international connections to UK and European destinations, typically requiring 60-75 minutes by car. Valencia Airport (approximately 150 kilometers) offers alternative international flights. Both airports feature rental car facilities for exploring the region. Cox enjoys excellent road connections via motorways linking to major coastal towns, regional centers, and neighboring communities. Modern highway infrastructure enables easy day trips to Benidorm, Alicante, and other Costa Blanca destinations. Local roads are well-maintained, and international driving licenses are recognized. Bus services operate regular routes connecting Cox to surrounding towns, beaches, and regional centers. Services increase during summer months when tourism peaks. Coordination between bus operators ensures connectivity across the Costa Blanca region."
+    },
+    "propertyMarketSection": "Cox's property market demonstrates robust health with 8% year-on-year growth, reflecting increasing international interest in inland Costa Blanca communities. The market offers excellent value positioning, with prices 40% lower than typical Spanish island markets, attracting investors and owner-occupiers seeking capital appreciation and rental income potential.\n\nPopular property types include Town House, Bungalow.\n\nRental potential remains strong with typical 7-night holiday lets commanding €800, creating viable investment returns for property owners. The combination of affordability, growth trajectory, and rental demand positions Cox as an attractive investment opportunity. Capital growth outlook is positive given regional development, infrastructure improvements, and increasing expat demand.",
+    "whyLiveHereSection": [
       "Exceptional value - 40% cheaper than island markets with comparable Mediterranean lifestyle and amenities",
       "Strong market growth of 8% year-on-year indicating positive investment trajectory and appreciation potential",
       "Established international community with English widely spoken, facilitating seamless integration for newcomers",
@@ -77,56 +63,327 @@
       "Authentic Spanish culture combined with modern infrastructure creating balanced lifestyle experience",
       "Multiple Blue Flag beaches within 20 minutes and championship golf courses enabling active lifestyle pursuits"
     ],
-    "cons": [
-      "Car ownership recommended for maximum flexibility, as public transport connectivity is more limited than major coastal cities",
-      "Smaller town character means fewer major retail centers and entertainment venues compared to larger Costa Blanca destinations",
-      "Summer tourism influx can increase congestion on roads to beaches, though inland location minimizes direct impact"
-    ]
+    "faqs": [
+      {
+        "question": "Is Cox a good place to live?",
+        "answer": "Yes, Cox is an excellent place to live. It combines authentic Spanish culture with modern amenities, maintains an established and welcoming international community where English is widely spoken, and offers exceptional value at 40% less than island market prices. The area provides quality healthcare, educational options for families, proximity to beautiful beaches, and strong rental income potential, making it suitable for retirees, families, and investors alike."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can freely purchase property in Spain without restrictions. EU citizens, non-EU citizens, and those without Spanish residency can all buy property. The process involves opening a Spanish bank account, obtaining a Spanish tax identification number (NIE), and registering the purchase with local authorities. Many international real estate professionals and English-speaking solicitors in the Cox area facilitate this process for foreign buyers."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Property costs in Cox range from €209,000 to €255,000, making it significantly affordable compared to other Spanish markets. Beyond the purchase price, buyers should budget for transfer tax (7-10%), legal fees (0.5-1.5% of property value), and registration costs (0.1-0.5%). Annual property taxes (IBI) typically range from €200-€400 depending on property value and location within Cox."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "Purchasing property in Spain does not require a visa. However, if you plan to live in Spain permanently, you'll need appropriate residency documentation. EU citizens can remain indefinitely with proof of financial means. Non-EU citizens typically require a long-stay visa, often obtained through investment or retirement programs. Property ownership alone doesn't grant residency but facilitates visa applications through demonstrating financial ties."
+      },
+      {
+        "question": "How much are property taxes in Spain?",
+        "answer": "Spain's property tax (IBI - Impuesto sobre Bienes Inmuebles) is municipal and varies by location. In Cox, annual IBI typically ranges from €200-€400 depending on property classification and cadastral value. Capital gains tax applies when selling property, generally 19% of profit for residents and higher rates for non-residents. Wealth tax applies if your Spanish property portfolio exceeds certain thresholds, typically €600,000-€700,000."
+      },
+      {
+        "question": "Can I get a mortgage in Spain as a foreigner?",
+        "answer": "Yes, foreign buyers can obtain mortgages in Spain. Most Spanish banks offer mortgages covering 70-80% of property value to qualified foreign applicants. Requirements typically include proof of income, credit assessment, and a deposit of 20-30%. Interest rates are generally competitive. Working with English-speaking mortgage brokers in the Cox area simplifies this process, and many foreigners successfully finance property purchases through Spanish banks."
+      },
+      {
+        "question": "What is the cost of living in Costa Blanca?",
+        "answer": "Cost of living in Cox is remarkably affordable, significantly lower than Northern Europe while maintaining quality of life. Average property prices per square meter stand at €2,200/m². Dining, entertainment, and utilities cost considerably less than UK equivalents. Local produce at markets is inexpensive, and healthcare costs are minimal compared to private systems in other countries. A comfortable lifestyle for a couple can be maintained on €1,200-€1,500 monthly, excluding property payments."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Costa Blanca, particularly areas like Cox, is excellent for retirees. The warm Mediterranean climate benefits health and wellbeing, healthcare facilities are of high quality with English-speaking professionals, and cost of living remains affordable on pensions. The established international community provides social opportunities and cultural familiarity, while proximity to beaches, golf courses, and outdoor activities supports active aging. Many retirees enjoy the lifestyle and financial advantages versus aging in place in Northern Europe."
+      },
+      {
+        "question": "How far is Costa Blanca from the UK?",
+        "answer": "Costa Blanca is approximately 1,500 kilometers (930 miles) from the UK. Flight times from London to Alicante-Elche Airport typically range from 2.5-3 hours, making it easily accessible for regular visits home. Multiple airlines operate daily flights between UK airports and Alicante, ensuring convenient connections for maintaining UK relationships and family visits. The area's popularity with British expats reflects this accessibility and short travel times."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Costa Blanca enjoys exceptional Mediterranean weather with over 300 days of sunshine annually. Summers are warm and dry (28-32°C) with minimal rainfall, while winters are mild (8-10°C). Spring and autumn offer ideal temperatures (18-25°C) for outdoor activities. The sea breeze moderates summer heat in coastal areas, and rainfall occurs mainly in autumn and winter. This climate supports year-round outdoor living and is particularly beneficial for those with respiratory issues or seeking escape from harsh winters."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Cox? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Rental potential remains strong with typical 7-night holiday lets commanding €800, creating viable investment returns for property owners. The combination of affordability, growth trajectory, and rental demand positions Cox as an attractive investment opportunity. Capital growth outlook is positive given regional development, infrastructure improvements, and increasing expat demand.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Cox are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Cox offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Cox celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Cox have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "20-35 min",
+          "description": "British curriculum school with excellent facilities and strong academic record serving the expat community"
+        },
+        {
+          "name": "Newton College",
+          "type": "International (British/Spanish)",
+          "distance": "25-40 min",
+          "description": "Bilingual international school offering both British and Spanish curricula with modern facilities"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Cox offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Cox has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Cox",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.8928!3d38.1411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Cox a good place to live?",
-      "answer": "Yes, Cox is an excellent place to live. It combines authentic Spanish culture with modern amenities, maintains an established and welcoming international community where English is widely spoken, and offers exceptional value at 40% less than island market prices. The area provides quality healthcare, educational options for families, proximity to beautiful beaches, and strong rental income potential, making it suitable for retirees, families, and investors alike."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Cox",
+    "description": "Cox is a inland municipality in Costa Blanca South, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.1411",
+      "longitude": "-0.8928"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can freely purchase property in Spain without restrictions. EU citizens, non-EU citizens, and those without Spanish residency can all buy property. The process involves opening a Spanish bank account, obtaining a Spanish tax identification number (NIE), and registering the purchase with local authorities. Many international real estate professionals and English-speaking solicitors in the Cox area facilitate this process for foreign buyers."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cox",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Property costs in Cox range from €209,000 to €255,000, making it significantly affordable compared to other Spanish markets. Beyond the purchase price, buyers should budget for transfer tax (7-10%), legal fees (0.5-1.5% of property value), and registration costs (0.1-0.5%). Annual property taxes (IBI) typically range from €200-€400 depending on property value and location within Cox."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "Purchasing property in Spain does not require a visa. However, if you plan to live in Spain permanently, you'll need appropriate residency documentation. EU citizens can remain indefinitely with proof of financial means. Non-EU citizens typically require a long-stay visa, often obtained through investment or retirement programs. Property ownership alone doesn't grant residency but facilitates visa applications through demonstrating financial ties."
-    },
-    {
-      "question": "How much are property taxes in Spain?",
-      "answer": "Spain's property tax (IBI - Impuesto sobre Bienes Inmuebles) is municipal and varies by location. In Cox, annual IBI typically ranges from €200-€400 depending on property classification and cadastral value. Capital gains tax applies when selling property, generally 19% of profit for residents and higher rates for non-residents. Wealth tax applies if your Spanish property portfolio exceeds certain thresholds, typically €600,000-€700,000."
-    },
-    {
-      "question": "Can I get a mortgage in Spain as a foreigner?",
-      "answer": "Yes, foreign buyers can obtain mortgages in Spain. Most Spanish banks offer mortgages covering 70-80% of property value to qualified foreign applicants. Requirements typically include proof of income, credit assessment, and a deposit of 20-30%. Interest rates are generally competitive. Working with English-speaking mortgage brokers in the Cox area simplifies this process, and many foreigners successfully finance property purchases through Spanish banks."
-    },
-    {
-      "question": "What is the cost of living in Costa Blanca?",
-      "answer": "Cost of living in Cox is remarkably affordable, significantly lower than Northern Europe while maintaining quality of life. Average property prices per square meter stand at €2,200/m². Dining, entertainment, and utilities cost considerably less than UK equivalents. Local produce at markets is inexpensive, and healthcare costs are minimal compared to private systems in other countries. A comfortable lifestyle for a couple can be maintained on €1,200-€1,500 monthly, excluding property payments."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Costa Blanca, particularly areas like Cox, is excellent for retirees. The warm Mediterranean climate benefits health and wellbeing, healthcare facilities are of high quality with English-speaking professionals, and cost of living remains affordable on pensions. The established international community provides social opportunities and cultural familiarity, while proximity to beaches, golf courses, and outdoor activities supports active aging. Many retirees enjoy the lifestyle and financial advantages versus aging in place in Northern Europe."
-    },
-    {
-      "question": "How far is Costa Blanca from the UK?",
-      "answer": "Costa Blanca is approximately 1,500 kilometers (930 miles) from the UK. Flight times from London to Alicante-Elche Airport typically range from 2.5-3 hours, making it easily accessible for regular visits home. Multiple airlines operate daily flights between UK airports and Alicante, ensuring convenient connections for maintaining UK relationships and family visits. The area's popularity with British expats reflects this accessibility and short travel times."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Costa Blanca enjoys exceptional Mediterranean weather with over 300 days of sunshine annually. Summers are warm and dry (28-32°C) with minimal rainfall, while winters are mild (8-10°C). Spring and autumn offer ideal temperatures (18-25°C) for outdoor activities. The sea breeze moderates summer heat in coastal areas, and rainfall occurs mainly in autumn and winter. This climate supports year-round outdoor living and is particularly beneficial for those with respiratory issues or seeking escape from harsh winters."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
     }
-  ],
-  "slug": "cox",
-  "town": "Cox",
-  "propertyCount": 7,
-  "generatedAt": "2026-02-05T23:15:58.512Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Cox a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Cox is an excellent place to live. It combines authentic Spanish culture with modern amenities, maintains an established and welcoming international community where English is widely spoken, and offers exceptional value at 40% less than island market prices. The area provides quality healthcare"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can freely purchase property in Spain without restrictions. EU citizens, non-EU citizens, and those without Spanish residency can all buy property. The process involves opening a Spanish bank account, obtaining a Spanish tax identification number (NIE), and registering the purchase w"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Property costs in Cox range from €209,000 to €255,000, making it significantly affordable compared to other Spanish markets. Beyond the purchase price, buyers should budget for transfer tax (7-10%), legal fees (0.5-1.5% of property value), and registration costs (0.1-0.5%). Annual property taxes (IB"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Purchasing property in Spain does not require a visa. However, if you plan to live in Spain permanently, you'll need appropriate residency documentation. EU citizens can remain indefinitely with proof of financial means. Non-EU citizens typically require a long-stay visa, often obtained through inve"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much are property taxes in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Spain's property tax (IBI - Impuesto sobre Bienes Inmuebles) is municipal and varies by location. In Cox, annual IBI typically ranges from €200-€400 depending on property classification and cadastral value. Capital gains tax applies when selling property, generally 19% of profit for residents and hi"
+        }
+      }
+    ]
+  }
 }

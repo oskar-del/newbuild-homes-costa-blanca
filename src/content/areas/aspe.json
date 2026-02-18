@@ -1,81 +1,378 @@
 {
-  "metaTitle": "Living in Aspe, Costa Blanca: Complete Buyer's Guide",
-  "metaDescription": "Discover Aspe, Costa Blanca. Explore villas from €380k-€581k, climate, amenities, and why expats choose this charming inland town.",
-  "heroIntro": "Nestled in the heart of the Costa Blanca, Aspe is a hidden gem that offers authentic Spanish living away from the crowded coastal resorts. This historic market town, located in the province of Alicante, has become increasingly popular with property buyers seeking a quieter lifestyle while maintaining excellent connectivity to beaches, airports, and major cities. With its vibrant local culture, weekly markets, and genuine Spanish character, Aspe provides the perfect balance between tranquility and convenience.\n\nThe town boasts a rich agricultural heritage, evident in its surrounding countryside filled with grape vineyards and almond groves. Modern infrastructure and recent property developments have brought contemporary comforts to this traditional community, making it an attractive destination for both retirees and families. The current property market in Aspe offers excellent value, with new build villas ranging from €380,000 to €581,000, providing stunning homes with modern amenities at reasonable prices compared to coastal alternatives.\n\nWhether you're seeking a permanent residence, a holiday retreat, or an investment opportunity, Aspe delivers authentic Mediterranean living with practical access to urban conveniences. The town's welcoming expat community, combined with its Spanish traditions and improving infrastructure, creates a unique living experience that appeals to discerning property buyers from across Europe.",
-  "climate": "Aspe enjoys a Mediterranean climate characterized by warm, dry summers and mild winters, making it an ideal year-round destination. Average summer temperatures reach 28-30°C with minimal rainfall, while winters remain pleasant at 10-12°C. With approximately 300 days of sunshine annually, residents benefit from excellent weather for outdoor activities and gardening. The autumn and spring seasons are particularly pleasant, offering comfortable temperatures of 18-22°C. While summer can bring occasional heat spells, the inland location means slightly cooler temperatures than coastal areas, and the surrounding terrain provides natural wind flow during the hottest months.",
-  "lifestyle": "Life in Aspe revolves around authentic Spanish traditions combined with modern convenience. The town pulses with activity during its famous Thursday market, where locals and visitors gather to purchase fresh produce, household items, and regional specialties. The expat community here is well-established but unpretentious, with residents enjoying a genuine integration into local life rather than forming isolated bubbles. Restaurants, tapas bars, and cafés line the main streets, offering both traditional Spanish cuisine and international options that cater to diverse palates.\n\nThe atmosphere in Aspe is relaxed and family-friendly, with strong cultural events throughout the year, including the impressive July festivities celebrating the town's patron saint. Shopping is convenient with local supermarkets, boutiques, and the excellent weekly market providing everything needed for daily life. The town maintains a walkable center where residents can conduct business, socialize, and enjoy meals on outdoor terraces. Despite its small-town charm, Aspe is only 15 minutes from larger shopping centers and major amenities, ensuring access to modern services when needed.",
-  "amenities": {
-    "healthcare": "Aspe has a well-equipped Centro de Salud (Health Center) providing general medical services for residents. For specialized treatments and emergencies, the Hospital Universitario del Vinalopó in Elche is approximately 20 kilometers away, with modern facilities and comprehensive medical services. Several private healthcare clinics are also available in the region, and most expats maintain private health insurance for immediate access to quality care.",
-    "shopping": "The weekly Thursday market (Mercado de Abastos) is the heart of Aspe's shopping scene, offering fresh produce, local goods, and regional specialties at excellent prices. The town center features local shops, pharmacies, and boutiques for daily needs. For larger shopping requirements, the Carrefour and other hypermarkets in nearby Elche (15 km) and Novelda (8 km) provide comprehensive shopping centers with international brands, electronics, and household items.",
-    "dining": "Aspe's gastronomic scene offers authentic Spanish dining experiences with numerous traditional restaurants and tapas bars concentrated around the central Plaza España and nearby streets. Local specialties include gazpacho, pisto, and regional rice dishes. The town supports both casual eateries perfect for lunch and more formal restaurants for evening dining. Several establishments cater to international tastes, reflecting the expat presence, while maintaining their Spanish character and quality local ingredients.",
-    "sports": "The region offers excellent sports facilities and outdoor activities. The nearby Playa Paraiso and other beaches of Guardamar del Segura (25 km away) provide water sports opportunities and coastal recreation. Golf enthusiasts have access to several championship courses within 30-45 minutes, including Club de Golf Bonalba and Villamartín Golf Club. Local sports clubs offer tennis, padel, football, and cycling opportunities. The surrounding countryside is perfect for hiking and countryside walks through the agricultural landscape."
-  },
-  "transport": {
-    "airports": "Alicante-Elche Airport (ALC) is approximately 35 kilometers away, a 40-minute drive, serving numerous European cities with both budget and full-service airlines. Murcia-San Javier Airport (MJA) is 85 kilometers distant, offering alternative flight options. Both airports provide excellent connectivity for travel and international visitors.",
-    "driving": "Aspe enjoys excellent road connectivity via the AP-7 and A-7 motorways, connecting to Alicante, Valencia, and southern regions efficiently. The town is directly accessible from the N-340 national road. From Aspe to Alicante city center requires approximately 35-40 minutes by car, Benidorm is 50 kilometers away, and the beaches of Torrevieja are 30 kilometers south. Road conditions are generally excellent with well-maintained highways and local routes.",
-    "public": "Public bus services connect Aspe to surrounding towns and Alicante city through regional bus operators. Direct bus routes serve Elche, Novelda, and other nearby municipalities. While having a personal vehicle is recommended for maximum flexibility, bus connections provide access to major amenities. Taxis are available and relatively inexpensive for local journeys within and around town."
-  },
-  "propertyMarket": {
-    "overview": "Aspe's property market presents excellent value proposition with recent new build developments offering modern villas in a charming traditional setting. The market has seen growing interest from European buyers seeking authentic living without premium coastal prices. Supply is carefully managed with quality new build projects that respect local character while incorporating contemporary features. The town's improving infrastructure and established expat community continue to drive steady demand.",
-    "priceRange": "€380,000 - €581,000",
-    "popularTypes": "Villa",
-    "investment": "Aspe offers compelling rental potential through both summer tourist rentals and longer-term expat lettings. The combination of proximity to beaches, affordable pricing, and growing expatriate community creates consistent demand for quality accommodation. Capital appreciation prospects are solid given the region's development trajectory and improving amenities. Properties in Aspe typically offer better rental yields than coastal alternatives while maintaining healthy capital growth potential."
-  },
-  "neighborhoods": [
-    "Nuevas Villas de Aspe - Modern urbanization featuring contemporary villas with community amenities, situated near the town center while maintaining peaceful surroundings",
-    "Centro Histórico - The charming old town center with traditional architecture, weekly market, restaurants, and authentic Spanish character, ideal for walkable urban living",
-    "Villas del Segura - Newer residential development offering spacious properties with private gardens, positioned between town convenience and countryside tranquility",
-    "Residencial Aspe - Established residential area with mixed property types, family-friendly atmosphere, and good access to schools and local amenities"
+  "slug": "aspe",
+  "name": "Aspe",
+  "region": "Costa Blanca",
+  "heroImage": "/images/areas/aspe-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 8,
+  "propertyTypes": [
+    "Villa"
   ],
-  "prosAndCons": {
-    "pros": [
+  "priceRange": {
+    "min": 380000,
+    "max": 581000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Aspe Tourism",
+      "url": "https://www.google.com/search?q=Aspe%20Spain%20official%20website",
+      "description": "Discover more about Aspe"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "30 km",
+      "driveTime": "25 min"
+    },
+    "healthcare": {
+      "name": "Hospital del Vinalopó (Elche)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20del%20Vinalop%C3%B3%20(Elche)",
+      "distance": "15 km"
+    }
+  },
+  "content": {
+    "metaTitle": "Living in Aspe, Costa Blanca: Complete Buyer's Guide",
+    "metaDescription": "Discover Aspe, Costa Blanca. Explore villas from €380k-€581k, climate, amenities, and why expats choose this charming inland town.",
+    "heroIntro": "Nestled in the heart of the Costa Blanca, Aspe is a hidden gem that offers authentic Spanish living away from the crowded coastal resorts. This historic market town, located in the province of Alicante, has become increasingly popular with property buyers seeking a quieter lifestyle while maintaining excellent connectivity to beaches, airports, and major cities. With its vibrant local culture, weekly markets, and genuine Spanish character, Aspe provides the perfect balance between tranquility and convenience.\n\nThe town boasts a rich agricultural heritage, evident in its surrounding countryside filled with grape vineyards and almond groves. Modern infrastructure and recent property developments have brought contemporary comforts to this traditional community, making it an attractive destination for both retirees and families. The current property market in Aspe offers excellent value, with new build villas ranging from €380,000 to €581,000, providing stunning homes with modern amenities at reasonable prices compared to coastal alternatives.\n\nWhether you're seeking a permanent residence, a holiday retreat, or an investment opportunity, Aspe delivers authentic Mediterranean living with practical access to urban conveniences. The town's welcoming expat community, combined with its Spanish traditions and improving infrastructure, creates a unique living experience that appeals to discerning property buyers from across Europe.",
+    "lifestyleSection": {
+      "intro": "Life in Aspe revolves around authentic Spanish traditions combined with modern convenience. The town pulses with activity during its famous Thursday market, where locals and visitors gather to purchase fresh produce, household items, and regional specialties. The expat community here is well-established but unpretentious, with residents enjoying a genuine integration into local life rather than forming isolated bubbles. Restaurants, tapas bars, and cafés line the main streets, offering both traditional Spanish cuisine and international options that cater to diverse palates.\n\nThe atmosphere in Aspe is relaxed and family-friendly, with strong cultural events throughout the year, including the impressive July festivities celebrating the town's patron saint. Shopping is convenient with local supermarkets, boutiques, and the excellent weekly market providing everything needed for daily life. The town maintains a walkable center where residents can conduct business, socialize, and enjoy meals on outdoor terraces. Despite its small-town charm, Aspe is only 15 minutes from larger shopping centers and major amenities, ensuring access to modern services when needed.\n\nAspe enjoys a Mediterranean climate characterized by warm, dry summers and mild winters, making it an ideal year-round destination. Average summer temperatures reach 28-30°C with minimal rainfall, while winters remain pleasant at 10-12°C. With approximately 300 days of sunshine annually, residents benefit from excellent weather for outdoor activities and gardening. The autumn and spring seasons are particularly pleasant, offering comfortable temperatures of 18-22°C. While summer can bring occasional heat spells, the inland location means slightly cooler temperatures than coastal areas, and the surrounding terrain provides natural wind flow during the hottest months.",
+      "highlights": [
+        "Exceptional value - New build villas €380k-€581k offer modern quality at significantly lower prices than coastal equivalents",
+        "Authentic Spanish living - Traditional market town atmosphere with genuine Spanish culture and established expat community providing integrated lifestyle",
+        "Excellent connectivity - Located 35km from Alicante airport with motorway access to beaches, cities, and major amenities within 15-50 minutes",
+        "Year-round sunshine - Mediterranean climate with 300+ days of sunshine, warm summers, and mild winters perfect for outdoor living",
+        "Real community - Vibrant town life with weekly markets, local events, restaurants, and genuine integration opportunities unlike isolated resort developments"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "The region offers excellent sports facilities and outdoor activities. The nearby Playa Paraiso and other beaches of Guardamar del Segura (25 km away) provide water sports opportunities and coastal recreation. Golf enthusiasts have access to several championship courses within 30-45 minutes, including Club de Golf Bonalba and Villamartín Golf Club. Local sports clubs offer tennis, padel, football, and cycling opportunities. The surrounding countryside is perfect for hiking and countryside walks through the agricultural landscape.",
+      "dining": "Aspe's gastronomic scene offers authentic Spanish dining experiences with numerous traditional restaurants and tapas bars concentrated around the central Plaza España and nearby streets. Local specialties include gazpacho, pisto, and regional rice dishes. The town supports both casual eateries perfect for lunch and more formal restaurants for evening dining. Several establishments cater to international tastes, reflecting the expat presence, while maintaining their Spanish character and quality local ingredients.",
+      "shopping": "The weekly Thursday market (Mercado de Abastos) is the heart of Aspe's shopping scene, offering fresh produce, local goods, and regional specialties at excellent prices. The town center features local shops, pharmacies, and boutiques for daily needs. For larger shopping requirements, the Carrefour and other hypermarkets in nearby Elche (15 km) and Novelda (8 km) provide comprehensive shopping centers with international brands, electronics, and household items.",
+      "healthcare": "Aspe has a well-equipped Centro de Salud (Health Center) providing general medical services for residents. For specialized treatments and emergencies, the Hospital Universitario del Vinalopó in Elche is approximately 20 kilometers away, with modern facilities and comprehensive medical services. Several private healthcare clinics are also available in the region, and most expats maintain private health insurance for immediate access to quality care.",
+      "transport": "Alicante-Elche Airport (ALC) is approximately 35 kilometers away, a 40-minute drive, serving numerous European cities with both budget and full-service airlines. Murcia-San Javier Airport (MJA) is 85 kilometers distant, offering alternative flight options. Both airports provide excellent connectivity for travel and international visitors. Aspe enjoys excellent road connectivity via the AP-7 and A-7 motorways, connecting to Alicante, Valencia, and southern regions efficiently. The town is directly accessible from the N-340 national road. From Aspe to Alicante city center requires approximately 35-40 minutes by car, Benidorm is 50 kilometers away, and the beaches of Torrevieja are 30 kilometers south. Road conditions are generally excellent with well-maintained highways and local routes. Public bus services connect Aspe to surrounding towns and Alicante city through regional bus operators. Direct bus routes serve Elche, Novelda, and other nearby municipalities. While having a personal vehicle is recommended for maximum flexibility, bus connections provide access to major amenities. Taxis are available and relatively inexpensive for local journeys within and around town."
+    },
+    "propertyMarketSection": "Aspe's property market presents excellent value proposition with recent new build developments offering modern villas in a charming traditional setting. The market has seen growing interest from European buyers seeking authentic living without premium coastal prices. Supply is carefully managed with quality new build projects that respect local character while incorporating contemporary features. The town's improving infrastructure and established expat community continue to drive steady demand.\n\nPopular property types include Villa.\n\nAspe offers compelling rental potential through both summer tourist rentals and longer-term expat lettings. The combination of proximity to beaches, affordable pricing, and growing expatriate community creates consistent demand for quality accommodation. Capital appreciation prospects are solid given the region's development trajectory and improving amenities. Properties in Aspe typically offer better rental yields than coastal alternatives while maintaining healthy capital growth potential.",
+    "whyLiveHereSection": [
       "Exceptional value - New build villas €380k-€581k offer modern quality at significantly lower prices than coastal equivalents",
       "Authentic Spanish living - Traditional market town atmosphere with genuine Spanish culture and established expat community providing integrated lifestyle",
       "Excellent connectivity - Located 35km from Alicante airport with motorway access to beaches, cities, and major amenities within 15-50 minutes",
       "Year-round sunshine - Mediterranean climate with 300+ days of sunshine, warm summers, and mild winters perfect for outdoor living",
       "Real community - Vibrant town life with weekly markets, local events, restaurants, and genuine integration opportunities unlike isolated resort developments"
     ],
-    "cons": [
-      "Limited immediate beach access - While beaches are accessible within 25-30 minutes, Aspe is an inland town without direct coastal amenities or beach walking distance",
-      "Language considerations - Genuine Spanish living requires basic Spanish language skills; expat services and English-speaking professionals are available but less pervasive than coastal tourist areas"
-    ]
+    "faqs": [
+      {
+        "question": "What is the best time to visit or move to Aspe?",
+        "answer": "Aspe is pleasant year-round, but spring (April-May) and autumn (September-October) offer ideal temperatures of 18-22°C for viewings and moving. Summer is warm but excellent for enjoying outdoor amenities, while winters remain mild. The Thursday market operates weekly, making any day suitable for experiencing town life."
+      },
+      {
+        "question": "How far is Aspe from the beaches?",
+        "answer": "Aspe is approximately 25-30 kilometers from the nearest beaches in Guardamar del Segura and other coastal areas, typically a 25-40 minute drive depending on the specific destination. This proximity allows beach access without the premium pricing of beachfront properties."
+      },
+      {
+        "question": "What is the expat community like in Aspe?",
+        "answer": "Aspe has a well-established, friendly expat community primarily from the UK, Germany, and Northern Europe. Unlike coastal tourist areas, the expat presence here encourages genuine integration with Spanish life rather than isolation. Residents typically speak basic Spanish and actively participate in local community events and traditions."
+      },
+      {
+        "question": "Are the new build villas good investments?",
+        "answer": "Yes, the new build villas offer strong investment potential. They provide modern amenities at competitive prices, with excellent rental yields for both tourist and long-term lettings. Capital appreciation is supported by improving infrastructure, growing expat interest, and the region's development trajectory."
+      },
+      {
+        "question": "What are property taxes and costs in Aspe?",
+        "answer": "Annual property taxes (IBI) typically range from €200-400 depending on property size and value. Residents pay community fees (HOA) of approximately €50-150 monthly for urbanizations. Spanish residents also contribute to Spanish income tax and healthcare. Consult with a local gestoría (tax advisor) for specific calculations based on your situation."
+      },
+      {
+        "question": "Is Spanish residency required to purchase property in Aspe?",
+        "answer": "No, foreign nationals can purchase property in Spain without residency, though you'll need a Spanish tax number (NIE). Many expats obtain residency for healthcare and other benefits. A Spanish lawyer can guide you through the legal process and ensure all requirements are met."
+      },
+      {
+        "question": "What utilities and services are available in Aspe?",
+        "answer": "Aspe has complete modern infrastructure including mains water, electricity, gas, and internet connectivity. Most new build properties feature fiber-optic internet connections. Spanish utility providers (Endesa for electricity, Aguas de Alicante for water) serve the town with reliable service comparable to Northern European standards."
+      },
+      {
+        "question": "How good is healthcare access from Aspe?",
+        "answer": "Aspe has a Centro de Salud for general practitioners and routine healthcare. The University Hospital in Elche (20 km) provides specialized and emergency services with modern facilities. Private healthcare options and English-speaking doctors are available in the region. Most expats maintain private health insurance for comprehensive coverage and choice."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Aspe? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Aspe offers compelling rental potential through both summer tourist rentals and longer-term expat lettings. The combination of proximity to beaches, affordable pricing, and growing expatriate community creates consistent demand for quality accommodation. Capital appreciation prospects are solid given the region's development trajectory and improving amenities. Properties in Aspe typically offer better rental yields than coastal alternatives while maintaining healthy capital growth potential.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Aspe are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Aspe offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Aspe celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Aspe have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "20-35 min",
+          "description": "British curriculum school with excellent facilities and strong academic record serving the expat community"
+        },
+        {
+          "name": "Newton College",
+          "type": "International (British/Spanish)",
+          "distance": "25-40 min",
+          "description": "Bilingual international school offering both British and Spanish curricula with modern facilities"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Aspe offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Aspe has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Diverse European community including British, Scandinavian, Dutch, German, and French residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Aspe",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7675!3d38.3444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "What is the best time to visit or move to Aspe?",
-      "answer": "Aspe is pleasant year-round, but spring (April-May) and autumn (September-October) offer ideal temperatures of 18-22°C for viewings and moving. Summer is warm but excellent for enjoying outdoor amenities, while winters remain mild. The Thursday market operates weekly, making any day suitable for experiencing town life."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Aspe",
+    "description": "Aspe is a inland municipality in Costa Blanca, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.3444",
+      "longitude": "-0.7675"
     },
-    {
-      "question": "How far is Aspe from the beaches?",
-      "answer": "Aspe is approximately 25-30 kilometers from the nearest beaches in Guardamar del Segura and other coastal areas, typically a 25-40 minute drive depending on the specific destination. This proximity allows beach access without the premium pricing of beachfront properties."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aspe",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What is the expat community like in Aspe?",
-      "answer": "Aspe has a well-established, friendly expat community primarily from the UK, Germany, and Northern Europe. Unlike coastal tourist areas, the expat presence here encourages genuine integration with Spanish life rather than isolation. Residents typically speak basic Spanish and actively participate in local community events and traditions."
-    },
-    {
-      "question": "Are the new build villas good investments?",
-      "answer": "Yes, the new build villas offer strong investment potential. They provide modern amenities at competitive prices, with excellent rental yields for both tourist and long-term lettings. Capital appreciation is supported by improving infrastructure, growing expat interest, and the region's development trajectory."
-    },
-    {
-      "question": "What are property taxes and costs in Aspe?",
-      "answer": "Annual property taxes (IBI) typically range from €200-400 depending on property size and value. Residents pay community fees (HOA) of approximately €50-150 monthly for urbanizations. Spanish residents also contribute to Spanish income tax and healthcare. Consult with a local gestoría (tax advisor) for specific calculations based on your situation."
-    },
-    {
-      "question": "Is Spanish residency required to purchase property in Aspe?",
-      "answer": "No, foreign nationals can purchase property in Spain without residency, though you'll need a Spanish tax number (NIE). Many expats obtain residency for healthcare and other benefits. A Spanish lawyer can guide you through the legal process and ensure all requirements are met."
-    },
-    {
-      "question": "What utilities and services are available in Aspe?",
-      "answer": "Aspe has complete modern infrastructure including mains water, electricity, gas, and internet connectivity. Most new build properties feature fiber-optic internet connections. Spanish utility providers (Endesa for electricity, Aguas de Alicante for water) serve the town with reliable service comparable to Northern European standards."
-    },
-    {
-      "question": "How good is healthcare access from Aspe?",
-      "answer": "Aspe has a Centro de Salud for general practitioners and routine healthcare. The University Hospital in Elche (20 km) provides specialized and emergency services with modern facilities. Private healthcare options and English-speaking doctors are available in the region. Most expats maintain private health insurance for comprehensive coverage and choice."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca"
     }
-  ],
-  "slug": "aspe",
-  "town": "Aspe",
-  "propertyCount": 8,
-  "generatedAt": "2026-02-05T19:17:52.177Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best time to visit or move to Aspe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aspe is pleasant year-round, but spring (April-May) and autumn (September-October) offer ideal temperatures of 18-22°C for viewings and moving. Summer is warm but excellent for enjoying outdoor amenities, while winters remain mild. The Thursday market operates weekly, making any day suitable for exp"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Aspe from the beaches?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aspe is approximately 25-30 kilometers from the nearest beaches in Guardamar del Segura and other coastal areas, typically a 25-40 minute drive depending on the specific destination. This proximity allows beach access without the premium pricing of beachfront properties."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the expat community like in Aspe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aspe has a well-established, friendly expat community primarily from the UK, Germany, and Northern Europe. Unlike coastal tourist areas, the expat presence here encourages genuine integration with Spanish life rather than isolation. Residents typically speak basic Spanish and actively participate in"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are the new build villas good investments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the new build villas offer strong investment potential. They provide modern amenities at competitive prices, with excellent rental yields for both tourist and long-term lettings. Capital appreciation is supported by improving infrastructure, growing expat interest, and the region's development "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are property taxes and costs in Aspe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Annual property taxes (IBI) typically range from €200-400 depending on property size and value. Residents pay community fees (HOA) of approximately €50-150 monthly for urbanizations. Spanish residents also contribute to Spanish income tax and healthcare. Consult with a local gestoría (tax advisor) f"
+        }
+      }
+    ]
+  }
 }

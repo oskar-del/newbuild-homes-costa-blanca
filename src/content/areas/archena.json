@@ -1,82 +1,379 @@
 {
-  "metaTitle": "Archena Costa Blanca Guide: New Builds €125k-€160k",
-  "metaDescription": "Discover Archena, Costa Blanca's hidden gem. New penthouse & apartment options from €125,000. Perfect for expats seeking authentic Mediterranean living.",
-  "heroIntro": "Archena is a charming inland town located in the Murcia region, just 25 kilometers from the stunning Costa Blanca beaches and approximately 45 minutes from Alicante Airport. This authentic Spanish municipality offers an exceptional alternative to crowded coastal developments, providing residents with genuine local culture, lower property prices, and a more relaxed Mediterranean lifestyle. With excellent connectivity to coastal attractions and a thriving expat community, Archena has emerged as an increasingly popular destination for international property buyers seeking value and authentic Spanish living.\n\nThe town is renowned for its therapeutic thermal springs, which have attracted health-conscious residents for centuries. Archena maintains its traditional character while embracing modern amenities, making it ideal for those seeking a balanced lifestyle between rural charm and contemporary convenience. The current property market presents outstanding opportunities, with newly developed penthouses and apartments available in the €125,000-€160,000 price range, offering exceptional value compared to coastal alternatives.\n\nWhether you're seeking a permanent residence, an investment property with strong rental potential, or a holiday home near the Costa Blanca, Archena delivers on multiple fronts. The combination of affordable pricing, thermal wellness culture, and proximity to both beaches and the vibrant city of Murcia makes this town an increasingly attractive proposition for discerning international buyers.",
-  "climate": "Archena enjoys a Mediterranean climate with over 300 days of sunshine annually, featuring warm, dry summers and mild winters. Average summer temperatures range from 28-32°C (82-90°F), while winter months typically see temperatures between 8-15°C (46-59°F). The town experiences minimal rainfall, concentrated primarily in autumn and spring, creating an ideal climate for outdoor activities year-round. The inland location provides protection from coastal winds, while thermal springs remain at constant temperatures, making the area particularly beneficial for those with joint or respiratory conditions.",
-  "lifestyle": "Life in Archena revolves around a slower pace than coastal towns, with strong emphasis on community, family values, and Spanish traditions. The expat community, though smaller and more selective than beach resort areas, comprises primarily European retirees, wellness seekers, and families attracted by the town's authenticity and lower cost of living. Daily life centers around the central plaza, local markets, and thermal springs, where residents engage in a genuinely integrated lifestyle rather than forming isolated expatriate bubbles.\n\nThe atmosphere is distinctly Spanish with Mediterranean warmth, where neighbors know one another and local festivals celebrate traditional culture. Residents enjoy easy access to both rural countryside and bustling coastal towns, providing perfect balance between peaceful living and entertainment options. The wellness culture is particularly strong, with many residents attracted by the therapeutic properties of local thermal waters, creating a health-conscious community focused on quality of life rather than nightlife consumption.",
-  "amenities": {
-    "healthcare": "Archena has a modern medical center (Centro de Salud) providing primary healthcare services. For specialist treatments and emergencies, Hospital General Universitario Morales Meseguer in Murcia is approximately 35 kilometers away. The thermal springs are renowned for therapeutic treatments, particularly benefiting those with rheumatism, arthritis, and respiratory conditions. Murcia city offers comprehensive private healthcare options for those seeking additional facilities.",
-    "shopping": "The town center features traditional Spanish shops, supermarkets including Mercadona and Carrefour Express, and weekly markets selling fresh local produce. For extensive shopping, Murcia city center (35km) provides major shopping areas including Centro Comercial Nueva Condomina. Daily necessities are readily available within walking distance of town center locations.",
-    "dining": "Archena's restaurant scene emphasizes traditional Murcian cuisine, featuring local specialties like caldero (fish stew), gazpachos, and garden vegetables. The town has numerous family-run restaurants and tapas bars where locals gather. Riverside restaurants near the Segura River offer pleasant dining atmospheres. Murcia city provides international dining options for those seeking variety beyond traditional Spanish fare.",
-    "sports": "Archena offers excellent sporting opportunities including golf at nearby courses such as Peñas Golf Club (15km away). The Segura River provides opportunities for fishing and water activities. Hiking and mountain biking trails traverse the surrounding countryside. Numerous courts accommodate tennis and paddle sports. Beach access is achievable within 30-40 minutes driving, with popular options including Playa Paraíso and Playa Calabazo on the Costa Blanca."
-  },
-  "transport": {
-    "airports": "Alicante-Elche Airport (ALC) is the primary gateway, located approximately 80 kilometers away with a 50-55 minute drive. Murcia-San Javier Airport (MJA) is closer at 45 kilometers, approximately 45 minutes drive. Both airports offer connections to major European cities. Málaga Airport (AGP) is approximately 180 kilometers for alternative flight options.",
-    "driving": "Archena is excellently connected via the RM-2 road linking directly to Murcia and the A-7 motorway providing access toward coastal destinations. The A-30 motorway offers connections to Alicante and the Costa Blanca. Madrid can be reached via A-3 motorway in approximately 4 hours. Road conditions are excellent with well-maintained highways throughout the region.",
-    "public": "Local bus services connect Archena to surrounding towns and Murcia city center. Regular daily buses serve major destinations including Murcia (frequent service), coastal towns, and nearby municipalities. While less extensive than coastal resort areas, public transport provides reliable connections for those without personal vehicles. Regional train services from nearby stations offer additional transport options."
-  },
-  "propertyMarket": {
-    "overview": "Archena's property market offers exceptional value with new build developments attracting both end-users and investors. The market remains relatively underdeveloped compared to coastal alternatives, creating opportunities for early investors. Demand is steadily increasing as awareness of the town's benefits grows among international buyers seeking authentic living and strong returns.",
-    "priceRange": "€125,000 - €160,000",
-    "popularTypes": "Penthouse, Apartment",
-    "investment": "Properties in Archena offer strong rental potential, particularly targeting wellness tourists drawn to thermal springs and increasingly younger digital nomads seeking affordable Mediterranean locations. Average rental yields range from 4-6% annually, with tourist season peaks providing premium short-term rental rates. Long-term rentals to local residents and expats provide stable income with lower vacancy rates. Capital appreciation potential remains strong as the area develops, particularly for properties near town center and thermal facilities."
-  },
-  "neighborhoods": [
-    "Casco Antiguo (Old Town) - Traditional heart of Archena with historic architecture, authentic Spanish character, proximity to central amenities and thermal springs",
-    "Urbanización Archena (Modern residential development) - Contemporary apartment complexes with modern amenities, family-oriented atmosphere, accessible to town center facilities",
-    "Zona Termal (Thermal Zone) - Premium area near thermal springs and wellness facilities, attracting health-conscious residents seeking therapeutic benefits",
-    "Ribera del Segura (Riverside) - Scenic properties along the Segura River offering beautiful natural settings with easy access to recreational activities and restaurants"
+  "slug": "archena",
+  "name": "Archena",
+  "region": "Murcia",
+  "heroImage": "/images/areas/archena-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 2,
+  "propertyTypes": [
+    "Penthouse",
+    "Apartment"
   ],
-  "prosAndCons": {
-    "pros": [
+  "priceRange": {
+    "min": 125000,
+    "max": 160000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Archena Tourism",
+      "url": "https://www.google.com/search?q=Archena%20Spain%20official%20website",
+      "description": "Discover more about Archena"
+    },
+    "airport": {
+      "name": "Murcia-Corvera Airport",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "55 km",
+      "driveTime": "40 min"
+    },
+    "healthcare": {
+      "name": "Hospital de Archena",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20de%20Archena",
+      "distance": "2 km"
+    }
+  },
+  "content": {
+    "metaTitle": "Archena Costa Blanca Guide: New Builds €125k-€160k",
+    "metaDescription": "Discover Archena, Costa Blanca's hidden gem. New penthouse & apartment options from €125,000. Perfect for expats seeking authentic Mediterranean living.",
+    "heroIntro": "Archena is a charming inland town located in the Murcia region, just 25 kilometers from the stunning Costa Blanca beaches and approximately 45 minutes from Alicante Airport. This authentic Spanish municipality offers an exceptional alternative to crowded coastal developments, providing residents with genuine local culture, lower property prices, and a more relaxed Mediterranean lifestyle. With excellent connectivity to coastal attractions and a thriving expat community, Archena has emerged as an increasingly popular destination for international property buyers seeking value and authentic Spanish living.\n\nThe town is renowned for its therapeutic thermal springs, which have attracted health-conscious residents for centuries. Archena maintains its traditional character while embracing modern amenities, making it ideal for those seeking a balanced lifestyle between rural charm and contemporary convenience. The current property market presents outstanding opportunities, with newly developed penthouses and apartments available in the €125,000-€160,000 price range, offering exceptional value compared to coastal alternatives.\n\nWhether you're seeking a permanent residence, an investment property with strong rental potential, or a holiday home near the Costa Blanca, Archena delivers on multiple fronts. The combination of affordable pricing, thermal wellness culture, and proximity to both beaches and the vibrant city of Murcia makes this town an increasingly attractive proposition for discerning international buyers.",
+    "lifestyleSection": {
+      "intro": "Life in Archena revolves around a slower pace than coastal towns, with strong emphasis on community, family values, and Spanish traditions. The expat community, though smaller and more selective than beach resort areas, comprises primarily European retirees, wellness seekers, and families attracted by the town's authenticity and lower cost of living. Daily life centers around the central plaza, local markets, and thermal springs, where residents engage in a genuinely integrated lifestyle rather than forming isolated expatriate bubbles.\n\nThe atmosphere is distinctly Spanish with Mediterranean warmth, where neighbors know one another and local festivals celebrate traditional culture. Residents enjoy easy access to both rural countryside and bustling coastal towns, providing perfect balance between peaceful living and entertainment options. The wellness culture is particularly strong, with many residents attracted by the therapeutic properties of local thermal waters, creating a health-conscious community focused on quality of life rather than nightlife consumption.\n\nArchena enjoys a Mediterranean climate with over 300 days of sunshine annually, featuring warm, dry summers and mild winters. Average summer temperatures range from 28-32°C (82-90°F), while winter months typically see temperatures between 8-15°C (46-59°F). The town experiences minimal rainfall, concentrated primarily in autumn and spring, creating an ideal climate for outdoor activities year-round. The inland location provides protection from coastal winds, while thermal springs remain at constant temperatures, making the area particularly beneficial for those with joint or respiratory conditions.",
+      "highlights": [
+        "Exceptional value with properties €125,000-€160,000 compared to €300,000+ coastal equivalents",
+        "Authentic Spanish living with genuine local culture and strong community atmosphere",
+        "Therapeutic thermal springs providing wellness benefits and attracting health tourism",
+        "Close proximity to Costa Blanca beaches (25-35km) combined with peaceful inland setting",
+        "Strong rental investment potential with growing wellness and digital nomad tourism"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Archena offers excellent sporting opportunities including golf at nearby courses such as Peñas Golf Club (15km away). The Segura River provides opportunities for fishing and water activities. Hiking and mountain biking trails traverse the surrounding countryside. Numerous courts accommodate tennis and paddle sports. Beach access is achievable within 30-40 minutes driving, with popular options including Playa Paraíso and Playa Calabazo on the Costa Blanca.",
+      "dining": "Archena's restaurant scene emphasizes traditional Murcian cuisine, featuring local specialties like caldero (fish stew), gazpachos, and garden vegetables. The town has numerous family-run restaurants and tapas bars where locals gather. Riverside restaurants near the Segura River offer pleasant dining atmospheres. Murcia city provides international dining options for those seeking variety beyond traditional Spanish fare.",
+      "shopping": "The town center features traditional Spanish shops, supermarkets including Mercadona and Carrefour Express, and weekly markets selling fresh local produce. For extensive shopping, Murcia city center (35km) provides major shopping areas including Centro Comercial Nueva Condomina. Daily necessities are readily available within walking distance of town center locations.",
+      "healthcare": "Archena has a modern medical center (Centro de Salud) providing primary healthcare services. For specialist treatments and emergencies, Hospital General Universitario Morales Meseguer in Murcia is approximately 35 kilometers away. The thermal springs are renowned for therapeutic treatments, particularly benefiting those with rheumatism, arthritis, and respiratory conditions. Murcia city offers comprehensive private healthcare options for those seeking additional facilities.",
+      "transport": "Alicante-Elche Airport (ALC) is the primary gateway, located approximately 80 kilometers away with a 50-55 minute drive. Murcia-San Javier Airport (MJA) is closer at 45 kilometers, approximately 45 minutes drive. Both airports offer connections to major European cities. Málaga Airport (AGP) is approximately 180 kilometers for alternative flight options. Archena is excellently connected via the RM-2 road linking directly to Murcia and the A-7 motorway providing access toward coastal destinations. The A-30 motorway offers connections to Alicante and the Costa Blanca. Madrid can be reached via A-3 motorway in approximately 4 hours. Road conditions are excellent with well-maintained highways throughout the region. Local bus services connect Archena to surrounding towns and Murcia city center. Regular daily buses serve major destinations including Murcia (frequent service), coastal towns, and nearby municipalities. While less extensive than coastal resort areas, public transport provides reliable connections for those without personal vehicles. Regional train services from nearby stations offer additional transport options."
+    },
+    "propertyMarketSection": "Archena's property market offers exceptional value with new build developments attracting both end-users and investors. The market remains relatively underdeveloped compared to coastal alternatives, creating opportunities for early investors. Demand is steadily increasing as awareness of the town's benefits grows among international buyers seeking authentic living and strong returns.\n\nPopular property types include Penthouse, Apartment.\n\nProperties in Archena offer strong rental potential, particularly targeting wellness tourists drawn to thermal springs and increasingly younger digital nomads seeking affordable Mediterranean locations. Average rental yields range from 4-6% annually, with tourist season peaks providing premium short-term rental rates. Long-term rentals to local residents and expats provide stable income with lower vacancy rates. Capital appreciation potential remains strong as the area develops, particularly for properties near town center and thermal facilities.",
+    "whyLiveHereSection": [
       "Exceptional value with properties €125,000-€160,000 compared to €300,000+ coastal equivalents",
       "Authentic Spanish living with genuine local culture and strong community atmosphere",
       "Therapeutic thermal springs providing wellness benefits and attracting health tourism",
       "Close proximity to Costa Blanca beaches (25-35km) combined with peaceful inland setting",
       "Strong rental investment potential with growing wellness and digital nomad tourism"
     ],
-    "cons": [
-      "Smaller international community compared to major coastal resort areas may impact some social preferences",
-      "Limited nightlife and entertainment compared to beach towns, requiring travel for extensive leisure options",
-      "Healthcare facilities for specialized treatments require travel to Murcia city, approximately 35 kilometers away"
-    ]
+    "faqs": [
+      {
+        "question": "What is the best time to visit or move to Archena?",
+        "answer": "Spring (April-May) and autumn (September-October) offer ideal weather with temperatures around 20-25°C. Summer is hot but suitable for beach visits nearby. Winter remains mild but can have occasional rain. For purchasing property, September-November shows best market conditions. Many retirees and wellness seekers prefer spring and autumn for outdoor activities."
+      },
+      {
+        "question": "Are property prices expected to increase in Archena?",
+        "answer": "Market analysts project moderate appreciation of 3-5% annually as Archena develops infrastructure and gains recognition as a wellness destination. Early investors benefit from entering a market before major appreciation. Compared to other Costa Blanca towns, Archena remains significantly undervalued, suggesting strong future growth potential as the expat community expands."
+      },
+      {
+        "question": "What are the main attractions and activities in Archena?",
+        "answer": "Primary attractions include the Archena Thermal Springs (Balneario de Archena), offering therapeutic treatments and relaxation. Outdoor activities include hiking, cycling, fishing, and nearby golf courses. Murcia city (35km) provides cultural sites, museums, and shopping. The Costa Blanca beaches are accessible for day trips. The town hosts traditional Spanish festivals throughout the year, particularly celebrating local agricultural heritage."
+      },
+      {
+        "question": "Is Archena suitable for retirees?",
+        "answer": "Archena is increasingly popular with retirees due to affordable living costs, therapeutic thermal springs, excellent healthcare access to Murcia, and peaceful lifestyle. The strong expat retiree community provides social connections while the authentic Spanish atmosphere offers cultural enrichment. Cost of living is approximately 20-30% lower than coastal equivalents, allowing comfortable retirement budgets to stretch further."
+      },
+      {
+        "question": "What are the costs of living in Archena compared to other Costa Blanca areas?",
+        "answer": "Archena offers 25-35% lower living costs than beach resort towns. Monthly expenses for a couple including utilities, food, and entertainment average €1,000-1,500, significantly below coastal alternatives. Rental properties command lower rates but maintain strong occupancy, making it attractive for investors. Thermal spring treatments cost 40-50% less than specialized wellness centers elsewhere."
+      },
+      {
+        "question": "How is the internet and digital infrastructure?",
+        "answer": "Archena has reliable broadband coverage with multiple providers offering speeds suitable for remote work and streaming. Fiber optic is available in many areas with 100+ Mbps speeds. Mobile networks (Vodafone, Orange, Telefónica) provide excellent coverage. Digital nomads and remote workers find the town increasingly equipped for modern working requirements while offering peaceful living environment."
+      },
+      {
+        "question": "What language is spoken and do I need Spanish?",
+        "answer": "Spanish is the primary language in Archena. While the expat community speaks English, learning basic Spanish significantly enhances integration and daily life comfort. English is less prevalent than major beach resorts, making language learning advantageous. Many local amenities and services operate primarily in Spanish, particularly in healthcare and administration."
+      },
+      {
+        "question": "What are the property ownership and residency requirements?",
+        "answer": "Non-EU citizens can purchase property as non-residents, though EU citizens have simplified procedures. Golden Visa requirements begin at €500,000 investment but offer residency benefits. Standard property purchase involves notary, registration, and taxation. Residency permits allow legal dwelling with varying duration. Consulting with Spanish property lawyers and accountants ensures compliance with current regulations and optimal tax planning for international buyers."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Archena? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Properties in Archena offer strong rental potential, particularly targeting wellness tourists drawn to thermal springs and increasingly younger digital nomads seeking affordable Mediterranean locations. Average rental yields range from 4-6% annually, with tourist season peaks providing premium short-term rental rates. Long-term rentals to local residents and expats provide stable income with lower vacancy rates. Capital appreciation potential remains strong as the area develops, particularly for properties near town center and thermal facilities.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Archena are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Archena offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Archena celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Archena have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school offering GCSE and A-Levels with strong extracurricular programmes"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "International (British)",
+          "distance": "25-45 min",
+          "description": "British curriculum primary and secondary school serving the international community"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Archena offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Archena has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Archena",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-1.3006!3d38.1194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "What is the best time to visit or move to Archena?",
-      "answer": "Spring (April-May) and autumn (September-October) offer ideal weather with temperatures around 20-25°C. Summer is hot but suitable for beach visits nearby. Winter remains mild but can have occasional rain. For purchasing property, September-November shows best market conditions. Many retirees and wellness seekers prefer spring and autumn for outdoor activities."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Archena",
+    "description": "Archena is a inland municipality in Murcia, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.1194",
+      "longitude": "-1.3006"
     },
-    {
-      "question": "Are property prices expected to increase in Archena?",
-      "answer": "Market analysts project moderate appreciation of 3-5% annually as Archena develops infrastructure and gains recognition as a wellness destination. Early investors benefit from entering a market before major appreciation. Compared to other Costa Blanca towns, Archena remains significantly undervalued, suggesting strong future growth potential as the expat community expands."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Archena",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What are the main attractions and activities in Archena?",
-      "answer": "Primary attractions include the Archena Thermal Springs (Balneario de Archena), offering therapeutic treatments and relaxation. Outdoor activities include hiking, cycling, fishing, and nearby golf courses. Murcia city (35km) provides cultural sites, museums, and shopping. The Costa Blanca beaches are accessible for day trips. The town hosts traditional Spanish festivals throughout the year, particularly celebrating local agricultural heritage."
-    },
-    {
-      "question": "Is Archena suitable for retirees?",
-      "answer": "Archena is increasingly popular with retirees due to affordable living costs, therapeutic thermal springs, excellent healthcare access to Murcia, and peaceful lifestyle. The strong expat retiree community provides social connections while the authentic Spanish atmosphere offers cultural enrichment. Cost of living is approximately 20-30% lower than coastal equivalents, allowing comfortable retirement budgets to stretch further."
-    },
-    {
-      "question": "What are the costs of living in Archena compared to other Costa Blanca areas?",
-      "answer": "Archena offers 25-35% lower living costs than beach resort towns. Monthly expenses for a couple including utilities, food, and entertainment average €1,000-1,500, significantly below coastal alternatives. Rental properties command lower rates but maintain strong occupancy, making it attractive for investors. Thermal spring treatments cost 40-50% less than specialized wellness centers elsewhere."
-    },
-    {
-      "question": "How is the internet and digital infrastructure?",
-      "answer": "Archena has reliable broadband coverage with multiple providers offering speeds suitable for remote work and streaming. Fiber optic is available in many areas with 100+ Mbps speeds. Mobile networks (Vodafone, Orange, Telefónica) provide excellent coverage. Digital nomads and remote workers find the town increasingly equipped for modern working requirements while offering peaceful living environment."
-    },
-    {
-      "question": "What language is spoken and do I need Spanish?",
-      "answer": "Spanish is the primary language in Archena. While the expat community speaks English, learning basic Spanish significantly enhances integration and daily life comfort. English is less prevalent than major beach resorts, making language learning advantageous. Many local amenities and services operate primarily in Spanish, particularly in healthcare and administration."
-    },
-    {
-      "question": "What are the property ownership and residency requirements?",
-      "answer": "Non-EU citizens can purchase property as non-residents, though EU citizens have simplified procedures. Golden Visa requirements begin at €500,000 investment but offer residency benefits. Standard property purchase involves notary, registration, and taxation. Residency permits allow legal dwelling with varying duration. Consulting with Spanish property lawyers and accountants ensures compliance with current regulations and optimal tax planning for international buyers."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Murcia"
     }
-  ],
-  "slug": "archena",
-  "town": "Archena",
-  "propertyCount": 2,
-  "generatedAt": "2026-02-05T19:18:24.933Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best time to visit or move to Archena?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Spring (April-May) and autumn (September-October) offer ideal weather with temperatures around 20-25°C. Summer is hot but suitable for beach visits nearby. Winter remains mild but can have occasional rain. For purchasing property, September-November shows best market conditions. Many retirees and we"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are property prices expected to increase in Archena?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Market analysts project moderate appreciation of 3-5% annually as Archena develops infrastructure and gains recognition as a wellness destination. Early investors benefit from entering a market before major appreciation. Compared to other Costa Blanca towns, Archena remains significantly undervalued"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the main attractions and activities in Archena?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Primary attractions include the Archena Thermal Springs (Balneario de Archena), offering therapeutic treatments and relaxation. Outdoor activities include hiking, cycling, fishing, and nearby golf courses. Murcia city (35km) provides cultural sites, museums, and shopping. The Costa Blanca beaches ar"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Archena suitable for retirees?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Archena is increasingly popular with retirees due to affordable living costs, therapeutic thermal springs, excellent healthcare access to Murcia, and peaceful lifestyle. The strong expat retiree community provides social connections while the authentic Spanish atmosphere offers cultural enrichment. "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of living in Archena compared to other Costa Blanca areas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Archena offers 25-35% lower living costs than beach resort towns. Monthly expenses for a couple including utilities, food, and entertainment average €1,000-1,500, significantly below coastal alternatives. Rental properties command lower rates but maintain strong occupancy, making it attractive for i"
+        }
+      }
+    ]
+  }
 }

@@ -1,75 +1,61 @@
 {
-  "metaTitle": "Living in Jalon 2026 | Complete Area Guide & Property",
-  "metaDescription": "Discover living in Jalon, Costa Blanca. Properties €75k-€625k, 40% cheaper than islands. Expat community, international schools, beaches nearby.",
-  "heroIntro": "Jalon is a charming inland town on Spain's Costa Blanca, offering an authentic Spanish lifestyle without the coastal price premium. Located in the heart of the region, this established community has become increasingly popular with international buyers seeking affordable property, genuine local culture, and proximity to Mediterranean beaches. With prices 40% lower than island markets and a thriving expat community where English is widely spoken, Jalon represents exceptional value for those seeking a Mediterranean relocation. Whether you're looking to retire, invest, or embrace a new lifestyle, Jalon combines affordability, amenities, and authentic Spanish living in one compelling package. The town benefits from excellent regional infrastructure, including quality healthcare, international education options, and direct connections to major Costa Blanca attractions, making it an ideal base for families and professionals alike.",
-  "climate": "Jalon enjoys a Mediterranean climate with warm, dry summers and mild winters, making it ideal for year-round living. Average temperatures range from 10-11°C in winter months to 28-30°C in summer, with approximately 300 days of sunshine annually. Spring and autumn offer the most pleasant conditions with temperatures between 15-25°C, perfect for outdoor activities and exploring the region. Rainfall is minimal, concentrated primarily in autumn and spring, while summer months remain virtually dry. The climate is particularly suited for those seeking relief from colder Northern European winters, though the mild winter temperatures rarely drop below freezing. This consistent Mediterranean weather supports both outdoor recreation and comfortable living throughout the year.",
-  "lifestyle": "Daily life in Jalon combines small-town Spanish authenticity with modern convenience and international accessibility. The established expat community has created a welcoming environment where English is commonly spoken, yet you'll experience genuine Spanish culture through local markets, tapas bars, and seasonal fiestas. The town benefits from excellent regional supermarkets including Mercadona and Lidl, alongside charming weekly markets offering fresh local produce. Jalon's location provides easy access to Blue Flag beaches within 20 minutes, championship golf courses, and the larger Costa Blanca infrastructure. Restaurants range from traditional Spanish cuisine to international dining, catering to diverse tastes. The social scene is vibrant, with numerous expat groups, hobby clubs, and community events creating a sense of belonging. Weekend activities include beach trips, hiking in nearby mountains, visiting white villages, or exploring cultural attractions. The pace of life is noticeably slower than major cities, emphasizing outdoor pursuits, family time, and community connection while maintaining access to modern amenities.",
-  "amenities": {
+  "slug": "jalon",
+  "name": "Jalon",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/jalon-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 3,
+  "propertyTypes": [
+    "Villas and land plots dominate available properties",
+    "with villas offering complete living solutions and land providing development opportunities for custom builds."
+  ],
+  "priceRange": {
+    "min": 75000,
+    "max": 625000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Jalon Tourism",
+      "url": "https://www.google.com/search?q=Jalon%20Spain%20official%20website",
+      "description": "Discover more about Jalon"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "85 km",
+      "driveTime": "55 min"
+    },
     "healthcare": {
-      "text": "Healthcare in Jalon is comprehensive and accessible, with a regional hospital located within 30 minutes and private clinics offering specialized services throughout the area. Many medical professionals speak English, making treatment straightforward for international residents. The healthcare system combines Spain's excellent public services with private options, allowing flexibility in choosing preferred providers. Emergency services are well-coordinated, and routine medical care is affordable compared to many Northern European countries. Most residents maintain private health insurance through Spanish providers or international plans, though EU citizens can access public healthcare through reciprocal agreements.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes drive",
-        "Private clinics with English-speaking doctors",
-        "Emergency services well-coordinated",
-        "Affordable healthcare costs vs Northern Europe"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping in Jalon offers excellent variety with both modern supermarkets and traditional markets. Major chains including Mercadona, Lidl, and Consum are conveniently located, providing international and Spanish products at competitive prices. Weekly local markets feature fresh produce, meats, and regional specialties at traditional prices. The larger towns within 20 minutes offer additional shopping centers and specialty stores for goods not readily available locally. Online shopping through Amazon Spain and other retailers provides additional options for both everyday items and specialty products.",
-      "keyPoints": [
-        "Mercadona supermarket - full range of products",
-        "Lidl - budget-friendly shopping",
-        "Consum - local chain with competitive prices",
-        "Weekly local markets with fresh produce"
-      ]
-    },
-    "education": {
-      "text": "Education facilities in the region serve families with various needs, including international schools offering British curriculum options and Spanish education programs. These institutions provide high educational standards and multicultural environments suitable for expatriate families. Schools include both primary and secondary options, with English-language instruction creating smooth transitions for international students. The region's education system is recognized for quality, and many schools have established relationships with universities across Spain and Europe, facilitating smooth progression through educational levels.",
-      "keyPoints": [
-        "International schools with British curriculum",
-        "Multilingual educational environment",
-        "Primary and secondary options available",
-        "Well-established expat education community"
-      ]
-    },
-    "sports": {
-      "text": "Jalon's location provides outstanding recreational opportunities with multiple Blue Flag beaches accessible within 20 minutes, offering swimming, water sports, and beach activities. Several championship golf courses nearby attract golf enthusiasts of all levels, complemented by an active sporting community. Hiking trails through surrounding countryside, cycling routes, and water sports facilities create diverse activity options. Tennis, paddle tennis, and fitness centers are available locally, while the Mediterranean setting encourages outdoor pursuits year-round.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Several championship golf courses nearby",
-        "Hiking and cycling trails throughout region",
-        "Water sports and beach clubs available"
-      ]
+      "name": "Hospital de Dénia",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20de%20D%C3%A9nia",
+      "distance": "18 km"
     }
   },
-  "transport": {
-    "overview": "Bus connections are available throughout the region, linking Jalon to nearby towns and major centers. However, a car is highly recommended for maximum flexibility and independence, allowing easy access to beaches, amenities, and exploring the wider Costa Blanca.",
-    "airports": "Alicante-Elche Airport is approximately 90 minutes away, serving international connections across Europe. Valencia Airport provides an alternative approximately 2 hours distance, offering additional flight options and potential cost savings.",
-    "driving": "Jalon benefits from good road connections via well-maintained provincial roads linking to the AP-7 motorway, providing swift access to Alicante, Valencia, and surrounding coastal towns. Driving to nearby beaches takes 20-30 minutes, while major cities are accessible in 1-2 hours.",
-    "public": "Regional bus services connect Jalon to larger towns and coastal areas, though frequency may be limited compared to major urban centers. Train connections are available through nearby stations with links to major Spanish cities.",
-    "keyPoints": [
-      "Regional bus network connects to major towns",
-      "Car recommended for flexibility and independence",
-      "Alicante Airport 90 minutes away",
-      "Quick motorway access via AP-7"
-    ]
-  },
-  "propertyMarket": {
-    "overview": "Jalon's property market is experiencing healthy growth with an 8% year-on-year increase, reflecting growing interest from international buyers. The market remains significantly more affordable than coastal alternatives, offering exceptional value. Current inventory of 3 available properties demonstrates selective availability of quality properties, suggesting strong market dynamics and careful curation.",
-    "priceRange": "€75,000 - €625,000",
-    "popularTypes": "Villas and land plots dominate available properties, with villas offering complete living solutions and land providing development opportunities for custom builds.",
-    "investment": "Rental potential remains strong with typical 7-night vacation rentals commanding €800, providing attractive returns for property investors. The 40% price advantage versus island markets, combined with established expat tourism infrastructure, supports both capital appreciation and consistent rental income. The +8% annual growth trend indicates solid market confidence and value retention."
-  },
-  "neighborhoods": [
-    "Jalon Town Center - authentic Spanish living with local markets, restaurants, and community atmosphere",
-    "Outskirts with Country Villas - peaceful semi-rural settings maintaining easy town access",
-    "Countryside Properties - isolated villas offering privacy and natural surroundings",
-    "Valley Locations - scenic properties with panoramic views of surrounding landscapes",
-    "Near Mercadona Areas - convenient residential zones with easy shopping access",
-    "Road to Beach Communities - transitional areas combining town convenience with coastal proximity"
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Jalon 2026 | Complete Area Guide & Property",
+    "metaDescription": "Discover living in Jalon, Costa Blanca. Properties €75k-€625k, 40% cheaper than islands. Expat community, international schools, beaches nearby.",
+    "heroIntro": "Jalon is a charming inland town on Spain's Costa Blanca, offering an authentic Spanish lifestyle without the coastal price premium. Located in the heart of the region, this established community has become increasingly popular with international buyers seeking affordable property, genuine local culture, and proximity to Mediterranean beaches. With prices 40% lower than island markets and a thriving expat community where English is widely spoken, Jalon represents exceptional value for those seeking a Mediterranean relocation. Whether you're looking to retire, invest, or embrace a new lifestyle, Jalon combines affordability, amenities, and authentic Spanish living in one compelling package. The town benefits from excellent regional infrastructure, including quality healthcare, international education options, and direct connections to major Costa Blanca attractions, making it an ideal base for families and professionals alike.",
+    "lifestyleSection": {
+      "intro": "Daily life in Jalon combines small-town Spanish authenticity with modern convenience and international accessibility. The established expat community has created a welcoming environment where English is commonly spoken, yet you'll experience genuine Spanish culture through local markets, tapas bars, and seasonal fiestas. The town benefits from excellent regional supermarkets including Mercadona and Lidl, alongside charming weekly markets offering fresh local produce. Jalon's location provides easy access to Blue Flag beaches within 20 minutes, championship golf courses, and the larger Costa Blanca infrastructure. Restaurants range from traditional Spanish cuisine to international dining, catering to diverse tastes. The social scene is vibrant, with numerous expat groups, hobby clubs, and community events creating a sense of belonging. Weekend activities include beach trips, hiking in nearby mountains, visiting white villages, or exploring cultural attractions. The pace of life is noticeably slower than major cities, emphasizing outdoor pursuits, family time, and community connection while maintaining access to modern amenities.\n\nJalon enjoys a Mediterranean climate with warm, dry summers and mild winters, making it ideal for year-round living. Average temperatures range from 10-11°C in winter months to 28-30°C in summer, with approximately 300 days of sunshine annually. Spring and autumn offer the most pleasant conditions with temperatures between 15-25°C, perfect for outdoor activities and exploring the region. Rainfall is minimal, concentrated primarily in autumn and spring, while summer months remain virtually dry. The climate is particularly suited for those seeking relief from colder Northern European winters, though the mild winter temperatures rarely drop below freezing. This consistent Mediterranean weather supports both outdoor recreation and comfortable living throughout the year.",
+      "highlights": [
+        "40% more affordable than Spanish island property markets",
+        "Established expat community with English widely spoken",
+        "Authentic Spanish lifestyle with modern amenities",
+        "Blue Flag beaches accessible within 20 minutes",
+        "Excellent healthcare with English-speaking doctors",
+        "International schools with British curriculum options"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Jalon's location provides outstanding recreational opportunities with multiple Blue Flag beaches accessible within 20 minutes, offering swimming, water sports, and beach activities. Several championship golf courses nearby attract golf enthusiasts of all levels, complemented by an active sporting community. Hiking trails through surrounding countryside, cycling routes, and water sports facilities create diverse activity options. Tennis, paddle tennis, and fitness centers are available locally, while the Mediterranean setting encourages outdoor pursuits year-round.",
+      "dining": "Jalon offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping in Jalon offers excellent variety with both modern supermarkets and traditional markets. Major chains including Mercadona, Lidl, and Consum are conveniently located, providing international and Spanish products at competitive prices. Weekly local markets feature fresh produce, meats, and regional specialties at traditional prices. The larger towns within 20 minutes offer additional shopping centers and specialty stores for goods not readily available locally. Online shopping through Amazon Spain and other retailers provides additional options for both everyday items and specialty products.",
+      "healthcare": "Healthcare in Jalon is comprehensive and accessible, with a regional hospital located within 30 minutes and private clinics offering specialized services throughout the area. Many medical professionals speak English, making treatment straightforward for international residents. The healthcare system combines Spain's excellent public services with private options, allowing flexibility in choosing preferred providers. Emergency services are well-coordinated, and routine medical care is affordable compared to many Northern European countries. Most residents maintain private health insurance through Spanish providers or international plans, though EU citizens can access public healthcare through reciprocal agreements.",
+      "transport": "Bus connections are available throughout the region, linking Jalon to nearby towns and major centers. However, a car is highly recommended for maximum flexibility and independence, allowing easy access to beaches, amenities, and exploring the wider Costa Blanca. Alicante-Elche Airport is approximately 90 minutes away, serving international connections across Europe. Valencia Airport provides an alternative approximately 2 hours distance, offering additional flight options and potential cost savings. Jalon benefits from good road connections via well-maintained provincial roads linking to the AP-7 motorway, providing swift access to Alicante, Valencia, and surrounding coastal towns. Driving to nearby beaches takes 20-30 minutes, while major cities are accessible in 1-2 hours. Regional bus services connect Jalon to larger towns and coastal areas, though frequency may be limited compared to major urban centers. Train connections are available through nearby stations with links to major Spanish cities."
+    },
+    "propertyMarketSection": "Jalon's property market is experiencing healthy growth with an 8% year-on-year increase, reflecting growing interest from international buyers. The market remains significantly more affordable than coastal alternatives, offering exceptional value. Current inventory of 3 available properties demonstrates selective availability of quality properties, suggesting strong market dynamics and careful curation.\n\nPopular property types include Villas and land plots dominate available properties, with villas offering complete living solutions and land providing development opportunities for custom builds..\n\nRental potential remains strong with typical 7-night vacation rentals commanding €800, providing attractive returns for property investors. The 40% price advantage versus island markets, combined with established expat tourism infrastructure, supports both capital appreciation and consistent rental income. The +8% annual growth trend indicates solid market confidence and value retention.",
+    "whyLiveHereSection": [
       "40% more affordable than Spanish island property markets",
       "Established expat community with English widely spoken",
       "Authentic Spanish lifestyle with modern amenities",
@@ -77,48 +63,319 @@
       "Excellent healthcare with English-speaking doctors",
       "International schools with British curriculum options"
     ],
-    "cons": [
-      "Car essential for maximum convenience and flexibility",
-      "Limited commercial development compared to coastal areas",
-      "Smaller selection of entertainment venues versus major tourist destinations"
-    ]
+    "faqs": [
+      {
+        "question": "Is Jalon a good place to live?",
+        "answer": "Yes, absolutely. Jalon offers exceptional value for money, a welcoming expat community, and authentic Spanish living combined with modern amenities. The region provides excellent healthcare, international education, proximity to beaches and golf, and maintains a peaceful, community-focused lifestyle. The +8% market growth indicates strong confidence in the area's future."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can freely purchase property in Spain without restrictions. EU citizens face no additional requirements, while non-EU buyers simply need to obtain an NIE (Spanish tax identification number) and follow standard legal procedures through a Spanish solicitor. The process is straightforward and well-established."
+      },
+      {
+        "question": "What is the cost of living in Jalon?",
+        "answer": "Cost of living in Jalon is significantly lower than Northern Europe and Spanish coastal areas. Supermarket shopping, dining, utilities, and local services are affordable. Combined with 40% lower property prices than island markets, overall living costs provide excellent value for international residents seeking Mediterranean lifestyle without premium pricing."
+      },
+      {
+        "question": "Is Costa Blanca a good place to buy property?",
+        "answer": "Yes, Costa Blanca remains one of Spain's most desirable property locations, offering established infrastructure, excellent weather, beautiful coastline, and mature expat communities. Inland areas like Jalon provide even greater value while maintaining access to regional attractions, making it an intelligent investment choice."
+      },
+      {
+        "question": "How much are property taxes in Spain?",
+        "answer": "Spain's property tax (IBI) averages 0.4-1.1% of property value annually, varying by municipality. Stamp duty on purchase is approximately 8-10% depending on region. Capital gains tax applies when selling, calculated on profit. Professional advice from a Spanish accountant ensures proper understanding of your specific tax obligations."
+      },
+      {
+        "question": "Can I get a mortgage in Spain as a foreigner?",
+        "answer": "Yes, numerous Spanish banks and international lenders provide mortgages to foreign buyers. Typically, you'll need documentation including proof of income, employment verification, and identification. Many lenders offer mortgages up to 80% of property value. Using a Spanish mortgage broker expedites the process and identifies best rates."
+      },
+      {
+        "question": "What is the weather like in Costa Blanca?",
+        "answer": "Costa Blanca enjoys Mediterranean climate with approximately 300 days of annual sunshine. Summers are warm (28-30°C), winters mild (10-11°C), and rainfall minimal. Spring and autumn offer perfect conditions (15-25°C) for outdoor activities. The consistent pleasant weather is a primary attraction for international residents seeking year-round comfortable living."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "No, purchasing property doesn't require a specific visa. However, if relocating permanently, you'll need appropriate residency documentation. EU citizens can register as residents easily. Non-EU citizens should consult Spanish immigration requirements based on their nationality. Property purchase itself remains accessible to all regardless of residence status."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Jalon? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Rental potential remains strong with typical 7-night vacation rentals commanding €800, providing attractive returns for property investors. The 40% price advantage versus island markets, combined with established expat tourism infrastructure, supports both capital appreciation and consistent rental income. The +8% annual growth trend indicates solid market confidence and value retention.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Jalon are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Jalon offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Jalon celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Jalon have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school with GCSE and A-Level programmes, excellent facilities and strong academic results"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "British and IB curriculum with outstanding facilities, sports programmes, and multilingual education"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Jalon offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Mountain Hiking",
+          "type": "Hiking",
+          "description": "Scenic mountain trails through Mediterranean pine forests with panoramic views of the valleys and coast"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Jalon has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Diverse European community including British, Scandinavian, Dutch, German, and French residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Jalon",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.0131!3d38.7314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Jalon a good place to live?",
-      "answer": "Yes, absolutely. Jalon offers exceptional value for money, a welcoming expat community, and authentic Spanish living combined with modern amenities. The region provides excellent healthcare, international education, proximity to beaches and golf, and maintains a peaceful, community-focused lifestyle. The +8% market growth indicates strong confidence in the area's future."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Jalon",
+    "description": "Jalon is a  municipality in Costa Blanca North, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.7314",
+      "longitude": "-0.0131"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can freely purchase property in Spain without restrictions. EU citizens face no additional requirements, while non-EU buyers simply need to obtain an NIE (Spanish tax identification number) and follow standard legal procedures through a Spanish solicitor. The process is straightforward and well-established."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jalon",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What is the cost of living in Jalon?",
-      "answer": "Cost of living in Jalon is significantly lower than Northern Europe and Spanish coastal areas. Supermarket shopping, dining, utilities, and local services are affordable. Combined with 40% lower property prices than island markets, overall living costs provide excellent value for international residents seeking Mediterranean lifestyle without premium pricing."
-    },
-    {
-      "question": "Is Costa Blanca a good place to buy property?",
-      "answer": "Yes, Costa Blanca remains one of Spain's most desirable property locations, offering established infrastructure, excellent weather, beautiful coastline, and mature expat communities. Inland areas like Jalon provide even greater value while maintaining access to regional attractions, making it an intelligent investment choice."
-    },
-    {
-      "question": "How much are property taxes in Spain?",
-      "answer": "Spain's property tax (IBI) averages 0.4-1.1% of property value annually, varying by municipality. Stamp duty on purchase is approximately 8-10% depending on region. Capital gains tax applies when selling, calculated on profit. Professional advice from a Spanish accountant ensures proper understanding of your specific tax obligations."
-    },
-    {
-      "question": "Can I get a mortgage in Spain as a foreigner?",
-      "answer": "Yes, numerous Spanish banks and international lenders provide mortgages to foreign buyers. Typically, you'll need documentation including proof of income, employment verification, and identification. Many lenders offer mortgages up to 80% of property value. Using a Spanish mortgage broker expedites the process and identifies best rates."
-    },
-    {
-      "question": "What is the weather like in Costa Blanca?",
-      "answer": "Costa Blanca enjoys Mediterranean climate with approximately 300 days of annual sunshine. Summers are warm (28-30°C), winters mild (10-11°C), and rainfall minimal. Spring and autumn offer perfect conditions (15-25°C) for outdoor activities. The consistent pleasant weather is a primary attraction for international residents seeking year-round comfortable living."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "No, purchasing property doesn't require a specific visa. However, if relocating permanently, you'll need appropriate residency documentation. EU citizens can register as residents easily. Non-EU citizens should consult Spanish immigration requirements based on their nationality. Property purchase itself remains accessible to all regardless of residence status."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
     }
-  ],
-  "slug": "jalon",
-  "town": "Jalon",
-  "propertyCount": 3,
-  "generatedAt": "2026-02-06T09:55:45.041Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Jalon a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. Jalon offers exceptional value for money, a welcoming expat community, and authentic Spanish living combined with modern amenities. The region provides excellent healthcare, international education, proximity to beaches and golf, and maintains a peaceful, community-focused lifestyle"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can freely purchase property in Spain without restrictions. EU citizens face no additional requirements, while non-EU buyers simply need to obtain an NIE (Spanish tax identification number) and follow standard legal procedures through a Spanish solicitor. The process is straightforwa"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Jalon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cost of living in Jalon is significantly lower than Northern Europe and Spanish coastal areas. Supermarket shopping, dining, utilities, and local services are affordable. Combined with 40% lower property prices than island markets, overall living costs provide excellent value for international resid"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Costa Blanca a good place to buy property?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Costa Blanca remains one of Spain's most desirable property locations, offering established infrastructure, excellent weather, beautiful coastline, and mature expat communities. Inland areas like Jalon provide even greater value while maintaining access to regional attractions, making it an int"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much are property taxes in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Spain's property tax (IBI) averages 0.4-1.1% of property value annually, varying by municipality. Stamp duty on purchase is approximately 8-10% depending on region. Capital gains tax applies when selling, calculated on profit. Professional advice from a Spanish accountant ensures proper understandin"
+        }
+      }
+    ]
+  }
 }

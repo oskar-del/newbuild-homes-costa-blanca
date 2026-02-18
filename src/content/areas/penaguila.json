@@ -1,75 +1,63 @@
 {
-  "metaTitle": "Living in Penaguila 2026 | Complete Inland Town Guide",
-  "metaDescription": "Discover Penaguila: Villas from €359,000. Established expat community, international schools, Blue Flag beaches 20 mins away. Costa Blanca living guide.",
-  "heroIntro": "Penaguila is a charming inland town in the Costa Blanca region that offers an authentic Spanish lifestyle combined with modern amenities and a welcoming international community. This hidden gem attracts families, retirees, and property investors seeking a more peaceful alternative to coastal areas while maintaining easy access to beaches, hospitals, and international schools. With properties starting at €359,000 and priced at €2,200/m², Penaguila represents exceptional value—40% less than island markets—making it increasingly popular among discerning buyers. The established expat community means English is commonly spoken, schools offer British curriculum options, and local services cater to international residents. Whether you're seeking investment potential, a family home, or a retirement destination, Penaguila combines affordability, convenience, and lifestyle quality that defines modern Costa Blanca living.",
-  "climate": "Penaguila enjoys a Mediterranean climate with over 300 days of sunshine annually, typical of the Costa Blanca region. Summers are warm and dry, with temperatures ranging from 28-32°C, while mild winters rarely drop below 10°C. Spring and autumn offer perfect conditions for outdoor activities, with comfortable temperatures around 20-24°C. The area receives minimal rainfall, concentrated in autumn and spring months. This predictable climate makes Penaguila ideal year-round living, with outdoor markets, beach visits, and golf available throughout the year. The elevation provides cooling breezes during summer months, making it more comfortable than coastal areas.",
-  "lifestyle": "Daily life in Penaguila blends traditional Spanish culture with modern convenience. The town features vibrant local markets where fresh produce, fish, and regional specialties are available daily. Charming restaurants serve traditional Spanish cuisine alongside international options catering to the established expat community. Social life revolves around beach outings—just 20 minutes away—where Blue Flag beaches offer water sports, family activities, and leisurely afternoons. The expat community is well-established and welcoming, with numerous social groups, clubs, and English-speaking services making integration seamless. Spanish culture thrives through local festivals, fiestas, and traditional events. Shopping is convenient with modern supermarkets alongside authentic local markets. Golf enthusiasts enjoy several championship courses nearby, while hikers appreciate the natural landscapes. The pace is relaxed yet connected, offering peaceful living without isolation.",
-  "amenities": {
+  "slug": "penaguila",
+  "name": "Penaguila",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/penaguila-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 5,
+  "propertyTypes": [
+    "Villas are the dominant property type",
+    "offering spacious living with land",
+    "gardens",
+    "and privacy highly valued by families and retirees."
+  ],
+  "priceRange": {
+    "min": 359000,
+    "max": 489000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Penaguila Tourism",
+      "url": "https://www.google.com/search?q=Penaguila%20Spain%20official%20website",
+      "description": "Discover more about Penaguila"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "55 km",
+      "driveTime": "45 min"
+    },
     "healthcare": {
-      "text": "Healthcare in Penaguila is comprehensive and accessible, with a regional hospital located within 30 minutes' drive providing full acute care services. Private clinics are available throughout the area, offering shorter waiting times and specialized services. English-speaking doctors are readily available in both private and public facilities, ensuring communication is never a barrier. The healthcare system is modern and well-equipped, with pharmacies conveniently located throughout the town. Many residents maintain private health insurance, which is affordable and provides additional options. Emergency services are efficient and respond quickly to calls.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes",
-        "Private clinics available",
-        "English-speaking doctors",
-        "Modern pharmacies and emergency services"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping in Penaguila offers excellent variety at competitive prices. Major supermarket chains including Mercadona, Lidl, and Consum provide everyday essentials and international products. Local markets operate regularly, offering fresh produce, fish, meat, and regional specialties at authentic prices. These markets are social hubs where you'll encounter locals and other residents. Supermarkets stock international brands and specialty items for those seeking familiar products. Shopping is convenient, with stores clustered in accessible locations. Many residents appreciate the blend of modern supermarkets and traditional markets.",
-      "keyPoints": [
-        "Mercadona supermarket",
-        "Lidl discount supermarket",
-        "Consum local chain",
-        "Daily fresh produce markets"
-      ]
-    },
-    "education": {
-      "text": "Education options in the Penaguila region cater to international families, with several schools offering international curricula and English instruction. British curriculum options are available, providing continuity for families relocating from the UK. International schools in the region feature excellent facilities, experienced teaching staff, and diverse student populations. These schools maintain high academic standards while offering extracurricular activities including sports, arts, and outdoor education. Many families find the education quality comparable to or exceeding their previous schools. Bilingual education is common, developing children's language skills naturally.",
-      "keyPoints": [
-        "International schools in the region",
-        "British curriculum options available",
-        "Bilingual education programs",
-        "Excellent sporting and arts facilities"
-      ]
-    },
-    "sports": {
-      "text": "Sports and leisure facilities are abundant in Penaguila and surrounding areas. Multiple Blue Flag beaches lie within just 20 minutes, offering swimming, windsurfing, paddleboarding, and beach volleyball. Several championship golf courses nearby attract enthusiasts of all levels, with professional instruction available. Hiking and nature trails through the inland landscape provide excellent exercise and natural beauty. Water sports facilities, tennis courts, and cycling opportunities abound. The established community supports various sports clubs and recreational groups. Fitness centers and gyms are available in the town, offering modern equipment and classes.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Several championship golf courses",
-        "Hiking and nature trails",
-        "Water sports and beach activities"
-      ]
+      "name": "Hospital de Alcoy",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20de%20Alcoy",
+      "distance": "15 km"
     }
   },
-  "transport": {
-    "overview": "Bus connections link Penaguila to surrounding towns and the coast, providing public transport options. A car is recommended for maximum flexibility and independence, especially given the inland location. Public transport is functional but limited compared to coastal areas.",
-    "airports": "Alicante-Elche Airport is approximately 50 kilometers away with frequent flights to European destinations. Valencia Airport, about 120 kilometers distant, offers additional flight options and is well-connected internationally.",
-    "driving": "Penaguila benefits from good road connections via the N-332 motorway, enabling quick access to coastal towns like Benidorm and Javea. Driving to other inland villages and regional centers is straightforward. The road system is well-maintained and clearly signposted.",
-    "public": "Bus services operated by local companies connect Penaguila to the coast and neighboring towns. Services run regularly but less frequently than coastal areas. Train connections are available at nearby stations for longer journeys.",
-    "keyPoints": [
-      "Car recommended for daily flexibility",
-      "Bus connections to coast and towns",
-      "Alicante Airport 50km away",
-      "Direct motorway access via N-332"
-    ]
-  },
-  "propertyMarket": {
-    "overview": "Penaguila's property market is experiencing healthy growth with an 8% year-on-year increase in values. The inland location and authentic character attract investors seeking value and capital appreciation. Properties are appreciating as more buyers discover this undervalued market segment.",
-    "priceRange": "€359,000 - €489,000",
-    "popularTypes": "Villas are the dominant property type, offering spacious living with land, gardens, and privacy highly valued by families and retirees.",
-    "investment": "Rental potential is strong with weekly rentals averaging €800 for a 7-night stay, providing solid income for holiday let investors. The established expat community and international appeal support consistent tourist demand. Capital growth projections are favorable given current market positioning and development trends."
-  },
-  "neighborhoods": [
-    "Old Town Center: Charming historic area with traditional architecture, local restaurants, and authentic Spanish character. Close to markets and community facilities.",
-    "Villa Districts: Residential areas featuring standalone villas with gardens, popular with families seeking privacy and space. Well-maintained and quiet.",
-    "Town Periphery: Newer developments offering modern villas with contemporary amenities. Good value and proximity to shopping centers and schools.",
-    "Countryside Surroundings: Properties in the surrounding landscape offering rural charm with mountain views and privacy. Popular with those seeking peaceful living.",
-    "Beachside Commute Zone: Areas positioned between Penaguila and nearby beaches, offering compromise between town amenities and coastal access.",
-    "Expat Communities: Established neighborhoods with significant international populations, English commonly spoken, and international services."
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Penaguila 2026 | Complete Inland Town Guide",
+    "metaDescription": "Discover Penaguila: Villas from €359,000. Established expat community, international schools, Blue Flag beaches 20 mins away. Costa Blanca living guide.",
+    "heroIntro": "Penaguila is a charming inland town in the Costa Blanca region that offers an authentic Spanish lifestyle combined with modern amenities and a welcoming international community. This hidden gem attracts families, retirees, and property investors seeking a more peaceful alternative to coastal areas while maintaining easy access to beaches, hospitals, and international schools. With properties starting at €359,000 and priced at €2,200/m², Penaguila represents exceptional value—40% less than island markets—making it increasingly popular among discerning buyers. The established expat community means English is commonly spoken, schools offer British curriculum options, and local services cater to international residents. Whether you're seeking investment potential, a family home, or a retirement destination, Penaguila combines affordability, convenience, and lifestyle quality that defines modern Costa Blanca living.",
+    "lifestyleSection": {
+      "intro": "Daily life in Penaguila blends traditional Spanish culture with modern convenience. The town features vibrant local markets where fresh produce, fish, and regional specialties are available daily. Charming restaurants serve traditional Spanish cuisine alongside international options catering to the established expat community. Social life revolves around beach outings—just 20 minutes away—where Blue Flag beaches offer water sports, family activities, and leisurely afternoons. The expat community is well-established and welcoming, with numerous social groups, clubs, and English-speaking services making integration seamless. Spanish culture thrives through local festivals, fiestas, and traditional events. Shopping is convenient with modern supermarkets alongside authentic local markets. Golf enthusiasts enjoy several championship courses nearby, while hikers appreciate the natural landscapes. The pace is relaxed yet connected, offering peaceful living without isolation.\n\nPenaguila enjoys a Mediterranean climate with over 300 days of sunshine annually, typical of the Costa Blanca region. Summers are warm and dry, with temperatures ranging from 28-32°C, while mild winters rarely drop below 10°C. Spring and autumn offer perfect conditions for outdoor activities, with comfortable temperatures around 20-24°C. The area receives minimal rainfall, concentrated in autumn and spring months. This predictable climate makes Penaguila ideal year-round living, with outdoor markets, beach visits, and golf available throughout the year. The elevation provides cooling breezes during summer months, making it more comfortable than coastal areas.",
+      "highlights": [
+        "Exceptional value: 40% less expensive than island markets with €2,200/m² average pricing",
+        "Established expat community with English-speaking services and social networks",
+        "International schools offering British curriculum ensuring educational continuity",
+        "Beaches and water sports within 20 minutes for weekend enjoyment",
+        "Strong rental investment potential with €800 weekly rates and 8% annual growth",
+        "Authentic Spanish culture and lifestyle with modern amenities and services"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Sports and leisure facilities are abundant in Penaguila and surrounding areas. Multiple Blue Flag beaches lie within just 20 minutes, offering swimming, windsurfing, paddleboarding, and beach volleyball. Several championship golf courses nearby attract enthusiasts of all levels, with professional instruction available. Hiking and nature trails through the inland landscape provide excellent exercise and natural beauty. Water sports facilities, tennis courts, and cycling opportunities abound. The established community supports various sports clubs and recreational groups. Fitness centers and gyms are available in the town, offering modern equipment and classes.",
+      "dining": "Penaguila offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping in Penaguila offers excellent variety at competitive prices. Major supermarket chains including Mercadona, Lidl, and Consum provide everyday essentials and international products. Local markets operate regularly, offering fresh produce, fish, meat, and regional specialties at authentic prices. These markets are social hubs where you'll encounter locals and other residents. Supermarkets stock international brands and specialty items for those seeking familiar products. Shopping is convenient, with stores clustered in accessible locations. Many residents appreciate the blend of modern supermarkets and traditional markets.",
+      "healthcare": "Healthcare in Penaguila is comprehensive and accessible, with a regional hospital located within 30 minutes' drive providing full acute care services. Private clinics are available throughout the area, offering shorter waiting times and specialized services. English-speaking doctors are readily available in both private and public facilities, ensuring communication is never a barrier. The healthcare system is modern and well-equipped, with pharmacies conveniently located throughout the town. Many residents maintain private health insurance, which is affordable and provides additional options. Emergency services are efficient and respond quickly to calls.",
+      "transport": "Bus connections link Penaguila to surrounding towns and the coast, providing public transport options. A car is recommended for maximum flexibility and independence, especially given the inland location. Public transport is functional but limited compared to coastal areas. Alicante-Elche Airport is approximately 50 kilometers away with frequent flights to European destinations. Valencia Airport, about 120 kilometers distant, offers additional flight options and is well-connected internationally. Penaguila benefits from good road connections via the N-332 motorway, enabling quick access to coastal towns like Benidorm and Javea. Driving to other inland villages and regional centers is straightforward. The road system is well-maintained and clearly signposted. Bus services operated by local companies connect Penaguila to the coast and neighboring towns. Services run regularly but less frequently than coastal areas. Train connections are available at nearby stations for longer journeys."
+    },
+    "propertyMarketSection": "Penaguila's property market is experiencing healthy growth with an 8% year-on-year increase in values. The inland location and authentic character attract investors seeking value and capital appreciation. Properties are appreciating as more buyers discover this undervalued market segment.\n\nPopular property types include Villas are the dominant property type, offering spacious living with land, gardens, and privacy highly valued by families and retirees..\n\nRental potential is strong with weekly rentals averaging €800 for a 7-night stay, providing solid income for holiday let investors. The established expat community and international appeal support consistent tourist demand. Capital growth projections are favorable given current market positioning and development trends.",
+    "whyLiveHereSection": [
       "Exceptional value: 40% less expensive than island markets with €2,200/m² average pricing",
       "Established expat community with English-speaking services and social networks",
       "International schools offering British curriculum ensuring educational continuity",
@@ -77,56 +65,327 @@
       "Strong rental investment potential with €800 weekly rates and 8% annual growth",
       "Authentic Spanish culture and lifestyle with modern amenities and services"
     ],
-    "cons": [
-      "Inland location requires a car for convenient daily life and beach access",
-      "Smaller town offers fewer nightlife and entertainment options than major coastal resorts",
-      "Limited public transportation compared to larger cities or coastal areas"
-    ]
+    "faqs": [
+      {
+        "question": "Is Penaguila a good place to live?",
+        "answer": "Yes, Penaguila is an excellent place to live for families, retirees, and professionals seeking authentic Spanish culture combined with modern amenities. The established expat community ensures easy integration, English is commonly spoken, and international schools provide quality education. With affordable properties, Blue Flag beaches 20 minutes away, championship golf courses, and regional hospitals nearby, Penaguila offers lifestyle quality that appeals to diverse residents. The 8% annual property appreciation suggests strong investment fundamentals."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can purchase property in Spain without restrictions. EU and non-EU citizens alike have equal rights to buy residential or commercial property. No residency requirement exists for property purchase. The process involves obtaining a Spanish tax identification number (NIE), hiring a local solicitor, and registering the property in your name. Most international buyers work with English-speaking legal professionals to navigate the straightforward purchase process."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Beyond the purchase price, expect additional costs including: transfer tax (6-10% depending on region), notary fees (0.3-0.5%), land registry fees, and legal fees (typically €1,500-3,000). In Penaguila, villas range from €359,000-€489,000, so total acquisition costs typically add 10-15% to the purchase price. Ongoing costs include annual property tax (0.4-1.1% of cadastral value), community fees for managed properties, and utilities. These costs remain competitive compared to most European property markets."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "No visa is required specifically to purchase property in Spain. However, if you plan to move to Spain as a resident, residency requirements depend on your nationality. EU/EEA citizens can reside freely. Non-EU citizens typically require a visa—commonly a Non-Lucrative Visa requiring €27,792 annual income, or a Investment Visa through property purchase of €500,000+. Many Penaguila residents use it as a holiday home without residency visas."
+      },
+      {
+        "question": "What are property taxes in Spain?",
+        "answer": "Spain's property taxes include: Annual property tax (Impuesto sobre Bienes Inmuebles) ranging 0.4-1.1% of cadastral value, transfer tax on purchase (6-10% regionally), and stamp duty. Capital gains tax applies if you sell the property for profit. Non-residents pay 19% capital gains tax on profits; residents get individual assessment. Penaguila's Valencian community charges competitive rates. Professional tax advice is recommended to optimize your specific situation."
+      },
+      {
+        "question": "Can I get a mortgage in Spain as a foreigner?",
+        "answer": "Yes, many Spanish banks and international lenders offer mortgages to foreigners purchasing Spanish property. Typically, non-residents can borrow 50-70% of property value at competitive rates. Requirements include proof of income, credit checks, and adequate deposits. Interest rates are comparable to UK mortgages. Documentation may be in Spanish, but English-speaking mortgage brokers assist with the process. Having an NIE (Spanish tax number) facilitates mortgage approval."
+      },
+      {
+        "question": "What is the cost of living in Costa Blanca?",
+        "answer": "Costa Blanca cost of living is approximately 20-30% less than the UK, though varies by lifestyle. Penaguila offers excellent value: rental properties at €800/week, villa purchases from €359,000, and daily expenses moderate. Groceries cost 15-25% less than UK prices; dining out remains affordable. Utilities (electricity, water, gas) cost €100-200 monthly. Healthcare through the Spanish system costs nothing for residents with proper status. Overall, a couple can live comfortably on €1,500-2,000 monthly."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Absolutely, Costa Blanca is an excellent retirement destination. Affordable properties allow significant capital stretching; comprehensive healthcare is accessible with English-speaking doctors; international communities provide social integration; and sunny weather year-round benefits health. Pensioner visas exist for those with sufficient income (€27,792+ annually). Many retirees relocate to Penaguila specifically for villa living, affordability, beaches, golf, and established expat networks. The relaxed pace and lifestyle quality appeal strongly to retirees."
+      },
+      {
+        "question": "How far is Costa Blanca from the UK?",
+        "answer": "Costa Blanca is approximately 1,400 kilometers (870 miles) from the UK. Flight time from London to Alicante is typically 2.5-3 hours. Multiple daily flights connect major UK airports to Alicante Airport, 50km from Penaguila. Budget airlines offer frequent, affordable flights. Many property owners maintain seasonal residency, visiting multiple times yearly. The accessibility makes maintaining UK connections easy while enjoying Spanish living."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Costa Blanca enjoys Mediterranean climate with 300+ annual sunshine days. Summers (June-September) reach 28-32°C with minimal rain and perfect beach weather. Winters are mild, 10-15°C, rarely freezing. Spring and autumn offer ideal temperatures around 20-24°C with occasional rain. Rainfall is minimal (400-500mm annually), concentrated in autumn/spring. The microclimate around Penaguila, slightly inland, provides cooling breezes during hot summers. Overall, the weather supports year-round outdoor activities and outdoor entertaining."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Penaguila? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Rental potential is strong with weekly rentals averaging €800 for a 7-night stay, providing solid income for holiday let investors. The established expat community and international appeal support consistent tourist demand. Capital growth projections are favorable given current market positioning and development trends.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Penaguila are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Penaguila offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Penaguila celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Penaguila have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school with GCSE and A-Level programmes, excellent facilities and strong academic results"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "British and IB curriculum with outstanding facilities, sports programmes, and multilingual education"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Penaguila offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Mountain Hiking",
+          "type": "Hiking",
+          "description": "Scenic mountain trails through Mediterranean pine forests with panoramic views of the valleys and coast"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Penaguila has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Diverse European community including British, Scandinavian, Dutch, German, and French residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Penaguila",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.3583!3d38.6583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Penaguila a good place to live?",
-      "answer": "Yes, Penaguila is an excellent place to live for families, retirees, and professionals seeking authentic Spanish culture combined with modern amenities. The established expat community ensures easy integration, English is commonly spoken, and international schools provide quality education. With affordable properties, Blue Flag beaches 20 minutes away, championship golf courses, and regional hospitals nearby, Penaguila offers lifestyle quality that appeals to diverse residents. The 8% annual property appreciation suggests strong investment fundamentals."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Penaguila",
+    "description": "Penaguila is a  municipality in Costa Blanca North, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.6583",
+      "longitude": "-0.3583"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can purchase property in Spain without restrictions. EU and non-EU citizens alike have equal rights to buy residential or commercial property. No residency requirement exists for property purchase. The process involves obtaining a Spanish tax identification number (NIE), hiring a local solicitor, and registering the property in your name. Most international buyers work with English-speaking legal professionals to navigate the straightforward purchase process."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Penaguila",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Beyond the purchase price, expect additional costs including: transfer tax (6-10% depending on region), notary fees (0.3-0.5%), land registry fees, and legal fees (typically €1,500-3,000). In Penaguila, villas range from €359,000-€489,000, so total acquisition costs typically add 10-15% to the purchase price. Ongoing costs include annual property tax (0.4-1.1% of cadastral value), community fees for managed properties, and utilities. These costs remain competitive compared to most European property markets."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "No visa is required specifically to purchase property in Spain. However, if you plan to move to Spain as a resident, residency requirements depend on your nationality. EU/EEA citizens can reside freely. Non-EU citizens typically require a visa—commonly a Non-Lucrative Visa requiring €27,792 annual income, or a Investment Visa through property purchase of €500,000+. Many Penaguila residents use it as a holiday home without residency visas."
-    },
-    {
-      "question": "What are property taxes in Spain?",
-      "answer": "Spain's property taxes include: Annual property tax (Impuesto sobre Bienes Inmuebles) ranging 0.4-1.1% of cadastral value, transfer tax on purchase (6-10% regionally), and stamp duty. Capital gains tax applies if you sell the property for profit. Non-residents pay 19% capital gains tax on profits; residents get individual assessment. Penaguila's Valencian community charges competitive rates. Professional tax advice is recommended to optimize your specific situation."
-    },
-    {
-      "question": "Can I get a mortgage in Spain as a foreigner?",
-      "answer": "Yes, many Spanish banks and international lenders offer mortgages to foreigners purchasing Spanish property. Typically, non-residents can borrow 50-70% of property value at competitive rates. Requirements include proof of income, credit checks, and adequate deposits. Interest rates are comparable to UK mortgages. Documentation may be in Spanish, but English-speaking mortgage brokers assist with the process. Having an NIE (Spanish tax number) facilitates mortgage approval."
-    },
-    {
-      "question": "What is the cost of living in Costa Blanca?",
-      "answer": "Costa Blanca cost of living is approximately 20-30% less than the UK, though varies by lifestyle. Penaguila offers excellent value: rental properties at €800/week, villa purchases from €359,000, and daily expenses moderate. Groceries cost 15-25% less than UK prices; dining out remains affordable. Utilities (electricity, water, gas) cost €100-200 monthly. Healthcare through the Spanish system costs nothing for residents with proper status. Overall, a couple can live comfortably on €1,500-2,000 monthly."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Absolutely, Costa Blanca is an excellent retirement destination. Affordable properties allow significant capital stretching; comprehensive healthcare is accessible with English-speaking doctors; international communities provide social integration; and sunny weather year-round benefits health. Pensioner visas exist for those with sufficient income (€27,792+ annually). Many retirees relocate to Penaguila specifically for villa living, affordability, beaches, golf, and established expat networks. The relaxed pace and lifestyle quality appeal strongly to retirees."
-    },
-    {
-      "question": "How far is Costa Blanca from the UK?",
-      "answer": "Costa Blanca is approximately 1,400 kilometers (870 miles) from the UK. Flight time from London to Alicante is typically 2.5-3 hours. Multiple daily flights connect major UK airports to Alicante Airport, 50km from Penaguila. Budget airlines offer frequent, affordable flights. Many property owners maintain seasonal residency, visiting multiple times yearly. The accessibility makes maintaining UK connections easy while enjoying Spanish living."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Costa Blanca enjoys Mediterranean climate with 300+ annual sunshine days. Summers (June-September) reach 28-32°C with minimal rain and perfect beach weather. Winters are mild, 10-15°C, rarely freezing. Spring and autumn offer ideal temperatures around 20-24°C with occasional rain. Rainfall is minimal (400-500mm annually), concentrated in autumn/spring. The microclimate around Penaguila, slightly inland, provides cooling breezes during hot summers. Overall, the weather supports year-round outdoor activities and outdoor entertaining."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
     }
-  ],
-  "slug": "penaguila",
-  "town": "Penaguila",
-  "propertyCount": 5,
-  "generatedAt": "2026-02-09T14:41:06.331Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Penaguila a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Penaguila is an excellent place to live for families, retirees, and professionals seeking authentic Spanish culture combined with modern amenities. The established expat community ensures easy integration, English is commonly spoken, and international schools provide quality education. With aff"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can purchase property in Spain without restrictions. EU and non-EU citizens alike have equal rights to buy residential or commercial property. No residency requirement exists for property purchase. The process involves obtaining a Spanish tax identification number (NIE), hiring a loc"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond the purchase price, expect additional costs including: transfer tax (6-10% depending on region), notary fees (0.3-0.5%), land registry fees, and legal fees (typically €1,500-3,000). In Penaguila, villas range from €359,000-€489,000, so total acquisition costs typically add 10-15% to the purch"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No visa is required specifically to purchase property in Spain. However, if you plan to move to Spain as a resident, residency requirements depend on your nationality. EU/EEA citizens can reside freely. Non-EU citizens typically require a visa—commonly a Non-Lucrative Visa requiring €27,792 annual i"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are property taxes in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Spain's property taxes include: Annual property tax (Impuesto sobre Bienes Inmuebles) ranging 0.4-1.1% of cadastral value, transfer tax on purchase (6-10% regionally), and stamp duty. Capital gains tax applies if you sell the property for profit. Non-residents pay 19% capital gains tax on profits; r"
+        }
+      }
+    ]
+  }
 }

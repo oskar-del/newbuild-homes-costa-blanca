@@ -1,75 +1,69 @@
 {
-  "metaTitle": "Living in Benissa 2025 | Complete Buyer's Guide",
-  "metaDescription": "Discover living in Benissa: 33 properties from €80k-€3.9M. Inland Costa Blanca town with beaches, expat community & 40% lower prices than islands.",
-  "heroIntro": "Benissa stands as one of Costa Blanca's most authentic inland towns, offering a perfect blend of traditional Spanish charm and modern international convenience. Perched in the heart of the region, this established community welcomes a diverse expat population who have discovered its exceptional value, excellent infrastructure, and genuine sense of place. With properties ranging from €80,000 to €3,900,000, Benissa caters to every budget and lifestyle preference. Whether you're seeking a retirement haven, investment opportunity, or family home, Benissa delivers Mediterranean living without the overcrowding or premium prices of coastal resorts. The town has cultivated a welcoming international community where English is commonly spoken, making relocation straightforward for UK and European buyers. Its proximity to stunning Blue Flag beaches, championship golf courses, and vibrant cultural attractions ensures daily life never lacks excitement, while the established infrastructure means you'll never sacrifice modern conveniences for character.",
-  "climate": "Benissa enjoys the coveted Mediterranean climate that makes Costa Blanca one of Europe's most desirable destinations. With over 300 days of sunshine annually, the region offers warm, dry summers and mild winters—perfect for year-round outdoor living. Summer temperatures typically reach 28-32°C, while winter averages hover around 12-16°C, rarely dropping below freezing. Spring and autumn provide ideal conditions for exploration, with pleasant temperatures and lower humidity. The sea breeze from the nearby coast provides natural cooling during summer months. Rainfall is minimal, concentrated primarily in autumn and spring. This climate is particularly appealing for retirees and those seeking consistent, comfortable weather without extreme seasonal variations. The sunny conditions support the region's abundant outdoor culture, from beach activities to golf and hiking.",
-  "lifestyle": "Daily life in Benissa combines small-town authenticity with cosmopolitan amenities. The weekly markets burst with fresh local produce, seafood, and regional specialties—a cornerstone of Mediterranean living where community members gather to socialize. Traditional paella restaurants serve alongside modern international cuisine, reflecting the diverse resident population. Benissa's established expat community has created a welcoming social ecosystem; English is widely spoken, and numerous clubs, groups, and activities cater to international residents. Weekends often involve excursions to nearby Blue Flag beaches for swimming and water sports, or rounds at championship-quality golf courses within minutes. The town itself retains genuine Spanish character—narrow winding streets, family-run businesses, and local festivals celebrate centuries of heritage. Cultural activities include art galleries, music events, and seasonal celebrations. The slower pace compared to coastal resorts doesn't mean boredom; rather, it enables a more genuine, connected lifestyle where you're recognized at your favorite café and become part of an authentic community.",
-  "amenities": {
-    "healthcare": {
-      "text": "Healthcare in Benissa meets international standards with excellent accessibility. A regional hospital operates within 30 minutes, providing comprehensive medical services for all emergencies and specialized treatments. Private clinics offering English-speaking doctors operate throughout the area, catering specifically to expat patients. The healthcare system combines Spanish public healthcare with private options, giving residents flexibility in choosing their preferred providers. Medical costs remain significantly lower than UK private healthcare, while quality matches European standards. Prescription medications are affordable and readily available at numerous pharmacies staffed with helpful professionals. Many international residents successfully manage chronic conditions through the Spanish healthcare system with minimal complications.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes",
-        "Private English-speaking clinics available",
-        "Affordable prescription medications",
-        "EU healthcare reciprocity for UK residents with EHIC"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping in Benissa combines convenience with authentic Spanish market culture. Major supermarket chains including Mercadona, Lidl, and Consum operate throughout the area, offering familiar products at competitive prices alongside extensive Spanish and international selections. Weekly farmers' markets provide fresh, locally-grown produce directly from regional growers at exceptional value. The town center features independent shops, boutiques, and specialty stores reflecting local character and unique offerings. For larger shopping needs, nearby towns offer modern shopping centers. Online delivery services have expanded significantly, with most supermarkets providing home delivery options. The combination of modern convenience and traditional market shopping creates diverse options matching different lifestyle preferences.",
-      "keyPoints": [
-        "Mercadona supermarket chain",
-        "Lidl discount supermarket",
-        "Consum grocery stores",
-        "Weekly local farmers' markets with fresh produce"
-      ]
-    },
-    "education": {
-      "text": "International schools in the region provide excellent educational options for families relocating to Benissa. British curriculum options serve families seeking familiar educational frameworks, with qualified teachers and comprehensive facilities. These international schools attract expat families across Costa Blanca and maintain high academic standards. The region also offers Spanish public schools with various international programs. Schools emphasize multicultural education, with students from numerous nationalities creating genuinely international learning environments. University-level education access extends to nearby universities offering degree programs in English and Spanish. The educational landscape supports families at every stage, from early childhood through university preparation.",
-      "keyPoints": [
-        "International schools with British curriculum",
-        "Multilingual, multicultural learning environments",
-        "High academic standards and international recognition",
-        "Spanish public schools with international programs"
-      ]
-    },
-    "sports": {
-      "text": "Sports and leisure activities define Benissa's appeal for active lifestyle seekers. Multiple Blue Flag beaches within 20 minutes provide swimming, paddleboarding, kayaking, and beach sports throughout the year. Several championship golf courses nearby cater to enthusiasts of all abilities, from beginners to competitive players. Hiking trails through inland hills offer stunning views and excellent cardiovascular activity. Water sports facilities including sailing, windsurfing, and fishing complement beach recreation. Tennis clubs, cycling routes, and football pitches support diverse athletic interests. The combination of coastal and inland activities ensures year-round options regardless of weather or preference.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Championship golf courses nearby",
-        "Water sports including sailing and paddleboarding",
-        "Hiking and cycling trails through scenic countryside"
-      ]
-    }
+  "slug": "benissa",
+  "name": "Benissa",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/benissa-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 33,
+  "propertyTypes": [
+    "Land",
+    "Villa",
+    "Apartment"
+  ],
+  "priceRange": {
+    "min": 80000,
+    "max": 3900000
   },
-  "transport": {
-    "overview": "Bus connections are available throughout Benissa and to surrounding towns, with schedules accommodating both daily commuting and leisure travel. For maximum flexibility and independence, residents typically recommend having a car, which enables easy access to beaches, golf courses, and neighboring communities.",
-    "airports": "Alicante-Elche Airport (ALC) lies approximately 70 kilometers south, offering direct flights to the UK and across Europe. Valencia Airport (VLC) is roughly 120 kilometers north, providing alternative travel options. Both airports operate modern facilities with competitive pricing through various airlines.",
-    "driving": "Benissa benefits from excellent road connections via the AP-7 motorway, enabling quick access to Alicante and Valencia. Local roads connect seamlessly to neighboring Costa Blanca towns including Teulada, Jávea, and Moraira. The region's motorway infrastructure supports easy day trips and business travel.",
-    "public": "Regional bus services connect Benissa to coastal towns, major shopping centers, and neighboring communities. Schedules vary seasonally with increased frequency during summer months. The bus network integrates with broader Costa Blanca transportation linking to most major destinations.",
-    "keyPoints": [
-      "Direct motorway access via AP-7",
-      "Alicante Airport 70km away with UK connections",
-      "Local bus services to beaches and towns",
-      "Car recommended for maximum flexibility and lifestyle"
+  "externalLinks": {
+    "tourism": {
+      "name": "Benissa Tourism",
+      "url": "https://www.google.com/search?q=Benissa%20Spain%20official%20website",
+      "description": "Discover more about Benissa"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "80 km",
+      "driveTime": "50 min"
+    },
+    "healthcare": {
+      "name": "Hospital de Dénia",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20de%20D%C3%A9nia",
+      "distance": "25 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+Benissa+Spain",
+        "description": "Beautiful Mediterranean beach nearby"
+      }
     ]
   },
-  "propertyMarket": {
-    "overview": "Benissa's property market demonstrates healthy momentum with 8% year-on-year growth, reflecting genuine demand from both owner-occupiers and investors. The market offers exceptional value compared to coastal alternatives, with average prices at €2,200/m² representing 40% savings versus Spanish island markets. Current inventory of 33 properties provides genuine selection across multiple categories.",
-    "priceRange": "€80,000 - €3,900,000",
-    "popularTypes": "Land, Villa, Apartment",
-    "investment": "Rental potential remains strong with typical 7-night rentals achieving €800, supporting annualized returns for investment properties. Capital growth prospects look positive given the region's increasing popularity, improved infrastructure, and expanding expat community. Both holiday rental and long-term rental markets show healthy demand, with residential property sales accelerating among EU buyers seeking permanent relocation."
-  },
-  "neighborhoods": [
-    "Centro Benissa: The historic town center preserves traditional Spanish architecture with narrow streets, local restaurants, and authentic community atmosphere. Modern amenities blend seamlessly with centuries-old charm, making it ideal for those seeking genuine Spanish living.",
-    "Coastal Zone: Properties near the coast benefit from proximity to Blue Flag beaches, water sports facilities, and seafood restaurants, while remaining quieter than developed resorts. Perfect for beach lovers and water sports enthusiasts.",
-    "Golf Communities: Areas surrounding championship golf courses attract serious golfers and luxury property buyers. These neighborhoods offer resort-style amenities with exclusive clubs and excellent rental potential.",
-    "Mountain Views: Inland properties with panoramic views over valleys and toward the sea provide peaceful settings away from crowds. Popular with those seeking tranquility while maintaining access to amenities.",
-    "Mixed Residential: Family-oriented neighborhoods with modern villas, good schools access, and community facilities suit those prioritizing suburban comfort with Mediterranean character.",
-    "Rural Countryside: Agricultural areas and country estates appeal to those seeking genuine rural living with privacy, land, and traditional Spanish character while remaining within 15 minutes of town services."
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Benissa 2025 | Complete Buyer's Guide",
+    "metaDescription": "Discover living in Benissa: 33 properties from €80k-€3.9M. Inland Costa Blanca town with beaches, expat community & 40% lower prices than islands.",
+    "heroIntro": "Benissa stands as one of Costa Blanca's most authentic inland towns, offering a perfect blend of traditional Spanish charm and modern international convenience. Perched in the heart of the region, this established community welcomes a diverse expat population who have discovered its exceptional value, excellent infrastructure, and genuine sense of place. With properties ranging from €80,000 to €3,900,000, Benissa caters to every budget and lifestyle preference. Whether you're seeking a retirement haven, investment opportunity, or family home, Benissa delivers Mediterranean living without the overcrowding or premium prices of coastal resorts. The town has cultivated a welcoming international community where English is commonly spoken, making relocation straightforward for UK and European buyers. Its proximity to stunning Blue Flag beaches, championship golf courses, and vibrant cultural attractions ensures daily life never lacks excitement, while the established infrastructure means you'll never sacrifice modern conveniences for character.",
+    "lifestyleSection": {
+      "intro": "Daily life in Benissa combines small-town authenticity with cosmopolitan amenities. The weekly markets burst with fresh local produce, seafood, and regional specialties—a cornerstone of Mediterranean living where community members gather to socialize. Traditional paella restaurants serve alongside modern international cuisine, reflecting the diverse resident population. Benissa's established expat community has created a welcoming social ecosystem; English is widely spoken, and numerous clubs, groups, and activities cater to international residents. Weekends often involve excursions to nearby Blue Flag beaches for swimming and water sports, or rounds at championship-quality golf courses within minutes. The town itself retains genuine Spanish character—narrow winding streets, family-run businesses, and local festivals celebrate centuries of heritage. Cultural activities include art galleries, music events, and seasonal celebrations. The slower pace compared to coastal resorts doesn't mean boredom; rather, it enables a more genuine, connected lifestyle where you're recognized at your favorite café and become part of an authentic community.\n\nBenissa enjoys the coveted Mediterranean climate that makes Costa Blanca one of Europe's most desirable destinations. With over 300 days of sunshine annually, the region offers warm, dry summers and mild winters—perfect for year-round outdoor living. Summer temperatures typically reach 28-32°C, while winter averages hover around 12-16°C, rarely dropping below freezing. Spring and autumn provide ideal conditions for exploration, with pleasant temperatures and lower humidity. The sea breeze from the nearby coast provides natural cooling during summer months. Rainfall is minimal, concentrated primarily in autumn and spring. This climate is particularly appealing for retirees and those seeking consistent, comfortable weather without extreme seasonal variations. The sunny conditions support the region's abundant outdoor culture, from beach activities to golf and hiking.",
+      "highlights": [
+        "40% lower property prices than Spanish island markets with equivalent quality",
+        "Established international expat community with English widely spoken",
+        "Multiple Blue Flag beaches within 20 minutes driving",
+        "Championship golf courses and diverse sports facilities nearby",
+        "Excellent healthcare with private English-speaking doctors available",
+        "Strong rental market with €800 typical 7-night rental income"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Sports and leisure activities define Benissa's appeal for active lifestyle seekers. Multiple Blue Flag beaches within 20 minutes provide swimming, paddleboarding, kayaking, and beach sports throughout the year. Several championship golf courses nearby cater to enthusiasts of all abilities, from beginners to competitive players. Hiking trails through inland hills offer stunning views and excellent cardiovascular activity. Water sports facilities including sailing, windsurfing, and fishing complement beach recreation. Tennis clubs, cycling routes, and football pitches support diverse athletic interests. The combination of coastal and inland activities ensures year-round options regardless of weather or preference.",
+      "dining": "Benissa offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping in Benissa combines convenience with authentic Spanish market culture. Major supermarket chains including Mercadona, Lidl, and Consum operate throughout the area, offering familiar products at competitive prices alongside extensive Spanish and international selections. Weekly farmers' markets provide fresh, locally-grown produce directly from regional growers at exceptional value. The town center features independent shops, boutiques, and specialty stores reflecting local character and unique offerings. For larger shopping needs, nearby towns offer modern shopping centers. Online delivery services have expanded significantly, with most supermarkets providing home delivery options. The combination of modern convenience and traditional market shopping creates diverse options matching different lifestyle preferences.",
+      "healthcare": "Healthcare in Benissa meets international standards with excellent accessibility. A regional hospital operates within 30 minutes, providing comprehensive medical services for all emergencies and specialized treatments. Private clinics offering English-speaking doctors operate throughout the area, catering specifically to expat patients. The healthcare system combines Spanish public healthcare with private options, giving residents flexibility in choosing their preferred providers. Medical costs remain significantly lower than UK private healthcare, while quality matches European standards. Prescription medications are affordable and readily available at numerous pharmacies staffed with helpful professionals. Many international residents successfully manage chronic conditions through the Spanish healthcare system with minimal complications.",
+      "transport": "Bus connections are available throughout Benissa and to surrounding towns, with schedules accommodating both daily commuting and leisure travel. For maximum flexibility and independence, residents typically recommend having a car, which enables easy access to beaches, golf courses, and neighboring communities. Alicante-Elche Airport (ALC) lies approximately 70 kilometers south, offering direct flights to the UK and across Europe. Valencia Airport (VLC) is roughly 120 kilometers north, providing alternative travel options. Both airports operate modern facilities with competitive pricing through various airlines. Benissa benefits from excellent road connections via the AP-7 motorway, enabling quick access to Alicante and Valencia. Local roads connect seamlessly to neighboring Costa Blanca towns including Teulada, Jávea, and Moraira. The region's motorway infrastructure supports easy day trips and business travel. Regional bus services connect Benissa to coastal towns, major shopping centers, and neighboring communities. Schedules vary seasonally with increased frequency during summer months. The bus network integrates with broader Costa Blanca transportation linking to most major destinations."
+    },
+    "propertyMarketSection": "Benissa's property market demonstrates healthy momentum with 8% year-on-year growth, reflecting genuine demand from both owner-occupiers and investors. The market offers exceptional value compared to coastal alternatives, with average prices at €2,200/m² representing 40% savings versus Spanish island markets. Current inventory of 33 properties provides genuine selection across multiple categories.\n\nPopular property types include Land, Villa, Apartment.\n\nRental potential remains strong with typical 7-night rentals achieving €800, supporting annualized returns for investment properties. Capital growth prospects look positive given the region's increasing popularity, improved infrastructure, and expanding expat community. Both holiday rental and long-term rental markets show healthy demand, with residential property sales accelerating among EU buyers seeking permanent relocation.",
+    "whyLiveHereSection": [
       "40% lower property prices than Spanish island markets with equivalent quality",
       "Established international expat community with English widely spoken",
       "Multiple Blue Flag beaches within 20 minutes driving",
@@ -77,48 +71,330 @@
       "Excellent healthcare with private English-speaking doctors available",
       "Strong rental market with €800 typical 7-night rental income"
     ],
-    "cons": [
-      "Car dependency for maximum lifestyle flexibility, though public transport exists",
-      "Summer crowds can diminish coastal area tranquility during peak season",
-      "Spanish bureaucracy requires patience and professional assistance for property purchase and residency"
-    ]
+    "faqs": [
+      {
+        "question": "Is Benissa a good place to live?",
+        "answer": "Yes, absolutely. Benissa offers an exceptional combination of affordable property, established international community, Mediterranean climate, excellent amenities, and genuine character. It suits retirees, families, and investors seeking authentic Costa Blanca living without premium coastal prices. The 8% annual price growth and strong rental demand demonstrate market confidence in the area."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can freely purchase property in Spain without restrictions. Non-EU citizens may require a Spanish tax identification number (NIE), and some regions have minor regulations, but foreign ownership is completely legal. Professional legal assistance ensures smooth transactions and compliance with Spanish property law."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Beyond the property purchase price, buyers should budget for: transfer tax (6-10% in Valencia region), notary fees (0.5-1%), property registration fees (0.1%), and legal fees (1-2%). Total additional costs typically range from 8-13% of the purchase price. Benissa properties averaging €2,200/m² make these additional costs proportionally lower than expensive coastal markets."
+      },
+      {
+        "question": "What is the cost of living in Costa Blanca?",
+        "answer": "Costa Blanca offers excellent value compared to UK and Northern Europe. Monthly costs for a couple include: rent (€600-1,500 depending on area), groceries (€300-400), utilities (€100-150), and dining out (€150-300). Healthcare costs are minimal with public insurance included. Overall, living costs run 30-40% below comparable UK locations, especially in Benissa where property prices are particularly competitive."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Costa Blanca ranks among Europe's best retirement destinations. The region offers: consistent warm weather year-round, excellent affordable healthcare, active expat communities, diverse leisure activities, and low cost of living. English is widely spoken, especially in established communities like Benissa. The combination of healthcare accessibility, social opportunities, and financial advantages makes it ideal for retirement planning."
+      },
+      {
+        "question": "How far is Costa Blanca from the UK?",
+        "answer": "Costa Blanca is approximately 1,200 kilometers from the UK, with flight times of 2.5-3 hours from most UK airports to Alicante. Multiple daily flights connect the region to London, Manchester, Birmingham, and other UK cities through various airlines. Easy accessibility makes regular UK visits straightforward, important for retirees maintaining family connections."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Costa Blanca enjoys Mediterranean climate with over 300 days of annual sunshine. Summers reach 28-32°C with minimal rainfall, winters average 12-16°C rarely freezing, and spring/autumn offer ideal 18-24°C temperatures. The region receives minimal rainfall concentrated in autumn/spring. This consistent, mild weather supports outdoor lifestyles year-round and appeals particularly to retirees and those escaping harsher northern climates."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "Visa requirements depend on your nationality. UK citizens can visit for up to 90 days visa-free. For property purchase and residency, long-term visa or residency application may be required depending on your circumstances. Property investment alone doesn't automatically grant residency. Professional legal advice ensures compliance with current Spanish immigration regulations for your specific situation."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Benissa? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "Rental potential remains strong with typical 7-night rentals achieving €800, supporting annualized returns for investment properties. Capital growth prospects look positive given the region's increasing popularity, improved infrastructure, and expanding expat community. Both holiday rental and long-term rental markets show healthy demand, with residential property sales accelerating among EU buyers seeking permanent relocation.",
+      "highlights": [
+        "Strong holiday rental demand during peak season (May-October)",
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Short-term holiday lets popular with European tourists"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Benissa are significantly lower than Northern Europe and very competitive within Spain. Coastal living here combines affordability with Mediterranean lifestyle.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Recommended for flexibility"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Benissa celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "June",
+          "description": "Magical midsummer beach celebrations with bonfires, fireworks, and midnight swimming traditions along the coast"
+        },
+        {
+          "name": "Summer Beach Festival",
+          "month": "July",
+          "description": "Outdoor concerts, food stalls, and cultural events along the waterfront throughout the summer season"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Benissa have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school with GCSE and A-Level programmes, excellent facilities and strong academic results"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "British and IB curriculum with outstanding facilities, sports programmes, and multilingual education"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Benissa offers excellent outdoor activities year-round, from beach activities and water sports to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Beach & Swimming",
+          "type": "Beach",
+          "description": "Beautiful Mediterranean beaches nearby with crystal-clear waters, perfect for swimming, snorkelling, and sunbathing"
+        },
+        {
+          "name": "Water Sports",
+          "type": "Water Sports",
+          "description": "Paddleboarding, kayaking, windsurfing, and sailing available at nearby beaches and marinas"
+        },
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Benissa has a thriving international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The coastal location attracts a diverse mix of nationalities, particularly from Northern Europe. English is widely spoken in shops, restaurants, and social settings, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Active international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Diverse European community including British, Scandinavian, Dutch, German, and French residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Benissa",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the sea breeze and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Beach Walk",
+          "description": "Morning stroll along the beach or promenade, breathing in the fresh Mediterranean air"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Beach Time",
+          "description": "Head to the beach for an afternoon swim in the warm Mediterranean waters"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d0.0483!3d38.7183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Benissa a good place to live?",
-      "answer": "Yes, absolutely. Benissa offers an exceptional combination of affordable property, established international community, Mediterranean climate, excellent amenities, and genuine character. It suits retirees, families, and investors seeking authentic Costa Blanca living without premium coastal prices. The 8% annual price growth and strong rental demand demonstrate market confidence in the area."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Benissa",
+    "description": "Benissa is a coastal municipality in Costa Blanca North, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.7183",
+      "longitude": "0.0483"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can freely purchase property in Spain without restrictions. Non-EU citizens may require a Spanish tax identification number (NIE), and some regions have minor regulations, but foreign ownership is completely legal. Professional legal assistance ensures smooth transactions and compliance with Spanish property law."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Benissa",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Beyond the property purchase price, buyers should budget for: transfer tax (6-10% in Valencia region), notary fees (0.5-1%), property registration fees (0.1%), and legal fees (1-2%). Total additional costs typically range from 8-13% of the purchase price. Benissa properties averaging €2,200/m² make these additional costs proportionally lower than expensive coastal markets."
-    },
-    {
-      "question": "What is the cost of living in Costa Blanca?",
-      "answer": "Costa Blanca offers excellent value compared to UK and Northern Europe. Monthly costs for a couple include: rent (€600-1,500 depending on area), groceries (€300-400), utilities (€100-150), and dining out (€150-300). Healthcare costs are minimal with public insurance included. Overall, living costs run 30-40% below comparable UK locations, especially in Benissa where property prices are particularly competitive."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Costa Blanca ranks among Europe's best retirement destinations. The region offers: consistent warm weather year-round, excellent affordable healthcare, active expat communities, diverse leisure activities, and low cost of living. English is widely spoken, especially in established communities like Benissa. The combination of healthcare accessibility, social opportunities, and financial advantages makes it ideal for retirement planning."
-    },
-    {
-      "question": "How far is Costa Blanca from the UK?",
-      "answer": "Costa Blanca is approximately 1,200 kilometers from the UK, with flight times of 2.5-3 hours from most UK airports to Alicante. Multiple daily flights connect the region to London, Manchester, Birmingham, and other UK cities through various airlines. Easy accessibility makes regular UK visits straightforward, important for retirees maintaining family connections."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Costa Blanca enjoys Mediterranean climate with over 300 days of annual sunshine. Summers reach 28-32°C with minimal rainfall, winters average 12-16°C rarely freezing, and spring/autumn offer ideal 18-24°C temperatures. The region receives minimal rainfall concentrated in autumn/spring. This consistent, mild weather supports outdoor lifestyles year-round and appeals particularly to retirees and those escaping harsher northern climates."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "Visa requirements depend on your nationality. UK citizens can visit for up to 90 days visa-free. For property purchase and residency, long-term visa or residency application may be required depending on your circumstances. Property investment alone doesn't automatically grant residency. Professional legal advice ensures compliance with current Spanish immigration regulations for your specific situation."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
     }
-  ],
-  "slug": "benissa",
-  "town": "Benissa",
-  "propertyCount": 33,
-  "generatedAt": "2026-02-06T09:46:50.162Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Benissa a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. Benissa offers an exceptional combination of affordable property, established international community, Mediterranean climate, excellent amenities, and genuine character. It suits retirees, families, and investors seeking authentic Costa Blanca living without premium coastal prices. "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can freely purchase property in Spain without restrictions. Non-EU citizens may require a Spanish tax identification number (NIE), and some regions have minor regulations, but foreign ownership is completely legal. Professional legal assistance ensures smooth transactions and complia"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond the property purchase price, buyers should budget for: transfer tax (6-10% in Valencia region), notary fees (0.5-1%), property registration fees (0.1%), and legal fees (1-2%). Total additional costs typically range from 8-13% of the purchase price. Benissa properties averaging €2,200/m² make "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Costa Blanca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costa Blanca offers excellent value compared to UK and Northern Europe. Monthly costs for a couple include: rent (€600-1,500 depending on area), groceries (€300-400), utilities (€100-150), and dining out (€150-300). Healthcare costs are minimal with public insurance included. Overall, living costs r"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Costa Blanca good for retirees?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costa Blanca ranks among Europe's best retirement destinations. The region offers: consistent warm weather year-round, excellent affordable healthcare, active expat communities, diverse leisure activities, and low cost of living. English is widely spoken, especially in established communities like B"
+        }
+      }
+    ]
+  }
 }

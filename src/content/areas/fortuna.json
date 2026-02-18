@@ -1,82 +1,378 @@
 {
-  "metaTitle": "Fortuna Costa Blanca: Luxury Villas & Expat Living Guide",
-  "metaDescription": "Discover Fortuna, Costa Blanca: new build villas from €350k, Mediterranean lifestyle, golf courses & beaches. Complete area guide for expat buyers.",
-  "heroIntro": "Fortuna is an emerging residential destination on the Costa Blanca, situated in the province of Alicante between the charming towns of Finestrat and Polop. This tranquil urbanization offers a perfect blend of modern development and traditional Mediterranean charm, attracting both investors and families seeking a peaceful lifestyle away from the hustle of coastal resorts. With stunning views of the surrounding mountains and strategic proximity to the beach, shopping centers, and major amenities, Fortuna represents an excellent opportunity for those looking to invest in Spanish real estate.\n\nThe community is characterized by contemporary new build properties, particularly villas designed with modern architecture and sustainable features. At current market prices ranging from €350,000 to €360,000, these residences offer exceptional value for Costa Blanca investors. The area appeals to international buyers seeking low-density living with excellent connectivity to Alicante city and the broader Costa Blanca region.\n\nFortuna's development emphasizes quality over quantity, with careful urban planning that preserves the natural landscape while providing all necessary amenities. The area continues to grow steadily, attracting a cosmopolitan community of expats and Spanish families who appreciate the balanced lifestyle it offers—close enough to urban conveniences yet distant enough to enjoy peaceful, residential tranquility.",
-  "climate": "Fortuna enjoys a Mediterranean climate with approximately 300 days of sunshine annually. Summer temperatures typically reach 28-32°C, while winters are mild, rarely dropping below 8-10°C. The area experiences minimal rainfall, mainly concentrated in autumn and spring months. Sea breezes from the nearby Mediterranean coast help moderate summer heat, creating comfortable living conditions year-round. This climate makes Fortuna ideal for outdoor activities and outdoor living, which is central to the Mediterranean lifestyle.",
-  "lifestyle": "Life in Fortuna revolves around a relaxed Mediterranean rhythm combined with modern convenience. The community attracts a diverse expat population including British, German, French, and Scandinavian residents who have created an integrated social fabric with welcoming cultural activities. Residents enjoy a strong sense of community through local associations, regular social events, and organized activities that celebrate both Spanish traditions and international culture.\n\nThe daily lifestyle emphasizes outdoor living, with residents spending considerable time on terraces, in gardens, and exploring nearby natural areas. The atmosphere is peaceful and family-friendly, ideal for those seeking to escape urban pressure while maintaining access to modern amenities. Golf enthusiasts, nature lovers, and outdoor recreation enthusiasts find Fortuna particularly attractive. The local expat community regularly organizes events, sports activities, and social gatherings, making it easy for newcomers to integrate and build meaningful connections.",
-  "amenities": {
-    "healthcare": "Fortuna is served by several healthcare facilities including the private Clínica Benidorm and Clínica Parquesol located nearby in Finestrat and Benidorm (approximately 10-15km away). The area also has local medical clinics and pharmacies within the urbanization. For comprehensive hospital services, Alicante's Hospital General (approximately 45km) provides state-of-the-art facilities. Many residents utilize Spain's excellent private healthcare system through international insurance providers.",
-    "shopping": "The area benefits from proximity to major shopping centers including La Marina Shopping Center in Finestrat (10km) and Carrefour supermarkets in nearby towns. Benidorm offers extensive shopping options including the Benidorm Centro shopping area and numerous international retailers. Local shops, supermarkets, and Spanish markets within the urbanization provide daily necessities, while specialty shops for organic products and international goods are accessible within 15-20 minutes driving distance.",
-    "dining": "Fortuna's dining scene combines traditional Spanish cuisine with international options. The urbanization features several restaurants and cafes serving Mediterranean cuisine, with popular options including local Spanish establishments serving paella, gazpacho, and fresh seafood. Finestrat town center (10km) offers authentic Spanish tapas bars and family-run restaurants. Benidorm provides diverse dining from Michelin-starred establishments to casual international cuisine, with particularly excellent seafood restaurants along the beachfront promenade.",
-    "sports": "The region is a sports enthusiast's paradise with multiple 18-hole golf courses within 15-20 minutes including Puerta del Golf and Bonalba Golf Club. Fortuna is situated approximately 10km from Benidorm's famous beaches including Playa de Levante and Playa Poniente, offering swimming, water sports, and beach clubs. Hiking opportunities abound in the nearby Sierras, while the area supports tennis clubs, padel courts, and fitness centers. Water sports including sailing, windsurfing, and scuba diving are accessible at nearby Mediterranean coastal areas."
-  },
-  "transport": {
-    "airports": "Alicante-Elche Airport is the primary international gateway, located approximately 60km south of Fortuna (approximately 50-60 minutes drive). Valencia Airport is positioned 150km north (approximately 90 minutes drive). Both airports offer extensive European and international connections. Private helicopter services to nearby Costa Blanca locations are also available.",
-    "driving": "Fortuna benefits from excellent road connectivity via the AP-7 motorway and N-332 national road, providing direct access to Alicante city (45 minutes), Benidorm (15 minutes), and Valencia (90 minutes). The road network is modern and well-maintained with clear signage. Driving is the primary transport method in the area, with reliable connectivity to all Costa Blanca destinations and major Spanish cities.",
-    "public": "Public transportation includes regular bus services connecting Fortuna to Benidorm, Finestrat, and surrounding areas. The ALSA bus company operates routes throughout the Costa Blanca with connections to Alicante and beyond. However, private transport is recommended for regular travel due to the suburban location. Taxis and ride-sharing services are readily available throughout the area."
-  },
-  "propertyMarket": {
-    "overview": "Fortuna's property market demonstrates steady growth with increasing demand for new build villas offering modern amenities and Mediterranean lifestyle. The market reflects strong interest from international investors seeking value in well-developed urbanizations with comprehensive facilities. Properties in this category typically sell within 6-12 months, with increasing interest from buyers seeking quality residential communities rather than mass-market beach resorts.",
-    "priceRange": "€350,000 - €360,000",
-    "popularTypes": "Villa",
-    "investment": "New build villas in Fortuna offer strong investment potential with projected annual appreciation of 3-5% based on regional market trends. Rental yields range from 4-6% annually through holiday rental platforms and long-term leasing. The growing expat community and increasing Costa Blanca tourism support consistent demand. Properties appeal to owner-occupiers seeking Mediterranean lifestyle as well as investors targeting rental returns through short and long-term leasing."
-  },
-  "neighborhoods": [
-    "Fortuna Urbanization Central - The primary developed area featuring most new build villas with proximity to main amenities and services",
-    "Sierra del Collado - An elevated section offering panoramic views toward mountains and sea, preferred for villa developments with enhanced privacy",
-    "Finestrat Adjacent - Properties at Fortuna's borders with excellent access to Finestrat town center services and the charming old town",
-    "Polop Proximity Area - The quieter northwestern section of Fortuna with greater natural surroundings and convenient access to Polop's historic village"
+  "slug": "fortuna",
+  "name": "Fortuna",
+  "region": "Murcia",
+  "heroImage": "/images/areas/fortuna-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 2,
+  "propertyTypes": [
+    "Villa"
   ],
-  "prosAndCons": {
-    "pros": [
+  "priceRange": {
+    "min": 350000,
+    "max": 360000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Fortuna Tourism",
+      "url": "https://www.google.com/search?q=Fortuna%20Spain%20official%20website",
+      "description": "Discover more about Fortuna"
+    },
+    "airport": {
+      "name": "Murcia-Corvera Airport",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "45 km",
+      "driveTime": "35 min"
+    },
+    "healthcare": {
+      "name": "Hospital de Molina de Segura",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20de%20Molina%20de%20Segura",
+      "distance": "20 km"
+    }
+  },
+  "content": {
+    "metaTitle": "Fortuna Costa Blanca: Luxury Villas & Expat Living Guide",
+    "metaDescription": "Discover Fortuna, Costa Blanca: new build villas from €350k, Mediterranean lifestyle, golf courses & beaches. Complete area guide for expat buyers.",
+    "heroIntro": "Fortuna is an emerging residential destination on the Costa Blanca, situated in the province of Alicante between the charming towns of Finestrat and Polop. This tranquil urbanization offers a perfect blend of modern development and traditional Mediterranean charm, attracting both investors and families seeking a peaceful lifestyle away from the hustle of coastal resorts. With stunning views of the surrounding mountains and strategic proximity to the beach, shopping centers, and major amenities, Fortuna represents an excellent opportunity for those looking to invest in Spanish real estate.\n\nThe community is characterized by contemporary new build properties, particularly villas designed with modern architecture and sustainable features. At current market prices ranging from €350,000 to €360,000, these residences offer exceptional value for Costa Blanca investors. The area appeals to international buyers seeking low-density living with excellent connectivity to Alicante city and the broader Costa Blanca region.\n\nFortuna's development emphasizes quality over quantity, with careful urban planning that preserves the natural landscape while providing all necessary amenities. The area continues to grow steadily, attracting a cosmopolitan community of expats and Spanish families who appreciate the balanced lifestyle it offers—close enough to urban conveniences yet distant enough to enjoy peaceful, residential tranquility.",
+    "lifestyleSection": {
+      "intro": "Life in Fortuna revolves around a relaxed Mediterranean rhythm combined with modern convenience. The community attracts a diverse expat population including British, German, French, and Scandinavian residents who have created an integrated social fabric with welcoming cultural activities. Residents enjoy a strong sense of community through local associations, regular social events, and organized activities that celebrate both Spanish traditions and international culture.\n\nThe daily lifestyle emphasizes outdoor living, with residents spending considerable time on terraces, in gardens, and exploring nearby natural areas. The atmosphere is peaceful and family-friendly, ideal for those seeking to escape urban pressure while maintaining access to modern amenities. Golf enthusiasts, nature lovers, and outdoor recreation enthusiasts find Fortuna particularly attractive. The local expat community regularly organizes events, sports activities, and social gatherings, making it easy for newcomers to integrate and build meaningful connections.\n\nFortuna enjoys a Mediterranean climate with approximately 300 days of sunshine annually. Summer temperatures typically reach 28-32°C, while winters are mild, rarely dropping below 8-10°C. The area experiences minimal rainfall, mainly concentrated in autumn and spring months. Sea breezes from the nearby Mediterranean coast help moderate summer heat, creating comfortable living conditions year-round. This climate makes Fortuna ideal for outdoor activities and outdoor living, which is central to the Mediterranean lifestyle.",
+      "highlights": [
+        "Mediterranean climate with 300+ sunny days annually, perfect for outdoor lifestyle year-round",
+        "New build luxury villas with modern architecture and contemporary amenities at competitive €350-360k price point",
+        "Strategic location 15km from Benidorm beaches and multiple golf courses while maintaining peaceful, low-density residential environment",
+        "Strong expat community with established social networks, cultural activities, and welcoming international atmosphere",
+        "Excellent road connectivity via AP-7 motorway providing quick access to Alicante, Valencia, and entire Costa Blanca region"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "The region is a sports enthusiast's paradise with multiple 18-hole golf courses within 15-20 minutes including Puerta del Golf and Bonalba Golf Club. Fortuna is situated approximately 10km from Benidorm's famous beaches including Playa de Levante and Playa Poniente, offering swimming, water sports, and beach clubs. Hiking opportunities abound in the nearby Sierras, while the area supports tennis clubs, padel courts, and fitness centers. Water sports including sailing, windsurfing, and scuba diving are accessible at nearby Mediterranean coastal areas.",
+      "dining": "Fortuna's dining scene combines traditional Spanish cuisine with international options. The urbanization features several restaurants and cafes serving Mediterranean cuisine, with popular options including local Spanish establishments serving paella, gazpacho, and fresh seafood. Finestrat town center (10km) offers authentic Spanish tapas bars and family-run restaurants. Benidorm provides diverse dining from Michelin-starred establishments to casual international cuisine, with particularly excellent seafood restaurants along the beachfront promenade.",
+      "shopping": "The area benefits from proximity to major shopping centers including La Marina Shopping Center in Finestrat (10km) and Carrefour supermarkets in nearby towns. Benidorm offers extensive shopping options including the Benidorm Centro shopping area and numerous international retailers. Local shops, supermarkets, and Spanish markets within the urbanization provide daily necessities, while specialty shops for organic products and international goods are accessible within 15-20 minutes driving distance.",
+      "healthcare": "Fortuna is served by several healthcare facilities including the private Clínica Benidorm and Clínica Parquesol located nearby in Finestrat and Benidorm (approximately 10-15km away). The area also has local medical clinics and pharmacies within the urbanization. For comprehensive hospital services, Alicante's Hospital General (approximately 45km) provides state-of-the-art facilities. Many residents utilize Spain's excellent private healthcare system through international insurance providers.",
+      "transport": "Alicante-Elche Airport is the primary international gateway, located approximately 60km south of Fortuna (approximately 50-60 minutes drive). Valencia Airport is positioned 150km north (approximately 90 minutes drive). Both airports offer extensive European and international connections. Private helicopter services to nearby Costa Blanca locations are also available. Fortuna benefits from excellent road connectivity via the AP-7 motorway and N-332 national road, providing direct access to Alicante city (45 minutes), Benidorm (15 minutes), and Valencia (90 minutes). The road network is modern and well-maintained with clear signage. Driving is the primary transport method in the area, with reliable connectivity to all Costa Blanca destinations and major Spanish cities. Public transportation includes regular bus services connecting Fortuna to Benidorm, Finestrat, and surrounding areas. The ALSA bus company operates routes throughout the Costa Blanca with connections to Alicante and beyond. However, private transport is recommended for regular travel due to the suburban location. Taxis and ride-sharing services are readily available throughout the area."
+    },
+    "propertyMarketSection": "Fortuna's property market demonstrates steady growth with increasing demand for new build villas offering modern amenities and Mediterranean lifestyle. The market reflects strong interest from international investors seeking value in well-developed urbanizations with comprehensive facilities. Properties in this category typically sell within 6-12 months, with increasing interest from buyers seeking quality residential communities rather than mass-market beach resorts.\n\nPopular property types include Villa.\n\nNew build villas in Fortuna offer strong investment potential with projected annual appreciation of 3-5% based on regional market trends. Rental yields range from 4-6% annually through holiday rental platforms and long-term leasing. The growing expat community and increasing Costa Blanca tourism support consistent demand. Properties appeal to owner-occupiers seeking Mediterranean lifestyle as well as investors targeting rental returns through short and long-term leasing.",
+    "whyLiveHereSection": [
       "Mediterranean climate with 300+ sunny days annually, perfect for outdoor lifestyle year-round",
       "New build luxury villas with modern architecture and contemporary amenities at competitive €350-360k price point",
       "Strategic location 15km from Benidorm beaches and multiple golf courses while maintaining peaceful, low-density residential environment",
       "Strong expat community with established social networks, cultural activities, and welcoming international atmosphere",
       "Excellent road connectivity via AP-7 motorway providing quick access to Alicante, Valencia, and entire Costa Blanca region"
     ],
-    "cons": [
-      "Primarily requires private vehicle ownership for practical daily living, as public transport options are limited compared to urban areas",
-      "Real estate market still developing with less established resale history compared to more established Costa Blanca destinations",
-      "Summer tourism season brings increased traffic and congestion on nearby roads and beaches during July-August months"
-    ]
+    "faqs": [
+      {
+        "question": "What is the current property market price range in Fortuna?",
+        "answer": "Current new build villas in Fortuna are priced between €350,000 and €360,000. These modern properties feature contemporary design, sustainable features, and typically include amenities such as private pools, terraces, and garage spaces. Prices reflect the quality of construction and location benefits."
+      },
+      {
+        "question": "How far is Fortuna from Alicante Airport?",
+        "answer": "Fortuna is approximately 60 kilometers south of Alicante-Elche Airport, with travel time of approximately 50-60 minutes depending on traffic conditions. The journey is straightforward via the AP-7 motorway, making international access convenient for travelers."
+      },
+      {
+        "question": "Is Fortuna suitable for families with children?",
+        "answer": "Yes, Fortuna is an excellent choice for families. The residential nature of the community provides safe, peaceful surroundings with low traffic density. Nearby Benidorm and surrounding towns offer quality international schools. The area provides excellent outdoor spaces, parks, and recreational facilities suitable for families."
+      },
+      {
+        "question": "What are the main expat communities in Fortuna?",
+        "answer": "Fortuna hosts a diverse international population primarily from the United Kingdom, Germany, France, and Scandinavian countries. The established expat community actively organizes social events, cultural activities, and support networks that facilitate integration for newcomers."
+      },
+      {
+        "question": "Are there golf courses near Fortuna?",
+        "answer": "Yes, multiple championship golf courses are located within 15-20 minutes of Fortuna, including Puerta del Golf and Bonalba Golf Club. The Costa Blanca region offers numerous courses catering to all skill levels, making it ideal for golf enthusiasts."
+      },
+      {
+        "question": "What are the annual maintenance costs for villas in Fortuna?",
+        "answer": "Annual maintenance typically includes community fees (€80-150 monthly), property tax (IBI) approximately €400-600 annually, and utilities. Private villa owners should budget €2,000-3,000 annually for maintenance depending on pool size and property features."
+      },
+      {
+        "question": "Can properties in Fortuna be rented out for holiday income?",
+        "answer": "Yes, new build villas in Fortuna are suitable for holiday rental through platforms like Airbnb and Booking.com. Expected rental yields range from 4-6% annually. Many owners combine personal use with seasonal rental to generate income while enjoying their property."
+      },
+      {
+        "question": "What is the best season to buy property in Fortuna?",
+        "answer": "Property purchases typically proceed throughout the year. Spring and autumn offer pleasant weather for viewings and surveys. Summer involves higher tourism but sometimes slower sales activity. Winter is advantageous for negotiating, while early spring shows increased market activity. Professional advice from local real estate agents optimizes purchase timing."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Fortuna? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "New build villas in Fortuna offer strong investment potential with projected annual appreciation of 3-5% based on regional market trends. Rental yields range from 4-6% annually through holiday rental platforms and long-term leasing. The growing expat community and increasing Costa Blanca tourism support consistent demand. Properties appeal to owner-occupiers seeking Mediterranean lifestyle as well as investors targeting rental returns through short and long-term leasing.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Fortuna are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Fortuna offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Fortuna celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Fortuna have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school offering GCSE and A-Levels with strong extracurricular programmes"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "International (British)",
+          "distance": "25-45 min",
+          "description": "British curriculum primary and secondary school serving the international community"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Fortuna offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Fortuna has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Fortuna",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-1.1244!3d38.1819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "What is the current property market price range in Fortuna?",
-      "answer": "Current new build villas in Fortuna are priced between €350,000 and €360,000. These modern properties feature contemporary design, sustainable features, and typically include amenities such as private pools, terraces, and garage spaces. Prices reflect the quality of construction and location benefits."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Fortuna",
+    "description": "Fortuna is a inland municipality in Murcia, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.1819",
+      "longitude": "-1.1244"
     },
-    {
-      "question": "How far is Fortuna from Alicante Airport?",
-      "answer": "Fortuna is approximately 60 kilometers south of Alicante-Elche Airport, with travel time of approximately 50-60 minutes depending on traffic conditions. The journey is straightforward via the AP-7 motorway, making international access convenient for travelers."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Fortuna",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
     },
-    {
-      "question": "Is Fortuna suitable for families with children?",
-      "answer": "Yes, Fortuna is an excellent choice for families. The residential nature of the community provides safe, peaceful surroundings with low traffic density. Nearby Benidorm and surrounding towns offer quality international schools. The area provides excellent outdoor spaces, parks, and recreational facilities suitable for families."
-    },
-    {
-      "question": "What are the main expat communities in Fortuna?",
-      "answer": "Fortuna hosts a diverse international population primarily from the United Kingdom, Germany, France, and Scandinavian countries. The established expat community actively organizes social events, cultural activities, and support networks that facilitate integration for newcomers."
-    },
-    {
-      "question": "Are there golf courses near Fortuna?",
-      "answer": "Yes, multiple championship golf courses are located within 15-20 minutes of Fortuna, including Puerta del Golf and Bonalba Golf Club. The Costa Blanca region offers numerous courses catering to all skill levels, making it ideal for golf enthusiasts."
-    },
-    {
-      "question": "What are the annual maintenance costs for villas in Fortuna?",
-      "answer": "Annual maintenance typically includes community fees (€80-150 monthly), property tax (IBI) approximately €400-600 annually, and utilities. Private villa owners should budget €2,000-3,000 annually for maintenance depending on pool size and property features."
-    },
-    {
-      "question": "Can properties in Fortuna be rented out for holiday income?",
-      "answer": "Yes, new build villas in Fortuna are suitable for holiday rental through platforms like Airbnb and Booking.com. Expected rental yields range from 4-6% annually. Many owners combine personal use with seasonal rental to generate income while enjoying their property."
-    },
-    {
-      "question": "What is the best season to buy property in Fortuna?",
-      "answer": "Property purchases typically proceed throughout the year. Spring and autumn offer pleasant weather for viewings and surveys. Summer involves higher tourism but sometimes slower sales activity. Winter is advantageous for negotiating, while early spring shows increased market activity. Professional advice from local real estate agents optimizes purchase timing."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Murcia"
     }
-  ],
-  "slug": "fortuna",
-  "town": "Fortuna",
-  "propertyCount": 2,
-  "generatedAt": "2026-02-05T19:31:28.963Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the current property market price range in Fortuna?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Current new build villas in Fortuna are priced between €350,000 and €360,000. These modern properties feature contemporary design, sustainable features, and typically include amenities such as private pools, terraces, and garage spaces. Prices reflect the quality of construction and location benefit"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Fortuna from Alicante Airport?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fortuna is approximately 60 kilometers south of Alicante-Elche Airport, with travel time of approximately 50-60 minutes depending on traffic conditions. The journey is straightforward via the AP-7 motorway, making international access convenient for travelers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Fortuna suitable for families with children?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Fortuna is an excellent choice for families. The residential nature of the community provides safe, peaceful surroundings with low traffic density. Nearby Benidorm and surrounding towns offer quality international schools. The area provides excellent outdoor spaces, parks, and recreational faci"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the main expat communities in Fortuna?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fortuna hosts a diverse international population primarily from the United Kingdom, Germany, France, and Scandinavian countries. The established expat community actively organizes social events, cultural activities, and support networks that facilitate integration for newcomers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there golf courses near Fortuna?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, multiple championship golf courses are located within 15-20 minutes of Fortuna, including Puerta del Golf and Bonalba Golf Club. The Costa Blanca region offers numerous courses catering to all skill levels, making it ideal for golf enthusiasts."
+        }
+      }
+    ]
+  }
 }

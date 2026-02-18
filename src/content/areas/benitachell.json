@@ -1,83 +1,397 @@
 {
-  "metaTitle": "Living in Benitachell: Complete Guide to Costa Blanca",
-  "metaDescription": "Discover Benitachell, Costa Blanca. Stunning coastal town with luxury properties, dramatic cliffs, and the famous Cala Moraig beach.",
-  "heroIntro": "Nestled between dramatic limestone cliffs and the azure Mediterranean Sea, Benitachell (Poble Nou de Benitatxell) is one of Costa Blanca's most spectacular hidden gems. This small coastal municipality, positioned between Jávea and Moraira, offers an exclusive blend of natural beauty, tranquility, and luxury living that attracts discerning international residents seeking the ultimate Mediterranean lifestyle.\n\nWith its stunning coastline featuring the renowned Cala Moraig beach and the breathtaking Puig de la Llorença Natural Park, Benitachell provides a perfect escape from the crowds while maintaining easy access to the vibrant towns of the Costa Blanca North. The town's elevated position offers panoramic sea views from many properties, while its protected natural environment ensures development remains sympathetic to the landscape. From luxury villas perched on clifftops to modern apartments with sea views, Benitachell represents the pinnacle of coastal Spanish living.",
-  "climate": "Benitachell enjoys a perfect Mediterranean climate with over 320 days of sunshine annually. Summer temperatures average 26-28°C, while winters remain mild at 15-18°C, making it ideal for year-round living. The coastal location provides refreshing sea breezes that moderate summer heat, while the surrounding mountains offer protection from harsh winds. Rainfall is minimal and mainly occurs between October and March, ensuring long, dry summers perfect for outdoor activities and beach living.",
-  "lifestyle": "Life in Benitachell revolves around its stunning natural environment and relaxed Mediterranean pace. The town attracts a sophisticated international community, particularly from the UK, Germany, and Northern Europe, creating a cosmopolitan yet intimate atmosphere. Residents enjoy hiking in the Puig de la Llorença Natural Park, swimming in crystal-clear coves, and socializing at the various beach clubs and restaurants dotting the coastline.\n\nThe expat community is well-established and welcoming, with numerous social clubs, language exchange groups, and cultural activities. Many residents are drawn to the area's exclusivity – unlike busier coastal towns, Benitachell maintains its peaceful character while offering luxury amenities. The town center, though small, provides essential services, while the stunning Cumbre del Sol development offers upscale dining, shopping, and recreational facilities with spectacular sea views.",
-  "amenities": {
-    "healthcare": "Benitachell has a local health center providing basic medical services, while comprehensive healthcare is available at Hospital Marina Salud in Denia (15 minutes) and Hospital de Dénia (20 minutes). Private international clinics in Jávea and Calpe serve the expat community with English-speaking staff. Emergency services are efficient, and many residents maintain private health insurance for premium care.",
-    "shopping": "Daily shopping needs are met at local supermarkets including Consum and Charter, plus several small convenience stores. The Cumbre del Sol commercial center offers additional shops and services. For extensive shopping, residents visit Portal de la Marina in Ondara (20 minutes) or La Marina Shopping in Finestrat (45 minutes). Local markets in nearby Jávea (Thursday) and Moraira (Friday) provide fresh produce and local goods.",
-    "dining": "Benitachell's dining scene focuses on high-quality establishments taking advantage of the spectacular coastal setting. Casa Pepe and Restaurante Cala Moraig offer excellent Mediterranean cuisine with sea views. The Cumbre del Sol area features upscale restaurants like Audrey's by Rafa Soler. Beach chiringuitos provide fresh seafood and paella directly on the sand. Nearby Jávea and Moraira expand dining options considerably with Michelin-recommended establishments.",
-    "sports": "The area is a paradise for outdoor enthusiasts, with excellent hiking trails in Puig de la Llorença Natural Park and coastal paths offering stunning views. Cala Moraig provides excellent snorkeling and diving opportunities. Golf enthusiasts can access Club de Golf Jávea (10 minutes) and Ifach Golf Club in Moraira (15 minutes). Tennis and padel courts are available at local clubs, while water sports including sailing, kayaking, and fishing are popular along the coast."
-  },
-  "transport": {
-    "airports": "Alicante Airport (ALC) is 90 minutes by car and offers extensive European connections. Valencia Airport (110 minutes) provides additional international flights. Both airports have car rental facilities and taxi services. Private transfer companies serve the area regularly.",
-    "driving": "Benitachell is accessible via the AP-7 motorway (Exit 63) and the scenic coastal N-332 road. The town connects easily to Jávea (10 minutes), Moraira (15 minutes), and Calpe (20 minutes). Denia ferry port (20 minutes) provides connections to the Balearic Islands. Parking is generally available, though some cliff-top areas have limited access.",
-    "public": "Public transport is limited within Benitachell itself. ALSA buses connect to Jávea, Denia, and other coastal towns, though services are infrequent. Most residents rely on private vehicles. Taxi services are available but should be booked in advance. The nearest train stations are in Denia (TRAM Metropolitano to Alicante) and Calpe (RENFE services)."
-  },
-  "propertyMarket": {
-    "overview": "Benitachell's property market represents the premium end of Costa Blanca real estate, with limited supply maintaining strong values. The market focuses on luxury properties with sea views, attracted by the area's natural beauty and exclusivity. New developments are strictly controlled, ensuring quality and environmental protection.",
-    "priceRange": "€441,000 - €5,428,000",
-    "popularTypes": "Villa, Apartment",
-    "investment": "Properties in Benitachell show strong capital appreciation potential due to limited supply and high demand from international buyers. Rental yields are excellent, particularly for luxury properties with sea views, as the area attracts high-end tourists year-round. The proximity to established towns like Jávea and Moraira, combined with Benitachell's exclusive character, makes it an attractive long-term investment."
-  },
-  "neighborhoods": [
-    "Cumbre del Sol - Exclusive hilltop development with luxury villas and stunning sea views",
-    "Cala Moraig area - Properties near the famous beach with direct coastal access",
-    "Pueblo center - Traditional Spanish village atmosphere with local amenities",
-    "Residential Jazmines - Quiet residential area with modern amenities and mountain views"
+  "slug": "benitachell",
+  "name": "Benitachell",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/benitachell-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80&fit=crop",
+  "propertyCount": 7,
+  "propertyTypes": [
+    "Villa",
+    "Apartment"
   ],
-  "prosAndCons": {
-    "pros": [
+  "priceRange": {
+    "min": 441000,
+    "max": 5428000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Benitachell Tourism",
+      "url": "https://www.google.com/search?q=Benitachell%20Spain%20official%20website",
+      "description": "Discover more about Benitachell"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "90 km",
+      "driveTime": "55 min"
+    },
+    "healthcare": {
+      "name": "Hospital de Dénia",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20de%20D%C3%A9nia",
+      "distance": "18 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+Benitachell+Spain",
+        "description": "Beautiful Mediterranean beach nearby"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Living in Benitachell: Complete Guide to Costa Blanca",
+    "metaDescription": "Discover Benitachell, Costa Blanca. Stunning coastal town with luxury properties, dramatic cliffs, and the famous Cala Moraig beach.",
+    "heroIntro": "Nestled between dramatic limestone cliffs and the azure Mediterranean Sea, Benitachell (Poble Nou de Benitatxell) is one of Costa Blanca's most spectacular hidden gems. This small coastal municipality, positioned between Jávea and Moraira, offers an exclusive blend of natural beauty, tranquility, and luxury living that attracts discerning international residents seeking the ultimate Mediterranean lifestyle.\n\nWith its stunning coastline featuring the renowned Cala Moraig beach and the breathtaking Puig de la Llorença Natural Park, Benitachell provides a perfect escape from the crowds while maintaining easy access to the vibrant towns of the Costa Blanca North. The town's elevated position offers panoramic sea views from many properties, while its protected natural environment ensures development remains sympathetic to the landscape. From luxury villas perched on clifftops to modern apartments with sea views, Benitachell represents the pinnacle of coastal Spanish living.",
+    "lifestyleSection": {
+      "intro": "Life in Benitachell revolves around its stunning natural environment and relaxed Mediterranean pace. The town attracts a sophisticated international community, particularly from the UK, Germany, and Northern Europe, creating a cosmopolitan yet intimate atmosphere. Residents enjoy hiking in the Puig de la Llorença Natural Park, swimming in crystal-clear coves, and socializing at the various beach clubs and restaurants dotting the coastline.\n\nThe expat community is well-established and welcoming, with numerous social clubs, language exchange groups, and cultural activities. Many residents are drawn to the area's exclusivity – unlike busier coastal towns, Benitachell maintains its peaceful character while offering luxury amenities. The town center, though small, provides essential services, while the stunning Cumbre del Sol development offers upscale dining, shopping, and recreational facilities with spectacular sea views.\n\nBenitachell enjoys a perfect Mediterranean climate with over 320 days of sunshine annually. Summer temperatures average 26-28°C, while winters remain mild at 15-18°C, making it ideal for year-round living. The coastal location provides refreshing sea breezes that moderate summer heat, while the surrounding mountains offer protection from harsh winds. Rainfall is minimal and mainly occurs between October and March, ensuring long, dry summers perfect for outdoor activities and beach living.",
+      "highlights": [
+        "Spectacular natural setting with dramatic cliffs and pristine beaches",
+        "Exclusive, peaceful environment away from mass tourism",
+        "Strong international expat community with high-end amenities",
+        "Excellent investment potential with limited property supply",
+        "Easy access to Jávea, Moraira, and other Costa Blanca attractions"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "The area is a paradise for outdoor enthusiasts, with excellent hiking trails in Puig de la Llorença Natural Park and coastal paths offering stunning views. Cala Moraig provides excellent snorkeling and diving opportunities. Golf enthusiasts can access Club de Golf Jávea (10 minutes) and Ifach Golf Club in Moraira (15 minutes). Tennis and padel courts are available at local clubs, while water sports including sailing, kayaking, and fishing are popular along the coast.",
+      "dining": "Benitachell's dining scene focuses on high-quality establishments taking advantage of the spectacular coastal setting. Casa Pepe and Restaurante Cala Moraig offer excellent Mediterranean cuisine with sea views. The Cumbre del Sol area features upscale restaurants like Audrey's by Rafa Soler. Beach chiringuitos provide fresh seafood and paella directly on the sand. Nearby Jávea and Moraira expand dining options considerably with Michelin-recommended establishments.",
+      "shopping": "Daily shopping needs are met at local supermarkets including Consum and Charter, plus several small convenience stores. The Cumbre del Sol commercial center offers additional shops and services. For extensive shopping, residents visit Portal de la Marina in Ondara (20 minutes) or La Marina Shopping in Finestrat (45 minutes). Local markets in nearby Jávea (Thursday) and Moraira (Friday) provide fresh produce and local goods.",
+      "healthcare": "Benitachell has a local health center providing basic medical services, while comprehensive healthcare is available at Hospital Marina Salud in Denia (15 minutes) and Hospital de Dénia (20 minutes). Private international clinics in Jávea and Calpe serve the expat community with English-speaking staff. Emergency services are efficient, and many residents maintain private health insurance for premium care.",
+      "transport": "Alicante Airport (ALC) is 90 minutes by car and offers extensive European connections. Valencia Airport (110 minutes) provides additional international flights. Both airports have car rental facilities and taxi services. Private transfer companies serve the area regularly. Benitachell is accessible via the AP-7 motorway (Exit 63) and the scenic coastal N-332 road. The town connects easily to Jávea (10 minutes), Moraira (15 minutes), and Calpe (20 minutes). Denia ferry port (20 minutes) provides connections to the Balearic Islands. Parking is generally available, though some cliff-top areas have limited access. Public transport is limited within Benitachell itself. ALSA buses connect to Jávea, Denia, and other coastal towns, though services are infrequent. Most residents rely on private vehicles. Taxi services are available but should be booked in advance. The nearest train stations are in Denia (TRAM Metropolitano to Alicante) and Calpe (RENFE services)."
+    },
+    "propertyMarketSection": "Benitachell's property market represents the premium end of Costa Blanca real estate, with limited supply maintaining strong values. The market focuses on luxury properties with sea views, attracted by the area's natural beauty and exclusivity. New developments are strictly controlled, ensuring quality and environmental protection.\n\nPopular property types include Villa, Apartment.\n\nProperties in Benitachell show strong capital appreciation potential due to limited supply and high demand from international buyers. Rental yields are excellent, particularly for luxury properties with sea views, as the area attracts high-end tourists year-round. The proximity to established towns like Jávea and Moraira, combined with Benitachell's exclusive character, makes it an attractive long-term investment.",
+    "whyLiveHereSection": [
       "Spectacular natural setting with dramatic cliffs and pristine beaches",
       "Exclusive, peaceful environment away from mass tourism",
       "Strong international expat community with high-end amenities",
       "Excellent investment potential with limited property supply",
       "Easy access to Jávea, Moraira, and other Costa Blanca attractions"
     ],
-    "cons": [
-      "Limited public transport requiring private vehicle ownership",
-      "Higher property prices compared to inland areas",
-      "Fewer entertainment and shopping options than larger towns"
-    ]
+    "faqs": [
+      {
+        "question": "What makes Benitachell special compared to other Costa Blanca towns?",
+        "answer": "Benitachell offers exclusivity and natural beauty with dramatic cliff-top locations, the famous Cala Moraig beach, and Puig de la Llorença Natural Park. It's less crowded than neighboring towns while maintaining easy access to Jávea and Moraira's amenities."
+      },
+      {
+        "question": "How far is Benitachell from major airports?",
+        "answer": "Alicante Airport is 90 minutes by car, while Valencia Airport is 110 minutes away. Both offer extensive European connections and transfer services to Benitachell."
+      },
+      {
+        "question": "What are property prices like in Benitachell?",
+        "answer": "Properties range from €441,000 to €5,428,000, with most being luxury villas and apartments with sea views. The limited supply and exclusive location maintain strong values and investment potential."
+      },
+      {
+        "question": "Is Benitachell suitable for year-round living?",
+        "answer": "Yes, with over 320 days of sunshine annually and mild winters (15-18°C), Benitachell is perfect for year-round residents. The established expat community and local amenities support comfortable permanent living."
+      },
+      {
+        "question": "What recreational activities are available in Benitachell?",
+        "answer": "Residents enjoy hiking in natural parks, swimming at Cala Moraig beach, snorkeling, golf at nearby courses in Jávea and Moraira, and various water sports along the spectacular coastline."
+      },
+      {
+        "question": "How easy is it to access healthcare in Benitachell?",
+        "answer": "Basic healthcare is available locally, with comprehensive services at hospitals in Denia (15-20 minutes). Many private clinics in nearby towns serve the international community with English-speaking staff."
+      },
+      {
+        "question": "Do I need a car to live in Benitachell?",
+        "answer": "Yes, a car is essential as public transport is limited. The area is well-connected by road to surrounding towns, and most residents find driving convenient for accessing amenities and exploring the region."
+      },
+      {
+        "question": "What's the expat community like in Benitachell?",
+        "answer": "The international community is well-established and welcoming, with residents primarily from the UK, Germany, and Northern Europe. Social clubs, language exchanges, and cultural activities create a cosmopolitan atmosphere."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Benitachell? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "Properties in Benitachell show strong capital appreciation potential due to limited supply and high demand from international buyers. Rental yields are excellent, particularly for luxury properties with sea views, as the area attracts high-end tourists year-round. The proximity to established towns like Jávea and Moraira, combined with Benitachell's exclusive character, makes it an attractive long-term investment.",
+      "highlights": [
+        "Strong holiday rental demand during peak season (May-October)",
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Short-term holiday lets popular with European tourists"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Benitachell are significantly lower than Northern Europe and very competitive within Spain. Coastal living here combines affordability with Mediterranean lifestyle.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Recommended for flexibility"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Benitachell celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "June",
+          "description": "Magical midsummer beach celebrations with bonfires, fireworks, and midnight swimming traditions along the coast"
+        },
+        {
+          "name": "Summer Beach Festival",
+          "month": "July",
+          "description": "Outdoor concerts, food stalls, and cultural events along the waterfront throughout the summer season"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Benitachell have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school with GCSE and A-Level programmes, excellent facilities and strong academic results"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "British and IB curriculum with outstanding facilities, sports programmes, and multilingual education"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Benitachell offers excellent outdoor activities year-round, from beach activities and water sports to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Beach & Swimming",
+          "type": "Beach",
+          "description": "Beautiful Mediterranean beaches nearby with crystal-clear waters, perfect for swimming, snorkelling, and sunbathing"
+        },
+        {
+          "name": "Water Sports",
+          "type": "Water Sports",
+          "description": "Paddleboarding, kayaking, windsurfing, and sailing available at nearby beaches and marinas"
+        },
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Benitachell has a thriving international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The coastal location attracts a diverse mix of nationalities, particularly from Northern Europe. English is widely spoken in shops, restaurants, and social settings, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Active international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Diverse European community including British, Scandinavian, Dutch, German, and French residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Benitachell",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the sea breeze and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Beach Walk",
+          "description": "Morning stroll along the beach or promenade, breathing in the fresh Mediterranean air"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Beach Time",
+          "description": "Head to the beach for an afternoon swim in the warm Mediterranean waters"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d0.1356!3d38.7303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "What makes Benitachell special compared to other Costa Blanca towns?",
-      "answer": "Benitachell offers exclusivity and natural beauty with dramatic cliff-top locations, the famous Cala Moraig beach, and Puig de la Llorença Natural Park. It's less crowded than neighboring towns while maintaining easy access to Jávea and Moraira's amenities."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Benitachell",
+    "description": "Benitachell is a coastal municipality in Costa Blanca North, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.7303",
+      "longitude": "0.1356"
     },
-    {
-      "question": "How far is Benitachell from major airports?",
-      "answer": "Alicante Airport is 90 minutes by car, while Valencia Airport is 110 minutes away. Both offer extensive European connections and transfer services to Benitachell."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Benitachell",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What are property prices like in Benitachell?",
-      "answer": "Properties range from €441,000 to €5,428,000, with most being luxury villas and apartments with sea views. The limited supply and exclusive location maintain strong values and investment potential."
-    },
-    {
-      "question": "Is Benitachell suitable for year-round living?",
-      "answer": "Yes, with over 320 days of sunshine annually and mild winters (15-18°C), Benitachell is perfect for year-round residents. The established expat community and local amenities support comfortable permanent living."
-    },
-    {
-      "question": "What recreational activities are available in Benitachell?",
-      "answer": "Residents enjoy hiking in natural parks, swimming at Cala Moraig beach, snorkeling, golf at nearby courses in Jávea and Moraira, and various water sports along the spectacular coastline."
-    },
-    {
-      "question": "How easy is it to access healthcare in Benitachell?",
-      "answer": "Basic healthcare is available locally, with comprehensive services at hospitals in Denia (15-20 minutes). Many private clinics in nearby towns serve the international community with English-speaking staff."
-    },
-    {
-      "question": "Do I need a car to live in Benitachell?",
-      "answer": "Yes, a car is essential as public transport is limited. The area is well-connected by road to surrounding towns, and most residents find driving convenient for accessing amenities and exploring the region."
-    },
-    {
-      "question": "What's the expat community like in Benitachell?",
-      "answer": "The international community is well-established and welcoming, with residents primarily from the UK, Germany, and Northern Europe. Social clubs, language exchanges, and cultural activities create a cosmopolitan atmosphere."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
     }
-  ],
-  "slug": "benitachell",
-  "town": "Benitachell",
-  "propertyCount": 7,
-  "generatedAt": "2026-01-07T19:41:53.116Z",
-  "cardImage": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80&fit=crop"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What makes Benitachell special compared to other Costa Blanca towns?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Benitachell offers exclusivity and natural beauty with dramatic cliff-top locations, the famous Cala Moraig beach, and Puig de la Llorença Natural Park. It's less crowded than neighboring towns while maintaining easy access to Jávea and Moraira's amenities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Benitachell from major airports?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alicante Airport is 90 minutes by car, while Valencia Airport is 110 minutes away. Both offer extensive European connections and transfer services to Benitachell."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are property prices like in Benitachell?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Properties range from €441,000 to €5,428,000, with most being luxury villas and apartments with sea views. The limited supply and exclusive location maintain strong values and investment potential."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Benitachell suitable for year-round living?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, with over 320 days of sunshine annually and mild winters (15-18°C), Benitachell is perfect for year-round residents. The established expat community and local amenities support comfortable permanent living."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What recreational activities are available in Benitachell?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Residents enjoy hiking in natural parks, swimming at Cala Moraig beach, snorkeling, golf at nearby courses in Jávea and Moraira, and various water sports along the spectacular coastline."
+        }
+      }
+    ]
+  }
 }

@@ -1,81 +1,396 @@
 {
-  "metaTitle": "Los Urrutias Costa Blanca Guide | Villas & Coastal Living Spain",
-  "metaDescription": "Discover Los Urrutias, Costa Blanca: charming coastal village with new build villas from €384,000. Perfect for expats seeking Mediterranean lifestyle near Murcia.",
-  "heroIntro": "Los Urrutias is a picturesque coastal village located in the Murcia region of Spain's Costa Blanca, offering an authentic Mediterranean experience away from the typical tourist crowds. Situated along the Mar Menor lagoon, Europe's largest saltwater lagoon, this charming enclave has become increasingly popular among international property buyers and expats seeking a genuine Spanish lifestyle combined with modern amenities. The village maintains its traditional character while embracing contemporary development, with new build properties offering contemporary comfort and design standards.\n\nThis hidden gem provides residents with direct access to pristine beaches, natural parks, and a thriving fishing heritage that continues to define the community's identity. Los Urrutias appeals to those seeking a balance between peaceful coastal living and convenient access to larger cities like Murcia and the vibrant resort areas of the Costa Blanca. Whether you're seeking a holiday home, permanent residence, or investment property, Los Urrutias presents compelling opportunities in one of Spain's most undervalued coastal markets.\n\nWith new villa developments commanding attention from savvy property investors, now is an excellent time to explore what this emerging destination offers. The combination of affordability, location, and lifestyle makes Los Urrutias an increasingly attractive choice for families, retirees, and remote workers relocating to Spain.",
-  "climate": "Los Urrutias enjoys a Mediterranean climate with warm, sunny weather year-round, featuring approximately 320 days of sunshine annually. Summer temperatures typically reach 28-32°C (82-90°F), while winters remain mild at 10-15°C (50-59°F). The Mar Menor's unique microclimate creates slightly cooler summers due to sea breezes and warmer winters compared to inland areas. Rainfall is minimal and concentrated in autumn and spring months, with July and August being particularly dry. This pleasant climate makes Los Urrutias ideal for outdoor activities and coastal living throughout the year.",
-  "lifestyle": "Life in Los Urrutias revolves around the sea, with residents enjoying a relaxed Mediterranean rhythm centered on fresh seafood, family gatherings, and beach culture. The community maintains strong local traditions, particularly evident in the fishing industry and seasonal festivals celebrating the village's maritime heritage. The expat community has grown substantially, creating a welcoming international atmosphere while preserving the village's authentic Spanish character and local customs.\n\nDaily life emphasizes outdoor activities, with residents regularly enjoying watersports, beachcombing, and sunset walks along the lagoon. The slower pace compared to coastal resorts like Benidorm appeals to those seeking tranquility without isolation. Local restaurants specialize in traditional paella and fresh Mediterranean seafood, while weekly markets offer fresh produce and local products. The close-knit community atmosphere, combined with accessibility to modern conveniences, creates an ideal setting for families and retirees seeking genuine Spanish culture with contemporary comforts.",
-  "amenities": {
-    "healthcare": "Los Urrutias has a local health center (Centro de Salud) providing primary medical care and emergency services. More comprehensive medical facilities are available in San Javier (8km) and Murcia city (45km), including Hospital Rafael Méndez and numerous private clinics. The area is well-served by pharmacies and dental practices, with many practitioners speaking English to accommodate the international population.",
-    "shopping": "The village center offers essential shopping including a supermarket, butcher, bakery, and traditional shops. Larger shopping centers are located in San Javier (8km), featuring Carrefour and specialist retailers. Murcia city center (45km) provides comprehensive department stores, fashion outlets, and shopping malls for more extensive purchases. Weekly markets in Los Urrutias and surrounding villages offer fresh produce and local products.",
-    "dining": "Los Urrutias specializes in traditional seafood restaurants featuring fresh daily catches and authentic paella, with numerous beachfront dining establishments offering spectacular Mar Menor views. Local tapas bars serve regional specialties and Spanish wines. The village maintains a collection of Spanish and international restaurants, plus casual chiringuitos (beach bars) for informal meals. Nearby San Javier and Torre Pacheco offer additional dining variety catering to international tastes.",
-    "sports": "The Mar Menor provides excellent opportunities for watersports including kitesurfing, windsurfing, sailing, and paddleboarding. Several beaches offer supervised swimming areas and water sports centers. Golf enthusiasts can visit Corvera Golf Course (25km) and various other championship courses within 30km. Hiking trails explore nearby natural parks, while cycling paths follow the coastline. The calm lagoon waters are perfect for beginners and families learning watersports."
-  },
-  "transport": {
-    "airports": "Murcia-San Javier Airport (15km) offers regional flights and some European connections. Alicante-Elche International Airport (95km) is the major international hub with extensive flight options to UK, Germany, and throughout Europe. Málaga Airport (180km) provides additional international alternatives. All airports have car rental facilities and taxi services.",
-    "driving": "Los Urrutias is well-connected via the N-332 coastal road running through San Javier (8km) and connecting to the AP-7 motorway accessing Murcia and Alicante. The C-3314 provides direct access to Torre Pacheco (12km) and inland areas. Modern highway infrastructure makes commuting straightforward, with Murcia city center approximately 45km away via well-maintained roads.",
-    "public": "Regular bus services connect Los Urrutias to nearby San Javier, Torre Pacheco, and Murcia city through ALSA and local providers. The Cercanías regional train connects San Javier to Murcia in approximately 40 minutes, providing an alternative to driving. Most residents rely on personal vehicles given the village's coastal location, though bus infrastructure continues improving as the area develops."
-  },
-  "propertyMarket": {
-    "overview": "Los Urrutias represents an emerging property market with excellent value compared to established Costa Blanca resorts. New build villa developments are attracting investors seeking quality construction and modern amenities at competitive prices. The market is characterized by both local interest and international investment, with properties appreciating steadily as infrastructure and tourism develop. This remains one of Costa Blanca's most undervalued coastal markets.",
-    "priceRange": "€384,000 - €384,000",
-    "popularTypes": "Villa",
-    "investment": "New build villas in Los Urrutias present strong investment potential, particularly for holiday rental purposes given increasing tourism interest. Properties appreciate steadily as the area's infrastructure develops and reputation grows. Rental demand from European tourists seeking authentic Costa Blanca experiences without overcrowding creates consistent income opportunities. The combination of affordability, new construction quality, and emerging market status makes Los Urrutias attractive for buy-to-let investors seeking moderate entry prices with appreciation potential."
-  },
-  "neighborhoods": [
-    "Urrutia Beach District: Prime beachfront location with direct Mar Menor access, featuring new villa developments and established homes with sea views",
-    "San Javier Extension: Growing residential area expanding from adjacent San Javier, offering modern amenities while maintaining village character",
-    "Lagoon View Urbanization: Planned developments with villa communities overlooking the Mar Menor, combining new construction with natural lagoon environment",
-    "Historic Village Center: Traditional core area with local character, local shops, restaurants, and authentic Spanish community atmosphere"
+  "slug": "los-urrutias",
+  "name": "Los Urrutias",
+  "region": "Murcia",
+  "heroImage": "/images/areas/los-urrutias-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 1,
+  "propertyTypes": [
+    "Villa"
   ],
-  "prosAndCons": {
-    "pros": [
+  "priceRange": {
+    "min": 384000,
+    "max": 384000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Los Urrutias Tourism",
+      "url": "https://www.google.com/search?q=Los%20Urrutias%20Spain%20official%20website",
+      "description": "Discover more about Los Urrutias"
+    },
+    "airport": {
+      "name": "Murcia-Corvera Airport",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "22 km",
+      "driveTime": "17 min"
+    },
+    "healthcare": {
+      "name": "Hospital General Universitario Santa Lucía (Cartagena)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20General%20Universitario%20Santa%20Luc%C3%ADa%20(Cartagena)",
+      "distance": "22 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+Los%20Urrutias+Spain",
+        "description": "Beautiful Mediterranean beach nearby"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Los Urrutias Costa Blanca Guide | Villas & Coastal Living Spain",
+    "metaDescription": "Discover Los Urrutias, Costa Blanca: charming coastal village with new build villas from €384,000. Perfect for expats seeking Mediterranean lifestyle near Murcia.",
+    "heroIntro": "Los Urrutias is a picturesque coastal village located in the Murcia region of Spain's Costa Blanca, offering an authentic Mediterranean experience away from the typical tourist crowds. Situated along the Mar Menor lagoon, Europe's largest saltwater lagoon, this charming enclave has become increasingly popular among international property buyers and expats seeking a genuine Spanish lifestyle combined with modern amenities. The village maintains its traditional character while embracing contemporary development, with new build properties offering contemporary comfort and design standards.\n\nThis hidden gem provides residents with direct access to pristine beaches, natural parks, and a thriving fishing heritage that continues to define the community's identity. Los Urrutias appeals to those seeking a balance between peaceful coastal living and convenient access to larger cities like Murcia and the vibrant resort areas of the Costa Blanca. Whether you're seeking a holiday home, permanent residence, or investment property, Los Urrutias presents compelling opportunities in one of Spain's most undervalued coastal markets.\n\nWith new villa developments commanding attention from savvy property investors, now is an excellent time to explore what this emerging destination offers. The combination of affordability, location, and lifestyle makes Los Urrutias an increasingly attractive choice for families, retirees, and remote workers relocating to Spain.",
+    "lifestyleSection": {
+      "intro": "Life in Los Urrutias revolves around the sea, with residents enjoying a relaxed Mediterranean rhythm centered on fresh seafood, family gatherings, and beach culture. The community maintains strong local traditions, particularly evident in the fishing industry and seasonal festivals celebrating the village's maritime heritage. The expat community has grown substantially, creating a welcoming international atmosphere while preserving the village's authentic Spanish character and local customs.\n\nDaily life emphasizes outdoor activities, with residents regularly enjoying watersports, beachcombing, and sunset walks along the lagoon. The slower pace compared to coastal resorts like Benidorm appeals to those seeking tranquility without isolation. Local restaurants specialize in traditional paella and fresh Mediterranean seafood, while weekly markets offer fresh produce and local products. The close-knit community atmosphere, combined with accessibility to modern conveniences, creates an ideal setting for families and retirees seeking genuine Spanish culture with contemporary comforts.\n\nLos Urrutias enjoys a Mediterranean climate with warm, sunny weather year-round, featuring approximately 320 days of sunshine annually. Summer temperatures typically reach 28-32°C (82-90°F), while winters remain mild at 10-15°C (50-59°F). The Mar Menor's unique microclimate creates slightly cooler summers due to sea breezes and warmer winters compared to inland areas. Rainfall is minimal and concentrated in autumn and spring months, with July and August being particularly dry. This pleasant climate makes Los Urrutias ideal for outdoor activities and coastal living throughout the year.",
+      "highlights": [
+        "Authentic Mediterranean coastal living with genuine Spanish village character, avoiding mass tourism overcrowding of major resorts",
+        "Exceptional value compared to established Costa Blanca destinations, with quality new build villas at competitive entry prices",
+        "Direct Mar Menor lagoon access providing unique watersports, swimming, and beach lifestyle opportunities",
+        "Strategic location 15km from Murcia-San Javier Airport and 45km from Murcia city, balancing coastal tranquility with urban accessibility",
+        "Growing international community and modern infrastructure maintaining traditional village atmosphere while providing contemporary amenities"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "The Mar Menor provides excellent opportunities for watersports including kitesurfing, windsurfing, sailing, and paddleboarding. Several beaches offer supervised swimming areas and water sports centers. Golf enthusiasts can visit Corvera Golf Course (25km) and various other championship courses within 30km. Hiking trails explore nearby natural parks, while cycling paths follow the coastline. The calm lagoon waters are perfect for beginners and families learning watersports.",
+      "dining": "Los Urrutias specializes in traditional seafood restaurants featuring fresh daily catches and authentic paella, with numerous beachfront dining establishments offering spectacular Mar Menor views. Local tapas bars serve regional specialties and Spanish wines. The village maintains a collection of Spanish and international restaurants, plus casual chiringuitos (beach bars) for informal meals. Nearby San Javier and Torre Pacheco offer additional dining variety catering to international tastes.",
+      "shopping": "The village center offers essential shopping including a supermarket, butcher, bakery, and traditional shops. Larger shopping centers are located in San Javier (8km), featuring Carrefour and specialist retailers. Murcia city center (45km) provides comprehensive department stores, fashion outlets, and shopping malls for more extensive purchases. Weekly markets in Los Urrutias and surrounding villages offer fresh produce and local products.",
+      "healthcare": "Los Urrutias has a local health center (Centro de Salud) providing primary medical care and emergency services. More comprehensive medical facilities are available in San Javier (8km) and Murcia city (45km), including Hospital Rafael Méndez and numerous private clinics. The area is well-served by pharmacies and dental practices, with many practitioners speaking English to accommodate the international population.",
+      "transport": "Murcia-San Javier Airport (15km) offers regional flights and some European connections. Alicante-Elche International Airport (95km) is the major international hub with extensive flight options to UK, Germany, and throughout Europe. Málaga Airport (180km) provides additional international alternatives. All airports have car rental facilities and taxi services. Los Urrutias is well-connected via the N-332 coastal road running through San Javier (8km) and connecting to the AP-7 motorway accessing Murcia and Alicante. The C-3314 provides direct access to Torre Pacheco (12km) and inland areas. Modern highway infrastructure makes commuting straightforward, with Murcia city center approximately 45km away via well-maintained roads. Regular bus services connect Los Urrutias to nearby San Javier, Torre Pacheco, and Murcia city through ALSA and local providers. The Cercanías regional train connects San Javier to Murcia in approximately 40 minutes, providing an alternative to driving. Most residents rely on personal vehicles given the village's coastal location, though bus infrastructure continues improving as the area develops."
+    },
+    "propertyMarketSection": "Los Urrutias represents an emerging property market with excellent value compared to established Costa Blanca resorts. New build villa developments are attracting investors seeking quality construction and modern amenities at competitive prices. The market is characterized by both local interest and international investment, with properties appreciating steadily as infrastructure and tourism develop. This remains one of Costa Blanca's most undervalued coastal markets.\n\nPopular property types include Villa.\n\nNew build villas in Los Urrutias present strong investment potential, particularly for holiday rental purposes given increasing tourism interest. Properties appreciate steadily as the area's infrastructure develops and reputation grows. Rental demand from European tourists seeking authentic Costa Blanca experiences without overcrowding creates consistent income opportunities. The combination of affordability, new construction quality, and emerging market status makes Los Urrutias attractive for buy-to-let investors seeking moderate entry prices with appreciation potential.",
+    "whyLiveHereSection": [
       "Authentic Mediterranean coastal living with genuine Spanish village character, avoiding mass tourism overcrowding of major resorts",
       "Exceptional value compared to established Costa Blanca destinations, with quality new build villas at competitive entry prices",
       "Direct Mar Menor lagoon access providing unique watersports, swimming, and beach lifestyle opportunities",
       "Strategic location 15km from Murcia-San Javier Airport and 45km from Murcia city, balancing coastal tranquility with urban accessibility",
       "Growing international community and modern infrastructure maintaining traditional village atmosphere while providing contemporary amenities"
     ],
-    "cons": [
-      "Limited nightlife and entertainment compared to major resort towns like Benidorm or Torrevieja, requiring travel for extensive social activities",
-      "Emerging market status means fewer established services, medical specialists, and international retailers compared to mature coastal communities"
-    ]
+    "faqs": [
+      {
+        "question": "Is Los Urrutias suitable for families with children?",
+        "answer": "Yes, Los Urrutias is excellent for families. The calm Mar Menor waters provide safe swimming, while the relaxed pace and strong community atmosphere create ideal conditions for raising children. Local schools serve the community, and the proximity to Murcia provides additional educational options. Outdoor activities, beaches, and natural spaces offer abundant family-friendly recreation."
+      },
+      {
+        "question": "What is the average cost of new build villas in Los Urrutias?",
+        "answer": "New build villas in Los Urrutias are currently priced at €384,000, representing excellent value for quality Mediterranean coastal property. Prices are substantially lower than comparable properties in established Costa Blanca resorts, making this an attractive investment opportunity for budget-conscious buyers."
+      },
+      {
+        "question": "How far is Los Urrutias from major airports?",
+        "answer": "Los Urrutias is 15km from Murcia-San Javier Airport (approximately 20 minutes driving) and 95km from Alicante-Elche International Airport (approximately 90 minutes). Both airports offer excellent connectivity to European destinations, making Los Urrutias accessible for international relocations."
+      },
+      {
+        "question": "Are new build villas in Los Urrutias good rental investments?",
+        "answer": "Yes, new build villas offer strong rental potential. The growing tourism interest in authentic Costa Blanca experiences, combined with the Mar Menor's unique appeal and proximity to water activities, creates consistent demand from European holiday renters. New construction with modern amenities commands premium rental rates compared to older properties."
+      },
+      {
+        "question": "What medical facilities are available in Los Urrutias?",
+        "answer": "Los Urrutias has a local health center providing primary care and emergency services. More comprehensive facilities are available in San Javier (8km) and Murcia city (45km), including Hospital Rafael Méndez and numerous private clinics. Many medical professionals speak English to serve the international community."
+      },
+      {
+        "question": "What activities are available in Los Urrutias besides beaches?",
+        "answer": "Beyond beach activities, residents enjoy watersports (kitesurfing, windsurfing, sailing), nearby golf courses within 30km, hiking and cycling paths, natural parks exploration, and traditional fishing village experiences. The proximity to Murcia provides cultural attractions, museums, and urban amenities for additional entertainment."
+      },
+      {
+        "question": "Is English widely spoken in Los Urrutias?",
+        "answer": "English is increasingly spoken, particularly among professionals, shop owners, and those in tourism and service sectors. The growing expat community and international property market have normalized English language use. However, learning basic Spanish is beneficial for daily interactions and integrating with the local community."
+      },
+      {
+        "question": "What is the best time to visit or relocate to Los Urrutias?",
+        "answer": "Year-round living is comfortable due to mild winters and warm summers. The best visiting periods are May-June and September-October, offering warm weather without extreme summer heat. Spring (March-May) and autumn (September-November) are ideal for relocating, providing pleasant conditions for settling into the community."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Los Urrutias? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "New build villas in Los Urrutias present strong investment potential, particularly for holiday rental purposes given increasing tourism interest. Properties appreciate steadily as the area's infrastructure develops and reputation grows. Rental demand from European tourists seeking authentic Costa Blanca experiences without overcrowding creates consistent income opportunities. The combination of affordability, new construction quality, and emerging market status makes Los Urrutias attractive for buy-to-let investors seeking moderate entry prices with appreciation potential.",
+      "highlights": [
+        "Strong holiday rental demand during peak season (May-October)",
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Short-term holiday lets popular with European tourists"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Los Urrutias are significantly lower than Northern Europe and very competitive within Spain. Coastal living here combines affordability with Mediterranean lifestyle.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Recommended for flexibility"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Los Urrutias celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "June",
+          "description": "Magical midsummer beach celebrations with bonfires, fireworks, and midnight swimming traditions along the coast"
+        },
+        {
+          "name": "Summer Beach Festival",
+          "month": "July",
+          "description": "Outdoor concerts, food stalls, and cultural events along the waterfront throughout the summer season"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Los Urrutias have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school offering GCSE and A-Levels with strong extracurricular programmes"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "International (British)",
+          "distance": "25-45 min",
+          "description": "British curriculum primary and secondary school serving the international community"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Los Urrutias offers excellent outdoor activities year-round, from beach activities and water sports to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Beach & Swimming",
+          "type": "Beach",
+          "description": "Beautiful Mediterranean beaches nearby with crystal-clear waters, perfect for swimming, snorkelling, and sunbathing"
+        },
+        {
+          "name": "Water Sports",
+          "type": "Water Sports",
+          "description": "Paddleboarding, kayaking, windsurfing, and sailing available at nearby beaches and marinas"
+        },
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Los Urrutias has a thriving international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The coastal location attracts a diverse mix of nationalities, particularly from Northern Europe. English is widely spoken in shops, restaurants, and social settings, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Active international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Los Urrutias",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the sea breeze and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Beach Walk",
+          "description": "Morning stroll along the beach or promenade, breathing in the fresh Mediterranean air"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Beach Time",
+          "description": "Head to the beach for an afternoon swim in the warm Mediterranean waters"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.84!3d37.6861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Los Urrutias suitable for families with children?",
-      "answer": "Yes, Los Urrutias is excellent for families. The calm Mar Menor waters provide safe swimming, while the relaxed pace and strong community atmosphere create ideal conditions for raising children. Local schools serve the community, and the proximity to Murcia provides additional educational options. Outdoor activities, beaches, and natural spaces offer abundant family-friendly recreation."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Los Urrutias",
+    "description": "Los Urrutias is a coastal municipality in Murcia, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.6861",
+      "longitude": "-0.84"
     },
-    {
-      "question": "What is the average cost of new build villas in Los Urrutias?",
-      "answer": "New build villas in Los Urrutias are currently priced at €384,000, representing excellent value for quality Mediterranean coastal property. Prices are substantially lower than comparable properties in established Costa Blanca resorts, making this an attractive investment opportunity for budget-conscious buyers."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Los Urrutias",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
     },
-    {
-      "question": "How far is Los Urrutias from major airports?",
-      "answer": "Los Urrutias is 15km from Murcia-San Javier Airport (approximately 20 minutes driving) and 95km from Alicante-Elche International Airport (approximately 90 minutes). Both airports offer excellent connectivity to European destinations, making Los Urrutias accessible for international relocations."
-    },
-    {
-      "question": "Are new build villas in Los Urrutias good rental investments?",
-      "answer": "Yes, new build villas offer strong rental potential. The growing tourism interest in authentic Costa Blanca experiences, combined with the Mar Menor's unique appeal and proximity to water activities, creates consistent demand from European holiday renters. New construction with modern amenities commands premium rental rates compared to older properties."
-    },
-    {
-      "question": "What medical facilities are available in Los Urrutias?",
-      "answer": "Los Urrutias has a local health center providing primary care and emergency services. More comprehensive facilities are available in San Javier (8km) and Murcia city (45km), including Hospital Rafael Méndez and numerous private clinics. Many medical professionals speak English to serve the international community."
-    },
-    {
-      "question": "What activities are available in Los Urrutias besides beaches?",
-      "answer": "Beyond beach activities, residents enjoy watersports (kitesurfing, windsurfing, sailing), nearby golf courses within 30km, hiking and cycling paths, natural parks exploration, and traditional fishing village experiences. The proximity to Murcia provides cultural attractions, museums, and urban amenities for additional entertainment."
-    },
-    {
-      "question": "Is English widely spoken in Los Urrutias?",
-      "answer": "English is increasingly spoken, particularly among professionals, shop owners, and those in tourism and service sectors. The growing expat community and international property market have normalized English language use. However, learning basic Spanish is beneficial for daily interactions and integrating with the local community."
-    },
-    {
-      "question": "What is the best time to visit or relocate to Los Urrutias?",
-      "answer": "Year-round living is comfortable due to mild winters and warm summers. The best visiting periods are May-June and September-October, offering warm weather without extreme summer heat. Spring (March-May) and autumn (September-November) are ideal for relocating, providing pleasant conditions for settling into the community."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Murcia"
     }
-  ],
-  "slug": "los-urrutias",
-  "town": "Los Urrutias",
-  "propertyCount": 1,
-  "generatedAt": "2026-02-05T19:31:56.948Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Los Urrutias suitable for families with children?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Los Urrutias is excellent for families. The calm Mar Menor waters provide safe swimming, while the relaxed pace and strong community atmosphere create ideal conditions for raising children. Local schools serve the community, and the proximity to Murcia provides additional educational options. O"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the average cost of new build villas in Los Urrutias?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "New build villas in Los Urrutias are currently priced at €384,000, representing excellent value for quality Mediterranean coastal property. Prices are substantially lower than comparable properties in established Costa Blanca resorts, making this an attractive investment opportunity for budget-consc"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Los Urrutias from major airports?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los Urrutias is 15km from Murcia-San Javier Airport (approximately 20 minutes driving) and 95km from Alicante-Elche International Airport (approximately 90 minutes). Both airports offer excellent connectivity to European destinations, making Los Urrutias accessible for international relocations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are new build villas in Los Urrutias good rental investments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, new build villas offer strong rental potential. The growing tourism interest in authentic Costa Blanca experiences, combined with the Mar Menor's unique appeal and proximity to water activities, creates consistent demand from European holiday renters. New construction with modern amenities comm"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What medical facilities are available in Los Urrutias?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los Urrutias has a local health center providing primary care and emergency services. More comprehensive facilities are available in San Javier (8km) and Murcia city (45km), including Hospital Rafael Méndez and numerous private clinics. Many medical professionals speak English to serve the internati"
+        }
+      }
+    ]
+  }
 }

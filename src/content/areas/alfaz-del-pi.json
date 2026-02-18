@@ -1,75 +1,68 @@
 {
-  "metaTitle": "Living in Alfaz del Pi 2026 | Complete Area Guide",
-  "metaDescription": "Discover living in Alfaz del Pi: €1.6M villas, 40% cheaper than Spanish islands, established expat community, Blue Flag beaches nearby.",
-  "heroIntro": "Alfaz del Pi represents one of Costa Blanca's most desirable inland destinations, offering an exceptional blend of Mediterranean lifestyle and modern convenience. This charming town has attracted an established international community seeking authentic Spanish living without sacrificing essential amenities and English-speaking services. With villa properties averaging €2,200 per square metre and rental yields reaching €800 per week, Alfaz del Pi provides compelling value—40% less expensive than comparable Spanish island markets while maintaining premium quality of life. The town perfectly bridges the gap between those seeking peaceful inland living and easy access to pristine coastal beaches, championship golf courses, and comprehensive healthcare facilities. Whether you're considering relocation for retirement, family life, or investment purposes, Alfaz del Pi combines affordability with lifestyle appeal that increasingly attracts discerning international buyers seeking the authentic Costa Blanca experience.",
-  "climate": "Alfaz del Pi enjoys one of Spain's most enviable climates, with over 300 days of sunshine annually and Mediterranean weather patterns. Temperatures remain mild year-round, averaging 17°C in winter months and reaching comfortable 28-30°C during summer. Spring and autumn offer ideal conditions for outdoor activities, with minimal rainfall concentrated primarily in autumn. Winter months attract those seeking escape from northern European weather, while summer brings vibrant social activities despite occasional heat. The stable climate significantly contributes to outdoor living appeal, with residents enjoying terrace dining and garden activities throughout most months. Sea breezes moderate temperatures, particularly beneficial in warmer seasons.",
-  "lifestyle": "Daily life in Alfaz del Pi revolves around Mediterranean rhythms combined with modern convenience. The established international community means English is widely spoken, easing integration for newcomers. Local markets provide fresh produce and regional specialties, while Mercadona and Lidl supermarkets offer international products. Social life flourishes through regular expat meetups, sports clubs, and community events. Residents enjoy leisurely café culture, with numerous restaurants serving international and traditional Spanish cuisine. Beach visits consume many weekends, with Blue Flag beaches just 20 minutes away offering water sports and swimming. The town's vibrant evening paseo culture encourages evening strolls through town centres. Golf enthusiasts access several championship courses, while hikers explore surrounding hills. Year-round outdoor activities, coupled with an accepting cosmopolitan atmosphere, create an engaging lifestyle attractive to active retirees and young professionals alike.",
-  "amenities": {
-    "healthcare": {
-      "text": "Alfaz del Pi benefits from excellent healthcare infrastructure accessible to residents. A regional hospital operates within 30 minutes, supported by several private clinics offering specialist services. English-speaking doctors are readily available throughout the area, significantly easing medical concerns for international residents. The combination of public healthcare through Spain's system and private alternatives ensures comprehensive coverage options. Dental services, physiotherapy, and specialist consultations meet international standards, with many practitioners trained abroad or serving long-established expat populations.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes drive",
-        "Private clinics with English-speaking staff",
-        "Dental and specialist services available",
-        "Modern medical facilities meeting international standards"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping convenience in Alfaz del Pi caters to both practical needs and leisure. Major supermarket chains including Mercadona, Lidl, and Consum provide competitive pricing and international product ranges. Local markets operate several days weekly, offering fresh Mediterranean produce and regional specialties at excellent value. Shopping centres nearby stock fashion, electronics, and household goods. Expat-oriented shops stock familiar international brands, while specialist food shops cater to specific dietary requirements. The combination ensures residents access both everyday essentials and specialty items without excessive travel.",
-      "keyPoints": [
-        "Mercadona supermarket chain",
-        "Lidl discount supermarket",
-        "Consum supermarket",
-        "Weekly local markets with fresh produce"
-      ]
-    },
-    "education": {
-      "text": "Families relocating to Alfaz del Pi access several international schools throughout the region, providing continuity with previous educational systems. British curriculum options prove particularly popular among British expat families, maintaining academic standards aligned with UK schooling. International schools employ qualified teachers experienced with English-language instruction and international examination systems. Bilingual education integrates Spanish language acquisition with English instruction, preparing students for multicultural environments. School facilities meet modern standards, and strong expat presence ensures established support networks and social integration opportunities for students.",
-      "keyPoints": [
-        "International schools in the region",
-        "British curriculum educational options",
-        "English-language instruction available",
-        "Bilingual education programs"
-      ]
-    },
-    "sports": {
-      "text": "Recreational opportunities abound throughout Alfaz del Pi and surrounding areas. Multiple Blue Flag beaches within 20 minutes provide swimming, water sports, and beach activities year-round. Several championship golf courses nearby satisfy enthusiasts from beginner to professional levels, with stunning Mediterranean backdrops. Hiking trails explore nearby hills offering panoramic views and nature engagement. Tennis clubs, cycling routes, and football facilities serve diverse sporting interests. Water sports including sailing, kayaking, and paddleboarding operate from nearby marinas. The abundance of activities supports active lifestyles attractive to health-conscious residents.",
-      "keyPoints": [
-        "Blue Flag beaches within 20 minutes",
-        "Championship golf courses nearby",
-        "Water sports facilities including sailing and kayaking",
-        "Hiking trails with scenic Mediterranean views"
-      ]
-    }
+  "slug": "alfaz-del-pi",
+  "name": "Alfaz del Pi",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/alfaz-del-pi-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 1,
+  "propertyTypes": [
+    "Villa properties dominate the market",
+    "ranging from modest 200m² properties to sprawling estates exceeding 500m²."
+  ],
+  "priceRange": {
+    "min": 1600000,
+    "max": 1600000
   },
-  "transport": {
-    "overview": "Bus connections are available throughout Alfaz del Pi and connecting to surrounding towns, though a car is recommended for maximum flexibility and independence.",
-    "airports": "Alicante Airport lies approximately 45 minutes south, serving major European destinations. Valencia Airport, 90 minutes north, offers additional flight options and sometimes better pricing.",
-    "driving": "Excellent motorway connections via the A-7 and N-332 provide easy access to Benidorm, Alicante, and other Costa Blanca destinations. Surrounding mountain roads offer scenic drives to inland villages.",
-    "public": "Bus services connect to Benidorm, Alicante, and regional destinations. Limited tram connections exist to coastal areas. Train services operate from nearby major towns.",
-    "keyPoints": [
-      "Car strongly recommended for daily flexibility",
-      "45 minutes to Alicante Airport",
-      "Direct motorway access via A-7",
-      "Regional bus connections to major destinations"
+  "externalLinks": {
+    "tourism": {
+      "name": "Alfaz del Pi Tourism",
+      "url": "https://www.google.com/search?q=Alfaz%20del%20Pi%20Spain%20official%20website",
+      "description": "Discover more about Alfaz del Pi"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "55 km",
+      "driveTime": "35 min"
+    },
+    "healthcare": {
+      "name": "Hospital Marina Baixa (Villajoyosa)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Marina%20Baixa%20(Villajoyosa)",
+      "distance": "8 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+Alfaz%20del%20Pi+Spain",
+        "description": "Beautiful Mediterranean beach nearby"
+      }
     ]
   },
-  "propertyMarket": {
-    "overview": "Alfaz del Pi's property market demonstrates robust growth with an 8% year-on-year increase, reflecting strong investor and resident interest. The market combines affordability with quality, attracting international buyers seeking value in premium Mediterranean locations.",
-    "priceRange": "€1,600,000 - €1,600,000",
-    "popularTypes": "Villa properties dominate the market, ranging from modest 200m² properties to sprawling estates exceeding 500m².",
-    "investment": "Current rental yields averaging €800 per week (€41,600 annually) provide compelling returns for investment properties. Strong tourist demand, year-round climate appeal, and established rental infrastructure support consistent occupancy. Capital appreciation potential remains positive given below-market pricing compared to coastal alternatives and ongoing demand from international buyers."
-  },
-  "neighborhoods": [
-    "Casco Antiguo: The historic town centre featuring traditional architecture, local restaurants, and authentic Spanish atmosphere ideal for cultural immersion.",
-    "Urbanización areas: Modern residential developments offering contemporary villas with modern amenities, private facilities, and manicured gardens.",
-    "Hillside properties: Elevated locations commanding panoramic Mediterranean and mountain views, often featuring pools and spacious grounds.",
-    "Polígono industrial vicinity: More affordable properties appealing to investment-focused buyers seeking rental yields.",
-    "Scenic mountain locations: Rural properties offering privacy and natural surroundings while maintaining reasonable town proximity.",
-    "Proximity to Benidorm: Transitional areas between Alfaz del Pi and Benidorm offering vibrant alternative to quieter central locations."
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Alfaz del Pi 2026 | Complete Area Guide",
+    "metaDescription": "Discover living in Alfaz del Pi: €1.6M villas, 40% cheaper than Spanish islands, established expat community, Blue Flag beaches nearby.",
+    "heroIntro": "Alfaz del Pi represents one of Costa Blanca's most desirable inland destinations, offering an exceptional blend of Mediterranean lifestyle and modern convenience. This charming town has attracted an established international community seeking authentic Spanish living without sacrificing essential amenities and English-speaking services. With villa properties averaging €2,200 per square metre and rental yields reaching €800 per week, Alfaz del Pi provides compelling value—40% less expensive than comparable Spanish island markets while maintaining premium quality of life. The town perfectly bridges the gap between those seeking peaceful inland living and easy access to pristine coastal beaches, championship golf courses, and comprehensive healthcare facilities. Whether you're considering relocation for retirement, family life, or investment purposes, Alfaz del Pi combines affordability with lifestyle appeal that increasingly attracts discerning international buyers seeking the authentic Costa Blanca experience.",
+    "lifestyleSection": {
+      "intro": "Daily life in Alfaz del Pi revolves around Mediterranean rhythms combined with modern convenience. The established international community means English is widely spoken, easing integration for newcomers. Local markets provide fresh produce and regional specialties, while Mercadona and Lidl supermarkets offer international products. Social life flourishes through regular expat meetups, sports clubs, and community events. Residents enjoy leisurely café culture, with numerous restaurants serving international and traditional Spanish cuisine. Beach visits consume many weekends, with Blue Flag beaches just 20 minutes away offering water sports and swimming. The town's vibrant evening paseo culture encourages evening strolls through town centres. Golf enthusiasts access several championship courses, while hikers explore surrounding hills. Year-round outdoor activities, coupled with an accepting cosmopolitan atmosphere, create an engaging lifestyle attractive to active retirees and young professionals alike.\n\nAlfaz del Pi enjoys one of Spain's most enviable climates, with over 300 days of sunshine annually and Mediterranean weather patterns. Temperatures remain mild year-round, averaging 17°C in winter months and reaching comfortable 28-30°C during summer. Spring and autumn offer ideal conditions for outdoor activities, with minimal rainfall concentrated primarily in autumn. Winter months attract those seeking escape from northern European weather, while summer brings vibrant social activities despite occasional heat. The stable climate significantly contributes to outdoor living appeal, with residents enjoying terrace dining and garden activities throughout most months. Sea breezes moderate temperatures, particularly beneficial in warmer seasons.",
+      "highlights": [
+        "40% cost advantage compared to Spanish island properties while maintaining premium quality",
+        "Established English-speaking expat community ensuring smooth integration and support networks",
+        "Multiple Blue Flag beaches accessible within 20 minutes for year-round coastal activities",
+        "Comprehensive healthcare with English-speaking doctors and regional hospital proximity",
+        "Strong rental market potential with €800 weekly yields supporting investment returns",
+        "Championship golf courses and diverse recreational activities throughout the region"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Recreational opportunities abound throughout Alfaz del Pi and surrounding areas. Multiple Blue Flag beaches within 20 minutes provide swimming, water sports, and beach activities year-round. Several championship golf courses nearby satisfy enthusiasts from beginner to professional levels, with stunning Mediterranean backdrops. Hiking trails explore nearby hills offering panoramic views and nature engagement. Tennis clubs, cycling routes, and football facilities serve diverse sporting interests. Water sports including sailing, kayaking, and paddleboarding operate from nearby marinas. The abundance of activities supports active lifestyles attractive to health-conscious residents.",
+      "dining": "Alfaz del Pi offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping convenience in Alfaz del Pi caters to both practical needs and leisure. Major supermarket chains including Mercadona, Lidl, and Consum provide competitive pricing and international product ranges. Local markets operate several days weekly, offering fresh Mediterranean produce and regional specialties at excellent value. Shopping centres nearby stock fashion, electronics, and household goods. Expat-oriented shops stock familiar international brands, while specialist food shops cater to specific dietary requirements. The combination ensures residents access both everyday essentials and specialty items without excessive travel.",
+      "healthcare": "Alfaz del Pi benefits from excellent healthcare infrastructure accessible to residents. A regional hospital operates within 30 minutes, supported by several private clinics offering specialist services. English-speaking doctors are readily available throughout the area, significantly easing medical concerns for international residents. The combination of public healthcare through Spain's system and private alternatives ensures comprehensive coverage options. Dental services, physiotherapy, and specialist consultations meet international standards, with many practitioners trained abroad or serving long-established expat populations.",
+      "transport": "Bus connections are available throughout Alfaz del Pi and connecting to surrounding towns, though a car is recommended for maximum flexibility and independence. Alicante Airport lies approximately 45 minutes south, serving major European destinations. Valencia Airport, 90 minutes north, offers additional flight options and sometimes better pricing. Excellent motorway connections via the A-7 and N-332 provide easy access to Benidorm, Alicante, and other Costa Blanca destinations. Surrounding mountain roads offer scenic drives to inland villages. Bus services connect to Benidorm, Alicante, and regional destinations. Limited tram connections exist to coastal areas. Train services operate from nearby major towns."
+    },
+    "propertyMarketSection": "Alfaz del Pi's property market demonstrates robust growth with an 8% year-on-year increase, reflecting strong investor and resident interest. The market combines affordability with quality, attracting international buyers seeking value in premium Mediterranean locations.\n\nPopular property types include Villa properties dominate the market, ranging from modest 200m² properties to sprawling estates exceeding 500m²..\n\nCurrent rental yields averaging €800 per week (€41,600 annually) provide compelling returns for investment properties. Strong tourist demand, year-round climate appeal, and established rental infrastructure support consistent occupancy. Capital appreciation potential remains positive given below-market pricing compared to coastal alternatives and ongoing demand from international buyers.",
+    "whyLiveHereSection": [
       "40% cost advantage compared to Spanish island properties while maintaining premium quality",
       "Established English-speaking expat community ensuring smooth integration and support networks",
       "Multiple Blue Flag beaches accessible within 20 minutes for year-round coastal activities",
@@ -77,48 +70,330 @@
       "Strong rental market potential with €800 weekly yields supporting investment returns",
       "Championship golf courses and diverse recreational activities throughout the region"
     ],
-    "cons": [
-      "Car dependency required for convenient daily access to amenities and coastal attractions",
-      "Summer heat occasionally exceeds comfort levels for those unaccustomed to Mediterranean climate",
-      "Seasonal tourism peaks may increase congestion and reduce peaceful atmosphere during July-August months"
-    ]
+    "faqs": [
+      {
+        "question": "Is Alfaz del Pi a good place to live?",
+        "answer": "Yes, absolutely. Alfaz del Pi combines Mediterranean lifestyle advantages with practical convenience. The established English-speaking expat community smooths integration, while excellent healthcare, international schools, and diverse amenities support comfortable living. Affordable pricing compared to coastal alternatives, combined with beach proximity and golf courses, creates compelling value for retirees, families, and professionals."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can freely purchase property in Spain without restrictions. Non-residents require a NIE (Spanish tax identification number), obtainable through Spanish embassies or locally. UK citizens, EU nationals, and citizens from most countries face no ownership limitations. Professional legal guidance ensures proper documentation and tax compliance throughout the purchase process."
+      },
+      {
+        "question": "What is the cost of living in Alfaz del Pi?",
+        "answer": "Cost of living in Alfaz del Pi proves significantly lower than Northern Europe and Spanish islands. Monthly expenses for couples typically range €1,500-€2,500 covering rent, utilities, food, and entertainment. Retired couples frequently live comfortably on €2,000 monthly. Local markets offer affordable fresh produce, while supermarkets provide competitive pricing. Healthcare costs remain low under Spain's public system, supplemented by affordable private options."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Beyond purchase price, budget approximately 10-12% additional costs including legal fees (0.5-1%), property registration (0.1-1%), and transfer tax (4-11% depending on region). Notary fees run €400-€800. Surveys and inspections cost €300-€500. Annual property taxes (IBI) average 0.4-1.5% of cadastral value. Mortgage lenders typically require 20-30% deposit with rates currently 2-4% for eligible borrowers."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Costa Blanca enjoys Mediterranean climate with over 300 sunshine days annually. Winter temperatures average 17°C with minimal rainfall. Summer reaches comfortable 28-30°C with cooling sea breezes. Spring and autumn offer ideal 20-24°C conditions. Year-round outdoor living is feasible, though July-August heat may prove intense. The stable climate supports diverse recreational activities and outdoor socialising throughout the year, ideal for those escaping harsh northern winters."
+      },
+      {
+        "question": "How far is Costa Blanca from the UK?",
+        "answer": "Alicante Airport, serving Costa Blanca, lies approximately 750 miles from London. Flight times range 2-3 hours with numerous daily connections. Budget airlines operate competitive routes, often charging £30-80 return. Ferry-drive combinations via France offer overland alternatives requiring 1-2 days travel. Modern transport connectivity makes Costa Blanca accessible for regular UK visits or simple relocation."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Excellent. Costa Blanca attracts thousands of international retirees annually. Advantages include affordable cost of living, excellent healthcare, sunshine and outdoor lifestyle, established expat communities, diverse recreational activities, and modern amenities. International schools benefit grandchildren visitors. Many retirees establish thriving social lives through clubs, sports, and community organisations. Healthcare quality meets international standards at fraction of UK costs."
+      },
+      {
+        "question": "Can I get a mortgage in Spain as a foreigner?",
+        "answer": "Yes, major Spanish banks offer mortgages to foreign buyers, typically requiring 20-30% deposit. Non-resident lending terms prove stricter than resident rates. Interest rates currently range 2-4% for eligible applicants. Banks require valid identification (passport/NIE), proof of income, and employment contracts. Some British and international banks offer Spanish mortgages. Professional mortgage brokers specialising in Spanish property significantly simplify complex application procedures."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Alfaz del Pi? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "Current rental yields averaging €800 per week (€41,600 annually) provide compelling returns for investment properties. Strong tourist demand, year-round climate appeal, and established rental infrastructure support consistent occupancy. Capital appreciation potential remains positive given below-market pricing compared to coastal alternatives and ongoing demand from international buyers.",
+      "highlights": [
+        "Strong holiday rental demand during peak season (May-October)",
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Short-term holiday lets popular with European tourists"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Alfaz del Pi are significantly lower than Northern Europe and very competitive within Spain. Coastal living here combines affordability with Mediterranean lifestyle.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Recommended for flexibility"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Alfaz del Pi celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "June",
+          "description": "Magical midsummer beach celebrations with bonfires, fireworks, and midnight swimming traditions along the coast"
+        },
+        {
+          "name": "Summer Beach Festival",
+          "month": "July",
+          "description": "Outdoor concerts, food stalls, and cultural events along the waterfront throughout the summer season"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Alfaz del Pi have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school with GCSE and A-Level programmes, excellent facilities and strong academic results"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "British and IB curriculum with outstanding facilities, sports programmes, and multilingual education"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Alfaz del Pi offers excellent outdoor activities year-round, from beach activities and water sports to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Beach & Swimming",
+          "type": "Beach",
+          "description": "Beautiful Mediterranean beaches nearby with crystal-clear waters, perfect for swimming, snorkelling, and sunbathing"
+        },
+        {
+          "name": "Water Sports",
+          "type": "Water Sports",
+          "description": "Paddleboarding, kayaking, windsurfing, and sailing available at nearby beaches and marinas"
+        },
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Alfaz del Pi has a thriving international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The coastal location attracts a diverse mix of nationalities, particularly from Northern Europe. English is widely spoken in shops, restaurants, and social settings, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Active international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Diverse European community including British, Scandinavian, Dutch, German, and French residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Alfaz del Pi",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the sea breeze and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Beach Walk",
+          "description": "Morning stroll along the beach or promenade, breathing in the fresh Mediterranean air"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Beach Time",
+          "description": "Head to the beach for an afternoon swim in the warm Mediterranean waters"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.1003!3d38.5889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Alfaz del Pi a good place to live?",
-      "answer": "Yes, absolutely. Alfaz del Pi combines Mediterranean lifestyle advantages with practical convenience. The established English-speaking expat community smooths integration, while excellent healthcare, international schools, and diverse amenities support comfortable living. Affordable pricing compared to coastal alternatives, combined with beach proximity and golf courses, creates compelling value for retirees, families, and professionals."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Alfaz del Pi",
+    "description": "Alfaz del Pi is a coastal municipality in Costa Blanca North, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.5889",
+      "longitude": "-0.1003"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can freely purchase property in Spain without restrictions. Non-residents require a NIE (Spanish tax identification number), obtainable through Spanish embassies or locally. UK citizens, EU nationals, and citizens from most countries face no ownership limitations. Professional legal guidance ensures proper documentation and tax compliance throughout the purchase process."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Alfaz del Pi",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What is the cost of living in Alfaz del Pi?",
-      "answer": "Cost of living in Alfaz del Pi proves significantly lower than Northern Europe and Spanish islands. Monthly expenses for couples typically range €1,500-€2,500 covering rent, utilities, food, and entertainment. Retired couples frequently live comfortably on €2,000 monthly. Local markets offer affordable fresh produce, while supermarkets provide competitive pricing. Healthcare costs remain low under Spain's public system, supplemented by affordable private options."
-    },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Beyond purchase price, budget approximately 10-12% additional costs including legal fees (0.5-1%), property registration (0.1-1%), and transfer tax (4-11% depending on region). Notary fees run €400-€800. Surveys and inspections cost €300-€500. Annual property taxes (IBI) average 0.4-1.5% of cadastral value. Mortgage lenders typically require 20-30% deposit with rates currently 2-4% for eligible borrowers."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Costa Blanca enjoys Mediterranean climate with over 300 sunshine days annually. Winter temperatures average 17°C with minimal rainfall. Summer reaches comfortable 28-30°C with cooling sea breezes. Spring and autumn offer ideal 20-24°C conditions. Year-round outdoor living is feasible, though July-August heat may prove intense. The stable climate supports diverse recreational activities and outdoor socialising throughout the year, ideal for those escaping harsh northern winters."
-    },
-    {
-      "question": "How far is Costa Blanca from the UK?",
-      "answer": "Alicante Airport, serving Costa Blanca, lies approximately 750 miles from London. Flight times range 2-3 hours with numerous daily connections. Budget airlines operate competitive routes, often charging £30-80 return. Ferry-drive combinations via France offer overland alternatives requiring 1-2 days travel. Modern transport connectivity makes Costa Blanca accessible for regular UK visits or simple relocation."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Excellent. Costa Blanca attracts thousands of international retirees annually. Advantages include affordable cost of living, excellent healthcare, sunshine and outdoor lifestyle, established expat communities, diverse recreational activities, and modern amenities. International schools benefit grandchildren visitors. Many retirees establish thriving social lives through clubs, sports, and community organisations. Healthcare quality meets international standards at fraction of UK costs."
-    },
-    {
-      "question": "Can I get a mortgage in Spain as a foreigner?",
-      "answer": "Yes, major Spanish banks offer mortgages to foreign buyers, typically requiring 20-30% deposit. Non-resident lending terms prove stricter than resident rates. Interest rates currently range 2-4% for eligible applicants. Banks require valid identification (passport/NIE), proof of income, and employment contracts. Some British and international banks offer Spanish mortgages. Professional mortgage brokers specialising in Spanish property significantly simplify complex application procedures."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
     }
-  ],
-  "slug": "alfaz-del-pi",
-  "town": "Alfaz del Pi",
-  "propertyCount": 1,
-  "generatedAt": "2026-02-06T09:52:58.458Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Alfaz del Pi a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. Alfaz del Pi combines Mediterranean lifestyle advantages with practical convenience. The established English-speaking expat community smooths integration, while excellent healthcare, international schools, and diverse amenities support comfortable living. Affordable pricing compared"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can freely purchase property in Spain without restrictions. Non-residents require a NIE (Spanish tax identification number), obtainable through Spanish embassies or locally. UK citizens, EU nationals, and citizens from most countries face no ownership limitations. Professional legal "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Alfaz del Pi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cost of living in Alfaz del Pi proves significantly lower than Northern Europe and Spanish islands. Monthly expenses for couples typically range €1,500-€2,500 covering rent, utilities, food, and entertainment. Retired couples frequently live comfortably on €2,000 monthly. Local markets offer afforda"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond purchase price, budget approximately 10-12% additional costs including legal fees (0.5-1%), property registration (0.1-1%), and transfer tax (4-11% depending on region). Notary fees run €400-€800. Surveys and inspections cost €300-€500. Annual property taxes (IBI) average 0.4-1.5% of cadastra"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the weather like on Costa Blanca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costa Blanca enjoys Mediterranean climate with over 300 sunshine days annually. Winter temperatures average 17°C with minimal rainfall. Summer reaches comfortable 28-30°C with cooling sea breezes. Spring and autumn offer ideal 20-24°C conditions. Year-round outdoor living is feasible, though July-Au"
+        }
+      }
+    ]
+  }
 }

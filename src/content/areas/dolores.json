@@ -1,81 +1,381 @@
 {
-  "metaTitle": "Living in Dolores Costa Blanca | Home Buying Guide Spain",
-  "metaDescription": "Discover Dolores, Costa Blanca: authentic Spanish living, modern amenities, and prime real estate from €259,000. Your complete guide to this charming Alicante town.",
-  "heroIntro": "Dolores is a hidden gem nestled in the heart of the Costa Blanca, offering visitors and residents an authentic Spanish experience away from the crowded tourist hotspots. Located in the province of Alicante, this charming inland town combines traditional Mediterranean character with modern conveniences, making it an increasingly popular choice for international buyers seeking genuine Spanish living at affordable prices. With its thriving community of expats, excellent infrastructure, and proximity to both beaches and natural attractions, Dolores represents exceptional value in Spain's property market.\n\nThe town has experienced a remarkable transformation over recent years, attracting a diverse international community while maintaining its genuine Spanish character. Local amenities have expanded significantly, with new restaurants, cafes, and services catering to both Spanish residents and the growing expatriate population. The combination of affordability, lifestyle quality, and investment potential has made Dolores one of the most sought-after locations on the Costa Blanca for those seeking to escape urban living without sacrificing modern conveniences.\n\nFor property seekers, Dolores offers compelling opportunities. With 15 new build properties currently available ranging from €259,000 to €465,000, buyers can acquire quality homes in villas, townhouses, quad houses, and bungalows at significantly lower prices than coastal alternatives. The town's strategic location provides easy access to beaches, airports, and major cities, while its lower cost of living and thriving expat infrastructure make it ideal for retirement, relocation, or investment purposes.",
-  "climate": "Dolores enjoys a Mediterranean climate characterized by over 300 days of sunshine annually, making it one of Spain's sunniest regions. Summers are warm and dry, with temperatures typically ranging from 28-35°C, while winters are mild with average temperatures around 10-15°C. The town receives minimal rainfall, concentrated mostly in autumn and spring months, creating ideal conditions for outdoor living year-round. The proximity to the Segura River provides occasional cooling breezes during summer months, moderating extreme heat and contributing to the region's comfortable microclimate.",
-  "lifestyle": "Life in Dolores revolves around a relaxed Mediterranean pace that respects traditional Spanish customs while embracing international influences. The town square comes alive during evening paseos (walks), where locals and expats mingle at numerous cafes and restaurants. Social activities center around the community, with regular markets, fiestas, and cultural events that celebrate local traditions. The strong expatriate community has established numerous clubs, associations, and social groups, making it easy for newcomers to integrate while maintaining familiar social connections.\n\nThe daily rhythm in Dolores suits those seeking a slower, more meaningful lifestyle. Local businesses close for afternoon siestas, encouraging a work-life balance that many find refreshing. The town hosts a vibrant weekly market offering fresh produce, local crafts, and international goods, reflecting the cosmopolitan yet authentic character of the community. Whether enjoying morning coffee at a local cafe, shopping at the market, or participating in community events, residents benefit from genuine human connections and a sense of belonging that characterizes this welcoming town.",
-  "amenities": {
-    "healthcare": "Dolores is well-served by healthcare facilities including the Centro de Salud (health center) with general practitioners and basic emergency services. For more specialized care, residents have easy access to the Hospital General de Alicante and Hospital Marina Salud in nearby Denia, both approximately 45 minutes away. Many local doctors speak English, and the town is covered by both Spanish public healthcare and private insurance networks. Pharmacies are conveniently located throughout town.",
-    "shopping": "The town center offers daily shopping amenities including supermarkets like Mercadona and Carrefour Express. Weekly markets provide fresh produce, clothing, and household goods at traditional Spanish prices. For major shopping needs, the nearby towns of Elda and Petrer, just 20 minutes away, offer larger shopping centers. Larger hypermarkets and international retailers are found in Alicante city, approximately 40 kilometers away.",
-    "dining": "Dolores boasts a diverse culinary scene with traditional Spanish tapas bars, family-run restaurants serving regional paella and seafood, and increasingly international cuisine reflecting the expat community. Local favorites include restaurants on Calle Mayor and around the Plaza Mayor. The town is famous for its local wine production, with bodegas offering tastings and sales. International cuisine including British, German, and other European options have emerged to serve the diverse population.",
-    "sports": "The Dolores Golf Club, an 18-hole championship course just outside town, offers professional-standard golfing with beautiful views. The town has modern sports facilities including tennis courts, swimming pools, and a well-maintained gymnasium. Nearby beaches at Playa Paraíso and Playa del Torres, only 20-30 minutes away, provide Mediterranean swimming and watersports. Hiking and cycling opportunities abound in the surrounding countryside and natural parks."
-  },
-  "transport": {
-    "airports": "Alicante-Elche Airport (ALC) is the nearest major airport, located approximately 45 kilometers away with approximately 1-hour drive time. Málaga-Costa del Sol Airport is about 180 kilometers away. Both airports offer extensive national and international connections. Several car rental agencies operate at the airports for convenient transportation to Dolores.",
-    "driving": "Dolores has excellent road connections via the A-7 motorway (Costa Blanca Motorway) linking to Alicante and other coastal towns. The town is easily accessed via the N-340 national road and well-maintained regional roads. The drive to Alicante city center takes approximately 40-50 minutes, while coastal beaches at Torrevieja are reachable in 30 minutes. Road signage is clear, and highways are modern and well-maintained.",
-    "public": "Local bus services connect Dolores to neighboring towns through Alsa and other regional transport operators. Regular bus connections link to Alicante, Elda, Petrer, and coastal towns. The nearest railway station is at Crevillente, approximately 15 kilometers away, offering connections to larger cities. While having a car is advantageous for convenience, public transport provides viable options for those preferring not to drive."
-  },
-  "propertyMarket": {
-    "overview": "Dolores presents one of the Costa Blanca's most dynamic property markets, experiencing steady growth as international buyers discover its value proposition. The market has transitioned from predominantly Spanish buyers to a significant international demographic seeking affordable Mediterranean living. New construction projects have modernized the town's housing stock while maintaining competitive pricing. Current market conditions favor buyers with excellent availability and favorable financing options.",
-    "priceRange": "€259,000 - €465,000",
-    "popularTypes": "Villa, Town House, Quad House, Bungalow",
-    "investment": "Dolores offers strong investment potential with both appreciation and rental yield opportunities. The growing expatriate community supports consistent rental demand, with property management companies facilitating vacation rentals and long-term lets. Purchase prices significantly undercut coastal alternatives, providing attractive entry points for investors. Annual rental yields typically range from 4-6% for holiday rentals, with long-term rentals providing stable returns. The town's development trajectory suggests continued property value appreciation as infrastructure and amenities expand."
-  },
-  "neighborhoods": [
-    "Dolores Town Center - The historic heart featuring the main plaza, local businesses, and traditional Spanish architecture with modern renovations. Walkable access to shops, restaurants, and services.",
-    "Urbanización Montesol - A popular residential development featuring modern townhouses and villas with community amenities including pools and gardens. Family-oriented with strong expat presence.",
-    "Dolores Golf Resort - Premium properties near the 18-hole golf course, offering golf enthusiasts convenient access to championship-level facilities and resort-style amenities.",
-    "Dolores Suburbs - Expanding residential areas toward Petrer featuring modern new-build properties, quieter atmosphere, and suburban living while maintaining town access."
+  "slug": "dolores",
+  "name": "Dolores",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/dolores-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 15,
+  "propertyTypes": [
+    "Villa",
+    "Town House",
+    "Quad House",
+    "Bungalow"
   ],
-  "prosAndCons": {
-    "pros": [
+  "priceRange": {
+    "min": 259000,
+    "max": 465000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Dolores Tourism",
+      "url": "https://www.google.com/search?q=Dolores%20Spain%20official%20website",
+      "description": "Discover more about Dolores"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "48 km",
+      "driveTime": "32 min"
+    },
+    "healthcare": {
+      "name": "Hospital Vega Baja (Orihuela)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Vega%20Baja%20(Orihuela)",
+      "distance": "12 km"
+    }
+  },
+  "content": {
+    "metaTitle": "Living in Dolores Costa Blanca | Home Buying Guide Spain",
+    "metaDescription": "Discover Dolores, Costa Blanca: authentic Spanish living, modern amenities, and prime real estate from €259,000. Your complete guide to this charming Alicante town.",
+    "heroIntro": "Dolores is a hidden gem nestled in the heart of the Costa Blanca, offering visitors and residents an authentic Spanish experience away from the crowded tourist hotspots. Located in the province of Alicante, this charming inland town combines traditional Mediterranean character with modern conveniences, making it an increasingly popular choice for international buyers seeking genuine Spanish living at affordable prices. With its thriving community of expats, excellent infrastructure, and proximity to both beaches and natural attractions, Dolores represents exceptional value in Spain's property market.\n\nThe town has experienced a remarkable transformation over recent years, attracting a diverse international community while maintaining its genuine Spanish character. Local amenities have expanded significantly, with new restaurants, cafes, and services catering to both Spanish residents and the growing expatriate population. The combination of affordability, lifestyle quality, and investment potential has made Dolores one of the most sought-after locations on the Costa Blanca for those seeking to escape urban living without sacrificing modern conveniences.\n\nFor property seekers, Dolores offers compelling opportunities. With 15 new build properties currently available ranging from €259,000 to €465,000, buyers can acquire quality homes in villas, townhouses, quad houses, and bungalows at significantly lower prices than coastal alternatives. The town's strategic location provides easy access to beaches, airports, and major cities, while its lower cost of living and thriving expat infrastructure make it ideal for retirement, relocation, or investment purposes.",
+    "lifestyleSection": {
+      "intro": "Life in Dolores revolves around a relaxed Mediterranean pace that respects traditional Spanish customs while embracing international influences. The town square comes alive during evening paseos (walks), where locals and expats mingle at numerous cafes and restaurants. Social activities center around the community, with regular markets, fiestas, and cultural events that celebrate local traditions. The strong expatriate community has established numerous clubs, associations, and social groups, making it easy for newcomers to integrate while maintaining familiar social connections.\n\nThe daily rhythm in Dolores suits those seeking a slower, more meaningful lifestyle. Local businesses close for afternoon siestas, encouraging a work-life balance that many find refreshing. The town hosts a vibrant weekly market offering fresh produce, local crafts, and international goods, reflecting the cosmopolitan yet authentic character of the community. Whether enjoying morning coffee at a local cafe, shopping at the market, or participating in community events, residents benefit from genuine human connections and a sense of belonging that characterizes this welcoming town.\n\nDolores enjoys a Mediterranean climate characterized by over 300 days of sunshine annually, making it one of Spain's sunniest regions. Summers are warm and dry, with temperatures typically ranging from 28-35°C, while winters are mild with average temperatures around 10-15°C. The town receives minimal rainfall, concentrated mostly in autumn and spring months, creating ideal conditions for outdoor living year-round. The proximity to the Segura River provides occasional cooling breezes during summer months, moderating extreme heat and contributing to the region's comfortable microclimate.",
+      "highlights": [
+        "Exceptional value for money compared to coastal Costa Blanca properties, with quality homes available at €259,000-€465,000",
+        "Over 300 days of sunshine annually with Mediterranean climate ideal for outdoor living and year-round activities",
+        "Thriving international expat community with excellent social infrastructure, clubs, and support networks for newcomers",
+        "Strategic location providing easy access to beaches (20-30 minutes), airports (45 minutes), and major cities within 1 hour",
+        "Lower cost of living with affordable local services, shopping, and dining compared to tourist-oriented coastal towns"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "The Dolores Golf Club, an 18-hole championship course just outside town, offers professional-standard golfing with beautiful views. The town has modern sports facilities including tennis courts, swimming pools, and a well-maintained gymnasium. Nearby beaches at Playa Paraíso and Playa del Torres, only 20-30 minutes away, provide Mediterranean swimming and watersports. Hiking and cycling opportunities abound in the surrounding countryside and natural parks.",
+      "dining": "Dolores boasts a diverse culinary scene with traditional Spanish tapas bars, family-run restaurants serving regional paella and seafood, and increasingly international cuisine reflecting the expat community. Local favorites include restaurants on Calle Mayor and around the Plaza Mayor. The town is famous for its local wine production, with bodegas offering tastings and sales. International cuisine including British, German, and other European options have emerged to serve the diverse population.",
+      "shopping": "The town center offers daily shopping amenities including supermarkets like Mercadona and Carrefour Express. Weekly markets provide fresh produce, clothing, and household goods at traditional Spanish prices. For major shopping needs, the nearby towns of Elda and Petrer, just 20 minutes away, offer larger shopping centers. Larger hypermarkets and international retailers are found in Alicante city, approximately 40 kilometers away.",
+      "healthcare": "Dolores is well-served by healthcare facilities including the Centro de Salud (health center) with general practitioners and basic emergency services. For more specialized care, residents have easy access to the Hospital General de Alicante and Hospital Marina Salud in nearby Denia, both approximately 45 minutes away. Many local doctors speak English, and the town is covered by both Spanish public healthcare and private insurance networks. Pharmacies are conveniently located throughout town.",
+      "transport": "Alicante-Elche Airport (ALC) is the nearest major airport, located approximately 45 kilometers away with approximately 1-hour drive time. Málaga-Costa del Sol Airport is about 180 kilometers away. Both airports offer extensive national and international connections. Several car rental agencies operate at the airports for convenient transportation to Dolores. Dolores has excellent road connections via the A-7 motorway (Costa Blanca Motorway) linking to Alicante and other coastal towns. The town is easily accessed via the N-340 national road and well-maintained regional roads. The drive to Alicante city center takes approximately 40-50 minutes, while coastal beaches at Torrevieja are reachable in 30 minutes. Road signage is clear, and highways are modern and well-maintained. Local bus services connect Dolores to neighboring towns through Alsa and other regional transport operators. Regular bus connections link to Alicante, Elda, Petrer, and coastal towns. The nearest railway station is at Crevillente, approximately 15 kilometers away, offering connections to larger cities. While having a car is advantageous for convenience, public transport provides viable options for those preferring not to drive."
+    },
+    "propertyMarketSection": "Dolores presents one of the Costa Blanca's most dynamic property markets, experiencing steady growth as international buyers discover its value proposition. The market has transitioned from predominantly Spanish buyers to a significant international demographic seeking affordable Mediterranean living. New construction projects have modernized the town's housing stock while maintaining competitive pricing. Current market conditions favor buyers with excellent availability and favorable financing options.\n\nPopular property types include Villa, Town House, Quad House, Bungalow.\n\nDolores offers strong investment potential with both appreciation and rental yield opportunities. The growing expatriate community supports consistent rental demand, with property management companies facilitating vacation rentals and long-term lets. Purchase prices significantly undercut coastal alternatives, providing attractive entry points for investors. Annual rental yields typically range from 4-6% for holiday rentals, with long-term rentals providing stable returns. The town's development trajectory suggests continued property value appreciation as infrastructure and amenities expand.",
+    "whyLiveHereSection": [
       "Exceptional value for money compared to coastal Costa Blanca properties, with quality homes available at €259,000-€465,000",
       "Over 300 days of sunshine annually with Mediterranean climate ideal for outdoor living and year-round activities",
       "Thriving international expat community with excellent social infrastructure, clubs, and support networks for newcomers",
       "Strategic location providing easy access to beaches (20-30 minutes), airports (45 minutes), and major cities within 1 hour",
       "Lower cost of living with affordable local services, shopping, and dining compared to tourist-oriented coastal towns"
     ],
-    "cons": [
-      "Inland location means slightly less immediate beach access than coastal towns, though beaches remain easily reachable for recreation",
-      "Summer temperatures can exceed 35°C, requiring air conditioning and heat management strategies for comfortable living during peak months"
-    ]
+    "faqs": [
+      {
+        "question": "What is the cost of living in Dolores compared to other Costa Blanca towns?",
+        "answer": "Dolores offers significantly lower living costs than coastal towns like Benidorm or Torrevieja. Monthly expenses for utilities, groceries, and dining are typically 20-30% lower. Property prices are substantially reduced compared to beachfront locations, while maintaining modern amenities and services. This affordability extends to healthcare, leisure activities, and transportation."
+      },
+      {
+        "question": "Is Dolores suitable for retirees and pensioners?",
+        "answer": "Yes, Dolores is increasingly popular with retirees due to its affordable cost of living, excellent healthcare access, strong social community, and warm climate. Many British, German, and other European retirees have established homes here. The town offers healthcare facilities adequate for most retirement needs, with specialized care available in nearby towns. The expat community provides familiar social connections and support networks."
+      },
+      {
+        "question": "How far is Dolores from beaches and major attractions?",
+        "answer": "Dolores is located 20-30 minutes from Mediterranean beaches at Playa Paraíso and Playa del Torres. The coastal town of Torrevieja is 30 minutes away, Alicante city center is 40-50 minutes, and Alicante Airport is approximately 45 minutes. This strategic inland position provides beach access without coastal living costs."
+      },
+      {
+        "question": "What type of property should I invest in for rental income?",
+        "answer": "Villas and townhouses work well for holiday rentals, typically generating 4-6% annual yields through vacation rental platforms. Town houses in central locations suit long-term rentals to the local community and expats. New-build properties with modern amenities attract premium rental rates. Property management companies in Dolores handle rentals professionally, making passive income straightforward."
+      },
+      {
+        "question": "Is there a strong expat community in Dolores?",
+        "answer": "Yes, Dolores has a well-established and growing expat community, primarily from the UK, Germany, Belgium, and Scandinavia. Numerous associations, clubs, and social groups facilitate integration and provide support. English is widely spoken in business, healthcare, and service sectors. The community organizes regular social events, providing newcomers with immediate social connections and practical assistance."
+      },
+      {
+        "question": "What are the property purchase procedures and costs for non-EU citizens?",
+        "answer": "Non-EU citizens can purchase property in Spain relatively easily without residency requirements. Typical costs include 6-8% for transfer tax, notary fees (1-2%), and registration fees. Legal representation is essential, with costs around €1,000-€2,000. Most developers and real estate agents guide foreign buyers through the process. Bank financing is available to non-residents, though some institutions may request residency documentation."
+      },
+      {
+        "question": "How good is the internet and telecommunications in Dolores?",
+        "answer": "Dolores has modern telecommunications infrastructure with fiber optic broadband available from multiple providers including Movistar, Vodafone, and local operators. Typical speeds are 100-600 Mbps, suitable for streaming, video conferencing, and remote work. Mobile coverage is excellent with all major Spanish networks operating. This makes Dolores viable for digital nomads and remote workers."
+      },
+      {
+        "question": "What are the property tax implications for foreign owners?",
+        "answer": "Foreign property owners pay Spanish property tax (IBI) based on cadastral value, typically 0.4-1.1% annually. Non-residents must also pay non-resident income tax (19%) on rental income if the property is rented. Capital gains tax applies upon sale. Consulting a Spanish tax advisor is essential for understanding individual circumstances and optimizing tax positions."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Dolores? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Dolores offers strong investment potential with both appreciation and rental yield opportunities. The growing expatriate community supports consistent rental demand, with property management companies facilitating vacation rentals and long-term lets. Purchase prices significantly undercut coastal alternatives, providing attractive entry points for investors. Annual rental yields typically range from 4-6% for holiday rentals, with long-term rentals providing stable returns. The town's development trajectory suggests continued property value appreciation as infrastructure and amenities expand.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Dolores are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Dolores offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Dolores celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Dolores have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "20-35 min",
+          "description": "British curriculum school with excellent facilities and strong academic record serving the expat community"
+        },
+        {
+          "name": "Newton College",
+          "type": "International (British/Spanish)",
+          "distance": "25-40 min",
+          "description": "Bilingual international school offering both British and Spanish curricula with modern facilities"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Dolores offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Dolores has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Dolores",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7675!3d38.1375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "What is the cost of living in Dolores compared to other Costa Blanca towns?",
-      "answer": "Dolores offers significantly lower living costs than coastal towns like Benidorm or Torrevieja. Monthly expenses for utilities, groceries, and dining are typically 20-30% lower. Property prices are substantially reduced compared to beachfront locations, while maintaining modern amenities and services. This affordability extends to healthcare, leisure activities, and transportation."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Dolores",
+    "description": "Dolores is a inland municipality in Costa Blanca South, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.1375",
+      "longitude": "-0.7675"
     },
-    {
-      "question": "Is Dolores suitable for retirees and pensioners?",
-      "answer": "Yes, Dolores is increasingly popular with retirees due to its affordable cost of living, excellent healthcare access, strong social community, and warm climate. Many British, German, and other European retirees have established homes here. The town offers healthcare facilities adequate for most retirement needs, with specialized care available in nearby towns. The expat community provides familiar social connections and support networks."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dolores",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "How far is Dolores from beaches and major attractions?",
-      "answer": "Dolores is located 20-30 minutes from Mediterranean beaches at Playa Paraíso and Playa del Torres. The coastal town of Torrevieja is 30 minutes away, Alicante city center is 40-50 minutes, and Alicante Airport is approximately 45 minutes. This strategic inland position provides beach access without coastal living costs."
-    },
-    {
-      "question": "What type of property should I invest in for rental income?",
-      "answer": "Villas and townhouses work well for holiday rentals, typically generating 4-6% annual yields through vacation rental platforms. Town houses in central locations suit long-term rentals to the local community and expats. New-build properties with modern amenities attract premium rental rates. Property management companies in Dolores handle rentals professionally, making passive income straightforward."
-    },
-    {
-      "question": "Is there a strong expat community in Dolores?",
-      "answer": "Yes, Dolores has a well-established and growing expat community, primarily from the UK, Germany, Belgium, and Scandinavia. Numerous associations, clubs, and social groups facilitate integration and provide support. English is widely spoken in business, healthcare, and service sectors. The community organizes regular social events, providing newcomers with immediate social connections and practical assistance."
-    },
-    {
-      "question": "What are the property purchase procedures and costs for non-EU citizens?",
-      "answer": "Non-EU citizens can purchase property in Spain relatively easily without residency requirements. Typical costs include 6-8% for transfer tax, notary fees (1-2%), and registration fees. Legal representation is essential, with costs around €1,000-€2,000. Most developers and real estate agents guide foreign buyers through the process. Bank financing is available to non-residents, though some institutions may request residency documentation."
-    },
-    {
-      "question": "How good is the internet and telecommunications in Dolores?",
-      "answer": "Dolores has modern telecommunications infrastructure with fiber optic broadband available from multiple providers including Movistar, Vodafone, and local operators. Typical speeds are 100-600 Mbps, suitable for streaming, video conferencing, and remote work. Mobile coverage is excellent with all major Spanish networks operating. This makes Dolores viable for digital nomads and remote workers."
-    },
-    {
-      "question": "What are the property tax implications for foreign owners?",
-      "answer": "Foreign property owners pay Spanish property tax (IBI) based on cadastral value, typically 0.4-1.1% annually. Non-residents must also pay non-resident income tax (19%) on rental income if the property is rented. Capital gains tax applies upon sale. Consulting a Spanish tax advisor is essential for understanding individual circumstances and optimizing tax positions."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
     }
-  ],
-  "slug": "dolores",
-  "town": "Dolores",
-  "propertyCount": 15,
-  "generatedAt": "2026-02-05T19:17:23.102Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Dolores compared to other Costa Blanca towns?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dolores offers significantly lower living costs than coastal towns like Benidorm or Torrevieja. Monthly expenses for utilities, groceries, and dining are typically 20-30% lower. Property prices are substantially reduced compared to beachfront locations, while maintaining modern amenities and service"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Dolores suitable for retirees and pensioners?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Dolores is increasingly popular with retirees due to its affordable cost of living, excellent healthcare access, strong social community, and warm climate. Many British, German, and other European retirees have established homes here. The town offers healthcare facilities adequate for most reti"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Dolores from beaches and major attractions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dolores is located 20-30 minutes from Mediterranean beaches at Playa Paraíso and Playa del Torres. The coastal town of Torrevieja is 30 minutes away, Alicante city center is 40-50 minutes, and Alicante Airport is approximately 45 minutes. This strategic inland position provides beach access without "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What type of property should I invest in for rental income?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Villas and townhouses work well for holiday rentals, typically generating 4-6% annual yields through vacation rental platforms. Town houses in central locations suit long-term rentals to the local community and expats. New-build properties with modern amenities attract premium rental rates. Property"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a strong expat community in Dolores?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Dolores has a well-established and growing expat community, primarily from the UK, Germany, Belgium, and Scandinavia. Numerous associations, clubs, and social groups facilitate integration and provide support. English is widely spoken in business, healthcare, and service sectors. The community "
+        }
+      }
+    ]
+  }
 }

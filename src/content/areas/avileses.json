@@ -1,75 +1,61 @@
 {
-  "metaTitle": "Living in Avileses 2026 | Complete Guide to Spain",
-  "metaDescription": "Discover living in Avileses: properties €78,000-€279,900, established expat community, Blue Flag beaches 20 mins away. Complete guide for buyers.",
-  "heroIntro": "Avileses represents an exceptional opportunity for those seeking an authentic Spanish lifestyle without the premium price tag of coastal resorts. This charming inland town offers a perfect blend of traditional Spanish character and modern conveniences, attracting a diverse international community alongside local residents. With property prices 40% lower than island markets and an established English-speaking expat community, Avileses has become increasingly popular among property buyers, retirees, and families seeking affordable Mediterranean living. The town serves as an ideal base for exploring the wider region, with cultural attractions, outdoor activities, and excellent connectivity to both coastal areas and major cities within easy reach. Whether you're seeking a permanent residence, investment property, or holiday home, Avileses delivers exceptional value and quality of life in one of Spain's most desirable regions.",
-  "climate": "Avileses enjoys a Mediterranean climate characterized by warm, sunny summers and mild winters, making it an attractive destination year-round. Summer temperatures typically range from 28-32°C (82-90°F), while winters remain pleasant at 12-16°C (54-61°F), with frost and snow extremely rare. The area receives approximately 300 days of sunshine annually, providing consistently good weather for outdoor activities. Spring and autumn are particularly delightful, offering comfortable temperatures between 20-25°C (68-77°F) ideal for exploring the region. The brief rainy season occurs primarily in autumn and winter, with summer being virtually dry. This stable, predictable climate makes Avileses perfect for year-round living, with no extreme weather events typical of other European regions.",
-  "lifestyle": "Daily life in Avileses combines the best of Spanish tradition with contemporary convenience. The established international community ensures English is widely spoken, making integration straightforward for newcomers. Your weekdays might include visits to local markets like Mercadona or Lidl for fresh produce, coffee at a terrace café, or exploring the town's authentic Spanish restaurants serving regional cuisine. Weekends offer endless possibilities: multiple Blue Flag beaches are just 20 minutes away for swimming and water sports, while championship golf courses provide opportunities for enthusiasts. The expat community organizes regular social events, language exchanges, and cultural activities, creating a welcoming environment. Local festivals and traditional Spanish celebrations bring the community together throughout the year. Shopping combines modern convenience with Mediterranean charm—local markets offer fresh produce while supermarkets provide international products. The pace is relaxed yet engaging, balancing the tranquility of small-town living with sufficient amenities and activities.",
-  "amenities": {
+  "slug": "avileses",
+  "name": "Avileses",
+  "region": "Murcia",
+  "heroImage": "/images/areas/avileses-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 5,
+  "propertyTypes": [
+    "Town House",
+    "Apartment"
+  ],
+  "priceRange": {
+    "min": 78000,
+    "max": 279900
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Avileses Tourism",
+      "url": "https://www.google.com/search?q=Avileses%20Spain%20official%20website",
+      "description": "Discover more about Avileses"
+    },
+    "airport": {
+      "name": "Murcia-Corvera Airport",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "15 km",
+      "driveTime": "12 min"
+    },
     "healthcare": {
-      "text": "Healthcare in Avileses is comprehensive and accessible, with a regional hospital located within 30 minutes providing full emergency and specialist services. Private clinics throughout the area offer alternatives for non-urgent treatment, often with shorter waiting times. The availability of English-speaking doctors eliminates language barriers for international residents, a crucial consideration for many expats. Medical facilities meet European standards, and prescription medications are affordable. Many residents use a combination of public and private healthcare to optimize both cost and access. International health insurance is recommended and readily available, with most providers offering seamless coverage in Spain.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes",
-        "Private clinics with modern facilities",
-        "English-speaking doctors available",
-        "Affordable prescription medications and treatments"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping in Avileses offers excellent variety at competitive prices, with major supermarket chains ensuring convenience and quality. Mercadona provides a comprehensive range of Spanish and international products with daily deals. Lidl offers budget-friendly groceries and household essentials, while Consum adds another convenient option for fresh produce and staples. Beyond supermarkets, traditional local markets deliver authentic Spanish produce, fresh fish, and local specialties at excellent prices. The combination of modern retail and traditional markets creates a shopping experience that satisfies both practical needs and cultural immersion.",
-      "keyPoints": [
-        "Mercadona supermarket chain",
-        "Lidl discount supermarket",
-        "Consum convenience stores",
-        "Traditional local markets with fresh produce"
-      ]
-    },
-    "education": {
-      "text": "Education options in Avileses and the surrounding region cater to international families seeking familiar curricula and teaching standards. International schools in the region provide British curriculum options, ensuring continuity for families relocating from the UK or Commonwealth countries. These institutions maintain high academic standards while offering a multicultural environment. Spanish public schools are excellent and significantly more affordable, suitable for families wanting cultural integration. The region's educational infrastructure supports expat families at all levels, from nursery through secondary education, with qualified, experienced teaching staff.",
-      "keyPoints": [
-        "International schools with British curriculum",
-        "High-quality Spanish public schools",
-        "Bilingual education programs available",
-        "Experienced international staff"
-      ]
-    },
-    "sports": {
-      "text": "Sports and leisure opportunities abound in Avileses, with multiple Blue Flag beaches just 20 minutes away offering swimming, paddleboarding, kayaking, and beach volleyball. Several championship golf courses nearby cater to enthusiasts of all levels, with stunning Mediterranean views and professional instruction available. Water sports are particularly popular, including sailing and windsurfing at nearby coastal areas. The mild climate enables outdoor activities year-round, while the established expat community organizes hiking groups, cycling clubs, and tennis matches. Fitness centers and sports facilities within the town provide additional options for maintaining active lifestyles.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Championship golf courses nearby",
-        "Water sports: sailing, paddleboarding, windsurfing",
-        "Hiking, cycling, and tennis opportunities"
-      ]
+      "name": "Hospital General Universitario Santa Lucía (Cartagena)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20General%20Universitario%20Santa%20Luc%C3%ADa%20(Cartagena)",
+      "distance": "25 km"
     }
   },
-  "transport": {
-    "overview": "Bus connections provide reliable local transport for daily needs, though a car is recommended for maximum flexibility and exploring the wider region. Public transport is affordable and efficient for town movement.",
-    "airports": "Alicante-Elche Airport is approximately 60-90 kilometers away, providing international connections with flight times under 2.5 hours to major UK airports. Valencia Airport offers another option 100 kilometers south with similar connectivity.",
-    "driving": "Well-maintained motorways connect Avileses to coastal resorts, major cities, and neighboring regions. The road network is modern and clearly signposted. Driving to Barcelona takes approximately 4-5 hours, while Valencia and Alicante are within 1-1.5 hours respectively.",
-    "public": "Regular bus services connect Avileses to surrounding towns and coastal areas. Train connections to major regional centers provide convenient alternative transport. Taxis and ride-sharing services offer convenient options for local journeys.",
-    "keyPoints": [
-      "Bus connections available throughout the region",
-      "Car recommended for flexibility and exploration",
-      "International airports within 60-90 kilometers",
-      "Modern motorway network for easy travel"
-    ]
-  },
-  "propertyMarket": {
-    "overview": "Avileses property market demonstrates strong fundamentals with 8% year-on-year growth, reflecting increasing international interest and improving regional infrastructure. The market remains affordable compared to coastal alternatives, attracting both owner-occupiers and investors. Five properties currently available indicate selective inventory, which typically supports price stability and appreciation.",
-    "priceRange": "€78,000 - €279,900",
-    "popularTypes": "Town House, Apartment",
-    "investment": "Rental potential is strong with typical 7-night holiday rentals commanding €800, generating attractive returns for investors. The established expat community ensures steady demand for rental properties. Capital growth prospects are positive, driven by increasing awareness of Avileses advantages and improving regional connectivity. Properties 40% below island market prices offer exceptional value with growth potential."
-  },
-  "neighborhoods": [
-    "Historic Town Center: Authentic Spanish architecture, traditional tapas bars, weekly markets, close to all amenities",
-    "Riverside Quarter: Peaceful residential area with local restaurants, parks, and authentic community atmosphere",
-    "Expat Community Hub: Popular with international residents, English-speaking services, organized social activities",
-    "Countryside Outskirts: Peaceful villas with land, stunning views, quiet lifestyle with 10-minute drive to amenities",
-    "Modern Development Zone: Contemporary apartments, modern facilities, excellent access to schools and shopping",
-    "Waterfront Area: Close to local water activities, scenic walks, recreational facilities"
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Avileses 2026 | Complete Guide to Spain",
+    "metaDescription": "Discover living in Avileses: properties €78,000-€279,900, established expat community, Blue Flag beaches 20 mins away. Complete guide for buyers.",
+    "heroIntro": "Avileses represents an exceptional opportunity for those seeking an authentic Spanish lifestyle without the premium price tag of coastal resorts. This charming inland town offers a perfect blend of traditional Spanish character and modern conveniences, attracting a diverse international community alongside local residents. With property prices 40% lower than island markets and an established English-speaking expat community, Avileses has become increasingly popular among property buyers, retirees, and families seeking affordable Mediterranean living. The town serves as an ideal base for exploring the wider region, with cultural attractions, outdoor activities, and excellent connectivity to both coastal areas and major cities within easy reach. Whether you're seeking a permanent residence, investment property, or holiday home, Avileses delivers exceptional value and quality of life in one of Spain's most desirable regions.",
+    "lifestyleSection": {
+      "intro": "Daily life in Avileses combines the best of Spanish tradition with contemporary convenience. The established international community ensures English is widely spoken, making integration straightforward for newcomers. Your weekdays might include visits to local markets like Mercadona or Lidl for fresh produce, coffee at a terrace café, or exploring the town's authentic Spanish restaurants serving regional cuisine. Weekends offer endless possibilities: multiple Blue Flag beaches are just 20 minutes away for swimming and water sports, while championship golf courses provide opportunities for enthusiasts. The expat community organizes regular social events, language exchanges, and cultural activities, creating a welcoming environment. Local festivals and traditional Spanish celebrations bring the community together throughout the year. Shopping combines modern convenience with Mediterranean charm—local markets offer fresh produce while supermarkets provide international products. The pace is relaxed yet engaging, balancing the tranquility of small-town living with sufficient amenities and activities.\n\nAvileses enjoys a Mediterranean climate characterized by warm, sunny summers and mild winters, making it an attractive destination year-round. Summer temperatures typically range from 28-32°C (82-90°F), while winters remain pleasant at 12-16°C (54-61°F), with frost and snow extremely rare. The area receives approximately 300 days of sunshine annually, providing consistently good weather for outdoor activities. Spring and autumn are particularly delightful, offering comfortable temperatures between 20-25°C (68-77°F) ideal for exploring the region. The brief rainy season occurs primarily in autumn and winter, with summer being virtually dry. This stable, predictable climate makes Avileses perfect for year-round living, with no extreme weather events typical of other European regions.",
+      "highlights": [
+        "Property prices 40% below coastal markets provide exceptional value",
+        "Established English-speaking expat community ensures smooth integration",
+        "Mediterranean climate with 300+ sunny days annually",
+        "Multiple Blue Flag beaches within 20 minutes",
+        "Strong rental market (€800 per week) attractive to investors",
+        "Affordable cost of living with modern amenities and services"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Sports and leisure opportunities abound in Avileses, with multiple Blue Flag beaches just 20 minutes away offering swimming, paddleboarding, kayaking, and beach volleyball. Several championship golf courses nearby cater to enthusiasts of all levels, with stunning Mediterranean views and professional instruction available. Water sports are particularly popular, including sailing and windsurfing at nearby coastal areas. The mild climate enables outdoor activities year-round, while the established expat community organizes hiking groups, cycling clubs, and tennis matches. Fitness centers and sports facilities within the town provide additional options for maintaining active lifestyles.",
+      "dining": "Avileses offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping in Avileses offers excellent variety at competitive prices, with major supermarket chains ensuring convenience and quality. Mercadona provides a comprehensive range of Spanish and international products with daily deals. Lidl offers budget-friendly groceries and household essentials, while Consum adds another convenient option for fresh produce and staples. Beyond supermarkets, traditional local markets deliver authentic Spanish produce, fresh fish, and local specialties at excellent prices. The combination of modern retail and traditional markets creates a shopping experience that satisfies both practical needs and cultural immersion.",
+      "healthcare": "Healthcare in Avileses is comprehensive and accessible, with a regional hospital located within 30 minutes providing full emergency and specialist services. Private clinics throughout the area offer alternatives for non-urgent treatment, often with shorter waiting times. The availability of English-speaking doctors eliminates language barriers for international residents, a crucial consideration for many expats. Medical facilities meet European standards, and prescription medications are affordable. Many residents use a combination of public and private healthcare to optimize both cost and access. International health insurance is recommended and readily available, with most providers offering seamless coverage in Spain.",
+      "transport": "Bus connections provide reliable local transport for daily needs, though a car is recommended for maximum flexibility and exploring the wider region. Public transport is affordable and efficient for town movement. Alicante-Elche Airport is approximately 60-90 kilometers away, providing international connections with flight times under 2.5 hours to major UK airports. Valencia Airport offers another option 100 kilometers south with similar connectivity. Well-maintained motorways connect Avileses to coastal resorts, major cities, and neighboring regions. The road network is modern and clearly signposted. Driving to Barcelona takes approximately 4-5 hours, while Valencia and Alicante are within 1-1.5 hours respectively. Regular bus services connect Avileses to surrounding towns and coastal areas. Train connections to major regional centers provide convenient alternative transport. Taxis and ride-sharing services offer convenient options for local journeys."
+    },
+    "propertyMarketSection": "Avileses property market demonstrates strong fundamentals with 8% year-on-year growth, reflecting increasing international interest and improving regional infrastructure. The market remains affordable compared to coastal alternatives, attracting both owner-occupiers and investors. Five properties currently available indicate selective inventory, which typically supports price stability and appreciation.\n\nPopular property types include Town House, Apartment.\n\nRental potential is strong with typical 7-night holiday rentals commanding €800, generating attractive returns for investors. The established expat community ensures steady demand for rental properties. Capital growth prospects are positive, driven by increasing awareness of Avileses advantages and improving regional connectivity. Properties 40% below island market prices offer exceptional value with growth potential.",
+    "whyLiveHereSection": [
       "Property prices 40% below coastal markets provide exceptional value",
       "Established English-speaking expat community ensures smooth integration",
       "Mediterranean climate with 300+ sunny days annually",
@@ -77,48 +63,319 @@
       "Strong rental market (€800 per week) attractive to investors",
       "Affordable cost of living with modern amenities and services"
     ],
-    "cons": [
-      "Car ownership recommended for flexibility beyond town amenities",
-      "Smaller international school selection compared to major coastal cities",
-      "Limited nightlife and entertainment venues compared to larger resort towns"
-    ]
+    "faqs": [
+      {
+        "question": "Is Avileses a good place to live?",
+        "answer": "Yes, absolutely. Avileses combines authentic Spanish character with modern conveniences, established expat community, and exceptional value. The mild Mediterranean climate, proximity to beaches, and affordable cost of living make it ideal for retirees, families, and remote workers. Healthcare and education facilities meet international standards, while the 8% annual property appreciation indicates strong confidence in the market."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can freely purchase property in Spain with minimal restrictions. EU citizens and non-EU nationals have equal rights to buy residential or commercial property. You'll need a Spanish tax identification number (NIE), but the process is straightforward. Most transactions complete within 2-4 weeks from agreement to completion, with professional legal representation ensuring smooth acquisition."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Beyond the purchase price, expect additional costs of approximately 8-10% including: notary fees (1-2%), property registration tax (6-10% depending on region), legal fees (0.5-1%), and real estate agency commission (3-5%). Avileses properties at €78,000-€279,900 are affordable compared to Mediterranean alternatives, particularly island markets."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "No separate visa is required specifically for property purchase. However, residency requirements depend on your nationality. EU citizens have freedom of movement and residence. Non-EU citizens can establish residency through investment or retirement programs. Consult with a Spanish immigration specialist regarding your specific circumstances, but property ownership alone doesn't restrict purchase eligibility."
+      },
+      {
+        "question": "What is the cost of living in Costa Blanca?",
+        "answer": "Avileses offers exceptional value with significantly lower costs than coastal resorts. Monthly expenses for a couple typically range €1,500-€2,500 including rent, utilities, groceries, and leisure. Healthcare costs are minimal with private insurance €50-100 monthly. Dining out costs €10-20 per person. Utilities average €100-150 monthly. This represents 30-40% savings compared to northern Europe."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Excellent. Costa Blanca, including Avileses, offers ideal retirement conditions: affordable healthcare, low cost of living, excellent climate, established expat communities for social integration, and quality residential infrastructure. Many retirees achieve comfortable lifestyles on modest pensions. Healthcare facilities meet high standards with English-speaking doctors readily available."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Costa Blanca enjoys Mediterranean climate with 300+ sunshine days annually. Summers average 28-32°C (82-90°F), winters 12-16°C (54-61°F), with spring/autumn at comfortable 20-25°C (68-77°F). Rainfall concentrates in autumn/winter. The climate is ideal for year-round outdoor activities, with no extreme weather events. This predictability makes Avileses perfect for permanent relocation or extended stays."
+      },
+      {
+        "question": "Can I get a mortgage in Spain as a foreigner?",
+        "answer": "Yes, many Spanish banks and international lenders offer mortgages to foreign buyers. Non-residents typically require 30-40% deposit with lending up to 60-70% loan-to-value. Interest rates are competitive, currently around 3-4%. Spanish residency isn't mandatory, but an NIE (tax identification number) is required. Currency exchange considerations apply for non-euro income. Professional mortgage brokers specializing in foreign clients streamline the process."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Avileses? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Rental potential is strong with typical 7-night holiday rentals commanding €800, generating attractive returns for investors. The established expat community ensures steady demand for rental properties. Capital growth prospects are positive, driven by increasing awareness of Avileses advantages and improving regional connectivity. Properties 40% below island market prices offer exceptional value with growth potential.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Avileses are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Avileses offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Avileses celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Avileses have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school offering GCSE and A-Levels with strong extracurricular programmes"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "International (British)",
+          "distance": "25-45 min",
+          "description": "British curriculum primary and secondary school serving the international community"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Avileses offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Avileses has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Avileses",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-1.0167!3d37.8167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Avileses a good place to live?",
-      "answer": "Yes, absolutely. Avileses combines authentic Spanish character with modern conveniences, established expat community, and exceptional value. The mild Mediterranean climate, proximity to beaches, and affordable cost of living make it ideal for retirees, families, and remote workers. Healthcare and education facilities meet international standards, while the 8% annual property appreciation indicates strong confidence in the market."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Avileses",
+    "description": "Avileses is a inland municipality in Murcia, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.8167",
+      "longitude": "-1.0167"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can freely purchase property in Spain with minimal restrictions. EU citizens and non-EU nationals have equal rights to buy residential or commercial property. You'll need a Spanish tax identification number (NIE), but the process is straightforward. Most transactions complete within 2-4 weeks from agreement to completion, with professional legal representation ensuring smooth acquisition."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Avileses",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Beyond the purchase price, expect additional costs of approximately 8-10% including: notary fees (1-2%), property registration tax (6-10% depending on region), legal fees (0.5-1%), and real estate agency commission (3-5%). Avileses properties at €78,000-€279,900 are affordable compared to Mediterranean alternatives, particularly island markets."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "No separate visa is required specifically for property purchase. However, residency requirements depend on your nationality. EU citizens have freedom of movement and residence. Non-EU citizens can establish residency through investment or retirement programs. Consult with a Spanish immigration specialist regarding your specific circumstances, but property ownership alone doesn't restrict purchase eligibility."
-    },
-    {
-      "question": "What is the cost of living in Costa Blanca?",
-      "answer": "Avileses offers exceptional value with significantly lower costs than coastal resorts. Monthly expenses for a couple typically range €1,500-€2,500 including rent, utilities, groceries, and leisure. Healthcare costs are minimal with private insurance €50-100 monthly. Dining out costs €10-20 per person. Utilities average €100-150 monthly. This represents 30-40% savings compared to northern Europe."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Excellent. Costa Blanca, including Avileses, offers ideal retirement conditions: affordable healthcare, low cost of living, excellent climate, established expat communities for social integration, and quality residential infrastructure. Many retirees achieve comfortable lifestyles on modest pensions. Healthcare facilities meet high standards with English-speaking doctors readily available."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Costa Blanca enjoys Mediterranean climate with 300+ sunshine days annually. Summers average 28-32°C (82-90°F), winters 12-16°C (54-61°F), with spring/autumn at comfortable 20-25°C (68-77°F). Rainfall concentrates in autumn/winter. The climate is ideal for year-round outdoor activities, with no extreme weather events. This predictability makes Avileses perfect for permanent relocation or extended stays."
-    },
-    {
-      "question": "Can I get a mortgage in Spain as a foreigner?",
-      "answer": "Yes, many Spanish banks and international lenders offer mortgages to foreign buyers. Non-residents typically require 30-40% deposit with lending up to 60-70% loan-to-value. Interest rates are competitive, currently around 3-4%. Spanish residency isn't mandatory, but an NIE (tax identification number) is required. Currency exchange considerations apply for non-euro income. Professional mortgage brokers specializing in foreign clients streamline the process."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Murcia"
     }
-  ],
-  "slug": "avileses",
-  "town": "Avileses",
-  "propertyCount": 5,
-  "generatedAt": "2026-02-06T09:59:07.778Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Avileses a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. Avileses combines authentic Spanish character with modern conveniences, established expat community, and exceptional value. The mild Mediterranean climate, proximity to beaches, and affordable cost of living make it ideal for retirees, families, and remote workers. Healthcare and ed"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can freely purchase property in Spain with minimal restrictions. EU citizens and non-EU nationals have equal rights to buy residential or commercial property. You'll need a Spanish tax identification number (NIE), but the process is straightforward. Most transactions complete within "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond the purchase price, expect additional costs of approximately 8-10% including: notary fees (1-2%), property registration tax (6-10% depending on region), legal fees (0.5-1%), and real estate agency commission (3-5%). Avileses properties at €78,000-€279,900 are affordable compared to Mediterran"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No separate visa is required specifically for property purchase. However, residency requirements depend on your nationality. EU citizens have freedom of movement and residence. Non-EU citizens can establish residency through investment or retirement programs. Consult with a Spanish immigration speci"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Costa Blanca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Avileses offers exceptional value with significantly lower costs than coastal resorts. Monthly expenses for a couple typically range €1,500-€2,500 including rent, utilities, groceries, and leisure. Healthcare costs are minimal with private insurance €50-100 monthly. Dining out costs €10-20 per perso"
+        }
+      }
+    ]
+  }
 }

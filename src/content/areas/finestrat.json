@@ -1,75 +1,64 @@
 {
-  "metaTitle": "Living in Finestrat 2026 | Complete Area Guide & Property",
-  "metaDescription": "Discover living in Finestrat, Costa Blanca. Properties €275k-€4.4m, 51 homes available. Expat-friendly inland town with beaches, schools & golf.",
-  "heroIntro": "Finestrat is a charming inland town on Spain's Costa Blanca that offers the perfect blend of Spanish authenticity and modern international living. Located just 20 minutes from pristine Blue Flag beaches and surrounded by championship golf courses, this established expat destination has become increasingly popular among property buyers seeking a lifestyle upgrade without the overcrowding of beachfront developments. With 51 properties currently available ranging from €275,000 to €4,450,000, Finestrat caters to diverse budgets and preferences. The area's established international community means English is widely spoken, making the transition to Spanish living remarkably smooth. Whether you're seeking a peaceful retirement, a family home, or an investment opportunity, Finestrat delivers exceptional value—property prices are 40% less than comparable Spanish island markets, while maintaining the same Mediterranean climate and coastal accessibility that makes Costa Blanca one of Europe's most desirable locations.",
-  "climate": "Finestrat enjoys a typical Mediterranean climate with over 300 days of sunshine annually. Summers are warm and dry, with temperatures averaging 28-30°C (82-86°F) from June to September, though the inland location keeps it slightly cooler than beachfront areas. Winters are mild and pleasant, with temperatures rarely dropping below 10°C (50°F), making it ideal year-round living. Spring and autumn offer perfect conditions for outdoor activities with comfortable 20-25°C temperatures. The region receives minimal rainfall, concentrated mainly in autumn and spring. Sea breezes from the Mediterranean provide natural cooling during summer months, while the location's elevation protects from extreme coastal winds. The best times to visit or relocate are April-May and September-October when weather is perfect and the area is less crowded than peak summer months.",
-  "lifestyle": "Daily life in Finestrat revolves around a relaxed Mediterranean rhythm combined with modern European conveniences. The town hosts vibrant local markets where you can source fresh produce, fish, and regional specialties at exceptional prices. Dining options range from traditional Spanish tapas bars to international restaurants catering to the diverse expat community. The proximity to multiple Blue Flag beaches within 20 minutes makes coastal activities accessible without the hassle of beachfront living. Golf enthusiasts enjoy several championship courses nearby, while hiking, water sports, and outdoor markets provide endless recreational opportunities. The established international community creates a welcoming environment where English is commonly spoken, and numerous expat groups organize social events, making integration effortless. Local amenities include weekly markets in neighboring towns, cultural festivals throughout the year, and easy access to larger shopping centers. Despite its modern amenities, Finestrat maintains authentic Spanish character with family-run restaurants, traditional tapas culture, and genuine connection to local traditions.",
-  "amenities": {
+  "slug": "finestrat",
+  "name": "Finestrat",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/finestrat-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 51,
+  "propertyTypes": [
+    "Villa",
+    "Apartment",
+    "Bungalow",
+    "Town House",
+    "Penthouse"
+  ],
+  "priceRange": {
+    "min": 275000,
+    "max": 4450000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Finestrat Tourism",
+      "url": "https://www.google.com/search?q=Finestrat%20Spain%20official%20website",
+      "description": "Discover more about Finestrat"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "50 km",
+      "driveTime": "35 min"
+    },
     "healthcare": {
-      "text": "Healthcare in Finestrat is comprehensive and easily accessible, with a regional hospital located within 30 minutes and several private clinics offering modern facilities. English-speaking doctors are readily available throughout the area, ensuring communication is never a barrier to treatment. The healthcare system in Spain is highly regarded, combining public healthcare with excellent private options for faster access to specialists. Prescription medications are affordable, and many private clinics cater specifically to expatriate patients familiar with British and other international healthcare standards. Emergency services are efficient and well-coordinated across the region.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes",
-        "Private clinics with modern facilities",
-        "English-speaking doctors available",
-        "Affordable prescription medications"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping in Finestrat and surrounding areas offers excellent variety and value. Major supermarket chains including Mercadona, Lidl, and Consum provide everyday groceries with competitive pricing, while local markets offer fresh produce, fish, and regional specialties at prices significantly lower than Northern Europe. The area has convenient access to larger shopping centers with international brands, pharmacies, and household goods. Local markets operate throughout the week, providing authentic shopping experiences and opportunities to connect with local vendors. Both online shopping and traditional retail are well-developed, ensuring residents have multiple purchasing options.",
-      "keyPoints": [
-        "Mercadona supermarket chain",
-        "Lidl for budget shopping",
-        "Consum local supermarkets",
-        "Weekly fresh markets and local vendors"
-      ]
-    },
-    "education": {
-      "text": "Education options in the Finestrat region are comprehensive for families, with several international schools offering curricula including British standards, American programs, and the International Baccalaureate. These schools provide a familiar educational framework for expatriate children while maintaining high academic standards. Local Spanish schools are also available for families seeking full integration into the Spanish education system. International schools in the region are well-established, with experienced teaching staff, modern facilities, and active parent communities. The area's reputation as an expat destination means schools are accustomed to welcoming international students and supporting families during relocation.",
-      "keyPoints": [
-        "International schools with British curriculum",
-        "American curriculum options available",
-        "IB (International Baccalaureate) programs",
-        "Established schools welcoming expatriate families"
-      ]
-    },
-    "sports": {
-      "text": "Finestrat is a paradise for sports and leisure enthusiasts with multiple Blue Flag beaches accessible within 20 minutes, offering water sports including swimming, windsurfing, paddleboarding, and sailing. Several championship golf courses in the surrounding area cater to all skill levels, from beginners to professionals. Beyond beaches and golf, residents enjoy hiking trails through scenic Mediterranean landscape, tennis clubs, fitness centers, and cycling routes. Watersports facilities are well-developed with professional instruction available. The region hosts various sporting events and tournaments throughout the year, fostering an active lifestyle culture.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Championship golf courses nearby",
-        "Water sports and sailing facilities",
-        "Hiking, cycling, and tennis opportunities"
-      ]
+      "name": "Hospital Marina Baixa (Villajoyosa)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Marina%20Baixa%20(Villajoyosa)",
+      "distance": "10 km"
     }
   },
-  "transport": {
-    "overview": "Public transport is available through bus connections linking Finestrat to surrounding towns and coastal areas, though a car is recommended for maximum flexibility and convenience. The inland location provides excellent road access to beaches, shopping centers, and neighboring communities without the traffic congestion of beachfront areas.",
-    "airports": "Alicante-Elche Airport is approximately 45 kilometers away with direct flights to UK and European cities. Valencia Airport is roughly 130 kilometers north, offering alternative flight options. Both airports provide convenient access for international travel and visiting family.",
-    "driving": "Finestrat benefits from excellent motorway connections via the AP-7 autopista, providing quick access to coastal destinations, Benidorm, and neighboring towns. The N-332 national road offers a scenic alternative route. Main town connections to Benidorm and Callosa d'En Sarrià are straightforward with well-maintained roads.",
-    "public": "Regular bus services connect Finestrat with local towns and coastal areas through the ALSA network. Alicante has a tram system for regional connections. While public transport exists, the frequency and coverage make a private vehicle advantageous for daily activities.",
-    "keyPoints": [
-      "Bus connections to surrounding areas available",
-      "Car recommended for flexibility and independence",
-      "45 minutes to Alicante Airport",
-      "Excellent motorway access via AP-7"
-    ]
-  },
-  "propertyMarket": {
-    "overview": "Finestrat's property market is experiencing steady growth with 8% year-on-year appreciation, making it an attractive investment destination. The market benefits from consistent demand from both owner-occupiers and investors seeking rental income. Supply is moderate with 51 properties currently available, indicating a balanced market with good selection without oversupply.",
-    "priceRange": "€275,000 - €4,450,000",
-    "popularTypes": "Villa, Apartment, Bungalow, Town House, Penthouse",
-    "investment": "Average property prices are €2,200 per square meter, representing significant value compared to coastal alternatives. Typical 7-night rental yields range around €800, providing strong investment potential. The 8% annual appreciation combined with rental income makes Finestrat particularly attractive for investor portfolios. Long-term capital growth is supported by increasing demand, limited new development, and the area's reputation among international buyers seeking authentic Mediterranean living with modern amenities."
-  },
-  "neighborhoods": [
-    "Centro: The heart of Finestrat with traditional Spanish charm, local restaurants, shops, and weekly markets. Offers authentic Mediterranean lifestyle with convenient access to modern amenities.",
-    "Residential Areas: Well-established neighborhoods with a mix of villas and apartments, populated by international residents. Generally quieter than the center with good school access.",
-    "Coastal Periphery: Properties closer to the northern boundary with better accessibility to beaches, golf courses, and water sports facilities while maintaining the peaceful inland character.",
-    "Golf Communities: Developments near championship courses appealing to golf enthusiasts with clubhouse facilities, amenities, and dedicated sports infrastructure.",
-    "Family Zones: Areas with proximity to international schools, parks, and family-friendly amenities, particularly popular among parents seeking community integration.",
-    "Luxury Developments: Exclusive villa communities and penthouses offering premium specifications, privacy, and high-end amenities for discerning buyers."
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Finestrat 2026 | Complete Area Guide & Property",
+    "metaDescription": "Discover living in Finestrat, Costa Blanca. Properties €275k-€4.4m, 51 homes available. Expat-friendly inland town with beaches, schools & golf.",
+    "heroIntro": "Finestrat is a charming inland town on Spain's Costa Blanca that offers the perfect blend of Spanish authenticity and modern international living. Located just 20 minutes from pristine Blue Flag beaches and surrounded by championship golf courses, this established expat destination has become increasingly popular among property buyers seeking a lifestyle upgrade without the overcrowding of beachfront developments. With 51 properties currently available ranging from €275,000 to €4,450,000, Finestrat caters to diverse budgets and preferences. The area's established international community means English is widely spoken, making the transition to Spanish living remarkably smooth. Whether you're seeking a peaceful retirement, a family home, or an investment opportunity, Finestrat delivers exceptional value—property prices are 40% less than comparable Spanish island markets, while maintaining the same Mediterranean climate and coastal accessibility that makes Costa Blanca one of Europe's most desirable locations.",
+    "lifestyleSection": {
+      "intro": "Daily life in Finestrat revolves around a relaxed Mediterranean rhythm combined with modern European conveniences. The town hosts vibrant local markets where you can source fresh produce, fish, and regional specialties at exceptional prices. Dining options range from traditional Spanish tapas bars to international restaurants catering to the diverse expat community. The proximity to multiple Blue Flag beaches within 20 minutes makes coastal activities accessible without the hassle of beachfront living. Golf enthusiasts enjoy several championship courses nearby, while hiking, water sports, and outdoor markets provide endless recreational opportunities. The established international community creates a welcoming environment where English is commonly spoken, and numerous expat groups organize social events, making integration effortless. Local amenities include weekly markets in neighboring towns, cultural festivals throughout the year, and easy access to larger shopping centers. Despite its modern amenities, Finestrat maintains authentic Spanish character with family-run restaurants, traditional tapas culture, and genuine connection to local traditions.\n\nFinestrat enjoys a typical Mediterranean climate with over 300 days of sunshine annually. Summers are warm and dry, with temperatures averaging 28-30°C (82-86°F) from June to September, though the inland location keeps it slightly cooler than beachfront areas. Winters are mild and pleasant, with temperatures rarely dropping below 10°C (50°F), making it ideal year-round living. Spring and autumn offer perfect conditions for outdoor activities with comfortable 20-25°C temperatures. The region receives minimal rainfall, concentrated mainly in autumn and spring. Sea breezes from the Mediterranean provide natural cooling during summer months, while the location's elevation protects from extreme coastal winds. The best times to visit or relocate are April-May and September-October when weather is perfect and the area is less crowded than peak summer months.",
+      "highlights": [
+        "40% cheaper than comparable Spanish island markets while maintaining Mediterranean lifestyle and beach access",
+        "Established English-speaking expat community creating welcoming, integrated international environment",
+        "Excellent healthcare with English-speaking doctors and private clinics within easy reach",
+        "8% annual property appreciation with strong rental income potential for investors",
+        "Diverse property selection from €275,000-€4,450,000 accommodates various budgets and preferences",
+        "Perfect climate with 300+ days of sunshine, mild winters ideal for retirees and families"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Finestrat is a paradise for sports and leisure enthusiasts with multiple Blue Flag beaches accessible within 20 minutes, offering water sports including swimming, windsurfing, paddleboarding, and sailing. Several championship golf courses in the surrounding area cater to all skill levels, from beginners to professionals. Beyond beaches and golf, residents enjoy hiking trails through scenic Mediterranean landscape, tennis clubs, fitness centers, and cycling routes. Watersports facilities are well-developed with professional instruction available. The region hosts various sporting events and tournaments throughout the year, fostering an active lifestyle culture.",
+      "dining": "Finestrat offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping in Finestrat and surrounding areas offers excellent variety and value. Major supermarket chains including Mercadona, Lidl, and Consum provide everyday groceries with competitive pricing, while local markets offer fresh produce, fish, and regional specialties at prices significantly lower than Northern Europe. The area has convenient access to larger shopping centers with international brands, pharmacies, and household goods. Local markets operate throughout the week, providing authentic shopping experiences and opportunities to connect with local vendors. Both online shopping and traditional retail are well-developed, ensuring residents have multiple purchasing options.",
+      "healthcare": "Healthcare in Finestrat is comprehensive and easily accessible, with a regional hospital located within 30 minutes and several private clinics offering modern facilities. English-speaking doctors are readily available throughout the area, ensuring communication is never a barrier to treatment. The healthcare system in Spain is highly regarded, combining public healthcare with excellent private options for faster access to specialists. Prescription medications are affordable, and many private clinics cater specifically to expatriate patients familiar with British and other international healthcare standards. Emergency services are efficient and well-coordinated across the region.",
+      "transport": "Public transport is available through bus connections linking Finestrat to surrounding towns and coastal areas, though a car is recommended for maximum flexibility and convenience. The inland location provides excellent road access to beaches, shopping centers, and neighboring communities without the traffic congestion of beachfront areas. Alicante-Elche Airport is approximately 45 kilometers away with direct flights to UK and European cities. Valencia Airport is roughly 130 kilometers north, offering alternative flight options. Both airports provide convenient access for international travel and visiting family. Finestrat benefits from excellent motorway connections via the AP-7 autopista, providing quick access to coastal destinations, Benidorm, and neighboring towns. The N-332 national road offers a scenic alternative route. Main town connections to Benidorm and Callosa d'En Sarrià are straightforward with well-maintained roads. Regular bus services connect Finestrat with local towns and coastal areas through the ALSA network. Alicante has a tram system for regional connections. While public transport exists, the frequency and coverage make a private vehicle advantageous for daily activities."
+    },
+    "propertyMarketSection": "Finestrat's property market is experiencing steady growth with 8% year-on-year appreciation, making it an attractive investment destination. The market benefits from consistent demand from both owner-occupiers and investors seeking rental income. Supply is moderate with 51 properties currently available, indicating a balanced market with good selection without oversupply.\n\nPopular property types include Villa, Apartment, Bungalow, Town House, Penthouse.\n\nAverage property prices are €2,200 per square meter, representing significant value compared to coastal alternatives. Typical 7-night rental yields range around €800, providing strong investment potential. The 8% annual appreciation combined with rental income makes Finestrat particularly attractive for investor portfolios. Long-term capital growth is supported by increasing demand, limited new development, and the area's reputation among international buyers seeking authentic Mediterranean living with modern amenities.",
+    "whyLiveHereSection": [
       "40% cheaper than comparable Spanish island markets while maintaining Mediterranean lifestyle and beach access",
       "Established English-speaking expat community creating welcoming, integrated international environment",
       "Excellent healthcare with English-speaking doctors and private clinics within easy reach",
@@ -77,48 +66,349 @@
       "Diverse property selection from €275,000-€4,450,000 accommodates various budgets and preferences",
       "Perfect climate with 300+ days of sunshine, mild winters ideal for retirees and families"
     ],
-    "cons": [
-      "Car ownership strongly recommended despite bus availability; public transport less comprehensive than major cities",
-      "Smaller town environment may feel limiting for those seeking larger urban cultural attractions and nightlife",
-      "Summer tourist season brings increased traffic and congestion to nearby coastal areas and beaches"
+    "faqs": [
+      {
+        "question": "Is Finestrat a good place to live?",
+        "answer": "Yes, absolutely. Finestrat offers exceptional value, authentic Spanish lifestyle, established international community, excellent healthcare, and easy beach access—all at 40% lower prices than comparable Spanish markets. The 8% annual property appreciation, mild climate, and English-speaking environment make it ideal for retirees, families, and investors seeking Mediterranean living without overcrowding."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, non-EU and EU foreigners can purchase property in Spain without restrictions. You'll need a Spanish tax identification number (NIE), which is straightforward to obtain. No visa is required solely for property purchase, though you may need residency documentation for some financial arrangements. Most property transactions involve legal representation to navigate Spanish regulations smoothly."
+      },
+      {
+        "question": "What is the cost of living in Costa Blanca?",
+        "answer": "Costa Blanca offers exceptional value for Mediterranean living. Monthly costs for a couple range €1,200-€2,000 depending on lifestyle, including rent/mortgage, utilities, groceries, and dining. Properties average €2,200/m² in Finestrat specifically. Groceries, dining, and services cost 30-50% less than Northern Europe. Healthcare and utilities are particularly affordable compared to UK and Northern European standards."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Beyond the property purchase price, expect additional costs of 8-12% including: transfer tax (6-11% depending on region), legal fees (0.5-1%), notary fees (0.2-0.5%), and registration fees (0.1%). Mortgage-related costs add another 1-2% if financing. In Finestrat, a €300,000 property would incur approximately €24,000-€36,000 in additional costs. Working with a qualified lawyer is essential to understand all local obligations."
+      },
+      {
+        "question": "Can I get a mortgage in Spain as a foreigner?",
+        "answer": "Yes, many Spanish banks offer mortgages to foreign buyers, typically up to 80% of property value. Requirements include: valid residency documentation (NIE), proof of income, credit history check, and often a deposit of 20-40%. Interest rates are competitive, typically 2.5-4.5%. It's advisable to compare offerings from major banks like Santander, BBVA, and Banco Sabadell, or work with a mortgage broker specializing in expatriate financing."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Excellent choice for retirees. The region offers affordable healthcare with English-speaking doctors, warm climate ideal for year-round living, established retirement communities, and low cost of living stretching pensions further. Finestrat specifically provides the perfect balance—peaceful living with easy beach and golf access, established expat community, and excellent amenities without the overcrowding of beachfront destinations."
+      },
+      {
+        "question": "How far is Costa Blanca from the UK?",
+        "answer": "Costa Blanca is approximately 1,200 kilometers from London (750 miles). Flight time is 2-2.5 hours from London to Alicante Airport, with multiple daily connections from major UK airports. The proximity makes regular family visits convenient while the Mediterranean location provides escape to better weather. Direct flights are competitively priced, especially from regional UK airports."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Exceptional year-round Mediterranean climate with over 300 days of sunshine annually. Summer temperatures average 28-30°C (82-86°F) with low rainfall. Winters are mild at 10-17°C (50-63°F), rarely freezing. Spring and autumn offer perfect 20-25°C temperatures. Sea breezes keep coastal areas comfortable. Finestrat's inland location avoids extreme coastal heat while maintaining excellent weather. Perfect for outdoor activities and outdoor living throughout the year."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Finestrat? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Average property prices are €2,200 per square meter, representing significant value compared to coastal alternatives. Typical 7-night rental yields range around €800, providing strong investment potential. The 8% annual appreciation combined with rental income makes Finestrat particularly attractive for investor portfolios. Long-term capital growth is supported by increasing demand, limited new development, and the area's reputation among international buyers seeking authentic Mediterranean living with modern amenities.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Finestrat are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Finestrat offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Finestrat celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Finestrat have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school with GCSE and A-Level programmes, excellent facilities and strong academic results"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "British and IB curriculum with outstanding facilities, sports programmes, and multilingual education"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Finestrat offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Mountain Hiking",
+          "type": "Hiking",
+          "description": "Scenic mountain trails through Mediterranean pine forests with panoramic views of the valleys and coast"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Finestrat has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Diverse European community including British, Scandinavian, Dutch, German, and French residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Finestrat",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.2167!3d38.5667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Finestrat",
+    "description": "Finestrat is a  municipality in Costa Blanca North, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.5667",
+      "longitude": "-0.2167"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Finestrat",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Finestrat a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. Finestrat offers exceptional value, authentic Spanish lifestyle, established international community, excellent healthcare, and easy beach access—all at 40% lower prices than comparable Spanish markets. The 8% annual property appreciation, mild climate, and English-speaking environm"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, non-EU and EU foreigners can purchase property in Spain without restrictions. You'll need a Spanish tax identification number (NIE), which is straightforward to obtain. No visa is required solely for property purchase, though you may need residency documentation for some financial arrangements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Costa Blanca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costa Blanca offers exceptional value for Mediterranean living. Monthly costs for a couple range €1,200-€2,000 depending on lifestyle, including rent/mortgage, utilities, groceries, and dining. Properties average €2,200/m² in Finestrat specifically. Groceries, dining, and services cost 30-50% less t"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond the property purchase price, expect additional costs of 8-12% including: transfer tax (6-11% depending on region), legal fees (0.5-1%), notary fees (0.2-0.5%), and registration fees (0.1%). Mortgage-related costs add another 1-2% if financing. In Finestrat, a €300,000 property would incur app"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get a mortgage in Spain as a foreigner?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, many Spanish banks offer mortgages to foreign buyers, typically up to 80% of property value. Requirements include: valid residency documentation (NIE), proof of income, credit history check, and often a deposit of 20-40%. Interest rates are competitive, typically 2.5-4.5%. It's advisable to com"
+        }
+      }
     ]
   },
-  "faqs": [
-    {
-      "question": "Is Finestrat a good place to live?",
-      "answer": "Yes, absolutely. Finestrat offers exceptional value, authentic Spanish lifestyle, established international community, excellent healthcare, and easy beach access—all at 40% lower prices than comparable Spanish markets. The 8% annual property appreciation, mild climate, and English-speaking environment make it ideal for retirees, families, and investors seeking Mediterranean living without overcrowding."
-    },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, non-EU and EU foreigners can purchase property in Spain without restrictions. You'll need a Spanish tax identification number (NIE), which is straightforward to obtain. No visa is required solely for property purchase, though you may need residency documentation for some financial arrangements. Most property transactions involve legal representation to navigate Spanish regulations smoothly."
-    },
-    {
-      "question": "What is the cost of living in Costa Blanca?",
-      "answer": "Costa Blanca offers exceptional value for Mediterranean living. Monthly costs for a couple range €1,200-€2,000 depending on lifestyle, including rent/mortgage, utilities, groceries, and dining. Properties average €2,200/m² in Finestrat specifically. Groceries, dining, and services cost 30-50% less than Northern Europe. Healthcare and utilities are particularly affordable compared to UK and Northern European standards."
-    },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Beyond the property purchase price, expect additional costs of 8-12% including: transfer tax (6-11% depending on region), legal fees (0.5-1%), notary fees (0.2-0.5%), and registration fees (0.1%). Mortgage-related costs add another 1-2% if financing. In Finestrat, a €300,000 property would incur approximately €24,000-€36,000 in additional costs. Working with a qualified lawyer is essential to understand all local obligations."
-    },
-    {
-      "question": "Can I get a mortgage in Spain as a foreigner?",
-      "answer": "Yes, many Spanish banks offer mortgages to foreign buyers, typically up to 80% of property value. Requirements include: valid residency documentation (NIE), proof of income, credit history check, and often a deposit of 20-40%. Interest rates are competitive, typically 2.5-4.5%. It's advisable to compare offerings from major banks like Santander, BBVA, and Banco Sabadell, or work with a mortgage broker specializing in expatriate financing."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Excellent choice for retirees. The region offers affordable healthcare with English-speaking doctors, warm climate ideal for year-round living, established retirement communities, and low cost of living stretching pensions further. Finestrat specifically provides the perfect balance—peaceful living with easy beach and golf access, established expat community, and excellent amenities without the overcrowding of beachfront destinations."
-    },
-    {
-      "question": "How far is Costa Blanca from the UK?",
-      "answer": "Costa Blanca is approximately 1,200 kilometers from London (750 miles). Flight time is 2-2.5 hours from London to Alicante Airport, with multiple daily connections from major UK airports. The proximity makes regular family visits convenient while the Mediterranean location provides escape to better weather. Direct flights are competitively priced, especially from regional UK airports."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Exceptional year-round Mediterranean climate with over 300 days of sunshine annually. Summer temperatures average 28-30°C (82-86°F) with low rainfall. Winters are mild at 10-17°C (50-63°F), rarely freezing. Spring and autumn offer perfect 20-25°C temperatures. Sea breezes keep coastal areas comfortable. Finestrat's inland location avoids extreme coastal heat while maintaining excellent weather. Perfect for outdoor activities and outdoor living throughout the year."
-    }
-  ],
-  "slug": "finestrat",
-  "town": "Finestrat",
-  "propertyCount": 51,
-  "generatedAt": "2026-02-06T09:58:00.936Z"
+  "golf": {
+    "intro": "Finestrat is ideally located for golf enthusiasts, with championship courses within minutes. The area combines a charming village setting with excellent access to world-class golfing facilities. The extended Mediterranean playing season provides year-round opportunities for golfers of all levels.",
+    "courses": [
+      {
+        "name": "Club de Golf Meliá Villaitana",
+        "distance": "8 km",
+        "driveTime": "12 minutes",
+        "holes": 36,
+        "url": "https://www.meliavillaitana.com/",
+        "googleMaps": "https://maps.google.com/?q=Melia+Villaitana+Golf",
+        "description": "Dual championship courses offering both seaside and mountain layouts with resort facilities and professional coaching"
+      },
+      {
+        "name": "Club de Golf Don Cayo",
+        "distance": "6 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Don+Cayo+Golf+Club",
+        "description": "Prestigious parkland course with challenging layout and panoramic Mediterranean views"
+      },
+      {
+        "name": "Club de Golf Las Rejas",
+        "distance": "5 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Las+Rejas+Golf",
+        "description": "Championship course with rolling fairways and stunning Mediterranean backdrop"
+      }
+    ]
+  }
 }

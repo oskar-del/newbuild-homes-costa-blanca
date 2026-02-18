@@ -1,75 +1,64 @@
 {
-  "metaTitle": "Living in Torre Pacheco 2026 | Complete Inland Guide",
-  "metaDescription": "Discover living in Torre Pacheco, Spain. Properties €192,000-€1,095,000. Expat-friendly inland town with beaches, schools & 40% lower costs than islands.",
-  "heroIntro": "Torre Pacheco represents one of Spain's most compelling inland destinations for property buyers and expats seeking authentic Spanish living combined with modern amenities. Located in the Murcia region, this vibrant town has transformed into a thriving community that balances traditional Mediterranean charm with contemporary infrastructure. The established international community speaks English widely, making it an accessible choice for foreigners considering a Spanish relocation. With 35 premium properties currently available ranging from €192,000 to €1,095,000, Torre Pacheco offers exceptional value compared to coastal alternatives—approximately 40% less expensive than Spanish island markets. This makes it ideal for buyers seeking investment potential, holiday homes, or permanent relocation. The town attracts retirees, families, and professionals drawn to its combination of affordability, quality of life, and strategic location near blue flag beaches and championship golf courses. Whether you're exploring your first Spanish property purchase or expanding an existing portfolio, Torre Pacheco delivers compelling opportunities without compromising on lifestyle or amenities.",
-  "climate": "Torre Pacheco enjoys a classic Mediterranean climate characterized by 300+ days of annual sunshine and mild winters. Summer temperatures average 28-32°C, perfect for beach days and outdoor activities, while winters remain pleasantly temperate at 10-15°C with minimal rainfall. Spring and autumn present ideal conditions for exploring the region, with comfortable temperatures and reduced tourism crowds. The microclimate benefits from proximity to coastal breezes, moderating extreme heat typical of inland Spanish regions. Rainfall concentrates primarily in autumn and early spring, with dry summers ensuring consistent weather for planning activities. For expats and retirees, the predictable climate requires minimal heating expenses and supports an outdoor lifestyle year-round. The region's sunshine abundance positively impacts mental health and energy levels, contributing to Torre Pacheco's appeal as a long-term residential destination.",
-  "lifestyle": "Daily life in Torre Pacheco revolves around a harmonious blend of Spanish traditions and contemporary international influences. The established expat community means English is commonly spoken in shops, restaurants, and local services, easing transition for newcomers. Local markets overflow with fresh Mediterranean produce, while traditional tapas bars and modern restaurants cater to diverse palates. Weekends often involve trips to the multiple blue flag beaches just 20 minutes away, offering swimming, paddleboarding, and beachside dining. The social calendar includes Spanish fiestas, golf tournaments, and community events that foster connections among residents. Shopping includes modern supermarkets like Mercadona and Lidl alongside authentic local markets, providing both convenience and cultural immersion. The pace of life encourages leisurely lunches, evening paseos (walks), and time with friends—quintessentially Mediterranean. For active residents, championship golf courses, water sports, and hiking opportunities abound nearby. This lifestyle attracts retirees seeking relaxation, families wanting quality time, and professionals balancing work with recreational pursuits in a welcoming, English-friendly environment.",
-  "amenities": {
+  "slug": "torre-pacheco",
+  "name": "Torre Pacheco",
+  "region": "Murcia",
+  "heroImage": "/images/areas/torre-pacheco-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 35,
+  "propertyTypes": [
+    "Villa",
+    "Quad House",
+    "Bungalow",
+    "Penthouse",
+    "Apartment"
+  ],
+  "priceRange": {
+    "min": 192000,
+    "max": 1095000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Torre Pacheco Tourism",
+      "url": "https://www.google.com/search?q=Torre%20Pacheco%20Spain%20official%20website",
+      "description": "Discover more about Torre Pacheco"
+    },
+    "airport": {
+      "name": "Murcia-Corvera Airport",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "15 km",
+      "driveTime": "12 min"
+    },
     "healthcare": {
-      "text": "Healthcare in Torre Pacheco meets international standards with excellent facilities and English-speaking medical professionals readily available. A regional hospital operates within 30 minutes, providing comprehensive emergency and specialist services. Multiple private clinics throughout the area offer faster consultation times and English-language support for expat patients. The healthcare system combines Spain's public provision with accessible private options, allowing residents to choose their preferred approach. Many doctors and dentists have trained internationally and specialize in treating expatriate communities, understanding specific health concerns of foreign residents. Health insurance for expats is affordable and comprehensive, with many providers covering both private and public healthcare access.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes",
-        "Private clinics with English-speaking staff",
-        "Affordable health insurance options",
-        "Internationally trained medical professionals"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping in Torre Pacheco offers excellent variety combining modern convenience with traditional Spanish markets. Major supermarket chains including Mercadona, Lidl, and Consum provide everyday groceries and international products at competitive prices. Local markets burst with fresh produce, seafood, and regional specialties, offering authentic shopping experiences and opportunities to practice Spanish. Shopping centers nearby feature clothing boutiques, pharmacies, and home goods stores. Many international products beloved by expats are stocked in local supermarkets, reducing the need for special ordering. The competitive retail environment keeps prices reasonable, contributing to the town's favorable cost-of-living statistics compared to coastal areas.",
-      "keyPoints": [
-        "Mercadona supermarket chain",
-        "Lidl discount supermarket",
-        "Consum local retailer",
-        "Traditional local markets with fresh produce"
-      ]
-    },
-    "education": {
-      "text": "Families relocating to Torre Pacheco have access to quality education options including international schools offering British curriculum standards. The region hosts several international institutions catering to expatriate families, providing English-language instruction while incorporating Spanish culture and language learning. These schools maintain high academic standards and facilitate integration into both international and local communities. Beyond international schools, Spanish public education provides excellent quality at minimal cost for families seeking cultural immersion. Many schools offer bilingual programs combining Spanish with English instruction, preparing children for global opportunities while maintaining cultural connection.",
-      "keyPoints": [
-        "International schools with British curriculum",
-        "English-language instruction options",
-        "Bilingual education programs",
-        "High academic standards"
-      ]
-    },
-    "sports": {
-      "text": "Torre Pacheco's location provides exceptional sports and leisure opportunities for active residents. Multiple blue flag beaches within 20 minutes offer swimming, paddleboarding, kitesurfing, and beach volleyball throughout the year. Several championship golf courses nearby attract enthusiasts of all skill levels, from beginners to serious competitors. Inland, residents enjoy hiking trails through scenic landscapes, cycling routes, and water sports facilities. Tennis clubs, fitness centers, and sports complexes throughout the town support varied recreational interests. The region's climate enables year-round outdoor activities, making Torre Pacheco ideal for sports-focused expats and retirees seeking active lifestyles.",
-      "keyPoints": [
-        "Multiple blue flag beaches within 20 minutes",
-        "Championship golf courses nearby",
-        "Water sports and beach activities",
-        "Hiking and cycling opportunities"
-      ]
+      "name": "Hospital Los Arcos del Mar Menor",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Los%20Arcos%20del%20Mar%20Menor",
+      "distance": "15 km"
     }
   },
-  "transport": {
-    "overview": "Bus connections link Torre Pacheco to surrounding towns and regional centers, providing affordable public transportation. However, owning a car is recommended for maximum flexibility and independence, particularly for beach trips and exploring the broader region.",
-    "airports": "Alicante-Elche Airport (ALC) operates approximately 60 kilometers away, featuring international flights to Europe and beyond. Murcia International Airport provides alternative access. Both airports connect via motorway, offering 45-90 minute transfers depending on destination.",
-    "driving": "Motorway connections link Torre Pacheco to major regional centers including Murcia, Alicante, and Cartagena. Well-maintained roads facilitate day trips to coastal areas, golf courses, and cultural attractions. The town's central Murcia location provides strategic access to diverse destinations.",
-    "public": "Regular bus services connect Torre Pacheco to nearby towns, beaches, and regional cities. Timetables suit local schedules, operating frequently during peak hours. Regional train connections provide alternatives for longer journeys.",
-    "keyPoints": [
-      "Regular bus connections to regional centers",
-      "Car recommended for flexibility",
-      "Motorway access to Alicante and Murcia",
-      "Approximately 1 hour to nearest beaches by car"
-    ]
-  },
-  "propertyMarket": {
-    "overview": "Torre Pacheco's property market demonstrates strong momentum with 8% year-on-year growth, reflecting increasing investor and expat interest. The inland location offers exceptional value compared to coastal alternatives, attracting shrewd buyers recognizing investment potential. Market fundamentals remain solid with steady rental demand and capital appreciation outlook.",
-    "priceRange": "€192,000 - €1,095,000",
-    "popularTypes": "Villa, Quad House, Bungalow, Penthouse, Apartment",
-    "investment": "Average pricing at €2,200 per square meter presents attractive entry points for investors. Typical 7-night vacation rentals achieve €800, supporting strong rental yields for buy-to-let investors. Capital appreciation of 8% annually outpaces inflation, building long-term wealth. The established expat community ensures consistent rental demand for furnished properties, while the town's development trajectory suggests continued property value growth."
-  },
-  "neighborhoods": [
-    "Centro Histórico: The charming old town center featuring traditional architecture, local restaurants, and authentic Spanish atmosphere with improved modern services",
-    "Zona Residencial Norte: Modern residential development with contemporary villas and apartments, popular with families and expats seeking new construction",
-    "Paseo del Río: Riverside development offering scenic walking paths, restaurants, and parks alongside residential properties with water views",
-    "Zona de Chalets: Established villa neighborhoods featuring larger properties with gardens, appealing to families and retirees seeking space",
-    "Área Comercial Este: Mixed-use zone combining retail, restaurants, and residential properties with convenient shopping and dining access",
-    "Periferia Tranquila: Quieter outer areas with spacious properties and rural character, ideal for buyers preferring countryside living near town amenities"
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Torre Pacheco 2026 | Complete Inland Guide",
+    "metaDescription": "Discover living in Torre Pacheco, Spain. Properties €192,000-€1,095,000. Expat-friendly inland town with beaches, schools & 40% lower costs than islands.",
+    "heroIntro": "Torre Pacheco represents one of Spain's most compelling inland destinations for property buyers and expats seeking authentic Spanish living combined with modern amenities. Located in the Murcia region, this vibrant town has transformed into a thriving community that balances traditional Mediterranean charm with contemporary infrastructure. The established international community speaks English widely, making it an accessible choice for foreigners considering a Spanish relocation. With 35 premium properties currently available ranging from €192,000 to €1,095,000, Torre Pacheco offers exceptional value compared to coastal alternatives—approximately 40% less expensive than Spanish island markets. This makes it ideal for buyers seeking investment potential, holiday homes, or permanent relocation. The town attracts retirees, families, and professionals drawn to its combination of affordability, quality of life, and strategic location near blue flag beaches and championship golf courses. Whether you're exploring your first Spanish property purchase or expanding an existing portfolio, Torre Pacheco delivers compelling opportunities without compromising on lifestyle or amenities.",
+    "lifestyleSection": {
+      "intro": "Daily life in Torre Pacheco revolves around a harmonious blend of Spanish traditions and contemporary international influences. The established expat community means English is commonly spoken in shops, restaurants, and local services, easing transition for newcomers. Local markets overflow with fresh Mediterranean produce, while traditional tapas bars and modern restaurants cater to diverse palates. Weekends often involve trips to the multiple blue flag beaches just 20 minutes away, offering swimming, paddleboarding, and beachside dining. The social calendar includes Spanish fiestas, golf tournaments, and community events that foster connections among residents. Shopping includes modern supermarkets like Mercadona and Lidl alongside authentic local markets, providing both convenience and cultural immersion. The pace of life encourages leisurely lunches, evening paseos (walks), and time with friends—quintessentially Mediterranean. For active residents, championship golf courses, water sports, and hiking opportunities abound nearby. This lifestyle attracts retirees seeking relaxation, families wanting quality time, and professionals balancing work with recreational pursuits in a welcoming, English-friendly environment.\n\nTorre Pacheco enjoys a classic Mediterranean climate characterized by 300+ days of annual sunshine and mild winters. Summer temperatures average 28-32°C, perfect for beach days and outdoor activities, while winters remain pleasantly temperate at 10-15°C with minimal rainfall. Spring and autumn present ideal conditions for exploring the region, with comfortable temperatures and reduced tourism crowds. The microclimate benefits from proximity to coastal breezes, moderating extreme heat typical of inland Spanish regions. Rainfall concentrates primarily in autumn and early spring, with dry summers ensuring consistent weather for planning activities. For expats and retirees, the predictable climate requires minimal heating expenses and supports an outdoor lifestyle year-round. The region's sunshine abundance positively impacts mental health and energy levels, contributing to Torre Pacheco's appeal as a long-term residential destination.",
+      "highlights": [
+        "Exceptional value: 40% less expensive than Spanish island markets with comparable amenities",
+        "Established expat community: English widely spoken with infrastructure supporting international residents",
+        "Strategic location: 20 minutes to blue flag beaches, 60 minutes to Alicante airport, good motorway access",
+        "Strong rental market: €800 typical weekly rental supports consistent investment returns",
+        "Diverse property options: Villas, penthouses, apartments, and bungalows suit varied buyer preferences and budgets",
+        "Healthcare and education: English-speaking medical professionals and international schools support families and retirees"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Torre Pacheco's location provides exceptional sports and leisure opportunities for active residents. Multiple blue flag beaches within 20 minutes offer swimming, paddleboarding, kitesurfing, and beach volleyball throughout the year. Several championship golf courses nearby attract enthusiasts of all skill levels, from beginners to serious competitors. Inland, residents enjoy hiking trails through scenic landscapes, cycling routes, and water sports facilities. Tennis clubs, fitness centers, and sports complexes throughout the town support varied recreational interests. The region's climate enables year-round outdoor activities, making Torre Pacheco ideal for sports-focused expats and retirees seeking active lifestyles.",
+      "dining": "Torre Pacheco offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping in Torre Pacheco offers excellent variety combining modern convenience with traditional Spanish markets. Major supermarket chains including Mercadona, Lidl, and Consum provide everyday groceries and international products at competitive prices. Local markets burst with fresh produce, seafood, and regional specialties, offering authentic shopping experiences and opportunities to practice Spanish. Shopping centers nearby feature clothing boutiques, pharmacies, and home goods stores. Many international products beloved by expats are stocked in local supermarkets, reducing the need for special ordering. The competitive retail environment keeps prices reasonable, contributing to the town's favorable cost-of-living statistics compared to coastal areas.",
+      "healthcare": "Healthcare in Torre Pacheco meets international standards with excellent facilities and English-speaking medical professionals readily available. A regional hospital operates within 30 minutes, providing comprehensive emergency and specialist services. Multiple private clinics throughout the area offer faster consultation times and English-language support for expat patients. The healthcare system combines Spain's public provision with accessible private options, allowing residents to choose their preferred approach. Many doctors and dentists have trained internationally and specialize in treating expatriate communities, understanding specific health concerns of foreign residents. Health insurance for expats is affordable and comprehensive, with many providers covering both private and public healthcare access.",
+      "transport": "Bus connections link Torre Pacheco to surrounding towns and regional centers, providing affordable public transportation. However, owning a car is recommended for maximum flexibility and independence, particularly for beach trips and exploring the broader region. Alicante-Elche Airport (ALC) operates approximately 60 kilometers away, featuring international flights to Europe and beyond. Murcia International Airport provides alternative access. Both airports connect via motorway, offering 45-90 minute transfers depending on destination. Motorway connections link Torre Pacheco to major regional centers including Murcia, Alicante, and Cartagena. Well-maintained roads facilitate day trips to coastal areas, golf courses, and cultural attractions. The town's central Murcia location provides strategic access to diverse destinations. Regular bus services connect Torre Pacheco to nearby towns, beaches, and regional cities. Timetables suit local schedules, operating frequently during peak hours. Regional train connections provide alternatives for longer journeys."
+    },
+    "propertyMarketSection": "Torre Pacheco's property market demonstrates strong momentum with 8% year-on-year growth, reflecting increasing investor and expat interest. The inland location offers exceptional value compared to coastal alternatives, attracting shrewd buyers recognizing investment potential. Market fundamentals remain solid with steady rental demand and capital appreciation outlook.\n\nPopular property types include Villa, Quad House, Bungalow, Penthouse, Apartment.\n\nAverage pricing at €2,200 per square meter presents attractive entry points for investors. Typical 7-night vacation rentals achieve €800, supporting strong rental yields for buy-to-let investors. Capital appreciation of 8% annually outpaces inflation, building long-term wealth. The established expat community ensures consistent rental demand for furnished properties, while the town's development trajectory suggests continued property value growth.",
+    "whyLiveHereSection": [
       "Exceptional value: 40% less expensive than Spanish island markets with comparable amenities",
       "Established expat community: English widely spoken with infrastructure supporting international residents",
       "Strategic location: 20 minutes to blue flag beaches, 60 minutes to Alicante airport, good motorway access",
@@ -77,48 +66,350 @@
       "Diverse property options: Villas, penthouses, apartments, and bungalows suit varied buyer preferences and budgets",
       "Healthcare and education: English-speaking medical professionals and international schools support families and retirees"
     ],
-    "cons": [
-      "Inland location: Lack of direct beachfront means short drives necessary for beach activities, though this supports affordability",
-      "Car dependency: Public transport exists but car ownership recommended for full flexibility and lifestyle convenience",
-      "Climate extremes: Summer heat can occasionally reach 35°C+, requiring air conditioning and hydration precautions"
+    "faqs": [
+      {
+        "question": "Is Torre Pacheco a good place to live?",
+        "answer": "Yes, absolutely. Torre Pacheco combines affordability, excellent amenities, and an established expat community. With properties 40% cheaper than Spanish islands, quality healthcare, international schools, and proximity to beaches and golf courses, it suits retirees, families, and professionals. The English-friendly environment and strong rental market make it ideal for both permanent residence and investment purposes."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can freely purchase property in Spain without requiring Spanish citizenship or residency. You'll need an NIE (tax identification number) and should consult with a Spanish property lawyer to navigate legal requirements. Most transactions proceed smoothly with proper documentation and professional guidance. Many estate agents in Torre Pacheco specialize in assisting international buyers through this process."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Beyond the purchase price, expect additional costs including: transfer tax (6-10%), notary fees (1-2%), registry fees (0.5-1%), and legal fees (1-3%). Total acquisition costs typically range 8-15% of property price. In Torre Pacheco, with properties averaging €2,200 per square meter, budgeting accordingly ensures smooth transactions without financial surprises."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "No visa is required specifically to purchase property. However, residency status depends on your nationality and intended stay duration. EU citizens enjoy freedom of movement. Non-EU citizens should check current visa requirements for Spain. Property purchase doesn't automatically grant residency, though the 'Golden Visa' program offers residency for qualifying investments (typically €500,000+)."
+      },
+      {
+        "question": "What is the cost of living in Costa Blanca?",
+        "answer": "Torre Pacheco offers particularly favorable living costs compared to coastal Costa Blanca areas. Monthly expenses for couples average €1,200-€1,800 including rent/mortgage, utilities, groceries, and dining. Healthcare costs are minimal with affordable insurance. Local restaurants offer menu del día (daily set menu) lunches at €8-€12. Supermarkets like Mercadona provide excellent value on groceries, making Torre Pacheco one of Spain's most affordable regions."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Excellent choice for retirees. The Mediterranean climate requires minimal heating, healthcare is accessible and affordable, and English-speaking communities ease transition. Torre Pacheco specifically attracts retirees with affordable property, established expat infrastructure, proximity to beaches and golf courses, and quality of life. Many retirees achieve comfortable lifestyles on modest pensions through cost advantages and currency benefits."
+      },
+      {
+        "question": "How far is Costa Blanca from the UK?",
+        "answer": "Approximately 1,200 kilometers (750 miles) separates the UK from Costa Blanca. Direct flights from major UK airports to Alicante average 2.5-3 hours flight time. Regular budget airline services keep costs reasonable for frequent visitors. Many UK expats maintain dual residency, splitting time between Spain and home."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Costa Blanca enjoys Mediterranean climate with 300+ annual sunshine hours. Summers (June-September) reach 28-32°C, ideal for beach activities. Winters (December-February) remain mild at 10-15°C with minimal freezing. Spring and autumn offer pleasant 18-22°C temperatures. Rainfall concentrates in autumn-spring months. Torre Pacheco's inland position moderates coastal temperature extremes while maintaining sunshine benefits, creating ideal conditions for outdoor living year-round."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Torre Pacheco? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "5-7%",
+      "annualAppreciation": "4-6%",
+      "overview": "Average pricing at €2,200 per square meter presents attractive entry points for investors. Typical 7-night vacation rentals achieve €800, supporting strong rental yields for buy-to-let investors. Capital appreciation of 8% annually outpaces inflation, building long-term wealth. The established expat community ensures consistent rental demand for furnished properties, while the town's development trajectory suggests continued property value growth.",
+      "highlights": [
+        "Golf properties command premium rental rates year-round",
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Torre Pacheco are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Torre Pacheco offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Torre Pacheco celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Torre Pacheco have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school offering GCSE and A-Levels with strong extracurricular programmes"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "International (British)",
+          "distance": "25-45 min",
+          "description": "British curriculum primary and secondary school serving the international community"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Torre Pacheco offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Championship Golf",
+          "type": "Golf",
+          "description": "Access to world-class golf courses with championship layouts, practice facilities, and clubhouse dining"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Torre Pacheco has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Torre Pacheco",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Morning Golf",
+          "description": "Head to the course for a relaxing round of golf, enjoying the perfectly maintained greens and warm sunshine"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.9547!3d37.7433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Torre Pacheco",
+    "description": "Torre Pacheco is a  municipality in Murcia, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.7433",
+      "longitude": "-0.9547"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Torre Pacheco",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Murcia"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Torre Pacheco a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. Torre Pacheco combines affordability, excellent amenities, and an established expat community. With properties 40% cheaper than Spanish islands, quality healthcare, international schools, and proximity to beaches and golf courses, it suits retirees, families, and professionals. The "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can freely purchase property in Spain without requiring Spanish citizenship or residency. You'll need an NIE (tax identification number) and should consult with a Spanish property lawyer to navigate legal requirements. Most transactions proceed smoothly with proper documentation and "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond the purchase price, expect additional costs including: transfer tax (6-10%), notary fees (1-2%), registry fees (0.5-1%), and legal fees (1-3%). Total acquisition costs typically range 8-15% of property price. In Torre Pacheco, with properties averaging €2,200 per square meter, budgeting accor"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No visa is required specifically to purchase property. However, residency status depends on your nationality and intended stay duration. EU citizens enjoy freedom of movement. Non-EU citizens should check current visa requirements for Spain. Property purchase doesn't automatically grant residency, t"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Costa Blanca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Torre Pacheco offers particularly favorable living costs compared to coastal Costa Blanca areas. Monthly expenses for couples average €1,200-€1,800 including rent/mortgage, utilities, groceries, and dining. Healthcare costs are minimal with affordable insurance. Local restaurants offer menu del día "
+        }
+      }
     ]
   },
-  "faqs": [
-    {
-      "question": "Is Torre Pacheco a good place to live?",
-      "answer": "Yes, absolutely. Torre Pacheco combines affordability, excellent amenities, and an established expat community. With properties 40% cheaper than Spanish islands, quality healthcare, international schools, and proximity to beaches and golf courses, it suits retirees, families, and professionals. The English-friendly environment and strong rental market make it ideal for both permanent residence and investment purposes."
-    },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can freely purchase property in Spain without requiring Spanish citizenship or residency. You'll need an NIE (tax identification number) and should consult with a Spanish property lawyer to navigate legal requirements. Most transactions proceed smoothly with proper documentation and professional guidance. Many estate agents in Torre Pacheco specialize in assisting international buyers through this process."
-    },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Beyond the purchase price, expect additional costs including: transfer tax (6-10%), notary fees (1-2%), registry fees (0.5-1%), and legal fees (1-3%). Total acquisition costs typically range 8-15% of property price. In Torre Pacheco, with properties averaging €2,200 per square meter, budgeting accordingly ensures smooth transactions without financial surprises."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "No visa is required specifically to purchase property. However, residency status depends on your nationality and intended stay duration. EU citizens enjoy freedom of movement. Non-EU citizens should check current visa requirements for Spain. Property purchase doesn't automatically grant residency, though the 'Golden Visa' program offers residency for qualifying investments (typically €500,000+)."
-    },
-    {
-      "question": "What is the cost of living in Costa Blanca?",
-      "answer": "Torre Pacheco offers particularly favorable living costs compared to coastal Costa Blanca areas. Monthly expenses for couples average €1,200-€1,800 including rent/mortgage, utilities, groceries, and dining. Healthcare costs are minimal with affordable insurance. Local restaurants offer menu del día (daily set menu) lunches at €8-€12. Supermarkets like Mercadona provide excellent value on groceries, making Torre Pacheco one of Spain's most affordable regions."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Excellent choice for retirees. The Mediterranean climate requires minimal heating, healthcare is accessible and affordable, and English-speaking communities ease transition. Torre Pacheco specifically attracts retirees with affordable property, established expat infrastructure, proximity to beaches and golf courses, and quality of life. Many retirees achieve comfortable lifestyles on modest pensions through cost advantages and currency benefits."
-    },
-    {
-      "question": "How far is Costa Blanca from the UK?",
-      "answer": "Approximately 1,200 kilometers (750 miles) separates the UK from Costa Blanca. Direct flights from major UK airports to Alicante average 2.5-3 hours flight time. Regular budget airline services keep costs reasonable for frequent visitors. Many UK expats maintain dual residency, splitting time between Spain and home."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Costa Blanca enjoys Mediterranean climate with 300+ annual sunshine hours. Summers (June-September) reach 28-32°C, ideal for beach activities. Winters (December-February) remain mild at 10-15°C with minimal freezing. Spring and autumn offer pleasant 18-22°C temperatures. Rainfall concentrates in autumn-spring months. Torre Pacheco's inland position moderates coastal temperature extremes while maintaining sunshine benefits, creating ideal conditions for outdoor living year-round."
-    }
-  ],
-  "slug": "torre-pacheco",
-  "town": "Torre Pacheco",
-  "propertyCount": 35,
-  "generatedAt": "2026-02-05T23:05:43.767Z"
+  "golf": {
+    "intro": "Torre Pacheco offers excellent access to championship golf courses, with multiple facilities within 15 minutes. The area provides convenient golfing with authentic Murcia region lifestyle. Extended Mediterranean playing season ensures year-round golf opportunities.",
+    "courses": [
+      {
+        "name": "Roda Golf Club",
+        "distance": "10 km",
+        "driveTime": "14 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Roda+Golf+Club",
+        "description": "Modern course featuring quality layout and comprehensive facilities for all skill levels"
+      },
+      {
+        "name": "Serena Golf Club",
+        "distance": "12 km",
+        "driveTime": "17 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Serena+Golf+Club",
+        "description": "Championship course with scenic design, quality facilities, and professional coaching available"
+      },
+      {
+        "name": "Hacienda del Álamo Golf Resort",
+        "distance": "18 km",
+        "driveTime": "25 minutes",
+        "holes": 18,
+        "url": "https://www.haciendadelalamogolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Hacienda+del+Alamo+Golf",
+        "description": "Luxury resort course with championship layout, spa facilities, and dining options"
+      }
+    ]
+  }
 }

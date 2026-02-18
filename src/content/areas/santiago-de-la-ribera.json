@@ -1,75 +1,68 @@
 {
-  "metaTitle": "Living in Santiago de la Ribera 2026 | Property Guide",
-  "metaDescription": "Discover Santiago de la Ribera: villas from €369,900, established expat community, Blue Flag beaches. Complete living guide for 2026.",
-  "heroIntro": "Santiago de la Ribera is an emerging inland Spanish destination that offers an authentic blend of Mediterranean lifestyle with modern amenities. Nestled in a region known for its natural beauty and welcoming international community, this charming town attracts families, retirees, and property investors seeking value without sacrificing quality of life. With properties ranging from €369,900 to €409,900, Santiago de la Ribera represents a compelling alternative to more saturated coastal markets, offering 40% savings compared to Spanish island markets. The town benefits from an established expatriate community where English is commonly spoken, making integration seamless for foreign buyers. Whether you're seeking a permanent residence, holiday home, or investment opportunity, Santiago de la Ribera delivers exceptional value, reliable rental yields of €800 per week, and access to world-class amenities within minutes.",
-  "climate": "Santiago de la Ribera enjoys a Mediterranean climate with over 300 days of sunshine annually. Summers are warm and dry, with temperatures typically ranging from 28-32°C (82-90°F), while winters remain mild at 10-15°C (50-59°F). Spring and autumn are particularly pleasant, offering perfect conditions for outdoor activities and exploration. The region rarely experiences harsh weather, making it ideal year-round living. The area benefits from cooling sea breezes despite being inland, and rainfall is minimal during summer months. This consistent, favorable climate supports an active outdoor lifestyle with golf, water sports, and beach activities available throughout the year.",
-  "lifestyle": "Life in Santiago de la Ribera revolves around authentic Spanish culture mixed with international sophistication. Daily routines include visiting vibrant local markets like Mercadona, Lidl, and Consum for fresh produce and essentials, followed by leisurely meals at traditional tapas bars and modern restaurants. The established expatriate community creates a welcoming environment where English is widely spoken, easing social integration. Weekends often involve drives to multiple Blue Flag beaches just 20 minutes away for swimming and water sports, or rounds at championship golf courses nearby. The town maintains a slower pace than coastal resorts while offering contemporary conveniences. Evening paseos through the town center, socializing with neighbors, and participation in community events define the relaxed Mediterranean rhythm. Both retirees and working families thrive here, appreciating the balance between peaceful living and accessible modern infrastructure.",
-  "amenities": {
-    "healthcare": {
-      "text": "Healthcare in Santiago de la Ribera meets international standards with excellent accessibility. A regional hospital operates within 30 minutes' drive, complemented by private clinics offering specialized services. The area maintains a strong presence of English-speaking doctors, ensuring clear communication for foreign residents. Private healthcare options provide shorter waiting times and personalized care, while the public system offers comprehensive coverage for Spanish residents and eligible foreign property owners. Preventive care, dental services, and emergency facilities are readily available.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes",
-        "Private clinics with specialist services",
-        "English-speaking medical professionals",
-        "Comprehensive emergency facilities"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping in Santiago de la Ribera combines modern supermarkets with traditional Spanish markets. Mercadona, Lidl, and Consum supermarkets provide daily essentials and international products, with competitive pricing and convenient locations. Local markets offer fresh seasonal produce, seafood, and artisanal goods at authentic prices. The established shopping infrastructure caters to both Spanish and international tastes, with many stores stocking familiar brands alongside local specialties. Shopping is accessible by car or bus, with ample parking available.",
-      "keyPoints": [
-        "Mercadona supermarket",
-        "Lidl discount chain",
-        "Consum local stores",
-        "Traditional markets with fresh produce"
-      ]
-    },
-    "education": {
-      "text": "Santiago de la Ribera provides excellent educational options for families with international schools in the region offering British curriculum and other international programs. These institutions serve the expatriate community while maintaining high academic standards and modern facilities. The proximity to larger regional centers provides additional schooling alternatives. International schools ensure children can pursue familiar educational pathways while gaining Spanish language skills and cultural exposure.",
-      "keyPoints": [
-        "International schools with British curriculum",
-        "Qualified, experienced teaching staff",
-        "Modern educational facilities",
-        "Strong expatriate family community"
-      ]
-    },
-    "sports": {
-      "text": "Sports and leisure enthusiasts will find Santiago de la Ribera an ideal location with multiple Blue Flag beaches situated within 20 minutes' drive. These pristine beaches offer swimming, water sports, beach clubs, and family-friendly amenities. Golf aficionados have access to several championship courses nearby, ranging from beginner-friendly layouts to challenging professional-standard greens. Beyond beaches and golf, the region supports hiking, cycling, water sports, and tennis facilities, creating diverse recreational opportunities throughout the year.",
-      "keyPoints": [
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Championship golf courses",
-        "Water sports and beach clubs",
-        "Hiking and cycling trails"
-      ]
-    }
+  "slug": "santiago-de-la-ribera",
+  "name": "Santiago de la Ribera",
+  "region": "Murcia",
+  "heroImage": "/images/areas/santiago-de-la-ribera-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 2,
+  "propertyTypes": [
+    "Villa - Spacious detached properties with private gardens and pools",
+    "ideal for families and those seeking privacy and outdoor living space."
+  ],
+  "priceRange": {
+    "min": 369900,
+    "max": 409900
   },
-  "transport": {
-    "overview": "Bus connections are available throughout Santiago de la Ribera and connecting to nearby towns, making car-free living possible for those comfortable with public transport. However, a car is recommended for maximum flexibility, especially for accessing beaches, golf courses, and surrounding attractions. The region benefits from good road infrastructure and motorway connections.",
-    "airports": "Alicante-Elche Airport is approximately 60 kilometers away, offering numerous European connections and budget airline options. Valencia Airport is about 120 kilometers distant. Both airports provide convenient access for international travel and visiting friends and family.",
-    "driving": "Santiago de la Ribera enjoys excellent motorway connections linking to major Spanish destinations. Local roads are well-maintained, and driving distances to beaches, golf courses, and regional centers are short. The town center remains navigable with adequate parking, while countryside driving unveils scenic routes through inland Spain.",
-    "public": "Bus services connect Santiago de la Ribera to neighboring towns and regional hubs. While reliable for regular commutes, bus frequencies vary. The established infrastructure supports residents without personal vehicles, though flexibility remains limited compared to car ownership.",
-    "keyPoints": [
-      "Bus connections to local and regional destinations",
-      "Car recommended for leisure activities and flexibility",
-      "Alicante Airport: 60 km away",
-      "Excellent motorway access to major Spanish cities"
+  "externalLinks": {
+    "tourism": {
+      "name": "Santiago de la Ribera Tourism",
+      "url": "https://www.google.com/search?q=Santiago%20de%20la%20Ribera%20Spain%20official%20website",
+      "description": "Discover more about Santiago de la Ribera"
+    },
+    "airport": {
+      "name": "Murcia-Corvera Airport",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "25 km",
+      "driveTime": "18 min"
+    },
+    "healthcare": {
+      "name": "Hospital Los Arcos del Mar Menor",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Los%20Arcos%20del%20Mar%20Menor",
+      "distance": "5 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+Santiago%20de%20la%20Ribera+Spain",
+        "description": "Beautiful Mediterranean beach nearby"
+      }
     ]
   },
-  "propertyMarket": {
-    "overview": "Santiago de la Ribera's property market demonstrates healthy momentum with year-on-year growth of 8%, indicating strengthening demand and appreciation potential. The market remains underdeveloped compared to coastal alternatives, offering significant opportunity for early investors. Properties consistently attract international buyers seeking value and lifestyle quality.",
-    "priceRange": "€369,900 - €409,900",
-    "popularTypes": "Villa - Spacious detached properties with private gardens and pools, ideal for families and those seeking privacy and outdoor living space.",
-    "investment": "Santiago de la Ribera offers compelling rental yields with typical 7-night vacation rentals commanding €800, translating to strong annual returns. The established expatriate community and international appeal support consistent holiday bookings. Long-term capital appreciation appears favorable given the 8% annual growth trend and relative affordability compared to coastal markets. Properties are 40% less expensive than Spanish island markets, providing excellent entry valuations."
-  },
-  "neighborhoods": [
-    "Central Santiago: The heart of the town featuring traditional architecture, local shops, restaurants, and community amenities. Convenient for accessing all services and enjoying authentic Spanish town life.",
-    "Beachside District: Properties positioned closer to the multiple Blue Flag beaches within 20 minutes, ideal for water sports enthusiasts and families prioritizing beach access.",
-    "Golf Communities: Developments near championship golf courses, perfect for golf enthusiasts seeking resort-style living with direct course access and clubhouse facilities.",
-    "Residential Villas: Suburban villa communities with spacious plots, pools, and gardens, popular with families and retirees seeking privacy and outdoor entertaining space.",
-    "Waterfront Areas: Properties near inland water features and parks, offering scenic views and peaceful settings while maintaining accessibility to town services.",
-    "Mixed Heritage Zones: Areas blending traditional Spanish charm with modern renovated properties, appealing to those wanting character homes with contemporary comforts."
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Santiago de la Ribera 2026 | Property Guide",
+    "metaDescription": "Discover Santiago de la Ribera: villas from €369,900, established expat community, Blue Flag beaches. Complete living guide for 2026.",
+    "heroIntro": "Santiago de la Ribera is an emerging inland Spanish destination that offers an authentic blend of Mediterranean lifestyle with modern amenities. Nestled in a region known for its natural beauty and welcoming international community, this charming town attracts families, retirees, and property investors seeking value without sacrificing quality of life. With properties ranging from €369,900 to €409,900, Santiago de la Ribera represents a compelling alternative to more saturated coastal markets, offering 40% savings compared to Spanish island markets. The town benefits from an established expatriate community where English is commonly spoken, making integration seamless for foreign buyers. Whether you're seeking a permanent residence, holiday home, or investment opportunity, Santiago de la Ribera delivers exceptional value, reliable rental yields of €800 per week, and access to world-class amenities within minutes.",
+    "lifestyleSection": {
+      "intro": "Life in Santiago de la Ribera revolves around authentic Spanish culture mixed with international sophistication. Daily routines include visiting vibrant local markets like Mercadona, Lidl, and Consum for fresh produce and essentials, followed by leisurely meals at traditional tapas bars and modern restaurants. The established expatriate community creates a welcoming environment where English is widely spoken, easing social integration. Weekends often involve drives to multiple Blue Flag beaches just 20 minutes away for swimming and water sports, or rounds at championship golf courses nearby. The town maintains a slower pace than coastal resorts while offering contemporary conveniences. Evening paseos through the town center, socializing with neighbors, and participation in community events define the relaxed Mediterranean rhythm. Both retirees and working families thrive here, appreciating the balance between peaceful living and accessible modern infrastructure.\n\nSantiago de la Ribera enjoys a Mediterranean climate with over 300 days of sunshine annually. Summers are warm and dry, with temperatures typically ranging from 28-32°C (82-90°F), while winters remain mild at 10-15°C (50-59°F). Spring and autumn are particularly pleasant, offering perfect conditions for outdoor activities and exploration. The region rarely experiences harsh weather, making it ideal year-round living. The area benefits from cooling sea breezes despite being inland, and rainfall is minimal during summer months. This consistent, favorable climate supports an active outdoor lifestyle with golf, water sports, and beach activities available throughout the year.",
+      "highlights": [
+        "40% cheaper than Spanish island alternatives, offering exceptional value",
+        "Established expatriate community with English widely spoken, easing integration",
+        "8% year-on-year market growth indicating strong investment potential",
+        "Multiple Blue Flag beaches and championship golf courses within 20 minutes",
+        "Strong rental yields with €800 typical weekly vacation rates",
+        "Mediterranean climate with 300+ days of sunshine annually"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Sports and leisure enthusiasts will find Santiago de la Ribera an ideal location with multiple Blue Flag beaches situated within 20 minutes' drive. These pristine beaches offer swimming, water sports, beach clubs, and family-friendly amenities. Golf aficionados have access to several championship courses nearby, ranging from beginner-friendly layouts to challenging professional-standard greens. Beyond beaches and golf, the region supports hiking, cycling, water sports, and tennis facilities, creating diverse recreational opportunities throughout the year.",
+      "dining": "Santiago de la Ribera offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping in Santiago de la Ribera combines modern supermarkets with traditional Spanish markets. Mercadona, Lidl, and Consum supermarkets provide daily essentials and international products, with competitive pricing and convenient locations. Local markets offer fresh seasonal produce, seafood, and artisanal goods at authentic prices. The established shopping infrastructure caters to both Spanish and international tastes, with many stores stocking familiar brands alongside local specialties. Shopping is accessible by car or bus, with ample parking available.",
+      "healthcare": "Healthcare in Santiago de la Ribera meets international standards with excellent accessibility. A regional hospital operates within 30 minutes' drive, complemented by private clinics offering specialized services. The area maintains a strong presence of English-speaking doctors, ensuring clear communication for foreign residents. Private healthcare options provide shorter waiting times and personalized care, while the public system offers comprehensive coverage for Spanish residents and eligible foreign property owners. Preventive care, dental services, and emergency facilities are readily available.",
+      "transport": "Bus connections are available throughout Santiago de la Ribera and connecting to nearby towns, making car-free living possible for those comfortable with public transport. However, a car is recommended for maximum flexibility, especially for accessing beaches, golf courses, and surrounding attractions. The region benefits from good road infrastructure and motorway connections. Alicante-Elche Airport is approximately 60 kilometers away, offering numerous European connections and budget airline options. Valencia Airport is about 120 kilometers distant. Both airports provide convenient access for international travel and visiting friends and family. Santiago de la Ribera enjoys excellent motorway connections linking to major Spanish destinations. Local roads are well-maintained, and driving distances to beaches, golf courses, and regional centers are short. The town center remains navigable with adequate parking, while countryside driving unveils scenic routes through inland Spain. Bus services connect Santiago de la Ribera to neighboring towns and regional hubs. While reliable for regular commutes, bus frequencies vary. The established infrastructure supports residents without personal vehicles, though flexibility remains limited compared to car ownership."
+    },
+    "propertyMarketSection": "Santiago de la Ribera's property market demonstrates healthy momentum with year-on-year growth of 8%, indicating strengthening demand and appreciation potential. The market remains underdeveloped compared to coastal alternatives, offering significant opportunity for early investors. Properties consistently attract international buyers seeking value and lifestyle quality.\n\nPopular property types include Villa - Spacious detached properties with private gardens and pools, ideal for families and those seeking privacy and outdoor living space..\n\nSantiago de la Ribera offers compelling rental yields with typical 7-night vacation rentals commanding €800, translating to strong annual returns. The established expatriate community and international appeal support consistent holiday bookings. Long-term capital appreciation appears favorable given the 8% annual growth trend and relative affordability compared to coastal markets. Properties are 40% less expensive than Spanish island markets, providing excellent entry valuations.",
+    "whyLiveHereSection": [
       "40% cheaper than Spanish island alternatives, offering exceptional value",
       "Established expatriate community with English widely spoken, easing integration",
       "8% year-on-year market growth indicating strong investment potential",
@@ -77,60 +70,372 @@
       "Strong rental yields with €800 typical weekly vacation rates",
       "Mediterranean climate with 300+ days of sunshine annually"
     ],
-    "cons": [
-      "Car strongly recommended despite bus availability, requiring transportation investment",
-      "Limited property selection with only 2 villas currently available in listed market",
-      "Smaller town atmosphere may feel remote for those accustomed to major city convenience"
+    "faqs": [
+      {
+        "question": "Is Santiago de la Ribera a good place to live?",
+        "answer": "Yes, Santiago de la Ribera is an excellent place to live, especially for those prioritizing value, community, and Mediterranean lifestyle. The established expatriate population ensures cultural familiarity with English widely spoken. Properties offer genuine value at 40% below island market prices while delivering strong rental yields and appreciation potential. The combination of beaches, golf, international schools, and English-speaking healthcare makes it ideal for families and retirees."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can freely purchase property in Spain, including EU citizens and non-EU nationals. Spain welcomes international property investment without significant restrictions. EU citizens enjoy equal rights to Spanish nationals. Non-EU citizens may require a Spanish tax identification number (NIF), but no visa is mandatory for property purchase. Professional legal guidance ensures smooth transactions and compliance with Spanish property laws."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Property costs in Santiago de la Ribera range from €369,900 to €409,900 for villas, representing excellent value. Beyond purchase price, expect additional costs including transfer tax (6-10%), notary fees (0.5-1%), and property registration (0.1%). For non-residents, wealth tax applies to Spanish properties. Mortgage options with 80-90% LTV are available through Spanish banks, typically charging 3-5% interest rates. Professional legal and tax advice minimizes hidden costs."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "No visa is required specifically to purchase property in Spain. EU citizens can live and invest freely. Non-EU citizens can buy property without residency, though obtaining a residency visa (like the Non-Lucrative Visa requiring €27,000 annual income) offers benefits including access to healthcare and utilities. Many international property buyers maintain residency in their home countries while owning Spanish properties. Consult with immigration specialists regarding personal visa circumstances."
+      },
+      {
+        "question": "What are the costs of living in Santiago de la Ribera?",
+        "answer": "Living costs in Santiago de la Ribera remain moderate and significantly lower than Northern Europe. Monthly expenses for a couple typically range €1,200-€1,800 including groceries, utilities, and dining out. Healthcare costs are minimal for residents accessing public systems. Property taxes (IBI) average €400-€600 annually. Utilities cost approximately €150-€250 monthly depending on seasonal usage. The area's affordability, combined with excellent services, delivers exceptional value compared to UK or Northern European alternatives."
+      },
+      {
+        "question": "Is Costa Blanca a good place to buy property?",
+        "answer": "Yes, Costa Blanca remains an excellent property investment destination. The region offers diverse neighborhoods from beachfront developments to inland towns like Santiago de la Ribera. Properties range significantly in price, accommodating various budgets. The established international community, excellent climate, and proven rental market support both residential and investment purchases. However, coastal areas command premium prices, making inland locations like Santiago de la Ribera more attractive for value-conscious buyers."
+      },
+      {
+        "question": "What is the cost of living in Costa Blanca?",
+        "answer": "Cost of living varies across Costa Blanca depending on location and lifestyle. Beachfront areas command higher expenses, while inland towns like Santiago de la Ribera offer superior value. Average monthly living costs for couples range €1,200-€2,000 including accommodation, food, and leisure. Groceries cost 30-40% less than UK prices, while dining remains affordable. Healthcare and utilities are economical. Retirees on modest incomes find the region highly affordable, particularly in non-coastal areas."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Costa Blanca is excellent for retirees, offering affordable living, quality healthcare, and active communities. Santiago de la Ribera specifically attracts retirees with its established expatriate community, English-speaking services, and peaceful town atmosphere. Healthcare facilities meet international standards with English-speaking doctors. The Mediterranean climate supports active outdoor lifestyles with golf, beaches, and walking trails. Cost of living accommodates fixed incomes comfortably. Many retirees access Spain's Non-Lucrative Visa requiring just €27,000 annual income."
+      },
+      {
+        "question": "How far is Costa Blanca from the UK?",
+        "answer": "Costa Blanca lies approximately 1,000 kilometers (620 miles) south of the UK. Flight time from London is roughly 2-2.5 hours, with budget airlines offering frequent connections. Ferry routes via France provide alternative travel, requiring 24-36 hours total journey time. Many British expats maintain strong UK connections with regular flights costing €30-€100 each way during competitive periods. The proximity makes weekend trips to the UK feasible, while Spain offers year-round Mediterranean living."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Costa Blanca features a Mediterranean climate with exceptional sunshine—approximately 300+ days annually. Summers (June-September) are warm and dry with temperatures 28-32°C (82-90°F). Winters remain mild at 10-15°C (50-59°F) with occasional rainfall. Spring and autumn offer perfect conditions with temperatures 18-24°C (64-75°F). The region rarely experiences extreme weather or harsh winters. Sea breezes moderate inland temperatures, making Santiago de la Ribera comfortable year-round despite being non-coastal. This consistency supports outdoor activities throughout all seasons."
+      },
+      {
+        "question": "Can I get a mortgage in Spain as a foreigner?",
+        "answer": "Yes, foreigners can obtain mortgages in Spain through Spanish banks. Most banks offer 80-90% loan-to-value ratios for non-residents, though some require 50% down payment for non-EU citizens. Interest rates typically range 3-5%, comparable to UK rates. Requirements include proof of income, valid ID, and a Spanish tax identification number (NIF). Many international buyers work with English-speaking mortgage brokers who navigate banking relationships and documentation. Mortgage terms typically span 20-25 years for residential properties."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Santiago de la Ribera? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "Santiago de la Ribera offers compelling rental yields with typical 7-night vacation rentals commanding €800, translating to strong annual returns. The established expatriate community and international appeal support consistent holiday bookings. Long-term capital appreciation appears favorable given the 8% annual growth trend and relative affordability compared to coastal markets. Properties are 40% less expensive than Spanish island markets, providing excellent entry valuations.",
+      "highlights": [
+        "Strong holiday rental demand during peak season (May-October)",
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Short-term holiday lets popular with European tourists"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Santiago de la Ribera are significantly lower than Northern Europe and very competitive within Spain. Coastal living here combines affordability with Mediterranean lifestyle.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Recommended for flexibility"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Santiago de la Ribera celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "June",
+          "description": "Magical midsummer beach celebrations with bonfires, fireworks, and midnight swimming traditions along the coast"
+        },
+        {
+          "name": "Summer Beach Festival",
+          "month": "July",
+          "description": "Outdoor concerts, food stalls, and cultural events along the waterfront throughout the summer season"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Santiago de la Ribera have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school offering GCSE and A-Levels with strong extracurricular programmes"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "International (British)",
+          "distance": "25-45 min",
+          "description": "British curriculum primary and secondary school serving the international community"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Santiago de la Ribera offers excellent outdoor activities year-round, from beach activities and water sports to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Beach & Swimming",
+          "type": "Beach",
+          "description": "Beautiful Mediterranean beaches nearby with crystal-clear waters, perfect for swimming, snorkelling, and sunbathing"
+        },
+        {
+          "name": "Water Sports",
+          "type": "Water Sports",
+          "description": "Paddleboarding, kayaking, windsurfing, and sailing available at nearby beaches and marinas"
+        },
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Santiago de la Ribera has a thriving international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The coastal location attracts a diverse mix of nationalities, particularly from Northern Europe. English is widely spoken in shops, restaurants, and social settings, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Active international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Santiago de la Ribera",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the sea breeze and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Beach Walk",
+          "description": "Morning stroll along the beach or promenade, breathing in the fresh Mediterranean air"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Beach Time",
+          "description": "Head to the beach for an afternoon swim in the warm Mediterranean waters"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.8083!3d37.7928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Santiago de la Ribera",
+    "description": "Santiago de la Ribera is a coastal municipality in Murcia, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.7928",
+      "longitude": "-0.8083"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santiago de la Ribera",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Murcia"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Santiago de la Ribera a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Santiago de la Ribera is an excellent place to live, especially for those prioritizing value, community, and Mediterranean lifestyle. The established expatriate population ensures cultural familiarity with English widely spoken. Properties offer genuine value at 40% below island market prices w"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can freely purchase property in Spain, including EU citizens and non-EU nationals. Spain welcomes international property investment without significant restrictions. EU citizens enjoy equal rights to Spanish nationals. Non-EU citizens may require a Spanish tax identification number ("
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Property costs in Santiago de la Ribera range from €369,900 to €409,900 for villas, representing excellent value. Beyond purchase price, expect additional costs including transfer tax (6-10%), notary fees (0.5-1%), and property registration (0.1%). For non-residents, wealth tax applies to Spanish pr"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No visa is required specifically to purchase property in Spain. EU citizens can live and invest freely. Non-EU citizens can buy property without residency, though obtaining a residency visa (like the Non-Lucrative Visa requiring €27,000 annual income) offers benefits including access to healthcare a"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of living in Santiago de la Ribera?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Living costs in Santiago de la Ribera remain moderate and significantly lower than Northern Europe. Monthly expenses for a couple typically range €1,200-€1,800 including groceries, utilities, and dining out. Healthcare costs are minimal for residents accessing public systems. Property taxes (IBI) av"
+        }
+      }
     ]
   },
-  "faqs": [
-    {
-      "question": "Is Santiago de la Ribera a good place to live?",
-      "answer": "Yes, Santiago de la Ribera is an excellent place to live, especially for those prioritizing value, community, and Mediterranean lifestyle. The established expatriate population ensures cultural familiarity with English widely spoken. Properties offer genuine value at 40% below island market prices while delivering strong rental yields and appreciation potential. The combination of beaches, golf, international schools, and English-speaking healthcare makes it ideal for families and retirees."
-    },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can freely purchase property in Spain, including EU citizens and non-EU nationals. Spain welcomes international property investment without significant restrictions. EU citizens enjoy equal rights to Spanish nationals. Non-EU citizens may require a Spanish tax identification number (NIF), but no visa is mandatory for property purchase. Professional legal guidance ensures smooth transactions and compliance with Spanish property laws."
-    },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Property costs in Santiago de la Ribera range from €369,900 to €409,900 for villas, representing excellent value. Beyond purchase price, expect additional costs including transfer tax (6-10%), notary fees (0.5-1%), and property registration (0.1%). For non-residents, wealth tax applies to Spanish properties. Mortgage options with 80-90% LTV are available through Spanish banks, typically charging 3-5% interest rates. Professional legal and tax advice minimizes hidden costs."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "No visa is required specifically to purchase property in Spain. EU citizens can live and invest freely. Non-EU citizens can buy property without residency, though obtaining a residency visa (like the Non-Lucrative Visa requiring €27,000 annual income) offers benefits including access to healthcare and utilities. Many international property buyers maintain residency in their home countries while owning Spanish properties. Consult with immigration specialists regarding personal visa circumstances."
-    },
-    {
-      "question": "What are the costs of living in Santiago de la Ribera?",
-      "answer": "Living costs in Santiago de la Ribera remain moderate and significantly lower than Northern Europe. Monthly expenses for a couple typically range €1,200-€1,800 including groceries, utilities, and dining out. Healthcare costs are minimal for residents accessing public systems. Property taxes (IBI) average €400-€600 annually. Utilities cost approximately €150-€250 monthly depending on seasonal usage. The area's affordability, combined with excellent services, delivers exceptional value compared to UK or Northern European alternatives."
-    },
-    {
-      "question": "Is Costa Blanca a good place to buy property?",
-      "answer": "Yes, Costa Blanca remains an excellent property investment destination. The region offers diverse neighborhoods from beachfront developments to inland towns like Santiago de la Ribera. Properties range significantly in price, accommodating various budgets. The established international community, excellent climate, and proven rental market support both residential and investment purchases. However, coastal areas command premium prices, making inland locations like Santiago de la Ribera more attractive for value-conscious buyers."
-    },
-    {
-      "question": "What is the cost of living in Costa Blanca?",
-      "answer": "Cost of living varies across Costa Blanca depending on location and lifestyle. Beachfront areas command higher expenses, while inland towns like Santiago de la Ribera offer superior value. Average monthly living costs for couples range €1,200-€2,000 including accommodation, food, and leisure. Groceries cost 30-40% less than UK prices, while dining remains affordable. Healthcare and utilities are economical. Retirees on modest incomes find the region highly affordable, particularly in non-coastal areas."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Costa Blanca is excellent for retirees, offering affordable living, quality healthcare, and active communities. Santiago de la Ribera specifically attracts retirees with its established expatriate community, English-speaking services, and peaceful town atmosphere. Healthcare facilities meet international standards with English-speaking doctors. The Mediterranean climate supports active outdoor lifestyles with golf, beaches, and walking trails. Cost of living accommodates fixed incomes comfortably. Many retirees access Spain's Non-Lucrative Visa requiring just €27,000 annual income."
-    },
-    {
-      "question": "How far is Costa Blanca from the UK?",
-      "answer": "Costa Blanca lies approximately 1,000 kilometers (620 miles) south of the UK. Flight time from London is roughly 2-2.5 hours, with budget airlines offering frequent connections. Ferry routes via France provide alternative travel, requiring 24-36 hours total journey time. Many British expats maintain strong UK connections with regular flights costing €30-€100 each way during competitive periods. The proximity makes weekend trips to the UK feasible, while Spain offers year-round Mediterranean living."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Costa Blanca features a Mediterranean climate with exceptional sunshine—approximately 300+ days annually. Summers (June-September) are warm and dry with temperatures 28-32°C (82-90°F). Winters remain mild at 10-15°C (50-59°F) with occasional rainfall. Spring and autumn offer perfect conditions with temperatures 18-24°C (64-75°F). The region rarely experiences extreme weather or harsh winters. Sea breezes moderate inland temperatures, making Santiago de la Ribera comfortable year-round despite being non-coastal. This consistency supports outdoor activities throughout all seasons."
-    },
-    {
-      "question": "Can I get a mortgage in Spain as a foreigner?",
-      "answer": "Yes, foreigners can obtain mortgages in Spain through Spanish banks. Most banks offer 80-90% loan-to-value ratios for non-residents, though some require 50% down payment for non-EU citizens. Interest rates typically range 3-5%, comparable to UK rates. Requirements include proof of income, valid ID, and a Spanish tax identification number (NIF). Many international buyers work with English-speaking mortgage brokers who navigate banking relationships and documentation. Mortgage terms typically span 20-25 years for residential properties."
-    }
-  ],
-  "slug": "santiago-de-la-ribera",
-  "town": "Santiago de la Ribera",
-  "propertyCount": 2,
-  "generatedAt": "2026-02-09T14:38:40.812Z"
+  "golf": {
+    "intro": "Santiago de la Ribera is perfectly positioned for golfers, with championship courses within 10 minutes. The coastal area offers convenient access to world-class facilities combined with Mediterranean beach lifestyle. The extended playing season provides year-round golfing opportunities.",
+    "courses": [
+      {
+        "name": "Serena Golf Club",
+        "distance": "8 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Serena+Golf+Club",
+        "description": "Championship course with scenic design, quality facilities, and professional coaching available"
+      },
+      {
+        "name": "Roda Golf Club",
+        "distance": "6 km",
+        "driveTime": "9 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Roda+Golf+Club",
+        "description": "Modern course featuring quality layout and comprehensive facilities for all skill levels"
+      },
+      {
+        "name": "Hacienda del Álamo Golf Resort",
+        "distance": "15 km",
+        "driveTime": "22 minutes",
+        "holes": 18,
+        "url": "https://www.haciendadelalamogolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Hacienda+del+Alamo+Golf",
+        "description": "Luxury resort course with championship layout, spa facilities, and dining options"
+      }
+    ]
+  }
 }

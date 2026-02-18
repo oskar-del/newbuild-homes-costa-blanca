@@ -1,82 +1,384 @@
 {
-  "metaTitle": "Living in Calasparra: Complete Costa Blanca Guide",
-  "metaDescription": "Discover Calasparra, Costa Blanca. New build villas €339,000-€405,000. Perfect for expats seeking Mediterranean lifestyle near Alicante.",
-  "heroIntro": "Calasparra is a charming inland municipality in the Vega Baja region of Costa Blanca, offering an authentic Spanish experience away from the crowded coastal resorts. Located in the province of Alicante, this picturesque town combines traditional Valencian culture with modern amenities, making it an increasingly popular choice for property buyers seeking value and genuine community living. With its proximity to both the Mediterranean coast and major urban centers, Calasparra provides the perfect balance between tranquility and accessibility.\n\nThe area has experienced steady growth in recent years, particularly with new build villa developments attracting both investors and families seeking permanent residency. The local economy is rooted in agriculture, tourism, and increasingly, residential development. Calasparra maintains its authentic Spanish character while gradually modernizing infrastructure and services to meet the needs of international residents. The town's strategic location makes it ideal for those wanting to explore the broader Costa Blanca region while enjoying a quieter, more community-oriented setting.\n\nFor property buyers, Calasparra represents excellent value in the Spanish property market, with quality new build villas available at competitive prices. The area appeals to retirees, remote workers, and families looking for affordable Mediterranean living without sacrificing quality or convenience.",
-  "climate": "Calasparra enjoys a typical Mediterranean climate with over 300 days of sunshine annually. Summers are warm with temperatures reaching 28-32°C (82-90°F), while winters are mild with average temperatures around 10-15°C (50-59°F). Rainfall is relatively low and concentrated mainly in autumn and spring months. The region benefits from the sea breeze effect, which helps moderate summer heat, while the surrounding agricultural landscape provides natural wind breaks. This climate is ideal for outdoor living and enjoying the property's gardens and terraces year-round.",
-  "lifestyle": "Life in Calasparra revolves around authentic Spanish traditions and modern convenience. The town maintains a relaxed Mediterranean pace while offering essential services, quality restaurants, and a growing international community of expats, particularly from Northern Europe and the UK. The local population is warm and welcoming, and the town's size allows residents to develop genuine connections with neighbors and local businesses. Weekly markets, local fiestas, and community events create opportunities for social engagement and cultural immersion.\n\nThe expat community in Calasparra is well-established but not overwhelming, creating a balanced environment where Spanish culture remains central while international residents find support and friendship. Many expats are attracted to the area's affordability, quality of life, and access to healthcare and amenities. The lifestyle here emphasizes outdoor activities, family time, and enjoying Spanish gastronomy, with numerous tapas bars, restaurants, and cafés throughout town. Whether you're seeking an active social scene or quiet, private living, Calasparra accommodates various lifestyle preferences.",
-  "amenities": {
-    "healthcare": "Calasparra has a modern medical center (Centro de Salud) providing primary healthcare, emergency services, and preventative care. For specialized treatments, Alicante's major hospitals, including Hospital General de Alicante and Quirónsalud, are within 45 minutes. Private healthcare options through ASISA, Sanitas, and Adeslas are readily available and popular among expats.",
-    "shopping": "The town center features local supermarkets including Carrefour Express and Lidl, along with traditional Spanish shops for fresh produce, butchery, and bakery items. The weekly market offers fresh vegetables, fruits, and local products every week. For larger shopping needs, the Carrefour and IKEA in nearby Elche (20 km) provide comprehensive retail options.",
-    "dining": "Calasparra offers excellent Spanish gastronomy with numerous restaurants and tapas bars serving regional specialties like arroz a banda and esparellò. Casa Montaña and similar establishments serve traditional Valencian cuisine. The restaurant scene caters to all budgets, from casual family eateries to more upscale dining options. Cafés and bars provide the authentic Spanish social experience.",
-    "sports": "The area features sports facilities including a municipal sports center with swimming pool, tennis courts, and football pitch. Golf enthusiasts have access to nearby courses including Campo de Golf Villamartín (25 km away) and Club de Golf Las Ramblas. The nearby coastal towns of Guardamar del Segura and Torrevieja offer beautiful beaches for swimming and water sports, just 25-30 km away. Cycling and walking trails through the agricultural landscape are popular recreational activities."
-  },
-  "transport": {
-    "airports": "Alicante-Elche Airport (ALC) is approximately 45 km away with flight times of 15-20 minutes. Valencia Airport (VLC) is 120 km distant, approximately 1.5 hours by car. Both airports serve numerous European destinations with regular budget and traditional carrier flights. Private car rental is readily available at both airports.",
-    "driving": "Calasparra is well-connected via the N-332 highway, providing easy access to the broader Costa Blanca region. The A-7 autopista connects Alicante and Murcia, with access points approximately 20 minutes away. Road conditions are generally excellent, and driving is the most practical transportation method for residents. The drive to Alicante city center takes approximately 45 minutes.",
-    "public": "Public bus services operate through ALSA and local providers, connecting Calasparra to nearby towns including Alicante, Elche, and Torrevieja. Train services are available via Cercanías from nearby Elche station. However, most residents rely on private vehicles for daily transportation. Taxis and ride-sharing services are available but less frequent than in larger cities."
-  },
-  "propertyMarket": {
-    "overview": "Calasparra's property market is characterized by steady growth and excellent value compared to coastal Costa Blanca areas. The market is moving from traditional Spanish properties toward modern new build developments targeting international buyers. Current conditions favor buyers with competitive pricing and good availability. The introduction of quality villa developments has enhanced the area's profile among property investors and lifestyle buyers.",
-    "priceRange": "€339,000 - €405,000",
-    "popularTypes": "Villa - Modern new build villas dominate current offerings, featuring contemporary architecture, energy-efficient systems, open-plan living, and outdoor spaces. Most villas include private gardens, parking, and contemporary finishes.",
-    "investment": "Calasparra presents strong investment potential with capital appreciation prospects and rental income opportunities. The growing expat community and affordable pricing compared to coastal areas creates favorable conditions for holiday rental businesses and long-term investment returns. Property values have shown consistent appreciation, with new builds typically maintaining value well. The area's improving infrastructure and services support future demand."
-  },
-  "neighborhoods": [
-    "Urbanización Montealto - Established residential area with mix of properties, close to town center, convenient access to amenities",
-    "New Build Villa Developments - Modern urbanizations featuring contemporary villas with gated security, communal facilities, and quality infrastructure",
-    "Town Center (Centro Histórico) - Traditional area with character properties, walkable to shops and services, authentic Spanish atmosphere",
-    "Agricultural Outskirts - Rural properties and villas on larger plots, offering privacy and countryside views while remaining accessible to town services"
+  "slug": "calasparra",
+  "name": "Calasparra",
+  "region": "Murcia",
+  "heroImage": "/images/areas/calasparra-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 3,
+  "propertyTypes": [
+    "Villa - Modern new build villas dominate current offerings",
+    "featuring contemporary architecture",
+    "energy-efficient systems",
+    "open-plan living",
+    "and outdoor spaces. Most villas include private gardens",
+    "parking",
+    "and contemporary finishes."
   ],
-  "prosAndCons": {
-    "pros": [
+  "priceRange": {
+    "min": 339000,
+    "max": 405000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Calasparra Tourism",
+      "url": "https://www.google.com/search?q=Calasparra%20Spain%20official%20website",
+      "description": "Discover more about Calasparra"
+    },
+    "airport": {
+      "name": "Murcia-Corvera Airport",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "90 km",
+      "driveTime": "60 min"
+    },
+    "healthcare": {
+      "name": "Hospital de la Vega Lorenzo Guirao (Cieza)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20de%20la%20Vega%20Lorenzo%20Guirao%20(Cieza)",
+      "distance": "22 km"
+    }
+  },
+  "content": {
+    "metaTitle": "Living in Calasparra: Complete Costa Blanca Guide",
+    "metaDescription": "Discover Calasparra, Costa Blanca. New build villas €339,000-€405,000. Perfect for expats seeking Mediterranean lifestyle near Alicante.",
+    "heroIntro": "Calasparra is a charming inland municipality in the Vega Baja region of Costa Blanca, offering an authentic Spanish experience away from the crowded coastal resorts. Located in the province of Alicante, this picturesque town combines traditional Valencian culture with modern amenities, making it an increasingly popular choice for property buyers seeking value and genuine community living. With its proximity to both the Mediterranean coast and major urban centers, Calasparra provides the perfect balance between tranquility and accessibility.\n\nThe area has experienced steady growth in recent years, particularly with new build villa developments attracting both investors and families seeking permanent residency. The local economy is rooted in agriculture, tourism, and increasingly, residential development. Calasparra maintains its authentic Spanish character while gradually modernizing infrastructure and services to meet the needs of international residents. The town's strategic location makes it ideal for those wanting to explore the broader Costa Blanca region while enjoying a quieter, more community-oriented setting.\n\nFor property buyers, Calasparra represents excellent value in the Spanish property market, with quality new build villas available at competitive prices. The area appeals to retirees, remote workers, and families looking for affordable Mediterranean living without sacrificing quality or convenience.",
+    "lifestyleSection": {
+      "intro": "Life in Calasparra revolves around authentic Spanish traditions and modern convenience. The town maintains a relaxed Mediterranean pace while offering essential services, quality restaurants, and a growing international community of expats, particularly from Northern Europe and the UK. The local population is warm and welcoming, and the town's size allows residents to develop genuine connections with neighbors and local businesses. Weekly markets, local fiestas, and community events create opportunities for social engagement and cultural immersion.\n\nThe expat community in Calasparra is well-established but not overwhelming, creating a balanced environment where Spanish culture remains central while international residents find support and friendship. Many expats are attracted to the area's affordability, quality of life, and access to healthcare and amenities. The lifestyle here emphasizes outdoor activities, family time, and enjoying Spanish gastronomy, with numerous tapas bars, restaurants, and cafés throughout town. Whether you're seeking an active social scene or quiet, private living, Calasparra accommodates various lifestyle preferences.\n\nCalasparra enjoys a typical Mediterranean climate with over 300 days of sunshine annually. Summers are warm with temperatures reaching 28-32°C (82-90°F), while winters are mild with average temperatures around 10-15°C (50-59°F). Rainfall is relatively low and concentrated mainly in autumn and spring months. The region benefits from the sea breeze effect, which helps moderate summer heat, while the surrounding agricultural landscape provides natural wind breaks. This climate is ideal for outdoor living and enjoying the property's gardens and terraces year-round.",
+      "highlights": [
+        "Exceptional value - New build villas at €339,000-€405,000 offer outstanding quality and location compared to comparable properties on the coast",
+        "Authentic Spanish living - Maintain genuine Spanish culture and community while having increasing international support systems",
+        "Strategic location - Just 45 minutes to Alicante, yet peaceful and quiet; close to beaches, golf, and major attractions",
+        "Excellent climate - Over 300 days of sunshine with mild winters perfect for year-round outdoor living and activities",
+        "Growing infrastructure - Improving amenities, services, and international community while avoiding overcrowded tourist areas"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "The area features sports facilities including a municipal sports center with swimming pool, tennis courts, and football pitch. Golf enthusiasts have access to nearby courses including Campo de Golf Villamartín (25 km away) and Club de Golf Las Ramblas. The nearby coastal towns of Guardamar del Segura and Torrevieja offer beautiful beaches for swimming and water sports, just 25-30 km away. Cycling and walking trails through the agricultural landscape are popular recreational activities.",
+      "dining": "Calasparra offers excellent Spanish gastronomy with numerous restaurants and tapas bars serving regional specialties like arroz a banda and esparellò. Casa Montaña and similar establishments serve traditional Valencian cuisine. The restaurant scene caters to all budgets, from casual family eateries to more upscale dining options. Cafés and bars provide the authentic Spanish social experience.",
+      "shopping": "The town center features local supermarkets including Carrefour Express and Lidl, along with traditional Spanish shops for fresh produce, butchery, and bakery items. The weekly market offers fresh vegetables, fruits, and local products every week. For larger shopping needs, the Carrefour and IKEA in nearby Elche (20 km) provide comprehensive retail options.",
+      "healthcare": "Calasparra has a modern medical center (Centro de Salud) providing primary healthcare, emergency services, and preventative care. For specialized treatments, Alicante's major hospitals, including Hospital General de Alicante and Quirónsalud, are within 45 minutes. Private healthcare options through ASISA, Sanitas, and Adeslas are readily available and popular among expats.",
+      "transport": "Alicante-Elche Airport (ALC) is approximately 45 km away with flight times of 15-20 minutes. Valencia Airport (VLC) is 120 km distant, approximately 1.5 hours by car. Both airports serve numerous European destinations with regular budget and traditional carrier flights. Private car rental is readily available at both airports. Calasparra is well-connected via the N-332 highway, providing easy access to the broader Costa Blanca region. The A-7 autopista connects Alicante and Murcia, with access points approximately 20 minutes away. Road conditions are generally excellent, and driving is the most practical transportation method for residents. The drive to Alicante city center takes approximately 45 minutes. Public bus services operate through ALSA and local providers, connecting Calasparra to nearby towns including Alicante, Elche, and Torrevieja. Train services are available via Cercanías from nearby Elche station. However, most residents rely on private vehicles for daily transportation. Taxis and ride-sharing services are available but less frequent than in larger cities."
+    },
+    "propertyMarketSection": "Calasparra's property market is characterized by steady growth and excellent value compared to coastal Costa Blanca areas. The market is moving from traditional Spanish properties toward modern new build developments targeting international buyers. Current conditions favor buyers with competitive pricing and good availability. The introduction of quality villa developments has enhanced the area's profile among property investors and lifestyle buyers.\n\nPopular property types include Villa - Modern new build villas dominate current offerings, featuring contemporary architecture, energy-efficient systems, open-plan living, and outdoor spaces. Most villas include private gardens, parking, and contemporary finishes..\n\nCalasparra presents strong investment potential with capital appreciation prospects and rental income opportunities. The growing expat community and affordable pricing compared to coastal areas creates favorable conditions for holiday rental businesses and long-term investment returns. Property values have shown consistent appreciation, with new builds typically maintaining value well. The area's improving infrastructure and services support future demand.",
+    "whyLiveHereSection": [
       "Exceptional value - New build villas at €339,000-€405,000 offer outstanding quality and location compared to comparable properties on the coast",
       "Authentic Spanish living - Maintain genuine Spanish culture and community while having increasing international support systems",
       "Strategic location - Just 45 minutes to Alicante, yet peaceful and quiet; close to beaches, golf, and major attractions",
       "Excellent climate - Over 300 days of sunshine with mild winters perfect for year-round outdoor living and activities",
       "Growing infrastructure - Improving amenities, services, and international community while avoiding overcrowded tourist areas"
     ],
-    "cons": [
-      "Less coastal atmosphere - Located inland means no direct beach access; nearest beaches are 25-30 km away requiring short drive",
-      "Smaller town services - While adequate, some specialized services require travel to Alicante; nightlife and entertainment more limited than larger cities",
-      "Spanish language consideration - While many expats and some service providers speak English, fluency is less common than in coastal tourist areas; learning Spanish beneficial"
-    ]
+    "faqs": [
+      {
+        "question": "Is Calasparra a good investment for property buyers?",
+        "answer": "Yes, Calasparra offers excellent investment potential with affordable pricing, capital appreciation prospects, and strong rental income opportunities. The growing expat community, improving infrastructure, and quality new build developments make it an attractive choice for both lifestyle and investment buyers seeking value in the Spanish property market."
+      },
+      {
+        "question": "How far is Calasparra from the beach?",
+        "answer": "Calasparra is approximately 25-30 km from the nearest beaches at Guardamar del Segura and Torrevieja, typically a 20-30 minute drive. While not directly coastal, the proximity allows easy beach access for residents who enjoy Mediterranean water activities."
+      },
+      {
+        "question": "What is the cost of living in Calasparra?",
+        "answer": "Cost of living in Calasparra is significantly lower than coastal Costa Blanca areas. Monthly expenses for a couple might range from €900-1,400 depending on lifestyle choices, including groceries (€300-400), utilities (€150-200), dining out (€200-300), and entertainment. Healthcare through public system is free for residents with legal residency."
+      },
+      {
+        "question": "Do I need to speak Spanish to live in Calasparra?",
+        "answer": "While Spanish fluency is not absolutely necessary, learning basic Spanish significantly enhances your experience and integration into the community. Many service providers speak English, particularly in newer businesses, but healthcare, government services, and daily interactions often require Spanish knowledge. Most expats find learning Spanish enriching and practical."
+      },
+      {
+        "question": "What are the best neighborhoods for new build villas?",
+        "answer": "Modern new build villa developments offer the best contemporary properties with quality finishes and amenities. These urbanizations typically feature gated security, communal facilities, and are strategically located for convenience. The area continues expanding with new projects offering excellent value in the €339,000-€405,000 price range."
+      },
+      {
+        "question": "How accessible is healthcare in Calasparra?",
+        "answer": "Calasparra has a modern medical center providing primary healthcare and emergency services. Specialized treatments are available at major hospitals in Alicante (45 minutes away). Most expats register with the public healthcare system or maintain private health insurance through providers like ASISA or Sanitas for comprehensive coverage."
+      },
+      {
+        "question": "What are the rental income prospects in Calasparra?",
+        "answer": "Calasparra offers growing rental potential with increasing tourist interest and a developing expat community. While not matching peak coastal rental rates, properties can generate consistent income through short-term holiday rentals and long-term expat leases. New build villas with modern amenities are particularly attractive to renters, supporting positive investment returns."
+      },
+      {
+        "question": "How is Calasparra for families with children?",
+        "answer": "Calasparra is very family-friendly with safe streets, community atmosphere, and access to schools and recreational facilities. The town has a sports center with swimming pool and various sports facilities. Proximity to beaches and natural areas provides excellent outdoor activities. The relaxed pace and affordable cost of living make it attractive for families seeking Mediterranean lifestyle while maintaining good value."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Calasparra? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Calasparra presents strong investment potential with capital appreciation prospects and rental income opportunities. The growing expat community and affordable pricing compared to coastal areas creates favorable conditions for holiday rental businesses and long-term investment returns. Property values have shown consistent appreciation, with new builds typically maintaining value well. The area's improving infrastructure and services support future demand.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Calasparra are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Calasparra offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Calasparra celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Calasparra have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school offering GCSE and A-Levels with strong extracurricular programmes"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "International (British)",
+          "distance": "25-45 min",
+          "description": "British curriculum primary and secondary school serving the international community"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Calasparra offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Calasparra has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Calasparra",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-1.7!3d38.2292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Calasparra a good investment for property buyers?",
-      "answer": "Yes, Calasparra offers excellent investment potential with affordable pricing, capital appreciation prospects, and strong rental income opportunities. The growing expat community, improving infrastructure, and quality new build developments make it an attractive choice for both lifestyle and investment buyers seeking value in the Spanish property market."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Calasparra",
+    "description": "Calasparra is a inland municipality in Murcia, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.2292",
+      "longitude": "-1.7"
     },
-    {
-      "question": "How far is Calasparra from the beach?",
-      "answer": "Calasparra is approximately 25-30 km from the nearest beaches at Guardamar del Segura and Torrevieja, typically a 20-30 minute drive. While not directly coastal, the proximity allows easy beach access for residents who enjoy Mediterranean water activities."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Calasparra",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What is the cost of living in Calasparra?",
-      "answer": "Cost of living in Calasparra is significantly lower than coastal Costa Blanca areas. Monthly expenses for a couple might range from €900-1,400 depending on lifestyle choices, including groceries (€300-400), utilities (€150-200), dining out (€200-300), and entertainment. Healthcare through public system is free for residents with legal residency."
-    },
-    {
-      "question": "Do I need to speak Spanish to live in Calasparra?",
-      "answer": "While Spanish fluency is not absolutely necessary, learning basic Spanish significantly enhances your experience and integration into the community. Many service providers speak English, particularly in newer businesses, but healthcare, government services, and daily interactions often require Spanish knowledge. Most expats find learning Spanish enriching and practical."
-    },
-    {
-      "question": "What are the best neighborhoods for new build villas?",
-      "answer": "Modern new build villa developments offer the best contemporary properties with quality finishes and amenities. These urbanizations typically feature gated security, communal facilities, and are strategically located for convenience. The area continues expanding with new projects offering excellent value in the €339,000-€405,000 price range."
-    },
-    {
-      "question": "How accessible is healthcare in Calasparra?",
-      "answer": "Calasparra has a modern medical center providing primary healthcare and emergency services. Specialized treatments are available at major hospitals in Alicante (45 minutes away). Most expats register with the public healthcare system or maintain private health insurance through providers like ASISA or Sanitas for comprehensive coverage."
-    },
-    {
-      "question": "What are the rental income prospects in Calasparra?",
-      "answer": "Calasparra offers growing rental potential with increasing tourist interest and a developing expat community. While not matching peak coastal rental rates, properties can generate consistent income through short-term holiday rentals and long-term expat leases. New build villas with modern amenities are particularly attractive to renters, supporting positive investment returns."
-    },
-    {
-      "question": "How is Calasparra for families with children?",
-      "answer": "Calasparra is very family-friendly with safe streets, community atmosphere, and access to schools and recreational facilities. The town has a sports center with swimming pool and various sports facilities. Proximity to beaches and natural areas provides excellent outdoor activities. The relaxed pace and affordable cost of living make it attractive for families seeking Mediterranean lifestyle while maintaining good value."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Murcia"
     }
-  ],
-  "slug": "calasparra",
-  "town": "Calasparra",
-  "propertyCount": 3,
-  "generatedAt": "2026-02-05T19:24:57.121Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Calasparra a good investment for property buyers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Calasparra offers excellent investment potential with affordable pricing, capital appreciation prospects, and strong rental income opportunities. The growing expat community, improving infrastructure, and quality new build developments make it an attractive choice for both lifestyle and investm"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Calasparra from the beach?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Calasparra is approximately 25-30 km from the nearest beaches at Guardamar del Segura and Torrevieja, typically a 20-30 minute drive. While not directly coastal, the proximity allows easy beach access for residents who enjoy Mediterranean water activities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Calasparra?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cost of living in Calasparra is significantly lower than coastal Costa Blanca areas. Monthly expenses for a couple might range from €900-1,400 depending on lifestyle choices, including groceries (€300-400), utilities (€150-200), dining out (€200-300), and entertainment. Healthcare through public sys"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to speak Spanish to live in Calasparra?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While Spanish fluency is not absolutely necessary, learning basic Spanish significantly enhances your experience and integration into the community. Many service providers speak English, particularly in newer businesses, but healthcare, government services, and daily interactions often require Spani"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the best neighborhoods for new build villas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Modern new build villa developments offer the best contemporary properties with quality finishes and amenities. These urbanizations typically feature gated security, communal facilities, and are strategically located for convenience. The area continues expanding with new projects offering excellent "
+        }
+      }
+    ]
+  }
 }

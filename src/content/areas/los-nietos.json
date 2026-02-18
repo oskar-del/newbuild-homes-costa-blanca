@@ -1,81 +1,396 @@
 {
-  "metaTitle": "Los Nietos Costa Blanca: Complete Living & Property Guide",
-  "metaDescription": "Discover Los Nietos, Costa Blanca's hidden gem. Modern villas, Mediterranean lifestyle, excellent amenities. €359,900 new builds available now.",
-  "heroIntro": "Los Nietos is a charming coastal urbanization located in the Murcia region of Spain's Costa Blanca, representing one of the most sought-after residential destinations for both Spanish families and international property investors. This picturesque Mediterranean community seamlessly blends modern infrastructure with traditional Spanish coastal charm, offering residents a relaxed yet vibrant lifestyle just minutes from pristine beaches and major urban centers. Positioned between the bustling cities of Cartagena and Torrevieja, Los Nietos provides the perfect balance of tranquility and accessibility, making it an ideal choice for those seeking an authentic Costa Blanca experience without sacrificing convenience or modern amenities.\n\nThe urbanization has undergone significant development in recent years, attracting considerable investment and attention from European buyers looking for quality new-build properties in a well-established community. The area is characterized by its friendly, welcoming atmosphere and strong expat community, with residents from across Europe creating a cosmopolitan environment while maintaining the authentic Spanish Mediterranean spirit. Whether you're considering a permanent relocation, a vacation retreat, or an investment property, Los Nietos offers compelling advantages that extend far beyond its competitive property prices.",
-  "climate": "Los Nietos enjoys a typical Mediterranean climate with over 300 days of sunshine annually, making it one of Spain's sunniest destinations. Summers are warm and dry with average temperatures reaching 28-32°C (82-90°F), while winters remain pleasantly mild with averages around 10-15°C (50-59°F). The area receives minimal rainfall, concentrated primarily in autumn and spring months, ensuring residents can enjoy outdoor activities year-round. Sea temperatures range from 13°C in winter to 26°C in summer, perfect for swimming and water sports during the warmer months.",
-  "lifestyle": "Los Nietos embodies the quintessential Mediterranean lifestyle, where beach culture, outdoor dining, and leisure activities form the cornerstone of daily living. The community attracts a diverse, cosmopolitan population including British, German, Scandinavian, and Dutch residents alongside Spanish families, creating a unique multicultural environment. Local restaurants, tapas bars, and beach chiringuitos serve fresh seafood and regional specialties, while friendly locals and established expat networks make integration seamless for newcomers.\n\nDaily life revolves around enjoying the coastal setting—morning beach walks, afternoon siestas, and evening paseos (strolls) through town are cultural touchstones. The area offers a slower pace than nearby urban centers, yet maintains excellent access to shopping, entertainment, and services. The strong expat community has established various clubs, associations, and social groups, making it easy to build meaningful connections. Property owners appreciate the relaxed atmosphere, sense of community, and the opportunity to enjoy outdoor living throughout the year.",
-  "amenities": {
-    "healthcare": "Los Nietos benefits from proximity to excellent healthcare facilities including Hospital Universitario Virgen del Rocío and Hospital Comarcal del Noroeste in nearby Cartagena, approximately 15 km away. The area has modern private clinics offering comprehensive medical services, dental facilities, and pharmacies throughout the urbanization and surrounding towns. Many healthcare professionals in the region speak English, facilitating easy communication for international residents.",
-    "shopping": "Shopping options range from local markets and small retailers within Los Nietos to major commercial centers in nearby Cartagena and La Manga. The weekly market provides fresh produce and local goods, while larger shopping needs are easily met at commercial parks in Cartagena, including Centro Comercial Espiral and numerous supermarkets. International goods and familiar brands are readily available, particularly useful for established expat communities.",
-    "dining": "Los Nietos offers an excellent selection of dining experiences, from beachfront chiringuitos serving fresh paella and seafood to authentic Spanish tapas bars and modern restaurants. The promenade and beach areas feature numerous establishments with Mediterranean specialties, while inland restaurants offer international cuisine catering to the diverse expat population. Fresh fish markets supply local restaurants daily, ensuring quality and authenticity in seafood dishes.",
-    "sports": "The area is a paradise for sports and recreation enthusiasts. Beautiful sandy beaches offer swimming, paddleboarding, and windsurfing opportunities, while the surrounding coastline is ideal for sailing and fishing. Multiple golf courses are within 30 km, including Campoamor Golf Club and La Manga Club, one of Europe's finest golf destinations. Cycling, hiking, and water sports facilities are abundant throughout the region, and the warmer climate allows outdoor activities year-round."
-  },
-  "transport": {
-    "airports": "Los Nietos is well-served by two major airports: Alicante-Elche Airport (approximately 100 km north), Spain's third-largest airport with extensive European connections, and Murcia-San Javier Airport (approximately 40 km west), offering direct flights to major European cities. Both airports provide regular shuttle services, car rental facilities, and reasonable travel times to Los Nietos.",
-    "driving": "Los Nietos benefits from excellent road connections via the N-332 coastal highway and the A-7 motorway, providing rapid access to Cartagena (15 km), Murcia city (50 km), and the broader Costa Blanca region. Modern roads and well-maintained infrastructure ensure smooth driving to nearby cities and attractions. Traveling to Madrid is feasible via the A-3 motorway, approximately 400 km north.",
-    "public": "Public transportation is available through local bus services connecting Los Nietos to Cartagena, Torrevieja, and surrounding municipalities. Regional train services operate from Cartagena and San Javier, connecting to major Spanish cities. While having a private vehicle is convenient, public transport provides a viable alternative for regular commuting and regional travel."
-  },
-  "propertyMarket": {
-    "overview": "Los Nietos' property market is experiencing robust growth, with new-build villas representing premium investment opportunities in an increasingly desirable Costa Blanca location. The market combines modern infrastructure with proven rental potential, attracting both owner-occupiers and investors seeking reliable returns. Properties in Los Nietos appeal to international buyers valuing quality construction, Mediterranean lifestyle, and proximity to established expat communities.",
-    "priceRange": "€359,900 - €359,900",
-    "popularTypes": "Villa",
-    "investment": "New-build villas in Los Nietos offer excellent investment potential due to increasing property demand, strong rental yields from holiday and long-term rentals, and capital appreciation in the thriving Costa Blanca market. The area's appeal to international buyers, established infrastructure, and family-friendly atmosphere support consistent property values. Rental income from holiday visitors and expat relocations provides reliable returns, while the Mediterranean climate and proximity to attractions ensure year-round occupancy opportunities."
-  },
-  "neighborhoods": [
-    "Urbanización Los Nietos Centro - The heart of the community featuring restaurants, shops, and beachfront promenade areas with established infrastructure",
-    "Los Nietos Playa - Prime beachfront neighborhoods offering direct beach access, water sports facilities, and premium properties with sea views",
-    "Residencial Los Nietos - Newer development zones with modern villas, contemporary amenities, and planned community facilities",
-    "Los Nietos Puerto - Marina-adjacent areas providing boat access, water sports, and upscale residential developments"
+  "slug": "los-nietos",
+  "name": "Los Nietos",
+  "region": "Murcia",
+  "heroImage": "/images/areas/los-nietos-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 1,
+  "propertyTypes": [
+    "Villa"
   ],
-  "prosAndCons": {
-    "pros": [
+  "priceRange": {
+    "min": 359900,
+    "max": 359900
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Los Nietos Tourism",
+      "url": "https://www.google.com/search?q=Los%20Nietos%20Spain%20official%20website",
+      "description": "Discover more about Los Nietos"
+    },
+    "airport": {
+      "name": "Murcia-Corvera Airport",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "22 km",
+      "driveTime": "18 min"
+    },
+    "healthcare": {
+      "name": "Hospital General Universitario Santa Lucía (Cartagena)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20General%20Universitario%20Santa%20Luc%C3%ADa%20(Cartagena)",
+      "distance": "18 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+Los%20Nietos+Spain",
+        "description": "Beautiful Mediterranean beach nearby"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Los Nietos Costa Blanca: Complete Living & Property Guide",
+    "metaDescription": "Discover Los Nietos, Costa Blanca's hidden gem. Modern villas, Mediterranean lifestyle, excellent amenities. €359,900 new builds available now.",
+    "heroIntro": "Los Nietos is a charming coastal urbanization located in the Murcia region of Spain's Costa Blanca, representing one of the most sought-after residential destinations for both Spanish families and international property investors. This picturesque Mediterranean community seamlessly blends modern infrastructure with traditional Spanish coastal charm, offering residents a relaxed yet vibrant lifestyle just minutes from pristine beaches and major urban centers. Positioned between the bustling cities of Cartagena and Torrevieja, Los Nietos provides the perfect balance of tranquility and accessibility, making it an ideal choice for those seeking an authentic Costa Blanca experience without sacrificing convenience or modern amenities.\n\nThe urbanization has undergone significant development in recent years, attracting considerable investment and attention from European buyers looking for quality new-build properties in a well-established community. The area is characterized by its friendly, welcoming atmosphere and strong expat community, with residents from across Europe creating a cosmopolitan environment while maintaining the authentic Spanish Mediterranean spirit. Whether you're considering a permanent relocation, a vacation retreat, or an investment property, Los Nietos offers compelling advantages that extend far beyond its competitive property prices.",
+    "lifestyleSection": {
+      "intro": "Los Nietos embodies the quintessential Mediterranean lifestyle, where beach culture, outdoor dining, and leisure activities form the cornerstone of daily living. The community attracts a diverse, cosmopolitan population including British, German, Scandinavian, and Dutch residents alongside Spanish families, creating a unique multicultural environment. Local restaurants, tapas bars, and beach chiringuitos serve fresh seafood and regional specialties, while friendly locals and established expat networks make integration seamless for newcomers.\n\nDaily life revolves around enjoying the coastal setting—morning beach walks, afternoon siestas, and evening paseos (strolls) through town are cultural touchstones. The area offers a slower pace than nearby urban centers, yet maintains excellent access to shopping, entertainment, and services. The strong expat community has established various clubs, associations, and social groups, making it easy to build meaningful connections. Property owners appreciate the relaxed atmosphere, sense of community, and the opportunity to enjoy outdoor living throughout the year.\n\nLos Nietos enjoys a typical Mediterranean climate with over 300 days of sunshine annually, making it one of Spain's sunniest destinations. Summers are warm and dry with average temperatures reaching 28-32°C (82-90°F), while winters remain pleasantly mild with averages around 10-15°C (50-59°F). The area receives minimal rainfall, concentrated primarily in autumn and spring months, ensuring residents can enjoy outdoor activities year-round. Sea temperatures range from 13°C in winter to 26°C in summer, perfect for swimming and water sports during the warmer months.",
+      "highlights": [
+        "Exceptional Mediterranean climate with 300+ days of sunshine annually and mild winters perfect for year-round outdoor living",
+        "Modern new-build villas offering contemporary design, energy efficiency, and attractive pricing in a quality beachfront location",
+        "Vibrant, welcoming expat community with established social networks, clubs, and English-speaking services facilitating integration",
+        "Excellent investment potential through holiday rental income, strong property appreciation, and reliable demand from international buyers",
+        "Perfect balance of beach lifestyle and convenience with immediate access to restaurants, beaches, sports facilities, and nearby urban centers"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "The area is a paradise for sports and recreation enthusiasts. Beautiful sandy beaches offer swimming, paddleboarding, and windsurfing opportunities, while the surrounding coastline is ideal for sailing and fishing. Multiple golf courses are within 30 km, including Campoamor Golf Club and La Manga Club, one of Europe's finest golf destinations. Cycling, hiking, and water sports facilities are abundant throughout the region, and the warmer climate allows outdoor activities year-round.",
+      "dining": "Los Nietos offers an excellent selection of dining experiences, from beachfront chiringuitos serving fresh paella and seafood to authentic Spanish tapas bars and modern restaurants. The promenade and beach areas feature numerous establishments with Mediterranean specialties, while inland restaurants offer international cuisine catering to the diverse expat population. Fresh fish markets supply local restaurants daily, ensuring quality and authenticity in seafood dishes.",
+      "shopping": "Shopping options range from local markets and small retailers within Los Nietos to major commercial centers in nearby Cartagena and La Manga. The weekly market provides fresh produce and local goods, while larger shopping needs are easily met at commercial parks in Cartagena, including Centro Comercial Espiral and numerous supermarkets. International goods and familiar brands are readily available, particularly useful for established expat communities.",
+      "healthcare": "Los Nietos benefits from proximity to excellent healthcare facilities including Hospital Universitario Virgen del Rocío and Hospital Comarcal del Noroeste in nearby Cartagena, approximately 15 km away. The area has modern private clinics offering comprehensive medical services, dental facilities, and pharmacies throughout the urbanization and surrounding towns. Many healthcare professionals in the region speak English, facilitating easy communication for international residents.",
+      "transport": "Los Nietos is well-served by two major airports: Alicante-Elche Airport (approximately 100 km north), Spain's third-largest airport with extensive European connections, and Murcia-San Javier Airport (approximately 40 km west), offering direct flights to major European cities. Both airports provide regular shuttle services, car rental facilities, and reasonable travel times to Los Nietos. Los Nietos benefits from excellent road connections via the N-332 coastal highway and the A-7 motorway, providing rapid access to Cartagena (15 km), Murcia city (50 km), and the broader Costa Blanca region. Modern roads and well-maintained infrastructure ensure smooth driving to nearby cities and attractions. Traveling to Madrid is feasible via the A-3 motorway, approximately 400 km north. Public transportation is available through local bus services connecting Los Nietos to Cartagena, Torrevieja, and surrounding municipalities. Regional train services operate from Cartagena and San Javier, connecting to major Spanish cities. While having a private vehicle is convenient, public transport provides a viable alternative for regular commuting and regional travel."
+    },
+    "propertyMarketSection": "Los Nietos' property market is experiencing robust growth, with new-build villas representing premium investment opportunities in an increasingly desirable Costa Blanca location. The market combines modern infrastructure with proven rental potential, attracting both owner-occupiers and investors seeking reliable returns. Properties in Los Nietos appeal to international buyers valuing quality construction, Mediterranean lifestyle, and proximity to established expat communities.\n\nPopular property types include Villa.\n\nNew-build villas in Los Nietos offer excellent investment potential due to increasing property demand, strong rental yields from holiday and long-term rentals, and capital appreciation in the thriving Costa Blanca market. The area's appeal to international buyers, established infrastructure, and family-friendly atmosphere support consistent property values. Rental income from holiday visitors and expat relocations provides reliable returns, while the Mediterranean climate and proximity to attractions ensure year-round occupancy opportunities.",
+    "whyLiveHereSection": [
       "Exceptional Mediterranean climate with 300+ days of sunshine annually and mild winters perfect for year-round outdoor living",
       "Modern new-build villas offering contemporary design, energy efficiency, and attractive pricing in a quality beachfront location",
       "Vibrant, welcoming expat community with established social networks, clubs, and English-speaking services facilitating integration",
       "Excellent investment potential through holiday rental income, strong property appreciation, and reliable demand from international buyers",
       "Perfect balance of beach lifestyle and convenience with immediate access to restaurants, beaches, sports facilities, and nearby urban centers"
     ],
-    "cons": [
-      "Summer tourism peaks can create crowded beaches and higher rental accommodation costs, potentially affecting year-round resident tranquility during peak season",
-      "While beaches are excellent, the immediate area has limited major cultural institutions compared to larger Spanish cities, requiring travel for specialized entertainment"
-    ]
+    "faqs": [
+      {
+        "question": "What is the cost of living in Los Nietos compared to other Costa Blanca areas?",
+        "answer": "Los Nietos offers competitive pricing compared to popular tourist areas like Benidorm and Torrevieja. Accommodation and property costs are reasonable, particularly for new-build investments. Daily living expenses including food, utilities, and services are moderate, making it affordable for both retirees and working professionals while maintaining quality Mediterranean living standards."
+      },
+      {
+        "question": "Is Los Nietos suitable for families with children?",
+        "answer": "Yes, Los Nietos is excellent for families. The area offers safe neighborhoods, good schools including both Spanish and international options nearby, abundant outdoor activities, and a family-friendly community atmosphere. Beaches are ideal for children, and the relaxed pace of life creates a nurturing environment for young families."
+      },
+      {
+        "question": "What is the rental income potential for properties in Los Nietos?",
+        "answer": "New-build villas in Los Nietos typically generate 5-8% annual rental yields through holiday lettings, with potential for higher returns during peak summer seasons. Long-term rentals to expats and professionals offer stable income with lower seasonal fluctuation, making dual-income strategies viable for property owners."
+      },
+      {
+        "question": "How far is Los Nietos from Alicante and Murcia?",
+        "answer": "Los Nietos is approximately 100 km south of Alicante-Elche Airport (1.5 hours drive) and 50 km south of Murcia city (45 minutes drive). The location provides convenient access to both regional hubs while maintaining a quieter, more relaxed coastal atmosphere away from urban congestion."
+      },
+      {
+        "question": "What documentation is required for non-EU citizens to purchase property in Los Nietos?",
+        "answer": "Non-EU citizens need a Spanish fiscal identification number (NIE), valid identification documentation, and proof of funds for the purchase. It's advisable to engage a Spanish lawyer experienced in property transactions to navigate documentation requirements, property transfer taxes (ITP at approximately 8-10%), and legal procedures specific to your nationality."
+      },
+      {
+        "question": "Are there English-speaking services and expat support in Los Nietos?",
+        "answer": "Yes, Los Nietos has an established expat community with numerous English-speaking professionals including estate agents, lawyers, accountants, and healthcare providers. Various expat groups and associations organize social activities, provide community support, and facilitate integration for newcomers, making relocation straightforward."
+      },
+      {
+        "question": "What is the best time of year to visit or relocate to Los Nietos?",
+        "answer": "Spring (April-May) and autumn (September-October) offer ideal weather with comfortable temperatures and fewer tourists. Summers are hot and crowded with holiday visitors, while winters remain mild and pleasant. Many property buyers prefer spring or autumn for relocating, as they can explore the area during pleasant conditions and establish routines before peak seasons."
+      },
+      {
+        "question": "Can I obtain Spanish residency through property purchase in Los Nietos?",
+        "answer": "Property purchase alone doesn't guarantee residency, but it supports visa applications. EU citizens have freedom of movement rights. Non-EU citizens typically apply for residency through Non-Lucrative Visas (requiring proof of income), Golden Visas (significant investment), or business/professional visas. Consulting with Spanish immigration specialists is essential for understanding eligibility and requirements based on your nationality."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Los Nietos? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "New-build villas in Los Nietos offer excellent investment potential due to increasing property demand, strong rental yields from holiday and long-term rentals, and capital appreciation in the thriving Costa Blanca market. The area's appeal to international buyers, established infrastructure, and family-friendly atmosphere support consistent property values. Rental income from holiday visitors and expat relocations provides reliable returns, while the Mediterranean climate and proximity to attractions ensure year-round occupancy opportunities.",
+      "highlights": [
+        "Strong holiday rental demand during peak season (May-October)",
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Short-term holiday lets popular with European tourists"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Los Nietos are significantly lower than Northern Europe and very competitive within Spain. Coastal living here combines affordability with Mediterranean lifestyle.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Recommended for flexibility"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Los Nietos celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "June",
+          "description": "Magical midsummer beach celebrations with bonfires, fireworks, and midnight swimming traditions along the coast"
+        },
+        {
+          "name": "Summer Beach Festival",
+          "month": "July",
+          "description": "Outdoor concerts, food stalls, and cultural events along the waterfront throughout the summer season"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Los Nietos have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school offering GCSE and A-Levels with strong extracurricular programmes"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "International (British)",
+          "distance": "25-45 min",
+          "description": "British curriculum primary and secondary school serving the international community"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Los Nietos offers excellent outdoor activities year-round, from beach activities and water sports to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Beach & Swimming",
+          "type": "Beach",
+          "description": "Beautiful Mediterranean beaches nearby with crystal-clear waters, perfect for swimming, snorkelling, and sunbathing"
+        },
+        {
+          "name": "Water Sports",
+          "type": "Water Sports",
+          "description": "Paddleboarding, kayaking, windsurfing, and sailing available at nearby beaches and marinas"
+        },
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Los Nietos has a thriving international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The coastal location attracts a diverse mix of nationalities, particularly from Northern Europe. English is widely spoken in shops, restaurants, and social settings, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Active international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Los Nietos",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the sea breeze and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Beach Walk",
+          "description": "Morning stroll along the beach or promenade, breathing in the fresh Mediterranean air"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Beach Time",
+          "description": "Head to the beach for an afternoon swim in the warm Mediterranean waters"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.8244!3d37.6406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "What is the cost of living in Los Nietos compared to other Costa Blanca areas?",
-      "answer": "Los Nietos offers competitive pricing compared to popular tourist areas like Benidorm and Torrevieja. Accommodation and property costs are reasonable, particularly for new-build investments. Daily living expenses including food, utilities, and services are moderate, making it affordable for both retirees and working professionals while maintaining quality Mediterranean living standards."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Los Nietos",
+    "description": "Los Nietos is a coastal municipality in Murcia, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.6406",
+      "longitude": "-0.8244"
     },
-    {
-      "question": "Is Los Nietos suitable for families with children?",
-      "answer": "Yes, Los Nietos is excellent for families. The area offers safe neighborhoods, good schools including both Spanish and international options nearby, abundant outdoor activities, and a family-friendly community atmosphere. Beaches are ideal for children, and the relaxed pace of life creates a nurturing environment for young families."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Los Nietos",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What is the rental income potential for properties in Los Nietos?",
-      "answer": "New-build villas in Los Nietos typically generate 5-8% annual rental yields through holiday lettings, with potential for higher returns during peak summer seasons. Long-term rentals to expats and professionals offer stable income with lower seasonal fluctuation, making dual-income strategies viable for property owners."
-    },
-    {
-      "question": "How far is Los Nietos from Alicante and Murcia?",
-      "answer": "Los Nietos is approximately 100 km south of Alicante-Elche Airport (1.5 hours drive) and 50 km south of Murcia city (45 minutes drive). The location provides convenient access to both regional hubs while maintaining a quieter, more relaxed coastal atmosphere away from urban congestion."
-    },
-    {
-      "question": "What documentation is required for non-EU citizens to purchase property in Los Nietos?",
-      "answer": "Non-EU citizens need a Spanish fiscal identification number (NIE), valid identification documentation, and proof of funds for the purchase. It's advisable to engage a Spanish lawyer experienced in property transactions to navigate documentation requirements, property transfer taxes (ITP at approximately 8-10%), and legal procedures specific to your nationality."
-    },
-    {
-      "question": "Are there English-speaking services and expat support in Los Nietos?",
-      "answer": "Yes, Los Nietos has an established expat community with numerous English-speaking professionals including estate agents, lawyers, accountants, and healthcare providers. Various expat groups and associations organize social activities, provide community support, and facilitate integration for newcomers, making relocation straightforward."
-    },
-    {
-      "question": "What is the best time of year to visit or relocate to Los Nietos?",
-      "answer": "Spring (April-May) and autumn (September-October) offer ideal weather with comfortable temperatures and fewer tourists. Summers are hot and crowded with holiday visitors, while winters remain mild and pleasant. Many property buyers prefer spring or autumn for relocating, as they can explore the area during pleasant conditions and establish routines before peak seasons."
-    },
-    {
-      "question": "Can I obtain Spanish residency through property purchase in Los Nietos?",
-      "answer": "Property purchase alone doesn't guarantee residency, but it supports visa applications. EU citizens have freedom of movement rights. Non-EU citizens typically apply for residency through Non-Lucrative Visas (requiring proof of income), Golden Visas (significant investment), or business/professional visas. Consulting with Spanish immigration specialists is essential for understanding eligibility and requirements based on your nationality."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Murcia"
     }
-  ],
-  "slug": "los-nietos",
-  "town": "Los Nietos",
-  "propertyCount": 1,
-  "generatedAt": "2026-02-05T19:33:56.812Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Los Nietos compared to other Costa Blanca areas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los Nietos offers competitive pricing compared to popular tourist areas like Benidorm and Torrevieja. Accommodation and property costs are reasonable, particularly for new-build investments. Daily living expenses including food, utilities, and services are moderate, making it affordable for both ret"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Los Nietos suitable for families with children?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Los Nietos is excellent for families. The area offers safe neighborhoods, good schools including both Spanish and international options nearby, abundant outdoor activities, and a family-friendly community atmosphere. Beaches are ideal for children, and the relaxed pace of life creates a nurturi"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the rental income potential for properties in Los Nietos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "New-build villas in Los Nietos typically generate 5-8% annual rental yields through holiday lettings, with potential for higher returns during peak summer seasons. Long-term rentals to expats and professionals offer stable income with lower seasonal fluctuation, making dual-income strategies viable "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is Los Nietos from Alicante and Murcia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los Nietos is approximately 100 km south of Alicante-Elche Airport (1.5 hours drive) and 50 km south of Murcia city (45 minutes drive). The location provides convenient access to both regional hubs while maintaining a quieter, more relaxed coastal atmosphere away from urban congestion."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What documentation is required for non-EU citizens to purchase property in Los Nietos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non-EU citizens need a Spanish fiscal identification number (NIE), valid identification documentation, and proof of funds for the purchase. It's advisable to engage a Spanish lawyer experienced in property transactions to navigate documentation requirements, property transfer taxes (ITP at approxima"
+        }
+      }
+    ]
+  }
 }

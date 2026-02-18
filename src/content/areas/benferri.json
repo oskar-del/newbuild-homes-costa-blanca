@@ -1,74 +1,60 @@
 {
-  "metaTitle": "Living in Benferri 2026 | Complete Area Guide & Property",
-  "metaDescription": "Discover living in Benferri, Costa Blanca. Villas from €298,000. International community, beaches, golf & 40% less than island markets.",
-  "heroIntro": "Benferri is a charming inland town on Spain's Costa Blanca that offers an authentic Spanish lifestyle with modern conveniences and an established international community. Located in a peaceful inland setting, this hidden gem attracts discerning buyers seeking value without compromising quality of life. With properties starting at €298,000 and prices 40% lower than coastal island markets, Benferri represents exceptional value for those looking to relocate to Spain.\n\nThe town combines traditional Spanish character with contemporary amenities, including excellent healthcare facilities, international schools, and convenient access to pristine Blue Flag beaches within just 20 minutes. Whether you're considering retirement, investment, or a lifestyle change, Benferri offers the perfect balance of tranquility, affordability, and accessibility that makes it increasingly popular with British and international expats.\n\nThe established expat community ensures English is widely spoken, and locals are welcoming to newcomers. From golfing at championship courses to exploring Mediterranean culture, Benferri provides a rewarding Spanish experience without the premium coastal price tags that characterize popular tourist destinations.",
-  "climate": "Benferri enjoys a Mediterranean climate with warm, dry summers and mild winters, creating an ideal year-round living environment. Summer temperatures typically range from 28-32°C, while winter months remain pleasant at 12-16°C. The region receives approximately 300 days of annual sunshine, making outdoor activities enjoyable throughout most of the year. Spring and autumn offer perfect temperatures for exploring the surrounding countryside and coastal areas. Winter months rarely experience frost, and snow is virtually non-existent. The proximity to both mountains and sea creates a microclimate that moderates temperature extremes, while low rainfall keeps the landscape verdant. This climate makes Benferri particularly attractive for retirees and those seeking to escape harsher northern European winters while maintaining a comfortable living environment.",
-  "lifestyle": "Daily life in Benferri centers around a relaxed Mediterranean rhythm balanced with modern European conveniences. The town hosts vibrant local markets where fresh produce, regional delicacies, and traditional Spanish products are available at competitive prices. Residents enjoy authentic tapas bars, family-run restaurants, and increasingly cosmopolitan dining options catering to the international community. The established English-speaking expat population creates a welcoming environment for newcomers, with numerous social groups, clubs, and community activities. Families appreciate the proximity to excellent schools and child-friendly amenities, while couples and retirees enjoy peaceful walks through charming streets and countryside. Weekend activities include visits to Blue Flag beaches just 20 minutes away, golfing at nearby championship courses, and exploring traditional Spanish villages. The town maintains authentic Spanish character while offering the comfort and familiarity that international residents seek, creating a unique blend of cultures and lifestyles.",
-  "amenities": {
+  "slug": "benferri",
+  "name": "Benferri",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/benferri-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 1,
+  "propertyTypes": [
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 298000,
+    "max": 298000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Benferri Tourism",
+      "url": "https://www.google.com/search?q=Benferri%20Spain%20official%20website",
+      "description": "Discover more about Benferri"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "45 km",
+      "driveTime": "30 min"
+    },
     "healthcare": {
-      "text": "Benferri residents benefit from excellent healthcare services with a modern regional hospital accessible within 30 minutes, complemented by several private clinics offering specialized care. Medical professionals in the area are experienced in treating international patients, with many English-speaking doctors and support staff ensuring clear communication throughout treatment. The healthcare system combines Spanish public services with private options, allowing residents to choose care that suits their preferences and requirements. Emergency services are well-equipped and responsive, while preventative care and wellness programs cater to the health-conscious community.",
-      "keyPoints": [
-        "Regional hospital within 30 minutes drive",
-        "Private clinics with specialist services",
-        "English-speaking doctors and medical staff",
-        "Comprehensive healthcare coverage for residents"
-      ]
-    },
-    "shopping": {
-      "text": "Shopping in Benferri offers convenience and choice with multiple supermarket options throughout the town and surrounding areas. Mercadona, Spain's largest supermarket chain, provides comprehensive grocery selections with competitive pricing and quality products. Lidl offers budget-friendly options alongside international items favored by expat communities. Consum stores provide convenient neighborhood shopping for daily essentials. Beyond supermarkets, traditional Spanish markets provide fresh local produce, regional specialties, and authentic ingredients for home cooking. Larger shopping centers and malls are accessible within 30-45 minutes for specialized retail and international brands.",
-      "keyPoints": [
-        "Mercadona supermarket chain",
-        "Lidl discount supermarket",
-        "Consum neighborhood stores",
-        "Traditional Spanish markets with local produce"
-      ]
-    },
-    "education": {
-      "text": "Benferri and the surrounding region offer excellent educational opportunities for families, with international schools providing British curriculum options and other recognized educational frameworks. These institutions cater to expat families seeking to maintain educational continuity while benefiting from Spanish and Mediterranean cultural exposure. International schools in the region combine rigorous academics with language development, offering both Spanish and English instruction. Facilities typically include modern classrooms, sports amenities, and diverse extracurricular activities. Local Spanish schools are also available for families seeking full cultural integration and Spanish language immersion.",
-      "keyPoints": [
-        "International schools with British curriculum",
-        "Bilingual education programs",
-        "Modern educational facilities and sports amenities",
-        "Local Spanish schools for cultural integration"
-      ]
-    },
-    "sports": {
-      "text": "Benferri's location provides exceptional access to diverse sporting and recreational facilities. Multiple championship golf courses within easy driving distance make it a paradise for golf enthusiasts, with professional-standard facilities, training academies, and competitive tournaments. Several Blue Flag beaches lie just 20 minutes away, offering pristine Mediterranean waters for swimming, water sports including paddleboarding and kayaking, and beach clubs for leisure dining. Land-based activities include hiking in nearby mountains, cycling through scenic coastal routes, and tennis clubs throughout the region. The combination of beach access and inland sports facilities ensures year-round recreational opportunities.",
-      "keyPoints": [
-        "Championship golf courses nearby",
-        "Multiple Blue Flag beaches within 20 minutes",
-        "Water sports and beach clubs",
-        "Hiking and cycling through scenic routes"
-      ]
+      "name": "Hospital Vega Baja (Orihuela)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Vega%20Baja%20(Orihuela)",
+      "distance": "8 km"
     }
   },
-  "transport": {
-    "overview": "Bus connections link Benferri to nearby towns and coastal areas, providing public transportation options for those preferring not to drive. However, a car is highly recommended for maximum flexibility and convenience, allowing exploration of the broader Costa Blanca region at your own pace.",
-    "airports": "Alicante Airport (approximately 50-60 minutes drive) serves as the primary international gateway with frequent flights to the UK and Europe. Valencia Airport is approximately 90 minutes away, offering alternative flight options.",
-    "driving": "Benferri benefits from excellent motorway access via the A-7 and N-332 highways, connecting to Alicante, Valencia, and other major Costa Blanca destinations. The town is strategically positioned inland while remaining within 30 minutes of popular coastal towns and beaches.",
-    "public": "Local bus services connect Benferri to regional towns and beaches, with schedules accommodating daily routines and leisure activities. Regional train services provide longer-distance connections to major cities.",
-    "keyPoints": [
-      "Alicante Airport 50-60 minutes away",
-      "Bus connections to nearby towns and beaches",
-      "Direct motorway access (A-7, N-332)",
-      "Car recommended for full flexibility and exploration"
-    ]
-  },
-  "propertyMarket": {
-    "overview": "Benferri's property market offers exceptional value compared to coastal Costa Blanca areas, with prices 40% lower than island markets while maintaining high quality and lifestyle standards. The market shows positive momentum with an 8% year-on-year growth trend, indicating healthy appreciation potential. The town attracts buyers seeking affordable Spanish properties without compromising access to amenities, beaches, or established expat communities.",
-    "priceRange": "€298,000 - €298,000",
-    "popularTypes": "Villa",
-    "investment": "Properties in Benferri offer strong rental potential with typical 7-night vacation rentals commanding €800, reflecting consistent demand from tourists and holiday visitors. The combination of affordability, amenity access, and growing expat popularity suggests solid capital growth prospects. Investors benefit from competitive purchase prices, reasonable property taxes, and active tourism rental markets. The 8% year-on-year price appreciation demonstrates market strength and suggests continued value development."
-  },
-  "neighborhoods": [
-    "Central Benferri: The heart of town featuring traditional architecture, local markets, restaurants, and authentic Spanish character alongside modern convenience",
-    "Waterfront areas: Properties near irrigation channels and natural water features offering scenic views and outdoor lifestyle appeal",
-    "Residential estates: Gated communities and modern developments providing contemporary amenities, security, and family-friendly environments",
-    "Countryside surroundings: Properties with countryside views and agricultural heritage, ideal for those seeking peaceful rural living with town accessibility",
-    "Beachside approaches: Areas positioned between Benferri and coastal towns, offering balanced access to both inland peace and Mediterranean beaches"
-  ],
-  "prosAndCons": {
-    "pros": [
+  "content": {
+    "metaTitle": "Living in Benferri 2026 | Complete Area Guide & Property",
+    "metaDescription": "Discover living in Benferri, Costa Blanca. Villas from €298,000. International community, beaches, golf & 40% less than island markets.",
+    "heroIntro": "Benferri is a charming inland town on Spain's Costa Blanca that offers an authentic Spanish lifestyle with modern conveniences and an established international community. Located in a peaceful inland setting, this hidden gem attracts discerning buyers seeking value without compromising quality of life. With properties starting at €298,000 and prices 40% lower than coastal island markets, Benferri represents exceptional value for those looking to relocate to Spain.\n\nThe town combines traditional Spanish character with contemporary amenities, including excellent healthcare facilities, international schools, and convenient access to pristine Blue Flag beaches within just 20 minutes. Whether you're considering retirement, investment, or a lifestyle change, Benferri offers the perfect balance of tranquility, affordability, and accessibility that makes it increasingly popular with British and international expats.\n\nThe established expat community ensures English is widely spoken, and locals are welcoming to newcomers. From golfing at championship courses to exploring Mediterranean culture, Benferri provides a rewarding Spanish experience without the premium coastal price tags that characterize popular tourist destinations.",
+    "lifestyleSection": {
+      "intro": "Daily life in Benferri centers around a relaxed Mediterranean rhythm balanced with modern European conveniences. The town hosts vibrant local markets where fresh produce, regional delicacies, and traditional Spanish products are available at competitive prices. Residents enjoy authentic tapas bars, family-run restaurants, and increasingly cosmopolitan dining options catering to the international community. The established English-speaking expat population creates a welcoming environment for newcomers, with numerous social groups, clubs, and community activities. Families appreciate the proximity to excellent schools and child-friendly amenities, while couples and retirees enjoy peaceful walks through charming streets and countryside. Weekend activities include visits to Blue Flag beaches just 20 minutes away, golfing at nearby championship courses, and exploring traditional Spanish villages. The town maintains authentic Spanish character while offering the comfort and familiarity that international residents seek, creating a unique blend of cultures and lifestyles.\n\nBenferri enjoys a Mediterranean climate with warm, dry summers and mild winters, creating an ideal year-round living environment. Summer temperatures typically range from 28-32°C, while winter months remain pleasant at 12-16°C. The region receives approximately 300 days of annual sunshine, making outdoor activities enjoyable throughout most of the year. Spring and autumn offer perfect temperatures for exploring the surrounding countryside and coastal areas. Winter months rarely experience frost, and snow is virtually non-existent. The proximity to both mountains and sea creates a microclimate that moderates temperature extremes, while low rainfall keeps the landscape verdant. This climate makes Benferri particularly attractive for retirees and those seeking to escape harsher northern European winters while maintaining a comfortable living environment.",
+      "highlights": [
+        "Exceptional value: 40% cheaper than coastal island markets with same quality and amenities",
+        "Established expat community: English widely spoken with welcoming international social network",
+        "Lifestyle balance: Inland tranquility with beach access just 20 minutes away",
+        "Excellent healthcare and education: Private clinics, English doctors, international schools nearby",
+        "Strong investment potential: 8% annual price growth with solid rental income opportunities",
+        "Mediterranean climate: 300+ days of sunshine with mild winters and warm summers"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Benferri's location provides exceptional access to diverse sporting and recreational facilities. Multiple championship golf courses within easy driving distance make it a paradise for golf enthusiasts, with professional-standard facilities, training academies, and competitive tournaments. Several Blue Flag beaches lie just 20 minutes away, offering pristine Mediterranean waters for swimming, water sports including paddleboarding and kayaking, and beach clubs for leisure dining. Land-based activities include hiking in nearby mountains, cycling through scenic coastal routes, and tennis clubs throughout the region. The combination of beach access and inland sports facilities ensures year-round recreational opportunities.",
+      "dining": "Benferri offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping in Benferri offers convenience and choice with multiple supermarket options throughout the town and surrounding areas. Mercadona, Spain's largest supermarket chain, provides comprehensive grocery selections with competitive pricing and quality products. Lidl offers budget-friendly options alongside international items favored by expat communities. Consum stores provide convenient neighborhood shopping for daily essentials. Beyond supermarkets, traditional Spanish markets provide fresh local produce, regional specialties, and authentic ingredients for home cooking. Larger shopping centers and malls are accessible within 30-45 minutes for specialized retail and international brands.",
+      "healthcare": "Benferri residents benefit from excellent healthcare services with a modern regional hospital accessible within 30 minutes, complemented by several private clinics offering specialized care. Medical professionals in the area are experienced in treating international patients, with many English-speaking doctors and support staff ensuring clear communication throughout treatment. The healthcare system combines Spanish public services with private options, allowing residents to choose care that suits their preferences and requirements. Emergency services are well-equipped and responsive, while preventative care and wellness programs cater to the health-conscious community.",
+      "transport": "Bus connections link Benferri to nearby towns and coastal areas, providing public transportation options for those preferring not to drive. However, a car is highly recommended for maximum flexibility and convenience, allowing exploration of the broader Costa Blanca region at your own pace. Alicante Airport (approximately 50-60 minutes drive) serves as the primary international gateway with frequent flights to the UK and Europe. Valencia Airport is approximately 90 minutes away, offering alternative flight options. Benferri benefits from excellent motorway access via the A-7 and N-332 highways, connecting to Alicante, Valencia, and other major Costa Blanca destinations. The town is strategically positioned inland while remaining within 30 minutes of popular coastal towns and beaches. Local bus services connect Benferri to regional towns and beaches, with schedules accommodating daily routines and leisure activities. Regional train services provide longer-distance connections to major cities."
+    },
+    "propertyMarketSection": "Benferri's property market offers exceptional value compared to coastal Costa Blanca areas, with prices 40% lower than island markets while maintaining high quality and lifestyle standards. The market shows positive momentum with an 8% year-on-year growth trend, indicating healthy appreciation potential. The town attracts buyers seeking affordable Spanish properties without compromising access to amenities, beaches, or established expat communities.\n\nPopular property types include Villa.\n\nProperties in Benferri offer strong rental potential with typical 7-night vacation rentals commanding €800, reflecting consistent demand from tourists and holiday visitors. The combination of affordability, amenity access, and growing expat popularity suggests solid capital growth prospects. Investors benefit from competitive purchase prices, reasonable property taxes, and active tourism rental markets. The 8% year-on-year price appreciation demonstrates market strength and suggests continued value development.",
+    "whyLiveHereSection": [
       "Exceptional value: 40% cheaper than coastal island markets with same quality and amenities",
       "Established expat community: English widely spoken with welcoming international social network",
       "Lifestyle balance: Inland tranquility with beach access just 20 minutes away",
@@ -76,48 +62,319 @@
       "Strong investment potential: 8% annual price growth with solid rental income opportunities",
       "Mediterranean climate: 300+ days of sunshine with mild winters and warm summers"
     ],
-    "cons": [
-      "Car dependency: While bus connections exist, owning a vehicle provides essential flexibility for daily life and exploration",
-      "Smaller town scale: Limited nightlife and entertainment compared to major coastal cities like Benidorm or Alicante",
-      "Language considerations: While English is spoken widely among expats, learning Spanish enhances integration and practical daily interactions"
-    ]
+    "faqs": [
+      {
+        "question": "Is Benferri a good place to live?",
+        "answer": "Yes, Benferri is an excellent place to live, particularly for those seeking authentic Spanish lifestyle at affordable prices. The established international community ensures English speakers feel welcome, while the combination of healthcare facilities, international schools, and proximity to beaches creates ideal conditions for families, retirees, and professionals. The 40% cost savings compared to coastal markets make it exceptional value."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can freely purchase property in Spain without requiring Spanish citizenship or residency. The process requires obtaining a Spanish tax identification number (NIE), opening a Spanish bank account, and engaging a local solicitor. Most international buyers successfully complete purchases within 8-12 weeks. Legal protections and property rights are equivalent for foreign and Spanish owners."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Beyond the purchase price, expect additional costs including transfer tax (6-10%), notary fees (approximately 1%), property registration fees (0.1-0.5%), and legal representation (€500-1,500). Some properties require surveyor valuations and mortgage arrangement fees if financing. These additional costs typically total 8-13% of the property purchase price, though exact amounts vary by autonomous community and property value."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "Purchasing property does not require a visa; foreigners can buy without Spanish residency. However, to live permanently in Spain, non-EU citizens need a residency visa. EU citizens can reside freely under freedom of movement rules. Many property buyers in Benferri maintain primary residences elsewhere while using their Spanish properties as investments or vacation homes."
+      },
+      {
+        "question": "What is the cost of living in Costa Blanca?",
+        "answer": "Costa Blanca cost of living is moderate compared to Northern Europe, with Benferri offering particularly good value at 40% less than coastal markets. Monthly expenses for a couple typically range €1,200-1,800 for rent, utilities, groceries, and dining, depending on lifestyle preferences. Retirees often report managing comfortably on €1,500-2,000 monthly including all expenses."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Absolutely. Costa Blanca is specifically renowned for retirees, offering excellent healthcare, pleasant climate, affordable living, and established expat communities. Benferri particularly appeals to retirees due to its peaceful setting, comprehensive medical facilities, and vibrant social groups. The combination of relaxed lifestyle, financial affordability, and quality healthcare makes it ideal for retirement planning."
+      },
+      {
+        "question": "How far is Costa Blanca from the UK?",
+        "answer": "Costa Blanca is approximately 1,000 miles (1,600 km) from the UK. Direct flights from most UK airports to Alicante typically take 2-2.5 hours. The proximity makes it convenient for maintaining UK connections while enjoying Mediterranean living, with frequent and affordable air routes supporting regular visits to family and friends."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Costa Blanca enjoys Mediterranean climate with warm summers (28-32°C) and mild winters (12-16°C). The region receives approximately 300 days of annual sunshine with minimal rainfall. Benferri's inland position provides slightly cooler summers and more moderate temperatures compared to coastal areas, making it comfortable year-round while offering dramatic seasonal changes less extreme than Northern Europe."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Benferri? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Properties in Benferri offer strong rental potential with typical 7-night vacation rentals commanding €800, reflecting consistent demand from tourists and holiday visitors. The combination of affordability, amenity access, and growing expat popularity suggests solid capital growth prospects. Investors benefit from competitive purchase prices, reasonable property taxes, and active tourism rental markets. The 8% year-on-year price appreciation demonstrates market strength and suggests continued value development.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Benferri are significantly lower than Northern Europe and very competitive within Spain. Inland locations like Benferri offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Benferri celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Benferri have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "20-35 min",
+          "description": "British curriculum school with excellent facilities and strong academic record serving the expat community"
+        },
+        {
+          "name": "Newton College",
+          "type": "International (British/Spanish)",
+          "distance": "25-40 min",
+          "description": "Bilingual international school offering both British and Spanish curricula with modern facilities"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Benferri offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Benferri has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Benferri",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.9833!3d38.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "Is Benferri a good place to live?",
-      "answer": "Yes, Benferri is an excellent place to live, particularly for those seeking authentic Spanish lifestyle at affordable prices. The established international community ensures English speakers feel welcome, while the combination of healthcare facilities, international schools, and proximity to beaches creates ideal conditions for families, retirees, and professionals. The 40% cost savings compared to coastal markets make it exceptional value."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Benferri",
+    "description": "Benferri is a inland municipality in Costa Blanca South, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.15",
+      "longitude": "-0.9833"
     },
-    {
-      "question": "Can foreigners buy property in Spain?",
-      "answer": "Yes, foreigners can freely purchase property in Spain without requiring Spanish citizenship or residency. The process requires obtaining a Spanish tax identification number (NIE), opening a Spanish bank account, and engaging a local solicitor. Most international buyers successfully complete purchases within 8-12 weeks. Legal protections and property rights are equivalent for foreign and Spanish owners."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Benferri",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What are the costs of buying property in Spain?",
-      "answer": "Beyond the purchase price, expect additional costs including transfer tax (6-10%), notary fees (approximately 1%), property registration fees (0.1-0.5%), and legal representation (€500-1,500). Some properties require surveyor valuations and mortgage arrangement fees if financing. These additional costs typically total 8-13% of the property purchase price, though exact amounts vary by autonomous community and property value."
-    },
-    {
-      "question": "Do I need a visa to buy property in Spain?",
-      "answer": "Purchasing property does not require a visa; foreigners can buy without Spanish residency. However, to live permanently in Spain, non-EU citizens need a residency visa. EU citizens can reside freely under freedom of movement rules. Many property buyers in Benferri maintain primary residences elsewhere while using their Spanish properties as investments or vacation homes."
-    },
-    {
-      "question": "What is the cost of living in Costa Blanca?",
-      "answer": "Costa Blanca cost of living is moderate compared to Northern Europe, with Benferri offering particularly good value at 40% less than coastal markets. Monthly expenses for a couple typically range €1,200-1,800 for rent, utilities, groceries, and dining, depending on lifestyle preferences. Retirees often report managing comfortably on €1,500-2,000 monthly including all expenses."
-    },
-    {
-      "question": "Is Costa Blanca good for retirees?",
-      "answer": "Absolutely. Costa Blanca is specifically renowned for retirees, offering excellent healthcare, pleasant climate, affordable living, and established expat communities. Benferri particularly appeals to retirees due to its peaceful setting, comprehensive medical facilities, and vibrant social groups. The combination of relaxed lifestyle, financial affordability, and quality healthcare makes it ideal for retirement planning."
-    },
-    {
-      "question": "How far is Costa Blanca from the UK?",
-      "answer": "Costa Blanca is approximately 1,000 miles (1,600 km) from the UK. Direct flights from most UK airports to Alicante typically take 2-2.5 hours. The proximity makes it convenient for maintaining UK connections while enjoying Mediterranean living, with frequent and affordable air routes supporting regular visits to family and friends."
-    },
-    {
-      "question": "What is the weather like on Costa Blanca?",
-      "answer": "Costa Blanca enjoys Mediterranean climate with warm summers (28-32°C) and mild winters (12-16°C). The region receives approximately 300 days of annual sunshine with minimal rainfall. Benferri's inland position provides slightly cooler summers and more moderate temperatures compared to coastal areas, making it comfortable year-round while offering dramatic seasonal changes less extreme than Northern Europe."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
     }
-  ],
-  "slug": "benferri",
-  "town": "Benferri",
-  "propertyCount": 1,
-  "generatedAt": "2026-02-06T10:14:30.251Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Benferri a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Benferri is an excellent place to live, particularly for those seeking authentic Spanish lifestyle at affordable prices. The established international community ensures English speakers feel welcome, while the combination of healthcare facilities, international schools, and proximity to beaches"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can freely purchase property in Spain without requiring Spanish citizenship or residency. The process requires obtaining a Spanish tax identification number (NIE), opening a Spanish bank account, and engaging a local solicitor. Most international buyers successfully complete purchase"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond the purchase price, expect additional costs including transfer tax (6-10%), notary fees (approximately 1%), property registration fees (0.1-0.5%), and legal representation (€500-1,500). Some properties require surveyor valuations and mortgage arrangement fees if financing. These additional co"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Purchasing property does not require a visa; foreigners can buy without Spanish residency. However, to live permanently in Spain, non-EU citizens need a residency visa. EU citizens can reside freely under freedom of movement rules. Many property buyers in Benferri maintain primary residences elsewhe"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Costa Blanca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costa Blanca cost of living is moderate compared to Northern Europe, with Benferri offering particularly good value at 40% less than coastal markets. Monthly expenses for a couple typically range €1,200-1,800 for rent, utilities, groceries, and dining, depending on lifestyle preferences. Retirees of"
+        }
+      }
+    ]
+  }
 }

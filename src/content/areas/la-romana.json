@@ -1,82 +1,378 @@
 {
-  "metaTitle": "La Romana Costa Blanca: Complete Living & Property Guide",
-  "metaDescription": "Discover La Romana, Costa Blanca. New build villas €315k-€392k. Climate, lifestyle, amenities & investment insights for expat buyers.",
-  "heroIntro": "La Romana is an emerging residential destination on the Costa Blanca, located in the province of Alicante, Spain. This charming area combines the relaxed Mediterranean lifestyle with modern development, making it increasingly popular among international buyers seeking value and quality. Situated between the established coastal towns and inland communities, La Romana offers a unique balance of convenience and tranquility, with easy access to beaches, golf courses, and major urban centers. The area has experienced significant growth in recent years, particularly in new build residential projects that cater to both owner-occupiers and investment-minded buyers. With contemporary villa developments featuring modern amenities and sustainable design, La Romana represents an attractive opportunity for those looking to invest in Spanish real estate. The region's appeal lies in its competitive pricing, with new villas ranging from €315,000 to €392,000, combined with its proximity to essential services, excellent climate, and vibrant expat community. Whether you're seeking a permanent residence, holiday home, or investment property, La Romana presents compelling options in one of Spain's most desirable coastal regions.",
-  "climate": "La Romana enjoys a Mediterranean climate characterized by over 300 days of sunshine annually, making it one of Spain's sunniest locations. Summers are warm and dry, with temperatures typically ranging from 28-32°C (82-90°F), while winters are mild with average temperatures of 10-15°C (50-59°F). The region receives minimal rainfall, concentrated mainly in spring and autumn months. Sea temperatures range from 14°C in winter to 26°C in summer, ideal for swimming and water sports. This consistently pleasant weather makes La Romana perfect for outdoor living and year-round activities.",
-  "lifestyle": "Life in La Romana revolves around a relaxed Mediterranean pace combined with modern conveniences. The area hosts a growing international community, particularly British, German, and Scandinavian expatriates, creating a welcoming multicultural environment. Local restaurants serve both traditional Spanish cuisine and international dishes, while the proximity to larger towns provides access to contemporary shopping and entertainment venues. The lifestyle emphasizes outdoor activities, from beach days at nearby Costa Blanca shores to golfing at championship courses, hiking, and water sports. Community events and local markets showcase Spanish culture while accommodating diverse preferences of international residents. The expat infrastructure is well-established, with international schools, English-speaking healthcare providers, and community organizations facilitating integration and social connections. Despite development, La Romana maintains its peaceful character with residential areas separated from commercial zones, offering a tranquil living environment without sacrificing access to modern amenities and social opportunities.",
-  "amenities": {
-    "healthcare": "La Romana has access to quality healthcare through both private and public facilities. The nearest major hospital is Hospital de Torrevieja, approximately 20km away, offering comprehensive medical services. Private clinics such as Clínica Privada La Romana and numerous GP practices serve the local population. Pharmacies are conveniently located throughout the area, and dental clinics offer specialized services. Many healthcare providers have English-speaking staff, catering to the international community.",
-    "shopping": "Shopping facilities range from local supermarkets and neighborhood shops to larger commercial centers. The nearby town of Torrevieja, 15-20km away, features modern shopping centers including Centro Comercial Torrevieja and Carrefour hypermarkets. Local supermarkets like Lidl, Alcampo, and Mercadona serve daily needs within La Romana itself. Weekly markets provide fresh produce and local goods. International products are available at specialist shops catering to expatriate communities.",
-    "dining": "La Romana's dining scene offers diverse options from traditional Spanish tapas bars to international restaurants. Local establishments serve paella, fresh seafood, and Mediterranean cuisine, while international restaurants cater to various tastes including British, German, and Asian cuisine. Chiringuitos (beachside restaurants) near coastal areas provide casual dining with sea views. The nearby town of Torrevieja offers extensive fine dining options. Weekly markets feature fresh local produce for self-catering.",
-    "sports": "La Romana is ideal for sports enthusiasts with multiple golf courses nearby, including Villamartin Golf Club, Las Ramblas Golf Course, and Campoamor Golf Club, all within 15-25km. Beach clubs offer water sports including paddleboarding, windsurfing, and sailing. The area features tennis clubs, fitness centers, and cycling routes. The Costa Blanca beaches provide swimming, beach volleyball, and other seaside activities. Hiking trails through inland terrain offer outdoor recreation opportunities."
-  },
-  "transport": {
-    "airports": "Alicante-Elche Airport (ALC) is the nearest major international airport, located approximately 50-60km away with a 45-60 minute drive. It offers flights to most European destinations. Valencia Airport (VLC) is approximately 130km away, providing additional flight options. Both airports have car rental facilities and shuttle services. Direct connections via bus and train are also available from nearby towns.",
-    "driving": "La Romana benefits from excellent road connectivity via the A-7 autovía (motorway), which runs along the Costa Blanca coast linking major towns and cities. The town is easily accessible via well-maintained regional roads. Road distances include approximately 20km to Torrevieja, 45km to Alicante city center, and 130km to Valencia. Traffic is generally moderate except during peak summer months. The road infrastructure supports comfortable travel throughout the region and Spain.",
-    "public": "Public transport options include regular bus services connecting La Romana to nearby towns, operated by companies such as ALSA and local providers. Buses link La Romana to Torrevieja, Alicante, and other coastal communities. Train services are available in nearby towns, with connections to major cities. The relatively short distances make taxis and ride-sharing apps convenient for local travel. Most residents own vehicles for flexibility and convenience."
-  },
-  "propertyMarket": {
-    "overview": "La Romana's property market is experiencing robust growth, driven by new development projects and international buyer interest. The market offers strong value compared to established coastal areas, attracting investors and owner-occupiers. New build properties dominate the current market, featuring modern construction standards, sustainable design, and contemporary amenities. Demand remains steady with healthy absorption rates for quality developments. The market shows signs of appreciation, particularly for well-located properties in established urbanizations.",
-    "priceRange": "€315,000 - €392,000",
-    "popularTypes": "Villa",
-    "investment": "La Romana presents attractive investment opportunities with several favorable factors. New build villas offer strong rental potential, particularly for holiday lets during peak summer season and winter months. The growing international community and tourism infrastructure support rental demand. Property appreciation trends are positive, with values increasing as the area develops. Rental yields for quality villas typically range from 4-6% annually, with holiday letting potentially offering higher returns. The lower entry price point compared to established coastal towns provides favorable investment economics, particularly for portfolio diversification."
-  },
-  "neighborhoods": [
-    "Villamartin: An established urbanization known for its golf course, amenities, and family-friendly environment with a strong expat community",
-    "Playa Flamenca: A beach-oriented neighborhood offering proximity to the sea, water sports facilities, and a vibrant summer atmosphere",
-    "Orihuela Costa: A larger area encompassing several urbanizations with diverse amenities, entertainment options, and coastal access",
-    "La Zenia: A developing neighborhood with modern facilities, shopping centers, and convenient access to both beaches and inland areas"
+  "slug": "la-romana",
+  "name": "La Romana",
+  "region": "Costa Blanca",
+  "heroImage": "/images/areas/la-romana-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 7,
+  "propertyTypes": [
+    "Villa"
   ],
-  "prosAndCons": {
-    "pros": [
+  "priceRange": {
+    "min": 315000,
+    "max": 392000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "La Romana Tourism",
+      "url": "https://www.google.com/search?q=La%20Romana%20Spain%20official%20website",
+      "description": "Discover more about La Romana"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "35 km",
+      "driveTime": "30 min"
+    },
+    "healthcare": {
+      "name": "Hospital del Vinalopó (Elche)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20del%20Vinalop%C3%B3%20(Elche)",
+      "distance": "20 km"
+    }
+  },
+  "content": {
+    "metaTitle": "La Romana Costa Blanca: Complete Living & Property Guide",
+    "metaDescription": "Discover La Romana, Costa Blanca. New build villas €315k-€392k. Climate, lifestyle, amenities & investment insights for expat buyers.",
+    "heroIntro": "La Romana is an emerging residential destination on the Costa Blanca, located in the province of Alicante, Spain. This charming area combines the relaxed Mediterranean lifestyle with modern development, making it increasingly popular among international buyers seeking value and quality. Situated between the established coastal towns and inland communities, La Romana offers a unique balance of convenience and tranquility, with easy access to beaches, golf courses, and major urban centers. The area has experienced significant growth in recent years, particularly in new build residential projects that cater to both owner-occupiers and investment-minded buyers. With contemporary villa developments featuring modern amenities and sustainable design, La Romana represents an attractive opportunity for those looking to invest in Spanish real estate. The region's appeal lies in its competitive pricing, with new villas ranging from €315,000 to €392,000, combined with its proximity to essential services, excellent climate, and vibrant expat community. Whether you're seeking a permanent residence, holiday home, or investment property, La Romana presents compelling options in one of Spain's most desirable coastal regions.",
+    "lifestyleSection": {
+      "intro": "Life in La Romana revolves around a relaxed Mediterranean pace combined with modern conveniences. The area hosts a growing international community, particularly British, German, and Scandinavian expatriates, creating a welcoming multicultural environment. Local restaurants serve both traditional Spanish cuisine and international dishes, while the proximity to larger towns provides access to contemporary shopping and entertainment venues. The lifestyle emphasizes outdoor activities, from beach days at nearby Costa Blanca shores to golfing at championship courses, hiking, and water sports. Community events and local markets showcase Spanish culture while accommodating diverse preferences of international residents. The expat infrastructure is well-established, with international schools, English-speaking healthcare providers, and community organizations facilitating integration and social connections. Despite development, La Romana maintains its peaceful character with residential areas separated from commercial zones, offering a tranquil living environment without sacrificing access to modern amenities and social opportunities.\n\nLa Romana enjoys a Mediterranean climate characterized by over 300 days of sunshine annually, making it one of Spain's sunniest locations. Summers are warm and dry, with temperatures typically ranging from 28-32°C (82-90°F), while winters are mild with average temperatures of 10-15°C (50-59°F). The region receives minimal rainfall, concentrated mainly in spring and autumn months. Sea temperatures range from 14°C in winter to 26°C in summer, ideal for swimming and water sports. This consistently pleasant weather makes La Romana perfect for outdoor living and year-round activities.",
+      "highlights": [
+        "Excellent climate with over 300 days of sunshine and mild winters ideal for year-round living",
+        "Competitive pricing for new build villas (€315k-€392k) offering value compared to other Costa Blanca areas",
+        "Strong infrastructure and established expat community with English-speaking services and multicultural environment",
+        "Proximity to multiple golf courses, beaches, and water sports facilities for active lifestyle",
+        "Attractive investment returns through holiday lettings and growing appreciation potential in developing market"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "La Romana is ideal for sports enthusiasts with multiple golf courses nearby, including Villamartin Golf Club, Las Ramblas Golf Course, and Campoamor Golf Club, all within 15-25km. Beach clubs offer water sports including paddleboarding, windsurfing, and sailing. The area features tennis clubs, fitness centers, and cycling routes. The Costa Blanca beaches provide swimming, beach volleyball, and other seaside activities. Hiking trails through inland terrain offer outdoor recreation opportunities.",
+      "dining": "La Romana's dining scene offers diverse options from traditional Spanish tapas bars to international restaurants. Local establishments serve paella, fresh seafood, and Mediterranean cuisine, while international restaurants cater to various tastes including British, German, and Asian cuisine. Chiringuitos (beachside restaurants) near coastal areas provide casual dining with sea views. The nearby town of Torrevieja offers extensive fine dining options. Weekly markets feature fresh local produce for self-catering.",
+      "shopping": "Shopping facilities range from local supermarkets and neighborhood shops to larger commercial centers. The nearby town of Torrevieja, 15-20km away, features modern shopping centers including Centro Comercial Torrevieja and Carrefour hypermarkets. Local supermarkets like Lidl, Alcampo, and Mercadona serve daily needs within La Romana itself. Weekly markets provide fresh produce and local goods. International products are available at specialist shops catering to expatriate communities.",
+      "healthcare": "La Romana has access to quality healthcare through both private and public facilities. The nearest major hospital is Hospital de Torrevieja, approximately 20km away, offering comprehensive medical services. Private clinics such as Clínica Privada La Romana and numerous GP practices serve the local population. Pharmacies are conveniently located throughout the area, and dental clinics offer specialized services. Many healthcare providers have English-speaking staff, catering to the international community.",
+      "transport": "Alicante-Elche Airport (ALC) is the nearest major international airport, located approximately 50-60km away with a 45-60 minute drive. It offers flights to most European destinations. Valencia Airport (VLC) is approximately 130km away, providing additional flight options. Both airports have car rental facilities and shuttle services. Direct connections via bus and train are also available from nearby towns. La Romana benefits from excellent road connectivity via the A-7 autovía (motorway), which runs along the Costa Blanca coast linking major towns and cities. The town is easily accessible via well-maintained regional roads. Road distances include approximately 20km to Torrevieja, 45km to Alicante city center, and 130km to Valencia. Traffic is generally moderate except during peak summer months. The road infrastructure supports comfortable travel throughout the region and Spain. Public transport options include regular bus services connecting La Romana to nearby towns, operated by companies such as ALSA and local providers. Buses link La Romana to Torrevieja, Alicante, and other coastal communities. Train services are available in nearby towns, with connections to major cities. The relatively short distances make taxis and ride-sharing apps convenient for local travel. Most residents own vehicles for flexibility and convenience."
+    },
+    "propertyMarketSection": "La Romana's property market is experiencing robust growth, driven by new development projects and international buyer interest. The market offers strong value compared to established coastal areas, attracting investors and owner-occupiers. New build properties dominate the current market, featuring modern construction standards, sustainable design, and contemporary amenities. Demand remains steady with healthy absorption rates for quality developments. The market shows signs of appreciation, particularly for well-located properties in established urbanizations.\n\nPopular property types include Villa.\n\nLa Romana presents attractive investment opportunities with several favorable factors. New build villas offer strong rental potential, particularly for holiday lets during peak summer season and winter months. The growing international community and tourism infrastructure support rental demand. Property appreciation trends are positive, with values increasing as the area develops. Rental yields for quality villas typically range from 4-6% annually, with holiday letting potentially offering higher returns. The lower entry price point compared to established coastal towns provides favorable investment economics, particularly for portfolio diversification.",
+    "whyLiveHereSection": [
       "Excellent climate with over 300 days of sunshine and mild winters ideal for year-round living",
       "Competitive pricing for new build villas (€315k-€392k) offering value compared to other Costa Blanca areas",
       "Strong infrastructure and established expat community with English-speaking services and multicultural environment",
       "Proximity to multiple golf courses, beaches, and water sports facilities for active lifestyle",
       "Attractive investment returns through holiday lettings and growing appreciation potential in developing market"
     ],
-    "cons": [
-      "Summer crowds and tourism traffic during peak season (July-August) can impact traffic and local infrastructure",
-      "Limited public transportation options compared to major cities, making a vehicle essential for most residents",
-      "Rapid development may change the character of quieter areas and potentially impact property values in some locations"
-    ]
+    "faqs": [
+      {
+        "question": "What is the cost of living in La Romana compared to other Costa Blanca areas?",
+        "answer": "La Romana offers competitive living costs with new property prices €315k-€392k, generally lower than established coastal towns. Daily expenses for utilities, groceries, and services are moderate, comparable to other Alicante province areas. Dining and entertainment vary from budget-friendly local options to upscale establishments. Overall, La Romana provides good value for the Costa Blanca lifestyle."
+      },
+      {
+        "question": "Is La Romana suitable for families with children?",
+        "answer": "Yes, La Romana is family-friendly with international schools available nearby, including private English-medium options. The area offers safe neighborhoods, recreational facilities, beaches for water activities, and a stable expat community. Healthcare services are accessible, and numerous family-oriented amenities make it attractive for families seeking a Mediterranean lifestyle."
+      },
+      {
+        "question": "What is the rental potential for villas in La Romana?",
+        "answer": "New build villas in La Romana show strong rental potential with yields typically 4-6% annually for long-term rentals. Holiday lettings can generate higher returns, particularly during summer and winter seasons. The growing tourism and expat community support steady demand. Professional property management services are available to handle rental operations."
+      },
+      {
+        "question": "How far is La Romana from Alicante airport?",
+        "answer": "Alicante-Elche Airport is approximately 50-60km from La Romana, typically requiring a 45-60 minute drive via the A-7 autovía. Car rental, shuttle services, and bus transfers are available. The journey is straightforward via well-maintained roads, making airport access convenient for international travelers."
+      },
+      {
+        "question": "Can I work remotely from La Romana?",
+        "answer": "Yes, La Romana has reliable internet infrastructure supporting remote work. Most modern villas include high-speed connections suitable for professional activities. Co-working spaces are available in nearby towns. The peaceful environment and good climate make it attractive for digital nomads and remote workers seeking a Mediterranean base."
+      },
+      {
+        "question": "What are the property ownership requirements for foreign buyers?",
+        "answer": "Foreign buyers can freely purchase property in Spain without restrictions or special permits. You'll need a Spanish tax identification number (NIE) and a non-resident bank account. Legal costs typically include 6-8% in taxes and fees. Professional legal advice is recommended to navigate purchases and ensure compliance with Spanish property regulations."
+      },
+      {
+        "question": "Are there English-speaking services available in La Romana?",
+        "answer": "Yes, La Romana has a well-established international community with numerous English-speaking services. These include healthcare providers, legal advisors, real estate agents, financial services, and restaurants. The expatriate infrastructure is mature, making daily life convenient for English speakers."
+      },
+      {
+        "question": "What are the weather conditions like for beach activities?",
+        "answer": "La Romana's Mediterranean climate supports beach activities year-round. Summer months (June-September) offer warm water temperatures of 22-26°C ideal for swimming. Winter months see temperatures of 14-16°C, still suitable for hardy swimmers. Spring and autumn provide pleasant conditions with moderate temperatures. The 300+ days of sunshine support consistent outdoor activities."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in La Romana? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "La Romana presents attractive investment opportunities with several favorable factors. New build villas offer strong rental potential, particularly for holiday lets during peak summer season and winter months. The growing international community and tourism infrastructure support rental demand. Property appreciation trends are positive, with values increasing as the area develops. Rental yields for quality villas typically range from 4-6% annually, with holiday letting potentially offering higher returns. The lower entry price point compared to established coastal towns provides favorable investment economics, particularly for portfolio diversification.",
+      "highlights": [
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Long-term rental demand from growing expat community"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in La Romana are significantly lower than Northern Europe and very competitive within Spain. Inland locations like La Romana offer particularly good value for daily expenses.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Essential for inland living"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "La Romana celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "May",
+          "description": "Celebration of spring with flower displays, food stalls, traditional music, and community gatherings in the town square"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "October",
+          "description": "Traditional autumn celebration featuring local produce, wine tasting, artisan markets, and regional gastronomy"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in La Romana have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "20-35 min",
+          "description": "British curriculum school with excellent facilities and strong academic record serving the expat community"
+        },
+        {
+          "name": "Newton College",
+          "type": "International (British/Spanish)",
+          "distance": "25-40 min",
+          "description": "Bilingual international school offering both British and Spanish curricula with modern facilities"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "La Romana offers excellent outdoor activities year-round, from hiking and cycling to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "La Romana has a growing international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The authentic Spanish character of the area appeals to those seeking genuine integration with local culture. English is increasingly spoken, with many services available in English, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Growing international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Diverse European community including British, Scandinavian, Dutch, German, and French residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in La Romana",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the morning sunshine and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Browse the local market for fresh produce, bread, and seasonal specialities from local farmers"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Explore the surrounding countryside or village streets as the temperature cools"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.8833!3d38.3667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
   },
-  "faqs": [
-    {
-      "question": "What is the cost of living in La Romana compared to other Costa Blanca areas?",
-      "answer": "La Romana offers competitive living costs with new property prices €315k-€392k, generally lower than established coastal towns. Daily expenses for utilities, groceries, and services are moderate, comparable to other Alicante province areas. Dining and entertainment vary from budget-friendly local options to upscale establishments. Overall, La Romana provides good value for the Costa Blanca lifestyle."
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "La Romana",
+    "description": "La Romana is a inland municipality in Costa Blanca, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.3667",
+      "longitude": "-0.8833"
     },
-    {
-      "question": "Is La Romana suitable for families with children?",
-      "answer": "Yes, La Romana is family-friendly with international schools available nearby, including private English-medium options. The area offers safe neighborhoods, recreational facilities, beaches for water activities, and a stable expat community. Healthcare services are accessible, and numerous family-oriented amenities make it attractive for families seeking a Mediterranean lifestyle."
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "La Romana",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
     },
-    {
-      "question": "What is the rental potential for villas in La Romana?",
-      "answer": "New build villas in La Romana show strong rental potential with yields typically 4-6% annually for long-term rentals. Holiday lettings can generate higher returns, particularly during summer and winter seasons. The growing tourism and expat community support steady demand. Professional property management services are available to handle rental operations."
-    },
-    {
-      "question": "How far is La Romana from Alicante airport?",
-      "answer": "Alicante-Elche Airport is approximately 50-60km from La Romana, typically requiring a 45-60 minute drive via the A-7 autovía. Car rental, shuttle services, and bus transfers are available. The journey is straightforward via well-maintained roads, making airport access convenient for international travelers."
-    },
-    {
-      "question": "Can I work remotely from La Romana?",
-      "answer": "Yes, La Romana has reliable internet infrastructure supporting remote work. Most modern villas include high-speed connections suitable for professional activities. Co-working spaces are available in nearby towns. The peaceful environment and good climate make it attractive for digital nomads and remote workers seeking a Mediterranean base."
-    },
-    {
-      "question": "What are the property ownership requirements for foreign buyers?",
-      "answer": "Foreign buyers can freely purchase property in Spain without restrictions or special permits. You'll need a Spanish tax identification number (NIE) and a non-resident bank account. Legal costs typically include 6-8% in taxes and fees. Professional legal advice is recommended to navigate purchases and ensure compliance with Spanish property regulations."
-    },
-    {
-      "question": "Are there English-speaking services available in La Romana?",
-      "answer": "Yes, La Romana has a well-established international community with numerous English-speaking services. These include healthcare providers, legal advisors, real estate agents, financial services, and restaurants. The expatriate infrastructure is mature, making daily life convenient for English speakers."
-    },
-    {
-      "question": "What are the weather conditions like for beach activities?",
-      "answer": "La Romana's Mediterranean climate supports beach activities year-round. Summer months (June-September) offer warm water temperatures of 22-26°C ideal for swimming. Winter months see temperatures of 14-16°C, still suitable for hardy swimmers. Spring and autumn provide pleasant conditions with moderate temperatures. The 300+ days of sunshine support consistent outdoor activities."
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca"
     }
-  ],
-  "slug": "la-romana",
-  "town": "La Romana",
-  "propertyCount": 7,
-  "generatedAt": "2026-02-05T19:25:25.994Z"
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in La Romana compared to other Costa Blanca areas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La Romana offers competitive living costs with new property prices €315k-€392k, generally lower than established coastal towns. Daily expenses for utilities, groceries, and services are moderate, comparable to other Alicante province areas. Dining and entertainment vary from budget-friendly local op"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is La Romana suitable for families with children?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, La Romana is family-friendly with international schools available nearby, including private English-medium options. The area offers safe neighborhoods, recreational facilities, beaches for water activities, and a stable expat community. Healthcare services are accessible, and numerous family-or"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the rental potential for villas in La Romana?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "New build villas in La Romana show strong rental potential with yields typically 4-6% annually for long-term rentals. Holiday lettings can generate higher returns, particularly during summer and winter seasons. The growing tourism and expat community support steady demand. Professional property mana"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How far is La Romana from Alicante airport?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alicante-Elche Airport is approximately 50-60km from La Romana, typically requiring a 45-60 minute drive via the A-7 autovía. Car rental, shuttle services, and bus transfers are available. The journey is straightforward via well-maintained roads, making airport access convenient for international tr"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I work remotely from La Romana?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, La Romana has reliable internet infrastructure supporting remote work. Most modern villas include high-speed connections suitable for professional activities. Co-working spaces are available in nearby towns. The peaceful environment and good climate make it attractive for digital nomads and rem"
+        }
+      }
+    ]
+  }
 }
