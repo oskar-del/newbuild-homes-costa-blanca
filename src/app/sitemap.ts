@@ -401,7 +401,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   );
 
-  // i18n pages - blog articles in all languages
+  // i18n pages - blog articles in all languages (from translated article directories)
   const i18nBlogPages: MetadataRoute.Sitemap = LANGUAGE_PREFIXES.flatMap((lang) =>
     getLangBlogSlugs(lang).map((slug) => ({
       url: `${baseUrl}/${lang}/blog/${slug}`,
@@ -411,8 +411,48 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   );
 
-  const totalUrls = staticPages.length + guidePages.length + golfPages.length + blogPages.length + developmentPages.length + areaPages.length + builderPages.length + filterPages.length + propertyPages.length + i18nCorePages.length + i18nGuidePages.length + i18nBlogPages.length;
-  console.log(`[Sitemap] Total URLs: ${totalUrls} (including ${i18nCorePages.length + i18nGuidePages.length + i18nBlogPages.length} i18n pages)`);
+  // i18n pages - area detail pages in all languages
+  // Every area has a [slug] route for every language
+  const areaSlugsList = areas.map(a => a.slug);
+  const i18nAreaPages: MetadataRoute.Sitemap = LANGUAGE_PREFIXES.flatMap((lang) =>
+    areaSlugsList.map((slug) => ({
+      url: `${baseUrl}/${lang}/areas/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    }))
+  );
+
+  // i18n pages - English blog articles also render in all languages via [slug] routes
+  // (In addition to the translated articles above, English articles are accessible at /{lang}/blog/{slug})
+  const i18nEnglishBlogPages: MetadataRoute.Sitemap = LANGUAGE_PREFIXES.flatMap((lang) => {
+    const langSpecificSlugs = new Set(getLangBlogSlugs(lang));
+    // Only include English slugs that don't have a language-specific version
+    return blogSlugs
+      .filter(slug => !langSpecificSlugs.has(slug))
+      .map((slug) => ({
+        url: `${baseUrl}/${lang}/blog/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.5,
+      }));
+  });
+
+  // i18n pages - individual property pages in all languages
+  // Every property has a [reference] route for every language (with AI-generated translated content)
+  const propertyRefs = properties.map(p => p.reference);
+  const i18nPropertyPages: MetadataRoute.Sitemap = LANGUAGE_PREFIXES.flatMap((lang) =>
+    propertyRefs.map((ref) => ({
+      url: `${baseUrl}/${lang}/properties/${ref}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.6,
+    }))
+  );
+
+  const i18nTotal = i18nCorePages.length + i18nGuidePages.length + i18nBlogPages.length + i18nAreaPages.length + i18nEnglishBlogPages.length + i18nPropertyPages.length;
+  const totalUrls = staticPages.length + guidePages.length + golfPages.length + blogPages.length + developmentPages.length + areaPages.length + builderPages.length + filterPages.length + propertyPages.length + i18nTotal;
+  console.log(`[Sitemap] Total URLs: ${totalUrls} (including ${i18nTotal} i18n pages: ${i18nAreaPages.length} area, ${i18nPropertyPages.length} property, ${i18nBlogPages.length + i18nEnglishBlogPages.length} blog)`);
 
   return [
     ...staticPages,
@@ -427,5 +467,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...i18nCorePages,
     ...i18nGuidePages,
     ...i18nBlogPages,
+    ...i18nAreaPages,
+    ...i18nEnglishBlogPages,
+    ...i18nPropertyPages,
   ];
 }
