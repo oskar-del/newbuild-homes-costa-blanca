@@ -6,12 +6,15 @@ import { LifestyleBanner, ImageGrid } from '@/components/area/SectionImage';
 import { getBlogPostsForArea } from '@/lib/blog-area-mapping';
 import { getVideosForArea } from '@/lib/video-mapping';
 import VideoCard from '@/components/VideoCard';
+import AreaDevelopments from '@/components/area/AreaDevelopments';
+import DayInTheLife from '@/components/area/DayInTheLife';
 import {
   beachImages,
   golfImages,
   villaPoolImages,
   marketFoodImages,
   oldTownImages,
+  marinaImages,
   getImageUrl,
 } from '@/data/stock-images';
 import { breadcrumbSchema, toJsonLd, articleSchema, placeSchema } from '@/lib/schema';
@@ -84,7 +87,7 @@ export default function AreaPageContent({
   });
 
   // VideoObject schema for SEO rich snippets
-  const areaVideos = getVideosForArea(data.slug, 1);
+  const areaVideos = getVideosForArea(data.slug, 3);
   const videoSchemaData = areaVideos.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'VideoObject',
@@ -103,6 +106,21 @@ export default function AreaPageContent({
     },
   } : null;
 
+  // Build nav sections based on available data
+  const navSections: { id: string; label: string }[] = [
+    { id: 'lifestyle', label: s.theLifestyle.replace('{name}', '').trim() || 'Lifestyle' },
+  ];
+  if (externalLinks?.beaches && externalLinks.beaches.length > 0) navSections.push({ id: 'beaches', label: s.beachesIn.replace('{name}', '').trim() || 'Beaches' });
+  if (golf && golf.courses && golf.courses.length > 0) navSections.push({ id: 'golf', label: 'Golf' });
+  if (developments && developments.length > 0) navSections.push({ id: 'developments', label: s.newBuildProperties.replace('{name}', '').trim() || 'Properties' });
+  if (content.investmentAnalysis) navSections.push({ id: 'investment', label: s.investmentAnalysis || 'Investment' });
+  if (content.costOfLiving) navSections.push({ id: 'costs', label: s.costOfLivingIn.replace('{name}', '').trim() || 'Costs' });
+  if (content.schools?.schools?.length) navSections.push({ id: 'schools', label: s.schoolsNear.replace('{name}', '').trim() || 'Schools' });
+  if (content.events?.events?.length) navSections.push({ id: 'events', label: s.eventsFiestas.replace('{name}', '').trim() || 'Events' });
+  if (content.expatCommunity) navSections.push({ id: 'expat', label: s.expatCommunity.replace('{name}', '').trim() || 'Expat Life' });
+  if (content.natureActivities?.activities?.length) navSections.push({ id: 'outdoor', label: s.natureActivities || 'Nature' });
+  navSections.push({ id: 'faqs', label: s.faqAbout.replace('{name}', '').trim() || 'FAQs' });
+
   return (
     <>
       {/* Schema Markup */}
@@ -114,731 +132,875 @@ export default function AreaPageContent({
       )}
       {videoSchemaData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchemaData) }} />}
 
-      <main className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="relative text-white py-20">
-          <Image src={heroImage} alt={data.name} fill className="object-cover" priority unoptimized />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/80" />
-          <div className="relative max-w-6xl mx-auto px-4">
-            <nav className="text-white/70 text-sm mb-4">
-              <Link href={`${langPrefix}/`} className="hover:text-white">{s.home}</Link>
+      <main className="min-h-screen">
+        {/* ═══════════════════════════════════════════════════════════════
+            HERO SECTION — Full viewport, dramatic overlay
+        ═══════════════════════════════════════════════════════════════ */}
+        <section className="relative min-h-[85vh] flex items-center bg-primary-900">
+          <div className="absolute inset-0">
+            <Image src={heroImage} alt={data.name} fill className="object-cover opacity-40" priority unoptimized />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-900 via-primary-900/80 to-primary-900/60" />
+          </div>
+
+          <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+            <nav className="text-white/60 text-sm mb-8">
+              <Link href={`${langPrefix}/`} className="hover:text-white transition-colors">{s.home}</Link>
               <span className="mx-2">&rsaquo;</span>
-              <Link href={`${langPrefix}/areas`} className="hover:text-white">{s.areas}</Link>
+              <Link href={`${langPrefix}/areas`} className="hover:text-white transition-colors">{s.areas}</Link>
               <span className="mx-2">&rsaquo;</span>
               <span className="text-white">{data.name}</span>
             </nav>
 
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              {t(s.livingIn, data.name)}
-            </h1>
-
-            <p className="text-xl text-white/90 mb-6 max-w-2xl">
-              {t(s.completeGuide, data.name)}
-            </p>
-
-            <div className="flex flex-wrap gap-4 text-sm">
-              <span className="bg-white/20 px-4 py-2 rounded-full">
-                {data.propertyCount} {s.newBuilds}
-              </span>
-              <span className="bg-white/20 px-4 py-2 rounded-full">
-                {s.from} &euro;{data.priceRange.min.toLocaleString()}
-              </span>
-              <span className="bg-white/20 px-4 py-2 rounded-full">
+            <div className="max-w-3xl">
+              <span className="inline-block bg-accent-500 text-white text-sm font-bold px-4 py-1.5 rounded-full mb-6">
                 {data.region || 'Costa Blanca'}
               </span>
-              {golf && golf.courses && (
-                <span className="bg-white/20 px-4 py-2 rounded-full">
-                  {golf.courses.length} {s.golfCoursesNearby}
-                </span>
-              )}
+
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 leading-tight">
+                {t(s.livingIn, '')} <span className="font-semibold">{data.name}</span>
+              </h1>
+
+              <p className="text-xl text-warm-300 mb-4 leading-relaxed">
+                {content.heroIntro.split('\n\n')[0]?.slice(0, 200) || t(s.completeGuide, data.name)}
+              </p>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                  <p className="text-white font-semibold mt-1">{data.propertyCount} {s.newBuilds}</p>
+                  <p className="text-white/60 text-sm">{s.from} &euro;{data.priceRange.min.toLocaleString()}</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                  <p className="text-white font-semibold mt-1">{data.region || 'Costa Blanca'}</p>
+                  <p className="text-white/60 text-sm">Spain</p>
+                </div>
+                {golf && golf.courses && (
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                    <span className="text-2xl">&#9971;</span>
+                    <p className="text-white font-semibold mt-1">{golf.courses.length} {s.golfCoursesNearby}</p>
+                  </div>
+                )}
+                {externalLinks?.airport && (
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+                    <p className="text-white font-semibold mt-1">{externalLinks.airport.name.split(' ')[0]}</p>
+                    <p className="text-white/60 text-sm">{externalLinks.airport.driveTime}</p>
+                  </div>
+                )}
+              </div>
+
+              <div className="flex flex-wrap gap-4">
+                <a href="#developments" className="bg-accent-500 hover:bg-accent-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors">
+                  View Properties
+                </a>
+                <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg transition-colors backdrop-blur-sm border border-white/20">
+                  WhatsApp
+                </a>
+              </div>
             </div>
           </div>
         </section>
 
-        <div className="max-w-6xl mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        {/* ═══════════════════════════════════════════════════════════════
+            STICKY NAVIGATION
+        ═══════════════════════════════════════════════════════════════ */}
+        <section className="bg-white border-b border-warm-200 sticky top-0 z-40">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="flex gap-1 overflow-x-auto py-3 text-sm font-medium">
+              {navSections.map((section) => (
+                <a
+                  key={section.id}
+                  href={`#${section.id}`}
+                  className="px-4 py-2 rounded-full hover:bg-accent-100 text-warm-600 hover:text-accent-700 whitespace-nowrap transition-colors"
+                >
+                  {section.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
 
-            {/* Main Content */}
-            <div className="lg:col-span-2 space-y-12">
-
-              {/* Intro */}
-              <section>
-                <div className="prose prose-lg max-w-none">
-                  {(content.heroIntro || '').split('\n\n').map((paragraph, i) => (
-                    <p key={i} className="text-warm-700 leading-relaxed">{paragraph}</p>
-                  ))}
-                </div>
-              </section>
-
-              {/* Lifestyle Section */}
-              <section>
-                <h2 className="text-2xl font-bold text-primary-900 mb-6">
-                  {t(s.theLifestyle, data.name)}
+        {/* ═══════════════════════════════════════════════════════════════
+            LIFESTYLE OVERVIEW — Full-width, rich layout
+        ═══════════════════════════════════════════════════════════════ */}
+        <section id="lifestyle" className="py-16 bg-white scroll-mt-16">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid lg:grid-cols-5 gap-12">
+              <div className="lg:col-span-3">
+                <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">{s.theLifestyle.replace('{name}', '').trim() || 'The Lifestyle'}</span>
+                <h2 className="text-3xl lg:text-4xl font-light text-primary-900 mt-2 mb-6">
+                  Why People Choose <span className="font-semibold">{data.name}</span>
                 </h2>
-                <div className="prose prose-lg max-w-none mb-6">
+
+                <div className="prose prose-lg text-warm-700 max-w-none">
                   {(content.lifestyleSection?.intro || '').split('\n\n').map((paragraph, i) => (
-                    <p key={i} className="text-warm-700">{paragraph}</p>
+                    <p key={i}>{paragraph}</p>
                   ))}
                 </div>
-
-                <ImageGrid
-                  images={[villaPoolImages[0], beachImages[1], marketFoodImages[0], oldTownImages[0]]}
-                  columns={2}
-                  gap="gap-4"
-                  className="mb-6"
-                />
 
                 {(content.lifestyleSection?.highlights?.length ?? 0) > 0 && (
-                  <div className="grid md:grid-cols-2 gap-3">
+                  <div className="grid md:grid-cols-2 gap-3 mt-8">
                     {content.lifestyleSection.highlights.map((highlight, i) => (
-                      <div key={i} className="flex items-start gap-3 p-3 bg-accent-50 rounded-sm">
-                        <span className="text-accent-500">&check;</span>
+                      <div key={i} className="flex items-start gap-3 p-3 bg-accent-50 rounded-xl">
+                        <span className="text-accent-500 text-lg">&check;</span>
                         <span className="text-warm-700">{highlight}</span>
                       </div>
                     ))}
                   </div>
                 )}
-              </section>
+              </div>
 
-              {/* Beaches with External Links */}
-              {externalLinks?.beaches && externalLinks.beaches.length > 0 && (
-                <section>
-                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
+              <div className="lg:col-span-2 space-y-6">
+                {/* At a Glance Card */}
+                <div className="bg-accent-50 rounded-2xl p-6">
+                  <h3 className="font-bold text-primary-900 text-lg mb-4">At a Glance</h3>
+                  <div className="space-y-3 text-sm">
+                    <div className="flex justify-between"><span className="text-warm-600">{s.region}</span><span className="font-semibold text-primary-900">{data.region || 'Costa Blanca'}</span></div>
+                    <div className="flex justify-between"><span className="text-warm-600">{s.newBuilds}</span><span className="font-semibold text-primary-900">{data.propertyCount}</span></div>
+                    <div className="flex justify-between"><span className="text-warm-600">{s.priceRange}</span><span className="font-semibold text-accent-600">&euro;{data.priceRange.min.toLocaleString()} - &euro;{data.priceRange.max.toLocaleString()}</span></div>
+                    <div className="flex justify-between"><span className="text-warm-600">{s.propertyTypes}</span><span className="font-semibold text-primary-900">{data.propertyTypes.slice(0, 3).join(', ')}</span></div>
+                    {externalLinks?.airport && (
+                      <div className="flex justify-between"><span className="text-warm-600">{s.transport}</span><span className="font-semibold text-primary-900">{externalLinks.airport.driveTime} to airport</span></div>
+                    )}
+                    {golf && golf.courses && (
+                      <div className="flex justify-between"><span className="text-warm-600">{s.golfCourses}</span><span className="font-semibold text-primary-900">{golf.courses.length} {s.nearby}</span></div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Quick Contact */}
+                <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-2xl p-6 text-white">
+                  <h3 className="font-bold text-lg mb-2">Free 30-Min Consultation</h3>
+                  <p className="text-warm-200 text-sm mb-4">
+                    Speak with an experienced agent with 12+ years selling new builds on the Costa Blanca. Get honest advice about {data.name}.
+                  </p>
+                  <Link
+                    href={`${langPrefix}/consultation`}
+                    className="block w-full bg-accent-500 hover:bg-accent-600 text-white text-center py-3 rounded-lg font-semibold transition-colors mb-3"
+                  >
+                    Book Free Consultation
+                  </Link>
+                  <a
+                    href={CONTACT.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-[#25D366] hover:bg-[#20bd5a] text-white text-center py-3 rounded-lg font-medium transition-colors"
+                  >
+                    Or WhatsApp Us
+                  </a>
+                </div>
+
+                {/* Tourism Link */}
+                {externalLinks?.tourism?.url && (
+                  <div className="bg-warm-50 rounded-2xl p-6">
+                    <a href={externalLinks.tourism.url} target="_blank" rel="noopener noreferrer"
+                      className="text-accent-600 hover:underline font-medium text-sm">
+                      {t(s.officialTourism, data.name)} &rarr;
+                    </a>
+                  </div>
+                )}
+
+                {/* Golf Courses Sidebar */}
+                {golf && golf.courses && golf.courses.length > 0 && (
+                  <div className="bg-warm-50 rounded-2xl p-6">
+                    <h3 className="font-bold text-primary-900 text-lg mb-4">{s.golfCourses} {s.nearby}</h3>
+                    <div className="space-y-2">
+                      {golf.courses.slice(0, 4).map((course, i) => (
+                        <div key={i} className="flex justify-between items-center hover:bg-warm-100 rounded-lg p-2 -mx-2 transition-colors">
+                          <span className="text-warm-700">{course.name}</span>
+                          <span className="text-warm-500 text-sm">{course.holes}H &bull; {course.distance}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <Link href={`${langPrefix}/golf`} className="block text-center text-accent-600 hover:text-accent-700 font-medium text-sm mt-4 pt-3 border-t border-warm-200">
+                      View All Golf Courses &rarr;
+                    </Link>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════════
+            BEACHES — with cards and Google Maps links
+        ═══════════════════════════════════════════════════════════════ */}
+        {externalLinks?.beaches && externalLinks.beaches.length > 0 && (
+          <section id="beaches" className="scroll-mt-16">
+            {/* Beach Image Banner */}
+            <div className="relative h-64 md:h-80">
+              <Image
+                src={getImageUrl(beachImages[0], 1920)}
+                alt={beachImages[0].alt}
+                fill
+                className="object-cover"
+                unoptimized
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 via-primary-900/70 to-primary-900/40" />
+              <div className="absolute inset-0 flex items-center">
+                <div className="max-w-7xl mx-auto px-6 w-full">
+                  <span className="text-accent-400 text-sm font-semibold uppercase tracking-wide">Coast & Sea</span>
+                  <h2 className="text-3xl lg:text-4xl font-light text-white mt-2 mb-4">
                     {t(s.beachesIn, data.name)}
                   </h2>
-
-                  <div className="relative h-64 rounded-sm overflow-hidden mb-6">
-                    <Image src={getImageUrl(beachImages[0], 1200)} alt={beachImages[0].alt} fill className="object-cover" unoptimized />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <p className="text-white text-lg font-light">{content.amenitiesSection.beaches}</p>
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-3 gap-4">
-                    {externalLinks.beaches.map((beach, i) => (
-                      <a key={i} href={beach.googleMaps || beach.url || '#'} target="_blank" rel="noopener noreferrer"
-                        className="group block rounded-sm overflow-hidden border border-warm-200 hover:shadow-lg transition-shadow">
-                        <div className="relative h-32">
-                          <Image src={getImageUrl(beachImages[i % beachImages.length], 600)} alt={`${beach.name} beach`} fill
-                            className="object-cover group-hover:scale-105 transition-transform duration-500" unoptimized />
-                        </div>
-                        <div className="p-4">
-                          <h3 className="font-bold text-primary-900 mb-1">{beach.name}</h3>
-                          {beach.description && <p className="text-warm-600 text-sm mb-2">{beach.description}</p>}
-                          <span className="text-accent-600 text-sm font-medium">{s.viewOnGoogleMaps}</span>
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              {/* Golf Section */}
-              {golf && golf.courses && golf.courses.length > 0 && (
-                <section>
-                  <LifestyleBanner
-                    image={golfImages[0]}
-                    title={t(s.golfNear, data.name)}
-                    description={golf.intro || `Discover world-class golf courses just minutes from ${data.name}. The Costa Blanca is a golfer's paradise with year-round sunshine.`}
-                    alignment="left"
-                  />
-                  <div className="mt-8 space-y-4">
-                    {golf.courses.map((course, i) => (
-                      <div key={i} className="flex gap-4 border border-warm-200 rounded-sm overflow-hidden hover:shadow-md transition-shadow">
-                        <div className="relative w-32 md:w-48 flex-shrink-0">
-                          <Image src={getImageUrl(golfImages[i % golfImages.length], 400)} alt={`${course.name} golf course`} fill className="object-cover" unoptimized />
-                        </div>
-                        <div className="flex-1 p-4">
-                          <div className="flex flex-wrap items-start justify-between gap-4 mb-3">
-                            <div>
-                              <h3 className="font-bold text-primary-900 text-lg">{course.name}</h3>
-                              <p className="text-warm-500">{course.holes} {s.holes} &bull; {course.distance} ({course.driveTime})</p>
-                            </div>
-                            <div className="flex gap-2">
-                              {course.url && (
-                                <a href={course.url} target="_blank" rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1 bg-success-500 hover:bg-success-600 text-white px-4 py-2 rounded-sm text-sm font-medium transition-colors">
-                                  {s.website}
-                                </a>
-                              )}
-                              {course.googleMaps && (
-                                <a href={course.googleMaps} target="_blank" rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1 bg-accent-500 hover:bg-accent-600 text-white px-4 py-2 rounded-sm text-sm font-medium transition-colors">
-                                  {s.directions}
-                                </a>
-                              )}
-                            </div>
-                          </div>
-                          {course.description && <p className="text-warm-700">{course.description}</p>}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              {/* Amenities Section */}
-              <section>
-                <h2 className="text-2xl font-bold text-primary-900 mb-6">{s.amenitiesServices}</h2>
-
-                <LifestyleBanner
-                  image={marketFoodImages[1]}
-                  title={s.localDiningMarkets}
-                  description={t(s.diningMarketsDesc, data.name)}
-                  alignment="center"
-                />
-
-                <div className="mt-8 space-y-6">
-                  <div className="border-l-4 border-accent-500 pl-4">
-                    <h3 className="font-bold text-primary-900 mb-2">{s.dining}</h3>
-                    <p className="text-warm-700">{content.amenitiesSection.dining}</p>
-                  </div>
-
-                  <div className="border-l-4 border-accent-500 pl-4">
-                    <h3 className="font-bold text-primary-900 mb-2">{s.shopping}</h3>
-                    <p className="text-warm-700">{content.amenitiesSection.shopping}</p>
-                  </div>
-
-                  <div className="border-l-4 border-red-500 pl-4">
-                    <h3 className="font-bold text-primary-900 mb-2">{s.healthcare}</h3>
-                    <p className="text-warm-700">{content.amenitiesSection.healthcare}</p>
-                    {externalLinks?.healthcare && (
-                      <div className="mt-3 flex flex-wrap gap-2">
-                        <a href={externalLinks.healthcare.googleMaps} target="_blank" rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-accent-600 hover:underline text-sm">
-                          📍 {externalLinks.healthcare.name} ({externalLinks.healthcare.distance})
-                        </a>
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="border-l-4 border-success-500 pl-4">
-                    <h3 className="font-bold text-primary-900 mb-2">{s.transport}</h3>
-                    <p className="text-warm-700">{content.amenitiesSection.transport}</p>
-                    {externalLinks?.airport && (
-                      <div className="mt-3 flex flex-wrap gap-2">
-                        <a href={externalLinks.airport.googleMaps} target="_blank" rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-accent-600 hover:underline text-sm">
-                          📍 {externalLinks.airport.name} ({externalLinks.airport.distance}, {externalLinks.airport.driveTime})
-                        </a>
-                      </div>
-                    )}
-                  </div>
+                  <p className="text-warm-300 text-lg max-w-2xl">{content.amenitiesSection.beaches}</p>
                 </div>
-              </section>
+              </div>
+            </div>
 
-              {/* Property Market */}
-              <section>
-                <h2 className="text-2xl font-bold text-primary-900 mb-6">
-                  {t(s.propertyMarketIn, data.name)}
-                </h2>
-                <div className="prose prose-lg max-w-none">
-                  {content.propertyMarketSection.split('\n\n').map((paragraph, i) => (
-                    <p key={i} className="text-warm-700">{paragraph}</p>
+            <div className="py-12 bg-white">
+              <div className="max-w-7xl mx-auto px-6">
+                <div className="grid md:grid-cols-3 gap-6">
+                  {externalLinks.beaches.map((beach, i) => (
+                    <a key={i} href={beach.googleMaps || beach.url || '#'} target="_blank" rel="noopener noreferrer"
+                      className="group bg-warm-50 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
+                      <div className="relative h-40">
+                        <Image src={getImageUrl(beachImages[i % beachImages.length], 600)} alt={`${beach.name} beach`} fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500" unoptimized />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                        <span className="absolute bottom-3 left-3 text-white font-semibold">{beach.name}</span>
+                      </div>
+                      <div className="p-4">
+                        {beach.description && <p className="text-warm-600 text-sm mb-2">{beach.description}</p>}
+                        <span className="text-accent-600 text-sm font-medium">{s.viewOnGoogleMaps} &rarr;</span>
+                      </div>
+                    </a>
                   ))}
                 </div>
-              </section>
+              </div>
+            </div>
+          </section>
+        )}
 
-              {/* Investment Analysis */}
-              {content.investmentAnalysis && (
-                <section>
-                  <h2 className="text-2xl font-bold text-primary-900 mb-6">{s.investmentAnalysis}</h2>
-                  <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-sm p-6 mb-6">
-                    <div className="grid grid-cols-2 gap-6 mb-6">
-                      <div className="text-center">
-                        <p className="text-3xl font-bold text-accent-600">{content.investmentAnalysis.rentalYield}</p>
-                        <p className="text-sm text-warm-600 mt-1">{s.rentalYield}</p>
-                      </div>
-                      <div className="text-center">
-                        <p className="text-3xl font-bold text-primary-700">{content.investmentAnalysis.annualAppreciation}</p>
-                        <p className="text-sm text-warm-600 mt-1">{s.annualAppreciation}</p>
+        {/* ═══════════════════════════════════════════════════════════════
+            GOLF SECTION — Full-width courses
+        ═══════════════════════════════════════════════════════════════ */}
+        {golf && golf.courses && golf.courses.length > 0 && (
+          <section id="golf" className="py-16 bg-warm-50 scroll-mt-16">
+            <div className="max-w-7xl mx-auto px-6">
+              <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Golf</span>
+              <h2 className="text-3xl lg:text-4xl font-light text-primary-900 mt-2 mb-4">
+                {t(s.golfNear, data.name)}
+              </h2>
+              {golf.intro && <p className="text-warm-600 text-lg mb-10 max-w-3xl">{golf.intro}</p>}
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {golf.courses.map((course, i) => (
+                  <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                    <div className="relative h-40">
+                      <Image src={getImageUrl(golfImages[i % golfImages.length], 600)} alt={`${course.name} golf course`} fill className="object-cover" unoptimized />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <div className="absolute bottom-3 left-3 right-3">
+                        <h3 className="font-bold text-white text-lg">{course.name}</h3>
+                        <p className="text-white/80 text-sm">{course.holes} {s.holes} &bull; {course.distance}</p>
                       </div>
                     </div>
-                    <p className="text-warm-700">{content.investmentAnalysis.overview}</p>
-                  </div>
-                  {(content.investmentAnalysis?.highlights?.length ?? 0) > 0 && (
-                    <div className="grid md:grid-cols-2 gap-3">
-                      {content.investmentAnalysis.highlights.map((highlight, i) => (
-                        <div key={i} className="flex items-start gap-3 p-3 border border-warm-200 rounded-sm">
-                          <span className="text-accent-500 text-lg">&bull;</span>
-                          <span className="text-warm-700">{highlight}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </section>
-              )}
-
-              {/* Cost of Living */}
-              {content.costOfLiving && (
-                <section>
-                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
-                    {t(s.costOfLivingIn, data.name)}
-                  </h2>
-                  <p className="text-warm-700 mb-6">{content.costOfLiving.intro}</p>
-                  <div className="overflow-hidden border border-warm-200 rounded-sm">
-                    <table className="w-full">
-                      <thead>
-                        <tr className="bg-primary-900 text-white">
-                          <th className="text-left px-4 py-3 font-medium">{s.category}</th>
-                          <th className="text-left px-4 py-3 font-medium">{s.cost}</th>
-                          <th className="text-left px-4 py-3 font-medium hidden md:table-cell">{s.notes}</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {content.costOfLiving.items.map((item, i) => (
-                          <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-warm-50'}>
-                            <td className="px-4 py-3 text-warm-800 font-medium">{item.category}</td>
-                            <td className="px-4 py-3 text-accent-600 font-bold">{item.cost}</td>
-                            <td className="px-4 py-3 text-warm-600 text-sm hidden md:table-cell">{item.notes}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </section>
-              )}
-
-              {/* Lifestyle Timeline */}
-              {(content.lifestyleTimeline?.entries?.length ?? 0) > 0 && (
-                <section>
-                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
-                    {content.lifestyleTimeline!.title || t(s.typicalDay, data.name)}
-                  </h2>
-                  <div className="relative">
-                    <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-accent-200" />
-                    <div className="space-y-6">
-                      {content.lifestyleTimeline!.entries.map((entry, i) => (
-                        <div key={i} className="relative flex gap-6 items-start">
-                          <div className="relative z-10 flex-shrink-0 w-12 h-12 bg-accent-500 text-white rounded-full flex items-center justify-center text-xs font-bold shadow-md">
-                            {entry.time}
-                          </div>
-                          <div className="flex-1 bg-white border border-warm-200 rounded-sm p-4 shadow-sm">
-                            <h3 className="font-bold text-primary-900 mb-1">{entry.activity}</h3>
-                            <p className="text-warm-600 text-sm">{entry.description}</p>
-                          </div>
-                        </div>
-                      ))}
+                    <div className="p-4">
+                      {course.description && <p className="text-warm-600 text-sm mb-3">{course.description}</p>}
+                      <div className="flex gap-2">
+                        {course.url && (
+                          <a href={course.url} target="_blank" rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 bg-success-500 hover:bg-success-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                            {s.website}
+                          </a>
+                        )}
+                        {course.googleMaps && (
+                          <a href={course.googleMaps} target="_blank" rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 bg-accent-500 hover:bg-accent-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                            {s.directions}
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
-                </section>
-              )}
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
-              {/* Events & Fiestas */}
-              {(content.events?.events?.length ?? 0) > 0 && (
-                <section>
-                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
-                    {t(s.eventsFiestas, data.name)}
-                  </h2>
-                  <p className="text-warm-700 mb-6">{content.events!.intro}</p>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {content.events!.events.map((event, i) => (
-                      <div key={i} className="border border-warm-200 rounded-sm p-4 hover:shadow-md transition-shadow">
-                        <div className="flex items-start gap-3">
-                          <div className="flex-shrink-0 bg-accent-100 text-accent-700 px-3 py-1 rounded-full text-sm font-medium">
-                            {event.month}
-                          </div>
-                          <div>
-                            <h3 className="font-bold text-primary-900 mb-1">{event.name}</h3>
-                            <p className="text-warm-600 text-sm">{event.description}</p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
+        {/* ═══════════════════════════════════════════════════════════════
+            DEVELOPMENTS — Using rich AreaDevelopments component
+        ═══════════════════════════════════════════════════════════════ */}
+        {developments && developments.length > 0 && (
+          <div id="developments" className="scroll-mt-16">
+            <AreaDevelopments
+              areaName={data.name}
+              areaSlug={data.slug}
+              maxDevelopments={6}
+              showLifestyleGuide={true}
+              relatedBlogPosts={relatedBlogPosts.map(post => ({
+                slug: post.slug,
+                title: post.title,
+                description: post.description,
+              }))}
+            />
+          </div>
+        )}
+
+        {/* ═══════════════════════════════════════════════════════════════
+            AMENITIES — Healthcare, Transport, Shopping
+        ═══════════════════════════════════════════════════════════════ */}
+        <section className="py-16 bg-warm-50 scroll-mt-16">
+          <div className="max-w-7xl mx-auto px-6">
+            <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Essential Amenities</span>
+            <h2 className="text-3xl lg:text-4xl font-light text-primary-900 mt-2 mb-4">
+              {s.amenitiesServices}
+            </h2>
+            <p className="text-warm-600 text-lg mb-10 max-w-3xl">
+              {t(s.diningMarketsDesc, data.name)}
+            </p>
+
+            <div className="grid lg:grid-cols-3 gap-6 mb-8">
+              {/* Dining Card */}
+              <div className="bg-white rounded-2xl p-6 shadow-sm">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-3xl">&#127860;</span>
+                  <h3 className="font-bold text-primary-900 text-xl">{s.dining}</h3>
+                </div>
+                <p className="text-warm-600 text-sm">{content.amenitiesSection.dining}</p>
+              </div>
+
+              {/* Healthcare Card */}
+              <div className="bg-white rounded-2xl p-6 shadow-sm">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-3xl">&#127973;</span>
+                  <h3 className="font-bold text-primary-900 text-xl">{s.healthcare}</h3>
+                </div>
+                <p className="text-warm-600 text-sm mb-3">{content.amenitiesSection.healthcare}</p>
+                {externalLinks?.healthcare && (
+                  <div className="bg-warm-50 rounded-xl p-3">
+                    <p className="font-semibold text-primary-900 text-sm">{externalLinks.healthcare.name}</p>
+                    <p className="text-warm-500 text-xs mb-2">{externalLinks.healthcare.distance}</p>
+                    <a href={externalLinks.healthcare.googleMaps} target="_blank" rel="noopener noreferrer"
+                      className="text-accent-600 hover:text-accent-700 text-xs font-medium">
+                      View on Map &rarr;
+                    </a>
                   </div>
-                </section>
-              )}
+                )}
+              </div>
 
-              {/* Schools */}
-              {(content.schools?.schools?.length ?? 0) > 0 && (
-                <section>
-                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
-                    {t(s.schoolsNear, data.name)}
-                  </h2>
-                  <p className="text-warm-700 mb-6">{content.schools!.intro}</p>
-                  <div className="space-y-3">
-                    {content.schools!.schools.map((school, i) => (
-                      <div key={i} className="flex items-start gap-4 p-4 border border-warm-200 rounded-sm">
-                        <span className="flex-shrink-0 text-2xl">&bull;</span>
-                        <div className="flex-1">
-                          <div className="flex flex-wrap items-center gap-2 mb-1">
-                            <h3 className="font-bold text-primary-900">{school.name}</h3>
-                            <span className="bg-primary-100 text-primary-700 px-2 py-0.5 rounded-full text-xs font-medium">
-                              {school.type}
-                            </span>
-                          </div>
-                          <p className="text-warm-600 text-sm">{school.description}</p>
-                          <p className="text-warm-500 text-xs mt-1">{school.distance}</p>
-                        </div>
-                      </div>
-                    ))}
+              {/* Transport Card */}
+              <div className="bg-white rounded-2xl p-6 shadow-sm">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-3xl">&#9992;&#65039;</span>
+                  <h3 className="font-bold text-primary-900 text-xl">{s.transport}</h3>
+                </div>
+                <p className="text-warm-600 text-sm mb-3">{content.amenitiesSection.transport}</p>
+                {externalLinks?.airport && (
+                  <div className="bg-warm-50 rounded-xl p-3">
+                    <p className="font-semibold text-primary-900 text-sm">{externalLinks.airport.name}</p>
+                    <p className="text-warm-500 text-xs mb-2">{externalLinks.airport.distance} ({externalLinks.airport.driveTime})</p>
+                    <a href={externalLinks.airport.googleMaps} target="_blank" rel="noopener noreferrer"
+                      className="text-accent-600 hover:text-accent-700 text-xs font-medium">
+                      View on Map &rarr;
+                    </a>
                   </div>
-                </section>
+                )}
+              </div>
+            </div>
+
+            {/* Shopping row */}
+            <div className="bg-white rounded-2xl p-6 shadow-sm">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-3xl">&#128717;&#65039;</span>
+                <h3 className="font-bold text-primary-900 text-xl">{s.shopping}</h3>
+              </div>
+              <p className="text-warm-600">{content.amenitiesSection.shopping}</p>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════════
+            PROPERTY MARKET
+        ═══════════════════════════════════════════════════════════════ */}
+        <section className="py-16 bg-white scroll-mt-16">
+          <div className="max-w-7xl mx-auto px-6">
+            <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Property Market</span>
+            <h2 className="text-3xl lg:text-4xl font-light text-primary-900 mt-2 mb-6">
+              {t(s.propertyMarketIn, data.name)}
+            </h2>
+            <div className="prose prose-lg max-w-none text-warm-700">
+              {content.propertyMarketSection.split('\n\n').map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════════
+            INVESTMENT ANALYSIS — Rich card layout
+        ═══════════════════════════════════════════════════════════════ */}
+        {content.investmentAnalysis && (
+          <section id="investment" className="py-16 bg-warm-50 scroll-mt-16">
+            <div className="max-w-7xl mx-auto px-6">
+              <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Investment</span>
+              <h2 className="text-3xl lg:text-4xl font-light text-primary-900 mt-2 mb-6">
+                {s.investmentAnalysis}
+              </h2>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="bg-gradient-to-br from-accent-500 to-accent-600 rounded-2xl p-8 text-white">
+                  <p className="text-white/70 text-sm uppercase tracking-wide mb-1">{s.rentalYield}</p>
+                  <p className="text-4xl font-bold mb-2">{content.investmentAnalysis.rentalYield}</p>
+                  <p className="text-white/80 text-sm">Estimated annual return on rental income</p>
+                </div>
+                <div className="bg-gradient-to-br from-primary-800 to-primary-900 rounded-2xl p-8 text-white">
+                  <p className="text-white/70 text-sm uppercase tracking-wide mb-1">{s.annualAppreciation}</p>
+                  <p className="text-4xl font-bold mb-2">{content.investmentAnalysis.annualAppreciation}</p>
+                  <p className="text-white/80 text-sm">Property value growth per year</p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-sm mb-8">
+                <p className="text-warm-700 text-lg leading-relaxed">{content.investmentAnalysis.overview}</p>
+              </div>
+
+              {(content.investmentAnalysis?.highlights?.length ?? 0) > 0 && (
+                <div className="grid md:grid-cols-2 gap-4">
+                  {content.investmentAnalysis.highlights.map((highlight, i) => (
+                    <div key={i} className="flex items-start gap-3 bg-white rounded-xl p-4 shadow-sm">
+                      <span className="flex-shrink-0 w-8 h-8 bg-accent-100 text-accent-600 rounded-full flex items-center justify-center font-bold text-sm">{i + 1}</span>
+                      <span className="text-warm-700">{highlight}</span>
+                    </div>
+                  ))}
+                </div>
               )}
 
-              {/* Nature & Activities */}
-              {(content.natureActivities?.activities?.length ?? 0) > 0 && (
-                <section>
-                  <h2 className="text-2xl font-bold text-primary-900 mb-6">{s.natureActivities}</h2>
-                  <p className="text-warm-700 mb-6">{content.natureActivities!.intro}</p>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {content.natureActivities!.activities.map((activity, i) => (
-                      <div key={i} className="bg-gradient-to-br from-warm-50 to-accent-50 rounded-sm p-4 border border-warm-100">
-                        <div className="flex items-start gap-3">
-                          <span className="flex-shrink-0 text-xl">
-                            {activity.type === 'Golf' ? '⛳' :
-                             activity.type === 'Beach' || activity.type === 'Water Sports' ? '🏖️' :
-                             activity.type === 'Hiking' || activity.type === 'Walking' ? '🥾' :
-                             activity.type === 'Cycling' ? '🚴' :
-                             activity.type === 'Nature Reserve' || activity.type === 'Nature' ? '🌿' :
-                             activity.type === 'Bird Watching' ? '🦅' :
-                             '🏞️'}
-                          </span>
-                          <div>
-                            <h3 className="font-bold text-primary-900 mb-1">{activity.name}</h3>
-                            <span className="text-xs bg-accent-100 text-accent-700 px-2 py-0.5 rounded-full">{activity.type}</span>
-                            <p className="text-warm-600 text-sm mt-2">{activity.description}</p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
+              {/* Investment CTA */}
+              <div className="mt-10 bg-gradient-to-r from-accent-500 to-primary-800 rounded-2xl p-8 text-white text-center">
+                <h3 className="text-2xl font-light mb-3">Interested in investing in {data.name}?</h3>
+                <p className="text-white/80 mb-6">Our team has 12+ years of experience helping investors find the right properties on the Costa Blanca.</p>
+                <Link href={`${langPrefix}/consultation`} className="inline-flex items-center gap-2 bg-white text-primary-900 hover:bg-warm-50 px-8 py-4 rounded-lg font-semibold transition-colors">
+                  Book Investment Consultation
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ═══════════════════════════════════════════════════════════════
+            COST OF LIVING — Card grid with summary
+        ═══════════════════════════════════════════════════════════════ */}
+        {content.costOfLiving && (
+          <section id="costs" className="py-16 bg-white scroll-mt-16">
+            <div className="max-w-7xl mx-auto px-6">
+              <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Finances</span>
+              <h2 className="text-3xl lg:text-4xl font-light text-primary-900 mt-2 mb-4">
+                {t(s.costOfLivingIn, data.name)}
+              </h2>
+              <p className="text-warm-600 text-lg mb-10 max-w-3xl">{content.costOfLiving.intro}</p>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {content.costOfLiving.items.map((item, i) => (
+                  <div key={i} className="bg-warm-50 rounded-xl p-5 shadow-sm">
+                    <h3 className="font-semibold text-primary-900 mb-1">{item.category}</h3>
+                    <p className="text-accent-600 font-bold text-lg mb-2">{item.cost}</p>
+                    <p className="text-warm-500 text-sm">{item.notes}</p>
                   </div>
-                </section>
-              )}
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
-              {/* Expat Community */}
-              {content.expatCommunity && (
-                <section>
-                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
+        {/* ═══════════════════════════════════════════════════════════════
+            LIFESTYLE TIMELINE (Day in the Life)
+        ═══════════════════════════════════════════════════════════════ */}
+        {(content.lifestyleTimeline?.entries?.length ?? 0) > 0 && (
+          <DayInTheLife
+            areaName={data.name}
+            intro={content.lifestyleTimeline!.title || t(s.typicalDay, data.name)}
+            timeline={content.lifestyleTimeline!.entries.map(entry => ({
+              time: entry.time,
+              title: entry.activity,
+              description: entry.description,
+              icon: '',
+            }))}
+            ctaText={`Find Your Home in ${data.name}`}
+            ctaLink={`${langPrefix}/areas/${data.slug}#developments`}
+          />
+        )}
+
+        {/* ═══════════════════════════════════════════════════════════════
+            SCHOOLS — Rich card layout
+        ═══════════════════════════════════════════════════════════════ */}
+        {(content.schools?.schools?.length ?? 0) > 0 && (
+          <section id="schools" className="py-16 bg-white scroll-mt-16">
+            <div className="max-w-7xl mx-auto px-6">
+              <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Education</span>
+              <h2 className="text-3xl lg:text-4xl font-light text-primary-900 mt-2 mb-4">
+                {t(s.schoolsNear, data.name)}
+              </h2>
+              <p className="text-warm-600 text-lg mb-10 max-w-3xl">{content.schools!.intro}</p>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                {content.schools!.schools.map((school, i) => (
+                  <div key={i} className="bg-warm-50 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                    <div className="flex justify-between items-start mb-3">
+                      <div>
+                        <h3 className="font-bold text-primary-900 text-lg">{school.name}</h3>
+                        <p className="text-accent-600 text-sm font-medium">{school.type}</p>
+                      </div>
+                      <span className="bg-white text-warm-600 text-sm px-3 py-1 rounded-full">{school.distance}</span>
+                    </div>
+                    <p className="text-warm-600 text-sm">{school.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ═══════════════════════════════════════════════════════════════
+            EVENTS & FIESTAS — Grid of event cards
+        ═══════════════════════════════════════════════════════════════ */}
+        {(content.events?.events?.length ?? 0) > 0 && (
+          <section id="events" className="py-16 bg-warm-50 scroll-mt-16">
+            <div className="max-w-7xl mx-auto px-6">
+              <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Culture</span>
+              <h2 className="text-3xl lg:text-4xl font-light text-primary-900 mt-2 mb-4">
+                {t(s.eventsFiestas, data.name)}
+              </h2>
+              <p className="text-warm-600 text-lg mb-10 max-w-3xl">{content.events!.intro}</p>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {content.events!.events.map((event, i) => (
+                  <div key={i} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <p className="text-accent-600 text-sm font-medium mb-2">{event.month}</p>
+                    <h3 className="font-bold text-primary-900 text-lg mb-2">{event.name}</h3>
+                    <p className="text-warm-600 text-sm">{event.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ═══════════════════════════════════════════════════════════════
+            EXPAT COMMUNITY — Two-column rich layout
+        ═══════════════════════════════════════════════════════════════ */}
+        {content.expatCommunity && (
+          <section id="expat" className="py-16 bg-white scroll-mt-16">
+            <div className="max-w-7xl mx-auto px-6">
+              <div className="grid lg:grid-cols-2 gap-12 items-start">
+                <div>
+                  <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Community</span>
+                  <h2 className="text-3xl lg:text-4xl font-light text-primary-900 mt-2 mb-6">
                     {t(s.expatCommunity, data.name)}
                   </h2>
-                  <div className="prose prose-lg max-w-none mb-6">
+                  <div className="prose prose-lg text-warm-700 max-w-none">
                     {(content.expatCommunity?.intro || '').split('\n\n').map((paragraph, i) => (
-                      <p key={i} className="text-warm-700">{paragraph}</p>
+                      <p key={i}>{paragraph}</p>
                     ))}
                   </div>
+                </div>
+
+                <div className="space-y-4">
                   {(content.expatCommunity?.nationalities?.length ?? 0) > 0 && (
-                    <div className="mb-6">
-                      <h3 className="font-medium text-primary-900 mb-3">{s.internationalCommunity}</h3>
+                    <div className="bg-warm-50 rounded-2xl p-6">
+                      <h3 className="font-bold text-primary-900 mb-4">{s.internationalCommunity}</h3>
                       <div className="flex flex-wrap gap-2">
                         {content.expatCommunity!.nationalities.map((nat, i) => (
-                          <span key={i} className="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium">
+                          <span key={i} className="bg-white text-warm-700 text-sm px-3 py-1 rounded-full">
                             {nat}
                           </span>
                         ))}
                       </div>
                     </div>
                   )}
+
                   {(content.expatCommunity?.highlights?.length ?? 0) > 0 && (
-                    <div className="grid md:grid-cols-2 gap-3">
-                      {content.expatCommunity!.highlights.map((highlight, i) => (
-                        <div key={i} className="flex items-start gap-3 p-3 bg-warm-50 rounded-sm">
-                          <span className="text-accent-500">&bull;</span>
-                          <span className="text-warm-700">{highlight}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </section>
-              )}
-
-              {/* Area Map */}
-              {content.mapEmbed && (
-                <section>
-                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
-                    {t(s.locationMap, data.name)}
-                  </h2>
-                  <div className="rounded-sm overflow-hidden border border-warm-200">
-                    <iframe
-                      src={content.mapEmbed}
-                      width="100%"
-                      height="400"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title={`Map of ${data.name}`}
-                    />
-                  </div>
-                </section>
-              )}
-
-              {/* Available Properties */}
-              {developments && developments.length > 0 && (
-                <section>
-                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
-                    {t(s.newBuildProperties, data.name)}
-                  </h2>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {developments.map((dev) => (
-                      <Link key={dev.slug} href={`/developments/${dev.slug}`}
-                        className="group bg-white border border-warm-200 rounded-sm overflow-hidden hover:shadow-lg transition-shadow">
-                        <div className="relative aspect-[4/3]">
-                          <Image src={dev.image} alt={dev.name} fill className="object-cover group-hover:scale-105 transition-transform" unoptimized />
-                          {dev.price && (
-                            <div className="absolute top-3 left-3">
-                              <span className="bg-primary-900 text-white px-3 py-1 rounded-sm text-sm font-bold">
-                                {s.from} &euro;{dev.price.toLocaleString()}
-                              </span>
-                            </div>
-                          )}
-                        </div>
-                        <div className="p-4">
-                          <h3 className="font-bold text-primary-900 group-hover:text-accent-600 transition-colors">{dev.name}</h3>
-                          <p className="text-warm-600 text-sm">{dev.propertyType}</p>
-                          {dev.bedrooms && <p className="text-warm-500 text-sm mt-1">{dev.bedrooms} bedrooms</p>}
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              {/* Video Tours Section */}
-              {(() => {
-                const areaVideos = getVideosForArea(data.slug, 3);
-                if (areaVideos.length === 0) return null;
-
-                if (areaVideos.length === 1) {
-                  const video = areaVideos[0];
-                  return (
-                    <section className="bg-primary-900 rounded-sm p-8 md:p-12">
-                      <div className="grid md:grid-cols-2 gap-8 items-center">
-                        <div className="text-white">
-                          <div className="flex items-center gap-3 mb-4">
-                            <div className="w-8 h-px bg-accent-500" />
-                            <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">{s.videoTour}</span>
+                    <div className="bg-warm-50 rounded-2xl p-6">
+                      <h3 className="font-bold text-primary-900 mb-4">Community Highlights</h3>
+                      <div className="space-y-3">
+                        {content.expatCommunity!.highlights.map((highlight, i) => (
+                          <div key={i} className="flex items-start gap-3">
+                            <span className="text-accent-500">&#10003;</span>
+                            <span className="text-warm-700 text-sm">{highlight}</span>
                           </div>
-                          <h2 className="text-3xl font-light mb-4">{t(s.exploreInVideo, data.name)}</h2>
-                          <p className="text-warm-200 mb-6 leading-relaxed">{video.description}</p>
-                          <div className="flex items-center gap-2 text-warm-300 text-sm">
-                            <span className="inline-block bg-accent-500 rounded-full px-3 py-1">{video.category}</span>
-                            {video.duration && <span>{video.duration}</span>}
-                            {video.price && <span className="text-accent-300 font-medium">From &euro;{video.price.toLocaleString()}</span>}
-                          </div>
-                        </div>
-                        <div><VideoCard {...video} variant="hero" /></div>
-                      </div>
-                    </section>
-                  );
-                }
-
-                return (
-                  <section className="py-12 bg-warm-50">
-                    <div className="max-w-7xl mx-auto px-6">
-                      <div className="text-center mb-8">
-                        <div className="flex items-center justify-center gap-4 mb-2">
-                          <div className="w-10 h-px bg-accent-500" />
-                          <span className="text-accent-600 text-xs font-medium tracking-widest uppercase">{s.videoTours}</span>
-                          <div className="w-10 h-px bg-accent-500" />
-                        </div>
-                        <h2 className="text-2xl md:text-3xl font-light text-primary-900">
-                          {t(s.videoTours, data.name)} {data.name}
-                        </h2>
-                      </div>
-                      <div className={`grid grid-cols-1 ${areaVideos.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3'} gap-6`}>
-                        {areaVideos.map((video) => (
-                          <VideoCard key={video.slug} {...video} variant="card" />
                         ))}
                       </div>
                     </div>
-                  </section>
-                );
-              })()}
-
-              {/* Related Blog Articles */}
-              {relatedBlogPosts.length > 0 && (
-                <section className="bg-accent-50 rounded-sm p-6">
-                  <h2 className="font-bold text-primary-900 text-xl mb-4">
-                    {t(s.guidesForBuying, data.name)}
-                  </h2>
-                  <div className="grid md:grid-cols-3 gap-4">
-                    {relatedBlogPosts.map(post => (
-                      <Link key={post.slug} href={`${langPrefix}/blog/${post.slug}`}
-                        className="bg-white rounded-sm p-4 hover:shadow-md transition-shadow group">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="bg-accent-100 text-accent-800 px-2 py-0.5 rounded text-xs font-medium">{post.category}</span>
-                          <span className="text-warm-400 text-xs">{post.readTime} {s.minRead}</span>
-                        </div>
-                        <h3 className="font-semibold text-primary-900 mb-1 group-hover:text-accent-600 transition-colors line-clamp-2">{post.title}</h3>
-                        <p className="text-warm-500 text-sm line-clamp-2">{post.description}</p>
-                      </Link>
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              {/* Why Live Here */}
-              {(content.whyLiveHereSection?.length ?? 0) > 0 && (
-                <section>
-                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
-                    {t(s.whyLiveIn, data.name)}
-                  </h2>
-                  <ul className="space-y-4">
-                    {content.whyLiveHereSection.map((reason, i) => (
-                      <li key={i} className="flex items-start gap-4 p-4 bg-accent-50 rounded-sm">
-                        <span className="flex-shrink-0 w-8 h-8 bg-accent-500 text-white rounded-full flex items-center justify-center font-bold">{i + 1}</span>
-                        <span className="text-warm-700">{reason}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-
-              {/* FAQs */}
-              {(content.faqs?.length ?? 0) > 0 && (
-                <section>
-                  <h2 className="text-2xl font-bold text-primary-900 mb-6">
-                    {t(s.faqAbout, data.name)}
-                  </h2>
-                  <div className="space-y-4">
-                    {content.faqs.map((faq, i) => (
-                      <details key={i} className="group border border-warm-200 rounded-sm">
-                        <summary className="flex justify-between items-center cursor-pointer p-4 font-medium text-primary-900 hover:bg-warm-50">
-                          {faq.question}
-                          <span className="ml-4 flex-shrink-0 text-warm-400 group-open:rotate-180 transition-transform">&#9660;</span>
-                        </summary>
-                        <div className="px-4 pb-4 text-warm-700">{faq.answer}</div>
-                      </details>
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              {/* Conclusion CTA */}
-              <section className="bg-gradient-to-r from-accent-500 to-primary-800 rounded-sm p-8 text-white">
-                <p className="text-lg mb-6">{content.conclusion}</p>
-                <div className="flex flex-wrap gap-4">
-                  <Link href={`${langPrefix}/consultation`}
-                    className="inline-flex items-center gap-2 bg-white text-primary-900 hover:bg-warm-50 px-6 py-3 rounded-sm font-semibold transition-colors">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                    Book Free Consultation
-                  </Link>
-                  <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-3 rounded-sm font-medium transition-colors">
-                    {s.whatsappUs}
-                  </a>
-                  <a href={`tel:${CONTACT.phone}`}
-                    className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-sm font-medium transition-colors">
-                    {CONTACT.phone}
-                  </a>
-                </div>
-              </section>
-            </div>
-
-            {/* Sidebar */}
-            <aside className="lg:col-span-1 space-y-6">
-              <div className="bg-white border border-warm-200 rounded-sm p-6 shadow-lg sticky top-6">
-                <h3 className="font-bold text-primary-900 text-xl mb-4">{data.name}</h3>
-
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <p className="text-sm text-warm-500">{s.region}</p>
-                    <p className="font-bold text-primary-900">{data.region || 'Costa Blanca'}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm text-warm-500">{s.newBuilds}</p>
-                    <p className="font-bold text-primary-900">{data.propertyCount}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm text-warm-500">{s.propertyTypes}</p>
-                    <p className="font-bold text-primary-900">{data.propertyTypes.join(', ')}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm text-warm-500">{s.priceRange}</p>
-                    <p className="font-bold text-primary-900">
-                      &euro;{data.priceRange.min.toLocaleString()} - &euro;{data.priceRange.max.toLocaleString()}
-                    </p>
-                  </div>
-                  {golf && golf.courses && (
-                    <div>
-                      <p className="text-sm text-warm-500">{s.golfCourses}</p>
-                      <p className="font-bold text-primary-900">{golf.courses.length} {s.nearby}</p>
-                    </div>
                   )}
                 </div>
+              </div>
+            </div>
+          </section>
+        )}
 
-                {externalLinks?.tourism?.url && (
-                  <div className="mb-6 p-3 bg-warm-50 rounded-sm">
-                    <a href={externalLinks.tourism.url} target="_blank" rel="noopener noreferrer"
-                      className="text-accent-600 hover:underline font-medium text-sm">
-                      {t(s.officialTourism, data.name)}
-                    </a>
+        {/* ═══════════════════════════════════════════════════════════════
+            NATURE & OUTDOOR ACTIVITIES
+        ═══════════════════════════════════════════════════════════════ */}
+        {(content.natureActivities?.activities?.length ?? 0) > 0 && (
+          <section id="outdoor" className="py-16 bg-warm-50 scroll-mt-16">
+            <div className="max-w-7xl mx-auto px-6">
+              <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Beyond the Property</span>
+              <h2 className="text-3xl lg:text-4xl font-light text-primary-900 mt-2 mb-4">
+                {s.natureActivities}
+              </h2>
+              <p className="text-warm-600 text-lg mb-10 max-w-3xl">{content.natureActivities!.intro}</p>
+
+              {/* Lifestyle Image Grid */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                {[golfImages[0], beachImages[3], marinaImages[0], oldTownImages[0]].map((img, i) => (
+                  <div key={i} className="relative aspect-square rounded-xl overflow-hidden group">
+                    <Image
+                      src={getImageUrl(img, 600)}
+                      alt={img.alt}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      unoptimized
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <span className="absolute bottom-3 left-3 text-white font-semibold text-sm">
+                      {['Golf', 'Beaches', 'Sailing', 'Old Towns'][i]}
+                    </span>
                   </div>
-                )}
-
-                <div className="space-y-3">
-                  <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer"
-                    className="block w-full bg-[#25D366] hover:bg-[#20bd5a] text-white text-center py-3 rounded-sm font-medium transition-colors">
-                    WhatsApp
-                  </a>
-                  <a href={`tel:${CONTACT.phone}`}
-                    className="block w-full bg-accent-500 hover:bg-accent-600 text-white text-center py-3 rounded-sm font-medium transition-colors">
-                    {s.callNow}
-                  </a>
-                  <a href={CONTACT.habeno} target="_blank" rel="noopener noreferrer"
-                    className="block w-full bg-gray-100 hover:bg-gray-200 text-warm-700 text-center py-3 rounded-sm font-medium transition-colors">
-                    {s.getMortgageQuote}
-                  </a>
-                </div>
+                ))}
               </div>
 
-              {/* Lead Form in Sidebar */}
-              <div className="bg-white border border-warm-200 rounded-sm p-6 shadow-lg">
-                <LeadForm
-                  area={data.name}
-                  language={lang}
-                  formType="Area Inquiry"
-                  sourcePage={`${langPrefix}/areas/${data.slug}`}
-                  budgetRange={`€${data.priceRange.min.toLocaleString()} - €${data.priceRange.max.toLocaleString()}`}
-                  compact={true}
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {content.natureActivities!.activities.map((activity, i) => (
+                  <div key={i} className="bg-white rounded-xl p-6 shadow-sm">
+                    <div className="flex justify-between items-start mb-3">
+                      <h3 className="font-bold text-primary-900">{activity.name}</h3>
+                      <span className="bg-accent-100 text-accent-700 text-xs px-2 py-1 rounded-full">{activity.type}</span>
+                    </div>
+                    <p className="text-warm-600 text-sm">{activity.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ═══════════════════════════════════════════════════════════════
+            MAP EMBED
+        ═══════════════════════════════════════════════════════════════ */}
+        {content.mapEmbed && (
+          <section className="scroll-mt-16">
+            <div className="max-w-7xl mx-auto px-6 py-16">
+              <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Location</span>
+              <h2 className="text-3xl lg:text-4xl font-light text-primary-900 mt-2 mb-6">
+                {t(s.locationMap, data.name)}
+              </h2>
+              <div className="rounded-2xl overflow-hidden border border-warm-200 shadow-sm">
+                <iframe
+                  src={content.mapEmbed}
+                  width="100%"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={`Map of ${data.name}`}
                 />
               </div>
+            </div>
+          </section>
+        )}
 
-              {/* Free Consultation CTA */}
-              <div className="bg-gradient-to-br from-primary-900 to-primary-800 rounded-sm p-6 text-white">
-                <h3 className="font-bold text-lg mb-2">Free 30-Min Consultation</h3>
-                <p className="text-warm-200 text-sm mb-4">
-                  Speak with an experienced agent with 12+ years selling new builds on the Costa Blanca. Get honest, personal advice about {data.name} — no obligation.
-                </p>
-                <Link
-                  href={`${langPrefix}/consultation`}
-                  className="block w-full bg-accent-500 hover:bg-accent-600 text-white text-center py-3 rounded-sm font-semibold transition-colors mb-3"
-                >
-                  Book Free Consultation
-                </Link>
-                <a
-                  href={CONTACT.whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full bg-[#25D366] hover:bg-[#20bd5a] text-white text-center py-3 rounded-sm font-medium transition-colors"
-                >
-                  Or WhatsApp Us
-                </a>
-              </div>
+        {/* ═══════════════════════════════════════════════════════════════
+            VIDEO TOURS
+        ═══════════════════════════════════════════════════════════════ */}
+        {(() => {
+          if (areaVideos.length === 0) return null;
 
-              {/* Newsletter CTA for area updates */}
-              <NewsletterCTA
-                type="area"
-                areaName={data.name}
-                language={lang}
-                sourcePage={`${langPrefix}/areas/${data.slug}`}
-              />
+          if (areaVideos.length === 1) {
+            const video = areaVideos[0];
+            return (
+              <section className="py-16 bg-primary-900">
+                <div className="max-w-7xl mx-auto px-6">
+                  <div className="grid md:grid-cols-2 gap-8 items-center">
+                    <div className="text-white">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-8 h-px bg-accent-500" />
+                        <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">{s.videoTour}</span>
+                      </div>
+                      <h2 className="text-3xl font-light mb-4">{t(s.exploreInVideo, data.name)}</h2>
+                      <p className="text-warm-200 mb-6 leading-relaxed">{video.description}</p>
+                      <div className="flex items-center gap-2 text-warm-300 text-sm">
+                        <span className="inline-block bg-accent-500 rounded-full px-3 py-1">{video.category}</span>
+                        {video.duration && <span>{video.duration}</span>}
+                      </div>
+                    </div>
+                    <div><VideoCard {...video} variant="hero" /></div>
+                  </div>
+                </div>
+              </section>
+            );
+          }
 
-              <div className="bg-warm-50 rounded-sm p-6">
-                <h3 className="font-bold text-primary-900 mb-4">{s.exploreOtherAreas}</h3>
-                <div className="space-y-2">
-                  <Link href={`${langPrefix}/areas/torrevieja`} className="block text-accent-600 hover:underline">Torrevieja</Link>
-                  <Link href={`${langPrefix}/areas/javea`} className="block text-accent-600 hover:underline">Jávea</Link>
-                  <Link href={`${langPrefix}/areas/moraira`} className="block text-accent-600 hover:underline">Moraira</Link>
-                  <Link href={`${langPrefix}/areas/benidorm`} className="block text-accent-600 hover:underline">Benidorm</Link>
-                  <Link href={`${langPrefix}/areas/calpe`} className="block text-accent-600 hover:underline">Calpe</Link>
+          return (
+            <section className="py-16 bg-warm-50">
+              <div className="max-w-7xl mx-auto px-6">
+                <div className="text-center mb-8">
+                  <span className="text-accent-600 text-xs font-medium tracking-widest uppercase">{s.videoTours}</span>
+                  <h2 className="text-3xl font-light text-primary-900 mt-2">
+                    {s.videoTours} {data.name}
+                  </h2>
+                </div>
+                <div className={`grid grid-cols-1 ${areaVideos.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3'} gap-6`}>
+                  {areaVideos.map((video) => (
+                    <VideoCard key={video.slug} {...video} variant="card" />
+                  ))}
                 </div>
               </div>
-            </aside>
+            </section>
+          );
+        })()}
+
+        {/* ═══════════════════════════════════════════════════════════════
+            RELATED BLOG ARTICLES
+        ═══════════════════════════════════════════════════════════════ */}
+        {relatedBlogPosts.length > 0 && (
+          <section className="py-16 bg-white">
+            <div className="max-w-7xl mx-auto px-6">
+              <h2 className="text-2xl font-light text-primary-900 mb-8">
+                {t(s.guidesForBuying, data.name)}
+              </h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {relatedBlogPosts.map(post => (
+                  <Link key={post.slug} href={`${langPrefix}/blog/${post.slug}`}
+                    className="bg-warm-50 rounded-2xl p-6 hover:shadow-md transition-shadow group">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="bg-accent-100 text-accent-800 px-2 py-0.5 rounded text-xs font-medium">{post.category}</span>
+                      <span className="text-warm-400 text-xs">{post.readTime} {s.minRead}</span>
+                    </div>
+                    <h3 className="font-semibold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors line-clamp-2">{post.title}</h3>
+                    <p className="text-warm-500 text-sm line-clamp-2">{post.description}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ═══════════════════════════════════════════════════════════════
+            WHY LIVE HERE
+        ═══════════════════════════════════════════════════════════════ */}
+        {(content.whyLiveHereSection?.length ?? 0) > 0 && (
+          <section className="py-16 bg-warm-50">
+            <div className="max-w-7xl mx-auto px-6">
+              <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Summary</span>
+              <h2 className="text-3xl lg:text-4xl font-light text-primary-900 mt-2 mb-8">
+                {t(s.whyLiveIn, data.name)}
+              </h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                {content.whyLiveHereSection.map((reason, i) => (
+                  <div key={i} className="flex items-start gap-4 bg-white rounded-xl p-5 shadow-sm">
+                    <span className="flex-shrink-0 w-10 h-10 bg-accent-500 text-white rounded-full flex items-center justify-center font-bold">{i + 1}</span>
+                    <span className="text-warm-700">{reason}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ═══════════════════════════════════════════════════════════════
+            INLINE LEAD FORM — Full-width
+        ═══════════════════════════════════════════════════════════════ */}
+        <section className="py-16 bg-white">
+          <div className="max-w-3xl mx-auto px-6">
+            <div className="text-center mb-8">
+              <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Get In Touch</span>
+              <h2 className="text-3xl font-light text-primary-900 mt-2">
+                Interested in {data.name}?
+              </h2>
+              <p className="text-warm-600 mt-3">Tell us what you are looking for and we will get back to you within 24 hours.</p>
+            </div>
+            <div className="bg-warm-50 rounded-2xl p-8">
+              <LeadForm
+                area={data.name}
+                language={lang}
+                formType="Area Inquiry"
+                sourcePage={`${langPrefix}/areas/${data.slug}`}
+                budgetRange={`€${data.priceRange.min.toLocaleString()} - €${data.priceRange.max.toLocaleString()}`}
+              />
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════════
+            FAQs — Centered, dramatic
+        ═══════════════════════════════════════════════════════════════ */}
+        {(content.faqs?.length ?? 0) > 0 && (
+          <section id="faqs" className="py-16 bg-warm-50 scroll-mt-16">
+            <div className="max-w-4xl mx-auto px-6">
+              <div className="text-center mb-12">
+                <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Questions Answered</span>
+                <h2 className="text-3xl lg:text-4xl font-light text-primary-900 mt-2">
+                  {t(s.faqAbout, data.name)}
+                </h2>
+              </div>
+
+              <div className="space-y-4">
+                {content.faqs.map((faq, i) => (
+                  <details key={i} className="group border border-warm-200 rounded-xl overflow-hidden bg-white">
+                    <summary className="flex justify-between items-center cursor-pointer p-5 font-semibold text-primary-900 hover:bg-warm-50 transition-colors">
+                      <span className="pr-4">{faq.question}</span>
+                      <span className="text-warm-400 group-open:rotate-180 transition-transform">&#9660;</span>
+                    </summary>
+                    <div className="px-5 pb-5 text-warm-700 leading-relaxed border-t border-warm-100 pt-4">
+                      {faq.answer}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ═══════════════════════════════════════════════════════════════
+            NEWSLETTER
+        ═══════════════════════════════════════════════════════════════ */}
+        <section className="py-12 bg-white">
+          <div className="max-w-3xl mx-auto px-6">
+            <NewsletterCTA
+              type="area"
+              areaName={data.name}
+              language={lang}
+              sourcePage={`${langPrefix}/areas/${data.slug}`}
+            />
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════════
+            FINAL CTA — Dramatic gradient
+        ═══════════════════════════════════════════════════════════════ */}
+        <section className="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-3xl lg:text-4xl font-light text-white mb-4">
+              Ready to Explore <span className="font-semibold">{data.name}?</span>
+            </h2>
+            <p className="text-warm-300 text-lg mb-8 max-w-2xl mx-auto">
+              {content.conclusion}
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              <Link href={`${langPrefix}/consultation`} className="bg-accent-500 hover:bg-accent-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors inline-flex items-center gap-2">
+                Book Free Consultation
+              </Link>
+              <a href={CONTACT.whatsapp} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold px-8 py-4 rounded-lg transition-colors inline-flex items-center gap-2">
+                WhatsApp
+              </a>
+              <a href={`tel:${CONTACT.phone}`} className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg transition-colors border border-white/20">
+                {CONTACT.phone}
+              </a>
+            </div>
+
+            <div className="pt-8 border-t border-white/20">
+              <p className="text-warm-400 text-sm mb-4">{s.exploreOtherAreas}</p>
+              <div className="flex flex-wrap justify-center gap-6">
+                <Link href={`${langPrefix}/areas/torrevieja`} className="text-white/70 hover:text-white transition-colors">Torrevieja &rarr;</Link>
+                <Link href={`${langPrefix}/areas/javea`} className="text-white/70 hover:text-white transition-colors">J&aacute;vea &rarr;</Link>
+                <Link href={`${langPrefix}/areas/moraira`} className="text-white/70 hover:text-white transition-colors">Moraira &rarr;</Link>
+                <Link href={`${langPrefix}/areas/benidorm`} className="text-white/70 hover:text-white transition-colors">Benidorm &rarr;</Link>
+                <Link href={`${langPrefix}/areas/calpe`} className="text-white/70 hover:text-white transition-colors">Calpe &rarr;</Link>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );
