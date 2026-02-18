@@ -8,6 +8,13 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Redirect old development URLs to properties
+# Pattern: /developments/{type}-{reference} -> /properties/{reference}
+[[redirects]]
+  from = "/developments/:type-:reference"
+  to = "/properties/:reference"
+  status = 301
+
 # Security headers
 [[headers]]
   for = "/*"

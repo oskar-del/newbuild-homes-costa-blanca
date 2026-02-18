@@ -17,6 +17,15 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // Handle old development URLs that should redirect to properties
+  // Pattern: /developments/{type}-{reference} where reference is like N8105, N9422, etc.
+  // Should redirect to /properties/{reference}
+  const developmentsMatch = pathname.match(/^\/developments\/([a-z-]+)-([nN]\d+)$/);
+  if (developmentsMatch) {
+    const reference = developmentsMatch[2].toUpperCase();
+    return NextResponse.redirect(new URL(`/properties/${reference}`, request.url), 301);
+  }
+
   // Check if the URL has a locale prefix
   const pathnameHasLocale = locales.some(
     locale => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
