@@ -13,6 +13,9 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: 'https://newbuildhomescostablanca.com/sitemap.xml',
+    sitemap: [
+      'https://newbuildhomescostablanca.com/sitemap.xml',
+      'https://newbuildhomescostablanca.com/video-sitemap.xml',
+    ],
   };
 }
