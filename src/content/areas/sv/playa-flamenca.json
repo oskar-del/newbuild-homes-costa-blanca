@@ -1,0 +1,482 @@
+{
+  "slug": "playa-flamenca",
+  "name": "Playa Flamenca",
+  "region": "Costa Blanca South",
+  "parentArea": "orihuela-costa",
+  "heroImage": "/images/areas/playa-flamenca-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartment",
+    "Penthouse",
+    "Townhouse",
+    "Villa",
+    "Bungalow"
+  ],
+  "priceRange": {
+    "min": 165000,
+    "max": 550000
+  },
+  "coordinates": {
+    "lat": 37.9297,
+    "lng": -0.7344
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Orihuela Costa Tourism",
+      "url": "https://www.orihuelaturistica.es/",
+      "description": "Officiell Orihuela turismportal"
+    },
+    "beaches": [
+      {
+        "name": "Playa Flamenca Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+Flamenca+Beach",
+        "description": "Blåglas strand med lugnt, grunt vatten—perfekt för familjer",
+        "blueFlag": true
+      },
+      {
+        "name": "Cala Mosca",
+        "googleMaps": "https://maps.google.com/?q=Cala+Mosca+Orihuela",
+        "description": "Liten kokstrand med steniga formationer"
+      },
+      {
+        "name": "Playa de La Zenia",
+        "googleMaps": "https://maps.google.com/?q=Playa+La+Zenia",
+        "description": "Angränsande strand med fler faciliteter",
+        "distance": "1 km"
+      }
+    ],
+    "shopping": [
+      {
+        "name": "La Zenia Boulevard",
+        "googleMaps": "https://maps.google.com/?q=La+Zenia+Boulevard",
+        "url": "https://www.lazeniaboulevard.es/",
+        "description": "Europas största öppna shoppingcenter",
+        "distance": "2 km"
+      },
+      {
+        "name": "Playa Flamenca Commercial Center",
+        "googleMaps": "https://maps.google.com/?q=Centro+Comercial+Playa+Flamenca",
+        "description": "Lokala butiker, supermarknader, restauranger"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "8 km",
+      "driveTime": "10 minutes"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "52 km",
+      "driveTime": "40 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Playa Flamenca är beläget i hjärtat av Orihuela Costas golftriangel med utmärkt åtkomst till alla stora banor.",
+    "courses": [
+      {
+        "name": "Villamartin Golf",
+        "distance": "3 km",
+        "driveTime": "5 minutes",
+        "holes": 18,
+        "url": "https://www.villamartingolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Villamartin+Golf",
+        "description": "Mästerligbana med skövald historia."
+      },
+      {
+        "name": "Las Ramblas Golf",
+        "distance": "4 km",
+        "driveTime": "7 minutes",
+        "holes": 18,
+        "url": "https://www.lasramblasgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Las+Ramblas+Golf",
+        "description": "Dramatiska höjdskillnader med utsikter."
+      },
+      {
+        "name": "Campoamor Golf",
+        "distance": "5 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "url": "https://www.campoamorgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Campoamor+Golf",
+        "description": "Väl underhållen kustkurs."
+      },
+      {
+        "name": "Las Colinas Golf",
+        "distance": "10 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.lascolinasgolf.es/",
+        "googleMaps": "https://maps.google.com/?q=Las+Colinas+Golf",
+        "description": "Prisvärdgolfbana rankad bland Spaniens bästa."
+      }
+    ]
+  },
+  "localMarket": {
+    "saturdayMarket": {
+      "name": "Playa Flamenca Saturday Market",
+      "location": "Commercial center area",
+      "googleMaps": "https://maps.google.com/?q=Mercadillo+Playa+Flamenca",
+      "hours": "Saturdays 8:00 - 14:00",
+      "description": "Populär vecklig marknad med färsk produkt, kläder och hushållsartiklar"
+    }
+  },
+  "content": {
+    "metaTitle": "Att bo i Playa Flamenca | Familjestrands Boende | Orihuela Costa 2026",
+    "metaDescription": "Komplett guide till Playa Flamenca—familjevänliga stränder, La Zenia Boulevard 2 min, bästa värdet i Orihuela Costa. Egenskaper från €165k. Det praktiska valet.",
+    "quickAnswer": "Playa Flamenca är Orihuela Costas familjevänliga söta punkt—lugna grunda stränder perfekta för barn, La Zenia Boulevard 2 km bort, och bästa värdiga kustegenskaper från €165 000. Bara 5 minuter från Villamartin Golf och 10 minuter från sjukhus. Praktiskt strandboende.",
+    "heroIntro": "Mellan La Zenias buzz och Punta Primas tystare nåer ligger Playa Flamenca—ett samhälle som gör kustboende praktiskt snarare än flashigt. Stranden här har lugna, grunda vatten som föräldrar uppskattar, försiktigt sluttande sand som barn älskar och tillräckligt utrymme för att sommartrötten inte känns överväldigande.\n\nPlaya Flamenecas hemlighet är dess praktikalitet. La Zenia Boulevard ligger 2 km bort—tillräckligt nära för bekväm shopping, långt nog för att området bibehåller sitt bostadskaraktär. Villamartin Golf är 5 minuter. Sjukhuset är 10 minuter. Priserna är vanligtvis 10-15% mindre än La Zenia samtidigt som de erbjuder liknande strändåtkomst och bättre golfnärhet.\n\nFör köpare som söker värde, familjevänlighet och praktisk bekvämlighet utan premiumpriser, levererar Playa Flamenca det väsentliga.",
+    "lifestyleSection": {
+      "intro": "Livet i Playa Flamenca är bekvämt förortsväxt. Morgonstrandspaserande, skolkörning (goda internationella alternativ i närheten), shopping på Boulevard, kvälls-barbecues. Det är mindre glamouröst än Cabo Roig, mindre kommersiellt än La Zenia, mindre pretensiöst än Campoamor. Det är praktiskt—och för många är det exakt rätt.\n\nSamhället är etablerat och familjeorienterat, med brittiska, skandinaviska och andra europeiska invånare. Engelska är mycket talat. Integration sker genom barns aktiviteter, golfklubbar och naturliga strandlivssamfund. Det är välkommen utan att vara överväldigande.",
+      "highlights": [
+        "Familjevänlig strand med lugnt, grunt vatten",
+        "La Zenia Boulevard bara 2 km—bekväm shopping",
+        "Bästa värde i kustig Orihuela Costa—10-15% mindre än La Zenia",
+        "Villamartin Golf 5 minuter",
+        "Sjukhus 10 minuter—praktisk sjukvårdstillgång",
+        "Lördagsmarknad lägger till lokal karaktär",
+        "Internationella skolor i närheten",
+        "Etablerat familjeorienterat samhälle"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Playa Flamenca strand är idealisk för familjer—lugn grunt vatten, försiktigt sandslutt, blåglas kvalitet. Mindre trängd än La Zenia strand samtidigt som den erbjuder liknande faciliteter inklusive livräddare och strandbar. Cala Mosca erbjuder ett stenigare alternativ. La Zenia strand ligger bara 1 km norrut för variation.",
+      "dining": "Lokala restauranger och barer omkring handelcentrumet erbjuder goda vardagsalternativ. Stranden har chiringuitos för casual äta. La Zenia Boulevard (2 km) tillhandahåller omfattande restaurangsortering. För särskilda tillfällen har Cabo Roigs hamn (5 km) utmärkt skaldjur.",
+      "shopping": "Lokalt handelscenter täcker dagliga behov—supermarknader, apotek, banker. La Zenia Boulevard (2 km) erbjuder 150+ butiker för allvarlig shopping. Lördagsmarknaden lägger till lokalt framställda och karaktär. Utmärkt kombination av bekvämlighet och val.",
+      "healthcare": "Hospital Universitario de Torrevieja är 8 km (10 minuter)—god åtkomst. Lokala medicinska centra och apotek i handelområdet. Sjukvårdsinfrastrukturen passar det familjeorienterade samhället.",
+      "transport": "Alicante-Elche Airport är 52 km (40 minuter via AP-7). Bra central plats i Orihuela Costa. En bil är användbar men området är mer gångbar än vissa—strand, butiker och restauranger är tillgängliga till fots från de flesta egenskaper."
+    },
+    "neighborhoods": [
+      {
+        "name": "Beachfront",
+        "description": "Egenskaper nära Playa Flamenca strand. Gångväg till sand och hav. Blandat lägenheter, radhus. Bra hyrespotential."
+      },
+      {
+        "name": "Commercial Center Area",
+        "description": "Nära butiker och restauranger. Bekväm för dagligt liv. Mer överkomligt än stranden. Bra för familjer."
+      },
+      {
+        "name": "Towards La Zenia",
+        "description": "Södra kant närmare La Zenia Boulevard. Bra shoppingtillgång. Något högre priser reflekterande Boulevard närhet."
+      },
+      {
+        "name": "Towards Punta Prima",
+        "description": "Norra kant, tystare atmosfär. Bra strändåtkomst. Populär med familjer som söker fred."
+      }
+    ],
+    "propertyMarketSection": "Playa Flamenca erbjuder bästa värdet i kustig Orihuela Costa. Nya byggnadslägenheter startar omkring €165 000-280 000, radhus från €220 000-380 000 och villor från €350 000-550 000. Priserna är vanligtvis 10-15% mindre än motsvarande La Zenia egenskaper.\n\nMarknaden attraherar familjer, värdekompnstenta köpare och de som prioriterar praktisk bekvämlighet. Hyrespotentialen är god—familjer söker de lugna stränderna och Boulevard åtkomst. Egenskaper med pooler presterar väl på hyresmarknaden.\n\nVidare egenskaper erbjuder ytterligare värde för de som söker omedelbar förväxling eller etablerade trädgårdar. Området har mognat väl med bra gemenskapsinfrastruktur.",
+    "whyLiveHereSection": [
+      "Bästa värde i kustig Orihuela Costa",
+      "Familjevänlig strand med lugnt vatten",
+      "La Zenia Boulevard bara 2 km",
+      "Villamartin Golf 5 minuter",
+      "Sjukhus 10 minuter",
+      "Lördagsmarknad lägger till karaktär",
+      "Etablerat familjeorienterat samhälle",
+      "Praktisk bekvämlighet utan premiumpriser"
+    ],
+    "faqs": [
+      {
+        "question": "Är Playa Flamenca bra för familjer?",
+        "answer": "Utmärkt. Stranden har lugnt, grunt vatten idealisk för barn. Internationella skolor är i närheten. Samhället är familjeorienterat. La Zenia Boulevard tillhandahåller familjevänlig shopping och underhållning. Det är en av de bästa familjeplatser på Orihuela Costa."
+      },
+      {
+        "question": "Hur jämför Playa Flamenca med La Zenia?",
+        "answer": "Playa Flamenca är 10-15% billigare medan det erbjuder liknande strändåtkomst och bättre golfnärhet. La Zenia har Boulevard på sin dörrsteg; Playa Flamenca är 2 km bort. Playa Flamenca är mer bostäder och familjeorienterad; La Zenia är mer kommersiell. Båda är utmärkta."
+      },
+      {
+        "question": "Vad är fastighetspriserna i Playa Flamenca?",
+        "answer": "Lägenheter från €165 000, radhus från €220 000, villor från €350 000. Bästa värde i kustig Orihuela Costa—vanligtvis 10-15% mindre än La Zenia."
+      },
+      {
+        "question": "Hur långt är La Zenia Boulevard från Playa Flamenca?",
+        "answer": "Bara 2 km (5 minuters körning, 20 minuters gångväg). Nära nog för bekväm shopping, långt nog för att bibehålla bostadskaraktär."
+      },
+      {
+        "question": "Är Playa Flamenca bra för golf?",
+        "answer": "Utmärkt åtkomst. Villamartin (5 min), Las Ramblas (7 min), Campoamor (8 min), Las Colinas (12 min). Central plats ger stor variation."
+      },
+      {
+        "question": "Hur är stranden i Playa Flamenca?",
+        "answer": "Blåglas kvalitet med lugnt, grunt vatten—idealisk för familjer och barn. Gyllene sand, försiktigt sluttande, mindre trängd än La Zenia. Livräddare och strändbar i säsong."
+      },
+      {
+        "question": "Är engelska mycket talat i Playa Flamenca?",
+        "answer": "Ja, med etablerat brittisk och internationalt samhälle. De flesta tjänster tillgodosatser engelsktalare. Familjeorienterat samhälle är välkommen."
+      },
+      {
+        "question": "Finns det marknad i Playa Flamenca?",
+        "answer": "Ja, lördagsmarknad i handelcentrumsområdet. Färsk produkt, kläder, hushållsartiklar. Lägger till lokal karaktär tillsammans med La Zenia Boulevards bekvämlighet shopping."
+      },
+      {
+        "question": "Är Playa Flamenca bra för hyresinvesteringar?",
+        "answer": "Bra potential. Familjer söker de lugna stränderna och Boulevard åtkomst. Egenskaper med pooler presterar väl. Värdeprisning innebär bättre avkastning än högre prissatta angränsande områden."
+      },
+      {
+        "question": "Är Playa Flamenca lämpligt för permanentboende?",
+        "answer": "Utmärkt för familjer och de som söker praktisk bekvämlighet. År-omkring tjänster, bra gemenskapsinfrastruktur, familjeorienterad atmosfär. Mindre lämpligt för de som söker spänning eller exklusivitet."
+      }
+    ],
+    "conclusion": "Playa Flamenca söker inte uppmärksamhet—det bara levererar praktisk kustboende till förnuftiga priser. Stranden passar familjer, Boulevard är nära, golfen är tillgänglig och samhället är etablerat. För köpare som prioriterar värde och bekvämlighet framför glamour och exklusivitet, är Playa Flamenca det smarta valet.\n\nReady to explore properties in Playa Flamenca? Vårt team förstår familjeorienterat kustboende och kan matcha dig med egenskaper som levererar de praktiska fördelar som detta område gör så väl.",
+    "investmentAnalysis": {
+      "rentalYield": "5-7% on apartments, 6-7% on family villas",
+      "annualAppreciation": "2-3% annually, steady due to family-market stability",
+      "overview": "Playa Flamenecas hyresmarknad attraherar familjer som söker lugna stränder och bekvämlighet. Det utmärkta värdeerbjudandet stöder konsistenta bokningar. Egenskaper med pooler presterar bäst.",
+      "highlights": [
+        "Familjemarknad-positionering driver stabil hyresenafterföljning",
+        "Best-värdskustegenskaper stöder högre ockupation",
+        "Pooleegenskaper kommanderar premiumpriser",
+        "Lugna stränder attraherar repeterat familj bokning",
+        "La Zenia Boulevard närhet ökar besökaräppel"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Playa Flamenecas levnadskostnad är utmärkt för ett kustområde—det bästa värdet i Orihuela Costa medan det bibehåller strändåtkomst och fullständiga faciliteter.",
+      "items": [
+        {
+          "category": "Hyra (2-sängrum lägenhet)",
+          "cost": "€650-950",
+          "notes": "Strands dyrare; handelcentrumsområde billigare"
+        },
+        {
+          "category": "Servicen (månatlig)",
+          "cost": "€90-130",
+          "notes": "Luftkonditionering väsentlig på sommaren"
+        },
+        {
+          "category": "Mat (veckovis)",
+          "cost": "€60-85",
+          "notes": "Supermarknader och lokala butiker, viss turistinflation"
+        },
+        {
+          "category": "Restaurang måltid (3-gånger)",
+          "cost": "€14-20",
+          "notes": "Blandat spanskt och internationellt, rimliga priser"
+        },
+        {
+          "category": "Café kaffe",
+          "cost": "€1,30-1,70",
+          "notes": "Strändplatser något högre"
+        },
+        {
+          "category": "Sjukvård (månatlig)",
+          "cost": "€70-110",
+          "notes": "Privat försäkring valfri; bra offentlig åtkomst"
+        },
+        {
+          "category": "Fastighetsskatt (årlig)",
+          "cost": "€350-550",
+          "notes": "IBI för kustig egendom"
+        },
+        {
+          "category": "Gemenskapsavgifter (om tillämpbart)",
+          "cost": "€80-150",
+          "notes": "För egenskaper med gemensamma faciliteter"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Playa Flamenecas eventkalender inkluderar traditionella spanska firande och familjeorienterade aktiviteter, vilket återspeglar dess gemenskapsfokus.",
+      "events": [
+        {
+          "name": "Fiestas de Verano (Summer Festivities)",
+          "month": "July-August",
+          "description": "Strand-fokuserad firande med familj arrangemang, kvällunderhållning och matsalar"
+        },
+        {
+          "name": "Saturday Market (Mercadillo)",
+          "month": "Year-round, weekly",
+          "description": "Traditionell marknad med färsk produkt, kläder och hushållsvaror"
+        },
+        {
+          "name": "Children's Beach Activities",
+          "month": "July-August",
+          "description": "Organiserat strandaktiviteter, tävlingar och underhållning för familjer"
+        },
+        {
+          "name": "Semana Santa (Holy Week)",
+          "month": "March/April",
+          "description": "Religiös processioner och traditionell Spansk firande"
+        },
+        {
+          "name": "Christmas Family Events",
+          "month": "December",
+          "description": "Familjevänlig festlig firande och strand-områdes semestermarknad"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Playa Flamenca har åtkomst till både spanska offentliga skolor och internationella alternativ, vilket gör det lämpligt för varierad utbildningspreferenser.",
+      "schools": [
+        {
+          "name": "Colegio Público Orihuela Costa",
+          "type": "Public Primary & Secondary",
+          "distance": "5 km, walking distance to some areas",
+          "description": "Spansk offentlig skola med tvåspråkiga utbildningsprogram"
+        },
+        {
+          "name": "International Schools (La Zenia)",
+          "type": "International Primary & Secondary",
+          "distance": "2 km, 5 minutes by car",
+          "description": "Brittisk och andra läroplaner skolor bekväm till Playa Flamenca familjer"
+        },
+        {
+          "name": "Private Schools",
+          "type": "Private education",
+          "distance": "Nearby Torrevieja and Orihuela Costa",
+          "description": "Varierade privata skola alternativ med olika läroplansmetoder"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Playa Flamenecas naturaktiviteter centrum på strand- och vattenrekreation, med lugna förhållanden perfekt för familjer.",
+      "activities": [
+        {
+          "name": "Swimming at Playa Flamenca Beach",
+          "type": "Water recreation",
+          "description": "Blåglas strand med lugnt, grunt vatten idealisk för barn och familjer"
+        },
+        {
+          "name": "Beach walks and exploration",
+          "type": "Leisure",
+          "description": "Långa sandiga stränder lämpliga för morgon- eller kvällspaserande"
+        },
+        {
+          "name": "Paddleboarding and kayaking",
+          "type": "Water sports",
+          "description": "Strand-baserad vattensportsuthyrningar tillgängliga sommarmånaderna"
+        },
+        {
+          "name": "Cycling along the coast",
+          "type": "Active recreation",
+          "description": "Platt kustvägar lämpliga för familjecykling och fritidsriding"
+        },
+        {
+          "name": "Golf at nearby courses",
+          "type": "Sports",
+          "description": "Villamartin (5 min), Las Ramblas (7 min), Campoamor (8 min) i närheten"
+        },
+        {
+          "name": "Beach volleyball and activities",
+          "type": "Recreation",
+          "description": "Familjevänlig strandsporter och aktiviteter"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Playa Flamenca har en etablerat, familjeorienterad utländsk gemenskap. Den praktiska, icke-pretensiösa atmosfären attraherar de som söker gemenskap framför exklusivitet.",
+      "highlights": [
+        "Stor, familjeorienterad expat gemenskap",
+        "Praktisk fokus appellerar till värdekompnstenta köpare",
+        "Internationell skolnärvaro stöder familjeintegration",
+        "Mindre exklusiv än upscale angränsande områden",
+        "Gemenskapsöversatt snarare än livsstilsorienterad"
+      ],
+      "nationalities": [
+        "Brittisk",
+        "Skandinavisk",
+        "Tysk",
+        "Nederländsk",
+        "Belgisk",
+        "Fransk"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "En Typical Day in Playa Flamenca",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Family breakfast",
+          "description": "Börja dagen med frukost, ibland på ett lokalt café eller strandbar"
+        },
+        {
+          "time": "10:00",
+          "activity": "Beach time with children",
+          "description": "Morgonstrandaktivitet, simning eller strandspel med familj"
+        },
+        {
+          "time": "13:00",
+          "activity": "Lunch",
+          "description": "Huvudmål, ofta på strand chiringuito eller hemma med familj"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta or pool time",
+          "description": "Eftermiddagsvilande eller simning i villapool"
+        },
+        {
+          "time": "17:00",
+          "activity": "School activities or recreation",
+          "description": "Organiserad aktivitet, golf eller ytterligare strändtid"
+        },
+        {
+          "time": "19:00",
+          "activity": "Family time or social activity",
+          "description": "Gemenskapsarrangemang, sport eller social samling"
+        },
+        {
+          "time": "20:30",
+          "activity": "Dinner",
+          "description": "Familj middag hemma eller på familjevänlig restaurang"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7344!3d37.9297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPlaya%20Flamenca!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Playa Flamenca",
+    "description": "Playa Flamenca är ett familjevänligt kustksamhälle i Orihuela Costa med lugna stränder, La Zenia Boulevard åtkomst och det bästa värdebostäderna på kusten.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.9297",
+      "longitude": "-0.7344"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Playa Flamenca",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Orihuela Costa, Costa Blanca"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Är Playa Flamenca bra för familjer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Utmärkt. Lugn grund strandvatten, närliggande internationella skolor, familjeorienterat samhälle och La Zenia Boulevard 2 km bort."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur jämför Playa Flamenca med La Zenia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "10-15% billigare med liknande strändåtkomst och bättre golfnärhet. Mer bostäder och familjeorienterad; La Zenia är mer kommersiell."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vad är fastighetspriserna i Playa Flamenca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lägenheter från €165 000, radhus från €220 000, villor från €350 000. Bästa värde i kustig Orihuela Costa."
+        }
+      }
+    ]
+  }
+}
