@@ -1,0 +1,607 @@
+{
+  "slug": "pilar-de-la-horadada",
+  "name": "Pilar de la Horadada",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/pilar-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartment",
+    "Penthouse",
+    "Townhouse",
+    "Villa",
+    "Bungalow"
+  ],
+  "priceRange": {
+    "min": 169000,
+    "max": 750000
+  },
+  "coordinates": {
+    "lat": 37.8681,
+    "lng": -0.7925
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Pilar de la Horadada Toerisme",
+      "url": "https://www.pilardelahoradada.org/",
+      "description": "Officiële toerismewebsite van Pilar de la Horadada"
+    },
+    "beaches": [
+      {
+        "name": "Playa Mil Palmeras",
+        "googleMaps": "https://maps.google.com/?q=Playa+Mil+Palmeras",
+        "description": "Hoofdstrand met volledige voorzieningen, badmeesters en strandtenten",
+        "blueFlag": true
+      },
+      {
+        "name": "Playa de las Higuericas",
+        "googleMaps": "https://maps.google.com/?q=Playa+Higuericas+Pilar",
+        "description": "Rustig strand met natuurlijke omgeving en minder druk"
+      },
+      {
+        "name": "Playa El Mojón",
+        "googleMaps": "https://maps.google.com/?q=Playa+El+Mojon",
+        "description": "Lang zandstrand bij de Murcia grens"
+      },
+      {
+        "name": "Torre de la Horadada Beach",
+        "googleMaps": "https://maps.google.com/?q=Torre+de+la+Horadada+Beach",
+        "description": "Historisch uitkijktorenstand met kleine haven en restaurants"
+      }
+    ],
+    "shopping": [
+      {
+        "name": "Pilar Stadscentrum",
+        "googleMaps": "https://maps.google.com/?q=Pilar+de+la+Horadada+Centro",
+        "description": "Traditioneel Spaans stadscentrum met winkels en markten"
+      },
+      {
+        "name": "Dos Mares Shopping Center",
+        "googleMaps": "https://maps.google.com/?q=Dos+Mares+San+Javier",
+        "description": "Groot winkelcentrum net over de grens in de Murcia regio",
+        "distance": "15 km"
+      },
+      {
+        "name": "La Zenia Boulevard",
+        "googleMaps": "https://maps.google.com/?q=La+Zenia+Boulevard",
+        "url": "https://www.lazeniaboulevard.es/",
+        "description": "Europas grootste openlucht winkelcentrum",
+        "distance": "20 km"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "20 km",
+      "driveTime": "18 minuten"
+    },
+    "airport": {
+      "name": "Luchthaven Murcia-Corvera",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Corvera+Airport",
+      "url": "https://www.aena.es/en/murcia-region-international.html",
+      "distance": "25 km",
+      "driveTime": "20 minuten"
+    }
+  },
+  "golf": {
+    "intro": "Pilar de la Horadada is thuis aan Lo Romero Golf, een fantastisch Jack Nicklaus ontwerp dat golfers naar het gebied trekt. Aanvullende banen zijn gemakkelijk bereikbaar, waardoor dit een serieus golfdoel wordt.",
+    "courses": [
+      {
+        "name": "Lo Romero Golf",
+        "distance": "3 km",
+        "driveTime": "5 minuten",
+        "holes": 18,
+        "url": "https://www.loromerogolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Lo+Romero+Golf",
+        "designer": "Jack Nicklaus",
+        "description": "Fantastisch Jack Nicklaus ontwerp met uitdagend lay-out en eersteklas voorzieningen. De onderscheidingsbaan van Pilar de la Horadada."
+      },
+      {
+        "name": "Roda Golf & Beach Resort",
+        "distance": "12 km",
+        "driveTime": "12 minuten",
+        "holes": 18,
+        "url": "https://www.rodagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Roda+Golf",
+        "description": "In het Mar Menor gebied. Dave Thomas ontwerp met brede fairways en uitstekende voorzieningen."
+      },
+      {
+        "name": "Mar Menor Golf Resort",
+        "distance": "15 km",
+        "driveTime": "15 minuten",
+        "holes": 18,
+        "url": "https://www.marmenorgolf.es/",
+        "googleMaps": "https://maps.google.com/?q=Mar+Menor+Golf",
+        "description": "Premium baan in Costa Cálida met uitgebreide oefenfaciliteiten."
+      },
+      {
+        "name": "Las Colinas Golf",
+        "distance": "15 km",
+        "driveTime": "15 minuten",
+        "holes": 18,
+        "url": "https://www.lascolinasgolf.es/",
+        "googleMaps": "https://maps.google.com/?q=Las+Colinas+Golf",
+        "description": "Bekroonde baan consistent gerangschikt onder Spanje's beste. Cabell Robinson ontwerp."
+      },
+      {
+        "name": "Campoamor Golf",
+        "distance": "18 km",
+        "driveTime": "18 minuten",
+        "holes": 18,
+        "url": "https://www.campoamorgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Campoamor+Golf",
+        "description": "Goed onderhouden kusten baan geschikt voor alle niveaus."
+      }
+    ]
+  },
+  "localMarket": {
+    "saturdayMarket": {
+      "name": "Pilar de la Horadada Zaterdagmarkt",
+      "location": "Stadscentrum",
+      "googleMaps": "https://maps.google.com/?q=Mercado+Pilar+de+la+Horadada",
+      "hours": "Zaterdag 8:00 - 14:00",
+      "description": "Traditionele Spaanse markt met uitstekend vers lokaal fruit en groenten"
+    },
+    "sundayMarket": {
+      "name": "Mil Palmeras Zondagsmarkt",
+      "location": "Mil Palmeras kustgebied",
+      "googleMaps": "https://maps.google.com/?q=Mercadillo+Mil+Palmeras",
+      "hours": "Zondag 8:00 - 14:00",
+      "description": "Populaire kusten markt met diverse goederen"
+    }
+  },
+  "content": {
+    "metaTitle": "Wonen in Pilar de la Horadada | Poort naar Costa Blanca Zuid 2026",
+    "metaDescription": "Volledige gids Pilar de la Horadada - zuidelijke poort naar Costa Blanca met Lo Romero Golf (Jack Nicklaus), Mil Palmeras stranden. Woningen vanaf €169k. 20 min naar luchthaven Murcia.",
+    "quickAnswer": "Pilar de la Horadada is de zuidelijke poort naar Costa Blanca, met de door Jack Nicklaus ontworpen Lo Romero Golf en prachtige Mil Palmeras stranden. Woningen variëren van €169.000 appartementen tot €750.000 golfvilla's. Slechts 20 minuten van luchthaven Murcia, dit is waar Costa Blanca Costa Cálida ontmoet.",
+    "heroIntro": "Aan de zuidelijke rand van Costa Blanca, waar provincie Alicante plaatsmaakt voor Murcia, ligt een stad die niet kan kiezen tussen identiteiten. Pilar de la Horadada heeft het authentieke Spaanse karakter van een agrarische gemeenschap, de resortaantrekkingskracht van kusten urbanisaties zoals Mil Palmeras, en de sportieve prestige van Lo Romero Golf - een Jack Nicklaus handtekeningsbaan die alleen al deze regio de aandacht waard maakt.\n\nHier ontmoeten Costa Blanca en Costa Cálida elkaar, letterlijk en figuurlijk. De Mar Menor lagune ligt net over de regionale grens. Luchthaven Murcia is dichterbij dan Alicante. Het gebied ontleent aan de krachten van beide regio's terwijl het zijn eigen onderscheidend karakter behoudt: authentiek Spaans leven met internationale resort-ontwikkeling, championship golf met natuurlijke stranden, landbouwerfgoed met moderne gemak.\n\nVoor kopers die waarde zoeken aan de grens van de gevestigde Costa Blanca markten, biedt Pilar de la Horadada onontdekt potentieel.",
+    "lifestyleSection": {
+      "intro": "Het leven in Pilar de la Horadada varieert dramatisch afhankelijk van waar je je vestigt. Het stadscentrum biedt authentiek Spaans leven - markten, festen, tapas bars en buren die hier al generaties wonen. De kusten urbanisaties zoals Mil Palmeras bieden resort-achtig wonen met stranden, moderne ontwikkelingen en internationale gemeenschap. En Lo Romero Golf creëert zijn eigen wereld van fairway-huizen en clubhuiscultuur.\n\nDeze diversiteit is deel van de aantrekkingskracht. Je kunt je levensstijl kiezen - Spaanse onderdompeling, resort gemak, golf focus - of ze naar voorkeur mengen. Het gebied is niet gehomogeniseerd door massatoerisme zoals sommige buren, wat opties behoudt.",
+      "highlights": [
+        "Lo Romero Golf - Jack Nicklaus handtekeningsbaan",
+        "5 golfbanen binnen 18 minuten rijden",
+        "Mil Palmeras stranden - Blauwe Vlag met volledige voorzieningen",
+        "Slechts 20 minuten van luchthaven Murcia-Corvera",
+        "Authentiek Spaans stadscentrum met traditionele markten",
+        "Uitstekende waarde - minder ontwikkeld dan noordelijke Orihuela Costa",
+        "Poortpositie tussen Costa Blanca en Costa Cálida",
+        "Groeiend gebied met ontwikkelingspotentieel"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Mil Palmeras is het hoofdstrand met Blauwe Vlag status, goudgeel zand en volledige voorzieningen met badmeesters, strandtenten en ligbedverhuur. Torre de la Horadada heeft een historische uitkijktoren, kleine haven en uitstekende zeevruchtenrestaurants. Playa de las Higuericas biedt een rustigere, natuurlijkere setting. El Mojón strekt zich uit naar Murcia. Meerdere strandopties gemakkelijk bereikbaar.",
+      "dining": "Het stadscentrum heeft uitstekende traditionele Spaanse restaurants - authentieke tapas, verse vis, lokale wijn. De kusten gebieden bieden meer internationale opties en strandrestaurants. Lo Romero Golf clubhouse biedt fine dining. Voor serieuze variatie breiden San Pedro del Pinatar (10 km) en La Zenia (20 km) de opties aanzienlijk uit.",
+      "shopping": "Pilar's stadscentrum heeft traditionele winkels, supermarkten en wekelijkse markten. De kusten gebieden hebben kleinere lokale winkels. Voor groot winkelen is Dos Mares centrum in San Javier (15 km) het dichtst, met La Zenia Boulevard (20 km) voor de volledige ervaring. De zaterdagmarkt in de stad is een hoogtepunt voor verse lokale producten.",
+      "healthcare": "Hospital Universitario de Torrevieja ligt 20 km weg (18 minuten). Hospital General Universitario Los Arcos del Mar Menor in San Javier is iets dichterbij. Meerdere lokale medische centra, tandartsen en apotheken bedienen het gebied. Healthcare toegang is goed hoewel niet zo onmiddellijk als in Torrevieja zelf.",
+      "transport": "Luchthaven Murcia-Corvera is slechts 25 km weg (20 minuten) - dichterbij dan Alicante voor zuidelijke bewoners. Luchthaven Alicante is 65 km weg (45 minuten). Een auto is essentieel. De AP-7 motorweg biedt goede noord-zuid verbindingen. De positie van het gebied maakt zowel provincie Alicante als regio Murcia toegankelijk."
+    },
+    "neighborhoods": [
+      {
+        "name": "Mil Palmeras",
+        "description": "Hoofd kustresort urbanisatie. Blauwe Vlag strand, moderne ontwikkelingen, internationale gemeenschap. Mix van appartementen, rijtjeshuizen en enkele villa's. Resort levensstijl focus."
+      },
+      {
+        "name": "Lo Romero Golf",
+        "description": "Woningen rond de Jack Nicklaus baan. Premium villa's met golfuitzicht. Exclusieve atmosfeer met clubhouse sociaal leven. Golf levensstijl focus."
+      },
+      {
+        "name": "Torre de la Horadada",
+        "description": "Historisch kustgebied met uitkijktoren en kleine haven. Meer karakter dan Mil Palmeras. Mix van traditionele en nieuwere woningen. Goede restaurants."
+      },
+      {
+        "name": "Pilar Stadscentrum",
+        "description": "Authentiek Spaans stadsleven. Lagere prijzen, echte integratie. Traditionele huizen en enkele nieuwere appartementen. Loopafstand naar markten en diensten."
+      },
+      {
+        "name": "El Mojón",
+        "description": "Kustgebied bij Murcia grens. Lang strand, rustigere atmosfeer. Mix van oudere en nieuwere ontwikkelingen. Goede waarde voor strandnabijheid."
+      }
+    ],
+    "propertyMarketSection": "Pilar de la Horadada biedt uitstekende waarde als een minder ontwikkeld alternatief voor noordelijke Orihuela Costa. Nieuwe appartementen beginnen rond €169.000-300.000, rijtjeshuizen vanaf €240.000-400.000 en villa's vanaf €350.000-750.000. Lo Romero Golf woningen vragen premies maar bieden echte Jack Nicklaus baanligging.\n\n**Uitgelichte Ontwikkeling: Orange Valley Villa** - 3-slaapkamer golfvilla's vanaf €399.000 bij Lo Romero Golf met privépools, golfuitzicht en garage. Sleutelklaar modern design.\n\n**Uitgelichte Ontwikkeling: Sunplace III** - Moderne 2-slaapkamer appartementen vanaf €269.000 in Mil Palmeras met gemeenschappelijke pools en stranddichte locatie. Hedendaagse specificaties.\n\nDe markt is minder verzadigd dan noordelijke Orihuela Costa, met toenemende ontwikkelingactiviteit. Vroege kopers kunnen profiteren van groeiende gebiedsherkenning. De Jack Nicklaus baan biedt langetermijn prestigeankering. Murcia luchthavennabijheid voegt waarde toe aan huurwoningen.",
+    "whyLiveHereSection": [
+      "Lo Romero Golf - Jack Nicklaus handtekeningsbaan aan je deur",
+      "5 championship banen binnen 18 minuten",
+      "Mil Palmeras Blauwe Vlagstranden - uitstekend kustleven",
+      "Slechts 20 minuten van luchthaven Murcia-Corvera",
+      "Authentiek Spaans stadscentrum voor echte integratie",
+      "Uitstekende waarde - minder premium dan noordelijke Orihuela Costa",
+      "Groeiend gebied met ontwikkelingspotentieel",
+      "Poortpositie toegang tot Costa Blanca en Costa Cálida"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Orange Valley Villa",
+        "reference": "N6673",
+        "price": 399000,
+        "type": "Villa",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "plotArea": 350,
+        "features": [
+          "Privé pool",
+          "Golfuitzicht",
+          "Garage"
+        ],
+        "description": "Moderne 3-slaapkamer villa bij Lo Romero Golf met privé pool en golfbananuitzicht. Sleutelklaar."
+      },
+      {
+        "title": "Sunplace III Appartement",
+        "reference": "N7716",
+        "price": 269000,
+        "type": "Apartment",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "features": [
+          "Dichter bij strand",
+          "Gemeenschappelijke pool",
+          "Modern"
+        ],
+        "description": "Hedendaags 2-slaapkamer appartement in Mil Palmeras bij het strand met gemeenschappelijke pools."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Pilar de la Horadada goed voor golf?",
+        "answer": "Uitstekend, vooral met Lo Romero Golf - een Jack Nicklaus handtekeningsbaan - slechts 3 km weg. Aanvullende banen inclusief Roda Golf, Mar Menor Golf, Las Colinas en Campoamor liggen allemaal binnen 18 minuten. De Jack Nicklaus status voegt prestige toe aan het gebied."
+      },
+      {
+        "question": "Hoe ver is Pilar de la Horadada van de luchthaven?",
+        "answer": "Luchthaven Murcia-Corvera is slechts 25 km weg (20 minuten) - erg handig. Luchthaven Alicante-Elche is 65 km weg (45 minuten). De Murcia nabijheid is een echt voordeel voor dit gebied."
+      },
+      {
+        "question": "Wat zijn de woningprijzen in Pilar de la Horadada?",
+        "answer": "Appartementen vanaf €169.000, rijtjeshuizen vanaf €240.000 en villa's vanaf €350.000. Lo Romero Golf woningen vragen premies. Over het algemeen biedt het gebied uitstekende waarde vergeleken met meer ontwikkelde Orihuela Costa locaties."
+      },
+      {
+        "question": "Wat is Mil Palmeras?",
+        "answer": "Mil Palmeras is de hoofd kustresort urbanisatie van Pilar de la Horadada. Het heeft Blauwe Vlag stranden, moderne ontwikkelingen, internationale gemeenschap en resort voorzieningen. De meeste internationale kopers die naar kusten levensstijl zoeken concentreren zich op Mil Palmeras."
+      },
+      {
+        "question": "Is Pilar de la Horadada goed voor stranden?",
+        "answer": "Ja. Mil Palmeras heeft een Blauwe Vlag strand met volledige voorzieningen. Torre de la Horadada heeft een historisch uitkijktoren strand met haven en restaurants. Las Higuericas is rustiger en natuurlijker. El Mojón strekt zich uit naar Murcia. Goede strandvariatie."
+      },
+      {
+        "question": "Wordt Engels veel gesproken in Pilar de la Horadada?",
+        "answer": "Dat varieert. Kusten gebieden zoals Mil Palmeras hebben internationale gemeenschappen waar Engels courant is. Het stadscentrum is traditioneel Spaans. Over het geheel genomen minder Engels-gericht dan Orihuela Costa - wat Spaans helpt, vooral in de stad."
+      },
+      {
+        "question": "Hoe vergelijkt Pilar met Orihuela Costa?",
+        "answer": "Pilar de la Horadada is minder ontwikkeld, betaalbaarder en heeft meer authentiek Spaans karakter. Orihuela Costa heeft meer winkels, nachtleven en gevestigde expat-infrastructuur. Pilar heeft Lo Romero Golf (Jack Nicklaus) als prestigeankering. Kies op basis van prioriteiten."
+      },
+      {
+        "question": "Wat is Lo Romero Golf?",
+        "answer": "Lo Romero Golf is een Jack Nicklaus handtekeningsbaan - een echte prestigieuze golfdestinatie. De baan is uitdagend met eersteklas voorzieningen. Woningen rond de baan bieden eerste-rij golfleven met wereldberoemde designerstatuur. Het is de voornaamste golf draw voor Pilar de la Horadada."
+      },
+      {
+        "question": "Is Pilar de la Horadada geschikt voor permanent wonen?",
+        "answer": "Ja, vooral als je authentiek Spaans leven waardeert. Het stadscentrum heeft jaarronde diensten en permanente bevolking. Mil Palmeras is seizoenbouwer maar bewoonbaar. Healthcare is toegankelijk hoewel niet zo onmiddellijk als Torrevieja. Het gebied past bij degenen die zich comfortabel voelen met minder verengelsde gemeenschappen."
+      },
+      {
+        "question": "Wat is het huurpotentieel in Pilar de la Horadada?",
+        "answer": "Groeiend. Lo Romero Golf trekt golfers aan; Mil Palmeras trekt strandvakantiegangers aan. Murcia luchthavennabijheid is een voordeel. De markt is minder verzadigd dan Orihuela Costa. Goed potentieel voor vroege investeerders als het gebied herkenning krijgt."
+      }
+    ],
+    "conclusion": "Pilar de la Horadada neemt een interessante positie in - de laatste stad van Costa Blanca, poort naar Costa Cálida, thuishaven van een Jack Nicklaus golfbaan, maar nog steeds betaalbaar en onontdekt door massatoerisme. Voor kopers die waarde, golf prestige, authentiek Spaans leven of ontwikkelingspotentieel zoeken, verdient dit gebied serieuze overweging.\n\nKlaar om woningen in Pilar de la Horadada te verkennen? Ons team kan je helpen deze diverse regio te begrijpen - van Lo Romero Golf villa's tot Mil Palmeras strandappartementen. We zullen je prioriteiten met de juiste locatie afstemmen en je bij elke stap begeleiden.",
+    "investmentAnalysis": {
+      "rentalYield": "5-7% op strandwoningen, 6-8% op golfvilla's",
+      "annualAppreciation": "2-4% jaarlijks, groeiend als het gebied erkend wordt",
+      "overview": "Het investeringspotentieel van Pilar de la Horadada groeit. De Jack Nicklaus baanprestige en Murcia luchthavennabijheid creëren differentiatie. Minder verzadigd dan noordelijke Orihuela Costa biedt potentieel voor vroege investeerders.",
+      "highlights": [
+        "Lo Romero Golf prestige trekt premium huurders aan",
+        "Opkomende markt met minder concurrentie dan noordelijke gebieden",
+        "Strandwoningen trekken vakantiehuurbeurs aan",
+        "Murcia luchthavennabijheid voegt jaarronde bezoekersappeal toe",
+        "Ontwikkelingspotentieel als het gebied herkenning krijgt"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "De levenskosten in Pilar de la Horadada zijn uitstekend voor een kustad - lager dan gevestigde noordelijke Orihuela Costa terwijl strandtoegang wordt behouden. Ontwikkelingsprijzen hebben dagelijkse kosten nog niet opgeblazen.",
+      "items": [
+        {
+          "category": "Huur (2-slaapkamer woning)",
+          "cost": "€650-1050",
+          "notes": "Mil Palmeras strandfront hoger; stadscentrum betaalbaarder"
+        },
+        {
+          "category": "Nutsvoorzieningen (maandelijks)",
+          "cost": "€90-130",
+          "notes": "Mild klimaat, airconditionering seizoensgebonden"
+        },
+        {
+          "category": "Boodschappen (wekelijks)",
+          "cost": "€60-85",
+          "notes": "Lokale supermarkten en markten, wat toeristenprijzen"
+        },
+        {
+          "category": "Restaurantmaaltijd (3-gangen)",
+          "cost": "€14-20",
+          "notes": "Mix van lokale Spaanse en toeristenvestigingen"
+        },
+        {
+          "category": "Café koffie",
+          "cost": "€1,30-1,70",
+          "notes": "Strandlocaties hoger; stadscentrum redelijk"
+        },
+        {
+          "category": "Golf greenfees",
+          "cost": "€50-75",
+          "notes": "Lo Romero Golf premium baantarieven"
+        },
+        {
+          "category": "Healthcare (maandelijks)",
+          "cost": "€80-120",
+          "notes": "Private verzekering aanbevolen"
+        },
+        {
+          "category": "Onroerendgoedbelasting (jaarlijks)",
+          "cost": "€350-600",
+          "notes": "IBI voor kusteigdom"
+        }
+      ]
+    },
+    "events": {
+      "intro": "De evenementenkalender van Pilar de la Horadada omvat traditionele Spaanse vieringen en activiteiten die zowel stadserven als kustresorkarakter weerspiegelen.",
+      "events": [
+        {
+          "name": "Pilar de la Horadada Zaterdagmarkt",
+          "month": "Jaarronde, wekelijks",
+          "description": "Traditionele Spaanse markt met vers lokaal fruit, groenten en huishoudelijke goederen"
+        },
+        {
+          "name": "Mil Palmeras Zondagsmarkt",
+          "month": "Jaarronde, wekelijks",
+          "description": "Kusten markt met diverse goederen en expat-gericht items"
+        },
+        {
+          "name": "Fiestas Patronales",
+          "month": "Augustus",
+          "description": "Stadviering met optochten, muziek, eten en culturele evenementen"
+        },
+        {
+          "name": "Lo Romero Golf Kampioenschappen",
+          "month": "Heel het jaar",
+          "description": "Regelmatige golftornooien en evenementen bij de prestigieuze Jack Nicklaus baan"
+        },
+        {
+          "name": "Zomer Strandfeest",
+          "month": "Juli-augustus",
+          "description": "Strand-gerichte vieringen met avondvermaak en voedingsfestivals"
+        }
+      ]
+    },
+    "markets": {
+      "intro": "De markten van Pilar de la Horadada weerspiegelen het dubbele karakter van de stad - traditionele Spaanse handel in het stadscentrum en moderne detailhandel in de kust urbanisaties. De zaterdagmarkt is favoriet bij locals en bezoekers.",
+      "markets": [
+        {
+          "name": "Pilar Zaterdagmarkt",
+          "day": "Zaterdag",
+          "time": "08:00 - 14:00",
+          "type": "Producten/Algemeen",
+          "distance": "Stadscentrum",
+          "description": "Traditionele Spaanse markt met uitstekend vers lokaal fruit, groenten, vis, kleding en huishoudelijke goederen. Populaire ontmoetingsplek met authentieke sfeer.",
+          "googleMaps": "https://maps.google.com/?q=Pilar+de+la+Horadada+Saturday+Market"
+        },
+        {
+          "name": "Torre de la Horadada Markt",
+          "day": "Zondag",
+          "time": "08:00 - 14:00",
+          "type": "Kustmarkt/Algemeen",
+          "distance": "Kustgebied",
+          "description": "Zondagsmarkt in het historische Torre de la Horadada gebied met diverse goederen, in de buurt van uitstekende zeevruchtenrestaurants bij de uitkijktoren.",
+          "googleMaps": "https://maps.google.com/?q=Torre+de+la+Horadada+Market"
+        },
+        {
+          "name": "Orihuela Zaterdagmarkt",
+          "day": "Zaterdag",
+          "time": "08:00 - 14:00",
+          "type": "Producten/Algemeen",
+          "distance": "18 km (20 minuten)",
+          "description": "Grote zaterdagmarkt in nabijgelegen Orihuela met uitgebreide vers fruit, groenten, regionale specialiteiten, kleding en huishoudelijke goederen.",
+          "googleMaps": "https://maps.google.com/?q=Orihuela+Saturday+Market"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Pilar de la Horadada heeft Spaanse openbare scholen en toegang tot internationale opties in nabijgelegen San Javier en Torrevieja.",
+      "schools": [
+        {
+          "name": "Colegio Público Pilar de la Horadada",
+          "type": "Openbare basisschool",
+          "distance": "Stadscentrum",
+          "description": "Spaanse openbare school met tweetalige onderwijsprogramma's"
+        },
+        {
+          "name": "IES Azarquiel",
+          "type": "Openbare voortgezette school",
+          "distance": "5 km",
+          "description": "Voortgezette school die het gebied bedient"
+        },
+        {
+          "name": "Internationale Scholen (San Javier)",
+          "type": "Internationaal Onderwijs",
+          "distance": "15 km",
+          "description": "Britse en ander curricula scholen in nabijgelegen San Javier (Murcia regio)"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "De natuuractiviteiten van Pilar de la Horadada mengen strandrecreatie met golfleven. De locatie biedt zowel mediterrane wateractiviteiten als championship baanspel.",
+      "activities": [
+        {
+          "name": "Zwemmen bij Playa Mil Palmeras",
+          "type": "Waterrecreatie",
+          "description": "Blauwe Vlag strand met goudgeel zand, kalm water en volledige voorzieningen"
+        },
+        {
+          "name": "Torre de la Horadada verkennen",
+          "type": "Historisch-natuurwandeling",
+          "description": "Historische uitkijktoren locatie met haven en kuststafereel"
+        },
+        {
+          "name": "Snorkelen bij Cala Piteras",
+          "type": "Watersport",
+          "description": "Rotsachtige baai met helder water en marien leven"
+        },
+        {
+          "name": "Golf bij Lo Romero",
+          "type": "Sport",
+          "description": "Jack Nicklaus championship baan 5 km weg"
+        },
+        {
+          "name": "Kustwandelingen en verkenning",
+          "type": "Natuurwandelingen",
+          "description": "Schilderachtige paden langs de zuidelijke Costa Blanca kust"
+        },
+        {
+          "name": "Mar Menor excursies",
+          "type": "Waterrecreatie",
+          "description": "Unieke lagune net over de regionale grens toegankelijk voor dagtochten"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Pilar de la Horadada heeft een groeiende expat gemeenschap, vooral in Mil Palmeras en rond Lo Romero Golf. Het gebied blijft minder verengels dan noordelijke Orihuela Costa.",
+      "highlights": [
+        "Groeiende expat gemeenschap, vooral in strandgebieden",
+        "Mix van golf-gefocuste en strandlevensttijl bewoners",
+        "Minder gevestigd dan Orihuela Costa - kans voor gemeenschapsopbouw",
+        "Meer Spaans karakter dan puur resortgerichte gebieden",
+        "Trekt degenen aan die waarde en ontwikkelingspotentieel zoeken"
+      ],
+      "nationalities": [
+        "Brits",
+        "Duits",
+        "Scandinavisch",
+        "Nederlands",
+        "Spaans"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Een typische dag in Pilar de la Horadada",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Ochtendactiviteit",
+          "description": "Strandwandeling (La Marina) of golftraining (Lo Romero) naar voorkeur"
+        },
+        {
+          "time": "10:00",
+          "activity": "Café en markt",
+          "description": "Koffie in lokale bar of winkelen op zaterdag/zondag markt"
+        },
+        {
+          "time": "13:00",
+          "activity": "Lang lunch",
+          "description": "Hoofd Spaanse maaltijd in restaurant of thuis"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta of strand",
+          "description": "Namiddagrust of zwemmen bij Mil Palmeras strand"
+        },
+        {
+          "time": "17:00",
+          "activity": "Golf of activiteit",
+          "description": "Ronde bij Lo Romero Golf of ander banen binnen 15-18 minuten"
+        },
+        {
+          "time": "19:00",
+          "activity": "Sociale activiteit",
+          "description": "Golf club activiteit, strandbar of gemeenschapsbijeenkomst"
+        },
+        {
+          "time": "21:00",
+          "activity": "Diner",
+          "description": "Kwaliteits diner in restaurant met zeegezicht of lokale vestiging"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7925!3d37.8681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPilar%20de%20la%20Horadada!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Pilar de la Horadada",
+    "description": "Pilar de la Horadada is de meest zuidelijke stad van Costa Blanca, met Lo Romero Golf (Jack Nicklaus ontwerp), Mil Palmeras stranden en authentiek Spaans karakter. Poort tussen Costa Blanca en Costa Cálida.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.8681",
+      "longitude": "-0.7925"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pilar de la Horadada",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Jack Nicklaus Golf Course (Lo Romero)",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Blue Flag Beaches",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Murcia Airport Proximity",
+        "value": "20 minutes"
+      }
+    ]
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Pilar de la Horadada goed voor golf?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Uitstekend. Lo Romero Golf - een Jack Nicklaus handtekeningsbaan - ligt slechts 3 km weg. Aanvullende banen inclusief Las Colinas en Campoamor liggen binnen 18 minuten."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hoe ver is Pilar de la Horadada van de luchthaven?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Luchthaven Murcia-Corvera is slechts 25 km weg (20 minuten). Luchthaven Alicante is 65 km weg (45 minuten)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat zijn de woningprijzen in Pilar de la Horadada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Appartementen vanaf €169.000, rijtjeshuizen vanaf €240.000, villa's vanaf €350.000. Uitstekende waarde vergeleken met noordelijk Orihuela Costa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat is Lo Romero Golf?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lo Romero Golf is een Jack Nicklaus handtekeningsbaan - een echte prestigieuze golfdestinatie met uitdagend lay-out en eersteklas voorzieningen. De voornaamste golf draw voor Pilar de la Horadada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat is Mil Palmeras?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mil Palmeras is de hoofd kusten resortisatie met Blauwe Vlag stranden, moderne ontwikkelingen en internationale gemeenschap. De meeste internationale kopers concentreren zich op dit gebied."
+        }
+      }
+    ]
+  }
+}

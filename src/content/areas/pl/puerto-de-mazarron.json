@@ -1,8 +1,8 @@
 {
-  "slug": "orihuela",
-  "name": "Orihuela",
-  "region": "Costa Blanca South",
-  "heroImage": "/images/areas/orihuela-hero.webp",
+  "slug": "puerto-de-mazarron",
+  "name": "Puerto de Mazarron",
+  "region": "Murcia",
+  "heroImage": "/images/areas/puerto-de-mazarron-hero.webp",
   "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
   "propertyCount": 8,
   "propertyTypes": [
@@ -324,7 +324,7 @@
   "schema": {
     "@context": "https://schema.org",
     "@type": "Place",
-    "name": "Orihuela",
+    "name": "Puerto de Mazarron",
     "description": "Orihuela is a municipality in Costa Blanca South, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
     "geo": {
       "@type": "GeoCoordinates",

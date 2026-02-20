@@ -1,0 +1,607 @@
+{
+  "slug": "pilar-de-la-horadada",
+  "name": "Pilar de la Horadada",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/pilar-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartment",
+    "Penthouse",
+    "Townhouse",
+    "Villa",
+    "Bungalow"
+  ],
+  "priceRange": {
+    "min": 169000,
+    "max": 750000
+  },
+  "coordinates": {
+    "lat": 37.8681,
+    "lng": -0.7925
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Pilar de la Horadada Tourismus",
+      "url": "https://www.pilardelahoradada.org/",
+      "description": "Offizielle Tourismuswebsite von Pilar de la Horadada"
+    },
+    "beaches": [
+      {
+        "name": "Playa Mil Palmeras",
+        "googleMaps": "https://maps.google.com/?q=Playa+Mil+Palmeras",
+        "description": "Hauptstrandresort mit vollständiger Ausstattung, Rettungsschwimmern und Strandlokalen",
+        "blueFlag": true
+      },
+      {
+        "name": "Playa de las Higuericas",
+        "googleMaps": "https://maps.google.com/?q=Playa+Higuericas+Pilar",
+        "description": "Ruhigerer Strand mit natürlicher Umgebung und weniger Menschenmengen"
+      },
+      {
+        "name": "Playa El Mojón",
+        "googleMaps": "https://maps.google.com/?q=Playa+El+Mojon",
+        "description": "Langer Sandstrand in der Nähe der Murcia-Grenze"
+      },
+      {
+        "name": "Torre de la Horadada Beach",
+        "googleMaps": "https://maps.google.com/?q=Torre+de+la+Horadada+Beach",
+        "description": "Historischer Wachturm-Strand mit kleinem Hafen und Restaurants"
+      }
+    ],
+    "shopping": [
+      {
+        "name": "Pilar Stadtzentrum",
+        "googleMaps": "https://maps.google.com/?q=Pilar+de+la+Horadada+Centro",
+        "description": "Traditionelles spanisches Stadtzentrum mit Geschäften und Märkten"
+      },
+      {
+        "name": "Dos Mares Shopping Center",
+        "googleMaps": "https://maps.google.com/?q=Dos+Mares+San+Javier",
+        "description": "Großes Einkaufszentrum gerade über der Grenze in der Region Murcia",
+        "distance": "15 km"
+      },
+      {
+        "name": "La Zenia Boulevard",
+        "googleMaps": "https://maps.google.com/?q=La+Zenia+Boulevard",
+        "url": "https://www.lazeniaboulevard.es/",
+        "description": "Europas größtes Open-Air-Einkaufszentrum",
+        "distance": "20 km"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "20 km",
+      "driveTime": "18 Minuten"
+    },
+    "airport": {
+      "name": "Flughafen Murcia-Corvera",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Corvera+Airport",
+      "url": "https://www.aena.es/en/murcia-region-international.html",
+      "distance": "25 km",
+      "driveTime": "20 Minuten"
+    }
+  },
+  "golf": {
+    "intro": "Pilar de la Horadada ist Heimat des Lo Romero Golf, ein atemberaubendes Jack Nicklaus Design, das Golfer in das Gebiet lockt. Zusätzliche Plätze sind leicht erreichbar und machen dies zu einem ernsthaften Golfziel.",
+    "courses": [
+      {
+        "name": "Lo Romero Golf",
+        "distance": "3 km",
+        "driveTime": "5 Minuten",
+        "holes": 18,
+        "url": "https://www.loromerogolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Lo+Romero+Golf",
+        "designer": "Jack Nicklaus",
+        "description": "Atemberaubendes Jack Nicklaus Design mit anspruchsvollem Layout und erstklassigen Einrichtungen. Der Signaturplatz von Pilar de la Horadada."
+      },
+      {
+        "name": "Roda Golf & Beach Resort",
+        "distance": "12 km",
+        "driveTime": "12 Minuten",
+        "holes": 18,
+        "url": "https://www.rodagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Roda+Golf",
+        "description": "In der Mar Menor Gegend. Dave Thomas Design mit breiten Fairways und ausgezeichneten Einrichtungen."
+      },
+      {
+        "name": "Mar Menor Golf Resort",
+        "distance": "15 km",
+        "driveTime": "15 Minuten",
+        "holes": 18,
+        "url": "https://www.marmenorgolf.es/",
+        "googleMaps": "https://maps.google.com/?q=Mar+Menor+Golf",
+        "description": "Premium Resort Platz in der Costa Cálida mit umfangreichen Trainingsstätten."
+      },
+      {
+        "name": "Las Colinas Golf",
+        "distance": "15 km",
+        "driveTime": "15 Minuten",
+        "holes": 18,
+        "url": "https://www.lascolinasgolf.es/",
+        "googleMaps": "https://maps.google.com/?q=Las+Colinas+Golf",
+        "description": "Preisgekrönter Platz, durchgehend unter Spaniens besten rangiert. Cabell Robinson Design."
+      },
+      {
+        "name": "Campoamor Golf",
+        "distance": "18 km",
+        "driveTime": "18 Minuten",
+        "holes": 18,
+        "url": "https://www.campoamorgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Campoamor+Golf",
+        "description": "Gut gepflegter Küstenplatz für alle Spielstärken geeignet."
+      }
+    ]
+  },
+  "localMarket": {
+    "saturdayMarket": {
+      "name": "Pilar de la Horadada Samstagmarkt",
+      "location": "Stadtzentrum",
+      "googleMaps": "https://maps.google.com/?q=Mercado+Pilar+de+la+Horadada",
+      "hours": "Samstags 8:00 - 14:00",
+      "description": "Traditioneller spanischer Markt mit ausgezeichnetem frischem Obst und Gemüse"
+    },
+    "sundayMarket": {
+      "name": "Mil Palmeras Sonntagsmarkt",
+      "location": "Mil Palmeras Küstengebiet",
+      "googleMaps": "https://maps.google.com/?q=Mercadillo+Mil+Palmeras",
+      "hours": "Sonntags 8:00 - 14:00",
+      "description": "Beliebter Küstenmarkt mit Warenvielfalt"
+    }
+  },
+  "content": {
+    "metaTitle": "Leben in Pilar de la Horadada | Eingang zur Costa Blanca Süd 2026",
+    "metaDescription": "Vollständiger Leitfaden zu Pilar de la Horadada - südlicher Eingang zur Costa Blanca mit Lo Romero Golf (Jack Nicklaus), Mil Palmeras Strände. Immobilien ab €169.000. 20 Min zum Flughafen Murcia.",
+    "quickAnswer": "Pilar de la Horadada ist der südliche Eingang zur Costa Blanca und bietet das von Jack Nicklaus entworfene Lo Romero Golf und wunderschöne Mil Palmeras Strände. Immobilien reichen von €169.000 Apartments bis €750.000 Golf-Villen. Nur 20 Minuten vom Flughafen Murcia entfernt, hier treffen sich Costa Blanca und Costa Cálida.",
+    "heroIntro": "Am südlichen Rand der Costa Blanca, wo die Provinz Alicante Murcia weicht, liegt eine Stadt, die sich nicht zwischen Identitäten entscheiden möchte. Pilar de la Horadada hat den authentischen spanischen Charakter einer Agrargemeinschaft, die Resort-Attraktivität seiner Küsten-Urbanisierungen wie Mil Palmeras und das sportliche Prestige des Lo Romero Golf - eines Jack Nicklaus Signature Course, der allein diese Gegend bemerkenswert macht.\n\nHier treffen sich Costa Blanca und Costa Cálida, buchstäblich und im übertragenen Sinne. Die Lagune Mar Menor liegt gerade über der Regionalgrenze. Der Flughafen Murcia ist näher als Alicante. Die Gegend profitiert von den Stärken beider Regionen und behält dabei ihren eigenen Charakter: authentisches spanisches Leben mit internationaler Resort-Entwicklung, Championship Golf mit natürlichen Stränden, landwirtschaftliches Erbe mit moderner Bequemlichkeit.\n\nFür Käufer, die Wert am Rande der etablierten Märkte der Costa Blanca suchen, bietet Pilar de la Horadada unentdecktes Potenzial.",
+    "lifestyleSection": {
+      "intro": "Das Leben in Pilar de la Horadada variiert dramatisch je nachdem, wo Sie sich niederlassen. Das Stadtzentrum bietet authentisches spanisches Leben - Märkte, Fiestas, Tapas-Bars und Nachbarn, die hier seit Generationen leben. Die Küsten-Urbanisierungen wie Mil Palmeras bieten Resort-ähnliches Wohnen mit Stränden, modernen Entwicklungen und internationaler Gemeinschaft. Und Lo Romero Golf schafft seine eigene Welt von Fairway-Häusern und Clubhouse-Kultur.\n\nDiese Vielfalt ist Teil der Attraktivität. Sie können Ihren Lebensstil wählen - spanische Immersion, Resort-Komfort, Golf-Fokus - oder sie nach Vorliebe vermischen. Das Gebiet wurde nicht durch Massentourismus wie einige Nachbarn homogenisiert, was Optionen bewahrt.",
+      "highlights": [
+        "Lo Romero Golf - Jack Nicklaus Signature Course",
+        "5 Golfplätze innerhalb von 18 Minuten Fahrt",
+        "Mil Palmeras Strände - Blaue Flagge mit vollständiger Ausstattung",
+        "Nur 20 Minuten vom Flughafen Murcia-Corvera",
+        "Authentisches spanisches Stadtzentrum mit traditionellen Märkten",
+        "Ausgezeichnetes Preis-Leistungs-Verhältnis - weniger entwickelt als nördliche Orihuela Costa",
+        "Toreingang zwischen Costa Blanca und Costa Cálida",
+        "Wachsende Gegend mit Entwicklungspotenzial"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Mil Palmeras ist der Hauptstrand mit Blaue-Flagge-Status, goldenem Sand und vollständiger Ausstattung einschließlich Rettungsschwimmern, Strandlokalen und Liegestuhlverleih. Torre de la Horadada hat einen historischen Wachturm, einen kleinen Hafen und ausgezeichnete Meeresfrüchte-Restaurants. Playa de las Higuericas bietet eine ruhigere, natürlichere Umgebung. El Mojón erstreckt sich in Richtung Murcia. Mehrere Strandoptionen in erreichbarer Nähe.",
+      "dining": "Das Stadtzentrum hat ausgezeichnete traditionelle spanische Restaurants - authentische Tapas, frischer Fisch, lokale Weine. Die Küstenbereiche bieten mehr internationale Optionen und Strandrestaurants. Das Lo Romero Golf Clubhouse bietet gehobenes Speisen. Für ernsthafte Vielfalt erweitern San Pedro del Pinatar (10 km) und La Zenia (20 km) die Optionen erheblich.",
+      "shopping": "Pilar's Stadtzentrum hat traditionelle Geschäfte, Supermärkte und wöchentliche Märkte. Die Küstenbereiche haben kleinere Lokalgeschäfte. Für Großeinkäufe ist das Dos Mares Zentrum in San Javier (15 km) am nächsten, mit La Zenia Boulevard (20 km) für das vollständige Erlebnis. Der Samstagmarkt in der Stadt ist ein Höhepunkt für frische lokale Produkte.",
+      "healthcare": "Das Krankenhaus Universitario de Torrevieja ist 20 km entfernt (18 Minuten). Hospital General Universitario Los Arcos del Mar Menor in San Javier ist etwas näher. Mehrere lokale Ärztezentren, Zahnärzte und Apotheken bedienen die Gegend. Der Zugang zum Gesundheitswesen ist gut, obwohl nicht so unmittelbar wie in Torrevieja selbst.",
+      "transport": "Der Flughafen Murcia-Corvera ist nur 25 km entfernt (20 Minuten) - näher als Alicante für südliche Bewohner. Der Flughafen Alicante ist 65 km entfernt (45 Minuten). Ein Auto ist essentiell. Die AP-7 Autobahn bietet gute Nord-Süd-Verbindungen. Die Position der Gegend macht sowohl die Provinz Alicante als auch die Region Murcia zugänglich."
+    },
+    "neighborhoods": [
+      {
+        "name": "Mil Palmeras",
+        "description": "Haupt-Küsten-Resort-Urbanisierung. Blaue-Flagge-Strand, moderne Entwicklungen, internationale Gemeinschaft. Mischung aus Wohnungen, Reihenhäusern und einigen Villen. Resort-Lebensstil-Fokus."
+      },
+      {
+        "name": "Lo Romero Golf",
+        "description": "Immobilien rund um den Jack Nicklaus Course. Premium-Villen mit Golfblick. Exklusive Atmosphäre mit Clubhouse-Sozialleben. Golf-Lebensstil-Fokus."
+      },
+      {
+        "name": "Torre de la Horadada",
+        "description": "Historisches Küstengebiet mit Wachturm und kleinem Hafen. Mehr Charakter als Mil Palmeras. Mischung aus traditionellen und neueren Immobilien. Gute Restaurants."
+      },
+      {
+        "name": "Pilar Stadtzentrum",
+        "description": "Authentisches spanisches Stadtleben. Niedrigere Preise, echte Integration. Traditionelle Häuser und einige neuere Apartments. Fußläufige Entfernung zu Märkten und Services."
+      },
+      {
+        "name": "El Mojón",
+        "description": "Küstengebiet in der Nähe der Murcia-Grenze. Langer Strand, ruhigere Atmosphäre. Mischung aus älteren und neueren Entwicklungen. Gutes Preis-Leistungs-Verhältnis für Strandnähe."
+      }
+    ],
+    "propertyMarketSection": "Pilar de la Horadada bietet ausgezeichnetes Preis-Leistungs-Verhältnis als weniger entwickelte Alternative zur nördlichen Orihuela Costa. Neue Apartments beginnen bei etwa €169.000-300.000, Reihenhäuser ab €240.000-400.000 und Villen ab €350.000-750.000. Lo Romero Golf Immobilien befehlen Prämien, aber bieten echte Jack Nicklaus Course Frontage.\n\n**Vorgestellte Entwicklung: Orange Valley Villa** - 3-Zimmer Golf-Villen ab €399.000 bei Lo Romero Golf mit privaten Pools, Golfblick und Garage. Schlüsselfertige moderne Gestaltung.\n\n**Vorgestellte Entwicklung: Sunplace III** - Moderne 2-Zimmer Apartments ab €269.000 in Mil Palmeras mit Gemeinschaftspools und strandnaher Lage. Zeitgenössische Spezifikationen.\n\nDer Markt ist weniger gesättigt als das nördliche Orihuela Costa, mit zunehmender Entwicklungstätigkeit. Frühe Käufer könnten von wachsender Gebietserkennung profitieren. Der Jack Nicklaus Platz bietet langfristig Prestige-Anker. Die Zugänglichkeit des Flughafens Murcia wertet Mietimmobilien auf.",
+    "whyLiveHereSection": [
+      "Lo Romero Golf - Jack Nicklaus Signature Course vor Ihrer Tür",
+      "5 Championship Courses innerhalb von 18 Minuten",
+      "Mil Palmeras Blaue-Flagge-Strände - ausgezeichnetes Küstenleben",
+      "Nur 20 Minuten vom Flughafen Murcia-Corvera",
+      "Authentisches spanisches Stadtzentrum für echte Integration",
+      "Ausgezeichnetes Preis-Leistungs-Verhältnis - weniger Premium als nördliche Orihuela Costa",
+      "Wachsende Gegend mit Entwicklungspotenzial",
+      "Toreingang Zugang zu Costa Blanca und Costa Cálida"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Orange Valley Villa",
+        "reference": "N6673",
+        "price": 399000,
+        "type": "Villa",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "plotArea": 350,
+        "features": [
+          "Privater Pool",
+          "Golfblick",
+          "Garage"
+        ],
+        "description": "Moderne 3-Zimmer Villa bei Lo Romero Golf mit privatem Pool und Golfplatzblick. Schlüsselfertig."
+      },
+      {
+        "title": "Sunplace III Apartment",
+        "reference": "N7716",
+        "price": 269000,
+        "type": "Apartment",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "features": [
+          "Strandnah",
+          "Gemeinschaftspool",
+          "Modern"
+        ],
+        "description": "Zeitgenössisches 2-Zimmer Apartment in Mil Palmeras in Strandnähe mit Gemeinschaftspools."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Ist Pilar de la Horadada gut für Golf?",
+        "answer": "Ausgezeichnet, besonders mit Lo Romero Golf - einem Jack Nicklaus Signature Course - nur 3 km entfernt. Zusätzliche Plätze wie Roda Golf, Mar Menor Golf, Las Colinas und Campoamor liegen alle innerhalb von 18 Minuten. Das Jack Nicklaus Prestige wertet das Gebiet auf."
+      },
+      {
+        "question": "Wie weit ist Pilar de la Horadada vom Flughafen entfernt?",
+        "answer": "Der Flughafen Murcia-Corvera ist nur 25 km entfernt (20 Minuten) - sehr praktisch. Der Flughafen Alicante-Elche ist 65 km entfernt (45 Minuten). Die Murcia-Nähe ist ein echtes Plus für dieses Gebiet."
+      },
+      {
+        "question": "Was sind die Immobilienpreise in Pilar de la Horadada?",
+        "answer": "Apartments ab €169.000, Reihenhäuser ab €240.000 und Villen ab €350.000. Lo Romero Golf Immobilien befehlen Prämien. Insgesamt bietet die Gegend ausgezeichnetes Preis-Leistungs-Verhältnis gegenüber mehr entwickelten Orihuela Costa Standorten."
+      },
+      {
+        "question": "Was ist Mil Palmeras?",
+        "answer": "Mil Palmeras ist die Haupt-Küsten-Resort-Urbanisierung von Pilar de la Horadada. Es hat Blaue-Flagge-Strände, moderne Entwicklungen, internationale Gemeinschaft und Resort-Annehmlichkeiten. Die meisten internationalen Käufer, die nach Küsten-Lebensstil suchen, konzentrieren sich auf Mil Palmeras."
+      },
+      {
+        "question": "Ist Pilar de la Horadada gut für Strände?",
+        "answer": "Ja. Mil Palmeras hat einen Blaue-Flagge-Strand mit vollständiger Ausstattung. Torre de la Horadada hat einen historischen Wachturm-Strand mit Hafen und Restaurants. Las Higuericas ist ruhiger und natürlicher. El Mojón erstreckt sich in Richtung Murcia. Gute Strandvielfalt."
+      },
+      {
+        "question": "Wird Englisch in Pilar de la Horadada viel gesprochen?",
+        "answer": "Das variiert. Küstenbereiche wie Mil Palmeras haben internationale Gemeinschaften, wo Englisch verbreitet ist. Das Stadtzentrum ist traditioneller spanisch. Insgesamt weniger Englisch-orientiert als Orihuela Costa - etwas Spanisch hilft, besonders in der Stadt."
+      },
+      {
+        "question": "Wie vergleicht sich Pilar mit Orihuela Costa?",
+        "answer": "Pilar de la Horadada ist weniger entwickelt, erschwinglicher und hat mehr authentischen spanischen Charakter. Orihuela Costa hat mehr Shopping, Nachtleben und etablierte Expat-Infrastruktur. Pilar hat Lo Romero Golf (Jack Nicklaus) als seinen Prestige-Anker. Wählen Sie basierend auf Prioritäten."
+      },
+      {
+        "question": "Was ist Lo Romero Golf?",
+        "answer": "Lo Romero Golf ist ein Jack Nicklaus Signature Course - ein echtes prestigereiches Golfdestination. Der Platz ist anspruchsvoll mit Premium-Einrichtungen. Immobilien rund um den Platz bieten First-Line Golf-Lebensstil mit weltberühmtem Designer-Prestige. Es ist der Haupt-Golf-Draw für Pilar de la Horadada."
+      },
+      {
+        "question": "Ist Pilar de la Horadada für Dauerleben geeignet?",
+        "answer": "Ja, besonders wenn Sie authentisches spanisches Leben schätzen. Das Stadtzentrum hat ganzjährig Services und ständige Bevölkerung. Mil Palmeras ist saisonaler, aber bewohnbar. Das Gesundheitswesen ist zugänglich, obwohl nicht so unmittelbar wie Torrevieja. Das Gebiet passt zu denen, die mit weniger anglisierter Gemeinschaft komfortabel sind."
+      },
+      {
+        "question": "Wie ist das Mietenpotenzial in Pilar de la Horadada?",
+        "answer": "Wachsend. Lo Romero Golf lockt Golfer an; Mil Palmeras lockt Strandbesucher an. Die Nähe des Flughafens Murcia ist ein Plus. Der Markt ist weniger gesättigt als Orihuela Costa. Gutes Potenzial für frühe Investoren, wenn das Gebiet Anerkennung gewinnt."
+      }
+    ],
+    "conclusion": "Pilar de la Horadada besetzt eine interessante Position - die letzte Stadt der Costa Blanca, Tor zur Costa Cálida, Heimat eines Jack Nicklaus Golfplatzes, aber dennoch erschwinglicher und unentdeckt vom Massentourismus. Für Käufer, die Wert, Golf-Prestige, authentisches spanisches Leben oder Entwicklungspotenzial suchen, verdient dieses Gebiet ernsthafte Überlegung.\n\nBereit, Immobilien in Pilar de la Horadada zu erkunden? Unser Team kann Sie helfen, diese vielfältige Gegend zu verstehen - von Lo Romero Golf Villen bis Mil Palmeras Strandapartments. Wir werden Ihre Prioritäten mit der richtigen Lage abgleichen und Sie bei jedem Schritt leiten.",
+    "investmentAnalysis": {
+      "rentalYield": "5-7% bei Strandimmobilien, 6-8% bei Golf-Villen",
+      "annualAppreciation": "2-4% jährlich, wachsend, wenn das Gebiet bekannter wird",
+      "overview": "Das Investitionspotenzial von Pilar de la Horadada wächst. Das Jack Nicklaus Platz-Prestige und die Nähe des Flughafens Murcia schaffen Differenzierung. Die weniger gesättigte Lage gegenüber nördlichen Orihuela Costa bietet Potenzial für frühe Investoren.",
+      "highlights": [
+        "Lo Romero Golf Prestige lockt Premium-Mieter an",
+        "Aufstrebender Markt mit weniger Konkurrenz als nördliche Gebiete",
+        "Strandimmobilien locken Ferienmiete-Markt an",
+        "Die Nähe des Flughafens Murcia fügt ganzjährige Besucher-Attraktivität hinzu",
+        "Entwicklungspotenzial, wenn das Gebiet Anerkennung gewinnt"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Die Lebenshaltungskosten in Pilar de la Horadada sind ausgezeichnet für eine Küstenstadt - niedriger als das etablierte nördliche Orihuela Costa, während Strandnähe beibehalten wird. Die Entwicklungspreise haben noch nicht tägliche Kosten inflationiert.",
+      "items": [
+        {
+          "category": "Miete (2-Zimmer Immobilie)",
+          "cost": "€650-1050",
+          "notes": "Mil Palmeras Strandfront höher; Stadtzentrum erschwinglicher"
+        },
+        {
+          "category": "Nebenkosten (monatlich)",
+          "cost": "€90-130",
+          "notes": "Mildes Klima, Klimaanlage saisonal"
+        },
+        {
+          "category": "Lebensmittel (wöchentlich)",
+          "cost": "€60-85",
+          "notes": "Lokale Supermärkte und Märkte, etwas Touristenpreise"
+        },
+        {
+          "category": "Restaurant-Mahlzeit (3-Gänge)",
+          "cost": "€14-20",
+          "notes": "Mischung aus lokalem Spanischen und touristischen Etablissements"
+        },
+        {
+          "category": "Café-Kaffee",
+          "cost": "€1,30-1,70",
+          "notes": "Strandstandorte höher; Stadtzentrum angemessen"
+        },
+        {
+          "category": "Golf Green Fees",
+          "cost": "€50-75",
+          "notes": "Lo Romero Golf Premium-Course-Tarife"
+        },
+        {
+          "category": "Gesundheitswesen (monatlich)",
+          "cost": "€80-120",
+          "notes": "Private Versicherung empfohlen"
+        },
+        {
+          "category": "Grundsteuer (jährlich)",
+          "cost": "€350-600",
+          "notes": "IBI für Küstenimmobilien"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Der Ereigniskalender von Pilar de la Horadada umfasst traditionelle spanische Feierlichkeiten und Aktivitäten, die sowohl Stadt-Erbe als auch Küsten-Resort-Charakter widerspiegeln.",
+      "events": [
+        {
+          "name": "Pilar de la Horadada Samstagmarkt",
+          "month": "Ganzjährig, wöchentlich",
+          "description": "Traditioneller spanischer Markt mit frischen lokalen Produkten und Haushaltswaren"
+        },
+        {
+          "name": "Mil Palmeras Sonntagsmarkt",
+          "month": "Ganzjährig, wöchentlich",
+          "description": "Küstenmarkt mit Warenvielfalt und Expat-fokussierten Gegenständen"
+        },
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Stadtfeier mit Paraden, Musik, Essen und kulturellen Veranstaltungen"
+        },
+        {
+          "name": "Lo Romero Golf Meisterschaften",
+          "month": "Ganzjährig",
+          "description": "Regelmäßige Golf-Turniere und Veranstaltungen beim prestigeträchtigen Jack Nicklaus Course"
+        },
+        {
+          "name": "Sommer-Strandsfestival",
+          "month": "Juli-August",
+          "description": "Strandfokussierte Feiern mit Abend-Unterhaltung und Lebensmittelfestivals"
+        }
+      ]
+    },
+    "markets": {
+      "intro": "Die Märkte von Pilar de la Horadada widerspiegeln den dualen Charakter der Stadt - traditioneller spanischer Handel im Stadtzentrum und moderner Einzelhandel in den Küsten-Urbanisierungen. Der Samstagmarkt ist ein Favorit von Einheimischen und Besuchern gleichermaßen.",
+      "markets": [
+        {
+          "name": "Pilar Samstagmarkt",
+          "day": "Samstag",
+          "time": "08:00 - 14:00",
+          "type": "Produkte/Allgemein",
+          "distance": "Stadtzentrum",
+          "description": "Traditioneller spanischer Markt mit ausgezeichnetem frischen lokalen Obst und Gemüse, Fisch, Kleidung und Haushaltswaren. Beliebter Treffpunkt mit authentischer Atmosphäre.",
+          "googleMaps": "https://maps.google.com/?q=Pilar+de+la+Horadada+Saturday+Market"
+        },
+        {
+          "name": "Torre de la Horadada Markt",
+          "day": "Sonntag",
+          "time": "08:00 - 14:00",
+          "type": "Küstenmarkt/Allgemein",
+          "distance": "Küstengebiet",
+          "description": "Sonntagsmarkt im historischen Torre de la Horadada Gebiet mit Warenvielfalt, nahe ausgezeichneten Meeresfrüchte-Restaurants am Wachturm.",
+          "googleMaps": "https://maps.google.com/?q=Torre+de+la+Horadada+Market"
+        },
+        {
+          "name": "Orihuela Samstagmarkt",
+          "day": "Samstag",
+          "time": "08:00 - 14:00",
+          "type": "Produkte/Allgemein",
+          "distance": "18 km (20 Minuten)",
+          "description": "Großer Samstagmarkt in nahem Orihuela mit umfassenden frischen Produkten, regionalen Spezialitäten, Kleidung und Haushaltswaren.",
+          "googleMaps": "https://maps.google.com/?q=Orihuela+Saturday+Market"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Pilar de la Horadada hat spanische öffentliche Schulen und Zugang zu internationalen Optionen in nahem San Javier und Torrevieja.",
+      "schools": [
+        {
+          "name": "Colegio Público Pilar de la Horadada",
+          "type": "Öffentliche Grundschule",
+          "distance": "Stadtzentrum",
+          "description": "Spanische öffentliche Schule mit zweisprachigen Unterrichtsprogrammen"
+        },
+        {
+          "name": "IES Azarquiel",
+          "type": "Öffentliche Sekundarschule",
+          "distance": "5 km",
+          "description": "Sekundarschule, die das Gebiet bedient"
+        },
+        {
+          "name": "Internationale Schulen (San Javier)",
+          "type": "Internationale Erziehung",
+          "distance": "15 km",
+          "description": "Britische und andere Curriculum-Schulen im nahen San Javier (Region Murcia)"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Die Naturaktivitäten von Pilar de la Horadada vermischen Strandfreizeit mit Golf-Lebensstil. Die Lage bietet sowohl mediterrane Wassersportaktivitäten als auch Championship Course-Spiel.",
+      "activities": [
+        {
+          "name": "Schwimmen bei Playa Mil Palmeras",
+          "type": "Wassersport",
+          "description": "Blaue-Flagge-Strand mit goldenem Sand, ruhigem Wasser und vollständiger Ausstattung"
+        },
+        {
+          "name": "Erkundung der Torre de la Horadada",
+          "type": "Historisch-Natur-Spaziergang",
+          "description": "Historischer Wachturm-Standort mit Hafen und Küstenszenerie"
+        },
+        {
+          "name": "Schnorcheln bei Cala Piteras",
+          "type": "Wassersport",
+          "description": "Felsige Bucht mit klarem Wasser und Meereslebewesen"
+        },
+        {
+          "name": "Golf bei Lo Romero",
+          "type": "Sport",
+          "description": "Jack Nicklaus Championship Course 5 km entfernt"
+        },
+        {
+          "name": "Küstenspaziergänge und Erkundung",
+          "type": "Naturwanderungen",
+          "description": "Malerische Wege entlang der südlichen Costa Blanca Küste"
+        },
+        {
+          "name": "Mar Menor Ausflüge",
+          "type": "Wassersport",
+          "description": "Einzigartige Lagune gerade über der Regionalgrenze für Tagesausflüge erreichbar"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Pilar de la Horadada hat eine wachsende Expat-Gemeinschaft, besonders in Mil Palmeras und rund um Lo Romero Golf. Das Gebiet bleibt weniger anglisiert als nördliche Orihuela Costa.",
+      "highlights": [
+        "Wachsende Expat-Gemeinschaft, besonders in Strandgebieten",
+        "Mischung aus Golf-fokussierten und Strandlebensstil-Bewohnern",
+        "Weniger etabliert als Orihuela Costa - Gelegenheit für Gemeinschaftsaufbau",
+        "Mehr spanischer Charakter als rein resort-fokussierte Gebiete",
+        "Lockt diejenigen an, die Wert und Entwicklungspotenzial suchen"
+      ],
+      "nationalities": [
+        "Britisch",
+        "Deutsch",
+        "Skandinavisch",
+        "Niederländisch",
+        "Spanisch"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Ein typischer Tag in Pilar de la Horadada",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morgen-Aktivität",
+          "description": "Strandspaziergang (La Marina) oder Golftraining (Lo Romero) je nach Vorliebe"
+        },
+        {
+          "time": "10:00",
+          "activity": "Café und Markt",
+          "description": "Kaffee in lokaler Bar oder Einkauf auf Samstag/Sonntag Markt"
+        },
+        {
+          "time": "13:00",
+          "activity": "Langes Mittagessen",
+          "description": "Hauptspanische Mahlzeit im Restaurant oder zuhause"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta oder Strand",
+          "description": "Nachmittags-Ruhe oder Schwimmen bei Mil Palmeras Strand"
+        },
+        {
+          "time": "17:00",
+          "activity": "Golf oder Aktivität",
+          "description": "Runde bei Lo Romero Golf oder anderen Kursen innerhalb von 15-18 Minuten"
+        },
+        {
+          "time": "19:00",
+          "activity": "Soziale Aktivität",
+          "description": "Golf-Club-Aktivität, Strandbar oder Gemeinschafts-Versammlung"
+        },
+        {
+          "time": "21:00",
+          "activity": "Abendessen",
+          "description": "Qualitäts-Abendessen in Restaurant mit Meerblick oder lokales Etablissement"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7925!3d37.8681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPilar%20de%20la%20Horadada!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Pilar de la Horadada",
+    "description": "Pilar de la Horadada ist die südlichste Stadt der Costa Blanca und bietet Lo Romero Golf (Jack Nicklaus Design), Mil Palmeras Strände und authentischen spanischen Charakter. Tor zwischen Costa Blanca und Costa Cálida.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.8681",
+      "longitude": "-0.7925"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pilar de la Horadada",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Jack Nicklaus Golf Course (Lo Romero)",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Blue Flag Beaches",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Murcia Airport Proximity",
+        "value": "20 minutes"
+      }
+    ]
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ist Pilar de la Horadada gut für Golf?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ausgezeichnet. Lo Romero Golf - ein Jack Nicklaus Signature Course - liegt nur 3 km entfernt. Zusätzliche Kurse wie Las Colinas und Campoamor sind innerhalb von 18 Minuten erreichbar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie weit ist Pilar de la Horadada vom Flughafen entfernt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Der Flughafen Murcia-Corvera ist nur 25 km (20 Minuten) entfernt. Der Flughafen Alicante ist 65 km (45 Minuten) entfernt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was sind die Immobilienpreise in Pilar de la Horadada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Apartments ab €169.000, Reihenhäuser ab €240.000, Villen ab €350.000. Ausgezeichnetes Preis-Leistungs-Verhältnis gegenüber nördlichem Orihuela Costa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist Lo Romero Golf?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lo Romero Golf ist ein Jack Nicklaus Signature Course - eine prestigeträchtiges Golfziel mit anspruchsvoll Layout und Premium-Einrichtungen. Der wichtigste Golf-Draw für Pilar de la Horadada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist Mil Palmeras?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mil Palmeras ist die Haupt-Küsten-Resort-Urbanisierung mit Blaue-Flagge-Stränden, modernen Entwicklungen und internationaler Gemeinschaft. Die meisten internationalen Käufer konzentrieren sich auf dieses Gebiet."
+        }
+      }
+    ]
+  }
+}

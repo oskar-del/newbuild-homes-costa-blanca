@@ -1,0 +1,391 @@
+{
+  "slug": "polop",
+  "name": "Polop",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/polop-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 8,
+  "propertyTypes": [
+    "Villa",
+    "Penthouse",
+    "Town House",
+    "Bungalow"
+  ],
+  "priceRange": {
+    "min": 299000,
+    "max": 1250000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Orihuela Toerisme",
+      "url": "https://www.google.com/search?q=Orihuela%20Spain%20official%20website",
+      "description": "Ontdek meer over Orihuela"
+    },
+    "airport": {
+      "name": "Luchthaven Alicante-Elche",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "55 km",
+      "driveTime": "40 min"
+    },
+    "healthcare": {
+      "name": "Hospital Vega Baja",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Vega%20Baja",
+      "distance": "2 km"
+    }
+  },
+  "content": {
+    "metaTitle": "Wonen in Orihuela 2026 | Volledige Gebiedsgids & Woningen",
+    "metaDescription": "Ontdek wonen in Orihuela: €299k-€1.25m woningen, 40% goedkoper dan eilanden, gevestigde expatgemeenschap, blauwvlagstranden binnen 20 minuten.",
+    "heroIntro": "Orihuela staat bekend als een van de meest aantrekkelijke binnenlandse bestemmingen van Costa Blanca, met authentieke Spaanse levensstijl en moderne internationale voorzieningen. Dit historische dorp, gelegen in het hart van de provincie Alicante, is een toonaangevende keuze voor vastgoedkopers die waarde, levensstijl en echt gemeenschapsgevoel zoeken. Met woningen variërend van €299.000 tot €1.250.000 biedt Orihuela uitzonderlijke waarde—40% goedkoper dan Spaanse eilandmarkten terwijl je hoge kwaliteit van leven behoudt. De stad trekt diverse bevolkingsgroepen aan: gepensioneerden die betaalbaar mediterraan leven zoeken, gezinnen die waarde hechten aan goede scholen en veiligheid, en investeerders die sterke huuropbrengsten herkennen met typische 7-nachtsverhuren van €800. De gevestigde internationale gemeenschap zorgt ervoor dat Engels wijd verspreid gesproken wordt, waardoor de overgang gemakkelijk is voor Britse en Europese kopers. Orihuela combineert oude Spaanse charme met modern gemak: blauwvlagstranden liggen slechts 20 minuten verderop, kampioenschapsgolfbanen bevinden zich in de regio, en een modern gezondheidsstelsel bedient bewoners. De groei van +8% per jaar op de markt weerspiegelt toenemende erkenning van Orihuela als een verstandige investeringsbestemming. Of je nu een primaire woning, vakantieverblijf of investeringspand zoekt, Orihuela biedt overtuigende voordelen ondersteund door tastbare marktmomentum en authentieke mediterrane levensstijl.",
+    "lifestyleSection": {
+      "intro": "Het dagelijks leven in Orihuela combineert Spaanse traditie naadloos met internationaal gemak. Ochtenden beginnen vaak op lokale markten—levendige, authentieke ervaringen waar verkopers verse producten, regionale specialiteiten en seizoensgebonden lekkernijen verkopen. De gevestigde internationale gemeenschap betekent dat Engels veel gesproken wordt in winkels, restaurants en sociale venues, wat het gemakkelijk maakt voor nieuwkomers. Middagen betreffen vaak ontspannen maaltijden in familierestaurants met traditionele paella, verse vis en tapas, naast internationale keuzeopties. Weekenden gaan meestal door met stranduitzapjes naar nabijgelegen blauwvlagstranden of ronden op kampioenschapsgolfbanen verspreid over de regio. De stad organiseert regelmatige feesten en culturele evenementen ter ere van Spaans erfgoed, terwijl Engelssprekende social clubs en internationale groepen gemakkelijke gemeenschapsverbinding faciliteren. Winkelen varieert van traditionele markten tot moderne supermarkten met zowel Spaanse als bekende internationale producten. Het tempo is duidelijk mediterraan—minder hectisch dan kustresorts maar meer ontwikkeld dan afgelegen dorpen. Sportliefhebbers genieten het hele jaar door van activiteiten: golf, watersport, wandelen en fietsen. De expatgemeenschap heeft infrastructuur gecreëerd die integratie soepel maakt: Engelssprekende diensten, internationale scholen en sociale netwerken vergemakkelijken echte verbindingen tussen nieuwkomers en gevestigde inwoners.\n\nOrihuela geniet een mediterraan klimaat met warme, droge zomers en milde winters—perfect voor het hele jaar buiten leven. Zomertemperaturen bereiken meestal 28-32°C (82-90°F), met kustwinden die intensiteit matigen, terwijl winters aangenaam mild blijven op 10-15°C (50-59°F). Regen concentreert zich in herfst en lente, met ongeveer 300 zonnedagen per jaar. Het beste moment om Orihuela te ervaren is april-juni en september-oktober, wanneer temperaturen ideaal zijn en menigten minimaal. Zelfs wintermaanden trekken bezoekers en bewoners aan die onderbreking zoeken van kouder noordelijk Europees klimaat. De consistente weerpatronen ondersteunen een actieve buitenlevensstijl: strandagen blijven haalbaar november tot maart, terwijl tuinieren en buitenactiviteiten het hele jaar door floreren. Dit klimaat aantrekkingskracht spreekt bijzonder aan tot gepensioneerden en die met gezondheidsaandachtigheden, omdat temperatuurextremen zeldzaam zijn. De droge, zonnige omstandigheden dragen ook bij tot gemak van vastgoedonderhoud en verminderde energiekosten vergeleken met koeler klimaten.",
+      "highlights": [
+        "Uitzonderlijke waarde: 40% goedkoper dan eilandmarkten met €2.200/m² gemiddelde prijzing",
+        "Sterke marktgroei: +8% jaarlijkse waardering geeft intelligente investeringstiming aan",
+        "Uitstekende levensstijl: blauwvlagstranden 20 minuten verderop, kampioenschapsgolf dichtbij, heel jaar zon",
+        "Gevestigde expatgemeenschap: Engels wijd gesproken, internationale diensten, gemakkelijke integratie",
+        "Solide huuropbrengst: €800 gemiddelde 7-nachtsverhuren ondersteunen beleggingsrendement",
+        "Volledige voorzieningen: Gezondheidszorg, internationale scholen, supermarkten, restaurants allemaal bereikbaar"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Orihuela's sport- en vrijetijdsvoorzieningen kunnen zich meten met kustresorts terwijl ze kalm lokaal karakter behouden. Meerdere blauwvlagstranden liggen binnen 20 minuten, biedend veilig zwemmen, watersport en strandclubs. Meerdere kampioenschapsgolfbanen dichtbij trekken enthousiastelingen van alle niveaus aan—van beginners die genieten van schilderachtige 9-holegolfbanen tot scratch golfers die kampioenschapslayouts uitdagen. Buiten traditionele sporten genieten bewoners wandelingen door Alicante-platteland, fietsen op speciale routes, watersport inclusief paddleboardvaren en kajakken, tennisclubs en fitnessvoorzieningen. Het milde klimaat maakt heel jaar deelname aan buitenactiviteiten mogelijk. Strandbarretjes en clubs bieden sociale venues combinatie verfrissing met kusambiance. Golfclubs trekken bijzonder de internationale gemeenschap aan, biedend faciliteiten, sociale evenementen en competities die verbindingen onder bewoners bevorderen.",
+      "dining": "Orihuela biedt diverse eetgelegenheden, van traditionele Spaanse tapasbars en familierestaurants tot internationale keuken. Lokale vestigingen serveren authentieke regionale gerechten met vers lokaal ingrediënten, terwijl het menú del día uitzonderlijke waarde biedt rond €10-12 voor driegangenmaaltijd.",
+      "shopping": "Winkelen in Orihuela cater op elk voorkeur en budget. Grote supermarktketens inclusief Mercadona, Lidl en Consum bieden bekende producten, internationale voeding en Spaanse basis tegen concurrerende prijzen. Traditionele markten bieden vers groenten, lokale kazen, rood vlees en vis rechtstreeks van verkopers—authentieke Spaanse ervaring en budgetvriendelijke optie. Moderne winkelcentra bevatten kleding-, elektronica- en huishoudgoederenbedrijven. Het stadscentrum onderhoudt onafhankelijke winkels, bakkerijen en gespecialiseerde winkels. Voor specifieke internationale producten niet lokaal beschikbaar, bieden nabijgelegen grotere steden alternatieven. Overall zijn winkelprijzen aanzienlijk lager dan VK-gelijkheden, bijzonder voor vers groenten en lokale producten, wat bijdraagt aan betaalbare levenskosten.",
+      "healthcare": "Gezondheidszorg in Orihuela voldoet aan hoge internationale standaarden met volledige faciliteiten dienend zowel bewoners als toeristen. Een modern regionaal ziekenhuis opereert binnen 30 minuten, uitgerust met spoedservices, chirurgische faciliteiten en speciaaldepartementen. Meerdere privéklinieken bieden alternatieve opties met kortere wachttijden en Engelssprekende artsen, aanpassend aan internationale voorkeuren. Het gezondheidsstelsel integreert Spaanse efficiëntie met moderne technologie—veel beoefenaren spreken Engels vloeiend, essentieel voor niet-Spaanse sprekers. Receptgeneesmiddelen zijn betaalbaar en wijd beschikbaar via apotheken overal in stad. Ziekteverzekering voor buitenlanders is rechtlijnig en concurrerend geprijsd, met veel bewoners privéverzekering verkrijgend via internationale aanbieders of Spaanse aanbieders. Tandheelkundige diensten, fysiotherapie en specialist-consulten zijn direct toegankelijk en rendabel vergeleken met VK-privézorg.",
+      "transport": "Busvingverbindingen verbinden Orihuela met omliggende dorpen en Alicante, biedend openbaartransportopties. Echter, auto is aanbevolen voor flexibiliteit, bijzonder toegang tot stranden, golfbanen en verkennen de bredere regio. Rijden is rechtlijnig met goed onderhouden wegen en logische bewegwijzering. Luchthaven Alicante-Elche, Spanje's 5de drukst, ligt ongeveer 50 kilometer zuid met regelmatige vluchten naar VK-luchthavens en Europese bestemmingen. Luchthaven Valencia, 120 kilometer noord, biedt extra vluchtopties. Beide vergemakkelijken gemakkelijke internationale toegang. Orihuela verbindt via goed onderhouden snelwegen naar Alicante (45 minuten zuid), Valencia (2 uur noord) en Murcia (1 uur west). Lokale wegen bereiken stranden, golfbanen en naburige dorpen. Het snelwegnet is modern en efficiënt, met redelijke tolls voor regelmatige reizigers. Regionale busservices verbinden Orihuela met Alicante, kustdorpen en omliggende gemeentes. Bussen rijden regelmatig, hoewel schema's seizoensafhankelijk varieën. Treinservice verbindt grotere regionale centra, hoewel auto-reizen praktischer blijft voor dagelijks gebruik."
+    },
+    "propertyMarketSection": "Orihuela's vastgoedmarkt demonstreert gezonde groei met +8% jaarlijkse waardering, weerspiegelend toenemend erkenning als een waardebestemming binnen Costa Blanca. De markt trekt internationale kopers zoekend betaalbare mediterrane woningen met sterke huuropbrengsten. Aanbod blijft stabiel met consistent inventaris over woningtypes, biedend kopers echte selectie zonder kunstmatige schaarste prijzen omhoog drijvend.\n\nPopulaire woningtypes zijn Villa, Penthouse, Town House, Bungalow.\n\nHuuropbrengstpotentieel blijft sterk: typische 7-nachtsverhuren gemiddelde €800, ondersteuning positieve kasstroom bijzonder tijdens piekseizoen. Kapitaalwaardering op 8% jaarlijks overtreft veel Europese markten. De 40% prijskorting versus Spaanse eilandmarkten biedt investeerders marge voor groei als Orihuela's profiel stijgt. Vakantieverhuurplatforms vergemakkelijken kortetermen verhuren, terwijl langtermijnverhuren de gevestigde expatgemeenschap serveren. Woningprijzen op €2.200 per vierkante meter representeren uitzonderlijke waarde vergeleken met Alicante-stad of kustalternatieven, terwijl hoge constructiekwaliteit en moderne voorzieningen worden behouden.",
+    "whyLiveHereSection": [
+      "Uitzonderlijke waarde: 40% goedkoper dan eilandmarkten met €2.200/m² gemiddelde prijzing",
+      "Sterke marktgroei: +8% jaarlijkse waardering geeft intelligente investeringstiming aan",
+      "Uitstekende levensstijl: blauwvlagstranden 20 minuten verderop, kampioenschapsgolf dichtbij, heel jaar zon",
+      "Gevestigde expatgemeenschap: Engels wijd gesproken, internationale diensten, gemakkelijke integratie",
+      "Solide huuropbrengst: €800 gemiddelde 7-nachtsverhuren ondersteunen beleggingsrendement",
+      "Volledige voorzieningen: Gezondheidszorg, internationale scholen, supermarkten, restaurants allemaal bereikbaar"
+    ],
+    "faqs": [
+      {
+        "question": "Is Orihuela een goede plek om te wonen?",
+        "answer": "Ja, absoluut. Orihuela biedt uitzonderlijke waarde (40% goedkoper dan Spaanse eilanden), authentieke mediterrane levensstijl, gevestigde internationale gemeenschap met Engels wijd gesproken, uitstekende gezondheidszorg en onderwijs, en nabijheid tot stranden en golf. De +8% jaarlijkse marktgroei weerspiegelt toenemend erkenning van Orihuela's kwaliteit van leven en investeringspotentieel."
+      },
+      {
+        "question": "Kunnen buitenlanders vastgoed in Spanje kopen?",
+        "answer": "Ja, buitenlanders kunnen vrijelijk vastgoed in Spanje aankopen zonder inwoningsvereisten of beperkingen. Niet-ingezetenen moeten een Spaans belastingnummering (NIE) verkrijgen voor aankoop. Het proces is rechtlijnig via lokale notarissen die overdracht behandelen. Veel internationale kopers in Orihuela navigeren aankopen zonder complicaties."
+      },
+      {
+        "question": "Wat zijn de kosten van vastgoedkoop in Spanje?",
+        "answer": "Buiten aankoopprijs, verwacht aanvullende kosten: 6-8% overdrachtsbelasting (varieert per regio), 1-2% notariskosten, vastgoedregistratiekosten rond 0.1% van aankoopprijs en optionele advocaatkosten. In Orihuela, eigendom €400.000 zou €30.000-€35.000 aanvullende kosten kunnen hebben. Deze kosten zijn lager dan VK-aankopen en transparant, duidelijk gespecificeerd tijdens transacties."
+      },
+      {
+        "question": "Heb ik visum nodig om vastgoed in Spanje te kopen?",
+        "answer": "Nee, visum is niet vereist specifiek voor vastgoedaankoop in Spanje. Niet-EU-burgers die vastgoed kopen hebben geen inwoningsvergunningen nodig voor aankoop zelf. Echter, wanneer je van plan bent in Spanje te wonen, visum-vereisten gelden gebaseerd op nationaliteit en beoogde duur. VK-burgers kunnen visa nodig hebben voor verblijf langer dan 90 dagen. Raadpleeg Spaanse ambassadegeleiding voor jouw specifieke omstandigheden."
+      },
+      {
+        "question": "Hoeveel zijn vastgoedbelastingen in Spanje?",
+        "answer": "Jaarlijkse vastgoedbelasting (IBI) gemiddelde 0.4-1.1% van vastgoedwaarde in provincie Alicante, aanzienlijk lager dan VK-gemeentelijke belasting. Overdrachtsbelasting bij aankoop is 6-8%. Spaanse ingezetenen betalen ook inkomstenbelasting op huuropbrengst wanneer eigendom verhuren, hoewel tarieven concurrerend zijn. Orihuela-bewoners rapporteren aanzienlijk lagere jaarlijkse vastgoedkosten vergeleken met VK-gelijkheden."
+      },
+      {
+        "question": "Kan ik hypotheek in Spanje krijgen als buitenlander?",
+        "answer": "Ja, buitenlandse kopers kunnen Spaanse hypotheken verkrijgen via Spaanse banken, hoewel veel VK-hypotheken verkiezen als geschikt. Spaanse hypotheken vereisen doorgaans 30% aanbetaling, inkomstenbewijs en NIE-nummer. Rentetarieven blijven concurrerend. Veel internationale vastgoedkopers in Orihuela verzekeren met succes hypotheken of kiezen contantaankopen gebruikmakend van lagere vastgoedprijzen."
+      },
+      {
+        "question": "Wat zijn levenskosten in Costa Blanca?",
+        "answer": "Costa Blanca biedt uitzonderlijke waarde vergeleken met noordelijk Europa. Orihuela steekt bijzonder uit op 40% goedkoper dan eilandmarkten. Maandelijkse kosten voor een persoon gemiddelde €1.200-€1.600 inclusief huisvesting, nutsvoorzieningen, voeding en vervoer. Gepensioneerden rapporteren comfortabel leven op €1.500-€2.000 maandelijks. Eten gaan blijft betaalbaar, supermarkt winkelen budgetvriendelijk, en nutsvoorzieningen redelijk heel jaar."
+      },
+      {
+        "question": "Is Costa Blanca goed voor gepensioneerden?",
+        "answer": "Uitstekende keuze voor gepensioneerden. Costa Blanca biedt betaalbaar leven (40% goedkoper dan eilanden), uitstekende gezondheidszorg met Engelssprekende artsen, warm klimaat verminderend verwarmingskosten, actieve sociale gemeenschappen en levendige levensstijl. Orihuela specifiek trekt gepensioneerden zoekend authenticiteit voorbij resortgebieden aan. Gevestigde expatnetwerken vergemakkelijken vriendschapbouwing en gemeenschapsintegratie."
+      },
+      {
+        "question": "Hoe ver is Costa Blanca van VK?",
+        "answer": "Luchthaven Alicante, 50km van Orihuela, biedt directe vluchten naar VK-luchthavens (Londen, Manchester, Birmingham) met reistijden van 2-2.5 uur vlucht. Totaal reizen vereist doorgaans 4-5 uur deur-tot-deur. Goedkopeluchtvaartmaatschappijen handhaven regelmatige routes tegen concurrerende prijzen, makend VK-bezoeken handig en betaalbaar voor bewoners."
+      },
+      {
+        "question": "Wat is het weer op Costa Blanca?",
+        "answer": "mediterraan klimaat met 300+ jaarlijkse zondagen. Zomers (juni-september) bereiken 28-32°C met lage vochtigheid en kustwinden. Winters (december-februari) gemiddelde 10-15°C—aangenaam mild vergeleken met noordelijk Europa. Lente en herfst bieden perfecte temperaturen (20-25°C). Regen concentreert zich in herfst/lente; zomers blijven betrouwbaar droog. Overall ondersteunt weer actieve heel-jaar buitenlevensstijl."
+      }
+    ],
+    "conclusion": "Klaar om je perfecte woning in Orihuela te ontdekken? Ons ervaren team specialiseert in nieuwbouwwoningen in dit gebied en kan je door elke stap begeleiden. Of je nu permanent huis, vakantieverblijf of investeringspand zoekt, we helpen je exact wat je zoekt te vinden. Boek een gratis 30-minuten overleg met ons team—met meer dan 12 jaar ervaring in het verkopen van nieuwbouw op Costa Blanca, kennen we deze markt van binnenuit.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Huuropbrengstpotentieel blijft sterk: typische 7-nachtsverhuren gemiddelde €800, ondersteuning positieve kasstroom bijzonder tijdens piekseizoen. Kapitaalwaardering op 8% jaarlijks overtreft veel Europese markten. De 40% prijskorting versus Spaanse eilandmarkten biedt investeerders marge voor groei als Orihuela's profiel stijgt. Vakantieverhuurplatforms vergemakkelijken kortetermen verhuren, terwijl langtermijnverhuren de gevestigde expatgemeenschap serveren. Woningprijzen op €2.200 per vierkante meter representeren uitzonderlijke waarde vergeleken met Alicante-stad of kustalternatieven, terwijl hoge constructiekwaliteit en moderne voorzieningen worden behouden.",
+      "highlights": [
+        "Lagere instapprijzen dan vergelijkbare markten met soortgelijke huuropbrengsten",
+        "Groeiende internationale vraag drijvend stabiele prijswaardering",
+        "Langtermijn huuropbrengstvraag vanuit groeiende expatgemeenschap"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Levenskosten in Orihuela zijn aanzienlijk lager dan Noord-Europa en zeer concurrerend binnen Spanje. Binnenlandse locaties zoals Orihuela bieden bijzonder goede waarde voor dagelijkse uitgaven.",
+      "items": [
+        {
+          "category": "Boodschappen (maandelijks, stel)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl en lokale markten dichtbij"
+        },
+        {
+          "category": "Nutsvoorzieningen (elektriciteit, water, gas)",
+          "cost": "€100-160",
+          "notes": "Hoger in zomer met airconditioning"
+        },
+        {
+          "category": "Gemeenschapskosten",
+          "cost": "€50-120",
+          "notes": "Varieert per ontwikkeling en inbegrepen diensten"
+        },
+        {
+          "category": "IBI (Gemeentelijke belasting)",
+          "cost": "€400-1.000/jaar",
+          "notes": "Jaarlijkse vastgoedbelasting gebaseerd op kadastrale waarde"
+        },
+        {
+          "category": "Eten gaan (per persoon)",
+          "cost": "€10-22",
+          "notes": "Menú del día van €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Telefoon",
+          "cost": "€35-50",
+          "notes": "Goede breedband dekking; meerdere aanbieders"
+        },
+        {
+          "category": "Auto-uitgaven (brandstof, verzekering)",
+          "cost": "€150-250",
+          "notes": "Essentieel voor binnenlands leven"
+        },
+        {
+          "category": "Privé ziekteverzekering",
+          "cost": "€60-150",
+          "notes": "Uitgebreide dekking; lager voor jongere bewoners"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Orihuela viert traditionele Spaanse feesten en gemeenschapsgebeurtenissen het hele jaar door, blokkend lokale tradities met de welkomende internationale gemeenschap.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "Augustus",
+          "description": "Jaarlijks patroon heiligenfeesten met parades, muziek, vuurwerk en traditionele viering brengend heel gemeenschap samen"
+        },
+        {
+          "name": "Semana Santa (Pasen Week)",
+          "month": "Maart/April",
+          "description": "Plechtige Heilig Week processies door straten met traditionele drijvers en eeuwenlang religieuze tradities"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "Nationale vakantieviering met lokale evenementen, markten en gemeenschapsbijeenkomsten"
+        },
+        {
+          "name": "Lente Festival",
+          "month": "Mei",
+          "description": "Viering van lente met bloemenstallingen, voedselkramen, traditionele muziek en gemeenschapsbijeenkomsten in stadsplein"
+        },
+        {
+          "name": "Oogstfestival",
+          "month": "Oktober",
+          "description": "Traditionele herfstvering met lokale producten, wijnproeven, ambachtelijke markten en regionale gastronomie"
+        },
+        {
+          "name": "Kerstmarkt & Drie Koningen",
+          "month": "December/Januari",
+          "description": "Feestseizoen met marktkramen, kerststallen en spectaculaire Drie Koningen parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Gezinnen in Orihuela hebben toegang tot kwaliteitsonderwijs opties in omliggende gebieden, met meerdere internationale scholen die de expatgemeenschap serveren naast uitstekende Spaanse staatscholen.",
+      "schools": [
+        {
+          "name": "El Limonar International School",
+          "type": "Internationaal (Brits)",
+          "distance": "20-35 min",
+          "description": "Brits curriculum school met uitstekende faciliteiten en sterke academische prestatie servend de expatgemeenschap"
+        },
+        {
+          "name": "Newton College",
+          "type": "Internationaal (Brits/Spaans)",
+          "distance": "25-40 min",
+          "description": "Tweetalige internationale school die zowel Britse als Spaanse curricula met moderne faciliteiten biedt"
+        },
+        {
+          "name": "Lokale Spaanse Basisschool",
+          "type": "Spaanse Staat",
+          "distance": "5-15 min",
+          "description": "Lokale staatschool die Spaans curriculum onderwijs biedt, uitstekend voor taaldompeling en gemeenschapsintegratie"
+        },
+        {
+          "name": "Lokale Spaanse Voortgezette School",
+          "type": "Spaanse Staat",
+          "distance": "10-20 min",
+          "description": "Staat voortgezette school die ESO en Bachillerato programma's met ondersteunende leeromgeving biedt"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Orihuela biedt uitstekende buitenactiviteiten het hele jaar door, van wandelen en fietsen tot golf, natuurwandelingen en meer.",
+      "activities": [
+        {
+          "name": "Plattelandwandelen",
+          "type": "Wandeling",
+          "description": "Wandelpaden door omringend platteland met uitzichten van boomgaarden, bergen en traditionele dorpen"
+        },
+        {
+          "name": "Fietsroutes",
+          "type": "Fietsen",
+          "description": "Weg- en bergfietsroutes door schilderachtig platteland, geschikt voor alle fitnesniveaus"
+        },
+        {
+          "name": "Nabijgelegen Golfbanen",
+          "type": "Golf",
+          "description": "Meerdere kwaliteitsgolfbanen binnen makkelijk rijafstand die heel jaar spelen in mediterrane zon bieden"
+        },
+        {
+          "name": "Natuurreservaten & Vogelbescherming",
+          "type": "Natuurreservaat",
+          "description": "Beschermde natuurgebieden dichtbij die vogelbescherming, fotografie en vredige natuurwandelingen bieden"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Orihuela heeft een groeiende internationale gemeenschap, met expats aangetrokken door mediterrane levensstijl, betaalbare levenskosten en welkomende sfeer. Het authentieke Spaanse karakter van het gebied spreekt aan degenen zoekend echte integratie met lokale cultuur. Engels wordt steeds meer gesproken, met veel diensten beschikbaar in Engels, makend dagelijks leven comfortabel voor nieuwkomers.",
+      "highlights": [
+        "Groeiende internationale sociale scene met regelmatige gemeenschapsgebeurtenissen",
+        "Engelssprekende diensten beschikbaar inclusief medische en juridische professionals",
+        "Regelmatige gemeenschapsbijeenkomsten, clubs en sociale activiteiten",
+        "Welkomende sfeer voor nieuwkomers met gevestigde expatnetwerken",
+        "Mengsel van permanente bewoners en seizoensbezoeken creëerend dynamische gemeenschap",
+        "Sterke Britse en Scandinavische aanwezigheid naast Nederlands, Belgische en Duitse bewoners",
+        "Lokale Spaanse gemeenschap welkomend en inclusief naar internationale bewoners"
+      ],
+      "nationalities": [
+        "Brits",
+        "Scandinavisch (Zweeds, Noors, Deens)",
+        "Nederlands",
+        "Belgisch",
+        "Duits",
+        "Iers",
+        "Spaans"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Een Typische Dag in Orihuela",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Ochtendkoffie",
+          "description": "Begin de dag met verse koffie op je terras, genietend van ochtendzon en vredige omgeving"
+        },
+        {
+          "time": "09:30",
+          "activity": "Marktbezoek",
+          "description": "Browse lokale markt voor vers groenten, brood en seizoensspecialiteiten van lokale boeren"
+        },
+        {
+          "time": "12:00",
+          "activity": "Vers Markt Winkelen",
+          "description": "Haal vers brood, fruit en lokaal groenten van supermarkt of wekelijkse markt"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spaans Lunch",
+          "description": "Geniet van ontspannen menú del día in lokaal restaurant—driegang met wijn rond €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Zwembad",
+          "description": "Rust tijdens warmste uren, dan verkoeling in je privé of gemeenschapszwembad"
+        },
+        {
+          "time": "17:30",
+          "activity": "Middagwandel",
+          "description": "Verken omringend platteland of dorp straten terwijl temperatuur afkoelt"
+        },
+        {
+          "time": "20:00",
+          "activity": "Avondpaseo",
+          "description": "Sluit aan bij lokalen voor traditionele avondwandel door stad, groetend buren en vrienden"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Diner",
+          "description": "Eindigt dag met tapas en glas lokaal wijn in je favoriete restaurant, buiten eten onder sterren"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.9442!3d38.0856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Polop",
+    "description": "Orihuela is a municipality in Costa Blanca South, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.0856",
+      "longitude": "-0.9442"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Orihuela",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Orihuela a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. Orihuela offers exceptional value (40% cheaper than Spanish islands), authentic Mediterranean lifestyle, established international community with English widely spoken, excellent healthcare and education, and proximity to beaches and golf. The +8% annual market growth reflects incre"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can freely purchase property in Spain without residence requirements or restrictions. Non-residents must obtain a Spanish tax identification number (NIE) before purchase. The process is straightforward through local notaries who handle transfers. Many international buyers in Orihuela"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond purchase price, expect additional costs: 6-8% transfer tax (varies by region), 1-2% notary fees, property registration fees around 0.1% of purchase price, and optional lawyer fees. In Orihuela, a €400,000 property might incur €30,000-€35,000 in additional costs. These costs are lower than UK "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No visa is required specifically to purchase property in Spain. Non-EU citizens buying property don't need residence permits for the purchase itself. However, if planning to reside in Spain, visa requirements apply based on nationality and intended duration. UK citizens may require visas for stays e"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much are property taxes in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Annual property tax (IBI) averages 0.4-1.1% of property value in Alicante province, considerably lower than UK council tax. Transfer tax at purchase is 6-8%. Spanish residents also pay income tax on rental income if letting properties, though rates are competitive. Orihuela residents report signific"
+        }
+      }
+    ]
+  }
+}
