@@ -1,0 +1,524 @@
+{
+  "slug": "rojales",
+  "name": "Rojales",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/rojales-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartament",
+    "Kamienica",
+    "Willa",
+    "Bungalow",
+    "Dom na wsi"
+  ],
+  "priceRange": {
+    "min": 145000,
+    "max": 650000
+  },
+  "coordinates": {
+    "lat": 38.0864,
+    "lng": -0.7256
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Rojales Tourism",
+      "url": "https://www.rojales.es/",
+      "description": "Oficjalna turystyka gminy Rojales"
+    },
+    "beaches": [
+      {
+        "name": "Guardamar Beaches",
+        "googleMaps": "https://maps.google.com/?q=Playa+Centro+Guardamar",
+        "description": "Naturalne plaże wsparte lasami sosnowymi",
+        "distance": "8 km"
+      },
+      {
+        "name": "La Mata Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+La+Mata",
+        "description": "Długa plaża naturalna blisko słonych jezior",
+        "distance": "12 km"
+      },
+      {
+        "name": "Torrevieja Beaches",
+        "googleMaps": "https://maps.google.com/?q=Playa+del+Cura+Torrevieja",
+        "description": "Miejskie plaże z pełnymi udogodnieniami",
+        "distance": "10 km"
+      }
+    ],
+    "shopping": [
+      {
+        "name": "Rojales Town Center",
+        "googleMaps": "https://maps.google.com/?q=Rojales+Centro",
+        "description": "Historyczne centrum z tradycyjnymi sklepami i rynkiem niedzielnym"
+      },
+      {
+        "name": "Habaneras Shopping Center",
+        "googleMaps": "https://maps.google.com/?q=Habaneras+Torrevieja",
+        "description": "Duże centrum handlowe w Torrevieji",
+        "distance": "10 km"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "10 km",
+      "driveTime": "12 minutes"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "40 km",
+      "driveTime": "30 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Gmina Rojales (wliczając Ciudad Quesada) otoczona jest doskonałymi polami golfowymi, z La Marquesą u drzwi i kilkoma innymi w łatwy zasięg.",
+    "courses": [
+      {
+        "name": "La Marquesa Golf",
+        "distance": "4 km",
+        "driveTime": "6 minutes",
+        "holes": 18,
+        "url": "https://www.lamarquesagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Marquesa+Golf",
+        "description": "Dobrze utrzymane pole popularne wśród mieszkańców. Dobre obiekty treningowe."
+      },
+      {
+        "name": "La Finca Golf",
+        "distance": "8 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "url": "https://www.lafincagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Finca+Golf+Algorfa",
+        "description": "Pole mistrzowskie zaprojektowane przez Pepe Gancedo."
+      },
+      {
+        "name": "Vistabella Golf",
+        "distance": "10 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.vistabellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+        "description": "Nowoczesne pole z doskonałymi obiektami."
+      }
+    ]
+  },
+  "localMarket": {
+    "sundayMarket": {
+      "name": "Rojales Sunday Market",
+      "location": "Town center and riverside",
+      "googleMaps": "https://maps.google.com/?q=Mercado+Rojales",
+      "hours": "Sundays 8:00 - 14:00",
+      "description": "Słynny rynek niedzielny wzdłuż rzeki Segura, jeden z największych w regionie"
+    }
+  },
+  "content": {
+    "metaTitle": "Życie w Rojales | Zabytkowe miasto | Costa Blanca South 2026",
+    "metaDescription": "Kompletny przewodnik po Rojales – zabytkowe hiszpańskie miasto nad rzeka Segura, słynny targ niedzielny, nowoczesne wille od €145 000. Prawdziwa Hiszpania ze wszystkimi udogodnieniami blisko.",
+    "quickAnswer": "Rojales to zabytkowe hiszpańskie miasto nad rzeką Segura oferujące autentyczny charakter i doskonałą wartość od €145 000. Słynne z targu niedzielnego (jeden z największych w Costa Blance), domów jaskiniowych i położenia nad rzeką. Plaże 8–12 minut stąd, szpital Torrevieja 12 minut. Zawiera Ciudad Quesada.",
+    "heroIntro": "Rzeka Segura kształtowała Rojales przez stulecia, drążąc drogę przez krajobraz i tworząc żyzną vega, która utrzymuje miasto. W niedzielne poranki brzeg rzeki ożywa jednym z największych rynków Costa Blanki, stoiska rozciągają się wzdłuż wody tak jak przez pokolenia. To miasto o korzeniach głębszych niż turystyczne inwestycje wokół niego.\n\nRojales jest siedzibą gminy, która obejmuje Ciudad Quesada w swoich granicach, ale centrum miasta samo w sobie oferuje coś innego – autentyczną historię hiszpańską, domy jaskiniowe (casas cueva) wykute w zboczach, rzekę, która płynie przez cały rok, i społeczność, która podtrzymuje tradycje. Nowoczesne urbanizacje w pobliżu oferują wygodne życie; centrum miasta oferuje duszę.\n\nDla kupujących szukających autentycznej Hiszpanii z dostępnym nowoczesnymi wygodami, Rojales łączy oba światy.",
+    "lifestyleSection": {
+      "intro": "Życie w centrum Rojales podąża za hiszpańskimi rytmami – poranna kawa w kawiarniach nad rzeką, zgiełk targu niedzielnego, wieczorny spacer wzdłuż brzegów rzeki. Domy jaskiniowe (casas cueva) wykute w zboczach to teraz muzea i osobliwości, przypominające odwiedzającym, że to miasto istniało na długo przed turystyką. Jednak Ciudad Quesada i inne urbanizacje zaledwie kilka minut stąd oferują nowoczesne życie z międzynarodowymi społeczności.\n\nTa dualność to szansa: wybierz autentyczne centrum do prawdziwej immersji, lub nowoczesną urbanizację na wygodę z autentyczności blisko. Tak czy inaczej, jesteś powiązany z czymś prawdziwym.",
+      "highlights": [
+        "Zabytkowe hiszpańskie miasto nad rzeką Segura",
+        "Słynny targ niedzielny – jeden z największych w regionie",
+        "Unikalne domy jaskiniowe (casas cueva) wykute w zboczach",
+        "Doskonała wartość – autentyczne nieruchomości od €145 000",
+        "Plaże Guardamaru zaledwie 8 km daleko",
+        "Gmina obejmuje Ciudad Quesada",
+        "Szpital Torrevieja 12 minut",
+        "30 minut do Lotniska Alicante-Elche"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Naturalne plaże Guardamaru (wsparte lasami sosnowymi i wydmami piaskowymi) znajdują się zaledwie 8 km daleko. Długi odcinek La Maty blisko słonych jezior leży 12 km daleko. Miejskie plaże Torreviei leżą 10 km daleko. Lokalizacja oferuje łatwy dostęp do plaż bez cen za przymorskie nieruchomości.",
+      "dining": "Centrum ma tradycyjne restauracje wzdłuż brzegu rzeki – doskonała lokalna kuchnia po lokalnych cenach. Targ niedzielny przyciąga odwiedzających z całego regionu. Dla różnorodności, Torrevieja (10 km) i Guardamar (8 km) oferują więcej opcji międzynarodowych.",
+      "shopping": "Centrum Rojales ma tradycyjne sklepy, supermarkety, banki i niezbędne usługi. Targ niedzielny jest legendarny dla świeżej produkcji, ubrań i artykułów gospodarstwa domowego. Habaneras centrum handlowe w Torrevieji (10 km) oferuje duże marki. La Zenia Boulevard (20 km) zapewnia pełne doświadczenie.",
+      "healthcare": "Hospital Universitario de Torrevieja leży 10 km daleko (12 minut). Lokalne ośrodki medyczne i apteki obsługują miasto. Dobry dostęp do opieki zdrowotnej dla wielkości miasta.",
+      "transport": "Lotnisko Alicante-Elche leży 40 km daleko (30 minut przez AP-7). Lokalizacja jest centralna, dzięki czemu podróż na północ-południe wzdłuż wybrzeża jest wydajna. Samochód jest niezbędny. CV-91 zapewnia dobre połączenia."
+    },
+    "neighborhoods": [
+      {
+        "name": "Casco Antiguo (Stare Miasto)",
+        "description": "Historyczne centrum z tradycyjną architekturą. Dostęp pieszych do rzeki, rynku i starego miasta. Niższe ceny, autentyczny charakter hiszpański. Kamienice i tradycyjne domy."
+      },
+      {
+        "name": "Riverside (Ribera)",
+        "description": "Nieruchomości blisko rzeki Segura. Przyjemne obszary spacerów, lokalizacja targu niedzielnego. Mieszanka starych i nowszych nieruchomości."
+      },
+      {
+        "name": "Modern Urbanizations",
+        "description": "Nowsze obszary mieszkalne wokół miasta. Nowoczesne wille i bungalowy z basenami. Więcej mieszkańców międzynarodowych. Dobra wartość z wygodnym dostępem."
+      },
+      {
+        "name": "Towards Ciudad Quesada",
+        "description": "Wschodnia krawędź łącząca się z Ciudad Quesada. Mieszanka stylów nieruchomości. Dobry dostęp do golfa. Obszar rosnącego rozwoju."
+      }
+    ],
+    "propertyMarketSection": "Rojales oferuje doskonałą wartość na całym spektrum typów nieruchomości. Nowe apartamenty zaczynają się od około €145 000–220 000, kamienice od €180 000–320 000 i wille od €280 000–650 000. Centrum miasta oferuje nieruchomości charakterystyczne; otaczające urbanizacje oferują nowoczesne wygody.\n\n**Wyróżniona inwestycja: Agata Villas Rojales** – Premium 4-pokojowe wille od €567 000 z prywatnymi basenami, 180m² powierzchni mieszkalnej i garażem. Nowoczesny design na 450m² działkach.\n\nRynek przyciąga kupujących szukających wartości bez poświęcania jakości, zainteresowanych integracją hiszpańską i entuzjastów golfa pragnących bliskości La Marquesy i innych pól. Potencjał wynajmu jest umiarkowany – lepszy niż głęboko śródlądowy, ale mniejszy niż kurorty przybrzeżne.",
+    "whyLiveHereSection": [
+      "Zabytkowe hiszpańskie miasto z autentycznym charakterem",
+      "Słynny targ niedzielny – atrakcja regionalna",
+      "Położenie nad rzeką Segura – unikalne wśród miast Costa Blanki",
+      "Doskonała wartość – autentyczna Hiszpania po dostępnych cenach",
+      "Gmina obejmuje golfowy styl życia Ciudad Quesady",
+      "Plaże Guardamaru zaledwie 8 km daleko",
+      "Szpital Torrevieja 12 minut",
+      "Domy jaskiniowe i historyczne osobliwości do zbadania"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Agata Villas Rojales",
+        "reference": "N7227",
+        "price": 567000,
+        "type": "Villa",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "plotArea": 450,
+        "features": [
+          "4 Bedrooms",
+          "Private Pool",
+          "Garage"
+        ],
+        "description": "Premium 4-pokojowa willa z 180m² powierzchni mieszkalnej, prywatnym basenem i garażem na 450m² działce."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Z czego słyna Rojales?",
+        "answer": "Rojales słyna z targu niedzielnego wzdłuż rzeki Segura (jeden z największych na Costa Blance), zabytkowych domów jaskiniowych i autentycznego charakteru hiszpańskiego. Gmina obejmuje również Ciudad Quesada."
+      },
+      {
+        "question": "Jak daleko Rojales od plaży?",
+        "answer": "Plaże Guardamaru leżą 8 km daleko (10 minut). La Mata leży 12 km daleko. Plaże Torreviei leżą 10 km daleko. Łatwy dostęp do plaż bez płacenia za nieruchomości przybrzeżne."
+      },
+      {
+        "question": "Jakie są ceny nieruchomości w Rojales?",
+        "answer": "Apartamenty od €145 000, kamienice od €180 000, wille od €280 000. Doskonała wartość autentycznych hiszpańskich nieruchomości z nowoczesnymi wygodami w pobliżu."
+      },
+      {
+        "question": "Co to jest targ niedzielny Rojales?",
+        "answer": "Jeden z największych targów Costa Blanki, rozciągających się wzdłuż rzeki Segura każdy niedzielny poranek. Świeża produkcja, ryba, ubrania, artykuły gospodarstwem domowych i rzemiosła lokalne. Autentyczne doświadczenie hiszpańskie przyciągające odwiedzających z całego regionu."
+      },
+      {
+        "question": "Czy Rojales to to samo co Ciudad Quesada?",
+        "answer": "Ciudad Quesada jest częścią gminy Rojales, ale odrębną urbanizacją. Rojales to zabytkowa siedziba gminy; Ciudad Quesada to nowoczesna inwestycja zbudowana wokół golfa La Marquesy. Są sąsiednie i połączone."
+      },
+      {
+        "question": "Czym są domy jaskiniowe w Rojales?",
+        "answer": "Casas cueva (domy jaskiniowe) to mieszkania wykute w zboczach, tradycyjne dla tego regionu. Niektóre sięgają wieków wstecz. Dzisiaj większość to muzea lub osobliwości, chociaż niektóre zostały przekonwertowane na domy. To unikalna cecha Rojales."
+      },
+      {
+        "question": "Czy angielski jest szeroko mówiony w Rojales?",
+        "answer": "Mniej w starym mieście niż w otaczających urbanizacjach. Rojales to autentycznie hiszpańskie; pobliskie Ciudad Quesada ma dużą anglojęzyczną społeczność. Zależy od części gminy, w której się znajdujesz."
+      },
+      {
+        "question": "Czy Rojales jest dobra dla golfa?",
+        "answer": "Dobry dostęp. La Marquesa Golf leży 4 km (6 minut), La Finca Golf 8 km (10 minut), Vistabella 10 km (12 minut). Gmina jest dobrze umiejscowiona dla różnorodności bez bycia skoncentrowaną na golfie."
+      },
+      {
+        "question": "Czy Rojales jest odpowiednia do stałego życia?",
+        "answer": "Tak, szczególnie dla tych wygodnych z integracją hiszpańską. Miasto ma usługi przez cały rok i stałą populację. Nowoczesne urbanizacje oferują więcej międzynarodowego komfortu. Dobra równowaga między autentycznością a praktyką."
+      },
+      {
+        "question": "Jak Rojales porównuje się do Torreviei?",
+        "answer": "Rojales jest mniejsza, bardziej hiszpańska i bardziej historyczna. Torrevieja jest większa z więcej międzynarodowymi udogodnieniami i bezpośrednim dostępem do plaży. Rojales oferuje autentyczność i wartość; Torrevieja oferuje wygodę i lokalizację przybrzeżną. Leżą 10 km od siebie."
+      }
+    ],
+    "conclusion": "Rojales oferuje coś coraz rzadszego: autentyczny charakter hiszpański w lokalizacji, która nie została wchłonięta do resortu anonimowości. Rzeka, rynek, domy jaskiniowe, historyczne centrum – dają miastu osobowość, którą brakowała urbanizacji. Jednak nowoczesne życie jest dostępne w otaczających urbanizacjach obejmujących Ciudad Quesada.\n\nDla kupujących szukających prawdziwej Hiszpanii za doskonałą wartość, z plażami i golfem w pobliżu, Rojales nagradza eksplorację poza oczywistym.\n\nGotów do zbadania nieruchomości w Rojales? Nasz zespół rozumie charakter tego zabytkowego miasta i może dopasować Cię do nieruchomości, które odpowiadają Twoim priorytetom – od nadrzecznych kamienic do nowoczesnych willi urbanizacyjnych.",
+    "investmentAnalysis": {
+      "rentalYield": "3–5% na urbanizacji nieruchomości, ograniczone na centrum",
+      "annualAppreciation": "2–3% rocznie, stabilne ze względu na autentyczne umiejscowienie charakteru",
+      "overview": "Rynek wynajmu Rojales jest umiarkowany – miasto przyciąga mieszkańców bardziej niż odwiedzających urlop. Autentyczny charakter i doskonała propozycja wartości tworzą atrakcyjność lifestylową raczej niż zwroty inwestycyjne.",
+      "highlights": [
+        "Urbanizacja nieruchomości (Ciudad Quesada) mają lepszy potencjał wynajmu",
+        "Długoterminowe wynagrodzenia ekspata bardziej niezawodne niż urlopy",
+        "Centrum oferuje zainteresowanie kulturalne dla rynku niszowego",
+        "Targ niedzielny generuje turystykę na ograniczoną skalę",
+        "Ceny wejścia wartości tworzą sprzyjającą psychologię kupca"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Koszty życia w Rojales są wyjątkowo niskie – autentyczne ceny hiszpańskie dla mieszkańców, a nie turystyczna inflacja. Gmina obejmuje zarówno historyczne centrum, jak i nowoczesne społeczności urbanizacyjne.",
+      "items": [
+        {
+          "category": "Czynsz (nieruchomość 2-pokojowa)",
+          "cost": "€500–750",
+          "notes": "Centrum taniej; urbanizacje nieco wyżej"
+        },
+        {
+          "category": "Mediów (miesięczne)",
+          "cost": "€70–110",
+          "notes": "Bliskość rzeki wpływa na niektóre nieruchomości"
+        },
+        {
+          "category": "Artykuły spożywcze (tygodniowe)",
+          "cost": "€45–70",
+          "notes": "Targ niedzielny zapewnia doskonałą wartość świeżej produkcji"
+        },
+        {
+          "category": "Posiłek restauracyjny (3-daniowy)",
+          "cost": "€11–17",
+          "notes": "Autentyczne ceny hiszpańskie, lokalne instytucje"
+        },
+        {
+          "category": "Kawa w kawiarni",
+          "cost": "€1,00–1,30",
+          "notes": "Lokalne ceny kawy w całym mieście"
+        },
+        {
+          "category": "Opieka zdrowotna (miesięczne)",
+          "cost": "€60–90",
+          "notes": "Publiczna opieka zdrowotna dostępna; opcjonalne ubezpieczenie prywatne"
+        },
+        {
+          "category": "Podatki nieruchomości (roczne)",
+          "cost": "€200–350",
+          "notes": "IBI dla typowej nieruchomości"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Kalendarz imprez Rojales centr się na słynnym targu niedzielnym i tradycyjnych hiszpańskich obchodach odzwierciedlających autentyczny charakter miasta.",
+      "events": [
+        {
+          "name": "Rynek Niedzielny Rojales (Mercado de Domingos)",
+          "month": "Przez cały rok, co tydzień",
+          "description": "Jeden z największych targów Costa Blanki rozciągających się wzdłuż rzeki Segura ze setkami straganów"
+        },
+        {
+          "name": "Fiestas Patronales de Rojales",
+          "month": "Sierpień",
+          "description": "Obchody świętego patrona miasta z paradami, działalnościami nad rzeką i tradycyjnymi festynami"
+        },
+        {
+          "name": "Semana Santa (Wielki Tydzień)",
+          "month": "Marzec/kwiecień",
+          "description": "Tradycyjne procesje Wielkiego Tygodnia wzdłuż rzeki i przez centrum miasta"
+        },
+        {
+          "name": "Wycieczki i wystawy domów jaskiniowych",
+          "month": "Przez cały rok",
+          "description": "Zainteresowanie kulturalne historycznym casas cueva z okazjonalnymi wystawami i edukacyjnymi wycieczkami"
+        },
+        {
+          "name": "Festiwel Rzeki Segura",
+          "month": "Maj",
+          "description": "Świętowanie dziedzictwa rzeki z działalnościami łodkowymi i obchodami nad brzegiem rzeki"
+        }
+      ]
+    },
+    "markets": {
+      "intro": "Rojales słynie z swojego legendarnego targu niedzielnego – jeden z największych na Costa Blance, rozciągającego się wzdłuż rzeki Segura. Targ jest autentycznym doświadczeniem hiszpańskim przyciągającym odwiedzających z całego regionu. Dodatkowe targi obsługują otaczające obszary.",
+      "markets": [
+        {
+          "name": "Targ Niedzielny Rojales",
+          "day": "Niedziela",
+          "time": "08:00 - 14:00",
+          "type": "Ogólny/Produkcja",
+          "distance": "Centrum i brzeg rzeki",
+          "description": "Jeden z największych i najsławniejszych targów Costa Blanki rozciągającego się na 1 km wzdłuż rzeki Segura. Setki straganów sprzedających świeżą produkcję, rybę, ubrania, artykuły gospodarstwa domowego i rzemiosła lokalne. Niezbędne doświadczenie hiszpańskie przyciągające odwiedzających z całego regionu.",
+          "googleMaps": "https://maps.google.com/?q=Rojales+Sunday+Market+Mercado+Domingos"
+        },
+        {
+          "name": "Targ Czwartkowy Ciudad Quesada",
+          "day": "Czwartek",
+          "time": "08:00 - 14:00",
+          "type": "Produkcja/Ogólny",
+          "distance": "3 km (5 minut)",
+          "description": "Targ czwartkowy w pobliskim Ciudad Quesada ze świeżą produkcją, specjalnikami regionalnymi i artykułami gospodarstwa domowego obsługującymi społeczność urbanizacji.",
+          "googleMaps": "https://maps.google.com/?q=Ciudad+Quesada+Thursday+Market"
+        },
+        {
+          "name": "Targ Środowy Guardamaru",
+          "day": "Środa",
+          "time": "08:00 - 14:00",
+          "type": "Produkcja/Ogólny",
+          "distance": "8 km (10 minut)",
+          "description": "Popularny targ środowy w przybrzeżnym mieście Guardamar ze świeżą lokalną produkcją, rybą i towarami regionalnymi z przybrzeżną atmosferą.",
+          "googleMaps": "https://maps.google.com/?q=Guardamar+Wednesday+Market"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Rojales ma publiczne szkoły hiszpańskie odpowiednie dla rodzin i dostęp do opcji międzynarodowych w pobliskich obszarach obejmujących sektor Ciudad Quesada.",
+      "schools": [
+        {
+          "name": "Colegio Público Rojales",
+          "type": "Publiczna szkoła podstawowa",
+          "distance": "Centrum, piesza odległość",
+          "description": "Publiczna szkoła hiszpańska z programem edukacji dwujęzycznej"
+        },
+        {
+          "name": "IES Puerta de la Vega",
+          "type": "Publiczna szkoła średnia",
+          "distance": "3 km",
+          "description": "Szkoła średnia obsługująca Rojales i otaczający obszar"
+        },
+        {
+          "name": "Szkoły międzynarodowe (Torrevieja)",
+          "type": "Edukacja międzynarodowa",
+          "distance": "12 km",
+          "description": "Szkoły programu britanijskiego i inne w pobliskiej Torrevieji"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Działalności przyrodnicze Rojales centrem się na rzece Segura i dostęp do pobliskich plaż i pól golfowych. Rzeka oferuje unikalne możliwości rekreacyjne.",
+      "activities": [
+        {
+          "name": "Spacer wzdłuż rzeki Segura",
+          "type": "Spacery przyrodnicze",
+          "description": "Ścieżki wzdłuż brzegu rzeki i promenady przez miasto z tradycyjnymi mostami i scenicznym punktem widokowym"
+        },
+        {
+          "name": "Obserwacja ptaków na mokradłach rzeki",
+          "type": "Obserwacja przyrody",
+          "description": "Chronione obszary mokradeł wspierające różnorodne ptactwo"
+        },
+        {
+          "name": "Eksploracja targu niedzielnego",
+          "type": "Działalność kulturalno-przyrodnicza",
+          "description": "Tygodniowy targ zarówno jako doświadczenie kulturalne, jak i handlowe"
+        },
+        {
+          "name": "Rowerem przez wieś",
+          "type": "Aktywna rekreacja",
+          "description": "Płaski teren i cichy wiejskie drogi przez obszary rolnicze"
+        },
+        {
+          "name": "Golf na La Marquesa",
+          "type": "Sport",
+          "description": "Pole mistrzowskie 4–6 km w sektorze Ciudad Quesady"
+        },
+        {
+          "name": "Dostęp do plaż Guardamaru",
+          "type": "Rekreacja wodna",
+          "description": "Plaże naturalne wsparte lasem sosnowym, 8 km daleko"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Rojales ma dwie odrębne społeczności ekspatów: jedną w historycznym centrum integrującą się z życiem hiszpańskim, drugą w golfowo-skoncentrowanej społeczności Ciudad Quesady.",
+      "highlights": [
+        "Podzielona między integracją centrum a nowoczesną urbanizacją",
+        "Sektor City Quesada ma dużą golfowo-skoncentrowaną społeczność",
+        "Historyczne centrum przyciąga kupujących skoncentrowanych na integracji hiszpańskiej",
+        "Mniej anglicyzmo niż czystej przybrzeżne obszary",
+        "Integracja hiszpańska bardziej naturalna niż w społeczności resortowych"
+      ],
+      "nationalities": [
+        "Brytyjski",
+        "Niemiec",
+        "Holender",
+        "Skandynawski",
+        "Francuski",
+        "Hiszpańsk"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Typowy dzień w Rojales",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Poranna kawa nad brzegiem rzeki",
+          "description": "Zacznij kawą nad brzegiem rzeki Segura, obserwując, jak lokalnym życiem zaczyna się dzień"
+        },
+        {
+          "time": "10:00",
+          "activity": "Targ niedzielny (co tydzień) lub zakupy",
+          "description": "Spacer po słynnym targu lub lokalne sklepy po codzienne artykuły"
+        },
+        {
+          "time": "13:00",
+          "activity": "Późny obiad",
+          "description": "Główny posiłek hiszpański w restauracji nad brzegiem rzeki lub w domu"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta lub czas w basenie",
+          "description": "Odpoczynek popołudniowy lub pływanie w basenie willi"
+        },
+        {
+          "time": "17:00",
+          "activity": "Golf lub aktywność przyrodnicza",
+          "description": "Runda na La Marquesa (6 min) lub spacer wzdłuż rzeki"
+        },
+        {
+          "time": "20:00",
+          "activity": "Paseo i aperitivo",
+          "description": "Wieczorny spacer przez miasto i napoje z przyjaciółmi"
+        },
+        {
+          "time": "21:00",
+          "activity": "Kolacja",
+          "description": "Kolacja hiszpańska w restauracji nad brzegiem rzeki lub w domu"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7256!3d38.0864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRojales!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Rojales",
+    "description": "Rojales to zabytkowe hiszpańskie miasto nad rzeką Segura w Costa Blanca South, słynne z targu niedzielnego, domów jaskiniowych i autentycznego charakteru. Gmina obejmuje Ciudad Quesada.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.0864",
+      "longitude": "-0.7256"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rojales",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Z czego Rojales słyna?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rojales słyna z targu niedzielnego wzdłuż rzeki Segura, historycznych domów jaskiniowych i autentycznego charakteru hiszpańskiego. Gmina obejmuje również Ciudad Quesada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jak daleko Rojales od plaży?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Plaże Guardamaru leżą 8 km daleko (10 minut). La Mata leży 12 km daleko. Plaże Torreviei leżą 10 km daleko."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jakie są ceny nieruchomości w Rojales?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Apartamenty od €145 000, kamienice od €180 000, wille od €280 000. Doskonała wartość autentycznych hiszpańskich nieruchomości."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Co to jest targ niedzielny Rojales?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Jeden z największych targów Costa Blanki wzdłuż rzeki Segura każdy niedzielny poranek. Świeża produkcja, ryba, ubrania i rzemiosła lokalne."
+        }
+      }
+    ]
+  }
+}

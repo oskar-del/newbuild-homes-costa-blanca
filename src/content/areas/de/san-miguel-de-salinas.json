@@ -1,0 +1,504 @@
+{
+  "slug": "san-miguel-de-salinas",
+  "name": "San Miguel de Salinas",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/san-miguel-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600585153209-0e59b8c47a42?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartment",
+    "Townhouse",
+    "Villa",
+    "Bungalow"
+  ],
+  "priceRange": {
+    "min": 155000,
+    "max": 550000
+  },
+  "coordinates": {
+    "lat": 37.9806,
+    "lng": -0.7897
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "San Miguel de Salinas",
+      "url": "https://www.sanmigueldesalinas.es/",
+      "description": "Offizielle San Miguel de Salinas Gemeinde"
+    },
+    "beaches": [
+      {
+        "name": "Mil Palmeras Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+Mil+Palmeras",
+        "description": "Nächster Urlaubsstrand mit vollständigen Einrichtungen",
+        "distance": "8 km"
+      },
+      {
+        "name": "Campoamor Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+Campoamor",
+        "description": "Blaufahne-Strand mit ruhigem Wasser",
+        "distance": "10 km"
+      },
+      {
+        "name": "La Zenia Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+La+Zenia",
+        "description": "Beliebter Strand mit vollständigen Urlaubsanlagen",
+        "distance": "12 km"
+      }
+    ],
+    "shopping": [
+      {
+        "name": "San Miguel Town Center",
+        "googleMaps": "https://maps.google.com/?q=San+Miguel+de+Salinas+Centro",
+        "description": "Traditionelles spanisches Stadtzentrum mit lokalen Geschäften, Banken und Restaurants"
+      },
+      {
+        "name": "La Zenia Boulevard",
+        "googleMaps": "https://maps.google.com/?q=La+Zenia+Boulevard",
+        "url": "https://www.lazeniaboulevard.es/",
+        "description": "Europas größtes Freilufteinkaufszentrum",
+        "distance": "12 km"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "12 km",
+      "driveTime": "15 minutes"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "55 km",
+      "driveTime": "40 minutes"
+    }
+  },
+  "golf": {
+    "intro": "San Miguel de Salinas ist von ausgezeichneten Golfplätzen umgeben und bietet Golfern Vielfalt ohne Premiumpreise für golfgemeinden.",
+    "courses": [
+      {
+        "name": "Las Colinas Golf",
+        "distance": "5 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "url": "https://www.lascolinasgolf.es/",
+        "googleMaps": "https://maps.google.com/?q=Las+Colinas+Golf",
+        "description": "Preisgekröntes Cabell Robinson-Design, durchgehend unter Spaniens besten rangiert."
+      },
+      {
+        "name": "Campoamor Golf",
+        "distance": "8 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "url": "https://www.campoamorgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Campoamor+Golf",
+        "description": "Gut gepflegter Küstenkurs geeignet für alle Niveaus."
+      },
+      {
+        "name": "Las Ramblas Golf",
+        "distance": "10 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.lasramblasgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Las+Ramblas+Golf",
+        "description": "Dramatische Höhenunterschiede mit Mittelmeerblick."
+      },
+      {
+        "name": "Villamartin Golf",
+        "distance": "12 km",
+        "driveTime": "15 minutes",
+        "holes": 18,
+        "url": "https://www.villamartingolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Villamartin+Golf",
+        "description": "Meisterschaftskurs mit legendärer Geschichte."
+      }
+    ]
+  },
+  "localMarket": {
+    "wednesdayMarket": {
+      "name": "San Miguel Wednesday Market",
+      "location": "Town center",
+      "googleMaps": "https://maps.google.com/?q=Mercado+San+Miguel+de+Salinas",
+      "hours": "Wednesdays 8:00 - 14:00",
+      "description": "Ausgezeichneter traditioneller Markt mit Frischobst und Gemüse, besonders von umliegenden Bauernhöfen"
+    }
+  },
+  "content": {
+    "metaTitle": "Leben in San Miguel de Salinas | Authentisches Spanien | Costa Blanca 2026",
+    "metaDescription": "Kompletter Leitfaden zu San Miguel de Salinas—authentische spanische Stadt, ausgezeichnete Immobilien ab 155 k€, Las Colinas Golf 8 Min. Echtes Spanien mit Küstenkomfort.",
+    "quickAnswer": "San Miguel de Salinas ist eine authentische spanische Landwirtschaftsstadt mit ausgezeichneten Immobilien ab 155 000 €, umgeben von Zitrushainen und 8 Minuten vom Las Colinas Golf (Spaniens Top-10-Kurs). Die Strände liegen 8-12 Minuten entfernt. Perfekt für Käufer, die echtes spanisches Leben zu 30-40% weniger als Küstenpreise suchen.",
+    "heroIntro": "Es gibt einen Moment in den Wochenmorgenseiten in San Miguel de Salinas, wenn die Stadt auf eine Weise zum Leben erwacht, die Ferienorte nur imitieren können. Der Markt füllt die Straßen mit Ständen von Orangen, die am Morgen von umliegenden Hainen gepflückt wurden, Gemüse noch schmutzig von den Feldern, Fisch von der Küste gebracht. Nachbarn grüßen sich auf Spanisch und halten an Bars an, wo sich die Preise seit Jahren nicht geändert haben. Dies ist echtes Spanien.\n\nSan Miguel de Salinas liegt im Herzen der Vega Baja Landwirtschaftsregion, umgeben von den Zitrushainen, die die Gegend seit Generationen ernähren. Es ist eine arbeitende spanische Stadt—nicht eine Ferienortschöpfung—wo das Leben viel so wie in den letzten Jahrzehnten fortgesetzt wird. Doch Las Colinas Golf (einer von Spaniens Top-10-Kursen) ist 8 Minuten entfernt, Strände sind 10 Minuten entfernt, und die Einsparungen gegenüber Küstenaustauschen betragen 30-40%.\n\nFür Käufer, die Authentizität neben Wert suchen, belohnt San Miguel Miguel de Salinas diejenigen, die bereit sind, über das Offensichtliche hinauszuschauen.",
+    "lifestyleSection": {
+      "intro": "Das Leben in San Miguel de Salinas bewegt sich nach spanischem Rhythmus. Der Morgenmarkt und die Kaffeekultur, die Siesta am Nachmittag, wenn die Stadt leise wird, der Abendpaseo, wenn alle herauskommt, um zu gehen und zu sozialisieren. Dies wird nicht für Touristen hergestellt—es ist, wie Menschen hier tatsächlich leben.\n\nDie internationale Gemeinschaft existiert, aber integriert sich mehr als dominiert. Spanisch ist hier nützlicher als in Küstenbereichen. Diejenigen, die dies annehmen, finden echte Freundschaften mit Einheimischen und eine Tiefe der Erfahrung, die Urlaubslebens nicht bieten kann. Diejenigen, die überall Englisch wollen, könnten es schwierig finden. Wählen Sie dementsprechend.",
+      "highlights": [
+        "Authentische spanische Landwirtschaftsstadt—die echte Sache",
+        "Ausgezeichneter Wert—30-40% weniger als Küstenaustausche",
+        "Las Colinas Golf (Top 10 in Spanien) nur 8 Minuten entfernt",
+        "Wöchentlicher Markt mit frischen Hofprodukten",
+        "Strände 8-12 Minuten bei Mil Palmeras/Campoamor",
+        "Umgeben von duftenden Zitrushainen",
+        "Niedrigere Lebenshaltungskosten als Ferienorte",
+        "Echte Möglichkeit der spanischen Integration"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "San Miguel liegt im Inland, aber Strände sind leicht zugänglich. Mil Palmeras (8 km) hat Blaufahne-Strände mit vollständigen Einrichtungen. Campoamor (10 km) bietet ruhige Buchten und ausgezeichnete Schwimmbäder. La Zenia (12 km) bietet das vollständige Ferienstrrandeerlebnis. Viele Einwohner halten Strandausrüstung im Auto für regelmäßige Ausflüge—nah genug für Bequemlichkeit ohne Küstenimmobilienprämie.",
+      "dining": "Das Stadtzentrum hat authentische spanische Restaurants und Tapas-Bars zu lokalen Preisen. Der Mittwochsmarkt hat ausgezeichnete frische Produkte für Heimkochen. Für Abwechslung bieten Torrevieja (12 km), Orihuela Costa (15 km) und Pilar de la Horadada (8 km) mehr internationale Optionen. Aber das authentische spanische Speisen in San Miguel ist ein Teil seines Charmes.",
+      "shopping": "San Miguel hat traditionelle Geschäfte, Supermärkte (Mercadona, lokale Optionen), Banken und alle wesentlichen Dienstleistungen. Der Mittwochsmarkt ist ein Höhepunkt. Für größere Einkäufe bietet La Zenia Boulevard (12 km) über 150 Geschäfte. Die Stadt ist selbstversorgend für den täglichen Bedarf, während größere Optionen in der Nähe sind.",
+      "healthcare": "Hospital Universitario de Torrevieja ist 12 km entfernt (15 Minuten). Lokale Gesundheitszentren und Apotheken bedienen die Stadt. Private Kliniken sind in Torrevieja und Orihuela Costa verfügbar. Der Zugang zur Gesundheitsversorgung ist für eine Stadt dieser Größe gut.",
+      "transport": "Alicante-Elche Airport ist 55 km entfernt (40 Minuten über AP-7). Murcia-Corvera ist 40 km entfernt (30 Minuten). Ein Auto ist essentiell—es gibt keinen Weg um diesen herum für San Miguel. Der Standort ist zentral zur Region, was die Erkundung erleichtert. CV-941 verbindet sich effizient mit der Küste."
+    },
+    "neighborhoods": [
+      {
+        "name": "Town Center (Casco Urbano)",
+        "description": "Traditionelles spanisches Stadtleben. Fußweg zu Markt, Geschäften, Restaurants. Niedrigere Preise, authentische Atmosphäre. Reihenhäuser und Wohnungen."
+      },
+      {
+        "name": "Urbanizaciones",
+        "description": "Zweckgebaut Wohnbereiche rund um die Stadt. Mischung von Villen und Bungalows mit Pools. Moderner, einige Expat-Präsenz. Guter Wert."
+      },
+      {
+        "name": "Campo (Countryside)",
+        "description": "Immobilien in umliegender Landschaft, oft mit Land. Größere Parzellen unter Zitrushainen. Datenschutz und Ruhe. Erfordert mehr Selbstversorgung."
+      },
+      {
+        "name": "Towards Las Colinas",
+        "description": "Östliche Kante in Richtung Golfplatz. Einige neuere Entwicklungen. Bequem für Golfzugang. Mischung von Eigenschaftstypen."
+      }
+    ],
+    "propertyMarketSection": "San Miguel de Salinas bietet ausgezeichnete Werte—authentische spanische Immobilen zu 30-40% weniger als Küstenaustausche. Neue Wohnungen beginnen bei etwa 155 000–250 000 €, Reihenhäuser/Bungalows ab 180 000–320 000 € und Villen ab 280 000–550 000 €.\n\n**Featured Development: Samsara** – Moderne 2-Bett-Bungalows ab 189 999 € mit Gemeinschaftspool, privatem Garten und Parkplatz. Zeitgenössisches Design mit Solarium. Ausgezeichneter Wertvollendungspunkt.\n\nDer Markt zieht wertorientierte Käufer an, die mehr Eigenschaft für ihr Geld suchen, Rentner, die sich mit spanischer Integration wohlfühlen, und diejenigen, die Authentizität gegenüber Bequemlichkeit priorisieren. Das Mietpotential ist stärker begrenzt als Küstenbereiche—dies ist eher eine Lebensstilwahl als ein Investitionsfokus.",
+    "whyLiveHereSection": [
+      "Authentisches spanisches Leben—das Echte, nicht eine desinfizierte Ferienortversion",
+      "Ausgezeichneter Wert—30-40% weniger als Küstenaustausche",
+      "Las Colinas Golf (Top 10 in Spanien) nur 8 Minuten entfernt",
+      "Wöchentlicher Markt mit frischen Hofprodukten",
+      "Strände in 8–12 Minuten zugänglich",
+      "Niedrigere Lebenshaltungskosten überall",
+      "Echte Möglichkeit der spanischen Integration",
+      "Friedliche Landschaftsumgebung mit Zitrushainen"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Samsara Bungalow",
+        "reference": "N8140",
+        "price": 189999,
+        "type": "Bungalow",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "features": [
+          "Communal Pool",
+          "Garden",
+          "Parking"
+        ],
+        "description": "Moderner 2-Bett-Bungalow mit Gemeinschaftspool, privatem Garten und Parkplatz. Ausgezeichneter Wert."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Ist San Miguel de Salinas ein guter Ort zum Kaufen von Immobilien?",
+        "answer": "Ja, für Käufer, die Wert und authentisches spanisches Leben priorisieren. Immobilien kosten 30-40% weniger als Küstenaustausche. Der Kompromiss ist weniger Englisch gesprochen und 8-12 Minuten Fahrt zu Stränden. Diejenigen, die sich mit spanischer Integration wohlfühlen, finden ausgezeichnete Lebensqualität."
+      },
+      {
+        "question": "Wie weit ist San Miguel de Salinas vom Strand entfernt?",
+        "answer": "Mil Palmeras Strand ist 8 km (10 Minuten). Campoamor ist 10 km (12 Minuten). La Zenia ist 12 km (15 Minuten). Nah genug für regelmäßige Strandtage ohne Küstenimmobilienprämie zu zahlen."
+      },
+      {
+        "question": "Wie sind die Grundstückspreise in San Miguel de Salinas?",
+        "answer": "Wohnungen ab 155 000 €, Bungalows/Reihenhäuser ab 180 000 €, Villen ab 280 000 €. Dies ist 30-40% weniger als vergleichbare Küstenliegenschaften—ausgezeichneter Wert für diejenigen, die sich mit dem Standort wohlfühlen."
+      },
+      {
+        "question": "Wird in San Miguel de Salinas weit verbreitet Englisch gesprochen?",
+        "answer": "Weniger als in Küstenbereichen. San Miguel ist eine authentische spanische Stadt, in der Spanisch die Hauptsprache ist. Einige internationale Bewohner und Unternehmen servieren englischsprachige Sprecher, aber grundlegendes Spanisch hilft erheblich. Dies ist ein Teil der authentischen Erfahrung."
+      },
+      {
+        "question": "Ist San Miguel de Salinas gut zum Golfen?",
+        "answer": "Ausgezeichneter Zugang. Las Colinas Golf (einer von Spaniens Top-10-Kursen) ist nur 8 Minuten entfernt. Campoamor (10 min), Las Ramblas (12 min) und Villamartin (15 min) addieren Vielfalt. Großartige Golf ohne Golf-Gemeinde-Preise."
+      },
+      {
+        "question": "Wie ist die Lebenshaltungskosten in San Miguel de Salinas?",
+        "answer": "Niedriger als Küsten-Ferienorte. Lokale Restaurants, Märkte und Dienstleistungen sind für spanische Einwohner, nicht Touristen bepreist. Grundsteuer und Gemeinschaftsgebühren sind in der Regel auch niedriger. Erwarten Sie 15-25% Einsparungen bei täglichen Lebenshaltungskosten."
+      },
+      {
+        "question": "Ist San Miguel de Salinas für Dauerhaft wohnen geeignet?",
+        "answer": "Ausgezeichnet für diejenigen, die echtes spanisches Leben wünschen. Ganzjährige Dienstleistungen, permanente spanische Bevölkerung, traditionelle Stadtatmosphäre. Weniger geeignet für diejenigen, die umfangreiche englischsprachige Gemeinschaft oder Ferienkomfort wünschen."
+      },
+      {
+        "question": "Wie ist der San Miguel Mittwochsmarkt?",
+        "answer": "Ausgezeichneter traditioneller spanischer Markt mit frischen Produkten aus umliegenden Landwirtschaftsbereichen. Orangen, Gemüse, Fisch, Fleisch, Kleidung und Haushaltswaren. Eine authentische spanische Erfahrung, die Einheimische von der ganzen Region anzieht."
+      },
+      {
+        "question": "Wie vergleicht sich San Miguel mit Torrevieja?",
+        "answer": "San Miguel ist kleiner, mehr Spanisch und kostengünstiger. Torrevieja ist größer mit mehr internationalen Annehmlichkeiten, aber höhere Preise. San Miguel bietet Authentizität; Torrevieja bietet Komfort. Sie sind 12 km entfernt—einfach, Torrevejas Dienstleistungen von San Miguel zuzugreifen."
+      },
+      {
+        "question": "Was ist das Mietpotential in San Miguel de Salinas?",
+        "answer": "Begrenzt im Vergleich zu Küstenbereichen. Der Ort zieht Käufer an, die nach Wert zum Leben suchen, nicht Ferienmiete. Langzeitmiete zu Auswanderern und spanischen Fachleuten ist möglich. Nicht als primärer Investitionsfokus empfohlen."
+      }
+    ],
+    "conclusion": "San Miguel de Salinas ist nicht für jedermann—und das ist genau der Punkt. Dies ist echtes Spanien, nicht eine desinfizierte Ferienortversion. Der Wert ist außergewöhnlich, der Golfzugang ausgezeichnet, die Strände zugänglich. Aber es erfordert Bequemlichkeit mit spanischem Leben, Akzeptanz von weniger Englisch und Wertschätzung für das, was authentisch ist über das, was bequem ist.\n\nFür den richtigen Käufer bietet San Miguel eine Lebensqualität, die Küstenprämien nicht kaufen können. Die Einsparungen gehen in bessere Immobilien, mehr Golf und Erfahrungen, die Touristen nie finden.\n\nBereit, Immobilien in San Miguel de Salinas zu erkunden? Unser Team versteht, was diesen Bereich besonders macht, und kann Ihnen helfen zu bestimmen, ob er Ihren Prioritäten entspricht. Von Stadtzentrum-Reihenhäusern bis zu Landgütern, wir leiten Sie ehrlich.",
+    "investmentAnalysis": {
+      "rentalYield": "2-3% auf Wohnimmobilien, begrenzter Investitionsfokus",
+      "annualAppreciation": "1-2% jährlich, konservativ aufgrund der Inlandslandwirtschaftspositionierung",
+      "overview": "San Miguel de Salinas ist kein investitionsorientierter Markt. Das Gebiet zieht Käufer an, die authentische Lebensweise zu außergewöhnlichem Wert suchen. Das Mietpotential ist minimal—dies ist primär eine Wohnfachwahl.",
+      "highlights": [
+        "Ausgezeichneter Eigentumswert—bestes Kapitalverhältnis",
+        "Langfrist-Preisstabilität von authentischer Charakter",
+        "Würdigung bescheiden aber stetig",
+        "Begrenzte Tourismus macht Mietpotential schwach",
+        "Lebensqualitätsgewinne übersteigen finanzielle Renditen"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "San Miguel de Salinas bietet die niedrigsten Lebenshaltungskosten an der Costa Blanca South—authentische spanische Preise für Einwohner, nicht Touristenaufschlag. Tägliche Ausgaben in allen Kategorien spiegeln die lokale Wirtschaft wider.",
+      "items": [
+        {
+          "category": "Rent (2-bed property)",
+          "cost": "€500-750",
+          "notes": "Stadtzentrum am billigsten; Landschaft höher"
+        },
+        {
+          "category": "Utilities (monthly)",
+          "cost": "€70-100",
+          "notes": "Mildes Klima hält Kosten niedrig"
+        },
+        {
+          "category": "Groceries (weekly)",
+          "cost": "€45-65",
+          "notes": "Mittwochsmarkt bietet ausgezeichneten Wert frisches Produkt"
+        },
+        {
+          "category": "Restaurant meal (3-course)",
+          "cost": "€10-15",
+          "notes": "Authentische spanische Preise in lokalen Etablissements"
+        },
+        {
+          "category": "Cafe coffee",
+          "cost": "€0.90-1.20",
+          "notes": "Lokale Kaffeehaus-Preise überall in der Stadt"
+        },
+        {
+          "category": "Golf green fees",
+          "cost": "€35-55",
+          "notes": "Besucherpreise bei Las Colinas und anderen Kursen"
+        },
+        {
+          "category": "Healthcare (monthly)",
+          "cost": "€50-80",
+          "notes": "Öffentliche Gesundheitsversorgung ausgezeichnet; privat optional"
+        },
+        {
+          "category": "Property taxes (annual)",
+          "cost": "€150-250",
+          "notes": "IBI unter den niedrigsten an der Küste"
+        }
+      ]
+    },
+    "events": {
+      "intro": "San Miguel de Salinas Ereigniskalender konzentriert sich auf traditionelle spanische Feiern und den berühmten Mittwochsmarkt. Landwirtschaftliches Erbe beeinflusst die Festivitäten.",
+      "events": [
+        {
+          "name": "San Miguel Wednesday Market",
+          "month": "Year-round, weekly",
+          "description": "Traditioneller spanischer Markt mit frischen Produkten von umliegenden Landwirtschaftsbereichen"
+        },
+        {
+          "name": "Fiestas Patronales",
+          "month": "September 29",
+          "description": "Feier des Heiligen Michaels mit Paraden, Musik, traditioneller Nahrung und Kulturveranstaltungen"
+        },
+        {
+          "name": "Semana Santa (Holy Week)",
+          "month": "March/April",
+          "description": "Religiöse Prozessionen und traditionelle spanische Zeremonien"
+        },
+        {
+          "name": "Harvest Celebrations",
+          "month": "September-October",
+          "description": "Feiern der Landwirtschaftsernte, die das Farmenerbe der Stadt widerspiegelt"
+        },
+        {
+          "name": "Christmas Market",
+          "month": "December",
+          "description": "Festliche Saisonmarkt und Urlaubsfeiern"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "San Miguel de Salinas hat spanische öffentliche Schulen, die für Familien geeignet sind, die spanische Integration wählen. Internationale Optionen erfordern Reisen zu größeren Städten.",
+      "schools": [
+        {
+          "name": "Colegio Público San Miguel de Salinas",
+          "type": "Public Primary School",
+          "distance": "Town center, walking distance",
+          "description": "Spanische öffentliche Schule mit zweisprachigem Bildungsprogramm"
+        },
+        {
+          "name": "IES San Miguel",
+          "type": "Public Secondary School",
+          "distance": "2 km",
+          "description": "Sekundarschule mit spanischem Lehrplan"
+        },
+        {
+          "name": "International Schools (Torrevieja)",
+          "type": "International Education",
+          "distance": "15 km",
+          "description": "Britische und andere Lehrplanschulen in nahegelegenem Torrevieja"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "San Miguel de Salinas Naturaktivitäten konzentrieren sich auf umliegende Zitushaine und Landschaftslandschaft. Die Einstellung bietet Landschafts- und Landwirtschaftserbe-Wertschätzung.",
+      "activities": [
+        {
+          "name": "Cycling through citrus groves",
+          "type": "Active recreation",
+          "description": "Flache Landstraßen perfekt für Freizeitradfahren durch Agrarlandschaft"
+        },
+        {
+          "name": "Walks in countryside",
+          "type": "Nature walks",
+          "description": "Szenische Wege durch Ackerbauland und Orangenhaine, besonders schön während der Blütezeit"
+        },
+        {
+          "name": "Blossom season visits (March-April)",
+          "type": "Seasonal recreation",
+          "description": "Frühjahrsbesuche zum Anschauen von Orangenblüten und zum Genießen des Dufts, der die Landschaft bedeckt"
+        },
+        {
+          "name": "Golf at Las Colinas",
+          "type": "Sports",
+          "description": "Top-10 spanischer Kurs nur 8 Minuten entfernt mit Meisterschaftslayout"
+        },
+        {
+          "name": "Beach excursions",
+          "type": "Water recreation",
+          "description": "Mil Palmeras (8 km) oder Campoamor (10 km) für Strandausflüge"
+        },
+        {
+          "name": "Agricultural tours",
+          "type": "Cultural-nature activity",
+          "description": "Verständnis des Landwirtschaftserbes und der Zitrusproduktion der Region"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "San Miguel de Salinas hat eine kleine, integrierte Expat-Gemeinschaft, die sich auf authentisches spanisches Leben konzentriert. Integration ist wichtiger als englischsprachige Infrastruktur.",
+      "highlights": [
+        "Kleine, ausgewählte Expat-Gemeinschaft",
+        "Integration mit spanischem Leben ist Priorität",
+        "Weniger englischsprachige Infrastruktur als Küstenstädte",
+        "Lebensqualitätsfokus über Komfort",
+        "Zieht diejenigen an, die echte Erfahrung über Ferienlebensstil suchen"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Week in San Miguel de Salinas",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning café in town",
+          "description": "Beginnen Sie in einer lokalen Bar mit spanischem Kaffee und Zeitung"
+        },
+        {
+          "time": "10:00",
+          "activity": "Wednesday market (weekly)",
+          "description": "Kaufen Sie frische Hofprodukte auf dem authentischen spanischen Markt ein"
+        },
+        {
+          "time": "13:00",
+          "activity": "Long Spanish lunch",
+          "description": "Hauptmahlzeit zu Hause oder im lokalen Restaurant—die spanische Tradition"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta",
+          "description": "Nachmittagsruhe während der warmen Stunden"
+        },
+        {
+          "time": "17:00",
+          "activity": "Golf or cycling",
+          "description": "Runde bei Las Colinas Golf oder Radfahren durch Zitushaine"
+        },
+        {
+          "time": "19:30",
+          "activity": "Paseo and drinks",
+          "description": "Abendspaziergang durch die Stadt und Aperitif mit Freunden"
+        },
+        {
+          "time": "21:00",
+          "activity": "Dinner",
+          "description": "Spanisches Abendessen im Restaurant oder zu Hause"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7897!3d37.9806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSan%20Miguel%20de%20Salinas!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "San Miguel de Salinas",
+    "description": "San Miguel de Salinas ist eine authentische spanische Landwirtschaftsstadt an der Costa Blanca South mit ausgezeichneter Immobilienwerth, umgeben von Zitrushainen, mit Las Colinas Golf und Stränden in 10-15 Minuten.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.9806",
+      "longitude": "-0.7897"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Miguel de Salinas",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ist San Miguel de Salinas ein guter Ort zum Kaufen von Immobilien?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, für Käufer, die Wert und authentisches spanisches Leben priorisieren. Immobilien kosten 30-40% weniger als Küstenaustausche. Gut für diejenigen, die sich mit spanischer Integration wohlfühlen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie weit ist San Miguel de Salinas vom Strand entfernt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mil Palmeras Strand ist 8 km (10 Minuten). Campoamor ist 10 km (12 Minuten). La Zenia ist 12 km (15 Minuten)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie sind die Grundstückspreise in San Miguel de Salinas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wohnungen ab 155 000 €, Bungalows ab 180 000 €, Villen ab 280 000 €. Dies ist 30-40% weniger als vergleichbare Küstenliegenschaften."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ist San Miguel de Salinas gut zum Golfen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ausgezeichnet. Las Colinas Golf (Top 10 in Spanien) ist 8 Minuten entfernt. Campoamor, Las Ramblas und Villamartin addieren Vielfalt in 15 Minuten."
+        }
+      }
+    ]
+  }
+}

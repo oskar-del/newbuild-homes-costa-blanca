@@ -1,0 +1,524 @@
+{
+  "slug": "rojales",
+  "name": "Rojales",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/rojales-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Leilighet",
+    "Rekkehus",
+    "Villa",
+    "Bungalow",
+    "Landlig hus"
+  ],
+  "priceRange": {
+    "min": 145000,
+    "max": 650000
+  },
+  "coordinates": {
+    "lat": 38.0864,
+    "lng": -0.7256
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Rojales Tourism",
+      "url": "https://www.rojales.es/",
+      "description": "Offisielt Rojales kommune turisme"
+    },
+    "beaches": [
+      {
+        "name": "Guardamar Beaches",
+        "googleMaps": "https://maps.google.com/?q=Playa+Centro+Guardamar",
+        "description": "Naturstrender støttet av furuskog",
+        "distance": "8 km"
+      },
+      {
+        "name": "La Mata Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+La+Mata",
+        "description": "Lang naturstrand nær saltsøer",
+        "distance": "12 km"
+      },
+      {
+        "name": "Torrevieja Beaches",
+        "googleMaps": "https://maps.google.com/?q=Playa+del+Cura+Torrevieja",
+        "description": "Urbane strender med fulle fasiliteter",
+        "distance": "10 km"
+      }
+    ],
+    "shopping": [
+      {
+        "name": "Rojales Town Center",
+        "googleMaps": "https://maps.google.com/?q=Rojales+Centro",
+        "description": "Historisk sentrum med tradisjonelle butikker og søndagsmarkedsplats"
+      },
+      {
+        "name": "Habaneras Shopping Center",
+        "googleMaps": "https://maps.google.com/?q=Habaneras+Torrevieja",
+        "description": "Stort kjøpesenter i Torrevieja",
+        "distance": "10 km"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "10 km",
+      "driveTime": "12 minutes"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "40 km",
+      "driveTime": "30 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Rojales kommune (inkludert Ciudad Quesada) er omgitt av utmerkede golfbaner, med La Marquesa ved døren og flere andre innen enkel rekkevidde.",
+    "courses": [
+      {
+        "name": "La Marquesa Golf",
+        "distance": "4 km",
+        "driveTime": "6 minutes",
+        "holes": 18,
+        "url": "https://www.lamarquesagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Marquesa+Golf",
+        "description": "Velholdt bane populær blant innbyggerne. Gode treningsfasiliteter."
+      },
+      {
+        "name": "La Finca Golf",
+        "distance": "8 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "url": "https://www.lafincagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Finca+Golf+Algorfa",
+        "description": "Mesterskapsjournal designet av Pepe Gancedo."
+      },
+      {
+        "name": "Vistabella Golf",
+        "distance": "10 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.vistabellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+        "description": "Moderne bane med utmerkede fasiliteter."
+      }
+    ]
+  },
+  "localMarket": {
+    "sundayMarket": {
+      "name": "Rojales Sunday Market",
+      "location": "Town center and riverside",
+      "googleMaps": "https://maps.google.com/?q=Mercado+Rojales",
+      "hours": "Sundays 8:00 - 14:00",
+      "description": "Berømt søndagsmarkedsplats langs Segura-elven, en av de største i regionen"
+    }
+  },
+  "content": {
+    "metaTitle": "Leve i Rojales | Historisk by | Costa Blanca South 2026",
+    "metaDescription": "Komplett guide til Rojales – historisk spansk by ved Segura-elven, berømt søndagsmarkedsplats, moderne villaer fra €145 000. Ekte Spania med alle bekvemmigheter i nærheten.",
+    "quickAnswer": "Rojales er en historisk spansk by ved Segura-elven som tilbyr autentisk karakter og utmerket verdi fra €145 000. Berømt for sitt søndagsmarkedsplats (en av regionens største), hulhus og elvsetting. Strender er 8–12 minutter unna, med Torrevieja sykehus 12 minutter. Inkluderer Ciudad Quesada.",
+    "heroIntro": "Segura-elven har formet Rojales gjennom århundrer, utgraving sin vei gjennom landskapet og skapende fruktbar vega som opprettholder byen. På søndagsmorgenen kommer elvebredden til liv med en av Costa Blancas største markeder, boder som strekker seg langs vannet som de har gjort gjennom generasjoner. Dette er en by med røtter som går dypere enn turismeutviklingen rundt den.\n\nRojales er det kommunale setet som inkluderer Ciudad Quesada innen grensene, men sentrum av byen selv tilbyr noe annet – genuine spansk historie, hulhus (casas cueva) utgravet i bratt, en elv som strømmer hele året, og et samfunn som opprettholder tradisjonene. De moderne urbaniseringer nærby gir komfortabelt liv; sentrum av byen gir sjel.\n\nFor kjøpere som søker spansk autentisitet med moderne komfort tilgjengelig, Rojales brodder begge verdener.",
+    "lifestyleSection": {
+      "intro": "Livet i Rojales-sentrum følger spanske rytmer – morgenkaffe på elvebredden kaféer, virksomheten fra søndagsmarkedsplats, kveldspaseo langs elbankene. Hulhusene (casas cueva) utgravet i bratt er nå museer og kuriositeter, som minner besøkende at denne byen fantes lenge før turisme. Likevel, Ciudad Quesada og andre modernisering bare minutter unna tilbyr moderne liv med internasjonale samfunn.\n\nDenne dualiteten er muligheten: velg autentisk sentrum for genuine immersjon, eller moderne urbanisering for komfort med autentisitet nær. Uansett, du er knyttet til noe ekte.",
+      "highlights": [
+        "Historisk spansk by ved Segura-elven",
+        "Berømt søndagsmarkedsplats – en av regionens største",
+        "Unike hulhus (casas cueva) utgravet i bratt",
+        "Utmerket verdi – autentiske eiendommer fra €145 000",
+        "Strender ved Guardamar bare 8 km unna",
+        "Kommune inkluderer Ciudad Quesada",
+        "Torrevieja sykehus 12 minutter",
+        "30 minutter til Alicante Airport"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Guardamars naturstrender (støttet av furuskog og sanddyner) ligger bare 8 km unna. La Matas lange strekning nær saltsøerne ligger 12 km unna. Torreviejas urbane strender ligger 10 km unna. Lokasjonen tilbyr enkel strandtilgang uten kostbare strandeiendommer.",
+      "dining": "Sentrum har tradisjonelle spanske restauranter langs elbrekken – utmerket lokal mat til lokale priser. Søndagsmarkedsplats trekker besøkende fra hele regionen. For variasjon, Torrevieja (10 km) og Guardamar (8 km) tilbyr flere internasjonale alternativer.",
+      "shopping": "Rojales sentrum har tradisjonelle butikker, supermarkeder, banker og vesentlige tjenester. Søndagsmarkedsplats er legendarisk for ferske produksjon, klær og husholdningsartikler. Habaneras kjøpesenter i Torrevieja (10 km) tilbyr store merker. La Zenia Boulevard (20 km) gir hele opplevelsen.",
+      "healthcare": "Hospital Universitario de Torrevieja ligger 10 km unna (12 minutter). Lokale medisinske sentre og apotek betjener byen. God helsetilgang for byens størrelse.",
+      "transport": "Alicante-Elche Airport ligger 40 km unna (30 minutter via AP-7). Lokasjonen er sentral, noe som gjør nord-sør-reise langs kysten effektiv. En bil er essentiell. CV-91 gir gode forbindelser."
+    },
+    "neighborhoods": [
+      {
+        "name": "Casco Antiguo (Old Town)",
+        "description": "Historisk sentrum med tradisjonell arkitektur. Gangavstand til elv, marked og gammel by. Lavere priser, genuine spansk karakter. Rekkehus og tradisjonelle hjem."
+      },
+      {
+        "name": "Riverside (Ribera)",
+        "description": "Eiendommer nær Segura-elven. Hyggelige gangarealer, søndagsmarkedsplats. Blanding av gamle og nyere eiendommer."
+      },
+      {
+        "name": "Modern Urbanizations",
+        "description": "Nyere boligområder rundt byen. Moderne villaer og bungalower med basseng. Flere internasjonale innbyggere. God verdi med bekvem tilgang."
+      },
+      {
+        "name": "Towards Ciudad Quesada",
+        "description": "Østlig kant som forbinder til Ciudad Quesada. Blanding av eiendomsstiler. God golfadgang. Voksende utviklingsområde."
+      }
+    ],
+    "propertyMarketSection": "Rojales tilbyr utmerket verdi på tvers av eiendomstyper. Nye leiligheter starter fra omkring €145 000–220 000, rekkehus fra €180 000–320 000 og villaer fra €280 000–650 000. Sentrum av byen tilbyr karaktereiendommer; omliggende modernisering tilbyr moderne bekvemmigheter.\n\n**Utvalgt utvikling: Agata Villas Rojales** – Premium 4-rom villaer fra €567 000 med private basseng, 180m² boligplass og garasje. Moderne design på 450m² tomter.\n\nMarkedet trekker kjøpere som søker verdi uten å ofre kvalitet, de interessert i spansk integrasjon og golfforbedringer som ønsker nærhet til La Marquesa og andre baner. Utleiepotensial er moderat – bedre enn dypt innland men mindre enn kystresort.",
+    "whyLiveHereSection": [
+      "Historisk spansk by med genuine karakter",
+      "Berømt søndagsmarkedsplats – regional attraksjon",
+      "Segura-elven setting – unikt blant Costa Blanca-byer",
+      "Utmerket verdi – autentisk Spania til tilgjengelige priser",
+      "Kommune inkluderer Ciudad Quesadas golflivsstil",
+      "Strender ved Guardamar bare 8 km unna",
+      "Torrevieja sykehus 12 minutter",
+      "Hulhus og historiske kuriositeter å utforske"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Agata Villas Rojales",
+        "reference": "N7227",
+        "price": 567000,
+        "type": "Villa",
+        "bedrooms": 4,
+        "bathrooms": 3,
+        "plotArea": 450,
+        "features": [
+          "4 Bedrooms",
+          "Private Pool",
+          "Garage"
+        ],
+        "description": "Premium 4-rom villa med 180m² boligplass, privat baseng og garasje på 450m² tomt."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Hva er Rojales kjent for?",
+        "answer": "Rojales er kjent for sitt søndagsmarkedsplats langs Segura-elven (en av de største på Costa Blanca), historiske hulhus utgravet i bratt, og autentisk spansk karakter. Kommunen inkluderer også Ciudad Quesada."
+      },
+      {
+        "question": "Hvor langt er Rojales fra stranden?",
+        "answer": "Guardamar-strender ligger 8 km unna (10 minutter). La Mata-strand ligger 12 km unna. Torrevieja-strender ligger 10 km unna. Enkel strandtilgang uten å betale for strandeiendommer."
+      },
+      {
+        "question": "Hva er eiendomspriser i Rojales?",
+        "answer": "Leiligheter fra €145 000, rekkehus fra €180 000, villaer fra €280 000. Utmerket verdi for autentiske spanske eiendommer med moderne bekvemmigheter i nærheten."
+      },
+      {
+        "question": "Hva er Rojales søndagsmarkedsplats?",
+        "answer": "En av Costa Blancas største markeder, som strekker seg langs Segura-elven hver søndagsmorgen. Fersk produksjon, fisk, klær, husholdningsartikler og lokale håndverk. En genuine spansk opplevelse som trekker besøkende fra hele regionen."
+      },
+      {
+        "question": "Er Rojales det samme som Ciudad Quesada?",
+        "answer": "Ciudad Quesada er del av Rojales kommune men en distinkt urbanisering. Rojales-byen er det historiske kommunale setet; Ciudad Quesada er en moderne utvikling bygget rundt La Marquesa Golf. De er ved siden av og forbundet."
+      },
+      {
+        "question": "Hva er hulhusene i Rojales?",
+        "answer": "Casas cueva (hulhus) er boliger utgravet i bratt, tradisjonelle for denne regionen. Noen dateres tilbake århundrer. I dag er de fleste museer eller kuriositeter, selv om noen har blitt konvertert til hjem. De er en unik egenskap for Rojales."
+      },
+      {
+        "question": "Er engelsk vidt talte i Rojales?",
+        "answer": "Mindre i den gamle byen enn i de omliggende moderniseringene. Rojales-byen er autentisk spansk; nærby Ciudad Quesada har et stort engelsktalende samfunn. Avhenger av hvilken del av kommunen du er i."
+      },
+      {
+        "question": "Er Rojales godt for golf?",
+        "answer": "God tilgang. La Marquesa Golf ligger 4 km (6 minutter), La Finca Golf 8 km (10 minutter), Vistabella 10 km (12 minutter). Kommunen er godt plassert for variasjon uten å være golfsentrert."
+      },
+      {
+        "question": "Er Rojales egnet for permanent liv?",
+        "answer": "Ja, spesielt for de komfortable med spansk integrasjon. Byen har året rundt tjenester og permanent befolkning. Moderne urbaniseringer tilbyr mer internasjonalt komfort. God balanse mellom autentisitet og praktiskitet."
+      },
+      {
+        "question": "Hvordan sammenligner Rojales med Torrevieja?",
+        "answer": "Rojales er mindre, mer spansk og mer historisk. Torrevieja er større med flere internasjonale fasiliteter og direkte strandtilgang. Rojales tilbyr autentisitet og verdi; Torrevieja tilbyr bekvemmighet og kystlokasjon. De er 10 km fra hverandre."
+      }
+    ],
+    "conclusion": "Rojales tilbyr noe stadig sjeldnere: autentisk spansk karakter på en lokasjon som ikke har blitt absorbert inn i resort anonymitet. Elven, markedet, hulhusene, det historiske sentrum – disse gir byen en personlighet som formålsbyggede utviklinger mangler. Likevel, moderne liv er tilgjengelig i omliggende moderniseringer inkludert Ciudad Quesada.\n\nFor kjøpere som søker ekte Spania til utmerket verdi, med strender og golf i nærheten, belønner Rojales utforsking utover det åpenbare.\n\nKlar til å utforske eiendommer i Rojales? Vårt team forstår karakteren av denne historiske byen og kan matche deg med eiendommer som passer dine prioriteringer – fra elvebredde-rekkehus til moderne urbanisering-villaer.",
+    "investmentAnalysis": {
+      "rentalYield": "3–5% på urbanisering eiendommer, begrenset på sentrum",
+      "annualAppreciation": "2–3% årlig, stabil på grunn av autentisk karakterplassering",
+      "overview": "Rojales utleiemarked er beskjedent – byen trekker innbyggere mer enn feriegjester. Den historiske karakteren og utmerkede verdip proposisjon skaper livsstilsappell snarere enn investeringsresultater.",
+      "highlights": [
+        "Urbanisering eiendommer (Ciudad Quesada) har bedre utleiepotensial",
+        "Langsiktig ekspat leie mer pålitelig enn ferien leie",
+        "Sentrum tilbyr kulturell interesse for nisje marked",
+        "Søndagsmarkedsplats genererer turisme på begrenset skala",
+        "Verdi-inngangs priser skaper gunstig kjøper psykologi"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Rojales levekostnader er eksepsjonelt lave – autentiske spanske priser for innbyggere snarere enn turist inflasjon. Kommunen spenner fra historisk sentrum til moderne urbanisering samfunn.",
+      "items": [
+        {
+          "category": "Leie (2-rom eiendom)",
+          "cost": "€500–750",
+          "notes": "Sentrum billigere; urbaniseringer litt høyere"
+        },
+        {
+          "category": "Verktøy (månedlig)",
+          "cost": "€70–110",
+          "notes": "Elv nærhet påvirker noen eiendommer"
+        },
+        {
+          "category": "Dagvarer (ukentlig)",
+          "cost": "€45–70",
+          "notes": "Søndagsmarkedsplats gir utmerket verdi på fersk produksjon"
+        },
+        {
+          "category": "Restaurantmåltid (3-gangs)",
+          "cost": "€11–17",
+          "notes": "Autentiske spanske priser, lokale etablissementer"
+        },
+        {
+          "category": "Cafe kaffe",
+          "cost": "€1,00–1,30",
+          "notes": "Lokale cafe bar-priser gjennom hele byen"
+        },
+        {
+          "category": "Helsevesen (månedlig)",
+          "cost": "€60–90",
+          "notes": "Offentlig helsevesen tilgjengelig; valgfritt privat forsikring"
+        },
+        {
+          "category": "Eiendomsskatter (årlig)",
+          "cost": "€200–350",
+          "notes": "IBI for typisk eiendom"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Rojales arrangementkalender sentre seg på det berømte søndagsmarkedet og tradisjonelle spanske markeringer som gjenspeiler byens autentiske karakter.",
+      "events": [
+        {
+          "name": "Rojales søndagsmarkedsplats (Mercado de Domingos)",
+          "month": "År-rundt, ukentlig",
+          "description": "En av Costa Blancas største markeder som strekker seg langs Segura-elven med hundrevis av boder"
+        },
+        {
+          "name": "Fiestas Patronales de Rojales",
+          "month": "August",
+          "description": "Byens skytshelgen feiring med parader, elvebasert aktiviteter og tradisjonelle festligheteri"
+        },
+        {
+          "name": "Semana Santa (Paskeuken)",
+          "month": "Mars/april",
+          "description": "Tradisjonelle spanske religiøse prosesjonert langs elven og gjennom sentrum"
+        },
+        {
+          "name": "Hull House Tours & Exhibitions",
+          "month": "År-rundt",
+          "description": "Kulturell interesse i historiske casas cueva med ocasjonelle utstillinger og pedagogiske turer"
+        },
+        {
+          "name": "Segura River Festival",
+          "month": "Mai",
+          "description": "Feiring av elv arv med båt aktiviteter og elvebredde markeringer"
+        }
+      ]
+    },
+    "markets": {
+      "intro": "Rojales er kjent for sitt legendariske søndagsmarkedsplats – en av Costa Blancas største, som strekker seg langs Segura-elven. Markedet er en autentisk spansk opplevelse som trekker besøkende fra hele regionen. Flere markeder betjener de omliggende områdene.",
+      "markets": [
+        {
+          "name": "Rojales søndagsmarkedsplats",
+          "day": "Søndag",
+          "time": "08:00 - 14:00",
+          "type": "Generell/Produksjon",
+          "distance": "Sentrum og elvebredde",
+          "description": "En av Costa Blancas største og mest berømte markeder som strekker seg over 1 km langs Segura-elven. Hundrevis av boder som selger ferske produksjon, fisk, klær, husholdningsartikler og lokale håndverk. Essentiell spansk opplevelse som trekker besøkende fra hele regionen.",
+          "googleMaps": "https://maps.google.com/?q=Rojales+Sunday+Market+Mercado+Domingos"
+        },
+        {
+          "name": "Ciudad Quesada Thursday Market",
+          "day": "Torsdag",
+          "time": "08:00 - 14:00",
+          "type": "Produksjon/Generell",
+          "distance": "3 km (5 minutter)",
+          "description": "Torsdagsmarkedsplats i nærby Ciudad Quesada med ferske produksjon, regionale spesialiteter og husholdningsartikler som betjener urbanisering-samfunnet.",
+          "googleMaps": "https://maps.google.com/?q=Ciudad+Quesada+Thursday+Market"
+        },
+        {
+          "name": "Guardamar Wednesday Market",
+          "day": "Onsdag",
+          "time": "08:00 - 14:00",
+          "type": "Produksjon/Generell",
+          "distance": "8 km (10 minutter)",
+          "description": "Populær onsdagsmarkedsplats i strandby Guardamar med ferske lokale produksjon, fisk og regionale varer med kystmosfer.",
+          "googleMaps": "https://maps.google.com/?q=Guardamar+Wednesday+Market"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Rojales har spanske offentlige skoler egnet for familier og tilgang til internasjonale alternativer i nærliggende områder inkludert Ciudad Quesada-sektor.",
+      "schools": [
+        {
+          "name": "Colegio Público Rojales",
+          "type": "Offentlig grunnskole",
+          "distance": "Sentrum, gangavstand",
+          "description": "Spansk offentlig skole med tospråklig utdanningsprogram"
+        },
+        {
+          "name": "IES Puerta de la Vega",
+          "type": "Offentlig ungdomsskole",
+          "distance": "3 km",
+          "description": "Ungdomsskole som betjener Rojales og omliggende område"
+        },
+        {
+          "name": "Internasjonale skoler (Torrevieja)",
+          "type": "Internasjonal utdanning",
+          "distance": "12 km",
+          "description": "Britisk og andre læreplan skoler i nærby Torrevieja"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Rojales naturaktiviteter sentre seg på Segura-elven og tilgang til nærby strender og golfbaner. Elven tilbyr unike rekreasjonsmulighetster.",
+      "activities": [
+        {
+          "name": "Gåing langs Segura-elven",
+          "type": "Naturturkr",
+          "description": "Elvebredde stier og promenader gjennom byen med tradisjonelle broer og sceniske utsikts punkt"
+        },
+        {
+          "name": "Fuglekiking på elv våtmark",
+          "type": "Naturobservasjon",
+          "description": "Beskyttede våtmark områder som støtter mangfoldig fugleliv"
+        },
+        {
+          "name": "Søndagsmarkedsplats utforsking",
+          "type": "Kulturell-naturaktivitet",
+          "description": "Ukentlige markedsplats som både kulturell og shopping-opplevelse"
+        },
+        {
+          "name": "Sykling gjennom landsbyen",
+          "type": "Aktiv rekreasjonen",
+          "description": "Flat terreng og stille landlige veier gjennom landbruksområder"
+        },
+        {
+          "name": "Golf på La Marquesa",
+          "type": "Sport",
+          "description": "Mesterskapsjournal 4–6 km unna i Ciudad Quesada-sektor"
+        },
+        {
+          "name": "Strandtilgang til Guardamar",
+          "type": "Vannrekreasjonen",
+          "description": "Naturstrender støttet av furuskog, 8 km unna"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Rojales har to distinkte ekspatriate-samfunn: et i historisk sentrum integrering med spansk liv, et annet i Ciudad Quesadas golfsentrert samfunn.",
+      "highlights": [
+        "Delt mellom sentrum-integrasjon og moderne urbanisering",
+        "City Quesada-sektor har stort etablert golfsentrert samfunn",
+        "Historisk sentrum trekker spansk-integrasjon fokusert kjøpere",
+        "Mindre anglisiert enn rent kystlige områder",
+        "Spansk integrasjon mer naturlig enn i resort-sentrerte samfunn"
+      ],
+      "nationalities": [
+        "Britisk",
+        "Tysk",
+        "Nederlandsk",
+        "Skandinavisk",
+        "Fransk",
+        "Spansk"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "En typisk dag i Rojales",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morgen cafe på elvebredden",
+          "description": "Start med kaffe med utsikt over Segura-elven, iakttakende lokalt liv begynner"
+        },
+        {
+          "time": "10:00",
+          "activity": "Søndagsmarkedsplats (ukentlig) eller shopping",
+          "description": "Stroll gjennom det berømte markedet eller lokale butikker for daglige nødvendigheter"
+        },
+        {
+          "time": "13:00",
+          "activity": "Sen lunsj",
+          "description": "Hovedspansk måltid på elvebredde restaurant eller hjemme"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta eller bassengtid",
+          "description": "Ettermiddagsrust eller swimming i villabaseng"
+        },
+        {
+          "time": "17:00",
+          "activity": "Golf eller naturaktivitet",
+          "description": "Round på La Marquesa (6 min) eller gåing langs elven"
+        },
+        {
+          "time": "20:00",
+          "activity": "Paseo og aperitivo",
+          "description": "Kveldsgåing gjennom byen og drinks med venner"
+        },
+        {
+          "time": "21:00",
+          "activity": "Middag",
+          "description": "Spansk middag på elvebredde restaurant eller hjemme"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7256!3d38.0864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRojales!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Rojales",
+    "description": "Rojales er en historisk spansk by ved Segura-elven i Costa Blanca South, kjent for sitt søndagsmarkedsplats, hulhus og autentisk karakter. Kommune inkluderer Ciudad Quesada.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.0864",
+      "longitude": "-0.7256"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rojales",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hva er Rojales kjent for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rojales er kjent for sitt søndagsmarkedsplats langs Segura-elven, historiske hulhus og autentisk spansk karakter. Kommunen inkluderer også Ciudad Quesada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvor langt er Rojales fra stranden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Guardamar-strender ligger 8 km unna (10 minutter). La Mata ligger 12 km unna. Torrevieja ligger 10 km unna."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hva er eiendomspriser i Rojales?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Leiligheter fra €145 000, rekkehus fra €180 000, villaer fra €280 000. Utmerket verdi for autentiske spanske eiendommer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hva er Rojales søndagsmarkedsplats?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En av Costa Blancas største markeder langs Segura-elven hver søndagsmorgen. Fersk produksjon, fisk, klær og lokale håndverk."
+        }
+      }
+    ]
+  }
+}

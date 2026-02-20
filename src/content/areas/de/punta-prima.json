@@ -1,0 +1,486 @@
+{
+  "slug": "punta-prima",
+  "name": "Punta Prima",
+  "region": "Costa Blanca South",
+  "parentArea": "orihuela-costa",
+  "heroImage": "/images/areas/punta-prima-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartment",
+    "Penthouse",
+    "Townhouse",
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 175000,
+    "max": 650000
+  },
+  "coordinates": {
+    "lat": 37.9578,
+    "lng": -0.7122
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Orihuela Costa Tourism",
+      "url": "https://www.orihuelaturistica.es/",
+      "description": "Offizielles Tourismusportal für Orihuela"
+    },
+    "beaches": [
+      {
+        "name": "Playa de Punta Prima",
+        "googleMaps": "https://maps.google.com/?q=Playa+Punta+Prima+Torrevieja",
+        "description": "Blaue-Flagge-Strand mit goldenem Sand, türkisem Wasser und vollständigen Einrichtungen",
+        "blueFlag": true
+      },
+      {
+        "name": "Cala Piteras",
+        "googleMaps": "https://maps.google.com/?q=Cala+Piteras",
+        "description": "Felsige Bucht mit kristallklarem Wasser und natürlichem Charakter"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "5 km",
+      "driveTime": "8 minutes"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "50 km",
+      "driveTime": "38 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Punta Prima bietet hervorragenden Golfzugang zu den Kursen der Orihuela Costa und behält dabei den Fokus auf Strandleben.",
+    "courses": [
+      {
+        "name": "Villamartin Golf",
+        "distance": "5 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "url": "https://www.villamartingolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Villamartin+Golf",
+        "description": "Championship-Platz mit legendärer Geschichte."
+      },
+      {
+        "name": "Las Ramblas Golf",
+        "distance": "6 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "url": "https://www.lasramblasgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Las+Ramblas+Golf",
+        "description": "Dramatische Höhenunterschiede mit Ausblicken."
+      },
+      {
+        "name": "Campoamor Golf",
+        "distance": "8 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.campoamorgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Campoamor+Golf",
+        "description": "Gepflegter Küstenplatz."
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Leben in Punta Prima | Strandnähe Wohnen | Orihuela Costa 2026",
+    "metaDescription": "Vollständiger Leitfaden für Punta Prima—nördliches Tor zur Orihuela Costa, Blaufahrtsstrand, in der Nähe von Torrevieja. Wohnungen ab €175k. Strandleben in seiner reinsten Form.",
+    "quickAnswer": "Punta Prima ist das nördliche Tor zur Orihuela Costa mit einem wunderbar blauen Flaggenstrand und Nähe zu Torrevieja (5 Min.). Die Immobilien beginnen bei €175 000 für Wohnungen, mit Meerblick-Penthäuser und Villen bis zu €650 000. Nur 8 Minuten zum Torrevieja-Krankenhaus, 38 Minuten zum Flughafen Alicante.",
+    "heroIntro": "Wo Torrevieja endet und Orihuela Costa beginnt, entsteht Punta Prima als eine Strandgemeinschaft, die das Strandleben auf seine Essenz destilliert. Der Strand hier ist außergewöhnlich—blaufahrtszertifiziert, mit dem besonderen Türkis, das aus der richtigen Kombination von Sand, Tiefe und mediterraner Klarheit entsteht. Es ist der Strand, der auf Fotos erscheint, wenn Menschen sich spanisches Küstenleben vorstellen.\n\nPunta Primas nördliche Position bietet Vorteile: Torreviejas vollständige Annehmlichkeiten sind nur 5 Minuten entfernt, das Universitätskrankenhaus 8 Minuten. Dennoch gehört es zur Orihuela Costa-Gemeinschaft und teilt die Resort-Infrastruktur und internationale Atmosphäre. Diese Torposition—verbunden mit beiden, unterschiedlich von beiden—definiert seinen Reiz.\n\nFür Käufer, die pures Strandleben mit praktischem Zugang zu Dienstleistungen suchen, liefert Punta Prima ohne Kompromisse.",
+    "lifestyleSection": {
+      "intro": "Das Leben in Punta Prima dreht sich um den Strand. Morgenschwimmen, bevor die Menschenmengen kommen. Nachmittagsfaulenzen auf Sand, der qualitativ hochwertig genug ist, um Besucher aus der ganzen Region anzulocken. Sonnenuntergangsdrinks an Strandlokalen. Der Rhythmus ist einfach, die Belohnungen unmittelbar.\n\nDie Gemeinschaft ist etabliert und international, mit der Freundlichkeit, die aus gemeinsamer Wertschätzung des Ortes kommt. Golf ist verfügbar, aber sekundär—dies ist zunächst Strandland. Torreviejas Geschäfte, Restaurants und Dienstleistungen bieten alles, was benötigt wird, ohne dass Punta Prima mehr wird als nur Strandnähe.",
+      "highlights": [
+        "Außergewöhnlicher Blaufahrtsstrand—unter den besten an der Costa Blanca",
+        "Torrevieja nur 5 Minuten entfernt—vollständige Stadtdienste in der Nähe",
+        "Krankenhaus 8 Minuten entfernt—hervorragende medizinische Versorgung",
+        "Nördliches Tor zur Orihuela Costa",
+        "5 Golfplätze innerhalb von 15 Minuten",
+        "Meerblick-Immobilien allgemein verfügbar",
+        "Etablierte internationale Gemeinschaft",
+        "38 Minuten zum Flughafen Alicante"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Playa de Punta Prima ist außergewöhnlich—blaufahrtszertifiziert mit goldenem Sand, türkisem Wasser und vollständigen Einrichtungen einschließlich Rettungsschwimmer, Strandlokalen und Sonnenliegen-Verleih. Cala Piteras bietet eine felsige Alternative zum Schnorcheln. Die Strandqualität ist die Hauptattraktion der Gegend.",
+      "dining": "Strandlokale servieren frischen Fisch und Paella. Die Promenade hat Cafés und Restaurants. Für Abwechslung bietet Torrevieja (5 Min.) umfangreiche Speisemöglichkeiten. La Zenia Boulevard (10 Min.) fügt internationale Optionen hinzu.",
+      "shopping": "Lokale Geschäfte decken das Nötigste ab. Torrevieja (5 Min.) hat vollständiges Angebot einschließlich Habaneras-Center. La Zenia Boulevard (10 Min.) bietet 150+ Geschäfte. Hervorragender Zugang zum Einkaufen, während Sie den Strandcharakter bewahren.",
+      "healthcare": "Hospital Universitario de Torrevieja ist nur 5 km entfernt (8 Minuten)—hervorragende medizinische Versorgung. Diese nördliche Position ist näher am Krankenhaus als die meisten Orihuela Costa-Standorte.",
+      "transport": "Flughafen Alicante-Elche ist 50 km entfernt (38 Minuten). Bequemer Zugang über die AP-7 und N-332. Der Standort verbindet Torrevieja und Orihuela Costa mit guten Verbindungen zu beiden."
+    },
+    "neighborhoods": [
+      {
+        "name": "Beachfront",
+        "description": "Immobilien in Gehweite von Playa de Punta Prima. Premium-Lage mit unmittelbarem Strandaccess. Mix aus Wohnungen und Penthäusern. Höchste Preise für die Gegend."
+      },
+      {
+        "name": "Punta Prima Park",
+        "description": "Etwas landeinwärts mit Parks und Pools. Gutes Preis-Leistungs-Verhältnis mit Strandaccess. Familienfreundliche Entwicklung. Mix aus Wohnungen und Reihenhäusern."
+      },
+      {
+        "name": "Towards La Zenia",
+        "description": "Südliche Kante, die die restliche Orihuela Costa verbindet. Guter Zugang zu beiden Punta Prima-Strand und La Zenia-Annehmlichkeiten."
+      }
+    ],
+    "propertyMarketSection": "Punta Prima bietet Strandleben zu erschwinglichen Preisen. Wohnungen beginnen bei etwa €175 000–350 000, Penthäuser ab €300 000–500 000 und Villen ab €450 000–650 000. Meerblick-Immobilien sind weit verbreitet angesichts der Strandausrichtung.\n\n**Highlighted Development: Residencial EMA Penthouse** – Premium 2-Zimmer-Penthäuser ab €425 000 mit Meerblick, Dachterrassen und luxuriöser Ausstattung. 120m² Wohnfläche mit außergewöhnlicher Strandnähe.\n\nDer Mietmarkt ist stark—die Strandlage treibt konsistente Nachfrage. Der Sommer ist Hochsaison, aber der hervorragende Strand lockt Besucher über die traditionelle Saison hinaus an. Immobilien mit Meerblick und Pools schneiden besonders gut ab.",
+    "whyLiveHereSection": [
+      "Außergewöhnlicher Blaufahrtsstrand—feinste Costa Blanca",
+      "Meerblick-Immobilien allgemein verfügbar",
+      "Torreviejas Dienstleistungen nur 5 Minuten entfernt",
+      "Krankenhaus 8 Minuten entfernt—hervorragender Zugang",
+      "5 Golfplätze innerhalb von 15 Minuten",
+      "Etablierte internationale Gemeinschaft",
+      "Starkes Vermietungspotenzial",
+      "Reines Strandleben"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Residencial EMA Penthouse",
+        "reference": "N7130",
+        "price": 425000,
+        "type": "Penthouse",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "features": [
+          "Sea Views",
+          "Roof Terrace",
+          "Luxury Finish"
+        ],
+        "description": "Premium 2-Zimmer-Penthouse mit Meerblick und 120m² Wohnfläche."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Wie ist der Strand in Punta Prima?",
+        "answer": "Außergewöhnlich—blaufahrtszertifiziert mit goldenem Sand und türkisem Wasser. Einer der besten Strände der Costa Blanca. Vollständige Einrichtungen einschließlich Rettungsschwimmer und Strandlokale. Strandqualität ist Punta Primas Hauptattraktion."
+      },
+      {
+        "question": "Wie weit ist Punta Prima von Torrevieja entfernt?",
+        "answer": "Nur 5 km (5 Minuten Fahrt). Torreviejas vollständige Dienstleistungen—Krankenhaus, Einkaufen, Restaurants—sind unmittelbar verfügbar, während Punta Prima seinen Strandcharakter behält."
+      },
+      {
+        "question": "Was sind die Immobilienpreise in Punta Prima?",
+        "answer": "Wohnungen ab €175 000, Penthäuser ab €300 000, Villen ab €450 000. Meerblick-Immobilien sind weit verbreitet. Gutes Preis-Leistungs-Verhältnis für Strandlage an der Costa Blanca."
+      },
+      {
+        "question": "Ist Punta Prima ein Teil von Torrevieja oder Orihuela Costa?",
+        "answer": "Punta Prima gehört zur Orihuela Costa (Orihuela-Gemeinde), sitzt aber an der nördlichen Grenze neben Torrevieja. Es profitiert von der Nähe zu Torreviejas Dienstleistungen und ist Teil der Orihuela Costa-Gemeinschaft."
+      },
+      {
+        "question": "Ist Punta Prima gut für Mietinvestitionen?",
+        "answer": "Ja, die Strandlage treibt starke Mietennachfrage. Der Sommer ist Hochsaison, aber der hervorragende Strand lockt Besucher über die traditionelle Saison hinaus an. Meerblick-Immobilien mit Pools schneiden am besten ab."
+      },
+      {
+        "question": "Wie nah ist das Krankenhaus an Punta Prima?",
+        "answer": "Hospital Universitario de Torrevieja ist nur 5 km entfernt (8 Minuten). Punta Prima hat besseren Krankenhausaccess als die meisten Orihuela Costa-Standorte aufgrund seiner nördlichen Position."
+      },
+      {
+        "question": "Ist Punta Prima gut zum Golfen?",
+        "answer": "Guter Zugang mit Villamartin (8 Min.), Las Ramblas (10 Min.) und Campoamor (12 Min.) in der Nähe. Allerdings ist Punta Prima strandorientiert—Golfer könnten Villamartin oder Campoamor als Basis bevorzugen."
+      },
+      {
+        "question": "Wird in Punta Prima weit verbreitet Englisch gesprochen?",
+        "answer": "Ja, mit einer etablierten internationalen Gemeinschaft. Die meisten Dienstleistungen bedienen Englischsprachige. Die Gemeinschaft ist herzlich und gut integriert."
+      },
+      {
+        "question": "Wie weit ist Punta Prima vom Flughafen Alicante entfernt?",
+        "answer": "Ungefähr 50 km (38 Minuten über die AP-7). Guter Zugang, etwas näher als südliche Orihuela Costa-Standorte."
+      },
+      {
+        "question": "Ist Punta Prima geeignet zum ständigen Leben?",
+        "answer": "Hervorragend für strandorientierte Lebensweise. Ganzjährige Dienstleistungen, gute medizinische Versorgung, etablierte Gemeinschaft. Torrevieja in der Nähe bietet alle Stadtdienste. Ideal für diejenigen, die den Strand im täglichen Leben haben möchten, nicht nur im Urlaub."
+      }
+    ],
+    "conclusion": "Punta Prima destilliert das Strandleben der Costa Blanca auf seine Essenz: außergewöhnlicher Strand, bequeme Dienstleistungen, Meerblick und eine Gemeinschaft, die auf Wertschätzung der Küste aufgebaut ist. Die Torposition bietet das Beste aus Torrevieja und Orihuela Costa ohne Kompromisse.\n\nFür Käufer, die reines Strandleben mit praktischer Bequemlichkeit suchen, liefert Punta Prima genau das.\n\nSind Sie bereit, Immobilien in Punta Prima zu erkunden? Unser Team versteht Strandleben und kann Sie mit Immobilien abgleichen, die das Beste aus diesem Standort herausholen—von Meerblick-Wohnungen bis zu Strand-Penthäusern.",
+    "investmentAnalysis": {
+      "rentalYield": "6-8% bei Meerblick-Wohnungen, 7-9% bei Penthäusern",
+      "annualAppreciation": "3-4% jährlich, stark aufgrund der Strandlage und Torposition",
+      "overview": "Punta Primas Mietmarkt ist stark—Strandlage treibt konsistente Sommernachfrage. Die nördliche Torposition und Nähe zu Torrevieja verstärken Besucherappeal über die traditionelle Saison hinaus.",
+      "highlights": [
+        "Strandlage verlangt Premium-Nachtsätze",
+        "Torproximität lockt Besucher zu beiden Standorten an",
+        "Meerblick-Immobilien erzielen außergewöhnliche Mietrenditen",
+        "Verlängerte Sommersaison aufgrund hervorragender Strandqualität",
+        "Jüngeres Immobilieninventar spricht anspruchsvolle Mieter an"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Punta Primas Lebenshaltungskosten widerspiegeln seine Premium-Strandposition, bleiben aber im Vergleich zu exklusiveren Küstengebieten erschwinglich.",
+      "items": [
+        {
+          "category": "Miete (2-Zimmer-Wohnung)",
+          "cost": "€800-1300",
+          "notes": "Meerblick-Prämie; Binnenland-Immobilien erschwinglicher"
+        },
+        {
+          "category": "Nebenkosten (monatlich)",
+          "cost": "€100-150",
+          "notes": "Klimaanlage notwendig; Meerblick-Immobilien stärker exponiert"
+        },
+        {
+          "category": "Lebensmittel (wöchentlich)",
+          "cost": "€70-100",
+          "notes": "Mix aus Supermärkten und kleinen Läden, Touristenpreise"
+        },
+        {
+          "category": "Restaurantmahlzeit (3-gängig)",
+          "cost": "€16-24",
+          "notes": "Strandrestaurants teurer; einige lokale Optionen günstiger"
+        },
+        {
+          "category": "Café Kaffee",
+          "cost": "€1.50-2.00",
+          "notes": "Strandlage verlangt Premium"
+        },
+        {
+          "category": "Gesundheitswesen (monatlich)",
+          "cost": "€80-120",
+          "notes": "Privatversicherung empfohlen"
+        },
+        {
+          "category": "Grundsteuer (jährlich)",
+          "cost": "€500-800",
+          "notes": "IBI für Strandimmobilie"
+        },
+        {
+          "category": "Gemeinschaftsgebühren",
+          "cost": "€100-200",
+          "notes": "Üblich in Strandentwicklungen"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Punta Primas Veranstaltungskalender umfasst strandorientierte Feiern und Veranstaltungen, die den Charakter seiner Küstengemeinde widerspiegeln.",
+      "events": [
+        {
+          "name": "Summer Beach Festival",
+          "month": "July-August",
+          "description": "Strandbasierte Feiern mit Konzerten, Lebensmittelfestivals und abendlicher Unterhaltung"
+        },
+        {
+          "name": "Fiestas Patronales",
+          "month": "July 30 - August 5",
+          "description": "Orihuela Costa-weite Feier mit Punta Prima strandorientierten Aktivitäten"
+        },
+        {
+          "name": "Seafood Festival",
+          "month": "September",
+          "description": "Feier der lokalen Meeresfrüchte mit Restaurantpräsentationen und Lebensmittelverkostungen"
+        },
+        {
+          "name": "Beach Cleaning Events",
+          "month": "Year-round",
+          "description": "Umweltgemeinschafts-Veranstaltungen zur Erhaltung der Strandqualität"
+        },
+        {
+          "name": "Sunset Celebrations",
+          "month": "Year-round",
+          "description": "Informelle Strandtreffen zum Feiern von Mittelmeer-Sonnenuntergängen"
+        }
+      ]
+    },
+    "markets": {
+      "intro": "Punta Prima genießt hervorragenden Marktzugang mit Optionen in sowohl Torrevieja in der Nähe als auch über Orihuela Costa. Vom berühmten Torrevieja-Freitagsmarkt bis zu Küstenoptionen ist das Einkaufen bequem.",
+      "markets": [
+        {
+          "name": "La Zenia Boulevard Market",
+          "day": "Sunday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "10 km",
+          "description": "Beliebter Sonntagsmarkt bei La Zenia Boulevard mit frischem Obst und Gemüse, Blumen, Kleidung und Haushaltswaren neben dem Einkaufszentrum",
+          "googleMaps": "https://maps.google.com/?q=La+Zenia+Boulevard+Market"
+        },
+        {
+          "name": "Orihuela Saturday Market",
+          "day": "Saturday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "22 km",
+          "description": "Umfangreicher Markt in Orihuela Stadtzentrum mit Hunderten von Ständen, die frisches Obst und Gemüse, Fisch, Kleidung, Handwerk und lokale Spezialitäten verkaufen",
+          "googleMaps": "https://maps.google.com/?q=Orihuela+Saturday+Market"
+        },
+        {
+          "name": "Torrevieja Friday Market",
+          "day": "Friday",
+          "time": "08:00 - 14:00",
+          "type": "General/Produce/Clothing",
+          "distance": "5 km",
+          "description": "Einer von Spaniens größten Straßenmärkten, der sich über 2 km erstreckt mit Hunderten von Ständen, die frisches Obst und Gemüse, Fisch, Kleidung, Haushaltswaren und Handwerk verkaufen",
+          "googleMaps": "https://maps.google.com/?q=Torrevieja+Friday+Market"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Punta Prima hat guten Zugang zu internationalen Schulen in nahegelegener Torrevieja und Orihuela Costa sowie Optionen für öffentliche spanische Schulen.",
+      "schools": [
+        {
+          "name": "International Schools (La Zenia)",
+          "type": "International Primary & Secondary",
+          "distance": "10 km, 12 minutes",
+          "description": "Britische und andere Lehrplanschu, die das breitere Gebiet bedienen"
+        },
+        {
+          "name": "Colegio Público Orihuela Costa",
+          "type": "Public Primary & Secondary",
+          "distance": "8 km",
+          "description": "Spanische öffentliche Schule mit zweisprachigen Programmen"
+        },
+        {
+          "name": "Torrevieja Schools",
+          "type": "Various options",
+          "distance": "5 km",
+          "description": "Spanische und private Schuloptionen in nahegelegener Torrevieja"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Punta Primas Naturaktivitäten sind wasserbasiert und kusterorientiert, mit Mittelmeer-Schwimmen und Wassersport im Kern.",
+      "activities": [
+        {
+          "name": "Swimming at Playa de Punta Prima",
+          "type": "Water recreation",
+          "description": "Blaufahrtsstrand mit außergewöhnlicher Wasserqualität und goldenem Sand"
+        },
+        {
+          "name": "Snorkeling at Cala Piteras",
+          "type": "Water sports",
+          "description": "Felsige Bucht mit klarem Wasser und Beobachtung des Meereslebens"
+        },
+        {
+          "name": "Paddleboarding and kayaking",
+          "type": "Water activities",
+          "description": "Strandbasierte Wassersportarten während der Sommermonate"
+        },
+        {
+          "name": "Coastal walking paths",
+          "type": "Leisure walks",
+          "description": "Landschaftlich reizvolle Pfade entlang der nördlichen Orihuela Costa-Küstenlinie"
+        },
+        {
+          "name": "Sunset watching",
+          "type": "Leisure",
+          "description": "Tägliche Mittelmeer-Sonnenuntergänge über dem Wasser von Stränden oder Terrassen"
+        },
+        {
+          "name": "Golf nearby",
+          "type": "Sports",
+          "description": "Villamartin (8 Min.) und andere Plätze innerhalb von 15 Minuten"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Punta Prima hat eine internationale Gemeinschaft, die sich auf Strandleben und Küstenleben konzentriert. Die Integration ist natürlich durch geteilte Wertschätzung des Ortes.",
+      "highlights": [
+        "Strandleben-fokussierte internationale Gemeinschaft",
+        "Mix aus ständigen Einwohnern und saisonalen Besuchern",
+        "Torreviejas Dienstleistungen in der Nähe unterstützen Expat-Anforderungen",
+        "Weniger organisiert als Binnenlandsgemeinden, spontaner",
+        "Geteilte Wertschätzung der Küstenschönheit schafft Bindungen"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian",
+        "German",
+        "Dutch",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Ein typischer Tag in Punta Prima",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Early beach walk",
+          "description": "Beginnen Sie den Tag mit einem Spaziergang entlang Playa de Punta Prima, bevor die Menschenmengen kommen"
+        },
+        {
+          "time": "10:00",
+          "activity": "Coffee and newspaper",
+          "description": "Café con leche in einer Strandkneipe, die Zeitung lesend"
+        },
+        {
+          "time": "13:00",
+          "activity": "Lunch at chiringuito",
+          "description": "Strandhauptmahlzeit mit frischen Meeresfrüchten und Mittelmeerblicken"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta or beach time",
+          "description": "Nachmittagsruhe oder Schwimmen und Sonnenbaden"
+        },
+        {
+          "time": "17:00",
+          "activity": "Activity or exploration",
+          "description": "Golf, Wassersport oder erkunden Sie das nahegelegene Torrevieja"
+        },
+        {
+          "time": "19:30",
+          "activity": "Aperitivo at bar",
+          "description": "Getränke vor dem Abendessen in einer Bar mit Blick auf den Sonnenuntergang übers Wasser"
+        },
+        {
+          "time": "21:00",
+          "activity": "Dinner",
+          "description": "Hochwertiges Abendessen in einem Strandrestaurant oder lokale Einrichtung"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7122!3d37.9578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPunta%20Prima!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Punta Prima",
+    "description": "Punta Prima ist eine Strandgemeinschaft am nördlichen Tor zur Orihuela Costa mit einem außergewöhnlichen Blaufahrtsstrand und bequemem Zugang zu Torreviejas Dienstleistungen.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.9578",
+      "longitude": "-0.7122"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Punta Prima",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Orihuela Costa, Costa Blanca"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wie ist der Strand in Punta Prima?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Außergewöhnlich—blaufahrtszertifiziert mit goldenem Sand und türkisem Wasser. Einer der besten Strände der Costa Blanca mit vollständigen Einrichtungen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie weit ist Punta Prima von Torrevieja entfernt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nur 5 km (5 Minuten Fahrt). Torreviejas vollständige Dienstleistungen sind unmittelbar verfügbar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was sind die Immobilienpreise in Punta Prima?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wohnungen ab €175 000, Penthäuser ab €300 000, Villen ab €450 000. Meerblick-Immobilien weit verbreitet."
+        }
+      }
+    ]
+  }
+}

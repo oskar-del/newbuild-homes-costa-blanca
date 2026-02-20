@@ -1,0 +1,183 @@
+{
+  "slug": "playa-flamenca",
+  "name": "Playa Flamenca",
+  "region": "Costa Blanca South",
+  "parentArea": "orihuela-costa",
+  "heroImage": "/images/areas/playa-flamenca-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": ["Appartement", "Penthouse", "Maison de ville", "Villa", "Bungalow"],
+  "priceRange": {"min": 165000, "max": 550000},
+  "coordinates": {"lat": 37.9297, "lng": -0.7344},
+  "externalLinks": {
+    "tourism": {"name": "Orihuela Costa Tourism", "url": "https://www.orihuelaturistica.es/", "description": "Portail officiel du tourisme d'Orihuela"},
+    "beaches": [
+      {"name": "Playa Flamenca Beach", "googleMaps": "https://maps.google.com/?q=Playa+Flamenca+Beach", "description": "Plage du Drapeau Bleu avec eaux calmes et peu profondes – parfait pour les familles", "blueFlag": true},
+      {"name": "Cala Mosca", "googleMaps": "https://maps.google.com/?q=Cala+Mosca+Orihuela", "description": "Petite plage de crique avec formations rocheuses"},
+      {"name": "Playa de La Zenia", "googleMaps": "https://maps.google.com/?q=Playa+La+Zenia", "description": "Plage adjacente avec plus de commodités", "distance": "1 km"}
+    ],
+    "shopping": [
+      {"name": "La Zenia Boulevard", "googleMaps": "https://maps.google.com/?q=La+Zenia+Boulevard", "url": "https://www.lazeniaboulevard.es/", "description": "Le plus grand centre commercial en plein air d'Europe", "distance": "2 km"},
+      {"name": "Playa Flamenca Commercial Center", "googleMaps": "https://maps.google.com/?q=Centro+Comercial+Playa+Flamenca", "description": "Boutiques locales, supermarchés, restaurants"}
+    ],
+    "healthcare": {"name": "Hospital Universitario de Torrevieja", "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja", "url": "https://torrevieja-salud.com/", "distance": "8 km", "driveTime": "10 minutes"},
+    "airport": {"name": "Alicante-Elche Airport", "googleMaps": "https://maps.google.com/?q=Alicante+Airport", "url": "https://www.alicante-airport.net/", "distance": "52 km", "driveTime": "40 minutes"}
+  },
+  "golf": {
+    "intro": "Playa Flamenca est au cœur du triangle de golf d'Orihuela Costa avec excellent accès à tous les grands parcours.",
+    "courses": [
+      {"name": "Villamartin Golf", "distance": "3 km", "driveTime": "5 minutes", "holes": 18, "url": "https://www.villamartingolf.com/", "googleMaps": "https://maps.google.com/?q=Villamartin+Golf", "description": "Parcours de championnat avec une histoire riche."},
+      {"name": "Las Ramblas Golf", "distance": "4 km", "driveTime": "7 minutes", "holes": 18, "url": "https://www.lasramblasgolf.com/", "googleMaps": "https://maps.google.com/?q=Las+Ramblas+Golf", "description": "Changements d'altitude dramatiques avec vues."},
+      {"name": "Campoamor Golf", "distance": "5 km", "driveTime": "8 minutes", "holes": 18, "url": "https://www.campoamorgolf.com/", "googleMaps": "https://maps.google.com/?q=Campoamor+Golf", "description": "Parcours côtier bien entretenu."},
+      {"name": "Las Colinas Golf", "distance": "10 km", "driveTime": "12 minutes", "holes": 18, "url": "https://www.lascolinasgolf.es/", "googleMaps": "https://maps.google.com/?q=Las+Colinas+Golf", "description": "Parcours primé classé parmi les meilleurs d'Espagne."}
+    ]
+  },
+  "localMarket": {"saturdayMarket": {"name": "Playa Flamenca Saturday Market", "location": "Commercial center area", "googleMaps": "https://maps.google.com/?q=Mercadillo+Playa+Flamenca", "hours": "Saturdays 8:00 - 14:00", "description": "Marché hebdomadaire populaire avec fruits et légumes frais, vêtements et articles ménagers"}},
+  "content": {
+    "metaTitle": "Vivre à Playa Flamenca | Vie de plage familiale | Orihuela Costa 2026",
+    "metaDescription": "Guide complet de Playa Flamenca – plages familiales, La Zenia Boulevard à 2 min, meilleure valeur d'Orihuela Costa. Propriétés à partir de €165k. Le choix pratique.",
+    "quickAnswer": "Playa Flamenca est la solution intermédiaire familiale d'Orihuela Costa – plages calmes parfaites pour les enfants, La Zenia Boulevard à 2 km, et les meilleures propriétés côtières avec rapport qualité-prix de €165 000. À seulement 5 minutes de Villamartin Golf et 10 minutes de l'hôpital. Vie côtière pratique.",
+    "heroIntro": "Entre le buzz de La Zenia et les étendues plus calmes de Punta Prima se trouve Playa Flamenca – une communauté qui fait la vie côtière de manière pratique plutôt que voyante. La plage ici a des eaux calmes et peu profondes que les parents apprécient, du sable légèrement incliné que les enfants adorent, et assez d'espace pour que les foules d'été ne soient pas écrasantes.\n\nLe secret de Playa Flamenca est sa praticité. La Zenia Boulevard est à 2 km – suffisamment proche pour des achats pratiques, assez loin pour que la zone conserve son caractère résidentiel. Villamartin Golf est à 5 minutes. L'hôpital est à 10 minutes. Les prix sont généralement 10–15% moins chers que La Zenia tout en offrant un accès similaire aux plages et une meilleure proximité au golf.\n\nPour les acheteurs cherchant la valeur, la convivialité familiale et la commodité pratique sans prix premium, Playa Flamenca fournit l'essentiel.",
+    "lifestyleSection": {
+      "intro": "La vie à Playa Flamenca est confortablement suburbaine-côtière. Promenades matinales sur la plage, trajets scolaires (bonnes options internationales à proximité), shopping au Boulevard, barbecues en soirée. C'est moins glamour que Cabo Roig, moins commercial que La Zenia, moins prétentieux que Campoamor. C'est pratique – et pour beaucoup, c'est exactement ce qu'il faut.\n\nLa communauté est établie et orientée vers les familles, avec des résidents britanniques, scandinaves et autres européens. L'anglais est largement parlé. L'intégration se fait par les activités des enfants, les clubs de golf et la communauté naturelle de la vie côtière. C'est accueillant sans être écrasant.",
+      "highlights": [
+        "Plage familiale avec eaux calmes et peu profondes",
+        "La Zenia Boulevard à seulement 2 km – shopping pratique",
+        "Meilleure valeur côtière d'Orihuela Costa – 10–15% moins cher que La Zenia",
+        "Villamartin Golf à 5 minutes",
+        "Hôpital à 10 minutes – accès pratique aux soins",
+        "Marché du samedi ajoute un caractère local",
+        "Écoles internationales à proximité",
+        "Communauté établie orientée vers les familles"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "La plage de Playa Flamenca est idéale pour les familles – eaux calmes et peu profondes, pente de sable douce, qualité du Drapeau Bleu. Moins fréquentée que la plage de La Zenia tout en offrant des équipements similaires incluant les sauveteurs et les chiringuitos. Cala Mosca offre une alternative plus rocheuse. La plage de La Zenia est à seulement 1 km pour la variété.",
+      "dining": "Les restaurants et bars locaux autour du centre commercial offrent de bonnes options au quotidien. Le front de mer a des chiringuitos pour manger décontracté. La Zenia Boulevard (2 km) fournit une grande variété de restaurants. Pour les occasions spéciales, le port de Cabo Roig (5 km) a d'excellents fruits de mer.",
+      "shopping": "Le centre commercial local couvre les besoins quotidiens – supermarchés, pharmacies, banques. La Zenia Boulevard (2 km) offre 150+ magasins pour des achats sérieux. Le marché du samedi ajoute des produits locaux et du caractère. Excellente combinaison de commodité et de choix.",
+      "healthcare": "L'Hospital Universitario de Torrevieja est à 8 km (10 minutes) – bon accès. Centres médicaux locaux et pharmacies dans le secteur commercial. L'infrastructure sanitaire convient à la communauté familiale.",
+      "transport": "L'aéroport Alicante-Elche est à 52 km (40 minutes via AP-7). Bonne situation centrale dans Orihuela Costa. Une voiture est utile mais la région est plus praticable à pied que certaines – plage, magasins et restaurants accessibles à pied depuis la plupart des propriétés."
+    },
+    "neighborhoods": [
+      {"name": "Beachfront", "description": "Propriétés près de la plage de Playa Flamenca. À distance de marche du sable et de la mer. Mélange d'appartements, maisons de ville. Bon potentiel locatif."},
+      {"name": "Commercial Center Area", "description": "Près des magasins et restaurants. Pratique pour la vie quotidienne. Plus abordable que le front de mer. Bon pour les familles."},
+      {"name": "Towards La Zenia", "description": "Bord sud plus proche de La Zenia Boulevard. Bon accès aux magasins. Prix légèrement plus élevés reflétant la proximité du Boulevard."},
+      {"name": "Towards Punta Prima", "description": "Bord nord, atmosphère plus calme. Bon accès à la plage. Populaire auprès des familles cherchant la paix."}
+    ],
+    "propertyMarketSection": "Playa Flamenca offre la meilleure valeur d'Orihuela Costa côtière. Les nouveaux appartements commencent autour de €165 000–280 000, les maisons de ville de €220 000–380 000 et les villas de €350 000–550 000. Les prix sont généralement 10–15% moins chers que les propriétés équivalentes de La Zenia.\n\nLe marché attire les familles, les acheteurs conscients de la valeur et ceux qui priorisent la commodité pratique. Le potentiel de location est bon – les familles cherchent les plages calmes et l'accès au Boulevard. Les propriétés avec piscines se portent bien sur le marché locatif.\n\nLes propriétés de revente offrent une valeur supplémentaire pour ceux cherchant l'occupation immédiate ou des jardins établis. La zone s'est bien développée avec une bonne infrastructure communautaire.",
+    "whyLiveHereSection": [
+      "Meilleure valeur d'Orihuela Costa côtière",
+      "Plage familiale avec eaux calmes",
+      "La Zenia Boulevard à seulement 2 km",
+      "Villamartin Golf à 5 minutes",
+      "Hôpital à 10 minutes",
+      "Marché du samedi ajoute du caractère",
+      "Communauté établie orientée vers les familles",
+      "Commodité pratique sans prix premium"
+    ],
+    "faqs": [
+      {"question": "Playa Flamenca convient-elle aux familles?", "answer": "Excellente. La plage a des eaux calmes et peu profondes idéales pour les enfants. Les écoles internationales sont à proximité. La communauté est orientée vers les familles. La Zenia Boulevard fournit des achats et divertissements familiaux. C'est l'un des meilleurs emplacements familiaux d'Orihuela Costa."},
+      {"question": "Comment Playa Flamenca se compare-t-elle à La Zenia?", "answer": "Playa Flamenca est 10–15% moins cher tout en offrant un accès similaire aux plages et une meilleure proximité au golf. La Zenia a le Boulevard à sa porte; Playa Flamenca est à 2 km. Playa Flamenca est plus résidentielle et orientée familles; La Zenia est plus commerciale. Les deux sont excellentes."},
+      {"question": "Quels sont les prix des propriétés à Playa Flamenca?", "answer": "Appartements à partir de €165 000, maisons de ville à partir de €220 000, villas à partir de €350 000. Meilleure valeur d'Orihuela Costa côtière – généralement 10–15% moins cher que La Zenia."},
+      {"question": "Playa Flamenca convient-elle à l'investissement locatif?", "answer": "Bon potentiel. Les familles recherchent les plages calmes et l'accès au Boulevard. Les propriétés avec piscine performent bien. Les prix de valeur signifient de meilleurs rendements que les zones voisines à prix plus élevés."}
+    ],
+    "conclusion": "Playa Flamenca n'est pas dans les projecteurs – elle fournit simplement une vie côtière pratique à des prix sensés. La plage convient aux familles, le Boulevard est proche, le golf est accessible, et la communauté est établie. Pour les acheteurs qui priorisent la valeur et la commodité plutôt que le glamour et l'exclusivité, Playa Flamenca est le choix intelligent.\n\nPrêt à explorer les propriétés à Playa Flamenca? Notre équipe comprend la vie côtière orientée familles et peut vous mettre en contact avec des propriétés qui offrent les avantages pratiques que cette région offre si bien.",
+    "investmentAnalysis": {
+      "rentalYield": "5–7% sur appartements, 6–7% sur villas familiales",
+      "annualAppreciation": "2–3% annuels, stable du au positionnement marché familial",
+      "overview": "Le marché locatif de Playa Flamenca attire les familles cherchant des plages calmes et la commodité. La proposition de valeur excellente soutient les réservations cohérentes. Les propriétés avec piscine performent au mieux.",
+      "highlights": [
+        "Le positionnement marché familial conduit à une demande locative stable",
+        "Les meilleures propriétés côtières valeur soutiennent une occupancy plus haute",
+        "Les propriétés piscine commandent des tarifs premium",
+        "Les plages calmes attirent les réservations familiales répétées",
+        "La proximité La Zenia Boulevard augmente l'attrait des visiteurs"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Le coût de la vie à Playa Flamenca est excellent pour une zone côtière – la meilleure valeur d'Orihuela Costa tout en maintenant l'accès à la plage et aux commodités complètes.",
+      "items": [
+        {"category": "Loyer (2-chambre appartement)", "cost": "€650–950", "notes": "Front de mer plus cher; centre commercial moins cher"},
+        {"category": "Services publics (mensuel)", "cost": "€90–130", "notes": "La climatisation est essentielle en été"},
+        {"category": "Épiceries (hebdomadaire)", "cost": "€60–85", "notes": "Supermarchés et magasins locaux, certaine inflation touristique"},
+        {"category": "Repas restaurant (3-cours)", "cost": "€14–20", "notes": "Mélange d'espagnol et international, prix raisonnables"},
+        {"category": "Café café", "cost": "€1,30–1,70", "notes": "Emplacements plage légèrement supérieurs"},
+        {"category": "Assurance santé (mensuel)", "cost": "€70–110", "notes": "Assurance privée optionnelle; bon accès public"},
+        {"category": "Impôts propriété (annuel)", "cost": "€350–550", "notes": "IBI pour propriété côtière"},
+        {"category": "Frais communauté (si applicable)", "cost": "€80–150", "notes": "Pour propriétés avec commodités communes"}
+      ]
+    },
+    "events": {
+      "intro": "Le calendrier des événements de Playa Flamenca inclut les célébrations espagnoles traditionnelles et les activités orientées familles, reflétant son orientation communauté.",
+      "events": [
+        {"name": "Fiestas de Verano (Festivités d'été)", "month": "Juillet-août", "description": "Célébrations centrées sur la plage avec événements familiaux, divertissements en soirée et festivals culinaires"},
+        {"name": "Marché du samedi (Mercadillo)", "month": "Année-ronde, hebdomadaire", "description": "Marché traditionnel avec fruits et légumes frais, vêtements et articles ménagers"},
+        {"name": "Activités plage enfants", "month": "Juillet-août", "description": "Activités de plage organisées, concours et divertissements pour familles"},
+        {"name": "Semana Santa (Semaine Sainte)", "month": "Mars/avril", "description": "Processions religieuses et célébrations espagnoles traditionnelles"},
+        {"name": "Événements festifs familiaux Noël", "month": "Décembre", "description": "Célébrations festives conviviales pour familles et marchés de vacances en zone plage"}
+      ]
+    },
+    "schools": {
+      "intro": "Playa Flamenca a accès aux écoles publiques espagnoles et options internationales, ce qui la rend adaptée à des préférences éducatives diverses.",
+      "schools": [
+        {"name": "Colegio Público Orihuela Costa", "type": "Primaire & Secondaire Publique", "distance": "5 km, accès à pied pour certaines zones", "description": "École publique espagnole avec programmes d'éducation bilingue"},
+        {"name": "Écoles Internationales (La Zenia)", "type": "Primaire & Secondaire International", "distance": "2 km, 5 minutes en voiture", "description": "Écoles British et autres programmes pratiques pour familles Playa Flamenca"},
+        {"name": "Écoles Privées", "type": "Éducation privée", "distance": "Orihuela Costa et Torrevieja voisin", "description": "Diverses options d'écoles privées avec différentes approches curriculum"}
+      ]
+    },
+    "natureActivities": {
+      "intro": "Les activités nature de Playa Flamenca centrent sur la récréation plage et eau, avec conditions calmes parfaites pour familles.",
+      "activities": [
+        {"name": "Nage à Playa Flamenca Beach", "type": "Récréation eau", "description": "Plage Drapeau Bleu avec eaux calmes et peu profondes idéales enfants et familles"},
+        {"name": "Promenades plage et exploration", "type": "Loisirs", "description": "Longues plages sableuses adaptées aux promenades matin ou soir"},
+        {"name": "Paddle et kayak", "type": "Sports eau", "description": "Locations sports eau plage disponibles mois d'été"},
+        {"name": "Cyclisme côte", "type": "Récréation active", "description": "Chemins côtiers plats adaptés cyclisme familial et loisir"},
+        {"name": "Golf cours voisins", "type": "Sport", "description": "Villamartin (5 min), Las Ramblas (7 min), Campoamor (8 min) voisin"},
+        {"name": "Volley plage et activités", "type": "Récréation", "description": "Activités sports plage conviviales et familiales"}
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Playa Flamenca a une communauté expatriée établie orientée familles. L'atmosphère pratique sans prétention attire ceux cherchant communauté plutôt qu'exclusivité.",
+      "highlights": [
+        "Grande communauté expatriée orientée familles",
+        "L'orientation pratique attire acheteurs conscients valeur",
+        "La présence école internationale soutient intégration familiale",
+        "Moins exclusif que zones haut de gamme voisines",
+        "Communauté-focalisé plutôt que lifestyle-focalisé"
+      ],
+      "nationalities": ["Britannique", "Scandinave", "Allemand", "Néerlandais", "Belge", "Français"]
+    },
+    "lifestyleTimeline": {
+      "title": "Une journée typique à Playa Flamenca",
+      "entries": [
+        {"time": "08:00", "activity": "Petit déjeuner familial", "description": "Commencez la journée avec petit déjeuner, parfois café local ou plage"},
+        {"time": "10:00", "activity": "Temps plage enfants", "description": "Activité plage matin, nage ou jeux plage en famille"},
+        {"time": "13:00", "activity": "Déjeuner", "description": "Repas principal, souvent chiringuito plage ou maison familial"},
+        {"time": "15:00", "activity": "Siesta ou temps piscine", "description": "Repos après-midi ou nage piscine villa"},
+        {"time": "17:00", "activity": "Activités scolaires ou récréation", "description": "Activités organisées, golf ou temps plage additionnel"},
+        {"time": "19:00", "activity": "Temps famille ou activité social", "description": "Événement communauté, sports ou rassemblement social"},
+        {"time": "20:30", "activity": "Dîner", "description": "Dîner familial maison ou restaurant convivial familles"}
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7344!3d37.9297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sPlaya%20Flamenca!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Playa Flamenca",
+    "description": "Playa Flamenca est une communauté côtière conviviale pour familles d'Orihuela Costa offrant plages calmes, accès La Zenia Boulevard et meilleures propriétés valeur sur la côte.",
+    "geo": {"@type": "GeoCoordinates", "latitude": "37.9297", "longitude": "-0.7344"},
+    "address": {"@type": "PostalAddress", "addressLocality": "Playa Flamenca", "addressRegion": "Alicante", "addressCountry": "ES"},
+    "containedInPlace": {"@type": "Place", "name": "Orihuela Costa, Costa Blanca"}
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Playa Flamenca convient-elle aux familles?", "acceptedAnswer": {"@type": "Answer", "text": "Excellente. Eaux plage calmes et peu profondes, écoles internationales voisines, communauté orientée familles et La Zenia Boulevard à 2 km."}},
+      {"@type": "Question", "name": "Comment Playa Flamenca se compare-t-elle à La Zenia?", "acceptedAnswer": {"@type": "Answer", "text": "10–15% moins cher avec accès plage similaire et meilleure proximité golf. Plus résidentielle et orientée familles; La Zenia plus commercial."}},
+      {"@type": "Question", "name": "Quels sont les prix des propriétés à Playa Flamenca?", "acceptedAnswer": {"@type": "Answer", "text": "Appartements à partir de €165 000, maisons de ville à partir de €220 000, villas à partir de €350 000. Meilleure valeur Orihuela Costa côtière."}}
+    ]
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "slug": "rojales",
+  "name": "Rojales",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/rojales-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": ["Appartement", "Rijtjeshuis", "Villa", "Bungalow", "Landhuis"],
+  "priceRange": {"min": 145000, "max": 650000},
+  "coordinates": {"lat": 38.0864, "lng": -0.7256},
+  "externalLinks": {
+    "tourism": {"name": "Rojales Tourism", "url": "https://www.rojales.es/", "description": "Officieel Rojales gemeente toerisme"},
+    "beaches": [
+      {"name": "Guardamar Beaches", "googleMaps": "https://maps.google.com/?q=Playa+Centro+Guardamar", "description": "Natuurlijke stranden ondersteund door dennenbossen", "distance": "8 km"},
+      {"name": "La Mata Beach", "googleMaps": "https://maps.google.com/?q=Playa+La+Mata", "description": "Lang natuurlijk strand nabij zoutwatermeren", "distance": "12 km"},
+      {"name": "Torrevieja Beaches", "googleMaps": "https://maps.google.com/?q=Playa+del+Cura+Torrevieja", "description": "Stadsstanden met alle faciliteiten", "distance": "10 km"}
+    ],
+    "shopping": [
+      {"name": "Rojales Town Center", "googleMaps": "https://maps.google.com/?q=Rojales+Centro", "description": "Historisch centrum met traditionele winkels en zondagsmarkt"},
+      {"name": "Habaneras Shopping Center", "googleMaps": "https://maps.google.com/?q=Habaneras+Torrevieja", "description": "Groot winkelcentrum in Torrevieja", "distance": "10 km"}
+    ],
+    "healthcare": {"name": "Hospital Universitario de Torrevieja", "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja", "url": "https://torrevieja-salud.com/", "distance": "10 km", "driveTime": "12 minutes"},
+    "airport": {"name": "Alicante-Elche Airport", "googleMaps": "https://maps.google.com/?q=Alicante+Airport", "url": "https://www.alicante-airport.net/", "distance": "40 km", "driveTime": "30 minutes"}
+  },
+  "golf": {
+    "intro": "Rojales gemeente (inclusief Ciudad Quesada) omgeven met uitstekende golfbanen, met La Marquesa aan de deur en verschillende anderen binnen gemakkelijk bereik.",
+    "courses": [
+      {"name": "La Marquesa Golf", "distance": "4 km", "driveTime": "6 minutes", "holes": 18, "url": "https://www.lamarquesagolf.com/", "googleMaps": "https://maps.google.com/?q=La+Marquesa+Golf", "description": "Goed onderhouden baan populair bij bewoners. Goed trainingsmateriaal."},
+      {"name": "La Finca Golf", "distance": "8 km", "driveTime": "10 minutes", "holes": 18, "url": "https://www.lafincagolf.com/", "googleMaps": "https://maps.google.com/?q=La+Finca+Golf+Algorfa", "description": "Kampioenschapsbaan ontworpen door Pepe Gancedo."},
+      {"name": "Vistabella Golf", "distance": "10 km", "driveTime": "12 minutes", "holes": 18, "url": "https://www.vistabellagolf.com/", "googleMaps": "https://maps.google.com/?q=Vistabella+Golf", "description": "Moderne baan met uitstekende faciliteiten."}
+    ]
+  },
+  "localMarket": {"sundayMarket": {"name": "Rojales Sunday Market", "location": "Town center and riverside", "googleMaps": "https://maps.google.com/?q=Mercado+Rojales", "hours": "Sundays 8:00 - 14:00", "description": "Beroemde zondagsmarkt langs de Segura rivier, een van de grootste in de regio"}},
+  "content": {
+    "metaTitle": "Wonen in Rojales | Historische stad | Costa Blanca South 2026",
+    "metaDescription": "Volledige gids voor Rojales – historische Spaanse stad aan de Segura rivier, beroemde zondagsmarkt, moderne villa's vanaf €145 000. Echt Spanje met alle gemakken dichtbij.",
+    "quickAnswer": "Rojales is een historische Spaanse stad aan de Segura rivier met authentieke karakter en uitstekende waarde vanaf €145 000. Beroemd om de zondagsmarkt (een van de grootste op Costa Blanca), grottewonen en riviersituatie. Stranden 8–12 minuten weg, Torrevieja ziekenhuis 12 minuten. Bevat Ciudad Quesada.",
+    "heroIntro": "De Segura rivier heeft Rojales voor eeuwen gevormd, hakken van de weg door het landschap en het creëren van vruchtbare vega die de stad ondersteunt. Op zondagochten komt de rivierover tot leven met een van Costa Blanca's grootste markten, staaltjes strekken zich langs het water uit zo ze hebben gedaan door generaties. Dit is een stad met wortels die dieper gaan dan de toeristische ontwikkelingen eromheen.\n\nRojales is de gemeentelijke zetel die Ciudad Quesada binnen zijn grenzen omvat, maar het stadscentrum zelf biedt iets anders – echte Spaanse geschiedenis, grottewonen uitgehakt in hellingen, een rivier die het hele jaar stroomt, en een gemeenschap die tradities handhaaft. Moderne urbanisaties in de buurt bieden comfortabel wonen; stadscentrum biedt ziel.\n\nVoor kopers die authentiek Spanje zoeken met moderne gemakken beschikbaar, Rojales brugt beide werelden.",
+    "lifestyleSection": {
+      "intro": "Het leven in centrum Rojales volgt Spaanse ritmen – ochtendkoffie in rivierkaféines, drukte van zondagsmarkt, avondpaseo langs rivieroevers. De grottewonen uitgehakt in hellingen zijn nu musea en curiositeiten, bezoekers herinnerend dat deze stad lang voor toerisme bestond. Toch bieden Ciudad Quesada en andere urbanisaties slechts minuten weg modern wonen met internationale gemeenschappen.\n\nDeze dualiteit is de gelegenheid: kies authentiek centrum voor echte onderdompeling, of moderne urbanisatie voor gemak met authenticiteit dicht bij. Hoe dan ook, je bent verbonden met iets echts.",
+      "highlights": [
+        "Historische Spaanse stad aan de Segura rivier",
+        "Beroemde zondagsmarkt – een van de grootste in de regio",
+        "Unieke grottewonen uitgehakt in hellingen",
+        "Uitstekende waarde – authentieke eigendommen vanaf €145 000",
+        "Guardamar stranden slechts 8 km weg",
+        "Gemeente omvat Ciudad Quesada",
+        "Torrevieja ziekenhuis 12 minuten",
+        "30 minuten naar Alicante-Elche luchthaven"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Natuurlijke stranden Guardamar (ondersteund door dennenbossen en zandduinen) liggen slechts 8 km weg. Long La Mata stretch dicht bij zoutwatermeren ligt 12 km weg. Stedelijke stranden Torrevieja liggen 10 km weg. De locatie biedt gemakkelijke strand toegang zonder het betalen voor kustonroerend.",
+      "dining": "Centrum heeft traditionele Spaanse restaurants langs de rivierover – uitstekend lokaal voedsel tegen lokale prijzen. Zondagsmarkt trekt bezoekers van over de regio. Voor variatie bieden Torrevieja (10 km) en Guardamar (8 km) meer internationale opties.",
+      "shopping": "Rojales centrum heeft traditionele winkels, supermarkten, banken en essentiële services. Zondagsmarkt is legendarisch voor vers product, kleding en huishoudelijkgoederen. Habaneras winkelcentrum in Torrevieja (10 km) biedt grote merken. La Zenia Boulevard (20 km) biedt volle ervaring.",
+      "healthcare": "Hospital Universitario de Torrevieja ligt 10 km weg (12 minuten). Lokale medische centra en apotheken dienen de stad. Goeie gezondheidszorgtoegankelijkheid voor de omvang van stad.",
+      "transport": "Alicante-Elche luchthaven ligt 40 km weg (30 minuten via AP-7). Locatie is centraal wat noord-zuiden reizen langs de kust effectief maakt. Auto is essentieel. CV-91 biedt goeie connecties."
+    },
+    "neighborhoods": [
+      {"name": "Casco Antiguo (Old Town)", "description": "Historisch centrum met traditionele architectuur. Loopafstand naar rivier, markt en oud centrum. Lagere prijzen, authentiek Spaans karakter. Rijtjeshuizen en traditionele huizen."},
+      {"name": "Riverside (Ribera)", "description": "Eigendommen dicht bij Segura rivier. Aangenaam loopgebieden, zondagsmarkt locatie. Mix van oude en nieuwere eigendommen."},
+      {"name": "Modern Urbanizations", "description": "Nieuwere woongebieden rond de stad. Moderne villa's en bungalows met zwembaden. Meer internationale bewoners. Goeie waarde met gemakkelijke toegang."},
+      {"name": "Towards Ciudad Quesada", "description": "Oostelijk rand verbindend met Ciudad Quesada. Mix van eigendomsstijlen. Goeie golftoegankelijkheid. Groeiende ontwikkelinggebied."}
+    ],
+    "propertyMarketSection": "Rojales biedt uitstekende waarde op alle soorten eigendommen. Nieuwe appartementen beginnen rond €145 000–220 000, rijtjeshuizen van €180 000–320 000 en villa's van €280 000–650 000. Centrum biedt karaktereigendommen; omringende urbanisaties bieden moderne gemak.\n\n**Uitgelichte ontwikkeling: Agata Villas Rojales** – Premium 4-slaapkamer villa's van €567 000 met privé zwembaden, 180m² woonruimte en garage. Modern design op 450m² percelen.\n\nMarkt trekt kopers zoekende waarde zonder kwaliteit op te offeren, geïnteresseerd in Spaanse integratie en golffanaten willen dichtbij La Marquesa en andere banen. Huuropbrengst potentieel is gematigd – beter dan diep binnenland maar minder dan kustresorts.",
+    "whyLiveHereSection": [
+      "Historische Spaanse stad met authentieke karakter",
+      "Beroemde zondagsmarkt – regionale trekpleister",
+      "Segura rivier situatie – unieke onder Costa Blanca steden",
+      "Uitstekende waarde – echt Spanje tegen betaalbare prijzen",
+      "Gemeente omvat golflifestyle Ciudad Quesada",
+      "Guardamar stranden slechts 8 km weg",
+      "Torrevieja ziekenhuis 12 minuten",
+      "Grottewonen en historische rariteiten om te verkennen"
+    ],
+    "featuredProperties": [
+      {"title": "Agata Villas Rojales", "reference": "N7227", "price": 567000, "type": "Villa", "bedrooms": 4, "bathrooms": 3, "plotArea": 450, "features": ["4 Bedrooms", "Private Pool", "Garage"], "description": "Premium 4-slaapkamer villa met 180m² woonruimte, privé zwembad en garage op 450m² perceel."}
+    ],
+    "faqs": [
+      {"question": "Waarvan is Rojales beroemd?", "answer": "Rojales is beroemd om de zondagsmarkt langs de Segura rivier (een van de grootste op Costa Blanca), historische grottewonen en authentieke Spaans karakter. De gemeente omvat ook Ciudad Quesada."},
+      {"question": "Hoe ver is Rojales van het strand?", "answer": "Guardamar stranden liggen 8 km weg (10 minuten). La Mata ligt 12 km weg. Torrevieja stranden liggen 10 km weg. Gemakkelijke strandtoegang zonder betalen voor kusteigendommen."},
+      {"question": "Wat zijn vastgoedprijzen in Rojales?", "answer": "Appartementen van €145 000, rijtjeshuizen van €180 000, villa's van €280 000. Uitstekende waarde voor authentieke Spaanse eigendommen met modern gemak dichtbij."},
+      {"question": "Wat is Rojales zondagsmarkt?", "answer": "Een van Costa Blanca's grootste markten langs de Segura rivier elk zondagochtend. Vers product, vis, kleding, huishoudelijkgoederen en lokale ambachten. Authentieke Spaanse ervaring met bezoekers van over de regio."}
+    ],
+    "conclusion": "Rojales biedt iets steeds zeldzamer: authentiek Spaans karakter op een locatie die niet is geabsorbeerd in resortanonymiteit. De rivier, markt, grottewonen, historisch centrum – zij geven de stad een persoonlijkheid waarmee gerichte ontwikkelingen moeite hebben. Toch is modern wonen beschikbaar in omringende urbanisaties inclusief Ciudad Quesada.\n\nVoor kopers die echt Spanje zoeken tegen uitstekende waarde, met stranden en golf dichtbij, beloont Rojales verkenning voorbij het voor de hand liggend.\n\nKlaar om eigendommen in Rojales te verkennen? Ons team begrijpt het karakter van deze historische stad en kan je matchen met eigendommen die je prioriteiten passen – van rivieroeverijtjeshuizen tot moderne urbanisatie villa's.",
+    "investmentAnalysis": {
+      "rentalYield": "3–5% op urbanisatie eigendommen, beperkt op centrum",
+      "annualAppreciation": "2–3% jaarlijks, stabiel vanwege authentiek karakterpositionering",
+      "overview": "Rojales huuropbrengst markt is bescheiden – stad trekt bewoners meer aan dan vakanties. Authentiek karakter en uitstekende waardeproposit scheppen levensstijlaantrekking eerder dan investeringsrendementen.",
+      "highlights": [
+        "Urbanisatie eigendommen (Ciudad Quesada) hebben beter huuropbrengst potentieel",
+        "Langterm expat verhuur betrouwbaarder dan vakanties",
+        "Centrum biedt cultureel belang voor nischemarkt",
+        "Zondagsmarkt genereert toerisme op beperkte schaal",
+        "Waarde ingangsprijzen creëren gunstige koperspsychologie"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Levenskosten in Rojales zijn uitzonderlijk laag – authentieke Spaanse prijzen voor bewoners eerder dan toeristische inflatie. Gemeente overspant zowel historisch centrum als moderne urbanisatie gemeenschappen.",
+      "items": [
+        {"category": "Huur (2-slaapkamer eigendom)", "cost": "€500–750", "notes": "Centrum goedkoper; urbanisaties iets hoger"},
+        {"category": "Nutsvoorzieningen (maandelijks)", "cost": "€70–110", "notes": "Rivierbetrokkenheid beïnvloedt sommige eigendommen"},
+        {"category": "Kruidenierswaren (wekelijks)", "cost": "€45–70", "notes": "Zondagsmarkt biedt uitstekende waarde op vers product"},
+        {"category": "Restaurant meal (3-gangs)", "cost": "€11–17", "notes": "Authentieke Spaanse prijzen, lokale instellingen"},
+        {"category": "Koffie koffie", "cost": "€1,00–1,30", "notes": "Lokale kaféprijzen door hele stad"},
+        {"category": "Gezondheidszorg (maandelijks)", "cost": "€60–90", "notes": "Openbare gezondheidszorg beschikbaar; optionele private verzekering"},
+        {"category": "Vastgoedbelastingen (jaarlijks)", "cost": "€200–350", "notes": "IBI voor typische eigendom"}
+      ]
+    },
+    "events": {
+      "intro": "Rojales evenementencalender concentreert op de beroemde zondagsmarkt en traditionele Spaanse observanties weerspiegelend authentiek stadskarakter.",
+      "events": [
+        {"name": "Rojales zondagsmarkt (Mercado de Domingos)", "month": "Jaar-rond, wekelijks", "description": "Een van Costa Blanca's grootste markten strekking langs Segura rivier met honderden kraampjes"},
+        {"name": "Fiestas Patronales de Rojales", "month": "Augustus", "description": "Stadspatroonheilig viering met parades, rivier-activiteiten en traditionele festiviteiten"},
+        {"name": "Semana Santa (Paasweek)", "month": "Maart/april", "description": "Traditionele Spaanse religieuze processies langs rivier en door stadscentrum"},
+        {"name": "Grottehuizen tours en tentoonstellingen", "month": "Jaar-rond", "description": "Cultureel belang in historische casas cueva met occasionele tentoonstellingen en educatieve tours"},
+        {"name": "Segura rivier festival", "month": "Mei", "description": "Viering van rivier erfgoed met bootactiviteiten en rivieroever festiviteiten"}
+      ]
+    },
+    "markets": {
+      "intro": "Rojales is beroemd om de legendarische zondagsmarkt – een van Costa Blanca's grootste strekken langs de Segura rivier. Markt is een authentieke Spaanse ervaring met bezoekers van over de regio. Aanvullende markten dienen de omringende gebieden.",
+      "markets": [
+        {"name": "Rojales zondagsmarkt", "day": "Zondag", "time": "08:00 - 14:00", "type": "Generaal/Product", "distance": "Centrum en rivierover", "description": "Een van Costa Blanca's grootste en meest beroemde markten strekking over 1 km langs de Segura rivier. Honderden kraampjes met vers product, vis, kleding, huishoudelijkgoederen en lokale ambachten. Essentiële Spaanse ervaring met bezoekers van over de regio.", "googleMaps": "https://maps.google.com/?q=Rojales+Sunday+Market+Mercado+Domingos"},
+        {"name": "Ciudad Quesada donderdagmarkt", "day": "Donderdag", "time": "08:00 - 14:00", "type": "Product/Generaal", "distance": "3 km (5 minuten)", "description": "Donderdagmarkt in nabije Ciudad Quesada met vers product, regionale specialiteiten en huishoudelijkgoederen dienend urbanisatie gemeenschap.", "googleMaps": "https://maps.google.com/?q=Ciudad+Quesada+Thursday+Market"},
+        {"name": "Guardamar woensdagmarkt", "day": "Woensdag", "time": "08:00 - 14:00", "type": "Product/Generaal", "distance": "8 km (10 minuten)", "description": "Populaire woensdagmarkt in kuststadmarkt Guardamar met vers lokaal product, vis en regionale goederen met kustsfeer.", "googleMaps": "https://maps.google.com/?q=Guardamar+Wednesday+Market"}
+      ]
+    },
+    "schools": {
+      "intro": "Rojales heeft Spaanse openbare scholen geschikt voor gezinnen en toegang tot internationale opties in nabije gebieden inclusief Ciudad Quesada sector.",
+      "schools": [
+        {"name": "Colegio Público Rojales", "type": "Openbare basisschool", "distance": "Centrum, loopafstand", "description": "Spaanse openbare school met tweetalig onderwijsprogramma"},
+        {"name": "IES Puerta de la Vega", "type": "Openbare middelbare school", "distance": "3 km", "description": "Middelbare school dienend Rojales en omringend gebied"},
+        {"name": "Internationale scholen (Torrevieja)", "type": "Internationaal onderwijs", "distance": "12 km", "description": "Brits en ander leerplanscholen in nabije Torrevieja"}
+      ]
+    },
+    "natureActivities": {
+      "intro": "Rojales natuuractiviteiten concentreren op Segura rivier en toegang tot nabije stranden en golfbanen. Rivier biedt unieke recreatiecngenten.",
+      "activities": [
+        {"name": "Wandeling langs Segura rivier", "type": "Natuurwandelingen", "description": "Rivierover paden en promenades door stad met traditionele bruggen en schilderachtige uitzichtspunten"},
+        {"name": "Vogelwaarneming op rivierwetlands", "type": "Natuurobservatie", "description": "Beschermde wetlandgebieden ondersteunen diverse vogeleven"},
+        {"name": "Zondagsmarkt verkenning", "type": "Cultuur-natuuractiviteit", "description": "Weekse markt als zowel culturele als winkelervaring"},
+        {"name": "Fietsen door landelijk", "type": "Actieve recreatie", "description": "Vlak terrein en rustige platteland wegen door landbouwgebieden"},
+        {"name": "Golf op La Marquesa", "type": "Sport", "description": "Kampioenschapsbaan 4–6 km weg in Ciudad Quesada sector"},
+        {"name": "Strand toegang Guardamar", "type": "Waterrecreatie", "description": "Natuurlijke stranden ondersteund door dennenbos, 8 km weg"}
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Rojales heeft twee verschillende expat gemeenschappen: één in historisch centrum integrering met Spaans leven, ander in golfiërd-gericht Ciudad Quesada gemeenschap.",
+      "highlights": [
+        "Verdeeld tussen centrum-integrering en moderne urbanisatie",
+        "City Quesada sector heeft grote golfgericht gemeenschap",
+        "Historisch centrum trekt Spaanse-integrering fokuskoper",
+        "Minder geëngliseerd dan pure kustig gebieden",
+        "Spaanse integrering meer natuurlijk dan in resort-gerichte gemeenschappen"
+      ],
+      "nationalities": ["Brits", "Duits", "Nederlands", "Scandinavisch", "Frans", "Spaans"]
+    },
+    "lifestyleTimeline": {
+      "title": "Een typische dag in Rojales",
+      "entries": [
+        {"time": "08:00", "activity": "Ochtendkoffie aan rivierover", "description": "Begin met koffie over Segura rivier, kijkend naar lokaal leven begint"},
+        {"time": "10:00", "activity": "Zondagsmarkt (wekelijks) of winkelen", "description": "Slentelen door de beroemde markt of lokale winkels voor dagelijks benodigdheden"},
+        {"time": "13:00", "activity": "Laat lunch", "description": "Hoofdmaaltijd Spaans op rivierover restaurant of thuis"},
+        {"time": "15:00", "activity": "Siesta of pooltijd", "description": "Middagrust of zwemmen in villapool"},
+        {"time": "17:00", "activity": "Golf of natuuractiviteit", "description": "Ronde op La Marquesa (6 min) of wandeling langs rivier"},
+        {"time": "20:00", "activity": "Paseo en aperitief", "description": "Avondwandeling door stad en drankjes met vrienden"},
+        {"time": "21:00", "activity": "Diner", "description": "Spaans diner in rivierover restaurant of thuis"}
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7256!3d38.0864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRojales!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Rojales",
+    "description": "Rojales is een historische Spaanse stad aan de Segura rivier in Costa Blanca South, beroemd om zondagsmarkt, grottewonen en authentieke karakter. Gemeente omvat Ciudad Quesada.",
+    "geo": {"@type": "GeoCoordinates", "latitude": "38.0864", "longitude": "-0.7256"},
+    "address": {"@type": "PostalAddress", "addressLocality": "Rojales", "addressRegion": "Alicante", "addressCountry": "ES"},
+    "containedInPlace": {"@type": "Place", "name": "Costa Blanca South"}
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Waarvan is Rojales beroemd?", "acceptedAnswer": {"@type": "Answer", "text": "Rojales is beroemd om de zondagsmarkt langs de Segura rivier, historische grottewonen en authentieke Spaans karakter. De gemeente omvat ook Ciudad Quesada."}},
+      {"@type": "Question", "name": "Hoe ver is Rojales van het strand?", "acceptedAnswer": {"@type": "Answer", "text": "Guardamar stranden liggen 8 km weg (10 minuten). La Mata ligt 12 km weg. Torrevieja stranden liggen 10 km weg."}},
+      {"@type": "Question", "name": "Wat zijn vastgoedprijzen in Rojales?", "acceptedAnswer": {"@type": "Answer", "text": "Appartementen van €145 000, rijtjeshuizen van €180 000, villa's van €280 000. Uitstekende waarde voor authentieke Spaanse eigendommen."}},
+      {"@type": "Question", "name": "Wat is Rojales zondagsmarkt?", "acceptedAnswer": {"@type": "Answer", "text": "Een van Costa Blanca's grootste markten langs de Segura rivier elk zondagochtend. Vers product, vis, kleding en lokale ambachten."}}
+    ]
+  }
+}
