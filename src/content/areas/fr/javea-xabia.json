@@ -1,0 +1,406 @@
+{
+  "slug": "javea-xabia",
+  "name": "Jávea / Xàbia",
+  "region": "Costa Blanca North",
+  "propertyCount": 24,
+  "propertyTypes": [
+    "Villa",
+    "Chalet"
+  ],
+  "priceRange": {
+    "min": 695000,
+    "max": 3450000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Jávea Tourism Office",
+      "url": "https://www.javea.es/",
+      "description": "Site officiel du tourisme de Jávea"
+    },
+    "beaches": [
+      {
+        "name": "Arenal Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+del+Arenal+Javea",
+        "description": "Plage principale avec sable et promenade"
+      },
+      {
+        "name": "La Granadella Beach",
+        "googleMaps": "https://maps.google.com/?q=Cala+Granadella+Javea",
+        "description": "Petite crique primée"
+      },
+      {
+        "name": "Portitxol Cove",
+        "googleMaps": "https://maps.google.com/?q=Cala+Portitxol+Javea",
+        "description": "Petite crique rocheuse isolée"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital de Dénia",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Denia",
+      "url": "https://marinasalud.es/",
+      "distance": "15 km"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "90 km",
+      "driveTime": "1 hour"
+    }
+  },
+  "golf": {
+    "intro": "Jávea offre d'excellentes installations de golf avec deux parcours de qualité à proximité. Le climat méditerranéen signifie que vous pouvez jouer toute l'année.",
+    "courses": [
+      {
+        "name": "Club de Golf Jávea",
+        "distance": "5 km",
+        "driveTime": "8 minutes",
+        "holes": 9,
+        "url": "https://www.clubdegolfjavea.com/",
+        "googleMaps": "https://maps.google.com/?q=Club+de+Golf+Javea",
+        "description": "Parcours intime à 9 trous avec une vue spectaculaire sur la montagne Montgó. Parfait pour une partie détente."
+      },
+      {
+        "name": "La Sella Golf Resort",
+        "distance": "15 km",
+        "driveTime": "18 minutes",
+        "holes": 27,
+        "url": "https://www.lasellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Sella+Golf+Denia",
+        "description": "Parcours de championnats à 27 trous conçu par José María Olazábal. Partie d'un complexe de luxe avec hôtel et spa."
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Vivre à Jávea (Xàbia) | Guide des propriétés Costa Blanca",
+    "metaDescription": "Guide complet pour vivre à Jávea, Costa Blanca. Découvrez les plages, le mode de vie, le marché immobilier, les parcours de golf et pourquoi les acheteurs internationaux choisissent Jávea.",
+    "heroIntro": "Jávea (Xàbia en valencien) est largement considérée comme le joyau de la Costa Blanca North. Cette pittoresque ville côtière combine le charme espagnol authentique avec une communauté internationale prospère, des plages de classe mondiale et un microclimat officiellement reconnu par l'Organisation mondiale de la santé comme l'un des plus sains au monde.\n\nContrairement aux développements de gratte-ciel du sud de la Costa Blanca, Jávea a maintenu des règlements de construction stricts qui préservent son caractère traditionnel. La ville est divisée en trois zones distinctes : la vieille ville historique avec son église gothique et son architecture traditionnelle, la zone portuaire animée avec d'excellents restaurants de fruits de mer, et la zone de plage Arenal avec sa célèbre plage de sable et sa promenade.",
+    "lifestyleSection": {
+      "intro": "La vie à Jávea se déroule à un rythme méditerranéen décontracté, tout en vous offrant tout ce dont vous avez besoin pour vivre confortablement. La ville attire une communauté internationale distinguée – principalement britannique, allemande et néerlandaise – qui valorise la qualité de vie plutôt que le développement touristique.\n\nLa scène culinaire est exceptionnelle, des bars à tapas traditionnels de la vieille ville aux restaurants de qualité Michelin le long du port. Les marchés hebdomadaires, les festivals toute l'année et un calendrier social actif signifient qu'il y a toujours quelque chose à faire.",
+      "highlights": [
+        "Microclimat reconnu par l'OMS avec plus de 300 jours de soleil par an",
+        "Trois zones distinctes : vieille ville, port et plage Arenal",
+        "Communauté internationale forte avec l'anglais largement parlé",
+        "Excellents restaurants des bars à tapas à la gastronomie fine",
+        "Événements culturels toute l'année et festivals traditionnels",
+        "Développement bas préservant la beauté naturelle",
+        "Environnement sûr et accueillant pour les familles",
+        "Mode de vie extérieur actif : randonnée, sports nautiques, cyclisme"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Jávea dispose de plus de 20 km de littoral avec diverses options de plage. L'Arenal est la principale plage de sable avec une promenade bordée de palmiers, parfaite pour les familles. La Granadella a été votée meilleure plage d'Espagne plusieurs fois – une magnifique crique avec des eaux cristallines. Pour quelque chose de plus tranquille, des criques cachées comme Portitxol et Ambolo offrent des lieux de baignade isolés.",
+      "dining": "Le port est le cœur culinaire de Jávea, avec des restaurants servant des fruits de mer frais quotidiennement. Essayez l'arroz a banda (riz local aux poissons) ou les gambas rojas (crevettes rouges) sur les terrasses en bord de mer. La vieille ville offre des tapas espagnoles traditionnelles, tandis qu'Arenal propose la cuisine internationale. Plusieurs restaurants ont des recommandations Michelin.",
+      "shopping": "La vieille ville propose des boutiques, des magasins d'artisanat et une halle couverte pour les produits frais. Arenal a des boutiques de vêtements de plage et des cafés. Pour faire des achats plus importants, Dénia (15 min) et Ondara (20 min) ont de grands supermarchés et centres commerciaux, dont un grand Carrefour et MediaMarkt.",
+      "healthcare": "L'hôpital de Dénia (Marina Salud) est un hôpital moderne privé-public à seulement 15 km, offrant des services médicaux complets avec du personnel anglophone. Jávea a de nombreuses cliniques privées, dentistes et pharmacies. De nombreux résidents utilisent également une assurance maladie privée pour un accès plus rapide aux spécialistes.",
+      "transport": "L'aéroport d'Alicante-Elche se trouve à 90 km (environ 1 heure) via l'autoroute AP-7. L'aéroport de Valence se trouve à 110 km (1 heure 15 minutes). La ville est bien desservie par la route, bien qu'une voiture soit essentielle. Les bus locaux se connectent à Dénia, qui a un tramway vers Alicante."
+    },
+    "propertyMarketSection": "Le marché immobilier de Jávea se concentre sur la qualité plutôt que la quantité. Les nouveaux développements sont limités en raison des règlements d'urbanisme stricts, rendant chaque projet très prisé. La plupart des nouveaux développements sont des villas de luxe en position surélevée avec vue sur la mer.\n\nLes prix des villas neuves commencent généralement autour de 700 000 € pour les propriétés à 3 chambres, montant jusqu'à 2-3 millions € pour les villas premium avec vue sur la mer. Le marché attire les acheteurs à la recherche de résidences permanentes ou de propriétés de vacances haut de gamme plutôt qu'un pur investissement.\n\nL'offre limitée de nouveaux développements, combinée à une demande internationale constante, a entraîné une appréciation des prix régulière. Les propriétés dans les zones recherchées comme Balcón al Mar et La Corona commandent des prix premium pour leurs vues panoramiques sur la mer.",
+    "whyLiveHereSection": [
+      "Microclimat officiellement reconnu comme l'un des plus sains au monde",
+      "Communauté internationale sophistiquée sans tourisme de masse",
+      "Plages exceptionnelles y compris le primé La Granadella",
+      "Valeurs immobilières solides en raison d'un développement limité",
+      "Mode de vie extérieur toute l'année avec randonnée, golf et sports nautiques",
+      "Gastronomie exceptionnelle de la cuisine espagnole traditionnelle à la gastronomie fine internationale",
+      "Ville sûre et bien entretenue avec une infrastructure de qualité",
+      "Beauté naturelle préservée avec le parc naturel Montgó en arrière-plan"
+    ],
+    "faqs": [
+      {
+        "question": "Jávea est-elle bonne pour les familles?",
+        "answer": "Jávea est excellente pour les familles. C'est une ville sûre et propre avec de bonnes écoles (y compris des options internationales dans les villes voisines), des plages accueillantes et de nombreuses activités de plein air. La communauté internationale signifie que les enfants s'intègrent facilement, et de nombreuses installations accueillent les familles."
+      },
+      {
+        "question": "Dois-je parler l'espagnol à Jávea?",
+        "answer": "Bien que l'espagnol soit utile, vous pouvez vous débrouiller avec l'anglais. La grande communauté internationale signifie que l'anglais est largement parlé dans les magasins, restaurants et services. Cependant, apprendre un peu d'espagnol enrichira votre expérience et aidera avec les affaires officielles."
+      },
+      {
+        "question": "Quel est le climat à Jávea?",
+        "answer": "Jávea jouît d'un microclimat méditerranéen avec plus de 300 jours ensoleillés par an. Les étés sont chauds (25-32°C) avec des brises marines, tandis que les hivers sont doux (12-18°C). Les précipitations sont faibles et se produisent principalement en automne. L'OMS a reconnu ce microclimat comme l'un des plus sains au monde."
+      },
+      {
+        "question": "Quelle est la distance de Jávea à l'aéroport?",
+        "answer": "L'aéroport d'Alicante-Elche se trouve à 90 km de Jávea, environ 1 heure en voiture via l'autoroute AP-7. L'aéroport de Valence se trouve à 110 km, environ 1 heure 15 minutes. Les deux aéroports ont d'excellentes connexions internationales."
+      },
+      {
+        "question": "Y a-t-il des parcours de golf près de Jávea?",
+        "answer": "Oui, Jávea a d'excellentes installations de golf. Club de Golf Jávea est un parcours pittoresque à 9 trous à seulement 5 km de la ville. Le La Sella Golf Resort, conçu par Olazábal, offre 27 trous de championnat et ne se trouve qu'à 15 km. Les deux parcours accueillent les visiteurs toute l'année."
+      },
+      {
+        "question": "Quel soins de santé sont disponibles?",
+        "answer": "L'hôpital de Dénia est un hôpital moderne à 15 km avec du personnel anglophone. Jávea a des cliniques médicales privées, des dentistes et des pharmacies. De nombreux expatriés utilisent une assurance maladie privée (environ 100-200 €/mois) pour une couverture complète."
+      },
+      {
+        "question": "Est-il coûteux de vivre à Jávea?",
+        "answer": "Jávea est l'une des zones les plus haut de gamme de la Costa Blanca, ce qui se reflète dans les prix des propriétés et certains services. Cependant, les coûts quotidiens – épiceries, restaurants, services publics – sont raisonnables par rapport à l'Europe du Nord. Budgétisez 2 000-3 000 €/mois pour un mode de vie confortable pour un couple."
+      },
+      {
+        "question": "Quels sont les prix des propriétés à Jávea?",
+        "answer": "Les villas neuves à Jávea commencent généralement à partir de 700 000 € pour les propriétés à 3 chambres et peuvent dépasser 3 millions € pour les maisons premium avec vue sur la mer. L'offre limitée de nouveaux développements et la demande constante ont maintenu des valeurs immobilières fortes."
+      }
+    ],
+    "conclusion": "Jávea représente le meilleur de la Costa Blanca North – beauté naturelle, caractère authentique et vie sophistiquée sans foules. Que vous cherchiez une résidence permanente au soleil espagnol ou une propriété de vacances haut de gamme, Jávea offre un style de vie exceptionnel. Contactez-nous aujourd'hui pour explorer les villas neuves disponibles à cet endroit très recherché.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6% sur les villas de qualité, plus élevé pendant la saison estivale",
+      "annualAppreciation": "3-5% annuellement, forte en raison de l'offre limitée et du positionnement de qualité",
+      "overview": "Le marché immobilier de Jávea se concentre sur les locations de vacances haut de gamme et les résidences permanentes. Le microclimat reconnu par l'OMS, les réglementations de construction strictes et le développement limité créent une demande soutenue de la part des acheteurs internationaux distingués.",
+      "highlights": [
+        "L'offre limitée de nouveaux biens maintient une forte appréciation des prix",
+        "Attire les acheteurs à hauts revenus à la recherche de la qualité plutôt que de la quantité",
+        "Le marché des locations de vacances soutient les bons taux d'occupation saisonniers",
+        "Le microclimat sanitaire de niveau UNESCO ajoute une valeur à long terme",
+        "Le positionnement de prestige établi attire une demande internationale constante"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Le coût de la vie à Jávea est supérieur à la moyenne de la Costa Blanca en raison de son positionnement haut de gamme, de ses services de qualité et de sa communauté internationale sophistiquée.",
+      "items": [
+        {
+          "category": "Loyer (villa 2-chambres)",
+          "cost": "€1200-2000",
+          "notes": "Les propriétés avec vue mer beaucoup plus; centre-ville moins cher"
+        },
+        {
+          "category": "Services publics (mensuels)",
+          "cost": "€120-180",
+          "notes": "Le climat doux réduit le chauffage; climatisation saisonnière"
+        },
+        {
+          "category": "Épiceries (hebdomadaires)",
+          "cost": "€80-120",
+          "notes": "Marché couvert avec produits de qualité; certains articles importés à prix premium"
+        },
+        {
+          "category": "Repas au restaurant (3-plats)",
+          "cost": "€22-35",
+          "notes": "Repas de qualité avec établissements recommandés Michelin"
+        },
+        {
+          "category": "Café café",
+          "cost": "€1.60-2.20",
+          "notes": "Tarifs de café premium en bord de mer et aux emplacements de la vieille ville"
+        },
+        {
+          "category": "Soins de santé (mensuels)",
+          "cost": "€100-150",
+          "notes": "Assurance privée recommandée pour l'accès aux spécialistes"
+        },
+        {
+          "category": "Taxes foncières (annuelles)",
+          "cost": "€800-1500",
+          "notes": "IBI plus élevé en raison des valeurs immobilières haut de gamme"
+        },
+        {
+          "category": "Frais communautaires",
+          "cost": "€150-250",
+          "notes": "Courant dans les communautés fermées et les développements"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Le calendrier des événements de Jávea mélange les célébrations espagnoles traditionnelles avec les événements culturels reflétant sa communauté internationale sophistiquée.",
+      "events": [
+        {
+          "name": "Fiestas de Jávea (Patron Saint Festival)",
+          "month": "July 30 - August 5",
+          "description": "Célébration espagnole traditionnelle honorer Mare de Déu, avec défilés, processions, concerts et événements culturels dans toute la ville"
+        },
+        {
+          "name": "Mediterranean Gastronomy Festival",
+          "month": "September",
+          "description": "Célébration de la cuisine locale avec des restaurants renommés, dégustations de vin et démonstrations des traditions culinaires méditerranéennes"
+        },
+        {
+          "name": "Semana Santa (Holy Week)",
+          "month": "March/April",
+          "description": "Processions religieuses dans la vieille ville historique avec des cérémonies espagnoles traditionnelles et une participation locale"
+        },
+        {
+          "name": "Cultural Events & Exhibitions",
+          "month": "Year-round",
+          "description": "Expositions d'art régulières, représentations théâtrales et événements culturels reflétant la communauté artistique de la ville"
+        },
+        {
+          "name": "Weekly Markets",
+          "month": "Year-round",
+          "description": "Marché couvert dans la vieille ville proposant des produits locaux frais, des fleurs et de l'artisanat"
+        },
+        {
+          "name": "Christmas Celebration",
+          "month": "December",
+          "description": "Célébrations festives de saison avec décoration, crèches et événements festifs dans toute la ville"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Jávea a plusieurs options d'écoles internationales aux côté d'excellentes écoles publiques espagnoles, la rendant appropriée pour les familles. La communauté sophistiquée soutient l'excellence de l'éducation.",
+      "schools": [
+        {
+          "name": "Jávea International School",
+          "type": "International Primary & Secondary",
+          "distance": "Central location",
+          "description": "École de curriculum anglophone avec une solide réputation académique et un corps étudiant international"
+        },
+        {
+          "name": "Colegio Público de Jávea",
+          "type": "Public Primary & Secondary",
+          "distance": "Walking distance",
+          "description": "École publique espagnole avec de bons normes d'éducation et programmes bilingues"
+        },
+        {
+          "name": "British Schools (Dénia)",
+          "type": "International Education",
+          "distance": "15 km",
+          "description": "Écoles de curriculum britannique dans la proche Dénia avec des populations d'étudiants expatriés établies"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "L'environnement naturel de Jávea est exceptionnel. La côte dramatique, les parcs protégés et les activités méditerranéennes offrent des opportunités de mode de vie extérieur toute l'année.",
+      "activities": [
+        {
+          "name": "Swimming at Arenal Beach",
+          "type": "Water recreation",
+          "description": "Principale plage de sable avec promenade, eaux calmes parfaites pour les familles et les nageurs occasionnels"
+        },
+        {
+          "name": "Snorkeling at La Granadella",
+          "type": "Water sports",
+          "description": "Crique primée avec des eaux cristallines, visibilité sous-marine et biodiversité marine"
+        },
+        {
+          "name": "Hiking in Montgó Natural Park",
+          "type": "Nature walks",
+          "description": "Sentiers de montagne avec vues panoramiques surplombant trois littoraux et environnement naturel protégé"
+        },
+        {
+          "name": "Coastal walks and cliff paths",
+          "type": "Scenic recreation",
+          "description": "Sentiers spectaculaires reliant différentes criques et offrant des vues méditerranéennes"
+        },
+        {
+          "name": "Water sports (sailing, paddleboarding)",
+          "type": "Water activities",
+          "description": "Diverses activités nautiques disponibles depuis les plages et le port"
+        },
+        {
+          "name": "Golf at La Sella Resort",
+          "type": "Sports",
+          "description": "Parcours de championnats 27 trous par José María Olazábal, 15 km, installations de classe mondiale"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Jávea a une communauté d'expatriés bien établie et sophistiquée qui valorise la qualité de vie et l'intégration culturelle. La population internationale est importante tout en maintenant le caractère espagnol.",
+      "highlights": [
+        "Communauté d'expatriés sophistiquée et axée sur la qualité",
+        "Mélange de résidents permanents et de visiteurs saisonniers",
+        "Forte présence britannique et nord-européenne aux côté des locaux espagnols",
+        "L'intégration culturelle est valorisée; restaurants, magasins et services multilingues",
+        "Clubs sociaux actifs et organisations communautaires",
+        "Climat tempéré toute l'année supportant un mode de vie extérieur actif"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "French",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Une journée typique à Jávea",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Beach walk or outdoor activity",
+          "description": "Commencez la journée par une promenade le long de la promenade d'Arenal ou une randonnée dans le parc Montgó"
+        },
+        {
+          "time": "10:00",
+          "activity": "Market or café",
+          "description": "Arrêtez-vous au marché couvert pour des produits frais ou un café con leche dans la vieille ville"
+        },
+        {
+          "time": "13:00",
+          "activity": "Long lunch",
+          "description": "Repas principal dans un restaurant terrasse surplombant le port ou dans un bar à tapas traditionnel"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta or beach time",
+          "description": "Repos de l'après-midi ou baignade dans l'une des criques les plus tranquilles"
+        },
+        {
+          "time": "17:00",
+          "activity": "Cultural activity",
+          "description": "Visite de musée, galerie d'art ou activité du centre culturel reflétant la communauté artistique de Jávea"
+        },
+        {
+          "time": "19:30",
+          "activity": "Paseo and aperitivo",
+          "description": "Promenade du soir sur la place de la vieille ville et verres dans un bar préféré"
+        },
+        {
+          "time": "21:00",
+          "activity": "Fine dining experience",
+          "description": "Dîner de qualité dans un restaurant recommandé Michelin ou un restaurant de spécialités locales"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.0600!3d38.7412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sJ%C3%A1vea!5e0!3m2!1sen!2ses"
+  },
+  "developments": [
+    {
+      "name": "Villa Elysia",
+      "slug": "villa-elysia",
+      "propertyType": "Villa",
+      "price": 1650000,
+      "bedrooms": 4,
+      "image": "https://feedmedia.egorealestate.com/Zfeed/S5/C6934/P26774897/Tphoto/0006340992.jpg"
+    }
+  ],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Vivre à Jávea (Xàbia) | Guide complet des propriétés",
+    "description": "Guide complet pour vivre à Jávea, Costa Blanca. Découvrez les plages, le mode de vie, le marché immobilier, les parcours de golf et pourquoi les acheteurs internationaux choisissent Jávea.",
+    "author": {
+      "@type": "Organization",
+      "name": "New Build Homes Costa Blanca"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Jávea est-elle bonne pour les familles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Jávea est excellente pour les familles. C'est une ville sûre et propre avec de bonnes écoles, des plages accueillantes et de nombreuses activités de plein air."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Y a-t-il des parcours de golf près de Jávea?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, Club de Golf Jávea est un parcours pittoresque à 9 trous à seulement 5 km de la ville. Le La Sella Golf Resort offre 27 trous de championnat et ne se trouve qu'à 15 km."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelle est la distance de Jávea à l'aéroport?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "L'aéroport d'Alicante-Elche se trouve à 90 km de Jávea, environ 1 heure en voiture. L'aéroport de Valence se trouve à 110 km, environ 1 heure 15 minutes."
+        }
+      }
+    ]
+  },
+  "cardImage": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80&fit=crop"
+}
