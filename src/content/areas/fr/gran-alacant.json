@@ -1,0 +1,436 @@
+{
+  "slug": "gran-alacant",
+  "name": "Gran Alacant",
+  "region": "Costa Blanca",
+  "heroImage": "/images/areas/gran-alacant-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 2,
+  "propertyTypes": [
+    "Quad House",
+    "Town House"
+  ],
+  "priceRange": {
+    "min": 350000,
+    "max": 410000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Gran Alacant Tourism",
+      "url": "https://www.google.com/search?q=Gran%20Alacant%20Spain%20official%20website",
+      "description": "Découvrez plus sur Gran Alacant"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "10 km",
+      "driveTime": "10 min"
+    },
+    "healthcare": {
+      "name": "Hospital General de Alicante",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20General%20de%20Alicante",
+      "distance": "20 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+Gran%20Alacant+Spain",
+        "description": "Beautiful Mediterranean beach nearby"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Gran Alacant Costa Blanca: Guide de vie & Guide d'achat de maisons",
+    "metaDescription": "Découvrez Gran Alacant, Costa Blanca. Propriétés neuves à partir de €350k. Mode de vie balnéaire, urbanisation moderne, parfait pour les expatriés recherchant la vie méditerranéenne.",
+    "heroIntro": "Gran Alacant se présente comme l'une des urbanisations modernes les plus dynamiques de la Costa Blanca, située entre la charmante ville de Santa Pola et la ville vibrante d'Alicante. Cette communauté résidentielle soigneusement planifiée offre le mélange parfait d'architecture contemporaine, de mode de vie méditerranéen et d'accès pratique aux meilleures commodités de la région. Que vous cherchiez une retraite paisible, une opportunité d'investissement ou une relocalisation permanente sur la côte ensoleillée d'Espagne, Gran Alacant offre une valeur exceptionnelle et une qualité de vie. L'urbanisation s'est transformée en un centre expatrié florissant, attirant les familles, les retraités et les jeunes professionnels qui apprécient la combinaison d'infrastructures modernes, de proximité à la plage et de charme espagnol authentique. Avec des propriétés de construction neuve disponibles à des prix compétitifs allant de €350 000 à €410 000, c'est maintenant le moment idéal de sécuriser votre morceau de cette destination Costa Blanca convoitée. L'emplacement stratégique de la communauté offre un accès facile à l'aéroport d'Alicante, aux plages locales, aux parcours de golf et aux commodités urbaines tout en maintenant une atmosphère décontractée et résidentielle qui définit la vie côtière méditerranéenne.",
+    "lifestyleSection": {
+      "intro": "Gran Alacant incarne un mode de vie méditerranéen détendu mais vibrant qui mélange sans fissures la commodité moderne avec la culture espagnole authentique. L'urbanisation accueille une communauté internationale diversifiée, avec des résidents de toute l'Europe créant une atmosphère accueillante pour les nouveaux venus. La vie quotidienne tourne autour des activités de plein air—les promenades matinales le long des plages vierges, le café l'après-midi dans les cafés locaux et les paseos du soir dans les rues bordées d'arbres de la communauté. Le réseau expatrié solide organise des événements sociaux réguliers, des activités sportives et des rassemblements culturels, rendant l'intégration fluide et agréable pour les familles et les individus. La communauté est accueillante pour les familles avec d'excellentes installations, tout en maintenant une ambiance sophistiquée qui attire les acheteurs murs et les professionnels à la recherche d'un style de vie haut de gamme. Les magasins, les restaurants et les divertissements sont facilement accessibles sans l'atmosphère touristique surpeuplée des grandes stations balnéaires, offrant le meilleur des deux mondes pour les résidents recherchant une vie côtière authentique avec des commodités modernes.\n\nGran Alacant bénéficie de l'un des climats les plus enviables d'Espagne, caractérisé par plus de 300 jours d'ensoleillement annuel et des hivers doux. Les températures estivales varient généralement de 28-32°C (82-90°F), tandis que les hivers restent agréables à 10-15°C (50-59°F). La brise de mer modère les températures tout au long de l'année, et les précipitations sont minimales, concentrées principalement en automne et au printemps. Ce climat méditerranéen rend Gran Alacant idéale pour les activités de plein air toute l'année, des journées à la plage au golf, et assure des conditions de vie confortables que vous fuisez des hivers du nord rudes ou que vous cherchiez un ensoleillement fiable.",
+      "highlights": [
+        "Climat méditerranéen parfait avec plus de 300 jours ensoleillés par an, idéal pour le mode de vie en plein air et les activités toute l'année",
+        "Urbanisation moderne bien entretenue avec une infrastructure excellente, une sécurité et des commodités communautaires offrant une vie de famille sûre",
+        "Proximité des plages vierges, plusieurs parcours de golf et des activités récréatives diversifiées à quelques minutes offrant des opportunités de mode de vie actif",
+        "Communauté expatriée internationale forte créant une atmosphère accueillante, rendant l'intégration fluide pour les familles et les individus",
+        "Excellent rapport qualité-prix des prix immobiliers (€350k-€410k) associé à un fort potentiel d'investissement locatif et des perspectives d'appréciation du capital"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Le sport et la récréation sont au cœur du mode de vie Gran Alacant. Plusieurs parcours de golf à proximité incluent le prestigieux Club de Golf Alicante et Marina Golf, tous deux à moins de 10 km. La région offre plusieurs belles plages—Playa Centro et Playa El Bol Nou à Santa Pola sont à quelques minutes, offrant la natation, le paddleboard et les sports nautiques. L'urbanisation dispose d'installations sportives communautaires, de courts de tennis et de sentiers de promenade. Le cyclisme est populaire le long des routes côtières, tandis que les salles de sport et les studios de yoga servent les résidents soucieux de leur santé. La marina offre des opportunités de voile et de bateau, et les réserves naturelles à proximité offrent la randonnée et l'observation des oiseaux.",
+      "dining": "Gran Alacant offre des expériences culinaires diversifiées reflétant sa communauté internationale. Les restaurants en bord de mer à proximité à Santa Pola servent les fruits de mer frais et la paella, tandis que l'urbanisation propose des restaurants de qualité, des bars à tapas et une cuisine internationale. Les établissements locaux proposent des plats espagnols traditionnels, notamment la gazpacho, les gambas al ajillo et les spécialités régionales. Les chiringuitos de plage décontractés offrent des repas détendus avec vue méditerranéenne. La variété satisfait toutes les préférences, de la gastronomie fine aux restaurants familiaux et aux cafés décontractés, parfait pour le café du matin ou les verres du soir.",
+      "shopping": "Les options commerciales vont des supermarchés locaux pratiques au sein de Gran Alacant, y compris Dia et les marchés locaux frais, aux grands centres commerciaux. Les hypermarchés Carrefour et Alcampo sont accessibles à proximité à Alicante, à environ 15 km. Le centre commercial Bálneario à Santa Pola offre des boutiques, des cafés et des restaurants. Les marchés hebdomadaires offrent des produits frais et des biens locaux, préservant les traditions commerciales espagnoles authentiques, tandis que les magasins de proximité modernes assurent que les articles essentiels quotidiens sont facilement disponibles.",
+      "healthcare": "Gran Alacant bénéficie d'un accès excellent aux installations de soins de santé. L'hôpital public le plus proche est l'Hôpital général universitaire d'Alicante, situé à environ 20 km dans le centre-ville d'Alicante. Les soins de santé privés sont disponibles via les réseaux Quirónsalud et HC Hospitals. Les cliniques locales et les pharmacies opèrent au sein de l'urbanisation et à proximité de Santa Pola. De nombreux résidents utilisent le système de santé publique espagnol bien établi (INAEM) ou maintiennent une assurance privée. Les professionnels médicaux de la région parlent plusieurs langues, facilitant les soins aux résidents internationaux.",
+      "transport": "L'aéroport d'Alicante-Elche (ALC) est la porte d'entrée principale, situé à environ 20 km de Gran Alacant avec un trajet de 20-25 minutes. Ce grand centre méditerranéen offre des connexions internationales étendues. L'aéroport de Valence (VLC) est situé à 140 km au nord, environ 1,5 heure de route, offrant des options de vol supplémentaires. Les deux aéroports disposent d'installations de location de voitures et de services de transport fiables, rendant Gran Alacant accessible pour les voyages internationaux. Gran Alacant bénéficie d'une excellente connectivité routière via la route nationale N-332, qui se connecte aux grandes villes et à la côte sud. L'autopista AP-7 (autoroute à péage) offre un accès rapide à Valence (nord) et à Murcie (sud). Le centre-ville d'Alicante est accessible via N-332 ou A-31, à environ 20 km de distance. L'urbanisation bénéficie de routes locales bien entretenues avec une signalisation claire. La dépendance automobile est modérée; la plupart des commodités locales sont accessibles par de courts trajets ou même à pied dans certains domaines. Le parking est abondant au sein de la communauté. Le transport public comprend les services de bus locaux reliant Gran Alacant à Santa Pola et au centre-ville d'Alicante. Le service de tramway se connecte à Benidorm et aux villes intermédiaires, accessible à partir des arrêts à proximité. Les transports d'Alicante offrent des réseaux de métro et de bus complets. Les services de taxi et le covoiturage (Uber, Bolt) opèrent dans la région. Bien qu'un véhicule personnel offre une flexibilité maximale et soit courant parmi les résidents, les options de transport public facilltent la vie sans voiture si souhaité, particulièrement pour les déplacements urbains réguliers."
+    },
+    "propertyMarketSection": "Le marché immobilier de Gran Alacant affiche des fondamentaux solides avec une demande constante des résidents de l'UE et des acheteurs espagnols. L'urbanisation s'est établie comme une destination premium sur la Costa Blanca, caractérisée par des normes de construction de qualité et une infrastructure bien entretenue. Les développements récents montrent une activité de marché saine avec des projets de construction neuve offrant des designs contemporains et des commodités modernes. Le marché reflète les tendances plus larges de la Costa Blanca tout en maintenant un charme local distinct et une attrait d'investissement.\n\nLes types de propriétés populaires incluent Maison Quad, Maison de ville.\n\nGran Alacant présente un fort potentiel d'investissement avec une forte demande de location des vacanciers et des résidents à long terme. L'appréciation immobilière a été constante, les nouveaux bâtiments modernes attirant des évaluations premium. L'attrait international de l'urbanisation assure des taux d'occupation stables pour les propriétés de location, avec la saison de pointe commandant €150-250 par semaine pour les locations de vacances. Les locations à long terme génèrent des rendements fiables de 4-6% annuellement. Les incitations fiscales pour les acheteurs non-résidents combinées à l'intérêt international croissant pour la Costa Blanca soutiennent les perspectives d'appréciation du capital. Les acheteurs pour la première fois, les investisseurs et les retraités trouvent tous des opportunités viables sur le marché équilibré de Gran Alacant.",
+    "whyLiveHereSection": [
+      "Climat méditerranéen parfait avec plus de 300 jours ensoleillés par an, idéal pour le mode de vie en plein air et les activités toute l'année",
+      "Urbanisation moderne bien entretenue avec une infrastructure excellente, une sécurité et des commodités communautaires offrant une vie de famille sûre",
+      "Proximité des plages vierges, plusieurs parcours de golf et des activités récréatives diversifiées à quelques minutes offrant des opportunités de mode de vie actif",
+      "Communauté expatriée internationale forte créant une atmosphère accueillante, rendant l'intégration fluide pour les familles et les individus",
+      "Excellent rapport qualité-prix des prix immobiliers (€350k-€410k) associé à un fort potentiel d'investissement locatif et des perspectives d'appréciation du capital"
+    ],
+    "faqs": [
+      {
+        "question": "Quel est le meilleur moment pour acheter une propriété à Gran Alacant?",
+        "answer": "Le printemps (avril-mai) et le début de l'automne (septembre-octobre) offrent des conditions idéales avec un temps agréable et une faible foule touristique. Cependant, les marchés immobiliers fonctionnent toute l'année. Envisagez l'achat en fonction de vos circonstances personnelles et de votre calendrier d'investissement plutôt que la saison, car Gran Alacant maintient une demande régulière tout au long de l'année."
+      },
+      {
+        "question": "Les citoyens non-UE peuvent-ils acheter des propriétés à Gran Alacant?",
+        "answer": "Oui, les citoyens non-UE peuvent acheter des propriétés en Espagne avec des processus généralement simples. Vous aurez besoin d'un NIE (numéro d'identité national), d'un compte bancaire et d'un conseiller fiscal. La plupart des propriétés se qualifient pour des régimes fiscaux favorables pour les investisseurs non-résidents. L'assistance juridique professionnelle est recommandée pour naviguer les exigences."
+      },
+      {
+        "question": "Quel est le potentiel de revenus locatifs pour les propriétés d'investissement?",
+        "answer": "Les propriétés de location de vacances génèrent €150-250+ par semaine en haute saison. Les locations à long terme rapportent généralement 4-6% de rendement annuel. Les propriétés modernes avec des commodités commandent des tarifs premium. La saison touristique dure principalement mai-septembre, bien que le tourisme hivernal offre des revenus supplémentaires. Des services de gestion immobilière professionnels sont disponibles pour gérer les réservations et l'entretien."
+      },
+      {
+        "question": "Gran Alacant est-elle adaptée aux familles avec enfants?",
+        "answer": "Absolument. Gran Alacant dispose d'excellentes infrastructures familiales, y compris des écoles de qualité à proximité, des commodités communautaires sûres, plusieurs plages et des installations récréatives. La communauté internationale offre des opportunités sociales diversifiées, et le rythme détendu est idéal pour la vie familiale. De nombreuses familles choisissent Gran Alacant spécifiquement pour son environnement accueillant pour les enfants."
+      },
+      {
+        "question": "Quels sont les coûts de propriété en cours?",
+        "answer": "Les frais communautaires annuels (IBI) varient généralement de €600-1 200, selon la taille de la propriété et les services inclus. Les coûts supplémentaires incluent les dépenses de services publics (électricité, eau, gaz), l'assurance et l'entretien optionnel. Les propriétés locatives entraînent des frais de gestion supplémentaires. Ces coûts restent raisonnables par rapport à l'Europe du Nord, contribuant aux avantages de coût de la vie favorable."
+      }
+    ],
+    "conclusion": "Prêt à découvrir votre propriété parfaite à Gran Alacant? Notre équipe expérimentée se spécialise dans les propriétés neuves dans cette région et peut vous guider à chaque étape. Que vous cherchiez une maison permanente, un refuge de vacances ou une propriété d'investissement, nous vous aiderons à trouver exactement ce que vous recherchez. Réservez une consultation gratuite de 30 minutes avec notre équipe—avec plus de 12 ans d'expérience dans la vente de propriétés neuves sur la Costa Blanca, nous connaissons ce marché sur le bout des doigts.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "Gran Alacant présente un fort potentiel d'investissement avec une forte demande de location des vacanciers et des résidents à long terme. L'appréciation immobilière a été constante, les nouveaux bâtiments modernes attirant des évaluations premium. L'attrait international de l'urbanisation assure des taux d'occupation stables pour les propriétés de location, avec la saison de pointe commandant €150-250 par semaine pour les locations de vacances. Les locations à long terme génèrent des rendements fiables de 4-6% annuellement. Les incitations fiscales pour les acheteurs non-résidents combinées à l'intérêt international croissant pour la Costa Blanca soutiennent les perspectives d'appréciation du capital. Les acheteurs pour la première fois, les investisseurs et les retraités trouvent tous des opportunités viables sur le marché équilibré de Gran Alacant.",
+      "highlights": [
+        "Forte demande de location de vacances en haute saison (mai-octobre)",
+        "Prix d'entrée plus bas que les marchés comparables avec des rendements similaires",
+        "Demande internationale croissante entraînant une appréciation des prix régulière",
+        "Les locations de vacances à court terme sont populaires auprès des touristes européens"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Le coût de la vie à Gran Alacant est considérablement inférieur à celui de l'Europe du Nord et très compétitif en Espagne. La vie côtière ici combine l'accessibilité avec le mode de vie méditerranéen.",
+      "items": [
+        {
+          "category": "Épicerie (mensuel, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl et marchés locaux à proximité"
+        },
+        {
+          "category": "Services publics (électricité, eau, gaz)",
+          "cost": "€100-160",
+          "notes": "Plus élevé en été avec climatisation"
+        },
+        {
+          "category": "Frais communautaires",
+          "cost": "€50-120",
+          "notes": "Varie selon le développement et les services inclus"
+        },
+        {
+          "category": "IBI (Taxe communale)",
+          "cost": "€400-1 000/an",
+          "notes": "Impôt foncier annuel basé sur la valeur cadastrale"
+        },
+        {
+          "category": "Manger dehors (par personne)",
+          "cost": "€10-22",
+          "notes": "Menú del día à partir de €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet et téléphone",
+          "cost": "€35-50",
+          "notes": "Bonne couverture haut débit; plusieurs fournisseurs"
+        },
+        {
+          "category": "Dépenses automobiles (carburant, assurance)",
+          "cost": "€150-250",
+          "notes": "Recommandé pour la flexibilité"
+        },
+        {
+          "category": "Assurance maladie privée",
+          "cost": "€60-150",
+          "notes": "Couverture complète; inférieur pour les résidents plus jeunes"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Gran Alacant célèbre les fiestas espagnoles traditionnelles et les événements communautaires tout au long de l'année, en mélangeant les traditions locales avec la communauté internationale accueillante.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "Août",
+          "description": "Festivités annuelles du saint patron avec défilés, musique, feux d'artifice et célébrations traditionnelles rassemblant toute la communauté"
+        },
+        {
+          "name": "Semana Santa (Semaine de Pâques)",
+          "month": "Mars/Avril",
+          "description": "Processions solennelles de la Semaine sainte dans les rues avec des chars traditionnels et des traditions religieuses centenaires"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "Décembre",
+          "description": "Célébrations nationales avec événements locaux, marchés et réunions communautaires"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "Juin",
+          "description": "Célébrations magiques de la plage du milieu de l'été avec des feux de joie, des feux d'artifice et des traditions de natation à minuit le long de la côte"
+        },
+        {
+          "name": "Summer Beach Festival",
+          "month": "Juillet",
+          "description": "Concerts en plein air, étals alimentaires et événements culturels le long de la promenade tout au long de la saison estivale"
+        },
+        {
+          "name": "Marché de Noël et Trois Rois",
+          "month": "Décembre/Janvier",
+          "description": "Saison festive avec des étals de marché, des crèches et le spectaculaire défilé des Trois Rois (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "markets": {
+      "intro": "Gran Alacant et la région environnante offrent d'excellentes expériences de marché. Du marché organisé du samedi de Gran Alacant aux options régionales proches à Santa Pola, les produits frais et les biens locaux sont facilement disponibles.",
+      "markets": [
+        {
+          "name": "Gran Alacant Saturday Market",
+          "day": "Saturday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "Walking distance",
+          "description": "Marché local du samedi avec produits frais, légumes, fruits, articles ménagers et biens locaux servant la communauté de Gran Alacant"
+        },
+        {
+          "name": "Santa Pola Saturday Market",
+          "day": "Saturday",
+          "time": "08:00 - 13:00",
+          "type": "Street Market",
+          "distance": "5 km",
+          "description": "Marché établi du samedi à Santa Pola proposant fruits de mer frais, produits, fleurs et produits locaux des vendeurs à proximité"
+        },
+        {
+          "name": "Elche Wednesday Market",
+          "day": "Wednesday",
+          "time": "08:00 - 14:00",
+          "type": "Street Market",
+          "distance": "35 km",
+          "description": "Grand marché régional à Elche avec large sélection de produits frais, vêtements, articles ménagers et spécialités régionales"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Les familles à Gran Alacant ont accès à des options d'éducation de qualité dans la région, avec plusieurs écoles internationales servant la communauté expatriée aux côtés d'excellentes écoles publiques espagnoles.",
+      "schools": [
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "20-35 min",
+          "description": "École de curriculum britannique avec d'excellentes installations et un excellent dossier académique servant la communauté expatriée"
+        },
+        {
+          "name": "Newton College",
+          "type": "International (British/Spanish)",
+          "distance": "25-40 min",
+          "description": "École internationale bilingue offrant les curriculum britannique et espagnol avec des installations modernes"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "École publique locale fournissant une éducation de curriculum espagnol, excellente pour l'immersion linguistique et l'intégration communautaire"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "École secondaire publique offrant les programmes ESO et Bachillerato avec un environnement d'apprentissage favorable"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Gran Alacant offre d'excellentes activités de plein air toute l'année, des activités à la plage et des sports nautiques au golf, les promenades dans la nature et plus.",
+      "activities": [
+        {
+          "name": "Beach & Swimming",
+          "type": "Beach",
+          "description": "Belles plages méditerranéennes à proximité avec des eaux cristallines, parfaites pour la natation, la plongée libre et le bronzage"
+        },
+        {
+          "name": "Water Sports",
+          "type": "Water Sports",
+          "description": "Paddleboard, kayak, planche à voile et voile disponibles sur les plages à proximité et dans les marinas"
+        },
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Sentiers de randonnée à travers la campagne pittoresque avec des vues sur les vergers, les montagnes et les villages traditionnels"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Routes de vélo de route et de montagne à travers la campagne pittoresque, appropriées pour tous les niveaux de condition physique"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Plusieurs terrains de golf de qualité à courte distance de conduite offrant un jeu toute l'année au soleil méditerranéen"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Zones naturelles protégées à proximité offrant l'observation des oiseaux, la photographie et les promenades tranquilles dans la nature"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Gran Alacant a une communauté internationale florissante, avec les expatriés attirés par le mode de vie méditerranéen, le coût de la vie abordable et l'atmosphère accueillante. L'emplacement côtier attire un mélange diversifié de nationalités, en particulier du nord de l'Europe. L'anglais est largement parlé dans les magasins, les restaurants et les lieux sociaux, ce qui rend la vie quotidienne confortable pour les nouveaux venus.",
+      "highlights": [
+        "Scène sociale internationale active avec des événements communautaires réguliers",
+        "Services anglophones disponibles, y compris les professionnels médicaux et juridiques",
+        "Réunions communautaires régulières, clubs et activités sociales",
+        "Atmosphère accueillante pour les nouveaux venus avec des réseaux expatriés établis",
+        "Mélange de résidents permanents et de visiteurs saisonniers créant une communauté dynamique",
+        "Communauté européenne diversifiée incluant les résidents britanniques, scandinaves, néerlandais, allemands et français",
+        "Communauté espagnole locale accueillante et inclusive envers les résidents internationaux"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Une journée typique à Gran Alacant",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Commencez la journée avec du café frais sur votre terrasse, profitez de la brise marine et des environs paisibles"
+        },
+        {
+          "time": "09:30",
+          "activity": "Beach Walk",
+          "description": "Promenade matinale le long de la plage ou de la promenade, respirez l'air pur de la Méditerranée"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Récupérez du pain frais, des fruits et des produits locaux au supermarché ou au marché hebdomadaire"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Profitez d'un confortable menú del día dans un restaurant local—trois cours avec du vin pour environ €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Reposez-vous pendant les heures les plus chaudes, puis rafraîchissez-vous dans votre piscine privée ou commune"
+        },
+        {
+          "time": "17:30",
+          "activity": "Beach Time",
+          "description": "Dirigez-vous vers la plage pour une baignade d'après-midi dans les eaux chaudes de la Méditerranée"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Rejoignez les habitants pour la promenade du soir traditionnelle dans la ville, saluez les voisins et les amis"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "Terminez la journée avec des tapas et un verre de vin local dans votre restaurant préféré, dînez en plein air sous les étoiles"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.5117!3d38.2633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Gran Alacant",
+    "description": "Gran Alacant est une municipalité de Costa Blanca, Espagne. Connu pour le mode de vie méditerranéen, les développements de haute qualité et la communauté internationale.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.2633",
+      "longitude": "-0.5117"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Gran Alacant",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quel est le meilleur moment pour acheter une propriété à Gran Alacant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le printemps (avril-mai) et le début de l'automne (septembre-octobre) offrent des conditions idéales avec un temps agréable et une faible foule touristique. Cependant, les marchés immobiliers fonctionnent toute l'année. Envisagez l'achat en fonction de vos circonstances personnelles et de votre calendrier d'investissement plutôt que la saison, car Gran Alacant maintient une demande régulière tout au long de l'année."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Les citoyens non-UE peuvent-ils acheter des propriétés à Gran Alacant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, les citoyens non-UE peuvent acheter des propriétés en Espagne avec des processus généralement simples. Vous aurez besoin d'un NIE (numéro d'identité national), d'un compte bancaire et d'un conseiller fiscal. La plupart des propriétés se qualifient pour des régimes fiscaux favorables pour les investisseurs non-résidents. L'assistance juridique professionnelle est recommandée pour naviguer les exigences."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quel est le potentiel de revenus locatifs pour les propriétés d'investissement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les propriétés de location de vacances génèrent €150-250+ par semaine en haute saison. Les locations à long terme rapportent généralement 4-6% de rendement annuel. Les propriétés modernes avec des commodités commandent des tarifs premium. La saison touristique dure principalement mai-septembre, bien que le tourisme hivernal offre des revenus supplémentaires. Des services de gestion immobilière professionnels sont disponibles pour gérer les réservations et l'entretien."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Gran Alacant est-elle adaptée aux familles avec enfants?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolument. Gran Alacant dispose d'excellentes infrastructures familiales, y compris des écoles de qualité à proximité, des commodités communautaires sûres, plusieurs plages et des installations récréatives. La communauté internationale offre des opportunités sociales diversifiées, et le rythme détendu est idéal pour la vie familiale. De nombreuses familles choisissent Gran Alacant spécifiquement pour son environnement accueillant pour les enfants."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quels sont les coûts de propriété en cours?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les frais communautaires annuels (IBI) varient généralement de €600-1 200, selon la taille de la propriété et les services inclus. Les coûts supplémentaires incluent les dépenses de services publics (électricité, eau, gaz), l'assurance et l'entretien optionnel. Les propriétés locatives entraînent des frais de gestion supplémentaires. Ces coûts restent raisonnables par rapport à l'Europe du Nord, contribuant aux avantages de coût de la vie favorable."
+        }
+      }
+    ]
+  },
+  "golf": {
+    "intro": "Gran Alacant bénéficie de la proximité de terrains de golf d'excellence offrant un jeu de norme championnat à quelques minutes de la zone résidentielle. Plusieurs terrains dans la région environnante offrent une variété et un défi pour les golfeurs de tous niveaux. La saison de jeu méditerranéenne prolongée assure des opportunités de golf toute l'année.",
+    "courses": [
+      {
+        "name": "Club de Golf Alicante",
+        "distance": "5 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Club+Golf+Alicante",
+        "description": "Parcours de championnats avec terrains ondulés et vues méditerranéennes, avec fairways bien entretenus et greens défiants"
+      },
+      {
+        "name": "Club de Golf Meliá Villaitana",
+        "distance": "12 km",
+        "driveTime": "18 minutes",
+        "holes": 36,
+        "url": "https://www.meliavillaitana.com/",
+        "googleMaps": "https://maps.google.com/?q=Melia+Villaitana+Golf",
+        "description": "Double parcours de championnats offrant à la fois des tracés en bord de mer et en montagne avec installations de complexe et entraînement professionnel"
+      }
+    ]
+  }
+}
