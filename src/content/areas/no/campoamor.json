@@ -1,0 +1,510 @@
+{
+  "slug": "campoamor",
+  "name": "Campoamor",
+  "region": "Costa Blanca South",
+  "parentArea": "orihuela-costa",
+  "heroImage": "/images/areas/campoamor-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartment",
+    "Penthouse",
+    "Townhouse",
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 195000,
+    "max": 800000
+  },
+  "coordinates": {
+    "lat": 37.8972,
+    "lng": -0.7564
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Orihuela Costa Tourism",
+      "url": "https://www.orihuelaturistica.es/",
+      "description": "Offisielt Orihuela turismeportal"
+    },
+    "beaches": [
+      {
+        "name": "Playa de Campoamor",
+        "googleMaps": "https://maps.google.com/?q=Playa+Campoamor",
+        "description": "Blå flagg-strand med gyllen sand, rolig vann og fulle fasiliteter",
+        "blueFlag": true
+      },
+      {
+        "name": "Playa La Glea",
+        "googleMaps": "https://maps.google.com/?q=Playa+La+Glea",
+        "description": "Tilstøtende strand med naturlig skjønnhet og steinformasjoner"
+      },
+      {
+        "name": "Playa Barranco Rubio",
+        "googleMaps": "https://maps.google.com/?q=Playa+Barranco+Rubio",
+        "description": "Stillere strand mot Pilar de la Horadada"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "15 km",
+      "driveTime": "18 minutter"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "60 km",
+      "driveTime": "45 minutter"
+    }
+  },
+  "golf": {
+    "intro": "Campoamor har sitt eget mesterskap kurs og ligger i hjertet av Orihuela Costas golftriantel med flere kurs innen få minutter.",
+    "courses": [
+      {
+        "name": "Campoamor Golf",
+        "distance": "0 km",
+        "driveTime": "Gangavstand",
+        "holes": 18,
+        "url": "https://www.campoamorgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Campoamor+Golf",
+        "description": "Hjemmebanen med utmerkede fasiliteter. Godt vedlikeholdt og egnet for alle nivåer. Aktivt klubbscene."
+      },
+      {
+        "name": "Las Colinas Golf",
+        "distance": "5 km",
+        "driveTime": "8 minutter",
+        "holes": 18,
+        "url": "https://www.lascolinasgolf.es/",
+        "googleMaps": "https://maps.google.com/?q=Las+Colinas+Golf",
+        "description": "Prisbærer Cabell Robinson design rangert blant Spania beste."
+      },
+      {
+        "name": "Las Ramblas Golf",
+        "distance": "4 km",
+        "driveTime": "6 minutter",
+        "holes": 18,
+        "url": "https://www.lasramblasgolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Las+Ramblas+Golf",
+        "description": "Dramatiske høydeforskjeller med Middelhavsviset."
+      },
+      {
+        "name": "Villamartin Golf",
+        "distance": "6 km",
+        "driveTime": "10 minutter",
+        "holes": 18,
+        "url": "https://www.villamartingolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Villamartin+Golf",
+        "description": "Mesterskap kurs med historisk rykte."
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Å bo i Campoamor | Strand og golf | Orihuela Costa 2026",
+    "metaDescription": "Fullstendig guide til Campoamor—Blå flagg strand, eget golfkurs, elegant atmosfære. Eiendommer fra €195k. Stillere, mer raffinert Orihuela Costa liv.",
+    "quickAnswer": "Campoamor er den stillere, mer eksklusiv enden av Orihuela Costa med egen Blå flagg strand og Campoamor golfkurs. Eiendommer starter fra €195.000 for leiligheter, €350.000 for rekkehus, €500.000 for villaer. Mindre kommersiell enn La Zenia, mer raffinert enn Cabo Roig.",
+    "heroIntro": "I den sørlige enden av Orihuela Costa, hvor kysten kurver mot Pilar de la Horadada, beholder Campoamor en stillere eleganse som skiller det fra sine travlere naboer. Stranden har blå flagg-kvalitet men er mindre fullpakket. Golfkurset er utmerket men mindre hektisk. Restaurantene serverer kvalitet uten pretensjon. Dette er Orihuela Costa for de som ønsker livsstilen uten mengdene.\n\nCampoamor vokste mer bevisst enn noen naboarealer, med lavere tetthet og mer plass mellom eiendommer. Resultatet er en mer raffinert atmosfære—fortsatt tilgjengelig, fortsatt vennlig, men med plass til å puste. Stranden og golfkurset forankrer dagliglivet, med La Zenia Boulevards shopping nær nok for bekvemmelighet men langt nok til å bevare ro.\n\nFor kjøpere som søker kvalitet kystbolig uten kompromiss, leverer Campoamor stilltiende utmerkethet.",
+    "lifestyleSection": {
+      "intro": "Livet i Campoamor balanserer strand og golf uten kommersielt drevet av La Zenia eller turismeetterspørselen fra Cabo Roig. Morgenkaffe kan være på golfklubben eller strandkafé. Ettermiddager tilbyr strandtid på sand som virkelig er mindre fullpakket. Kveldene bringer god servering uten å vente på bord.\n\nDet internasjonale fellesskapet er etablert men mindre enn i naboarealer—mer mulighet for ekte forbindelse, mindre anonymitet. De som søker ikke-stoppbar aktivitet bør se andre steder; de som søker livskvalitet finner det her.",
+      "highlights": [
+        "Blå flagg strand med mindre folkemengde enn naboer",
+        "Campoamor golfkurs på dørstokken",
+        "5 golfkurs innen 10 minutter",
+        "Stillere, mer eksklusiv enn La Zenia/Cabo Roig",
+        "Las Colinas (Spania top-10 kurs) 8 minutter",
+        "La Zenia Boulevard 10 minutter for shopping",
+        "Lavere tetthet med mer plass",
+        "Raffinert atmosfære uten pretensjon"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Playa de Campoamor har blå flagg-status—gyllen sand, rolig vann, fulle fasiliteter inkludert livvakter og strandbarene. Stranden er merkbart mindre fullpakket enn La Zenia eller Cabo Roig, som opprettholder kvalitet mens du tilbyr plass. Playa La Glea ved siden av tilbyr naturlige steinformasjoner. Begge er gangavstand fra de fleste eiendommer.",
+      "dining": "Campoamor har kvalitet restauranter uten resort kommersialisme. Strandpromenaden tilbyr sjømat; golfklubben gir klubbmat. For variasjon, Cabo Roigs havn (8 km) har utmerket sjømat, og La Zenia Boulevard (10 km) tilbyr internasjonale alternativer. Kvalitet over mengde definerer mat her.",
+      "shopping": "Lokale butikker og supermarkeder dekker dagligbehov. For større shopping, La Zenia Boulevard (10 km) gir 150+ butikker. Plasseringen tilbyr bekvemmelighet når det trengs, ro når det foretrekkes.",
+      "healthcare": "Hospital Universitario de Torrevieja ligger 15 km unna (18 minutter). Lokale medisintjenester og apotek tilgjengelig. Helsetilgang er god gitt område boligkarakteren.",
+      "transport": "Alicante-Elche Airport er 60 km (45 minutter via AP-7). Murcia-Corvera Airport er 30 km (25 minutter)—nærmere fra denne enden av Orihuela Costa. En bil anbefales."
+    },
+    "neighborhoods": [
+      {
+        "name": "Campoamor Beach",
+        "description": "Eiendommer tett på stranden. Premium lokasjon med ganging strandtilgang. Blanding av leiligheter og villaer. Høyeste priser for området."
+      },
+      {
+        "name": "Campoamor Golf",
+        "description": "Eiendommer omkring golfkurset. Fairway-utsikt tilgjengelig. Golflivsstil fokus. Blanding av villaer og rekkehus."
+      },
+      {
+        "name": "Dehesa de Campoamor",
+        "description": "Etablert boligområde. Større tomter, etablert hager. Stillere atmosfære. Populært blant permanente innbyggere."
+      }
+    ],
+    "propertyMarketSection": "Campoamor tilbyr kvalitet ved Orihuela Costas stillere ende. Nye leiligheter starter fra rundt €195.000-350.000, rekkehus fra €350.000-500.000, og villaer fra €500.000-800.000. Den lavere tetthetsutviklingen og raffinert atmosfære rettferdiggjør beskjedne premier over travlere områder.\n\n**Fremhevet utvikling: Lomas de Campoamor** – Moderne 2-romsleiheter fra €212.350 med felles basseng, nær golf og havutsikt. Moderne spesifikasjoner.\n\n**Fremhevet utvikling: Innova Beach** – Premium 4-romsvillaer fra €699.900 med private bassenger, 200m² stue, nær strandplassering. Luksusutførelse.",
+    "whyLiveHereSection": [
+      "Blå flagg strand med mindre folkemengde",
+      "Campoamor golfkurs på dørstokken",
+      "5 kurs innen 10 minutter",
+      "Stillere, mer raffinert atmosfære",
+      "Lavere tetthetsutvikling",
+      "Las Colinas golf 8 minutter",
+      "La Zenia Boulevard 10 minutter",
+      "Kvalitet over mengde i alle aspekter"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Lomas de Campoamor",
+        "reference": "N8535",
+        "price": 212350,
+        "type": "Apartment",
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "features": [
+          "Felles basseng",
+          "Nær golf",
+          "Havutsikt"
+        ],
+        "description": "Modern 2-romsleihetet med bassengtilgang, golfnærhet og havutsikt."
+      },
+      {
+        "title": "Innova Beach Villa",
+        "reference": "N6722",
+        "price": 699900,
+        "type": "Villa",
+        "bedrooms": 4,
+        "bathrooms": 4,
+        "features": [
+          "4 sovrom",
+          "Nær strand",
+          "Premium"
+        ],
+        "description": "Luksus 4-romsvillа med basseng, 200m² stue, nær strand."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Hvordan sammenligner Campoamor seg med La Zenia?",
+        "answer": "Campoamor er stillere, mindre kommersiell og mer raffinert. La Zenia har Boulevard shopping og mer aktivitet. Campoamor tilbyr kvalitet strand og golf med mindre folkemengde. Prisene er like men Campoamor har lavere tetthet. Velg basert på atmosfærepreferanse."
+      },
+      {
+        "question": "Er Campoamor bra for golf?",
+        "answer": "Utmerket. Campoamor golf er på dørstokken. Las Colinas (8 min), Las Ramblas (6 min), og Villamartin (10 min) legger til variasjon. Fem kurs innen 10 minutter gjør dette til en seriøs golflokasjon."
+      },
+      {
+        "question": "Hvordan er stranden i Campoamor?",
+        "answer": "Blå flagg-kvalitet med gyllen sand og rolig vann. Mindre fullpakket enn La Zenia eller Cabo Roig strander. Fulle fasiliteter inkludert livvakter og strandbarene. Kvalitetsrandopplevelse uten å kjempe for plass."
+      },
+      {
+        "question": "Hva er eiendomsprisene i Campoamor?",
+        "answer": "Leiligheter fra €195.000, rekkehus fra €350.000, villaer fra €500.000. Små premier over travlere områder reflekterer lavere tetthet og raffinert atmosfære."
+      },
+      {
+        "question": "Er Campoamor stille?",
+        "answer": "Stillere enn La Zenia eller Cabo Roig, ja. Det er ikke isolert—strander, golf, restauranter er alle aktive. Men tettheten er lavere, folkemengdene er færre, og atmosfæren er mer raffinert. Ideell for de som søker kvalitet uten drivantur."
+      },
+      {
+        "question": "Hvor langt er La Zenia Boulevard fra Campoamor?",
+        "answer": "Omtrent 10 km (12 minutter kjøring). Nær nok for bekvem shopping, langt nok til å bevare Campoamors stillere atmosfære."
+      },
+      {
+        "question": "Blir engelsk mye snakket i Campoamor?",
+        "answer": "Ja, med et veletablert internasjonalt fellesskap. De fleste tjenester henvender seg til engelsktalende. Fellesskapet er mindre enn La Zenia men like velkomment."
+      },
+      {
+        "question": "Er Campoamor bra for leieinvestering?",
+        "answer": "Ja, med kvalitetsfokus. Området tiltrekker seg kvalitetsbevisste besøkende og golfspillere som er villige til å betale premiumtakster. Mindre volum enn La Zenia men høyere verdi per opphold. Mindre slitasje på eiendommer."
+      },
+      {
+        "question": "Hvilken flyplass er nærmest Campoamor?",
+        "answer": "Murcia-Corvera flyplass er nærmest på 30 km (25 minutter). Alicante-Elche er 60 km (45 minutter). Campoamors sørglige posisjon gjør Murcia mer praktisk."
+      },
+      {
+        "question": "Er Campoamor egnet for permanent bosted?",
+        "answer": "Utmerket for de som søker livskvalitet over aktivitet. År-rundt tjenester, permanent innbyggerfellesskap, raffinert atmosfære. Mer egnet for de som foretrekker stillere kystbolig."
+      }
+    ],
+    "conclusion": "Campoamor tilbyr hva diskresjonære kjøpere søker: kvalitet strand, utmerket golf, raffinert atmosfære og lavere tetthet—uten å ofre bekvemmelighet. Det er Orihuela Costa for de som foretrekker sitt Middelhavsliv med rom til å puste og kvalitet over folkemengde.\n\nKlar til å utforske eiendommer i Campoamor? Vårt team forstår hva som gjør dette området spesiell og kan matche deg med eiendommer som leverer dets karakteristiske kombinasjon av kvalitet og ro.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6% på leiligheter, 5-6% på villaer med bassenger",
+      "annualAppreciation": "2-3% årlig, stabil på grunn av begrenset tilbud og raffinert posisjonering",
+      "overview": "Campoamor tiltrekker kvalitetsbevisste feriegjester og golfrurfølgere som verdsetter raffinert bolig fremfor masseappell. Den lavere tettheten og eksklusiv posisjonering støtter premium nattligger og lengre sesongutleie.",
+      "highlights": [
+        "Tiltrekker par og golfbevisste besøkende som søker kvalitet",
+        "Raffinert posisjonering støtter premium nattligger",
+        "Lavere tetthet enn naboarealer reduserer konkurranse",
+        "Eiendommer med bassenger og golfutsikt presterer best",
+        "Golfkurs anker gir år-rundt etterspørselskatalysator"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Campoamors levekostnader er litt høyere enn La Zenia men lavere enn eksklusiv golforter. Den raffinert atmosfæren gjenspeiler beskjedne pris premiums i dining og tjenester.",
+      "items": [
+        {
+          "category": "Leie (2-romsleihetet)",
+          "cost": "€700-1100",
+          "notes": "Stranproksimitet kommanderer premium; innland urbanisering rimeligere"
+        },
+        {
+          "category": "Hjelpemidler (månedlig)",
+          "cost": "€100-140",
+          "notes": "Klimaanlegg essensielt, bassenger øker sesongforbruk"
+        },
+        {
+          "category": "Dagligvarer (ukentlig)",
+          "cost": "€65-90",
+          "notes": "Blanding av supermarkeder og små butikker, noe turistinflasjon"
+        },
+        {
+          "category": "Restaurantmåltid (3-rett)",
+          "cost": "€16-24",
+          "notes": "Kvalitetsmiddag uten resort markup"
+        },
+        {
+          "category": "Café kaffe",
+          "cost": "€1.40-1.80",
+          "notes": "Strand og golfklubblokasjon litt høyere"
+        },
+        {
+          "category": "Golfgreen avgifter",
+          "cost": "€45-70",
+          "notes": "Campoamor golf beboer satser tilgjengelig; andre kurs forhandlet"
+        },
+        {
+          "category": "Helsetjeneste (månedlig)",
+          "cost": "€80-120",
+          "notes": "Privat forsikring anbefalt for kvalitet spesialist tilgang"
+        },
+        {
+          "category": "Eiendomsskatt (årlig)",
+          "cost": "€600-1000",
+          "notes": "IBI for typisk strand eller golfnærhet eiendom"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Campoamors begivenhetskalender kombinerer tradisjonell spansk feiring med aktiviteter sentrert omkring strand- og golflivsstil fellesskap.",
+      "events": [
+        {
+          "name": "Fiestas de Verano (sommerfeiring)",
+          "month": "juli-august",
+          "description": "Strandfokusert feiring med kveldsevenementer, konserter og matfestivaler langs Playa de Campoamor"
+        },
+        {
+          "name": "golfklubk mesterskap",
+          "month": "hele året",
+          "description": "Campoamor golf arrangerer regelmessige turneringer og klubbevenementer som tiltrekker golfspillere fra hele området"
+        },
+        {
+          "name": "Semana Santa (påskeuken)",
+          "month": "mars/april",
+          "description": "Religiøse prosessjoner gjennom Campoamor med strandområde deltakelse i regionfeiringer"
+        },
+        {
+          "name": "Dia del Turismo (turismedag)",
+          "month": "juli",
+          "description": "Strandfokusert feiring med spesialevenementer, kampanjer og fellesaktiviteter"
+        },
+        {
+          "name": "julemarked",
+          "month": "desember",
+          "description": "Festive sesongmarkeder og dekorasjoner sentrert omkring strandområde og handelssenter"
+        }
+      ]
+    },
+    "markets": {
+      "intro": "Campoamor nyter godt av utmerket markedstilgang i det omkringliggende Orihuela Costa området. Fra de berømte markedene på Cabo Roig til ferske produsenter på Zoco Campoamor, shoppingalternativer er mangfoldige.",
+      "markets": [
+        {
+          "name": "Zoco Market Campoamor",
+          "day": "søndag",
+          "time": "09:00 - 14:00",
+          "type": "Handverkmarked",
+          "distance": "gangavstand",
+          "description": "Handverkmarked i Campoamor med lokale håndverk, håndlagde varer og unike gjenstander fra lokale leverandører",
+          "googleMaps": "https://maps.google.com/?q=Zoco+Market+Campoamor"
+        },
+        {
+          "name": "Orihuela lørdags marked",
+          "day": "lørdag",
+          "time": "08:00 - 14:00",
+          "type": "gatemark",
+          "distance": "18 km",
+          "description": "Omfattende marked i Orihuela sentrum med hundretalls stall som selger friske produsenter, fisk, klær, håndverk og lokale spesialiteter",
+          "googleMaps": "https://maps.google.com/?q=Orihuela+Saturday+Market"
+        },
+        {
+          "name": "Cabo Roig Strip marked",
+          "day": "onsdag",
+          "time": "08:00 - 14:00",
+          "type": "gatemark",
+          "distance": "8 km",
+          "description": "Berømt Cabo Roig marked med hundretalls stall som selger friske produsenter, fisk, blomster, klær, håndverk og husholdningsartikler",
+          "googleMaps": "https://maps.google.com/?q=Cabo+Roig+Strip+Market"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Campoamor er avhengig av nærliggende internasjonale skolealternativer i La Zenia og Orihuela Costa, med spanske offentlige skoler tilgjengelig i omliggende områder.",
+      "schools": [
+        {
+          "name": "internasjonale skoler (La Zenia)",
+          "type": "internasjonal primær og sekundær",
+          "distance": "10 km, 12 minutter med bil",
+          "description": "britisk og andre internasjonale læreplaner skoler med engelskspråkig undervisning"
+        },
+        {
+          "name": "Colegio Público Orihuela Costa",
+          "type": "offentlig primær og sekundær",
+          "distance": "8 km, 10 minutter med bil",
+          "description": "spansk offentlig skole med tospråklig utdanningsprogram som betjener området"
+        },
+        {
+          "name": "Lycée Français Orihuela",
+          "type": "internasjonalskole",
+          "distance": "12 km",
+          "description": "fransk læreplan skole for familier som foretrekker franskspråklig utdanning"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Campoamors naturlige aktiviteter er sentrert omkring strand- og golfkurs livsstil, med Middelhavsvannsport og kystgang muligheter.",
+      "activities": [
+        {
+          "name": "Svømming på Playa de Campoamor",
+          "type": "vannrekreasjon",
+          "description": "Blå flagg strand med rolig gyllen sand, mild helling ideell for familier og utmerket vannklarhet"
+        },
+        {
+          "name": "Golf på Campoamor golf",
+          "type": "idrett",
+          "description": "Gangbar mesterskap kurs rett på dørstokken med utmerkede fasiliteter og dramatiske fairways"
+        },
+        {
+          "name": "Kystgang til La Glea",
+          "type": "naturgang",
+          "description": "Malerisk stier langs kysten som forbinder til tilstøtende Playa La Glea med steinformasjoner"
+        },
+        {
+          "name": "Paddleboarding og vannsport",
+          "type": "vannaktiviteter",
+          "description": "Strandbasert vannsportutleie tilgjengelig for kajakking, paddleboarding og stranvolleyball"
+        },
+        {
+          "name": "solnedgang strandtid",
+          "type": "fritid",
+          "description": "Middelhavssóluedganger over rolig vann fra stranden eller strandrestauranter"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Campoamors fremmedlandske fellesskap er etablert og kvalitetsbevisst, mindre enn La Zenia men like velkomment. Den raffinert atmosfæren tiltrekker diskresjonær internasjonale innbyggere.",
+      "highlights": [
+        "Mindre, mer selektiv fremmedlandsk fellesskap bevisst på kvalitet",
+        "Blanding av pensjonister og aktive familier som søker raffinert bolig",
+        "Golfklubbеr og strandklubbеr tilbyr felleskapets infrastruktur",
+        "britisk og nordeuropeisk fokus med spansk integrasjonsverdy",
+        "Mindre anglisert enn La Zenia—mer spansk kulturell integrasjon"
+      ],
+      "nationalities": [
+        "britisk",
+        "tysk",
+        "skandinavisk",
+        "nederlandsk",
+        "belgisk",
+        "fransk"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "En typisk dag i Campoamor",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "strandgang eller yoga",
+          "description": "Start dagen med en forfriskende gang langs Playa de Campoamor eller strandside yoga klasse"
+        },
+        {
+          "time": "10:00",
+          "activity": "Kafé og avis",
+          "description": "Kaffe på strandkafé som fanger opp nyheter og møter naboer"
+        },
+        {
+          "time": "13:00",
+          "activity": "sein lunsj",
+          "description": "Hovedmåltid, enten på strandrestaurant, golfklubb eller hjemmelaget middelhavsmat"
+        },
+        {
+          "time": "15:00",
+          "activity": "siesta eller basseng tid",
+          "description": "Ettermiddag hvile eller slapping ved privat basseng med utsikt over stranden"
+        },
+        {
+          "time": "17:00",
+          "activity": "golfrundetide",
+          "description": "Ettermiddag 18 hull på Campoamor golf (gangavstand) eller nærliggende Las Colinas eller Las Ramblas"
+        },
+        {
+          "time": "19:30",
+          "activity": "aperitivo på klubb eller bar",
+          "description": "før middag drikker på golfklubben eller strandbar med venner"
+        },
+        {
+          "time": "21:00",
+          "activity": "middag og kveld",
+          "description": "Kvalitetsmiddag på strandrestaurant eller klubbhus, kveld underholdning eller stille tid"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7564!3d37.8972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCampoamor!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Campoamor",
+    "description": "Campoamor er et raffinert kystsamfunn ved den sørlige enden av Orihuela Costa, som inneholder en blå flagg strand, Campoamor golfkurs og stillere, mer eksklusiv atmosfære enn naboarealer.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.8972",
+      "longitude": "-0.7564"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Campoamor",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Orihuela Costa, Costa Blanca"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hvordan sammenligner Campoamor seg med La Zenia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Campoamor er stillere, mindre kommersiell og mer raffinert med lavere tetthetsutviklingen. La Zenia har Boulevard shopping og mer aktivitet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Er Campoamor bra for golf?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Utmerket. Campoamor golf er på dørstokken, med Las Colinas, Las Ramblas og Villamartin innen 10 minutter."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hva er eiendomsprisene i Campoamor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Leiligheter fra €195.000, rekkehus fra €350.000, villaer fra €500.000."
+        }
+      }
+    ]
+  }
+}
