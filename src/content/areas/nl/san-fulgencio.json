@@ -1,0 +1,515 @@
+{
+  "slug": "san-fulgencio",
+  "name": "San Fulgencio & La Marina",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/san-fulgencio-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartment",
+    "Townhouse",
+    "Villa",
+    "Bungalow"
+  ],
+  "priceRange": {
+    "min": 159000,
+    "max": 650000
+  },
+  "coordinates": {
+    "lat": 38.1089,
+    "lng": -0.7567
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "San Fulgencio Toerisme",
+      "url": "https://www.sanfulgencio.es/",
+      "description": "Officiële San Fulgencio gemeente"
+    },
+    "beaches": [
+      {
+        "name": "La Marina Strand",
+        "googleMaps": "https://maps.google.com/?q=Playa+La+Marina",
+        "description": "Lange natuurlijke strand ondersteund door beschermde duinen – ongerepte en wildheid",
+        "blueFlag": true
+      },
+      {
+        "name": "El Pinet Strand",
+        "googleMaps": "https://maps.google.com/?q=Playa+El+Pinet",
+        "description": "Wilde natuurlijke strand dicht bij de zoutmoerassen",
+        "distance": "2 km van La Marina"
+      },
+      {
+        "name": "Guardamar Stranden",
+        "googleMaps": "https://maps.google.com/?q=Playa+Guardamar",
+        "description": "Dennenbegroeide stranden met volledige voorzieningen",
+        "distance": "5 km"
+      }
+    ],
+    "nature": [
+      {
+        "name": "Dunas de Guardamar",
+        "googleMaps": "https://maps.google.com/?q=Dunas+Guardamar",
+        "description": "Beschermd duinsysteem en dennenbossen",
+        "distance": "3 km"
+      },
+      {
+        "name": "Parque Natural de las Salinas de Santa Pola",
+        "googleMaps": "https://maps.google.com/?q=Salinas+Santa+Pola",
+        "description": "Zoutmoerassen met flamingo's en vogelrijk",
+        "distance": "5 km"
+      }
+    ],
+    "shopping": [
+      {
+        "name": "La Marina Commerciële gebieden",
+        "googleMaps": "https://maps.google.com/?q=La+Marina+Urbanizacion",
+        "description": "Lokale winkels, supermarkten, restaurants langs de strip"
+      },
+      {
+        "name": "Habaneras Centro Comercial",
+        "googleMaps": "https://maps.google.com/?q=Habaneras+Torrevieja",
+        "url": "https://cchabaneras.com/",
+        "description": "Groot winkelcentrum in Torrevieja",
+        "distance": "18 km"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital General de Elche",
+      "googleMaps": "https://maps.google.com/?q=Hospital+General+Elche",
+      "distance": "20 km",
+      "driveTime": "20 minutes"
+    },
+    "airport": {
+      "name": "Luchthaven Alicante-Elche",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "25 km",
+      "driveTime": "20 minutes"
+    }
+  },
+  "golf": {
+    "intro": "San Fulgencio biedt uitstekende golftoegang met La Finca en Vistabella in de buurt, plus gemakkelijke bereikbaarheid van Alicante-banen in het noorden.",
+    "courses": [
+      {
+        "name": "Golf La Finca",
+        "distance": "10 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.lafincagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Finca+Golf",
+        "description": "Kampioenschapsbaan ontworpen door Pepe Gancedo."
+      },
+      {
+        "name": "Golf Vistabella",
+        "distance": "15 km",
+        "driveTime": "18 minutes",
+        "holes": 18,
+        "url": "https://www.vistabellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+        "description": "Moderne baan met uitstekende voorzieningen."
+      },
+      {
+        "name": "Golf Alicante",
+        "distance": "30 km",
+        "driveTime": "25 minutes",
+        "holes": 18,
+        "url": "https://www.alicantegolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Alicante+Golf",
+        "description": "Baan ontworpen door Seve Ballesteros ten noorden van het gebied."
+      }
+    ]
+  },
+  "localMarket": {
+    "tuesdayMarket": {
+      "name": "San Fulgencio Dinsdag Markt",
+      "location": "Stadskern",
+      "googleMaps": "https://maps.google.com/?q=Mercado+San+Fulgencio",
+      "hours": "Dinsdags 8:00 - 14:00",
+      "description": "Traditionele Spaanse markt met verse producten, kleding en huishoudartikelen"
+    },
+    "sundayMarket": {
+      "name": "La Marina Zondag Markt",
+      "location": "La Marina urbanisatie",
+      "googleMaps": "https://maps.google.com/?q=Mercadillo+La+Marina",
+      "hours": "Zondags 8:00 - 14:00",
+      "description": "Populaire expat markt met variatie aan goederen"
+    }
+  },
+  "content": {
+    "metaTitle": "Wonen in San Fulgencio & La Marina | Strand & Duinen | Costa Blanca 2026",
+    "metaDescription": "Volledige gids voor San Fulgencio & La Marina – ongerepte duinstranden, dichtst bij Alicante Luchthaven (20 min), gevestigde expat gemeenschap. Panden vanaf €159k. Natuur ontmoet gemak.",
+    "quickAnswer": "San Fulgencio is een traditionele Spaanse binnenstad terwijl La Marina zijn kuststadjes is met ongerepte duinstranden. Slechts 20 minuten van Alicante Luchthaven – het dichtstbijzijnde woongebied bij de luchthaven. Panden vanaf €159 000 voor appartementen, €275 000 voor villa's. Sterke expat gemeenschap met natuur voor je deur.",
+    "heroIntro": "Twee persoonlijkheden, één gemeente. San Fulgencio is het traditionele Spaanse hart – een bergstad met kerkklokken, smalle straatjes en authenticiteit die kuststations alleen kunnen nabootsen. La Marina is de ziel – een strandwijk waar goudgeel zand op beschermde duinen stuit, waar flamingo's waden in nabijgelegen zoutmoerassen, en waar een van Costa Blanca's meest ongerepte kustlijnen zich in beide richtingen uitstrekt.\n\nWat dit gebied uniek maakt, is de nabijheid van Alicante Luchthaven – slechts 20 minuten van deur tot deur. Voor frequente reizigers, weekendgasten of degenen die gewoon gemakkelijke verbindingen waarderen, is deze bereikbaarheid ongeëvenaard aan de zuidelijke Costa Blanca. Toch blijven de stranden hier ondanks dit gemak opmerkelijk natuurlijk, de duinen nog steeds wild, de ontwikkeling laag en respectvol.\n\nVoor kopers die natuurlijke schoonheid, luchthavengemak en gevestigde gemeenschap zoeken – alles zonder de premiumpreizen van bekende toeristenoorden – biedt San Fulgencio en La Marina een overtuigende combinatie.",
+    "lifestyleSection": {
+      "intro": "Het leven hier wordt verdeeld tussen het strand en de stad. La Marina biedt lange ochtendwandelingen op ongerepte zand, middagen aan het zwembad en avonden in strandrestaurants waar u de zonsondergang over de duinen kijkt. San Fulgencio biedt Spaanse authenticiteit – de drukke dinsdag markt met lokale producten, tapas bars waar Spaans met Engels en Duits vermengd is, een kerkplein waar dorpsleven zoals generaties lang doorgaat.\n\nDe expatgemeenschap is goed gevestigd – vooral Britse, Duitse en Scandinavische inwoners die dit gebied decennia geleden ontdekten. Clubs, activiteiten en sociale groepen zijn overvloedig. Engels wordt veel gesproken in La Marina, terwijl Spaans in de stad domineert. De meeste inwoners waarderen beide opties.",
+      "highlights": [
+        "Dichtstbijzijnde woongebied bij Alicante Luchthaven – 20 minuten",
+        "Ongerepte duinstranden aan La Marina",
+        "Beschermde natuuromgeving – zoutmoerassen, flamingo's",
+        "Traditionele Spaanse stadkarakteer",
+        "Gevestigde internationale gemeenschap",
+        "Panden vanaf €159 000 – uitstekende waarde",
+        "Golf La Finca slechts 12 minuten",
+        "Dennenbossen van Guardamar in de buurt"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "La Marina strand is een van Costa Blanca's fijnste – lang, goudgeel, ondersteund door beschermde duinen, met Blauwe Vlag waterkwaliteit. El Pinet biedt een wilder ervaring nabij de zoutmoerassen. Guardamar's dennen-achtergrond stranden zijn slechts 5 km zuidelijk. Het natuurlijke karakter hier wordt zeldzaam op ontwikkelde kusten.",
+      "dining": "La Marina heeft talrijke restaurants en bars langs haar main strip – Britse pubs, Spaanse tapas, internationale keuken. San Fulgencio biedt meer traditionele Spaanse eet. Voor variatie voegen Guardamar (5 km) en Santa Pola (10 km) uitstekende zeevruchten toe.",
+      "shopping": "La Marina heeft supermarkten en dagelijkse benodigdheden. San Fulgencio's dinsdag markt levert lokale producten. Voor grotere aankopen bieden Santa Pola (10 km) of Elche (20 km) volledige opties. De beroemde La Zenia Boulevard is 30 km zuidelijk.",
+      "healthcare": "Hospital General de Elche is 20 km weg (20 minuten). Lokale gezondheidscentra in San Fulgencio en La Marina. De nabijheid van het gebied bij Elche biedt goede gezondheidsinfrastructuur.",
+      "transport": "Luchthaven Alicante-Elche is slechts 25 km weg (20 minuten) – het dichtst van elk woongebied op Costa Blanca Zuid. Dit is een groot voordeel voor frequente reizigers. Een auto is essentieel voor het dagelijks leven."
+    },
+    "neighborhoods": [
+      {
+        "name": "La Marina Waterfront",
+        "description": "Panden dicht bij het strand en duinen. Loopafstand naar zand. Mix van appartement en rijtjeshuizen. Premiumlocatie met huurpotentieel."
+      },
+      {
+        "name": "La Marina Urbanisatie",
+        "description": "Gevestigd woongebied met villa's en bungalows. Zwembaden, tuinen. Sterke expat gemeenschap. Goede waarde vergeleken met strandfront."
+      },
+      {
+        "name": "San Fulgencio Stad",
+        "description": "Traditioneel Spaans stadskern. Lagere prijzen, authentieke karakter. Loopafstand naar winkels en restaurants. Rijtjeshuizen en appartementen."
+      },
+      {
+        "name": "Urbanisaties (Binnenland)",
+        "description": "Verschillende woonentwickelingen tussen stad en kust. Villa's met zwembaden, grotere percelen. Vredige omgeving met landbouwkarakteer."
+      }
+    ],
+    "propertyMarketSection": "San Fulgencio en La Marina biedt uitstekende waarde met het voordeel van luchthavennabijheid. Appartementen beginnen rond €159 000-250 000, rijtjeshuizen vanaf €185 000-320 000 en villa's vanaf €275 000-650 000. Waterfront La Marina biedt premies; binnenland San Fulgencio biedt betere waarde.\n\n**Featured Development: Buganvillas Sol Villa** – 3 slaapkamer villa op €275 000 in dit gebied, uitstekende waarde met zwembad en tuin.\n\nDe markt trekt waarde-bewuste kopers, natuurliefhebbers en degenen die luchthaventoegang prioriteren. Huurpotentieel is goed in La Marina, met name voor vakantieverhuur aangetrokken door stranden en gemakkelijke luchthavenverbindingen.",
+    "whyLiveHereSection": [
+      "Dichtstbij Alicante Luchthaven – 20 minuten",
+      "Ongerepte duinstranden",
+      "Beschermde natuuromgeving",
+      "Traditionele Spaanse stadkarakteer",
+      "Gevestigde expat gemeenschap",
+      "Uitstekende waardepanden",
+      "Golf La Finca 12 minuten",
+      "Twee markten per week – dinsdag en zondag"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Buganvillas Sol Villa",
+        "reference": "N7825",
+        "price": 275000,
+        "type": "Villa",
+        "bedrooms": 3,
+        "bathrooms": 2,
+        "features": [
+          "Private Pool",
+          "Garden",
+          "Terrace"
+        ],
+        "description": "3 slaapkamer villa in San Fulgencio / La Marina gebied met privé zwembad."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Hoe ver is San Fulgencio van Alicante Luchthaven?",
+        "answer": "Slechts 25 km (20 minuten) – het dichtstbijzijnde woongebied bij de luchthaven op Costa Blanca Zuid. Dit is ideaal voor frequente reizigers of degenen die regelmatig gasten ontvangen."
+      },
+      {
+        "question": "Wat is het verschil tussen San Fulgencio en La Marina?",
+        "answer": "San Fulgencio is de traditionele Spaanse binnenstad – authentiek, betaalbaar, met dinsdag markt. La Marina is de kuststadjes – stranden, duinen, expat gemeenschap, zondagmarkt. Dezelfde gemeente, verschillende karakters. Veel inwoners waarderen beide."
+      },
+      {
+        "question": "Is La Marina strand mooi?",
+        "answer": "Uitzonderlijk. Lang goudgeel zand ondersteund door beschermde duinen, Blauwe Vlag waterkwaliteit, opmerkelijk ongerepte voor Costa Blanca. Een van de meest natuurlijke strandmilieus aan de zuidkust."
+      },
+      {
+        "question": "Wat zijn vastgoedprijzen in San Fulgencio en La Marina?",
+        "answer": "Appartementen vanaf €159 000, rijtjeshuizen vanaf €185 000, villa's vanaf €275 000. Waterfront La Marina biedt premies; binnenland San Fulgencio biedt betere waarde voor degenen die geen dagelijks strandtoegang nodig hebben."
+      },
+      {
+        "question": "Is er een expat gemeenschap in La Marina?",
+        "answer": "Ja, goed gevestigd. Britse, Duitse en Scandinavische inwoners wonen hier decennia. Sociaalclubs, activiteiten, Engels veel gesproken. Welkomsgende gemeenschap terwijl Spaans karakter in de stad zelf behouden blijft."
+      },
+      {
+        "question": "Is San Fulgencio goed voor golf?",
+        "answer": "Goedetoegang. Golf La Finca is 12 minuten, Vistabella 18 minuten weg. Noordelijke ligging biedt ook toegang tot Alicante baanen. Niet zo centraal als Villamartin gebied maar voldoende voor regelmatige golffers."
+      },
+      {
+        "question": "Hoe zijn de duinen aan La Marina?",
+        "answer": "Beschermde natuuromgeving – onderdeel van hetzelfde duinsysteem als Guardamar. Wandelpaden door vegetatie, vogelrijk, buffering tussen ontwikkeling en zee. Zeldzaam op ontwikkelde kusten."
+      },
+      {
+        "question": "Wordt Engels veel gesproken?",
+        "answer": "In La Marina, ja – sterke expat gemeenschap. In San Fulgencio stad domineert Spaans maar basis Engels wordt begrepen in winkels en restaurants. Beide opties hebben is een voordeel."
+      },
+      {
+        "question": "Welke markten zijn er?",
+        "answer": "Dinsdag markt in San Fulgencio stad – traditionele Spaanse markt met lokale producten. Zondagmarkt in La Marina – populaire expat markt met variatie goederen. Beide voegen karakter en gemak toe."
+      },
+      {
+        "question": "Is San Fulgencio geschikt voor permanent wonen?",
+        "answer": "Ja, vooral voor degenen die luchthaventoegang en natuuromgeving waarderen. Het hele jaar diensten beschikbaar. De combinatie van Spaanse stad en kuststadjes past verschillende buien. Minder geschikt voor degenen die toeristenoord nachtleven willen."
+      }
+    ],
+    "conclusion": "San Fulgencio en La Marina bieden iets bijzonders: de dichtstbijzijnde woonstranden bij Alicante Luchthaven, omgeven door beschermde duinen en zoutmoerassen, met een traditionele Spaanse stad net binnenland. Voor kopers die natuurlijke schoonheid, gemakkelijke reizen en gevestigde gemeenschap waarderen – alles zonder premiumprijzen – levert deze dubbele karakter gemeente op alle fronten.\n\nKlaar om panden in San Fulgencio en La Marina te verkennen? Ons team begrijpt zowel strandfront aantrekkingskracht als binnenland waarde en helpt je het perfecte evenwicht tussen natuur, gemak en levensstijl te vinden.",
+    "investmentAnalysis": {
+      "rentalYield": "5-7% on beachfront La Marina, 3-4% on inland San Fulgencio",
+      "annualAppreciation": "2-3% annually, steady from airport-proximity positioning",
+      "overview": "San Fulgencio en La Marina verhuurmarkt profiteert van Alicante Luchthaven nabijheid. La Marina waterfront trekt vakantielogés aan; San Fulgencio trekt langtermijn inwoners en zakenreizigers aan.",
+      "highlights": [
+        "Luchthavennabijheid creëert zakenreiziger markt",
+        "Waterfront La Marina biedt premium nachtstarief",
+        "Natuurlijke strandmilieu trekt kwaliteit-gerichte huurders",
+        "Het hele jaar bezoekersmogelijkheid vanwege luchthaventoegang",
+        "Uitstekende waarde invoerprijzen ondersteunen sterke rendement"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "San Fulgencio en La Marina bieden uitstekende waarde – lager dan puur kuststoorts terwijl strandtoegang behouden blijft. Luchthavennabijheid blaast dagelijkse levenskosten niet op.",
+      "items": [
+        {
+          "category": "Huur (2 slaapkamer pand)",
+          "cost": "€600-950",
+          "notes": "Waterfront La Marina duurder; stadskern betaalbaar"
+        },
+        {
+          "category": "Nutsvoorzieningen (maandelijks)",
+          "cost": "€85-125",
+          "notes": "Mild jaar-rond klimaat houdt kosten gematigde"
+        },
+        {
+          "category": "Boodschappen (wekelijks)",
+          "cost": "€55-80",
+          "notes": "Lokale supermarktprijzen, minimale toeristische inflatie"
+        },
+        {
+          "category": "Restaurantmaaltijd (3-gangen)",
+          "cost": "€13-19",
+          "notes": "Mix van Spaanse lokale en internationale opties"
+        },
+        {
+          "category": "Café koffie",
+          "cost": "€1.20-1.60",
+          "notes": "Redelijke prijzen door het gebied"
+        },
+        {
+          "category": "Gezondheid (maandelijks)",
+          "cost": "€70-110",
+          "notes": "Goede ziekenhuistoegang; privé verzekering optioneel"
+        },
+        {
+          "category": "Onroerendgoedbelasting (jaarlijks)",
+          "cost": "€250-450",
+          "notes": "IBI voor typisch pand"
+        },
+        {
+          "category": "Luchthaventransfers",
+          "cost": "€30-50",
+          "notes": "Taxi of autoservice naar Alicante Luchthaven (20 min)"
+        }
+      ]
+    },
+    "events": {
+      "intro": "San Fulgencio en La Marina gebeurteniskalender omvat traditionele Spaanse celebraties en strandgeoriënteerde activiteiten.",
+      "events": [
+        {
+          "name": "San Fulgencio Dinsdag Markt",
+          "month": "Het hele jaar, wekelijks",
+          "description": "Traditionele Spaanse markt met vers lokaal product en huishoudartikel"
+        },
+        {
+          "name": "La Marina Zondagmarkt",
+          "month": "Het hele jaar, wekelijks",
+          "description": "Populaire expat en lokale markt met verscheidenheid aan goederen en internationale artikel"
+        },
+        {
+          "name": "Fiestas Patronales",
+          "month": "Augustus",
+          "description": "Stadfeest met parade, muziek, eetstandplaatsen en cultuurevenementen"
+        },
+        {
+          "name": "Zomer Strandactiviteiten",
+          "month": "Juli-Augustus",
+          "description": "Strandgebaseerde evenementen en activiteiten aan La Marina"
+        },
+        {
+          "name": "Semana Santa (Heilige Week)",
+          "month": "Maart/April",
+          "description": "Religieuze procesies in stadskern van San Fulgencio"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "San Fulgencio heeft Spaanse openbare scholen; internationale opties zijn beschikbaar in nabijgelegen steden en Torrevieja.",
+      "schools": [
+        {
+          "name": "Colegio Público San Fulgencio",
+          "type": "Openbare basisschool",
+          "distance": "Stadskern, loopafstand",
+          "description": "Spaanse openbare school met tweetalig onderwijsprogramma's"
+        },
+        {
+          "name": "IES Laguna Salada",
+          "type": "Openbare middelbare school",
+          "distance": "3 km",
+          "description": "Middelbare school dienend het gebied"
+        },
+        {
+          "name": "Internationale scholen (nabijgelegen gebieden)",
+          "type": "Internationaal onderwijs",
+          "distance": "15-20 km",
+          "description": "Britse en andere leerplan scholen in Santa Pola en Torrevieja gebieden"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "San Fulgencio en La Marina natuuractiviteiten concentreren zich op ongerepte stranden en beschermd duinsysteem. De natuuromgeving is een primaire lifestyle feature.",
+      "activities": [
+        {
+          "name": "Zwemmen aan La Marina Strand",
+          "type": "Waterrecreatie",
+          "description": "Blauwe Vlag strand met beschermde duinen, kristalhelder water en natuurlijke schoonheid"
+        },
+        {
+          "name": "Wandeling door Dunas de Guardamar",
+          "type": "Natuurwandelingen",
+          "description": "Beschermd duinsysteem met gemarkeerde paden en natuurlijke vegetatie"
+        },
+        {
+          "name": "Vogelkijken aan zoutmoerassen",
+          "type": "Natuurobservatie",
+          "description": "Beschermde wetlands met flamingo's en divers vogelrijk"
+        },
+        {
+          "name": "Strand- en duinfietsen",
+          "type": "Actieve recreatie",
+          "description": "Fietsen door natuurgebieden en langs beschermde kustlijn"
+        },
+        {
+          "name": "Watersport aan La Marina",
+          "type": "Wateractiviteiten",
+          "description": "Stand-up paddle, kajak en strandvolleybal beschikbaar"
+        },
+        {
+          "name": "Golf aan La Finca",
+          "type": "Sport",
+          "description": "Kampioenschapsbaan 12 km weg met natuurlijk decor"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "San Fulgencio en La Marina hebben goed gevestigde expatgemeenschappen, vooral sterk in La Marina's strandgebied. Luchthavennabijheid trekt zakenexpats naast levensstijl kopers.",
+      "highlights": [
+        "Gevestigde expat gemeenschap vooral in La Marina",
+        "Britse, Duitse en Scandinavische aanwezigheid dominant",
+        "Mix van permanente inwoners en frequente bezoekers",
+        "Luchthavennabijheid trekt zakenprofs",
+        "Minder formeel dan golfgerichte gemeenschappen, meer levensstijl gebaseerd"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Scandinavian",
+        "Dutch",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Een typische dag in San Fulgencio / La Marina",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Strandwandeling (La Marina) of koffie (stad)",
+          "description": "Morgenactiviteit hangt af van locatiekeuze – strandwandeling of café"
+        },
+        {
+          "time": "10:00",
+          "activity": "Marktbezoek (dinsdag/zondag)",
+          "description": "Boodschappen op lokale markten of supermarkt voor verse producten"
+        },
+        {
+          "time": "13:00",
+          "activity": "Lunch",
+          "description": "Hoofd Spaanse maaltijd thuis of lokaal restaurant"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta of strand/zwembadtijd",
+          "description": "Middagrust of zwemmen en ontspanning"
+        },
+        {
+          "time": "17:00",
+          "activity": "Natuuractiviteit",
+          "description": "Wandeling door duinen, vogelkijken of golf aan La Finca"
+        },
+        {
+          "time": "19:00",
+          "activity": "Sociale activiteit",
+          "description": "Gemeenschapsverzameling of vrienden ontmoeten"
+        },
+        {
+          "time": "20:30",
+          "activity": "Diner",
+          "description": "Avondmaaltijd in restaurant of thuis"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7567!3d38.1089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSan%20Fulgencio!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "San Fulgencio & La Marina",
+    "description": "San Fulgencio is een traditionele Spaanse stad met La Marina als kuststadties, biedend ongerepte duinstranden slechts 20 minuten van Alicante Luchthaven.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.1089",
+      "longitude": "-0.7567"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Fulgencio",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hoe ver is San Fulgencio van Alicante Luchthaven?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Slechts 25 km (20 minuten) – het dichtstbijzijnde woongebied bij de luchthaven op Costa Blanca Zuid."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat is het verschil tussen San Fulgencio en La Marina?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "San Fulgencio is de traditionele Spaanse binnenstad. La Marina is de kuststadties met stranden en expat gemeenschap. Dezelfde gemeente, verschillende karakters."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat zijn vastgoedprijzen in San Fulgencio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Appartementen vanaf €159 000, rijtjeshuizen vanaf €185 000, villa's vanaf €275 000. Uitstekende waarde met luchthavennabijheid."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is La Marina strand mooi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Uitzonderlijk – lang goudgeel zand ondersteund door beschermde duinen, Blauwe Vlag kwaliteit, opmerkelijk ongerepte."
+        }
+      }
+    ]
+  }
+}

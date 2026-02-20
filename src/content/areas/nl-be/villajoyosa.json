@@ -1,0 +1,397 @@
+{
+  "slug": "villajoyosa",
+  "name": "Villajoyosa",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/villajoyosa-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 16,
+  "propertyTypes": [
+    "Apartment",
+    "Penthouse"
+  ],
+  "priceRange": {
+    "min": 249000,
+    "max": 730000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Villajoyosa Toerisme",
+      "url": "https://www.google.com/search?q=Villajoyosa%20Spain%20official%20website",
+      "description": "Ontdek meer over Villajoyosa"
+    },
+    "airport": {
+      "name": "Luchthaven Alicante-Elche",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "40 km",
+      "driveTime": "30 min"
+    },
+    "healthcare": {
+      "name": "Hospital Marina Baixa",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Marina%20Baixa",
+      "distance": "2 km"
+    },
+    "beaches": [
+      {
+        "name": "Dichtstbijzijnde Strand",
+        "googleMaps": "https://maps.google.com/?q=beach+near+Villajoyosa+Spain",
+        "description": "Mooi Mediterraans strand in de buurt"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Wonen in Villajoyosa: Complete Gids voor Costa Blanca",
+    "metaDescription": "Ontdek Villajoyosa op Costa Blanca. Verken levendige levensstijl, nieuwe appartementen en penthouses vanaf €249.000. Je gids naar paradijsleven in Spanje.",
+    "heroIntro": "Villajoyosa, lokaal bekend als La Vila, is een schilderachtig juweel van de Middellandse Zee gelegen aan de beroemde Costa Blanca in Spanje. Dit charmante kuststadje combineert traditionele Spaanse cultuur met moderne voorzieningen, wat het steeds populairder maakt bij internationale kopers en beleggers. Met zijn karakteristieke veelkleurige visserhuisjes, ongerepte stranden en bloeiende expat-gemeenschap biedt Villajoyosa een authentieke maar kosmopolitische levensstijl. De stad is geëvolueerd van een rustig vissersdorpje naar een gewilde woonbestemming, terwijl het zijn authentieke karakter en charme behield. Vandaag biedt Villajoyosa uitstekende mogelijkheden voor zowel eigenaren van vakantiehuizen als permanente bewoners die de perfecte mix van mediterrane schoonheid en modern wonen zoeken. De vastgoedmarkt hier is dynamisch, met nieuwe bouwprojecten die hoogwaardige appartementen en penthouses bieden met moderne voorzieningen en prachtig uitzicht op zee of bergen. Of je nu een investeringspand, een vakantieverblijf of je droomhuis aan de Costa Blanca zoekt, Villajoyosa biedt uitzonderlijke waarde en levensstijlvoordelen die weinig andere Spaanse kustplaatsen kunnen bieden.",
+    "lifestyleSection": {
+      "intro": "Het dagelijks leven in Villajoyosa draait om Middellandse cultuur, strandactiviteiten en een ontspannen tempo dat mensen uit heel Europa aantrekt. De stad herbergt een bloeiende expatgemeenschap naast lokale Spanjaarden, wat een gastvrije, multiculturele omgeving schept. Je vindt internationale restaurants, Engelstalige diensten en talloze sociale groepen voor buitenlandse inwoners. De beroemde carnavalsvieringen, lokale vismarkten en strandpromenades bepalen de authentieke sfeer, terwijl moderne winkelcentra en hedendaagse voorzieningen comfortabel modern wonen garanderen. De expat-gemeenschap is goed gevestigd met actieve sociale clubs, sportgroepen en netwerkmogelijkheden, wat integratie voor nieuwkomers uit elke achtergrond vergemakkelijkt. Of je nu geniet van tapas in strandbarretjes, nabijgelegen baaitjes verkent of aan watersport deelneemt, de levensstijl hier benadrukt buitenactiviteiten, gemeenschapsbanden en het genieten van de Middellandse Zee. Gezinnen vinden uitstekende scholen, veilige buurten en recreatieve faciliteiten, terwijl gepensioneerden het ontspannen tempo, medische zorg en betaalbare levenskosten in vergelijking met Noord-Europa waarderen.\n\nVillajoyosa geniet van een Mediterraan klimaat met meer dan 300 zonnige dagen per jaar, wat het tot een van de zonnigste plaatsen van Spanje maakt. Zomers zijn warm en droog, met gemiddelde temperaturen van 28-30°C, terwijl winters mild blijven op 12-15°C. De zee handhaaft aangenaam temperaturen van juni tot september, perfect voor zwemmen en watersport. Regenval is minimaal en geconcentreerd in voor- en najaarsmaanden, wat droge zomers garandeert ideaal voor strandactiviteiten en buitenentertainment. Dit consistent aangenaam weer het hele jaar door maakt Villajoyosa een aantrekkelijke bestemming voor wie betrouwbare zonneschijn en comfortabele buitenleefomstandigheden zoekt.",
+      "highlights": [
+        "Mediterraan klimaat met 300+ zonnige dagen per jaar, ideaal voor buitenleven en watersport",
+        "Uitstekende waarde vergeleken met andere Costa Blanca-locaties, met uiteenlopende eigendommen in alle prijsklassen",
+        "Sterke potentiaal van de huursector met 5-7% jaarlijks rendement voor beleggingspanden en vakantieverhuur",
+        "Bloeiende expat-gemeenschap met uitstekende integratie, internationale diensten en gevestigde sociale netwerken",
+        "Mooie stranden, authentieke Spaanse cultuur en uitzonderlijke natuurlijke schoonheid gecombineerd met moderne voorzieningen"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "De stad is een paradijs voor watersporten-enthousiastelingen met mogelijkheden voor zwemmen, duiken, windsurfen en jetski. Vier mooie zandstranden met inbegrip van Centro, Bol Nou en Paraíso baaien bieden veilige zwemgebieden. Golfliefhebbers hebben toegang tot verschillende kampioensbanen binnen 20-30 km, waaronder Villamartin Golf Club en Las Ramblas Golf. Tennisclubs, fitnescentra en fietspaden langs kustpaden bieden het hele jaar door vrijetijdsactiviteiten voor alle fitnessniveaus.",
+      "dining": "Villajoyosa kan zich beroemen op een indrukwekkende culinaire scene met meer dan 150 restaurants, van traditionele Spaanse paelleria's tot internationale keuken. De zeepromenade heeft talrijke chiringuito's die vers zeebanket en mediterrane gerechten serveren. Het stadscentrum biedt tapasbarretjes, Italiaanse restaurants, Aziatische keuken en internationale opties voor verschillende smaken. Lokale visrestaurants specialiseren zich in dagverse vangsten, en gezellige cafés liggen verspreid langs de straten voor ochtendkoffie en middagpauzes.",
+      "shopping": "De stad biedt uitstekende shoppingmogelijkheden met het Villajoyosa Shopping Center met internationale merken en lokale Spaanse retailers. De warenhuis El Corte Inglés in nabijgelegen Benidorm (15 km) biedt premium shopping. Lokale markten, inclusief de wekelijkse boerenmarkt, bieden verse producten en lokale goederen. Supermarkten zoals Mercadona, Carrefour en Lidl bieden handige boodschappen door de hele stad en omgeving.",
+      "healthcare": "Villajoyosa wordt bediend door Hospital de La Plana in Benidorm (15 km afstand), een modern medisch centrum met uitgebreide diensten. Het stadscentrum heeft meerdere particuliere klinieken en tandartspraktijken gericht op internationale bewoners, inclusief Engelssprekende artsen. Apotheken zijn volop aanwezig door de hele stad, en veel internationale verzekeringen worden geaccepteerd. Nooddiensten zijn 24/7 beschikbaar via het noodnummer 112.",
+      "transport": "Alicante-Elche International Airport (70 km, 1 uur rijden) is de dichtstbijzijnde grote luchthaven met verbindingen naar de meeste Europese steden. Valencia Airport (130 km, 1,5 uur) biedt alternatieve vluchtopties. Ibiza Airport (180 km, 2 uur) is toegankelijk voor alternatieve routes. De meeste bewoners gebruiken Alicante als primaire ingang met uitstekende autoverhuuropties en beschikbare luchthavenshuttles. Villajoyosa is uitstekend verbonden via de kustweg N-332 die Valencia en Almeria verbindt. De snelweg A-7 biedt snelle toegang tot Alicante (70 km zuid) en Altea (15 km noord). De stad ligt ongeveer 2 uur van Madrid via snelweg en 3 uur van Barcelona. Lokale wegen zijn goed onderhouden, en rijden in de regio is eenvoudig met duidelijke borden en gemakkelijk beschikbare GPS-navigatie. Lokale busservices (ALSA) verbinden Villajoyosa met nabijgelegen steden inclusief Benidorm, Alicante en Valencia. De TRAM rijdt tussen Benidorm en Alicante, bereikbaar via lokale bustransfer (15 km naar dichtstbijzijnd station). Taxi's zijn talrijk en betaalbaar voor lokale reizen. De stad is compact en voetgangersvriendelijk voor dagelijkse activiteiten, met meeste voorzieningen binnen loopafstand van het centrum. Autobezit wordt aanbevolen voor verkenning van het bredere Costa Blanca-gebied en nabije bezienswaardigheden."
+    },
+    "propertyMarketSection": "De vastgoedmarkt van Villajoyosa blijft dynamisch met sterke vraag van Europese kopers op zoek naar mediterrane eigendommen. De markt biedt uitstekende waarde vergeleken met andere Costa Blanca-hotspots zoals Benidorm en Altea. Nieuwe bouwprojecten worden steeds populairder en bieden moderne constructie, hedendaagse voorzieningen en concurrerende prijzen. De huursector is robuust met hoge bezettingsgraad tijdens het toeristische seizoen, wat beleggingspanden aantrekkelijk maakt. Marktomstandigheden begunstigen kopers met meerdere opties in verschillende prijsklassen en eigendoomstypes.\n\nPopulaire eigendoomtypes zijn Appartementen, Penthouses.\n\nVillajoyosa presenteert sterk investeringspotentieel met aanhoudende huuraanvraag van toeristen en vakantiegangers. Eigendommen bereiken doorgaans 5-7% jaarlijks huurbate, vooral op strandfront- en stadscentrumlokaties. Penthouses vragen premiumhuurprijzen vanwege grote vraag naar luxe vakantieverblijven. De markt toont stabiele waardegroei met eigendomswaarden die jaarlijks 3-5% stijgen. Veel beleggers beheren succesvol eigendommen op kortetermijn-huurbatformaten (Airbnb, Booking.com) of via professionele beheermaatschappijen. Langetermijnhuuraanvraag van expats die permanente woningen zoeken, biedt extra inkomstenstabiliteit. Aankoopprijzen zijn 20-30% lager dan vergelijkbare eigendommen in Benidorm, terwijl soortgelijk huurinkomstenpotentieel behouden blijft.",
+    "whyLiveHereSection": [
+      "Mediterraan klimaat met 300+ zonnige dagen per jaar, ideaal voor buitenleven en watersport",
+      "Uitstekende waarde vergeleken met andere Costa Blanca-locaties, met uiteenlopende eigendommen in alle prijsklassen",
+      "Sterke potentiaal van de huursector met 5-7% jaarlijks rendement voor beleggingspanden en vakantieverhuur",
+      "Bloeiende expat-gemeenschap met uitstekende integratie, internationale diensten en gevestigde sociale netwerken",
+      "Mooie stranden, authentieke Spaanse cultuur en uitzonderlijke natuurlijke schoonheid gecombineerd met moderne voorzieningen"
+    ],
+    "faqs": [
+      {
+        "question": "Wat is het beste moment van het jaar om eigendom in Villajoyosa te kopen?",
+        "answer": "Wintermaanden (november-februari) bieden meestal de beste selectie en mogelijk betere onderhandelingspositie omdat er minder kopers zijn. Echter, lente (maart-mei) is ideaal voor het bekijken van eigendommen en genieten van aangenaam weer tijdens je aankoopaankoop. Zomer en vroege herfst zien verhoogde toerisme die de markt beïnvloedt."
+      },
+      {
+        "question": "Kunnen burgers van buiten de EU eigendom in Villajoyosa kopen?",
+        "answer": "Ja, burgers van buiten de EU kunnen eigendom in Spanje aanschaffen met minimale beperkingen. Je hebt een Spaans belastingidentificatienummer (NIE) nodig, wat relatief gemakkelijk te verkrijgen is. Het inhuren van een Spaanse advocaat die zich specialiseert in aankoop van eigendommen is essentieel voor navigatie door juridische eisen en zorgen voor juiste documentatie."
+      },
+      {
+        "question": "Wat zijn typische huurbaten voor beleggingseigendommen in Villajoyosa?",
+        "answer": "Beleggingseigendommen in Villajoyosa bereiken doorgaans 5-7% jaarlijks bruto-huurbate, met mogelijkheid voor hogere returns voor premium strandfront-eigendommen. Korttermijnvakantieverhuur genereert betere returns (8-12%) maar vereist actiever management vergeleken met langtermijn residentiële verhuur (3-5%)."
+      },
+      {
+        "question": "Hoe ver is Villajoyosa van grote voorzieningen en attracties?",
+        "answer": "Alicante Airport ligt 70 km verwijderd (1 uur rijden). Benidorm ligt 15 km naar het noorden met winkels en entertainment. Themaparken (Terra Mítica, Mundomar) liggen 20 km verwijderd. Het stadscentrum heeft uitstekende winkels, restaurants en stranden binnen loopafstand. De meeste grote voorzieningen liggen in de stad of 15-30 km verderop."
+      },
+      {
+        "question": "Welke talen worden in Villajoyosa gesproken?",
+        "answer": "Spaans is de primaire taal, maar Engels wordt veel gesproken vanwege de grote expat-gemeenschap. Veel serviceproviders, restaurants en bedrijven zijn speciaal gericht op Engelstaligen. Het leren van basisspaans wordt echter aanbevolen en geapprecieerd door locals."
+      },
+      {
+        "question": "Zijn er goede scholen in Villajoyosa voor gezinnen met kinderen?",
+        "answer": "Ja, Villajoyosa heeft meerdere Spaanse openbare scholen, particuliere scholen en internationale scholen. De stad is gezinsvriendelijk met goede onderwijsopties. Veel internationale gezinnen kiezen voor scholen in nabijgelegen Benidorm of Altea, op 15-25 km afstand, die meer gespecialiseerde curricula bieden."
+      },
+      {
+        "question": "Wat zijn de levenskosten in Villajoyosa vergeleken met andere Europese landen?",
+        "answer": "Levenskosten zijn aanzienlijk lager dan Noord-Europa. Boodschappen, eten en nutsvoorzieningen zijn 30-50% goedkoper dan Britse of Noord-Europese prijzen. Eten aan het strand en entertainment bieden beter waarde. Huisvestingskosten zijn concurrerend, en gecombineerd met uitstekend weer, maken de totale levenskosten Villajoyosa aantrekkelijk voor gepensioneerden en werknemers op afstand."
+      },
+      {
+        "question": "Hoe is het internet en mobiele connectiviteit in Villajoyosa?",
+        "answer": "Villajoyosa heeft uitstekende internetconnectiviteit met meerdere glasvezel- en mobiele providers beschikbaar in de hele stad. Downloadsnelheden van 300+ Mbps zijn gebruikelijk, wat geschikt is voor telewerk en online bedrijven. Grote providers zijn Movistar, Vodafone en Orange met concurrerende tarieven."
+      }
+    ],
+    "conclusion": "Klaar om je perfecte eigendom in Villajoyosa te ontdekken? Ons ervaren team specialiseert zich in nieuwe eigendommen in dit gebied en kan je bij elke stap begeleiden. Of je nu op zoek bent naar een permanent huis, vakantieplek of beleggingseigendom, we helpen je precies wat je zoekt te vinden. Boek een gratis 30-minuten-overleg met ons team - met meer dan 12 jaar ervaring in verkoop van nieuwbouw aan de Costa Blanca, kennen we deze markt door en door.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "Villajoyosa presenteert sterk investeringspotentieel met aanhoudende huuraanvraag van toeristen en vakantiegangers. Eigendommen bereiken doorgaans 5-7% jaarlijks huurbate, vooral op strandfront- en stadscentrumlokaties. Penthouses vragen premiumhuurprijzen vanwege grote vraag naar luxe vakantieverblijven. De markt toont stabiele waardegroei met eigendomswaarden die jaarlijks 3-5% stijgen. Veel beleggers beheren succesvol eigendommen op kortetermijn-huurbatformaten (Airbnb, Booking.com) of via professionele beheermaatschappijen. Langetermijnhuuraanvraag van expats die permanente woningen zoeken, biedt extra inkomstenstabiliteit. Aankoopprijzen zijn 20-30% lager dan vergelijkbare eigendommen in Benidorm, terwijl soortgelijk huurinkomstenpotentieel behouden blijft.",
+      "highlights": [
+        "Sterke huuraanvraag voor vakantie in het hoogtijoen (mei-oktober)",
+        "Lagere instappe dan vergelijkbare markten met soortgelijke huurbate",
+        "Groeiende internationale vraag die stabiele prijsstijging drijft",
+        "Korttermijnvakantieverhuur populair bij Europese toeristen"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Levenskosten in Villajoyosa zijn aanzienlijk lager dan Noord-Europa en zeer concurrerend in Spanje. Kustleven hier combineert betaalbaarheid met mediterrane levensstijl.",
+      "items": [
+        {
+          "category": "Boodschappen (maandelijks, koppel)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl en lokale markten in de buurt"
+        },
+        {
+          "category": "Nutsvoorzieningen (elektriciteit, water, gas)",
+          "cost": "€100-160",
+          "notes": "Hoger in zomer met airconditioning"
+        },
+        {
+          "category": "Gemeenschapskosten",
+          "cost": "€50-120",
+          "notes": "Varieert naar gelang van ontwikkeling en inbegrepen diensten"
+        },
+        {
+          "category": "IBI (Gemeentelijke belasting)",
+          "cost": "€400-1.000/jaar",
+          "notes": "Jaarlijkse eigendomsbelasting op basis van kadastrale waarde"
+        },
+        {
+          "category": "Eten buiten (per persoon)",
+          "cost": "€10-22",
+          "notes": "Menú del día vanaf €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Telefoon",
+          "cost": "€35-50",
+          "notes": "Goede breedbanddekking; meerdere providers"
+        },
+        {
+          "category": "Auto-uitgaven (brandstof, verzekering)",
+          "cost": "€150-250",
+          "notes": "Aanbevolen voor flexibiliteit"
+        },
+        {
+          "category": "Particuliere ziektekostenverzekering",
+          "cost": "€60-150",
+          "notes": "Uitgebreide dekking; lager voor jongere bewoners"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Villajoyosa viert traditionele Spaanse feesten en gemeenschapsevenementen het hele jaar door, waarbij lokale tradities worden gecombineerd met de gastvrije internationale gemeenschap.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "Augustus",
+          "description": "Jaarlijkse patroonheiligenvieringen met parades, muziek, vuurwerk en traditionele vieringen die de hele gemeenschap samenbrengt"
+        },
+        {
+          "name": "Semana Santa (Paasweek)",
+          "month": "Maart/April",
+          "description": "Plechtige Paasprocessies door de straten met traditionele floats en eeuwenoude religieuze tradities"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "Nationale feestdagvieringen met lokale evenementen, markten en gemeenschapsvergaderingen"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "Juni",
+          "description": "Magische zomerstondvieringen met vreugdevuren, vuurwerk en middernachtzwemtradities langs de kust"
+        },
+        {
+          "name": "Zomerstrandfestival",
+          "month": "Juli",
+          "description": "Openluchtconcerten, voedselkramen en culturele evenementen langs de waterkant het hele seizoen door"
+        },
+        {
+          "name": "Kerstmarkt & Drie Koningen",
+          "month": "December/Januari",
+          "description": "Feestelijk seizoen met marktstandjes, kribbe-scènes en de spectaculaire Drie Koningenparade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Gezinnen in Villajoyosa hebben toegang tot kwaliteitsonderwijs in de omgeving, met meerdere internationale scholen voor de expatgemeenschap naast uitstekende Spaanse openbare scholen.",
+      "schools": [
+        {
+          "name": "El Limonar Internationale School (Villajoyosa)",
+          "type": "Internationaal (Brits)",
+          "distance": "20-40 min",
+          "description": "Britse curriculum school met GCSE en A-Level programma's, uitstekende faciliteiten en sterke academische resultaten"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "Internationaal (Brits/IB)",
+          "distance": "25-45 min",
+          "description": "Brits en IB curriculum met uitstekende faciliteiten, sportprogramma's en meertalig onderwijs"
+        },
+        {
+          "name": "Lokale Spaanse basisschool",
+          "type": "Spaanse staat",
+          "distance": "5-15 min",
+          "description": "Lokale openbare school met Spaans curriculum onderwijs, uitstekend voor taalonderdompeling en maatschappelijke integratie"
+        },
+        {
+          "name": "Lokale Spaanse middelbare school",
+          "type": "Spaanse staat",
+          "distance": "10-20 min",
+          "description": "Staatsschool voor voortgezet onderwijs met ESO en Bachillerato programma's in een ondersteunende leeromgeving"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Villajoyosa biedt het hele jaar uitstekende buitenactiviteiten, van strandactiviteiten en watersport tot golf, natuurwandelingen en meer.",
+      "activities": [
+        {
+          "name": "Strand & Zwemmen",
+          "type": "Strand",
+          "description": "Prachtige Middellandse stranden in de buurt met kristalhelder water, perfect voor zwemmen, snorkelen en zonnebaden"
+        },
+        {
+          "name": "Watersport",
+          "type": "Watersport",
+          "description": "Paddleboarden, kajakken, windsurfen en zeilen beschikbaar op nabijgelegen stranden en havens"
+        },
+        {
+          "name": "Plattelandswandelingen",
+          "type": "Wandelen",
+          "description": "Wandelpaden door de omliggende platteland met uitzicht op boomgaarden, bergen en traditionele dorpen"
+        },
+        {
+          "name": "Fietsroutes",
+          "type": "Fietsen",
+          "description": "Weg- en bergfietsroutes door schilderachtig landschap, geschikt voor alle fitnessniveaus"
+        },
+        {
+          "name": "Nabijgelegen Golfbanen",
+          "type": "Golf",
+          "description": "Meerdere kwaliteitsgolfbanen op gemakkelijk bereikbare afstand, het hele jaar spelen onder Middellandse zon"
+        },
+        {
+          "name": "Natuurreservaten & Vogelkijken",
+          "type": "Natuurreservaat",
+          "description": "Beschermde natuurgebieden in de buurt met vogelkijken, fotografie en rustige natuurwandelingen"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Villajoyosa heeft een bloeiende internationale gemeenschap, met expats aangetrokken door de mediterrane levensstijl, betaalbare levenskosten en gastvrije sfeer. De kustlocatie trekt een diverse mix van nationaliteiten aan, vooral uit Noord-Europa. Engels wordt veel gesproken in winkels, restaurants en sociale instellingen, wat het dagelijks leven comfortabel maakt voor nieuwelingen.",
+      "highlights": [
+        "Actieve internationale sociale scene met regelmatige gemeenschapsevenementen",
+        "Engelstalige diensten beschikbaar inclusief medische en juridische professionals",
+        "Regelmatige gemeenschapsvergaderingen, clubs en sociale activiteiten",
+        "Gastvrije sfeer voor nieuwelingen met gevestigde expatnetwerken",
+        "Mix van permanente bewoners en seizoensbezoekers, wat een dynamische gemeenschap vormt",
+        "Diverse Europese gemeenschap inclusief Britse, Scandinavische, Nederlandse, Duitse en Franse bewoners",
+        "Lokale Spaanse gemeenschap gastvrij en inclusief tegenover internationale bewoners"
+      ],
+      "nationalities": [
+        "Brits",
+        "Duits",
+        "Nederlands",
+        "Scandinavisch",
+        "Frans",
+        "Belgisch",
+        "Spaans"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Een typische dag in Villajoyosa",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Ochtendkoffie",
+          "description": "Begin de dag met verse koffie op je terras, genietend van zeebriesje en rustige omgeving"
+        },
+        {
+          "time": "09:30",
+          "activity": "Strandwandeling",
+          "description": "Ochtendwandeling langs het strand of de promenade, adem het frisse mediterrane luchtje in"
+        },
+        {
+          "time": "12:00",
+          "activity": "Verse marktkopen",
+          "description": "Haal vers brood, fruit en lokale producten van de supermarkt of wekelijkse markt"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spaanse Lunch",
+          "description": "Geniet van een luie menú del día in een lokaal restaurant - drie gangen met wijn voor ongeveer €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Zwembad",
+          "description": "Rust uit in de warmste uren, dan afkoelen in je privé- of gemeenschappelijk zwembad"
+        },
+        {
+          "time": "17:30",
+          "activity": "Strandtijd",
+          "description": "Ga naar het strand voor een middagzwembeurt in het warme Middellandse water"
+        },
+        {
+          "time": "20:00",
+          "activity": "Avond Paseo",
+          "description": "Voeg je aan bij locals voor de traditionele avondwandeling door de stad, groet buurtgenoten en vrienden"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Diner",
+          "description": "Beëindig de dag met tapas en een glas lokale wijn in je favoriete restaurant, eet al fresco onder de sterren"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.2336!3d38.5075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Villajoyosa",
+    "description": "Villajoyosa is een kustgemeente in Costa Blanca Noord, Spanje. Bekend om mediterrane levensstijl, kwaliteit nieuwe bouwontwikkelingen en internationale gemeenschap.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.5075",
+      "longitude": "-0.2336"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Villajoyosa",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wat is het beste moment van het jaar om eigendom in Villajoyosa te kopen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wintermaanden (november-februari) bieden meestal de beste selectie en mogelijk betere onderhandelingspositie omdat er minder kopers zijn. Echter, lente (maart-mei) is ideaal voor het bekijken van eigendommen en genieten van aangenaam weer tijdens je aankoopaankoop. Zomer en vroege herfst zien verhoogde toerisme die de markt beïnvloedt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kunnen burgers van buiten de EU eigendom in Villajoyosa kopen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, burgers van buiten de EU kunnen eigendom in Spanje aanschaffen met minimale beperkingen. Je hebt een Spaans belastingidentificatienummer (NIE) nodig, wat relatief gemakkelijk te verkrijgen is. Het inhuren van een Spaanse advocaat die zich specialiseert in aankoop van eigendommen is essentieel voor navigatie door juridische eisen en zorgen voor juiste documentatie."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat zijn typische huurbaten voor beleggingseigendommen in Villajoyosa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beleggingseigendommen in Villajoyosa bereiken doorgaans 5-7% jaarlijks bruto-huurbate, met mogelijkheid voor hogere returns voor premium strandfront-eigendommen. Korttermijnvakantieverhuur genereert betere returns (8-12%) maar vereist actiever management vergeleken met langtermijn residentiële verhuur (3-5%)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hoe ver is Villajoyosa van grote voorzieningen en attracties?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alicante Airport ligt 70 km verwijderd (1 uur rijden). Benidorm ligt 15 km naar het noorden met winkels en entertainment. Themaparken (Terra Mítica, Mundomar) liggen 20 km verwijderd. Het stadscentrum heeft uitstekende winkels, restaurants en stranden binnen loopafstand. De meeste grote voorzieningen liggen in de stad of 15-30 km verderop."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welke talen worden in Villajoyosa gesproken?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Spaans is de primaire taal, maar Engels wordt veel gesproken vanwege de grote expat-gemeenschap. Veel serviceproviders, restaurants en bedrijven zijn speciaal gericht op Engelstaligen. Het leren van basisspaans wordt echter aanbevolen en geapprecieerd door locals."
+        }
+      }
+    ]
+  }
+}
