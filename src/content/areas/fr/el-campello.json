@@ -1,0 +1,426 @@
+{
+  "slug": "el-campello",
+  "name": "El Campello",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/el-campello-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=800&q=80&fit=crop",
+  "propertyCount": 1,
+  "propertyTypes": [
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 495000,
+    "max": 495000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "El Campello Tourism",
+      "url": "https://www.google.com/search?q=El%20Campello%20Spain%20official%20website",
+      "description": "Découvrez plus sur El Campello"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "25 km",
+      "driveTime": "20 min"
+    },
+    "healthcare": {
+      "name": "Hospital General de Alicante",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20General%20de%20Alicante",
+      "distance": "12 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+El%20Campello+Spain",
+        "description": "Magnifique plage méditerranéenne à proximité"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Vivre à El Campello : Guide complet Costa Blanca 2024",
+    "metaDescription": "Découvrez El Campello : plages immaculées, excellentes liaisons de transport, communauté d'expatriés dynamique. Informations sur le marché immobilier et guide de mode de vie.",
+    "heroIntro": "El Campello offre le mélange parfait entre la vie côtière espagnole authentique et le confort moderne le long du littoral époustouflant de la Costa Blanca. Cette ville charmante, nichée entre Alicante et Benidorm, s'est transformée d'un village de pêcheurs traditionnel en l'une des destinations résidentielles les plus désirables de la région, tout en préservant son caractère méditerranéen authentique et son esprit communautaire accueillant.\n\nAvec plus de 13 kilomètres de littoral immaculé présentant à la fois des plages de sable et des formations rocheuses dramatiques, El Campello offre une qualité de vie exceptionnelle aux résidents. La localisation stratégique de la ville offre un accès facile aux grandes villes tout en préservant une atmosphère de petite ville décontractée qui attire les acheteurs avisés à la recherche d'une résidence permanente ou de maisons de vacances. Du marché aux poissons animé du port aux zones résidentielles tranquilles de l'arrière-pays, El Campello s'adapte aux préférences de style de vie diverses tout en maintenant les liens communautaires forts entre les résidents locaux espagnols et internationaux.",
+    "lifestyleSection": {
+      "intro": "La vie quotidienne à El Campello tourne autour du rythme méditerranéen de la vie côtière, où les promenades matinales le long de Playa Muchavista, les siestas de l'après-midi et les tapas du soir créent une routine décontractée mais engageante. La ville maintient de fortes traditions espagnoles avec des marchés hebdomadaires, des festivals locaux comme la célébration de la Virgen del Carmen et une industrie de la pêche florissante qui fournit des fruits de mer frais aux restaurants locaux. Les résidents jouissent d'un accès facile aux activités culturelles, des expositions d'art au Centro Cultural aux concerts de l'amphithéâtre en plein air.\n\nLa communauté d'expatriés à El Campello est bien établie et diversifiée, composée principalement de résidents britanniques, allemands et scandinaves qui se sont bien intégrés à la population locale espagnole. Diverses associations et clubs internationaux organisent des événements sociaux, des échanges linguistiques et des activités culturelles toute l'année. La proximité d'Alicante offre un accès aux écoles internationales, aux installations médicales et aux attractions culturelles tout en maintenant l'intimité d'une communauté côtière étroitement liée où les voisins se connaissent et les entreprises locales offrent un service personnalisé.\n\nEl Campello bénéficie du climat méditerranéen renommé de la Costa Blanca avec plus de 320 jours de soleil par an et des températures moyennes de 18°C. Les étés sont chauds et secs avec des températures atteignant 28-30°C, modérées par des brises marines rafraîchissantes, tandis que les hivers restent doux à 12-16°C avec des précipitations occasionnelles. La zone connaît une humidité très faible et des précipitations minimales entre juin et septembre, ce qui la rend idéale pour les activités de plein air toute l'année. Le printemps et l'automne offrent des conditions particulièrement agréables avec des températures autour de 20-24°C, parfaites pour la randonnée, le cyclisme et l'exploration du littoral.",
+      "highlights": [
+        "Excellentes liaisons de transport vers l'aéroport d'Alicante et le centre-ville via TRAM",
+        "Plus de 13 km de littoral immaculé avec plages Pavillon Bleu",
+        "Atmosphère espagnole authentique avec une forte communauté locale",
+        "Commodités complètes incluant les services de santé, les achats et la restauration",
+        "Localisation stratégique entre Alicante et Benidorm avec accès autoroutier facile"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Les installations sportives incluent Club Náutico El Campello pour la voile et les sports nautiques, plusieurs courts de tennis et de padel et d'excellentes occasions de plongée autour de l'Isla de Tabarca. La longue Playa Muchavista offre des conditions parfaites pour le volley-ball de plage, la planche à voile et le kite-surf. Les amateurs de golf peuvent accéder à Alenda Golf (15 minutes) et Bonalba Golf (20 minutes), tandis que les sentiers côtiers et les collines de l'arrière-pays offrent d'excellentes randonnées et des itinéraires cyclables.",
+      "dining": "La scène gastronomique d'El Campello célèbre son héritage de pêche avec d'excellents restaurants de fruits de mer comme Batiste surplombant le port et Casa Joaquín pour la paella traditionnelle. La ville offre une cuisine internationale diversifiée incluant des restaurants italiens, chinois et indiens, aux côtés des bars à tapas espagnols traditionnels. La tradition du 'pescaíto' (poisson frit) du vendredi soir et les chiringuitos en bord de plage créent des expériences culinaires sociales dynamiques.",
+      "shopping": "Les besoins de shopping sont bien servis par le marché hebdomadaire du jeudi sur la Plaza Constitución, les supermarchés Mercadona et Consum et de nombreuses boutiques locales le long de l'Avenida Ausias March. Le centre commercial La Marina à proximité et Panoramis à Alicante offrent des marques internationales et des options de restauration. Les boulangeries locales, les boucheries et le marché aux poissons du matin au port fournissent des produits locaux frais de haute qualité.",
+      "healthcare": "El Campello est desservi par le moderne Hospital Universitario Sant Joan d'Alacant, à seulement 10 minutes, aux côtés de plusieurs cliniques privées dont Clínica Vistahermosa. La ville compte plusieurs pharmacies, cabinets dentaires et le Centro de Salud El Campello local fournit des services de soins primaires. De nombreux professionnels médicaux parlent l'anglais et l'assurance maladie privée offre un accès à d'excellentes installations à proximité d'Alicante.",
+      "transport": "L'aéroport Alicante-Elche est à seulement 25 minutes via l'autoroute AP-7, offrant des vols vers plus de 100 destinations à travers l'Europe. L'aéroport de Valence (150 km au nord) fournit des connexions internationales supplémentaires, tandis que le plus petit aéroport Murcia-Corvera (100 km au sud) dessert certaines routes européennes. El Campello bénéficie d'excellentes connexions routières via les autoroutes A-70 et AP-7. Le centre-ville d'Alicante est à 15 minutes, tandis que Valence (170 km) prend environ 1,5 heure. La route côtière N-332 offre un accès pittoresque aux villes voisines et les routes locales se connectent efficacement aux zones de l'arrière-pays et à l'aéroport. Le TRAM Metropolitano relie El Campello directement au centre-ville d'Alicante, l'aéroport et les destinations balnéaires avec des services réguliers toutes les 15-20 minutes. Les itinéraires d'autobus locaux desservent les zones résidentielles et se connectent aux villes voisines. Le système de transport public efficace rend la propriété automobile facultative pour les besoins quotidiens, bien que de nombreux résidents apprécient la flexibilité du transport privé."
+    },
+    "propertyMarketSection": "Le marché immobilier d'El Campello reste stable et attrayant, avec une demande constante d'acheteurs internationaux et de ressortissants espagnols à la recherche d'une vie côtière. Le marché bénéficie de l'excellente infrastructure de la ville, de la proximité d'Alicante et du caractère espagnol authentique. Les propriétés vont des appartements en bord de mer aux villas sur les collines, avec les nouveaux développements soigneusement réglementés pour préserver le caractère de la ville.\n\nLes types de propriétés populaires incluent Villa.\n\nLe marché locatif montre un fort potentiel, particulièrement pour les locations de vacances en raison des excellentes plages et liaisons de transport d'El Campello. Les rendements de location annuels se situent généralement entre 5 et 7%, avec des rendements plus élevés possibles pour les propriétés bien situées près de la plage ou du centre-ville. La proximité d'Alicante et la communauté d'expatriés établie soutiennent les perspectives de croissance du capital à long terme.",
+    "whyLiveHereSection": [
+      "Excellentes liaisons de transport vers l'aéroport d'Alicante et le centre-ville via TRAM",
+      "Plus de 13 km de littoral immaculé avec plages Pavillon Bleu",
+      "Atmosphère espagnole authentique avec une forte communauté locale",
+      "Commodités complètes incluant les services de santé, les achats et la restauration",
+      "Localisation stratégique entre Alicante et Benidorm avec accès autoroutier facile"
+    ],
+    "faqs": [
+      {
+        "question": "Combien de temps faut-il pour se rendre à l'aéroport d'Alicante depuis El Campello ?",
+        "answer": "L'aéroport d'Alicante est à environ 25 minutes d'El Campello en voiture via l'autoroute AP-7, ou environ 45 minutes en utilisant le TRAM Metropolitano avec une correspondance."
+      },
+      {
+        "question": "Y a-t-il une bonne communauté d'expatriés à El Campello ?",
+        "answer": "Oui, El Campello possède une communauté internationale bien établie, particulièrement des résidents britanniques, allemands et scandinaves, avec divers clubs et groupes sociaux organisant des activités et des événements réguliers."
+      },
+      {
+        "question": "Quelles sont les meilleures plages d'El Campello ?",
+        "answer": "Playa Muchavista est la plage principale avec du sable fin et le statut Pavillon Bleu, tandis que Playa Carrer la Mar offre un cadre plus intime. La région présente également des formations rocheuses dramatiques et de petites criques parfaites pour la baignade et la plongée."
+      },
+      {
+        "question": "Pouvez-vous vivre à El Campello sans parler espagnol ?",
+        "answer": "Bien que de nombreux locaux et prestataires parlent un peu l'anglais, l'apprentissage de l'espagnol de base améliore considérablement l'expérience. La communauté d'expatriés fournit des réseaux d'appui et de nombreux professionnels médicaux et juridiques offrent des services en anglais."
+      },
+      {
+        "question": "Quel est le coût de la vie à El Campello ?",
+        "answer": "El Campello offre d'excellente valeur avec des repas au restaurant de 12 à 25 euros, des épiceries similaires aux prix d'Europe du Nord et des services publics en moyenne 80-120 euros par mois. Les taxes foncières et les frais communautaires sont généralement raisonnables."
+      },
+      {
+        "question": "El Campello est-il adapté à la vie toute l'année ?",
+        "answer": "Absolument. Avec plus de 320 jours d'ensoleillement, des hivers doux, d'excellents services de santé et des équipements complets, El Campello est idéale pour une résidence permanente, offrant un style de vie actif toute l'année."
+      },
+      {
+        "question": "Comment sont les transports publics à El Campello ?",
+        "answer": "Les transports publics sont excellents, avec le TRAM Metropolitano offrant des connexions régulières vers Alicante, l'aéroport et les villes côtières. Les services d'autobus locaux desservent les zones résidentielles, rendant la propriété automobile facultative pour les besoins quotidiens."
+      },
+      {
+        "question": "Quel potentiel d'investissement les propriétés d'El Campello offrent-elles ?",
+        "answer": "El Campello montre un bon potentiel d'investissement avec des rendements de location de 5-7%, une forte demande de locations de vacances en raison des excellentes plages et liaisons de transport, et une croissance du capital stable soutenue par le développement limité et la qualité de vie élevée."
+      }
+    ],
+    "conclusion": "Prêt à découvrir votre propriété parfaite à El Campello ? Notre équipe expérimentée se spécialise dans les nouveaux bâtiments dans cette région et peut vous guider à chaque étape. Que vous recherchiez une résidence permanente, une maison de vacances ou une propriété d'investissement, nous vous aiderons à trouver exactement ce que vous recherchez. Réservez une consultation gratuite de 30 minutes avec notre équipe - avec plus de 12 ans d'expérience dans la vente de nouveaux bâtiments à Costa Blanca, nous connaissons ce marché parfaitement.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "Le marché locatif montre un fort potentiel, particulièrement pour les locations de vacances en raison des excellentes plages et liaisons de transport d'El Campello. Les rendements de location annuels se situent généralement entre 5 et 7%, avec des rendements plus élevés possibles pour les propriétés bien situées près de la plage ou du centre-ville. La proximité d'Alicante et la communauté d'expatriés établie soutiennent les perspectives de croissance du capital à long terme.",
+      "highlights": [
+        "Forte demande de location de vacances en haute saison (mai-octobre)",
+        "Prix d'entrée inférieurs à ceux des marchés comparables avec rendements locatifs similaires",
+        "Demande internationale croissante entraînant une appréciation des prix régulière",
+        "Locations de vacances populaires auprès des touristes européens"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Le coût de la vie à El Campello est nettement inférieur à celui de l'Europe du Nord et très compétitif en Espagne. La vie côtière ici combine l'accessibilité financière au style de vie méditerranéen.",
+      "items": [
+        {
+          "category": "Épicerie (mensuel, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl et marchés locaux à proximité"
+        },
+        {
+          "category": "Services publics (électricité, eau, gaz)",
+          "cost": "€100-160",
+          "notes": "Plus élevé en été avec climatisation"
+        },
+        {
+          "category": "Frais de communauté",
+          "cost": "€50-120",
+          "notes": "Varie selon le développement et les services inclus"
+        },
+        {
+          "category": "IBI (Impôt communal)",
+          "cost": "€400-1,000/an",
+          "notes": "Impôt foncier annuel basé sur la valeur cadastrale"
+        },
+        {
+          "category": "Manger au restaurant (par personne)",
+          "cost": "€10-22",
+          "notes": "Menú del día à partir de €10 ; restaurants €15-30"
+        },
+        {
+          "category": "Internet et téléphone",
+          "cost": "€35-50",
+          "notes": "Bonne couverture haut débit ; plusieurs fournisseurs"
+        },
+        {
+          "category": "Dépenses automobiles (carburant, assurance)",
+          "cost": "€150-250",
+          "notes": "Recommandé pour la flexibilité"
+        },
+        {
+          "category": "Assurance maladie privée",
+          "cost": "€60-150",
+          "notes": "Couverture complète ; inférieur pour les résidents plus jeunes"
+        }
+      ]
+    },
+    "events": {
+      "intro": "El Campello célèbre les fêtes espagnoles traditionnelles et les événements communautaires toute l'année, mélangeant les traditions locales à la communauté internationale accueillante.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "Août",
+          "description": "Festivités patronales annuelles avec défilés, musique, feux d'artifice et célébrations traditionnelles réunissant toute la communauté"
+        },
+        {
+          "name": "Semana Santa (Semaine sainte)",
+          "month": "Mars/avril",
+          "description": "Processions solennelles du dimanche des Rameaux dans les rues avec des chars traditionnels et des traditions religieuses séculaires"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "Décembre",
+          "description": "Célébrations de la Fête nationale avec événements locaux, marchés et rassemblements communautaires"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "Juin",
+          "description": "Célébrations magiques du solstice d'été sur la plage avec des feux, des feux d'artifice et des traditions de baignade à minuit le long de la côte"
+        },
+        {
+          "name": "Summer Beach Festival",
+          "month": "Juillet",
+          "description": "Concerts en plein air, stands de nourriture et événements culturels le long du front de mer tout au long de la saison estivale"
+        },
+        {
+          "name": "Marché de Noël et Trois Rois",
+          "month": "Décembre/janvier",
+          "description": "Saison festive avec stands de marché, scènes de crèche et le spectaculaire défilé des Trois Rois (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Les familles à El Campello ont accès à une éducation de qualité dans la région environnante, avec plusieurs écoles internationales servant la communauté des expatriés aux côtés d'excellentes écoles publiques espagnoles.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "École de programme britannique avec GCSE et niveaux A, excellentes installations et résultats académiques solides"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "Programme britannique et IB avec des installations exceptionnelles, des programmes sportifs et une éducation multilingue"
+        },
+        {
+          "name": "École primaire espagnole locale",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "École publique locale fournissant l'enseignement du programme espagnol, excellente pour l'immersion linguistique et l'intégration communautaire"
+        },
+        {
+          "name": "École secondaire espagnole locale",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "École secondaire publique offrant les programmes ESO et Bachillerato avec environnement d'apprentissage favorable"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "El Campello offre d'excellentes activités de plein air toute l'année, des activités balnéaires et sports nautiques au golf, randonnées en nature et plus encore.",
+      "activities": [
+        {
+          "name": "Plage et baignade",
+          "type": "Beach",
+          "description": "Magnifiques plages méditerranéennes à proximité avec eaux cristallines, parfaites pour la baignade, la plongée et les bains de soleil"
+        },
+        {
+          "name": "Sports nautiques",
+          "type": "Water Sports",
+          "description": "Stand-up paddle, kayak, planche à voile et voile disponibles sur les plages et marinas voisines"
+        },
+        {
+          "name": "Randonnée à la campagne",
+          "type": "Hiking",
+          "description": "Sentiers de randonnée à travers la campagne environnante avec vues sur les vergers, les montagnes et les villages traditionnels"
+        },
+        {
+          "name": "Parcours cyclables",
+          "type": "Cycling",
+          "description": "Routes routières et VTT à travers la campagne pittoresque, adaptées à tous les niveaux de condition physique"
+        },
+        {
+          "name": "Terrains de golf à proximité",
+          "type": "Golf",
+          "description": "Plusieurs parcours de golf de qualité à distance de conduite facile offrant un jeu toute l'année au soleil méditerranéen"
+        },
+        {
+          "name": "Réserves naturelles et observation des oiseaux",
+          "type": "Nature Reserve",
+          "description": "Zones naturelles protégées à proximité offrant l'observation des oiseaux, la photographie et des randonnées pédestres paisibles"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "El Campello possède une communauté internationale florissante, avec des expatriés attirés par le style de vie méditerranéen, les coûts de la vie abordables et l'atmosphère accueillante. Le front de mer attire un mélange diversifié de nationalités, particulièrement d'Europe du Nord. L'anglais est largement parlé dans les magasins, les restaurants et les contextes sociaux, rendant la vie quotidienne confortable pour les nouveaux venus.",
+      "highlights": [
+        "Scène sociale internationale active avec événements communautaires réguliers",
+        "Services de langue anglaise disponibles incluant les professionnels médicaux et juridiques",
+        "Rassemblements communautaires réguliers, clubs et activités sociales",
+        "Atmosphère accueillante pour les nouveaux venus avec des réseaux d'expatriés établis",
+        "Mélange de résidents permanents et de visiteurs saisonniers créant une communauté dynamique",
+        "Communauté européenne diversifiée incluant les résidents britanniques, scandinaves, néerlandais, allemands et français",
+        "Communauté espagnole locale accueillante et inclusive envers les résidents internationaux"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Une journée typique à El Campello",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Café du matin",
+          "description": "Commencez la journée avec un café frais sur votre terrasse, en profitant de la brise marine et du calme environnant"
+        },
+        {
+          "time": "09:30",
+          "activity": "Promenade sur la plage",
+          "description": "Promenade matinale le long de la plage ou de la promenade, respirant l'air méditerranéen frais"
+        },
+        {
+          "time": "12:00",
+          "activity": "Achats au marché frais",
+          "description": "Ramassez du pain frais, des fruits et des produits locaux au supermarché ou au marché hebdomadaire"
+        },
+        {
+          "time": "13:30",
+          "activity": "Déjeuner espagnol",
+          "description": "Savourez un menú del día tranquille dans un restaurant local - trois plats avec du vin pour environ 12 euros"
+        },
+        {
+          "time": "15:30",
+          "activity": "Sieste et piscine",
+          "description": "Reposez-vous pendant les heures les plus chaudes, puis rafraîchissez-vous dans votre piscine privée ou commune"
+        },
+        {
+          "time": "17:30",
+          "activity": "Temps à la plage",
+          "description": "Allez à la plage pour une baignade l'après-midi dans les eaux chaudes de la Méditerranée"
+        },
+        {
+          "time": "20:00",
+          "activity": "Paseo du soir",
+          "description": "Rejoignez les habitants pour la promenade traditionnelle en soirée à travers la ville, saluant les voisins et les amis"
+        },
+        {
+          "time": "21:30",
+          "activity": "Dîner aux tapas",
+          "description": "Terminez la journée avec des tapas et un verre de vin local à votre restaurant préféré, en mangeant dehors sous les étoiles"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.3989!3d38.4283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "El Campello",
+    "description": "El Campello est une municipalité côtière de Costa Blanca North, Espagne. Connue pour le style de vie méditerranéen, les développements de qualité des nouveaux bâtiments et la communauté internationale.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.4283",
+      "longitude": "-0.3989"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "El Campello",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Combien de temps faut-il pour se rendre à l'aéroport d'Alicante depuis El Campello ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "L'aéroport d'Alicante est à environ 25 minutes d'El Campello en voiture via l'autoroute AP-7, ou environ 45 minutes en utilisant le TRAM Metropolitano avec une correspondance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Y a-t-il une bonne communauté d'expatriés à El Campello ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, El Campello possède une communauté internationale bien établie, particulièrement des résidents britanniques, allemands et scandinaves, avec divers clubs et groupes sociaux organisant des activités et des événements réguliers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelles sont les meilleures plages d'El Campello ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Playa Muchavista est la plage principale avec du sable fin et le statut Pavillon Bleu, tandis que Playa Carrer la Mar offre un cadre plus intime. La région présente également des formations rocheuses dramatiques et de petites criques parfaites pour la baignade et la plongée."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pouvez-vous vivre à El Campello sans parler espagnol ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bien que de nombreux locaux et prestataires parlent un peu l'anglais, l'apprentissage de l'espagnol de base améliore considérablement l'expérience. La communauté d'expatriés fournit des réseaux d'appui et de nombreux professionnels médicaux et juridiques offrent des services en anglais."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quel est le coût de la vie à El Campello ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El Campello offre d'excellente valeur avec des repas au restaurant de 12 à 25 euros, des épiceries similaires aux prix d'Europe du Nord et des services publics en moyenne 80-120 euros par mois. Les taxes foncières et les frais communautaires sont généralement raisonnables."
+        }
+      }
+    ]
+  },
+  "golf": {
+    "intro": "El Campello bénéficie d'une accessibilité au golf exceptionnelle, avec des parcours de championnats à moins de 10 minutes. La région combine un cadre côtier tranquille avec un accès pratique aux installations de classe mondiale. La saison de jeu méditerranéenne prolongée assure des opportunités de golf toute l'année pour les enthousiastes.",
+    "courses": [
+      {
+        "name": "Club de Golf Alicante",
+        "distance": "6 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Club+Golf+Alicante",
+        "description": "Parcours de championnat avec terrain accidenté et vues méditerranéennes, présentant des fairways bien entretenus et des greens difficiles"
+      },
+      {
+        "name": "Club de Golf Bonalba",
+        "distance": "8 km",
+        "driveTime": "13 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Club+Golf+Bonalba",
+        "description": "Parcours moderne avec agencement pittoresque, installations de qualité et programmes d'entraînement professionnel"
+      },
+      {
+        "name": "Club de Golf Meliá Villaitana",
+        "distance": "14 km",
+        "driveTime": "20 minutes",
+        "holes": 36,
+        "url": "https://www.meliavillaitana.com/",
+        "googleMaps": "https://maps.google.com/?q=Melia+Villaitana+Golf",
+        "description": "Parcours de championnats duels offrant à la fois des agencements côtiers et montagneux avec installations de villégiature"
+      }
+    ]
+  }
+}

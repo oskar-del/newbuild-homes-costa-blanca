@@ -1,0 +1,426 @@
+{
+  "slug": "el-campello",
+  "name": "El Campello",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/el-campello-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=800&q=80&fit=crop",
+  "propertyCount": 1,
+  "propertyTypes": [
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 495000,
+    "max": 495000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "El Campello Tourism",
+      "url": "https://www.google.com/search?q=El%20Campello%20Spain%20official%20website",
+      "description": "Upptäck mer om El Campello"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "25 km",
+      "driveTime": "20 min"
+    },
+    "healthcare": {
+      "name": "Hospital General de Alicante",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20General%20de%20Alicante",
+      "distance": "12 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+El%20Campello+Spain",
+        "description": "Vacker medelhavsstrand i närheten"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Att bo i El Campello: Komplett Costa Blanca Guide 2024",
+    "metaDescription": "Upptäck El Campello: orörda stränder, utmärkta transportlänkar, levande utlandssamfund. Fastighetsmarknadsinsikter och livsstilsguide.",
+    "heroIntro": "El Campello erbjuder den perfekta blandningen av autentisk spansk kustnära boendeliv och modern bekvämlighet längs Costa Blancas fantastiska kustlinje. Denna charmiga stad, belägen mellan Alicante och Benidorm, har utvecklats från en traditionell fiskebystad till en av regionens mest önskvärda bostäder samtidigt som den bevarar sin genuina medelhavskvalitet och välkomnande gemenskapskänsla.\n\nMed över 13 kilometer orörda kustlinje med både sandstränder och dramatiska klippformationer erbjuder El Campello ett exceptionellt livskvalitet för invånare. Stadens strategiska läge erbjuder lätt tillgång till större städer samtidigt som en avslappnad småstädsatmosfär bevaras som attraherar diskriminerande köpare som söker permanent bostad eller semesterbostäder. Från den livliga fiskemarkanden vid hamnen till de lugna bostadsområdena inlandet erbjuder El Campello olika livsstilspreferenser samtidigt som starka gemenskapsbindningar upprätthålls mellan spanska lokala och internationella invånare.",
+    "lifestyleSection": {
+      "intro": "Dagligt liv i El Campello kretsar kring den mediterrana rytmen av kustnär boendeliv, där morgonpromenader längs Playa Muchavista, eftermiddagsstunder och kvällstapas skapar en avslappnad men engagerande rutin. Staden bevarar starka spanska traditioner med veckovisa marknader, lokala festivaler som Virgen del Carmen-celebrationen och en blomstrande fiskerinäring som förser lokala restauranger med färsk fisk. Invånare åtnjuter lätt tillgång till kulturella aktiviteter, från konstutställningar på Centro Cultural till konserter vid den utomhusscenen.\n\nUtlandssamfundet i El Campello är väletablerat och varierat och består främst av brittiska, tyska och skandinaviska invånare som har integrerats väl med den lokala spanska befolkningen. Olika internationella klubbar och föreningar organiserar sociala evenemang, språkutbyten och kulturella aktiviteter året om. Stadens närhet till Alicante ger tillgång till internationella skolor, medicinska faciliteter och kulturella attraktioner samtidigt som den intima känslan av ett nära kustnär samhälle bibehålls där grannar känner varandra och lokala företag ger personlig service.\n\nEl Campello åtnjuter Costa Blancas berömda medelhavsklimat med över 320 solskina dagar årligen och genomsnittliga temperaturer på 18°C. Somrarna är varma och torra med temperaturer som når 28-30°C, modererade av uppfriskande havsbriser, medan vintrarna förblir milda på 12-16°C med enstaka nederbörd. Området upplever mycket låg luftfuktighet och minimal nederbörd mellan juni och september, vilket gör det idealiskt för året runt utomhusaktiviteter. Vår och höst erbjuder särskilt behagliga förhållanden med temperaturer omkring 20-24°C, perfekt för vandring, cykling och kuststudier.",
+      "highlights": [
+        "Utmärkta transportlänkar till Alicante flygplats och stadskärnan via TRAM",
+        "Över 13km orörda kustlinje med Blue Flag-stränder",
+        "Autentisk spansk atmosfär med starkt lokalt samhälle",
+        "Omfattande bekvämligheter inklusive sjukvård, shopping och matsal",
+        "Strategisk läge mellan Alicante och Benidorm med lätt motorvägsåtkomst"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Sportfaciliteter inkluderar Club Náutico El Campello för segling och vattensporter, flera tennis- och padelbaner och utmärkta dykmöjligheter omkring Isla de Tabarca. Den långa Playa Muchavista erbjuder perfekta förhållanden för strandvolleyboll, windsurfning och kitesurfning. Golfentusiaster kan få tillgång till Alenda Golf (15 minuter) och Bonalba Golf (20 minuter), medan kustnära stigar och inlandshöjder erbjuder utmärkta vandring och cykelvägar.",
+      "dining": "El Campellos matscen firar sitt fiskearv med utmärkta fiskrestauranger som Batiste med utsikt över hamnen och Casa Joaquín för traditionell paella. Staden erbjuder varierande internationell mat inklusive italiensk, kinesisk och indisk restaurang, tillsammans med traditionella spanska tapasbarer. Fredagskvälls pescaíto-traditionen (friterad fisk) och strandnära chiringuitos skapar vibrerande sociala matupplevelser.",
+      "shopping": "Shoppingbehoven serveras väl av den veckovisa torsdagsmarknaden på Plaza Constitución, Mercadona och Consum-supermarknader och många lokala butiker längs Avenida Ausias March. Det närliggande La Marina Shopping Centre och Panoramis i Alicante erbjuder internationella märken och matscener. Lokala bagarier, slaktare och morgonfiskmarknaden vid hamnen ger färsk lokal högvärdig mat.",
+      "healthcare": "El Campello betjänas av det moderna Hospital Universitario Sant Joan d'Alacant, bara 10 minuter bort, tillsammans med flera privata kliniker inklusive Clínica Vistahermosa. Staden har flera apotek, tandläkarpraktiker och den lokala Centro de Salud El Campello tillhandahåller primär sjukvård. Många medicinska yrkesfolk talar engelska och privat sjukförsäkring ger tillgång till utmärkta anläggningar i närliggande Alicante.",
+      "transport": "Alicante-Elche Airport ligger bara 25 minuter bort via AP-7-motorvägen och erbjuder flyg till över 100 destinationer över Europa. Valencias flygplats (150km norr) ger ytterligare internationella förbindelser, medan den mindre Murcia-Corvera Airport (100km söder) betjänar utvalda europeiska vägar. El Campello åtnjuter utmärkta väganslutningar via A-70 och AP-7-motorvägen. Alicante stadskärna ligger 15 minuter bort, medan Valencia (170km) tar ungefär 1,5 timmar. N-332 kustnära vägen ger malerisk tillgång till närliggande städer och lokala vägar ansluter effektivt till inlandområden och flygplatsen. TRAM Metropolitano förbinder El Campello direkt till Alicante stadskärna, flygplatsen och strändestinationer med regelbundna tjänster var 15-20 minut. Lokala bussvägar betjänar bostadsområden och ansluter till närliggande städer. Det effektiva kollektivtrafiksystemet gör bilägande valfritt för dagliga behov, även om många invånare uppskattar flexibiliteten i privat transport."
+    },
+    "propertyMarketSection": "El Campellos fastighetsmarknad förblir stabil och attraktiv med stabil efterfrågan från både internationella köpare och spanska nationaler som söker kustnär boende. Marknaden drar nytta av stadens utmärkta infrastruktur, närhet till Alicante och autentisk spansk karaktär. Fastigheter sträcker sig från strandnära lägenheter till kulle villor med nya utvecklingar noggrant reglerade för att bevara stadens karaktär.\n\nPopulära fastighetstyper inkluderar Villa.\n\nHyresmarknaden visar starkt potentiell, särskilt för semesteruthyrning på grund av El Campellos utmärkta stränder och transportlänkar. Årliga hyresavkastningar sträcker sig typiskt från 5-7%, med högre avkastning möjlig för väl placerade fastigheter nära stranden eller stadskärna. Närheten till Alicante och etablerat utlandssamfund stödjer långsiktiga kapitaltillväxtmöjligheter.",
+    "whyLiveHereSection": [
+      "Utmärkta transportlänkar till Alicante flygplats och stadskärnan via TRAM",
+      "Över 13km orörda kustlinje med Blue Flag-stränder",
+      "Autentisk spansk atmosfär med starkt lokalt samhälle",
+      "Omfattande bekvämligheter inklusive sjukvård, shopping och matsal",
+      "Strategisk läge mellan Alicante och Benidorm med lätt motorvägsåtkomst"
+    ],
+    "faqs": [
+      {
+        "question": "Hur lång tid tar det att komma till Alicante Airport från El Campello?",
+        "answer": "Alicante Airport ligger ungefär 25 minuter från El Campello med bil via AP-7-motorvägen, eller cirka 45 minuter med TRAM Metropolitano med en anslutning."
+      },
+      {
+        "question": "Finns det ett bra utlandssamfund i El Campello?",
+        "answer": "Ja, El Campello har ett väletablerat internationellt samhälle, särskilt brittiska, tyska och skandinaviska invånare, med olika klubbar och sociala grupper som organiserar regelbundna aktiviteter och evenemang."
+      },
+      {
+        "question": "Vilka är de bästa stränderna i El Campello?",
+        "answer": "Playa Muchavista är huvudstranden med fin sand och Blue Flag-status, medan Playa Carrer la Mar erbjuder en mer intim inställning. Området innehåller också dramatiska klippformationer och små vikar perfekt för simning och snorkling."
+      },
+      {
+        "question": "Kan du bo i El Campello utan att tala spanska?",
+        "answer": "Även om många lokala och tjänsteleverantörer talar viss engelska, ökar lärandet av grundläggande spanska upplevelsen mycket. Utlandssamfundet ger stödnätverk och många medicinska och juridiska yrkesfolk erbjuder tjänster på engelska."
+      },
+      {
+        "question": "Hur är levnadskostnaden i El Campello?",
+        "answer": "El Campello erbjuder utmärkt värde med restaurangmål från €12-25, livsmedel liknande nordeuropeiska priser och verktyg i genomsnitt €80-120 månadsvis. Fastighetsskatter och gemenskapsbidrag är generellt rimliga."
+      },
+      {
+        "question": "Är El Campello lämpligt för året runt boende?",
+        "answer": "Absolut. Med över 320 solskina dagar, milda vintrar, utmärkt sjukvård och omfattande bekvämligheter är El Campello idealisk för permanent bostad och erbjuder en aktiv livsstil året runt."
+      },
+      {
+        "question": "Hur är kollektivtrafiken i El Campello?",
+        "answer": "Kollektivtrafiken är utmärkt med TRAM Metropolitano som erbjuder regelbundna förbindelser till Alicante, flygplatsen och kustnära städer. Lokala bussservices täcker bostadsområden vilket gör bilägande valfritt för dagliga behov."
+      },
+      {
+        "question": "Vilken investeringspotential erbjuder El Campello-fastigheter?",
+        "answer": "El Campello visar god investeringspotential med hyresavkastningar på 5-7%, stark semesteruthyrningsefterfrågan på grund av utmärkta stränder och transportlänkar och stabil kapitaltillväxt stödd av begränsad utveckling och högt livskvalitet."
+      }
+    ],
+    "conclusion": "Redo att upptäcka din perfekta fastighet i El Campello? Vårt erfarna team är specialiserat på nya byggnader över detta område och kan guida dej genom varje steg. Oavsett om du söker ett permanent hem, semesterbostäder eller investeringsfastighet hjälper vi dej hitta exakt vad du letar efter. Boka en gratis 30-minuters konsultation med vårt team - med över 12 års erfarenhet av att sälja nya byggnader på Costa Blanca vet vi denna marknad inuti och ut.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "Hyresmarknaden visar starkt potentiell, särskilt för semesteruthyrning på grund av El Campellos utmärkta stränder och transportlänkar. Årliga hyresavkastningar sträcker sig typiskt från 5-7%, med högre avkastning möjlig för väl placerade fastigheter nära stranden eller stadskärna. Närheten till Alicante och etablerat utlandssamfund stödjer långsiktiga kapitaltillväxtmöjligheter.",
+      "highlights": [
+        "Stark semesteruthyrningsefterfrågan under högöversäsong (maj-oktober)",
+        "Lägre inträdespriser än jämförbara marknader med liknande hyresavkastning",
+        "Växande internationell efterfrågan som driver stabil prisökning",
+        "Semesteruthyrning populär bland europeiska turister"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Levnadskostnaderna i El Campello är betydligt lägre än Nordeuropa och mycket konkurrenskraftiga inom Spanien. Kustnär boende här kombinerar överkomliga priser med medelhavsklivsstil.",
+      "items": [
+        {
+          "category": "Dagligvaror (månatlig, par)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl och lokala marknader i närheten"
+        },
+        {
+          "category": "Verktyg (el, vatten, gas)",
+          "cost": "€100-160",
+          "notes": "Högre på sommaren med luftkonditionering"
+        },
+        {
+          "category": "Gemenskapsbidrag",
+          "cost": "€50-120",
+          "notes": "Varierar beroende på utveckling och inkluderade tjänster"
+        },
+        {
+          "category": "IBI (Kommunalskatt)",
+          "cost": "€400-1,000/år",
+          "notes": "Årlig fastighetsskatt baserad på katastral värde"
+        },
+        {
+          "category": "Att äta ute (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día från €10; restauranger €15-30"
+        },
+        {
+          "category": "Internet och telefon",
+          "cost": "€35-50",
+          "notes": "Bra bredbandsöverförning; flera leverantörer"
+        },
+        {
+          "category": "Bilkostnader (bränsle, försäkring)",
+          "cost": "€150-250",
+          "notes": "Rekommenderas för flexibilitet"
+        },
+        {
+          "category": "Privat sjukförsäkring",
+          "cost": "€60-150",
+          "notes": "Omfattande täckning; lägre för yngre invånare"
+        }
+      ]
+    },
+    "events": {
+      "intro": "El Campello firar traditionell spanska fiestas och gemenskapsevenemang året om och blandar lokala traditioner med det välkomnande internationella samhället.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "Augusti",
+          "description": "Årlig helgonpatronfestival med parader, musik, fyrverkerier och traditionell celebrering som samlar hela samhället"
+        },
+        {
+          "name": "Semana Santa (Påskveckan)",
+          "month": "Mars/april",
+          "description": "Högtidliga palmsondag-processer genom gatorna med traditionella flöten och århundradens gamla religiösa traditioner"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "Nationaldag-celebrering med lokala evenemang, marknader och gemenskapssamlingar"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "Juni",
+          "description": "Magisk midsommarkustnär-celebrering med eldar, fyrverkerier och traditionella midnattssimningar längs kusten"
+        },
+        {
+          "name": "Summer Beach Festival",
+          "month": "Juli",
+          "description": "Utomhuskoncerter, matställ och kulturella evenemang längs vattnet genomgående sommarsäsong"
+        },
+        {
+          "name": "Julmarknad & Tre Kungar",
+          "month": "December/januari",
+          "description": "Festlig säsong med marknadsstand, krubbar och den spektakulär Tre Kungar-paraden (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Familjer i El Campello har tillgång till kvalitativ undervisning i närliggande områden med flera internationella skolor som betjänar expatriate-gemenskapen tillsammans med utmärkta spanska statliga skolor.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "Brittisk läroplansskola med GCSE och A-Level-program, utmärkta anläggningar och starka akademiska resultat"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "Brittisk och IB-läroplan med utmärkta anläggningar, sportprogram och flerspråkig utbildning"
+        },
+        {
+          "name": "Lokal spansk grundskola",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Lokal statlig skola som tillhandahåller spansk läroplanundervisning utmärkt för språknedsänkning och samhällsintegration"
+        },
+        {
+          "name": "Lokal spansk högskola",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "Statlig högskola som erbjuder ESO och Bachillerato-program med stödjande lärningmiljö"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "El Campello erbjuder utmärkta utomhusaktiviteter året runt från strandaktiviteter och vattensporter till golf, naturvägar och mera.",
+      "activities": [
+        {
+          "name": "Strand & Simning",
+          "type": "Beach",
+          "description": "Vacker medelhavsstrand i närheten med kristallklart vatten perfekt för simning, snorkling och solning"
+        },
+        {
+          "name": "Vattensporter",
+          "type": "Water Sports",
+          "description": "Stand-up paddleboarding, kajakåkning, windsurfning och segling tillgänglig vid närliggande stränder och mariner"
+        },
+        {
+          "name": "Landsbygds vandring",
+          "type": "Hiking",
+          "description": "Vandringsslingor genom omgivande landsbygd med utsikt över fruktodlingar, berg och traditionella byar"
+        },
+        {
+          "name": "Cykelvägar",
+          "type": "Cycling",
+          "description": "Väg- och bergsbikevägar genom vacker landsbygd lämplig för alla fitnessnivåer"
+        },
+        {
+          "name": "Närliggande golfkurser",
+          "type": "Golf",
+          "description": "Flera högklassiga golfkurser inom lätt körning som erbjuder året runt spel i medelhavssolen"
+        },
+        {
+          "name": "Naturreservat & Fågelskådning",
+          "type": "Nature Reserve",
+          "description": "Skyddat naturligt område i närheten som erbjuder fågelskådning, fotografering och fridfull naturvägar"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "El Campello har ett blomstrande internationellt samhälle med utlänningar lockade av den medelhavsklivsstil, överkomliga levnadskostnader och välkomnande atmosfär. Kustnära läget attraherar en varierande mixning av nationaliteter, särskilt från Nordeuropa. Engelska talas i stor uträckning i butiker, restauranger och sociala inställningar vilket gör dagligt liv bekvämt för nykomlingar.",
+      "highlights": [
+        "Aktiv internationell socialscen med regelbundna gemenskapsdetaljer",
+        "Engelsktalande tjänster tillgänglig inklusive medicinska och juridiska yrkesfolk",
+        "Regelbundna gemenskapssamlingar, klubbar och sociala aktiviteter",
+        "Välkomnande atmosfär för nykomlingar med etablerade utlandsnettverk",
+        "Mixning av permanenta invånare och säsongsbesökare som skapar en vibrerande gemenskapsmiljö",
+        "Varierande europeisk gemenskapsmiljö inklusive brittiska, skandinaviska, nederländska, tyska och franska invånare",
+        "Lokal spansk gemenskapsmiljö välkomnande och omfattande mot internationella invånare"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "En typisk dag i El Campello",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morgonkaffe",
+          "description": "Börja dagen med färskt kaffe på din terrass och njut av havsbrisar och lugn omgivning"
+        },
+        {
+          "time": "09:30",
+          "activity": "Strandpromenad",
+          "description": "Morgonpromenad längs stranden eller promenaden och andas in den färska medelhavsluften"
+        },
+        {
+          "time": "12:00",
+          "activity": "Färsk marknads-shopping",
+          "description": "Plocka upp färskt bröd, frukt och lokala produkter från supermarknaden eller veckomakten"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spansk lunch",
+          "description": "Njut av en långsam menú del día på en lokal restaurang - tre rätter med vin för omkring €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Vila under de varmaste timmarna och kyla av dej i ditt privata eller gemensamt pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Strandtid",
+          "description": "Gå till stranden för en eftermiddagssimning i det varma medelhavsvattnet"
+        },
+        {
+          "time": "20:00",
+          "activity": "Kvällspasso",
+          "description": "Gå med de lokala för den traditionella kvällspromenaden genom stan och hälsa grannar och vänner"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas-middag",
+          "description": "Avsluta dagen med tapas och ett glas lokalt vin på din favoritrestaurang och äta utomhus under stjärnorna"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.3989!3d38.4283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "El Campello",
+    "description": "El Campello är en kustkommunicipunkt på Costa Blanca North, Spanien. Känd för medelhavsklivsstil, högkvalitativa nya byggnader och internationella gemenskapsmiljö.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.4283",
+      "longitude": "-0.3989"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "El Campello",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hur lång tid tar det att komma till Alicante Airport från El Campello?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alicante Airport ligger ungefär 25 minuter från El Campello med bil via AP-7-motorvägen, eller cirka 45 minuter med TRAM Metropolitano med en anslutning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Finns det ett bra utlandssamfund i El Campello?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, El Campello har ett väletablerat internationellt samhälle, särskilt brittiska, tyska och skandinaviska invånare, med olika klubbar och sociala grupper som organiserar regelbundna aktiviteter och evenemang."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vilka är de bästa stränderna i El Campello?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Playa Muchavista är huvudstranden med fin sand och Blue Flag-status, medan Playa Carrer la Mar erbjuder en mer intim inställning. Området innehåller också dramatiska klippformationer och små vikar perfekt för simning och snorkling."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan du bo i El Campello utan att tala spanska?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Även om många lokala och tjänsteleverantörer talar viss engelska, ökar lärandet av grundläggande spanska upplevelsen mycket. Utlandssamfundet ger stödnätverk och många medicinska och juridiska yrkesfolk erbjuder tjänster på engelska."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur är levnadskostnaden i El Campello?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El Campello erbjuder utmärkt värde med restaurangmål från €12-25, livsmedel liknande nordeuropeiska priser och verktyg i genomsnitt €80-120 månadsvis. Fastighetsskatter och gemenskapsbidrag är generellt rimliga."
+        }
+      }
+    ]
+  },
+  "golf": {
+    "intro": "El Campello drar nytta av utmärkt golfatkomst med mästerskapskurser inom 10 minuter. Området kombinerar en lugn kustnär inställning med bekväm tillgång till världsklassfaciliteter. Utökad medelhavsspelsäsong säkerställer året runt golftillfällen för entusiaster.",
+    "courses": [
+      {
+        "name": "Club de Golf Alicante",
+        "distance": "6 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Club+Golf+Alicante",
+        "description": "Mästerskapskurs med rullandeterräng och medelhavsutsikt med väl underhållet fairways och utmanande grönt"
+      },
+      {
+        "name": "Club de Golf Bonalba",
+        "distance": "8 km",
+        "driveTime": "13 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Club+Golf+Bonalba",
+        "description": "Modern kurs med malerisk layout, högkvalitativ facilitet och professionella träningsprogram"
+      },
+      {
+        "name": "Club de Golf Meliá Villaitana",
+        "distance": "14 km",
+        "driveTime": "20 minutes",
+        "holes": 36,
+        "url": "https://www.meliavillaitana.com/",
+        "googleMaps": "https://maps.google.com/?q=Melia+Villaitana+Golf",
+        "description": "Dubbla mästerskapskurser som erbjuder både kustnära och berglayout med resort-faciliteter"
+      }
+    ]
+  }
+}

@@ -1,0 +1,389 @@
+{
+  "slug": "cox",
+  "name": "Cox",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/cox-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 7,
+  "propertyTypes": [
+    "Town House",
+    "Bungalow"
+  ],
+  "priceRange": {
+    "min": 209000,
+    "max": 255000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Cox Tourism",
+      "url": "https://www.google.com/search?q=Cox%20Spain%20official%20website",
+      "description": "Oppdag mer om Cox"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "50 km",
+      "driveTime": "35 min"
+    },
+    "healthcare": {
+      "name": "Hospital Vega Baja (Orihuela)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Vega%20Baja%20(Orihuela)",
+      "distance": "8 km"
+    }
+  },
+  "content": {
+    "metaTitle": "Liv i Cox 2026 | Komplett områdeguide & Eiendom",
+    "metaDescription": "Oppdag liv i Cox: €209k-€255k eiendommer, etablert ekspat-samfunn, 8% vekst. Blåflagg-strender, internasjonale skoler & helsevesen.",
+    "heroIntro": "Cox er en sjarmerende innlandsby som har blitt stadig mer populær blant internasjonale kjøpere som søker autentisk spansk liv kombinert med moderne fasiliteter. Lokalisert på Spanias Costa Blanca, tilbyr Cox en unik blanding av tradisjonell spansk kultur og moderne bekvemmelighet, noe som gjør det til en attraktiv destinasjon for familier, pensjonister og investorer. Byen har et etablert internasjonalt samfunn hvor engelsk tales flytende, noe som eliminerer språkbarrierer for nykommere. Med eiendomspriser fra €209.000 til €255.000 og en sterk 8% år-til-år markedsvekst, representerer Cox utmerket verdi sammenlignet med øymarkeder - 40% billigere enn typiske spanske øyeiendommer. Området har transformert seg over det siste tiåret mens det har opprettholdt sin autentiske karakter, med moderne infrastruktur som støtter både fast bosatte og de som søker inntekter fra ferieutleie. Enten du leter etter en primærbolig, investeringseiendom eller feriehjem, leverer Cox tilgjengelighet, overkommelighet og livskvalitet som rivaliserer med mer kjente kystdestinasioner.",
+    "lifestyleSection": {
+      "intro": "Dagliglivet i Cox dreier seg om den spanske tradisjonen for fellesskapsliv, med livlige lokalmarkeder, familieorienterte restauranter og sosiale møtesteder rundt omkring i byen. Det etablerte internasjonale samfunnet har skapt en velkomstende atmosfære hvor engelsk tales vanlig, men du vil fortsatt oppleve autentiske spanske tradisjoner og mat. Mercadona og Lidl-supermarkeder tilbyr praktisk shopping sammen med sjarmerende lokale markeder som tilbyr fersk produksjon, fisk og regionale spesialiteter. Sosiale aktiviteter florerer med mange kafeer, tapas-barer og restauranter som serverer både tradisjonell spansk og internasjonal mat. Flere Blåflagg-strender ligger innenfor 20 minutter, og tilbyr svømming, vannaktiviteter og strandbarer. Ekspat-samfunnet organiserer regelmessige sosiale arrangementer, kulturelle aktiviteter og nettverkingsmuligheter, noe som gjør integreringen smertefri for nykommere. Golfentusiaster setter pris på flere mesterskapsbaner i nærheten, mens hiking, sykling og friluftaktiviteter er tilgjengelige i hele regionen. Livstempoet forblir avslappet og barnvennlig, med sterk vekt på fritid, god mat og personlige forbindelser - essensen av middelhavslivet.\n\nCox har et klassisk middelhavsklimaet med over 300 solskinnsdager årlig, milde vintrer og varme, tørre somre. Temperaturer varierer typisk fra 8-10°C om vinteren til 28-32°C om sommeren, noe som skaper ideelle forhold for årrundt-living. Vår og høst tilbyr særlig behagelig vær, med komfortable temperaturer perfekt for friluftaktiviteter og utforsking. Nedbør er minimal, konsentrert hovedsakelig i høst- og vintermånedene, mens sommeren forblir konsekvent tørr og perfekt for strandbesøk. Klimaet er særlig fordelaktig for de med respiratoriske problemer eller som søker å unngå harde vintrer. Den rådende sjøbrisen holder kystområdene kjøligere under toppetid om sommeren, og nærheten til Middelhavet modererer temperaturekstremer. Dette klimaet gjør Cox egnet for mennesker i alle aldre, fra aktive familier til pensjonister som søker terapeutiske værforhold.",
+      "highlights": [
+        "Uovertruffet verdi - 40% billigere enn øymarkeder med sammenlignbar middelhavsliv og fasiliteter",
+        "Sterk markedsvekst på 8% år-til-år som indikerer positiv investeringsbane og verdistigning potensial",
+        "Etablert internasjonalt samfunn med engelsk som vanlig språk, noe som legger til rette for smidig integrasjon for nykommere",
+        "Utmerket helsefasiliteter inkludert engelsktalende leger, regionale sykehus og private klinikker innenfor kort distanse",
+        "Autentisk spansk kultur kombinert med moderne infrastruktur som skaper balansert livserfaring",
+        "Flere Blåflagg-strender innenfor 20 minutter og mesterskapsgolfbaner som muliggjør aktiv livsstil"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Sports- og fritidsaktiviteter definerer Cox-livsstilen, med flere Blåflagg-strender innenfor 20 minutter som tilbyr svømming, vannaktiviteter og strandbarer. Flere mesterskapsgolfbaner i nærheten henvender seg til entusiaster på alle ferdighetsnivåer, med vakre baner og profesjonelle fasiliteter. Kystproximitet muliggjør vannaktiviteter inkludert paddlebrettsurfing, vindsurfing og kajakk. Hiking- og sykkelstier krysser det omliggende landet, noe som tilbyr friluftsentusiaster endeløse utforskningsmuligheter. Fitnessentre, tennisbaner og sportsklubb skaper en aktiv samfunnkultur egnet for familier og helsebeviste innbyggere som søker en aktiv middelhavsliv.",
+      "dining": "Cox tilbyr variete av matopplevelser, fra tradisjonelle spanske tapas-barer og familierestauranter til internasjonal mat. Lokale etablissementer serverer autentiske regionale retter med ferske lokale ingredienser, mens menú del día tilbyr utmerket verdi på rundt €10-12 for et treretter måltid.",
+      "shopping": "Shopping i Cox henvender seg til alle preferanser, fra moderne supermarkeder til tradisjonelle spanske markeder. Mercadona tilbyr omfattende produktutvalg med konkurransedyktig prising, mens Lidl tilbyr budsjettvenlige alternativer for dagligvarene. Consum-supermarkedet betjener lokale samfunn med kvalitetsprodukter og lokale spesialiteter. Tradisjonelle markeder drives regelmessig, med fersk produksjon, fisk og regionale mat til utmerket priser. Kombinasjonen av moderne handel og tradisjonelle markeder sikrer at innbyggere nyter både bekvemmelighet og autentiske handelsopplevelser, med tilgang til internasjonale produkter for de som søker kjente merker.",
+      "healthcare": "Helsevesen i Cox er omfattende og internasjonalt anerkjent, med et regionalt sykehus lokalisert innenfor 30 minutter som tilbyr full medisinsk service og akuttbehandling. Private klinikker er lett tilgjengelige i hele området, og tilbyr spesialiserte tjenester og kortere ventetider. Engelsktalende leger finnes vanlig både i offentlige og private fasiliteter, noe som eliminerer kommunikasjonbarrierer for internasjonale innbyggere. Helsevesenet opprettholder europeiske standarder mens det tilbyr eksepsjonell verdi sammenlignet med private helsekostnader i Nord-Europa. Mange innbyggere setter pris på kombinasjonen av offentlig helsevesen tilgang og rimelige private alternativer for ikke-nødvendige behandlinger.",
+      "transport": "Bussforbindelser knytter Cox til omliggende byer og kystområder, noe som tilbyr praktisk offentlig transport for de som foretrekker ikke å kjøre. Imidlertid anbefales bileierskap for maksimal fleksibilitet, noe som muliggjør lett utforsking av det bredere Costa Blanca-området og tilgang til fasiliteter som ikke er direkte forbundet med offentlig transport. Alicante-Elche-flyplassen (omtrent 90 kilometer borte) tilbyr internasjonale forbindelser til UK og europeiske destinasjoner, typisk krever 60-75 minutter med bil. Valencia-flyplassen (omtrent 150 kilometer) tilbyr alternative internasjonale flyvninger. Begge flyplassene har bilutleiefasiliteter for utforsking av regionen. Cox nyter utmerket veisamband via motorveier som knytter til større kystbyer, regionale sentre og naborsamfunn. Moderne motorveiinfrastruktur muliggjør enkle dagsturer til Benidorm, Alicante og andre Costa Blanca-destinasjoner. Lokale veier er godt vedlikeholdt, og internasjonale førerbevis er anerkjent. Busserviser drives regelmessig knytter Cox til omliggende byer, strender og regionale sentre. Servicene øker i sommermånedene når turismen topper. Koordinering mellom busselskaper sikrer konnektivitet over hele Costa Blanca-regionen."
+    },
+    "propertyMarketSection": "Cox sitt eiendomsmarked viser robust helse med 8% år-til-år vekst, noe som reflekterer økende internasjonalt interesse i innlands Costa Blanca-samfunn. Markedet tilbyr utmerket verdistilling, med priser 40% lavere enn typiske spanske øymarkeder, noe som tiltrekker investorer og eierbebyggere som søker kapitalstigning og potensial for leieinntekter.\n\nPopulære eiendomstyper inkluderer Town House, Bungalow.\n\nLeiepotensial forblir sterkt med typiske 7-natters ferieutleie som krever €800, noe som skaper praktiske investeringsavkastninger for eiendomseiere. Kombinasjonen av overkommelighet, vekstbane og leieetterspørsel posisjonerer Cox som en attraktiv investeringsmulighet. Kapitalvekst-utsikter er positive gitt regional utvikling, infrastrukturforbedringar og økende ekspat-etterspørsel.",
+    "whyLiveHereSection": [
+      "Uovertruffet verdi - 40% billigere enn øymarkeder med sammenlignbar middelhavsliv og fasiliteter",
+      "Sterk markedsvekst på 8% år-til-år som indikerer positiv investeringsbane og verdistigning potensial",
+      "Etablert internasjonalt samfunn med engelsk som vanlig språk, noe som legger til rette for smidig integrasjon for nykommere",
+      "Utmerket helsefasiliteter inkludert engelsktalende leger, regionale sykehus og private klinikker innenfor kort distanse",
+      "Autentisk spansk kultur kombinert med moderne infrastruktur som skaper balansert livserfaring",
+      "Flere Blåflagg-strender innenfor 20 minutter og mesterskapsgolfbaner som muliggjør aktiv livsstil"
+    ],
+    "faqs": [
+      {
+        "question": "Er Cox et godt sted å bo?",
+        "answer": "Ja, Cox er et utmerket sted å bo. Det kombinerer autentisk spansk kultur med moderne fasiliteter, opprettholder et etablert og velkomstende internasjonalt samfunn hvor engelsk tales flytende, og tilbyr uovertruffet verdi på 40% mindre enn øymarkedspriser. Området tilbyr kvalitetshelsevesen, utdannelsesmuligheter for familier, nærhet til vakre strender og sterkt potensial for leieinntekter, noe som gjør det egnet for pensjonister, familier og investorer."
+      },
+      {
+        "question": "Kan utlendinger kjøpe eiendom i Spania?",
+        "answer": "Ja, utlendinger kan fritt kjøpe eiendom i Spania uten restriksjoner. EU-borgere, ikke-EU-borgere og de uten spansk oppholdstillatelse kan alle kjøpe eiendom. Prosessen innebærer åpning av en spansk bankkonto, innhenting av et spansk skatteid (NIE), og registrering av kjøpet hos lokale myndigheter. Mange internasjonale eiendomsmeglere og engelsktalende advokater i Cox-området legger til rette for denne prosessen for utenlandske kjøpere."
+      },
+      {
+        "question": "Hva er kostnadene ved å kjøpe eiendom i Spania?",
+        "answer": "Eiendomskostnadene i Cox varierer fra €209.000 til €255.000, noe som gjør det betydelig rimelig sammenlignet med andre spanske markeder. Utover kjøpsprisen bør kjøpere budsjettere for overføringsskatt (7-10%), juridiske honorarer (0,5-1,5% av eiendomsverdi) og registreringskostnader (0,1-0,5%). Årlige eiendomsskatter (IBI) varierer typisk fra €200-€400 avhengig av eiendomsverdi og plassering innenfor Cox."
+      },
+      {
+        "question": "Trenger jeg visum for å kjøpe eiendom i Spania?",
+        "answer": "Kjøp av eiendom i Spania krever ikke visum. Hvis du imidlertid planlegger å bo i Spania permanent, trenger du passende oppholdstilatelse. EU-borgere kan forbli på ubestemt tid med bevis på økonomiske midler. Ikke-EU-borgere krever typisk langtidsvisum, ofte innhentet gjennom investerings- eller pensjonistprogrammer. Eiendomseierskap alene gir ikke oppholdstillatelse, men legger til rette for visumsøknader gjennom demonstrering av økonomiske forbindelser."
+      },
+      {
+        "question": "Hvor mye er eiendomsskatter i Spania?",
+        "answer": "Spanias eiendomsskatt (IBI - Impuesto sobre Bienes Inmuebles) er kommunal og varierer etter lokasjon. I Cox varierer årlig IBI typisk fra €200-€400 avhengig av eiendomsklassifisering og katastralverdi. Gevinstskatt gjelder når du selger eiendom, generelt 19% av overskudd for innbyggere og høyere satser for ikke-innbyggere. Formueskatt gjelder hvis din spanske eiendomsportefølje overstiger visse terskler, typisk €600.000-€700.000."
+      },
+      {
+        "question": "Kan jeg få boliglån i Spania som utlending?",
+        "answer": "Ja, utenlandske kjøpere kan innhente boliglån i Spania. De fleste spanske banker tilbyr boliglån som dekker 70-80% av eiendomsverdi til kvalifiserte utenlandske søkere. Kravene innebærer typisk inntektsbevis, kredittbedømmelse og et innskudd på 20-30%. Rentesatser er generelt konkurransedyktige. Arbeid med engelsktalende boliglånsmeglere i Cox-området forenkler denne prosessen, og mange utlendinger finansierer eiendomskjøp gjennom spanske banker."
+      },
+      {
+        "question": "Hva er levekostnadene i Costa Blanca?",
+        "answer": "Levekostnadene i Cox er bemerkelsesverdig rimelige, betydelig lavere enn Nord-Europa samtidig som man opprettholder livskvalitet. Gjennomsnittlige eiendomspriser per kvadratmeter står på €2.200/m². Spising, underholdning og forbruk koster betydelig mindre enn UK-ekvivalenter. Lokal produksjon på markeder er billig, og helsekostnader er minimale sammenlignet med private systemer i andre land. En komfortabel livsstil for et par kan opprettholdes på €1.200-€1.500 månedlig, ekskludert eiendomsbetalinger."
+      },
+      {
+        "question": "Er Costa Blanca bra for pensjonister?",
+        "answer": "Costa Blanca, særlig områder som Cox, er utmerket for pensjonister. Det varme middelhavsklima gagner helse og velvære, helsefasiliteter er av høy kvalitet med engelsktalende fagfolk, og levekostnader forblir rimelige på pensjoner. Det etablerte internasjonale samfunnet gir sosiale muligheter og kulturell kjentskap, mens nærhet til strender, golfbaner og friluftaktiviteter støtter aktiv aldring. Mange pensjonister nyter livsstilen og økonomiske fordeler kontra å bli eldre på plass i Nord-Europa."
+      },
+      {
+        "question": "Hvor langt er Costa Blanca fra UK?",
+        "answer": "Costa Blanca ligger omtrent 1.500 kilometer (930 miles) fra UK. Flygetider fra London til Alicante-Elche-flyplassen varierer typisk fra 2,5-3 timer, noe som gjør det lett tilgjengelig for regelmessige besøk hjem. Flere flyselskaper drives daglige flyvninger mellom UK-lufthavner og Alicante, noe som sikrer praktiske forbindelser for vedlikehold av UK-forhold og familiebesøk. Områdets popularitet med britiske ekspater gjenspeiler denne tilgjengeligheten og korte reisetider."
+      },
+      {
+        "question": "Hva er været som på Costa Blanca?",
+        "answer": "Costa Blanca nyter eksepsjonelt middelhavsvær med over 300 solskinnsdager årlig. Sommere er varme og tørre (28-32°C) med minimal nedbør, mens vintrer er milde (8-10°C). Vår og høst tilbyr ideale temperaturer (18-25°C) for friluftaktiviteter. Sjøbrisen modererer sommerhete i kystområdene, og nedbør oppstår hovedsakelig i høst og vinter. Dette klimaet støtter årrundt friluftsliv og er særlig fordelaktig for de med respiratoriske problemer eller som søker unnslippe harde vintrer."
+      }
+    ],
+    "conclusion": "Klar til å finne din perfekte eiendom i Cox? Vårt erfarne team spesialiserer seg på nye bygg-eiendommer i hele dette området og kan veilede deg gjennom hver steg. Enten du søker et permanent hjem, feriehyttehjem eller investeringseiendom, vil vi hjelpe deg finne nøyaktig det du leter etter. Book en gratis 30-minutters konsultasjon med vårt team - med over 12 års erfaring med å selge nye bygg på Costa Blanca, kjenner vi dette markedet godt.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Leiepotensial forblir sterkt med typiske 7-natters ferieutleie som krever €800, noe som skaper praktiske investeringsavkastninger for eiendomseiere. Kombinasjonen av overkommelighet, vekstbane og leieetterspørsel posisjonerer Cox som en attraktiv investeringsmulighet. Kapitalvekst-utsikter er positive gitt regional utvikling, infrastrukturforbedringar og økende ekspat-etterspørsel.",
+      "highlights": [
+        "Lavere inngangspriser enn sammenlignbare markeder med lignende leieavkastninger",
+        "Økende internasjonal etterspørsel som driver stabil prisstigning",
+        "Langsiktig leieetterspørsel fra økende ekspat-samfunn"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Levekostnader i Cox er betydelig lavere enn Nord-Europa og meget konkurransedyktige innenfor Spania. Innlandslokasjoner som Cox tilbyr særlig god verdi for daglige utgifter.",
+      "items": [
+        {
+          "category": "Dagligvarer (månedlig, par)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl og lokale markeder i nærheten"
+        },
+        {
+          "category": "Verktøy (elektrisitet, vann, gass)",
+          "cost": "€100-160",
+          "notes": "Høyere om sommeren med luftkondisjonering"
+        },
+        {
+          "category": "Fellesgebyr",
+          "cost": "€50-120",
+          "notes": "Varierer etter utvikling og inkluderte tjenester"
+        },
+        {
+          "category": "IBI (Kommuneskatt)",
+          "cost": "€400-1.000/år",
+          "notes": "Årlig eiendomsskatt basert på katastralverdi"
+        },
+        {
+          "category": "Spising ute (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día fra €10; restauranter €15-30"
+        },
+        {
+          "category": "Internett & Telefon",
+          "cost": "€35-50",
+          "notes": "God bredbåndsdekning; flere leverandører"
+        },
+        {
+          "category": "Bilkostnader (drivstoff, forsikring)",
+          "cost": "€150-250",
+          "notes": "Essentiell for innlandsliv"
+        },
+        {
+          "category": "Privat helseforsikring",
+          "cost": "€60-150",
+          "notes": "Omfattende dekning; lavere for yngre innbyggere"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Cox feirer tradisjonelle spanske fiestas og samfunnsarrangementer gjennom året, noe som blender lokale tradisjoner med det velkomstende internasjonale samfunnet.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Årlige festdag til vernehelgen med parader, musikk, fyrverkeri og tradisjonelle feiringer som bringer hele samfunnet sammen"
+        },
+        {
+          "name": "Semana Santa (Påskeuken)",
+          "month": "Mars/April",
+          "description": "Høytidelige Påskeuka-prosessjoner gjennom gatene med tradisjonelle flytere og hundreårsold religøse tradisjoner"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "Desember",
+          "description": "Nasjonale feierdag-feiringer med lokale arrangementer, markeder og samfunnsamlinger"
+        },
+        {
+          "name": "Spring Festival",
+          "month": "Mai",
+          "description": "Feiring av våren med blomsterdekorasjoner, matboder, tradisjonell musikk og samfunnsamlinger på torget"
+        },
+        {
+          "name": "Harvest Festival",
+          "month": "Oktober",
+          "description": "Tradisjonell høstfeiring som med lokale produksjon, vinnesting, håndverkermarkeder og regional gastronomi"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "Desember/Januar",
+          "description": "Festlig sesong med markedsboder, krybbekrypter og spektakulær Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Familier i Cox har tilgang til kvalitetsutdanningstilbud i det omliggende området, med flere internasjonale skoler som betjener ekspat-samfunnet sammen med utmerkete spanske offentlige skoler.",
+      "schools": [
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "20-35 min",
+          "description": "Britisk læreplannskole med utmerkete fasiliteter og sterke akademiske resultater som betjener ekspat-samfunnet"
+        },
+        {
+          "name": "Newton College",
+          "type": "International (British/Spanish)",
+          "distance": "25-40 min",
+          "description": "Tospråklig internasjonal skole som tilbyr både britisk og spansk læreplaner med moderne fasiliteter"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Lokal offentlig skole som tilbyr spansk læreplan utdanning, utmerket for språkdopping og samfunnsintegrasjon"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "Offentlig videregående skole som tilbyr ESO og Bachillerato programmer med supportivt læringsmiljø"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Cox tilbyr utmerkete friluftaktiviteter året rundt, fra hiking og sykling til golf, natureturer og mer.",
+      "activities": [
+        {
+          "name": "Landstygn Walking",
+          "type": "Hiking",
+          "description": "Vandringsstier gjennom det omliggende landet med utsikt over frukthager, fjell og tradisjonelle landsbyer"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Vei- og fjellsykkelturer gjennom det vakre landet, egnet for alle fitnessnivåer"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Flere kvalitetsgolfbaner innenfor lett kjøreavstand som tilbyr årrundt spill i middelhavsolen"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Beskyttede naturomrader i nærheten som tilbyr fugletitting, fotografi og fredelige natureturer"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Cox har et økende internasjonalt samfunn, med ekspatiater trukket av middelhavslivsstilen, rimelige levekostnader og velkomstende atmosfære. Den autentiske spanske karakteren til området tiltrekker de som søker genuin integrasjon med lokal kultur. Engelsk tales i økende grad, med mange tjenester tilgjengelige på engelsk, noe som gjør dagliglivet komfortabelt for nykommere.",
+      "highlights": [
+        "Økende internasjonal sosial scene med regelmessige samfunnsarrangementer",
+        "Engelsktalende tjenester tilgjengelige inkludert medisinsk og juridisk fagfolk",
+        "Regelmessige samfunnsamlinger, klubber og sosiale aktiviteter",
+        "Velkomstende atmosfære for nykommere med etablerte ekspat-nettverk",
+        "Blanding av permanente innbyggere og sesongbesøkende som skaper et dynamisk samfunn",
+        "Sterk britisk og skandinavisk tilstedeværelse sammen med nederlandsk, belgisk og tysk innbyggere",
+        "Lokalt spansk samfunn som er velkomstende og inkluderende overfor internasjonale innbyggere"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "En typisk dag i Cox",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start dagen med fersk kaffe på terrassen din, nytende av morgensolskinn og fredelige omgivelser"
+        },
+        {
+          "time": "09:30",
+          "activity": "Market Visit",
+          "description": "Bla gjennom det lokale markedet for fersk produksjon, brød og sesongmessige spesialiteter fra lokale bønder"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Plukk opp fersk brød, frukt og lokal produksjon fra supermarkedet eller ukentlig marked"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Nyt en avslappet menú del día på en lokal restaurant - tre retter med vin for rundt €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Hvil under de varmeste timene, deretter avkjøl deg i ditt private eller felles basseng"
+        },
+        {
+          "time": "17:30",
+          "activity": "Afternoon Walk",
+          "description": "Utforsk det omliggende landet eller byggatene mens temperaturen kjøler seg ned"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Slutt deg til lokalbefolkningen for den tradisjonelle kveldspromenaden gjennom byen, hilsende naboer og venner"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "Avsluttt dagen med tapas og et glass lokalt vin på din favoritrestaurant, spise al fresco under stjernene"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.8928!3d38.1411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Cox",
+    "description": "Cox er en innlandskommune i Costa Blanca South, Spania. Kjent for middelhavsliv, kvalitet nye bygg-utviklinger og internasjonalt samfunn.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.1411",
+      "longitude": "-0.8928"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cox",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Er Cox et godt sted å bo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, Cox er et utmerket sted å bo. Det kombinerer autentisk spansk kultur med moderne fasiliteter, opprettholder et etablert og velkomstende internasjonalt samfunn hvor engelsk tales flytende, og tilbyr uovertruffet verdi på 40% mindre enn øymarkedspriser. Området tilbyr kvalitetshelsevesen"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan utlendinger kjøpe eiendom i Spania?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, utlendinger kan fritt kjøpe eiendom i Spania uten restriksjoner. EU-borgere, ikke-EU-borgere og de uten spansk oppholdstillatelse kan alle kjøpe eiendom. Prosessen innebærer åpning av en spansk bankkonto, innhenting av spansk skatteid (NIE), og registrering av kjøpet w"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hva er kostnadene ved å kjøpe eiendom i Spania?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eiendomskostnadene i Cox varierer fra €209.000 til €255.000, noe som gjør det betydelig rimelig sammenlignet med andre spanske markeder. Utover kjøpsprisen bør kjøpere budsjettere for overføringsskatt (7-10%), juridiske honorarer (0,5-1,5% av eiendomsverdi) og registreringskostnader (0,1-0,5%). Årlige eiendomsskatter (IB"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Trenger jeg visum for å kjøpe eiendom i Spania?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kjøp av eiendom i Spania krever ikke visum. Hvis du imidlertid planlegger å bo i Spania permanent, trenger du passende oppholdstilatelse. EU-borgere kan forbli på ubestemt tid med bevis på økonomiske midler. Ikke-EU-borgere krever typisk langtidsvisum, ofte innhentet gjennom inve"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvor mye er eiendomsskatter i Spania?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Spanias eiendomsskatt (IBI - Impuesto sobre Bienes Inmuebles) er kommunal og varierer etter lokasjon. I Cox varierer årlig IBI typisk fra €200-€400 avhengig av eiendomsklassifisering og katastralverdi. Gevinstskatt gjelder når du selger eiendom, generelt 19% av overskudd for innbyggere og hi"
+        }
+      }
+    ]
+  }
+}
