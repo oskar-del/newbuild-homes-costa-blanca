@@ -359,14 +359,13 @@ export default function BlogArticleContent({
                       {/* Property Showcases - Before Conclusion */}
                       {getShowcasesByPosition('before-conclusion').map(renderPropertyShowcaseEl)}
 
-                      {/* Conclusion — clean bordered design */}
+                      {/* Conclusion */}
                       {structured.conclusion && (
-                        <section className="mt-10 p-6 md:p-8 bg-primary-900 rounded-sm text-white">
-                          <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                            <span className="w-8 h-8 bg-accent-500 text-white rounded-full flex items-center justify-center text-sm flex-shrink-0">✓</span>
+                        <section className="mt-10 p-6 md:p-8 bg-warm-50 rounded-sm border border-warm-200">
+                          <h2 className="text-xl font-bold text-primary-900 mb-4 pl-4 border-l-4 border-accent-500">
                             {strings.conclusion}
                           </h2>
-                          <div className="[&_p]:text-warm-200 [&_strong]:text-white [&_div]:text-warm-200" dangerouslySetInnerHTML={{ __html: markdownToHtml(structured.conclusion) }} />
+                          <div className="[&_p]:text-warm-700 [&_strong]:text-primary-900" dangerouslySetInnerHTML={{ __html: markdownToHtml(structured.conclusion) }} />
                         </section>
                       )}
 
