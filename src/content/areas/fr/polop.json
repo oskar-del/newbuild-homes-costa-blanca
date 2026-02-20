@@ -1,0 +1,381 @@
+{
+  "slug": "polop",
+  "name": "Polop",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/polop-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 27,
+  "propertyTypes": [
+    "Les propriétés Villa et Maison de Ville dominent le marché",
+    "offrant diverses tailles et aménagements pour différents profils d'acheteurs et budgets."
+  ],
+  "priceRange": {
+    "min": 470000,
+    "max": 860000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Tourisme Polop",
+      "url": "https://www.google.com/search?q=Polop%20Spain%20official%20website",
+      "description": "Découvrez plus sur Polop"
+    },
+    "airport": {
+      "name": "Aéroport Alicante-Elche",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "55 km",
+      "driveTime": "38 min"
+    },
+    "healthcare": {
+      "name": "Hôpital Marina Baixa (Villajoyosa)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Marina%20Baixa%20(Villajoyosa)",
+      "distance": "12 km"
+    }
+  },
+  "content": {
+    "metaTitle": "Vivre à Polop 2026 | Guide complet de la ville intérieure",
+    "metaDescription": "Découvrez Polop à la Costa Blanca : villas & maisons de ville €470k-€860k, communauté expatriée établie, plages au drapeau bleu à 20 min. Guide complet.",
+    "heroIntro": "Polop est une ville intérieure charmante au cœur de la Costa Blanca, offrant un mélange parfait d'authenticité espagnole et de commodité internationale. Cette communauté résidentielle établie est devenue de plus en plus populaire auprès des acheteurs immobiliers cherchant une alternative aux développements côtiers surpeuplés, sans sacrifier l'accès aux plages et aux commodités. Avec 27 propriétés de qualité disponibles entre 470 000 € et 860 000 €, Polop représente une valeur exceptionnelle par rapport aux propriétés insulaires - 40 % moins chères que les propriétés insulaires espagnoles comparables. La ville attire une communauté expatriée diversifiée où l'anglais est largement parlé, ce qui la rend idéale pour les retraités et les familles cherchant un style de vie méditerranéen décontracté. Que vous recherchiez une résidence permanente, un investissement locatif ou une maison de vacances, Polop combine abordabilité, accessibilité et qualité de vie dans l'une des régions les plus désirables d'Espagne.",
+    "lifestyleSection": {
+      "intro": "La vie quotidienne à Polop s'articule autour d'un rythme méditerranéen décontracté combiné à des commodités modernes. La ville est le foyer de marchés locaux établis où les résidents achètent des produits frais, du poisson et des spécialités régionales, créant un rythme hebdomadaire vibrant. Les restaurants vont des bars à tapas espagnols traditionnels aux cuisines internationales, s'adaptant à la communauté expatriée diversifiée. La communauté internationale établie signifie que l'anglais est couramment parlé dans les magasins, restaurants et cercles sociaux, facilitant la transition pour les nouveaux venus. Plusieurs plages au drapeau bleu ne sont qu'à 20 minutes, rendant les excursions en week-end pratiques. Polop offre un excellent accès à des parcours de golf de championnats pour les amateurs, tandis que les sentiers de randonnée à proximité dans les montagnes de la Sierra offrent des loisirs en plein air. Le réseau expatrié organise des événements sociaux réguliers, des clubs de lecture et des activités, créant une structure sociale accueillante. Les magasins sont pratiques avec des supermarchés modernes et des marchés traditionnels, tandis que le rythme plus lent permet une connexion authentique avec la culture espagnole et les traditions locales.\n\nPolop jouit d'un climat méditerranéen classique avec plus de 300 jours de soleil par an. Les étés sont chauds et secs, avec des températures moyennes de 28-32°C de juin à août, tandis que les hivers restent doux avec des températures rarement inférieures à 10°C. Le printemps et l'automne offrent le temps le plus agréable, avec des températures modérées entre 18-24°C et des niveaux d'humidité plus faibles. Les montagnes de la Sierra à proximité offrent une protection naturelle contre la chaleur excessive, créant des conditions légèrement plus fraîches que les zones côtières. La meilleure période pour visiter ou s'installer est avril à juin ou septembre à novembre, quand le temps est idéal et les foules touristiques sont minimes. Les mois d'hiver restent agréables pour ceux qui cherchent à échapper à des climats plus froids du nord, ce qui rend Polop une destination excellente toute l'année.",
+      "highlights": [
+        "Valeur exceptionnelle - 40 % moins cher que les marchés insulaires espagnols avec un style de vie similaire",
+        "Communauté internationale établie avec l'anglais couramment parlé, facilitant l'intégration",
+        "Équilibre parfait entre la vie authentique en ville espagnole et les commodités modernes et services",
+        "Plusieurs plages au drapeau bleu à seulement 20 minutes pour la détente en week-end",
+        "Fort potentiel d'investissement locatif avec un taux typique de 7 nuits à €800",
+        "Excellents soins de santé avec cliniques privées, médecins parlant anglais et installations modernes"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Les activités sportives et de loisirs sont abondantes à proximité de Polop. Plusieurs plages au drapeau bleu en 20 minutes offrent des opportunités pour la natation, les sports nautiques et la détente sur la plage. Plusieurs parcours de golf de championnats à proximité conviennent aux golfeurs de tous niveaux, avec des parcours offrant un enseignement professionnel et d'excellentes installations. Les sentiers de randonnée dans les montagnes de la Sierra à proximité offrent des vues magnifiques et des niveaux de difficulté variables. Les sports nautiques incluant le paddleboard, le kayak et la voile sont disponibles sur les plages à proximité. La région dispose également de courts de tennis, de pistes cyclables et d'installations de remise en forme.",
+      "dining": "Polop offre des expériences culinaires variées, des bars à tapas espagnols traditionnels et restaurants familiaux à la cuisine internationale. Les établissements locaux servent des plats régionaux authentiques avec des ingrédients locaux frais, tandis que le menú del día offre un excellent rapport qualité-prix à environ 10-12 € pour un repas à trois plats.",
+      "shopping": "Les achats à Polop combinent les supermarchés modernes avec les marchés espagnols traditionnels. Les grandes chaînes incluant Mercadona, Lidl et Consum offrent des prix compétitifs et des commodités de shopping hebdomadaires. Ces supermarchés proposent des produits internationaux aux côtés des aliments de base espagnols, s'adaptant aux préférences alimentaires diverses. Les marchés locaux hebdomadaires offrent des produits frais, du poisson, de la viande et des spécialités régionales à d'excellents prix. La ville dispose également de magasins spécialisés pour le pain, le vin et les produits locaux. Pour les gros achats et le shopping étendu, les villes à proximité offrent des options de vente au détail supplémentaires, incluant les centres commerciaux.",
+      "healthcare": "Les soins de santé à Polop sont complets et accessibles, avec un hôpital régional situé à moins de 30 minutes offrant des services d'urgence et de spécialiste. Plusieurs cliniques privées sont disponibles dans toute la région, offrant souvent des délais d'attente plus courts et des soins personnalisés. De nombreux professionnels de la santé parlent anglais, facilitant la communication pour les résidents internationaux. Le système de santé combine les services publics espagnols avec des options privées, permettant aux résidents de choisir leur fournisseur préféré. Les ordonnances sont abordables et facilement obtenues, avec de nombreux médicaments coûtant sensiblement moins cher que dans d'autres pays européens.",
+      "transport": "Les connexions de bus sont disponibles dans tout Polop et se connectent aux villes à proximité et aux zones côtières. Une voiture est recommandée pour la flexibilité maximale, particulièrement pour les excursions à la plage et l'exploration de la région, bien que les services de bus offrent une alternative viable pour les trajets réguliers. L'aéroport d'Alicante-Elche est à environ 60 kilomètres, offrant un accès d'une heure aux grandes destinations européennes. L'aéroport de Valence est plus au nord, à environ 130 kilomètres, offrant des options de vol supplémentaires et souvent des prix compétitifs. Polop bénéficie d'excellentes connexions routières via l'autoroute AP-7, se connectant à Alicante, Valence et Murcie. Les routes régionales se connectent sans interruption aux villes côtières à proximité, incluant Benidorm, Altea et Jávea. La ville est bien positionnée à la Costa Blanca avec un accès facile aux destinations côtières nord et sud. Les services de bus fonctionnent régulièrement entre Polop et les grandes destinations côtières, offrant des connexions fiables à Benidorm, Altea et autres villes. Les itinéraires sont conçus pour les résidents et les touristes, avec des tarifs abordables et des horaires pratiques."
+    },
+    "propertyMarketSection": "Le marché immobilier de Polop montre une forte dynamique de croissance avec une augmentation année sur année de 8 % de la valeur marchande. La région représente un excellent potentiel d'investissement combinant l'appréciation du capital avec les revenus locatifs. Le marché reste équilibré entre les acheteurs locaux et les investisseurs internationaux, créant une tarification stable et une bonne disponibilité.\n\nLes types de propriétés populaires incluent les propriétés Villa et Maison de Ville qui dominent le marché, offrant diverses tailles et aménagements adaptés à différents profils d'acheteurs et budgets..\n\nLe potentiel locatif est fort avec les locations typiques de 7 nuits atteignant 800 €, représentant des rendements solides pour les investisseurs immobiliers. La communauté expatriée établie et l'environnement favorable aux familles soutiennent une demande locative cohérente. Les perspectives de croissance du capital restent positives compte tenu des tendances du marché et de la popularité croissante de la région comme alternative aux développements côtiers coûteux.",
+    "whyLiveHereSection": [
+      "Valeur exceptionnelle - 40 % moins cher que les marchés insulaires espagnols avec un style de vie similaire",
+      "Communauté internationale établie avec l'anglais couramment parlé, facilitant l'intégration",
+      "Équilibre parfait entre la vie authentique en ville espagnole et les commodités modernes et services",
+      "Plusieurs plages au drapeau bleu à seulement 20 minutes pour la détente en week-end",
+      "Fort potentiel d'investissement locatif avec un taux typique de 7 nuits à €800",
+      "Excellents soins de santé avec cliniques privées, médecins parlant anglais et installations modernes"
+    ],
+    "faqs": [
+      {
+        "question": "Polop est-elle une bonne place où vivre?",
+        "answer": "Oui, Polop est une excellente place où vivre. Elle offre un style de vie méditerranéen espagnol authentique à une valeur exceptionnelle, avec une infrastructure forte, une communauté expatriée établie, des installations de soins de santé et un accès pratique aux plages et au golf. La croissance annuelle du marché de 8 % indique une forte confiance dans l'attrait et le potentiel d'investissement de la région."
+      },
+      {
+        "question": "Les étrangers peuvent-ils acheter des propriétés en Espagne?",
+        "answer": "Oui, les étrangers peuvent librement acheter des propriétés en Espagne. Les résidents non-espagnols ont les mêmes droits d'achat de propriété que les citoyens espagnols. Vous devrez obtenir un numéro d'identifiant fiscal espagnol (NIE), et le processus implique la documentation juridique et l'enregistrement de la propriété. De nombreux acheteurs internationaux travaillent avec des avocats locaux pour naviguer le processus d'achat en douceur."
+      },
+      {
+        "question": "Quels sont les coûts d'achat de propriétés en Espagne?",
+        "answer": "Au-delà du prix d'achat de la propriété, les coûts d'achat typiques en Espagne incluent: l'impôt de transfert immobilier (6-10%), les frais notariaux (environ 1%), les frais d'enregistrement immobilier (0,5-1%) et les frais juridiques (1-2%). À Polop, les propriétés vont de 470 000 € à 860 000 €, représentant une valeur exceptionnelle pour la vie à la Costa Blanca. Prévoyez 8-13% supplémentaires au-dessus du prix d'achat pour tous les coûts associés."
+      },
+      {
+        "question": "Puis-je obtenir un prêt hypothécaire en Espagne en tant qu'étranger?",
+        "answer": "Oui, de nombreuses banques espagnoles offrent des prêts hypothécaires aux acheteurs étrangers, généralement jusqu'à 80% du rapport prêt-valeur pour les résidences principales et 70% pour les propriétés d'investissement. Vous devrez fournir une preuve de revenu, une identification et un historique de crédit. Les banques espagnoles exigent souvent moins de documentation que prévu, et beaucoup ont du personnel parlant anglais. Les citoyens de l'UE peuvent trouver le processus plus facile, bien que les acheteurs non-UE soient également approuvés régulièrement."
+      },
+      {
+        "question": "Quel est le coût de la vie à la Costa Blanca?",
+        "answer": "Le coût de la vie à la Costa Blanca est nettement inférieur à celui de l'Europe du Nord. Polop offre une valeur exceptionnelle avec des prix de propriété moyens de 2 200 €/m², les coûts alimentaires locaux 40-50% moins chers que les prix britanniques et les factures de services nettement moins chères. Un style de vie confortable, incluant les repas au restaurant, les loisirs et les services, coûte généralement 1 200-1 800 € par mois pour les retraités."
+      },
+      {
+        "question": "La Costa Blanca est-elle bonne pour les retraités?",
+        "answer": "La Costa Blanca est excellente pour les retraités, offrant un logement abordable, d'excellents soins de santé, un climat chaud, des communautés de retraités établies et des réseaux de soutien parlant anglais. Polop attire particulièrement les retraités cherchant une vie plus calme que dans les villes côtières, tout en maintenant un accès pratique aux plages, services et activités sociales. La communauté expatriée offre des réseaux sociaux prêts à l'emploi."
+      },
+      {
+        "question": "À quelle distance la Costa Blanca se trouve-t-elle du Royaume-Uni?",
+        "answer": "L'aéroport d'Alicante, desservant la Costa Blanca, est à environ 2,5 heures de vol de Londres et d'autres aéroports britanniques. Les vols directs depuis plusieurs aéroports britanniques rendent les voyages pratiques et abordables. De nombreux résidents maintiennent un contact régulier avec la famille britannique par des options de voyage faciles et abordables."
+      },
+      {
+        "question": "Quel est le temps à la Costa Blanca?",
+        "answer": "La Costa Blanca jouit d'un climat méditerranéen avec plus de 300 jours de soleil par an. Les températures d'été moyennes 28-32°C, tandis que les hivers restent doux à 10-15°C. Le printemps et l'automne offrent des conditions idéales à 18-24°C. La situation intérieure de Polop offre des températures légèrement plus fraîches que les zones côtières, la rendant confortable toute l'année. Les précipitations sont minimes, concentrées sur les mois d'automne et de printemps."
+      }
+    ],
+    "conclusion": "Prêt à découvrir votre propriété idéale à Polop? Notre équipe expérimentée se spécialise dans les propriétés neuves dans cette région et peut vous guider à chaque étape. Que vous recherchiez une résidence permanente, un lieu de vacances ou une propriété d'investissement, nous vous aiderons à trouver exactement ce que vous cherchez. Réservez une consultation gratuite de 30 minutes avec notre équipe - avec plus de 12 ans d'expérience dans la vente de constructions neuves à la Costa Blanca, nous connaissons ce marché à fond.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Le potentiel locatif est fort avec les locations typiques de 7 nuits atteignant 800 €, représentant des rendements solides pour les investisseurs immobiliers. La communauté expatriée établie et l'environnement favorable aux familles soutiennent une demande locative cohérente. Les perspectives de croissance du capital restent positives compte tenu des tendances du marché et de la popularité croissante de la région comme alternative aux développements côtiers coûteux.",
+      "highlights": [
+        "Prix d'entrée plus bas que les marchés comparables avec des rendements locatifs similaires",
+        "La demande internationale croissante entraîne une appréciation des prix régulière",
+        "Demande locative à long terme de la communauté expatriée croissante"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Le coût de la vie à Polop est nettement inférieur à celui de l'Europe du Nord et très compétitif en Espagne. Les emplacements intérieurs comme Polop offrent une valeur particulièrement bonne pour les dépenses quotidiennes.",
+      "items": [
+        {
+          "category": "Épiceries (mensuel, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl et marchés locaux à proximité"
+        },
+        {
+          "category": "Services (électricité, eau, gaz)",
+          "cost": "€100-160",
+          "notes": "Plus élevé en été avec climatisation"
+        },
+        {
+          "category": "Frais de communauté",
+          "cost": "€50-120",
+          "notes": "Varie selon le développement et les services inclus"
+        },
+        {
+          "category": "IBI (Taxe municipale)",
+          "cost": "€400-1 000/an",
+          "notes": "Impôt foncier annuel basé sur la valeur cadastrale"
+        },
+        {
+          "category": "Repas au restaurant (par personne)",
+          "cost": "€10-22",
+          "notes": "Menú del día à partir de €10 ; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Téléphone",
+          "cost": "€35-50",
+          "notes": "Bonne couverture haut débit ; plusieurs fournisseurs"
+        },
+        {
+          "category": "Frais automobiles (carburant, assurance)",
+          "cost": "€150-250",
+          "notes": "Essentiel pour la vie intérieure"
+        },
+        {
+          "category": "Assurance maladie privée",
+          "cost": "€60-150",
+          "notes": "Couverture complète ; moins cher pour les résidents plus jeunes"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Polop célèbre les fiestas espagnoles traditionnelles et les événements communautaires tout au long de l'année, mélangeant les traditions locales avec la communauté internationale accueillante.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "Août",
+          "description": "Festivités annuelles du saint patron avec des défilés, musique, feux d'artifice et célébrations traditionnelles rassemblant toute la communauté"
+        },
+        {
+          "name": "Semana Santa (Semaine Sainte)",
+          "month": "Mars/Avril",
+          "description": "Processions solennelles de la Semaine Sainte dans les rues avec des chars traditionnels et des traditions religieuses centenaires"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "Décembre",
+          "description": "Célébrations nationales des vacances avec des événements locaux, des marchés et des réunions communautaires"
+        },
+        {
+          "name": "Festival de printemps",
+          "month": "Mai",
+          "description": "Célébration du printemps avec expositions florales, stands alimentaires, musique traditionnelle et réunions communautaires sur la place du marché"
+        },
+        {
+          "name": "Festival des récoltes",
+          "month": "Octobre",
+          "description": "Célébration d'automne traditionnelle avec des produits locaux, dégustation de vins, marchés artisanaux et gastronomie régionale"
+        },
+        {
+          "name": "Marché de Noël & Jour des trois rois",
+          "month": "Décembre/Janvier",
+          "description": "Saison festive avec des stands de marché, des scènes de crèche et le spectaculaire défilé des Trois Rois (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Les familles à Polop ont accès à une éducation de qualité dans la région environnante, avec plusieurs écoles internationales servant la communauté expatriée aux côtés d'excellentes écoles d'État espagnoles.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "École de programme britannique avec GCSE et programmes A-Level, excellentes installations et résultats académiques solides"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "Programme britannique et IB avec d'excellentes installations, programmes sportifs et éducation multilingue"
+        },
+        {
+          "name": "École primaire espagnole locale",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "École d'État locale offrant l'éducation au programme espagnol, excellente pour l'immersion linguistique et l'intégration communautaire"
+        },
+        {
+          "name": "École secondaire espagnole locale",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "École secondaire d'État offrant les programmes ESO et Bachillerato avec un environnement d'apprentissage favorable"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Polop offre d'excellentes activités de plein air toute l'année, de la randonnée et du cyclisme au golf, aux promenades naturelles et plus encore.",
+      "activities": [
+        {
+          "name": "Randonnée en montagne",
+          "type": "Hiking",
+          "description": "Sentiers de montagne pittoresques à travers les forêts de pins méditerranéens avec des vues panoramiques sur les vallées et la côte"
+        },
+        {
+          "name": "Itinéraires cyclables",
+          "type": "Cycling",
+          "description": "Itinéraires cyclistes routiers et VTT dans la campagne pittoresque, adaptés à tous les niveaux de condition physique"
+        },
+        {
+          "name": "Parcours de golf à proximité",
+          "type": "Golf",
+          "description": "Plusieurs excellents terrains de golf à courte distance offrant un jeu toute l'année sous le soleil méditerranéen"
+        },
+        {
+          "name": "Réserves naturelles & Observation des oiseaux",
+          "type": "Nature Reserve",
+          "description": "Zones naturelles protégées à proximité offrant l'observation des oiseaux, la photographie et les promenades tranquilles dans la nature"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Polop a une communauté internationale croissante, avec des expatriés attirés par le style de vie méditerranéen, le coût de la vie abordable et l'atmosphère accueillante. Le caractère espagnol authentique de la région attire ceux qui cherchent une intégration authentique avec la culture locale. L'anglais est de plus en plus parlé, avec de nombreux services disponibles en anglais, rendant la vie quotidienne confortable pour les nouveaux venus.",
+      "highlights": [
+        "Scène sociale internationale croissante avec des événements communautaires réguliers",
+        "Services parlant anglais disponibles incluant les professionnels médicaux et juridiques",
+        "Réunions communautaires régulières, clubs et activités sociales",
+        "Atmosphère accueillante pour les nouveaux venus avec des réseaux expatriés établis",
+        "Mélange de résidents permanents et de visiteurs saisonniers créant une communauté dynamique",
+        "Communauté européenne diversifiée incluant les résidents britanniques, scandinaves, néerlandais, allemands et français",
+        "Communauté espagnole locale accueillante et inclusive envers les résidents internationaux"
+      ],
+      "nationalities": [
+        "Britannique",
+        "Allemande",
+        "Néerlandaise",
+        "Scandinave",
+        "Française",
+        "Belge",
+        "Espagnole"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Une journée typique à Polop",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Café du matin",
+          "description": "Commencez la journée avec un café frais sur votre terrasse, profitez du soleil du matin et de l'environnement calme"
+        },
+        {
+          "time": "09:30",
+          "activity": "Visite du marché",
+          "description": "Parcourez le marché local à la recherche de produits frais, pain et spécialités saisonnières des agriculteurs locaux"
+        },
+        {
+          "time": "12:00",
+          "activity": "Shopping au marché frais",
+          "description": "Récupérez pain frais, fruits et produits locaux au supermarché ou au marché hebdomadaire"
+        },
+        {
+          "time": "13:30",
+          "activity": "Déjeuner espagnol",
+          "description": "Profitez d'un menú del día décontracté dans un restaurant local - trois plats avec vin pour environ 12 €"
+        },
+        {
+          "time": "15:30",
+          "activity": "Sieste & Piscine",
+          "description": "Reposez-vous pendant les heures les plus chaudes, puis rafraîchissez-vous dans votre piscine privée ou communautaire"
+        },
+        {
+          "time": "17:30",
+          "activity": "Promenade l'après-midi",
+          "description": "Explorez la campagne environnante ou les rues du village au fur et à mesure que la température refroidit"
+        },
+        {
+          "time": "20:00",
+          "activity": "Paseo du soir",
+          "description": "Rejoignez les habitants pour la promenade traditionnelle du soir à travers la ville, saluez les voisins et les amis"
+        },
+        {
+          "time": "21:30",
+          "activity": "Dîner Tapas",
+          "description": "Terminez la journée avec des tapas et un verre de vin local dans votre restaurant favori, dinez en plein air sous les étoiles"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.1267!3d38.6281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Polop",
+    "description": "Polop est une municipalité à la Costa Blanca North, en Espagne. Connue pour le style de vie méditerranéen, les nouveaux développements de qualité et la communauté internationale.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.6281",
+      "longitude": "-0.1267"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Polop",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Polop est-elle une bonne place où vivre?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, Polop est une excellente place où vivre. Elle offre un style de vie méditerranéen espagnol authentique à une valeur exceptionnelle, avec une infrastructure forte, une communauté expatriée établie, des installations de soins de santé et un accès pratique aux plages et au golf. La croissance annuelle du marché de 8 % indique une forte confiance dans"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Les étrangers peuvent-ils acheter des propriétés en Espagne?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, les étrangers peuvent librement acheter des propriétés en Espagne. Les résidents non-espagnols ont les mêmes droits d'achat de propriété que les citoyens espagnols. Vous devrez obtenir un numéro d'identifiant fiscal espagnol (NIE), et le processus implique la documentation juridique et l'enregistrement de la propriété. De nombreux acheteurs internationaux travaillent avec loc"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quels sont les coûts d'achat de propriétés en Espagne?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Au-delà du prix d'achat de la propriété, les coûts d'achat typiques en Espagne incluent: l'impôt de transfert immobilier (6-10%), les frais notariaux (environ 1%), les frais d'enregistrement immobilier (0,5-1%) et les frais juridiques (1-2%). À Polop, les propriétés vont de 470 000 € à 860 000 €, représentant une valeur exceptionnelle pour la vie à la Costa Blanca. Prév"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Puis-je obtenir un prêt hypothécaire en Espagne en tant qu'étranger?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, de nombreuses banques espagnoles offrent des prêts hypothécaires aux acheteurs étrangers, généralement jusqu'à 80% du rapport prêt-valeur pour les résidences principales et 70% pour les propriétés d'investissement. Vous devrez fournir une preuve de revenu, une identification et un historique de crédit. Les banques espagnoles exigent souvent moins de documentation que prévu, et beaucoup h"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quel est le coût de la vie à la Costa Blanca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le coût de la vie à la Costa Blanca est nettement inférieur à celui de l'Europe du Nord. Polop offre une valeur exceptionnelle avec des prix de propriété moyens de 2 200 €/m², les coûts alimentaires locaux 40-50% moins chers que les prix britanniques et les factures de services nettement moins chères. Un style de vie confortable, incluant les repas au restaurant, les loisirs et l"
+        }
+      }
+    ]
+  }
+}
