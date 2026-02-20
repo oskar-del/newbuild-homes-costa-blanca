@@ -1,0 +1,410 @@
+{
+  "slug": "sucina",
+  "name": "Sucina",
+  "region": "Murcia",
+  "heroImage": "/images/areas/sucina-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 8,
+  "propertyTypes": [
+    "Villa",
+    "Town House"
+  ],
+  "priceRange": {
+    "min": 298000,
+    "max": 725000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Sucina Turism",
+      "url": "https://www.google.com/search?q=Sucina%20Spain%20official%20website",
+      "description": "Upptäck mer om Sucina"
+    },
+    "airport": {
+      "name": "Murcia-Corvera flygplats",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "10 km",
+      "driveTime": "8 min"
+    },
+    "healthcare": {
+      "name": "Hospital General Universitario Reina Sofía (Murcia)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20General%20Universitario%20Reina%20Sof%C3%ADa%20(Murcia)",
+      "distance": "20 km"
+    }
+  },
+  "content": {
+    "metaTitle": "Leva i Sucina, Costa Blanca: Komplett guide och hem",
+    "metaDescription": "Upptäck Sucina, Costa Blanca. Utforska nya villor och radhus €298k-€725k, livsstil, bekvämligheter, klimat och investeringspotential.",
+    "heroIntro": "Sucina är en charmig urbanisering belägen i de inre delarna av Murcias Costa Blanca, som erbjuder en perfekt blandning av lugn och modern bekvämlighet för familjer och pensionärer som söker en autentisk spansk livsstil. Inbäddad mellan de livliga kustnära områdena och det vågiga murcianska landsbygden, erbjuder Sucina en idealisk flykt från stressen i den hektiska turismzonen medan man förblir nära väsentliga bekvämligheter och rekreationsfaciliteter. Denna omfattande guide utforskar allt potentiella köpare och invånare behöver veta om att leva i Sucina, från dess temperade klimat och välkomnande expat-gemenskap till dess närhet till golfbanor, shoppingcentra och magnifika medelhavsstrander. Med nya bostäder som sträcker sig från €298.000 till €725.000 presenterar Sucina en utmärkt möjlighet för både privat bostad och investeringsfastigheter. Oavsett om du söker en modern villa med privat pool eller ett samtida radhus i en säker gemenskap, erbjuder Sucina exceptionellt värde och livskvalitet på Spaniens Costa Blanca.",
+    "lifestyleSection": {
+      "intro": "Livet i Sucina kretsar kring en avslappnad medelhavstakt kombinerad med modern komfort och bekvämligheter. Gemenskapen är alltmer populär bland internationella invånare, särskilt från Storbritannien, Nordeuropa och Skandinavien, vilket skapar en mångfaldig, välkomnande expat-miljö där engelska och andra språk är brett talade. Invånarna behöver en perfekt balans mellan fredlig förortslivning och enkel tillgång till underhållning, restauranger och kulturella aktiviteter, med veckomarknader, lokala restauranger som serverar traditionell spansk mat och samhällsevenemang som fostrar en stark grannskapsatmosfär. Expat-gemenskapen har etablerat många sociala klubbar, sportgrupper och nätverksorganisationer, vilket gör det enkelt för nybörjare att integrera sig och bygga vänskaper samtidigt som de bibehåller sina livsstilspreferenser och kulturella kopplingar.\n\nSucina har ett medelhavsklimate som kännetecknas av varma, soliga somrar och milda vintrar, med cirka 300 dagar med solsken årligen. Sommartemperaturer sträcker sig vanligtvis från 28-32°C (82-90°F), medan vintermånaderna är i genomsnitt 12-16°C (54-61°F), vilket skapar en idealisk miljö året runt. Regionen får minimal nederbörd, huvudsakligen koncentrerad till höstmånaderna, och förmåner från uppfräschande havsbris som modererar sommarvärmen. Detta exceptionella klimat gör Sucina perfekt för utomhusaktiviteter, trädgårdsarbete och att njuta av de utomhusutrymmen som karakteriserar moderna fastigheter i området.",
+      "highlights": [
+        "Exceptionellt värde för pengarna med moderna fastigheter 40-50% billigare än kustalternativ",
+        "Enastående medelhavsklimate med 300 dagar med solsken och milda vintrar",
+        "Blomstrande internationell expat-gemenskap med etablerade sociala nätverk och supportsystem",
+        "Utmärkt tillgång till golfbanor, strander och friluftsbadning inom 15-35 km radie",
+        "Starka möjligheter för hyresinvesteringar med varierande hyresgäststampa inklusive pensionärer, familjer och semesterbesökare"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Området är känt för golfentusiaster, med mästerskapskurser inklusive Murcia Golf Club (12 km), La Torre Golf (18 km) och Los Alcázares Golf Club (25 km). Strander vid Playa del Espalmador och Playa Paraíso (25-35 km) erbjuder vattensporter, simning och strandklubbar. Cykling, tennis, paddel-banor och fitnessanläggningar finns tillgängliga i hela gemenskapen, många integrerade i bostadsföretag.",
+      "dining": "Sucina och omgivande områden har en mångsidig matscen som sträcker sig från traditionella spanska tapas-barer och familjeägda restauranger till internationell mat som vänder sig till expat-gemenskapen. Lokala etablissemang serverar autentisk Murcian-specialiteter, paella och frisk medelhavsseafood. Flera golfklubbar restauranger och resort-ätande alternativ erbjuder högt klassiga kulinariska upplevelser.",
+      "shopping": "Shoppingalternativ i Sucina inkluderar närliggande Centro Comercial Carrefour i Alcantarilla (15 km) som erbjuder stora stormarknader, modemarken och varuhus. Veckomarknader tillhandahåller färsk frukt och traditionella varor. De större shoppingcentra i Murcia stadskärna (30 km) har internationella märken och moderna detaljhandelsupplevelser.",
+      "healthcare": "Sucina har tillgång till högkvalitativa sjukvårdsanläggningar inklusive privata och offentliga medicinska centra. Det närmaste stora sjukhuset är Hospital Quirónsalud Murcia (ungefär 25 km bort) som erbjuder omfattande tjänster. Lokala hälsokliniker och apotek betjänar området Sucina omedelbar, med många läkare och medicinsk personal flytande i engelska för att betjäna den internationella gemenskapen.",
+      "transport": "Murcia International Airport (Corvera) ligger ungefär 40 km bort med regelbundna flygningar till europeiska destinationer. Alicante-Elche Airport (100 km) erbjuder fler flygalternativ inklusive stora internationella kopplingar. Båda flygplatserna erbjuder biluthyrning och taxitjänster för bekväm tillgång till Sucina. Sucina drar nytta av utmärkt väganslutning via A-7-motorvägen (Autovia del Mediterraneo) som förbinder till Murcia stadskärna (30 km) och kustnära områden. N-340 kustvägen tillhandahåller direkt tillgång till strander och närliggande städer. Infrastrukturen stöder enkel utforskning av hela Costa Blanca-regionen och inre Murcia. Offentlig transport inkluderar regionala busslinjer som förbinder Sucina till Murcia stadskärna och omgivande områden. Lokala minibussar betjänar gemenskapen och närliggande urbaniseringar. Även om inte lika omfattande som kustnära områden gynnar områdets layout personlig bilkörning. Murcias offentliga transitsystem tillhandahåller förbindelser till ytterligare destinationer vid behov."
+    },
+    "propertyMarketSection": "Sucinas fastighetsmarknad erbjuder exceptionellt värde med moderna nya byggnadsföretag som presenterar samtida arkitektur, hållbar byggpraxis och omfattande bekvämligheter. Marknaden lockar både ägare som söker primära bostäder och investerare som erkänner stark hyrespotential från både långsiktiga invånare och kortsiktiga semesterbesökare. Fastigheter presenterar höga specifikationer, privata pooler, gemensamma anläggningar och säkra stängda miljöer.\n\nPopulära fastighetstyper inkluderar Villa, Radhus.\n\nSucina presenterar stark investeringspotential med pålitliga hyresavkastningar från den etablerade expat-gemenskapen och semestermarknaden. Fastigheter lockar pensionärer som söker medelhavslivning, familjer som söker värde för pengarna och investerare som söker stabila avkastningar. Områdets överkomligt pris jämfört med kustzoner, kombinerat med högkvalitativ konstruktion och moderna bekvämligheter, stöder appreciering och konkurrenskraftiga hyresintäkter som genererar 5-8% årlig avkastning för investeringsfastigheter.",
+    "whyLiveHereSection": [
+      "Exceptionellt värde för pengarna med moderna fastigheter 40-50% billigare än kustalternativ",
+      "Enastående medelhavsklimate med 300 dagar med solsken och milda vintrar",
+      "Blomstrande internationell expat-gemenskap med etablerade sociala nätverk och supportsystem",
+      "Utmärkt tillgång till golfbanor, strander och friluftsbadning inom 15-35 km radie",
+      "Starka möjligheter för hyresinvesteringar med varierande hyresgäststampa inklusive pensionärer, familjer och semesterbesökare"
+    ],
+    "faqs": [
+      {
+        "question": "Vad är genomsnittspriset för en nybyggd villa i Sucina?",
+        "answer": "Nybyggda villor i Sucina sträcker sig vanligtvis från €400.000 till €725.000 beroende på storlek, plats och bekvämligheter. Fastigheter presenterar moderna designer, privata pooler och mogna landskapering. Radhus erbjuder mer överkomliga alternativ från €298.000."
+      },
+      {
+        "question": "Är Sucina lämpligt för pensionärer?",
+        "answer": "Ja, Sucina är idealiskt för pensionärer. Området erbjuder överkomlig högkvalitativ livning, utmärkt sjukvårdstillgång, en välkomnande expat-gemenskap av likåldriga invånare, året runt trevligt väder och närhet till golf, strander och underhållning utan bullret och turismen från kustnära områden."
+      },
+      {
+        "question": "Hur långt är Sucina från stranden?",
+        "answer": "Sucina ligger ungefär 25-35 km från de närmaste stränderna inklusive Playa del Espalmador och Playa Paraíso. En 30-40 minuters körning ger tillgång till medelhavsstrander, strandklubbar och vattensportanläggningar för regelbunden strandkul."
+      },
+      {
+        "question": "Hur är expat-gemenskapen i Sucina?",
+        "answer": "Sucina har en etablerad och välkomnande internationell gemenskap huvudsakligen från Storbritannien, Tyskland, Skandinavien och andra europeiska länder. Många klubbar, föreningar och sociala grupper underlättar integreringen, engelska talas brett, och det finns etablerade nätverk som stödjer nybörjare."
+      },
+      {
+        "question": "Är fastigheter i Sucina bra för hyresinvesteringar?",
+        "answer": "Ja, Sucina erbjuder stark hyrespotential med årlig avkastning på 5-8%. Fastigheter lockar pensionärer, familjer och semesterbesökare. Den stabila expat-populationen tillhandahåller konsekvent långsiktig hyresgäst, medan närheten till golfbanor och strander stöder semesterhyresintäkter."
+      },
+      {
+        "question": "Vad är huvudbekvämligheten i Sucina?",
+        "answer": "Bekvämligheter inkluderar lokala restauranger, barer, kaféer, veckomarknader, medicinska kliniker, apotek, sportanläggningar och närliggande golfbanor. Shoppingcentra och större detaljhandel ligger 15-30 km bort i Alcantarilla och Murcia. Gemenskapscentra och sociala anläggningar stöder den aktiva livsstilen."
+      },
+      {
+        "question": "Hur är vädret året runt i Sucina?",
+        "answer": "Sucina har medelhavsklimate med varma somrar (28-32°C), milda vintrar (12-16°C) och ungefär 300 dagar med solsken årligen. Nederbörd är minimal, huvudsakligen på hösten. Klimatet stöder utomhusbodande och aktiviteter året runt."
+      },
+      {
+        "question": "Vilken dokumentation behövs för att köpa en fastighet i Sucina som en icke-EU-medborgare?",
+        "answer": "Icke-EU-medborgare behöver ett spanskt skatteidentifikationsnummer (NIE), slutförda köpkontrakt, fastighetsgranskningsrapporter och hypotekdokumentation vid behov. Juridisk assistans från en spansk advokat med specialisering i fastigheter är väsentlig för att säkerställa överensstämmelse med spansk fastighetsrätt och skatteregler."
+      }
+    ],
+    "conclusion": "Redo att upptäcka din perfekta fastighet i Sucina? Vårt erfaret team specialiserar sig på nya fastigheter i denna område och kan vägleda dig genom varje steg. Oavsett om du söker ett permanent hem, semesterbostad eller investeringsfastighet, hjälper vi dig att hitta exakt vad du söker. Boka en gratis 30-minuters konsultation med vårt team - med över 12 års erfarenhet av att sälja nya byggnader på Costa Blanca, känner vi denna marknad inuti och ut.",
+    "investmentAnalysis": {
+      "rentalYield": "5-7%",
+      "annualAppreciation": "4-6%",
+      "overview": "Sucina presenterar stark investeringspotential med pålitliga hyresavkastningar från den etablerade expat-gemenskapen och semestermarknaden. Fastigheter lockar pensionärer som söker medelhavslivning, familjer som söker värde för pengarna och investerare som söker stabila avkastningar. Områdets överkomligt pris jämfört med kustzoner, kombinerat med högkvalitativ konstruktion och moderna bekvämligheter, stöder appreciering och konkurrenskraftiga hyresintäkter som genererar 5-8% årlig avkastning för investeringsfastigheter.",
+      "highlights": [
+        "Golfegenskaper kommenderar premiumhyrespriser året runt",
+        "Lägre startpriser än jämförbara marknader med liknande hyresavkastningar",
+        "Växande internationell efterfrågan som driver stadiga prisuppskattningar",
+        "Långsiktig hyresenligt från växande expat-gemenskap"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Levnadskostnaderna i Sucina är betydligt lägre än Nordeuropa och mycket konkurrenskraftiga inom Spanien. Inlandsplatser som Sucina erbjuder särskilt bra värde för dagliga utgifter.",
+      "items": [
+        {
+          "category": "Matvaror (månadsvis, par)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl och närliggande lokala marknader"
+        },
+        {
+          "category": "Verktyg (elektricitet, vatten, gas)",
+          "cost": "€100-160",
+          "notes": "Högre på sommaren med luftkonditionering"
+        },
+        {
+          "category": "Gemenskapsavgifter",
+          "cost": "€50-120",
+          "notes": "Varierar beroende på utveckling och inkluderade tjänster"
+        },
+        {
+          "category": "IBI (Kommunal skatt)",
+          "cost": "€400-1.000/år",
+          "notes": "Årlig egendomsskatt baserad på katastral värde"
+        },
+        {
+          "category": "Äta ute (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día från €10; restauranger €15-30"
+        },
+        {
+          "category": "Internet och telefon",
+          "cost": "€35-50",
+          "notes": "Bra broadband-täckning; flera leverantörer"
+        },
+        {
+          "category": "Bilkostnader (bränsle, försäkring)",
+          "cost": "€150-250",
+          "notes": "Väsentligt för inlandsbodande"
+        },
+        {
+          "category": "Privat sjukförsäkring",
+          "cost": "€60-150",
+          "notes": "Omfattande täckning; lägre för yngre invånare"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Sucina firar traditionell spansk fiestas och samhällsevenemang året runt, som blandas lokala traditioner med den välkomnande internationella gemenskapen.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "Augusti",
+          "description": "Årliga helgonsfestivaler med parader, musik, fyrverkerier och traditionella firanden som samlar hela gemenskapen"
+        },
+        {
+          "name": "Semana Santa (Påskveckan)",
+          "month": "Mars/April",
+          "description": "Högtidliga påskprocessioner genom gatorna med traditionella floater och hundraåriga religiösa traditioner"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "Nationalfirandet med lokala evenemang, marknader och gemenskapsamlingar"
+        },
+        {
+          "name": "Vårfestival",
+          "month": "Maj",
+          "description": "Firande av våren med blomsterdisplayer, matlillar, traditionell musik och gemenskapsamlingar på torget"
+        },
+        {
+          "name": "Skördefestival",
+          "month": "Oktober",
+          "description": "Traditionell höstfirande med lokala produkter, vinsmakning, hantverkmarknader och regional gastronomi"
+        },
+        {
+          "name": "Julmarknad och Tre Kungar",
+          "month": "December/Januari",
+          "description": "Festlig säsong med marknadskojor, nativityscener och den spektakulära Tre Kungar-paraden (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Familjer i Sucina har tillgång till högkvalitativa utbildningsalternativ i omgivande område, med flera internationella skolor som betjänar expatriatgemenskapen tillsammans med utmärkta spanska statskollar.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "Internationell (brittisk)",
+          "distance": "20-40 min",
+          "description": "Brittisk läroplan skola med GCSE och A-Levels med starka extrakurrikulära program"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "Internationell (brittisk)",
+          "distance": "25-45 min",
+          "description": "Brittisk läroplan grund- och sekundärskola som betjänar den internationella gemenskapen"
+        },
+        {
+          "name": "Lokala spanska grundskola",
+          "type": "Spansk staten",
+          "distance": "5-15 min",
+          "description": "Lokal statsskola som tillhandahåller spansk läroplan utbildning, utmärkt för språknedsänkning och samhälleintegreringen"
+        },
+        {
+          "name": "Lokal spansk sekundärskola",
+          "type": "Spansk staten",
+          "distance": "10-20 min",
+          "description": "Statlig sekundärskola som erbjuder ESO och Bachillerato-program med stödjande läromiljö"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Sucina erbjuder utmärkta friluftaktiviteter året runt, från vandring och cykling till golf, naturvandringar och mer.",
+      "activities": [
+        {
+          "name": "Landsbygds-vandring",
+          "type": "Vandring",
+          "description": "Vandringsvägar genom omgivande landsbygd med utsikter över fruktträdgårdar, berg och traditionella byar"
+        },
+        {
+          "name": "Cykelvägar",
+          "type": "Cykling",
+          "description": "Väg- och mountainbike-vägar genom den pittoreska landsbygden, lämplig för alla fitnessnivåer"
+        },
+        {
+          "name": "Mästerskapsgolf",
+          "type": "Golf",
+          "description": "Tillgång till världsklass golfbanor med mästerskapsplanering, praktikanläggningar och klubbhusmatsal"
+        },
+        {
+          "name": "Naturreservat och fågelskådning",
+          "type": "Naturreservat",
+          "description": "Skyddade naturområden i närheten som erbjuder fågelskådning, fotografi och fredliga naturvandringar"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Sucina har en växande internationell gemenskap, med utländska medborgare lockas av medelhavslivsstilen, överkomliga levnadskostnader och välkomnande atmosfär. Områdets autentiska spanska karaktär lockar till dem som söker genuin integrering med lokal kultur. Engelska talas alltmer, med många tjänster tillgängliga på engelska, vilket gör det dagliga livet bekvämt för nybörjare.",
+      "highlights": [
+        "Växande internationell socialscen med regelbundna samhällsevenemang",
+        "Engelsktalkande tjänster tillgängliga inklusive medicinska och juridiska yrkesverksamheter",
+        "Regelbundna gemenskapssamlingar, klubbar och sociala aktiviteter",
+        "Välkomnande atmosfär för nybörjare med etablerade expat-nätverk",
+        "Blandning av permanenta invånare och säsongsbesökare som skapar en dynamisk gemenskap",
+        "Stark brittisk och skandinavisk närvaro tillsammans med nederländsk, belgisk och tysk invånare",
+        "Lokalt spanskt samhälle välkomnade och inkluderande mot internationella invånare"
+      ],
+      "nationalities": [
+        "Brittisk",
+        "Skandinavisk (svensk, norsk, dansk)",
+        "Nederländsk",
+        "Belgisk",
+        "Tysk",
+        "Irländsk",
+        "Spansk"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "En typisk dag i Sucina",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morgonkaffe",
+          "description": "Börja dagen med friskt kaffe på din terrass, njutande av morgonsolskenet och lugna omgivningar"
+        },
+        {
+          "time": "09:30",
+          "activity": "Morgongolf",
+          "description": "Gå till banan för en avslappnad golfomgång, njutande av de perfekt underhållna gräsmattorna och varm solsken"
+        },
+        {
+          "time": "12:00",
+          "activity": "Färsk marknadshandling",
+          "description": "Skaffa friskt bröd, frukt och lokal produkt från stormarknaden eller veckomarknaden"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spansk lunch",
+          "description": "Njut av en avslappnad menú del día på en lokal restaurang - tre kurser med vin för ungefär €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta och pool",
+          "description": "Vila under de varmaste timmarna, sedan kyla av dig i din privata eller gemensamma pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Eftermiddagspromenad",
+          "description": "Utforska omgivande landsbygd eller landsvägarnas vägar när temperaturen svalnar"
+        },
+        {
+          "time": "20:00",
+          "activity": "Kväll Paseo",
+          "description": "Gå med lokalbefolkningen för den traditionella kvällspromenaden genom stan, hälsning grannar och vänner"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas-middag",
+          "description": "Avsluta dagen med tapas och ett glas lokalt vin på din favoritrestaurang, äta al fresco under stjärnorna"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.9833!3d37.8333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Sucina",
+    "description": "Sucina is a municipality in Murcia, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.8333",
+      "longitude": "-0.9833"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sucina",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Murcia"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vad är genomsnittspriset för en nybyggd villa i Sucina?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nybyggda villor i Sucina sträcker sig vanligtvis från €400.000 till €725.000 beroende på storlek, plats och bekvämligheter. Fastigheter presenterar moderna designer, privata pooler och mogna landskapering. Radhus erbjuder mer överkomliga alternativ från €298.000."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Är Sucina lämpligt för pensionärer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, Sucina är idealiskt för pensionärer. Området erbjuder överkomlig högkvalitativ livning, utmärkt sjukvårdstillgång, en välkomnande expat-gemenskap av likåldriga invånare, året runt trevligt väder och närhet till golf, strander och underhållning utan bullret och turismen från kustnära områden."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur långt är Sucina från stranden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sucina ligger ungefär 25-35 km från de närmaste stränderna inklusive Playa del Espalmador och Playa Paraíso. En 30-40 minuters körning ger tillgång till medelhavsstrander, strandklubbar och vattensportanläggningar för regelbunden strandkul."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur är expat-gemenskapen i Sucina?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sucina har en etablerad och välkomnande internationell gemenskap huvudsakligen från Storbritannien, Tyskland, Skandinavien och andra europeiska länder. Många klubbar, föreningar och sociala grupper underlättar integreringen, engelska talas brett, och det finns etablerade nätverk som stödjer nybörjare."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Är fastigheter i Sucina bra för hyresinvesteringar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, Sucina erbjuder stark hyrespotential med årlig avkastning på 5-8%. Fastigheter lockar pensionärer, familjer och semesterbesökare. Den stabila expat-populationen tillhandahåller konsekvent långsiktig hyresgäst, medan närheten till golfbanor och strander stöder semesterhyresintäkter."
+        }
+      }
+    ]
+  },
+  "golf": {
+    "intro": "Sucina erbjuder utmärkta golfmöjligheter med mästerskapsbanor inom lätt räckhåll. Området tillhandahåller bekväm tillgång till högkvalitativa anläggningar kombinerat med autentisk Murcia-landsbygdslivning. Långt säsong säkerställer året runt golfnöje.",
+    "courses": [
+      {
+        "name": "Hacienda del Álamo Golf Resort",
+        "distance": "10 km",
+        "driveTime": "14 minuter",
+        "holes": 18,
+        "url": "https://www.haciendadelalamogolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Hacienda+del+Alamo+Golf",
+        "description": "Lyx-resortbana med mästerskapslayout, spa-anläggningar och ätande alternativ"
+      },
+      {
+        "name": "Peraleja Golf Club",
+        "distance": "8 km",
+        "driveTime": "12 minuter",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Peraleja+Golf+Club",
+        "description": "Kvalitativ bana med pittorsk design och väl underhållen anläggning"
+      },
+      {
+        "name": "Serena Golf Club",
+        "distance": "14 km",
+        "driveTime": "20 minuter",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Serena+Golf+Club",
+        "description": "Mästerskapsbana med pittorsk design, kvalitativ anläggning och professionell coaching tillgänglig"
+      }
+    ]
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "slug": "teulada",
+  "name": "Teulada",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/teulada-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600607686527-6fb886090705?w=800&q=80&fit=crop",
+  "propertyCount": 1,
+  "propertyTypes": [
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 2985000,
+    "max": 2985000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Teulada Turism",
+      "url": "https://www.google.com/search?q=Teulada%20Spain%20official%20website",
+      "description": "Upptäck mer om Teulada"
+    },
+    "airport": {
+      "name": "Alicante-Elche flygplats",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "85 km",
+      "driveTime": "55 min"
+    },
+    "healthcare": {
+      "name": "Hospital de Dénia",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20de%20D%C3%A9nia",
+      "distance": "20 km"
+    },
+    "beaches": [
+      {
+        "name": "Närmaste strand",
+        "googleMaps": "https://maps.google.com/?q=beach+near+Teulada+Spain",
+        "description": "Vacker medelhavsstand i närheten"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Leva i Teulada: Komplett guide till Costa Blanca",
+    "metaDescription": "Upptäck lyxbodande i Teulada, Costa Blanca. Premiumvillor, fantastisk kustlinje, rik historia. Komplett guide till att köpa egendom i detta exklusiva område.",
+    "heroIntro": "Inbäddad i hjärtat av Costa Blancas Marina Alta-region står Teulada som en av Spaniens mest prestigefyllda kustnära destinationer. Denna charmiga kommun, bara 5 km inre från den glamorös hamnen Moraira, erbjuder en intoxicerande blandning av traditionell spansk autenticitet och modern lyxbodande. Med sina valsande vingårdar, historiska gamla stad och närhet till några av Medelhavets vackraste strander, representerar Teulada den perfekta balansen mellan kulturell arv och samtida komfort.\n\nStadens unika positionering ger invånare det bästa från båda världarna - den lugna, autentiska atmosfären i inlandet Spanien kombinerat med enkel tillgång till världsklass marina, strander och kusträtter. Teuladas landskap är dominerat av traditionell medelhavarkitektur, forntida olivlusker och premiumbostadutvecklingar som lockar kräsna internationella köpare som söker exklusivitet och livskvalitet. Området har blivit särskilt känt för sin lyxvillmarknad, erbjuder sofistikerade egenskaper som utnyttjar regionens naturliga skönhet och avundsvärd klimat samtidigt som det bibehåller charmen som gör detta hörn av Alicanteprovins så speciellt.",
+    "lifestyleSection": {
+      "intro": "Livet i Teulada rör sig i en förnöjsamt avslappnad takt, där spanska traditioner sömlöst blandas med internationell sofistikering. Stadskärnan behåller sin autentiska karaktär med traditionella tapas-barer, familjeägda butiker och den vackra gotiska kyrkan Santa Catalina, medan omgivande områden erbjuder moderna bekvämligheter och tjänster. Veckomarknader, lokala festivaler och samhällsevenemang ger möjligheter att dyka in i spansk kultur, medan närheten till Moraira garanterar tillgång till förstklassig matsal, shopping och marinliv.\n\nDen internationella gemenskapen i Teulada är väl etablerad och välkomnande, huvudsakligen nordeuropeiska invånare som uppskattar områdets exklusivitet och livskvalitet. Engelska, tyska och nederländska talas vanligtvis tillsammans med spanska, vilket skapar en multikulturell miljö som är både kosmopolitisk och rotad i lokal tradition. Invånare njuter av en aktiv livsstil centrerad kring friluftaktiviteter, kulturella aktiviteter och sociala sammankomster, med många som utnyttjar de utmärkta golfbanorna, vandringsleden och vattensporterna tillgängliga i omedelbar närhet.\n\nTeulada har ett av Europas mest avundsvärdaste klimat, med över 320 dagar med solsken årligen och genomsnittliga temperaturer från 16°C på vintern till 28°C på sommaren. Det mediterrana mikroklimatet modereras av havsbris från närliggande kust och det skyddande omfamningen av omgivande kullar, vilket skapar idealiska förhållanden året runt. Regnet är minimalt och typiskt koncentrerat under höstmånaderna, medan somrar är varma men sällan tryckande tack vare den kylande påverkan från Medelhavet. Detta exceptionella klimat gör utomhusbodande möjligt året runt, perfekt för att njuta av terrasser, pooler och trädgårdar som karakteriserar Teuladas lyxegenskaper.",
+      "highlights": [
+        "Prestigefullt läge som kombinerar autentisk spansk kultur med lyxbodande",
+        "Närhet till vackra strander, marina och kustnära bekvämligheter",
+        "Utmärkt klimat med över 320 dagar med solsken årligen",
+        "Stark internationell gemenskap och högkvalitativ infrastruktur",
+        "Exklusiv fastighetsmarknad med utmärkt investeringspotential"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Sportentusiaster är välsignade med valet med flera mästerskapsgolfbanor inom 15 minuter, inklusive Club de Golf Ifach i Moraira och La Sella Golf Resort i Dénia. Den närliggande kusten erbjuder utmärkt segling, dyk och vattensporta, särskilt vid Morairas marina. Tennis- och padelbannor finns vid olika klubbar, medan omgivande landsbygd erbjuder utmärkt vandring och cykling genom Montgó naturpark och kustvägar.",
+      "dining": "Teuladas matscen fångar perfekt essensen av autentisk Valencian-matlagning, med traditionella restauranger som serverar lokala specialiteter som paella, frisk fisk och regionala viner från lokala vingårdar. Den närliggande kusten utökar matningsalternativ dramatiskt, med Moraira som erbjuder Michelin-rekommenderad restauranger, strandklubbar och internationell mat. Området är särskilt känt för sin vinproduktion, med flera bodegas som erbjuder provningar och visningar av lokala Moscatel vingårdar.",
+      "shopping": "Medan Teulada stad erbjuder traditionell spansk shopping med lokala marknader, bagarier och specialistbutiker, täcks större shoppingbehov lätt i närliggande Calpe och Dénia. Mercadona och Consum-supermarkter tillhandahåller dagliga nödvändigheter, medan Moraira (5 km) erbjuder boutique shopping och internationella produkter. För omfattande shopping erbjuder Portal de la Marina shoppingcentre i Ondara (25 km) stora internationella märken och varuhus.",
+      "healthcare": "Teulada betjänas av ett lokalt hälsocenter (Centro de Salud Teulada) som tillhandahåller primärvård och akuttjänster. Det närmaste stora sjukhuset är Hospital Marina Salud i Dénia (20 km) som erbjuder omfattande medicinska tjänster inklusive specialistvård. Privata sjukvårdsalternativ är utmärkta, med flera internationella kliniker i närliggande Calpe och Dénia som betjänar expatriatbeboere. Många invånare reser också till Alicante (85 km) för specialistbehandlingar vid världsklass-anläggningar.",
+      "transport": "Alicante flygplats ligger 85 km söderut (ungefär 1 timmes körning) med omfattande internationella förbindelser. Valencia flygplats ligger 110 km norrut (1 timme 15 minuter) och erbjuder ytterligare flygalternativ. Båda flygplatserna är lätt tillgängliga via AP-7 autopista, med regelbundna busklinjer och privata transferföretag tillgängliga. Teulada har utmärkt väganslutning via AP-7 autopista, som ger direkt tillgång till större spanska städer och fransk gräns. N-332 kustuägen förbinder till alla Costa Blanca-destinationer, medan lokala vägar effektivt förbinder till Moraira (5 km), Calpe (12 km) och Dénia (20 km). Staden är väl förbunden med inlandsbadningar och den bredare Valenciaregionen. Offentlig transport inkluderar regelbundna busklinjer som förbinder Teulada till Calpe, Dénia och Benidorm via ALSA-busklinjer. Den närmaste tågstationen ligger i Calpe (12 km) på TRAM Metropolitano-linjen som förbinder till Alicante. Många invånare föredrar privat transport på grund av landsbygdslokationen, även om taxi-tjänster och ride-sharing-alternativ är tillgängliga."
+    },
+    "propertyMarketSection": "Teuladas fastighetsmarknad representerar premiumsegmentet av Costa Blanca fastigheter, karakteriserat av exklusiva villautvecklingar och lyxestatem. Marknaden förblir motståndskraftig med stark efterfrågan från internationella köpare, särskilt de som söker högklassiga egenskaper med integritet, kvalitet och närhet till kustnära bekvämligheter. Begränsad tillgång och streng planering förordningar hjälper till att upprätthålla fastighetsvärden och exklusivitet.\n\nPopulära fastighetstyper inkluderar Villa.\n\nTeulada erbjuder utmärkt investeringspotential på grund av dess prestigefullt läge och begränsad tillgång på premiumegenskaper. Den lyxiga uthyrningsmarknaden är stark, särskilt för högklassiga villor som riktar sig mot välbärgade semesterbesökare och långsiktiga internationella invånare. Fastighetsvärden har visat stadiga uppskattningar, stödda av områdets rykte, infrastrukturkvalitet och närhet till viktigaste bekvämligheter. Kombinationen av spansk bosättningsfördelar och potentiell hyresavkastning gör det attraktivt för både livsstils- och investeringsköp.",
+    "whyLiveHereSection": [
+      "Prestigefullt läge som kombinerar autentisk spansk kultur med lyxbodande",
+      "Närhet till vackra strander, marina och kustnära bekvämligheter",
+      "Utmärkt klimat med över 320 dagar med solsken årligen",
+      "Stark internationell gemenskap och högkvalitativ infrastruktur",
+      "Exklusiv fastighetsmarknad med utmärkt investeringspotential"
+    ],
+    "faqs": [
+      {
+        "question": "Vad gör Teulada annorlunda från andra Costa Blanca-platser?",
+        "answer": "Teulada erbjuder en unik kombination av autentisk spansk stadsmiljö med tillgång till lyxiga kustnära bekvämligheter. Dess inlandsposition ger lugn medan det bara ligger 5 km från Morairas strander och marina, skapar en exklusiv livsstilsmiljö som balanserar tradition med modern lyx."
+      },
+      {
+        "question": "Hur långt är de närmaste stränderna från Teulada?",
+        "answer": "Morairas fantastiska strander ligger bara 5 km bort, inklusive Playa del Portet och Playa de l'Ampolla. Dessa anses bland Costa Blancas finaste strander, erbjuder kristallklar vatten, utmärkta faciliteter och Blue Flag-status."
+      },
+      {
+        "question": "Är Teulada lämpligt för året runt bodande?",
+        "answer": "Absolut. Teuladas exceptionella klimat, etablerad internationell gemenskap, utmärkt sjukvård och omfattande bekvämligheter gör det idealiskt för permanent bostad. Många invånare njuter av den autentiska spanska livsstilen samtidigt som det enkelt har tillgång till internationella tjänster och faciliteter."
+      },
+      {
+        "question": "Vilka är fastighetsskatterna och pågående kostnader i Teulada?",
+        "answer": "Fastighetsskatter (IBI) är typiskt 0,4-1,1% av katastralvärdena årligen. Ytterligare kostnader inkluderar gemenskapsavgifter för utvecklingen, verktyg och årlig skatteersättning om tillämplig. Sammanlagda kostnader är rimliga jämfört med liknande premiumeuropeiska destinationer."
+      },
+      {
+        "question": "Hur etablerad är den internationella gemenskapen i Teulada?",
+        "answer": "Mycket väl etablerad, med en betydande befolkning av nordeuropeiska invånare, särskilt brittiska, tyska och nederländska expatriater. Detta skapar en välkomnande multikulturell miljö med engelska talas brett och internationella tjänster lätt tillgängliga."
+      },
+      {
+        "question": "Vilka fritidsaktiviteter finns i och omkring Teulada?",
+        "answer": "Aktiviteter inkluderar flera mästerskapsgolfbanor, vattensporter vid närliggande mariner, vandring i naturparker, vinsmakning på lokala bodegas, kulturella evenemang och utforskande av historiska platser. Området erbjuder utmärkt balans mellan aktiva aktiviteter och kulturella upplevelser."
+      },
+      {
+        "question": "Hur tillgänglig är Teulada för internationell resor?",
+        "answer": "Mycket tillgänglig med Alicante flygplats 85 km bort (1 timmas körning) erbjuder omfattande europeiska förbindelser. Valencia flygplats ger ytterligare alternativ. Det utmärkta motorvägnätverket gör resor i hela Spanien bekväm och platsen ger enkel tillgång till både kusts- och inlandsbadningar."
+      },
+      {
+        "question": "Vad är investeringspotentialen för lyxvillor i Teulada?",
+        "answer": "Utmärkt, på grund av begränsad tillgång, prestigefullt läge och stark uthyrningsefterfrågan. Lyxmarknaden har visat motståndskraft och stadiga uppskattningar. Egenskaper drar nytta av närhet till bekvämligheter, utmärkt klimat och områdets rykte, vilket gör dem attraktiva för både kapitalväxt och hyresintäktspotential."
+      }
+    ],
+    "conclusion": "Redo att upptäcka din perfekta egendom i Teulada? Vårt erfaret team specialiserar sig på nya byggnader i detta område och kan vägleda dig genom varje steg. Oavsett om du söker ett permanent hem, semesterbostad eller investeringsegendom, hjälper vi dig att hitta exakt vad du söker. Boka en gratis 30-minuters konsultation med vårt team - med över 12 års erfarenhet av att sälja nya byggnader på Costa Blanca, känner vi denna marknad inuti och ut.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "Teulada erbjuder utmärkt investeringspotential på grund av sitt prestigefullt läge och begränsad tillgång på premiumegenskaper. Den lyxiga uthyrningsmarknaden är stark, särskilt för högklassiga villor som riktar sig mot välbärgade semesterbesökare och långsiktiga internationella invånare. Fastighetsvärden har visat stadiga uppskattningar, stödda av områdets rykte, infrastrukturkvalitet och närhet till viktigaste bekvämligheter. Kombinationen av spansk bosättningsfördelar och potentiell hyresavkastning gör det attraktivt för både livsstils- och investeringsköp.",
+      "highlights": [
+        "Stark semesterhyresefterfrågan under högsäsong (maj-oktober)",
+        "Lägre instegspreser än jämförbara marknader med liknande hyresavkastningar",
+        "Växande internationell efterfrågan som driver stadiga prisuppskattningar",
+        "Korttidssemesteruthyrning populär med europeiska turister"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Levnadskostnaderna i Teulada är betydligt lägre än Nordeuropa och mycket konkurrenskraftiga i Spanien. Kustnära bodande här kombinerar överkomligt med medelhavslivsstil.",
+      "items": [
+        {
+          "category": "Matvaror (månatligen, par)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl och lokala marknader i närheten"
+        },
+        {
+          "category": "Verktyg (elektricitet, vatten, gas)",
+          "cost": "€100-160",
+          "notes": "Högre på sommaren med luftkonditionering"
+        },
+        {
+          "category": "Gemenskapsavgifter",
+          "cost": "€50-120",
+          "notes": "Varierar beroende på utveckling och tjänster som ingår"
+        },
+        {
+          "category": "IBI (Kommunal skatt)",
+          "cost": "€400-1.000/år",
+          "notes": "Årlig fastighetsskatt baserad på katastralvärde"
+        },
+        {
+          "category": "Äta ute (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día från €10; restauranger €15-30"
+        },
+        {
+          "category": "Internet och telefon",
+          "cost": "€35-50",
+          "notes": "Bra broadbandtäckning; flera leverantörer"
+        },
+        {
+          "category": "Bilkostnader (bensin, försäkring)",
+          "cost": "€150-250",
+          "notes": "Rekommenderas för flexibilitet"
+        },
+        {
+          "category": "Privat sjukförsäkring",
+          "cost": "€60-150",
+          "notes": "Omfattande täckning; lägre för yngre invånare"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Teulada firar traditionell spansk fiestas och samhällsevenemang året runt, som blandas lokala traditioner med den välkomnande internationella gemenskapen.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "Augusti",
+          "description": "Årliga helgonsfestivaler med parader, musik, fyrverkerier och traditionella firanden som samlar hela gemenskapen"
+        },
+        {
+          "name": "Semana Santa (Påskveckan)",
+          "month": "Mars/April",
+          "description": "Högtidliga påskprocessioner genom gatorna med traditionella floater och hundraåriga religiösa traditioner"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "Nationalfirandet med lokala evenemang, marknader och gemenskapsamlingar"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "Juni",
+          "description": "Magisk midsommarbrandfel med eldar, fyrverkerier och midnattssväralningstråditioner längs kusten"
+        },
+        {
+          "name": "Sommarsstrandfestival",
+          "month": "Juli",
+          "description": "Utomhuskom, matstaningar och kulturella evenemang längs stranden under hela sommaren"
+        },
+        {
+          "name": "Julmarknad och Tre Kungar",
+          "month": "December/Januari",
+          "description": "Festlig säsong med marknadskojor, nativityscener och spektakulär Tre Kungar-parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Familjer i Teulada har tillgång till högkvalitativa utbildningsalternativ i omgivande område, med flera internationella skolor som betjänar expatriatgemenskapen tillsammans med utmärkta spanska statskollar.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "Internationell (brittisk)",
+          "distance": "20-40 min",
+          "description": "Brittisk läroplan skola med GCSE och A-Level-program, utmärkta faciliteter och starka akademiska resultat"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "Internationell (brittisk/IB)",
+          "distance": "25-45 min",
+          "description": "Brittisk och IB-läroplan med utmärkta faciliteter, sportprogram och flerspråkig utbildning"
+        },
+        {
+          "name": "Lokala spanska grundskola",
+          "type": "Spansk staten",
+          "distance": "5-15 min",
+          "description": "Lokal statsskola som tillhandahåller spansk läroplan utbildning, utmärkt för språknedsänkning och gemenskapintegreringen"
+        },
+        {
+          "name": "Lokal spansk sekundärskola",
+          "type": "Spansk staten",
+          "distance": "10-20 min",
+          "description": "Statlig sekundärskola som erbjuder ESO och Bachillerato-program med stödjande läromiljö"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Teulada erbjuder utmärkta friluftaktiviteter året runt, från strandaktiviteter och vattensporter till golf, naturvandringar och mer.",
+      "activities": [
+        {
+          "name": "Strand och simning",
+          "type": "Strand",
+          "description": "Vackra medelhavsstrander i närheten med kristallklar vatten, perfekt för simning, snorkling och solbadning"
+        },
+        {
+          "name": "Vattensporter",
+          "type": "Vattensporter",
+          "description": "Paddling, kajaking, windsurfing och segling tillgängliga på närliggande strander och mariner"
+        },
+        {
+          "name": "Landsbygd vandring",
+          "type": "Vandring",
+          "description": "Vandringsvägar genom omgivande landsbygd med utsikter över fruktträdgårdar, berg och traditionella byar"
+        },
+        {
+          "name": "Cykelvägar",
+          "type": "Cykling",
+          "description": "Väg- och mountainbike-vägar genom sköna landsbygd, lämplig för alla fitnessnivåer"
+        },
+        {
+          "name": "Närliggande golfbanor",
+          "type": "Golf",
+          "description": "Flera högkvalitativa golfbanor inom lätt körning erbjuder året runt spel i Medelhavsolen"
+        },
+        {
+          "name": "Naturreservat och fågelskådning",
+          "type": "Naturreservat",
+          "description": "Skyddade naturområden i närheten som erbjuder fågelskådning, fotografi och fredliga naturvandringar"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Teulada har en blomstrande internationell gemenskap, med expatriater lockas av medelhavslivsstilen, överkomliga levnadskostnader och välkomnande atmosfär. Kustplatsen lockar ett varierat mix av nationaliteter, särskilt från Nordeuropa. Engelska talas övervägande i butiker, restauranger och sociala inställningar, vilket gör det dagliga livet bekvämt för nykomenter.",
+      "highlights": [
+        "Aktiv internationell socialscen med regelbundna samhällsevenemang",
+        "Engelsktalkande tjänster tillgängliga inklusive medicinska och juridiska yrkesverksamheter",
+        "Regelbundna gemenskapssamlingar, klubbar och sociala aktiviteter",
+        "Välkomnande atmosfär för nykomenter med etablerade expatnätverk",
+        "Blandning av permanenta invånare och säsongsbesökare som skapar dynamisk gemenskap",
+        "Mångfaldig europeisk gemenskap inklusive brittiska, skandinaviska, nederländska, tyska och franska invånare",
+        "Lokalt spanskt samhälle välkomnade och inkluderande mot internationella invånare"
+      ],
+      "nationalities": [
+        "Brittisk",
+        "Tysk",
+        "Nederländsk",
+        "Skandinavisk",
+        "Fransk",
+        "Belgisk",
+        "Spansk"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "En typisk dag i Teulada",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morgonkaffe",
+          "description": "Börja dagen med friskt kaffe på din terrass, njutande av havsbris och lugna omgivningar"
+        },
+        {
+          "time": "09:30",
+          "activity": "Strandpromenad",
+          "description": "Morgonpromenad längs stranden eller promenaden, andas in den friska Medelhavsluftningen"
+        },
+        {
+          "time": "12:00",
+          "activity": "Färsk marknadshandling",
+          "description": "Skaffa friskt bröd, frukt och lokal produkt från stormarknaden eller veckomarknaden"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spansk lunch",
+          "description": "Njut av en avslappnad menú del día på en lokal restaurang - tre kurser med vin för ungefär €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta och pool",
+          "description": "Vila under de varmaste timmarna, sedan kyla av dig i din privata eller gemensamma pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Strandtid",
+          "description": "Gå till stranden för ett eftermiddagsbad i det varma Medelhavsvattnet"
+        },
+        {
+          "time": "20:00",
+          "activity": "Kväll Paseo",
+          "description": "Gå med lokalbefolkningen för den traditionella kvällspromenaden genom stan, hälsning grannar och vänner"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas-middag",
+          "description": "Avsluta dagen med tapas och ett glas lokalt vin på din favoritrestaurang, äta al fresco under stjärnorna"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d0.1089!3d38.7278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Teulada",
+    "description": "Teulada is a coastal municipality in Costa Blanca North, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.7278",
+      "longitude": "0.1089"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Teulada",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vad gör Teulada annorlunda från andra Costa Blanca-platser?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Teulada erbjuder en unik kombination av autentisk spansk stadsmiljö med tillgång till lyxiga kustnära bekvämligheter. Dess inlandsposition ger lugn medan det bara ligger 5 km från Morairas strander och marina, skapar en exklusiv livsstilsmiljö som balanserar tradition med modern lyx."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur långt är de närmaste stränderna från Teulada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Morairas fantastiska strander ligger bara 5 km bort, inklusive Playa del Portet och Playa de l'Ampolla. Dessa anses bland Costa Blancas finaste strander, erbjuder kristallklar vatten, utmärkta faciliteter och Blue Flag-status."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Är Teulada lämpligt för året runt bodande?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolut. Teuladas exceptionella klimat, etablerad internationell gemenskap, utmärkt sjukvård och omfattande bekvämligheter gör det idealiskt för permanent bostad. Många invånare njuter av den autentiska spanska livsstilen samtidigt som det enkelt har tillgång till internationella tjänster och faciliteter."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vilka är fastighetsskatterna och pågående kostnader i Teulada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fastighetsskatter (IBI) är typiskt 0,4-1,1% av katastralvärdena årligen. Ytterligare kostnader inkluderar gemenskapsavgifter för utvecklingen, verktyg och årlig skatteersättning om tillämplig. Sammanlagda kostnader är rimliga jämfört med liknande premiumeuropeiska destinationer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur etablerad är den internationella gemenskapen i Teulada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mycket väl etablerad, med en betydande befolkning av nordeuropeiska invånare, särskilt brittiska, tyska och nederländska expatriater. Detta skapar en välkomnande multikulturell miljö med engelska talas brett och internationella tjänster lätt tillgängliga."
+        }
+      }
+    ]
+  }
+}

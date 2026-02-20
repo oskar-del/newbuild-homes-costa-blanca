@@ -1,0 +1,410 @@
+{
+  "slug": "sucina",
+  "name": "Sucina",
+  "region": "Murcia",
+  "heroImage": "/images/areas/sucina-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 8,
+  "propertyTypes": [
+    "Villa",
+    "Town House"
+  ],
+  "priceRange": {
+    "min": 298000,
+    "max": 725000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Tourisme Sucina",
+      "url": "https://www.google.com/search?q=Sucina%20Spain%20official%20website",
+      "description": "Découvrez plus sur Sucina"
+    },
+    "airport": {
+      "name": "Aéroport Murcia-Corvera",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "10 km",
+      "driveTime": "8 min"
+    },
+    "healthcare": {
+      "name": "Hospital General Universitario Reina Sofía (Murcia)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20General%20Universitario%20Reina%20Sof%C3%ADa%20(Murcia)",
+      "distance": "20 km"
+    }
+  },
+  "content": {
+    "metaTitle": "Vivre à Sucina, Costa Blanca: Guide complet et maisons",
+    "metaDescription": "Découvrez Sucina, Costa Blanca. Explorez nouvelles villas et maisons de ville €298k-€725k, style de vie, commodités, climat et potentiel d'investissement.",
+    "heroIntro": "Sucina est une urbanisation charmante située dans les régions intérieures de la Costa Blanca à Murcia, offrant un mélange parfait de tranquillité et de commodités modernes pour les familles et les retraités cherchant un style de vie espagnol authentique. Nichée entre les zones côtières animées et la campagne vallonnée de Murcia, Sucina offre une échappatoire idéale au stress des zones touristiques animées tout en restant proche des commodités essentielles et des installations de loisirs. Ce guide complet explore tout ce que les acheteurs potentiels et les résidents doivent savoir sur la vie à Sucina, de son climat tempéré et de sa communauté expatriée accueillante à sa proximité des terrains de golf, des centres commerciaux et des magnifiques plages méditerranéennes. Avec les propriétés neuves allant de €298.000 à €725.000, Sucina présente une excellente opportunité pour les résidences principales et les propriétés d'investissement. Que vous cherchiez une villa moderne avec piscine privée ou une maison de ville contemporaine dans une communauté sécurisée, Sucina offre une valeur exceptionnelle et une qualité de vie sur la Costa Blanca en Espagne.",
+    "lifestyleSection": {
+      "intro": "La vie à Sucina tourne autour d'un rythme méditerranéen décontracté combiné aux conforts et commodités modernes. La communauté est de plus en plus populaire auprès des résidents internationaux, en particulier en provenance du Royaume-Uni, d'Europe du Nord et de Scandinavie, créant un environnement expatrié diversifié et accueillant où l'anglais et d'autres langues sont largement parlés. Les résidents jouissent d'un équilibre parfait entre la vie paisible en banlieue et l'accès facile aux divertissements, restaurants et activités culturelles, avec des marchés hebdomadaires, des restaurants locaux servant une cuisine espagnole traditionnelle et des événements communautaires favorisant une atmosphère de quartier forte. La communauté expatriée a établi de nombreux clubs sociaux, groupes sportifs et organisations de réseautage, facilitant l'intégration des nouveaux arrivants et la création d'amitiés tout en conservant leurs préférences de style de vie et leurs connexions culturelles.\n\nSucina jouit d'un climat méditerranéen caractérisé par des étés chauds et ensoleillés et des hivers doux, avec environ 300 jours d'ensoleillement par an. Les températures estivales se situent généralement entre 28-32°C (82-90°F), tandis que les mois d'hiver avoisinent 12-16°C (54-61°F), créant un environnement idéal toute l'année. La région reçoit peu de précipitations, principalement concentrées en automne, et bénéficie de brises marines rafraîchissantes qui modèrent la chaleur estivale. Ce climat exceptionnel rend Sucina parfait pour les activités en plein air, le jardinage et l'appréciation des espaces extérieurs caractérisant les propriétés modernes de la région.",
+      "highlights": [
+        "Valeur exceptionnelle avec propriétés modernes 40-50% moins chères que les alternatives côtières",
+        "Climat méditerranéen remarquable avec 300 jours d'ensoleillement et hivers doux",
+        "Communauté expatriée florissante avec réseaux sociaux établis et systèmes de soutien",
+        "Accès excellent aux terrains de golf, plages et loisirs de plein air dans un rayon de 15-35 km",
+        "Fort potentiel d'investissement locatif avec base diversifiée de locataires incluant retraités, familles et visiteurs en vacances"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "La région est renommée pour les amateurs de golf, avec des terrains de championnat incluant Murcia Golf Club (12 km), La Torre Golf (18 km) et Los Alcázares Golf Club (25 km). Les plages de Playa del Espalmador et Playa Paraíso (25-35 km) offrent sports nautiques, baignade et clubs de plage. Le cyclisme, tennis, courts de padel et installations de fitness sont disponibles dans toute la communauté, nombre d'entre eux intégrés aux développements résidentiels.",
+      "dining": "Sucina et les régions environnantes offrent une scène culinaire diversifiée allant des bars à tapas espagnols traditionnels et restaurants familiaux à la cuisine internationale servant la communauté expatriée. Les établissements locaux servent des spécialités authentiques de Murcie, de la paella et des fruits de mer méditerranéens frais. Plusieurs restaurants de clubs de golf et options de restauration de villégiature offrent des expériences culinaires haut de gamme.",
+      "shopping": "Les options de magasinage à Sucina incluent le proche Centro Comercial Carrefour à Alcantarilla (15 km) offrant de grands supermarchés, marques de mode et grands magasins. Les marchés hebdomadaires locaux proposent des produits frais et des biens traditionnels. Les plus grands centres commerciaux au centre-ville de Murcia (30 km) proposent des marques internationales et des expériences commerciales modernes.",
+      "healthcare": "Sucina a accès à des installations de santé de qualité comprenant des centres médicaux privés et publics. L'hôpital majeur le plus proche est Hospital Quirónsalud Murcia (environ 25 km) offrant des services complets. Les cliniques de santé locales et pharmacies desservent la région de Sucina, avec de nombreux médecins et professionnels de santé parlant couramment l'anglais pour servir la communauté internationale.",
+      "transport": "L'aéroport international de Murcia (Corvera) est à environ 40 km avec des vols réguliers vers destinations européennes. L'aéroport d'Alicante-Elche (100 km) propose plus d'options de vol incluant les connexions internationales majeures. Les deux aéroports offrent location de voitures et services de taxi pour accès pratique à Sucina. Sucina bénéficie d'une excellente connectivité routière via l'autoroute A-7 (Autovia del Mediterraneo) reliant au centre-ville de Murcia (30 km) et aux régions côtières. La route côtière N-340 offre accès direct aux plages et villes voisines. L'infrastructure soutient l'exploration aisée de toute la région Costa Blanca et l'intérieur de Murcia. Le transport public comprend des services de bus régionaux reliant Sucina au centre-ville de Murcia et zones environnantes. Les minibus locaux desservent la communauté et urbanisations adjacentes. Bien que non aussi étendu que les zones côtières, la disposition de la région favorise l'utilisation de voitures privées. Le système de transit public de Murcia fournit connexions vers destinations supplémentaires au besoin."
+    },
+    "propertyMarketSection": "Le marché immobilier de Sucina offre une valeur exceptionnelle avec développements neufs modernes présentant l'architecture contemporaine, pratiques de construction durable et commodités complètes. Le marché attire à la fois les propriétaires-occupants cherchant des résidences principales et les investisseurs reconnaissant le fort potentiel locatif des résidents à long terme et visiteurs en vacances courtes. Les propriétés présentent des spécifications élevées, piscines privées, installations communes et environnements sécurisés fermés.\n\nLes types de propriétés populaires incluent Villa, Maison de Ville.\n\nSucina présente un potentiel d'investissement solide avec des rendements locatifs fiables de la communauté expatriée établie et du marché des vacances. Les propriétés attirent les retraités cherchant la vie méditerranéenne, les familles voulant un bon rapport qualité-prix et les investisseurs visant des rendements stables. L'accessibilité de la région comparée aux zones côtières, combinée à la construction de qualité et commodités modernes, soutient l'appréciation et les revenus locatifs compétitifs générant des rendements annuels de 5-8% pour les propriétés d'investissement.",
+    "whyLiveHereSection": [
+      "Valeur exceptionnelle avec propriétés modernes 40-50% moins chères que les alternatives côtières",
+      "Climat méditerranéen remarquable avec 300 jours d'ensoleillement et hivers doux",
+      "Communauté expatriée florissante avec réseaux sociaux établis et systèmes de soutien",
+      "Accès excellent aux terrains de golf, plages et loisirs de plein air dans un rayon de 15-35 km",
+      "Fort potentiel d'investissement locatif avec base diversifiée de locataires incluant retraités, familles et visiteurs en vacances"
+    ],
+    "faqs": [
+      {
+        "question": "Quel est le prix moyen d'une villa neuve à Sucina?",
+        "answer": "Les villas neuves à Sucina varient généralement de €400.000 à €725.000 selon la taille, localisation et commodités. Les propriétés offrent des designs modernes, piscines privées et aménagement paysager mature. Les maisons de ville offrent des options plus abordables à partir de €298.000."
+      },
+      {
+        "question": "Sucina convient-elle aux retraités?",
+        "answer": "Oui, Sucina est idéale pour les retraités. La région offre une vie de qualité abordable, excellent accès au système de santé, une communauté expatriée accueillante de résidents d'âge similaire, météo agréable toute l'année et proximité des terrains de golf, plages et divertissements sans le bruit et tourisme des zones côtières."
+      },
+      {
+        "question": "À quelle distance Sucina se trouve-t-elle de la plage?",
+        "answer": "Sucina est à environ 25-35 km des plages les plus proches incluant Playa del Espalmador et Playa Paraíso. Une conduite de 30-40 minutes donne accès aux plages méditerranéennes, clubs de plage et installations de sports nautiques pour profiter régulièrement de la plage."
+      },
+      {
+        "question": "Comment est la communauté expatriée à Sucina?",
+        "answer": "Sucina possède une communauté internationale établie et accueillante provenant principalement du Royaume-Uni, Allemagne, Scandinavie et autres pays européens. Nombreux clubs, associations et groupes sociaux facilitent l'intégration, l'anglais est largement parlé, et il existe des réseaux établis supportant les nouveaux arrivants."
+      },
+      {
+        "question": "Les propriétés à Sucina conviennent-elles aux investissements locatifs?",
+        "answer": "Oui, Sucina offre un fort potentiel locatif avec rendements annuels de 5-8%. Les propriétés attirent retraités, familles et visiteurs en vacances. La population expatriée stable fournit une location long terme cohérente, tandis que la proximité des terrains de golf et plages soutient les revenus locatifs de vacances."
+      },
+      {
+        "question": "Quelles sont les principales commodités à Sucina?",
+        "answer": "Les commodités incluent restaurants locaux, bars, cafés, marchés hebdomadaires, cliniques médicales, pharmacies, installations sportives et terrains de golf à proximité. Centres commerciaux et détail plus important se trouvent à 15-30 km à Alcantarilla et Murcia. Centres communautaires et installations sociales supportent le style de vie actif."
+      },
+      {
+        "question": "Comment est la météo toute l'année à Sucina?",
+        "answer": "Sucina bénéficie d'un climat méditerranéen avec étés chauds (28-32°C), hivers doux (12-16°C) et environ 300 jours d'ensoleillement annuel. Les précipitations sont minimales, principalement en automne. Le climat soutient la vie en plein air et activités toute l'année."
+      },
+      {
+        "question": "Quelle documentation est nécessaire pour acheter une propriété à Sucina en tant que non-citoyen UE?",
+        "answer": "Les non-citoyens UE requièrent un numéro d'identification fiscale espagnol (NIE), contrats d'achat finalisés, rapports d'inspection de propriété et documentation hypothécaire si nécessaire. L'assistance juridique d'un avocat espagnol spécialisé en immobilier est essentielle pour assurer conformité au droit immobilier espagnol et réglementations fiscales."
+      }
+    ],
+    "conclusion": "Prêt à découvrir votre propriété parfaite à Sucina? Notre équipe expérimentée se spécialise dans les propriétés neuves dans cette région et peut vous guider à chaque étape. Que vous cherchiez une résidence permanente, retraite de vacances ou propriété d'investissement, nous vous aiderons à trouver exactement ce que vous cherchez. Réservez une consultation gratuite de 30 minutes avec notre équipe - avec plus de 12 années d'expérience vendant neufs bâtiments à la Costa Blanca, nous connaissons ce marché dans les moindres détails.",
+    "investmentAnalysis": {
+      "rentalYield": "5-7%",
+      "annualAppreciation": "4-6%",
+      "overview": "Sucina présente un potentiel d'investissement solide avec rendements locatifs fiables de la communauté expatriée établie et du marché des vacances. Les propriétés attirent retraités cherchant la vie méditerranéenne, familles voulant un bon rapport qualité-prix et investisseurs visant des rendements stables. L'accessibilité de la région comparée aux zones côtières, combinée à la construction de qualité et commodités modernes, soutient l'appréciation et revenus locatifs compétitifs générant rendements annuels de 5-8% pour propriétés d'investissement.",
+      "highlights": [
+        "Propriétés golf commandent tarifs locatifs premium toute l'année",
+        "Prix d'entrée plus bas que marchés comparables avec rendements locatifs similaires",
+        "Demande internationale croissante entraînant appréciation régulière des prix",
+        "Demande locative long terme de communauté expatriée en croissance"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Les frais de vie à Sucina sont considérablement plus bas qu'en Europe du Nord et très compétitifs en Espagne. Les emplacements intérieurs comme Sucina offrent une valeur particulièrement bonne pour les dépenses quotidiennes.",
+      "items": [
+        {
+          "category": "Épicerie (mensuel, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl et marchés locaux à proximité"
+        },
+        {
+          "category": "Services (électricité, eau, gaz)",
+          "cost": "€100-160",
+          "notes": "Plus élevé en été avec climatisation"
+        },
+        {
+          "category": "Frais communautaires",
+          "cost": "€50-120",
+          "notes": "Varie selon développement et services inclus"
+        },
+        {
+          "category": "IBI (Impôt foncier)",
+          "cost": "€400-1.000/an",
+          "notes": "Impôt foncier annuel basé sur valeur cadastrale"
+        },
+        {
+          "category": "Repas au restaurant (par personne)",
+          "cost": "€10-22",
+          "notes": "Menú del día à partir €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet et Téléphone",
+          "cost": "€35-50",
+          "notes": "Bonne couverture haut débit; plusieurs fournisseurs"
+        },
+        {
+          "category": "Dépenses automobile (carburant, assurance)",
+          "cost": "€150-250",
+          "notes": "Essentiel pour vie intérieure"
+        },
+        {
+          "category": "Assurance santé privée",
+          "cost": "€60-150",
+          "notes": "Couverture complète; moins cher pour résidents plus jeunes"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Sucina célèbre fiestas espagnoles traditionnelles et événements communautaires toute l'année, mélangeant traditions locales avec la communauté internationale accueillante.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "Août",
+          "description": "Festivités patronales annuelles avec défilés, musique, feux d'artifice et célébrations traditionnelles réunissant la communauté"
+        },
+        {
+          "name": "Semana Santa (Semaine Sainte)",
+          "month": "Mars/Avril",
+          "description": "Processions solennelles de Pâques dans les rues avec chars traditionnels et traditions religieuses séculaires"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "Décembre",
+          "description": "Célébrations nationales avec événements locaux, marchés et rassemblements communautaires"
+        },
+        {
+          "name": "Festival du Printemps",
+          "month": "Mai",
+          "description": "Célébration du printemps avec expositions florales, étals alimentaires, musique traditionnelle et rassemblements communautaires sur la place"
+        },
+        {
+          "name": "Festival de la Moisson",
+          "month": "Octobre",
+          "description": "Célébration automnale traditionnelle avec produits locaux, dégustations vins, marchés artisanaux et gastronomie régionale"
+        },
+        {
+          "name": "Marché de Noël et Trois Rois",
+          "month": "Décembre/Janvier",
+          "description": "Saison festive avec étals de marché, crèches et spectaculaire défilé Trois Rois (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Les familles à Sucina ont accès à des options éducatives de qualité dans la région environnante, avec plusieurs écoles internationales servant la communauté expatriée avec d'excellentes écoles publiques espagnoles.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "International (Britannique)",
+          "distance": "20-40 min",
+          "description": "École curriculum britannique proposant GCSE et A-Levels avec forts programmes extrascolaires"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "International (Britannique)",
+          "distance": "25-45 min",
+          "description": "École primaire et secondaire curriculum britannique servant la communauté internationale"
+        },
+        {
+          "name": "École Primaire Publique Espagnole Locale",
+          "type": "Public Espagnol",
+          "distance": "5-15 min",
+          "description": "École publique locale proposant curriculum espagnol, excellente pour immersion linguistique et intégration communautaire"
+        },
+        {
+          "name": "École Secondaire Publique Espagnole Locale",
+          "type": "Public Espagnol",
+          "distance": "10-20 min",
+          "description": "École secondaire publique offrant programmes ESO et Bachillerato avec environnement d'apprentissage supportif"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Sucina offre d'excellentes activités de plein air toute l'année, de la randonnée et cyclisme au golf, promenades nature et plus.",
+      "activities": [
+        {
+          "name": "Randonnée en Campagne",
+          "type": "Randonnée",
+          "description": "Sentiers de randonnée à travers la campagne environnante avec vues sur vergers, montagnes et villages traditionnels"
+        },
+        {
+          "name": "Routes Cyclables",
+          "type": "Cyclisme",
+          "description": "Routes vélo route et montagne à travers paysages pittoresques, adaptées pour tous niveaux fitness"
+        },
+        {
+          "name": "Golf Championnat",
+          "type": "Golf",
+          "description": "Accès aux terrains de golf de classe mondiale avec dispositions championnat, installations d'entraînement et restauration clubhouse"
+        },
+        {
+          "name": "Réserves Naturelles et Observation Oiseaux",
+          "type": "Réserve Naturelle",
+          "description": "Zones naturelles protégées à proximité offrant observation d'oiseaux, photographie et promenades nature paisibles"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Sucina possède une communauté internationale en croissance, avec expatriés attirés par le style de vie méditerranéen, coûts de vie abordables et atmosphère accueillante. Le caractère espagnol authentique de la région attire ceux cherchant l'intégration authentique avec la culture locale. L'anglais est de plus en plus parlé, avec nombreux services disponibles en anglais, rendant la vie quotidienne confortable pour les nouveaux arrivants.",
+      "highlights": [
+        "Scène sociale internationale croissante avec événements communautaires réguliers",
+        "Services parlant anglais disponibles incluant professionnels médicaux et juridiques",
+        "Rassemblements communautaires réguliers, clubs et activités sociales",
+        "Atmosphère accueillante pour nouveaux arrivants avec réseaux expatriés établis",
+        "Mélange résidents permanents et visiteurs saisonniers créant communauté dynamique",
+        "Forte présence britannique et scandinave aux côtés habitants néerlandais, belges et allemands",
+        "Communauté espagnole locale accueillante et inclusive envers résidents internationaux"
+      ],
+      "nationalities": [
+        "Britannique",
+        "Scandinave (Suédois, Norvégien, Danois)",
+        "Néerlandais",
+        "Belge",
+        "Allemand",
+        "Irlandais",
+        "Espagnol"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Une journée typique à Sucina",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Café Matin",
+          "description": "Commencez la journée avec café frais sur votre terrasse, profitant du soleil du matin et environnement paisible"
+        },
+        {
+          "time": "09:30",
+          "activity": "Golf Matin",
+          "description": "Allez au terrain pour une partie relaxante de golf, profitant des greens parfaitement entretenus et soleil chaud"
+        },
+        {
+          "time": "12:00",
+          "activity": "Marché Frais",
+          "description": "Procurez-vous pain frais, fruits et produits locaux du supermarché ou marché hebdomadaire"
+        },
+        {
+          "time": "13:30",
+          "activity": "Déjeuner Espagnol",
+          "description": "Profitez menú del día décontracté au restaurant local - trois cours avec vin pour environ €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Sieste et Piscine",
+          "description": "Reposez-vous pendant les heures les plus chaudes, puis rafraîchissez-vous dans votre piscine privée ou communautaire"
+        },
+        {
+          "time": "17:30",
+          "activity": "Promenade l'Après-midi",
+          "description": "Explorez campagne environnante ou rues villageoise comme température baisse"
+        },
+        {
+          "time": "20:00",
+          "activity": "Paseo Soir",
+          "description": "Rejoignez les locaux pour promenade traditionnelle du soir à travers ville, saluant voisins et amis"
+        },
+        {
+          "time": "21:30",
+          "activity": "Dîner Tapas",
+          "description": "Terminez la journée avec tapas et verre vin local à votre restaurant favori, dînant al fresco sous les étoiles"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.9833!3d37.8333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Sucina",
+    "description": "Sucina is a municipality in Murcia, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.8333",
+      "longitude": "-0.9833"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sucina",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Murcia"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quel est le prix moyen d'une villa neuve à Sucina?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les villas neuves à Sucina varient généralement de €400.000 à €725.000 selon taille, localisation et commodités. Les propriétés offrent designs modernes, piscines privées et aménagement paysager mature. Les maisons de ville offrent options plus abordables à partir de €298.000."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Sucina convient-elle aux retraités?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, Sucina est idéale pour retraités. La région offre vie qualité abordable, excellent accès système santé, communauté expatriée accueillante résidents âge similaire, météo agréable année et proximité terrains golf, plages divertissements sans bruit tourisme zones côtières."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "À quelle distance Sucina se trouve-t-elle de la plage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sucina est environ 25-35 km plages plus proches incluant Playa del Espalmador et Playa Paraíso. Une conduite 30-40 minutes donne accès plages méditerranéennes, clubs plage installations sports nautiques pour profiter régulièrement plage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment est la communauté expatriée à Sucina?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sucina possède communauté internationale établie accueillante provenant principalement Royaume-Uni, Allemagne, Scandinavie autres pays européens. Nombreux clubs, associations groupes sociaux facilitent intégration, anglais largement parlé il existe réseaux établis supportant nouveaux arrivants."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Les propriétés à Sucina conviennent-elles aux investissements locatifs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, Sucina offre fort potentiel locatif avec rendements annuels 5-8%. Les propriétés attirent retraités, familles visiteurs vacances. La population expatriée stable fournit location long terme cohérente, tandis proximité terrains golf plages soutient revenus locatifs vacances."
+        }
+      }
+    ]
+  },
+  "golf": {
+    "intro": "Sucina offre d'excellentes opportunités de golf avec terrains de championnat à portée facile. La région offre accès pratique aux installations haut de gamme combiné avec vie campagnarde authentique Murcia. Saison longue jeu assure plaisir golf toute l'année.",
+    "courses": [
+      {
+        "name": "Hacienda del Álamo Golf Resort",
+        "distance": "10 km",
+        "driveTime": "14 minutes",
+        "holes": 18,
+        "url": "https://www.haciendadelalamogolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Hacienda+del+Alamo+Golf",
+        "description": "Terrain de resort luxe avec disposition championnat, installations spa et options de restauration"
+      },
+      {
+        "name": "Peraleja Golf Club",
+        "distance": "8 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Peraleja+Golf+Club",
+        "description": "Terrain qualité avec design pittoresque installations bien entretenues"
+      },
+      {
+        "name": "Serena Golf Club",
+        "distance": "14 km",
+        "driveTime": "20 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Serena+Golf+Club",
+        "description": "Terrain championnat avec design pittoresque, installations qualité coaching professionnel disponible"
+      }
+    ]
+  }
+}
