@@ -1,0 +1,400 @@
+{
+  "slug": "aguilas",
+  "name": "Aguilas",
+  "region": "Costa Blanca South / Murcia",
+  "heroImage": "/images/areas/aguilas-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 14,
+  "propertyTypes": [
+    "Apartment",
+    "Penthouse",
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 239500,
+    "max": 646000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Aguilas Tourism",
+      "url": "https://www.google.com/search?q=Aguilas%20Spain%20official%20website",
+      "description": "Découvrez-en plus sur Aguilas"
+    },
+    "airport": {
+      "name": "Murcia-Corvera Airport",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "85 km",
+      "driveTime": "55 min"
+    },
+    "healthcare": {
+      "name": "Hospital Rafael Méndez (Lorca)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Rafael%20M%C3%A9ndez%20(Lorca)",
+      "distance": "35 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+Aguilas+Spain",
+        "description": "Magnifique plage méditerranéenne à proximité"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Vivre à Aguilas 2026 | Guide complet de ce joyau caché",
+    "metaDescription": "Découvrez la vie à Aguilas : propriétés €239 500-€646 000, 40% moins cher que les îles, communauté expatriée dynamique et style de vie méditerranéen.",
+    "heroIntro": "Aguilas représente l'une des destinations immobilières les plus sous-estimées d'Espagne, offrant un véritable style de vie méditerranéen à une fraction du coût que vous paieriez sur les îles espagnoles. Cette charmante petite ville combine l'authenticité avec les commodités modernes, devenant de plus en plus populaire auprès des acheteurs internationaux cherchant la valeur sans compromis. Que vous recherchiez une résidence permanente, un bien d'investissement ou une base de vacances, Aguilas offre des opportunités exceptionnelles. Avec des prix immobiliers moyens de 2 200 euros par m² et une robuste croissance annuelle de 8%, elle attire les investisseurs avisés et les familles. La communauté expatriée établie assure une intégration aisée des nouveaux venus, avec l'anglais largement parlé dans la ville. Des plages pavillon bleu à 20 minutes de distance aux parcours de golf de championnat et aux excellentes installations de santé, Aguilas offre un forfait de style de vie complet qui plaît aux retraités, familles et télétravailleurs cherchant une meilleure qualité de vie dans le sud de l'Espagne.",
+    "lifestyleSection": {
+      "intro": "La vie quotidienne à Aguilas tourne autour d'un parfait mélange de détente et d'activité. Les matinées commencent souvent par des visites aux marchés locaux où sont disponibles les produits frais, le poisson et les spécialités régionales. La communauté internationale établie crée une atmosphère accueillante où l'anglais est communément parlé, tout en gardant une culture espagnole authentique. Les fins de semaine impliquent généralement des excursions aux plages pavillon bleu à proximité, des repas tranquilles dans les restaurants en bord de mer proposant une cuisine méditerranéenne, ou des parties de golf dans les parcours de championnat facilement accessibles. La communauté expatriée organise des événements sociaux réguliers, des clubs et des réunions, facilitant l'intégration sociale pour les nouveaux venus. Les achats sont pratiques avec les grands supermarchés incluant Mercadona, Lidl et Consum, ainsi que les marchés espagnols traditionnels. Les événements culturels et les festivals tout au long de l'année offrent du divertissement et des liens plus profonds avec les traditions locales. Le rythme est notablement plus lent que dans les grandes villes, encourageant un meilleur équilibre travail-vie, tandis qu'une excellente connectivité garantit que vous ne soyez jamais isolé des commodités modernes ou des services internationaux.\n\nAguilas bénéficie de plus de 300 jours de soleil par an, avec des caractéristiques de climat méditerranéen qui le rendent idéal toute l'année. Les étés sont chauds et ensoleillés, atteignant généralement 28-32°C de juin à septembre, tandis que les hivers sont doux avec des températures rarement inférieures à 10°C. Le printemps et l'automne offrent des conditions parfaites pour les activités de plein air, avec des températures agréables de 20-25°C et des précipitations minimales. La proximité côtière fournit des brises marines rafraîchissantes qui modèrent la chaleur estivale, rendant le climat plus gérable que les zones intérieures plus au nord. Bien qu'août puisse être assez chaud, les conditions tempérées de mai-juin et septembre-octobre sont considérées comme optimales à la fois pour visiter et s'installer. Contrairement à certaines zones méditerranéennes, Aguilas connaît une chaleur extrême moins intense que les régions intérieures de la Costa Blanca plus au nord, et les pluies hivernales sont brèves et peu fréquentes.",
+      "highlights": [
+        "Valeur exceptionnelle : 40% moins cher que les propriétés des îles espagnoles avec un potentiel locatif supérieur",
+        "Communauté expatriée établie avec anglais largement parlé, facilitant l'intégration des nouveaux venus",
+        "Croissance forte du marché : appréciation annuelle de 8% avec véritable potentiel d'investissement",
+        "Commodités complètes : Soins de santé, écoles internationales, shopping et sports tous facilement disponibles",
+        "Style de vie méditerranéen : Plages pavillon bleu, golf de championnat, sports nautiques à 20 minutes",
+        "Culture espagnole authentique : Caractère authentique préservé avec couche de services internationaux modernes"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Les sports et loisirs sont abondants à Aguilas, avec plusieurs plages pavillon bleu situées à seulement 20 minutes, offrant la baignade sécurisée, les sports nautiques et les clubs de plage. Les parcours de golf de championnat de la région offrent des installations de classe mondiale pour tous les niveaux de compétence, avec plusieurs parcours facilement accessibles en voiture. Les sports nautiques incluant la voile, le kayak et le paddleboard sont populaires en raison de l'emplacement côtier. Le volleyball de plage, le tennis et les installations de fitness sont disponibles dans toute la ville. Le climat doux permet des activités de plein air toute l'année, des randonnées dans les montagnes voisines au cyclisme le long des routes côtières.",
+      "dining": "Aguilas offre des expériences culinaires variées, des bars à tapas espagnols traditionnels et restaurants familiaux à la cuisine internationale. Les établissements locaux servent des plats régionaux authentiques utilisant des ingrédients locaux frais, tandis que le menú del día offre une excellente valeur à environ 10-12 euros pour un repas de trois plats.",
+      "shopping": "Le shopping à Aguilas s'adapte à tous les besoins avec un mélange de supermarchés modernes et de marchés espagnols traditionnels. Les grandes chaînes incluant Mercadona, Lidl et Consum fonctionnent commodément dans toute la ville, offrant des prix compétitifs et des produits internationaux. Les marchés locaux hebdomadaires proposent des produits frais, du poisson, de la viande et des spécialités régionales à des prix excellents, offrant une expérience de shopping authentiquement espagnole. Les plus grands centres commerciaux avec variété de détail sont situés à moins de 30 minutes pour des besoins de shopping plus importants. La combinaison de commodité moderne et de marchés traditionnels signifie que les résidents jouissent à la fois de l'efficacité et de l'immersion culturelle.",
+      "healthcare": "Les soins de santé à Aguilas sont bien établis avec d'excellentes installations et des professionnels médicaux parlant anglais facilement disponibles. Un hôpital régional est situé à moins de 30 minutes, offrant des services complets pour les urgences et les traitements spécialisés. Plusieurs cliniques privées opèrent dans toute la ville, offrant des temps d'attente plus courts et des soins personnalisés. La forte communauté expatriée a entraîné le développement de services médicaux spécifiquement adaptés aux résidents internationaux, avec les médecins parlant anglais courants dans les secteurs public et privé. Les soins de routine, les ordonnances et les rendez-vous spécialisés sont facilement arrangés, et de nombreuses polices d'assurance internationales sont acceptées.",
+      "transport": "Les connexions de bus sont disponibles dans Aguilas et vers les zones environnantes, fournissant un transport public abordable. Cependant, une voiture est recommandée pour une flexibilité maximale pour explorer la région, accéder aux plages et parcours de golf, et profiter de la liberté qui accompagne les voyages indépendants. La taille gérable de la ville la rend praticable pour les besoins quotidiens, mais un véhicule améliore considérablement la qualité du style de vie. L'aéroport d'Alicante est à environ 120 kilomètres de distance (90 minutes en voiture), servant de principal point d'entrée international avec des connexions mondiales. L'aéroport de Valence offre une alternative à environ 180 kilomètres au nord. La ville bénéficie de bonnes connexions d'autoroute reliant d'autres destinations de la Costa Blanca. L'autoroute A-7 offre l'accès à Carthagène, Murcie et les régions du sud. Les routes nationales se connectent à Almeria et Grenade à l'intérieur des terres. Temps de conduite : Alicante 90 minutes, Murcie 45 minutes, Carthagène 30 minutes. Les services de bus locaux relient les quartiers et les villes voisines. Les autocars régionaux fournissent des connexions vers Alicante, Murcie et d'autres destinations. Les services de train opèrent depuis les gares voisines pour les distances plus longues."
+    },
+    "propertyMarketSection": "Aguilas représente l'un des marchés immobiliers les plus prometteurs d'Espagne, avec une croissance constante et une valeur exceptionnelle. Le marché connaît une appréciation annuelle saine de 8%, reflétant la reconnaissance croissante du potentiel de la ville. Contrairement aux marchés côtiers saturés, Aguilas offre une véritable opportunité de croissance avec moins de spéculation. La communauté expatriée établie et l'infrastructure s'améliorant continuent de stimuler la demande de propriétés de qualité.\n\nLes types de propriété populaires incluent Appartement, Penthouse, Villa.\n\nLe marché locatif offre d'excellents rendements avec les locations de 7 nuits typiques avoisinant 800 euros, offrant un potentiel locatif de vacances fort. Les locations à long terme à la communauté expatriée croissante assurent une demande constante. L'appréciation du capital de 8% annuellement est supérieure aux moyennes espagnoles, tandis que les prix restent 40% inférieurs aux propriétés comparables sur les îles espagnoles. Les acheteurs pour la première fois et de deuxième maison trouvent une valeur exceptionnelle, avec à la fois le mérite du style de vie et de l'investissement.",
+    "whyLiveHereSection": [
+      "Valeur exceptionnelle : 40% moins cher que les propriétés des îles espagnoles avec un potentiel locatif supérieur",
+      "Communauté expatriée établie avec anglais largement parlé, facilitant l'intégration des nouveaux venus",
+      "Croissance forte du marché : appréciation annuelle de 8% avec véritable potentiel d'investissement",
+      "Commodités complètes : Soins de santé, écoles internationales, shopping et sports tous facilement disponibles",
+      "Style de vie méditerranéen : Plages pavillon bleu, golf de championnat, sports nautiques à 20 minutes",
+      "Culture espagnole authentique : Caractère authentique préservé avec couche de services internationaux modernes"
+    ],
+    "faqs": [
+      {
+        "question": "Aguilas est-il un bon endroit pour vivre?",
+        "answer": "Oui, absolument. Aguilas offre une excellente combinaison de commodité, de style de vie méditerranéen et de communauté. Avec une population expatriée établie où l'anglais est communément parlé, des soins de santé de qualité à moins de 30 minutes, des écoles internationales et un accès aux plages pavillon bleu et aux parcours de golf, il convient aux familles, retraités et professionnels. L'appréciation annuelle des propriétés de 8% suggère des fondamentaux économiques forts et la reconnaissance croissante du potentiel de la ville."
+      },
+      {
+        "question": "Les étrangers peuvent-ils acheter des biens en Espagne?",
+        "answer": "Oui, les étrangers peuvent librement acheter des propriétés en Espagne sans restrictions. Les citoyens de l'UE et non-UE ont des droits égaux d'acheter des propriétés résidentielles et commerciales. Vous aurez besoin d'un numéro d'identification fiscale espagnol (NIE), mais le processus est simple. De nombreux résidents internationaux à Aguilas ont acheté avec succès des propriétés. L'assistance juridique d'un avocat espagnol parlant anglais est recommandée pour naviguer le processus d'achat."
+      },
+      {
+        "question": "Quels sont les coûts d'achat de propriété en Espagne?",
+        "answer": "À Aguilas spécifiquement, les prix des propriétés vont de 239 500 à 646 000 euros. Au-delà du prix d'achat, attendez-vous aux coûts supplémentaires : taxe de transfert (6-10%), frais de notaire (0,5-1%), frais d'enregistrement (0,1%) et frais juridiques (1-2%). Les coûts supplémentaires totaux s'élèvent généralement à 8-13% du prix d'achat. Les coûts continus incluent la taxe annuelle sur les biens (0,4-1,1% de la valeur cadastrale), les taux municipaux et les services publics. Ces coûts supplémentaires rendent Aguilas d'une valeur exceptionnelle par rapport aux îles espagnoles où les propriétés coûtent 40% plus cher."
+      },
+      {
+        "question": "Ai-je besoin d'un visa pour acheter une propriété en Espagne?",
+        "answer": "Non, vous n'avez pas besoin d'un visa spécifiquement pour acheter une propriété. Cependant, si vous prévoyez de vivre en Espagne, les exigences de visa dépendent de votre nationalité. Les citoyens britanniques et autres ressortissants non-UE requièrent un visa de résidence. Les citoyens de l'UE/EEA ont la liberté de mouvement. Une fois que vous possédez une propriété espagnole et établissez la résidence, vous obtiendrez une identification fiscale espagnole (NIE). De nombreux résidents d'Aguilas travaillent avec des spécialistes de l'immigration pour organiser les visas appropriés pour leurs circonstances."
+      },
+      {
+        "question": "Combien coûtent les impôts sur les propriétés en Espagne?",
+        "answer": "Les impôts sur les propriétés espagnoles incluent la taxe annuelle sur les propriétés (Impuesto sobre Bienes Inmuebles) s'élevant généralement de 0,4-1,1% de la valeur cadastrale, plus les taux municipaux (taxe basura) moyenne 150-400 euros annuellement. L'impôt sur les gains en capital s'applique lors de la vente avec profit. L'impôt sur la fortune (occasionnellement applicable) est d'environ 0,2-2,5% selon la valeur de la propriété. L'impôt local (IBI) varie selon la commune. Dans l'ensemble, les coûts annuels des impôts fonciers à Aguilas sont raisonnables par rapport aux normes internationales, rendant la propriété à long terme économique."
+      },
+      {
+        "question": "Puis-je obtenir un prêt hypothécaire en Espagne en tant qu'étranger?",
+        "answer": "Oui, les acheteurs immobiliers étrangers peuvent obtenir des prêts hypothécaires espagnols, bien que les conditions soient plus favorables pour les citoyens de l'UE. La plupart des banques espagnoles exigent une mise de fonds de 20-30%, avec des ratios de prêt-à-valeur de 70-80%. Les citoyens non-UE peuvent faire face à des exigences supplémentaires incluant une preuve de revenu espagnol ou un dépôt plus important. Les taux d'intérêt sont compétitifs (actuellement 3-4% pour les prêts hypothécaires). De nombreux acheteurs de propriétés à Aguilas travaillent avec des courtiers en hypothèques internationaux qui se spécialisent dans le financement immobilier espagnol et peuvent naviguer le processus de candidature en anglais."
+      },
+      {
+        "question": "Quel est le coût de la vie à Costa Blanca?",
+        "answer": "Costa Blanca offre une excellente valeur, Aguilas étant particulièrement abordable. Les coûts mensuels pour un couple pourraient inclure : loyer 400-800 euros (ou paiements hypothécaires), services 100-150 euros, épicerie 250-350 euros, restauration 200-400 euros, transport 50-100 euros. Les coûts mensuels totaux s'élèvent généralement à 1 000-1 800 euros, sensiblement inférieurs aux normes britanniques et nord-européennes. Les soins de santé et l'enseignement international sont abordables. Les prix moyens des propriétés à Aguilas de 2 200 euros par m² signifient que la propriété est accessible, ce qui la rend idéale pour les expatriés conscients du budget."
+      },
+      {
+        "question": "Costa Blanca est-elle bonne pour les retraités?",
+        "answer": "Excellent choix pour les retraités. Costa Blanca et Aguilas spécifiquement offrent une vie abordable, des soins de santé de qualité avec des médecins parlant anglais, un climat doux toute l'année et des communautés expatriées établies offrant des connexions sociales. Les coûts des soins de santé sont minimaux, et de nombreuses pensions privées britanniques reçoivent un traitement fiscal favorable. Le rythme relaxe convient aux styles de vie retraité, tandis que l'excellente connectivité vers le Royaume-Uni et l'Europe permet de visiter la famille. Aguilas offre une culture espagnole authentique aux côtés des services internationaux modernes, idéale pour les retraités actifs recherchant à la fois l'aventure et le confort."
+      }
+    ],
+    "conclusion": "Prêt à découvrir votre propriété parfaite à Aguilas? Notre équipe expérimentée se spécialise dans les propriétés de construction neuve dans cette région et peut vous guider à chaque étape. Que vous recherchiez une résidence permanente, une retraite de vacances ou une propriété d'investissement, nous vous aiderons à trouver exactement ce que vous cherchez. Réservez une consultation gratuite de 30 minutes avec notre équipe, avec plus de 12 ans d'expérience dans la vente de constructions neuves sur la Costa Blanca, nous connaissons ce marché à fond.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "Le marché locatif offre d'excellents rendements avec les locations de 7 nuits typiques avoisinant 800 euros, offrant un potentiel locatif de vacances fort. Les locations à long terme à la communauté expatriée croissante assurent une demande constante. L'appréciation du capital de 8% annuellement est supérieure aux moyennes espagnoles, tandis que les prix restent 40% inférieurs aux propriétés comparables sur les îles espagnoles. Les acheteurs pour la première fois et de deuxième maison trouvent une valeur exceptionnelle, avec à la fois le mérite du style de vie et de l'investissement.",
+      "highlights": [
+        "Forte demande locative en vacances pendant la saison de pointe (mai-octobre)",
+        "Prix d'entrée inférieurs aux marchés comparables avec rendements locatifs similaires",
+        "Demande internationale croissante stimulant l'appréciation des prix réguliers",
+        "Locations de vacances à court terme populaires auprès des touristes européens"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Les coûts de la vie à Aguilas sont sensiblement inférieurs à l'Europe du Nord et très compétitifs au sein de l'Espagne. La vie côtière ici combine l'abordabilité au style de vie méditerranéen.",
+      "items": [
+        {
+          "category": "Épicerie (mensuelle, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl et marchés locaux à proximité"
+        },
+        {
+          "category": "Services (électricité, eau, gaz)",
+          "cost": "€100-160",
+          "notes": "Plus élevé en été avec climatisation"
+        },
+        {
+          "category": "Frais communautaires",
+          "cost": "€50-120",
+          "notes": "Varie selon le développement et les services inclus"
+        },
+        {
+          "category": "IBI (Impôt local)",
+          "cost": "€400-1 000/an",
+          "notes": "Impôt annuel sur les propriétés basé sur la valeur cadastrale"
+        },
+        {
+          "category": "Restauration (par personne)",
+          "cost": "€10-22",
+          "notes": "Menú del día à partir de 10 euros; restaurants 15-30 euros"
+        },
+        {
+          "category": "Internet et téléphone",
+          "cost": "€35-50",
+          "notes": "Bonne couverture haut débit; plusieurs fournisseurs"
+        },
+        {
+          "category": "Dépenses automobiles (carburant, assurance)",
+          "cost": "€150-250",
+          "notes": "Recommandé pour la flexibilité"
+        },
+        {
+          "category": "Assurance maladie privée",
+          "cost": "€60-150",
+          "notes": "Couverture complète; moins cher pour les jeunes résidents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Aguilas célèbre les fiestas espagnoles traditionnelles et les événements communautaires tout au long de l'année, mélangeant les traditions locales à la communauté internationale accueillante.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "Août",
+          "description": "Les festivités annuelles du saint patron avec parades, musique, feux d'artifice et célébrations traditionnelles réunissant toute la communauté"
+        },
+        {
+          "name": "Semana Santa (Semaine sainte)",
+          "month": "Mars/Avril",
+          "description": "Processions solennelles de la Semaine sainte dans les rues avec chars traditionnels et traditions religieuses séculaires"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "Décembre",
+          "description": "Célébrations de la fête nationale avec événements locaux, marchés et rassemblements communautaires"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "Juin",
+          "description": "Célébrations magiques de la veille du solstice d'été avec feux de joie, feux d'artifice et traditions de baignade minuit le long de la côte"
+        },
+        {
+          "name": "Festival d'été de la plage",
+          "month": "Juillet",
+          "description": "Concerts en plein air, stands de nourriture et événements culturels le long du front de mer tout au long de la saison estivale"
+        },
+        {
+          "name": "Marché de Noël et Rois Mages",
+          "month": "Décembre/Janvier",
+          "description": "Saison festive avec stands de marché, crèches de Noël et la spectaculaire parade des Rois Mages (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Les familles à Aguilas ont accès à des options d'éducation de qualité dans la région environnante, avec plusieurs écoles internationales servant la communauté expatriée aux côtés d'excellentes écoles d'état espagnoles.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "International (Britannique)",
+          "distance": "20-40 min",
+          "description": "École de programme britannique offrant GCSE et niveaux A avec des programmes parascolaires solides"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "International (Britannique)",
+          "distance": "25-45 min",
+          "description": "École primaire et secondaire de programme britannique servant la communauté internationale"
+        },
+        {
+          "name": "École primaire locale espagnole",
+          "type": "État espagnol",
+          "distance": "5-15 min",
+          "description": "École d'état locale offrant l'enseignement du programme espagnol, excellente pour l'immersion linguistique et l'intégration communautaire"
+        },
+        {
+          "name": "École secondaire locale espagnole",
+          "type": "État espagnol",
+          "distance": "10-20 min",
+          "description": "École secondaire d'état offrant les programmes ESO et Bachillerato avec un environnement d'apprentissage favorable"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Aguilas offre d'excellentes activités de plein air toute l'année, des activités de plage et sports nautiques au golf, randonnées à pied et plus encore.",
+      "activities": [
+        {
+          "name": "Plage et baignade",
+          "type": "Plage",
+          "description": "Magnifiques plages méditerranéennes à proximité avec des eaux cristallines, parfaites pour la baignade, le snorkeling et les bains de soleil"
+        },
+        {
+          "name": "Sports nautiques",
+          "type": "Sports nautiques",
+          "description": "Paddleboard, kayak, planche à voile et voile disponibles sur les plages et marinas à proximité"
+        },
+        {
+          "name": "Randonnée à la campagne",
+          "type": "Randonnée pédestre",
+          "description": "Sentiers de randonnée à travers la campagne environnante avec vue sur les vergers, montagnes et villages traditionnels"
+        },
+        {
+          "name": "Itinéraires cyclistes",
+          "type": "Cyclisme",
+          "description": "Routes de vélo de route et de montagne à travers la campagne pittoresque, adaptées à tous les niveaux de forme physique"
+        },
+        {
+          "name": "Parcours de golf à proximité",
+          "type": "Golf",
+          "description": "Plusieurs parcours de golf de qualité facilement accessibles en voiture offrant un jeu toute l'année au soleil méditerranéen"
+        },
+        {
+          "name": "Réserves naturelles et observation des oiseaux",
+          "type": "Réserve naturelle",
+          "description": "Zones naturelles protégées à proximité offrant l'observation des oiseaux, la photographie et les randonnées pédestres tranquilles"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Aguilas a une communauté internationale dynamique, avec des expatriés attirés par le style de vie méditerranéen, les coûts de vie abordables et l'atmosphère accueillante. L'emplacement côtier attire un mélange diversifié de nationalités, particulièrement du Nord de l'Europe. L'anglais est largement parlé dans les magasins, restaurants et contextes sociaux, rendant la vie quotidienne confortable pour les nouveaux venus.",
+      "highlights": [
+        "Scène sociale internationale active avec des événements communautaires réguliers",
+        "Services parlant anglais disponibles incluant les professionnels médicaux et juridiques",
+        "Rassemblements communautaires réguliers, clubs et activités sociales",
+        "Atmosphère accueillante pour les nouveaux venus avec des réseaux expatriés établis",
+        "Mélange de résidents permanents et visiteurs saisonniers créant une communauté dynamique",
+        "Forte présence britannique et scandinave aux côtés des résidents néerlandais, belges et allemands",
+        "Communauté espagnole locale accueillante et inclusive envers les résidents internationaux"
+      ],
+      "nationalities": [
+        "Britannique",
+        "Scandinave (suédois, norvégien, danois)",
+        "Néerlandais",
+        "Belge",
+        "Allemand",
+        "Irlandais",
+        "Espagnol"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Une journée typique à Aguilas",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Café du matin",
+          "description": "Commencez la journée avec un café frais sur votre terrasse, profitant de la brise marine et de l'environnement tranquille"
+        },
+        {
+          "time": "09:30",
+          "activity": "Promenade à la plage",
+          "description": "Promenade matinale le long de la plage ou de la promenade, respirant l'air frais méditerranéen"
+        },
+        {
+          "time": "12:00",
+          "activity": "Marché d'achat frais",
+          "description": "Cherchez du pain frais, des fruits et des produits locaux au supermarché ou au marché hebdomadaire"
+        },
+        {
+          "time": "13:30",
+          "activity": "Déjeuner espagnol",
+          "description": "Profitez d'un leisurely menú del día au restaurant local, trois plats avec vin pour environ 12 euros"
+        },
+        {
+          "time": "15:30",
+          "activity": "Sieste et piscine",
+          "description": "Reposez-vous pendant les heures les plus chaudes, puis rafraîchissez-vous dans votre piscine privée ou communale"
+        },
+        {
+          "time": "17:30",
+          "activity": "Temps à la plage",
+          "description": "Allez à la plage pour une baignade d'après-midi dans les eaux tièdes méditerranéennes"
+        },
+        {
+          "time": "20:00",
+          "activity": "Paseo du soir",
+          "description": "Rejoignez les habitants pour la promenade soirée traditionnelle à travers la ville, saluant les voisins et amis"
+        },
+        {
+          "time": "21:30",
+          "activity": "Dîner de tapas",
+          "description": "Terminez la journée avec tapas et un verre de vin local à votre restaurant préféré, dînant en plein air sous les étoiles"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-1.5836!3d37.4048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Aguilas",
+    "description": "Aguilas est une municipalité côtière de Costa Blanca Sud/Murcie, Espagne. Connu pour le style de vie méditerranéen, les développements de construction neuve de qualité et la communauté internationale.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.4048",
+      "longitude": "-1.5836"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aguilas",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South / Murcia"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Aguilas est-il un bon endroit pour vivre?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, absolument. Aguilas offre une excellente combinaison de commodité, de style de vie méditerranéen et de communauté. Avec une population expatriée établie où l'anglais est communément parlé, des soins de santé de qualité à moins de 30 minutes, des écoles internationales et un accès aux plages pavillon bleu et aux parcours de golf"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Les étrangers peuvent-ils acheter des biens en Espagne?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, les étrangers peuvent librement acheter des propriétés en Espagne sans restrictions. Les citoyens de l'UE et non-UE ont des droits égaux d'acheter des propriétés résidentielles et commerciales. Vous aurez besoin d'un numéro d'identification fiscale espagnol (NIE), mais le processus est simple. De nombreux résidents internationaux à Aguilas ont acheté avec succès"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quels sont les coûts d'achat de propriété en Espagne?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "À Aguilas spécifiquement, les prix des propriétés vont de 239 500 à 646 000 euros. Au-delà du prix d'achat, attendez-vous aux coûts supplémentaires : taxe de transfert (6-10%), frais de notaire (0,5-1%), frais d'enregistrement (0,1%) et frais juridiques (1-2%). Les coûts supplémentaires totaux s'élèvent généralement à 8-13% du prix d'achat. Les coûts continus"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ai-je besoin d'un visa pour acheter une propriété en Espagne?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non, vous n'avez pas besoin d'un visa spécifiquement pour acheter une propriété. Cependant, si vous prévoyez de vivre en Espagne, les exigences de visa dépendent de votre nationalité. Les citoyens britanniques et autres ressortissants non-UE requièrent un visa de résidence. Les citoyens de l'UE/EEA ont la liberté de mouvement. Une fois que vous possédez une propriété espagnole et établissez res"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien coûtent les impôts sur les propriétés en Espagne?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les impôts sur les propriétés espagnoles incluent la taxe annuelle sur les propriétés (Impuesto sobre Bienes Inmuebles) s'élevant généralement de 0,4-1,1% de la valeur cadastrale, plus les taux municipaux (taxe basura) moyenne 150-400 euros annuellement. L'impôt sur les gains en capital s'applique lors de la vente avec profit. L'impôt sur la fortune (occasionnellement applicable) est approx"
+        }
+      }
+    ]
+  }
+}

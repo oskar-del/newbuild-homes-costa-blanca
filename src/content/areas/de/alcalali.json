@@ -1,0 +1,378 @@
+{
+  "slug": "alcalali",
+  "name": "Alcalali",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/alcalali-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80&fit=crop",
+  "propertyCount": 9,
+  "propertyTypes": [
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 440000,
+    "max": 945000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Alcalali Tourism",
+      "url": "https://www.google.com/search?q=Alcalali%20Spain%20official%20website",
+      "description": "Erfahren Sie mehr über Alcalali"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "95 km",
+      "driveTime": "60 min"
+    },
+    "healthcare": {
+      "name": "Hospital Marina Salud Dénia",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Marina%20Salud%20D%C3%A9nia",
+      "distance": "20 km"
+    }
+  },
+  "content": {
+    "metaTitle": "Leben in Alcalali: Vollständiger Costa Blanca Dorfleitfaden",
+    "metaDescription": "Entdecken Sie Alcalali - charmantes Costa Blanca Dorf mit atemberaubender Bergansicht. Villen €440k-€945k. Perfekt für authentisches spanisches Leben.",
+    "heroIntro": "Eingebettet in das Herz des Jalón-Tales ist Alcalali ein malerisches spanisches Dorf, das ein authentisches Costa Blanca-Erlebnis abseits der geschäftigen Küstenstädte bietet. Dieses charmante pueblo mit seinen traditionellen weißgetünchten Häusern und atemberaubender Bergkulisse ist zunehmend beliebt bei internationalen Käufern, die einen ruhigen Rückzugsort suchen und dabei einen einfachen Zugang zu modernen Annehmlichkeiten bewahren. Das Dorf liegt wunderschön zwischen den dramatischen Gipfeln der Sierra de Bernia und bietet atemberaubende Ausblicke über Orange- und Mandelbaumhaine, die diese Landschaft seit Jahrhunderten prägen.\n\nAlcalali verbindet traditionelles spanisches Dörfleben perfekt mit den Annehmlichkeiten, die moderne Einwohner suchen. Die Gemeinschaft bewahrt ihren authentischen Charakter durch wöchentliche Märkte, lokale Festivals und familiengeführte Unternehmen, während sie eine wachsende internationale Gemeinschaft willkommen heißt. Mit ausgezeichneten Verbindungen zu größeren Städten wie Xàbia und Dénia genießen Einwohner die Ruhe des ländlichen Lebens, ohne auf Zugang zu Stränden, Shopping, Gesundheitswesen und kulturellen Aktivitäten zu verzichten. Der aktuelle Immobilienmarkt bietet ausgezeichnete Möglichkeiten mit neuen Villen im Bereich von €440.000 bis €945.000, was es zu einer attraktiven Option für diejenigen macht, die hochwertige Häuser in einer unberührten mediterranen Umgebung suchen.",
+    "lifestyleSection": {
+      "intro": "Das Leben in Alcalali bewegt sich in einem sanften, authentischen spanischen Tempo, das diejenigen anzieht, die einen entspannteren Lebensstil suchen. Das Dorf bewahrt starke Traditionen mit wöchentlichen Samstagsmärkten, auf denen sich Einheimische versammeln, um frische Produkte zu kaufen, sich zu unterhalten und über Gemeindenvachrichten zu diskutieren. Der zentrale Platz dient als Herz des sozialen Lebens, umgeben von traditionellen Cafés und Bars, wo Einwohner morgens Kaffee und abends Tapas genießen. Lokale Festivals, besonders die jährliche Moors-and-Christians-Feierlichkeit und Erntefeste, bringen die gesamte Gemeinschaft zusammen und bieten Neuankömmlingen wunderbare Chancen zur Integration.\n\nDie Auswanderergemeinschaft in Alcalali ist gut etabliert, behält aber den spanischen Charakter des Dorfes, wobei Einwohner aus verschiedenen europäischen Ländern das Gebiet für seine Authentizität und natürliche Schönheit wählen. Viele internationale Einwohner sind aktiv in lokalen Organisationen, Spanischsprachen-Gruppen und Gemeindeprojekten beteiligt. Der Lebensstil spricht besonders diejenigen an, die Outdoor-Aktivitäten suchen, mit ausgezeichneten Wanderwegen, Radstrecken und Nähe zu Golfplätzen. Das Lebenstempo fördert lange Mittagessen, Nachmittagssiestas und Abendwanderungen durch Dorfstraßen und verkörpert das beste des mediterranen Lebens.\n\nAlcalali genießt ein klassisches Mittelmeerklima mit über 320 Sonnentagen pro Jahr. Die Sommer sind warm und trocken mit Temperaturen durchschnittlich 28-32°C, während die Winter mild bei 12-18°C bleiben und das ganze Jahr über angenehm sind. Das Dorf profitiert von seiner Lage im Inland-Tal, das natürlichen Schutz vor Küstenwinden bietet und gleichzeitig gute Luftzirkulation bewahrt. Frühling und Herbst sind besonders entzückend, mit idealen Temperaturen zum Wandern in umliegenden Bergen und zur Erkundung der Landschaft. Niederschlag ist minimal, tritt typischerweise zwischen Oktober und März auf und gewährleistet, dass Outdoor-Aktivitäten die meiste Zeit des Jahres genossen werden können.",
+      "highlights": [
+        "Authentische spanische Dorfatmosphäre mit starkem Gemeinschaftsgeist",
+        "Atemberaubende Berglandschaft und ausgezeichnete Wandermöglichkeiten",
+        "Friedliche Lage bei Wahrung des guten Zugangs zu Küstenausstattungen",
+        "Etablierte Auswanderergemeinschaft mit guten Integrationsmöglichkeiten",
+        "Hochwertige Neubauten mit modernen Annehmlichkeiten und traditionellem Design"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Golfer können Club de Golf Ifach in Moraira (30 Minuten) und La Sella Golf Resort in Dénia (25 Minuten) erreichen. Das Gebiet ist für Wandern berühmt mit Wegen, die in die Sierra de Bernia führen. Die Strände von Xàbia und Dénia sind 20-25 Minuten entfernt und bieten Wassersport, Segeln und Strandclubs. Tennisclubs sind in Gata de Gorgos und Xàbia vertreten.",
+      "dining": "Das Dorf bietet mehrere authentische spanische Restaurants und Bars, einschließlich des beliebten Restaurante Casa Pepe, das für traditionelle valencianische Küche bekannt ist. Bar El Rincón bietet ausgezeichnete Tapas und dient als lokaler Treffpunkt. Für vielfältigere Essensmöglichkeiten bieten nahegelegene Städte wie Gata de Gorgos und Xàbia internationale Küche, einschließlich italienischer, deutscher und britischer Restaurants.",
+      "shopping": "Die täglichen Einkaufsbedürfnisse werden von lokalen Läden, einem kleinen Supermarkt und dem wöchentlichen Samstagmarkt erfüllt. Für größere Einkäufe fahren Einwohner zu Ondara (15 Minuten), das große Supermärkte wie Mercadona und Lidl hat, oder zum Portal de la Marina Shopping-Center (25 Minuten) für internationale Marken und Dienstleistungen.",
+      "healthcare": "Alcalali hat ein lokales Ärztezentrum für Routineversorgung, mit dem nächsten vollständigen Krankenhaus Hospital Marina Salud in Dénia (20 Minuten). Private Gesundheitsoptionen sind in nahe Gata de Gorgos und Xàbia verfügbar, mit vielen englischsprachigen Ärzten. Notfalldienste sind zuverlässig und Apotheken in Nachbardörfern bieten Rezeptdienste.",
+      "transport": "Der Flughafen Alicante ist 90 Minuten mit dem Auto entfernt und bietet umfangreiche europäische Verbindungen. Der Flughafen Valencia ist 90 Minuten nördlich mit zusätzlichen internationalen Flügen. Beide Flughäfen haben Mietwagen-Einrichtungen und Busverbindungen in die Region. Alcalali ist leicht über die AP-7 Autobahn erreichbar (15 Minuten zur Ausfahrt), die zu Großstädten verbindet. Die CV-750 bietet direkten Zugang zu Xàbia (20 Minuten) und Dénia (20 Minuten). Lokale Straßen verbinden mit Gata de Gorgos (8 Minuten) und Lliber (10 Minuten). Das Parken im Dorf ist allgemein verfügbar. Der öffentliche Nahverkehr ist begrenzt mit gelegentlichen Busdienstleistungen zu größeren Städten. Die meisten Einwohner verlassen sich auf private Fahrzeuge. Taxidienste sind von nahen Städten verfügbar und einige Einwohner nutzen den TRAM-Dienst von Gata de Gorgos zur Verbindung zu Dénia und Alicante."
+    },
+    "propertyMarketSection": "Der Immobilienmarkt Alcalalis ist durch hochwertige Neubauvillas gekennzeichnet, die anspruchsvolle Käufer anvisieren, die authentisches spanisches Dörfleben suchen. Der Markt hat sich stabil erwiesen mit stetiger internationaler Nachfrage, besonders von nordeuropäischen Käufern. Immobilien bieten typischerweise Bergblicke, traditionelle Architektur und moderne Annehmlichkeiten.\n\nBeliebt sind Villa.\n\nDas Gebiet bietet gutes langfristiges Investitionspotential aufgrund begrenzter Entwicklungsmöglichkeiten und wachsender Nachfrage nach authentischen spanischen Orten. Die Mietrenditen sind moderat, aber Immobilien tendieren zu stetiger Wertsteigerung. Die Nähe zu etablierten Kürtsstädten bei Wahrung des Dorfcharakters macht es attraktiv für permanente Einwohner und Ferienhausbuyer.",
+    "whyLiveHereSection": [
+      "Authentische spanische Dorfatmosphäre mit starkem Gemeinschaftsgeist",
+      "Atemberaubende Berglandschaft und ausgezeichnete Wandermöglichkeiten",
+      "Friedliche Lage bei Wahrung des guten Zugangs zu Küstenausstattungen",
+      "Etablierte Auswanderergemeinschaft mit guten Integrationsmöglichkeiten",
+      "Hochwertige Neubauten mit modernen Annehmlichkeiten und traditionellem Design"
+    ],
+    "faqs": [
+      {
+        "question": "Wie weit ist Alcalali vom nächsten Strand entfernt?",
+        "answer": "Die wunderschönen Strände von Xàbia sind nur 20 Minuten Fahrtzeit entfernt, während Dénia's Strände 25 Minuten sind. Beide bieten ausgezeichnete Einrichtungen, Restaurants und Wassersport-Möglichkeiten."
+      },
+      {
+        "question": "Gibt es eine gute Auswanderergemeinschaft in Alcalali?",
+        "answer": "Ja, Alcalali hat eine gut etablierte internationale Gemeinschaft, besonders aus UK, Deutschland und anderen nordeuropäischen Ländern. Die Gemeinschaft ist aktiv in lokalen Organisationen, während sie spanische Traditionen respektiert."
+      },
+      {
+        "question": "Wie sind die Grundsteuer-Kosten in Alcalali?",
+        "answer": "Die Grundsteuern (IBI) sind generell angemessen für eine ländliche Gemeinde. Die jährlichen Kosten liegen typischerweise bei €300-800, abhängig vom Immobilienwert. Zusätzliche Kosten umfassen Abfallgebühren und Gemeindegebühren für Neubauten."
+      },
+      {
+        "question": "Kann man leicht auf Gesundheitsdienstleistungen aus Alcalali zugreifen?",
+        "answer": "Grundlegende Gesundheitsverwaltung ist lokal verfügbar, mit umfassenden Dienstleistungen in Dénia (20 Minuten). Viele englischsprachige Ärzte praktizieren im Gebiet und sowohl öffentliche als auch private Gesundheitsoptionen sind erreichbar."
+      },
+      {
+        "question": "Wie ist die Internet-Konnektivität im Dorf?",
+        "answer": "Glasfaser-Internet ist überall in den meisten Teilen Alcalalis verfügbar, mit guten Breitbandgeschwindigkeiten, die für Fernarbeit geeignet sind. Die Netzabdeckung ist ausgezeichnet mit allen großen spanischen Anbietern, die zuverlässigen Dienst bieten."
+      },
+      {
+        "question": "Gibt es gute Wandermöglichkeiten nahe Alcalali?",
+        "answer": "Absolut! Alcalali ist ein Wandererparadies mit Wegen, die in die Sierra de Bernia führen, Routen zu Jalón-Tal-Aussichtspunkten und Verbindungen zum Fernwanderweg GR-5. Das Gebiet bietet Wanderungen für alle Fähigkeitsstufen."
+      },
+      {
+        "question": "Wie einfach ist es, sich in die lokale Gemeinschaft zu integrieren?",
+        "answer": "Das Dorf heißt Neukömmlinge warmherzig willkommen. Das Beitreten zu lokalen Aktivitäten wie dem Samstagmarkt, Dorf-Festivals, Spanischkursen und Wandergruppen sind ausgezeichnete Wege zur Integration. Viele Einheimische sprechen etwas Englisch und schätzen Bemühungen, Spanisch zu lernen."
+      },
+      {
+        "question": "Was ist mit ganzjährigem Leben - behält das Dorf Dienste im Winter?",
+        "answer": "Ja, Alcalali ist eine funktionierende ganzjährige Gemeinschaft mit allen wesentlichen Dienstleistungen das ganze Jahr über. Während einige saisonale Restaurants schließen mögen, bleiben Kernausstattungen, Läden und Dienstleistungen offen, was es perfekt für permanente Einwohner macht."
+      }
+    ],
+    "conclusion": "Bereit, Ihre perfekte Immobilie in Alcalali zu entdecken? Unser erfahrenes Team spezialisiert sich auf Neubauten in diesem Gebiet und kann Sie bei jedem Schritt leiten. Egal, ob Sie einen Hauptwohnsitz, ein Ferienrefugium oder eine Investitionsimmobilie suchen, wir helfen Ihnen, genau das zu finden, was Sie suchen. Buchen Sie eine kostenlose 30-Minuten-Beratung mit unserem Team - mit über 12 Jahren Erfahrung beim Verkauf von Neubauten an der Costa Blanca, kennen wir diesen Markt in- und auswendig.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Das Gebiet bietet gutes langfristiges Investitionspotential aufgrund begrenzter Entwicklungsmöglichkeiten und wachsender Nachfrage nach authentischen spanischen Orten. Die Mietrenditen sind moderat, aber Immobilien tendieren zu stetiger Wertsteigerung. Die Nähe zu etablierten Kürtsstädten bei Wahrung des Dorfcharakters macht es attraktiv für permanente Einwohner und Ferienhausbuyer.",
+      "highlights": [
+        "Niedrigere Eintrittspreise als vergleichbare Märkte mit ähnlichen Mietrenditen",
+        "Wachsende internationale Nachfrage treibt stetiges Preiswachstum an",
+        "Langfristige Vermietungsnachfrage von der wachsenden Auswanderergemeinschaft"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Die Lebenskosten in Alcalali sind deutlich niedriger als Nordeuropa und sehr wettbewerbsfähig innerhalb Spaniens. Inland-Standorte wie Alcalali bieten besonders guten Wert für Tagesausgaben.",
+      "items": [
+        {
+          "category": "Lebensmittel (monatlich, Paar)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl und lokale Märkte in der Nähe"
+        },
+        {
+          "category": "Nebenkosten (Strom, Wasser, Gas)",
+          "cost": "€100-160",
+          "notes": "Höher im Sommer mit Klimaanlage"
+        },
+        {
+          "category": "Gemeindegebühren",
+          "cost": "€50-120",
+          "notes": "Variiert nach Entwicklung und eingeschlossenen Dienstleistungen"
+        },
+        {
+          "category": "IBI (Gemeindesteuer)",
+          "cost": "€400-1.000/Jahr",
+          "notes": "Jährliche Grundsteuer basierend auf Katastralwert"
+        },
+        {
+          "category": "Essen gehen (pro Person)",
+          "cost": "€10-22",
+          "notes": "Menü des Tages ab €10; Restaurants €15-30"
+        },
+        {
+          "category": "Internet & Telefon",
+          "cost": "€35-50",
+          "notes": "Gute Breitbandabdeckung; mehrere Anbieter"
+        },
+        {
+          "category": "Ausgaben für Auto (Benzin, Versicherung)",
+          "cost": "€150-250",
+          "notes": "Wesentlich für Inland-Leben"
+        },
+        {
+          "category": "Private Krankenversicherung",
+          "cost": "€60-150",
+          "notes": "Umfassende Abdeckung; günstiger für jüngere Einwohner"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Alcalali feiert traditionelle spanische Feuerwerkskeiten und Gemeindeveranstaltungen das ganze Jahr über und verbindet lokale Traditionen mit der einladenden internationalen Gemeinschaft.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Jährliche Patronatsfestivitäten mit Paraden, Musik, Feuerwerk und traditionellen Feierlichkeiten, die die ganze Gemeinschaft zusammenbringt"
+        },
+        {
+          "name": "Semana Santa (Osterwoche)",
+          "month": "März/April",
+          "description": "Feierliche Karwochenprozessionen durch die Straßen mit traditionellen Festwagen und hundertealter religiöser Traditionen"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "Dezember",
+          "description": "Nationale Feierlichkeiten mit lokalen Veranstaltungen, Märkten und Gemeindeversammlungen"
+        },
+        {
+          "name": "Frühlingsfest",
+          "month": "Mai",
+          "description": "Frühlingsfest mit Blumendarstellungen, Essensständen, traditioneller Musik und Gemeindeversammlungen auf dem Stadtplatz"
+        },
+        {
+          "name": "Erntefest",
+          "month": "Oktober",
+          "description": "Traditionelle Herbstfeierlichkeit mit lokalen Produkten, Weinverkostung, Kunsthandwerkmärkten und regionaler Gastronomie"
+        },
+        {
+          "name": "Weihnachtsmarkt & Dreikönig",
+          "month": "Dezember/Januar",
+          "description": "Festliche Saison mit Marktständen, Krippen und der spektakulären Dreikönigs-Parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Familien in Alcalali haben Zugang zu qualitativ hochwertigen Bildungsoptionen in der umliegenden Region, mit mehreren internationalen Schulen, die die Auswanderergemeinschaft bedienen, sowie ausgezeichneten spanischen Schulen.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (Britisch)",
+          "distance": "20-40 min",
+          "description": "Britischer Lehrplan mit GCSE- und A-Level-Programmen, ausgezeichnete Einrichtungen und starke akademische Ergebnisse"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (Britisch/IB)",
+          "distance": "25-45 min",
+          "description": "Britischer und IB-Lehrplan mit hervorragenden Einrichtungen, Sportprogrammen und mehrsprachiger Bildung"
+        },
+        {
+          "name": "Lokale spanische Grundschule",
+          "type": "Spanische Staatliche",
+          "distance": "5-15 min",
+          "description": "Lokale staatliche Schule, die spanische Lehrplana-Bildung bietet, ausgezeichnet für Sprachimmersion und Gemeinschaftsintegration"
+        },
+        {
+          "name": "Lokale spanische Sekundarschule",
+          "type": "Spanische Staatliche",
+          "distance": "10-20 min",
+          "description": "Staatliche Sekundarschule mit ESO- und Bachillerato-Programmen mit unterstützendem Lernumfeld"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Alcalali bietet das ganze Jahr über ausgezeichnete Outdoor-Aktivitäten, von Wanderungen und Radfahren bis zu Golf, Naturwanderungen und mehr.",
+      "activities": [
+        {
+          "name": "Landschaftswanderungen",
+          "type": "Wandern",
+          "description": "Wanderwege durch die umliegenden Landschaft mit Blick auf Obstgärten, Berge und traditionelle Dörfer"
+        },
+        {
+          "name": "Radfahrrouten",
+          "type": "Radfahren",
+          "description": "Straßen- und Mountainbike-Routen durch die malerische Landschaft, geeignet für alle Fitnessstufen"
+        },
+        {
+          "name": "Nahegelegene Golfplätze",
+          "type": "Golf",
+          "description": "Mehrere Qualitätsgolfplätze in kurzer Fahrtdistanz mit ganzjährigem Spiel in der mediterranen Sonne"
+        },
+        {
+          "name": "Naturschutzgebiete & Vogelbeobachtung",
+          "type": "Naturschutzgebiet",
+          "description": "Geschützte Naturgebiete in der Nähe, die Vogelbeobachtung, Fotografie und friedliche Naturwanderungen bieten"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Alcalali hat eine wachsende internationale Gemeinschaft, mit Auswanderern, die vom mediterranen Lebensstil, günstigen Lebenskosten und einladender Atmosphäre angezogen werden. Der authentische spanische Charakter des Gebiets spricht diejenigen an, die echte Integration mit lokaler Kultur suchen. Englisch wird zunehmend gesprochen, mit vielen Dienstleistungen in Englisch verfügbar und macht das tägliche Leben angenehm für Neukömmlinge.",
+      "highlights": [
+        "Wachsende internationale Sozialszene mit regelmäßigen Gemeindeveranstaltungen",
+        "Englischsprachige Dienstleistungen verfügbar, einschließlich medizinische und juristische Fachleute",
+        "Regelmäßige Gemeindeversammlungen, Clubs und Sozialaktivitäten",
+        "Einladende Atmosphäre für Neukömmlinge mit etabliertem Auswanderer-Netzwerk",
+        "Mischung aus permanenten Einwohnern und saisonalen Besuchern, die eine dynamische Gemeinschaft schaffen",
+        "Vielfältige europäische Gemeinschaft, einschließlich britischer, skandinavischer, niederländischer, deutscher und französischer Einwohner",
+        "Lokale spanische Gemeinschaft, die offen und inklusiv gegenüber internationalen Einwohnern ist"
+      ],
+      "nationalities": [
+        "Britisch",
+        "Deutsch",
+        "Niederländisch",
+        "Skandinavisch",
+        "Französisch",
+        "Belgisch",
+        "Spanisch"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Ein typischer Tag in Alcalali",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morgenkaffee",
+          "description": "Beginnen Sie den Tag mit frischem Kaffee auf Ihrer Terrasse, genießen Sie die Morgensonne und friedliche Umgebung"
+        },
+        {
+          "time": "09:30",
+          "activity": "Marktbesuch",
+          "description": "Durchsuchen Sie den lokalen Markt nach frischen Produkten, Brot und saisonalen Spezialitäten von lokalen Bauern"
+        },
+        {
+          "time": "12:00",
+          "activity": "Frische Markteinkäufe",
+          "description": "Holen Sie sich frisches Brot, Obst und lokale Produkte vom Supermarkt oder wöchentlichen Markt"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanischer Mittagessen",
+          "description": "Genießen Sie ein gemütliches Menü del día in einem lokalen Restaurant - drei Gänge mit Wein für etwa €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Ruhen Sie sich während der wärmsten Stunden aus, dann kühlen Sie sich in Ihrem privaten oder gemeinsamen Pool ab"
+        },
+        {
+          "time": "17:30",
+          "activity": "Nachmittagsspaziergang",
+          "description": "Erkunden Sie die umliegende Landschaft oder Dorfstraßen, während die Temperatur sinkt"
+        },
+        {
+          "time": "20:00",
+          "activity": "Abendlicher Paseo",
+          "description": "Schließen Sie sich den Einheimischen zum traditionellen Abendspaziergang durch die Stadt an, grüßen Sie Nachbarn und Freunde"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Abendessen",
+          "description": "Beenden Sie den Tag mit Tapas und einem Glas Lokalwein in Ihrem Lieblings-Restaurant, essen Sie im Freien unter den Sternen"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.0528!3d38.7531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Alcalali",
+    "description": "Alcalali ist eine Inland-Gemeinde in Costa Blanca North, Spanien. Bekannt für mediterranen Lebensstil, hochwertige Neubauten und internationale Gemeinschaft.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.7531",
+      "longitude": "-0.0528"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Alcalali",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wie weit ist Alcalali vom nächsten Strand entfernt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die wunderschönen Strände von Xàbia sind nur 20 Minuten Fahrtzeit entfernt, während Dénia's Strände 25 Minuten sind. Beide bieten ausgezeichnete Einrichtungen, Restaurants und Wassersport-Möglichkeiten."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Gibt es eine gute Auswanderergemeinschaft in Alcalali?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, Alcalali hat eine gut etablierte internationale Gemeinschaft, besonders aus UK, Deutschland und anderen nordeuropäischen Ländern. Die Gemeinschaft ist aktiv in lokalen Organisationen, während sie spanische Traditionen respektiert."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie sind die Grundsteuer-Kosten in Alcalali?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Grundsteuern (IBI) sind generell angemessen für eine ländliche Gemeinde. Die jährlichen Kosten liegen typischerweise bei €300-800, abhängig vom Immobilienwert. Zusätzliche Kosten umfassen Abfallgebühren und Gemeindegebühren für Neubauten."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann man leicht auf Gesundheitsdienstleistungen aus Alcalali zugreifen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Grundlegende Gesundheitsverwaltung ist lokal verfügbar, mit umfassenden Dienstleistungen in Dénia (20 Minuten). Viele englischsprachige Ärzte praktizieren im Gebiet und sowohl öffentliche als auch private Gesundheitsoptionen sind erreichbar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie ist die Internet-Konnektivität im Dorf?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Glasfaser-Internet ist überall in den meisten Teilen Alcalalis verfügbar, mit guten Breitbandgeschwindigkeiten, die für Fernarbeit geeignet sind. Die Netzabdeckung ist ausgezeichnet mit allen großen spanischen Anbietern, die zuverlässigen Dienst bieten."
+        }
+      }
+    ]
+  }
+}
