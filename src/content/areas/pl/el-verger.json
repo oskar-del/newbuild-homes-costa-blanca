@@ -1,0 +1,383 @@
+{
+  "slug": "el-verger",
+  "name": "El Verger",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/el-verger-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 11,
+  "propertyTypes": [
+    "Land",
+    "Apartment",
+    "Town House",
+    "Penthouse"
+  ],
+  "priceRange": {
+    "min": 232000,
+    "max": 555000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "El Verger Tourism",
+      "url": "https://www.google.com/search?q=El%20Verger%20Spain%20official%20website",
+      "description": "Odkryj więcej o El Verger"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "95 km",
+      "driveTime": "60 min"
+    },
+    "healthcare": {
+      "name": "Hospital de Dénia",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20de%20D%C3%A9nia",
+      "distance": "8 km"
+    }
+  },
+  "content": {
+    "metaTitle": "Życie w El Verger 2026 | Kompletny przewodnik po Costa Blanca",
+    "metaDescription": "Odkryj życie w El Verger: Nieruchomości od €232.000, ugruntowana społeczność emigrantów, plaże i golf w pobliżu. Koszt życia 40% poniżej Wysp Hiszpańskich.",
+    "heroIntro": "El Verger to urocze miasto na terenie Pana/Pani w Costa Blanca, które oferuje autentyczny hiszpański styl życia połączony z nowoczesnymi udogodnieniami i gościnną międzynarodową społecznością. Strategicznie położone między Brzegiem Śródziemnym a walencyjskim wnętrzem, ta ukryta perła zapewnia idealną równowagę dla osób szukających życia nad Morzem Śródziemnym bez tłumów turystów. Z 11 właściwościami wysokiej jakości obecnie dostępnymi w przedziale od €232.000 do €555.000, El Verger przyciąga rodziny, emerytów i inwestorów szukających doskonałej wartości. Miasto może się pochwalić ugruntowaną społecznością emigrantów, gdzie powszechnie mówi się po angielsku, ułatwiając integrację międzynarodowym nabywcom. Plaże z Błękitną Flagą znajdują się zaledwie 20 minut drogi, pola golfowe mistrzostw są rozrzucone po krajobrazie, a koszty utrzymania są około 40% niższe niż na rynkach wysp hiszpańskich. Niezależnie od tego, czy przeprowadzasz się na stałe, szukasz domu wakacyjnego, czy szukasz oportunidades inwestycyjnych, El Verger zapewnia wyjątkową jakość życia w niepokonanych cenach.",
+    "lifestyleSection": {
+      "intro": "Codzienne życie w El Verger obraca się wokół autentycznej kultury hiszpańskiej z nowoczesnymi wygodami. Tętniące życiem cotygodniowe targi Pana/Pani oferują świeże produkty lokalne, owoce morza i specjały regionalne w wyjątkowych cenach. Zakresy wyżywienia od tradycyjnych barów tapa i restauracji rodzinnych po międzynarodowe kuchnie zaspokajające ugruntowaną społeczność emigrantów. Plaże są łatwo dostępne – wiele nagrodzonych plaż z Błękitną Flagą znajduje się w zaledwie 20 minut, oferując sporty wodne, pływanie i rozkoszne posiłki przy plaży. Miasto utrzymuje uczciwy tempo doskonały zarówno do aktywnego spędzania czasu, jak i relaksu. Miłośnicy golfa mają dostęp do kilku pól mistrzostw w pobliżu, podczas gdy imprezy kulturalne i fiestas łączą wspólnotę przez cały rok. Ugruntowana międzynarodowa społeczność zapewnia, że angielski jest powszechnie mówiony, tworząc gościnne środowisko dla nowicjuszy, jednocześnie zachowując autentyczne hiszpańskie czary. Weekendowe wycieczki do pobliskich Dénia, Jávea lub wsi we wnętrzu zapewniają odkrywanie kultury i przygody gastronomiczne.\n\nEl Verger cieszy się klasycznym klimatem śródziemnomorskim z około 300 dniami słoneczymi rocznie. Zimy są łagodne, z temperaturą średnio 12-15°C, podczas gdy lata są ciepłe i suche, osiągając 28-32°C. Wiosna i jesień są szczególnie przyjemne, z komfortowymi temperaturami idealnymi do aktywności na świeżym powietrzu i wizyt nad plaża. Region doświadcza minimalnych opadów, skupionych głównie na jesieni i wiosnie. Ten klimat sprawia, że El Verger jest idealny do bycia przez cały rok – zimy są na tyle łagodne, aby cieszyć się powietrzem bez ekstremalnych mrozów, podczas gdy lata zapewniają niezawodne słońce do działań plażowych i golfowych. Niska wilgotność i stabilne wzorce pogody tworzą idealne warunki zarówno dla mieszkańców, jak i odwiedzających przez cały rok.",
+      "highlights": [
+        "Wyjątkowa wartość: 40% tańsze niż rynki wysp hiszpańskich z nieruchomościami od €232.000",
+        "Silny wzrost rynku: wzrost rok do roku 8% wykazuje zdrowy potencjał inwestycyjny",
+        "Ugruntowana społeczność emigrantów: angielski powszechnie mówiony z międzynarodowymi sieciami wsparcia już na miejscu",
+        "Bliskość wybrzeża: Wiele plaż z Błękitną Flagą i sporty wodne w ciągu 20 minut",
+        "Rekreacja: Pola golfowe mistrzostw w pobliżu przyciągają entuzjastów wszystkich umiejętności",
+        "Słońce przez cały rok: Klimat śródziemnomorski z 300+ słonecznymi dniami rocznie"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Obiekty sportowe i rekreacyjne czynią El Verger idealnym dla aktywnych stylów życia. Wiele plaż z Błękitną Flagą w ciągu 20 minut oferuje pływanie, paddleboarding, kajakarstwo i spacery brzegiem morza. Kilka pól golfowych mistrzostw w pobliżu oferuje obiekty światowego poziomu dla entuzjastów wszystkich umiejętności. Kluby tenisowe, szlaki turystyczne przez krajobraz śródziemnomorski i obiekty do uprawiania sportów wodnych zapewniają różnorodne opcje działań. Siatkówka plażowa, bary plażowe i restauracje nad brzegiem morza łączą rekreację z działalnością społeczną. Łagodny klimat umożliwia udział w sporcie przez cały rok, od zimowego golfa do letnich sportów wodnych.",
+      "dining": "El Verger oferuje różnorodne doświadczenia kulinarne, od tradycyjnych barów tapa i restauracji rodzinnych do międzynarodowych kuchni. Lokalne lokale serwują autentyczne potrawy regionalne z świeżych lokalnych składników, podczas gdy menú del día oferuje doskonałą wartość za około €10-12 za trzydaniowy posiłek.",
+      "shopping": "Obiekty handlowe w i wokół El Verger zapewniają wygodę i doskonałą wartość. Duże sieci supermarketów, w tym Mercadona, Lidl i Consum, oferują konkurencyjne ceny artykułów spożywczych, przedmiotów gospodarstwa domowego i produktów międzynarodowych. Targi lokalne działają regularnie, oferując świeże produkty, owoce morza i specjały regionalne w tradycyjnych cenach targowych. Te targi zapewniają autentyczne doświadczenie zakupów, wspierając lokalnych rolników i producentów. Nowoczesne centra handlowe w pobliżu zapewniają dodatkowe opcje handlu detalicznego, od odzieży do elektroniki. Kombinacja supermarketów i tradycyjnych targów zaspokaja wszystkie preferencje i budżety zakupów.",
+      "healthcare": "Opieka zdrowotna w El Verger spełnia międzynarodowe standardy z kompleksowymi placówkami medycznymi obsługującymi mieszkańców doskonale. Szpital regionalny jest wygodnie położony w ciągu 30 minut, zapewniając opiekę na wypadek nagłych wypadków i specjalistyczną. Wiele prywatnych klinik na terenie oferuje prywatne opcje opieki zdrowotnej z krótszymi czasami oczekiwania. Lekarze mówiący po angielsku są łatwo dostępni, zapewniając jasną komunikację dla międzynarodowych mieszkańców dotyczącą diagnozy, leczenia i rad medycznych. Region utrzymuje wysokie standardy opieki zdrowotnej porównywalne z Europą Zachodnią, ze współczesnym sprzętem i wykwalifikowanymi specjalistami medycznymi. Wiele prywatnych klinik akceptuje międzynarodowe ubezpieczenie zdrowotne i oferuje konkurencyjne ceny za zabiegi i procedury.",
+      "transport": "Połączenia autobusowe są dostępne w całym regionie, łącząc El Verger z pobliskimi miastami i obszarami przybrzeżnymi. Samochód jest zalecany ze względu na maksymalną elastyczność i wygodę, umożliwiając niezależne odkrywanie okolicznych obszarów, plaż i udogodnień. Międzynarodowe Lotnisko Alicante jest około 90 minut drogi, obsługując loty do Wielkiej Brytanii i na terenie Europy. Port Lotniczy Walencji stanowi alternatywę około 120 minut drogi. El Verger cieszy się doskonałymi połączeniami autostradami przez autostradę A-7 łączącą region Costa Blanca. Pobliskie miasta, w tym Dénia (25 minut), Jávea (30 minut) i Benidorm (45 minut), są łatwo dostępne. Szerszy region Walencji i wioski we wnętrzu są w zasięgu wygodnej jazdy. Regionalne usługi autobusowe łączą El Verger z pobliskimi miastami i obszarami przybrzeżnymi. Te usługi zapewniają niedrogą transport, ale działają na mniej częste harmonogramy niż obszary miejskie, co czyni pojazd osobisty preferowanym ze względu na wygodę."
+    },
+    "propertyMarketSection": "Rynek nieruchomości El Verger wykazuje zdrowy wzrost z imponującym wzrostem rok do roku 8%, odzwierciedlającym rosnące zapotrzebowanie na wysokiej jakości lokalizacje śródlądowe. Rynek oferuje wyjątkową wartość z cenami nieruchomości średnio €2.200 za m², około 40% poniżej rynków wysp hiszpańskich. Bieżąca dostępność obejmuje 11 wysokiej jakości nieruchomości w różnorodnych kategoriach, zapewniając opcje dla różnych wymagań nabywców i budżetów.\n\nPopularne typy nieruchomości obejmują Land, Apartment, Town House, Penthouse.\n\nEl Verger stanowi doskonały potencjał inwestycyjny z silnym zapotrzebowaniem na wynajem. Typowe wynajmy na 7 nocy wymagają €800, zapewniając stałe strumienie dochodów dla inwestorów wynajmujących wakacje. Perspektywy wzrostu kapitału pozostają przychylne biorąc pod uwagę tendencję 8% rocznego wzrostu i rosnące uznanie El Verger jako głównego kierunku Costa Blanca. Kombinacja niedrogich cen zakupu, potencjału dochodów z wynajmu i aprecjacji kapitału czyni El Verger atrakcyjnym dla użytkowników i portfeli inwestycyjnych.",
+    "whyLiveHereSection": [
+      "Wyjątkowa wartość: 40% tańsze niż rynki wysp hiszpańskich z nieruchomościami od €232.000",
+      "Silny wzrost rynku: wzrost rok do roku 8% wykazuje zdrowy potencjał inwestycyjny",
+      "Ugruntowana społeczność emigrantów: angielski powszechnie mówiony z międzynarodowymi sieciami wsparcia już na miejscu",
+      "Bliskość wybrzeża: Wiele plaż z Błękitną Flagą i sporty wodne w ciągu 20 minut",
+      "Rekreacja: Pola golfowe mistrzostw w pobliżu przyciągają entuzjastów wszystkich umiejętności",
+      "Słońce przez cały rok: Klimat śródziemnomorski z 300+ słonecznymi dniami rocznie"
+    ],
+    "faqs": [
+      {
+        "question": "Czy El Verger to dobre miejsce do zamieszkania?",
+        "answer": "Tak, El Verger to doskonałe miejsce do zamieszkania, oferujące autentyczny styl życia śródziemnomorski za wyjątkową cenę. Ugruntowana międzynarodowa społeczność, osoby mówiące po angielsku, placówki medyczne i bliskość plaż tworzą idealne warunki dla emigrantów, rodzin i emerytów. Wzrost nieruchomości 8% rocznie i niższe koszty utrzymania w porównaniu z rynkami wysp czynią to sensowne finansowo."
+      },
+      {
+        "question": "Czy Costa Blanca to dobre miejsce do kupienia nieruchomości?",
+        "answer": "Costa Blanca jest jednym z najlepszych regionów inwestycji nieruchomościowych w Hiszpanii, oferując różne opcje od nadbrzeżnych właściwości kurortowych do urokliwych miast śródlądowych, takich jak El Verger. Region łączy styl życia śródziemnomorski, doskonałą opiekę zdrowotną, szkoły międzynarodowe i silny potencjał dochodów z wynajmu napędzanego turystyką. Wartości nieruchomości aprecjonowały się konsekwentnie, czyniąc to atrakcyjnym dla użytku osobistego i inwestycji."
+      },
+      {
+        "question": "Czy imigranci mogą kupować nieruchomości w Hiszpanii?",
+        "answer": "Tak, imigranci mogą swobodnie kupować nieruchomości w Hiszpanii bez ograniczeń. Osoby niebędące rezydentami mogą kupować nieruchomości mieszkalne i handlowe tak łatwo, jak obywatele Hiszpanii. Większość międzynarodowych nabywców pracuje z adwokatami hiszpańskimi w celu poruszania się po procedurach prawnych, organizowania finansowania i zapewniania płynnych transakcji. Wymogi prawne są proste, a proces jest dobrze ugruntowany dla międzynarodowych nabywców."
+      },
+      {
+        "question": "Jakie są koszty zakupu nieruchomości w Hiszpanii?",
+        "answer": "Koszty zakupu nieruchomości w Hiszpanii zazwyczaj obejmują: cenę nieruchomości, podatek od transferu (6-10% w zależności od regionu), opłaty notarialne (0,5-1%), opłaty rejestracyjne (0,1%) i opłaty prawne (1-2% zazwyczaj). W El Verger, z nieruchomościami w przedziale €232.000-€555.000, całkowite koszty nabycia zwykle dodają 8-13% do ceny zakupu. Umowy hipoteczne mogą wiązać się z dodatkowymi kosztami. Profesjonalna porada prawna zapewnia przejrzystość dotyczącą wszystkich wydatków."
+      },
+      {
+        "question": "Czy potrzebuję wizy do kupienia nieruchomości w Hiszpanii?",
+        "answer": "Zakup nieruchomości w Hiszpanii nie wymaga żadnej specjalnej wizy ani zezwolenia pobytu dla obywateli zagranicznych – transakcja jest czysto komercyjna. Aby mieszkać w Hiszpanii na stałe lub przez dłuższe okresy, będziesz jednak potrzebować odpowiedniego sponsorowania wizy (takiego jak wiza na non-lucrative, wiza emeryta lub Golden Visa na znaczną inwestycję). Nasi specjaliści mogą poprowadzić Cię przez opcje pobytu odpowiednie do Pana/Pani okoliczności."
+      },
+      {
+        "question": "Jaki jest koszt życia w Costa Blanca?",
+        "answer": "Costa Blanca oferuje wyjątkową wartość w porównaniu z Europą Północną i innymi regionami Hiszpanii. El Verger konkretnie zapewnia koszty około 40% poniżej rynków wysp. Miesięczne wydatki zazwyczaj obejmują: media (€80-120), artykuły spożywcze (€250-400), jedzenie poza domem (€12-25 za posiłek) i aktywności (zmienne). Opieka zdrowotna poprzez ubezpieczenie prywatne kosztuje €100-200 miesięcznie. Emeryci mogą żyć wygodnie na skromnych emeryturach."
+      },
+      {
+        "question": "Czy Costa Blanca jest dobra dla emerytów?",
+        "answer": "Costa Blanca jest niezwykle popularna wśród emerytów, oferując łagodne zimy, doskonałą opiekę zdrowotną, niedrogie mieszkania i ugruntowane międzynarodowe społeczności. El Verger konkretnie przyciąga emerytów poprzez niedrogie nieruchomości, spokojną atmosferę, bliskość plaż i golfa oraz anglojęzyczne placówki medyczne. Wiza Non-Lucrative dostosowuje się do emerytów z dochodami z emerytur, a rozleniwiony styl życia wspomaga aktywne, zdrowe starzenie się."
+      },
+      {
+        "question": "Jakie jest pogoda na Costa Blanca?",
+        "answer": "Costa Blanca cieszy się klimatem śródziemnomorskim z około 300 dniami słonecznika rocznie. Zimy są łagodne (12-15°C), rzadko wymagają ogrzewania. Lata są ciepłe (28-32°C) z niską wilgotnością. Wiosna i jesień są szczególnie przyjemne z komfortowymi temperaturami idealnymi do działań na świeżym powietrzu. Opady są minimalne i skupione jesienią/wiosną. To konsekwentne pogodę sprawia, że bycie na otwartym powietrzu przez cały rok i działania plażowe są w pełni wykonalne."
+      }
+    ],
+    "conclusion": "Gotów do odkrycia swoją doskonałą nieruchomość w El Verger? Nasz doświadczony zespół specjalizuje się w nowych budynkach nieruchomości na całym tym terenie i może poprowadzić Pana/Panią przez każdy krok. Niezależnie od tego, czy szukasz domu na stałe, schowiska wakacyjnego czy nieruchomości inwestycyjnej, pomożemy Ci znaleźć dokładnie to, czego szukasz. Zarezerwuj bezpłatną 30-minutową konsultację z naszym zespołem – z ponad 12-letnim doświadczeniem w sprzedaży nowych budynków na Costa Blanca, znamy ten rynek do wewnątrz i na zewnątrz.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "El Verger stanowi doskonały potencjał inwestycyjny z silnym zapotrzebowaniem na wynajem. Typowe wynajmy na 7 nocy wymagają €800, zapewniając stałe strumienie dochodów dla inwestorów wynajmujących wakacje. Perspektywy wzrostu kapitału pozostają przychylne biorąc pod uwagę tendencję 8% rocznego wzrostu i rosnące uznanie El Verger jako głównego kierunku Costa Blanca. Kombinacja niedrogich cen zakupu, potencjału dochodów z wynajmu i aprecjacji kapitału czyni El Verger atrakcyjnym dla użytkowników i portfeli inwestycyjnych.",
+      "highlights": [
+        "Niższe ceny wejścia niż porównywalne rynki z podobnymi zwrotami wynajmu",
+        "Rosnące międzynarodowe zapotrzebowanie napędzające stały wzrost cen",
+        "Długoterminowe zapotrzebowanie wynajmu ze strony rosnącej społeczności emigrantów"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Koszty utrzymania w El Verger są znacznie niższe niż w Europie Północnej i bardzo konkurencyjne w Hiszpanii. Lokalizacje śródlądowe, takie jak El Verger, oferują szczególnie dobrą wartość codziennych wydatków.",
+      "items": [
+        {
+          "category": "Artykuły spożywcze (miesięczne, para)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl i targi lokalne w pobliżu"
+        },
+        {
+          "category": "Media (elektryczność, woda, gaz)",
+          "cost": "€100-160",
+          "notes": "Wyższy latem z klimatyzacją"
+        },
+        {
+          "category": "Opłaty wspólnoty",
+          "cost": "€50-120",
+          "notes": "Zmienia się w zależności od zabudowy i usług"
+        },
+        {
+          "category": "IBI (podatek gminny)",
+          "cost": "€400-1.000/rok",
+          "notes": "Roczny podatek majątkowy na podstawie wartości katastralnej"
+        },
+        {
+          "category": "Jedzenie poza domem (na osobę)",
+          "cost": "€10-22",
+          "notes": "Menú del día od €10; restauracje €15-30"
+        },
+        {
+          "category": "Internet i telefon",
+          "cost": "€35-50",
+          "notes": "Dobra dostępność szerokopasmowa; wielu dostawców"
+        },
+        {
+          "category": "Wydatki samochodowe (paliwo, ubezpieczenie)",
+          "cost": "€150-250",
+          "notes": "Niezbędne do życia na terenie"
+        },
+        {
+          "category": "Prywatne ubezpieczenie zdrowotne",
+          "cost": "€60-150",
+          "notes": "Kompleksowa ochrona; niższe dla młodszych mieszkańców"
+        }
+      ]
+    },
+    "events": {
+      "intro": "El Verger świętuje tradycyjne fiestas hiszpańskie i imprezy społeczne przez cały rok, łącząc tradycje lokalne z gościnną międzynarodową społecznością.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "Sierpień",
+          "description": "Roczne obchody świętego patrona z paradami, muzyką, sztuczycznymi ogniami i tradycyjnymi obchodami zjeżdżającymi całą społeczność"
+        },
+        {
+          "name": "Semana Santa (Tydzień Wielkanocny)",
+          "month": "Marzec/kwiecień",
+          "description": "Uroczyste procesje Wielkiego Piątku przez ulice z tradycyjnymi platform i wiekowymi tradycjami religijnymi"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "Grudzień",
+          "description": "Świętowanie święta narodowego z lokalnymi imprezami, targami i zebraniami społeczności"
+        },
+        {
+          "name": "Festiwal Wiosny",
+          "month": "Maj",
+          "description": "Świętowanie wiosny z wyświetleniami kwiatów, straganami z jedzeniem, tradycyjną muzyką i zebraniami społeczności na placu miasta"
+        },
+        {
+          "name": "Festiwal żniw",
+          "month": "Październik",
+          "description": "Tradycyjne jesienne świętowanie z lokalnych produktów, degustacji wina, targów rzemieślniczych i gastronomii regionalnej"
+        },
+        {
+          "name": "Bożonarodzeniowy targ i trzej królowie",
+          "month": "Grudzień/styczeń",
+          "description": "Świąteczny sezon z straganami targu, szopkami i spektakularną paradą Trzech Króli (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Rodziny w El Verger mają dostęp do opcji edukacji wysokiej jakości w okolicy, z kilkoma międzynarodowymi szkołami obsługującymi społeczność emigrantów obok doskonałych państwowych szkół hiszpańskich.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "Międzynarodowa (brytyjska)",
+          "distance": "20-40 min",
+          "description": "Szkoła curriculum brytyjskiego z programami GCSE i A-Level, doskonałe obiekty i mocne wyniki akademickie"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "Międzynarodowa (brytyjska/IB)",
+          "distance": "25-45 min",
+          "description": "Curriculum brytyjskie i IB z doskonałymi obiektami, programami sportowymi i edukacją wielojęzyczną"
+        },
+        {
+          "name": "Lokalna szkoła podstawowa w Hiszpanii",
+          "type": "Państwowa Hiszpania",
+          "distance": "5-15 min",
+          "description": "Lokalna szkoła państwowa zapewniająca edukację curriculum hiszpańskiego, doskonała do immersji językowej i integracji społeczności"
+        },
+        {
+          "name": "Lokalna szkoła średnia w Hiszpanii",
+          "type": "Państwowa Hiszpania",
+          "distance": "10-20 min",
+          "description": "Państwowa szkoła średnia oferująca programy ESO i Bachillerato z wspierającym środowiskiem nauki"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "El Verger oferuje doskonałe działania na świeżym powietrzu przez cały rok, od turystyki pieszej i jazdy na rowerze do golfa, spacerów po przyrodzie i nie tylko.",
+      "activities": [
+        {
+          "name": "Spacery na wsi",
+          "type": "Turystyka piesza",
+          "description": "Szlaki turystyczne przez otaczający krajobraz z widokami na sady, góry i tradycyjne wioski"
+        },
+        {
+          "name": "Trasy rowerowe",
+          "type": "Jazda na rowerze",
+          "description": "Drogi i szlaki górskie rowerowe przez malowniczy krajobraz, odpowiednie dla wszystkich poziomów fitness"
+        },
+        {
+          "name": "Pobliskie pola golfowe",
+          "type": "Golf",
+          "description": "Kilka wysokiej jakości pól golfowych w zasięgu łatwej jazdy oferujących grę przez cały rok w śródziemnomorskim słońcu"
+        },
+        {
+          "name": "Rezerwaty przyrody i obserwacja ptaków",
+          "type": "Rezerwat przyrody",
+          "description": "Chronione obszary przyrodnicze w pobliżu oferujące obserwację ptaków, fotografię i spokojne spacery przyrodnicze"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "El Verger ma rosnącą międzynarodową społeczność, z emigrantami przyciąganymi przez styl życia śródziemnomorski, niedrogie koszty utrzymania i gościnną atmosferę. Autentyczny charakter hiszpański obszaru przyciąga tych, którzy szukają czystej integracji z lokalną kulturą. Angielski jest coraz bardziej mówiony, z wieloma usługami dostępnymi w angielsku, czyniąc codzienne życie wygodnym dla nowicjuszy.",
+      "highlights": [
+        "Rosnąca międzynarodowa scena społeczna z regularnymi imprezami społeczności",
+        "Usługi anglojęzyczne dostępne, w tym profesjonaliści medyczni i prawni",
+        "Regularne spotkania społeczności, kluby i działania społeczne",
+        "Gościnną atmosferę dla nowicjuszy z ugruntowanymi sieciami emigrantów",
+        "Mieszanka rezydentów stałych i odwiedzających sezonowych, tworząc dynamiczną społeczność",
+        "Różnorodna społeczność europejska, w tym mieszkańcy brytyjscy, skandynawscy, holenderscy, niemieccy i francuscy",
+        "Lokalna społeczność hiszpańska, która jest przyjaźnie i włączająca wobec międzynarodowych mieszkańców"
+      ],
+      "nationalities": [
+        "Brytyjski",
+        "Niemiecki",
+        "Holenderski",
+        "Skandynawski",
+        "Francuski",
+        "Belgijski",
+        "Hiszpański"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Typowy dzień w El Verger",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Poranek kawy",
+          "description": "Zacznij dzień od świeżej kawy na tarasie, ciesząc się porannym słońcem i spokojnymi otoczeniami"
+        },
+        {
+          "time": "09:30",
+          "activity": "Wizytu na targu",
+          "description": "Przeglądaj targi lokalne aby uzyskać świeże produkty, chleb i specjały sezonowe od lokalnych rolników"
+        },
+        {
+          "time": "12:00",
+          "activity": "Świeży targ shopping",
+          "description": "Podnieś świeży chleb, owoce i lokalne produkty z supermarketu lub cotygodniowego targu"
+        },
+        {
+          "time": "13:30",
+          "activity": "Hiszpański lunch",
+          "description": "Ciesz się leniwym menú del día w lokalnej restauracji – trzy kursy z winem za około €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta i basen",
+          "description": "Odpoczywaj podczas najcieplejszych godzin, a potem ochłodzić się w swoim prywatnym lub wspólnym basenie"
+        },
+        {
+          "time": "17:30",
+          "activity": "Spacer popołudniowy",
+          "description": "Zbadaj otaczający krajobraz lub ulice wioski, gdy temperatura spada"
+        },
+        {
+          "time": "20:00",
+          "activity": "Wieczór Paseo",
+          "description": "Dołącz się do lokalnych osób na tradycyjnym wieczornym spacerze przez miasto, pozdrawiając sąsiadów i przyjaciół"
+        },
+        {
+          "time": "21:30",
+          "activity": "Obiad z tapas",
+          "description": "Zakończ dzień z tapasami i kieliszkiem lokalnego wina w swojej ulubionej restauracji, jadąc al fresco pod gwiazdami"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d0.0053!3d38.8289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "El Verger",
+    "description": "El Verger to gmina śródlądowa w Costa Blanca North w Hiszpanii. Znany ze stylu życia śródziemnomorskiego, wysokiej jakości nowych budynków i międzynarodowej społeczności.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.8289",
+      "longitude": "0.0053"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "El Verger",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Czy El Verger to dobre miejsce do zamieszkania?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak, El Verger to doskonałe miejsce do zamieszkania, oferujące autentyczny styl życia śródziemnomorski za wyjątkową cenę. Ugruntowana międzynarodowa społeczność, osoby mówiące po angielsku, placówki medyczne i bliskość plaż tworzą idealne warunki dla emigrantów, rodzin i emerytów."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy Costa Blanca to dobre miejsce do kupienia nieruchomości?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costa Blanca jest jednym z najlepszych regionów inwestycji nieruchomościowych w Hiszpanii, oferując różne opcje od nadbrzeżnych właściwości kurortowych do urokliwych miast śródlądowych. Region łączy styl życia śródziemnomorski, doskonałą opiekę zdrowotną, szkoły międzynarodowe i silny potencjał dochodów z wynajmu napędzanego turystyką."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy imigranci mogą kupować nieruchomości w Hiszpanii?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak, imigranci mogą swobodnie kupować nieruchomości w Hiszpanii bez ograniczeń. Osoby niebędące rezydentami mogą kupować nieruchomości mieszkalne i handlowe tak łatwo, jak obywatele Hiszpanii. Większość międzynarodowych nabywców pracuje z adwokatami hiszpańskimi w celu poruszania się po procedurach prawnych."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jakie są koszty zakupu nieruchomości w Hiszpanii?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Koszty zakupu nieruchomości w Hiszpanii zazwyczaj obejmują: cenę nieruchomości, podatek od transferu (6-10%), opłaty notarialne (0,5-1%), opłaty rejestracyjne (0,1%) i opłaty prawne (1-2%). W El Verger całkowite koszty nabycia zwykle dodają 8-13% do ceny zakupu."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy potrzebuję wizy do kupienia nieruchomości w Hiszpanii?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zakup nieruchomości w Hiszpanii nie wymaga żadnej specjalnej wizy ani zezwolenia pobytu dla obywateli zagranicznych. Aby mieszkać w Hiszpanii na stałe lub przez dłuższe okresy, będziesz jednak potrzebować odpowiedniego sponsorowania wizy takie jak non-lucrative, emeryty lub Golden Visa."
+        }
+      }
+    ]
+  }
+}

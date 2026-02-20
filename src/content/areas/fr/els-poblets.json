@@ -1,0 +1,396 @@
+{
+  "slug": "els-poblets",
+  "name": "Els Poblets",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/els-poblets-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600563438938-a9a27216b4f5?w=800&q=80&fit=crop",
+  "propertyCount": 2,
+  "propertyTypes": [
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 550000,
+    "max": 585000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Els Poblets Tourism",
+      "url": "https://www.google.com/search?q=Els%20Poblets%20Spain%20official%20website",
+      "description": "Découvrez plus sur Els Poblets"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "95 km",
+      "driveTime": "60 min"
+    },
+    "healthcare": {
+      "name": "Hospital de Dénia",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20de%20D%C3%A9nia",
+      "distance": "8 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+Els%20Poblets+Spain",
+        "description": "Magnifique plage méditerranéenne à proximité"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Vivre à Els Poblets: Guide Complet de la Costa Blanca",
+    "metaDescription": "Découvrez Els Poblets, Costa Blanca - vie côtière paisible avec plages, communauté d'expatriés et excellentes commodités. Guide immobilier et informations sur le mode de vie.",
+    "heroIntro": "Els Poblets est une charmante municipalité côtière sur la Costa Blanca en Espagne, parfaitement positionnée entre Dénia et Oliva le long du littoral méditerranéen. Cette petite ville paisible d'environ 3 000 habitants offre un mode de vie espagnol authentique tout en maintenant une communauté internationale accueillante, ce qui en fait une destination idéale pour ceux qui recherchent une vie côtière tranquille loin de la foule touristique.\n\nLa ville dispose de plus de 2 kilomètres de plages de sable immaculées, notamment la populaire Playa de Els Poblets et Playa Almadrava, où l'eau cristalline rencontre le sable doré entouré de dunes naturelles et de forêts de pins. Le centre-ville historique présente une architecture espagnole traditionnelle, des marchés locaux et des restaurants familiaux servant des fruits de mer frais et des spécialités régionales. Avec sa position stratégique à seulement 10 minutes du port dynamique de Dénia et des attractions culturelles, Els Poblets offre l'équilibre parfait entre la sérénité et l'accès aux commodités modernes et aux possibilités de divertissement.",
+    "lifestyleSection": {
+      "intro": "La vie quotidienne à Els Poblets tourne autour d'un rythme méditerranéen décontracté, les habitants et les expatriés profitant de promenades matinales sur la plage, de siestas l'après-midi et de paseos en soirée le long de la promenade. La ville maintient de fortes traditions espagnoles avec des marchés hebdomadaires le jeudi, des festivals locaux comme les célébrations estivales des Moros y Cristianos, et des entreprises familiales qui servent la communauté depuis des générations. Les chiringuitos en bord de plage s'animent pendant les mois d'été, offrant de la paella fraîche et des boissons froides avec une vue merveilleuse sur la mer.\n\nLa communauté internationale à Els Poblets est bien établie et accueillante, composée principalement de résidents britanniques, allemands et néerlandais qui ont choisi cette enclave paisible pour leur retraite ou pour vivre toute l'année. Diverses associations et organisations sociales facilitent l'intégration, notamment des cours d'espagnol hebdomadaires, des groupes de randonnée et des échanges culturels. La proximité de la ville avec de plus grands centres comme Dénia et Jávea assure l'accès aux services internationaux tout en conservant son caractère espagnol authentique et son atmosphère communautaire étroite.\n\nEls Poblets jouit d'un climat méditerranéen magnifique avec plus de 300 jours de soleil par an, ce qui en fait l'une des destinations les plus désirables d'Europe pour une année. Les températures estivales moyennes sont de 26-30°C avec des brises de mer rafraîchissantes, tandis que les hivers restent doux à 15-18°C avec des précipitations minimales. Les saisons intermédiaires du printemps et de l'automne sont particulièrement agréables, offrant des jours chauds parfaits pour les activités de plein air et les promenades sur la plage. La région bénéficie de l'influence protectrice du parc naturel voisin de Montgó, qui aide à modérer les températures et à se protéger des vents violents.",
+      "highlights": [
+        "Magnifiques plages peu fréquentées avec sable propre et eau claire",
+        "Atmosphère espagnole authentique avec une forte communauté locale",
+        "Excellent emplacement entre Dénia et Oliva avec accès facile aux commodités",
+        "Environnement paisible loin du tourisme de masse",
+        "Forte communauté d'expatriés offrant des opportunités sociales"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Les vastes plages offrent d'excellentes opportunités pour les sports nautiques dont la voile, la planche à voile et le paddle, avec la location d'équipement disponible localement. Les amateurs de golf peuvent accéder au terrain de golf d'Oliva Nova (10 minutes) et au complexe de golf La Sella à Dénia (15 minutes). Les clubs de tennis, les pistes cyclables à travers les orangeraies et les sentiers de randonnée du parc naturel Montgó à proximité offrent des styles de vie actifs toute l'année.",
+      "dining": "Els Poblets propose d'excellents restaurants locaux spécialisés dans les fruits de mer frais et la cuisine valencienne traditionnelle, notamment des établissements de paella renommés le long de la plage. Les lieux populaires incluent le Restaurante Voramar pour les fruits de mer et Casa Pepa pour les plats régionaux authentiques. Les villes voisines de Dénia et Oliva élargissent considérablement les options culinaires, offrant une cuisine internationale, des restaurants recommandés par le Michelin et des scènes de tapas vibrantes.",
+      "shopping": "Les besoins d'achat quotidiens sont satisfaits par les supermarchés locaux dont Consum et plusieurs épiceries indépendantes, tandis que le marché hebdomadaire du jeudi propose des produits frais et des articles locaux. Pour les achats importants, le centre commercial Portal de la Marina à Ondara (15 minutes) propose des grandes chaînes de détail, des restaurants et des services. Le centre-ville de Dénia offre des boutiques, des magasins spécialisés et des marchés espagnols traditionnels.",
+      "healthcare": "Les services de santé sont bien fournis par le centre de santé local Centro de Salud Els Poblets pour les soins primaires, avec le moderne Hospital de Dénia à seulement 10 minutes offrant des services médicaux complets. Les cliniques privées à proximité de Dénia servent les résidents internationaux avec du personnel multilingue. Les pharmacies sont disponibles localement et les services d'urgence maintiennent des temps de réponse rapides dans toute la région.",
+      "transport": "L'aéroport d'Alicante est à 110 km au sud (1 heure 15 minutes de route), offrant des connexions européennes et internationales étendues. L'aéroport de Valencia est à 100 km au nord (1 heure 10 minutes), offrant des options de vol supplémentaires. Les deux aéroports sont bien desservis par les services de transfert et les locations de voitures. Els Poblets jouit d'excellentes connexions routières via l'autopista AP-7 et la route côtière N-332. La ville est facilement accessible depuis les grandes villes: Valencia (1 heure au nord), Alicante (1h25 au sud) et se connecte facilement aux villes côtières voisines. Les routes locales offrent des trajets pittoresques à travers les orangeraies et le long du littoral. Des services de bus réguliers relient Els Poblets à Dénia, Gandia et Valencia via les lignes de bus ALSA. Le port proche de Dénia offre des connexions par ferry vers les îles Baléares (Ibiza, Majorque, Formentera). Les services de taxi locaux et les options de covoiturage sont facilement disponibles pour les trajets plus courts dans la région."
+    },
+    "propertyMarketSection": "Le marché immobilier d'Els Poblets reste stable et attrayant, stimulé par son emplacement côtier désirable et son atmosphère paisible. Le marché attire principalement les acheteurs internationaux à la recherche de résidences permanentes ou de maisons de vacances, avec une demande constante de propriétés de qualité près de la plage et du centre-ville.\n\nLes types de propriétés populaires incluent Villa.\n\nLes valeurs immobilières à Els Poblets ont montré une appréciation régulière en raison du développement limité et de la grande désirabilité. Le potentiel de location est fort pour les propriétés de qualité, particulièrement pendant les mois d'été et les saisons intermédiaires. Le caractère authentique de la ville et l'emplacement côtier offrent une bonne sécurité d'investissement à long terme, tandis que la proximité de Dénia assure une demande continue de la part des résidents permanents et des acheteurs de maisons de vacances.",
+    "whyLiveHereSection": [
+      "Magnifiques plages peu fréquentées avec sable propre et eau claire",
+      "Atmosphère espagnole authentique avec une forte communauté locale",
+      "Excellent emplacement entre Dénia et Oliva avec accès facile aux commodités",
+      "Environnement paisible loin du tourisme de masse",
+      "Forte communauté d'expatriés offrant des opportunités sociales"
+    ],
+    "faqs": [
+      {
+        "question": "Quelles sont les meilleures plages près d'Els Poblets?",
+        "answer": "Els Poblets dispose de Playa de Els Poblets et Playa Almadrava, toutes deux offrant des plages de sable propre avec le label Pavillon Bleu. Ces plages sont moins fréquentées que les stations avoisinantes et disposent de dunes naturelles bordées de forêts de pins."
+      },
+      {
+        "question": "À quelle distance Els Poblets est-elle des grandes villes?",
+        "answer": "Els Poblets est à environ 1 heure de Valence, 1h25 d'Alicante et seulement 10 minutes de Dénia. La ville jouit d'excellentes connexions autoroutières via l'AP-7 et la route côtière N-332."
+      },
+      {
+        "question": "Y a-t-il une bonne communauté d'expatriés à Els Poblets?",
+        "answer": "Oui, Els Poblets dispose d'une communauté internationale bien établie, en particulier des résidents britanniques, allemands et néerlandais. Diverses associations, échanges linguistiques et activités culturelles facilitent l'intégration et les connexions sociales."
+      },
+      {
+        "question": "Quelles options de santé sont disponibles?",
+        "answer": "Els Poblets dispose d'un centre de santé local pour les soins primaires, avec des services médicaux complets disponibles à l'Hospital de Dénia (10 minutes). Les cliniques privées avec personnel parlant anglais servent la communauté internationale."
+      },
+      {
+        "question": "Peut-on vivre à Els Poblets toute l'année?",
+        "answer": "Absolument. Els Poblets est parfait pour une vie toute l'année avec son climat méditerranéen doux, ses excellentes commodités et sa communauté active. De nombreux résidents internationaux la choisissent comme résidence permanente plutôt que comme simple destination de vacances."
+      },
+      {
+        "question": "Quel est le potentiel d'investissement immobilier à Els Poblets?",
+        "answer": "Le potentiel d'investissement immobilier est fort en raison de la demande constante des acheteurs internationaux, du développement limité maintenant l'offre contrôlée et de l'emplacement côtier désirable de la ville. Les rendements locatifs sont particulièrement bons pour les propriétés de qualité près de la plage."
+      },
+      {
+        "question": "Quel est le trajet facile pour se rendre aux aéroports depuis Els Poblets?",
+        "answer": "Les aéroports d'Alicante et de Valence se trouvent à environ 1-1h25 de route d'Els Poblets via d'excellentes connexions autoroutières. Les services de transfert réguliers et les locations de voitures rendent l'accès aéroportuaire pratique pour les résidents et les visiteurs."
+      },
+      {
+        "question": "Quelles activités de plein air sont disponibles à Els Poblets?",
+        "answer": "Els Poblets offre d'excellentes opportunités de plein air toute l'année, notamment les activités de plage, les sports nautiques, le vélo à travers les orangeraies, la randonnée dans le parc naturel Montgó voisin et le golf dans les terrains d'Oliva Nova et Dénia. Le climat toute l'année soutient les styles de vie actifs."
+      }
+    ],
+    "conclusion": "Prêt à découvrir votre propriété parfaite à Els Poblets? Notre équipe expérimentée se spécialise dans les propriétés neuves dans cette région et peut vous guider à chaque étape. Que vous recherchiez une maison permanente, un refuge de vacances ou une propriété d'investissement, nous vous aiderons à trouver exactement ce que vous recherchez. Réservez une consultation gratuite de 30 minutes avec notre équipe - avec plus de 12 ans d'expérience dans la vente de propriétés neuves à la Costa Blanca, nous connaissons ce marché comme le fond de nos poches.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "Les valeurs immobilières à Els Poblets ont montré une appréciation régulière en raison du développement limité et de la grande désirabilité. Le potentiel de location est fort pour les propriétés de qualité, particulièrement pendant les mois d'été et les saisons intermédiaires. Le caractère authentique de la ville et l'emplacement côtier offrent une bonne sécurité d'investissement à long terme, tandis que la proximité de Dénia assure une demande continue de la part des résidents permanents et des acheteurs de maisons de vacances.",
+      "highlights": [
+        "Forte demande de locations saisonnières pendant la haute saison (mai-octobre)",
+        "Prix d'entrée plus bas que les marchés comparables avec des rendements locatifs similaires",
+        "Demande internationale croissante stimulant l'appréciation régulière des prix",
+        "Locations de vacances à court terme populaires auprès des touristes européens"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Le coût de la vie à Els Poblets est considérablement inférieur à l'Europe du Nord et très compétitif en Espagne. La vie côtière ici combine l'accessibilité économique et le style de vie méditerranéen.",
+      "items": [
+        {
+          "category": "Épiceries (mensuel, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl et marchés locaux à proximité"
+        },
+        {
+          "category": "Services publics (électricité, eau, gaz)",
+          "cost": "€100-160",
+          "notes": "Plus élevé en été avec climatisation"
+        },
+        {
+          "category": "Frais de communauté",
+          "cost": "€50-120",
+          "notes": "Varie selon le développement et les services inclus"
+        },
+        {
+          "category": "IBI (Impôt foncier)",
+          "cost": "€400-1,000/an",
+          "notes": "Impôt foncier annuel basé sur la valeur cadastrale"
+        },
+        {
+          "category": "Manger dehors (par personne)",
+          "cost": "€10-22",
+          "notes": "Menú del día à partir de €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet et téléphone",
+          "cost": "€35-50",
+          "notes": "Bonne couverture haut débit; plusieurs fournisseurs"
+        },
+        {
+          "category": "Dépenses automobiles (carburant, assurance)",
+          "cost": "€150-250",
+          "notes": "Recommandé pour la flexibilité"
+        },
+        {
+          "category": "Assurance maladie privée",
+          "cost": "€60-150",
+          "notes": "Couverture complète; inférieure pour les habitants plus jeunes"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Els Poblets célèbre les fêtes espagnoles traditionnelles et les événements communautaires tout au long de l'année, mélangeant les traditions locales avec la communauté internationale accueillante.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "Août",
+          "description": "Festivités annuelles du saint patron avec défilés, musique, feux d'artifice et célébrations traditionnelles rassemblant toute la communauté"
+        },
+        {
+          "name": "Semana Santa (Semaine Sainte)",
+          "month": "Mars/Avril",
+          "description": "Solennelles processions du Dimanche des Rameaux dans les rues avec des chars traditionnels et des traditions religieuses centenaires"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "Décembre",
+          "description": "Célébrations nationales avec des événements locaux, des marchés et des rassemblements communautaires"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "Juin",
+          "description": "Célébrations magiques de la plage du solstice d'été avec des feux, des feux d'artifice et les traditions de baignade à minuit le long de la côte"
+        },
+        {
+          "name": "Summer Beach Festival",
+          "month": "Juillet",
+          "description": "Concerts en plein air, étals de nourriture et événements culturels le long du littoral pendant les mois d'été"
+        },
+        {
+          "name": "Marché de Noël et Trois Rois",
+          "month": "Décembre/Janvier",
+          "description": "Saison festive avec des étals de marché, des crèches et le spectaculaire défilé des Trois Rois (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Les familles à Els Poblets ont accès à des options d'éducation de qualité dans la région environnante, avec plusieurs écoles internationales servant la communauté d'expatriés ainsi que d'excellentes écoles publiques espagnoles.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "École du programme britannique avec programmes GCSE et A-Level, excellentes installations et résultats académiques solides"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "Programme britannique et IB avec des installations exceptionnelles, des programmes sportifs et une éducation multilingue"
+        },
+        {
+          "name": "École primaire publique espagnole locale",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "École publique locale offrant une éducation au programme espagnol, excellente pour l'immersion linguistique et l'intégration communautaire"
+        },
+        {
+          "name": "École secondaire publique espagnole locale",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "École publique secondaire offrant des programmes ESO et Bachillerato avec un environnement d'apprentissage favorable"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Els Poblets offre d'excellentes activités de plein air toute l'année, des activités de plage et sports nautiques au golf, randonnées nature et bien plus.",
+      "activities": [
+        {
+          "name": "Plage et natation",
+          "type": "Beach",
+          "description": "Magnifiques plages méditerranéennes à proximité avec une eau cristalline, parfaites pour la natation, la plongée avec tuba et les bains de soleil"
+        },
+        {
+          "name": "Sports nautiques",
+          "type": "Water Sports",
+          "description": "Paddle, kayak, planche à voile et voile disponibles sur les plages et marinas voisines"
+        },
+        {
+          "name": "Randonnée pédestre",
+          "type": "Hiking",
+          "description": "Sentiers de randonnée à travers la campagne environnante avec vues sur les vergers, les montagnes et les villages traditionnels"
+        },
+        {
+          "name": "Pistes cyclables",
+          "type": "Cycling",
+          "description": "Routes routières et VTT à travers la campagne pittoresque, adaptées à tous les niveaux de condition physique"
+        },
+        {
+          "name": "Terrains de golf voisins",
+          "type": "Golf",
+          "description": "Plusieurs terrains de golf de qualité à courte distance offrant un jeu toute l'année sous le soleil méditerranéen"
+        },
+        {
+          "name": "Réserves naturelles et observation des oiseaux",
+          "type": "Nature Reserve",
+          "description": "Les zones naturelles protégées à proximité offrent l'observation des oiseaux, la photographie et des randonnées pédestres paisibles"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Els Poblets dispose d'une communauté internationale florissante, avec des expatriés attirés par le style de vie méditerranéen, le coût de la vie abordable et l'atmosphère accueillante. L'emplacement côtier attire un mélange diversifié de nationalités, en particulier d'Europe du Nord. L'anglais est largement parlé dans les magasins, les restaurants et les contextes sociaux, rendant la vie quotidienne confortable pour les nouveaux arrivants.",
+      "highlights": [
+        "Scène sociale internationale active avec des événements communautaires réguliers",
+        "Services anglophones disponibles y compris les professionnels médicaux et juridiques",
+        "Rassemblements communautaires réguliers, clubs et activités sociales",
+        "Atmosphère accueillante pour les nouveaux arrivants avec des réseaux d'expatriés établis",
+        "Mélange de résidents permanents et de visiteurs saisonniers créant une communauté dynamique",
+        "Communauté européenne diversifiée incluant des résidents britanniques, scandinaves, néerlandais, allemands et français",
+        "Communauté espagnole locale accueillante et inclusive envers les résidents internationaux"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Scandinavian",
+        "French",
+        "Belgian",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Une journée typique à Els Poblets",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Café du matin",
+          "description": "Commencez la journée avec du café frais sur votre terrasse, profitez de la brise marine et de l'environnement paisible"
+        },
+        {
+          "time": "09:30",
+          "activity": "Promenade sur la plage",
+          "description": "Balade matinale le long de la plage ou de la promenade, respirez l'air frais méditerranéen"
+        },
+        {
+          "time": "12:00",
+          "activity": "Courses au marché frais",
+          "description": "Récupérez du pain frais, des fruits et des produits locaux au supermarché ou au marché hebdomadaire"
+        },
+        {
+          "time": "13:30",
+          "activity": "Déjeuner espagnol",
+          "description": "Profitez d'un menú del día décontracté dans un restaurant local - trois cours avec du vin pour environ €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Sieste et piscine",
+          "description": "Reposez-vous pendant les heures les plus chaudes, puis rafraîchissez-vous dans votre piscine privée ou commune"
+        },
+        {
+          "time": "17:30",
+          "activity": "Temps de plage",
+          "description": "Allez à la plage pour un bain d'après-midi dans l'eau tiède de la Méditerranée"
+        },
+        {
+          "time": "20:00",
+          "activity": "Paseo du soir",
+          "description": "Rejoignez les habitants pour la promenade traditionnelle du soir à travers la ville, saluez voisins et amis"
+        },
+        {
+          "time": "21:30",
+          "activity": "Dîner tapas",
+          "description": "Terminez la journée avec des tapas et un verre de vin local dans votre restaurant préféré, dînez en plein air sous les étoiles"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d0.0167!3d38.8333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Els Poblets",
+    "description": "Els Poblets est une municipalité côtière dans Costa Blanca North, Espagne. Connue pour le style de vie méditerranéen, les développements immobiliers neufs de qualité et la communauté internationale.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.8333",
+      "longitude": "0.0167"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Els Poblets",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quelles sont les meilleures plages près d'Els Poblets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Els Poblets dispose de Playa de Els Poblets et Playa Almadrava, toutes deux offrant des plages de sable propre avec le label Pavillon Bleu. Ces plages sont moins fréquentées que les stations avoisinantes et disposent de dunes naturelles bordées de forêts de pins."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "À quelle distance Els Poblets est-elle des grandes villes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Els Poblets est à environ 1 heure de Valence, 1h25 d'Alicante et seulement 10 minutes de Dénia. La ville jouit d'excellentes connexions autoroutières via l'AP-7 et la route côtière N-332."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Y a-t-il une bonne communauté d'expatriés à Els Poblets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, Els Poblets dispose d'une communauté internationale bien établie, en particulier des résidents britanniques, allemands et néerlandais. Diverses associations, échanges linguistiques et activités culturelles facilitent l'intégration et les connexions sociales."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelles options de santé sont disponibles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Els Poblets dispose d'un centre de santé local pour les soins primaires, avec des services médicaux complets disponibles à l'Hospital de Dénia (10 minutes). Les cliniques privées avec personnel parlant anglais servent la communauté internationale."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Peut-on vivre à Els Poblets toute l'année?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolument. Els Poblets est parfait pour une vie toute l'année avec son climat méditerranéen doux, ses excellentes commodités et sa communauté active. De nombreux résidents internationaux la choisissent comme résidence permanente plutôt que comme simple destination de vacances."
+        }
+      }
+    ]
+  }
+}

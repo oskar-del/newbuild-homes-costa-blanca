@@ -1,0 +1,414 @@
+{
+  "slug": "finestrat",
+  "name": "Finestrat",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/finestrat-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 51,
+  "propertyTypes": [
+    "Villa",
+    "Apartment",
+    "Bungalow",
+    "Town House",
+    "Penthouse"
+  ],
+  "priceRange": {
+    "min": 275000,
+    "max": 4450000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Finestrat Tourism",
+      "url": "https://www.google.com/search?q=Finestrat%20Spain%20official%20website",
+      "description": "Oppdag mer om Finestrat"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "50 km",
+      "driveTime": "35 min"
+    },
+    "healthcare": {
+      "name": "Hospital Marina Baixa (Villajoyosa)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Marina%20Baixa%20(Villajoyosa)",
+      "distance": "10 km"
+    }
+  },
+  "content": {
+    "metaTitle": "Å bo i Finestrat 2026 | Komplett område guide & eiendom",
+    "metaDescription": "Oppdag livet i Finestrat, Costa Blanca. Eiendommer €275k-€4,4m, 51 boliger tilgjengelig. Utenlandsvennlig innlandsstad med strender, skoler og golf.",
+    "heroIntro": "Finestrat er en sjarmerende innlandsstad på Spanias Costa Blanca som tilbyr den perfekte kombinasjonen av spansk autentisitet og moderne internasjonalt liv. Bare 20 minutter fra pristine Blue Flag-strender og omgitt av kampionsgolfbaner, har denne etablerte utenlandske destinasjonen blitt stadig mer populær blant eiendomskjøpere som søker en livsstilsoppgradering uten overbelastningen av strandutvikling. Med 51 eiendommer tilgjengelig fra €275.000 til €4.450.000, imøtekommer Finestrat diverse budsjetter og preferanser. Områdets etablerte internasjonale samfunn betyr at engelsk er mye brukt, noe som gjør overgangen til spansk liv bemerkelsesverdig smooth. Enten du søker en fredelig pensjon, et familiehjem eller en investeringsmulighet, leverer Finestrat eksepsjonell verdi—eiendomspriser er 40% lavere enn sammenlignbare spanske øymarkeder, samtidig som den opprettholder samme middelhavsklima og kystaksessibilitet som gjør Costa Blanca til en av Europas mest attraktive steder.",
+    "lifestyleSection": {
+      "intro": "Dagliglivet i Finestrat dreier seg om en avslappet middelhavsrytme kombinert med moderne europeiske bekvemmelser. Byen arrangerer livlige lokale markeder hvor du kan få fersk produksjon, fisk og regionale spesialiteter til eksepsjonelle priser. Spisetilbud spenner fra tradisjonelle spanske tapasbarer til internasjonale restauranter som imøtekommer det mangfoldige utenlandske samfunnet. Nærheten til flere Blue Flag-strender innen 20 minutter gjør kystaktiviteter tilgjengelig uten bryet med strandbolig. Golfentusiaster nyter flere kampionsgolfbaner i nærheten, mens friluftsliv, vannsport og utendørsmarkeder gir endeløse rekreasjonsmuligheter. Det etablerte internasjonale samfunnet skaper et velkommende miljø hvor engelsk er vanlig snakket, og mange utenlandske grupper organiserer sosiale arrangementer, noe som gjør integrasjonen ubesværlig. Lokale fasiliteter inkluderer ukentlige markeder i nærliggende byer, kulturelle festivaler gjennom året, og lett tilgang til større kjøpesentre. Til tross for sine moderne fasiliteter, opprettholder Finestrat autentisk spansk karakter med familieeide restauranter, tradisjonell tapakultur og genuinn forbindelse til lokale tradisjoner.\n\nFinestrat nyter et typisk middelhavsklima med over 300 dager med sol årlig. Sommeren er varm og tørr, med temperaturer som i gjennomsnitt er 28-30°C (82-86°F) fra juni til september, selv om innlandslokalisering holder det litt kjøligere enn strandområder. Vinteren er mild og behagelig, med temperaturer som sjelden faller under 10°C (50°F), noe som gjør det ideelt hele året. Vår og høst tilbyr perfekte forhold for utendørsaktiviteter med behagelig 20-25°C temperaturer. Regionen mottar minimalt nedbør, konsentrert hovedsakelig i høst og vår. Havbrisene fra Middelhavet gir naturlig avkjøling i sommermånedene, mens områdets høyde beskytter fra ekstreme kystkoster. De beste tidspunktene å besøke eller omlokaliser er april-mai og september-oktober når været er perfekt og området er mindre fullstappet enn høysesongen.",
+      "highlights": [
+        "40% billigere enn sammenlignbare spanske øymarkeder samtidig som du opprettholder middelhavslivsstil og strandtilgang",
+        "Etablert engelsktalende utenlandsk samfunn som skaper et velkommende, integrert internasjonalt miljø",
+        "Utmerket helsevesen med engelsktalende leger og private klinikker innen lett rekkevidde",
+        "8% årlig eiendomsvurdering med sterkt potensial for leieinntekter for investorer",
+        "Mangfoldigt eiendomsvalg fra €275.000-€4.450.000 imøtekommer ulike budsjetter og preferanser",
+        "Perfekt klima med 300+ dager med sol, milde vintrer ideelt for pensjonister og familier"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Finestrat er et paradis for idretts- og friluftsentusiaster med flere Blue Flag-strender tilgjengelig innen 20 minutter, og tilbyr vannsport inkludert svømming, vindsurfing, paddelbrett og seiling. Flere kampionsgolfbaner i området rundt imøtekommer alle ferdighetsnivåer, fra nybegynnere til profesjonelle. Ut over strender og golf, nyter beboere vandre stier gjennom vakker middelhavslandskap, tennisklubber, treningssentre og sykkelstier. Vannsportfasiliteter er godt utviklet med profesjonell undervisning tilgjengelig. Regionen arrangerer ulike sportsarrangementer og turneringer gjennom året, og fremmer en aktiv livsstilkultur.",
+      "dining": "Finestrat tilbyr mangfoldige spiseoplevelser, fra tradisjonelle spanske tapasbarer og familierestauranter til internasjonal mat. Lokale etablissementer serverer autentiske regionale retter ved bruk av ferske lokale ingredienser, mens menú del día tilbyr utmerket verdi rundt €10-12 for et trerettes måltid.",
+      "shopping": "Kjøpet i Finestrat og omkringliggende områder tilbyr utmerket variasjon og verdi. Store supermarkjedekjedjer inkludert Mercadona, Lidl og Consum gir daglige dagligvarer med konkurransedyktig prising, mens lokale markeder tilbyr fersk produksjon, fisk og regionale spesialiteter til priser betydelig lavere enn Nord-Europa. Området har praktisk tilgang til større kjøpesentre med internasjonale merker, apotek og husholdningsvarer. Lokale markeder opererer gjennom hele uken, og gir autentiske shoppingopplevelser og muligheter til å få kontakt med lokale leverandører. Både netthandel og tradisjonell detaljhandel er godt utviklet, noe som sikrer at beboere har flere kjøpsalternativer.",
+      "healthcare": "Helsevesenet i Finestrat er omfattende og lett tilgjengelig, med et regionalt sykehus beliggende innen 30 minutter og flere private klinikker med moderne fasiliteter. Engelsktalende leger er lett tilgjengelige gjennom hele området, noe som sikrer at kommunikasjon aldri er en barriere for behandling. Helsevesenet i Spania er høyt ansett, kombinert offentlig helsevesen med utmerkede private alternativer for raskere tilgang til spesialister. Reseptmedisiner er rimelig, og mange private klinikker imøtekommer spesifikt pasientpasienter som er kjent med britisk og andre internasjonale helsestandarder. Nødtjenestene er effektive og godt koordinert på tvers av regionen.",
+      "transport": "Offentlig transport er tilgjengelig gjennom buskoblingene som forbinder Finestrat til omkringliggende byer og kystområder, selv om en bil er anbefalt for maksimal fleksibilitet og bekvemmelse. Innlandslokalisering gir utmerket vegtilgang til strender, kjøpesentre og nabokommuner uten trafikkongestionen av strandområder. Alicante-Elche flyplass er ca 45 kilometer unna med direkte flyvninger til Storbritannia og europeiske byer. Valencia Airport er grovt 130 kilometer nord, og tilbyr alternative flymuligheter. Begge flyplassene gir praktisk tilgang for internasjonal reise og besøksårt familie. Finestrat drar nytte av utmerkede motorveiforbindelser via AP-7 autopista, som gir rask tilgang til kystdestinasjonene, Benidorm og nærliggende byer. N-332 nasjonale vei tilbyr en vakker alternativ rute. Hovedtilkoblinger til Benidorm og Callosa d'En Sarrià er enkle med godt vedlikeholdte veier. Vanlig busservice forbinder Finestrat med lokale byer og kystområder gjennom ALSA-nettverket. Alicante har et tramssystem for regionale forbindelser. Selv om offentlig transport eksisterer, gjør frekvens og dekning en privatbil fordelaktig for daglige aktiviteter."
+    },
+    "propertyMarketSection": "Eiendomsmarkedet i Finestrat opplever jevn vekst med 8% år-for-år vurdering, noe som gjør det til en attraktiv investeringsdestinasjon. Markedet drar nytte av konsistent etterspørsel fra både eiere-okkupanter og investorer som søker leieinntekter. Forsyninger er moderate med 51 eiendommer tilgjengelig for øyeblikket, noe som indikerer et balansert marked med godt utvalg uten oversupply.\n\nPopulære eiendomstyper inkluderer Villa, Apartment, Bungalow, Town House, Penthouse.\n\nGjennomsnittlige eiendomspriser er €2.200 per kvadratmeter, som representerer betydelig verdi sammenlignet med kystAlternativ. Typiske 7-natt leieyield spenner rundt €800, noe som gir sterkt investeringspotensial. De 8% årlige vurderingene kombinert med leieinntekter gjør Finestrat spesielt attraktiv for investorsamlingen. Langsiktig kapitalvekst støttes av økende etterspørsel, begrenset ny utvikling og områdets rykte blant internasjonale kjøpere som søker autentisk middelhavsliv med moderne fasiliteter.",
+    "whyLiveHereSection": [
+      "40% billigere enn sammenlignbare spanske øymarkeder samtidig som du opprettholder middelhavslivsstil og strandtilgang",
+      "Etablert engelsktalende utenlandsk samfunn som skaper et velkommende, integrert internasjonalt miljø",
+      "Utmerket helsevesen med engelsktalende leger og private klinikker innen lett rekkevidde",
+      "8% årlig eiendomsvurdering med sterkt potensial for leieinntekter for investorer",
+      "Mangfoldigt eiendomsvalg fra €275.000-€4.450.000 imøtekommer ulike budsjetter og preferanser",
+      "Perfekt klima med 300+ dager med sol, milde vintrer ideelt for pensjonister og familier"
+    ],
+    "faqs": [
+      {
+        "question": "Er Finestrat et bra sted å bo?",
+        "answer": "Ja, absolutt. Finestrat tilbyr eksepsjonell verdi, autentisk spansk livsstil, etablert internasjonalt samfunn, utmerket helsevesen og lett strandtilgang—alt til 40% lavere priser enn sammenlignbare spanske markeder. Den 8% årlige eiendomsvurderingen, milde klima og engelsktalende miljø gjør det ideelt for pensjonister, familier og investorer som søker middelhavslivsstil uten overbelastning."
+      },
+      {
+        "question": "Kan utlendinger kjøpe eiendom i Spania?",
+        "answer": "Ja, både EU- og ikke-EU-utlendinger kan kjøpe eiendom i Spania uten restriksjoner. Du trenger et spansk skattidentifikasjonsnummer (NIE), som er enkelt å skaffe. Intet visum kreves kun for eiendomskjøp, selv om du kan trenge residensdokumentasjon for noen økonomiske ordninger. De fleste eiendomstransaksjoner innebærer juridisk representasjon for å navigere spanske regler smooth."
+      },
+      {
+        "question": "Hva er levekostnadene i Costa Blanca?",
+        "answer": "Costa Blanca tilbyr eksepsjonell verdi for middelhavsbolig. Månedlige kostnader for et par spenner €1.200-€2.000 avhengig av livsstil, inkludert leie/boliglån, utilities, dagligvarer og spising. Eiendommer gjennomsnittlig €2.200/m² i Finestrat spesifikt. Dagligvarer, spising og tjenester koster 30-50% mindre enn Nord-Europa. Helsevesen og utilities er spesielt rimelig sammenlignet med britiske og nordiske europeiske standarder."
+      },
+      {
+        "question": "Hva er kostnadene ved å kjøpe eiendom i Spania?",
+        "answer": "Ut over eiendomskjøpsprisen, forvent ytterligere kostnader på 8-12% inkludert: overdragelsesskat (6-11% avhengig av region), juridiske avgifter (0,5-1%), notarnavgifter (0,2-0,5%) og registreringsavgifter (0,1%). Boliglånsrelaterte kostnader legger til ytterligere 1-2% hvis finansiering. I Finestrat ville en €300.000 eiendom pådra seg ca €24.000-€36.000 i ytterligere kostnader. Å arbeide med en kvalifisert advokat er essensielt for å forstå alle lokale forpliktelser."
+      },
+      {
+        "question": "Kan jeg få boliglån i Spania som utenlandsk?",
+        "answer": "Ja, mange spanske banker tilbyr boliglån til utenlandske kjøpere, typisk opptil 80% av eiendomsverdien. Kravene inkluderer: gyldig residensdokumentasjon (NIE), bevis på inntekt, kredittkontroll og ofte en innskudd på 20-40%. Rentesatsene er konkurransedyktige, typisk 2,5-4,5%. Det er tilrådelig å sammenligne tilbud fra større banker som Santander, BBVA og Banco Sabadell, eller arbeide med en boliglånsmegler som spesialiserer seg på ekspatfinansiering."
+      },
+      {
+        "question": "Er Costa Blanca bra for pensjonister?",
+        "answer": "Utmerket valg for pensjonister. Regionen tilbyr rimelig helsevesen med engelsktalende leger, varmt klima ideelt for hele året, etablerte pensjonssamfunn og lavt levekostnader som strekker pensjonene lenger. Finestrat spesifikt gir den perfekte balansen—fredelig bolig med lett strand- og golftilgang, etablert utenlandsk samfunn og utmerkede fasiliteter uten overbelastningen av stranddestinasjoner."
+      },
+      {
+        "question": "Hvor langt er Costa Blanca fra Storbritannia?",
+        "answer": "Costa Blanca er omtrent 1.200 kilometer fra London (750 mil). Flygetid er 2-2,5 timer fra London til Alicante flyplass, med flere daglige forbindelser fra store britiske flyplasser. Nærheten gjør vanlig familiebesøk praktisk mens middelhavsstedet gir flukt til bedre vær. Direkte flyvninger er konkurransedyktig priset, spesielt fra regionale britiske flyplasser."
+      },
+      {
+        "question": "Hvordan er været på Costa Blanca?",
+        "answer": "Eksepsjonelt hele året middelhavsklima med over 300 dager med sol årlig. Sommertemperaturer gjennomsnitt 28-30°C (82-86°F) med lavt nedbør. Vinteren er mild på 10-17°C (50-63°F), sjelden frysing. Vår og høst tilbyr perfekt 20-25°C temperaturer. Havbrisene holder kystområder komfortable. Finestrats innlandslokalisering unngår ekstrem kystvarme samtidig som den opprettholder utmerket vær. Perfekt for utendørsaktiviteter og friluftsliv gjennom hele året."
+      }
+    ],
+    "conclusion": "Klar til å oppdage din perfekte eiendom i Finestrat? Vårt erfarne team spesialiserer seg på nye bygninger på tvers av dette området og kan veilede deg gjennom hvert skritt. Enten du søker et permanent hjem, feriehjem eller investeringseiendom, vil vi hjelpe deg med å finne nøyaktig hva du leter etter. Bestill en gratis 30-minutters konsultasjon med vårt team—med over 12 års erfaring med å selge nye bygninger på Costa Blanca, vi vet dette markedet innsiden ut.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Gjennomsnittlige eiendomspriser er €2.200 per kvadratmeter, som representerer betydelig verdi sammenlignet med kystAlternativ. Typiske 7-natt leieyield spenner rundt €800, noe som gir sterkt investeringspotensial. De 8% årlige vurderingene kombinert med leieinntekter gjør Finestrat spesielt attraktiv for investorsamlingen. Langsiktig kapitalvekst støttes av økende etterspørsel, begrenset ny utvikling og områdets rykte blant internasjonale kjøpere som søker autentisk middelhavsliv med moderne fasiliteter.",
+      "highlights": [
+        "Lavere inngangspriser enn sammenlignbare markeder med lignende leieyield",
+        "Voksende internasjonal etterspørsel som driver jevn prissettingsøkning",
+        "Langsiktig leietterspørsel fra voksende utenlandsk samfunn"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Levekostnadene i Finestrat er betydelig lavere enn Nord-Europa og veldig konkurransedyktige innen Spania. Innlandslokalisering som Finestrat tilbyr spesielt god verdi for daglige utgifter.",
+      "items": [
+        {
+          "category": "Dagligvarer (månedlig, par)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl og lokale markeder i nærheten"
+        },
+        {
+          "category": "Utilities (strøm, vann, gass)",
+          "cost": "€100-160",
+          "notes": "Høyere om sommeren med luftkjøling"
+        },
+        {
+          "category": "Felleshovedstol",
+          "cost": "€50-120",
+          "notes": "Varierer etter utvikling og inkluderte tjenester"
+        },
+        {
+          "category": "IBI (Kommunale avgift)",
+          "cost": "€400-1.000/år",
+          "notes": "Årlig eiendomsskat basert på kattastral verdi"
+        },
+        {
+          "category": "Spising ute (pr. person)",
+          "cost": "€10-22",
+          "notes": "Menú del día fra €10; restauranter €15-30"
+        },
+        {
+          "category": "Internett & telefon",
+          "cost": "€35-50",
+          "notes": "God bredbåndsdekning; flere leverandører"
+        },
+        {
+          "category": "Bilutgifter (drivstoff, forsikring)",
+          "cost": "€150-250",
+          "notes": "Essensielt for innlandsbolig"
+        },
+        {
+          "category": "Privat helseforsikring",
+          "cost": "€60-150",
+          "notes": "Omfattende dekning; lavere for yngre beboere"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Finestrat feirer tradisjonelle spanske fiestas og samfunnsarrangementer gjennom året, og blender lokale tradisjoner med det velkommende internasjonale samfunnet.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Årlige skytshelgen festiviteter med parader, musikk, fyrverkeri og tradisjonelle feiringer som samler hele samfunnet"
+        },
+        {
+          "name": "Semana Santa (påskeuken)",
+          "month": "Mars/april",
+          "description": "Solenn Holy Week-prosesjon gjennom gatene med tradisjonelle floter og hundreårsold religiøse tradisjoner"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "Desember",
+          "description": "Nasjonale feieringsmarkering med lokale arrangementer, markeder og samfunnssamlinger"
+        },
+        {
+          "name": "Vårkistival",
+          "month": "Mai",
+          "description": "Feiring av våren med blomsterdisplay, matboder, tradisjonell musikk og samfunnssamlinger på torget"
+        },
+        {
+          "name": "Høstfestival",
+          "month": "Oktober",
+          "description": "Tradisjonell høstfeiring med lokalt produserte, vinsmak, kunstnermarkeder og regional gastronomi"
+        },
+        {
+          "name": "Julemarked & Tre konger",
+          "month": "Desember/januar",
+          "description": "Festlig sesong med markedsboder, krybba-scener og spektakulær Tre Konger-parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Familier i Finestrat har tilgang til kvalitetsutdannelsesmuligheter i området rundt, med flere internasjonale skoler som betjener utenlandske samfunn ved siden av utmerkede spanske statsskoler.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "Internasjonale (Britisk)",
+          "distance": "20-40 min",
+          "description": "Britisk curriculumskole med GCSE- og A-Level-programmer, utmerkede fasiliteter og sterke akademiske resultater"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "Internasjonale (Britisk/IB)",
+          "distance": "25-45 min",
+          "description": "Britisk og IB-curriculum med utmerkede fasiliteter, idrettsprogrammer og flerspråklig utdanning"
+        },
+        {
+          "name": "Lokal spansk barneskole",
+          "type": "Spansk stat",
+          "distance": "5-15 min",
+          "description": "Lokal statsskole som gir spansk curriculumsutdanning, utmerket for språkimmersjon og samfunnsintegrering"
+        },
+        {
+          "name": "Lokal spansk ungdomsskole",
+          "type": "Spansk stat",
+          "distance": "10-20 min",
+          "description": "Statlig ungdomsskole med ESO- og Bachillerato-programmer med støttende læringsmiljø"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Finestrat tilbyr utmerkede friluftaktiviteter hele året rundt, fra friluftsliv og sykling til golf, naturkryp og mer.",
+      "activities": [
+        {
+          "name": "Fjellvandringer",
+          "type": "Friluftsliv",
+          "description": "Maleriske fjellstier gjennom middelhavsbarskog med panoramautsikt over dalene og kysten"
+        },
+        {
+          "name": "Sykkelruter",
+          "type": "Sykling",
+          "description": "Vei- og mountainbike-ruter gjennom det vakre landsbygd, egnet for alle fitnessnivåer"
+        },
+        {
+          "name": "Nærliggende golfbaner",
+          "type": "Golf",
+          "description": "Flere kvalitetsgolfbaner innen lett kjøreavstand og tilbyr hele året spill i middelhavsolen"
+        },
+        {
+          "name": "Naturreservater & fuglebetraktning",
+          "type": "Naturreservat",
+          "description": "Beskyttede naturomgivelser i nærheten som tilbyr fuglebetraktning, fotografi og fredelig naturkryp"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Finestrat har et voksende internasjonalt samfunn, med utenlandske mennesker tiltrukket av middelhavslivsstilen, rimelige levekostnader og velkommende atmosfære. Den autentiske spanske karakteren til området appellerer til de som søker genuine integrering med lokal kultur. Engelsk er stadig mer snakket, med mange tjenester tilgjengelige på engelsk, noe som gjør dagliglivet komfortabel for nyankomne.",
+      "highlights": [
+        "Voksende internasjonalt sosialt liv med vanlige samfunnsarrangementer",
+        "Engelsktalende tjenester tilgjengelige inkludert medisinsk og juridisk fagfolk",
+        "Vanlige samfunnssamlinger, klubber og sosiale aktiviteter",
+        "Velkommende atmosfære for nyankomne med etablert utenlandsk nettverk",
+        "Blanding av permanente beboere og sesongbesøkende som skaper et dynamisk samfunn",
+        "Mangfoldigt europeisk samfunn inkludert britisk, skandinavisk, nederlandsk, tysk og fransk beboere",
+        "Lokalt spansk samfunn velkommende og inkluderende overfor internasjonale beboere"
+      ],
+      "nationalities": [
+        "Britisk",
+        "Tysk",
+        "Nederlandsk",
+        "Skandinavisk",
+        "Fransk",
+        "Belgisk",
+        "Spansk"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "En typisk dag i Finestrat",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morgenkaffe",
+          "description": "Start dagen med fersk kaffe på terrassen din, og nyt morgensolen og fredelige omgivelser"
+        },
+        {
+          "time": "09:30",
+          "activity": "Markedsbesøk",
+          "description": "Bla gjennom det lokale markedet for fersk produksjon, brød og sesongbundne spesialiteter fra lokale bønder"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fersk marketshopping",
+          "description": "Plukk opp fersk brød, frukt og lokal produksjon fra supermarkedet eller det ukentlige markedet"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spansk lunsj",
+          "description": "Nyt en avslappet menú del día på en lokal restaurant—tre retter med vin for rundt €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & basseng",
+          "description": "Hvil under de varmeste timene, og kjøl deg av i ditt private eller delt basseng"
+        },
+        {
+          "time": "17:30",
+          "activity": "Ettermiddagstur",
+          "description": "Utforsk det omkringliggende landsbygd eller bygatene mens temperaturen avkjøles"
+        },
+        {
+          "time": "20:00",
+          "activity": "Kveldspaseo",
+          "description": "Bli med lokalbefolkningen for den tradisjonelle kveldsturen gjennom byen, hilsing nabo og venner"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas middag",
+          "description": "Avslutt dagen med tapas og et glass lokal vin på favorittrestauranten din, som spiser uteluftene under stjerner"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.2167!3d38.5667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Finestrat",
+    "description": "Finestrat er en kommune i Costa Blanca North, Spania. Kjent for middelhavslivsstil, kvalitet nye bygninger og internasjonalt samfunn.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.5667",
+      "longitude": "-0.2167"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Finestrat",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca North"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Er Finestrat et bra sted å bo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, absolutt. Finestrat tilbyr eksepsjonell verdi, autentisk spansk livsstil, etablert internasjonalt samfunn, utmerket helsevesen og lett strandtilgang—alt til 40% lavere priser enn sammenlignbare spanske markeder. Den 8% årlige eiendomsvurderingen, milde klima og engelsktalende miljø gjør det ideelt for pensjonister, familier og investorer som søker middelhavslivsstil uten overbelastning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan utlendinger kjøpe eiendom i Spania?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, både EU- og ikke-EU-utlendinger kan kjøpe eiendom i Spania uten restriksjoner. Du trenger et spansk skattidentifikasjonsnummer (NIE), som er enkelt å skaffe. Intet visum kreves kun for eiendomskjøp, selv om du kan trenge residensdokumentasjon for noen økonomiske ordninger."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hva er levekostnadene i Costa Blanca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costa Blanca tilbyr eksepsjonell verdi for middelhavsbolig. Månedlige kostnader for et par spenner €1.200-€2.000 avhengig av livsstil, inkludert leie/boliglån, utilities, dagligvarer og spising. Eiendommer gjennomsnittlig €2.200/m² i Finestrat spesifikt. Dagligvarer, spising og tjenester koster 30-50% mindre enn Nord-Europa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hva er kostnadene ved å kjøpe eiendom i Spania?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ut over eiendomskjøpsprisen, forvent ytterligere kostnader på 8-12% inkludert: overdragelsesskat (6-11% avhengig av region), juridiske avgifter (0,5-1%), notarnavgifter (0,2-0,5%) og registreringsavgifter (0,1%). Boliglånsrelaterte kostnader legger til ytterligere 1-2% hvis finansiering."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kan jeg få boliglån i Spania som utenlandsk?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, mange spanske banker tilbyr boliglån til utenlandske kjøpere, typisk opptil 80% av eiendomsverdien. Kravene inkluderer: gyldig residensdokumentasjon (NIE), bevis på inntekt, kredittkontroll og ofte en innskudd på 20-40%. Rentesatsene er konkurransedyktige, typisk 2,5-4,5%."
+        }
+      }
+    ]
+  },
+  "golf": {
+    "intro": "Finestrat er idealt plassert for golfentusiaster, med kampionsbaner minutter unna. Området kombinerer en sjarmerende by med utmerket tilgang til golfglobale fasiliteter. Den utvidede middelhavsspillsesongen gir hele året muligheter for golfere på alle nivåer.",
+    "courses": [
+      {
+        "name": "Club de Golf Meliá Villaitana",
+        "distance": "8 km",
+        "driveTime": "12 minutes",
+        "holes": 36,
+        "url": "https://www.meliavillaitana.com/",
+        "googleMaps": "https://maps.google.com/?q=Melia+Villaitana+Golf",
+        "description": "Doble kampionsbaner som tilbyr både strandside- og fjellutvalg med resortfasiliteter og profesjonell coaching"
+      },
+      {
+        "name": "Club de Golf Don Cayo",
+        "distance": "6 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Don+Cayo+Golf+Club",
+        "description": "Prestisjefylt parklandsbane med utfordrende layout og panoramisk middelhavsaussikt"
+      },
+      {
+        "name": "Club de Golf Las Rejas",
+        "distance": "5 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "googleMaps": "https://maps.google.com/?q=Las+Rejas+Golf",
+        "description": "Kampionsbane med rullende fairways og fantastisk middelhavsbackdrop"
+      }
+    ]
+  }
+}
