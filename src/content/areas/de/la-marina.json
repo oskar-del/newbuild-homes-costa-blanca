@@ -1,0 +1,471 @@
+{
+  "slug": "la-marina",
+  "name": "La Marina",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/la-marina-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 5,
+  "propertyTypes": [
+    "Penthouse",
+    "Apartment",
+    "Villa"
+  ],
+  "priceRange": {
+    "min": 246000,
+    "max": 595000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "La Marina Tourism",
+      "url": "https://www.google.com/search?q=La%20Marina%20Spain%20official%20website",
+      "description": "Erfahren Sie mehr über La Marina"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "35 km",
+      "driveTime": "25 min"
+    },
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20Universitario%20de%20Torrevieja",
+      "distance": "20 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+La%20Marina+Spain",
+        "description": "Wunderschöner Mittelmeerstrand in der Nähe"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "La Marina Costa Blanca | Strandufer-Lebensleitfaden und Immobilien",
+    "metaDescription": "Entdecken Sie La Marina, Costa Blanca: goldene Strände, moderne Annehmlichkeiten und exklusive Immobilien von 246.000 bis 595.000 Euro. Ihr Leitfaden zum Mittelmeer-Lebensstil.",
+    "heroIntro": "La Marina ist ein atemberaubendes Küstenziel an der Costa Blanca, gelegen zwischen dem charmanten Ort Guardamar del Segura und Torrevieja. Diese geplante Ferienort-Gemeinde hat sich zu einem der begehrtesten Orte Spaniens für Urlauber und Dauerbewohner entwickelt, die einen mediterranen Lebensstil suchen. Mit makellos sauberen Sandstränden entlang der Küste verbindet La Marina natürliche Schönheit mit zeitgenössischer Infrastruktur und zieht eine internationale Gemeinschaft von Hausbesitzern und Investoren an.\n\nDie Gegend ist berühmt für ihre gut geplante Stadtentwicklung mit baumbestandenen Alleen, gepflegten Gärten und erstklassigen Annehmlichkeiten. Ob Sie einen ruhigen Altersruhestand, ein Ferienhaus oder eine solide Immobilieninvestition anstreben, La Marina bietet vielfältige Unterkunftsmöglichkeiten von luxuriösen Penthäusern bis zu geräumigen Villen. Die Gemeinde bewahrt eine exklusive aber gastfreundliche Atmosphäre, mit weit verbreiteter englischer Sprache und einem florierenden Auswanderernetzwerk, das über Jahrzehnte hinweg etabliert wurde.\n\nLa Marinas strategische Lage an der Costa Blanca bietet die perfekte Balance zwischen Ruhe und Erreichbarkeit. Nur wenige Minuten vom lebhaften Torrevieja entfernt und in der Nähe des Valencia-Flughafens genießen Bewohner sowohl ruhiges Küstenleben als auch einfache Verbindungen zu regionalen Attraktionen, Kulturzentren und internationalen Zielen.",
+    "lifestyleSection": {
+      "intro": "Das Leben in La Marina dreht sich um Strandkultur, Outdoor-Aktivitäten und ein entspanntes mediterranes Tempo. Die Gemeinde verfügt über zahlreiche Restaurants, Strandclubs und soziale Treffpunkte, an denen Bewohner ihre Freizeit verbringen. Eine etablierte Auswanderergemeinde – hauptsächlich britische, deutsche und skandinavische Bewohner – hat eine gastfreundliche internationale Atmosphäre geschaffen, in der Englisch weit verbreitet ist und das ganze Jahr über verschiedene kulturelle Veranstaltungen stattfinden.\n\nDie Atmosphäre balanciert aktive Freizeit mit friedlicher Entspannung. Die Tage umfassen typischerweise Spaziergänge am Strand, Golf, Wassersport oder Essen in Strandlokalen. Abende werden damit verbracht, mediterrane Sonnenuntergänge zu genießen, lokale Märkte zu erkunden oder an Gemeinschaftsveranstaltungen teilzunehmen. Die Gegend bewahrt einen raffinierten aber bescheidenen Charakter, der reife Fachleute, Rentner und Familien anzieht, die Lebensqualität vor Nachtleben schätzen, was eine stabile, familienfreundliche Wohnumgebung schafft.\n\nLa Marina profitiert vom außergewöhnlichen Mittelmeerklima der Costa Blanca mit über 300 Sonnentagen pro Jahr. Die Winter sind mild und fallen selten unter 10°C, während die Sommer warm und sonnig sind mit durchschnittlichen Temperaturen um 28-30°C. Die Meeresbrise bietet natürliche Kühlung in den heißen Monaten, und Niederschlag ist minimal, konzentriert hauptsächlich auf Herbst und Frühling. Dieses Klima macht La Marina ideal für ganzjährige Outdoor-Aktivitäten, Strandfreizeit und Alfresco-Dining das ganze Jahr über.",
+      "highlights": [
+        "Außergewöhnliches Mittelmeerklima mit über 300 Sonnentagen jährlich, perfekt für ganzjährige Strand- und Outdoor-Aktivitäten",
+        "Pristine Strände mit sauberem Wasser ideal zum Schwimmen, Wassersport und Entspannung direkt in der Gemeinde",
+        "Etablierte internationale Auswanderergemeinde mit ausgezeichneter Infrastruktur, Dienstleistungen und kultureller Vielfalt, die eine willkommene Umgebung schafft",
+        "Starkes Mietrenditepotential mit konsistenter Nachfrage von Urlaubsgästen und Langzeitvermietungsmarkt für möblierte Immobilien",
+        "Strategische Costa Blanca-Lage mit einfachem Zugang zum Flughafen Alicante, Torrevieja und großen regionalen Attraktionen bei Bewahrung des friedlichen Strandlebens"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "La Marina und die umliegenden Gebiete bieten außergewöhnliche Sportanlagen. Drei Meisterschaftsgolfplätze in der Nähe sind der Campoamor Golf Club und das La Marquesa Golf Resort. Strandaktivitäten umfassen Schwimmen, Standup-Paddling, Windsurfen und Kajakfahren. Tennisplätze, Fitnesscenter und Gehwege in der gesamten Gemeinde fördern aktive Lebensweisen. Die Sportanlagen von Torrevieja umfassen Segelclubs und Wassersportzentren.",
+      "dining": "La Marina bietet ausgezeichnetes Essen mit über 20 Restaurants und Strandclubs mit mediterraner, spanischer, internationaler und asiatischer Küche. Strandlokale servieren frische Meeresfrüchte und Paella mit Meerblick. Die Gemeinde verfügt über spanische Tapas-Bars, italienische Restaurants und gemütliche Cafés. Lokale Wochenmärkte bieten frische Produkte, und Supermärkte lagern internationale Produkte für die Selbstverpflegung.",
+      "shopping": "Shopping-Optionen reichen von lokalen Supermärkten und Boutiquen in La Marina bis zu größeren Einkaufszentren in der nahe gelegenen Torrevieja und Guardamar del Segura. Carrefour, Mercadona und Lidl-Supermärkte sind leicht erreichbar. Wochenmärkte in Guardamar und Torrevieja bieten frische Produkte, Kleidung und Handwerk. Einkaufszentren Torrevieja und Habaneras bieten internationale Marken und Restaurants.",
+      "healthcare": "La Marina hat Zugang zu ausgezeichneten Gesundheitseinrichtungen. Das nächste große Krankenhaus, Torrevieja Hospital (Hospital de Torrevieja), ist etwa 15 km entfernt und bietet umfassende medizinische Dienstleistungen. Guardamar del Segura hat auch ein Gesundheitszentrum. Viele internationale Bewohner nutzen private Gesundheitsdienste auf der ganzen Costa Blanca, mit englischsprachigen Ärzten leicht verfügbar.",
+      "transport": "Der Flughafen Alicante-Elche (ALC) ist etwa 65 km entfernt mit einer ungefähren Fahrzeit von 1 Stunde und bietet Flüge in ganz Europa und darüber hinaus. Der Flughafen Valencia (VLC) ist 130 km entfernt mit einer ungefähren Fahrzeit von 2 Stunden. Beide Flughäfen bieten regelmäßige planmäßige Flüge und internationale Verbindungen, was Reisen für Bewohner und Besucher bequem macht. La Marina ist durch moderne Straßen gut angebunden. Die Küstenautobahn N-332 verläuft in der Nähe und bietet direkten Zugang zu Torrevieja (15 km südlich) und Guardamar del Segura (8 km nördlich). Die Autobahn A-7 verbindet sich mit großen Städten wie Alicante, Murcia und Valencia. Die Straßenzustände sind ausgezeichnet und das Fahren ist unkompliziert, um auf die breitere Costa Blanca und Nachbarregionen zuzugreifen. Der öffentliche Verkehr umfasst regelmäßige Busverbindungen von La Marina zu Torrevieja, Guardamar del Segura und umliegenden Städten. Lokale Busse bedienen Hauptbereiche innerhalb der Gemeinde. Fernbusse verbinden sich mit Valencia, Alicante und Murcia. Während öffentliche Verkehrsmittel verfügbar sind, finden die meisten Bewohner ein Auto für Bequemlichkeit und Unabhängigkeit beim Zugang zu nahegelegenen Städten, Stränden und Attraktionen unverzichtbar."
+    },
+    "propertyMarketSection": "La Marinas Immobilienmarkt zeigt eine stetige Nachfrage von europäischen Investoren und Hauskäufern, die das mediterrane Küstenleben suchen. Der Markt bietet hervorragendes Wert im Vergleich zu anderen Premium-Costa Blanca-Standorten, mit Immobilien von erschwinglichen Wohnungen bis zu luxuriösen Villen. Neubauten ziehen weiterhin Investoren an, die moderne, hochwertige Unterkünfte suchen. Das Gebiet zieht sowohl Endnutzer an, die einen ständigen Wohnort suchen, als auch Investoren, die auf Mieteinnahmen aus Ferien- und Langzeitvermietungen abzielen.\n\nBeliebt Immobilientypen sind Penthouse, Wohnung, Villa.\n\nLa Marina bietet überzeugende Investitionsmöglichkeiten mit starker Nachfrage von Urlaubsgästen und Langzeitmietern. Penthäuser und moderne Wohnungen erzielen typischerweise 5-7% Bruttorenditen durch Ferienvermietung über Plattformen wie Airbnb und Booking.com. Immobilien mit Meerblick und aktualisierten Annehmlichkeiten erzielen Premiumpreise. Langzeitvermietungen an internationale Bewohner und Rentner bieten stabile Einkommensströme. Die Kapitalwertschätzung ist positiv geblieben, mit dem Gebiet, das ständiges internationales Interesse anzieht und Infrastrukturverbesserungen, die Werte unterstützen.",
+    "whyLiveHereSection": [
+      "Außergewöhnliches Mittelmeerklima mit über 300 Sonnentagen jährlich, perfekt für ganzjährige Strand- und Outdoor-Aktivitäten",
+      "Pristine Strände mit sauberem Wasser ideal zum Schwimmen, Wassersport und Entspannung direkt in der Gemeinde",
+      "Etablierte internationale Auswanderergemeinde mit ausgezeichneter Infrastruktur, Dienstleistungen und kultureller Vielfalt, die eine willkommene Umgebung schafft",
+      "Starkes Mietrenditepotential mit konsistenter Nachfrage von Urlaubsgästen und Langzeitvermietungsmarkt für möblierte Immobilien",
+      "Strategische Costa Blanca-Lage mit einfachem Zugang zum Flughafen Alicante, Torrevieja und großen regionalen Attraktionen bei Bewahrung des friedlichen Strandlebens"
+    ],
+    "faqs": [
+      {
+        "question": "Wann ist die beste Zeit, La Marina zu besuchen oder dorthin zu ziehen?",
+        "answer": "April bis Juni und September bis Oktober bieten ideale Bedingungen mit warmen Temperaturen und weniger Menschenmassen. La Marinas milde Winter ermöglichen jedoch das ganzjährige Wohnen. Besichtigungen sind jederzeit möglich, aber Frühling und Herbst bieten das angenehmste Wetter zum Erkunden der Gegend."
+      },
+      {
+        "question": "Ist La Marina für Familien mit Kindern geeignet?",
+        "answer": "Ja, La Marina ist sehr familienfreundlich. Die Gemeinde bietet sichere, fußgängerfreundliche Layouts, hervorragende Strände mit überwachten Bereichen, hochwertige Schulen in der Nähe in Guardamar und Torrevieja, Sportanlagen und zahlreiche familienorientierte Restaurants und Aktivitäten. Die stabile Gemeinschaftsatmosphäre und die guten Einrichtungen machen es ideal für Familien."
+      },
+      {
+        "question": "Kann ich meine Immobilie in La Marina vermieten?",
+        "answer": "Absolut. La Marina ist sehr gut für Investitionen geeignet. Ferienvermietungen über Plattformen wie Airbnb generieren starke Saisoneinkommen, während Langzeitvermietungen an Auswanderer stabiles Einkommen bieten. Moderne möblierte Wohnungen und Meerblick-Immobilien schneiden besonders gut ab. Viele Immobilienverwaltungsunternehmen bieten umfassende Vermietungs- und Wartungsdienste an."
+      },
+      {
+        "question": "Wie sieht die Auswanderergemeinde in La Marina aus?",
+        "answer": "La Marina hat eine gut etablierte, willkommene internationale Gemeinde mit hauptsächlich britischen, deutschen und skandinavischen Bewohnern. Englisch wird weit verbreitet, es gibt zahlreiche Clubs und Organisationen, und kulturelle Veranstaltungen vereinen die Gemeinde. Die Atmosphäre ist reif, raffiniert und inklusiv, was die Integration für Neulinge einfach macht."
+      },
+      {
+        "question": "Wie weit ist La Marina von großen Städten und Attraktionen entfernt?",
+        "answer": "Torrevieja liegt 15 km südlich, Guardamar del Segura liegt 8 km nördlich, Alicante liegt 60 km entfernt und Valencia liegt 140 km entfernt. Der Flughafen Alicante ist etwa 65 km entfernt mit einer einstündigen Fahrt. Viele Attraktionen der Costa Blanca einschließlich Valencias City of Arts and Sciences, Salzseen und Inlandsdörfer sind leicht erreichbar."
+      },
+      {
+        "question": "Wie sind die Immobilienpreise in La Marina derzeit?",
+        "answer": "Aktuelle Immobilien reichen von 246.000 Euro für moderne Wohnungen bis zu 595.000 Euro für luxuriöse Penthäuser und Villen. Meerblick-Immobilien erzielen Premiumpreise, während Immobilien mit Mietgeschichte oder Neubau typischerweise bessere Investitionsrenditen erzielen. Die Preise bleiben im Vergleich zu anderen Premium-Costa Blanca-Standorten wettbewerbsfähig."
+      },
+      {
+        "question": "Welche Unterlagen benötige ich, um als Ausländer Immobilien in La Marina zu kaufen?",
+        "answer": "Sie benötigen eine NIE (spanische Steueridentifikationsnummer), Reisepass, Einkommensnachweis für die Hypothekenqualifikation und juristische Vertretung durch einen spanischen Anwalt. Die meisten Transaktionen umfassen Immobilienuntersuchungen, Eigentumsüberprüfung und Steuerdokumentation. Professionelle Berater können den kompletten Prozess leiten und die Einhaltung der spanischen Immobiliengesetze gewährleisten."
+      },
+      {
+        "question": "Gibt es gute Restaurants und Unterhaltungsmöglichkeiten in La Marina?",
+        "answer": "Ja, La Marina bietet über 20 Restaurants und Strandclubs mit mediterraner, spanischer, internationaler und asiatischer Küche. Strandlokale servieren frische Meeresfrüchte mit Meerblick, während gemütliche Cafés und Bars überall verteilt sind. In der nahe gelegenen Torrevieja und Guardamar gibt es zusätzliche Unterhaltung, Shopping und Restaurants."
+      }
+    ],
+    "conclusion": "Bereit, Ihre perfekte Immobilie in La Marina zu entdecken? Unser erfahrenes Team spezialisiert sich auf Neubauten in diesem Gebiet und kann Sie durch jeden Schritt leiten. Egal ob Sie ein permanentes Zuhause, ein Ferienhaus oder eine Anlageobjekt suchen, wir helfen Ihnen, genau das zu finden, was Sie suchen. Buchen Sie eine kostenlose 30-minütige Beratung mit unserem Team – mit über 12 Jahren Erfahrung beim Verkauf von Neubauten an der Costa Blanca kennen wir diesen Markt in- und auswendig.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "La Marina bietet überzeugende Investitionsmöglichkeiten mit starker Nachfrage von Urlaubsgästen und Langzeitmietern. Penthäuser und moderne Wohnungen erzielen typischerweise 5-7% Bruttorenditen durch Ferienvermietung über Plattformen wie Airbnb und Booking.com. Immobilien mit Meerblick und aktualisierten Annehmlichkeiten erzielen Premiumpreise. Langzeitvermietungen an internationale Bewohner und Rentner bieten stabile Einkommensströme. Die Kapitalwertschätzung ist positiv geblieben, mit dem Gebiet, das ständiges internationales Interesse anzieht und Infrastrukturverbesserungen, die Werte unterstützen.",
+      "highlights": [
+        "Starke Nachfrage nach Ferienvermietung in der Hochsaison (Mai-Oktober)",
+        "Niedrigere Einstiegspreise als vergleichbare Märkte mit ähnlichen Mietrenditen",
+        "Wachsende internationale Nachfrage mit stetiger Preisaufwertung",
+        "Kurzzeit-Ferienvermietung bei europäischen Touristen beliebt"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Die Lebenshaltungskosten in La Marina sind deutlich niedriger als in Nordeuropa und sehr wettbewerbsfähig innerhalb Spaniens. Das Küstenleben hier kombiniert Erschwinglichkeit mit Mittelmeer-Lebensstil.",
+      "items": [
+        {
+          "category": "Lebensmittel (monatlich, Paar)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl und lokale Märkte in der Nähe"
+        },
+        {
+          "category": "Nebenkosten (Elektrizität, Wasser, Gas)",
+          "cost": "€100-160",
+          "notes": "Im Sommer höher mit Klimaanlage"
+        },
+        {
+          "category": "Gemeinschaftsbeitrag",
+          "cost": "€50-120",
+          "notes": "Variiert je nach Entwicklung und enthaltenen Dienstleistungen"
+        },
+        {
+          "category": "IBI (Gemeindesteuern)",
+          "cost": "€400-1,000/Jahr",
+          "notes": "Jährliche Grundsteuer basierend auf Katasterwert"
+        },
+        {
+          "category": "Essen gehen (pro Person)",
+          "cost": "€10-22",
+          "notes": "Menú del día ab €10; Restaurants €15-30"
+        },
+        {
+          "category": "Internet und Telefon",
+          "cost": "€35-50",
+          "notes": "Gute Breitbandabdeckung; mehrere Anbieter"
+        },
+        {
+          "category": "Autokosten (Benzin, Versicherung)",
+          "cost": "€150-250",
+          "notes": "Empfohlen für Flexibilität"
+        },
+        {
+          "category": "Private Krankenversicherung",
+          "cost": "€60-150",
+          "notes": "Umfassende Deckung; niedriger für jüngere Bewohner"
+        }
+      ]
+    },
+    "events": {
+      "intro": "La Marina feiert traditionelle spanische Fiestas und Gemeinschaftsveranstaltungen das ganze Jahr über und verbindet lokale Traditionen mit der willkommenen internationalen Gemeinde.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Jährliche Schutzpatronfestspiele mit Paraden, Musik, Feuerwerk und traditionellen Feierlichkeiten, die die ganze Gemeinde zusammenbringen"
+        },
+        {
+          "name": "Semana Santa (Karwoche)",
+          "month": "März/April",
+          "description": "Feierliche Karwoche-Prozessionen durch die Straßen mit traditionellen Wagen und jahrhundertealten religiösen Traditionen"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "Dezember",
+          "description": "Nationalfeiertags-Feierlichkeiten mit lokalen Veranstaltungen, Märkten und Gemeindeversammlungen"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "Juni",
+          "description": "Magische Mittsommerfeierlichkeiten am Strand mit Feuern, Feuerwerk und Mitternachtsschwimm-Traditionen entlang der Küste"
+        },
+        {
+          "name": "Summer Beach Festival",
+          "month": "Juli",
+          "description": "Outdoor-Konzerte, Essensstände und kulturelle Veranstaltungen entlang des Wassers während der Sommersaison"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "Dezember/Januar",
+          "description": "Festliche Jahreszeit mit Marktständen, Krippen-Szenen und der spektakulären Dreikönigs-Parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "markets": {
+      "intro": "La Marina und die umliegenden Gebiete bieten bequemen Zugang zu Märkten und Shopping. Die nahe gelegenen Städte Guardamar und Torrevieja beherbergen ausgezeichnete Wochenmärkte mit frischen lokalen Produkten, Fisch und regionalen Spezialitäten.",
+      "markets": [
+        {
+          "name": "La Marina Saturday Market",
+          "day": "Samstag",
+          "time": "08:00 - 14:00",
+          "type": "Produce/General",
+          "distance": "In community",
+          "description": "Wochenmarkt in der Gemeinde mit frischen lokalen Produkten, regionalen Waren und Haushaltsartikeln. Bequemes Shopping vor Ort für La Marina-Bewohner.",
+          "googleMaps": "https://maps.google.com/?q=La+Marina+Saturday+Market"
+        },
+        {
+          "name": "Guardamar Wednesday Market",
+          "day": "Mittwoch",
+          "time": "08:00 - 14:00",
+          "type": "Produce/General",
+          "distance": "8 km (10 Minuten)",
+          "description": "Beliebter Mittwochsmarkt in der nahe gelegenen Küstenstadt Guardamar mit frischen lokalen Produkten, Fisch und regionalen Waren mit Küstencharakter.",
+          "googleMaps": "https://maps.google.com/?q=Guardamar+Wednesday+Market"
+        },
+        {
+          "name": "Santa Pola Saturday Market",
+          "day": "Samstag",
+          "time": "08:00 - 14:00",
+          "type": "Produce/General",
+          "distance": "12 km (15 Minuten)",
+          "description": "Beliebter Samstagmarkt in der nahe gelegenen Santa Pola mit frischen lokalen Produkten, Fisch aus dem aktiven Hafen und Haushaltsartikeln. Widerspiegelt den authentischen Fischergemeinde-Charakter.",
+          "googleMaps": "https://maps.google.com/?q=Santa+Pola+Saturday+Market"
+        }
+      ]
+    },
+    "golf": {
+      "intro": "La Marina ist perfekt positioniert für Golfbegeisterte mit mehreren Meisterschaftsplätzen in Reichweite. Nahe gelegene Plätze sind La Marquesa Golf in Rojales, La Finca Golf in Algorfa und mehrere andere innerhalb von 20 Minuten. Ganzjährige Spielbedingungen machen dies zu einem idealen Golfdestination.",
+      "courses": [
+        {
+          "name": "La Marquesa Golf",
+          "distance": "12 km",
+          "driveTime": "15 Minuten",
+          "holes": 18,
+          "url": "https://www.lamarquesagolf.com/",
+          "googleMaps": "https://maps.google.com/?q=La+Marquesa+Golf+Rojales",
+          "description": "Gut gepflegter Meisterschaftsplatz, beliebt bei Bewohnern. Ausgezeichnete Einrichtungen und malerisches Layout perfekt für ganzjähriges Spiel."
+        },
+        {
+          "name": "La Finca Golf",
+          "distance": "18 km",
+          "driveTime": "20 Minuten",
+          "holes": 18,
+          "url": "https://www.lafincagolf.com/",
+          "googleMaps": "https://maps.google.com/?q=La+Finca+Golf+Algorfa",
+          "description": "Meisterschaftsplatz entworfen von Pepe Gancedo mit wunderschönem Setting mit Seeelementen und ausgezeichneten Einrichtungen."
+        },
+        {
+          "name": "Vistabella Golf",
+          "distance": "20 km",
+          "driveTime": "22 Minuten",
+          "holes": 18,
+          "url": "https://www.vistabellagolf.com/",
+          "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+          "description": "Moderner Platz mit ausgezeichneten Einrichtungen und anspruchsvollem Layout. Ganzjährige Mittelmeer-Spielbedingungen."
+        },
+        {
+          "name": "Lo Romero Golf",
+          "distance": "25 km",
+          "driveTime": "25 Minuten",
+          "holes": 18,
+          "url": "https://www.loromerogolf.com/",
+          "googleMaps": "https://maps.google.com/?q=Lo+Romero+Golf",
+          "description": "Atemberaubender Jack Nicklaus-Signatur-Platz mit Premium-Einrichtungen und anspruchsvollem Meisterschafts-Layout."
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Familien in La Marina haben Zugang zu hochwertiger Bildung in der umliegenden Gegend, mit mehreren internationalen Schulen, die die Auswanderergemeinde bedienen, neben ausgezeichneten spanischen Schulen.",
+      "schools": [
+        {
+          "name": "El Limonar International School",
+          "type": "International (British)",
+          "distance": "20-35 min",
+          "description": "Britischer Lehrplan-Schule mit ausgezeichneten Einrichtungen und starker akademischer Bilanz für die Auswanderergemeinde"
+        },
+        {
+          "name": "Newton College",
+          "type": "International (British/Spanish)",
+          "distance": "25-40 min",
+          "description": "Zweisprachige internationale Schule mit britischem und spanischem Lehrplan mit modernen Einrichtungen"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Lokale Grundschule mit spanischem Lehrplan, ausgezeichnet für Sprachimmersion und Gemeinde-Integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "Staatliche Sekundarschule mit ESO und Bachillerato-Programmen in unterstützender Lernumgebung"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "La Marina bietet hervorragende Outdoor-Aktivitäten das ganze Jahr über, von Strandaktivitäten und Wassersport bis Golf, Naturwanderungen und mehr.",
+      "activities": [
+        {
+          "name": "Beach & Swimming",
+          "type": "Beach",
+          "description": "Wunderschöne Mittelmeerstrände in der Nähe mit kristallklarem Wasser, perfekt zum Schwimmen, Schnorcheln und Sonnenbaden"
+        },
+        {
+          "name": "Water Sports",
+          "type": "Water Sports",
+          "description": "Standup-Paddling, Kajakfahren, Windsurfen und Segeln an nahe gelegenen Stränden und Häfen"
+        },
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Wanderwege durch die umliegenden Landschaften mit Ausblicken auf Obstgärten, Berge und traditionelle Dörfer"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Straßen- und Mountainbike-Routen durch die malerische Landschaft, geeignet für alle Fitnessstufen"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Mehrere hochwertige Golfplätze in leicht erreichbarer Entfernung mit ganzjährigem Spielen in der Mittelmeer-Sonne"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Geschützte Naturgebiete in der Nähe mit Vogelbeobachtung, Fotografie und friedlichen Naturwanderungen"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "La Marina hat eine blühende internationale Gemeinde mit Auswanderern, die vom Mittelmeer-Lebensstil, erschwinglichen Lebenshaltungskosten und willkommener Atmosphäre angezogen werden. Die Küstenlage zieht eine vielfältige Mischung von Nationalitäten an, besonders aus Nordeuropa. Englisch wird in Geschäften, Restaurants und sozialen Umgebungen weit verbreitet, was das tägliche Leben für Neulinge komfortabel macht.",
+      "highlights": [
+        "Aktive internationale Sozialszene mit regelmäßigen Gemeindeveranstaltungen",
+        "Englischsprachige Dienstleistungen einschließlich medizinischer und rechtlicher Fachleute",
+        "Regelmäßige Gemeindeversammlungen, Clubs und soziale Aktivitäten",
+        "Willkommene Atmosphäre für Neulinge mit etablierten Auswanderernetzwerken",
+        "Mischung aus permanenten Bewohnern und Saisonbesuchern, die eine dynamische Gemeinde schaffen",
+        "Starke britische und skandinavische Präsenz zusammen mit niederländischen, belgischen und deutschen Bewohnern",
+        "Lokale spanische Gemeinde, die willkommend und einbeziehend gegenüber internationalen Bewohnern ist"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Ein typischer Tag in La Marina",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Starten Sie den Tag mit frischem Kaffee auf der Terrasse und genießen Sie die Meeresbrise und friedliche Umgebung"
+        },
+        {
+          "time": "09:30",
+          "activity": "Beach Walk",
+          "description": "Morgendlicher Spaziergang am Strand oder der Strandpromenade und atmen Sie die frische Mittelmeerluft ein"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Holen Sie sich frisches Brot, Obst und lokale Produkte aus dem Supermarkt oder Wochenmarkt"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Genießen Sie ein gemütliches menú del día in einem lokalen Restaurant – drei Gänge mit Wein für etwa €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Ruhen Sie sich während der heißesten Stunden aus, dann erfrischen Sie sich im privaten oder Gemeinschaftspool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Beach Time",
+          "description": "Gehen Sie zum Strand für ein Nachmittags-Bad im warmen Mittelmeer"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Treten Sie den Einheimischen bei zum traditionellen Abendspaziergang durch die Stadt und grüßen Sie Nachbarn und Freunde"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "Beenden Sie den Tag mit Tapas und einem Glas Lokalwein im Lieblingsrestaurant und essen im Freien unter den Sternen"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.6656!3d38.1508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "La Marina",
+    "description": "La Marina ist eine Gemeinde in Costa Blanca South, Spanien. Bekannt für Mittelmeer-Lebensstil, hochwertige Neubau-Entwicklungen und internationale Gemeinde.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.1508",
+      "longitude": "-0.6656"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "La Marina",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wann ist die beste Zeit, La Marina zu besuchen oder dorthin zu ziehen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "April bis Juni und September bis Oktober bieten ideale Bedingungen mit warmen Temperaturen und weniger Menschenmassen. La Marinas milde Winter ermöglichen jedoch das ganzjährige Wohnen. Besichtigungen sind jederzeit möglich, aber Frühling und Herbst bieten das angenehmste Wetter zum Erkunden der Gegend "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ist La Marina für Familien mit Kindern geeignet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, La Marina ist sehr familienfreundlich. Die Gemeinde bietet sichere, fußgängerfreundliche Layouts, hervorragende Strände mit überwachten Bereichen, hochwertige Schulen in der Nähe in Guardamar und Torrevieja, Sportanlagen und zahlreiche familienorientierte Restaurants und Aktivitäten. Die stabile Gemeinschaftsatmosphäre und die guten "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann ich meine Immobilie in La Marina vermieten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolut. La Marina ist sehr gut für Investitionen geeignet. Ferienvermietungen über Plattformen wie Airbnb generieren starke Saisoneinkommen, während Langzeitvermietungen an Auswanderer stabiles Einkommen bieten. Moderne möblierte Wohnungen und Meerblick-Immobilien schneiden besonders gut ab. Viele Immobilienverwaltungsunternehmen bieten umfassende Vermietungs- und Wartungsdienste an. "
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie sieht die Auswanderergemeinde in La Marina aus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La Marina hat eine gut etablierte, willkommene internationale Gemeinde mit hauptsächlich britischen, deutschen und skandinavischen Bewohnern. Englisch wird weit verbreitet, es gibt zahlreiche Clubs und Organisationen, und kulturelle Veranstaltungen vereinen die Gemeinde. Die Atmosphäre ist reif, raffiniert"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie weit ist La Marina von großen Städten und Attraktionen entfernt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Torrevieja liegt 15 km südlich, Guardamar del Segura liegt 8 km nördlich, Alicante liegt 60 km entfernt und Valencia liegt 140 km entfernt. Der Flughafen Alicante ist etwa 65 km entfernt mit einer einstündigen Fahrt. Viele Attraktionen der Costa Blanca einschließlich Valencias City of Arts and Sciences, Salzseen und Inlandsdörfer sind e"
+        }
+      }
+    ]
+  }
+}

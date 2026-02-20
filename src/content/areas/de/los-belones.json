@@ -1,0 +1,401 @@
+{
+  "slug": "los-belones",
+  "name": "Los Belones",
+  "region": "Murcia",
+  "heroImage": "/images/areas/los-belones-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 1,
+  "propertyTypes": [
+    "Villas dominate the Los Belones market",
+    "offering spacious family homes with private gardens",
+    "pools",
+    "and outdoor living spaces. Villa properties typically provide excellent rental potential and strong capital appreciation prospects."
+  ],
+  "priceRange": {
+    "min": 355000,
+    "max": 355000
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Los Belones Tourism",
+      "url": "https://www.google.com/search?q=Los%20Belones%20Spain%20official%20website",
+      "description": "Discover more about Los Belones"
+    },
+    "airport": {
+      "name": "Murcia-Corvera Airport",
+      "googleMaps": "https://maps.google.com/?q=Murcia+Airport",
+      "url": "https://www.aena.es",
+      "distance": "20 km",
+      "driveTime": "15 min"
+    },
+    "healthcare": {
+      "name": "Hospital General Universitario Santa Lucía (Cartagena)",
+      "googleMaps": "https://maps.google.com/?q=Hospital%20General%20Universitario%20Santa%20Luc%C3%ADa%20(Cartagena)",
+      "distance": "15 km"
+    },
+    "beaches": [
+      {
+        "name": "Nearest Beach",
+        "googleMaps": "https://maps.google.com/?q=beach+near+Los%20Belones+Spain",
+        "description": "Beautiful Mediterranean beach nearby"
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Leben in Los Belones 2026 | Kompletter Gebietsleitfaden",
+    "metaDescription": "Entdecken Sie Los Belones: Villen ab €355.000, etablierte Expatriate-Gemeinde, 20 Minuten zu Stränden. Vollständiger Wohnleitfaden für Costa Blanca Binnenküstenstadt.",
+    "heroIntro": "Los Belones ist eine charmante Binnenstadt, die das authentische Herz des Costa Blanca-Lebens darstellt. Strategisch zwischen der Küste und Binnenregionen positioniert, bietet diese etablierte Gemeinde die perfekte Balance zwischen Ruhe und Zugänglichkeit. Mit Immobilienpreisen 40% unter den Inselsmärkten und einer blühenden internationalen Gemeinde, wo Englisch weit verbreitet wird, zieht Los Belones Familien, Rentner und Immobilieninvestoren an, die echtes spanisches Küstenleben ohne Touristenmassen suchen. Die Stadt hat sich zu einem gastfreundlichen Ziel für Ausländer entwickelt, besonders für britische Expatriates und europäische Käufer, die Wert und Lebensqualität suchen. Im Gegensatz zu überladenen Küstenentwicklungen behält Los Belones seinen authentischen Charakter, während es alle modernen Annehmlichkeiten, ausgezeichnete Gesundheitseinrichtungen und Nähe zu Weltklasse-Stränden innerhalb von 20 Minuten bietet. Ob Sie einen permanenten Wohnsitz, ein Ferienhaus oder ein Anlageimmobiliensuchenhen, bietet Los Belones zwingende Vorteile in einer der begehrtesten Regionen Spaniens.",
+    "lifestyleSection": {
+      "intro": "Life in Los Belones revolves around a relaxed Mediterranean pace combined with modern conveniences. The established expat community has created a welcoming environment where English is widely spoken, easing the transition for international residents. Daily life includes visits to local markets and supermarkets like Mercadona and Consum for fresh produce, traditional bakeries for morning pastries, and local restaurants serving authentic Spanish cuisine alongside international options. The proximity to Blue Flag beaches means weekend activities often include swimming, water sports, and beachside dining. Golf enthusiasts enjoy several championship courses within short driving distance. Social life is vibrant, with numerous expat clubs, hobby groups, and community events fostering connections among residents. Restaurants range from casual tapas bars to fine dining establishments, many with terraces perfect for evening meals. The slower pace allows residents to genuinely relax and enjoy family time, outdoor pursuits, and the natural beauty surrounding the town. Cultural activities, shopping, and entertainment are easily accessible while maintaining the peaceful, secure atmosphere that attracted residents initially.\n\nLos Belones enjoys a Mediterranean climate with over 320 days of sunshine annually, making it an ideal destination for those seeking consistent, pleasant weather. Summer temperatures range from 28-32°C, while winters remain mild at 10-15°C, with frost being exceptionally rare. The area experiences minimal rainfall, concentrated mainly in autumn and spring months. The coastal location provides natural cooling breezes during summer, preventing extreme heat. Spring (March-May) and autumn (September-November) offer the most comfortable living conditions with warm days and cool evenings perfect for outdoor activities. Winter is ideal for retirees and those escaping harsh northern climates, while summer attracts beach enthusiasts. The stable climate supports outdoor lifestyle year-round, whether enjoying the nearby beaches, golf courses, or al fresco dining. This consistent weather pattern is one of Los Belones' greatest attractions for permanent residents and holiday homeowners alike.",
+      "highlights": [
+        "Exceptional value: 40% less expensive than island markets while offering superior quality of life",
+        "Established expat community: English widely spoken with cultural clubs and social networks already in place",
+        "Proximity to beaches: Blue Flag beaches just 20 minutes away for weekend recreation",
+        "Healthcare excellence: Regional hospital and private clinics with English-speaking doctors within 30 minutes",
+        "Investment potential: 8% annual growth with strong rental income opportunities and limited inventory",
+        "Mediterranean climate: 320+ days of sunshine with mild winters, perfect for year-round outdoor living"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Los Belones is a paradise for sports and leisure enthusiasts with multiple Blue Flag beaches accessible within 20 minutes, offering swimming, water sports, paddleboarding, and diving opportunities. Several championship-level golf courses operate nearby, attracting golfers from across Europe with pristine fairways and challenging layouts. Beyond water sports and golf, residents enjoy cycling, hiking through coastal and inland trails, tennis clubs, and beach volleyball. The Mediterranean location supports year-round outdoor activities, while the mild climate enables sports engagement throughout all seasons. Active lifestyle opportunities cater to competitive athletes and casual enthusiasts alike, making Los Belones ideal for those prioritizing health and outdoor recreation.",
+      "dining": "Los Belones offers diverse dining experiences, from traditional Spanish tapas bars and family restaurants to international cuisine. Local establishments serve authentic regional dishes using fresh local ingredients, while the menú del día offers excellent value at around €10-12 for a three-course meal.",
+      "shopping": "Shopping facilities in Los Belones cater to both everyday needs and lifestyle preferences. Major supermarket chains including Mercadona, Lidl, and Consum provide competitive pricing and extensive product ranges, stocking everything from Spanish specialties to international brands. Traditional local markets offer fresh produce, fish, and meats directly from producers, maintaining authentic Spanish shopping culture. For more extensive retail needs, larger shopping centers are within 20-30 minutes drive. The town's established expat community has created specialized shops catering to international tastes, making it easy to find familiar products from home. Shopping is convenient, affordable, and combines modern supermarket efficiency with charming traditional market experiences.",
+      "healthcare": "Healthcare in Los Belones meets high international standards with a regional hospital located within 30 minutes, ensuring emergency care and specialist services are readily accessible. Private clinics operate throughout the area, offering excellent facilities and shorter waiting times for consultations and treatments. One of the key advantages for expatriate residents is the availability of English-speaking doctors and medical staff, eliminating language barriers during healthcare consultations. The healthcare infrastructure combines Spanish efficiency with international service standards, making Los Belones an ideal location for families and retirees prioritizing health security. Private health insurance is affordable and widely available, often covering both private and public facilities.",
+      "transport": "Bus connections are available throughout Los Belones and surrounding areas, providing affordable public transportation for local travel. However, a personal car is recommended for maximum flexibility, enabling easy access to beaches, golf courses, restaurants, and neighboring towns. The inland location means driving is essential for truly experiencing the region's diverse attractions. Alicante-Elche Airport is approximately 60 km south, with flight times around 1 hour from major European cities including London. Valencia Airport lies 90 km to the north, offering additional international flight options and competitive fares. Los Belones benefits from excellent motorway connections via the AP-7 and N-332, enabling quick access to coastal towns, inland villages, and larger regional centers. Driving to Alicante takes 45 minutes, while the Costa Blanca coast is just 20-30 minutes away. Regional roads are well-maintained with clear signage. Local and regional bus services connect Los Belones to surrounding towns and coastal areas. Service frequency is reasonable for daily needs, though vehicles may not always depart on Spanish schedules. Buses provide affordable transportation but lack the convenience and flexibility of private vehicles."
+    },
+    "propertyMarketSection": "Los Belones' property market shows positive momentum with 8% year-on-year growth, indicating strong demand and investor confidence. The market remains substantially undervalued compared to coastal alternatives, offering genuine investment potential. Supply is limited with only selective properties available, creating competitive conditions favoring sellers while providing excellent value for discerning buyers.\n\nPopular property types include Villas dominate the Los Belones market, offering spacious family homes with private gardens, pools, and outdoor living spaces. Villa properties typically provide excellent rental potential and strong capital appreciation prospects..\n\nLos Belones represents exceptional value for property investors, with rental yields supported by consistent tourism demand (€800 for 7-night rentals) and strong long-term capital growth potential. The 40% price discount versus island markets provides attractive entry points. Limited inventory and growing international demand suggest continued appreciation. Properties generate rental income while maintaining appreciation potential, making Los Belones an intelligent investment choice.",
+    "whyLiveHereSection": [
+      "Exceptional value: 40% less expensive than island markets while offering superior quality of life",
+      "Established expat community: English widely spoken with cultural clubs and social networks already in place",
+      "Proximity to beaches: Blue Flag beaches just 20 minutes away for weekend recreation",
+      "Healthcare excellence: Regional hospital and private clinics with English-speaking doctors within 30 minutes",
+      "Investment potential: 8% annual growth with strong rental income opportunities and limited inventory",
+      "Mediterranean climate: 320+ days of sunshine with mild winters, perfect for year-round outdoor living"
+    ],
+    "faqs": [
+      {
+        "question": "Is Los Belones a good place to live?",
+        "answer": "Absolutely. Los Belones combines authentic Spanish living with modern amenities, excellent healthcare, and a welcoming international community. The town offers significantly better value than coastal alternatives while maintaining proximity to beaches, golf courses, and leisure facilities. The established expat community, English-speaking services, and Mediterranean climate make it ideal for families, retirees, and professionals seeking quality of life at reasonable costs."
+      },
+      {
+        "question": "Can foreigners buy property in Spain?",
+        "answer": "Yes, foreigners can purchase property in Spain without restrictions. Non-EU citizens need an NIE (Spanish tax identification number), and all buyers must follow standard legal procedures including property surveys, title verification, and notary registration. Professional legal advice is essential to navigate Spanish property law, though the process is straightforward and well-established for international buyers."
+      },
+      {
+        "question": "What are the costs of buying property in Spain?",
+        "answer": "Beyond the purchase price, expect additional costs: transfer tax (6-10%), notary fees (1-2%), property registration (0.5%), and legal fees (1-2%). Total acquisition costs typically add 8-15% to the purchase price. In Los Belones, villas at €355,000 would involve approximately €28,000-€53,000 in additional expenses. These are standard, transparent costs applied consistently throughout Spain."
+      },
+      {
+        "question": "Do I need a visa to buy property in Spain?",
+        "answer": "Purchasing property in Spain does not require a visa. However, your right to reside depends on your nationality and circumstances. EU/EEA citizens have automatic residency rights. Non-EU citizens may need appropriate visas for extended stays (such as retirement visas or investor visas). Property ownership and residency are separate legal matters; it's possible to own Spanish property while residing elsewhere."
+      },
+      {
+        "question": "What is the cost of living in Costa Blanca?",
+        "answer": "Costa Blanca offers excellent value with moderate living costs. Groceries are affordable, particularly when shopping at local markets and supermarket chains. Utilities (electricity, water, gas) average €100-150 monthly. Restaurants range from €8-12 for lunch menus to €40-60 for quality dinners. Healthcare and private education are competitively priced. Overall, a comfortable lifestyle costs 30-40% less than comparable UK locations, making Costa Blanca attractive for retirees and families."
+      },
+      {
+        "question": "Is Costa Blanca good for retirees?",
+        "answer": "Costa Blanca is excellent for retirees, offering healthcare excellence, affordable living costs, sunny climate, and established expat communities. Healthcare infrastructure rivals northern European standards with English-speaking doctors and modern facilities. The stable weather requires minimal heating and supports active outdoor lifestyles. Social opportunities through clubs and community groups prevent isolation. The combination of affordability, healthcare access, and leisure opportunities makes Costa Blanca one of Europe's premier retirement destinations."
+      },
+      {
+        "question": "How far is Costa Blanca from the UK?",
+        "answer": "Costa Blanca is approximately 1,000 miles from the UK, typically requiring 2-3 flight hours from London. Alicante Airport (60km from Los Belones) connects to London with multiple daily flights. Flight costs are affordable, especially with advance booking and budget carriers. The proximity to UK makes it convenient for maintaining family connections while enjoying Mediterranean living."
+      },
+      {
+        "question": "What is the weather like on Costa Blanca?",
+        "answer": "Costa Blanca enjoys a Mediterranean climate with over 320 days of annual sunshine. Summer temperatures range 28-32°C with low humidity thanks to coastal breezes. Winters are mild (10-15°C) without frost or snow. Rainfall is minimal, concentrated in autumn and spring. This consistent, pleasant weather supports year-round outdoor activities and minimizes extreme seasonal variations, making it ideal for those seeking stable, comfortable climates."
+      }
+    ],
+    "conclusion": "Ready to discover your perfect property in Los Belones? Our experienced team specializes in new build properties across this area and can guide you through every step. Whether you're seeking a permanent home, holiday retreat, or investment property, we'll help you find exactly what you're looking for. Book a free 30-minute consultation with our team—with over 12 years of experience selling new builds on the Costa Blanca, we know this market inside out.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "Los Belones represents exceptional value for property investors, with rental yields supported by consistent tourism demand (€800 for 7-night rentals) and strong long-term capital growth potential. The 40% price discount versus island markets provides attractive entry points. Limited inventory and growing international demand suggest continued appreciation. Properties generate rental income while maintaining appreciation potential, making Los Belones an intelligent investment choice.",
+      "highlights": [
+        "Strong holiday rental demand during peak season (May-October)",
+        "Lower entry prices than comparable markets with similar rental returns",
+        "Growing international demand driving steady price appreciation",
+        "Short-term holiday lets popular with European tourists"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Living costs in Los Belones are significantly lower than Northern Europe and very competitive within Spain. Coastal living here combines affordability with Mediterranean lifestyle.",
+      "items": [
+        {
+          "category": "Groceries (monthly, couple)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl, and local markets nearby"
+        },
+        {
+          "category": "Utilities (electricity, water, gas)",
+          "cost": "€100-160",
+          "notes": "Higher in summer with air conditioning"
+        },
+        {
+          "category": "Community fees",
+          "cost": "€50-120",
+          "notes": "Varies by development and included services"
+        },
+        {
+          "category": "IBI (Council tax)",
+          "cost": "€400-1,000/year",
+          "notes": "Annual property tax based on cadastral value"
+        },
+        {
+          "category": "Dining out (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día from €10; restaurants €15-30"
+        },
+        {
+          "category": "Internet & Phone",
+          "cost": "€35-50",
+          "notes": "Good broadband coverage; multiple providers"
+        },
+        {
+          "category": "Car expenses (fuel, insurance)",
+          "cost": "€150-250",
+          "notes": "Recommended for flexibility"
+        },
+        {
+          "category": "Private health insurance",
+          "cost": "€60-150",
+          "notes": "Comprehensive coverage; lower for younger residents"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Los Belones celebrates traditional Spanish fiestas and community events throughout the year, blending local traditions with the welcoming international community.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "August",
+          "description": "Annual patron saint festivities with parades, music, fireworks, and traditional celebrations bringing the whole community together"
+        },
+        {
+          "name": "Semana Santa (Easter Week)",
+          "month": "March/April",
+          "description": "Solemn Holy Week processions through the streets with traditional floats and centuries-old religious traditions"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "National holiday celebrations with local events, markets, and community gatherings"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "June",
+          "description": "Magical midsummer beach celebrations with bonfires, fireworks, and midnight swimming traditions along the coast"
+        },
+        {
+          "name": "Summer Beach Festival",
+          "month": "July",
+          "description": "Outdoor concerts, food stalls, and cultural events along the waterfront throughout the summer season"
+        },
+        {
+          "name": "Christmas Market & Three Kings",
+          "month": "December/January",
+          "description": "Festive season with market stalls, nativity scenes, and the spectacular Three Kings parade (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Families in Los Belones have access to quality education options in the surrounding area, with several international schools serving the expatriate community alongside excellent Spanish state schools.",
+      "schools": [
+        {
+          "name": "King's College Murcia",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "British curriculum school offering GCSE and A-Levels with strong extracurricular programmes"
+        },
+        {
+          "name": "El Limonar International School (Murcia)",
+          "type": "International (British)",
+          "distance": "25-45 min",
+          "description": "British curriculum primary and secondary school serving the international community"
+        },
+        {
+          "name": "Local Spanish Primary School",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Local state school providing Spanish curriculum education, excellent for language immersion and community integration"
+        },
+        {
+          "name": "Local Spanish Secondary School",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "State secondary school offering ESO and Bachillerato programmes with supportive learning environment"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Los Belones offers excellent outdoor activities year-round, from beach activities and water sports to golf, nature walks, and more.",
+      "activities": [
+        {
+          "name": "Beach & Swimming",
+          "type": "Beach",
+          "description": "Beautiful Mediterranean beaches nearby with crystal-clear waters, perfect for swimming, snorkelling, and sunbathing"
+        },
+        {
+          "name": "Water Sports",
+          "type": "Water Sports",
+          "description": "Paddleboarding, kayaking, windsurfing, and sailing available at nearby beaches and marinas"
+        },
+        {
+          "name": "Countryside Walking",
+          "type": "Hiking",
+          "description": "Walking trails through the surrounding countryside with views of orchards, mountains, and traditional villages"
+        },
+        {
+          "name": "Cycling Routes",
+          "type": "Cycling",
+          "description": "Road and mountain bike routes through the scenic countryside, suitable for all fitness levels"
+        },
+        {
+          "name": "Nearby Golf Courses",
+          "type": "Golf",
+          "description": "Several quality golf courses within easy driving distance offering year-round play in the Mediterranean sun"
+        },
+        {
+          "name": "Nature Reserves & Birdwatching",
+          "type": "Nature Reserve",
+          "description": "Protected natural areas nearby offering birdwatching, photography, and peaceful nature walks"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Los Belones has a thriving international community, with expatriates drawn by the Mediterranean lifestyle, affordable living costs, and welcoming atmosphere. The coastal location attracts a diverse mix of nationalities, particularly from Northern Europe. English is widely spoken in shops, restaurants, and social settings, making daily life comfortable for newcomers.",
+      "highlights": [
+        "Active international social scene with regular community events",
+        "English-speaking services available including medical and legal professionals",
+        "Regular community gatherings, clubs, and social activities",
+        "Welcoming atmosphere for newcomers with established expat networks",
+        "Mix of permanent residents and seasonal visitors creating a dynamic community",
+        "Strong British and Scandinavian presence alongside Dutch, Belgian, and German residents",
+        "Local Spanish community welcoming and inclusive toward international residents"
+      ],
+      "nationalities": [
+        "British",
+        "Scandinavian (Swedish, Norwegian, Danish)",
+        "Dutch",
+        "Belgian",
+        "German",
+        "Irish",
+        "Spanish"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "A Typical Day in Los Belones",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morning Coffee",
+          "description": "Start the day with fresh coffee on your terrace, enjoying the sea breeze and peaceful surroundings"
+        },
+        {
+          "time": "09:30",
+          "activity": "Beach Walk",
+          "description": "Morning stroll along the beach or promenade, breathing in the fresh Mediterranean air"
+        },
+        {
+          "time": "12:00",
+          "activity": "Fresh Market Shopping",
+          "description": "Pick up fresh bread, fruit, and local produce from the supermarket or weekly market"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spanish Lunch",
+          "description": "Enjoy a leisurely menú del día at a local restaurant—three courses with wine for around €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Rest during the warmest hours, then cool off in your private or communal pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Beach Time",
+          "description": "Head to the beach for an afternoon swim in the warm Mediterranean waters"
+        },
+        {
+          "time": "20:00",
+          "activity": "Evening Paseo",
+          "description": "Join the locals for the traditional evening walk through town, greeting neighbours and friends"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Dinner",
+          "description": "End the day with tapas and a glass of local wine at your favourite restaurant, dining al fresco under the stars"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.8!3d37.6167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Los Belones",
+    "description": "Los Belones is a coastal municipality in Murcia, Spain. Known for Mediterranean lifestyle, quality new build developments, and international community.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.6167",
+      "longitude": "-0.8"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Los Belones",
+      "addressRegion": "Murcia",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Murcia"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Los Belones a good place to live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Los Belones combines authentic Spanish living with modern amenities, excellent healthcare, and a welcoming international community. The town offers significantly better value than coastal alternatives while maintaining proximity to beaches, golf courses, and leisure facilities. The estab"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can foreigners buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, foreigners can purchase property in Spain without restrictions. Non-EU citizens need an NIE (Spanish tax identification number), and all buyers must follow standard legal procedures including property surveys, title verification, and notary registration. Professional legal advice is essential t"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the costs of buying property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond the purchase price, expect additional costs: transfer tax (6-10%), notary fees (1-2%), property registration (0.5%), and legal fees (1-2%). Total acquisition costs typically add 8-15% to the purchase price. In Los Belones, villas at €355,000 would involve approximately €28,000-€53,000 in addi"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a visa to buy property in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Purchasing property in Spain does not require a visa. However, your right to reside depends on your nationality and circumstances. EU/EEA citizens have automatic residency rights. Non-EU citizens may need appropriate visas for extended stays (such as retirement visas or investor visas). Property own"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of living in Costa Blanca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Costa Blanca offers excellent value with moderate living costs. Groceries are affordable, particularly when shopping at local markets and supermarket chains. Utilities (electricity, water, gas) average €100-150 monthly. Restaurants range from €8-12 for lunch menus to €40-60 for quality dinners. Heal"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,471 @@
+{
+  "slug": "los-montesinos",
+  "name": "Los Montesinos",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/los-montesinos-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Apartment",
+    "Townhouse",
+    "Villa",
+    "Bungalow"
+  ],
+  "priceRange": {
+    "min": 149000,
+    "max": 600000
+  },
+  "coordinates": {
+    "lat": 38.0247,
+    "lng": -0.7356
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Los Montesinos Tourism",
+      "url": "https://www.losmontesinos.es/",
+      "description": "Official Los Montesinos municipality"
+    },
+    "beaches": [
+      {
+        "name": "La Mata Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+La+Mata",
+        "description": "Longue plage naturelle près des lacs salés",
+        "distance": "8 km"
+      },
+      {
+        "name": "Guardamar Beaches",
+        "googleMaps": "https://maps.google.com/?q=Playa+Guardamar",
+        "description": "Plages naturelles bordées de forêts de pins",
+        "distance": "10 km"
+      },
+      {
+        "name": "Torrevieja Beaches",
+        "googleMaps": "https://maps.google.com/?q=Playa+del+Cura+Torrevieja",
+        "description": "Plages urbaines avec équipements complets",
+        "distance": "12 km"
+      }
+    ],
+    "nature": [
+      {
+        "name": "Parque Natural de las Lagunas de La Mata y Torrevieja",
+        "googleMaps": "https://maps.google.com/?q=Lagunas+Torrevieja",
+        "description": "Réserve naturelle avec lacs salés, flamants et sentiers de randonnée—à votre porte",
+        "distance": "2 km"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "8 km",
+      "driveTime": "10 minutes"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "42 km",
+      "driveTime": "32 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Los Montesinos vous offre un excellent accès au golf avec des parcours dans toutes les directions—idéal pour les golfeurs qui désirent la variété sans vivre sur un complexe de golf.",
+    "courses": [
+      {
+        "name": "La Finca Golf",
+        "distance": "6 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "url": "https://www.lafincagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Finca+Golf",
+        "description": "Parcours de championnat conçu par Pepe Gancedo."
+      },
+      {
+        "name": "Vistabella Golf",
+        "distance": "8 km",
+        "driveTime": "10 minutes",
+        "holes": 18,
+        "url": "https://www.vistabellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+        "description": "Parcours moderne avec équipements excellents."
+      },
+      {
+        "name": "La Marquesa Golf",
+        "distance": "5 km",
+        "driveTime": "7 minutes",
+        "holes": 18,
+        "url": "https://www.lamarquesagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Marquesa+Golf",
+        "description": "Parcours bien entretenu populaire auprès des résidents."
+      }
+    ]
+  },
+  "localMarket": {
+    "sundayMarket": {
+      "name": "Los Montesinos Sunday Market",
+      "location": "Town center",
+      "googleMaps": "https://maps.google.com/?q=Mercado+Los+Montesinos",
+      "hours": "Sundays 8:00 - 14:00",
+      "description": "Marché local avec produits frais et articles ménagers"
+    }
+  },
+  "content": {
+    "metaTitle": "Vivre à Los Montesinos | Lacs Salés & Valeur | Costa Blanca 2026",
+    "metaDescription": "Guide complet de Los Montesinos—surplombant les célèbres lacs salés, flamants à votre porte, excellentes villas à partir de €149k. 8 min de La Finca Golf, 10 min des plages.",
+    "quickAnswer": "Los Montesinos surplombe la célèbre réserve naturelle des lacs salés de Torrevieja avec des flamants visibles toute l'année. Les propriétés commencent à €149.000 pour les appartements, €280.000 pour les villas avec piscines. À seulement 8 minutes de La Finca Golf et 10 minutes des plages, elle offre la nature et la valeur à part égale.",
+    "heroIntro": "De certains points de vue à Los Montesinos, la vue est unique sur la Costa Blanca : l'étendue scintillante des lacs salés—l'un rose, l'un vert—s'étendant à l'horizon avec des flamants pataugeant dans les eaux peu profondes. Cette réserve naturelle protégée se trouve littéralement à la porte de la ville, un rappel quotidien que ce coin d'Espagne est quelque chose de spécial.\n\nLos Montesinos elle-même est une ville espagnole tranquille qui s'est développée pour accueillir les résidents internationaux en quête d'espace, de valeur et de contact avec la nature. Elle manque de l'agitation des stations côtières—et pour beaucoup, c'est précisément l'attrait. Ici, les matinées peuvent impliquer l'observation des flamants depuis votre terrasse, les après-midi sur l'un des parcours de golf à proximité, et les soirées les fenêtres ouvertes sur une brise maritime.\n\nPour les acheteurs qui privilégient la nature et la tranquillité ainsi qu'une valeur excellente, Los Montesinos offre une proposition distinctive.",
+    "lifestyleSection": {
+      "intro": "La vie à Los Montesinos est plus tranquille que sur la côte—délibérément. La réserve naturelle des lacs salés offre des sentiers de randonnée et de vélo à travers un paysage protégé où les flamants, les hérons et autres oiseaux sont des compagnons réguliers. La ville elle-même propose l'essentiel sans commercialisme touristique. Les plages et le golf sont à quelques minutes quand vous le souhaitez ; la paix et la nature sont des constantes.\n\nLa communauté internationale est présente mais plus petite que dans les villes plus grandes. L'intégration à la vie espagnole est plus naturelle ici. Ceux qui cherchent la vie nocturne et le shopping facile devraient chercher ailleurs ; ceux qui cherchent l'espace, la nature et la valeur trouvent exactement ce qu'ils cherchent.",
+      "highlights": [
+        "Réserve naturelle des lacs salés à votre porte—flamants toute l'année",
+        "Valeur exceptionnelle—villas modernes à partir de €280.000",
+        "La Finca Golf à seulement 8 minutes",
+        "Plage de La Mata à 10 minutes",
+        "Hôpital de Torrevieja à 10 minutes",
+        "Cadre rural paisible avec vues spectaculaires",
+        "Environnement naturel protégé—rare sur la Costa Blanca",
+        "Densité touristique inférieure—véritablement tranquille"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "La longue plage naturelle de La Mata (près des lacs salés) est à seulement 8 km (10 minutes). Les plages de Guardamar bordées de pins sont à 10 km. Les plages urbaines de Torrevieja sont à 12 km. Accès facile aux plages sans primes immobilières côtières.",
+      "dining": "La ville compte des restaurants et bars espagnols traditionnels. Pour plus de variété, Torrevieja (8 km) offre des options étendues. Le lieu convient à ceux qui sont à l'aise de cuisiner à la maison avec des sorties occasionnelles au restaurant plutôt que de manger dehors quotidiennement.",
+      "shopping": "Los Montesinos dispose de magasins essentiels et de supermarchés pour les besoins quotidiens. Le marché du dimanche ajoute des produits locaux. Pour les achats importants, Habaneras à Torrevieja (8 km) ou La Zenia Boulevard (18 km) sont accessibles.",
+      "healthcare": "L'Hôpital Universitario de Torrevieja est à seulement 8 km (10 minutes)—accès excellent pour une ville de cette taille. Centre médical local et pharmacie en ville.",
+      "transport": "L'aéroport d'Alicante-Elche est à 42 km (32 minutes via AP-7). Bonne localisation centrale pour explorer la région. Une voiture est essentielle."
+    },
+    "neighborhoods": [
+      {
+        "name": "Town Center",
+        "description": "Centre-ville espagnol traditionnel. Magasins et restaurants accessibles à pied. Prix inférieurs, caractère local authentique. Maisons de ville et appartements."
+      },
+      {
+        "name": "Urbanizations",
+        "description": "Zones résidentielles modernes avec villas et bungalows. Piscines privées, terrains plus grands. Résidents internationaux. Vues sur les lacs salés à certains endroits."
+      },
+      {
+        "name": "Laguna Views",
+        "description": "Propriétés avec vue sur les lacs salés. Prime pour la région mais vues naturelles spectaculaires. Vaut le coup pour les amoureux de la nature."
+      }
+    ],
+    "propertyMarketSection": "Los Montesinos vous offre une valeur exceptionnelle pour ceux qui recherchent l'espace et la nature. Les appartements commencent à environ €149.000-220.000, les maisons de ville de €180.000-300.000 et les villas de €280.000-600.000. Les propriétés avec vue sur les lacs salés commandent des primes mais offrent des vues naturelles uniques.\n\n**Développement Vedette : Residencial Laguna Azul** – Villas 3 chambres à partir de €485.000 avec piscines privées, option sous-construction et vues. 160m² d'espace de vie sur 400m² de terrain.\n\nLe marché attire les amoureux de la nature, les acheteurs soucieux de la valeur et ceux qui recherchent la tranquillité. Le potentiel locatif est limité par rapport aux stations côtières—c'est avant tout un choix de mode de vie pour les résidents.",
+    "whyLiveHereSection": [
+      "Réserve naturelle des lacs salés à votre porte",
+      "Flamants et faune visibles toute l'année",
+      "Valeur exceptionnelle—villas modernes à partir de €280.000",
+      "La Finca Golf à seulement 8 minutes",
+      "Plages à La Mata à 10 minutes",
+      "Hôpital de Torrevieja à 10 minutes",
+      "Vie paisible et de faible densité",
+      "Environnement naturel protégé"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Residencial Laguna Azul Villa",
+        "reference": "N6403",
+        "price": 485000,
+        "type": "Villa",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "plotArea": 400,
+        "features": [
+          "Private Pool",
+          "Underbuild",
+          "Views"
+        ],
+        "description": "Villa moderne 3 chambres avec piscine, option sous-construction et vues naturelles. 160m² d'espace de vie."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Qu'est-ce qui rend Los Montesinos spéciale ?",
+        "answer": "Los Montesinos surplombe la réserve naturelle des lacs salés de Torrevieja—une zone protégée avec flamants, hérons et autres faune. Cet environnement naturel se trouve littéralement à la porte de la ville, ce qui le rend unique sur la Costa Blanca. Les lacs salés rose et vert créent des vues spectaculaires."
+      },
+      {
+        "question": "Peut-on voir des flamants à Los Montesinos ?",
+        "answer": "Oui, les flamants habitent les lacs salés toute l'année, bien que les chiffres varient selon les saisons. Depuis les propriétés avec vue sur le lagon ou les sentiers de la réserve naturelle, les flamants sont régulièrement visibles. C'est l'une des attractions uniques de la ville."
+      },
+      {
+        "question": "À quelle distance Los Montesinos se trouve-t-elle de la plage ?",
+        "answer": "La plage de La Mata est à 8 km (10 minutes). Les plages de Guardamar sont à 10 km. Les plages de Torrevieja sont à 12 km. Accès facile aux plages sans payer les primes immobilières côtières."
+      },
+      {
+        "question": "Quels sont les prix des propriétés à Los Montesinos ?",
+        "answer": "Appartements à partir de €149.000, maisons de ville à partir de €180.000, villas à partir de €280.000. Les propriétés avec vue sur les lacs salés commandent des primes. Valeur exceptionnelle pour une vie orientée vers la nature."
+      },
+      {
+        "question": "Los Montesinos est-elle bonne pour le golf ?",
+        "answer": "Accès excellent. La Finca Golf est à 8 minutes, Vistabella à 10 minutes, La Marquesa à 7 minutes. La localisation centrale offre la variété sans vivre sur un complexe de golf."
+      },
+      {
+        "question": "Los Montesinos est-elle tranquille ?",
+        "answer": "Oui, délibérément. C'est une petite ville espagnole sans développement touristique. Parfait pour ceux qui recherchent la tranquillité et la nature. Pas idéal pour ceux qui veulent la vie nocturne ou des achats étendus."
+      },
+      {
+        "question": "L'anglais est-il largement parlé à Los Montesinos ?",
+        "answer": "Modérément. Il existe une communauté internationale mais plus petite que dans les villes plus grandes. Un peu d'espagnol est utile. Les amoureux de la nature et les acheteurs soucieux de la valeur qui s'installent ici ont tendance à mieux s'intégrer."
+      },
+      {
+        "question": "Qu'est-ce que la réserve naturelle des lacs salés ?",
+        "answer": "Le Parque Natural de las Lagunas de La Mata y Torrevieja est une zone protégée composée de deux lacs salés—l'un rose (Laguna Rosa), l'un vert (Laguna de Torrevieja). Les flamants, hérons et autres oiseaux habitent la région. Les sentiers de randonnée et de vélo offrent un accès."
+      },
+      {
+        "question": "Los Montesinos convient-elle à une habitation permanente ?",
+        "answer": "Oui, pour ceux qui valorisent la nature et la tranquillité par rapport à la commodité. Les services toute l'année sont disponibles. Les lacs salés et l'atmosphère paisible attirent les résidents permanents en quête de qualité de vie plutôt que de commodités touristiques."
+      },
+      {
+        "question": "Comment Los Montesinos se compare-t-elle aux autres villes de l'intérieur ?",
+        "answer": "Unique en raison de la réserve naturelle des lacs salés—aucune autre ville de l'intérieur n'offre cela. Des prix légèrement plus élevés que certaines villes purement agricoles, mais l'environnement naturel justifie la prime pour les amoureux de la nature."
+      }
+    ],
+    "conclusion": "Los Montesinos offre quelque chose de vraiment différent : une ville espagnole tranquille avec une réserve naturelle protégée à sa porte. Les flamants, les vues sur les lacs salés, l'atmosphère paisible—ce ne sont pas des gimmicks marketing mais la réalité quotidienne. Pour les acheteurs privilégiant la nature et la tranquillité ainsi qu'une valeur exceptionnelle, Los Montesinos mérite d'être considérée.\n\nPrêt à explorer les propriétés à Los Montesinos ? Notre équipe comprend l'attrait de cette ville orientée vers la nature et peut vous associer à des propriétés qui capturent son caractère unique—des villas avec vue sur le lagon aux maisons pratiques du centre-ville.",
+    "investmentAnalysis": {
+      "rentalYield": "3-4% sur propriétés standards, 4-5% sur villas avec vue sur le lagon",
+      "annualAppreciation": "1-2% historiquement, conservateur en raison du positionnement naturel (non-resort)",
+      "overview": "Le marché locatif de Los Montesinos est limité—le lieu attire plus les résidents orientés vers la nature que les visiteurs en vacances. La valeur de l'investissement provient d'une valeur immobilière exceptionnelle et d'une qualité de vie plutôt que du rendement locatif.",
+      "highlights": [
+        "Valeur immobilière exceptionnelle—excellent prix d'entrée",
+        "Les locations à long terme aux amoureux de la nature expats plus fiables que les locations de vacances",
+        "Les propriétés avec vue sur le lagon commandent des primes modestes",
+        "L'offre limitée maintient les prix stables",
+        "La zone naturelle protégée assure la stabilité environnementale"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Le coût de la vie à Los Montesinos est parmi les plus bas sur la Costa Blanca South. Les prix reflètent la localisation à l'intérieur des terres, le caractère de petite ville et le positionnement naturel (non-resort).",
+      "items": [
+        {
+          "category": "Location (villa 2 chambres)",
+          "cost": "€550-800",
+          "notes": "Prime vue lagon ; propriétés standards beaucoup moins chères"
+        },
+        {
+          "category": "Services (mensuel)",
+          "cost": "€70-100",
+          "notes": "Climat doux, les piscines augmentent la consommation d'été"
+        },
+        {
+          "category": "Épiceries (hebdomadaire)",
+          "cost": "€45-65",
+          "notes": "Prix du supermarché local, inflation touristique minimale"
+        },
+        {
+          "category": "Repas au restaurant (3 plats)",
+          "cost": "€10-16",
+          "notes": "Prix du village espagnol, établissements locaux authentiques"
+        },
+        {
+          "category": "Café café",
+          "cost": "€0.95-1.20",
+          "notes": "Prix des cafés locaux"
+        },
+        {
+          "category": "Soins de santé (mensuel)",
+          "cost": "€50-80",
+          "notes": "Soins de santé publics disponibles ; assurance privée facultative"
+        },
+        {
+          "category": "Taxes immobilières (annuel)",
+          "cost": "€150-250",
+          "notes": "IBI pour propriété intérieure typique"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Le calendrier des événements de Los Montesinos se concentre sur les célébrations espagnoles traditionnelles et les activités orientées vers la nature. Le marché du dimanche est un rassemblement communautaire important.",
+      "events": [
+        {
+          "name": "Los Montesinos Sunday Market",
+          "month": "Year-round, weekly",
+          "description": "Marché espagnol traditionnel au centre-ville avec produits frais, articles ménagers et rassemblement communautaire"
+        },
+        {
+          "name": "Fiestas Patronales",
+          "month": "September",
+          "description": "Fête du saint patron de la ville avec défilés, musique en direct, étals de nourriture et festivités traditionnelles"
+        },
+        {
+          "name": "Birdwatching tours at salt lakes",
+          "month": "April & October",
+          "description": "Observation naturaliste organisée pendant les saisons de migration printanière et automnale"
+        },
+        {
+          "name": "Semana Santa (Holy Week)",
+          "month": "March/April",
+          "description": "Processions religieuses espagnoles traditionnelles à travers le centre-ville"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Los Montesinos dispose d'écoles publiques espagnoles appropriées pour les familles s'intégrant à la vie espagnole. Les options internationales nécessitent des déplacements vers les villes proches.",
+      "schools": [
+        {
+          "name": "Colegio Público Los Montesinos",
+          "type": "Public Primary School",
+          "distance": "Walking distance",
+          "description": "École publique espagnole avec programme d'éducation bilingue"
+        },
+        {
+          "name": "IES Las Villas",
+          "type": "Public Secondary School",
+          "distance": "5 km",
+          "description": "Collège servant la région locale"
+        },
+        {
+          "name": "International Schools (Torrevieja)",
+          "type": "International Education",
+          "distance": "15 km",
+          "description": "Écoles de curriculum britannique et autres à proximité de Torrevieja"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Los Montesinos est centrée sur la nature—les lacs salés sont l'attraction principale, avec la randonnée, l'observation des oiseaux et l'observation naturelle au cœur des activités lifestyle.",
+      "activities": [
+        {
+          "name": "Walking in Parque Natural de las Lagunas",
+          "type": "Nature walking",
+          "description": "Sentiers balisés à travers les zones humides protégées avec flamants, hérons et oiseaux divers"
+        },
+        {
+          "name": "Birdwatching year-round",
+          "type": "Nature observation",
+          "description": "Oiseaux résidents et migrateurs visibles depuis les propriétés avec vue lagon ou zones d'observation désignées"
+        },
+        {
+          "name": "Photography of wildlife",
+          "type": "Nature recreation",
+          "description": "Opportunités photographiques spectaculaires, particulièrement pendant les saisons de migration et les saisons des flamants"
+        },
+        {
+          "name": "Cycling through countryside",
+          "type": "Active recreation",
+          "description": "Terrain plat idéal pour le cyclisme de loisir à travers les zones agricoles et naturelles"
+        },
+        {
+          "name": "Beach days at La Mata",
+          "type": "Water recreation",
+          "description": "Plage naturelle à 10 km, bordée de forêt de pins—accessible pour des visites régulières"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Los Montesinos a une petite communauté expatriée orientée vers la nature. L'intégration concerne davantage l'appréciation partagée de la nature et du mode de vie que l'infrastructure expatriée organisée.",
+      "highlights": [
+        "Petite communauté internationale orientée vers la nature",
+        "Opportunité d'intégration espagnole authentique",
+        "L'appréciation partagée de l'environnement naturel crée des liens",
+        "Moins structuré que les grandes communautés expatriées",
+        "Attire les chercheurs de qualité de vie plutôt que les touristes en mode de vie"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Belgian",
+        "Scandinavian"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Une Semaine Typique à Los Montesinos",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Early morning walk at laguna",
+          "description": "Commencez la journée en observant les oiseaux au lagon, particulièrement flamants et hérons"
+        },
+        {
+          "time": "10:00",
+          "activity": "Local café",
+          "description": "Café au café local avec voisins locaux, lecture des actualités espagnoles ou internationales"
+        },
+        {
+          "time": "12:00",
+          "activity": "Sunday market (weekly)",
+          "description": "Achetez au marché traditionnel pour les produits frais locaux et articles ménagers"
+        },
+        {
+          "time": "13:00",
+          "activity": "Lunch",
+          "description": "Repas principal à la maison ou au restaurant espagnol local"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta or pool time",
+          "description": "Repos de l'après-midi ou baignade dans la piscine de la villa"
+        },
+        {
+          "time": "17:00",
+          "activity": "Golf or nature activity",
+          "description": "Partie à La Finca Golf (8 min) ou observation natura supplémentaire"
+        },
+        {
+          "time": "20:30",
+          "activity": "Dinner and evening",
+          "description": "Dîner à la maison ou au restaurant local, activités soirée tranquille"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7356!3d38.0247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sLos%20Montesinos!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Los Montesinos",
+    "description": "Los Montesinos est une ville espagnole tranquille surplombant la réserve naturelle des lacs salés de Torrevieja dans la Costa Blanca Sud, offrant des propriétés de valeur exceptionnelle et un environnement naturel unique avec des flamants visibles toute l'année.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.0247",
+      "longitude": "-0.7356"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Los Montesinos",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "containedInPlace": {
+      "@type": "Place",
+      "name": "Costa Blanca South"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qu'est-ce qui rend Los Montesinos spéciale ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los Montesinos surplombe la réserve naturelle des lacs salés de Torrevieja avec flamants, hérons et faune protégée. Les lacs rose et vert salés créent des vues spectaculaires."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Peut-on voir des flamants à Los Montesinos ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, les flamants habitent les lacs salés toute l'année. Depuis les propriétés avec vue lagon ou sentiers de réserve naturelle, les flamants sont régulièrement visibles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quels sont les prix des propriétés à Los Montesinos ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Appartements à partir de €149.000, maisons de ville à partir de €180.000, villas à partir de €280.000. Valeur exceptionnelle pour une vie orientée vers la nature."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "À quelle distance Los Montesinos se trouve-t-elle de la plage ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La plage de La Mata est à 8 km (10 minutes). Les plages de Guardamar sont à 10 km. Accès facile sans primes côtières."
+        }
+      }
+    ]
+  }
+}

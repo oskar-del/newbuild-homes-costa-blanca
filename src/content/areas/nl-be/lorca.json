@@ -1,0 +1,151 @@
+{
+  "slug": "lorca",
+  "name": "Lorca",
+  "region": "Murcia",
+  "heroImage": "/images/areas/lorca-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 3,
+  "propertyTypes": ["Villa"],
+  "priceRange": {"min": 375000, "max": 422000},
+  "externalLinks": {
+    "tourism": {"name": "Lorca Toerisme", "url": "https://www.google.com/search?q=Lorca%20Spain%20official%20website", "description": "Ontdek meer over Lorca"},
+    "airport": {"name": "Luchthaven Murcia-Corvera", "googleMaps": "https://maps.google.com/?q=Murcia+Airport", "url": "https://www.aena.es", "distance": "75 km", "driveTime": "50 min"},
+    "healthcare": {"name": "Hospital Rafael Méndez", "googleMaps": "https://maps.google.com/?q=Hospital%20Rafael%20M%C3%A9ndez", "distance": "3 km"}
+  },
+  "content": {
+    "metaTitle": "Leven in Lorca, Costa Blanca: Volledige Gids en Nieuwe Wille",
+    "metaDescription": "Ontdek Lorca op Costa Blanca. 3 nieuwe villa's €375k-€422k. Klimaat, levensstijl, voorzieningen en investeringsgids voor expatriaten.",
+    "heroIntro": "Lorca is een charmant binnenlands stadje in de regio Murcia in het zuidoosten van Spanje, strategisch gepositioneerd tussen de levendige kust en het bergachtige interieur. Slechts 35 kilometer van de Middellandse Zeekust en slechts 40 minuten van het vliegveld Alicante, biedt Lorca de perfecte balans tussen kustvergelijkheid en authentiek Spaans dorpsleven. Dit historische stadje heeft aanzienlijke modernisering ondergaan terwijl het zijn traditionele karakter behield, wat het tot een steeds populairder bestemmingsgebied voor internationale onroerendgoedkopers maakt die waarde en levenskwaliteit zoeken.\n\nDe stad is beroemd om zijn barokke architectuur, waaronder het indrukwekkende Lorca-kasteel op de heuvelzijde, en zijn rijke erfgoed dat teruggaat tot maurische tijden. In de afgelopen jaren is Lorca een verborgen parel op Costa Blanca geworden, aangetrokken door gezinnen, gepensioneerden en investeerders die zijn authentieke Spaanse sfeer, uitstekend klimaat en betaalbare onroerendgoedprijzen in vergelijking met kustopties waarderen. Het omliggende platteland bevat prachtig landschap dat perfect is voor buitenactiviteitenliefhebbers, terwijl moderne infrastructuur en diensten garanderen dat alle hedendaagse voorzieningen gemakkelijk beschikbaar zijn.\n\nMet opkomende luxe villa-ontwikkelingen in de omliggende urbanisaties, vertegenwoordigt Lorca een uitstekende investeringsmogelijkheid voor degenen die op zoek zijn naar Spaans onroerend goed met sterke verhuurpotentieel en waarderingsprospectiva. De combinatie van authentieke cultuur, mediterraan klimaat, moderne voorzieningen en concurrerende prijzen maakt Lorca een steeds aantrekkelijker keuze voor Europese onroerendgoedkopers.",
+    "lifestyleSection": {
+      "intro": "Lorca biedt een authentieke Spaanse levensstijl weg van de drukte van drukke toeristische oorden. Het stadscentrum behoudt traditionele pleinen, lokale tapasbarren en markten waar het Spaanse leven natuurlijk ontvouwt. De expatgemeenschap in Lorca groeit, maar blijft beter geïntegreerd en minder geïsoleerd dan in kustgebieden, wat kansen schept voor authentieke culturele uitwisseling. Inwoners genieten van ontspannen cafécultuur, wekelijkse markten en lokale festivals het hele jaar door, inclusief de beroemde paasvakantieprocessies die bezoekers uit heel Spanje aantrekken.\n\nHet dagelijks leven in Lorca wordt gekenmerkt door een ontspannen mediterraan tempo met uitstekende levenskosten in vergelijking met Noord-Europa of kust-Spanje. Het stadscentrum is zeer voetgängersvriendelijk, met essentiële diensten binnen gemakkelijke bereik, terwijl moderne winkelcentra en supermarkten hedendaagse gemakken bieden. De nabijheid van zowel bergen als stranden betekent dat inwoners gemakkelijk natuurlijke attracties in het weekend kunnen verkennen. De gemeenschap is gastvrij voor nieuwkomers, groeiend aantal Europese emigranten vestigt zich in het gebied, creëerend informele netwerken en ondersteuningstelsels terwijl het authentieke lokale karakter behouden blijft dat Lorca bijzonder maakt.\n\nLorca geniet van een mediterraan klimaat met warme, zonnige dagen en zachte winters typisch voor de Costa Blanca-regio. Zomertemperaturen gemiddeld 28-32°C (82-90°F) met zeer weinig neerslag, terwijl winters mild zijn met temperaturen rond 10-14°C (50-57°F). Het gebied ontvangt ongeveer 300 zonnedagen per jaar, wat het ideaal maakt voor buitenactiviteiten en buitenleven. Neerslag concentreert zich in herfst en lente, met zomermaanden bijna volledig droog. Dit voorspelbare aangename klimaat stelt inwoners in staat het hele jaar door buiten te genieten, van strandbezoeken tot wandelingen in nabijgelegen bergen.",
+      "highlights": [
+        "Uitstekende waarde voor geld in vergelijking met kusteigendommen Costa Blanca met prijsbesparing 20-30%",
+        "Authentieke Spaanse levensstijl met echte lokale cultuur, markten en tradities niet overschaduwd door toerisme",
+        "Perfect klimaat het hele jaar door met 300+ zonnedagen, ideaal voor buitenleven en activiteiten",
+        "Handig gelegen met stranden 35km weg, bergen in de buurt en luchthaven Alicante 80km",
+        "Groeiende expatgemeenschap die ondersteuningsnetwerken biedt met behoud van authentiek Spaans karakter en betaalbare kosten",
+        "Sterk verhuurpotentieel voor vakantiewoningen en langetermijninvestering met concurrerend rendement"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Lorca en omliggende gebieden bieden uitstekende buitenrecreatiemogelijkheden. Verschillende golfbanen bevinden zich binnen 30 minuten, waaronder Campo de Golf de Lorca en Vista Hermosa Golf Club. Stranden zijn toegankelijk binnen 35 kilometer op Playa Grande en andere Middellandse Zeebaaien. De sierra Espuña-bergen bieden wandelen, wandelen en bergtochten. Tennisclubs, zwembaden en fitnescentra zijn beschikbaar in de stad. Watersporten zijn gemakkelijk toegankelijk aan de kust.",
+      "dining": "De restaurantscène in Lorca varieert van traditionele Spaanse restaurants met authentieke regionale keuken tot moderne cafés en informele eateries. De stad is beroemd om lokale specialiteiten inclusief migas (broodschotel) en regionale groenten. Talrijke tapasbarren liggen langs de centrale straten, biedend traditionele Spaanse dranken en appetizers. Internationale restaurants zijn gaan verschijnen, bedienend de groeiende expatgemeenschap terwijl ze authentieke lokale smaken handhaven. Prijzen zijn aanzienlijk meer betaalbaar dan kusttoeristen.",
+      "shopping": "Lorca biedt een mix van traditioneel winkelen en modern retail. Het stadscentrum bevat lokale markten, familiewaakzame winkels en traditionele Spaanse winkels. Centro Comercial Lorca biedt moderne winkeltoestellen met supermarkten, kledingwinkels en dagelijke benodigdheden. Grote hypermarkten zoals Carrefour en Alcampo liggen in de buurt. Wekelijkse markten in het stadscentrum bieden verse producten, lokale goederen en authentieke Spaanse winkelervaring.",
+      "healthcare": "Gezondheidswerk in Lorca wordt goed ondersteund door Hospital Vega Media dat uitgebreide medische diensten levert. Particuliere zorg is ook beschikbaar voor degenen die alternatieve opties zoeken. De stad heeft talrijke apotheken, tandartsklineken en huisartsen in de hele gemeenschap. Voor gespecialiseerde behandeling zijn grotere ziekenhuizen in de stad Murcia (30km) beschikbaar. EU-burgers hebben toegang tot openbare zorg in Spanje onder onderlinge overeenkomsten.",
+      "transport": "Luchthaven Alicante-Elche is ongeveer 80 kilometer weg (50 minuten rijden), biedend uitgebreide internationale verbindingen en het belangrijkste toegangspunt voor de meeste inwoners. Internationaal vliegveld Murcia (San Javier) is 60 kilometer weg (45 minuten). Beide luchthavens hebben autoverhuurfaciliteiten en zijn goed verbonden via snelweg naar Lorca. Lorca is goed verbonden via autoweg A-7, die snelle toegang biedt tot zowel Alicante als Murcia. Het stadscentrum is gemakkelijk met de auto te navigeren met volledige parkeerplaatsen. Wegverbindingen naar de kust zijn uitstekend, met ritjes naar stranden in ongeveer 35-40 minuten. Binnenlandse wegen zijn modern en goed onderhouden. Rijden is de belangrijkste vervoersmethode voor de meeste inwoners. Diensten voor openbaar vervoer verbinden Lorca met omliggende steden en de kust, hoewel diensten minder regelmatig zijn dan in grotere steden. Lokale bussen werken in het stadscentrum. Bussen op lange afstand verbinden Alicante, Murcia en andere provinciale steden. Voor degenen die liever niet rijden, zijn taxi's beschikbaar en voordelig geprijsd. De meeste inwoners vertrouwen op persoonlijke voertuigen voor dagelijks vervoer."
+    },
+    "propertyMarketSection": "De vastgoedmarkt van Lorca ondergaat groei, aangezien doordachte investeerders de waardestellingsstelling van deze authentieke Spaanse stad erkennen. De markt blijft relatief stabiel met voortdurende waardering, in het bijzonder voor nieuwe ontwikkelingen in moderne urbanisaties. Prijzen zijn aanzienlijk lager dan kustopties terwijl ze vergelijkbare klimaat-, gebruikservaring en levensstijlvoordelen bieden. De markt trekt investeerders aan die huuropbrengsten zoeken, eigenheimkoper die waarde zoeken en gepensioneerden die betaalbare kwaliteit leven zoeken.\n\nPopulaire soorten vastgoed zijn Villa.\n\nNieuwe villaotwikkelingen in Lorca bieden uitstekend investeringspotentieel met sterke korte termijn verhuurvraag van toeristen op zoek naar authentieke Spaanse ervaringen weg van drukke vakantieplaatsen. De prijs-naar-waarde verhouding is aantrekkelijk vergeleken met kusttoestellen, met potentieel voor kapitaalwaardering naarmate het gebied zich ontwikkelt. Huuropbrengsten zijn concurrerend, met veel eigendommen bereikt 4-6% jaarlijks rendement door vakantieverhuuring. Langetermijnwaardering wordt verwacht naarmate de infrastructuur verbetert en het gebied beter bekend wordt bij internationale kopers. Eigendommen trekken zowel eigenheimkopers als pure investeringsportefeuilles aan.",
+    "whyLiveHereSection": [
+      "Uitstekende waarde voor geld in vergelijking met kusteigendommen Costa Blanca met prijsbesparing 20-30%",
+      "Authentieke Spaanse levensstijl met echte lokale cultuur, markten en tradities niet overschaduwd door toerisme",
+      "Perfect klimaat het hele jaar door met 300+ zonnedagen, ideaal voor buitenleven en activiteiten",
+      "Handig gelegen met stranden 35km weg, bergen in de buurt en luchthaven Alicante 80km",
+      "Groeiende expatgemeenschap die ondersteuningsnetwerken biedt met behoud van authentiek Spaans karakter en betaalbare kosten",
+      "Sterk verhuurpotentieel voor vakantiewoningen en langetermijninvestering met concurrerend rendement"
+    ],
+    "faqs": [
+      {"question": "Hoe ver is Lorca van het strand?", "answer": "Lorca is ongeveer 35 kilometer van de Middellandse Zeekust, wat ongeveer 35-40 minuten rijden is naar populaire stranden zoals Playa Grande. Bewoners kunnen gemakkelijk toegang krijgen tot kustactiviteiten terwijl je geniet van de voordelen van binnenlandse woning."},
+      {"question": "Is Lorca een goed beleggingsoord voor verhuurwoningen?", "answer": "Ja, Lorca biedt sterk verhuurinvesteringspotentieel. Nieuwe villaotwikkelingen trekken toeristen aan op zoek naar authentieke Spaanse ervaringen weg van drukke vakantieplaatsen. Mogelijke huuropbrengsten variëren van 4-6% per jaar, met goede langetermijnwaarderingsprospectiva naarmate het gebied internationale erkenning krijgt."},
+      {"question": "Hoe is de expatgemeenschap in Lorca?", "answer": "De expatgemeenschap in Lorca groeit, maar blijft goed geïntegreerd met lokale Spaanse cultuur, in tegenstelling tot sommige verzadigde kustgebieden. Je vindt gevestigde netwerken van Europese inwoners terwijl je nog steeds authentiek Spaans leven ervaart. De gemeenschap bestaat meestal uit ernstige vastgoedinvesteerders en levenskwaliteitszoekers in plaats van puur toerisme-georiënteerde inwoners."},
+      {"question": "Kan ik verblijfsstatus in Spanje verkrijgen als vastgoodeigenaar?", "answer": "Alleen vastgoedbeziit verleent geen verblijfsstatus, maar Spanje biedt verschillende verblijfsopties voor vastgoedeigenaren, waaronder Non-Lucrative visum voor gepensioneerden met voldoende passief inkomen, Digital Nomad Visa en investeringsgebaseerde verblijfsprogramma's. Raadpleeg een Spaanse juridisch adviseur voor opties die bij uw omstandigheden passen."},
+      {"question": "Wat zijn de levenskosten in Lorca?", "answer": "Lorca heeft aanzienlijk lagere levenskosten in vergelijking met Noord-Europa en kust-Spanje. Maandelijkse uitgaven voor een paar variëren meestal van €1200-€1800, inclusief nutsvoorzieningen, boodschappen, vervoer en entertainment. Zorg via het Spaanse systeem is betaalbaar, en onroerende goedbelastingen zijn redelijk, wat het ideaal maakt voor gepensioneerden en degenen die waarde zoeken."}
+    ],
+    "conclusion": "Bent u klaar om uw perfecte onroerendgoed in Lorca te ontdekken? Ons ervaren team specialiseert zich in nieuwbouw in dit gebied en kan je door elke stap begeleiden. Of je nu een permanent onderkomen, vakantieverblijf of investeringspand zoekt, helpen we je exact te vinden wat je zoekt. Boek een gratis 30-minuten consultatie bij ons team — met meer dan 12 jaren ervaring in de verkoop van nieuwbouw aan de Costa Blanca, kennen we deze markt goed.",
+    "investmentAnalysis": {
+      "rentalYield": "4-6%",
+      "annualAppreciation": "4-6%",
+      "overview": "Nieuwe villaotwikkelingen in Lorca bieden uitstekend investeringspotentieel met sterke korte termijn verhuurvraag van toeristen op zoek naar authentieke Spaanse ervaringen weg van drukke vakantieplaatsen. De prijs-naar-waarde verhouding is aantrekkelijk vergeleken met kusttoestellen, met potentieel voor kapitaalwaardering naarmate het gebied zich ontwikkelt. Huuropbrengsten zijn concurrerend, met veel eigendommen bereikt 4-6% jaarlijks rendement door vakantieverhuuring. Langetermijnwaardering wordt verwacht naarmate de infrastructuur verbetert en het gebied beter bekend wordt bij internationale kopers. Eigendommen trekken zowel eigenheimkopers als pure investeringsportefeuilles aan.",
+      "highlights": ["Lagere instapprijs dan vergelijkbare markten met vergelijkbare huuropbrengsten", "Groeiende internationale vraag die stabiele prijsstijging aandrijft", "Langetermijn huurbehoefte van groeiende expatgemeenschap"]
+    },
+    "costOfLiving": {
+      "intro": "Levenskosten in Lorca zijn aanzienlijk lager dan Noord-Europa en zeer concurrerend in Spanje. Binnenlandse locaties zoals Lorca bieden bijzonder goede waarde voor dagelijkse uitgaven.",
+      "items": [
+        {"category": "Boodschappen (maandelijks, paar)", "cost": "€280-400", "notes": "Mercadona, Lidl en lokale markten in de buurt"},
+        {"category": "Nutsvoorzieningen (elektriciteit, water, gas)", "cost": "€100-160", "notes": "Hoger in de zomer met airconditioning"},
+        {"category": "Gemeenschappelijke lasten", "cost": "€50-120", "notes": "Varieert per ontwikkeling en inclusieve diensten"},
+        {"category": "IBI (Gemeentelijke belasting)", "cost": "€400-1,000/jaar", "notes": "Jaarlijkse onroerendgoedbelasting op basis van kadastrale waarde"},
+        {"category": "Eten buiten huis (per persoon)", "cost": "€10-22", "notes": "Menú del día vanaf €10; restaurants €15-30"},
+        {"category": "Internet en telefoon", "cost": "€35-50", "notes": "Goede breedbanddekkking; meerdere providers"},
+        {"category": "Auto-uitgaven (brandstof, verzekering)", "cost": "€150-250", "notes": "Essentieel voor binnenlandse woning"},
+        {"category": "Particuliere ziektekostenverzekering", "cost": "€60-150", "notes": "Uitgebreide dekking; lager voor jongere inwoners"}
+      ]
+    },
+    "events": {
+      "intro": "Lorca viert traditionele Spaanse fiestas en gemeenschapsgebeurtenissen het hele jaar door, waarbij lokale tradities worden gemengd met de gastvrije internationale gemeenschap.",
+      "events": [
+        {"name": "Fiestas Patronales", "month": "Augustus", "description": "Jaarlijkse festiviteiten van de patroonheilige met parades, muziek, vuurwerk en traditionele vieringen waarbij de hele gemeenschap samenkomt"},
+        {"name": "Semana Santa (Paaweek)", "month": "Maart/April", "description": "Plechtige Heilige Weekprocessies door de straten met traditionele vlonders en eeuwenoude religieuze tradities"},
+        {"name": "Día de la Constitución", "month": "December", "description": "Nationale vakantieviering met lokale evenementen, markten en gemeenschapsvergaderingen"},
+        {"name": "Lentfestival", "month": "Mei", "description": "Viering van lente met bloemendisplays, voedselkramen, traditionele muziek en gemeenschapsvergaderingen op het plein"},
+        {"name": "Oogstfestival", "month": "Oktober", "description": "Traditionele herfstviering met lokale producten, wijnproeverijen, ambachtsmarkten en regionale gastronomie"},
+        {"name": "Kerstmarkt en Drie Koningen", "month": "December/Januari", "description": "Feestseizoen met marktstandjes, kerstkribbescènes en de spectaculaire Driekoningenparade (Cabalgata de Reyes)"}
+      ]
+    },
+    "schools": {
+      "intro": "Gezinnen in Lorca hebben toegang tot kwaliteitseducatieopties in de omliggende regio, met verschillende internationale scholen die de expatgemeenschap bedienen naast uitstekende Spaanse staatsscholen.",
+      "schools": [
+        {"name": "King's College Murcia", "type": "Internationaal (Brits)", "distance": "20-40 min", "description": "Brits curriculum school met GCSE en A-Levels met sterke buitenschoolse programma's"},
+        {"name": "El Limonar International School (Murcia)", "type": "Internationaal (Brits)", "distance": "25-45 min", "description": "Brits curriculum basis- en middelbare school die het internationale gemeenschap bedient"},
+        {"name": "Lokale Spaanse basisschool", "type": "Spaanse staat", "distance": "5-15 min", "description": "Lokale staatsschool met Spaans curriculum onderwijs, uitstekend voor taalonderdompeling en gemeenschapsintegratie"},
+        {"name": "Lokale Spaanse middelbare school", "type": "Spaanse staat", "distance": "10-20 min", "description": "Staatsschool middelbare onderwijs met ESO- en Bachillerato-programma's met ondersteunende leeromgeving"}
+      ]
+    },
+    "natureActivities": {
+      "intro": "Lorca biedt het hele jaar door uitstekende buitenactiviteiten, van wandelen en fietsen tot golf, natuurwandelingen en meer.",
+      "activities": [
+        {"name": "Plattelandswandelingen", "type": "Wandelen", "description": "Wandelpaden door het omliggende platteland met uitzicht op boomgaarden, bergen en traditionele dorpjes"},
+        {"name": "Fietsroutes", "type": "Fietsen", "description": "Weg- en mountainbikeroutes door schilderachtig platteland, geschikt voor alle fitnessniveaus"},
+        {"name": "Nabijgelegen golfbanen", "type": "Golf", "description": "Diverse kwaliteitsgolfbanen op korte afstand die het hele jaar golf in mediterraanse zon bieden"},
+        {"name": "Natuurreservaten en vogelkijken", "type": "Natuurreservaat", "description": "Beschermde natuurgebieden in de buurt met vogelkijken, fotografie en rustige natuurwandelingen"}
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Lorca heeft een groeiende internationale gemeenschap, met expats aangetrokken door mediterrane levensstijl, betaalbare levenskosten en gastvrije sfeer. Het authentieke Spaanse karakter van het gebied spreekt aan tot degenen die echte integratie met lokale cultuur zoeken. Engels wordt steeds meer gesproken, met vele diensten beschikbaar in het Engels, waardoor het dagelijks leven comfortabel is voor nieuwkomers.",
+      "highlights": [
+        "Groeiende internationale sociale scène met regelmatige gemeenschapsgebeurtenissen",
+        "Engelssprekende diensten beschikbaar, inclusief medische en juridische professionals",
+        "Regelmatige gemeenschapsvergaderingen, clubs en sociale activiteiten",
+        "Gastvrije sfeer voor nieuwkomers met gevestigd expatnetwerk",
+        "Mix van permanente en seizoensbewoners wat een dynamische gemeenschap creëert",
+        "Sterke Britse en Scandinavische aanwezigheid samen met Nederlandse, Belgische en Duitse inwoners",
+        "Lokale Spaanse gemeenschap gastvrij en inclusief voor internationale bewoners"
+      ],
+      "nationalities": ["Brits", "Scandinavisch (Zweeds, Noors, Deens)", "Nederlands", "Belgisch", "Duits", "Iers", "Spaans"]
+    },
+    "lifestyleTimeline": {
+      "title": "Een typische dag in Lorca",
+      "entries": [
+        {"time": "08:00", "activity": "Ochtendkoffie", "description": "Begin de dag met verse koffie op uw terras, genietend van de ochtendzon en rustige omgeving"},
+        {"time": "09:30", "activity": "Marktbezoek", "description": "Blader door de lokale markt voor vers fruit, brood en seizoengebonden specialiteiten van lokale boeren"},
+        {"time": "12:00", "activity": "Vers marktboodschappen", "description": "Haal vers brood, fruit en lokaal geteelde producten van de supermarkt of wekelijkse markt"},
+        {"time": "13:30", "activity": "Spaanse lunch", "description": "Geniet van een ontspannen menú del día in een lokaal restaurant — drie gangen met wijn voor ongeveer €12"},
+        {"time": "15:30", "activity": "Siësta en zwembad", "description": "Rust uit in de warmste uren, koel jezelf dan af in uw privé- of gemeenschappelijk zwembad"},
+        {"time": "17:30", "activity": "Middagwandeling", "description": "Verken het omliggende platteland of dorpsstraten als de temperatuur daalt"},
+        {"time": "20:00", "activity": "Avondpaseo", "description": "Sluit je aan bij de lokale bevolking voor de traditionele avondwandeling door de stad, groetend naar buren en vrienden"},
+        {"time": "21:30", "activity": "Tapa-diner", "description": "Sluit de dag af met tapas en een glas lokale wijn in uw favoriete restaurant, al fresco dinen onder de sterren"}
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-1.6983!3d37.6717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Lorca",
+    "description": "Lorca is een gemeente in Murcia in Spanje. Bekend om mediterrane levensstijl, kwaliteitsniewbouw en internationale gemeenschap.",
+    "geo": {"@type": "GeoCoordinates", "latitude": "37.6717", "longitude": "-1.6983"},
+    "address": {"@type": "PostalAddress", "addressLocality": "Lorca", "addressRegion": "Murcia", "addressCountry": "ES"},
+    "containedInPlace": {"@type": "Place", "name": "Murcia"}
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Hoe ver is Lorca van het strand?", "acceptedAnswer": {"@type": "Answer", "text": "Lorca is ongeveer 35 kilometer van de Middellandse Zeekust, wat ongeveer 35-40 minuten rijden is naar populaire stranden zoals Playa Grande. Bewoners kunnen gemakkelijk toegang krijgen tot kustactiviteiten terwijl je geniet van de voordelen van binnenlandse woning."}},
+      {"@type": "Question", "name": "Is Lorca een goed beleggingsoord voor verhuurwoningen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, Lorca biedt sterk verhuurinvesteringspotentieel. Nieuwe villaotwikkelingen trekken toeristen aan op zoek naar authentieke Spaanse ervaringen weg van drukke vakantieplaatsen. Mogelijke huuropbrengsten variëren van 4-6% per jaar, met goede langetermijnwaarderingsprospectiva naarmate het gebied internationale erkenning krijgt."}},
+      {"@type": "Question", "name": "Hoe is de expatgemeenschap in Lorca?", "acceptedAnswer": {"@type": "Answer", "text": "De expatgemeenschap in Lorca groeit, maar blijft goed geïntegreerd met lokale Spaanse cultuur, in tegenstelling tot sommige verzadigde kustgebieden. Je vindt gevestigde netwerken van Europese inwoners terwijl je nog steeds authentiek Spaans leven ervaart. De gemeenschap bestaat meestal uit ernstige vastgoedinvesteerders en levenskwaliteitszoekers in plaats van puur toerisme-georiënteerde inwoners."}},
+      {"@type": "Question", "name": "Kan ik verblijfsstatus in Spanje verkrijgen als vastgoodeigenaar?", "acceptedAnswer": {"@type": "Answer", "text": "Alleen vastgoedbeziit verleent geen verblijfsstatus, maar Spanje biedt verschillende verblijfsopties voor vastgoedeigenaren, waaronder Non-Lucrative visum voor gepensioneerden met voldoende passief inkomen, Digital Nomad Visa en investeringsgebaseerde verblijfsprogramma's. Raadpleeg een Spaanse juridisch adviseur voor opties die bij uw omstandigheden passen."}},
+      {"@type": "Question", "name": "Wat zijn de levenskosten in Lorca?", "acceptedAnswer": {"@type": "Answer", "text": "Lorca heeft aanzienlijk lagere levenskosten in vergelijking met Noord-Europa en kust-Spanje. Maandelijkse uitgaven voor een paar variëren meestal van €1200-€1800, inclusief nutsvoorzieningen, boodschappen, vervoer en entertainment. Zorg via het Spaanse systeem is betaalbaar, en onroerende goedbelastingen zijn redelijk, wat het ideaal maakt voor gepensioneerden en degenen die waarde zoeken."}}
+    ]
+  }
+}
