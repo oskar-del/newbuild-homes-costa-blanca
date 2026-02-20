@@ -1,0 +1,326 @@
+{
+  "slug": "benissa",
+  "name": "Benissa",
+  "region": "Costa Blanca North",
+  "heroImage": "/images/areas/benissa-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80&fit=crop",
+  "propertyCount": 33,
+  "propertyTypes": ["Land", "Villa", "Apartment"],
+  "priceRange": {"min": 80000, "max": 3900000},
+  "externalLinks": {
+    "tourism": {"name": "Benissa Tourism", "url": "https://www.google.com/search?q=Benissa%20Spain%20official%20website", "description": "Upptäck mer om Benissa"},
+    "airport": {"name": "Alicante-Elche Airport", "googleMaps": "https://maps.google.com/?q=Alicante+Airport", "url": "https://www.alicante-airport.net/", "distance": "80 km", "driveTime": "50 min"},
+    "healthcare": {"name": "Hospital de Dénia", "googleMaps": "https://maps.google.com/?q=Hospital%20de%20D%C3%A9nia", "distance": "25 km"},
+    "beaches": [{"name": "Nearest Beach", "googleMaps": "https://maps.google.com/?q=beach+near+Benissa+Spain", "description": "Vacker Medelhavsstand i närheten"}]
+  },
+  "content": {
+    "metaTitle": "Att bo i Benissa 2025 | Komplett köpareguide",
+    "metaDescription": "Upptäck livet i Benissa: 33 fastigheter från €80k-€3,9M. Inlandstad Costa Blanca med strander, expat-gemenskap & 40% lägre priser än öar.",
+    "heroIntro": "Benissa står som en av Costa Blancas mest autentiska inlandsstäder, som erbjuder en perfekt blandning av traditionell spansk charm och modern internationell bekvämlighet. Placerad i hjärtat av regionen välkomnar denna etablerade gemenskap en mångskiftande expat-population som har upptäckt dess exceptionella värde, utmärkta infrastruktur och genuina känsla av plats. Med fastigheter från €80.000 till €3.900.000 tillämpar Benissa varje budget och livsstil preferens. Oavsett om du söker en pensioneringsmöjlighet, investeringsmöjlighet eller familjehem, levererar Benissa medelhavslevande utan trängsel eller premiumpriser för kustresorts. Staden har odlat ett välkomnande internationellt samhälle där engelska är allmänt talad, vilket gör omflyttning enkelt för brittiska och europeiska köpare. Närheten till vackra Blåflaggor strander, mästerkapsgolfbanor och livfulla kulturella attraktioner säkerställer att dagligt liv aldrig saknar spänning, medan den etablerade infrastrukturen innebär att du aldrig offrar moderna bekvämligheter för karaktär.",
+    "lifestyleSection": {
+      "intro": "Dagligt liv i Benissa kombinerar småstad autenticity med kosmopolitiska bekvämligheter. De veckovisa marknaderna spränger med färsk lokalt produkt, skaldjur och regionala specialiteter - en hörnsten av medelhavsliv där samhällsmedlemmar samlas för att socialisera. Traditionella paellas restauranger serverar tillsammans med moderna internationell kock, vilket återspeglar den mångskiftande bosatt befolkningen. Benissas etablerade expat-gemenskap har skapat ett välkommet socialt ekosystem; engelska talas allmänt och talrika klubbar, grupper och aktiviteter vänder sig till internationella invånare. Veckoslutaktiviteter inbegriper ofta utflykter till närliggande Blåflagg strander för simning och vattensporter, eller rundar på mästerkapskvalitets golfbanor inom minuter. Själva stadnär är genuin spansk karakter - smala slingrande gator, familjedrivna företag och lokala festivaleer firar århundraden av arv. Kulturella aktiviteter inbegriper konstgallerier, musikevenemang och säsongsfiranden. Den långsammare takten jämfört med kustresorts innebär inte tristess; snarare möjliggör det en mer genuin, ansluten livsstil där du känns igen på din favoritcafé och blir del av ett autentiskt gemenskap.\n\nBenissa genießt det åtråvärda medelhavsklimat som gör Costa Blanca till en av Europas mest önskvärkade destinationer. Med över 300 dagar med solsken årligen erbjuder regionen varma, torra somrar och milda vintrar - perfekt för året runt utomhusliv. Sommartemperaturerna når vanligtvis 28-32°C, medan vintermedelvärden svävar omkring 12-16°C, sällan sjunkande under frysning. Vår och höst ger idealiska förhållanden för utforsking, med behagliga temperaturer och lägre fuktighet. Havsbrisen från de närliggande kusterna ger naturlig kylning under sommarens månader. Nederbörden är minimal, koncentrerad främst höst och vår. Detta klimat är särskilt tilltalande för pensionärer och dem som söker konsekvent komfortabelt väder utan extrema säsongsvariationer. Det soliga förhållandena stöder områdets riklig utomhutskultur, från strändande aktiviteter till golf och vandring.",
+      "highlights": [
+        "40% lägre fastighetspriser än spanska ömarketer med motsvarande kvalitet",
+        "Etablerad internationell expat-gemenskap med engelska allmänt talad",
+        "Flera Blåflaggor strander inom 20 minuters körning",
+        "Mästerkapsgolfbanor och diversifierade sportfaciliteter i närheten",
+        "Utmärkt hälsovård med privat engelsktalande läkare tillgänglig",
+        "Stark hyresmarknad med €800 typiska 7-natt hyresinkomster"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Sport- och fritidsaktiviteter definierar Benissas tilltal för aktiv livsstilssökare. Flera Blåflaggor strander inom 20 minuter tillhandahål simning, paddelbording, kajaking och strandisporter året runt. Flera mästerkapsgolfbanor i närheten vänder sig till entusiaster av alla evenheter, från nybörjare till konkurrenskraftiga spelare. Vandringsleder genom inland kullar erbjuder fantastisk vyinspirering och utmärkt kardiovaskulär aktivitet. Vattensportfaciliteter inklusive segling, vindsurfing och fiske kompletterar strändande rekreation. Tennisklubbar, cykelvägar och fotbollsplaner stöder diverse atletiska intressen. Kombinationen av strand- och inlandaktiviteter säkerställer året rundt möjligheter oberoende väder eller preferens.",
+      "dining": "Benissa erbjuder diversifierad matupplevelse, från traditionell spansk tapas-barer och familjerestauranger till internationell mat. Lokala etableringr serverar autentiska regionala iska med färska lokala ingredienser, medan menú del día erbjuder utmärkt värde omkring €10-12 för tre-kurs måltid.",
+      "shopping": "Shopping i Benissa kombinerar bekvämlighet med autentisk spansk marknadkultur. Stora supermarketkedjor inklusive Mercadona, Lidl och Consum verkar i hela området, erbjudande välkänt produkter på konkurrenskraftiga priser tillsammans med utsträckta spansk och internationell val. Veckovisa bonde marknader tillhandahål färsk, lokalt odlat producera direkt från regionala framställare vid utmärkt värde. Stadscenter karakteriserar oberoende butiker, butiker och specialistbutiker som återspeglar lokala karaktär och unika erbjudanden. För större shoppingbehov erbjuder närliggande städer moderna shoppingcentra. Online leveranstjänster har utvidgats betydligt, med de flesta supermarketer tillhandahål hemlevering optioner. Kombinationen av modern bekvämlighet och traditionell marknadshoppingor skapar diversifierad möjligheter matchande olika livsstilspreferenser.",
+      "healthcare": "Healthcare i Benissa møter internationell standard med utmärkt tillgänglighet. Ett regionalt sjukhus fungerar inom 30 minuter, tillhandahål omfattande medicinska tjänster för alla nödfall och specialiserad behandlingar. Privata kliniker erbjudande engelsktalande läkare verkar i hela området, tillhandahål specifikt för expat patienter. Healthcare systemet kombinerar spansk offentlig healthcare med privata möjligheter, givande invånare flexibilitet i valet av sina föredragna leverantörer. Medicinska kostnader förblir betydligt lägre än brittisk privat healthcare, medan kvaliteten motsvarar europeiska standarder. Receptmediciner är prisvärda och lätt tillgängliga på talrika apotek med hjälpsamt personale. Många internationella invånare lyckas hantera kroniska tillstånd genom spansk healthcare systemet med minimala komplikationer.",
+      "transport": "Busförbindelser är tillgängliga i hela Benissa och till omringande städer, med schemaer tillgodosedese både daglig pendling och fritidsresor. För maximal flexibilitet och oberoende rekommenderar invånare typiska att ha en bil, vilket möjliggör lätt tillgång till strander, golfbanor och angränsande samhällen. Alicante-Elche Airport (ALC) ligger cirka 70 kilometer söder, erbjudande direktflyg till Storbritannien och över Europa. Valencia Airport (VLC) ligger ungefär 120 kilometer norr, erbjudande alternativa resealternativ. Båda flygplatserna verkar modern faciliteter med konkurrenskraftiga priser genom diversifierad flygbolag. Benissa gynnas av utmärkt väg anslutelse via AP-7 motorvägen, möjliggörande snabb tillgång till Alicante och Valencia. Lokala vägar kopplar sömlöst till angränsande Costa Blanca städer inklusive Teulada, Jávea och Moraira. Områdets motorvägsinfrastruktur stöder lätt dagutflykt och affärsresor. Regionala busjtjänster förbinder Benissa till kustätäder, större shoppingcentra och angränsande samhällen. Schemaer varierar säsong med utökad frekvens under sommarmånader. Busnätverket inintegr med bredare Costa Blanca transport linkande till de flesta stora destinationer."
+    },
+    "propertyMarketSection": "Benissas fastighetsmarknad visar hälsosamt momentum med 8% år-till-år-växthård, reflekterande genuin efterfråga från både ägare-ockupanter och investerare. Marknaden erbjuder utmärkt värde jämfört med kuststernativ, med genomsnitt priser på €2.200/m² representerande 40% besparing kontra spansk ömarketer. Nuvarande inventerie av 33 fastigheter tillhandahål genuint urval över flera kategorier.\n\nPopulära fastighetstyper inkluderar Mark, Villa, Lägenhet.\n\nHyrespotential förblir starkande med typisk 7-natt hyror som uppnår €800, stödjande årligöversättad avkasning för investeringsfastighet. Huvudstadstillväxtmöjligheter ser positiva givet områdets ökande popularitet, förbättrad infrastruktur och utvidgande expat-gemenskap. Både semesterhyra och långtidshuyrmarketer visar hälsosam efterfrågan, med residentiell fastighetsförsäljning accelererande bland EU-köpare sökar permanent omflyttning.",
+    "whyLiveHereSection": [
+      "40% lägre fastighetspriser än spanska ömarketer med motsvarande kvalitet",
+      "Etablerad internationell expat-gemenskap med engelska allmänt talad",
+      "Flera Blåflaggor strander inom 20 minuters körning",
+      "Mästerkapsgolfbanor och diversifierade sportfaciliteter i närheten",
+      "Utmärkt hälsovård med privat engelsktalande läkare tillgänglig",
+      "Stark hyresmarknad med €800 typiska 7-natt hyresinkomster"
+    ],
+    "faqs": [
+      {
+        "question": "Är Benissa en bra plats att bo?",
+        "answer": "Ja, absolut. Benissa erbjuder en exceptionell kombination av prisvärd fastighet, etablerad internationell gemenskap, mediterran klimat, utmärkta bekvämligheter och genuin karaktär. Det passar pensionärer, familjer och investerare söker autentiska Costa Blanca levande utan premiumpriserkund. Den 8% årliga prisstegring och stark hyresbehov visar marknadsförtroende i området."
+      },
+      {
+        "question": "Kan utlänningar köpa fastighet i Spanien?",
+        "answer": "Ja, utlänningar kan fritt köpa fastighet i Spanien utan begränsningar. Icke-EU-medborgare kan kräva ett spanskt skatteididentifikationsnummer (NIE), och vissa regioner har mindre reglering, men utlänningsägande är helt lagliga. Professionell juridisk assistans säkerställer smidiga transaktioner och efterlevnad av spansk egendomslag."
+      },
+      {
+        "question": "Vilka är kostnaderna vid köp av fastighet i Spanien?",
+        "answer": "Utöver köpeskillingen bör köpare budgetera för: överförmarskatt (6-10% i Valencia-region), notariusavgifter (0,5-1%), fastighetsregistrerings avgifter (0,1%), och juridiska avgifter (1-2%). Totala ytterligare kostnader varierar vanligtvis från 8-13% av köpeskillingen. Benissa-fastigheter som genomsnittsligt €2.200/m² gör dessa ytterligare kostnader proportionellt lägre än dyra kustmarketer."
+      },
+      {
+        "question": "Vad är levnadskostnaden i Costa Blanca?",
+        "answer": "Costa Blanca erbjuder utmärkt värde jämfört med Storbritannien och Nord-Europa. Månatliga kostnader för ett par inkluderar: hyra (€600-1.500 beroende på område), mat (€300-400), verktyg (€100-150) och spising ut (€150-300). Sjukvårdskostnader är minimal med offentlig försäkring inkluderad. Överlagring levnadskostnader löpa 30-40% under jämförbara brittiska platser, speciellt i Benissa där fastighetspriser är särskilt konkurrenskraftiga."
+      },
+      {
+        "question": "Är Costa Blanca bra för pensionärer?",
+        "answer": "Costa Blanca rankas bland Europas bästa pensioneringsdestnationer. Regionen erbjuder: konsekvent varmt väder året runt, utmärkt prisvärd sjukvård, aktiv expatsamfund, diversifierad fritidsaktiviteter och låg levnadskostnad. Engelska talas allmänt, speciellt i etablerade gemenskaper som Benissa. Kombinationen av sjukvårdstillgänglighet, sociala möjligheter och finansiell fördel gör det idealiska för pensioneringsplanering."
+      },
+      {
+        "question": "Hur långt är Costa Blanca från Storbritannien?",
+        "answer": "Costa Blanca är ungefär 1.200 kilometer från Storbritannien, med flygtider på 2,5-3 timmar från de flesta brittiska flygplatser till Alicante. Talrika dagliga flyg förbinder regionen till London, Manchester, Birmingham och andra brittiska städer genom varierande flygbolag. Lätt tillgänglighet gör regelbundna brittiska besök enkla, viktiga för pensionärer som upprätthål familjeförbindelser."
+      },
+      {
+        "question": "Vad är vädret som på Costa Blanca?",
+        "answer": "Costa Blanca genießer middelhavsklimatet med över 300 dagar årlig solsken. Somrar når 28-32°C med minimal nederbörd, vintrar medelvärde 12-16°C sällan frustrande, och vår/höst erbjuder idealiska 18-24°C temperaturer. Regionen mottar minimal nederbörd koncentrerad höst/vår. Detta konsekvent, mildt väder stöder utomhusvänliga livsstilseiter året runt och tilltal särskilt pensionärer och dem som flyr strängare norra klimat."
+      },
+      {
+        "question": "Behöver jag visum för att köpa fastighet i Spanien?",
+        "answer": "Visumkrav beror på nationalitet. Brittiska medborgare kan besöka upp till 90 dagar visumfritt. För fastighetsköp och hemvist kan långsiktigt visum eller hemvistansökan krävas beroende på omständigheter. Egendomsinvestering ger inte automatiskt hemvist. Professionell juridisk råd säkerställer efterlevnad av aktuella spansk immigrationsreglering för din specifika situation."
+      }
+    ],
+    "conclusion": "Redo att upptäcka din perfekta fastighet i Benissa? Vårt erfara team specialiserar sig på nybyggnad fastigheter i det här området och kan vägleda dig genom varje steg. Oavsett om du söker ett permanent hem, semesterhöll eller investeringsfastighet, hjälper vi dig att hitta exakt vad du letar efter. Boka en gratis 30-minuters konsultation med vårt team - med över 12 års erfarenhet av att sälja nybyggnader på Costa Blanca, känner vi denna marknad in och ut.",
+    "investmentAnalysis": {
+      "rentalYield": "5-8%",
+      "annualAppreciation": "5-8%",
+      "overview": "Hyrespotential förblir stark med typisk 7-natt hyror som uppnår €800, stödjande årligöversättad avkasning för investeringsfastighet. Huvudstadstillväxtmöjligheter ser positiva givet områdets ökande popularitet, förbättrad infrastruktur och utvidgande expat-gemenskap. Både semesterhyra och långtidshuyrmarketer visar hälsosam efterfrågan, med residentiell fastighetsförsäljning accelererande bland EU-köpare söker permanent omflyttning.",
+      "highlights": [
+        "Stark semesterhurvefterdemand under toppsäsong (maj-oktober)",
+        "Lägre instalighetspriser än jämförbara marketer med liknande hyresavkasning",
+        "Växande internationell efterfrågan driver stadiga prisökningar",
+        "Kortvarig semesterhyra populär med europeiska turister"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Levnadskostnaderna i Benissa är betydligt lägre än Nord-Europa och mycket konkurrenskraftiga i Spanien. Kuststödet liv här kombinerar prisvärdning med middelhavslivsstil.",
+      "items": [
+        {
+          "category": "Mat (månatligt, par)",
+          "cost": "€280-400",
+          "notes": "Mercadona, Lidl och lokala marknader i närheten"
+        },
+        {
+          "category": "Verktyg (el, vatten, gas)",
+          "cost": "€100-160",
+          "notes": "Högre på sommaren med luftkonditionering"
+        },
+        {
+          "category": "Gemensamma avgifter",
+          "cost": "€50-120",
+          "notes": "Varierar beroende på utveckling och ingående tjänster"
+        },
+        {
+          "category": "IBI (Kommunalskatt)",
+          "cost": "€400-1.000/år",
+          "notes": "Årlig fastighetsskatt baserad på katastralvärde"
+        },
+        {
+          "category": "Äta ute (per person)",
+          "cost": "€10-22",
+          "notes": "Menú del día från €10; restauranger €15-30"
+        },
+        {
+          "category": "Internet & Telefon",
+          "cost": "€35-50",
+          "notes": "Bra bredbandsäcke; flera leverantörer"
+        },
+        {
+          "category": "Bilkostnader (bränsle, försäkring)",
+          "cost": "€150-250",
+          "notes": "Rekommenderas för flexibilitet"
+        },
+        {
+          "category": "Privat sjukförsäkring",
+          "cost": "€60-150",
+          "notes": "Omfattande täckning; lägre för yngre invånare"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Benissa firar traditionell spansk fiestas och gemenskapsevenemang året runt, blandande lokala traditioner med det välkomnande internationella samhället.",
+      "events": [
+        {
+          "name": "Fiestas Patronales",
+          "month": "Augusti",
+          "description": "Årliga skyddspatron festiviteter med parader, musik, fyrverkerier och traditionell celebration som samlar hela samhället"
+        },
+        {
+          "name": "Semana Santa (Påskveckan)",
+          "month": "Mars/April",
+          "description": "Högtidliga Heliga vecka processioner genom gatorna med traditionella vagnar och århundradesveteologiska traditioner"
+        },
+        {
+          "name": "Día de la Constitución",
+          "month": "December",
+          "description": "Nationaldagsfiranden med lokala evenemang, marknader och gemenskapsamlingar"
+        },
+        {
+          "name": "Noche de San Juan",
+          "month": "Juni",
+          "description": "Magiska midsommar strandbetoningar med lägereld, fyrverkerier och midnatt simning traditioner längs kusten"
+        },
+        {
+          "name": "Sommar strändande festival",
+          "month": "Juli",
+          "description": "Utomhuskonsertning, matbudor och kulturella evenemang längs strandpromenaden under hela sommarsäsongen"
+        },
+        {
+          "name": "Julmarknad & Tre Kungar",
+          "month": "December/Januari",
+          "description": "Festlig säsong med marknadsstånd, krubbebildningar och spektakulär Tre kungar-parad (Cabalgata de Reyes)"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Familjer i Benissa har tillgång till kvalitetsutbildningsalternativ i omgivande område, med flera internationella skolor som betjänar expat-samhället tillsammans med utmärkta spanska statsskolor.",
+      "schools": [
+        {
+          "name": "El Limonar International School (Villajoyosa)",
+          "type": "International (British)",
+          "distance": "20-40 min",
+          "description": "Brittisk läroplanskola med GCSE och A-Level program, utmärkta anläggningar och starka akademiska resultat"
+        },
+        {
+          "name": "Laude Lady Elizabeth School",
+          "type": "International (British/IB)",
+          "distance": "25-45 min",
+          "description": "Brittisk och IB läroplan med fantastiska anläggningar, sportprogram och flerspråkig utbildning"
+        },
+        {
+          "name": "Lokal spansk grundskola",
+          "type": "Spanish State",
+          "distance": "5-15 min",
+          "description": "Lokal statsskola som tillhandahål spansk läroplanutbildning, utmärkt för språkfördjupning och samhällsintegration"
+        },
+        {
+          "name": "Lokal spansk gymnasieskola",
+          "type": "Spanish State",
+          "distance": "10-20 min",
+          "description": "Statens sekundärskola som erbjuder ESO- och Bachillerato-program med stödjande lärande miljö"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Benissa erbjuder utmärkta utomhusaktiviteter året runt, från strändande aktiviteter och vattensporter till golf, naturvandring och mer.",
+      "activities": [
+        {
+          "name": "Strand & Simning",
+          "type": "Beach",
+          "description": "Vacker medelhavsstrander i närheten med kristallklar vatten, perfekt för simning, snorkling och solning"
+        },
+        {
+          "name": "Vattensporter",
+          "type": "Water Sports",
+          "description": "Paddelbording, kajaking, vindsurfing och segling tillgängligt på närliggande strander och marinaer"
+        },
+        {
+          "name": "Landsbygdsvandringar",
+          "type": "Hiking",
+          "description": "Vandringsleder genom omgivande landsbygd med utsikter över frukttradgårdar, berg och traditionella byar"
+        },
+        {
+          "name": "Cykelvägar",
+          "type": "Cycling",
+          "description": "Väg- och mountainbike-vägar genom pittoresk landsbygd, lämpliga för alla konditionsnivåer"
+        },
+        {
+          "name": "Närliggande golfbanor",
+          "type": "Golf",
+          "description": "Flera högkvalitativa golfbanor inom bekvämt körningsavstånd som erbjuder året runt spel i Medelhavssolskenet"
+        },
+        {
+          "name": "Naturreservat & Fågelskådning",
+          "type": "Nature Reserve",
+          "description": "Skyddade naturområden i närheten som erbjuder fågelskådning, fotografering och fredlig naturvandring"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Benissa har ett blomstrande internationellt samhälle, med expats lockade av medelhavslivsstilen, prisvärda levnadskostnader och välkomnande atmosfär. Kustplatsen attraherar en mångskiftad blandning av nationaliteter, särskilt från Nord-Europa. Engelska talas allmänt i butiker, restauranger och sociala sammanhang, vilket gör dagligt liv bekvämt för nyanländare.",
+      "highlights": [
+        "Aktiv internationell social scen med regelbundna gemenskapsevenemang",
+        "Engelsktalande tjänster tillgängliga inklusive medicinska och juridiska yrkesmän",
+        "Regelbundna gemenskapsamlingar, klubbar och sociala aktiviteter",
+        "Välkomnande atmosfär för nyanländare med etablerade expat-nätverk",
+        "Blandning av permanenta invånare och säsongsbesökare som skapar ett dynamiskt samhälle",
+        "Mångskiftad europeisk gemenskap inklusive brittisk, skandinavisk, nederländsk, tysk och fransk invånare",
+        "Lokalt spanskt samhälle välkomnande och inkluderande mot internationella invånare"
+      ],
+      "nationalities": [
+        "Brittisk",
+        "Tysk",
+        "Nederländsk",
+        "Skandinavisk",
+        "Fransk",
+        "Belgisk",
+        "Spansk"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "En typisk dag i Benissa",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morgonkaffe",
+          "description": "Börja dagen med färskt kaffe på din terrass, njutande havsbrisen och fredlig omgivning"
+        },
+        {
+          "time": "09:30",
+          "activity": "Strandpromenad",
+          "description": "Morgonpromenad längs stranden eller promenaden, andande i den friska medelhavsluften"
+        },
+        {
+          "time": "12:00",
+          "activity": "Färsk marknadshandling",
+          "description": "Plocka upp färskt bröd, frukt och lokal produktion från supermarknaden eller veckomarknaden"
+        },
+        {
+          "time": "13:30",
+          "activity": "Spansk lunch",
+          "description": "Njut av en gemytlig menú del día på en lokal restaurang - tre rätter med vin för omkring €12"
+        },
+        {
+          "time": "15:30",
+          "activity": "Siesta & Pool",
+          "description": "Vila under de varmaste timmarna, sedan svala av i din privata eller gemensamma pool"
+        },
+        {
+          "time": "17:30",
+          "activity": "Strandtid",
+          "description": "Gå till stranden för ett eftermiddag simma i varmt medelhavsvattnet"
+        },
+        {
+          "time": "20:00",
+          "activity": "Kvällspasseo",
+          "description": "Anslut dig lokalt för traditionell kvällspromenad genom stad, hälsning grannarna och vänner"
+        },
+        {
+          "time": "21:30",
+          "activity": "Tapas Middag",
+          "description": "Avsluta dagen med tapas och ett glas lokal vin på din favoritrestaurant, diner al fresco under stjärnorna"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d0.0483!3d38.7183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Benissa",
+    "description": "Benissa är en kustad kommun på Costa Blanca North, Spanien. Känd för medelhavslivsstil, kvalitetes nya byggföretag och internationellt samhälle.",
+    "geo": {"@type": "GeoCoordinates", "latitude": "38.7183", "longitude": "0.0483"},
+    "address": {"@type": "PostalAddress", "addressLocality": "Benissa", "addressRegion": "Alicante", "addressCountry": "ES"},
+    "containedInPlace": {"@type": "Place", "name": "Costa Blanca North"}
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Är Benissa en bra plats att bo?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, absolut. Benissa erbjuder en exceptionell kombination av prisvärd fastighet, etablerad internationell gemenskap, mediterran klimat, utmärkta bekvämligheter och genuin karaktär. Det passar pensionärer, familjer och investerare söker autentiska Costa Blanca levande utan premiumpriserkund."}},
+      {"@type": "Question", "name": "Kan utlänningar köpa fastighet i Spanien?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, utlänningar kan fritt köpa fastighet i Spanien utan begränsningar. Icke-EU-medborgare kan kräva ett spanskt skatteididentifikationsnummer (NIE), och vissa regioner har mindre reglering, men utlänningsägande är helt lagliga."}},
+      {"@type": "Question", "name": "Vilka är kostnaderna vid köp av fastighet i Spanien?", "acceptedAnswer": {"@type": "Answer", "text": "Utöver köpeskillingen bör köpare budgetera för: överförmarskatt (6-10% i Valencia-region), notariusavgifter (0,5-1%), fastighetsregistrerings avgifter (0,1%), och juridiska avgifter (1-2%). Totala ytterligare kostnader varierar vanligtvis från 8-13%."}},
+      {"@type": "Question", "name": "Vad är levnadskostnaden i Costa Blanca?", "acceptedAnswer": {"@type": "Answer", "text": "Costa Blanca erbjuder utmärkt värde jämfört med Storbritannien och Nord-Europa. Månatliga kostnader för ett par inkluderar: hyra (€600-1.500 beroende på område), mat (€300-400), verktyg (€100-150) och spising ut (€150-300). Levnadskostnader löpar 30-40% under jämförbara brittiska platser."}},
+      {"@type": "Question", "name": "Är Costa Blanca bra för pensionärer?", "acceptedAnswer": {"@type": "Answer", "text": "Costa Blanca rankas bland Europas bästa pensioneringsdestnationer. Regionen erbjuder: konsekvent varmt väder året runt, utmärkt prisvärd sjukvård, aktiv expatsamfund, diversifierad fritidsaktiviteter och låg levnadskostnad."}}
+    ]
+  }
+}

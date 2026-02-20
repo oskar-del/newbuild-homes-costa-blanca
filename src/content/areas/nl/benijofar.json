@@ -1,0 +1,430 @@
+{
+  "slug": "benijofar",
+  "name": "Benijófar",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/benijofar-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Townhouse",
+    "Villa",
+    "Bungalow",
+    "Country House"
+  ],
+  "priceRange": {
+    "min": 165000,
+    "max": 550000
+  },
+  "coordinates": {
+    "lat": 38.0697,
+    "lng": -0.7278
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Benijófar",
+      "url": "https://www.benijofar.es/",
+      "description": "Officiële gemeente Benijófar"
+    },
+    "beaches": [
+      {
+        "name": "Guardamar Beaches",
+        "googleMaps": "https://maps.google.com/?q=Playa+Centro+Guardamar",
+        "description": "Natuurlijke stranden met dennenbossen op de achtergrond",
+        "distance": "6 km"
+      },
+      {
+        "name": "La Mata Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+La+Mata",
+        "description": "Lang natuurlijk strand dicht bij zoutmeren",
+        "distance": "10 km"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "12 km",
+      "driveTime": "14 minutes"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "38 km",
+      "driveTime": "28 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Benijófar wordt omringd door golfbanen in alle richtingen, en biedt variatie zonder golfresort-prijzen.",
+    "courses": [
+      {
+        "name": "La Finca Golf",
+        "distance": "5 km",
+        "driveTime": "7 minutes",
+        "holes": 18,
+        "url": "https://www.lafincagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Finca+Golf",
+        "description": "Kampioensbaan ontworpen door Pepe Gancedo."
+      },
+      {
+        "name": "La Marquesa Golf",
+        "distance": "6 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "url": "https://www.lamarquesagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Marquesa+Golf",
+        "description": "Goed onderhouden baan populair bij bewoners."
+      },
+      {
+        "name": "Vistabella Golf",
+        "distance": "10 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.vistabellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+        "description": "Moderne baan met uitstekende faciliteiten."
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Wonen in Benijófar | Dorpsleven | Costa Blanca South 2026",
+    "metaDescription": "Complete gids voor Benijófar—authentiek Spaans dorp, moderne villa's vanaf €165k, Guardamar stranden 6 km weg. Citrusgroves, traditionele feesten, echte integratie.",
+    "quickAnswer": "Benijófar is een klein authentiek Spaans dorp omringd door citrusgroves met moderne villa's vanaf €165.000. Guardamar-stranden zijn slechts 6 km weg, La Finca Golf 7 minuten. Perfect voor kopers die dorpsleven zoeken met kustgemak—echt Spanje tegen betaalbare prijzen.",
+    "heroIntro": "Benijófar is het soort Spaans dorp dat ansichtkaarten proberen vast te leggen: witgekalkte huizen gegroepeerd rond een kerktoren, citrusgroves die de lucht in het voorjaar parfumeren, oudere inwoners die zich verzamelen op het plein zoals zij al generaties doen. Toch is dit geen museumstuk—het is een levende gemeenschap waar nieuwe villa's met zwembaden naast traditionele huizen liggen, en internationale kopers worden welkom geheten in echt dorpsleven.\n\nHet dorp occupeert een zachte helling in de landbouwregio Vega Baja, omringd door de citrusgroves die het gebied eeuwenlang hebben ondersteund. Guardamar's natuurlijke stranden zijn slechts 6 km weg. La Finca Golf is 7 minuten weg. Torrevieja's faciliteiten zijn 12 minuten weg. Toch is het levensritme hier onmiskenbaar dorp—langzamer, vriendelijker, meer verbonden met de ritmes van het Spaanse leven.\n\nVoor kopers die authenticiteit zonder isolement zoeken, biedt Benijófar een zeldzaam evenwicht.",
+    "lifestyleSection": {
+      "intro": "Dorpsleven in Benijófar betekent je buren kennen, stoppen voor koffie in de lokale bar, en deelnemen aan feesten die al generaties plaatsvinden. De internationale gemeenschap is aanwezig maar integreert eerder dan domineert. Spaans is nuttig en gewaardeerd. Degenen die dorpsleven omarmen, vinden warmte die toerisme niet kan repliceren.\n\nDe omringende moderne urbanisaties bieden nieuwe villa's met zwembaden en hedendaagse voorzieningen. Bewoners krijgen het beste van beide werelden: dorpskarakter voor dagelijks leven, moderne huiscomfort, en kust-voorzieningen op enkele minuten.",
+      "highlights": [
+        "Authentieke Spaanse dorpssfeer",
+        "Moderne nieuwe build villa's met zwembaden beschikbaar",
+        "Guardamar stranden slechts 6 km weg",
+        "La Finca Golf 7 minuten",
+        "Omringd door geurige citrusgroves",
+        "Traditionele feesten het hele jaar door",
+        "Uitstekende waarde vergeleken met kustgebieden",
+        "Echte Spaanse integratie mogelijkheid"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Guardamar's natuurlijke stranden (omzoomd door dennenbossen) zijn slechts 6 km weg (8 minuten). La Mata is 10 km weg. Dicht genoeg voor regelmatige strandtripjes zonder premies voor kustproperty.",
+      "dining": "Het dorp heeft traditionele Spaanse bars en restaurants. Voor meer variëteit bieden Rojales (3 km), Guardamar (6 km), en Torrevieja (12 km) meer opties.",
+      "shopping": "Dorpswinkelss dekken basis behoeftes. Mercadona supermarkt in de buurt. Weekse markten in omringende steden. Voor grote aankopen, Habaneras in Torrevieja (12 km) of La Zenia Boulevard (22 km).",
+      "healthcare": "Hospital Universitario de Torrevieja is 12 km weg (14 minuten). Lokaal medisch centrum en apotheek in het dorp. Goed toegankelijk voor een dorp van deze grootte.",
+      "transport": "Alicante-Elche Airport is 38 km weg (28 minuten)—goede toegang. Een auto is essentieel. Centrale locatie maakt regionale verkenning gemakkelijk."
+    },
+    "neighborhoods": [
+      {
+        "name": "Dorpscentrum",
+        "description": "Traditioneel Spaans dorpsleven. Stadhuizen en oudere panden. Loopafstand naar plein, kerk, en bars. Echte integratie."
+      },
+      {
+        "name": "Moderne Urbanisaties",
+        "description": "Nieuwe villa's en bungalows rondom het dorp. Privé zwembaden, moderne specificaties. Internationale bewoners. Beste van beide werelden."
+      }
+    ],
+    "propertyMarketSection": "Benijófar biedt uitstekende waarde voor dorpsaangrenzend wonen. Stadhuizen starten rond €165.000-280.000, en villa's van €280.000-550.000. De combinatie van dorpskarakter en moderne urbanisatie-opties trekt waardegeoriënteerde kopers aan.\n\n**Uitgelichte Ontwikkeling: Doña Patro IX** – Moderne 3-slaapkamer villa's vanaf €449.000 met privé zwembaden, 140 m² leefruimte, garage. Hedendaags design op 300 m² percelen.\n\nDe markt trekt aan die op zoek zijn naar authentieke Spaanse integratie met moderne huiscomfort in de buurt. Huurpotentieel is beperkt vergeleken met kustgebieden—dit is een lifestyle keuze.",
+    "whyLiveHereSection": [
+      "Authentiek Spaans dorpskarakter",
+      "Moderne nieuwe build villa's beschikbaar",
+      "Guardamar stranden slechts 6 km weg",
+      "La Finca Golf 7 minuten",
+      "Traditionele feesten en gemeenschapsleven",
+      "Uitstekende waarde voor dorpsaangrenzend wonen",
+      "Citrusgroves en landelijk decor",
+      "28 minuten naar Alicante Airport"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Doña Patro IX Villa",
+        "reference": "N8496",
+        "price": 449000,
+        "type": "Villa",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "plotArea": 300,
+        "features": [
+          "Privé Zwembad",
+          "Modern Design",
+          "Garage"
+        ],
+        "description": "Hedendaagse 3-slaapkamer villa met zwembad, 140 m² leefruimte, en garage."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Benijófar een goed plaats om property te kopen?",
+        "answer": "Uitstekend voor kopers die authentiek Spaans dorpsleven zoeken met moderne villa opties in de buurt. Panden kosten minder dan kust equivalenten terwijl stranden slechts 6 km weg zijn. Ideaal voor degenen comfortabel met dorps integratie."
+      },
+      {
+        "question": "Hoe ver is Benijófar van het strand?",
+        "answer": "Guardamar stranden zijn 6 km weg (8 minuten). La Mata is 10 km weg. Heel dichtbij voor een binnenlands dorp—makkelijke strand toegang zonder kust prijzen."
+      },
+      {
+        "question": "Wat zijn property prijzen in Benijófar?",
+        "answer": "Stadhuizen vanaf €165.000, villa's vanaf €280.000. Moderne nieuwe constructie in omringende urbanisaties biedt hedendaags wonen tegen dorp-aangrenzende prijzen."
+      },
+      {
+        "question": "Is Benijófar goed voor golf?",
+        "answer": "Goede toegang. La Finca Golf is 7 minuten weg, La Marquesa 8 minuten, Vistabella 12 minuten. Centrale locatie zonder golfresort prijzen."
+      },
+      {
+        "question": "Wordt Engels veel gesproken in Benijófar?",
+        "answer": "Het dorp is authentiek Spaans—Spaans is de primaire taal. Enige internationale bewoners in omringende urbanisaties. Basis Spaans is nuttig en gewaardeerd."
+      },
+      {
+        "question": "Hoe is dorpsleven in Benijófar?",
+        "answer": "Traditionele Spaanse dorps ritmes: ochtend koffie in lokale bars, avond paseo op het plein, feesten het hele jaar door. Buren kennen elkaar. Degenen die integreren vinden echte gemeenschaps warmte."
+      },
+      {
+        "question": "Is Benijófar geschikt voor permanent wonen?",
+        "answer": "Ja, voor degenen die dorpssfeer en Spaanse integratie waarderen. Ganzjarig services, permanente bevolking, traditionele gemeenschap. Niet voor degenen die uitgebreide Engelstalige voorzieningen willen."
+      },
+      {
+        "question": "Hoe vergelijkt Benijófar met grotere steden?",
+        "answer": "Kleiner, meer Spaans, intimer. Grotere steden zoals Torrevieja bieden meer faciliteiten maar minder karakter. Benijófar biedt dorps authenticiteit met grotere stadsfaciliteiten in de buurt."
+      }
+    ],
+    "conclusion": "Benijófar biedt iets dat steeds zeldzamer wordt: echt Spaans dorpsleven dat niet door massatourisme is getransformeerd. De witgekalkte huizen, de citrusgroves, de feesten—deze zijn authentiek, niet nagebootst. Toch bieden moderne villa's in de buurt hedendaagse comfort, en stranden zijn dichter dan veel kuststontwikkelingen.\n\nVoor kopers die dorpsintegratie met nabije voorzieningen zoeken, levert Benijófar allebei.\n\nKlaar om panden in Benijófar te verkennen? Ons team begrijpt dorpsleven en kan je matchen met panden die aansluiten bij je integratiedoelen—van stadhuizen in het dorpscentrum tot moderne urbanisatie villa's.",
+    "investmentAnalysis": {
+      "rentalYield": "3-5% op moderne villa's in omringende urbanisaties",
+      "annualAppreciation": "2-3% historisch, stabiele groei van kust nabijheid",
+      "overview": "Benijófars huurmarkt is beperkt door zijn binnenlandse locatie en dorpskarakter—panden trekken meer langetermijn bewoners dan vakantiegangers. Waarde komt van lagere inkomp prijzen en kwaliteit van leven in plaats van investerings waardering.",
+      "highlights": [
+        "Kustpanden 6-10 km weg trekken huurzoekers aan",
+        "Moderne villa's met zwembaden bieden beter huurpotentieel dan dorpscentrum panden",
+        "Lange termijn huurders aan expats betrouwbaarder dan vakantie verhuren",
+        "Property waardering bescheiden maar stabiel van Costa Blanca South ontwikkeling",
+        "Lagere aankoopprijzen betekenen sneller kapitaal herstel op huurrendement"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Leefkosten in Benijófar zijn aanzienlijk lager dan kustgebieden, wat zijn binnenlandse dorpslocatie en Spaanse karakter weerspiegelt. Dagelijkse uitgaven zijn begroot tegen lokale tarieven, niet toeristenprijzen.",
+      "items": [
+        {
+          "category": "Huur (2-slaapkamer appartement)",
+          "cost": "€600-850",
+          "notes": "Dorpscentrum goedkoper dan omringende urbanisaties"
+        },
+        {
+          "category": "Utilities (maandelijks)",
+          "cost": "€80-120",
+          "notes": "Elektriciteit, water, gas voor typische villa"
+        },
+        {
+          "category": "Boodschappen (wekelijks)",
+          "cost": "€50-75",
+          "notes": "Lokale supermarkt en markt prijzen"
+        },
+        {
+          "category": "Restaurant maaltijd (3-gangen)",
+          "cost": "€12-18",
+          "notes": "Spaanse tapas bar prijzen, niet toeristische instellingen"
+        },
+        {
+          "category": "Koffie",
+          "cost": "€1,20-1,50",
+          "notes": "Zittend service in dorps bars"
+        },
+        {
+          "category": "Gezondheidszorg (maandelijks)",
+          "cost": "€50-100",
+          "notes": "Prive verzekering optioneel; openbare gezondheidszorg beschikbaar"
+        },
+        {
+          "category": "Property belastingen (jaarlijks)",
+          "cost": "€300-500",
+          "notes": "IBI voor typische villa, schaal met property waarde. Plus overdrachtsbelasting 2% bij aankoop."
+        }
+      ]
+    },
+    "events": {
+      "intro": "Benijófars kalender draait om traditionele Spaanse feesten en agrarische vieringen, weerspiegelend van zijn dorps identiteit. Deze evenementen brengen de gemeenschap samen en bieden echt Spaanse culturele ervaring.",
+      "events": [
+        {
+          "name": "Fiestas Patronales de Benijófar",
+          "month": "Augustus",
+          "description": "Voornaamste fiesta ter ere van de stadsheilige met parades, livemuze, voedselkraampjes, en straat vieringen gedurende meerdere dagen"
+        },
+        {
+          "name": "Semana Santa (Heilige Week)",
+          "month": "Maart/April",
+          "description": "Religieuze processies door dorpscentrum, traditionele Spaanse ceremonies, en lokale voedsel vieringen"
+        },
+        {
+          "name": "Feria de Primavera (Lentebeurs)",
+          "month": "Mei",
+          "description": "Agrarische beurs vieren lente oogst met lokale producten, handwerk, en traditioneel vermaak"
+        },
+        {
+          "name": "Noche de San Juan (Midzomernacht)",
+          "month": "Juni",
+          "description": "Vuurpijlen en strand vieringen bij Guardamar stranden, traditionele Spaanse zomer zonnewende festiviteiten"
+        },
+        {
+          "name": "Mercado Navideño (Kerstmarkt)",
+          "month": "December",
+          "description": "Dorpscentrum kerstmarkt met lokaal handwerk, versiering, en traditioneel seizoen eten"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Benijófar heeft basis Spaanse openbare scholen geschikt voor gezinnen die in dorpsleven willen integreren. Voor internationale curriculum opties, nabijgelegen Torrevieja biedt betere selectie.",
+      "schools": [
+        {
+          "name": "Colegio Público Benijófar",
+          "type": "Openbare Basisschool",
+          "distance": "Dorpscentrum, loopafstand",
+          "description": "Spaanse openbare school serverende lokale gemeenschap, tweetalig programma met Engels vanaf basis niveau"
+        },
+        {
+          "name": "IES Playa Flamenca",
+          "type": "Openbare Secundaire School",
+          "distance": "8 km naar Playa Flamenca",
+          "description": "Secundaire school serverende breder gebied met Spaans curriculum en technische opties"
+        },
+        {
+          "name": "Internationale Scholen (Torrevieja)",
+          "type": "Internationale Basis & Secundair",
+          "distance": "12 km",
+          "description": "Britse en andere internationale curriculum scholen in Torrevieja bieden alternatieven voor Spaans openbaar onderwijs"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Benijófars natuurlijke omgeving biedt activiteiten gecentreerd op omringende agrarische landschap, nabijgelegen zoutmeren, en kust toegang. Natuurervaring is authentiek en niet-commercieel.",
+      "activities": [
+        {
+          "name": "Fietsen door citrusgroves",
+          "type": "Actief buitenvermaak",
+          "description": "Vlak terrein en rustige plattelandswegen perfect voor fietsen tussen orangebomen, vooral prachtig gedurende lente bloem"
+        },
+        {
+          "name": "Wandelpaden bij Guardamar duinen",
+          "type": "Natuur wandelen",
+          "description": "Dennenbossen zandduinen met gemarkeerde wandelpaden, 6 km weg, biedt kust natuuronderdompeling"
+        },
+        {
+          "name": "Vogelwatching bij La Mata zoutmeren",
+          "type": "Natuur observatie",
+          "description": "Beschermd wetland gebied 10 km weg gastheer flamingo's, reigers, en trekvoels—bijzonder rijk in voorjaar/herfst"
+        },
+        {
+          "name": "Zwemmen en snorkelen bij Guardamar stranden",
+          "type": "Wateractiviteiten",
+          "description": "Natuurlijke stranden 6 km weg met helder middellandsezeewater ideaal voor casual zwemmen en verkenning"
+        },
+        {
+          "name": "Bloei seizoen wandelingen (Maart-April)",
+          "type": "Seizoens natuurbeleving",
+          "description": "Lente bezoeken aan omringende citrusgroves gedurende bloei biedt spectaculaire citrusbloemzichten en geur"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Benijófars expatriaat gemeenschap is kleiner en beter geintegreerd dan kustgebieden, trekkend aan degenen die echt Spaans dorpsleven waarderen boven vakantie gemak. Integratie gebeurt natuurlijk via gedeelde dorp ervaring.",
+      "highlights": [
+        "Kleiner, beter geintregreerde expat gemeenschap dan kuststad",
+        "Dorps sfeer moedigt echt Spaanse vriendschappen en taallearning aan",
+        "Sociale verbindingen vormen zich rond golfclubs, lokale restaurants, en gedeelde gemeenschaps evenementen",
+        "Geen gevestigde expat infrastructuur betekent zelfvoorziening en diepere lokale integratie",
+        "Kwaliteit-van-leven zoekers eerder dan toerist bezoekers of pure investeerders"
+      ],
+      "nationalities": [
+        "Brits",
+        "Duits",
+        "Nederlands",
+        "Belgisch",
+        "Scandinavisch",
+        "Frans"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Een Typische Week in Benijófar",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Ochtend koffie en krant",
+          "description": "Start de dag in lokale bar met café con leche, lezende Spaanse of internationale kranten"
+        },
+        {
+          "time": "10:00",
+          "activity": "Marktwinkelen of boodschappen",
+          "description": "Winkel bij lokale supermarkt of weekse markt voor verse producten en dagelijkse basisbehoeftes"
+        },
+        {
+          "time": "13:00",
+          "activity": "Late lunch",
+          "description": "Hoofdmaaltijd van de dag, thuis of lokaal restaurant—Spaanse traditie neemt tijd"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta of zwembad tijd",
+          "description": "Middagrust of afkoelen in villa zwembad als temperaturen stijgen in zomer"
+        },
+        {
+          "time": "18:00",
+          "activity": "Golf of sports",
+          "description": "Ronde bij La Finca Golf (7 min) of tennis en recreatieve activiteiten"
+        },
+        {
+          "time": "20:30",
+          "activity": "Avond paseo en diner",
+          "description": "Wandeling door dorpscentrum groetende buren, dan diner (licht maaltijd) rond 20:30-21:00"
+        },
+        {
+          "time": "22:00",
+          "activity": "Sociaal tijd",
+          "description": "Drankjes met vrienden in bar, gesprekken over de dag, Spaans televisie"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7278!3d38.0697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBenij%C3%B3far!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Benijófar",
+    "description": "Benijófar is een authentiek Spaans dorp in Costa Blanca South omringd door citrusgroves, aanbiedend traditioneel dorpsleven en moderne nieuwe bouw villa's met Guardamar stranden slechts 6 km weg.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.0697",
+      "longitude": "-0.7278"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Benijófar",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Benijófar een goed plaats om property te kopen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Uitstekend voor kopers die authentiek Spaans dorpsleven zoeken met moderne villa opties in de buurt. Stranden zijn slechts 6 km weg tegen lagere prijzen dan kust equivalenten."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hoe ver is Benijófar van het strand?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Guardamar stranden zijn 6 km weg (8 minuten). Heel dichtbij voor een binnenlands dorp."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wat zijn property prijzen in Benijófar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Stadhuizen vanaf €165.000, villa's vanaf €280.000."
+        }
+      }
+    ]
+  }
+}

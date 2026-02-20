@@ -1,0 +1,430 @@
+{
+  "slug": "benijofar",
+  "name": "Benijófar",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/benijofar-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Townhouse",
+    "Villa",
+    "Bungalow",
+    "Country House"
+  ],
+  "priceRange": {
+    "min": 165000,
+    "max": 550000
+  },
+  "coordinates": {
+    "lat": 38.0697,
+    "lng": -0.7278
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Benijófar",
+      "url": "https://www.benijofar.es/",
+      "description": "Mairie officielle de Benijófar"
+    },
+    "beaches": [
+      {
+        "name": "Guardamar Beaches",
+        "googleMaps": "https://maps.google.com/?q=Playa+Centro+Guardamar",
+        "description": "Plages naturelles avec forêts de pins en arrière-plan",
+        "distance": "6 km"
+      },
+      {
+        "name": "La Mata Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+La+Mata",
+        "description": "Longue plage naturelle près des lacs salés",
+        "distance": "10 km"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "12 km",
+      "driveTime": "14 minutes"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "38 km",
+      "driveTime": "28 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Benijófar est entouré de terrains de golf dans toutes les directions, offrant de la variété sans les prix des complexes golfiques.",
+    "courses": [
+      {
+        "name": "La Finca Golf",
+        "distance": "5 km",
+        "driveTime": "7 minutes",
+        "holes": 18,
+        "url": "https://www.lafincagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Finca+Golf",
+        "description": "Parcours de championnat conçu par Pepe Gancedo."
+      },
+      {
+        "name": "La Marquesa Golf",
+        "distance": "6 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "url": "https://www.lamarquesagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Marquesa+Golf",
+        "description": "Parcours bien entretenu et populaire auprès des résidents."
+      },
+      {
+        "name": "Vistabella Golf",
+        "distance": "10 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.vistabellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+        "description": "Parcours moderne avec des installations excellentes."
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Vivre à Benijófar | Vie du Village | Costa Blanca South 2026",
+    "metaDescription": "Guide complet de Benijófar—authentique village espagnol, villas modernes à partir de 165 000 €, plages de Guardamar à 6 km. Vergers d'agrumes, fêtes traditionnelles, intégration véritable.",
+    "quickAnswer": "Benijófar est un petit village espagnol authentique entouré de vergers d'agrumes offrant des villas modernes à partir de 165 000 €. Les plages de Guardamar sont à seulement 6 km, La Finca Golf à 7 minutes. Parfait pour les acheteurs en quête de vie villageoise avec commodités côtières—l'Espagne authentique à des prix abordables.",
+    "heroIntro": "Benijófar est le genre de village espagnol que les cartes postales tentent de capturer : des maisons blanchies à la chaux regroupées autour d'un clocher d'église, des orangeraies embaumant l'air au printemps, des habitants âgés se réunissant sur la plaza comme ils le font depuis des générations. Pourtant, ce n'est pas une pièce de musée—c'est une communauté vivante où de nouvelles villas avec piscines cohabitent avec des maisons traditionnelles, et les acheteurs internationaux sont accueillis dans la véritable vie villageoise.\n\nLe village occupe une légère élévation dans la région agricole de Vega Baja, entouré des vergers d'agrumes qui ont soutenu la région pendant des siècles. Les plages naturelles de Guardamar sont à seulement 6 km. La Finca Golf est à 7 minutes. Les commodités de Torrevieja sont à 12 minutes. Pourtant, le rythme de vie ici est indéniablement villageois—plus lent, plus amical, plus connecté aux rythmes de la vie espagnole.\n\nPour les acheteurs en quête d'authenticité sans isolement, Benijófar offre un rare équilibre.",
+    "lifestyleSection": {
+      "intro": "La vie villageoise à Benijófar signifie connaître vos voisins, s'arrêter pour un café au bar local, et participer à des fêtes qui se déroulent depuis des générations. La communauté internationale est présente mais s'intègre plutôt que de dominer. L'espagnol est utile et apprécié. Ceux qui embrassent la vie villageoise trouvent une chaleur que la vie de station balnéaire ne peut pas reproduire.\n\nLes urbanisations modernes environnantes offrent de nouvelles villas avec piscines et équipements contemporains. Les résidents obtiennent le meilleur des deux mondes : le caractère villageois pour la vie quotidienne, les conforts modernes, et les commodités côtières à quelques minutes.",
+      "highlights": [
+        "Atmosphère authentique du village espagnol",
+        "Nouvelles villas avec piscines disponibles",
+        "Plages de Guardamar à seulement 6 km",
+        "La Finca Golf à 7 minutes",
+        "Entouré de vergers d'agrumes parfumés",
+        "Fêtes traditionnelles toute l'année",
+        "Excellente valeur comparée aux zones côtières",
+        "Opportunité véritable d'intégration espagnole"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Les plages naturelles de Guardamar (bordées de forêts de pins) sont à seulement 6 km (8 minutes). La Mata est à 10 km. Assez proche pour des journées plage régulières sans les primes de propriété côtière.",
+      "dining": "Le village a des bars et restaurants traditionnels espagnols. Pour plus de variété, Rojales (3 km), Guardamar (6 km), et Torrevieja (12 km) offrent plus d'options.",
+      "shopping": "Les boutiques villageoises couvrent les essentiels. Supermarché Mercadona à proximité. Marchés hebdomadaires dans les villes environnantes. Pour les achats majeurs, Habaneras à Torrevieja (12 km) ou La Zenia Boulevard (22 km).",
+      "healthcare": "L'Hospital Universitario de Torrevieja est à 12 km (14 minutes). Centre médical local et pharmacie au village. Bon accès pour un village de cette taille.",
+      "transport": "L'aéroport d'Alicante-Elche est à 38 km (28 minutes)—bon accès. Une voiture est essentielle. L'emplacement central facilite l'exploration régionale."
+    },
+    "neighborhoods": [
+      {
+        "name": "Centre du Village",
+        "description": "Vie villageoise espagnole traditionnelle. Maisons de ville et propriétés anciennes. À distance de marche de la plaza, église et bars. Intégration véritable."
+      },
+      {
+        "name": "Urbanisations Modernes",
+        "description": "Nouvelles villas et bungalows entourant le village. Piscines privées, spécifications modernes. Résidents internationaux. Meilleur des deux mondes."
+      }
+    ],
+    "propertyMarketSection": "Benijófar offre une excellente valeur pour la vie adjacente au village. Les maisons de ville commencent autour de 165 000 à 280 000 €, et les villas de 280 000 à 550 000 €. La combinaison du caractère villageois et des options d'urbanisation moderne attire les acheteurs axés sur la valeur.\n\n**Développement en vedette : Doña Patro IX** – Villas modernes 3 chambres à partir de 449 000 € avec piscines privées, 140 m² d'espace de vie, garage. Design contemporain sur terrains de 300 m².\n\nLe marché attire ceux qui recherchent l'intégration espagnole authentique avec les conforts de la maison moderne à proximité. Le potentiel locatif est limité comparé aux zones côtières—c'est un choix de style de vie.",
+    "whyLiveHereSection": [
+      "Caractère authentique du village espagnol",
+      "Nouvelles villas modernes disponibles",
+      "Plages de Guardamar à seulement 6 km",
+      "La Finca Golf à 7 minutes",
+      "Fêtes traditionnelles et vie communautaire",
+      "Excellente valeur pour la vie adjacente au village",
+      "Vergers d'agrumes et cadre campagnard",
+      "28 minutes à l'aéroport d'Alicante"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Villa Doña Patro IX",
+        "reference": "N8496",
+        "price": 449000,
+        "type": "Villa",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "plotArea": 300,
+        "features": [
+          "Piscine Privée",
+          "Design Moderne",
+          "Garage"
+        ],
+        "description": "Villa contemporaine 3 chambres avec piscine, 140 m² d'espace de vie, et garage."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Benijófar est-il un bon endroit pour acheter une propriété ?",
+        "answer": "Excellent pour les acheteurs en quête de vie villageoise espagnole authentique avec options de villa moderne à proximité. Les propriétés coûtent moins que les équivalents côtiers tandis que les plages sont à seulement 6 km. Idéal pour ceux à l'aise avec l'intégration villageoise."
+      },
+      {
+        "question": "Quelle est la distance de Benijófar à la plage ?",
+        "answer": "Les plages de Guardamar sont à 6 km (8 minutes). La Mata est à 10 km. Très proche pour un village intérieur—accès facile à la plage sans prix côtiers."
+      },
+      {
+        "question": "Quels sont les prix des propriétés à Benijófar ?",
+        "answer": "Maisons de ville à partir de 165 000 €, villas à partir de 280 000 €. Les nouveaux immeubles modernes dans les urbanisations environnantes offrent une vie contemporaine à des prix adjacents au village."
+      },
+      {
+        "question": "Benijófar est-il bon pour le golf ?",
+        "answer": "Bon accès. La Finca Golf est à 7 minutes, La Marquesa à 8 minutes, Vistabella à 12 minutes. Emplacement central sans prix de complexe golfique."
+      },
+      {
+        "question": "L'anglais est-il largement parlé à Benijófar ?",
+        "answer": "Le village est authentiquement espagnol—l'espagnol est la langue principale. Certains résidents internationaux dans les urbanisations environnantes. L'espagnol basique est utile et apprécié."
+      },
+      {
+        "question": "Comment est la vie villageoise à Benijófar ?",
+        "answer": "Rythmes traditionnels du village espagnol : café le matin aux bars locaux, paseo du soir sur la plaza, fêtes toute l'année. Les voisins se connaissent. Ceux qui s'intègrent trouvent une chaleur communautaire véritable."
+      },
+      {
+        "question": "Benijófar convient-il à la vie permanente ?",
+        "answer": "Oui, pour ceux qui valorisent l'atmosphère villageoise et l'intégration espagnole. Services toute l'année, population permanente, communauté traditionnelle. Pas pour ceux qui souhaitent des commodités étendues en langue anglaise."
+      },
+      {
+        "question": "Comment Benijófar se compare-t-il aux villes plus grandes ?",
+        "answer": "Plus petit, plus espagnol, plus intime. Les villes plus grandes comme Torrevieja offrent plus de commodités mais moins de caractère. Benijófar offre l'authenticité villageoise avec les commodités des villes plus grandes à proximité."
+      }
+    ],
+    "conclusion": "Benijófar offre quelque chose d'de plus en plus précieux : la véritable vie villageoise espagnole qui n'a pas été transformée par le tourisme de masse. Les maisons blanchies à la chaux, les vergers d'agrumes, les fêtes—ce sont authentiques, non recréés. Pourtant, les villas modernes à proximité offrent le confort contemporain, et les plages sont plus proches que de nombreux développements côtiers.\n\nPour les acheteurs en quête d'intégration villageoise avec commodités à proximité, Benijófar livre les deux.\n\nPrêt à explorer les propriétés à Benijófar ? Notre équipe comprend la vie villageoise et peut vous mettre en relation avec des propriétés qui correspondent à vos objectifs d'intégration—des maisons de ville du centre du village aux villas des urbanisations modernes.",
+    "investmentAnalysis": {
+      "rentalYield": "3-5% sur les villas modernes des urbanisations environnantes",
+      "annualAppreciation": "2-3% historiquement, croissance stable de la proximité côtière",
+      "overview": "Le marché locatif de Benijófar est limité en raison de sa localisation intérieure et de son caractère villageois—les propriétés attirent plus les résidents à long terme que les visiteurs en vacances. La valeur provient des prix d'entrée plus bas et de la qualité de vie plutôt que de l'appréciation des investissements.",
+      "highlights": [
+        "Les propriétés côtières à 6-10 km attrent ceux qui cherchent des locations",
+        "Les villas modernes avec piscines offrent un meilleur potentiel locatif que les propriétés du centre-ville",
+        "Les locations à long terme aux expatriés plus fiables que les locations de vacances",
+        "Appréciation des propriétés modeste mais stable de la région Costa Blanca South",
+        "Les prix d'achat plus bas signifient une récupération de capital plus rapide sur les rendements locatifs"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Les coûts de vie à Benijófar sont considérablement inférieurs aux zones côtières, reflétant son emplacement villageois intérieur et son caractère espagnol. Les dépenses quotidiennes sont budgétisées aux tarifs locaux, pas aux prix touristiques.",
+      "items": [
+        {
+          "category": "Loyer (appartement 2 chambres)",
+          "cost": "600-850 €",
+          "notes": "Centre du village moins cher que les urbanisations environnantes"
+        },
+        {
+          "category": "Utilities (mensuel)",
+          "cost": "80-120 €",
+          "notes": "Électricité, eau, gaz pour villa typique"
+        },
+        {
+          "category": "Épiceries (hebdomadaire)",
+          "cost": "50-75 €",
+          "notes": "Prix des supermarches et marchés locaux"
+        },
+        {
+          "category": "Repas au restaurant (3 courses)",
+          "cost": "12-18 €",
+          "notes": "Prix des bars à tapas espagnols, pas établissements touristiques"
+        },
+        {
+          "category": "Café",
+          "cost": "1,20-1,50 €",
+          "notes": "Service assis aux bars du village"
+        },
+        {
+          "category": "Santé (mensuel)",
+          "cost": "50-100 €",
+          "notes": "Assurance privée facultative ; services publics disponibles"
+        },
+        {
+          "category": "Impôts fonciers (annuel)",
+          "cost": "300-500 €",
+          "notes": "IBI pour villa typique, échelle avec valeur de propriété"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Le calendrier de Benijófar est centré sur les fêtes espagnoles traditionnelles et les célébrations agricoles, reflétant son identité villageoise. Ces événements rassemblent la communauté et offrent une véritable expérience culturelle espagnole.",
+      "events": [
+        {
+          "name": "Fiestas Patronales de Benijófar",
+          "month": "Août",
+          "description": "Fête principale honorant le saint patron de la ville avec des parades, de la musique en direct, des étalages de nourriture et des célébrations de rue pendant plusieurs jours"
+        },
+        {
+          "name": "Semana Santa (Semaine Sainte)",
+          "month": "Mars/Avril",
+          "description": "Processions religieuses à travers le centre-ville, cérémonies espagnoles traditionnelles, et célébrations de nourriture locale"
+        },
+        {
+          "name": "Feria de Primavera (Foire du Printemps)",
+          "month": "Mai",
+          "description": "Foire agricole célébrant la récolte de printemps avec produits locaux, artisanat, et divertissements traditionnels"
+        },
+        {
+          "name": "Noche de San Juan (Nuit de la Saint-Jean)",
+          "month": "Juin",
+          "description": "Bonfires et célébrations plage aux plages de Guardamar, festivités d'été espagnoles traditionnelles du solstice d'été"
+        },
+        {
+          "name": "Mercado Navideño (Marché de Noël)",
+          "month": "Décembre",
+          "description": "Marché de Noël du centre-ville avec artisanat local, décorations, et nourriture saisonnière traditionnelle"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Benijófar a des écoles publiques espagnoles basiques adaptées aux familles prévoyant de s'intégrer à la vie villageoise. Pour les options de cursus international, Torrevieja à proximité offre une meilleure sélection.",
+      "schools": [
+        {
+          "name": "Colegio Público Benijófar",
+          "type": "École Primaire Publique",
+          "distance": "Centre du village, à distance de marche",
+          "description": "École publique espagnole servant la communauté locale, programme bilingue avec anglais depuis le niveau primaire"
+        },
+        {
+          "name": "IES Playa Flamenca",
+          "type": "École Secondaire Publique",
+          "distance": "8 km à Playa Flamenca",
+          "description": "École secondaire servant la région plus large avec cursus espagnol et options techniques"
+        },
+        {
+          "name": "Écoles Internationales (Torrevieja)",
+          "type": "Primaire & Secondaire International",
+          "distance": "12 km",
+          "description": "Les écoles de cursus britannique et international à Torrevieja offrent des alternatives à l'éducation publique espagnole"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Le cadre naturel de Benijófar offre des activités centrées sur le paysage agricole environnant, les lacs salés proches, et l'accès côtier. Les expériences naturelles sont authentiques et non commercialisées.",
+      "activities": [
+        {
+          "name": "Cyclisme à travers les vergers d'agrumes",
+          "type": "Loisir actif en plein air",
+          "description": "Terrain plat et routes rurales tranquilles parfaits pour le cyclisme parmi les orangeraies, particulièrement beau pendant la floraison de printemps"
+        },
+        {
+          "name": "Sentiers de marche aux dunes de Guardamar",
+          "type": "Marche nature",
+          "description": "Dunes de sable bordées de pins avec sentiers balisés, à 6 km, offre une immersion dans la nature côtière"
+        },
+        {
+          "name": "Observation des oiseaux aux lacs salés de La Mata",
+          "type": "Observation de la nature",
+          "description": "Zone humide protégée à 10 km accueillant flamants roses, hérons, et oiseaux migrateurs—particulièrement riche au printemps/automne"
+        },
+        {
+          "name": "Natation et snorkeling aux plages de Guardamar",
+          "type": "Activités aquatiques",
+          "description": "Plages naturelles à 6 km avec eau méditerranéenne claire idéale pour la natation casual et l'exploration"
+        },
+        {
+          "name": "Marches à l'époque de la floraison (Mars-Avril)",
+          "type": "Expérience nature saisonnière",
+          "description": "Visites de printemps aux vergers d'agrumes environnants pendant la floraison offre des vues spectaculaires de fleurs d'oranger et du parfum"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "La communauté expatriée de Benijófar est plus petite et mieux intégrée que dans les zones côtières, attirant ceux qui valorisent vraiment la vie villageoise espagnole plutôt que le confort de station balnéaire. L'intégration se fait naturellement à travers l'expérience villageoise partagée.",
+      "highlights": [
+        "Communauté expatriée plus petite et mieux intégrée que les villes côtières",
+        "L'atmosphère villageoise encourage les amitié espagnoles véritables et l'apprentissage des langues",
+        "Les connexions sociales se forment autour des clubs de golf, restaurants locaux, et événements communautaires partagés",
+        "L'absence d'infrastructure expatriée établie signifie l'auto-suffisance et l'intégration locale plus profonde",
+        "Chercheurs de qualité de vie plutôt que visiteurs touristiques ou investisseurs purs"
+      ],
+      "nationalities": [
+        "Britannique",
+        "Allemand",
+        "Néerlandais",
+        "Belge",
+        "Scandinave",
+        "Français"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "Une Semaine Typique à Benijófar",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Café du matin et journal",
+          "description": "Commencez la journée à un bar local avec café con leche, lisant des journaux espagnols ou internationaux"
+        },
+        {
+          "time": "10:00",
+          "activity": "Courses au marché ou courses",
+          "description": "Achetez au supermarché local ou au marché hebdomadaire pour les produits frais et les essentiels quotidiens"
+        },
+        {
+          "time": "13:00",
+          "activity": "Déjeuner tardif",
+          "description": "Repas principal de la journée, soit à la maison soit au restaurant local—la tradition espagnole prend du temps"
+        },
+        {
+          "time": "15:00",
+          "activity": "Sieste ou temps à la piscine",
+          "description": "Repos de l'après-midi ou refroidissement à la piscine de la villa car les températures augmentent en été"
+        },
+        {
+          "time": "18:00",
+          "activity": "Golf ou sports",
+          "description": "Partie à La Finca Golf (7 min) ou tennis et activités récréatives"
+        },
+        {
+          "time": "20:30",
+          "activity": "Paseo du soir et dîner",
+          "description": "Marche à travers le centre-village en saluant les voisins, puis dîner (repas plus léger) vers 20 h 30-21 h"
+        },
+        {
+          "time": "22:00",
+          "activity": "Temps social",
+          "description": "Verres avec des amis à un bar, conversations sur la journée, télévision espagnole"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7278!3d38.0697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBenij%C3%B3far!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Benijófar",
+    "description": "Benijófar est un village espagnol authentique de Costa Blanca South entouré de vergers d'agrumes, offrant une vie villageoise traditionnelle et des villas modernes avec construction nouvelle avec plages de Guardamar à seulement 6 km.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.0697",
+      "longitude": "-0.7278"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Benijófar",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Benijófar est-il un bon endroit pour acheter une propriété ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Excellent pour les acheteurs en quête de vie villageoise espagnole authentique avec options de villa moderne à proximité. Les plages sont à seulement 6 km à des prix plus bas que les équivalents côtiers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quelle est la distance de Benijófar à la plage ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les plages de Guardamar sont à 6 km (8 minutes). Très proche pour un village intérieur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quels sont les prix des propriétés à Benijófar ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Maisons de ville à partir de 165 000 €, villas à partir de 280 000 €."
+        }
+      }
+    ]
+  }
+}

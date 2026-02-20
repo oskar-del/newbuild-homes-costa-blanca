@@ -1,0 +1,430 @@
+{
+  "slug": "benijofar",
+  "name": "Benijófar",
+  "region": "Costa Blanca South",
+  "heroImage": "/images/areas/benijofar-hero.webp",
+  "cardImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&fit=crop",
+  "propertyCount": 0,
+  "propertyTypes": [
+    "Townhouse",
+    "Villa",
+    "Bungalow",
+    "Country House"
+  ],
+  "priceRange": {
+    "min": 165000,
+    "max": 550000
+  },
+  "coordinates": {
+    "lat": 38.0697,
+    "lng": -0.7278
+  },
+  "externalLinks": {
+    "tourism": {
+      "name": "Benijófar",
+      "url": "https://www.benijofar.es/",
+      "description": "Offisiell Benijófar kommune"
+    },
+    "beaches": [
+      {
+        "name": "Guardamar Beaches",
+        "googleMaps": "https://maps.google.com/?q=Playa+Centro+Guardamar",
+        "description": "Naturlige strender med furuskog bak",
+        "distance": "6 km"
+      },
+      {
+        "name": "La Mata Beach",
+        "googleMaps": "https://maps.google.com/?q=Playa+La+Mata",
+        "description": "Lang naturlig strand ved saltsjøer",
+        "distance": "10 km"
+      }
+    ],
+    "healthcare": {
+      "name": "Hospital Universitario de Torrevieja",
+      "googleMaps": "https://maps.google.com/?q=Hospital+de+Torrevieja",
+      "url": "https://torrevieja-salud.com/",
+      "distance": "12 km",
+      "driveTime": "14 minutes"
+    },
+    "airport": {
+      "name": "Alicante-Elche Airport",
+      "googleMaps": "https://maps.google.com/?q=Alicante+Airport",
+      "url": "https://www.alicante-airport.net/",
+      "distance": "38 km",
+      "driveTime": "28 minutes"
+    }
+  },
+  "golf": {
+    "intro": "Benijófar er omgitt av golfbaner i alle retninger, og tilbyr variasjon uten golfresortpriser.",
+    "courses": [
+      {
+        "name": "La Finca Golf",
+        "distance": "5 km",
+        "driveTime": "7 minutes",
+        "holes": 18,
+        "url": "https://www.lafincagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Finca+Golf",
+        "description": "Mesterskapstype golfbane designet av Pepe Gancedo."
+      },
+      {
+        "name": "La Marquesa Golf",
+        "distance": "6 km",
+        "driveTime": "8 minutes",
+        "holes": 18,
+        "url": "https://www.lamarquesagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=La+Marquesa+Golf",
+        "description": "Velholdt bane som er populær blant innbyggere."
+      },
+      {
+        "name": "Vistabella Golf",
+        "distance": "10 km",
+        "driveTime": "12 minutes",
+        "holes": 18,
+        "url": "https://www.vistabellagolf.com/",
+        "googleMaps": "https://maps.google.com/?q=Vistabella+Golf",
+        "description": "Moderne bane med utmerkede fasiliteter."
+      }
+    ]
+  },
+  "content": {
+    "metaTitle": "Å bo i Benijófar | Landsbylivet | Costa Blanca South 2026",
+    "metaDescription": "Komplett guide til Benijófar—autentisk spansk landsby, moderne villaer fra €165k, Guardamar strender 6 km unna. Sitrusgårder, tradisjonelle fester, genuint samspill.",
+    "quickAnswer": "Benijófar er en liten autentisk spansk landsby omgitt av sitrusfrukthager som tilbyr moderne villaer fra €165.000. Guardamar strender ligger bare 6 km unna, La Finca Golf 7 minutter unna. Perfekt for kjøpere som søker landsbylivet med kystbekvemmelighet—ekte Spania til rimelige priser.",
+    "heroIntro": "Benijófar er den type spanske landsby som postkort prøver å fange: hvitkalkede hus klynget rundt et kirkespir, oransjegrover som dufter luften på våren, eldre innbyggere som samles på plassen slik de har gjort i generasjoner. Men dette er ikke et museum—det er et levende samfunn hvor nye villaer med basseng ligger ved siden av tradisjonelle hjem, og internasjonale kjøpere er velkomne til genuint landsbylivet.\n\nLandsbyen ligger på en mild høyde i Vega Baja landbruksregionen, omgitt av sitrushagene som har ernært området i århundrer. Guardamars naturlige strender ligger bare 6 km unna. La Finca Golf er 7 minutter unna. Torreviejas fasiliteter er 12 minutter unna. Likevel er livstempoet her utpreget landsbybasert—langsommere, vennligere, mer tilknyttet de spanske livets rytmer.\n\nFor kjøpere som søker autentisitet uten isolasjon, tilbyr Benijófar en sjelden balanse.",
+    "lifestyleSection": {
+      "intro": "Landsbylivet i Benijófar betyr å kjenne naboene dine, stoppe for kaffe på den lokale baren, og delta i fester som har kjørt i generasjoner. Det internasjonale samfunnet er tilstede men integreres snarere enn dominerer. Spansk er nyttig og satt pris på. De som omfavner landsbylivet finner varme som resort-livet ikke kan gjenskape.\n\nDe omkringliggende moderne urbaniseringene tilbyr nye villaer med basseng og moderne bekvemmeligheter. Innbyggere får det beste fra begge verdener: landsbykarakter for dagliglivet, moderne hjemmebekvemmeligheter, og kystfasiliteter minutter unna.",
+      "highlights": [
+        "Autentisk spansk landsbyatmosfære",
+        "Moderne nybygg-villaer med basseng tilgjengelig",
+        "Guardamar strender bare 6 km unna",
+        "La Finca Golf 7 minutter unna",
+        "Omgitt av duftende sitrushager",
+        "Tradisjonelle fester gjennom året",
+        "Utmerket verdi sammenlignet med kystområder",
+        "Genuint spansk integrasjonsmulighet"
+      ]
+    },
+    "amenitiesSection": {
+      "beaches": "Guardamars naturlige strender (støttet av furuskoger) ligger bare 6 km unna (8 minutter). La Mata er 10 km unna. Nær nok for vanlige strandsdager uten kystkostnad premie.",
+      "dining": "Landsbyen har tradisjonelle spanske barer og restauranter. For variasjon tilbyr Rojales (3 km), Guardamar (6 km), og Torrevieja (12 km) flere alternativer.",
+      "shopping": "Landsbybutikker dekker det grunnleggende. Mercadona supermarked i nærheten. Ukentlige markeder i omkringliggende byer. For større handel, Habaneras i Torrevieja (12 km) eller La Zenia Boulevard (22 km).",
+      "healthcare": "Hospital Universitario de Torrevieja ligger 12 km unna (14 minutter). Lokalt medisinskt senter og apotek i landsbyen. God tilgang for en landsby av denne størrelsen.",
+      "transport": "Alicante-Elche flyplass er 38 km unna (28 minutter)—god tilgang. En bil er essensielt. Sentral plassering gjør regional utforsking lett."
+    },
+    "neighborhoods": [
+      {
+        "name": "Landsbysenteret",
+        "description": "Tradisjonelt spansk landsbylivet. Rektehus og eldre eiendommer. Gangavstand til plassen, kirken, og barer. Genuint samspill."
+      },
+      {
+        "name": "Moderne urbaniseringer",
+        "description": "Nye villaer og bungalower rundt landsbyen. Private basseng, moderne spesifikasjoner. Internasjonale innbyggere. Best fra begge verdener."
+      }
+    ],
+    "propertyMarketSection": "Benijófar tilbyr utmerket verdi for landsbyadjacent boliglivet. Rektehus starter fra omkring €165.000-280.000, og villaer fra €280.000-550.000. Kombinasjonen av landsbykarakter og moderne urbaniseringsalternativer tiltrekker seg verdibevisste kjøpere.\n\n**Fremhevet utvikling: Doña Patro IX** – Moderne 3-soverom villaer fra €449.000 med private basseng, 140m² stue, garasje. Samtidsdesign på 300m² tomter.\n\nMarkedet tiltrekker de som søker autentisk spansk integrasjon med moderne hjemmekomfort i nærheten. Utleiepotensialet er begrenset sammenlignet med kystområder—dette er et livsstilsvalg.",
+    "whyLiveHereSection": [
+      "Autentisk spansk landsbykarakter",
+      "Moderne nybygg-villaer tilgjengelig",
+      "Guardamar strender bare 6 km unna",
+      "La Finca Golf 7 minutter unna",
+      "Tradisjonelle fester og samfunnsliv",
+      "Utmerket verdi for landsbyadjacent boliglivet",
+      "Sitrushager og landbruksinnstilling",
+      "28 minutter til Alicante flyplass"
+    ],
+    "featuredProperties": [
+      {
+        "title": "Doña Patro IX Villa",
+        "reference": "N8496",
+        "price": 449000,
+        "type": "Villa",
+        "bedrooms": 3,
+        "bathrooms": 3,
+        "plotArea": 300,
+        "features": [
+          "Private Pool",
+          "Modern Design",
+          "Garage"
+        ],
+        "description": "Samtidsdesign 3-soverom villa med basseng, 140m² stue, og garasje."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Er Benijófar et godt sted å kjøpe eiendom?",
+        "answer": "Utmerket for kjøpere som søker autentisk spansk landsbylivet med moderne villaalternativer i nærheten. Eiendommer koster mindre enn kystkvaivalenter mens strender ligger bare 6 km unna. Ideelt for de som er komfortable med landsbyintegrering."
+      },
+      {
+        "question": "Hvor langt er Benijófar fra stranden?",
+        "answer": "Guardamar strender ligger 6 km unna (8 minutter). La Mata er 10 km unna. Veldig nær for en innlands landsby—lett strandtilgang uten kystpriser."
+      },
+      {
+        "question": "Hva er eiendomspriser i Benijófar?",
+        "answer": "Rektehus fra €165.000, villaer fra €280.000. Moderne nybygg i omkringliggende urbaniseringer tilbyr samtidsbolig til landsbyadjacent priser."
+      },
+      {
+        "question": "Er Benijófar bra for golf?",
+        "answer": "God tilgang. La Finca Golf er 7 minutter unna, La Marquesa 8 minutter, Vistabella 12 minutter unna. Sentral plassering uten golfresortpriser."
+      },
+      {
+        "question": "Snakkes engelsk mye i Benijófar?",
+        "answer": "Landsbyen er autentisk spansk—spansk er hovedspråket. Noen internasjonale innbyggere i omkringliggende urbaniseringer. Grunnleggende spansk er nyttig og satt pris på."
+      },
+      {
+        "question": "Hvordan er landsbylivet i Benijófar?",
+        "answer": "Tradisjonelle spanske landsbyriter: morgenkaffe på lokale barer, kveld paseo på plassen, fester gjennom året. Naboer kjenner hverandre. De som integreres finner genuint samfunnsvarmth."
+      },
+      {
+        "question": "Er Benijófar egnet for permanent bolig?",
+        "answer": "Ja, for de som verdsetter landsbyatmosfære og spansk integrasjon. Helårstjenester, permanent befolkning, tradisjonelt samfunn. Ikke for de som ønsker omfattende engelsktalende fasiliteter."
+      },
+      {
+        "question": "Hvordan sammenlignes Benijófar med større byer?",
+        "answer": "Mindre, mer spansk, mer intim. Større byer som Torrevieja tilbyr flere fasiliteter men mindre karakter. Benijófar tilbyr landsbyautentisitet med større bysfasiliteter i nærheten."
+      }
+    ],
+    "conclusion": "Benijófar tilbyr noe stadig mer sjeldent: genuint spansk landsbylivet som ikke har blitt transformert av masseturisme. De hvitkalka husene, sitrushagene, festene—disse er autentiske, ikke gjenskapet. Likevel tilbyr moderne villaer i nærheten moderne komfort, og strender ligger nærmere enn mange kystutvikling.\n\nFor kjøpere som søker landsbyintegrasjon med bekvemmelighet i nærheten, leverer Benijófar begge.\n\nKlar til å utforske eiendommer i Benijófar? Vårt team forstår landsbylivet og kan matche deg med eiendommer som passer dine integrasjonsmål—fra landsbysentrum rektehus til moderne urbanisering villaer.",
+    "investmentAnalysis": {
+      "rentalYield": "3-5% på moderne villaer i omkringliggende urbaniseringer",
+      "annualAppreciation": "2-3% historisk, stabil vekst fra kystnærhet",
+      "overview": "Benijófars utleiemarked er begrenset på grunn av innlandsplassering og landsbykarakter—eiendommer tiltrekker seg langsiktige innbyggere mer enn feriegjester. Verdi kommer fra lavere inngangspriser og livskvalitet snarere enn investeringsappresisering.",
+      "highlights": [
+        "Kysteiendommer 6-10 km unna tiltrekker utleiesøkere",
+        "Moderne villaer med basseng tilbyr bedre utleiepotensialet enn landsbysentereiendommer",
+        "Langtidsutleier til utlendinger mer pålitelig enn ferielukking",
+        "Eiendomsappresisering beskjeden men stabil fra Costa Blanca South utvikling",
+        "Lavere kjøpspriser betyr raskere kapitaloppvinding på utleieresultater"
+      ]
+    },
+    "costOfLiving": {
+      "intro": "Levekostnadene i Benijófar er betydelig lavere enn kystområder, noe som gjenspeiler innlands-landsbysplassering og spansk karakter. Daglige utgifter budsjetteres til lokale priser, ikke turistpriser.",
+      "items": [
+        {
+          "category": "Leie (2-soverom leilighet)",
+          "cost": "€600-850",
+          "notes": "Landsbysentrum billigere enn omkringliggende urbaniseringer"
+        },
+        {
+          "category": "Verktøy (månedlig)",
+          "cost": "€80-120",
+          "notes": "Elektrisitet, vann, gass for typisk villa"
+        },
+        {
+          "category": "Dagligvarer (ukentlig)",
+          "cost": "€50-75",
+          "notes": "Lokale supermarkeder og markedspriser"
+        },
+        {
+          "category": "Restaurantmåltid (3-retter)",
+          "cost": "€12-18",
+          "notes": "Spansk tapas bar priser, ikke turiststeder"
+        },
+        {
+          "category": "Kafé kaffe",
+          "cost": "€1.20-1.50",
+          "notes": "Sittende service i landsbybarene"
+        },
+        {
+          "category": "Helsevesen (månedlig)",
+          "cost": "€50-100",
+          "notes": "Privat forsikring valgfritt; offentlig helsevesen tilgjengelig"
+        },
+        {
+          "category": "Eiendomsskatter (årlig)",
+          "cost": "€300-500",
+          "notes": "IBI for typisk villa, skalerer med eiendomsverdi"
+        }
+      ]
+    },
+    "events": {
+      "intro": "Benijófars kalender sentreres rundt tradisjonelle spanske fester og landbruksseremonien, noe som gjenspeiler landsbyidentiteten. Disse arrangementene bringer samfunnet sammen og tilbyr genuint spansk kulturell opplevelse.",
+      "events": [
+        {
+          "name": "Fiestas Patronales de Benijófar",
+          "month": "August",
+          "description": "Hoved fiesta for ære til byens skytshelgen med parader, live musikk, matstanden, og gatekelebrasjoner som varer flere dager"
+        },
+        {
+          "name": "Semana Santa (Langfredag uke)",
+          "month": "March/April",
+          "description": "Religiøse prosessjoner gjennom bysentrum, tradisjonelle spanske seremonier, og lokale matfeiringer"
+        },
+        {
+          "name": "Feria de Primavera (Vårmarkedet)",
+          "month": "May",
+          "description": "Landbruksmarked som feirer vårhøsten med lokal produksjon, håndverk, og tradisjonelt underholdning"
+        },
+        {
+          "name": "Noche de San Juan (Midsommer natt)",
+          "month": "June",
+          "description": "Bålfire og strandfeiringer ved nærliggende Guardamar strender, tradisjonelle spanske sommersolverv festiviteter"
+        },
+        {
+          "name": "Mercado Navideño (Julemarkedet)",
+          "month": "December",
+          "description": "Bysentrum julemarked med lokal håndverk, dekorasjoner, og tradisjonell sesongmat"
+        }
+      ]
+    },
+    "schools": {
+      "intro": "Benijófar har grunnleggende spanske offentlige skoler som passer for familier som planlegger å integreres i landsbylivet. For internasjonale læreplanalternativer tilbyr nærtliggende Torrevieja bedre utvalg.",
+      "schools": [
+        {
+          "name": "Colegio Público Benijófar",
+          "type": "Public Primary School",
+          "distance": "Landsbysentrum, gangavstand",
+          "description": "Spansk offentlig skole som betjener det lokale samfunnet, tospråklig program med engelsk fra primærnivå"
+        },
+        {
+          "name": "IES Playa Flamenca",
+          "type": "Public Secondary School",
+          "distance": "8 km til Playa Flamenca",
+          "description": "Videregående skole som betjener den bredere regionen med spansk læreplan og tekniske alternativer"
+        },
+        {
+          "name": "International Schools (Torrevieja)",
+          "type": "International Primary & Secondary",
+          "distance": "12 km",
+          "description": "Britiske og andre internasjonale læreplansskoler i Torrevieja tilbyr alternativer til spansk offentlig utdanning"
+        }
+      ]
+    },
+    "natureActivities": {
+      "intro": "Benijófars naturlige innstilling tilbyr aktiviteter sentrert rundt det omkringliggende landbrukslandskap, nærliggende saltsjøer, og kystadgang. Naturopplevelser er autentiske og ikke-kommersialiserte.",
+      "activities": [
+        {
+          "name": "Sykling gjennom sitrushager",
+          "type": "Active outdoor recreation",
+          "description": "Flatt terreng og stille landsbyveger perfekt for sykling blant oransjegårdene, spesielt vakkert under vårblomst"
+        },
+        {
+          "name": "Vandringsstier ved Guardamar sanddyner",
+          "type": "Nature walking",
+          "description": "Furukullen sandsdyner med merket vandringsstier, 6 km unna, tilbyr kystnaturomdømming"
+        },
+        {
+          "name": "Fuglekikking ved La Mata saltsjøer",
+          "type": "Nature observation",
+          "description": "Beskyttet våtmarkområde 10 km unna som huser flamingoer, heironer, og trekkfugler—spesielt rikt på våren/høsten"
+        },
+        {
+          "name": "Svømming og dykking ved Guardamar strender",
+          "type": "Water activities",
+          "description": "Naturlige strender 6 km unna med klar Middelhavsvattn ideell for uformell svømming og utforsking"
+        },
+        {
+          "name": "Blomstringen sesong vandrings (March-April)",
+          "type": "Seasonal nature experience",
+          "description": "Vårbesøk til omkringliggende sitrushager under blomstring tilbyr spektakulært oransjeblomstsynspunkt og duft"
+        }
+      ]
+    },
+    "expatCommunity": {
+      "intro": "Benijófars utlendersamfunn er mindre og mer integrert enn kystområder, som tiltrekker de som genuint verdsetter spansk landsbylivet snarere enn resort bekvemmelighet. Integrering skjer naturlig gjennom delt landsbyopplevelse.",
+      "highlights": [
+        "Mindre, mer integrert utlendersamfunn enn kystbyer",
+        "Landsbyatmosfære oppmuntrer genuint spansk vennskap og språklæring",
+        "Sosiale forbindelser dannes rundt golfklubber, lokale restauranter, og delte samfunnshendelser",
+        "Mindre etablert utlenderinfrastruktur betyr selvstendighet og dypere lokal integrasjon",
+        "Livskvalitetssøkere over turistbesøkende eller rene investorer"
+      ],
+      "nationalities": [
+        "British",
+        "German",
+        "Dutch",
+        "Belgian",
+        "Scandinavian",
+        "French"
+      ]
+    },
+    "lifestyleTimeline": {
+      "title": "En typisk uke i Benijófar",
+      "entries": [
+        {
+          "time": "08:00",
+          "activity": "Morgen kaffe og avis",
+          "description": "Start dagen på en lokal bar med kafé con leche, lese spansk eller internasjonale aviser"
+        },
+        {
+          "time": "10:00",
+          "activity": "Markedshandling eller erend",
+          "description": "Handle på lokalt supermarked eller ukentlig marked for frisk produksjon og daglige nødvendigvarer"
+        },
+        {
+          "time": "13:00",
+          "activity": "Sen frokost",
+          "description": "Hovudmåltidet på dagen, enten hjemme eller lokal restaurant—den spanske tradisjon tar tid"
+        },
+        {
+          "time": "15:00",
+          "activity": "Siesta eller bassengtime",
+          "description": "Ettermiddag hvile eller kjøling i villabasseng når temperaturer topper på sommeren"
+        },
+        {
+          "time": "18:00",
+          "activity": "Golf eller idretter",
+          "description": "Runde på La Finca Golf (7 min) eller tennis og rekreasjonelle aktiviteter"
+        },
+        {
+          "time": "20:30",
+          "activity": "Kveld paseo og middag",
+          "description": "Gå gjennom landsbysentrum hilse naboer, så middag (lettere måltid) omkring 20:30-21:00"
+        },
+        {
+          "time": "22:00",
+          "activity": "Sosial tid",
+          "description": "Drinker med venner på en bar, samtaler om dagen, spansk TV"
+        }
+      ]
+    },
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25000!2d-0.7278!3d38.0697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBenij%C3%B3far!5e0!3m2!1sen!2ses"
+  },
+  "developments": [],
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Benijófar",
+    "description": "Benijófar er en autentisk spansk landsby i Costa Blanca South omgitt av sitrushager, som tilbyr tradisjonelt landsbylivet og moderne nybygg-villaer med Guardamar strender bare 6 km unna.",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.0697",
+      "longitude": "-0.7278"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Benijófar",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    }
+  },
+  "schemaFAQ": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Er Benijófar et godt sted å kjøpe eiendom?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Utmerket for kjøpere som søker autentisk spansk landsbylivet med moderne villaalternativer i nærheten. Strender ligger bare 6 km unna til lavere priser enn kystkvalivalenter."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hvor langt er Benijófar fra stranden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Guardamar strender ligger 6 km unna (8 minutter). Veldig nær for en innlands landsby."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hva er eiendomspriser i Benijófar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rektehus fra €165.000, villaer fra €280.000."
+        }
+      }
+    ]
+  }
+}
