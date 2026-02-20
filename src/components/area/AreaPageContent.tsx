@@ -661,7 +661,7 @@ export default function AreaPageContent({
                   <h2 className="text-3xl lg:text-4xl font-light text-white mt-2 mb-4">
                     {t(s.beachesIn, data.name)}
                   </h2>
-                  <p className="text-warm-300 text-lg max-w-2xl">{content.amenitiesSection.beaches}</p>
+                  <p className="text-warm-300 text-lg max-w-2xl">{content.amenitiesSection?.beaches}</p>
                 </div>
               </div>
             </div>
@@ -787,6 +787,7 @@ export default function AreaPageContent({
         {/* ═══════════════════════════════════════════════════════════════
             AMENITIES — Healthcare, Transport, Shopping
         ═══════════════════════════════════════════════════════════════ */}
+        {content.amenitiesSection && (
         <section className="py-16 bg-warm-50 scroll-mt-16">
           <div className="max-w-7xl mx-auto px-6">
             <span className="text-accent-600 text-sm font-semibold uppercase tracking-wide">Essential Amenities</span>
@@ -804,7 +805,7 @@ export default function AreaPageContent({
                   <span className="text-3xl">&#127860;</span>
                   <h3 className="font-bold text-primary-900 text-xl">{s.dining}</h3>
                 </div>
-                <p className="text-warm-600 text-sm">{content.amenitiesSection.dining}</p>
+                <p className="text-warm-600 text-sm">{content.amenitiesSection?.dining}</p>
               </div>
 
               {/* Healthcare Card */}
@@ -813,7 +814,7 @@ export default function AreaPageContent({
                   <span className="text-3xl">&#127973;</span>
                   <h3 className="font-bold text-primary-900 text-xl">{s.healthcare}</h3>
                 </div>
-                <p className="text-warm-600 text-sm mb-3">{content.amenitiesSection.healthcare}</p>
+                <p className="text-warm-600 text-sm mb-3">{content.amenitiesSection?.healthcare}</p>
                 {externalLinks?.healthcare && (
                   <div className="bg-warm-50 rounded-xl p-3">
                     <p className="font-semibold text-primary-900 text-sm">{externalLinks.healthcare.name}</p>
@@ -832,7 +833,7 @@ export default function AreaPageContent({
                   <span className="text-3xl">&#9992;&#65039;</span>
                   <h3 className="font-bold text-primary-900 text-xl">{s.transport}</h3>
                 </div>
-                <p className="text-warm-600 text-sm mb-3">{content.amenitiesSection.transport}</p>
+                <p className="text-warm-600 text-sm mb-3">{content.amenitiesSection?.transport}</p>
                 {externalLinks?.airport && (
                   <div className="bg-warm-50 rounded-xl p-3">
                     <p className="font-semibold text-primary-900 text-sm">{externalLinks.airport.name}</p>
@@ -852,10 +853,11 @@ export default function AreaPageContent({
                 <span className="text-3xl">&#128717;&#65039;</span>
                 <h3 className="font-bold text-primary-900 text-xl">{s.shopping}</h3>
               </div>
-              <p className="text-warm-600">{content.amenitiesSection.shopping}</p>
+              <p className="text-warm-600">{content.amenitiesSection?.shopping}</p>
             </div>
           </div>
         </section>
+        )}
 
         {/* ═══════════════════════════════════════════════════════════════
             PROPERTY MARKET
@@ -867,7 +869,7 @@ export default function AreaPageContent({
               {t(s.propertyMarketIn, data.name)}
             </h2>
             <div className="prose prose-lg max-w-none text-warm-700">
-              {content.propertyMarketSection.split('\n\n').map((paragraph, i) => (
+              {(content.propertyMarketSection || '').split('\n\n').map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}
             </div>
@@ -1324,7 +1326,7 @@ export default function AreaPageContent({
                 {t(s.whyLiveIn, data.name)}
               </h2>
               <div className="grid md:grid-cols-2 gap-4">
-                {content.whyLiveHereSection.map((reason, i) => (
+                {(content.whyLiveHereSection || []).map((reason, i) => (
                   <div key={i} className="flex items-start gap-4 bg-white rounded-xl p-5 shadow-sm">
                     <span className="flex-shrink-0 w-10 h-10 bg-accent-500 text-white rounded-full flex items-center justify-center font-bold">{i + 1}</span>
                     <span className="text-warm-700">{reason}</span>
