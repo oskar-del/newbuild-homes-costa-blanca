@@ -1,10 +1,11 @@
-import { redirect } from 'next/navigation';
+// ISR: Regenerate builder pages every hour
+export const revalidate = 3600;
+export const dynamicParams = true;
 
-export default async function LocalizedPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  redirect(`/builders/${slug}`);
-}
+import { createTranslatedBuilderMetadata, createTranslatedBuilderPage } from '@/lib/translated-builder-page';
+
+const LANG = 'nl-be';
+const LANG_PREFIX = '/nl-be';
+
+export const generateMetadata = createTranslatedBuilderMetadata(LANG, LANG_PREFIX);
+export default createTranslatedBuilderPage(LANG, LANG_PREFIX);
