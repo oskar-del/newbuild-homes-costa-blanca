@@ -73,6 +73,7 @@ interface PropertyPageClientProps {
   content: PropertyContent;
   similarProperties: UnifiedProperty[];
   linkingData: LinkingData;
+  lang?: string;
 }
 
 // ====================
@@ -227,12 +228,12 @@ function FAQItem({ question, answer, isOpen, onClick }: {
 }
 
 // Property Card for Similar Properties — larger format
-function PropertyCard({ property }: { property: UnifiedProperty }) {
+function PropertyCard({ property, basePath = '' }: { property: UnifiedProperty; basePath?: string }) {
   const imageUrl = property.images?.[0]?.url || '/placeholder-property.jpg';
 
   return (
     <Link
-      href={`/properties/${property.reference || property.id}`}
+      href={`${basePath}/properties/${property.reference || property.id}`}
       className="block bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all border border-warm-200 group"
     >
       <div className="relative h-56 md:h-64 overflow-hidden">
@@ -278,7 +279,10 @@ function PropertyCard({ property }: { property: UnifiedProperty }) {
 // MAIN COMPONENT
 // ====================
 
-export default function PropertyPageClient({ property, content, similarProperties, linkingData }: PropertyPageClientProps) {
+export default function PropertyPageClient({ property, content, similarProperties, linkingData, lang }: PropertyPageClientProps) {
+  // Language-aware path prefix (e.g., '/fr' for French, '' for English)
+  const basePath = lang && lang !== 'en' ? `/${lang}` : '';
+
   // State
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -286,7 +290,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
   const [showUrgencyForm, setShowUrgencyForm] = useState(false);
   // Form state removed — now using LeadForm component with Airtable integration
-  
+
   // Data
   const images = property.images || [];
   const mainImage = images[0]?.url || '/placeholder-property.jpg';
@@ -367,13 +371,13 @@ export default function PropertyPageClient({ property, content, similarPropertie
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* ==================== BREADCRUMB ==================== */}
         <nav className="flex items-center gap-2 text-sm text-warm-500 mb-6 flex-wrap">
-          <Link href="/" className="hover:text-accent-600">Home</Link>
+          <Link href={`${basePath}/`} className="hover:text-accent-600">Home</Link>
           <span>›</span>
-          <Link href="/properties" className="hover:text-accent-600">Properties</Link>
+          <Link href={`${basePath}/properties`} className="hover:text-accent-600">Properties</Link>
           {linkingData.development && (
             <>
               <span>›</span>
-              <Link href={`/developments/${linkingData.development.slug}`} className="hover:text-accent-600">
+              <Link href={`${basePath}/developments/${linkingData.development.slug}`} className="hover:text-accent-600">
                 {linkingData.development.name}
               </Link>
             </>
@@ -468,7 +472,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
                 <span className="font-medium">{property.town}, {property.province || 'Alicante'}</span>
                 <span className="text-warm-300">•</span>
                 <Link
-                  href={`/properties/${slugify(property.propertyType || 'property')}s`}
+                  href={`${basePath}/properties/${slugify(property.propertyType || 'property')}s`}
                   className="bg-accent-100 text-accent-800 px-3 py-1 rounded-full text-sm font-medium hover:bg-accent-200 transition-colors"
                 >
                   {property.propertyType || 'Property'}
@@ -477,7 +481,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
                   <>
                     <span className="text-warm-300">•</span>
                     <Link
-                      href={`/developments/${linkingData.development.slug}`}
+                      href={`${basePath}/developments/${linkingData.development.slug}`}
                       className="text-accent-600 hover:text-accent-700 font-medium flex items-center gap-1"
                     >
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -491,7 +495,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
                   <>
                     <span className="text-warm-300">•</span>
                     <Link
-                      href={`/builders/${linkingData.builder.slug}`}
+                      href={`${basePath}/builders/${linkingData.builder.slug}`}
                       className="text-accent-600 hover:text-accent-700 font-medium flex items-center gap-1"
                     >
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -545,7 +549,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
               <div className="bg-primary-900 rounded-xl p-4 mb-4 flex flex-wrap items-center gap-4">
                 {linkingData.development && (
                   <Link
-                    href={`/developments/${linkingData.development.slug}`}
+                    href={`${basePath}/developments/${linkingData.development.slug}`}
                     className="flex items-center gap-3 bg-white/10 hover:bg-white/20 px-4 py-2.5 rounded-lg transition-colors flex-1 min-w-[200px]"
                   >
                     <div className="w-10 h-10 bg-accent-500 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -567,7 +571,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
                 )}
                 {linkingData.builder && (
                   <Link
-                    href={`/builders/${linkingData.builder.slug}`}
+                    href={`${basePath}/builders/${linkingData.builder.slug}`}
                     className="flex items-center gap-3 bg-white/10 hover:bg-white/20 px-4 py-2.5 rounded-lg transition-colors flex-1 min-w-[200px]"
                   >
                     <div className="w-10 h-10 bg-primary-700 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -869,7 +873,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
                 </div>
                 {property.town && (
                   <Link
-                    href={`/areas/${property.town.toLowerCase().replace(/\s+/g, '-')}`}
+                    href={`${basePath}/areas/${property.town.toLowerCase().replace(/\s+/g, '-')}`}
                     className="inline-flex items-center gap-2 mt-4 text-primary-600 hover:text-primary-700 font-medium transition-colors"
                   >
                     Explore {property.town} Area Guide
@@ -1027,7 +1031,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
             <div className="bg-white rounded-xl p-6 shadow-sm border border-warm-100">
               <h2 className="text-xl font-bold text-primary-900 mb-4">Helpful Resources</h2>
               <div className="grid md:grid-cols-2 gap-4">
-                <Link href="/guides/buying-process" className="flex items-center gap-3 p-3 rounded-lg hover:bg-warm-50 transition-colors group">
+                <Link href={`${basePath}/guides/buying-process`} className="flex items-center gap-3 p-3 rounded-lg hover:bg-warm-50 transition-colors group">
                   <div className="w-10 h-10 bg-accent-100 rounded-lg flex items-center justify-center group-hover:bg-accent-200 transition-colors">
                     <svg className="w-5 h-5 text-accent-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -1039,7 +1043,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
                   </div>
                 </Link>
 
-                <Link href="/guides/nie-number" className="flex items-center gap-3 p-3 rounded-lg hover:bg-warm-50 transition-colors group">
+                <Link href={`${basePath}/guides/nie-number`} className="flex items-center gap-3 p-3 rounded-lg hover:bg-warm-50 transition-colors group">
                   <div className="w-10 h-10 bg-accent-100 rounded-lg flex items-center justify-center group-hover:bg-accent-200 transition-colors">
                     <svg className="w-5 h-5 text-accent-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2" />
@@ -1051,7 +1055,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
                   </div>
                 </Link>
 
-                <Link href="/guides/mortgages" className="flex items-center gap-3 p-3 rounded-lg hover:bg-warm-50 transition-colors group">
+                <Link href={`${basePath}/guides/mortgages`} className="flex items-center gap-3 p-3 rounded-lg hover:bg-warm-50 transition-colors group">
                   <div className="w-10 h-10 bg-accent-100 rounded-lg flex items-center justify-center group-hover:bg-accent-200 transition-colors">
                     <svg className="w-5 h-5 text-accent-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -1063,7 +1067,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
                   </div>
                 </Link>
 
-                <Link href={`/areas/${townSlug}`} className="flex items-center gap-3 p-3 rounded-lg hover:bg-warm-50 transition-colors group">
+                <Link href={`${basePath}/areas/${townSlug}`} className="flex items-center gap-3 p-3 rounded-lg hover:bg-warm-50 transition-colors group">
                   <div className="w-10 h-10 bg-accent-100 rounded-lg flex items-center justify-center group-hover:bg-accent-200 transition-colors">
                     <svg className="w-5 h-5 text-accent-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -1089,7 +1093,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {property.town && (
                   <Link
-                    href={`/properties/${slugify(property.town)}`}
+                    href={`${basePath}/properties/${slugify(property.town)}`}
                     className="flex items-center gap-2 p-3 rounded-lg bg-primary-50 hover:bg-primary-100 transition-colors group"
                   >
                     <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1100,7 +1104,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
                 )}
                 {property.propertyType && (
                   <Link
-                    href={`/properties/${slugify(property.propertyType)}s`}
+                    href={`${basePath}/properties/${slugify(property.propertyType)}s`}
                     className="flex items-center gap-2 p-3 rounded-lg bg-accent-50 hover:bg-accent-100 transition-colors group"
                   >
                     <svg className="w-5 h-5 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1111,7 +1115,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
                 )}
                 {property.bedrooms > 0 && (
                   <Link
-                    href={`/properties/${property.bedrooms}-bed`}
+                    href={`${basePath}/properties/${property.bedrooms}-bed`}
                     className="flex items-center gap-2 p-3 rounded-lg bg-warm-100 hover:bg-warm-200 transition-colors group"
                   >
                     <svg className="w-5 h-5 text-warm-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1122,7 +1126,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
                 )}
                 {property.price && property.price < 300000 && (
                   <Link
-                    href="/properties/under-300k"
+                    href={`${basePath}/properties/under-300k`}
                     className="flex items-center gap-2 p-3 rounded-lg bg-success-50 hover:bg-success-100 transition-colors group"
                   >
                     <svg className="w-5 h-5 text-success-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1132,7 +1136,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
                   </Link>
                 )}
                 <Link
-                  href="/properties/key-ready"
+                  href={`${basePath}/properties/key-ready`}
                   className="flex items-center gap-2 p-3 rounded-lg bg-success-50 hover:bg-success-100 transition-colors group"
                 >
                   <svg className="w-5 h-5 text-success-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1142,7 +1146,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
                 </Link>
                 {property.region && (
                   <Link
-                    href={`/properties/${slugify(property.region)}`}
+                    href={`${basePath}/properties/${slugify(property.region)}`}
                     className="flex items-center gap-2 p-3 rounded-lg bg-primary-50 hover:bg-primary-100 transition-colors group"
                   >
                     <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1317,7 +1321,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
                 <h2 className="text-2xl font-bold text-primary-900 mb-6">Similar Properties You&apos;ll Love</h2>
                 <div className="grid md:grid-cols-3 gap-6">
                   {similarProperties.slice(0, 3).map((prop) => (
-                    <PropertyCard key={prop.id} property={prop} />
+                    <PropertyCard key={prop.id} property={prop} basePath={basePath} />
                   ))}
                 </div>
               </div>
@@ -1336,7 +1340,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
                   {linkingData.relatedArticles.map((article) => (
                     <Link
                       key={article.slug}
-                      href={`/blog/${article.slug}`}
+                      href={`${basePath}/blog/${article.slug}`}
                       className="flex items-center gap-4 p-4 rounded-xl bg-warm-50 hover:bg-accent-50 transition-colors group border border-warm-100"
                     >
                       <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-accent-200 transition-colors">
@@ -1365,7 +1369,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
             {/* ==================== VIEW ALL PROPERTIES CTA ==================== */}
             <div className="text-center">
               <Link
-                href="/properties"
+                href={`${basePath}/properties`}
                 className="inline-flex items-center gap-2 bg-primary-900 hover:bg-primary-800 text-white px-8 py-4 rounded-xl font-semibold transition-colors"
               >
                 View All Properties

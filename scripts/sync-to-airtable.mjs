@@ -165,7 +165,7 @@ function loadDevelopments() {
         'Meta Title': (data.metaTitle || '').substring(0, 255),
         'Meta Description': (data.metaDescription || '').substring(0, 500),
         'Source': data.source || '',
-        'Website URL': `${BASE_URL}/developments/${slug}`,
+        'Website URL': `${BASE_URL}/properties/${ref}`,
         'Translations': getTranslations(slug, 'developments'),
         'Content Generated': true,
         'Last Synced': new Date().toISOString()
@@ -200,10 +200,14 @@ function loadBuilders() {
         }
       } catch {}
 
-      records.push({
+      // Filter regions to only valid Airtable select options
+      const validRegions = ['Costa Blanca North', 'Costa Blanca South', 'Costa Calida', 'Mar Menor'];
+      const rawRegions = data.specializationSection?.regions || [];
+      const matchedRegions = rawRegions.filter(r => validRegions.includes(r));
+
+      const record = {
         'Name': data.name || slug,
         'Slug': slug,
-        'Regions': data.specializationSection?.regions || [],
         'Towns': (data.specializationSection?.towns || []).join(', '),
         'Property Types': (data.specializationSection?.propertyTypes || []).join(', '),
         'Active Developments': devCount,
@@ -213,7 +217,12 @@ function loadBuilders() {
         'Translations': getTranslations(slug, 'builders'),
         'Content Generated': true,
         'Last Synced': new Date().toISOString()
-      });
+      };
+      // Only include Regions if there are valid matches (Airtable rejects empty arrays for selects)
+      if (matchedRegions.length > 0) {
+        record['Regions'] = matchedRegions;
+      }
+      records.push(record);
     } catch (e) {
       console.error(`  Error loading ${file}: ${e.message}`);
     }
@@ -265,15 +274,31 @@ function loadArticles() {
       const slug = data.slug || file.replace('.json', '');
       const content = data.content || {};
 
-      records.push({
+      // Map nationality-specific categories to 'Nationality Guide'
+      const validCategories = [
+        'Area Guide', 'Lifestyle', 'Investment', 'Nationality Guide', 'Finance',
+        'Golf', 'Legal', 'Top 10', 'Buying Guide', 'Super Guide',
+        'Visas & Residency', 'Sports & Activities', 'Living in Spain',
+        'Travel', 'Food & Wine', 'Luxury Properties', 'Budget Properties'
+      ];
+      let category = data.category || '';
+      if (category && !validCategories.includes(category)) {
+        // Map buyer-specific categories to Nationality Guide
+        if (category.includes('Buyers')) {
+          category = 'Nationality Guide';
+        } else {
+          category = ''; // Skip unknown categories
+        }
+      }
+
+      const record = {
         'Title': (data.title || '').substring(0, 255),
         'Slug': slug,
-        'Category': data.category || '',
         'Excerpt': (data.excerpt || '').substring(0, 500),
         'Published': data.publishedAt || null,
         'Updated': data.updatedAt || null,
-        'Read Time': data.readTime || '',
-        'Featured': data.featured || false,
+        'Read Time': data.readTime ? String(data.readTime) + ' min' : '',
+        'Featured': data.featured === true,
         'Author': data.author || '',
         'Tags': (data.tags || []).join(', '),
         'Related Areas': (data.relatedAreas || []).join(', '),
@@ -282,7 +307,12 @@ function loadArticles() {
         'Website URL': `${BASE_URL}/blog/${slug}`,
         'Translations': getTranslations(slug, 'articles'),
         'Last Synced': new Date().toISOString()
-      });
+      };
+      // Only include Category if valid (Airtable rejects empty string for singleSelect)
+      if (category) {
+        record['Category'] = category;
+      }
+      records.push(record);
     } catch (e) {
       console.error(`  Error loading ${file}: ${e.message}`);
     }

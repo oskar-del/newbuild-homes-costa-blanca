@@ -266,6 +266,7 @@ export function createTranslatedPropertyPage(lang: string) {
           content={content}
           similarProperties={similarProperties}
           linkingData={linkingData}
+          lang={lang}
         />
       </>
     );
