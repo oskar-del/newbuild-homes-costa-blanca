@@ -1,10 +1,11 @@
-import { redirect } from 'next/navigation';
+// ISR: Regenerate development pages every hour
+export const revalidate = 3600;
+export const dynamicParams = true;
 
-export default async function LocalizedDevelopmentPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-  redirect(`/developments/${slug}`);
-}
+import { createTranslatedDevMetadata, createTranslatedDevPage } from '@/lib/translated-development-page';
+
+const LANG = 'fr';
+const LANG_PREFIX = '/fr';
+
+export const generateMetadata = createTranslatedDevMetadata(LANG, LANG_PREFIX);
+export default createTranslatedDevPage(LANG, LANG_PREFIX);
