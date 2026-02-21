@@ -336,12 +336,12 @@ function LanguageSwitcher({ className = '' }: { className?: string }) {
       return `${lang.prefix}/guides`;
     }
 
-    // Properties/developments/golf/builders detail pages — English only
-    // Fall back to the section index in target language
-    if (basePath.startsWith('/properties/')) return `${lang.prefix}/properties`;
-    if (basePath.startsWith('/developments/')) return `${lang.prefix}/developments`;
-    if (basePath.startsWith('/golf/')) return `${lang.prefix}/golf`;
-    if (basePath.startsWith('/builders/')) return `${lang.prefix}/builders`;
+    // Properties/developments/golf/builders detail pages — all have translated versions
+    // Preserve the full path so /properties/N9497 → /fr/properties/N9497
+    if (basePath.startsWith('/properties/')) return `${lang.prefix}${basePath}`;
+    if (basePath.startsWith('/developments/')) return `${lang.prefix}${basePath}`;
+    if (basePath.startsWith('/golf/')) return `${lang.prefix}${basePath}`;
+    if (basePath.startsWith('/builders/')) return `${lang.prefix}${basePath}`;
 
     // Default: try the translated path (works for any new routes added later)
     return `${lang.prefix}${basePath === '/' ? '' : basePath}`;
