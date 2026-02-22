@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 /**
  * Global 404 Page
@@ -6,6 +7,14 @@ import Link from 'next/link';
  * Clean, professional 404 with strong internal linking for SEO.
  * Helps Google recrawl valuable pages instead of wasting crawl budget on dead URLs.
  */
+
+export const metadata: Metadata = {
+  title: 'Page Not Found | New Build Homes Costa Blanca',
+  robots: {
+    index: false,
+    follow: true, // Still follow internal links
+  },
+};
 
 export default function NotFound() {
   return (

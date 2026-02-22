@@ -6,7 +6,7 @@
  */
 import Link from 'next/link';
 import Image from 'next/image';
-import { breadcrumbSchema, faqSchema, toJsonLd } from '@/lib/schema';
+import { breadcrumbSchema, faqSchema, articleSchema, toJsonLd } from '@/lib/schema';
 import { markdownToHtml, slugify, inlineFmt } from '@/lib/blog-renderer';
 import ArticlePropertyShowcase from '@/components/ArticlePropertyShowcase';
 import type { ArticleContent, PropertyShowcase, Property, RelatedArticle, ArticleSection, FAQ } from '@/lib/blog-page-utils';
@@ -201,9 +201,20 @@ export default function BlogArticleContent({
 
   const showConsultationCTA = structured?.showConsultationCTA;
 
+  // Article structured data for blog posts
+  const blogArticleSchema = articleSchema({
+    headline: article.title,
+    description: article.metaDescription || article.excerpt,
+    datePublished: article.publishedAt,
+    author: article.author || 'New Build Homes Costa Blanca',
+    url: `${BASE_URL}${langPrefix}/blog/${article.slug}`,
+    image: article.image,
+  });
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbs) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(blogArticleSchema) }} />
       {structured?.faqs?.length > 0 && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(faqSchema(structured.faqs)) }} />
       )}

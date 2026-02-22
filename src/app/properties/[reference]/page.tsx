@@ -62,8 +62,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!parsedProperty) {
     return {
-      title: 'Property Not Found | New Build Homes Costa Blanca',
-      description: 'The property you are looking for could not be found.',
+      title: 'Property Sold | New Build Homes Costa Blanca',
+      description: 'This property has been sold or is no longer available. Browse hundreds of new build homes on Costa Blanca.',
+      robots: {
+        index: false,
+        follow: true,
+      },
     };
   }
 
