@@ -515,7 +515,7 @@ const KostnaderSkattersPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/34XXXXXXXXX?text=Hej%2C%20jag%20vill%20veta%20mer%20om%20kostnader%20och%20finansiering"
+                href="https://wa.me/34634044970?text=Hej%2C%20jag%20vill%20veta%20mer%20om%20kostnader%20och%20finansiering"
                 className="bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-sm transition inline-block"
               >
                 Kontakta Oss på WhatsApp

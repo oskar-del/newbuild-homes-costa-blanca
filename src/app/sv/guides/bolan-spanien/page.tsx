@@ -538,7 +538,7 @@ const BolanSpanienPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/34XXXXXXXXX?text=Hej%2C%20jag%20är%20intresserad%20av%20ett%20bolån%20för%20fastighet%20i%20Spanien"
+                href="https://wa.me/34634044970?text=Hej%2C%20jag%20är%20intresserad%20av%20ett%20bolån%20för%20fastighet%20i%20Spanien"
                 className="bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-sm transition inline-block"
               >
                 Kontakta Oss på WhatsApp

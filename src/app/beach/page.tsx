@@ -16,6 +16,18 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/beach',
+    languages: {
+      'en': 'https://newbuildhomescostablanca.com/beach',
+      'sv': 'https://newbuildhomescostablanca.com/sv/beach',
+      'nl': 'https://newbuildhomescostablanca.com/nl/beach',
+      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be/beach',
+      'fr': 'https://newbuildhomescostablanca.com/fr/beach',
+      'no': 'https://newbuildhomescostablanca.com/no/beach',
+      'de': 'https://newbuildhomescostablanca.com/de/beach',
+      'pl': 'https://newbuildhomescostablanca.com/pl/beach',
+      'ru': 'https://newbuildhomescostablanca.com/ru/beach',
+      'x-default': 'https://newbuildhomescostablanca.com/beach',
+    },
   },
 };
 

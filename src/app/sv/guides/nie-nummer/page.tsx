@@ -633,7 +633,7 @@ const NieNummerPage = () => {
                   Kontakta oss idag för att komma igång med NIE-processen. Vi guidar dig från start till finish.
                 </p>
                 <a
-                  href="https://wa.me/34XXXXXXXXX?text=Hej%2C%20jag%20behöver%20hjälp%20med%20NIE-numret"
+                  href="https://wa.me/34634044970?text=Hej%2C%20jag%20behöver%20hjälp%20med%20NIE-numret"
                   className="bg-accent-500 hover:bg-accent-600 text-white font-bold py-3 px-6 rounded-sm transition inline-block"
                 >
                   Kontakta Oss på WhatsApp
@@ -652,7 +652,7 @@ const NieNummerPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/34XXXXXXXXX?text=Hej%2C%20jag%20vill%20ha%20hjälp%20att%20skaffa%20NIE-nummer"
+                href="https://wa.me/34634044970?text=Hej%2C%20jag%20vill%20ha%20hjälp%20att%20skaffa%20NIE-nummer"
                 className="bg-accent-500 hover:bg-accent-600 text-white font-bold py-4 px-8 rounded-sm transition inline-block"
               >
                 Starta NIE-Processen

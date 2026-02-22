@@ -11,7 +11,8 @@
  * URL Strategy: Subdirectory pattern
  * - English (default): /properties, /areas, /blog
  * - Swedish: /sv/properties, /sv/areas, /sv/blog
- * - Spanish: /es/properties, /es/areas, /es/blog
+ * - German: /de/..., Dutch: /nl/..., Dutch-Belgian: /nl-be/...
+ * - French: /fr/..., Norwegian: /no/..., Polish: /pl/..., Russian: /ru/...
  *
  * The property data already supports multilingual descriptions
  * via the PropertyDescription interface (en, es, de, nl, fr, sv, etc.)
@@ -19,32 +20,32 @@
 
 export const DEFAULT_LOCALE = 'en';
 
-export const SUPPORTED_LOCALES = ['en', 'sv'] as const;
+export const SUPPORTED_LOCALES = ['en', 'sv', 'de', 'nl', 'nl-be', 'fr', 'no', 'pl', 'ru'] as const;
 
 export type Locale = (typeof SUPPORTED_LOCALES)[number];
 
 export const LOCALE_NAMES: Record<string, string> = {
   en: 'English',
   sv: 'Svenska',
-  es: 'Español',
   de: 'Deutsch',
   nl: 'Nederlands',
+  'nl-be': 'Vlaams',
   fr: 'Français',
   no: 'Norsk',
-  da: 'Dansk',
-  fi: 'Suomi',
+  pl: 'Polski',
+  ru: 'Русский',
 };
 
 export const LOCALE_FLAGS: Record<string, string> = {
   en: 'en',
   sv: 'sv',
-  es: 'es',
   de: 'de',
   nl: 'nl',
+  'nl-be': 'nl-be',
   fr: 'fr',
   no: 'no',
-  da: 'da',
-  fi: 'fi',
+  pl: 'pl',
+  ru: 'ru',
 };
 
 /**
@@ -59,10 +60,12 @@ export function generateHreflangTags(pathname: string): Record<string, string> {
   const languages: Record<string, string> = {};
 
   for (const locale of SUPPORTED_LOCALES) {
+    // Use proper hreflang codes (nl-BE instead of nl-be)
+    const hreflangCode = locale === 'nl-be' ? 'nl-BE' : locale;
     if (locale === DEFAULT_LOCALE) {
-      languages[locale] = `${base}${pathname}`;
+      languages[hreflangCode] = `${base}${pathname}`;
     } else {
-      languages[locale] = `${base}/${locale}${pathname}`;
+      languages[hreflangCode] = `${base}/${locale}${pathname}`;
     }
   }
 
