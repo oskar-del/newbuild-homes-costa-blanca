@@ -160,7 +160,7 @@ export default function PolskiHomepage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-center justify-center gap-6 text-sm">
               <span className="text-warm-300">
-                <span className="text-accent-400 font-medium">500+</span> Nowe Boliger
+                <span className="text-accent-400 font-medium">500+</span> Nowe Mieszkania
               </span>
               <span className="text-warm-500 hidden sm:inline">|</span>
               <span className="text-warm-300 hidden sm:inline">
@@ -217,7 +217,7 @@ export default function PolskiHomepage() {
                   <span className="font-semibold"> Gotowy do Zamieszkania</span>
                 </h1>
                 <p className="text-warm-300 max-w-xl mx-auto">
-                  Innflytningsklare boliger fra €164.000. Twoje śródziemne życie zaczyna się tutaj.
+                  Gotowe mieszkania od €164.000. Twoje śródziemne życie zaczyna się tutaj.
                 </p>
               </div>
 
@@ -242,7 +242,7 @@ export default function PolskiHomepage() {
                       {formatPrice(featured.heroLeft.price)}
                     </span>
                     <span className="text-warm-300 text-sm">
-                      {featured.heroLeft.bedrooms} soverom · {featured.heroLeft.builtArea}m²
+                      {featured.heroLeft.bedrooms} sypialnie · {featured.heroLeft.builtArea}m²
                     </span>
                   </div>
                 </Link>
@@ -266,7 +266,7 @@ export default function PolskiHomepage() {
                       {formatPrice(featured.heroRight.price)}
                     </span>
                     <span className="text-warm-300 text-sm">
-                      {featured.heroRight.bedrooms} soverom · {featured.heroRight.builtArea}m²
+                      {featured.heroRight.bedrooms} sypialnie · {featured.heroRight.builtArea}m²
                     </span>
                   </div>
                 </Link>
@@ -311,7 +311,7 @@ export default function PolskiHomepage() {
                 Nowy w <span className="font-semibold">Costa Blanca?</span>
               </h2>
               <p className="text-warm-600 mt-2 max-w-xl mx-auto">
-                Ważne przewodniki for å hjelpe deg do podejmowania świadomych decyzji o kupnie nieruchomości w Hiszpanii.
+                Ważne przewodniki, które pomogą Ci podejmować świadome decyzje o kupnie nieruchomości w Hiszpanii.
               </p>
             </div>
 
@@ -629,7 +629,7 @@ export default function PolskiHomepage() {
                     </h3>
                     <p className="text-sm text-warm-500 mb-2">{property.town}</p>
                     <div className="flex items-center gap-3 text-sm text-warm-600">
-                      <span>{property.bedrooms} soverom</span>
+                      <span>{property.bedrooms} sypialnie</span>
                       <span className="text-warm-300">•</span>
                       <span>{property.bathrooms} bad</span>
                       <span className="text-warm-300">•</span>
@@ -684,7 +684,7 @@ export default function PolskiHomepage() {
                     {formatPrice(featured.southVilla1.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {featured.southVilla1.bedrooms} soverom · {featured.southVilla1.builtArea}m²
+                    {featured.southVilla1.bedrooms} sypialnie · {featured.southVilla1.builtArea}m²
                   </span>
                 </div>
               </div>
@@ -727,7 +727,7 @@ export default function PolskiHomepage() {
                     {formatPrice(featured.southVilla2.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {featured.southVilla2.bedrooms} soverom · {featured.southVilla2.builtArea}m²
+                    {featured.southVilla2.bedrooms} sypialnie · {featured.southVilla2.builtArea}m²
                   </span>
                 </div>
               </div>
@@ -803,7 +803,7 @@ export default function PolskiHomepage() {
                     {formatPrice(featured.inland1.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {featured.inland1.bedrooms} soverom · {featured.inland1.builtArea}m²
+                    {featured.inland1.bedrooms} sypialnie · {featured.inland1.builtArea}m²
                   </span>
                 </div>
                 <div className="mt-3 flex items-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
@@ -849,7 +849,7 @@ export default function PolskiHomepage() {
                     {formatPrice(featured.inland2.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {featured.inland2.bedrooms} soverom · {featured.inland2.builtArea}m²
+                    {featured.inland2.bedrooms} sypialnie · {featured.inland2.builtArea}m²
                   </span>
                 </div>
                 <div className="mt-3 flex items-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
@@ -1073,7 +1073,7 @@ export default function PolskiHomepage() {
                     {formatPrice(featured.golf1.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {featured.golf1.bedrooms} soverom · {featured.golf1.builtArea}m²
+                    {featured.golf1.bedrooms} sypialnie · {featured.golf1.builtArea}m²
                   </span>
                 </div>
 
@@ -1125,7 +1125,7 @@ export default function PolskiHomepage() {
                     {formatPrice(featured.golf2.price)}
                   </span>
                   <span className="text-warm-200 text-xs">
-                    {featured.golf2.bedrooms} soverom · {featured.golf2.builtArea}m²
+                    {featured.golf2.bedrooms} sypialnie · {featured.golf2.builtArea}m²
                   </span>
                 </div>
               </div>
@@ -1167,7 +1167,7 @@ export default function PolskiHomepage() {
                     {formatPrice(carousels['south-golf'].properties[2]?.price || featured.golf1.price)}
                   </span>
                   <span className="text-warm-200 text-xs">
-                    {carousels['south-golf'].properties[2]?.bedrooms || featured.golf1.bedrooms} soverom · {carousels['south-golf'].properties[2]?.builtArea || featured.golf1.builtArea}m²
+                    {carousels['south-golf'].properties[2]?.bedrooms || featured.golf1.bedrooms} sypialnie · {carousels['south-golf'].properties[2]?.builtArea || featured.golf1.builtArea}m²
                   </span>
                 </div>
               </div>
@@ -1180,7 +1180,7 @@ export default function PolskiHomepage() {
               href="/pl/golf"
               className="inline-flex items-center gap-2 text-white font-medium text-sm hover:text-accent-300 transition-colors group"
             >
-              Pokaż Wszystko Golfboliger
+              Pokaż Wszystko Nieruchomości Golfowe
               <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -1278,7 +1278,7 @@ export default function PolskiHomepage() {
                 <div className="relative h-40 overflow-hidden">
                   <Image
                     src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80"
-                    alt="Underskrift av eiendomsdokumenter i Spania"
+                    alt="Podpisywanie dokumentów nieruchomości w Hiszpanii"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -1388,7 +1388,7 @@ export default function PolskiHomepage() {
                 href="/pl/guides"
                 className="inline-flex items-center gap-2 text-primary-900 font-medium hover:text-accent-600 transition-colors group text-sm"
               >
-                Pokaż Wszystko Kjøpersguider
+                Pokaż Wszystkie Przewodniki
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -1551,7 +1551,7 @@ export default function PolskiHomepage() {
                     {formatPrice(featured.bespokeLeft.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {featured.bespokeLeft.bedrooms} soverom · {featured.bespokeLeft.builtArea}m²
+                    {featured.bespokeLeft.bedrooms} sypialnie · {featured.bespokeLeft.builtArea}m²
                   </span>
                 </div>
                 <div className="mt-3 flex items-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
@@ -1595,7 +1595,7 @@ export default function PolskiHomepage() {
                     {formatPrice(featured.bespokeRight.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {featured.bespokeRight.bedrooms} soverom · {featured.bespokeRight.builtArea}m²
+                    {featured.bespokeRight.bedrooms} sypialnie · {featured.bespokeRight.builtArea}m²
                   </span>
                 </div>
                 <div className="mt-3 flex items-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
@@ -1642,7 +1642,7 @@ export default function PolskiHomepage() {
                     {formatPrice(miralboVillas.villaAtlantis.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {miralboVillas.villaAtlantis.bedrooms} soverom · {miralboVillas.villaAtlantis.builtArea}m² · {miralboVillas.villaAtlantis.plotArea}m² tomt
+                    {miralboVillas.villaAtlantis.bedrooms} sypialnie · {miralboVillas.villaAtlantis.builtArea}m² · {miralboVillas.villaAtlantis.plotArea}m² działka
                   </span>
                 </div>
                 <div className="mt-3 flex items-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
@@ -1686,7 +1686,7 @@ export default function PolskiHomepage() {
                     {formatPrice(miralboVillas.villaPosidonia.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {miralboVillas.villaPosidonia.bedrooms} soverom · {miralboVillas.villaPosidonia.builtArea}m² · {miralboVillas.villaPosidonia.plotArea}m² tomt
+                    {miralboVillas.villaPosidonia.bedrooms} sypialnie · {miralboVillas.villaPosidonia.builtArea}m² · {miralboVillas.villaPosidonia.plotArea}m² działka
                   </span>
                 </div>
                 <div className="mt-3 flex items-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
@@ -1734,7 +1734,7 @@ export default function PolskiHomepage() {
                   {formatPrice(miralboVillas.villaMIR0159.price)}
                 </span>
                 <span className="text-warm-300 text-sm">
-                  {miralboVillas.villaMIR0159.bedrooms} soverom · {miralboVillas.villaMIR0159.bathrooms} bad · {miralboVillas.villaMIR0159.builtArea}m² · {miralboVillas.villaMIR0159.plotArea}m² tomt
+                  {miralboVillas.villaMIR0159.bedrooms} sypialnie · {miralboVillas.villaMIR0159.bathrooms} bad · {miralboVillas.villaMIR0159.builtArea}m² · {miralboVillas.villaMIR0159.plotArea}m² działka
                 </span>
               </div>
               <div className="flex items-center gap-2 text-accent-400 font-medium group-hover:gap-3 transition-all">

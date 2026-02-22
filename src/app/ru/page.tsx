@@ -12,11 +12,11 @@ import {
 // Экспорт метаданных для русской домашней страницы
 export const metadata: Metadata = {
   title: 'Новостройки Коста Бланка | Виллы и Апартаменты в Испании',
-  description: 'Finn drømmeboligen din på Коста Бланка, Испания. Nybyggede villaer, leiligheter og rekkehus fra €164.000. Экспертная помощь для российских покупателей.',
-  keywords: 'nybygg Costa Blanca, kjøpe hus Spania, bolig Costa Blanca, villa Costa Blanca, leiligheter Spania',
+  description: 'Найди свой дом мечты на Коста Бланка, Испания. Новые виллы, апартаменты и дома от €164.000. Экспертная помощь для российских покупателей.',
+  keywords: 'новостройки Коста Бланка, купить дом Испания, недвижимость Коста Бланка, виллы Коста Бланка, апартаменты Испания',
   openGraph: {
     title: 'Новостройки Коста Бланка | Виллы и Апартаменты в Испании',
-    description: 'Finn drømmeboligen din på Costa Blanca. Nybyggede villaer, leiligheter og rekkehus fra надежных застройщиков.',
+    description: 'Найди свой дом мечты на Коста Бланка. Новые виллы, апартаменты и дома от надежных застройщиков.',
     type: 'website',
     url: 'https://newbuildhomescostablanca.com/ru',
     siteName: 'Новостройки Коста Бланка',
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Luksusvilla og leiligheter på Коста Бланка, Испания',
+        alt: 'Люксовые виллы и апартаменты на Коста Бланка, Испания',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Новостройки Коста Бланка',
-    description: 'Finn drømmeboligen din på Коста Бланка, Испания.',
+    description: 'Найди свой дом мечты на Коста Бланка, Испания.',
     images: ['/images/og-image.jpg'],
   },
   alternates: {
@@ -160,7 +160,7 @@ export default function RussiaHomepage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-center justify-center gap-6 text-sm">
               <span className="text-warm-300">
-                <span className="text-accent-400 font-medium">500+</span> Nybyggede Boliger
+                <span className="text-accent-400 font-medium">500+</span> Новые квартиры
               </span>
               <span className="text-warm-500 hidden sm:inline">|</span>
               <span className="text-warm-300 hidden sm:inline">
@@ -217,7 +217,7 @@ export default function RussiaHomepage() {
                   <span className="font-semibold"> Готово к Проживанию</span>
                 </h1>
                 <p className="text-warm-300 max-w-xl mx-auto">
-                  Innflytningsklare boliger fra €164.000. Твоя средиземная жизнь начинается здесь.
+                  Готовые квартиры от €164.000. Твоя средиземная жизнь начинается здесь.
                 </p>
               </div>
 
@@ -242,7 +242,7 @@ export default function RussiaHomepage() {
                       {formatPrice(featured.heroLeft.price)}
                     </span>
                     <span className="text-warm-300 text-sm">
-                      {featured.heroLeft.bedrooms} soverom · {featured.heroLeft.builtArea}m²
+                      {featured.heroLeft.bedrooms} спальни · {featured.heroLeft.builtArea}m²
                     </span>
                   </div>
                 </Link>
@@ -266,7 +266,7 @@ export default function RussiaHomepage() {
                       {formatPrice(featured.heroRight.price)}
                     </span>
                     <span className="text-warm-300 text-sm">
-                      {featured.heroRight.bedrooms} soverom · {featured.heroRight.builtArea}m²
+                      {featured.heroRight.bedrooms} спальни · {featured.heroRight.builtArea}m²
                     </span>
                   </div>
                 </Link>
@@ -311,7 +311,7 @@ export default function RussiaHomepage() {
                 Новичок в <span className="font-semibold">Costa Blanca?</span>
               </h2>
               <p className="text-warm-600 mt-2 max-w-xl mx-auto">
-                Важные руководства for å hjelpe deg принимать обоснованные решения о покупке недвижимости в Испании.
+                Важные руководства, которые помогут вам принимать обоснованные решения о покупке недвижимости в Испании.
               </p>
             </div>
 
@@ -324,7 +324,7 @@ export default function RussiaHomepage() {
                 <div className="relative h-40 overflow-hidden">
                   <Image
                     src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80"
-                    alt="Moderne nybygget villainnredning med åpen planløsning"
+                    alt="Современный интерьер новой виллы с открытой планировкой"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -629,7 +629,7 @@ export default function RussiaHomepage() {
                     </h3>
                     <p className="text-sm text-warm-500 mb-2">{property.town}</p>
                     <div className="flex items-center gap-3 text-sm text-warm-600">
-                      <span>{property.bedrooms} soverom</span>
+                      <span>{property.bedrooms} спальни</span>
                       <span className="text-warm-300">•</span>
                       <span>{property.bathrooms} bad</span>
                       <span className="text-warm-300">•</span>
@@ -684,7 +684,7 @@ export default function RussiaHomepage() {
                     {formatPrice(featured.southVilla1.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {featured.southVilla1.bedrooms} soverom · {featured.southVilla1.builtArea}m²
+                    {featured.southVilla1.bedrooms} спальни · {featured.southVilla1.builtArea}m²
                   </span>
                 </div>
               </div>
@@ -727,7 +727,7 @@ export default function RussiaHomepage() {
                     {formatPrice(featured.southVilla2.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {featured.southVilla2.bedrooms} soverom · {featured.southVilla2.builtArea}m²
+                    {featured.southVilla2.bedrooms} спальни · {featured.southVilla2.builtArea}m²
                   </span>
                 </div>
               </div>
@@ -803,7 +803,7 @@ export default function RussiaHomepage() {
                     {formatPrice(featured.inland1.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {featured.inland1.bedrooms} soverom · {featured.inland1.builtArea}m²
+                    {featured.inland1.bedrooms} спальни · {featured.inland1.builtArea}m²
                   </span>
                 </div>
                 <div className="mt-3 flex items-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
@@ -849,7 +849,7 @@ export default function RussiaHomepage() {
                     {formatPrice(featured.inland2.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {featured.inland2.bedrooms} soverom · {featured.inland2.builtArea}m²
+                    {featured.inland2.bedrooms} спальни · {featured.inland2.builtArea}m²
                   </span>
                 </div>
                 <div className="mt-3 flex items-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
@@ -990,7 +990,7 @@ export default function RussiaHomepage() {
 
                 <p className="text-success-100 mb-6 max-w-md leading-relaxed">
                   Живите на чемпионских полях для гольфа ved La Finca, Lo Romero и Vistabella.
-                  Солнце круглый год, innflytningsklare villaer и гольф на пороге.
+                  Солнце круглый год, готовые виллы и гольф на пороге.
                 </p>
 
                 {/* Golf course stats */}
@@ -1073,7 +1073,7 @@ export default function RussiaHomepage() {
                     {formatPrice(featured.golf1.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {featured.golf1.bedrooms} soverom · {featured.golf1.builtArea}m²
+                    {featured.golf1.bedrooms} спальни · {featured.golf1.builtArea}m²
                   </span>
                 </div>
 
@@ -1125,7 +1125,7 @@ export default function RussiaHomepage() {
                     {formatPrice(featured.golf2.price)}
                   </span>
                   <span className="text-warm-200 text-xs">
-                    {featured.golf2.bedrooms} soverom · {featured.golf2.builtArea}m²
+                    {featured.golf2.bedrooms} спальни · {featured.golf2.builtArea}m²
                   </span>
                 </div>
               </div>
@@ -1167,7 +1167,7 @@ export default function RussiaHomepage() {
                     {formatPrice(carousels['south-golf'].properties[2]?.price || featured.golf1.price)}
                   </span>
                   <span className="text-warm-200 text-xs">
-                    {carousels['south-golf'].properties[2]?.bedrooms || featured.golf1.bedrooms} soverom · {carousels['south-golf'].properties[2]?.builtArea || featured.golf1.builtArea}m²
+                    {carousels['south-golf'].properties[2]?.bedrooms || featured.golf1.bedrooms} спальни · {carousels['south-golf'].properties[2]?.builtArea || featured.golf1.builtArea}m²
                   </span>
                 </div>
               </div>
@@ -1180,7 +1180,7 @@ export default function RussiaHomepage() {
               href="/ru/golf"
               className="inline-flex items-center gap-2 text-white font-medium text-sm hover:text-accent-300 transition-colors group"
             >
-              Смотреть Все Golfboliger
+              Смотреть Все Гольф-недвижимость
               <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -1278,7 +1278,7 @@ export default function RussiaHomepage() {
                 <div className="relative h-40 overflow-hidden">
                   <Image
                     src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80"
-                    alt="Underskrift av eiendomsdokumenter i Spania"
+                    alt="Подписание документов на недвижимость в Испании"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -1346,13 +1346,13 @@ export default function RussiaHomepage() {
 
               {/* Guide Card 3: Mortgages */}
               <Link
-                href="/ru/guides/boliglan-spania"
+                href="/ru/guides/ipoteka-ispaniya"
                 className="group relative bg-warm-50 rounded-sm overflow-hidden border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
               >
                 <div className="relative h-40 overflow-hidden">
                   <Image
                     src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80"
-                    alt="Husnøkler og boliglånsdokumenter"
+                    alt="Ключи и документы по ипотеке"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -1388,7 +1388,7 @@ export default function RussiaHomepage() {
                 href="/ru/guides"
                 className="inline-flex items-center gap-2 text-primary-900 font-medium hover:text-accent-600 transition-colors group text-sm"
               >
-                Смотреть Все Kjøpersguider
+                Смотреть Все Руководства
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -1551,7 +1551,7 @@ export default function RussiaHomepage() {
                     {formatPrice(featured.bespokeLeft.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {featured.bespokeLeft.bedrooms} soverom · {featured.bespokeLeft.builtArea}m²
+                    {featured.bespokeLeft.bedrooms} спальни · {featured.bespokeLeft.builtArea}m²
                   </span>
                 </div>
                 <div className="mt-3 flex items-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
@@ -1595,7 +1595,7 @@ export default function RussiaHomepage() {
                     {formatPrice(featured.bespokeRight.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {featured.bespokeRight.bedrooms} soverom · {featured.bespokeRight.builtArea}m²
+                    {featured.bespokeRight.bedrooms} спальни · {featured.bespokeRight.builtArea}m²
                   </span>
                 </div>
                 <div className="mt-3 flex items-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
@@ -1642,7 +1642,7 @@ export default function RussiaHomepage() {
                     {formatPrice(miralboVillas.villaAtlantis.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {miralboVillas.villaAtlantis.bedrooms} soverom · {miralboVillas.villaAtlantis.builtArea}m² · {miralboVillas.villaAtlantis.plotArea}m² tomt
+                    {miralboVillas.villaAtlantis.bedrooms} спальни · {miralboVillas.villaAtlantis.builtArea}m² · {miralboVillas.villaAtlantis.plotArea}m² участок
                   </span>
                 </div>
                 <div className="mt-3 flex items-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
@@ -1686,7 +1686,7 @@ export default function RussiaHomepage() {
                     {formatPrice(miralboVillas.villaPosidonia.price)}
                   </span>
                   <span className="text-warm-300 text-sm">
-                    {miralboVillas.villaPosidonia.bedrooms} soverom · {miralboVillas.villaPosidonia.builtArea}m² · {miralboVillas.villaPosidonia.plotArea}m² tomt
+                    {miralboVillas.villaPosidonia.bedrooms} спальни · {miralboVillas.villaPosidonia.builtArea}m² · {miralboVillas.villaPosidonia.plotArea}m² участок
                   </span>
                 </div>
                 <div className="mt-3 flex items-center gap-2 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
@@ -1734,7 +1734,7 @@ export default function RussiaHomepage() {
                   {formatPrice(miralboVillas.villaMIR0159.price)}
                 </span>
                 <span className="text-warm-300 text-sm">
-                  {miralboVillas.villaMIR0159.bedrooms} soverom · {miralboVillas.villaMIR0159.bathrooms} bad · {miralboVillas.villaMIR0159.builtArea}m² · {miralboVillas.villaMIR0159.plotArea}m² tomt
+                  {miralboVillas.villaMIR0159.bedrooms} спальни · {miralboVillas.villaMIR0159.bathrooms} bad · {miralboVillas.villaMIR0159.builtArea}m² · {miralboVillas.villaMIR0159.plotArea}m² участок
                 </span>
               </div>
               <div className="flex items-center gap-2 text-accent-400 font-medium group-hover:gap-3 transition-all">
