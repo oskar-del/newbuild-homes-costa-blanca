@@ -130,6 +130,7 @@ function renderCardGrid(cards: ContentCard[]): string {
 }
 
 function renderSectionContent(text: string): string {
+  if (!text) return '';
   const blocks = parseContentBlocks(text);
   return blocks.map(block => {
     if (block.type === 'cards' && block.cards) return renderCardGrid(block.cards);
