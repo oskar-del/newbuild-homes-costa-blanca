@@ -467,7 +467,21 @@ export function createTranslatedBuilderMetadata(lang: string, langPrefix: string
     return {
       title: `${builder.name} | ${getStrings(lang).propertyDeveloper} Costa Blanca`,
       description: `${builder.developmentCount} developments by ${builder.name} in ${builder.towns.slice(0, 3).join(', ')}.`,
-      alternates: { canonical: `${BASE_URL}${langPrefix}/builders/${slug}` },
+      alternates: {
+        canonical: `${BASE_URL}${langPrefix}/builders/${slug}`,
+        languages: {
+          'en': `${BASE_URL}/builders/${slug}`,
+          'sv': `${BASE_URL}/sv/builders/${slug}`,
+          'nl': `${BASE_URL}/nl/builders/${slug}`,
+          'nl-BE': `${BASE_URL}/nl-be/builders/${slug}`,
+          'fr': `${BASE_URL}/fr/builders/${slug}`,
+          'no': `${BASE_URL}/no/builders/${slug}`,
+          'de': `${BASE_URL}/de/builders/${slug}`,
+          'pl': `${BASE_URL}/pl/builders/${slug}`,
+          'ru': `${BASE_URL}/ru/builders/${slug}`,
+          'x-default': `${BASE_URL}/builders/${slug}`,
+        },
+      },
     };
   };
 }

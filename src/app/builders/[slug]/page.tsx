@@ -142,12 +142,26 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   // Check for enhanced content first
   const enhanced = getEnhancedContent(slug);
+  const hreflangAlternates = {
+    'en': `https://newbuildhomescostablanca.com/builders/${slug}`,
+    'sv': `https://newbuildhomescostablanca.com/sv/builders/${slug}`,
+    'nl': `https://newbuildhomescostablanca.com/nl/builders/${slug}`,
+    'nl-BE': `https://newbuildhomescostablanca.com/nl-be/builders/${slug}`,
+    'fr': `https://newbuildhomescostablanca.com/fr/builders/${slug}`,
+    'no': `https://newbuildhomescostablanca.com/no/builders/${slug}`,
+    'de': `https://newbuildhomescostablanca.com/de/builders/${slug}`,
+    'pl': `https://newbuildhomescostablanca.com/pl/builders/${slug}`,
+    'ru': `https://newbuildhomescostablanca.com/ru/builders/${slug}`,
+    'x-default': `https://newbuildhomescostablanca.com/builders/${slug}`,
+  };
+
   if (enhanced) {
     return {
       title: enhanced.content.metaTitle,
       description: enhanced.content.metaDescription,
       alternates: {
         canonical: `https://newbuildhomescostablanca.com/builders/${slug}`,
+        languages: hreflangAlternates,
       },
     };
   }
@@ -163,6 +177,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: `View ${builder.developmentCount} developments by ${builder.name} in ${builder.towns.slice(0, 3).join(', ')}. New build homes from ${builder.priceRange}. Trusted Costa Blanca developer.`,
     alternates: {
       canonical: `https://newbuildhomescostablanca.com/builders/${slug}`,
+      languages: hreflangAlternates,
     },
   };
 }

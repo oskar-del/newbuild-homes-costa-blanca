@@ -264,6 +264,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       },
       alternates: {
         canonical: `https://newbuildhomescostablanca.com/developments/${slug}`,
+        languages: {
+          'en': `https://newbuildhomescostablanca.com/developments/${slug}`,
+          'sv': `https://newbuildhomescostablanca.com/sv/developments/${slug}`,
+          'nl': `https://newbuildhomescostablanca.com/nl/developments/${slug}`,
+          'nl-BE': `https://newbuildhomescostablanca.com/nl-be/developments/${slug}`,
+          'fr': `https://newbuildhomescostablanca.com/fr/developments/${slug}`,
+          'no': `https://newbuildhomescostablanca.com/no/developments/${slug}`,
+          'de': `https://newbuildhomescostablanca.com/de/developments/${slug}`,
+          'pl': `https://newbuildhomescostablanca.com/pl/developments/${slug}`,
+          'ru': `https://newbuildhomescostablanca.com/ru/developments/${slug}`,
+          'x-default': `https://newbuildhomescostablanca.com/developments/${slug}`,
+        },
       },
     };
   }
@@ -280,6 +292,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: { title: development.name, description, images: development.mainImage ? [development.mainImage] : undefined },
     alternates: {
       canonical: `https://newbuildhomescostablanca.com/developments/${slug}`,
+      languages: {
+        'en': `https://newbuildhomescostablanca.com/developments/${slug}`,
+        'sv': `https://newbuildhomescostablanca.com/sv/developments/${slug}`,
+        'nl': `https://newbuildhomescostablanca.com/nl/developments/${slug}`,
+        'nl-BE': `https://newbuildhomescostablanca.com/nl-be/developments/${slug}`,
+        'fr': `https://newbuildhomescostablanca.com/fr/developments/${slug}`,
+        'no': `https://newbuildhomescostablanca.com/no/developments/${slug}`,
+        'de': `https://newbuildhomescostablanca.com/de/developments/${slug}`,
+        'pl': `https://newbuildhomescostablanca.com/pl/developments/${slug}`,
+        'ru': `https://newbuildhomescostablanca.com/ru/developments/${slug}`,
+        'x-default': `https://newbuildhomescostablanca.com/developments/${slug}`,
+      },
     },
   };
 }

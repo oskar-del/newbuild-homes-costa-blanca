@@ -233,7 +233,21 @@ export function createTranslatedDevMetadata(lang: string, langPrefix: string) {
     return {
       title: `${development.name} | ${development.town || 'Costa Blanca'}`,
       description: `${development.name} by ${development.developer || 'Developer'} in ${development.town || 'Costa Blanca'}`,
-      alternates: { canonical: `${BASE_URL}${langPrefix}/developments/${slug}` },
+      alternates: {
+        canonical: `${BASE_URL}${langPrefix}/developments/${slug}`,
+        languages: {
+          'en': `${BASE_URL}/developments/${slug}`,
+          'sv': `${BASE_URL}/sv/developments/${slug}`,
+          'nl': `${BASE_URL}/nl/developments/${slug}`,
+          'nl-BE': `${BASE_URL}/nl-be/developments/${slug}`,
+          'fr': `${BASE_URL}/fr/developments/${slug}`,
+          'no': `${BASE_URL}/no/developments/${slug}`,
+          'de': `${BASE_URL}/de/developments/${slug}`,
+          'pl': `${BASE_URL}/pl/developments/${slug}`,
+          'ru': `${BASE_URL}/ru/developments/${slug}`,
+          'x-default': `${BASE_URL}/developments/${slug}`,
+        },
+      },
     };
   };
 }
