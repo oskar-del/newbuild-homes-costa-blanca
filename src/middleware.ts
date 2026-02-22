@@ -18,12 +18,20 @@ export function middleware(request: NextRequest) {
   }
 
   // Handle old development URLs that should redirect to properties
-  // Pattern: /developments/{type}-{reference} where reference is like N8105, N9422, etc.
-  // Should redirect to /properties/{reference}
+  // Pattern 1: /developments/{type}-{reference} where reference is like N8105, N9422, etc.
   const developmentsMatch = pathname.match(/^\/developments\/([a-z-]+)-([nN]\d+)$/);
   if (developmentsMatch) {
     const reference = developmentsMatch[2].toUpperCase();
     return NextResponse.redirect(new URL(`/properties/${reference}`, request.url), 301);
+  }
+
+  // Pattern 2: /developments/{ref}-{description} where ref is like 3126jav, 2091jav, etc.
+  // Old URLs had format: /developments/3126jav-newly-built-villa-for-sale-in-javea
+  // Redirect to: /developments/3126jav (the correct short slug)
+  const devLongSlugMatch = pathname.match(/^\/developments\/(\d+[a-z]+)-[a-z].*$/);
+  if (devLongSlugMatch) {
+    const shortSlug = devLongSlugMatch[1];
+    return NextResponse.redirect(new URL(`/developments/${shortSlug}`, request.url), 301);
   }
 
   // Check if the URL has a locale prefix

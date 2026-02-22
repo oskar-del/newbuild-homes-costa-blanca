@@ -82,10 +82,21 @@ export interface RelatedArticle {
 }
 
 /**
+ * Get the articles directory for a given language.
+ * English articles live in the root articles/ dir, others in articles/{lang}/
+ */
+function getArticlesDir(lang: string): string {
+  if (lang === 'en') {
+    return path.join(process.cwd(), 'src', 'content', 'articles');
+  }
+  return path.join(process.cwd(), 'src', 'content', 'articles', lang);
+}
+
+/**
  * Load article from JSON file
  */
 export function getArticle(slug: string, lang: string): ArticleContent | null {
-  const articlesDir = path.join(process.cwd(), 'src', 'content', 'articles', lang);
+  const articlesDir = getArticlesDir(lang);
   const filePath = path.join(articlesDir, `${slug}.json`);
   if (fs.existsSync(filePath)) {
     try {
@@ -144,7 +155,7 @@ export function getSmartRelatedArticles(
   limit: number = 6
 ): RelatedArticle[] {
   try {
-    const articlesDir = path.join(process.cwd(), 'src', 'content', 'articles', lang);
+    const articlesDir = getArticlesDir(lang);
     if (!fs.existsSync(articlesDir)) return [];
 
     const currentArticle = getArticle(currentSlug, lang);
@@ -200,7 +211,7 @@ export function getSmartRelatedArticles(
  */
 export function getArticleSlugs(lang: string): string[] {
   try {
-    const articlesDir = path.join(process.cwd(), 'src', 'content', 'articles', lang);
+    const articlesDir = getArticlesDir(lang);
     if (!fs.existsSync(articlesDir)) return [];
     return fs.readdirSync(articlesDir)
       .filter(f => f.endsWith('.json'))
