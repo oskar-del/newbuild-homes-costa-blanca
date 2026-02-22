@@ -4,18 +4,19 @@ const nextConfig = {
   experimental: {
     workerThreads: false,
     cpus: 1,
-  },
-  // Include article JSON files in serverless function bundles (needed for Netlify ISR)
-  outputFileTracingIncludes: {
-    '/blog/[slug]': ['./src/content/articles/**/*.json'],
-    '/sv/blog/[slug]': ['./src/content/articles/**/*.json'],
-    '/de/blog/[slug]': ['./src/content/articles/**/*.json'],
-    '/nl/blog/[slug]': ['./src/content/articles/**/*.json'],
-    '/nl-be/blog/[slug]': ['./src/content/articles/**/*.json'],
-    '/fr/blog/[slug]': ['./src/content/articles/**/*.json'],
-    '/no/blog/[slug]': ['./src/content/articles/**/*.json'],
-    '/pl/blog/[slug]': ['./src/content/articles/**/*.json'],
-    '/ru/blog/[slug]': ['./src/content/articles/**/*.json'],
+    // Include article JSON files in serverless function bundles (needed for Netlify ISR)
+    // Must be under experimental in Next.js 14.x
+    outputFileTracingIncludes: {
+      '/blog/[slug]': ['./src/content/articles/**/*.json'],
+      '/sv/blog/[slug]': ['./src/content/articles/**/*.json'],
+      '/de/blog/[slug]': ['./src/content/articles/**/*.json'],
+      '/nl/blog/[slug]': ['./src/content/articles/**/*.json'],
+      '/nl-be/blog/[slug]': ['./src/content/articles/**/*.json'],
+      '/fr/blog/[slug]': ['./src/content/articles/**/*.json'],
+      '/no/blog/[slug]': ['./src/content/articles/**/*.json'],
+      '/pl/blog/[slug]': ['./src/content/articles/**/*.json'],
+      '/ru/blog/[slug]': ['./src/content/articles/**/*.json'],
+    },
   },
   // Reduce timeout for static page generation to speed up build
   staticPageGenerationTimeout: 120, // 2 minutes instead of 5 minutes
