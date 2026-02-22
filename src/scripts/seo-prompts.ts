@@ -10,7 +10,14 @@
  * 4. Include price context and comparisons
  * 5. Voice search optimization (direct answers first)
  * 6. Long-tail keyword integration
+ * 7. GSC data-driven keyword targeting (from seo-keyword-database)
  */
+
+import {
+  getQuestionsForPropertyContext,
+  getRelevantGSCQueries,
+  getRelevantKeywords,
+} from '../data/seo-keyword-database';
 
 // ============================================
 // BUYER PERSONA DETECTION
@@ -341,6 +348,12 @@ export function generatePropertyPrompt(property: {
   const amenitiesKey = Object.keys(TOWN_AMENITIES_DATA).find(t => property.town.toLowerCase().includes(t)) || 'default';
   const amenities = TOWN_AMENITIES_DATA[amenitiesKey] || TOWN_AMENITIES_DATA['default'];
 
+  // === GSC DATA-DRIVEN ENRICHMENT ===
+  // Pull real search data to inform content generation
+  const gscDataQueries = getRelevantGSCQueries(property.town, 5);
+  const dataQuestions = getQuestionsForPropertyContext(property.town, persona.type, 'en', 6);
+  const dataKeywords = getRelevantKeywords(property.town, persona.type, 8);
+
   return `Generate PREMIUM SEO-optimized content for this Costa Blanca property listing.
 
 === PROPERTY DATA ===
@@ -378,6 +391,11 @@ Keywords to naturally include: ${persona.keywords.join(', ')}
 - Golf Courses: ${amenities.golfCourses.join(', ')}
 - Expat Community: ${amenities.expat}
 
+=== REAL GOOGLE SEARCH DATA (from Search Console) ===
+People are ACTUALLY searching for these terms related to this area:
+${gscDataQueries.map(q => `   - "${q.query}" (${q.impressions} impressions/month)`).join('\n')}
+${dataKeywords.length > 0 ? `\nHigh-value keywords to naturally weave in:\n${dataKeywords.map(k => `   - "${k}"`).join('\n')}` : ''}
+
 === SEO REQUIREMENTS ===
 1. FAQs MUST start with DIRECT ANSWER (for featured snippets)
    Example: Q: "How much does this property cost?"
@@ -385,6 +403,7 @@ Keywords to naturally include: ${persona.keywords.join(', ')}
 
 2. Include these PEOPLE ALSO ASK questions (pick 3-4 most relevant):
 ${paaQuestions.map(q => `   - "${q}"`).join('\n')}
+${dataQuestions.length > 0 ? `\n   DATA-DRIVEN additional questions (from Google PAA research):\n${dataQuestions.map(q => `   - "${q}"`).join('\n')}` : ''}
 
 3. Image alt tags should be SEARCH QUERIES people type:
    - "What does a €${Math.round(property.price/1000)}k ${property.type.toLowerCase()} look like in ${property.town}"
@@ -395,6 +414,7 @@ ${paaQuestions.map(q => `   - "${q}"`).join('\n')}
    - "buy ${property.type.toLowerCase()} ${property.town} Spain"
    - "${property.bedrooms} bed property ${property.town}"
    - "new build homes ${property.town}"
+${dataKeywords.length > 0 ? `   - ${dataKeywords.slice(0, 3).map(k => `"${k}"`).join('\n   - ')}` : ''}
 
 === GENERATE THIS JSON ===
 {
@@ -623,6 +643,11 @@ export function generateAreaPrompt(area: {
   const amenities = TOWN_AMENITIES_DATA[areaKey] || TOWN_AMENITIES_DATA['default'];
   const priceData = TOWN_PRICE_DATA[areaKey] || TOWN_PRICE_DATA['default'];
 
+  // GSC data-driven enrichment for area pages
+  const areaGSCQueries = getRelevantGSCQueries(area.name, 5);
+  const areaDataQuestions = getQuestionsForPropertyContext(area.name, 'holiday', 'en', 8);
+  const areaKeywords = getRelevantKeywords(area.name, 'holiday', 8);
+
   return `Generate PREMIUM SEO content for an area guide page: ${area.name}
 
 === AREA DATA ===
@@ -654,8 +679,9 @@ Life searches: "hospitals in ${area.name}", "international schools ${area.name}"
 
 === PEOPLE ALSO ASK TO TARGET ===
 ${paaQuestions.map(q => `- "${q}"`).join('\n')}
+${areaDataQuestions.length > 0 ? `\nDATA-DRIVEN questions from Google PAA research:\n${areaDataQuestions.map(q => `- "${q}"`).join('\n')}` : ''}
 
-=== GENERATE THIS JSON ===
+${areaGSCQueries.length > 0 ? `=== REAL GOOGLE SEARCH DATA ===\nPeople are ACTUALLY searching for:\n${areaGSCQueries.map(q => `- "${q.query}" (${q.impressions} impressions/month)`).join('\n')}\n${areaKeywords.length > 0 ? `\nHigh-value keywords to naturally include:\n${areaKeywords.map(k => `- "${k}"`).join('\n')}` : ''}\n` : ''}=== GENERATE THIS JSON ===
 {
   "metaTitle": "Living in ${area.name} 2026 | Complete Guide - under 60 chars",
   "metaDescription": "155 chars about living in ${area.name} with price range",

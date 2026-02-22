@@ -1791,6 +1791,122 @@ export function getQuestionsForTown(town: string): SEOQuestion[] {
 }
 
 /**
+ * Get relevant PAA questions for a specific property context.
+ * Used by seo-prompts.ts to enrich AI content generation prompts.
+ */
+export function getQuestionsForPropertyContext(
+  town: string,
+  buyerPersona: string,
+  language: string = "en",
+  limit: number = 6
+): string[] {
+  const townLower = town.toLowerCase();
+
+  // Map buyer personas to relevant question categories
+  const personaCategoryMap: Record<string, string[]> = {
+    luxury: ["property-types", "investment-rental", "lifestyle", "legal-documentation"],
+    golf: ["lifestyle", "healthcare-lifestyle", "property-types", "costs-taxes"],
+    retirement: ["healthcare-lifestyle", "residency-visa", "costs-taxes", "safety-security", "lifestyle"],
+    family: ["schools-education", "healthcare-lifestyle", "safety-security", "lifestyle", "buying-process"],
+    investment: ["investment-rental", "costs-taxes", "mortgages", "beckham-law"],
+    holiday: ["buying-process", "costs-taxes", "lifestyle", "weather-climate"],
+  };
+
+  const relevantCategories = personaCategoryMap[buyerPersona] || personaCategoryMap["holiday"];
+
+  // First: town-specific questions in the right language
+  const townQuestions = paaQuestions.filter(
+    (q) =>
+      q.language === language &&
+      q.relatedTowns?.some((t) => t.toLowerCase().includes(townLower) || townLower.includes(t.toLowerCase()))
+  );
+
+  // Second: category-matched questions in the right language
+  const categoryQuestions = paaQuestions.filter(
+    (q) =>
+      q.language === language &&
+      relevantCategories.includes(q.category) &&
+      !townQuestions.includes(q)
+  );
+
+  // Sort by priority
+  const priorityOrder: Record<string, number> = { high: 0, medium: 1, low: 2 };
+  const sorted = [
+    ...townQuestions.sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]),
+    ...categoryQuestions.sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]),
+  ];
+
+  return sorted.slice(0, limit).map((q) => q.question);
+}
+
+/**
+ * Get relevant GSC search queries for a given town.
+ * Shows what people are ACTUALLY searching for in that area.
+ */
+export function getRelevantGSCQueries(
+  town: string,
+  limit: number = 5
+): { query: string; impressions: number }[] {
+  const townLower = town.toLowerCase();
+
+  // Direct town match
+  const townMatches = gscQueries.filter((q) =>
+    q.query.toLowerCase().includes(townLower)
+  );
+
+  // If no direct matches, show top general queries
+  const results =
+    townMatches.length > 0
+      ? townMatches.sort((a, b) => b.impressions - a.impressions)
+      : gscQueries
+          .filter((q) => q.language === "en")
+          .sort((a, b) => b.impressions - a.impressions);
+
+  return results.slice(0, limit).map((q) => ({
+    query: q.query,
+    impressions: q.impressions,
+  }));
+}
+
+/**
+ * Get long-tail keywords from clusters relevant to a property.
+ */
+export function getRelevantKeywords(
+  town: string,
+  buyerPersona: string,
+  limit: number = 8
+): string[] {
+  const townLower = town.toLowerCase();
+
+  const personaTopicMap: Record<string, string[]> = {
+    luxury: ["Luxury Properties & Premium Living", "Investment & Rental Income"],
+    golf: ["Lifestyle & Living"],
+    retirement: ["Healthcare & Lifestyle", "Costs & Taxes", "Residency & Visa"],
+    family: ["Schools & Education Information", "Healthcare & Lifestyle", "Safety & Security"],
+    investment: ["Investment & Rental Income", "Mortgages & Finance", "Beckham Law Tax Benefits"],
+    holiday: ["Buying Process", "Costs & Taxes", "Weather & Climate"],
+  };
+
+  const relevantTopics = personaTopicMap[buyerPersona] || [];
+
+  const keywords: string[] = [];
+  for (const cluster of keywordClusters) {
+    const isTopicMatch = relevantTopics.some((t) =>
+      cluster.topic.toLowerCase().includes(t.toLowerCase())
+    );
+    const isTownMatch = cluster.relatedTowns?.some(
+      (t) => t.toLowerCase().includes(townLower) || townLower.includes(t.toLowerCase())
+    );
+
+    if (isTopicMatch || isTownMatch) {
+      keywords.push(cluster.primaryKeyword, ...cluster.relatedKeywords.slice(0, 2));
+    }
+  }
+
+  return Array.from(new Set(keywords)).slice(0, limit);
+}
+
+/**
  * Statistics about the keyword database
  */
 export const databaseStats = {
