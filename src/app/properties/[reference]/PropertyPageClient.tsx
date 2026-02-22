@@ -1672,7 +1672,7 @@ export default function PropertyPageClient({ property, content, similarPropertie
                   </div>
                 </div>
                 <p className="text-sm text-warm-600">
-                  I help international buyers find their perfect home in Costa Blanca. I speak English, Swedish, and Spanish.
+                  {s.agentBio}
                 </p>
               </div>
 

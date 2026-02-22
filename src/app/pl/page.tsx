@@ -303,7 +303,7 @@ export default function PolskiHomepage() {
               <div className="flex items-center justify-center gap-4 mb-2">
                 <div className="w-10 h-px bg-accent-500" />
                 <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
-                  Start her
+                  Zacznij tutaj
                 </span>
                 <div className="w-10 h-px bg-accent-500" />
               </div>
