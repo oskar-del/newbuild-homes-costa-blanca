@@ -1,0 +1,33 @@
+{
+  "name": "property-reels",
+  "version": "1.0.0",
+  "description": "Automated property showcase reels for Costa Blanca real estate",
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion render PropertyReel out/property-reel.mp4",
+    "render:property": "tsx src/scripts/render-property.ts",
+    "render:batch": "tsx src/scripts/render-batch.ts",
+    "themes:generate": "tsx src/scripts/generate-themes.ts",
+    "themes:render": "tsx src/scripts/render-themes.ts",
+    "themes:list": "tsx src/scripts/generate-themes.ts --list",
+    "publish": "tsx src/scripts/postiz-publish.ts",
+    "publish:dry": "tsx src/scripts/postiz-publish.ts --dry-run"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "@remotion/bundler": "^4.0.0",
+    "@remotion/renderer": "^4.0.0",
+    "@remotion/transitions": "^4.0.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "remotion": "^4.0.0",
+    "fast-xml-parser": "^4.3.0",
+    "zod": "^3.22.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0"
+  }
+}
