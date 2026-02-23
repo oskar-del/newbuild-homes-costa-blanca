@@ -1,6 +1,7 @@
 import { Composition, calculateMetadata } from "remotion";
 import { PropertyReel, propertyReelSchema } from "./components/PropertyReel";
 import { PropertyCarousel, propertyCarouselSchema } from "./components/PropertyCarousel";
+import { LogoIntro, logoIntroSchema } from "./components/LogoIntro";
 
 /**
  * Remotion Root - Registers all video compositions
@@ -49,6 +50,7 @@ export const RemotionRoot: React.FC = () => {
           agentPhone: "+34 634 044 970",
           websiteUrl: "newbuildhomescostablanca.com",
           language: "en" as const,
+          musicTrack: "music/upbeat.mp3",
         }}
       />
 
@@ -107,6 +109,49 @@ export const RemotionRoot: React.FC = () => {
           agentPhone: "+34 634 044 970",
           websiteUrl: "newbuildhomescostablanca.com",
           language: "en" as const,
+          musicTrack: "music/chill.mp3",
+        }}
+      />
+
+      {/* Logo watermark — overlay on top of reels (not standalone) */}
+      <Composition
+        id="LogoWatermark"
+        component={LogoIntro}
+        schema={logoIntroSchema}
+        durationInFrames={450} // matches PropertyReel duration
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          variant: "watermark" as const,
+        }}
+      />
+
+      {/* Logo end card — 0.8s flash before CTA */}
+      <Composition
+        id="LogoEndCard"
+        component={LogoIntro}
+        schema={logoIntroSchema}
+        durationInFrames={24} // 0.8 seconds
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          variant: "end-card" as const,
+        }}
+      />
+
+      {/* YouTube intro — 3s animated logo, only for long-form content */}
+      <Composition
+        id="LogoYouTubeIntro"
+        component={LogoIntro}
+        schema={logoIntroSchema}
+        durationInFrames={90} // 3 seconds
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          variant: "youtube-intro" as const,
         }}
       />
 
