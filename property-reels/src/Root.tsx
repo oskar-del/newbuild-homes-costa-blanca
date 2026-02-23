@@ -1,18 +1,25 @@
-import { Composition } from "remotion";
+import { Composition, calculateMetadata } from "remotion";
 import { PropertyReel, propertyReelSchema } from "./components/PropertyReel";
 import { PropertyCarousel, propertyCarouselSchema } from "./components/PropertyCarousel";
 
 /**
  * Remotion Root - Registers all video compositions
  *
- * Compositions:
- * 1. PropertyReel - Single property showcase (9:16 vertical for Instagram/TikTok)
- * 2. PropertyCarousel - Multiple properties slideshow (9:16 vertical)
+ * PLATFORM SPECS:
+ * ┌──────────────────┬──────────┬───────────┬───────────────────┐
+ * │ Platform         │ Ratio    │ Duration  │ Key difference    │
+ * ├──────────────────┼──────────┼───────────┼───────────────────┤
+ * │ TikTok           │ 9:16     │ 15-60s    │ Fast cuts, hook   │
+ * │ Instagram Reels  │ 9:16     │ 15-90s    │ Captions help     │
+ * │ YouTube Shorts   │ 9:16     │ up to 60s │ More polished     │
+ * │ YouTube          │ 16:9     │ 3-15min   │ Longer, detailed  │
+ * │ Facebook Reels   │ 9:16     │ 15-60s    │ Slightly slower   │
+ * └──────────────────┴──────────┴───────────┴───────────────────┘
  */
 export const RemotionRoot: React.FC = () => {
   return (
     <>
-      {/* Single property reel - 15 seconds, 9:16 vertical */}
+      {/* Single property reel - 15 seconds, 9:16 vertical (TikTok/Reels) */}
       <Composition
         id="PropertyReel"
         component={PropertyReel}
@@ -45,12 +52,16 @@ export const RemotionRoot: React.FC = () => {
         }}
       />
 
-      {/* Property carousel - 30 seconds, 9:16 vertical */}
+      {/* Property carousel - dynamic duration based on property count */}
       <Composition
         id="PropertyCarousel"
         component={PropertyCarousel}
         schema={propertyCarouselSchema}
-        durationInFrames={900} // 30 seconds at 30fps
+        calculateMetadata={({ props }) => {
+          // 75 intro + 90 per property (max 5) + 90 CTA
+          const count = Math.min(props.properties.length, 5);
+          return { durationInFrames: 75 + count * 90 + 90 };
+        }}
         fps={30}
         width={1080}
         height={1920}
@@ -98,6 +109,20 @@ export const RemotionRoot: React.FC = () => {
           language: "en" as const,
         }}
       />
+
+      {/* YouTube 16:9 version — same reel content but landscape
+          TODO: Add when builder videos are available
+      <Composition
+        id="PropertyYouTube"
+        component={PropertyReel}
+        schema={propertyReelSchema}
+        durationInFrames={450}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{...}}
+      />
+      */}
     </>
   );
 };

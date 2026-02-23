@@ -204,18 +204,18 @@ const PropertyCardScene: React.FC<{
   const { fps } = useVideoConfig();
   const t = translations[lang] || translations.en;
 
-  // Image Ken Burns
-  const scale = interpolate(frame, [0, 120], [1, 1.12], {
+  // Image Ken Burns — faster zoom for snappier feel
+  const scale = interpolate(frame, [0, 90], [1.02, 1.15], {
     extrapolateRight: "clamp",
   });
 
-  // Content slide up
-  const slideUp = spring({ frame: frame - 5, fps, from: 60, to: 0, durationInFrames: 18 });
-  const contentOpacity = spring({ frame: frame - 5, fps, from: 0, to: 1, durationInFrames: 18 });
+  // Content slide up — faster animation
+  const slideUp = spring({ frame: frame - 3, fps, from: 40, to: 0, durationInFrames: 12 });
+  const contentOpacity = spring({ frame: frame - 3, fps, from: 0, to: 1, durationInFrames: 12 });
 
-  // Price pop
-  const priceScale = spring({ frame: frame - 12, fps, from: 0.7, to: 1, durationInFrames: 15 });
-  const priceOpacity = spring({ frame: frame - 12, fps, from: 0, to: 1, durationInFrames: 15 });
+  // Price pop — punchy entrance
+  const priceScale = spring({ frame: frame - 8, fps, from: 0.6, to: 1, durationInFrames: 10, config: { damping: 8 } });
+  const priceOpacity = spring({ frame: frame - 8, fps, from: 0, to: 1, durationInFrames: 10 });
 
   return (
     <AbsoluteFill>
@@ -232,15 +232,15 @@ const PropertyCardScene: React.FC<{
         />
       </div>
 
-      {/* Gradient overlay */}
+      {/* Gradient overlay — taller for more readable text */}
       <div
         style={{
           position: "absolute",
           bottom: 0,
           left: 0,
           right: 0,
-          height: "55%",
-          background: "linear-gradient(transparent, rgba(26,35,50,0.95))",
+          height: "60%",
+          background: "linear-gradient(transparent 0%, rgba(26,35,50,0.4) 30%, rgba(26,35,50,0.95) 70%)",
         }}
       />
 
@@ -248,16 +248,16 @@ const PropertyCardScene: React.FC<{
       <div
         style={{
           position: "absolute",
-          top: 60,
-          right: 60,
+          top: 70,
+          right: 50,
           background: "rgba(26,35,50,0.7)",
           backdropFilter: "blur(10px)",
           borderRadius: 50,
-          padding: "10px 24px",
+          padding: "12px 28px",
           border: `1px solid rgba(197,165,90,0.4)`,
         }}
       >
-        <span style={{ color: COLORS.accent, fontSize: 22, fontWeight: 700 }}>
+        <span style={{ color: COLORS.accent, fontSize: 26, fontWeight: 700 }}>
           {index + 1}/{total}
         </span>
       </div>
@@ -266,96 +266,101 @@ const PropertyCardScene: React.FC<{
       <div
         style={{
           position: "absolute",
-          top: 60,
+          top: 70,
           left: 0,
           background: COLORS.accent,
-          padding: "10px 30px 10px 40px",
-          borderTopRightRadius: 8,
-          borderBottomRightRadius: 8,
+          padding: "12px 36px 12px 44px",
+          borderTopRightRadius: 10,
+          borderBottomRightRadius: 10,
           opacity: contentOpacity,
         }}
       >
-        <span style={{ color: COLORS.white, fontSize: 24, fontWeight: 700, letterSpacing: 1 }}>
+        <span style={{ color: COLORS.primary, fontSize: 26, fontWeight: 700, letterSpacing: 2 }}>
           {property.type.toUpperCase()}
         </span>
       </div>
 
-      {/* Content area */}
+      {/* Content area — more padding, cleaner layout */}
       <div
         style={{
           position: "absolute",
-          bottom: 100,
-          left: 50,
-          right: 50,
+          bottom: 140,
+          left: 60,
+          right: 60,
           opacity: contentOpacity,
           transform: `translateY(${slideUp}px)`,
         }}
       >
         {/* Town */}
-        <div style={{ color: COLORS.accent, fontSize: 24, fontWeight: 600, letterSpacing: 2, marginBottom: 8 }}>
-          {property.town.toUpperCase()}
+        <div style={{
+          color: COLORS.accent,
+          fontSize: 26,
+          fontWeight: 600,
+          letterSpacing: 3,
+          marginBottom: 14,
+        }}>
+          📍 {property.town.toUpperCase()}
         </div>
 
-        {/* Title */}
-        <div style={{ color: COLORS.white, fontSize: 40, fontWeight: 700, lineHeight: 1.2, marginBottom: 20 }}>
-          {property.title}
-        </div>
-
-        {/* Price */}
+        {/* Price — big and bold */}
         <div
           style={{
-            color: COLORS.accent,
-            fontSize: 64,
+            color: COLORS.white,
+            fontSize: 72,
             fontWeight: 800,
-            marginBottom: 24,
+            marginBottom: 30,
             transform: `scale(${priceScale})`,
             opacity: priceOpacity,
             transformOrigin: "left center",
+            lineHeight: 1,
           }}
         >
           {formatPrice(property.price, lang)}
         </div>
 
-        {/* Specs row */}
-        <div style={{ display: "flex", gap: 30 }}>
+        {/* Specs row — pill style, well spaced */}
+        <div style={{ display: "flex", gap: 20 }}>
           <div
             style={{
-              background: "rgba(255,255,255,0.1)",
-              borderRadius: 12,
-              padding: "12px 24px",
+              background: "rgba(255,255,255,0.12)",
+              borderRadius: 50,
+              padding: "14px 28px",
               display: "flex",
               alignItems: "center",
               gap: 10,
+              border: "1px solid rgba(255,255,255,0.1)",
             }}
           >
-            <span style={{ color: COLORS.white, fontSize: 32, fontWeight: 700 }}>{property.bedrooms}</span>
-            <span style={{ color: COLORS.accent, fontSize: 20 }}>{t.bedrooms}</span>
+            <span style={{ color: COLORS.white, fontSize: 30, fontWeight: 700 }}>{property.bedrooms}</span>
+            <span style={{ color: COLORS.accent, fontSize: 20, fontWeight: 500 }}>{t.bedrooms}</span>
           </div>
           <div
             style={{
-              background: "rgba(255,255,255,0.1)",
-              borderRadius: 12,
-              padding: "12px 24px",
+              background: "rgba(255,255,255,0.12)",
+              borderRadius: 50,
+              padding: "14px 28px",
               display: "flex",
               alignItems: "center",
               gap: 10,
+              border: "1px solid rgba(255,255,255,0.1)",
             }}
           >
-            <span style={{ color: COLORS.white, fontSize: 32, fontWeight: 700 }}>{property.bathrooms}</span>
-            <span style={{ color: COLORS.accent, fontSize: 20 }}>{t.bathrooms}</span>
+            <span style={{ color: COLORS.white, fontSize: 30, fontWeight: 700 }}>{property.bathrooms}</span>
+            <span style={{ color: COLORS.accent, fontSize: 20, fontWeight: 500 }}>{t.bathrooms}</span>
           </div>
           <div
             style={{
-              background: "rgba(255,255,255,0.1)",
-              borderRadius: 12,
-              padding: "12px 24px",
+              background: "rgba(255,255,255,0.12)",
+              borderRadius: 50,
+              padding: "14px 28px",
               display: "flex",
               alignItems: "center",
               gap: 10,
+              border: "1px solid rgba(255,255,255,0.1)",
             }}
           >
-            <span style={{ color: COLORS.white, fontSize: 32, fontWeight: 700 }}>{property.area}</span>
-            <span style={{ color: COLORS.accent, fontSize: 20 }}>{t.sqm}</span>
+            <span style={{ color: COLORS.white, fontSize: 30, fontWeight: 700 }}>{property.area}</span>
+            <span style={{ color: COLORS.accent, fontSize: 20, fontWeight: 500 }}>{t.sqm}</span>
           </div>
         </div>
       </div>
@@ -378,90 +383,80 @@ const CarouselCTAScene: React.FC<{
   const { fps } = useVideoConfig();
   const t = translations[lang] || translations.en;
 
-  const fadeIn = spring({ frame, fps, from: 0, to: 1, durationInFrames: 20 });
-  const slideUp = spring({ frame: frame - 8, fps, from: 40, to: 0, durationInFrames: 20 });
+  const fadeIn = spring({ frame, fps, from: 0, to: 1, durationInFrames: 15 });
+  const slideUp = spring({ frame: frame - 6, fps, from: 30, to: 0, durationInFrames: 15 });
+  const btnPop = spring({ frame: frame - 12, fps, from: 0.8, to: 1, durationInFrames: 12 });
 
   return (
     <AbsoluteFill
       style={{
         background: COLORS.primary,
+        display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        padding: 60,
       }}
     >
-      {/* Logo area */}
-      <div style={{ opacity: fadeIn, marginBottom: 40, textAlign: "center" }}>
-        <div style={{ color: COLORS.accent, fontSize: 28, fontWeight: 600, letterSpacing: 4, textTransform: "uppercase" }}>
+      {/* Top section — Brand */}
+      <div style={{ opacity: fadeIn, textAlign: "center", marginBottom: 80 }}>
+        <div style={{ color: COLORS.accent, fontSize: 26, fontWeight: 600, letterSpacing: 6, textTransform: "uppercase" }}>
           New Build Homes
         </div>
-        <div style={{ color: COLORS.white, fontSize: 48, fontWeight: 700, marginTop: 8 }}>
+        <div style={{ color: COLORS.white, fontSize: 52, fontWeight: 700, marginTop: 12 }}>
           Costa Blanca
         </div>
       </div>
 
-      {/* Property count */}
+      {/* Middle section — CTA button */}
       <div
         style={{
-          background: "rgba(197,165,90,0.15)",
-          border: `2px solid ${COLORS.accent}`,
-          borderRadius: 16,
-          padding: "20px 50px",
-          marginBottom: 40,
           opacity: fadeIn,
+          transform: `translateY(${slideUp}px) scale(${btnPop})`,
+          marginBottom: 80,
         }}
       >
-        <span style={{ color: COLORS.accent, fontSize: 64, fontWeight: 800 }}>{propertyCount}+</span>
-        <div style={{ color: COLORS.white, fontSize: 24, fontWeight: 500, marginTop: 4, textAlign: "center" }}>
-          {t.newProperties}
+        <div
+          style={{
+            background: COLORS.accent,
+            borderRadius: 16,
+            padding: "28px 80px",
+          }}
+        >
+          <span style={{ color: COLORS.primary, fontSize: 36, fontWeight: 700 }}>
+            {t.viewAll}
+          </span>
         </div>
       </div>
 
-      {/* View All button */}
-      <div
-        style={{
-          background: COLORS.accent,
-          borderRadius: 12,
-          padding: "24px 60px",
-          opacity: fadeIn,
-          transform: `translateY(${slideUp}px)`,
-          marginBottom: 40,
-        }}
-      >
-        <span style={{ color: COLORS.primary, fontSize: 32, fontWeight: 700 }}>
-          {t.viewAll}
-        </span>
-      </div>
-
-      {/* Agent info */}
+      {/* Bottom section — Contact info, well spaced */}
       <div style={{ opacity: fadeIn, textAlign: "center" }}>
-        <div style={{ color: COLORS.white, fontSize: 30, fontWeight: 600, marginBottom: 10 }}>
+        <div style={{ color: COLORS.white, fontSize: 34, fontWeight: 600, marginBottom: 20 }}>
           {agentName}
         </div>
-        <div style={{ color: COLORS.accent, fontSize: 26, marginBottom: 8 }}>
+        <div style={{ color: COLORS.accent, fontSize: 30, marginBottom: 16 }}>
           {agentPhone}
         </div>
-        <div style={{ color: "rgba(255,255,255,0.6)", fontSize: 22 }}>
+        <div style={{ color: "rgba(255,255,255,0.5)", fontSize: 24 }}>
           {websiteUrl}
         </div>
       </div>
 
-      {/* WhatsApp */}
+      {/* WhatsApp — fixed to bottom */}
       <div
         style={{
           position: "absolute",
-          bottom: 100,
+          bottom: 140,
           background: "#25D366",
           borderRadius: 50,
-          padding: "14px 40px",
+          padding: "16px 44px",
           display: "flex",
           alignItems: "center",
-          gap: 12,
+          gap: 14,
           opacity: fadeIn,
         }}
       >
-        <span style={{ fontSize: 28 }}>💬</span>
-        <span style={{ color: COLORS.white, fontSize: 22, fontWeight: 600 }}>WhatsApp</span>
+        <span style={{ fontSize: 30 }}>💬</span>
+        <span style={{ color: COLORS.white, fontSize: 24, fontWeight: 600 }}>WhatsApp</span>
       </div>
     </AbsoluteFill>
   );
@@ -474,15 +469,15 @@ const CarouselCTAScene: React.FC<{
 export const PropertyCarousel: React.FC<PropertyCarouselProps> = (props) => {
   const { fps } = useVideoConfig();
 
-  // Timing:
-  // Intro: 4 seconds (120 frames)
-  // Each property: 4 seconds (120 frames)
-  // CTA: 4 seconds (120 frames)
-  // Max 5 properties shown = 4 + 20 + 4 = 28s (fits in 30s)
+  // SNAPPIER TIMING — ~2-3s per scene
+  // Intro: 2.5s (75 frames) — hook fast
+  // Each property: 3s (90 frames) — enough to read price + specs
+  // CTA: 3s (90 frames) — contact info
+  // Max 5 properties = 2.5 + 15 + 3 = 20.5s (punchy, high retention)
 
-  const introFrames = 120;
-  const propertyFrames = 120;
-  const ctaFrames = 120;
+  const introFrames = 75;
+  const propertyFrames = 90;
+  const ctaFrames = 90;
   const maxProperties = Math.min(props.properties.length, 5);
   const totalFrames = introFrames + maxProperties * propertyFrames + ctaFrames;
 

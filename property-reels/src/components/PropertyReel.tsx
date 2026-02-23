@@ -265,12 +265,12 @@ const GalleryScene: React.FC<{
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  // Cycle through images every 2.5 seconds
-  const imageIndex = Math.floor(frame / 75) % Math.max(images.length, 1);
-  const imageProgress = (frame % 75) / 75;
+  // Cycle through images every 1.5 seconds (45 frames at 30fps) — TikTok pace
+  const imageIndex = Math.floor(frame / 45) % Math.max(images.length, 1);
+  const imageProgress = (frame % 45) / 45;
 
-  // Ken Burns for current image
-  const scale = interpolate(imageProgress, [0, 1], [1, 1.08]);
+  // Ken Burns for current image — faster zoom
+  const scale = interpolate(imageProgress, [0, 1], [1.02, 1.12]);
 
   // Feature tags animation
   const tagOpacity = spring({ frame: frame - 10, fps, from: 0, to: 1, durationInFrames: 20 });
@@ -416,13 +416,21 @@ const CTAScene: React.FC<{
 export const PropertyReel: React.FC<PropertyReelProps> = (props) => {
   const { fps } = useVideoConfig();
 
-  // Scene timing (at 30fps, 15 seconds total = 450 frames)
-  // Scene 1: Hero (0-5s = 0-150 frames)
-  // Scene 2: Price + Specs (5-9s = 150-270 frames)
-  // Scene 3: Gallery (9-12.5s = 270-375 frames)
-  // Scene 4: CTA (12.5-15s = 375-450 frames)
+  // FASTER PACING — ~2 seconds per scene for TikTok/Reels algorithm
+  // At 30fps, 15 seconds total = 450 frames
+  //
+  // Scene 1: Hero (0-2.5s = 0-75 frames) — hook shot, fast
+  // Scene 2: Price + Specs (2.5-5s = 75-150 frames) — key info quick
+  // Scene 3: Gallery (5-12s = 150-360 frames) — 2s per image, cycle through
+  // Scene 4: CTA (12-15s = 360-450 frames) — contact info
+  //
+  // PLATFORM DIFFERENCES:
+  // - TikTok: 9:16, 15-60s, fast cuts, first 2s = hook
+  // - Instagram Reels: 9:16, 15-90s, slightly slower OK, captions help
+  // - YouTube Shorts: 9:16, up to 60s, slightly more polished
+  // This composition targets the TikTok sweet spot — works on all three.
 
-  // Resolve music track — use provided URL, staticFile, or nothing
+  // Resolve music track
   const musicSrc = props.musicTrack
     ? props.musicTrack.startsWith("http")
       ? props.musicTrack
@@ -436,7 +444,7 @@ export const PropertyReel: React.FC<PropertyReelProps> = (props) => {
         <Audio
           src={musicSrc}
           volume={(f) =>
-            interpolate(f, [0, 15, 390, 450], [0, 0.6, 0.6, 0], {
+            interpolate(f, [0, 10, 390, 450], [0, 0.6, 0.6, 0], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
             })
@@ -444,7 +452,8 @@ export const PropertyReel: React.FC<PropertyReelProps> = (props) => {
         />
       )}
 
-      <Sequence from={0} durationInFrames={150}>
+      {/* Hero — 2.5s hook */}
+      <Sequence from={0} durationInFrames={75}>
         <HeroScene
           image={props.images[0] || ""}
           type={props.type}
@@ -453,7 +462,8 @@ export const PropertyReel: React.FC<PropertyReelProps> = (props) => {
         />
       </Sequence>
 
-      <Sequence from={150} durationInFrames={120}>
+      {/* Price + Specs — 2.5s */}
+      <Sequence from={75} durationInFrames={75}>
         <PriceScene
           price={props.price}
           bedrooms={props.bedrooms}
@@ -464,14 +474,16 @@ export const PropertyReel: React.FC<PropertyReelProps> = (props) => {
         />
       </Sequence>
 
-      <Sequence from={270} durationInFrames={105}>
+      {/* Gallery — 7s, ~2s per image */}
+      <Sequence from={150} durationInFrames={210}>
         <GalleryScene
           images={props.images.slice(1, 6)}
           features={props.features}
         />
       </Sequence>
 
-      <Sequence from={375} durationInFrames={75}>
+      {/* CTA — 3s */}
+      <Sequence from={360} durationInFrames={90}>
         <CTAScene
           agentName={props.agentName}
           agentPhone={props.agentPhone}
