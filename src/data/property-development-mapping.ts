@@ -44,6 +44,14 @@ export const propertyMapping: Record<string, PropertyDevelopmentInfo> = {
   'N9506': { developer: 'AVKR HOMES', development: 'SAMAR VILLAS', deliveryDate: '01-06-2028', zone: 'Las Filipinas' },
 
   // ==========================================
+  // AVKR HOMES - EDIFICIO VENTO (Torrevieja, Centro)
+  // ==========================================
+  'N9593': { developer: 'AVKR HOMES', development: 'EDIFICIO VENTO', deliveryDate: '01-12-2027', zone: 'Centro' },
+  'N9594': { developer: 'AVKR HOMES', development: 'EDIFICIO VENTO', deliveryDate: '01-12-2027', zone: 'Centro' },
+  'N9535': { developer: 'AVKR HOMES', development: 'EDIFICIO VENTO', deliveryDate: '01-12-2027', zone: 'Centro' },
+  'N9591': { developer: 'AVKR HOMES', development: 'EDIFICIO VENTO', deliveryDate: '01-12-2027', zone: 'Centro' },
+
+  // ==========================================
   // BLUE MED INVEST - SILVER VIEWS (Puerto de Mazarron, Mar De Plata)
   // ==========================================
   'N9519': { developer: 'BLUE MED INVEST', development: 'SILVER VIEWS', deliveryDate: '01-12-2026', zone: 'Mar De Plata' },

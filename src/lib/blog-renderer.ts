@@ -7,6 +7,7 @@
 // Inline text formatting (bold, stars, emoji cleanup)
 export const inlineFmt = (text: string) => text
   .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-primary-900">$1</strong>')
+  .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-accent-600 hover:text-accent-700 underline underline-offset-2">$1</a>')
   .replace(/⭐⭐/g, '<span class="text-amber-500">★★</span>')
   .replace(/⭐/g, '<span class="text-amber-500">★</span>')
   .replace(/[🌴☀️🏠💶🏖️🍽️🛍️🏥✈️🤝⚖️🌿🥾🏔️❄️🤿💎💡📋📖🔑🏦🎉✨🏆]/g, '');
@@ -27,6 +28,15 @@ export function markdownToHtml(text: string): string {
     if (!trimmed) {
       if (inList) { output.push('</div>'); inList = false; }
       if (inParagraph) { output.push('</p>'); inParagraph = false; }
+      continue;
+    }
+
+    // Markdown images: ![alt text](src)
+    const imgMatch = trimmed.match(/^!\[(.*?)\]\((.*?)\)$/);
+    if (imgMatch) {
+      if (inList) { output.push('</div>'); inList = false; }
+      if (inParagraph) { output.push('</p>'); inParagraph = false; }
+      output.push(`<figure class="my-6"><img src="${imgMatch[2]}" alt="${imgMatch[1]}" class="w-full rounded-lg shadow-md" loading="lazy" />${imgMatch[1] ? `<figcaption class="text-sm text-warm-500 mt-2 text-center">${imgMatch[1]}</figcaption>` : ''}</figure>`);
       continue;
     }
 
