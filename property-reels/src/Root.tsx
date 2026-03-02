@@ -666,10 +666,10 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           propertyRef: "VENTO",
           images: [
-            staticFile("vento/edificio-vento-exterior.png"),
-            staticFile("vento/torrevieja-drone-playa-del-cura-beachfront-01.jpg"),
-            staticFile("vento/edificio-vento-night.png"),
-            staticFile("vento/torrevieja-rooftop-beach-harbour-view-01.jpg"),
+            "vento/edificio-vento-exterior.png",
+            "vento/torrevieja-drone-playa-del-cura-beachfront-01.jpg",
+            "vento/edificio-vento-night.png",
+            "vento/torrevieja-rooftop-beach-harbour-view-01.jpg",
           ],
           title: "Edificio Vento — New Build Torrevieja Centre",
           price: 158000,
@@ -719,10 +719,10 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           propertyRef: "VENTO",
           images: [
-            staticFile("vento/edificio-vento-exterior.png"),
-            staticFile("vento/torrevieja-palm-promenade-beach-01.jpg"),
-            staticFile("vento/edificio-vento-night.png"),
-            staticFile("vento/torrevieja-harbour-sunset-01.jpg"),
+            "vento/edificio-vento-exterior.png",
+            "vento/torrevieja-palm-promenade-beach-01.jpg",
+            "vento/edificio-vento-night.png",
+            "vento/torrevieja-harbour-sunset-01.jpg",
           ],
           title: "New Build Torrevieja From €158K",
           price: 158000,
@@ -749,10 +749,10 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           propertyRef: "VENTO-PH",
           images: [
-            staticFile("vento/edificio-vento-night.png"),
-            staticFile("vento/torrevieja-rooftop-beach-harbour-view-01.jpg"),
-            staticFile("vento/edificio-vento-sunset.png"),
-            staticFile("vento/torrevieja-drone-playa-del-cura-beachfront-01.jpg"),
+            "vento/edificio-vento-night.png",
+            "vento/torrevieja-rooftop-beach-harbour-view-01.jpg",
+            "vento/edificio-vento-sunset.png",
+            "vento/torrevieja-drone-playa-del-cura-beachfront-01.jpg",
           ],
           title: "Penthouse + Private Pool — Edificio Vento",
           price: 412000,
@@ -802,10 +802,10 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           propertyRef: "VENTO-PH3",
           images: [
-            staticFile("vento/edificio-vento-sunset.png"),
-            staticFile("vento/torrevieja-marina-dock-sailboats-01.jpg"),
-            staticFile("vento/edificio-vento-exterior.png"),
-            staticFile("vento/floorplan-overview.webp"),
+            "vento/edificio-vento-sunset.png",
+            "vento/torrevieja-marina-dock-sailboats-01.jpg",
+            "vento/edificio-vento-exterior.png",
+            "vento/floorplan-overview.webp",
           ],
           title: "3-Bed Penthouse Torrevieja €488K",
           price: 488000,
@@ -951,7 +951,7 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1080}
         defaultProps={{
-          image: staticFile("vento/edificio-vento-exterior.png"),
+          image: "vento/edificio-vento-exterior.png",
           title: "Edificio Vento — New Build Torrevieja Centre",
           price: 158000,
           bedrooms: 1,
@@ -971,11 +971,11 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1350}
         defaultProps={{
-          image: staticFile("vento/edificio-vento-exterior.png"),
+          image: "vento/edificio-vento-exterior.png",
           images: [
-            staticFile("vento/edificio-vento-exterior.png"),
-            staticFile("vento/floorplan-overview.webp"),
-            staticFile("vento/edificio-vento-apartments-overview.webp"),
+            "vento/edificio-vento-exterior.png",
+            "vento/floorplan-overview.webp",
+            "vento/edificio-vento-apartments-overview.webp",
           ],
           title: "Edificio Vento — New Build Torrevieja Centre",
           price: 158000,
@@ -997,7 +997,7 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1080}
         defaultProps={{
-          image: staticFile("vento/edificio-vento-night.png"),
+          image: "vento/edificio-vento-night.png",
           title: "2-Bed Apartment — Edificio Vento Torrevieja",
           price: 245000,
           bedrooms: 2,
@@ -1017,11 +1017,11 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1350}
         defaultProps={{
-          image: staticFile("vento/edificio-vento-night.png"),
+          image: "vento/edificio-vento-night.png",
           images: [
-            staticFile("vento/edificio-vento-night.png"),
-            staticFile("vento/floorplan-overview.webp"),
-            staticFile("vento/torrevieja-playa-del-cura-promenade-01.jpg"),
+            "vento/edificio-vento-night.png",
+            "vento/floorplan-overview.webp",
+            "vento/torrevieja-playa-del-cura-promenade-01.jpg",
           ],
           title: "2-Bed Apartment — Edificio Vento Torrevieja",
           price: 245000,
@@ -1043,7 +1043,7 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1080}
         defaultProps={{
-          image: staticFile("vento/edificio-vento-sunset.png"),
+          image: "vento/edificio-vento-sunset.png",
           title: "Penthouse + Private Pool — Edificio Vento",
           price: 412000,
           bedrooms: 2,
@@ -1063,11 +1063,11 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1350}
         defaultProps={{
-          image: staticFile("vento/edificio-vento-sunset.png"),
+          image: "vento/edificio-vento-sunset.png",
           images: [
-            staticFile("vento/edificio-vento-sunset.png"),
-            staticFile("vento/torrevieja-rooftop-beach-harbour-view-01.jpg"),
-            staticFile("vento/edificio-vento-exterior.png"),
+            "vento/edificio-vento-sunset.png",
+            "vento/torrevieja-rooftop-beach-harbour-view-01.jpg",
+            "vento/edificio-vento-exterior.png",
           ],
           title: "Penthouse + Private Pool — Edificio Vento",
           price: 412000,
@@ -1089,7 +1089,7 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1080}
         defaultProps={{
-          image: staticFile("vento/torrevieja-drone-playa-del-cura-beachfront-01.jpg"),
+          image: "vento/torrevieja-drone-playa-del-cura-beachfront-01.jpg",
           title: "3-Bed Duplex Penthouse — Edificio Vento",
           price: 488000,
           bedrooms: 3,
@@ -1109,11 +1109,11 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1350}
         defaultProps={{
-          image: staticFile("vento/torrevieja-drone-playa-del-cura-beachfront-01.jpg"),
+          image: "vento/torrevieja-drone-playa-del-cura-beachfront-01.jpg",
           images: [
-            staticFile("vento/torrevieja-drone-playa-del-cura-beachfront-01.jpg"),
-            staticFile("vento/edificio-vento-night.png"),
-            staticFile("vento/floorplan-overview.webp"),
+            "vento/torrevieja-drone-playa-del-cura-beachfront-01.jpg",
+            "vento/edificio-vento-night.png",
+            "vento/floorplan-overview.webp",
           ],
           title: "3-Bed Duplex Penthouse — Edificio Vento",
           price: 488000,
@@ -1135,7 +1135,7 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1080}
         defaultProps={{
-          image: staticFile("vento/torrevieja-palm-promenade-beach-01.jpg"),
+          image: "vento/torrevieja-palm-promenade-beach-01.jpg",
           locationName: "Torrevieja",
           tagline: "New Builds From €158,000",
           websiteUrl: "newbuildhomescostablanca.com",
@@ -1149,7 +1149,7 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1350}
         defaultProps={{
-          image: staticFile("vento/torrevieja-harbour-sunset-01.jpg"),
+          image: "vento/torrevieja-harbour-sunset-01.jpg",
           locationName: "Torrevieja",
           tagline: "New Builds From €158,000",
           websiteUrl: "newbuildhomescostablanca.com",

@@ -15,8 +15,13 @@ import {
   interpolate,
   useCurrentFrame,
   Easing,
+  staticFile,
 } from "remotion";
 import { COLORS } from "../../brand";
+
+// Resolve media path — supports both HTTP URLs and local public/ paths
+const resolveMedia = (src: string) =>
+  src.startsWith("http") || src.startsWith("/") ? src : staticFile(src);
 
 export interface VideoSegmentProps {
   /** Video source path (MP4) */
@@ -160,7 +165,7 @@ export const VideoSegment: React.FC<VideoSegmentProps> = ({
         >
           {videoSrc ? (
             <Video
-              src={videoSrc}
+              src={resolveMedia(videoSrc)}
               startFrom={startFrom * 30}
               style={{
                 width: "100%",
@@ -171,7 +176,7 @@ export const VideoSegment: React.FC<VideoSegmentProps> = ({
             />
           ) : imageSrc ? (
             <Img
-              src={imageSrc}
+              src={resolveMedia(imageSrc)}
               alt="Video segment background image"
               style={{
                 width: "100%",

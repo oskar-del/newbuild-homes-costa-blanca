@@ -6,7 +6,7 @@ import {
 import { z } from "zod";
 
 // ============================================================================
-// SCHEMA - Defines the props for the area showcase
+// SCHEMA
 // ============================================================================
 
 export const areaShowcaseSchema = z.object({
@@ -19,21 +19,18 @@ export const areaShowcaseSchema = z.object({
 type AreaShowcaseProps = z.infer<typeof areaShowcaseSchema>;
 
 // ============================================================================
-// BRAND COLORS - Matching the website
+// DESIGN SYSTEM — Editorial / Verity-inspired
+// Photo is 100%, text floats over a subtle gradient
+// Light, airy, luxury magazine feel — NOT dark navy boxes
 // ============================================================================
 
 const COLORS = {
-  primary: "#1a2332",    // Dark navy
-  accent: "#c5a55a",     // Gold
-  white: "#ffffff",
-  warm50: "#faf8f5",
-  warm700: "#4a4540",
+  text900: "#1E2A38",
+  accent: "#B39960",
 };
 
 // ============================================================================
-// AREA SHOWCASE - Still component for area engagement posts
-// Works for Square (1080x1080) and Pinterest (1080x1350)
-// Full-bleed drone/area photo with large text overlay
+// AREA SHOWCASE — Full-bleed photo with editorial text overlay
 // ============================================================================
 
 export const AreaShowcase: React.FC<AreaShowcaseProps> = ({
@@ -42,11 +39,15 @@ export const AreaShowcase: React.FC<AreaShowcaseProps> = ({
   tagline,
   websiteUrl,
 }) => {
+  const imgSrc = image.startsWith("http") || image.startsWith("/")
+    ? image
+    : staticFile(image);
+
   return (
     <AbsoluteFill>
-      {/* Full-bleed area photo (drone shot, beach, town) */}
+      {/* Full-bleed photo — the entire card */}
       <Img
-        src={image.startsWith("http") ? image : staticFile(image)}
+        src={imgSrc}
         alt={locationName}
         style={{
           width: "100%",
@@ -55,131 +56,140 @@ export const AreaShowcase: React.FC<AreaShowcaseProps> = ({
         }}
       />
 
-      {/* Dark gradient overlay from bottom — heavier for text legibility */}
+      {/* Soft gradient — just enough for text, not a dark overlay */}
       <div
         style={{
           position: "absolute",
           bottom: 0,
           left: 0,
           right: 0,
-          height: "75%",
-          background: "linear-gradient(transparent, rgba(26,35,50,0.95))",
+          height: "50%",
+          background:
+            "linear-gradient(transparent, rgba(0,0,0,0.12) 30%, rgba(0,0,0,0.5))",
         }}
       />
 
-      {/* Subtle gradient from top for logo area */}
+      {/* Tag pill — top left, frosted glass */}
       <div
         style={{
           position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          height: "20%",
-          background: "linear-gradient(rgba(26,35,50,0.4), transparent)",
+          top: 32,
+          left: 32,
+          background: "rgba(255,255,255,0.92)",
+          backdropFilter: "blur(12px)",
+          padding: "10px 20px",
+          display: "flex",
+          alignItems: "center",
+          gap: 8,
         }}
-      />
+      >
+        <div
+          style={{
+            width: 6,
+            height: 6,
+            borderRadius: "50%",
+            background: COLORS.accent,
+          }}
+        />
+        <span
+          style={{
+            color: COLORS.text900,
+            fontSize: 18,
+            fontWeight: 500,
+            letterSpacing: 2.5,
+            textTransform: "uppercase",
+          }}
+        >
+          Area Guide
+        </span>
+      </div>
 
-      {/* Logo watermark - top-right */}
+      {/* Logo — top right, frosted glass */}
       <div
         style={{
           position: "absolute",
           top: 28,
           right: 28,
-          width: 80,
-          height: 80,
+          width: 56,
+          height: 56,
           borderRadius: "50%",
-          background: "rgba(255,255,255,0.15)",
+          background: "rgba(255,255,255,0.85)",
           backdropFilter: "blur(8px)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           overflow: "hidden",
+          boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
         }}
       >
         <Img
           src={staticFile("logo-round.png")}
-          alt="New Build Homes Costa Blanca logo"
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
+          alt="Logo"
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
       </div>
 
-      {/* Bottom content container */}
+      {/* Bottom text — floating over the photo, clean and editorial */}
       <div
         style={{
           position: "absolute",
           bottom: 0,
           left: 0,
           right: 0,
-          padding: "60px 44px 44px 44px",
+          padding: "0 40px 44px",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "flex-end",
+          gap: 12,
         }}
       >
-        {/* Gold accent line above location name */}
-        <div
+        {/* Location name — large editorial serif */}
+        <h2
           style={{
-            width: 80,
-            height: 4,
-            background: COLORS.accent,
-            marginBottom: 20,
-            borderRadius: 2,
-          }}
-        />
-
-        {/* Location name - LARGE, bold, white */}
-        <div
-          style={{
-            color: COLORS.white,
-            fontSize: 88,
-            fontWeight: 700,
+            fontFamily: "'Playfair Display', Georgia, serif",
+            fontSize: 64,
+            fontWeight: 400,
+            color: "#ffffff",
             lineHeight: 1.05,
-            marginBottom: 20,
+            letterSpacing: 1,
+            textShadow: "0 2px 20px rgba(0,0,0,0.3)",
           }}
         >
           {locationName}
-        </div>
+        </h2>
 
-        {/* Tagline - gold, medium size */}
-        <div
+        {/* Tagline */}
+        <p
           style={{
-            color: COLORS.accent,
-            fontSize: 36,
-            fontWeight: 500,
-            letterSpacing: 0.5,
-            marginBottom: 36,
+            fontSize: 22,
+            fontWeight: 400,
+            color: "rgba(255,255,255,0.85)",
+            letterSpacing: 1,
           }}
         >
           {tagline}
-        </div>
+        </p>
 
-        {/* Gold divider */}
+        {/* Small gold accent line */}
         <div
           style={{
-            width: "100%",
+            width: 60,
             height: 2,
             background: COLORS.accent,
-            opacity: 0.3,
-            marginBottom: 16,
+            marginTop: 4,
           }}
         />
 
-        {/* Website URL - visible but not overpowering */}
-        <div
+        {/* Website */}
+        <span
           style={{
-            color: "rgba(255,255,255,0.5)",
-            fontSize: 20,
-            fontWeight: 400,
-            letterSpacing: 0.5,
-            textAlign: "right",
+            fontSize: 14,
+            color: "rgba(255,255,255,0.6)",
+            letterSpacing: 1.5,
+            textTransform: "uppercase",
           }}
         >
           {websiteUrl}
-        </div>
+        </span>
       </div>
     </AbsoluteFill>
   );

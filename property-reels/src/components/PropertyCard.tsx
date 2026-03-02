@@ -6,12 +6,12 @@ import {
 import { z } from "zod";
 
 // ============================================================================
-// SCHEMA - Defines the props for the property card
+// SCHEMA
 // ============================================================================
 
 export const propertyCardSchema = z.object({
   image: z.string(),
-  images: z.array(z.string()).optional(), // For Pinterest multi-image layout
+  images: z.array(z.string()).optional(),
   title: z.string(),
   price: z.number(),
   bedrooms: z.number(),
@@ -26,30 +26,36 @@ export const propertyCardSchema = z.object({
 type PropertyCardProps = z.infer<typeof propertyCardSchema>;
 
 // ============================================================================
-// BRAND COLORS - Matching the website
+// DESIGN SYSTEM — Editorial / Verity-inspired
+// Matches the website's new Key-Ready Under €400k section
 // ============================================================================
 
 const COLORS = {
-  primary: "#1a2332",    // Dark navy
-  accent: "#c5a55a",     // Gold
-  white: "#ffffff",
-  warm50: "#faf8f5",
-  warm700: "#4a4540",
+  bg: "#FDFCFA",           // Warm cream page background
+  cardBg: "#FFFFFF",       // White card surface
+  text900: "#1E2A38",      // Deep slate — primary text
+  text600: "#475569",      // Medium slate
+  text400: "#B8B3AA",      // Warm grey — secondary
+  accent: "#B39960",       // Muted gold
+  accentDark: "#9a7f4a",   // Darker gold
+  tagBg: "#F7F5F0",        // Warm stone — tag pill background
+  border: "#E8E6E1",       // Subtle warm border
 };
 
 // ============================================================================
-// FORMAT HELPERS
+// HELPERS
 // ============================================================================
+
+const resolveImg = (src: string) =>
+  src.startsWith("http") || src.startsWith("/") ? src : staticFile(src);
 
 function formatPrice(price: number): string {
   return `€${price.toLocaleString("de-DE")}`;
 }
 
 // ============================================================================
-// PROPERTY CARD - Still component for social media posts
-// Works for both Square (1080x1080) and Pinterest (1080x1350)
-// REDESIGNED: Photo takes ~72% of the card, info panel is compact ~28%
-// No dead space — the image is the hero, info is a slim overlay strip
+// PROPERTY CARD — Photo-forward editorial design
+// Photo is the star (85%+), text is minimal and elegant
 // ============================================================================
 
 export const PropertyCard: React.FC<PropertyCardProps> = ({
@@ -65,184 +71,155 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
   propertyRef,
   websiteUrl,
 }) => {
-  const hasMultipleImages = images && images.length >= 3;
+  const heroImg = resolveImg(image);
+  const resolvedImages = images?.map(resolveImg);
+  const hasMultipleImages = resolvedImages && resolvedImages.length >= 3;
 
   return (
-    <AbsoluteFill style={{ background: COLORS.primary }}>
+    <AbsoluteFill style={{ background: COLORS.bg }}>
       {/* ================================================================ */}
-      {/* IMAGE SECTION — takes ~72% of the card                           */}
+      {/* PHOTO SECTION — Full-bleed, takes ~82% of the card              */}
       {/* ================================================================ */}
 
       {hasMultipleImages ? (
-        /* Pinterest multi-image layout: Large hero + 2 smaller photos */
+        /* Pinterest: Hero + 2 smaller photos in a clean grid */
         <div
           style={{
             position: "absolute",
             top: 0,
             left: 0,
             right: 0,
-            height: "72%",
+            height: "70%",
             display: "flex",
             flexDirection: "column",
-            gap: 4,
+            gap: 3,
           }}
         >
-          {/* Main hero photo */}
+          {/* Main hero — 75% of image area */}
           <div style={{ flex: 3, overflow: "hidden", position: "relative" }}>
             <Img
-              src={images[0]}
-              alt={`${title} - photo 1`}
+              src={resolvedImages![0]}
+              alt={title}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
-            {/* NEW BUILD badge */}
-            <div
-              style={{
-                position: "absolute",
-                top: 32,
-                left: 0,
-                background: COLORS.accent,
-                padding: "12px 32px",
-                borderTopRightRadius: 6,
-                borderBottomRightRadius: 6,
-              }}
-            >
-              <span
-                style={{
-                  color: COLORS.white,
-                  fontSize: 24,
-                  fontWeight: 700,
-                  letterSpacing: 2,
-                }}
-              >
-                NEW BUILD
-              </span>
-            </div>
-
-            {/* Logo watermark */}
-            <div
-              style={{
-                position: "absolute",
-                bottom: 14,
-                right: 14,
-                width: 60,
-                height: 60,
-                borderRadius: "50%",
-                background: "rgba(255,255,255,0.15)",
-                backdropFilter: "blur(8px)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                overflow: "hidden",
-              }}
-            >
-              <Img
-                src={staticFile("logo-round.png")}
-                alt="Logo"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </div>
           </div>
-
-          {/* Two smaller photos side by side */}
-          <div style={{ flex: 1, display: "flex", gap: 4 }}>
-            <div style={{ flex: 1, overflow: "hidden", borderRadius: 3 }}>
+          {/* Two thumbnails side by side */}
+          <div style={{ flex: 1, display: "flex", gap: 3 }}>
+            <div style={{ flex: 1, overflow: "hidden" }}>
               <Img
-                src={images[1]}
-                alt={`${title} - photo 2`}
+                src={resolvedImages![1]}
+                alt={`${title} - 2`}
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
             </div>
-            <div style={{ flex: 1, overflow: "hidden", borderRadius: 3 }}>
+            <div style={{ flex: 1, overflow: "hidden" }}>
               <Img
-                src={images[2]}
-                alt={`${title} - photo 3`}
+                src={resolvedImages![2]}
+                alt={`${title} - 3`}
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
             </div>
           </div>
         </div>
       ) : (
-        /* Standard single-image layout — 72% photo */
+        /* Square: Single hero photo, full bleed */
         <div
           style={{
             position: "absolute",
             top: 0,
             left: 0,
             right: 0,
-            height: "72%",
+            height: "82%",
             overflow: "hidden",
           }}
         >
           <Img
-            src={image}
+            src={heroImg}
             alt={title}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
 
-          {/* Gradient at bottom for smooth transition to info panel */}
+          {/* Soft gradient fade into info area */}
           <div
             style={{
               position: "absolute",
               bottom: 0,
               left: 0,
               right: 0,
-              height: "30%",
-              background: "linear-gradient(transparent, rgba(26,35,50,0.5))",
+              height: "20%",
+              background: "linear-gradient(transparent, rgba(253,252,250,0.6))",
             }}
           />
-
-          {/* NEW BUILD badge - top-left */}
-          <div
-            style={{
-              position: "absolute",
-              top: 32,
-              left: 0,
-              background: COLORS.accent,
-              padding: "12px 32px",
-              borderTopRightRadius: 6,
-              borderBottomRightRadius: 6,
-            }}
-          >
-            <span
-              style={{
-                color: COLORS.white,
-                fontSize: 24,
-                fontWeight: 700,
-                letterSpacing: 2,
-              }}
-            >
-              NEW BUILD
-            </span>
-          </div>
-
-          {/* Logo watermark - bottom-right */}
-          <div
-            style={{
-              position: "absolute",
-              bottom: 20,
-              right: 20,
-              width: 70,
-              height: 70,
-              borderRadius: "50%",
-              background: "rgba(255,255,255,0.15)",
-              backdropFilter: "blur(8px)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              overflow: "hidden",
-            }}
-          >
-            <Img
-              src={staticFile("logo-round.png")}
-              alt="Logo"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          </div>
         </div>
       )}
 
       {/* ================================================================ */}
-      {/* INFO PANEL — compact 28% strip at bottom                         */}
+      {/* TAG PILL — top left, subtle and modern                          */}
+      {/* ================================================================ */}
+      <div
+        style={{
+          position: "absolute",
+          top: 32,
+          left: 32,
+          background: "rgba(255,255,255,0.92)",
+          backdropFilter: "blur(12px)",
+          padding: "10px 20px",
+          display: "flex",
+          alignItems: "center",
+          gap: 8,
+        }}
+      >
+        <div
+          style={{
+            width: 6,
+            height: 6,
+            borderRadius: "50%",
+            background: COLORS.accent,
+          }}
+        />
+        <span
+          style={{
+            color: COLORS.text900,
+            fontSize: 18,
+            fontWeight: 500,
+            letterSpacing: 2.5,
+            textTransform: "uppercase",
+          }}
+        >
+          New Build
+        </span>
+      </div>
+
+      {/* ================================================================ */}
+      {/* LOGO — bottom right of photo, frosted glass circle              */}
+      {/* ================================================================ */}
+      <div
+        style={{
+          position: "absolute",
+          top: hasMultipleImages ? undefined : undefined,
+          bottom: hasMultipleImages ? "32%" : "20%",
+          right: 28,
+          width: 56,
+          height: 56,
+          borderRadius: "50%",
+          background: "rgba(255,255,255,0.85)",
+          backdropFilter: "blur(8px)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          overflow: "hidden",
+          boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
+        }}
+      >
+        <Img
+          src={staticFile("logo-round.png")}
+          alt="Logo"
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
+      </div>
+
+      {/* ================================================================ */}
+      {/* INFO STRIP — clean, cream background, editorial typography      */}
       {/* ================================================================ */}
       <div
         style={{
@@ -250,112 +227,113 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
           bottom: 0,
           left: 0,
           right: 0,
-          height: "28%",
-          background: COLORS.primary,
-          padding: "20px 40px 24px",
+          height: hasMultipleImages ? "30%" : "18%",
+          background: COLORS.bg,
+          padding: hasMultipleImages ? "24px 40px 32px" : "0px 40px 28px",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
-          gap: 6,
+          justifyContent: "flex-end",
+          gap: hasMultipleImages ? 10 : 6,
         }}
       >
-        {/* Row 1: Type + Town  |  Specs */}
+        {/* Title + Price row */}
         <div
           style={{
             display: "flex",
+            alignItems: "baseline",
             justifyContent: "space-between",
-            alignItems: "center",
+            gap: 24,
           }}
         >
-          <div
+          <h3
             style={{
-              color: COLORS.accent,
-              fontSize: 20,
-              fontWeight: 600,
-              letterSpacing: 1.5,
+              fontFamily: "'Playfair Display', Georgia, serif",
+              fontSize: hasMultipleImages ? 32 : 34,
+              fontWeight: 400,
+              color: COLORS.text900,
+              lineHeight: 1.2,
+              letterSpacing: 0.5,
+              flex: 1,
+            }}
+          >
+            {title}
+          </h3>
+          <span
+            style={{
+              fontFamily: "'Playfair Display', Georgia, serif",
+              fontSize: hasMultipleImages ? 34 : 38,
+              fontWeight: 400,
+              color: COLORS.text900,
+              whiteSpace: "nowrap",
+            }}
+          >
+            {formatPrice(price)}
+          </span>
+        </div>
+
+        {/* Location + Specs row */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          {/* Town + Type */}
+          <span
+            style={{
+              fontSize: 16,
+              fontWeight: 400,
+              letterSpacing: 2,
               textTransform: "uppercase",
+              color: COLORS.text400,
             }}
           >
-            {type.toUpperCase()} • {town.toUpperCase()}
-          </div>
-          <div
-            style={{
-              display: "flex",
-              gap: 24,
-            }}
-          >
+            {type} · {town}
+          </span>
+
+          {/* Bed / Bath / M² — minimal */}
+          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
             {[
-              { value: bedrooms, label: "BED" },
-              { value: bathrooms, label: "BATH" },
-              { value: area, label: "M²" },
-            ].map(({ value, label }) => (
-              <div key={label} style={{ textAlign: "center" }}>
-                <span
-                  style={{
-                    color: COLORS.white,
-                    fontSize: 24,
-                    fontWeight: 700,
-                  }}
-                >
-                  {value}
-                </span>
-                <span
-                  style={{
-                    color: COLORS.accent,
-                    fontSize: 14,
-                    fontWeight: 500,
-                    marginLeft: 4,
-                    letterSpacing: 0.5,
-                  }}
-                >
-                  {label}
-                </span>
-              </div>
+              { icon: "⌂", value: `${bedrooms} bed` },
+              { icon: "◦", value: `${bathrooms} bath` },
+              { icon: "□", value: `${area} m²` },
+            ].map(({ value }, i) => (
+              <span
+                key={i}
+                style={{
+                  fontSize: 15,
+                  color: COLORS.text600,
+                  fontWeight: 400,
+                }}
+              >
+                {value}
+              </span>
             ))}
           </div>
         </div>
 
-        {/* Row 2: Title */}
+        {/* Divider line */}
         <div
           style={{
-            color: COLORS.white,
-            fontSize: hasMultipleImages ? 30 : 36,
-            fontWeight: 600,
-            lineHeight: 1.15,
+            width: "100%",
+            height: 1,
+            background: COLORS.border,
+            marginTop: 2,
           }}
-        >
-          {title}
-        </div>
+        />
 
-        {/* Row 3: Price + Website */}
-        <div
+        {/* Website URL — subtle */}
+        <span
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-end",
+            fontSize: 13,
+            color: COLORS.text400,
+            letterSpacing: 1,
+            textAlign: "right",
           }}
         >
-          <div
-            style={{
-              color: COLORS.accent,
-              fontSize: hasMultipleImages ? 44 : 54,
-              fontWeight: 800,
-              lineHeight: 1,
-            }}
-          >
-            {formatPrice(price)}
-          </div>
-          <div
-            style={{
-              color: "rgba(255,255,255,0.5)",
-              fontSize: 16,
-              fontWeight: 400,
-              letterSpacing: 0.5,
-            }}
-          >
-            {websiteUrl}
-          </div>
-        </div>
+          {websiteUrl}
+        </span>
       </div>
     </AbsoluteFill>
   );
