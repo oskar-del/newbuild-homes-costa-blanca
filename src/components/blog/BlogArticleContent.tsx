@@ -275,7 +275,7 @@ export default function BlogArticleContent({
       )}
 
       <main className="min-h-screen bg-warm-50">
-        {/* ─── Hero — Full-width editorial banner ─── */}
+        {/* ─── Hero — Full-width editorial banner with prominent image ─── */}
         <section className="relative bg-primary-900 overflow-hidden">
           {article.image && (
             <div className="absolute inset-0">
@@ -283,14 +283,14 @@ export default function BlogArticleContent({
                 src={article.image}
                 alt={article.title}
                 fill
-                className="object-cover opacity-15"
+                className="object-cover opacity-30"
                 priority
                 unoptimized
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-primary-900/70 via-primary-900/90 to-primary-900" />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary-900/50 via-primary-900/70 to-primary-900/95" />
             </div>
           )}
-          <div className="relative z-10 max-w-4xl mx-auto px-6 pt-16 pb-20 md:pt-20 md:pb-24">
+          <div className="relative z-10 max-w-4xl mx-auto px-6 pt-16 pb-8 md:pt-20 md:pb-10">
             <nav className="text-warm-400 text-sm mb-8">
               <Link href={`${langPrefix || '/'}`} className="hover:text-white transition-colors">Home</Link>
               <span className="mx-2 text-warm-500">›</span>
@@ -315,6 +315,21 @@ export default function BlogArticleContent({
               <span>{new Date(article.publishedAt).toLocaleDateString(dateLocale, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
             </div>
           </div>
+          {/* Prominent hero image — visible below the title */}
+          {article.image && (
+            <div className="relative z-10 max-w-5xl mx-auto px-6 pb-10">
+              <div className="relative w-full aspect-[21/9] rounded-sm overflow-hidden shadow-xl">
+                <Image
+                  src={article.image}
+                  alt={article.title}
+                  fill
+                  className="object-cover"
+                  priority
+                  unoptimized
+                />
+              </div>
+            </div>
+          )}
         </section>
 
         {/* Wave transition from hero to content */}
