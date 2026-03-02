@@ -647,6 +647,188 @@ export const RemotionRoot: React.FC = () => {
       />
 
       {/* ═══════════════════════════════════════════
+          EDIFICIO VENTO — Video Reels
+          Using Torrevieja-specific footage
+          ═══════════════════════════════════════════ */}
+
+      {/* Vento Cinematic — premium 35s showcase */}
+      <Composition
+        id="VentoCinematic"
+        component={PropertySpotlightCinematic}
+        schema={propertySpotlightCinematicSchema}
+        durationInFrames={PROPERTY_SPOTLIGHT_CINEMATIC_FRAMES}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          propertyRef: "N9593",
+          images: [
+            staticFile("vento/edificio-vento-exterior.png"),
+            staticFile("vento/edificio-vento-night.png"),
+            staticFile("vento/floorplan-overview.webp"),
+            staticFile("vento/edificio-vento-apartments-overview.webp"),
+          ],
+          title: "Edificio Vento — New Build Torrevieja Centre",
+          price: 158000,
+          bedrooms: 1,
+          bathrooms: 1,
+          area: 48,
+          town: "Torrevieja",
+          province: "Alicante",
+          type: "Apartment",
+          features: [
+            "City Centre Location",
+            "10 Min Walk to Beach",
+            "Private Rooftop Pools",
+            "Underfloor Heating",
+            "Climalit Double Glazing",
+            "Roca & Saloni Finishes",
+          ],
+          description:
+            "Boutique building of 10 exclusive apartments in walkable central Torrevieja. From €158K for 1-bed to €488K for a penthouse with private pool.",
+          nearbyAmenities: {
+            beach: "Playa del Cura — 10 min walk",
+            golf: "Villamartín Golf — 15 min drive",
+            airport: "Alicante Airport — 45 min",
+            restaurants: "City centre dining — on your doorstep",
+          },
+          rentalYield: "5-7%",
+          pricePerSqm: 3284,
+          videoLocation: vid("torrevieja boardwalk.mp4"),
+          videoInvestment: vid("marina torrevieja.mp4"),
+          videoCTA: vid("sunset.mp4"),
+          websiteUrl: "newbuildhomescostablanca.com",
+          agentName: "Oskar Peterson",
+          agentPhone: "+34 634 044 970",
+          musicTrack: "music/luxury.mp3",
+        }}
+      />
+
+      {/* Vento Rapid — 15s TikTok energy version */}
+      <Composition
+        id="VentoRapid"
+        component={PropertySpotlightRapid}
+        schema={propertySpotlightRapidSchema}
+        durationInFrames={PROPERTY_SPOTLIGHT_RAPID_FRAMES}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          propertyRef: "N9593",
+          images: [
+            staticFile("vento/edificio-vento-exterior.png"),
+            staticFile("vento/edificio-vento-night.png"),
+            staticFile("vento/edificio-vento-sunset.png"),
+            staticFile("vento/floorplan-overview.webp"),
+          ],
+          title: "New Build Torrevieja From €158K",
+          price: 158000,
+          bedrooms: 1,
+          bathrooms: 1,
+          area: 48,
+          town: "Torrevieja",
+          type: "Apartment",
+          features: ["City Centre", "Walk to Beach", "Private Pools", "10 Units Only", "Premium Finishes"],
+          websiteUrl: "newbuildhomescostablanca.com",
+          musicTrack: "music/upbeat.mp3",
+        }}
+      />
+
+      {/* Vento Penthouse Cinematic — the flagship unit */}
+      <Composition
+        id="VentoPenthouseCinematic"
+        component={PropertySpotlightCinematic}
+        schema={propertySpotlightCinematicSchema}
+        durationInFrames={PROPERTY_SPOTLIGHT_CINEMATIC_FRAMES}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          propertyRef: "N9593-PH",
+          images: [
+            staticFile("vento/edificio-vento-night.png"),
+            staticFile("vento/edificio-vento-exterior.png"),
+            staticFile("vento/edificio-vento-sunset.png"),
+            staticFile("vento/edificio-vento-apartments-overview.webp"),
+          ],
+          title: "Penthouse + Private Pool — Edificio Vento",
+          price: 412000,
+          bedrooms: 2,
+          bathrooms: 2,
+          area: 173,
+          town: "Torrevieja",
+          province: "Alicante",
+          type: "Penthouse",
+          features: [
+            "Private Rooftop Pool",
+            "Outdoor Kitchen",
+            "173 m² Duplex",
+            "Solarium Terrace",
+            "City Centre Location",
+            "Walk to Beach",
+          ],
+          description:
+            "Duplex penthouse with private rooftop pool, solarium and outdoor kitchen. 173 m² across three levels in the heart of Torrevieja.",
+          nearbyAmenities: {
+            beach: "Playa del Cura — 10 min walk",
+            golf: "Villamartín Golf — 15 min drive",
+            airport: "Alicante Airport — 45 min",
+            restaurants: "Tapas bars & seafood — steps away",
+          },
+          rentalYield: "4-6%",
+          pricePerSqm: 2382,
+          videoLocation: vid("torrevieja harbour.mp4"),
+          videoInvestment: vid("pink lake torrevieja.mp4"),
+          videoCTA: vid("sunset.mp4"),
+          websiteUrl: "newbuildhomescostablanca.com",
+          agentName: "Oskar Peterson",
+          agentPhone: "+34 634 044 970",
+          musicTrack: "music/luxury.mp3",
+        }}
+      />
+
+      {/* Vento Blog Summary Reel — drive traffic to the article */}
+      <Composition
+        id="VentoBlogReel"
+        component={BlogSummaryReel}
+        schema={blogSummaryReelSchema}
+        durationInFrames={calculateBlogSummaryDuration(3)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          articleTitle: "New Build Apartments Torrevieja City Centre From €158K",
+          category: "Development Spotlight",
+          hookQuestion: "A new build in a walkable city centre — from €158,000?",
+          keyPoints: [
+            {
+              headline: "10 Exclusive Apartments",
+              summary:
+                "Boutique building on a corner plot in central Torrevieja. 1-3 beds from €158K. Penthouses with private rooftop pools from €412K.",
+            },
+            {
+              headline: "Walk-Everywhere Location",
+              summary:
+                "10-minute walk to Playa del Cura. Shops, restaurants, and healthcare all on foot. No car needed for daily life.",
+            },
+            {
+              headline: "Premium Build Quality",
+              summary:
+                "Roca sanitaryware, Saloni porcelain floors, Climalit double glazing, underfloor heating in bathrooms. Built by AVKR HOMES.",
+            },
+          ],
+          takeaway:
+            "City centre new build from €158K with a 10-min beach walk. Read the full development spotlight on our blog.",
+          videoHook: vid("torrevieja boardwalk.mp4"),
+          videoPoints: vid("marina torrevieja.mp4"),
+          videoCTA: vid("sunset.mp4"),
+          websiteUrl: "newbuildhomescostablanca.com",
+          articleSlug: "edificio-vento-torrevieja-new-build-apartments",
+          musicTrack: "music/chill.mp3",
+        }}
+      />
+
+      {/* ═══════════════════════════════════════════
           EDIFICIO VENTO — Social Media Stills
           3 posts × 2 formats (Square + Pinterest)
           ═══════════════════════════════════════════ */}
