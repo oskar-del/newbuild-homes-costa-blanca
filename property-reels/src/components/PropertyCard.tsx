@@ -191,34 +191,6 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
       </div>
 
       {/* ================================================================ */}
-      {/* LOGO — bottom right of photo, frosted glass circle              */}
-      {/* ================================================================ */}
-      <div
-        style={{
-          position: "absolute",
-          top: hasMultipleImages ? undefined : undefined,
-          bottom: hasMultipleImages ? "32%" : "20%",
-          right: 28,
-          width: 56,
-          height: 56,
-          borderRadius: "50%",
-          background: "rgba(255,255,255,0.85)",
-          backdropFilter: "blur(8px)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          overflow: "hidden",
-          boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
-        }}
-      >
-        <Img
-          src={staticFile("logo-round.png")}
-          alt="Logo"
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-        />
-      </div>
-
-      {/* ================================================================ */}
       {/* INFO STRIP — clean, cream background, editorial typography      */}
       {/* ================================================================ */}
       <div

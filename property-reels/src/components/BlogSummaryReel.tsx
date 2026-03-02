@@ -319,11 +319,28 @@ export const BlogSummaryReel: React.FC<BlogSummaryReelProps> = ({
               gap: SPACING.md,
             }}
           >
+            {/* Hook question shown first, above the title */}
+            {hookQuestion && (
+              <FadeUpText
+                text={hookQuestion}
+                delay={0}
+                style={{
+                  fontSize: FONT_SIZES.lg,
+                  fontWeight: FONT_WEIGHTS.regular,
+                  color: COLORS.accentLight,
+                  maxWidth: "85%",
+                  fontStyle: "italic",
+                  lineHeight: 1.4,
+                  marginBottom: SPACING.sm,
+                }}
+              />
+            )}
+
             <FadeUpText
               text={articleTitle}
-              delay={0}
+              delay={hookQuestion ? 12 : 0}
               style={{
-                fontSize: FONT_SIZES["3xl"],
+                fontSize: FONT_SIZES["2xl"],
                 fontWeight: FONT_WEIGHTS.regular,
                 color: "#ffffff",
                 textShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
@@ -332,23 +349,6 @@ export const BlogSummaryReel: React.FC<BlogSummaryReelProps> = ({
                 fontFamily: FONTS.display,
               }}
             />
-
-            {/* Hook question if provided */}
-            {hookQuestion && (
-              <Sequence from={20} durationInFrames={40}>
-                <FadeUpText
-                  text={hookQuestion}
-                  delay={0}
-                  style={{
-                    fontSize: FONT_SIZES.lg,
-                    fontWeight: FONT_WEIGHTS.regular,
-                    color: COLORS.accentLight,
-                    maxWidth: "90%",
-                    fontStyle: "italic",
-                  }}
-                />
-              </Sequence>
-            )}
           </div>
         </Sequence>
       </Sequence>

@@ -1,56 +1,96 @@
 #!/bin/bash
-# ============================================================================
-# Render all Edificio Vento social media stills
-# 5 posts × 2 formats (Square 1080×1080 + Pinterest 1080×1350) = 10 images
-# ============================================================================
+# ═══════════════════════════════════════════════════════════════════════════
+# RENDER ALL VENTO CONTENT — Videos + Stills
+# Run on your Mac: cd property-reels && bash render-vento.sh
+# ═══════════════════════════════════════════════════════════════════════════
 
 set -e
 
-OUTPUT_DIR="out/social-posts"
-mkdir -p "$OUTPUT_DIR"
+VIDS="out/videos"
+STILLS="out/social-posts"
+mkdir -p "$VIDS" "$STILLS"
 
-echo "╔══════════════════════════════════════════════════╗"
-echo "║   Rendering Edificio Vento Stills                ║"
-echo "║   5 posts × 2 formats = 10 images                ║"
-echo "╚══════════════════════════════════════════════════╝"
+echo "╔══════════════════════════════════════════════════════════════╗"
+echo "║  EDIFICIO VENTO — Full Render Pipeline                      ║"
+echo "║  7 video reels + 10 still images                            ║"
+echo "╚══════════════════════════════════════════════════════════════╝"
 echo ""
 
-# ── Post 1: Development Overview ──
-echo "🏢 [1/5] Vento Overview..."
-npx remotion still VentoOverviewSquare --output "$OUTPUT_DIR/vento-overview-square.png" 2>/dev/null
-npx remotion still VentoOverviewPinterest --output "$OUTPUT_DIR/vento-overview-pinterest.png" 2>/dev/null
-echo "  ✅ Overview done"
+# ── VIDEO REELS ────────────────────────────────────────────────────────────
+echo "🎬 RENDERING VIDEO REELS..."
+echo ""
 
-# ── Post 2: Two-Bedroom Apartment ──
-echo "🛏️  [2/5] Vento 2-Bed..."
-npx remotion still Vento2BedSquare --output "$OUTPUT_DIR/vento-2bed-square.png" 2>/dev/null
-npx remotion still Vento2BedPinterest --output "$OUTPUT_DIR/vento-2bed-pinterest.png" 2>/dev/null
-echo "  ✅ 2-Bed done"
+echo "  [1/7] VentoCinematic (35s)..."
+npx remotion render VentoCinematic "$VIDS/vento-cinematic.mp4" --codec h264
 
-# ── Post 3: Penthouse ──
-echo "🏊 [3/5] Vento Penthouse..."
-npx remotion still VentoPenthouseSquare --output "$OUTPUT_DIR/vento-penthouse-square.png" 2>/dev/null
-npx remotion still VentoPenthousePinterest --output "$OUTPUT_DIR/vento-penthouse-pinterest.png" 2>/dev/null
-echo "  ✅ Penthouse done"
+echo "  [2/7] VentoRapid (15s)..."
+npx remotion render VentoRapid "$VIDS/vento-rapid.mp4" --codec h264
 
-# ── Post 4: 3-Bed Flagship ──
-echo "🏡 [4/5] Vento 3-Bed..."
-npx remotion still Vento3BedSquare --output "$OUTPUT_DIR/vento-3bed-square.png" 2>/dev/null
-npx remotion still Vento3BedPinterest --output "$OUTPUT_DIR/vento-3bed-pinterest.png" 2>/dev/null
-echo "  ✅ 3-Bed done"
+echo "  [3/7] VentoPenthouseCinematic (35s)..."
+npx remotion render VentoPenthouseCinematic "$VIDS/vento-penthouse-cinematic.mp4" --codec h264
 
-# ── Post 5: Torrevieja Area Showcase ──
-echo "🌊 [5/5] Vento Torrevieja Area..."
-npx remotion still VentoTorreviejaSquare --output "$OUTPUT_DIR/vento-torrevieja-square.png" 2>/dev/null
-npx remotion still VentoTorreviejaPinterest --output "$OUTPUT_DIR/vento-torrevieja-pinterest.png" 2>/dev/null
-echo "  ✅ Torrevieja done"
+echo "  [4/7] VentoPenthouseRapid (15s)..."
+npx remotion render VentoPenthouseRapid "$VIDS/vento-penthouse-rapid.mp4" --codec h264
+
+echo "  [5/7] VentoBlogReel (30s)..."
+npx remotion render VentoBlogReel "$VIDS/vento-blog-reel.mp4" --codec h264
+
+echo "  [6/7] VentoAreaGuide (33s)..."
+npx remotion render VentoAreaGuide "$VIDS/vento-area-guide.mp4" --codec h264
+
+echo "  [7/7] VentoInvestmentCase (15s)..."
+npx remotion render VentoInvestmentCase "$VIDS/vento-investment-case.mp4" --codec h264
 
 echo ""
-echo "╔══════════════════════════════════════════════════╗"
-echo "║   All 10 Vento stills rendered!                   ║"
-echo "╚══════════════════════════════════════════════════╝"
+echo "✅ All 7 video reels rendered!"
 echo ""
-echo "Output:"
-ls -lh "$OUTPUT_DIR"/vento-*.png
+
+# ── STILL IMAGES ───────────────────────────────────────────────────────────
+echo "📸 RENDERING STILL IMAGES..."
 echo ""
-echo "Next step: node upload-vento-to-postiz.mjs"
+
+echo "  [1/10] VentoOverviewSquare..."
+npx remotion still VentoOverviewSquare --output "$STILLS/vento-overview-square.png"
+
+echo "  [2/10] VentoOverviewPinterest..."
+npx remotion still VentoOverviewPinterest --output "$STILLS/vento-overview-pinterest.png"
+
+echo "  [3/10] Vento2BedSquare..."
+npx remotion still Vento2BedSquare --output "$STILLS/vento-2bed-square.png"
+
+echo "  [4/10] Vento2BedPinterest..."
+npx remotion still Vento2BedPinterest --output "$STILLS/vento-2bed-pinterest.png"
+
+echo "  [5/10] VentoPenthouseSquare..."
+npx remotion still VentoPenthouseSquare --output "$STILLS/vento-penthouse-square.png"
+
+echo "  [6/10] VentoPenthousePinterest..."
+npx remotion still VentoPenthousePinterest --output "$STILLS/vento-penthouse-pinterest.png"
+
+echo "  [7/10] Vento3BedSquare..."
+npx remotion still Vento3BedSquare --output "$STILLS/vento-3bed-square.png"
+
+echo "  [8/10] Vento3BedPinterest..."
+npx remotion still Vento3BedPinterest --output "$STILLS/vento-3bed-pinterest.png"
+
+echo "  [9/10] VentoTorreviejaSquare..."
+npx remotion still VentoTorreviejaSquare --output "$STILLS/vento-torrevieja-square.png"
+
+echo "  [10/10] VentoTorreviejaPinterest..."
+npx remotion still VentoTorreviejaPinterest --output "$STILLS/vento-torrevieja-pinterest.png"
+
+echo ""
+echo "✅ All 10 stills rendered!"
+echo ""
+
+# ── SUMMARY ────────────────────────────────────────────────────────────────
+echo "╔══════════════════════════════════════════════════════════════╗"
+echo "║  RENDER COMPLETE                                            ║"
+echo "╚══════════════════════════════════════════════════════════════╝"
+echo ""
+echo "  🎬 Videos: $(ls -1 $VIDS/*.mp4 2>/dev/null | wc -l) files in $VIDS/"
+echo "  📸 Stills: $(ls -1 $STILLS/*.png 2>/dev/null | wc -l) files in $STILLS/"
+echo ""
+echo "  Next steps:"
+echo "    1. Preview: node schedule-engine.mjs --batch content-batches/vento.json --dry-run"
+echo "    2. Go live: node schedule-engine.mjs --batch content-batches/vento.json"

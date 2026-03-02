@@ -27,6 +27,8 @@ export const investmentCaseReelSchema = z.object({
   videoHook: z.string(),
   videoStats: z.string(),
   videoCTA: z.string(),
+  /** Optional hero image overlay for the hook (e.g. building render) */
+  heroImage: z.string().optional(),
   websiteUrl: z.string().default('newbuildhomescostablanca.com'),
   musicTrack: z.string().optional(),
 });
@@ -66,6 +68,7 @@ export const InvestmentCaseReel: React.FC<InvestmentCaseReelProps> = ({
   videoHook,
   videoStats,
   videoCTA,
+  heroImage,
   websiteUrl,
   musicTrack,
 }) => {
@@ -98,6 +101,7 @@ export const InvestmentCaseReel: React.FC<InvestmentCaseReelProps> = ({
   const renderHook = () => (
     <VideoSegment
       videoSrc={videoHook}
+      imageSrc={heroImage}
       durationInFrames={hookFrames}
       kenBurns="zoom-in"
       zoomIntensity={1.15}
