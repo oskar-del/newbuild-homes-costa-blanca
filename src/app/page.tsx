@@ -154,278 +154,140 @@ export default function HomePage() {
 
     <main className="min-h-screen bg-warm-50">
       {/* ============================================ */}
-      {/* HERO INTRO BAR - Transition from header */}
+      {/* HERO — Verity-inspired with search bar */}
       {/* ============================================ */}
-      <section className="bg-primary-900 py-3">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-center gap-6 text-sm">
-            <span className="text-warm-300">
-              <span className="text-accent-400 font-medium">500+</span> New Build Properties
-            </span>
-            <span className="text-warm-500 hidden sm:inline">|</span>
-            <span className="text-warm-300 hidden sm:inline">
-              From <span className="text-accent-400 font-medium">€164,000</span>
-            </span>
-            <span className="text-warm-500 hidden md:inline">|</span>
-            <span className="text-warm-300 hidden md:inline">
-              Costa Blanca South & North
-            </span>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================ */}
-      {/* HERO - Dual Property Layout - Key Ready Focus */}
-      {/* ============================================ */}
-      <section className="relative h-[65vh] min-h-[450px] max-h-[600px]">
-        {/* Two Properties Side by Side */}
-        <div className="grid md:grid-cols-2 h-full">
-          {/* Left Property */}
-          <div className="relative overflow-hidden">
-            <Image
-              src={featured.heroLeft.image}
-              alt={featured.heroLeft.title}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/40 to-primary-900/20" />
-          </div>
-
-          {/* Right Property */}
-          <div className="relative overflow-hidden hidden md:block">
-            <Image
-              src={featured.heroRight.image}
-              alt={featured.heroRight.title}
-              fill
-              className="object-cover"
-              sizes="50vw"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/40 to-primary-900/20" />
-          </div>
+      <section className="relative h-[80vh] min-h-[560px] max-h-[780px] -mt-16 md:-mt-20">
+        {/* Single cinematic background */}
+        <div className="absolute inset-0">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/Drone 2/Areas & Zones/Torrevieja/Cabo Cervera .jpg"
+            alt="Aerial drone view of the Costa Blanca coastline, Spain"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/15 to-black/50" />
         </div>
 
-        {/* Content Overlay */}
-        <div className="absolute inset-0 z-10 flex flex-col justify-end">
-          <div className="max-w-7xl mx-auto px-6 pb-6 md:pb-10 w-full">
-            {/* Main Headline */}
-            <div className="text-center mb-6">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mb-2 leading-[1.1]">
-                New Build Homes,
-                <span className="font-semibold"> Ready to Move In</span>
-              </h1>
-              <p className="text-warm-300 max-w-xl mx-auto">
-                Key-ready properties from €164,000. Your Mediterranean lifestyle starts here.
-              </p>
-            </div>
+        {/* Content */}
+        <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6">
+          <p className="text-[11px] md:text-xs font-medium tracking-[0.3em] uppercase text-warm-300 mb-4">
+            New Build Property Specialists · Costa Blanca
+          </p>
 
-            {/* Two Property Cards */}
-            <div className="grid md:grid-cols-2 gap-4">
-              {/* Left Property Card */}
-              <Link
-                href={`/properties/${featured.heroLeft.reference}`}
-                className="group bg-white/10 backdrop-blur-md rounded-sm p-4 border border-white/20 hover:bg-white/20 transition-all"
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="bg-accent-500 text-white text-xs px-2 py-1 rounded-sm">
-                    Key Ready
-                  </span>
-                  <span className="text-warm-300 text-xs">{featured.heroLeft.town}</span>
-                </div>
-                <h3 className="text-white font-medium mb-1 group-hover:text-accent-300 transition-colors">
-                  {featured.heroLeft.title}
-                </h3>
-                <div className="flex items-center justify-between">
-                  <span className="text-xl font-semibold text-white">
-                    {formatPrice(featured.heroLeft.price)}
-                  </span>
-                  <span className="text-warm-300 text-sm">
-                    {featured.heroLeft.bedrooms} bed · {featured.heroLeft.builtArea}m²
-                  </span>
-                </div>
-              </Link>
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.1] mb-4 max-w-3xl">
+            Find your home in{' '}
+            <span className="italic">the sun</span>
+          </h1>
 
-              {/* Right Property Card */}
-              <Link
-                href={`/properties/${featured.heroRight.reference}`}
-                className="group bg-white/10 backdrop-blur-md rounded-sm p-4 border border-white/20 hover:bg-white/20 transition-all hidden md:block"
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="bg-accent-500 text-white text-xs px-2 py-1 rounded-sm">
-                    Key Ready
-                  </span>
-                  <span className="text-warm-300 text-xs">{featured.heroRight.town}</span>
-                </div>
-                <h3 className="text-white font-medium mb-1 group-hover:text-accent-300 transition-colors">
-                  {featured.heroRight.title}
-                </h3>
-                <div className="flex items-center justify-between">
-                  <span className="text-xl font-semibold text-white">
-                    {formatPrice(featured.heroRight.price)}
-                  </span>
-                  <span className="text-warm-300 text-sm">
-                    {featured.heroRight.bedrooms} bed · {featured.heroRight.builtArea}m²
-                  </span>
-                </div>
-              </Link>
-            </div>
+          <p className="text-warm-300 text-base md:text-lg max-w-lg mb-8">
+            Key-ready properties from €164,000. Over 500 new builds across Costa Blanca South & North.
+          </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center mt-5">
-              <Link
-                href="/properties?isKeyReady=true"
-                className="group bg-accent-500 hover:bg-accent-600 text-white font-medium px-6 py-3 rounded-sm text-center transition-all inline-flex items-center justify-center gap-2"
-              >
-                View Key-Ready Homes
-                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          {/* Search Bar — Verity-style */}
+          <div className="w-full max-w-2xl">
+            <Link
+              href="/properties"
+              className="flex items-center bg-white/95 backdrop-blur-sm overflow-hidden group hover:bg-white transition-colors"
+            >
+              <div className="flex-1 px-6 py-4 text-left">
+                <span className="text-warm-400 text-base">Search by area, town, or property type…</span>
+              </div>
+              <div className="bg-accent-500 hover:bg-accent-600 px-8 py-4 flex items-center gap-2 transition-colors">
+                <span className="text-white text-sm font-medium tracking-wide uppercase hidden sm:inline">Find Your Home</span>
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
-              </Link>
-              <Link
-                href="/properties"
-                className="bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-3 rounded-sm text-center transition-all border border-white/20"
-              >
-                Browse All Properties
-              </Link>
+              </div>
+            </Link>
+
+            {/* Quick filter pills */}
+            <div className="flex flex-wrap justify-center gap-2 mt-4">
+              {[
+                { label: 'Key Ready', href: '/properties/key-ready' },
+                { label: 'Under €300k', href: '/properties/under-300k' },
+                { label: 'Golf Properties', href: '/golf' },
+                { label: 'Luxury Villas', href: '/luxury' },
+                { label: 'Sea View', href: '/properties?features=sea-view' },
+              ].map((pill) => (
+                <Link
+                  key={pill.label}
+                  href={pill.href}
+                  className="text-xs tracking-wide text-white/80 hover:text-white border border-white/25 hover:border-white/50 px-3 py-1.5 transition-all hover:bg-white/10"
+                >
+                  {pill.label}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* ============================================ */}
-      {/* DISCOVER GUIDES - Help buyers understand the market */}
+      {/* EXPLORE — Circular photo grid (Instagram highlights) */}
       {/* ============================================ */}
-      <section className="py-12 bg-white border-b border-warm-200">
+      <section className="py-10 md:py-14 bg-white border-b border-warm-100">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-8">
-            <div className="flex items-center justify-center gap-4 mb-2">
-              <div className="w-10 h-px bg-accent-500" />
-              <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
-                Start Here
-              </span>
-              <div className="w-10 h-px bg-accent-500" />
-            </div>
-            <h2 className="text-2xl md:text-3xl font-light text-primary-900">
-              New to <span className="font-semibold">Costa Blanca?</span>
+          <div className="text-center mb-8 animate-on-scroll">
+            <h2 className="font-display text-2xl md:text-3xl font-light text-primary-900">
+              Explore
             </h2>
-            <p className="text-warm-600 mt-2 max-w-xl mx-auto">
-              Essential guides to help you make informed decisions about buying property in Spain.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Guide Card 1: Why New Build */}
-            <Link
-              href="/guides/why-new-build"
-              className="group relative bg-warm-50 rounded-sm overflow-hidden border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
-            >
-              <div className="relative h-40 overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80"
-                  alt="Modern new build villa interior with open plan living"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  unoptimized
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent" />
-                <div className="absolute bottom-3 left-3">
-                  <span className="bg-accent-500 text-white text-xs font-bold px-2 py-1 rounded-sm uppercase">
-                    Guide
-                  </span>
+          {/* Circular grid — 6 categories, Verity-style fade-up staggered */}
+          <div className="flex gap-6 md:gap-10 overflow-x-auto pb-4 scrollbar-hide justify-start md:justify-center stagger-children">
+            {[
+              {
+                label: 'Key Ready',
+                href: '/properties/key-ready',
+                image: 'https://fotos15.apinmo.com/7515/21616952/3-1.jpg',
+              },
+              {
+                label: 'Luxury',
+                href: '/luxury',
+                image: '/images/developments/atlantis.jpeg',
+              },
+              {
+                label: 'Golf',
+                href: '/golf',
+                image: 'https://fotos15.apinmo.com/7515/16689067/12-1.jpg',
+              },
+              {
+                label: 'Villas',
+                href: '/properties/villas',
+                image: '/images/developments/posidionia.jpg',
+              },
+              {
+                label: 'Sea View',
+                href: '/properties?features=sea-view',
+                image: '/images/Drone 2/Areas & Zones/Torrevieja/La Mata/La Mata .jpg',
+              },
+              {
+                label: 'Areas',
+                href: '/areas',
+                image: '/images/Drone 2/Areas & Zones/Orihuela Costa/Cala Capitan .jpg',
+              },
+            ].map((cat) => (
+              <Link
+                key={cat.label}
+                href={cat.href}
+                className="flex flex-col items-center gap-2.5 group flex-shrink-0 animate-on-scroll"
+              >
+                <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden ring-2 ring-warm-200 group-hover:ring-accent-500 transition-all duration-500 p-[3px] bg-white">
+                  <div className="w-full h-full rounded-full overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={cat.image}
+                      alt={cat.label}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="p-5">
-                <h3 className="font-semibold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">
-                  Why Buy New Build?
-                </h3>
-                <p className="text-warm-600 text-sm leading-relaxed">
-                  10-year warranty, energy efficiency, no chain, modern design - discover the benefits of buying new.
-                </p>
-                <div className="mt-4 flex items-center gap-2 text-accent-600 text-sm font-medium group-hover:gap-3 transition-all">
-                  Read Guide
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-            </Link>
-
-            {/* Guide Card 2: North vs South */}
-            <Link
-              href="/guides/north-vs-south"
-              className="group relative bg-warm-50 rounded-sm overflow-hidden border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
-            >
-              <div className="relative h-40 overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80"
-                  alt="Costa Blanca coastline with blue sea and white buildings"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  unoptimized
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent" />
-                <div className="absolute bottom-3 left-3">
-                  <span className="bg-accent-500 text-white text-xs font-bold px-2 py-1 rounded-sm uppercase">
-                    Guide
-                  </span>
-                </div>
-              </div>
-              <div className="p-5">
-                <h3 className="font-semibold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">
-                  North vs South Costa Blanca
-                </h3>
-                <p className="text-warm-600 text-sm leading-relaxed">
-                  Climate, prices, expat communities, airports - which area suits your lifestyle better?
-                </p>
-                <div className="mt-4 flex items-center gap-2 text-accent-600 text-sm font-medium group-hover:gap-3 transition-all">
-                  Read Guide
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-            </Link>
-
-            {/* Guide Card 3: Key Ready vs Off-Plan */}
-            <Link
-              href="/guides/key-ready-vs-off-plan"
-              className="group relative bg-warm-50 rounded-sm overflow-hidden border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
-            >
-              <div className="relative h-40 overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80"
-                  alt="New build development under construction in Costa Blanca"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  unoptimized
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent" />
-                <div className="absolute bottom-3 left-3">
-                  <span className="bg-accent-500 text-white text-xs font-bold px-2 py-1 rounded-sm uppercase">
-                    Guide
-                  </span>
-                </div>
-              </div>
-              <div className="p-5">
-                <h3 className="font-semibold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors">
-                  Key Ready vs Off-Plan
-                </h3>
-                <p className="text-warm-600 text-sm leading-relaxed">
-                  Move in now or save money? Compare the pros, cons, and payment options for each.
-                </p>
-                <div className="mt-4 flex items-center gap-2 text-accent-600 text-sm font-medium group-hover:gap-3 transition-all">
-                  Read Guide
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-            </Link>
+                <span className="text-xs tracking-wide uppercase text-warm-600 group-hover:text-primary-900 transition-colors font-medium">
+                  {cat.label}
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -433,29 +295,29 @@ export default function HomePage() {
       {/* ============================================ */}
       {/* DESTINATION GUIDES - Immersive area guides */}
       {/* ============================================ */}
-      <section className="py-14 bg-primary-900">
+      <section className="py-16 md:py-20 bg-white border-b border-warm-100">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-8">
+          <div className="text-center mb-8 animate-on-scroll">
             <div className="flex items-center justify-center gap-4 mb-2">
               <div className="w-10 h-px bg-accent-500" />
-              <span className="text-accent-400 text-xs font-medium tracking-widest uppercase">
+              <span className="text-accent-600 text-xs font-medium tracking-widest uppercase">
                 Explore Destinations
               </span>
               <div className="w-10 h-px bg-accent-500" />
             </div>
-            <h2 className="text-2xl md:text-3xl font-light text-white">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900">
               Complete <span className="font-semibold">Living Guides</span>
             </h2>
-            <p className="text-warm-300 mt-2 max-w-xl mx-auto text-sm">
+            <p className="text-warm-500 mt-2 max-w-xl mx-auto text-sm">
               The most comprehensive neighborhood guides on the internet — with aerial photography, property prices, and insider tips.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-5 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-5 max-w-6xl mx-auto stagger-children">
             {/* Torrevieja Guide */}
             <Link
               href="/guides/torrevieja"
-              className="group relative bg-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-accent-500/50 hover:bg-white/10 transition-all"
+              className="animate-on-scroll group relative bg-warm-50 rounded-sm overflow-hidden border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
             >
               <div className="relative h-44 overflow-hidden">
                 <Image
@@ -466,7 +328,7 @@ export default function HomePage() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   unoptimized
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-900 via-primary-900/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 via-primary-900/20 to-transparent" />
                 <div className="absolute top-3 left-3">
                   <span className="bg-accent-500 text-white text-xs font-bold px-2 py-1 rounded-sm uppercase">
                     Super Guide
@@ -474,15 +336,15 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="p-5">
-                <h3 className="text-lg font-bold text-white mb-1.5 group-hover:text-accent-400 transition-colors">
+                <h3 className="text-lg font-bold text-primary-900 mb-1.5 group-hover:text-accent-600 transition-colors">
                   Living in Torrevieja
                 </h3>
-                <p className="text-warm-300 text-sm mb-3">
+                <p className="text-warm-500 text-sm mb-3">
                   7 neighborhoods with helicopter drone photography. Costa Blanca South.
                 </p>
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className="text-xs bg-white/10 text-warm-300 px-2 py-0.5 rounded">104+ photos</span>
-                  <span className="text-xs bg-white/10 text-warm-300 px-2 py-0.5 rounded">7 zones</span>
+                  <span className="text-xs bg-warm-100 text-warm-600 px-2 py-0.5 rounded">104+ photos</span>
+                  <span className="text-xs bg-warm-100 text-warm-600 px-2 py-0.5 rounded">7 zones</span>
                 </div>
               </div>
             </Link>
@@ -490,7 +352,7 @@ export default function HomePage() {
             {/* Jávea Guide */}
             <Link
               href="/guides/javea"
-              className="group relative bg-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-accent-500/50 hover:bg-white/10 transition-all"
+              className="animate-on-scroll group relative bg-warm-50 rounded-sm overflow-hidden border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
             >
               <div className="relative h-44 overflow-hidden">
                 <Image
@@ -501,7 +363,7 @@ export default function HomePage() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   unoptimized
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-900 via-primary-900/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 via-primary-900/20 to-transparent" />
                 <div className="absolute top-3 left-3">
                   <span className="bg-accent-500 text-white text-xs font-bold px-2 py-1 rounded-sm uppercase">
                     Super Guide
@@ -509,16 +371,16 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="p-5">
-                <h3 className="text-lg font-bold text-white mb-1.5 group-hover:text-accent-400 transition-colors">
+                <h3 className="text-lg font-bold text-primary-900 mb-1.5 group-hover:text-accent-600 transition-colors">
                   Living in Jávea
                 </h3>
-                <p className="text-warm-300 text-sm mb-3">
+                <p className="text-warm-500 text-sm mb-3">
                   4 neighborhoods beneath Montgó mountain. Costa Blanca North.
                 </p>
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className="text-xs bg-white/10 text-warm-300 px-2 py-0.5 rounded">4 neighborhoods</span>
-                  <span className="text-xs bg-white/10 text-warm-300 px-2 py-0.5 rounded">7 beaches</span>
-                  <span className="text-xs bg-white/10 text-warm-300 px-2 py-0.5 rounded">20 min</span>
+                  <span className="text-xs bg-warm-100 text-warm-600 px-2 py-0.5 rounded">4 neighborhoods</span>
+                  <span className="text-xs bg-warm-100 text-warm-600 px-2 py-0.5 rounded">7 beaches</span>
+                  <span className="text-xs bg-warm-100 text-warm-600 px-2 py-0.5 rounded">20 min</span>
                 </div>
               </div>
             </Link>
@@ -526,7 +388,7 @@ export default function HomePage() {
             {/* Costa Blanca North Guide */}
             <Link
               href="/guides/costa-blanca-north"
-              className="group relative bg-white/5 rounded-xl overflow-hidden border border-white/10 hover:border-accent-500/50 hover:bg-white/10 transition-all"
+              className="animate-on-scroll group relative bg-warm-50 rounded-sm overflow-hidden border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
             >
               <div className="relative h-44 overflow-hidden">
                 <Image
@@ -537,7 +399,7 @@ export default function HomePage() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   unoptimized
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-900 via-primary-900/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 via-primary-900/20 to-transparent" />
                 <div className="absolute top-3 left-3">
                   <span className="bg-emerald-500 text-white text-xs font-bold px-2 py-1 rounded-sm uppercase">
                     Region Guide
@@ -545,22 +407,22 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="p-5">
-                <h3 className="text-lg font-bold text-white mb-1.5 group-hover:text-accent-400 transition-colors">
+                <h3 className="text-lg font-bold text-primary-900 mb-1.5 group-hover:text-accent-600 transition-colors">
                   Costa Blanca North
                 </h3>
-                <p className="text-warm-300 text-sm mb-3">
+                <p className="text-warm-500 text-sm mb-3">
                   6 towns compared with aerial photography. The complete region overview.
                 </p>
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className="text-xs bg-white/10 text-warm-300 px-2 py-0.5 rounded">6 towns</span>
-                  <span className="text-xs bg-white/10 text-warm-300 px-2 py-0.5 rounded">Region guide</span>
+                  <span className="text-xs bg-warm-100 text-warm-600 px-2 py-0.5 rounded">6 towns</span>
+                  <span className="text-xs bg-warm-100 text-warm-600 px-2 py-0.5 rounded">Region guide</span>
                 </div>
               </div>
             </Link>
           </div>
 
           <div className="text-center mt-6">
-            <Link href="/guides" className="text-accent-400 hover:text-accent-300 text-sm font-medium transition-colors">
+            <Link href="/guides" className="text-accent-600 hover:text-accent-500 text-sm font-medium transition-colors">
               View All Guides →
             </Link>
           </div>
@@ -568,76 +430,123 @@ export default function HomePage() {
       </section>
 
       {/* ============================================ */}
-      {/* AFFORDABLE KEY-READY SECTION */}
+      {/* AFFORDABLE KEY-READY SECTION — Verity-style */}
       {/* ============================================ */}
-      <section className="py-14 md:py-18 bg-warm-50">
+      <section className="py-16 md:py-24 bg-warm-50">
         <div className="max-w-7xl mx-auto px-6">
-          {/* Section Header */}
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
-            <div>
-              <div className="flex items-center gap-4 mb-2">
-                <div className="w-10 h-px bg-accent-500" />
-                <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
-                  Best Value
-                </span>
-              </div>
-              <h2 className="text-2xl md:text-3xl font-light text-primary-900">
+          {/* Section Header — Verity editorial style */}
+          <div className="animate-on-scroll mb-10 md:mb-14">
+            <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-warm-500 mb-3">
+              Homes of the Month
+            </p>
+            <div className="flex items-end justify-between">
+              <h2 className="font-display text-3xl md:text-4xl font-light text-primary-900 leading-tight">
                 Key-Ready Under €400k
               </h2>
+              <Link
+                href="/properties?maxPrice=400000&isKeyReady=true"
+                className="hidden md:inline-flex items-center gap-2 text-primary-900 text-sm tracking-wide uppercase hover:text-accent-600 transition-colors group border border-primary-900 px-5 py-2.5 hover:border-accent-600"
+              >
+                View All
+                <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
-            <Link
-              href="/properties?maxPrice=400000&isKeyReady=true"
-              className="inline-flex items-center gap-2 text-primary-900 font-medium hover:text-accent-600 transition-colors group text-sm"
-            >
-              View All
-              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
+            <div className="w-full h-px bg-warm-200 mt-4" />
           </div>
 
-          {/* Property Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {featured.affordable.map((property) => (
+          {/* Property Grid — Tall vertical cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 stagger-children">
+            {featured.affordable.slice(0, 3).map((property) => (
               <Link
                 key={property.reference}
                 href={`/properties/${property.reference}`}
-                className="group bg-white rounded-sm overflow-hidden hover:shadow-xl transition-all duration-300 border border-warm-100"
+                className="animate-on-scroll group block"
               >
-                <div className="relative h-64 overflow-hidden">
+                {/* Tall Image */}
+                <div className="relative aspect-[3/4] overflow-hidden rounded-sm mb-5">
                   <Image
                     src={property.image}
                     alt={property.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  <div className="absolute top-3 left-3 flex gap-2">
-                    <span className="bg-accent-500 text-white text-xs px-2 py-1 rounded-sm">
-                      Key Ready
-                    </span>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                    <div className="text-xl font-semibold text-white">
-                      {formatPrice(property.price)}
-                    </div>
+                  {/* Heart icon — bottom right (decorative) */}
+                  <div
+                    className="absolute bottom-3 right-3 w-9 h-9 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white transition-colors shadow-sm"
+                    aria-hidden="true"
+                  >
+                    <svg className="w-4 h-4 text-primary-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                    </svg>
                   </div>
                 </div>
-                <div className="p-4">
-                  <h3 className="font-medium text-primary-900 mb-1 group-hover:text-accent-600 transition-colors">
-                    {property.title}
-                  </h3>
-                  <p className="text-sm text-warm-500 mb-2">{property.town}</p>
-                  <div className="flex items-center gap-3 text-sm text-warm-600">
-                    <span>{property.bedrooms} bed</span>
-                    <span className="text-warm-300">•</span>
-                    <span>{property.bathrooms} bath</span>
-                    <span className="text-warm-300">•</span>
-                    <span>{property.builtArea}m²</span>
+
+                {/* Card Details — Verity layout */}
+                <div className="space-y-2.5">
+                  {/* Name + Price row */}
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="font-display text-base md:text-lg tracking-wide uppercase text-primary-900 group-hover:text-accent-600 transition-colors leading-tight">
+                      {property.title}
+                    </h3>
+                    <span className="font-display text-lg md:text-xl text-primary-900 whitespace-nowrap">
+                      {formatPrice(property.price)}
+                    </span>
+                  </div>
+
+                  {/* Development + Town */}
+                  <p className="text-xs tracking-wide uppercase text-warm-500">
+                    {property.development} · {property.town}
+                  </p>
+
+                  {/* Beds/Baths + Feature */}
+                  <div className="flex items-center justify-between pt-1">
+                    <div className="flex items-center gap-4 text-warm-600">
+                      {/* Bed icon */}
+                      <span className="flex items-center gap-1.5 text-sm">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M2 17V8h2V6a2 2 0 012-2h4a2 2 0 012 2v2h4a2 2 0 012 2v3h2v6h-2v-2H4v2H2zm4-9h4V6H6v2z" />
+                        </svg>
+                        {property.bedrooms}
+                      </span>
+                      {/* Bath icon */}
+                      <span className="flex items-center gap-1.5 text-sm">
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14a1 1 0 011 1v1a5 5 0 01-3 4.58V20H7v-1.42A5 5 0 014 14v-1a1 1 0 011-1zm1-5a3 3 0 016 0v5" />
+                        </svg>
+                        {property.bathrooms}
+                      </span>
+                    </div>
+                    {/* Feature highlight */}
+                    <span className="text-xs tracking-wider uppercase text-warm-500">
+                      {property.features?.[0] || `${property.builtArea}m² Built`}
+                    </span>
+                  </div>
+
+                  {/* Tag pill */}
+                  <div className="pt-1">
+                    <span className="inline-block bg-warm-200/80 text-primary-900 text-[10px] font-medium tracking-[0.15em] uppercase px-3 py-1.5">
+                      {property.isKeyReady ? 'Key Ready' : 'New Build'}
+                    </span>
                   </div>
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* Mobile CTA */}
+          <div className="mt-10 md:hidden text-center">
+            <Link
+              href="/properties?maxPrice=400000&isKeyReady=true"
+              className="inline-flex items-center gap-2 text-primary-900 text-sm tracking-wide uppercase border border-primary-900 px-6 py-3 hover:bg-primary-900 hover:text-white transition-all"
+            >
+              View All Properties
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
@@ -749,19 +658,19 @@ export default function HomePage() {
       {/* ============================================ */}
       <section className="relative">
         {/* Section Header */}
-        <div className="bg-warm-800 py-6">
+        <div className="bg-warm-50 py-6 border-b border-warm-200">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <div className="flex items-center justify-center gap-4 mb-2">
               <div className="w-10 h-px bg-warm-400" />
-              <span className="text-warm-300 text-xs font-medium tracking-widest uppercase">
-                🏔️ Countryside Living
+              <span className="text-warm-500 text-xs font-medium tracking-widest uppercase">
+                Countryside Living
               </span>
               <div className="w-10 h-px bg-warm-400" />
             </div>
-            <h2 className="text-2xl md:text-3xl font-light text-white">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900">
               Pinoso Villas from €518k
             </h2>
-            <p className="text-warm-400 mt-2 text-sm">
+            <p className="text-warm-500 mt-2 text-sm">
               Peaceful countryside living with private pools, larger plots, and exceptional value
             </p>
           </div>
@@ -863,10 +772,10 @@ export default function HomePage() {
         </div>
 
         {/* View All Inland Link */}
-        <div className="bg-warm-800 py-4 text-center">
+        <div className="bg-warm-100 py-4 text-center">
           <Link
             href="/properties/inland"
-            className="inline-flex items-center gap-2 text-white font-medium hover:text-accent-400 transition-colors group text-sm"
+            className="inline-flex items-center gap-2 text-primary-900 font-medium hover:text-accent-600 transition-colors group text-sm"
           >
             Explore All Inland Properties
             <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -882,7 +791,7 @@ export default function HomePage() {
       <section className="py-14 md:py-18 bg-warm-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <div>
+            <div className="animate-on-scroll">
               <div className="flex items-center gap-4 mb-3">
                 <div className="w-10 h-px bg-accent-500" />
                 <span className="text-accent-500 text-xs font-medium tracking-widest uppercase">
@@ -907,8 +816,8 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
-              <div className="bg-white p-4 rounded-sm border border-warm-200">
+            <div className="grid grid-cols-2 gap-3 stagger-children">
+              <div className="animate-on-scroll bg-white p-4 rounded-sm border border-warm-200">
                 <div className="w-9 h-9 bg-accent-100 rounded-sm flex items-center justify-center mb-3">
                   <svg className="w-4 h-4 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -918,7 +827,7 @@ export default function HomePage() {
                 <p className="text-warm-600 text-xs">Proven track records only.</p>
               </div>
 
-              <div className="bg-white p-4 rounded-sm border border-warm-200">
+              <div className="animate-on-scroll bg-white p-4 rounded-sm border border-warm-200">
                 <div className="w-9 h-9 bg-primary-100 rounded-sm flex items-center justify-center mb-3">
                   <svg className="w-4 h-4 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -928,7 +837,7 @@ export default function HomePage() {
                 <p className="text-warm-600 text-xs">EN, SE, FR, NL, ES.</p>
               </div>
 
-              <div className="bg-white p-4 rounded-sm border border-warm-200">
+              <div className="animate-on-scroll bg-white p-4 rounded-sm border border-warm-200">
                 <div className="w-9 h-9 bg-success-100 rounded-sm flex items-center justify-center mb-3">
                   <svg className="w-4 h-4 text-success-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -938,7 +847,7 @@ export default function HomePage() {
                 <p className="text-warm-600 text-xs">Compare Spanish banks.</p>
               </div>
 
-              <div className="bg-white p-4 rounded-sm border border-warm-200">
+              <div className="animate-on-scroll bg-white p-4 rounded-sm border border-warm-200">
                 <div className="w-9 h-9 bg-warm-100 rounded-sm flex items-center justify-center mb-3">
                   <svg className="w-4 h-4 text-warm-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -1237,12 +1146,12 @@ export default function HomePage() {
           </div>
 
           {/* Property Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 stagger-children">
             {featured.northProperties.map((property) => (
               <Link
                 key={property.reference}
                 href={`/properties/${property.reference}`}
-                className="group"
+                className="group animate-on-scroll"
               >
                 <div className="relative h-64 overflow-hidden rounded-sm mb-3">
                   <Image
@@ -1285,11 +1194,11 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 stagger-children">
             {/* Guide Card 1: Buying Process */}
             <Link
               href="/guides/buying-process"
-              className="group relative bg-warm-50 rounded-sm overflow-hidden border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
+              className="animate-on-scroll group relative bg-warm-50 rounded-sm overflow-hidden border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
             >
               <div className="relative h-40 overflow-hidden">
                 <Image
@@ -1326,7 +1235,7 @@ export default function HomePage() {
             {/* Guide Card 2: Costs & Taxes */}
             <Link
               href="/guides/costs-taxes"
-              className="group relative bg-warm-50 rounded-sm overflow-hidden border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
+              className="animate-on-scroll group relative bg-warm-50 rounded-sm overflow-hidden border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
             >
               <div className="relative h-40 overflow-hidden">
                 <Image
@@ -1363,7 +1272,7 @@ export default function HomePage() {
             {/* Guide Card 3: NIE Number */}
             <Link
               href="/guides/nie-number"
-              className="group relative bg-warm-50 rounded-sm overflow-hidden border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
+              className="animate-on-scroll group relative bg-warm-50 rounded-sm overflow-hidden border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
             >
               <div className="relative h-40 overflow-hidden">
                 <Image
@@ -1584,11 +1493,11 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 stagger-children">
             {/* First Time Buyer - Links to Buying Process Guide */}
             <Link
               href="/guides/buying-process"
-              className="group bg-white rounded-sm p-6 border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
+              className="animate-on-scroll group bg-white rounded-sm p-6 border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
             >
               <div className="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-accent-500 transition-colors">
                 <svg className="w-6 h-6 text-accent-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1612,7 +1521,7 @@ export default function HomePage() {
             {/* Planning to Rent? - Links to Tourist Rental License Guide */}
             <Link
               href="/guides/tourist-rental-license"
-              className="group bg-white rounded-sm p-6 border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
+              className="animate-on-scroll group bg-white rounded-sm p-6 border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
             >
               <div className="w-12 h-12 bg-success-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-success-500 transition-colors">
                 <svg className="w-6 h-6 text-success-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1636,7 +1545,7 @@ export default function HomePage() {
             {/* Costa Blanca vs Costa Calida */}
             <Link
               href="/areas/costa-calida"
-              className="group bg-white rounded-sm p-6 border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
+              className="animate-on-scroll group bg-white rounded-sm p-6 border border-warm-200 hover:border-accent-500 hover:shadow-lg transition-all"
             >
               <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary-600 transition-colors">
                 <svg className="w-6 h-6 text-primary-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1665,7 +1574,7 @@ export default function HomePage() {
       {/* ============================================ */}
       <section className="relative">
         {/* Section Header */}
-        <div className="bg-primary-900 py-6">
+        <div className="bg-white py-6">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <div className="flex items-center justify-center gap-4 mb-2">
               <div className="w-10 h-px bg-accent-500" />
@@ -1674,10 +1583,10 @@ export default function HomePage() {
               </span>
               <div className="w-10 h-px bg-accent-500" />
             </div>
-            <h2 className="text-2xl md:text-3xl font-light text-white">
+            <h2 className="text-2xl md:text-3xl font-light text-primary-900">
               Luxury Villas from €800k+
             </h2>
-            <p className="text-warm-400 mt-2 text-sm">
+            <p className="text-warm-500 mt-2 text-sm">
               Handpicked premium properties in Jávea, Moraira & Costa Blanca North
             </p>
           </div>
@@ -1913,10 +1822,10 @@ export default function HomePage() {
         </Link>
 
         {/* View Bespoke Collection Link */}
-        <div className="bg-primary-900 py-4 text-center">
+        <div className="bg-white py-4 text-center">
           <Link
             href="/properties?minPrice=800000"
-            className="inline-flex items-center gap-2 text-white font-medium hover:text-accent-400 transition-colors group text-sm"
+            className="inline-flex items-center gap-2 text-primary-900 font-medium hover:text-accent-600 transition-colors group text-sm"
           >
             Explore Full Bespoke Collection
             <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

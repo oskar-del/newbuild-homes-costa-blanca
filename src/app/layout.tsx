@@ -3,7 +3,7 @@ import Script from 'next/script';
 import localFont from 'next/font/local';
 import './globals.css';
 import { organizationSchema, websiteSchema, localBusinessSchema, toJsonLd } from '@/lib/schema';
-import Header from '@/components/Header';
+import Header from '@/components/SiteHeader';
 import Footer from '@/components/Footer';
 import CookieConsent from '@/components/CookieConsent';
 
@@ -21,6 +21,17 @@ const dmSans = localFont({
   variable: '--font-dm-sans',
   display: 'swap',
   fallback: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+});
+
+const playfairDisplay = localFont({
+  src: [
+    { path: '../fonts/PlayfairDisplay-Regular.woff2', weight: '400', style: 'normal' },
+    { path: '../fonts/PlayfairDisplay-Medium.woff2', weight: '500', style: 'normal' },
+    { path: '../fonts/PlayfairDisplay-Bold.woff2', weight: '700', style: 'normal' },
+  ],
+  variable: '--font-playfair',
+  display: 'swap',
+  fallback: ['Georgia', 'Times New Roman', 'serif'],
 });
 
 export const metadata: Metadata = {
@@ -92,7 +103,7 @@ export default function RootLayout({
   const gtmNoscriptUrl = GTM_ID ? "https://www.googletagmanager.com/ns.html?id=" + GTM_ID : "";
 
   return (
-    <html lang="en" className={dmSans.variable}>
+    <html lang="en" className={`${dmSans.variable} ${playfairDisplay.variable}`} suppressHydrationWarning>
       <head>
         <Script
           id="gtm-script"
@@ -120,7 +131,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: toJsonLd(localBusinessSchema()) }}
         />
       </head>
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased" suppressHydrationWarning>
         {GTM_ID && (
           <noscript>
             <iframe
@@ -151,6 +162,29 @@ export default function RootLayout({
         <main className="min-h-screen">{children}</main>
         <Footer />
         <CookieConsent />
+        {/* Scroll animation observer — tiny, non-blocking, respects prefers-reduced-motion */}
+        <Script
+          id="scroll-observer"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              if(!window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+                var sel='.animate-on-scroll,.animate-slide-left,.animate-slide-right,.animate-scale,.image-reveal';
+                var o=new IntersectionObserver(function(e){e.forEach(function(i){
+                  if(i.isIntersecting){i.target.classList.add('is-visible');o.unobserve(i.target)}
+                })},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+                document.querySelectorAll(sel).forEach(function(el){o.observe(el)});
+                document.documentElement.classList.add('scroll-animations-ready');
+                new MutationObserver(function(m){m.forEach(function(r){r.addedNodes.forEach(function(n){
+                  if(n.nodeType===1){
+                    if(n.classList&&(n.classList.contains('animate-on-scroll')||n.classList.contains('animate-slide-left')||n.classList.contains('animate-slide-right')||n.classList.contains('animate-scale')||n.classList.contains('image-reveal')))o.observe(n);
+                    n.querySelectorAll&&n.querySelectorAll(sel).forEach(function(el){o.observe(el)});
+                  }
+                })})}).observe(document.body,{childList:true,subtree:true});
+              }
+            `,
+          }}
+        />
       </body>
     </html>
   );

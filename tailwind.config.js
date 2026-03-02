@@ -79,7 +79,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ['DM Sans', 'system-ui', 'sans-serif'],
-        display: ['DM Sans', 'system-ui', 'sans-serif'],
+        display: ['Playfair Display', 'Georgia', 'serif'],
+        serif: ['Playfair Display', 'Georgia', 'serif'],
       },
       fontSize: {
         'xs': ['0.8125rem', { lineHeight: '1.4' }],    // 13px
@@ -92,8 +93,9 @@ module.exports = {
         '4xl': ['3.5rem', { lineHeight: '1.1' }],      // 56px
       },
       spacing: {
-        'section': '6rem',      // 96px between sections
-        'section-sm': '4rem',   // 64px for smaller gaps
+        'section': '8rem',       // 128px between sections (was 96px)
+        'section-sm': '5rem',    // 80px for smaller gaps (was 64px)
+        'section-lg': '10rem',   // 160px for hero/breathing room
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

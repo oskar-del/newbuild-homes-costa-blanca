@@ -121,3 +121,46 @@ When a process takes more than a few minutes:
 - Single town (e.g., torrevieja): 1-2 hours, $5-10
 
 **Every failed run due to push conflicts = money burned**
+
+---
+
+## Rule 9: SKILL MAINTENANCE (MANDATORY)
+
+Skills are the project's institutional memory. Without them, every new session starts from zero and repeats the same mistakes.
+
+### Auto-Update Skills After Every Major Change
+When you fix a bug, discover a gotcha, change a pattern, or build something new:
+1. **Update the relevant SKILL.md** in BOTH locations:
+   - Local project: `newbuild-nextjs/skills/{skill-name}/SKILL.md`
+   - Platform: `/sessions/exciting-tender-cerf/mnt/.skills/skills/{skill-name}/SKILL.md` (if writable)
+2. **Add the fix/pattern to the "Known Issues & Fixes" section** of the skill
+3. **Tell the user** if they need to manually re-upload to the platform
+
+### When to Create a New Skill
+- Any major new system, integration, or pipeline
+- Any workflow that took more than 2 sessions to get right
+- Any area where the same mistakes keep happening
+
+### Existing Skills (6 total)
+| Skill | Covers |
+|-------|--------|
+| `newbuild-seo-engine` | AI content generation, schemas, alt tags, meta, hreflang, FAQs |
+| `newbuild-data-pipeline` | XML feeds, parsing, normalization, regions, caching, dedup |
+| `newbuild-landing-pages` | Property, developer, development, area, golf, blog pages |
+| `newbuild-brand-kit` | Tailwind tokens, Remotion brand.ts, colors, typography, spacing |
+| `newbuild-video-reels` | 10 video + 4 still templates, rendering, music, batch processing |
+| `newbuild-distribution` | Postiz scheduling, MailerLite segmentation, Airtable CRM |
+
+### READ SKILLS BEFORE WORKING
+Before starting work on ANY area covered by a skill:
+1. Read the relevant SKILL.md FIRST
+2. Follow its patterns — don't reinvent from scratch
+3. This prevents repeating bugs we already solved (SSL certs, staticFile on URLs, Blob uploads, etc.)
+
+---
+
+## Rule 10: TODO LIST & PROGRESS TRACKING
+- Always use TodoWrite at the start of multi-step work
+- Update todo status in real-time as tasks complete
+- When starting a new session, review what was pending from previous sessions
+- Keep the user informed — they should never have to ask "what's happening?"
