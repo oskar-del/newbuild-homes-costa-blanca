@@ -177,9 +177,8 @@ export const AccentLine: React.FC<AccentLineProps> = ({
     <div
       style={{
         width: interpolate(progress, [0, 1], [0, width]),
-        height: 5,
+        height: 2,
         backgroundColor: COLORS.accent,
-        borderRadius: 3,
         ...style,
       }}
     />
@@ -213,21 +212,31 @@ export const PillBadge: React.FC<PillBadgeProps> = ({
       style={{
         display: "inline-flex",
         alignItems: "center",
-        padding: "14px 32px",
-        borderRadius: 100,
-        backgroundColor: "rgba(179, 153, 96, 0.2)",
-        border: `2px solid ${COLORS.accent}`,
-        color: COLORS.accent,
+        gap: 10,
+        padding: "12px 24px",
+        background: "rgba(255,255,255,0.92)",
+        backdropFilter: "blur(12px)",
+        color: COLORS.text,
         fontFamily: FONTS.primary,
-        fontWeight: FONT_WEIGHTS.semibold,
+        fontWeight: FONT_WEIGHTS.medium,
         fontSize: FONT_SIZES.sm,
-        letterSpacing: "0.06em",
+        letterSpacing: "0.12em",
         textTransform: "uppercase" as const,
         opacity: progress,
         transform: `scale(${interpolate(progress, [0, 1], [0.8, 1])})`,
         ...style,
       }}
     >
+      {/* Small gold dot */}
+      <div
+        style={{
+          width: 7,
+          height: 7,
+          borderRadius: "50%",
+          background: COLORS.accent,
+          flexShrink: 0,
+        }}
+      />
       {text}
     </div>
   );
@@ -322,15 +331,16 @@ export const CTACard: React.FC<CTACardProps> = ({
         transform: `translateY(${interpolate(progress, [0, 1], [40, 0])}px)`,
       }}
     >
+      {/* Headline — editorial serif */}
       <div
         style={{
-          fontFamily: FONTS.primary,
-          fontWeight: FONT_WEIGHTS.bold,
-          fontSize: FONT_SIZES["4xl"],
+          fontFamily: FONTS.display,
+          fontWeight: FONT_WEIGHTS.regular,
+          fontSize: FONT_SIZES["3xl"],
           color: COLORS.white,
           textAlign: "center",
-          lineHeight: 1.15,
-          letterSpacing: "-0.01em",
+          lineHeight: 1.1,
+          letterSpacing: "0.01em",
         }}
       >
         {headline}
@@ -340,10 +350,9 @@ export const CTACard: React.FC<CTACardProps> = ({
         <div
           style={{
             fontFamily: FONTS.primary,
-            fontWeight: FONT_WEIGHTS.medium,
-            fontSize: FONT_SIZES.xl,
-            color: COLORS.white,
-            opacity: 0.85,
+            fontWeight: FONT_WEIGHTS.regular,
+            fontSize: FONT_SIZES.lg,
+            color: "rgba(255,255,255,0.7)",
             textAlign: "center",
             lineHeight: 1.4,
           }}
@@ -352,22 +361,27 @@ export const CTACard: React.FC<CTACardProps> = ({
         </div>
       )}
 
-      {/* CTA Button — follow-oriented */}
+      {/* Small gold accent line */}
       <div
         style={{
-          display: "inline-flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "32px 72px",
-          borderRadius: 14,
-          backgroundColor: COLORS.accent,
-          color: COLORS.primary,
+          width: 60,
+          height: 2,
+          background: COLORS.accent,
+        }}
+      />
+
+      {/* Website URL — subtle */}
+      <div
+        style={{
           fontFamily: FONTS.primary,
-          fontWeight: FONT_WEIGHTS.bold,
-          fontSize: FONT_SIZES.xl,
+          fontWeight: FONT_WEIGHTS.regular,
+          fontSize: FONT_SIZES.sm,
+          color: "rgba(255,255,255,0.5)",
+          letterSpacing: "0.08em",
+          textTransform: "uppercase" as const,
         }}
       >
-        Follow for More
+        {websiteUrl}
       </div>
     </div>
   );

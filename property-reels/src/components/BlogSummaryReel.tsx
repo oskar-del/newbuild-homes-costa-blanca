@@ -124,30 +124,14 @@ const KeyPoint: React.FC<{
         videoSrc={!backgroundSrc ? fallbackVideo : undefined}
         imageSrc={backgroundSrc}
         durationInFrames={duration}
-        overlayOpacity={0.68}
+        overlayOpacity={0.4}
         kenBurns="zoom-in"
         zoomIntensity={kenBurnsIntensity}
         entrance="fade"
         exit="fade"
         transitionFrames={transitionFrames}
+        gradientBottom={true}
       />
-
-      {/* Point number - semi-transparent large text */}
-      <div
-        style={{
-          position: "absolute",
-          top: SPACING.lg,
-          left: SPACING.lg,
-          fontSize: FONT_SIZES["6xl"],
-          fontWeight: FONT_WEIGHTS.bold,
-          color: COLORS.accent,
-          opacity: 0.25,
-          fontFamily: FONTS.primary,
-          pointerEvents: "none",
-        }}
-      >
-        {pointNumber}
-      </div>
 
       {/* Point headline */}
       <Sequence from={contentStartFrame} durationInFrames={duration - contentStartFrame}>
@@ -157,7 +141,11 @@ const KeyPoint: React.FC<{
             bottom: SPACING.lg,
             left: SPACING.lg,
             right: SPACING.lg,
-            fontFamily: FONTS.primary,
+            fontFamily: FONTS.display,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-end",
+            height: "100%",
           }}
         >
           <FadeUpText
@@ -165,8 +153,9 @@ const KeyPoint: React.FC<{
             delay={0}
             style={{
               fontSize: FONT_SIZES["3xl"],
-              fontWeight: FONT_WEIGHTS.bold,
-              color: COLORS.white,
+              fontWeight: FONT_WEIGHTS.regular,
+              color: "#ffffff",
+              textShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
               lineHeight: 1.2,
               marginBottom: SPACING.md,
             }}
@@ -284,12 +273,13 @@ export const BlogSummaryReel: React.FC<BlogSummaryReelProps> = ({
         <VideoSegment
           videoSrc={videoHook}
           durationInFrames={HOOK_FRAMES}
-          overlayOpacity={0.65}
+          overlayOpacity={0.4}
           kenBurns="zoom-in"
           zoomIntensity={1.15}
           entrance="fade"
           exit="fade"
           transitionFrames={12}
+          gradientBottom={true}
         />
 
         {/* Category badge */}
@@ -297,8 +287,8 @@ export const BlogSummaryReel: React.FC<BlogSummaryReelProps> = ({
           <div
             style={{
               position: "absolute",
-              top: SPACING.safeArea,
-              left: SPACING.lg,
+              top: 40,
+              left: 40,
             }}
           >
             <PillBadge
@@ -321,10 +311,9 @@ export const BlogSummaryReel: React.FC<BlogSummaryReelProps> = ({
           <div
             style={{
               position: "absolute",
-              top: "50%",
+              bottom: SPACING.lg,
               left: SPACING.lg,
               right: SPACING.lg,
-              transform: "translateY(-50%)",
               display: "flex",
               flexDirection: "column",
               gap: SPACING.md,
@@ -335,10 +324,12 @@ export const BlogSummaryReel: React.FC<BlogSummaryReelProps> = ({
               delay={0}
               style={{
                 fontSize: FONT_SIZES["3xl"],
-                fontWeight: FONT_WEIGHTS.bold,
-                color: COLORS.white,
+                fontWeight: FONT_WEIGHTS.regular,
+                color: "#ffffff",
+                textShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
                 lineHeight: 1.2,
                 maxWidth: "90%",
+                fontFamily: FONTS.display,
               }}
             />
 
@@ -379,13 +370,13 @@ export const BlogSummaryReel: React.FC<BlogSummaryReelProps> = ({
 
       {/* ===== TAKEAWAY SECTION (3s) ===== */}
       <Sequence from={takeawayStart} durationInFrames={TAKEAWAY_FRAMES}>
-        {/* Dark background overlay */}
+        {/* Subtle dark gradient background */}
         <div
           style={{
             position: "absolute",
             width: "100%",
             height: "100%",
-            backgroundColor: COLORS.primary,
+            backgroundImage: "linear-gradient(to bottom, rgba(30, 42, 56, 0.85), rgba(30, 42, 56, 0.95))",
           }}
         />
 
@@ -409,28 +400,7 @@ export const BlogSummaryReel: React.FC<BlogSummaryReelProps> = ({
           </div>
         </Sequence>
 
-        {/* "Key Takeaway" label */}
-        <Sequence from={15} durationInFrames={65}>
-          <div
-            style={{
-              position: "absolute",
-              top: SPACING.safeArea + 50,
-              left: SPACING.lg,
-            }}
-          >
-            <PillBadge
-              text="KEY TAKEAWAY"
-              delay={0}
-              style={{
-                fontSize: FONT_SIZES.base,
-                fontWeight: FONT_WEIGHTS.semibold,
-                color: COLORS.accent,
-              }}
-            />
-          </div>
-        </Sequence>
-
-        {/* Takeaway quote/message */}
+        {/* Takeaway quote/message - editorial serif styling */}
         <Sequence from={25} durationInFrames={65}>
           <div
             style={{
@@ -446,10 +416,12 @@ export const BlogSummaryReel: React.FC<BlogSummaryReelProps> = ({
               delay={0}
               style={{
                 fontSize: FONT_SIZES["4xl"],
-                fontWeight: FONT_WEIGHTS.semibold,
-                color: COLORS.white,
+                fontWeight: FONT_WEIGHTS.regular,
+                color: "#ffffff",
+                textShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
                 lineHeight: 1.3,
                 fontStyle: "italic",
+                fontFamily: FONTS.display,
               }}
             />
           </div>
@@ -461,39 +433,65 @@ export const BlogSummaryReel: React.FC<BlogSummaryReelProps> = ({
         <VideoSegment
           videoSrc={videoCTA}
           durationInFrames={CTA_FRAMES}
-          overlayOpacity={0.65}
+          overlayOpacity={0.4}
           kenBurns="zoom-out"
           zoomIntensity={0.95}
           entrance="fade"
           exit="fade"
           transitionFrames={12}
+          gradientBottom={true}
         />
 
-        {/* CTA Card */}
+        {/* Editorial CTA */}
         <Sequence from={20} durationInFrames={100}>
           <div
             style={{
               position: "absolute",
-              bottom: SPACING.safeArea,
+              bottom: SPACING.lg,
               left: SPACING.lg,
               right: SPACING.lg,
               display: "flex",
-              justifyContent: "center",
+              flexDirection: "column",
+              gap: SPACING.md,
             }}
           >
-            <CTACard
-              headline="Read the Full Guide"
-              subtext={
+            <FadeUpText
+              text="Read the Full Guide"
+              delay={0}
+              style={{
+                fontSize: FONT_SIZES["3xl"],
+                fontWeight: FONT_WEIGHTS.regular,
+                color: "#ffffff",
+                textShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
+                lineHeight: 1.2,
+                fontFamily: FONTS.display,
+              }}
+            />
+
+            {/* Gold accent line */}
+            <AccentLine
+              delay={15}
+              width={80}
+              style={{
+                backgroundColor: COLORS.accent,
+                height: 2,
+              }}
+            />
+
+            {/* Website URL */}
+            <FadeUpText
+              text={
                 articleSlug
                   ? `newbuildhomescostablanca.com/${articleSlug}`
                   : websiteUrl
               }
-              websiteUrl={
-                articleSlug
-                  ? `https://${websiteUrl}/${articleSlug}`
-                  : `https://${websiteUrl}`
-              }
-              delay={0}
+              delay={30}
+              style={{
+                fontSize: FONT_SIZES.base,
+                fontWeight: FONT_WEIGHTS.regular,
+                color: COLORS.accentLight,
+                lineHeight: 1.4,
+              }}
             />
           </div>
         </Sequence>

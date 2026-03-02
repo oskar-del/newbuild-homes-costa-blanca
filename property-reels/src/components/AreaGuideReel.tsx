@@ -172,45 +172,57 @@ export const AreaGuideReel: React.FC<AreaGuideReelProps> = (props) => {
           exit="fade"
           transitionFrames={CROSS_FADE}
         >
+          {/* Tag pill — top left */}
+          <div style={{ position: "absolute", top: 40, left: 40 }}>
+            <FrostedBadge text="Area Guide" delay={8} />
+          </div>
+
+          {/* Logo circle — top right */}
+          <div style={logoCircleStyle}>
+            <span style={{ fontSize: 10, color: "rgba(255,255,255,0.5)" }}></span>
+          </div>
+
+          {/* Bottom text — editorial */}
           <AbsoluteFill
             style={{
-              justifyContent: "center",
-              padding: SPACING.safeArea,
-              paddingTop: 200,
+              justifyContent: "flex-end",
+              padding: "0 48px 160px",
+              gap: 14,
             }}
           >
-            {/* Region badge */}
-            <NavyBadge text={region} delay={8} />
-
-            {/* Area name */}
+            {/* Area name — large editorial serif */}
             <FadeUpText
               text={areaName}
-              delay={15}
+              delay={12}
               style={{
-                ...headingLargeStyle,
-                marginTop: 20,
+                fontFamily: FONTS.display,
+                fontWeight: FONT_WEIGHTS.regular,
+                fontSize: FONT_SIZES["3xl"],
+                color: "#ffffff",
+                lineHeight: 1.05,
+                textShadow: "0 2px 20px rgba(0,0,0,0.3)",
               }}
             />
-
-            {/* Gold accent line */}
-            <AccentLine delay={22} width={160} style={{ marginTop: 24 }} />
 
             {/* Hook line */}
             <FadeUpText
               text={hookLine}
-              delay={28}
+              delay={20}
               style={{
                 ...bodyLargeStyle,
-                marginTop: 20,
                 maxWidth: 800,
               }}
             />
-          </AbsoluteFill>
 
-          {/* Logo watermark top-right */}
-          <div style={watermarkStyle}>
-            <span style={watermarkTextStyle}>{websiteUrl}</span>
-          </div>
+            <AccentLine delay={26} width={60} style={{ marginTop: 4 }} />
+
+            {/* Website */}
+            <FadeUpText
+              text={websiteUrl}
+              delay={32}
+              style={watermarkTextStyle}
+            />
+          </AbsoluteFill>
         </VideoSegment>
       </Sequence>
 
@@ -224,38 +236,38 @@ export const AreaGuideReel: React.FC<AreaGuideReelProps> = (props) => {
           videoSrc={videoLifestyle}
           durationInFrames={LIFESTYLE_DUR}
           kenBurns="pan-right"
-          overlayOpacity={0.55}
-          gradientBottom={false}
+          overlayOpacity={0.35}
+          gradientBottom
           entrance="slide-up"
           exit="fade"
           transitionFrames={CROSS_FADE}
         >
+          <div style={{ position: "absolute", top: 40, left: 40 }}>
+            <FrostedBadge text="Lifestyle" delay={5} />
+          </div>
+
           <AbsoluteFill
             style={{
-              justifyContent: "center",
-              padding: SPACING.safeArea,
-              gap: 24,
+              justifyContent: "flex-end",
+              padding: "0 48px 120px",
+              gap: 16,
             }}
           >
-            {/* Section label */}
-            <NavyBadge text="Lifestyle" delay={5} />
-
             <FadeUpText
               text={`Living in ${areaName}`}
               delay={10}
-              style={headingStyle}
+              style={editorialHeadingStyle}
             />
 
-            <AccentLine delay={16} />
+            <AccentLine delay={16} width={60} />
 
-            {/* Highlight items */}
-            <div style={{ display: "flex", flexDirection: "column", gap: 20, marginTop: 12 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 8 }}>
               {lifestyleHighlights.slice(0, 4).map((highlight, i) => (
-                <IconTextRow
+                <FadeUpText
                   key={i}
-                  icon={["🏖️", "☀️", "🍷", "🏡"][i] || "✨"}
                   text={highlight}
                   delay={20 + i * 8}
+                  style={listItemStyle}
                 />
               ))}
             </div>
@@ -274,44 +286,46 @@ export const AreaGuideReel: React.FC<AreaGuideReelProps> = (props) => {
           durationInFrames={AMENITIES_DUR}
           kenBurns="zoom-in"
           zoomIntensity={1.1}
-          overlayOpacity={0.6}
-          gradientBottom={false}
+          overlayOpacity={0.35}
+          gradientBottom
           entrance="slide-left"
           exit="fade"
           transitionFrames={CROSS_FADE}
         >
+          <div style={{ position: "absolute", top: 40, left: 40 }}>
+            <FrostedBadge text="Nearby" delay={5} />
+          </div>
+
           <AbsoluteFill
             style={{
-              justifyContent: "center",
-              padding: SPACING.safeArea,
-              gap: 20,
+              justifyContent: "flex-end",
+              padding: "0 48px 120px",
+              gap: 16,
             }}
           >
-            <NavyBadge text="Nearby" delay={5} />
-
             <FadeUpText
               text="Everything Close By"
               delay={10}
-              style={headingStyle}
+              style={editorialHeadingStyle}
             />
 
-            <AccentLine delay={16} />
+            <AccentLine delay={16} width={60} />
 
-            <div style={{ display: "flex", flexDirection: "column", gap: 18, marginTop: 8 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 8 }}>
               {amenities.beach && (
-                <IconTextRow icon="🏖️" text={amenities.beach} delay={20} />
+                <FadeUpText text={amenities.beach} delay={20} style={listItemStyle} />
               )}
               {amenities.golf && (
-                <IconTextRow icon="⛳" text={amenities.golf} delay={28} />
+                <FadeUpText text={amenities.golf} delay={28} style={listItemStyle} />
               )}
               {amenities.dining && (
-                <IconTextRow icon="🍽️" text={amenities.dining} delay={36} />
+                <FadeUpText text={amenities.dining} delay={36} style={listItemStyle} />
               )}
               {amenities.healthcare && (
-                <IconTextRow icon="🏥" text={amenities.healthcare} delay={44} />
+                <FadeUpText text={amenities.healthcare} delay={44} style={listItemStyle} />
               )}
               {amenities.airport && (
-                <IconTextRow icon="✈️" text={amenities.airport} delay={52} />
+                <FadeUpText text={amenities.airport} delay={52} style={listItemStyle} />
               )}
             </div>
           </AbsoluteFill>
@@ -329,52 +343,37 @@ export const AreaGuideReel: React.FC<AreaGuideReelProps> = (props) => {
             videoSrc={videoInvestment}
             durationInFrames={INVESTMENT_DUR}
             kenBurns="pan-left"
-            overlayOpacity={0.7}
-            gradientBottom={false}
+            overlayOpacity={0.4}
+            gradientBottom
             entrance="zoom"
             exit="fade"
             transitionFrames={CROSS_FADE}
           >
+            <div style={{ position: "absolute", top: 40, left: 40 }}>
+              <FrostedBadge text="Investment" delay={5} />
+            </div>
+
             <AbsoluteFill
               style={{
-                justifyContent: "center",
-                alignItems: "center",
-                padding: SPACING.safeArea,
-                gap: 32,
+                justifyContent: "flex-end",
+                padding: "0 48px 120px",
+                gap: 20,
               }}
             >
-              <NavyBadge text="Investment" delay={5} />
-
               <FadeUpText
                 text="Smart Investment"
                 delay={10}
-                style={{ ...headingStyle, textAlign: "center" }}
+                style={editorialHeadingStyle}
               />
 
               <AccentLine delay={16} width={60} />
 
-              {/* Stats row */}
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  gap: 60,
-                  marginTop: 16,
-                }}
-              >
+              <div style={{ display: "flex", gap: 48, marginTop: 8 }}>
                 {investmentData.rentalYield && (
-                  <StatBox
-                    label="Rental Yield"
-                    value={investmentData.rentalYield}
-                    delay={22}
-                  />
+                  <StatBox label="Rental Yield" value={investmentData.rentalYield} delay={22} />
                 )}
                 {investmentData.appreciation && (
-                  <StatBox
-                    label="Appreciation"
-                    value={investmentData.appreciation}
-                    delay={30}
-                  />
+                  <StatBox label="Appreciation" value={investmentData.appreciation} delay={30} />
                 )}
               </div>
 
@@ -382,11 +381,7 @@ export const AreaGuideReel: React.FC<AreaGuideReelProps> = (props) => {
                 <FadeUpText
                   text={`Properties from €${investmentData.priceFrom.toLocaleString()}`}
                   delay={38}
-                  style={{
-                    ...bodyLargeStyle,
-                    color: COLORS.accent,
-                    textAlign: "center",
-                  }}
+                  style={listItemStyle}
                 />
               )}
             </AbsoluteFill>
@@ -405,37 +400,32 @@ export const AreaGuideReel: React.FC<AreaGuideReelProps> = (props) => {
             videoSrc={videoDayInLife}
             durationInFrames={DAYINLIFE_DUR}
             kenBurns="pan-up"
-            overlayOpacity={0.6}
-            gradientBottom={false}
+            overlayOpacity={0.35}
+            gradientBottom
             entrance="slide-up"
             exit="fade"
             transitionFrames={CROSS_FADE}
           >
+            <div style={{ position: "absolute", top: 40, left: 40 }}>
+              <FrostedBadge text={`A Day in ${areaName}`} delay={5} />
+            </div>
+
             <AbsoluteFill
               style={{
-                justifyContent: "center",
-                padding: SPACING.safeArea,
-                gap: 20,
+                justifyContent: "flex-end",
+                padding: "0 48px 120px",
+                gap: 16,
               }}
             >
-              <NavyBadge text={`A Day in ${areaName}`} delay={5} />
-
               <FadeUpText
                 text="Your Typical Day"
                 delay={10}
-                style={headingStyle}
+                style={editorialHeadingStyle}
               />
 
-              <AccentLine delay={16} />
+              <AccentLine delay={16} width={60} />
 
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 24,
-                  marginTop: 12,
-                }}
-              >
+              <div style={{ display: "flex", flexDirection: "column", gap: 20, marginTop: 8 }}>
                 {dayInTheLife.slice(0, 4).map((entry, i) => (
                   <TimelineEntry
                     key={i}
@@ -477,7 +467,8 @@ export const AreaGuideReel: React.FC<AreaGuideReelProps> = (props) => {
 
 // ── Helper sub-components ───────────────────────────
 
-const NavyBadge: React.FC<{ text: string; delay: number }> = ({ text, delay }) => {
+/** Frosted glass badge — matches editorial PropertyCard/AreaShowcase style */
+const FrostedBadge: React.FC<{ text: string; delay: number }> = ({ text, delay }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const progress = spring({
@@ -489,21 +480,23 @@ const NavyBadge: React.FC<{ text: string; delay: number }> = ({ text, delay }) =
   return (
     <div
       style={{
-        display: "inline-block",
-        alignSelf: "flex-start",
-        backgroundColor: COLORS.primary,
-        color: COLORS.white,
-        padding: "10px 28px",
-        borderRadius: 8,
-        fontSize: FONT_SIZES.sm,
-        fontWeight: FONT_WEIGHTS.bold,
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 10,
+        background: "rgba(255,255,255,0.92)",
+        backdropFilter: "blur(12px)",
+        padding: "12px 24px",
+        color: COLORS.primary,
+        fontSize: 18,
+        fontWeight: FONT_WEIGHTS.medium,
         fontFamily: FONTS.primary,
         textTransform: "uppercase",
-        letterSpacing: "0.1em",
+        letterSpacing: "0.12em",
         opacity: progress,
         transform: `translateY(${interpolate(progress, [0, 1], [20, 0])}px)`,
       }}
     >
+      <div style={{ width: 7, height: 7, borderRadius: "50%", background: COLORS.accent }} />
       {text}
     </div>
   );
@@ -528,21 +521,17 @@ const StatBox: React.FC<{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: 8,
-        padding: "24px 32px",
-        backgroundColor: COLORS.primary,
-        border: `2px solid ${COLORS.accent}`,
-        borderRadius: 12,
+        gap: 6,
         opacity: progress,
-        transform: `scale(${interpolate(progress, [0, 1], [0.8, 1])})`,
+        transform: `translateY(${interpolate(progress, [0, 1], [20, 0])}px)`,
       }}
     >
       <span
         style={{
-          fontFamily: FONTS.primary,
-          fontWeight: FONT_WEIGHTS.bold,
-          fontSize: FONT_SIZES["2xl"],
-          color: COLORS.accent,
+          fontFamily: FONTS.display,
+          fontWeight: FONT_WEIGHTS.regular,
+          fontSize: FONT_SIZES.xl,
+          color: "#ffffff",
           lineHeight: 1,
         }}
       >
@@ -551,12 +540,11 @@ const StatBox: React.FC<{
       <span
         style={{
           fontFamily: FONTS.primary,
-          fontWeight: FONT_WEIGHTS.medium,
-          fontSize: FONT_SIZES.sm,
-          color: COLORS.white,
-          opacity: 0.8,
+          fontWeight: FONT_WEIGHTS.regular,
+          fontSize: FONT_SIZES.xs,
+          color: "rgba(255,255,255,0.6)",
           textTransform: "uppercase",
-          letterSpacing: "0.05em",
+          letterSpacing: "0.1em",
         }}
       >
         {label}
@@ -588,19 +576,19 @@ const TimelineEntry: React.FC<{
         transform: `translateX(${interpolate(progress, [0, 1], [-40, 0])}px)`,
       }}
     >
-      {/* Time badge */}
+      {/* Time badge — frosted glass */}
       <div
         style={{
-          minWidth: 140,
-          padding: "12px 20px",
-          borderRadius: 10,
-          backgroundColor: COLORS.primary,
-          border: `2px solid ${COLORS.accent}`,
+          minWidth: 120,
+          padding: "10px 18px",
+          background: "rgba(255,255,255,0.9)",
+          backdropFilter: "blur(8px)",
           fontFamily: FONTS.primary,
-          fontWeight: FONT_WEIGHTS.bold,
-          fontSize: FONT_SIZES.sm,
-          color: COLORS.white,
+          fontWeight: FONT_WEIGHTS.medium,
+          fontSize: 16,
+          color: COLORS.primary,
           textAlign: "center",
+          letterSpacing: "0.06em",
         }}
       >
         {time}
@@ -610,9 +598,9 @@ const TimelineEntry: React.FC<{
       <span
         style={{
           fontFamily: FONTS.primary,
-          fontWeight: FONT_WEIGHTS.medium,
+          fontWeight: FONT_WEIGHTS.regular,
           fontSize: FONT_SIZES.base,
-          color: COLORS.white,
+          color: "rgba(255,255,255,0.85)",
           lineHeight: 1.4,
         }}
       >
@@ -622,46 +610,54 @@ const TimelineEntry: React.FC<{
   );
 };
 
-// ── Shared styles ───────────────────────────────────
+// ── Editorial styles ─────────────────────────────────
 
-const headingLargeStyle: React.CSSProperties = {
-  fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.bold,
-  fontSize: FONT_SIZES["3xl"],
-  color: COLORS.white,
-  lineHeight: 1.1,
-  letterSpacing: "-0.02em",
-};
-
-const headingStyle: React.CSSProperties = {
-  fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.bold,
+const editorialHeadingStyle: React.CSSProperties = {
+  fontFamily: FONTS.display,
+  fontWeight: FONT_WEIGHTS.regular,
   fontSize: FONT_SIZES["2xl"],
-  color: COLORS.white,
-  lineHeight: 1.15,
-  letterSpacing: "-0.01em",
+  color: "#ffffff",
+  lineHeight: 1.1,
+  textShadow: "0 2px 16px rgba(0,0,0,0.3)",
 };
 
 const bodyLargeStyle: React.CSSProperties = {
   fontFamily: FONTS.primary,
   fontWeight: FONT_WEIGHTS.regular,
   fontSize: FONT_SIZES.base,
-  color: COLORS.white,
+  color: "rgba(255,255,255,0.8)",
   lineHeight: 1.4,
-  opacity: 0.9,
 };
 
-const watermarkStyle: React.CSSProperties = {
+const listItemStyle: React.CSSProperties = {
+  fontFamily: FONTS.primary,
+  fontWeight: FONT_WEIGHTS.regular,
+  fontSize: FONT_SIZES.base,
+  color: "rgba(255,255,255,0.85)",
+  lineHeight: 1.4,
+};
+
+const logoCircleStyle: React.CSSProperties = {
   position: "absolute",
-  top: SPACING.safeArea,
-  right: SPACING.safeArea,
+  top: 36,
+  right: 36,
+  width: 56,
+  height: 56,
+  borderRadius: "50%",
+  background: "rgba(255,255,255,0.85)",
+  backdropFilter: "blur(8px)",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  overflow: "hidden",
+  boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
 };
 
 const watermarkTextStyle: React.CSSProperties = {
   fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.medium,
+  fontWeight: FONT_WEIGHTS.regular,
   fontSize: FONT_SIZES.xs,
-  color: COLORS.white,
-  opacity: 0.5,
-  letterSpacing: "0.02em",
+  color: "rgba(255,255,255,0.5)",
+  letterSpacing: "0.08em",
+  textTransform: "uppercase",
 };

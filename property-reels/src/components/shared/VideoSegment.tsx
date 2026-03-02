@@ -196,18 +196,18 @@ export const VideoSegment: React.FC<VideoSegmentProps> = ({
         </div>
       </div>
 
-      {/* Flat overlay */}
+      {/* Flat overlay — softer, photo-forward */}
       {overlayOpacity > 0 && (
         <div
           style={{
             position: "absolute",
             inset: 0,
-            backgroundColor: `rgba(30, 42, 56, ${overlayOpacity})`,
+            backgroundColor: `rgba(0, 0, 0, ${overlayOpacity})`,
           }}
         />
       )}
 
-      {/* Gradient overlays */}
+      {/* Gradient overlays — editorial, not heavy navy */}
       {gradientBottom && (
         <div
           style={{
@@ -215,9 +215,9 @@ export const VideoSegment: React.FC<VideoSegmentProps> = ({
             bottom: 0,
             left: 0,
             right: 0,
-            height: "65%",
+            height: "55%",
             background:
-              "linear-gradient(to top, rgba(30,42,56,0.92) 0%, rgba(30,42,56,0.6) 40%, transparent 100%)",
+              "linear-gradient(transparent, rgba(0,0,0,0.12) 30%, rgba(0,0,0,0.55))",
           }}
         />
       )}
@@ -228,9 +228,9 @@ export const VideoSegment: React.FC<VideoSegmentProps> = ({
             top: 0,
             left: 0,
             right: 0,
-            height: "35%",
+            height: "30%",
             background:
-              "linear-gradient(to bottom, rgba(30,42,56,0.7) 0%, transparent 100%)",
+              "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, transparent 100%)",
           }}
         />
       )}

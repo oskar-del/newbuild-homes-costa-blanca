@@ -44,18 +44,21 @@ export const COLORS = {
   // Success / sage green
   sage: "#7D8B75",
 
-  // Overlays
-  overlayDark: "rgba(30, 42, 56, 0.75)",
-  overlayMedium: "rgba(30, 42, 56, 0.55)",
-  overlayLight: "rgba(30, 42, 56, 0.35)",
+  // Overlays — softer, photo-forward (not heavy navy)
+  overlayDark: "rgba(0, 0, 0, 0.55)",
+  overlayMedium: "rgba(0, 0, 0, 0.4)",
+  overlayLight: "rgba(0, 0, 0, 0.25)",
   overlayGold: "rgba(179, 153, 96, 0.15)",
+  // Frosted glass
+  frostedWhite: "rgba(255, 255, 255, 0.92)",
+  frostedDark: "rgba(30, 42, 56, 0.85)",
 } as const;
 
 // ── Typography ──────────────────────────────────────
 export const FONTS = {
-  // DM Sans is loaded at the system level; Remotion uses
-  // the host's fonts or we load via @remotion/google-fonts.
+  // DM Sans for body text, Playfair Display for editorial headings
   primary: "DM Sans, system-ui, sans-serif",
+  display: "'Playfair Display', Georgia, serif",
   mono: "JetBrains Mono, monospace",
 } as const;
 
@@ -119,29 +122,29 @@ export const videoBackgroundStyle: React.CSSProperties = {
   objectFit: "cover",
 };
 
-/** Dark gradient overlay from bottom (for text readability) */
+/** Soft gradient overlay from bottom — photo-forward, not heavy */
 export const gradientBottomStyle: React.CSSProperties = {
   position: "absolute",
   bottom: 0,
   left: 0,
   right: 0,
-  height: "60%",
+  height: "55%",
   background:
-    "linear-gradient(to top, rgba(30,42,56,0.9) 0%, rgba(30,42,56,0.5) 50%, transparent 100%)",
+    "linear-gradient(transparent, rgba(0,0,0,0.12) 30%, rgba(0,0,0,0.5))",
 };
 
-/** Dark gradient overlay from top */
+/** Soft gradient overlay from top */
 export const gradientTopStyle: React.CSSProperties = {
   position: "absolute",
   top: 0,
   left: 0,
   right: 0,
-  height: "40%",
+  height: "35%",
   background:
-    "linear-gradient(to bottom, rgba(30,42,56,0.7) 0%, transparent 100%)",
+    "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, transparent 100%)",
 };
 
-/** Full overlay (for text-heavy slides) */
+/** Full overlay (for text-heavy slides) — softer than before */
 export const fullOverlayStyle: React.CSSProperties = {
   position: "absolute",
   inset: 0,
@@ -156,13 +159,13 @@ export const accentLineStyle: React.CSSProperties = {
   borderRadius: 2,
 };
 
-/** Heading text defaults */
+/** Heading text defaults — editorial serif */
 export const headingStyle: React.CSSProperties = {
-  fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.bold,
+  fontFamily: FONTS.display,
+  fontWeight: FONT_WEIGHTS.regular,
   color: COLORS.white,
-  letterSpacing: "-0.01em",
-  lineHeight: 1.15,
+  letterSpacing: "0.01em",
+  lineHeight: 1.1,
 };
 
 /** Body text defaults */
@@ -190,35 +193,36 @@ export const statStyle: React.CSSProperties = {
   lineHeight: 1,
 };
 
-/** Pill / tag badge */
+/** Pill / tag badge — frosted glass style */
 export const pillStyle: React.CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
-  padding: "12px 28px",
-  borderRadius: 100,
-  backgroundColor: "rgba(179, 153, 96, 0.2)",
-  border: `2px solid ${COLORS.accent}`,
-  color: COLORS.accent,
+  gap: 10,
+  padding: "12px 24px",
+  background: "rgba(255,255,255,0.92)",
+  backdropFilter: "blur(12px)",
+  color: COLORS.primary,
   fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.semibold,
+  fontWeight: FONT_WEIGHTS.medium,
   fontSize: FONT_SIZES.sm,
-  letterSpacing: "0.05em",
+  letterSpacing: "0.12em",
   textTransform: "uppercase" as const,
 };
 
-/** CTA button style */
+/** CTA button style — elegant, not chunky */
 export const ctaButtonStyle: React.CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
-  padding: "28px 56px",
-  borderRadius: 12,
-  backgroundColor: COLORS.accent,
+  padding: "24px 48px",
+  background: "rgba(255,255,255,0.92)",
+  backdropFilter: "blur(12px)",
   color: COLORS.primary,
   fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.bold,
-  fontSize: FONT_SIZES.lg,
-  letterSpacing: "0.01em",
+  fontWeight: FONT_WEIGHTS.medium,
+  fontSize: FONT_SIZES.base,
+  letterSpacing: "0.08em",
+  textTransform: "uppercase" as const,
 };
 
 // ── Video background mapping ────────────────────────

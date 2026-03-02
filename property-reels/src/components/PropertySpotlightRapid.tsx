@@ -137,35 +137,45 @@ export const PropertySpotlightRapid: React.FC<PropertySpotlightRapidProps> = (
           exit="fade"
           transitionFrames={FADE_TRANSITION}
         >
+          {/* Tag pill — top left */}
+          <div style={{ position: "absolute", top: 40, left: 40 }}>
+            <PillBadge text={type} delay={6} />
+          </div>
+
+          {/* Logo circle — top right */}
+          <div style={logoCircleStyle}>
+            <Img
+              src={staticFile("logo-round.png")}
+              alt="Logo"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </div>
+
+          {/* Bottom text — editorial */}
           <AbsoluteFill
             style={{
-              justifyContent: "center",
-              alignItems: "flex-end",
-              padding: SPACING.safeArea,
+              justifyContent: "flex-end",
+              padding: "0 48px 160px",
+              gap: 12,
             }}
           >
-            {/* Property type badge — fast entrance */}
-            <PillBadge text={type} delay={8} />
-
-            {/* Price — huge, bold, slamming in */}
+            {/* Price — large serif */}
             <FadeUpText
               text={`€${price.toLocaleString()}`}
-              delay={12}
+              delay={10}
               style={priceCalloutStyle}
             />
 
             {/* Town name */}
             <FadeUpText
               text={town}
-              delay={18}
+              delay={16}
               style={townCalloutStyle}
             />
-          </AbsoluteFill>
 
-          {/* Website watermark top-right */}
-          <div style={watermarkStyle}>
-            <span style={watermarkTextStyle}>{websiteUrl}</span>
-          </div>
+            {/* Gold accent */}
+            <div style={{ width: 60, height: 2, background: COLORS.accent, marginTop: 4 }} />
+          </AbsoluteFill>
         </VideoSegment>
       </Sequence>
 
@@ -233,62 +243,56 @@ export const PropertySpotlightRapid: React.FC<PropertySpotlightRapidProps> = (
           durationInFrames={CTA_DUR}
           kenBurns="zoom-out"
           zoomIntensity={1.2}
-          overlayOpacity={0.8}
-          gradientBottom={false}
-          gradientTop={false}
+          gradientBottom
+          gradientTop
           entrance="fade"
           exit="none"
           transitionFrames={FADE_TRANSITION}
         >
+          {/* Logo circle — top right */}
+          <div style={logoCircleStyle}>
+            <Img
+              src={staticFile("logo-round.png")}
+              alt="Logo"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </div>
+
           <AbsoluteFill
             style={{
-              justifyContent: "center",
-              alignItems: "center",
-              padding: SPACING.safeArea,
-              flexDirection: "column",
-              gap: 48,
+              justifyContent: "flex-end",
+              padding: "0 48px 160px",
+              gap: 16,
             }}
           >
-            {/* Property type */}
-            <FadeUpText
-              text={type}
-              delay={8}
-              style={ctaLabelStyle}
-            />
-
-            {/* Property location */}
+            {/* Property title — serif */}
             <FadeUpText
               text={`${title} in ${town}`}
-              delay={15}
+              delay={10}
               style={ctaHeadlineStyle}
             />
 
-            {/* Price again */}
+            {/* Price */}
             <FadeUpText
               text={`€${price.toLocaleString()}`}
-              delay={22}
+              delay={18}
               style={ctaPriceStyle}
             />
 
-            {/* Property ref */}
+            {/* Gold accent */}
+            <div style={{ width: 60, height: 2, background: COLORS.accent, marginTop: 4 }} />
+
+            {/* Ref + Website */}
             <FadeUpText
               text={`Ref: ${propertyRef}`}
-              delay={29}
+              delay={26}
               style={ctaRefStyle}
             />
 
-            {/* Website URL — call to action */}
             <FadeUpText
               text={websiteUrl}
-              delay={36}
+              delay={32}
               style={ctaUrlStyle}
-            />
-
-            {/* Tap / Swipe up indicator */}
-            <FadeUpText
-              text="Swipe Up"
-              delay={43}
-              style={ctaTapStyle}
             />
           </AbsoluteFill>
         </VideoSegment>
@@ -356,14 +360,14 @@ const GalleryCallout: React.FC<{ text: string; delay: number }> = ({
     >
       <span
         style={{
-          fontFamily: FONTS.primary,
-          fontWeight: FONT_WEIGHTS.bold,
-          fontSize: FONT_SIZES["6xl"],
+          fontFamily: FONTS.display,
+          fontWeight: FONT_WEIGHTS.regular,
+          fontSize: FONT_SIZES["5xl"],
           color: COLORS.white,
           textAlign: "center",
           lineHeight: 1,
-          textShadow: "0 4px 16px rgba(0, 0, 0, 0.8)",
-          letterSpacing: "-0.02em",
+          textShadow: "0 4px 20px rgba(0, 0, 0, 0.6)",
+          letterSpacing: "0.01em",
         }}
       >
         {text}
@@ -374,90 +378,72 @@ const GalleryCallout: React.FC<{ text: string; delay: number }> = ({
 
 // ── Styles ──────────────────────────────────────────
 
+// ── Editorial styles ────────────────────────────────
+
 const priceCalloutStyle: React.CSSProperties = {
-  fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.bold,
-  fontSize: FONT_SIZES["6xl"],
-  color: COLORS.accent,
-  lineHeight: 1,
-  letterSpacing: "-0.02em",
-  marginBottom: 16,
+  fontFamily: FONTS.display,
+  fontWeight: FONT_WEIGHTS.regular,
+  fontSize: FONT_SIZES["4xl"],
+  color: "#ffffff",
+  lineHeight: 1.05,
+  textShadow: "0 2px 20px rgba(0,0,0,0.3)",
 };
 
 const townCalloutStyle: React.CSSProperties = {
   fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.semibold,
-  fontSize: FONT_SIZES.xl,
-  color: COLORS.white,
-  lineHeight: 1.2,
-  letterSpacing: "-0.01em",
-};
-
-const watermarkStyle: React.CSSProperties = {
-  position: "absolute",
-  top: SPACING.safeArea,
-  right: SPACING.safeArea,
-};
-
-const watermarkTextStyle: React.CSSProperties = {
-  fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.medium,
-  fontSize: FONT_SIZES.xs,
-  color: COLORS.white,
-  opacity: 0.5,
-  letterSpacing: "0.02em",
-};
-
-const ctaLabelStyle: React.CSSProperties = {
-  fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.medium,
-  fontSize: FONT_SIZES.base,
-  color: COLORS.accent,
-  textTransform: "uppercase",
+  fontWeight: FONT_WEIGHTS.regular,
+  fontSize: FONT_SIZES.lg,
+  color: "rgba(255,255,255,0.8)",
   letterSpacing: "0.06em",
+  textTransform: "uppercase",
+};
+
+const logoCircleStyle: React.CSSProperties = {
+  position: "absolute",
+  top: 36,
+  right: 36,
+  width: 56,
+  height: 56,
+  borderRadius: "50%",
+  background: "rgba(255,255,255,0.85)",
+  backdropFilter: "blur(8px)",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  overflow: "hidden",
+  boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
 };
 
 const ctaHeadlineStyle: React.CSSProperties = {
-  fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.bold,
-  fontSize: FONT_SIZES["4xl"],
-  color: COLORS.white,
-  lineHeight: 1.2,
-  letterSpacing: "-0.01em",
-  textAlign: "center",
+  fontFamily: FONTS.display,
+  fontWeight: FONT_WEIGHTS.regular,
+  fontSize: FONT_SIZES["3xl"],
+  color: "#ffffff",
+  lineHeight: 1.1,
+  textShadow: "0 2px 16px rgba(0,0,0,0.3)",
 };
 
 const ctaPriceStyle: React.CSSProperties = {
-  fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.bold,
-  fontSize: FONT_SIZES["5xl"],
-  color: COLORS.accent,
+  fontFamily: FONTS.display,
+  fontWeight: FONT_WEIGHTS.regular,
+  fontSize: FONT_SIZES["2xl"],
+  color: "rgba(255,255,255,0.9)",
   lineHeight: 1,
-  letterSpacing: "-0.02em",
 };
 
 const ctaRefStyle: React.CSSProperties = {
   fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.medium,
-  fontSize: FONT_SIZES.base,
-  color: COLORS.white,
-  opacity: 0.8,
-  letterSpacing: "0.02em",
+  fontWeight: FONT_WEIGHTS.regular,
+  fontSize: FONT_SIZES.sm,
+  color: "rgba(255,255,255,0.6)",
+  letterSpacing: "0.06em",
 };
 
 const ctaUrlStyle: React.CSSProperties = {
   fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.semibold,
-  fontSize: FONT_SIZES.lg,
-  color: COLORS.accent,
-  letterSpacing: "0.01em",
-};
-
-const ctaTapStyle: React.CSSProperties = {
-  fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.bold,
-  fontSize: FONT_SIZES.xl,
-  color: COLORS.white,
-  letterSpacing: "0.05em",
+  fontWeight: FONT_WEIGHTS.regular,
+  fontSize: FONT_SIZES.sm,
+  color: "rgba(255,255,255,0.5)",
+  letterSpacing: "0.08em",
   textTransform: "uppercase",
 };

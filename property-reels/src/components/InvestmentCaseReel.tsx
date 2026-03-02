@@ -101,7 +101,7 @@ export const InvestmentCaseReel: React.FC<InvestmentCaseReelProps> = ({
       durationInFrames={hookFrames}
       kenBurns="zoom-in"
       zoomIntensity={1.15}
-      overlayOpacity={0.7}
+      overlayOpacity={0.4}
       gradientBottom
       transitionFrames={transitionFrames}
     >
@@ -114,26 +114,43 @@ export const InvestmentCaseReel: React.FC<InvestmentCaseReelProps> = ({
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
+          justifyContent: 'flex-end',
           alignItems: 'center',
           paddingLeft: SPACING.safeArea,
           paddingRight: SPACING.safeArea,
+          paddingBottom: SPACING["2xl"],
           textAlign: 'center',
           zIndex: 2,
         }}
       >
-        {/* Pill Badge */}
-        <PillBadge text="INVESTMENT" delay={15} style={{ marginBottom: 24 }} />
+        {/* Pill Badge - Top Left */}
+        <PillBadge text="INVESTMENT" delay={15} style={{ position: 'absolute', top: 40, left: 40 }} />
+
+        {/* Logo Circle - Top Right */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 40,
+            right: 40,
+            width: 56,
+            height: 56,
+            borderRadius: '50%',
+            backgroundColor: 'rgba(255, 255, 255, 0.85)',
+            backdropFilter: 'blur(10px)',
+            zIndex: 3,
+          }}
+        />
 
         {/* Main Headline */}
         <FadeUpText
           text={headline}
           delay={30}
           style={{
-            fontFamily: FONTS.primary,
+            fontFamily: FONTS.display,
             fontSize: FONT_SIZES['5xl'],
-            fontWeight: FONT_WEIGHTS.bold,
-            color: COLORS.white,
+            fontWeight: FONT_WEIGHTS.regular,
+            color: '#ffffff',
+            textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
             lineHeight: 1.2,
             marginBottom: SPACING.lg,
             maxWidth: '90%',
@@ -165,7 +182,7 @@ export const InvestmentCaseReel: React.FC<InvestmentCaseReelProps> = ({
       <VideoSegment
         videoSrc={videoStats}
         durationInFrames={statsDashboardFrames}
-        overlayOpacity={0.65}
+        overlayOpacity={0.4}
         gradientBottom
         transitionFrames={transitionFrames}
       >
@@ -185,15 +202,44 @@ export const InvestmentCaseReel: React.FC<InvestmentCaseReelProps> = ({
             zIndex: 2,
           }}
         >
+          {/* Frosted Badge - Top Left */}
+          <div
+            style={{
+              position: 'absolute',
+              top: 40,
+              left: 40,
+              paddingLeft: 12,
+              paddingRight: 12,
+              paddingTop: 6,
+              paddingBottom: 6,
+              borderRadius: 20,
+              backgroundColor: 'rgba(255, 255, 255, 0.85)',
+              backdropFilter: 'blur(10px)',
+              zIndex: 3,
+            }}
+          >
+            <div
+              style={{
+                fontFamily: FONTS.primary,
+                fontSize: FONT_SIZES.xs,
+                fontWeight: FONT_WEIGHTS.semibold,
+                color: COLORS.primary,
+              }}
+            >
+              METRICS
+            </div>
+          </div>
+
           {/* Stats Title */}
           <FadeUpText
             text="Investment Metrics"
             delay={10}
             style={{
-              fontFamily: FONTS.primary,
+              fontFamily: FONTS.display,
               fontSize: FONT_SIZES["2xl"],
-              fontWeight: FONT_WEIGHTS.semibold,
-              color: COLORS.accentLight,
+              fontWeight: FONT_WEIGHTS.regular,
+              color: '#ffffff',
+              textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
               marginBottom: SPACING.xl,
             }}
           />
@@ -232,13 +278,13 @@ export const InvestmentCaseReel: React.FC<InvestmentCaseReelProps> = ({
 
   /**
    * Segment 3: CTA
-   * Call-to-action with CTACard component
+   * Call-to-action with editorial serif heading and subtle gold accent
    */
   const renderCTA = () => (
     <VideoSegment
       videoSrc={videoCTA}
       durationInFrames={ctaFrames}
-      overlayOpacity={0.7}
+      overlayOpacity={0.4}
       gradientBottom
       transitionFrames={transitionFrames}
     >
@@ -258,25 +304,62 @@ export const InvestmentCaseReel: React.FC<InvestmentCaseReelProps> = ({
           zIndex: 2,
         }}
       >
-        {/* CTA Card */}
-        <CTACard
-          headline={ctaText}
-          subtext={ctaSubtext}
-          websiteUrl={websiteUrl}
+        {/* Editorial Serif Heading */}
+        <FadeUpText
+          text={ctaText}
           delay={20}
+          style={{
+            fontFamily: FONTS.display,
+            fontSize: FONT_SIZES['5xl'],
+            fontWeight: FONT_WEIGHTS.regular,
+            color: '#ffffff',
+            textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
+            lineHeight: 1.2,
+            marginBottom: SPACING.lg,
+            maxWidth: '90%',
+            textAlign: 'center',
+          }}
         />
 
-        {/* Property Count */}
+        {/* Subtle Gold Accent Line */}
+        <div
+          style={{
+            width: 60,
+            height: 2,
+            backgroundColor: COLORS.accent,
+            marginBottom: SPACING['2xl'],
+            opacity: 0.7,
+          }}
+        />
+
+        {/* Subtext */}
+        {ctaSubtext && (
+          <FadeUpText
+            text={ctaSubtext}
+            delay={35}
+            style={{
+              fontFamily: FONTS.primary,
+              fontSize: FONT_SIZES.base,
+              fontWeight: FONT_WEIGHTS.regular,
+              color: '#ffffff',
+              marginBottom: SPACING["2xl"],
+              opacity: 0.85,
+            }}
+          />
+        )}
+
+        {/* Website URL at Bottom */}
         <FadeUpText
-          text="1,200+ Properties Available"
+          text={websiteUrl}
           delay={50}
           style={{
             fontFamily: FONTS.primary,
-            fontSize: FONT_SIZES.base,
+            fontSize: FONT_SIZES.sm,
             fontWeight: FONT_WEIGHTS.regular,
-            color: COLORS.accentLight,
+            color: COLORS.accent,
             marginTop: SPACING.lg,
-            opacity: 0.9,
+            opacity: 0.8,
+            letterSpacing: '0.5px',
           }}
         />
       </div>
@@ -321,6 +404,7 @@ export const InvestmentCaseReel: React.FC<InvestmentCaseReelProps> = ({
  *
  * Shows a large animated number with a label below in grid layout.
  * Counter animates over ~30 frames for impact.
+ * Uses editorial serif font for values with lighter weight.
  *
  * @param label - Stat label e.g. "Rental Yield"
  * @param value - Numeric value to animate to
@@ -352,9 +436,9 @@ const StatCard: React.FC<{
       {/* Animated Counter Value */}
       <div
         style={{
-          fontFamily: FONTS.primary,
+          fontFamily: FONTS.display,
           fontSize: FONT_SIZES['5xl'],
-          fontWeight: FONT_WEIGHTS.bold,
+          fontWeight: FONT_WEIGHTS.regular,
           color: COLORS.accent,
           textAlign: 'center',
           marginBottom: SPACING.md,
@@ -370,9 +454,9 @@ const StatCard: React.FC<{
           currency={isCurrency}
           decimals={decimals}
           style={{
-            fontFamily: FONTS.primary,
+            fontFamily: FONTS.display,
             fontSize: FONT_SIZES['5xl'],
-            fontWeight: FONT_WEIGHTS.bold,
+            fontWeight: FONT_WEIGHTS.regular,
             color: COLORS.accent,
           }}
         />
@@ -384,7 +468,7 @@ const StatCard: React.FC<{
           fontFamily: FONTS.primary,
           fontSize: FONT_SIZES.base,
           fontWeight: FONT_WEIGHTS.regular,
-          color: COLORS.white,
+          color: '#ffffff',
           textAlign: 'center',
           opacity: 0.85,
           lineHeight: 1.3,

@@ -175,58 +175,58 @@ export const PropertySpotlightCinematic: React.FC<PropertySpotlightCinematicProp
           exit="fade"
           transitionFrames={CROSS_FADE}
         >
+          {/* Tag pill — top left, frosted glass */}
+          <div
+            style={{
+              position: "absolute",
+              top: 40,
+              left: 40,
+            }}
+          >
+            <PillBadge text={type} delay={8} />
+          </div>
+
+          {/* Logo — top right, frosted glass circle */}
+          <div style={logoCircleStyle}>
+            <Img
+              src={staticFile("logo-round.png")}
+              alt="Logo"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </div>
+
+          {/* Bottom text — editorial, floating over photo */}
           <AbsoluteFill
             style={{
               justifyContent: "flex-end",
-              padding: SPACING.safeArea,
-              paddingBottom: 200,
+              padding: "0 48px 160px",
+              gap: 16,
             }}
           >
-            {/* Property type badge */}
-            <FadeUpText
-              text={type.toUpperCase()}
-              delay={8}
-              style={{
-                fontFamily: FONTS.primary,
-                fontWeight: FONT_WEIGHTS.bold,
-                fontSize: FONT_SIZES["3xl"],
-                color: COLORS.white,
-                lineHeight: 1,
-                letterSpacing: "0.08em",
-                textTransform: "uppercase" as const,
-                textShadow: "0 4px 16px rgba(0, 0, 0, 0.5)",
-              }}
-            />
-
-            {/* Price */}
+            {/* Price — large editorial serif */}
             <FadeUpText
               text={`€${price.toLocaleString()}`}
-              delay={15}
-              style={{
-                ...priceStyle,
-                marginTop: 40,
-              }}
+              delay={12}
+              style={priceStyle}
             />
 
-            {/* Gold accent line */}
-            <AccentLine delay={22} width={120} style={{ marginTop: 32 }} />
-
-            {/* Location name */}
+            {/* Location name — serif */}
             <FadeUpText
               text={`${town}, ${province}`}
-              delay={28}
-              style={{
-                ...bodyLargeStyle,
-                marginTop: 40,
-                maxWidth: 800,
-              }}
+              delay={20}
+              style={locationStyle}
+            />
+
+            {/* Small gold accent line */}
+            <AccentLine delay={26} width={60} style={{ marginTop: 8 }} />
+
+            {/* Website */}
+            <FadeUpText
+              text={websiteUrl}
+              delay={32}
+              style={watermarkTextStyle}
             />
           </AbsoluteFill>
-
-          {/* Logo watermark top-right */}
-          <div style={watermarkStyle}>
-            <span style={watermarkTextStyle}>{websiteUrl}</span>
-          </div>
         </VideoSegment>
       </Sequence>
 
@@ -241,64 +241,47 @@ export const PropertySpotlightCinematic: React.FC<PropertySpotlightCinematicProp
           durationInFrames={KEYSTATS_DUR}
           kenBurns="zoom-in"
           zoomIntensity={1.1}
-          overlayOpacity={0.65}
-          gradientBottom={false}
+          overlayOpacity={0.45}
+          gradientBottom
           entrance="fade"
           exit="fade"
           transitionFrames={CROSS_FADE}
         >
+          {/* Tag pill top-left */}
+          <div style={{ position: "absolute", top: 40, left: 40 }}>
+            <PillBadge text="Details" delay={5} />
+          </div>
+
+          {/* Stats at bottom over gradient */}
           <AbsoluteFill
             style={{
-              justifyContent: "center",
-              alignItems: "center",
-              padding: SPACING.safeArea,
-              gap: 32,
+              justifyContent: "flex-end",
+              padding: "0 48px 120px",
+              gap: 24,
             }}
           >
-            {/* Section label */}
-            <PillBadge text="Property Details" delay={5} />
-
-            {/* Stats grid */}
-            <div
+            {/* Title — serif */}
+            <FadeUpText
+              text={title}
+              delay={10}
               style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: 60,
-                marginTop: 32,
+                fontFamily: FONTS.display,
+                fontWeight: FONT_WEIGHTS.regular,
+                fontSize: FONT_SIZES["2xl"],
+                color: "#ffffff",
+                lineHeight: 1.1,
+                textShadow: "0 2px 16px rgba(0,0,0,0.3)",
               }}
-            >
-              {/* Bedrooms */}
-              <StatBox
-                icon="🛏️"
-                label="Bedrooms"
-                value={bedrooms.toString()}
-                delay={15}
-              />
+            />
 
-              {/* Bathrooms */}
-              <StatBox
-                icon="🚿"
-                label="Bathrooms"
-                value={bathrooms.toString()}
-                delay={23}
-              />
-
-              {/* Area */}
-              <StatBox
-                icon="📐"
-                label="Area"
-                value={`${area} m²`}
-                delay={31}
-              />
-
-              {/* Type */}
-              <StatBox
-                icon="🏠"
-                label="Property"
-                value={type}
-                delay={39}
-              />
+            {/* Stats row — minimal */}
+            <div style={{ display: "flex", gap: 32, marginTop: 8 }}>
+              <StatBox label="Bed" value={bedrooms.toString()} delay={18} />
+              <StatBox label="Bath" value={bathrooms.toString()} delay={24} />
+              <StatBox label="m²" value={area.toString()} delay={30} />
             </div>
+
+            <AccentLine delay={36} width={60} />
           </AbsoluteFill>
         </VideoSegment>
       </Sequence>
@@ -313,45 +296,53 @@ export const PropertySpotlightCinematic: React.FC<PropertySpotlightCinematicProp
           imageSrc={images[2] || images[0]}
           durationInFrames={FEATURES_DUR}
           kenBurns="pan-right"
-          overlayOpacity={0.6}
-          gradientBottom={false}
+          overlayOpacity={0.4}
+          gradientBottom
           entrance="slide-up"
           exit="fade"
           transitionFrames={CROSS_FADE}
         >
+          {/* Tag pill */}
+          <div style={{ position: "absolute", top: 40, left: 40 }}>
+            <PillBadge text="Highlights" delay={5} />
+          </div>
+
           <AbsoluteFill
             style={{
-              justifyContent: "center",
-              padding: SPACING.safeArea,
-              gap: 40,
+              justifyContent: "flex-end",
+              padding: "0 48px 120px",
+              gap: 24,
             }}
           >
-            {/* Section label */}
-            <PillBadge text="Highlights" delay={5} />
-
             <FadeUpText
               text="Key Features"
               delay={10}
-              style={headingStyle}
+              style={{
+                fontFamily: FONTS.display,
+                fontWeight: FONT_WEIGHTS.regular,
+                fontSize: FONT_SIZES["2xl"],
+                color: "#ffffff",
+                lineHeight: 1.1,
+                textShadow: "0 2px 16px rgba(0,0,0,0.3)",
+              }}
             />
 
-            <AccentLine delay={16} />
+            <AccentLine delay={16} width={60} />
 
-            {/* Feature items */}
-            <div style={{ display: "flex", flexDirection: "column", gap: 32, marginTop: 16 }}>
-              {features.slice(0, 6).map((feature, i) => (
-                <IconTextRow
+            {/* Feature items — clean, no emojis */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 20, marginTop: 8 }}>
+              {features.slice(0, 4).map((feature, i) => (
+                <FadeUpText
                   key={i}
-                  icon={[
-                    "🏊",
-                    "🅿️",
-                    "🌅",
-                    "🏊",
-                    "🎾",
-                    "🌳",
-                  ][i] || "✨"}
                   text={feature}
                   delay={22 + i * 8}
+                  style={{
+                    fontFamily: FONTS.primary,
+                    fontWeight: FONT_WEIGHTS.regular,
+                    fontSize: FONT_SIZES.base,
+                    color: "rgba(255,255,255,0.85)",
+                    lineHeight: 1.4,
+                  }}
                 />
               ))}
             </div>
@@ -369,41 +360,50 @@ export const PropertySpotlightCinematic: React.FC<PropertySpotlightCinematicProp
           videoSrc={videoLocation}
           durationInFrames={LOCATION_DUR}
           kenBurns="pan-left"
-          overlayOpacity={0.55}
-          gradientBottom={false}
+          overlayOpacity={0.35}
+          gradientBottom
           entrance="slide-left"
           exit="fade"
           transitionFrames={CROSS_FADE}
         >
+          <div style={{ position: "absolute", top: 40, left: 40 }}>
+            <PillBadge text="Location" delay={5} />
+          </div>
+
           <AbsoluteFill
             style={{
-              justifyContent: "center",
-              padding: SPACING.safeArea,
-              gap: 40,
+              justifyContent: "flex-end",
+              padding: "0 48px 120px",
+              gap: 20,
             }}
           >
-            <PillBadge text="Location" delay={5} />
-
             <FadeUpText
               text="Prime Location"
               delay={10}
-              style={headingStyle}
+              style={{
+                fontFamily: FONTS.display,
+                fontWeight: FONT_WEIGHTS.regular,
+                fontSize: FONT_SIZES["2xl"],
+                color: "#ffffff",
+                lineHeight: 1.1,
+                textShadow: "0 2px 16px rgba(0,0,0,0.3)",
+              }}
             />
 
-            <AccentLine delay={16} />
+            <AccentLine delay={16} width={60} />
 
-            <div style={{ display: "flex", flexDirection: "column", gap: 32, marginTop: 16 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 16, marginTop: 8 }}>
               {nearbyAmenities?.beach && (
-                <IconTextRow icon="🏖️" text={nearbyAmenities.beach} delay={20} />
+                <FadeUpText text={nearbyAmenities.beach} delay={20} style={amenityTextStyle} />
               )}
               {nearbyAmenities?.golf && (
-                <IconTextRow icon="⛳" text={nearbyAmenities.golf} delay={28} />
+                <FadeUpText text={nearbyAmenities.golf} delay={28} style={amenityTextStyle} />
               )}
               {nearbyAmenities?.airport && (
-                <IconTextRow icon="✈️" text={nearbyAmenities.airport} delay={36} />
+                <FadeUpText text={nearbyAmenities.airport} delay={36} style={amenityTextStyle} />
               )}
               {nearbyAmenities?.restaurants && (
-                <IconTextRow icon="🍽️" text={nearbyAmenities.restaurants} delay={44} />
+                <FadeUpText text={nearbyAmenities.restaurants} delay={44} style={amenityTextStyle} />
               )}
             </div>
           </AbsoluteFill>
@@ -501,52 +501,45 @@ export const PropertySpotlightCinematic: React.FC<PropertySpotlightCinematicProp
             durationInFrames={INVESTMENT_DUR}
             kenBurns="zoom-in"
             zoomIntensity={1.12}
-            overlayOpacity={0.7}
-            gradientBottom={false}
+            overlayOpacity={0.4}
+            gradientBottom
             entrance="zoom"
             exit="fade"
             transitionFrames={CROSS_FADE}
           >
+            <div style={{ position: "absolute", top: 40, left: 40 }}>
+              <PillBadge text="Investment" delay={5} />
+            </div>
+
             <AbsoluteFill
               style={{
-                justifyContent: "center",
-                alignItems: "center",
-                padding: SPACING.safeArea,
-                gap: 32,
+                justifyContent: "flex-end",
+                padding: "0 48px 120px",
+                gap: 20,
               }}
             >
-              <PillBadge text="Investment" delay={5} />
-
               <FadeUpText
                 text="Smart Investment"
                 delay={10}
-                style={{ ...headingStyle, textAlign: "center" }}
+                style={{
+                  fontFamily: FONTS.display,
+                  fontWeight: FONT_WEIGHTS.regular,
+                  fontSize: FONT_SIZES["2xl"],
+                  color: "#ffffff",
+                  lineHeight: 1.1,
+                  textShadow: "0 2px 16px rgba(0,0,0,0.3)",
+                }}
               />
 
               <AccentLine delay={16} width={60} />
 
               {/* Stats row */}
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  gap: 100,
-                  marginTop: 32,
-                }}
-              >
+              <div style={{ display: "flex", gap: 48, marginTop: 8 }}>
                 {rentalYield && (
-                  <StatBox
-                    label="Rental Yield"
-                    value={rentalYield}
-                    delay={22}
-                  />
+                  <StatBox label="Rental Yield" value={rentalYield} delay={22} />
                 )}
                 {pricePerSqm && (
-                  <StatBox
-                    label="Price/m²"
-                    value={`€${pricePerSqm.toLocaleString()}`}
-                    delay={30}
-                  />
+                  <StatBox label="Price/m²" value={`€${pricePerSqm.toLocaleString()}`} delay={30} />
                 )}
               </div>
             </AbsoluteFill>
@@ -601,22 +594,17 @@ const StatBox: React.FC<{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: 16,
+        gap: 6,
         opacity: progress,
-        transform: `scale(${interpolate(progress, [0, 1], [0.8, 1])})`,
+        transform: `translateY(${interpolate(progress, [0, 1], [20, 0])}px)`,
       }}
     >
-      {icon && (
-        <span style={{ fontSize: FONT_SIZES["2xl"] }}>
-          {icon}
-        </span>
-      )}
       <span
         style={{
-          fontFamily: FONTS.primary,
-          fontWeight: FONT_WEIGHTS.bold,
-          fontSize: FONT_SIZES["2xl"],
-          color: COLORS.accent,
+          fontFamily: FONTS.display,
+          fontWeight: FONT_WEIGHTS.regular,
+          fontSize: FONT_SIZES.xl,
+          color: "#ffffff",
           lineHeight: 1,
         }}
       >
@@ -625,12 +613,11 @@ const StatBox: React.FC<{
       <span
         style={{
           fontFamily: FONTS.primary,
-          fontWeight: FONT_WEIGHTS.medium,
-          fontSize: FONT_SIZES.sm,
-          color: COLORS.white,
-          opacity: 0.8,
+          fontWeight: FONT_WEIGHTS.regular,
+          fontSize: FONT_SIZES.xs,
+          color: "rgba(255,255,255,0.6)",
           textTransform: "uppercase",
-          letterSpacing: "0.05em",
+          letterSpacing: "0.1em",
         }}
       >
         {label}
@@ -673,46 +660,56 @@ const GalleryRef: React.FC<{
   );
 };
 
-// ── Shared styles ───────────────────────────────────
+// ── Shared styles — editorial ───────────────────────
 
 const priceStyle: React.CSSProperties = {
-  fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.bold,
-  fontSize: FONT_SIZES["5xl"],
-  color: COLORS.accent,
-  lineHeight: 1.1,
-  letterSpacing: "-0.01em",
+  fontFamily: FONTS.display,
+  fontWeight: FONT_WEIGHTS.regular,
+  fontSize: FONT_SIZES["4xl"],
+  color: "#ffffff",
+  lineHeight: 1.05,
+  letterSpacing: "0.01em",
+  textShadow: "0 2px 20px rgba(0,0,0,0.3)",
 };
 
-const headingStyle: React.CSSProperties = {
-  fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.bold,
-  fontSize: FONT_SIZES["2xl"],
-  color: COLORS.white,
-  lineHeight: 1.15,
-  letterSpacing: "-0.01em",
-};
-
-const bodyLargeStyle: React.CSSProperties = {
+const locationStyle: React.CSSProperties = {
   fontFamily: FONTS.primary,
   fontWeight: FONT_WEIGHTS.regular,
   fontSize: FONT_SIZES.lg,
-  color: COLORS.white,
-  lineHeight: 1.5,
-  opacity: 0.9,
+  color: "rgba(255,255,255,0.8)",
+  letterSpacing: "0.06em",
+  textTransform: "uppercase",
 };
 
-const watermarkStyle: React.CSSProperties = {
+const amenityTextStyle: React.CSSProperties = {
+  fontFamily: FONTS.primary,
+  fontWeight: FONT_WEIGHTS.regular,
+  fontSize: FONT_SIZES.base,
+  color: "rgba(255,255,255,0.85)",
+  lineHeight: 1.4,
+};
+
+const logoCircleStyle: React.CSSProperties = {
   position: "absolute",
-  top: SPACING.safeArea,
-  right: SPACING.safeArea,
+  top: 36,
+  right: 36,
+  width: 56,
+  height: 56,
+  borderRadius: "50%",
+  background: "rgba(255,255,255,0.85)",
+  backdropFilter: "blur(8px)",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  overflow: "hidden",
+  boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
 };
 
 const watermarkTextStyle: React.CSSProperties = {
   fontFamily: FONTS.primary,
-  fontWeight: FONT_WEIGHTS.medium,
+  fontWeight: FONT_WEIGHTS.regular,
   fontSize: FONT_SIZES.xs,
-  color: COLORS.white,
-  opacity: 0.5,
-  letterSpacing: "0.02em",
+  color: "rgba(255,255,255,0.5)",
+  letterSpacing: "0.08em",
+  textTransform: "uppercase",
 };
