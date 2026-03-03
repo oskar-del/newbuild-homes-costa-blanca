@@ -408,7 +408,7 @@ function getNextScheduleStart() {
 // POSTIZ POST CREATION
 // ============================================================================
 
-function buildPostizPayload(entry) {
+function buildPostizPayload(entry, mediaUploadObj) {
   const { platform, content, date, time, postType } = entry;
   const isVideo = content.mediaType === "video";
   const channelId = CHANNELS[platform];
@@ -423,11 +423,13 @@ function buildPostizPayload(entry) {
   const hashtags = content.hashtags?.[platform] || content.hashtags?.default || "";
   const fullCaption = hashtags ? `${caption}\n\n${hashtags}` : caption;
 
+  // IMPORTANT: Postiz API always uses "image" field for ALL media (both images and videos)
+  // The upload object { id, path } goes directly into the image array
   const post = {
     integration: { id: channelId },
     value: [{
       content: fullCaption,
-      ...(isVideo ? { video: ["__MEDIA_ID__"] } : { image: ["__MEDIA_ID__"] }),
+      image: [mediaUploadObj],
     }],
     settings: buildPlatformSettings(platform, content, isVideo, postType),
   };
@@ -459,12 +461,12 @@ function buildPlatformSettings(platform, content, isVideo, postType) {
     case "instagram":
       return {
         __type: "instagram",
-        post_type: isVideo ? "reel" : "post",
+        post_type: "post",  // Postiz only accepts "post" or "story"
       };
     case "facebook":
       return {
         __type: "facebook",
-        type: isVideo ? "reel" : "post",
+        type: "post",  // Postiz only accepts "post"
       };
     case "youtube":
       return {
@@ -617,22 +619,21 @@ async function main() {
     }
 
     try {
-      const payload = buildPostizPayload(entry);
-
-      // Replace placeholder with actual media ID
-      const payloadStr = JSON.stringify(payload).replace('"__MEDIA_ID__"', JSON.stringify(mediaUpload));
+      // Pass actual upload object — Postiz always uses "image" field for all media
+      const payload = buildPostizPayload(entry, mediaUpload);
+      const payloadStr = JSON.stringify(payload);
 
       console.log(`  [${i + 1}/${schedule.length}] ${entry.platform} ${entry.date} ${entry.time} → ${entry.content.name}`);
       const result = await curlJson("POST", "/posts", { body: payloadStr });
 
       results.push({ ...entry, status: "success", postizId: result.id });
 
-      // Rate limit: 2s between posts, 30s every 10 posts
+      // Rate limit: 5s between posts, 120s every 10 posts (30 req/hr limit)
       if ((i + 1) % 10 === 0) {
-        console.log(`  ⏳ Cooling down (30s)...`);
-        await sleep(30000);
+        console.log(`  ⏳ Cooling down (120s)...`);
+        await sleep(120000);
       } else {
-        await sleep(2000);
+        await sleep(5000);
       }
     } catch (err) {
       console.error(`  ❌ Failed: ${err.message}`);
