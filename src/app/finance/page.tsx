@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { breadcrumbSchema, toJsonLd, faqSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Spanish Mortgage & Finance | Compare Rates 2026 | New Build Homes Costa Blanca',
+    title: 'Spanish Mortgage & Finance | Compare Rates 2026',
   description: 'Compare Spanish mortgage rates from all major banks. Expert finance solutions for property buyers - from first-time buyers to luxury €800k+ properties. Free calculator & market insights.',
   openGraph: {
     title: 'Spanish Mortgage & Finance | Compare Rates 2026',
