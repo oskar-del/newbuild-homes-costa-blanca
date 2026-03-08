@@ -12,7 +12,7 @@ import { getCardImages } from '@/lib/image-categorization';
 import { filterDevelopmentsByTags, TaggedDevelopment } from '@/lib/tag-service';
 
 export const metadata: Metadata = {
-  title: 'New Build Developments Costa Blanca | Find Your Perfect Project',
+    title: 'New Build Developments Costa Blanca | 1100+ Homes',
   description: 'Explore new build developments across Costa Blanca and Costa Calida. Key-ready homes, golf properties, beachfront living. Find your dream Spanish home.',
   openGraph: {
     title: 'New Build Developments Costa Blanca',
