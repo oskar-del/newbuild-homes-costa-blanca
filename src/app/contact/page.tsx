@@ -3,7 +3,7 @@ import LeadForm from '@/components/LeadForm';
 import { localBusinessSchema, breadcrumbSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | New Build Homes Costa Blanca',
+    title: 'Contact Us',
   description: 'Get in touch with New Build Homes Costa Blanca. Expert guidance for buying new build properties in Spain. WhatsApp, phone, email or contact form.',
   openGraph: {
     title: 'Contact Us | New Build Homes Costa Blanca',
