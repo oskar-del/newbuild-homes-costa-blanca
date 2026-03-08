@@ -46,7 +46,7 @@ function getCoursesWithImages(): GolfCourse[] {
 }
 
 export const metadata: Metadata = {
-  title: 'Golf Course Properties Costa Blanca & Murcia | 22 Courses, 100+ Properties',
+    title: 'Golf Properties Costa Blanca | 22 Courses, 100+ Homes',
   description: 'Find new build homes near 22 golf courses across Costa Blanca North, South, and Murcia. From La Sella and Jávea to Las Colinas and Serena Golf. Golf lifestyle from €120,000.',
   openGraph: {
     title: 'Golf Course Properties Costa Blanca & Murcia',
