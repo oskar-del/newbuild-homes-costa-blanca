@@ -5,7 +5,7 @@ import { fetchLandPlots, formatPrice, ParsedProperty } from '@/lib/xml-parser';
 import { breadcrumbSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Building Plots Costa Blanca | Buy Land & Build Your Dream Home',
+    title: 'Building Plots Costa Blanca | Buy Land & Build',
   description: 'Premium building plots for sale in Costa Blanca from €200,000+. Build your dream villa with our trusted architects and builders. Full bespoke service from land purchase to key handover.',
   openGraph: {
     title: 'Building Plots Costa Blanca | Build Your Dream Home',
