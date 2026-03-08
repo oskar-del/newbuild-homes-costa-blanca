@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Buying Guides | New Build Property in Spain | Costa Blanca 2026',
+    title: 'Buying Guides | Property in Costa Blanca 2026',
   description: 'Complete guides to buying new build property in Costa Blanca. NIE numbers, mortgages, taxes, costs and step-by-step buying process for international buyers.',
   alternates: {
     canonical: 'https://newbuildhomescostablanca.com/guides',
