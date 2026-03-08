@@ -6,7 +6,7 @@ import path from 'path';
 import { breadcrumbSchema, collectionPageSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Costa Blanca Living: Guides, Tips & Lifestyle | New Build Homes',
+    title: 'Costa Blanca Living: Guides, Tips & Lifestyle',
   description: 'Your guide to Mediterranean living. Area guides, beach guides, buying tips, golf lifestyle, and everything you need to know about life in Costa Blanca.',
   openGraph: {
     title: 'Costa Blanca Living: Guides, Tips & Lifestyle',
