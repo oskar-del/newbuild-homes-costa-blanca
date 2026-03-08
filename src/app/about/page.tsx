@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { breadcrumbSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'About Us | New Build Homes Costa Blanca',
+    title: 'About Us | Your Trusted Property Partner in Spain',
   description: 'Your trusted partner for new build properties in Costa Blanca and Costa Calida. Expert guidance for British, Irish, and Scandinavian buyers seeking their dream home in Spain.',
   openGraph: {
     title: 'About Us | New Build Homes Costa Blanca',
