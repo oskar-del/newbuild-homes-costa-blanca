@@ -37,7 +37,7 @@ const playfairDisplay = localFont({
 export const metadata: Metadata = {
   title: {
     default: 'New Build Homes Costa Blanca | Modern Properties in Spain',
-    template: '%s | New Build Homes Costa Blanca',
+    template: '%s',
   },
   description: 'Find your dream new build property in Costa Blanca. Modern apartments, villas and townhouses from trusted developers. Expert guidance for international buyers.',
   metadataBase: new URL('https://newbuildhomescostablanca.com'),
@@ -74,21 +74,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     images: ['/images/og-image.jpg'],
   },
-  alternates: {
-    canonical: 'https://newbuildhomescostablanca.com',
-    languages: {
-      'en': 'https://newbuildhomescostablanca.com',
-      'sv': 'https://newbuildhomescostablanca.com/sv',
-      'nl': 'https://newbuildhomescostablanca.com/nl',
-      'nl-BE': 'https://newbuildhomescostablanca.com/nl-be',
-      'fr': 'https://newbuildhomescostablanca.com/fr',
-      'no': 'https://newbuildhomescostablanca.com/no',
-      'de': 'https://newbuildhomescostablanca.com/de',
-      'pl': 'https://newbuildhomescostablanca.com/pl',
-      'ru': 'https://newbuildhomescostablanca.com/ru',
-      'x-default': 'https://newbuildhomescostablanca.com',
-    },
-  },
+  // NOTE: Do NOT set canonical here — each page.tsx must set its own
+  // self-referencing canonical in its metadata.alternates.canonical.
+  // Setting a canonical in the root layout causes child pages to inherit
+  // the homepage canonical if they forget to override it, which breaks
+  // Google indexing ("Google chose different canonical").
   verification: {
     // Add your Google Search Console verification code here
     // google: 'your-verification-code',
@@ -162,7 +152,7 @@ export default function RootLayout({
         <main className="min-h-screen">{children}</main>
         <Footer />
         <CookieConsent />
-        {/* Scroll animation observer — tiny, non-blocking, respects prefers-reduced-motion */}
+        {/* Scroll animation observer â tiny, non-blocking, respects prefers-reduced-motion */}
         <Script
           id="scroll-observer"
           strategy="afterInteractive"
