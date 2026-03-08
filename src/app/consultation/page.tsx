@@ -3,7 +3,7 @@ import Link from 'next/link';
 import ConsultationForm from '@/components/ConsultationForm';
 
 export const metadata: Metadata = {
-  title: 'Book a Free Consultation | New Build Homes Costa Blanca',
+    title: 'Book a Free Property Consultation in Spain',
   description: 'Schedule a free video call, phone call, or WhatsApp consultation with our Costa Blanca property experts. Get personalized advice on new build homes in Spain.',
   openGraph: {
     title: 'Book a Free Property Consultation',
