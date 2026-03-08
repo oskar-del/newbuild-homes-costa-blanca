@@ -5,7 +5,7 @@ import { fetchInlandProperties, formatPrice, ParsedProperty, REGIONS } from '@/l
 import { breadcrumbSchema, faqSchema, toJsonLd } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Inland Properties Costa Blanca | New Builds Away From the Coast',
+    title: 'Inland Properties Costa Blanca | Countryside Homes',
   description: 'Discover new build properties in inland Costa Blanca and Costa Calida. More space, better value, and authentic Spanish living in towns like Algorfa, Rojales, Polop, and more.',
   openGraph: {
     title: 'Inland Properties Costa Blanca',
